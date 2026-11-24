@@ -1,0 +1,358 @@
+{
+ "schema_version": 2,
+ "pmid": "33691672",
+ "doi": "10.1186/s12894-021-00806-7",
+ "receipt": "FTR-20261124-33691672-01",
+ "landing": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/RESULT_ADV218_IT_20261124.md",
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/PREREG_ADV218_IT_20261124.md"
+ ],
+ "coverage_status": "complete_fulltext_read",
+ "declared_reading_gap": "The reference list was not enumerated; the paper has no formal limitations section; source data of the western blots and the TCGA subgroup tables beyond Additional file 1 are not deposited.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "ADV-218 reading-debt package: a complete read with verbatim locators and a receipt, no commit candidate and no promotion of the record."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC fullTextXML and the PMC open-data bucket (figures and deposited supplements), both lawful and keyless; nothing refused."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Same Lodz molecular carcinogenesis department as the glioblastoma paper; bladder-cancer cell and database study."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX[tiab] AND bladder[tiab]",
+    "route": "PubMed esearch rettype=count, 2026-11-24",
+    "count": 18
+   },
+   {
+    "query": "WWOX[tiab] AND (mitochondri*[tiab] OR respirat*[tiab])",
+    "route": "PubMed esearch rettype=count, 2026-11-24",
+    "count": 37
+   }
+  ],
+  "note": "Counts only."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 53,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "note": "References counted from the XML (ref elements), titles not read in this pass; no multi-hop was run."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "fulltext_receipts.py status --pmid 33691672; registry P291 (screened - corpus placeholder, tier C, clinical relevance LOW)",
+  "hits": 1,
+  "finding": "No receipt before this reading; the registry carried a screened placeholder with no claim link."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-11-24",
+  "route": "retraction_check.py (PubMed, Europe PMC)",
+  "result": "Checked 2026-11-24 with retraction_check.py (PubMed and Europe PMC): flagged 0; no retraction, expression of concern or correction listed for the PMID.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 53,
+   "references_screened": 50,
+   "references_with_doi": 50,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 34,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33691672_Kaluzinska2021_PMC7944886_epmc.xml",
+   "sha256": "12d42eb84a0f9338e1e7ed796071f27fcbe58d02adda655cdc0a69482c833d8a",
+   "kind": "article_text",
+   "note": "Europe PMC full-text XML (JATS) of the CC BY article PMC7944886; body, table, caption and reference text.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7944886/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "12d42eb84a0f9338e1e7ed796071f27fcbe58d02adda655cdc0a69482c833d8a"
+   }
+  },
+  {
+   "path": "files/figures/PMID33691672/12894_2021_806_Fig1_HTML.jpg",
+   "sha256": "1abd657eefd6cc84f51ba7fe1ccb378b6f1bf6442980be4d1afe3984c6f1be82",
+   "kind": "figure",
+   "note": "Figure 1 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7944886.1/12894_2021_806_Fig1_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "1abd657eefd6cc84f51ba7fe1ccb378b6f1bf6442980be4d1afe3984c6f1be82"
+   }
+  },
+  {
+   "path": "files/figures/PMID33691672/12894_2021_806_Fig2_HTML.jpg",
+   "sha256": "a759c8db464df1255f622c932065e99dc256b392327989298b283017a6da3a20",
+   "kind": "figure",
+   "note": "Figure 2 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7944886.1/12894_2021_806_Fig2_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "a759c8db464df1255f622c932065e99dc256b392327989298b283017a6da3a20"
+   }
+  },
+  {
+   "path": "files/figures/PMID33691672/12894_2021_806_Fig3_HTML.jpg",
+   "sha256": "1bcc375b01b253a06c7858793326ec7ecfe663d2a7f2896174e45d7cc869a608",
+   "kind": "figure",
+   "note": "Figure 3 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7944886.1/12894_2021_806_Fig3_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "1bcc375b01b253a06c7858793326ec7ecfe663d2a7f2896174e45d7cc869a608"
+   }
+  },
+  {
+   "path": "files/figures/PMID33691672/12894_2021_806_Fig4_HTML.jpg",
+   "sha256": "3f687a099571ab5fd983a0f6f587fc1552e53611c29ed6477474f8a7ace40f2b",
+   "kind": "figure",
+   "note": "Figure 4 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7944886.1/12894_2021_806_Fig4_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "3f687a099571ab5fd983a0f6f587fc1552e53611c29ed6477474f8a7ace40f2b"
+   }
+  },
+  {
+   "path": "files/figures/PMID33691672/12894_2021_806_Fig5_HTML.jpg",
+   "sha256": "169a685f1192447fc9cd19f0fc6c3475903e25fb854882210c3a5a9ebb921cb9",
+   "kind": "figure",
+   "note": "Figure 5 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7944886.1/12894_2021_806_Fig5_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "169a685f1192447fc9cd19f0fc6c3475903e25fb854882210c3a5a9ebb921cb9"
+   }
+  },
+  {
+   "path": "files/figures/PMID33691672/12894_2021_806_Fig6_HTML.jpg",
+   "sha256": "3c78f848e5642f911ff5b391c3bb170c62c57128a21df78dd20309e2104bbb0b",
+   "kind": "figure",
+   "note": "Figure 6 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7944886.1/12894_2021_806_Fig6_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "3c78f848e5642f911ff5b391c3bb170c62c57128a21df78dd20309e2104bbb0b"
+   }
+  },
+  {
+   "path": "files/figures/PMID33691672/12894_2021_806_Fig7_HTML.jpg",
+   "sha256": "2070603e248f2a5358ab8a9e41e6aa733d8ceb79808cca9424987f86a882f8c5",
+   "kind": "figure",
+   "note": "Figure 7 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7944886.1/12894_2021_806_Fig7_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "2070603e248f2a5358ab8a9e41e6aa733d8ceb79808cca9424987f86a882f8c5"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID33691672_supplement/12894_2021_806_MOESM1_ESM.docx",
+   "sha256": "f727b8c09d51455edcd491ca419527a413bf334a399aadfc1c91ce8b1d8da123",
+   "kind": "supplement_binary",
+   "note": "Additional file 1 (patient characteristics by group), read through word/document.xml.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7944886.1/12894_2021_806_MOESM1_ESM.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "f727b8c09d51455edcd491ca419527a413bf334a399aadfc1c91ce8b1d8da123"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID33691672_supplement/12894_2021_806_MOESM2_ESM.tif",
+   "sha256": "08e78639f8320444bde184b89511f341d1819a0dac642857f367c7c5e818881c",
+   "kind": "supplement_binary",
+   "note": "Additional file 2 (remaining cluster heatmaps), opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7944886.1/12894_2021_806_MOESM2_ESM.tif",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "08e78639f8320444bde184b89511f341d1819a0dac642857f367c7c5e818881c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC fullTextXML of PMC7944886, seven figure images and two additional files saved and fingerprinted; the figures and the heatmap file were opened as images and the docx read as text.",
+  "abstract_anchoring_waived": "Abstract statements are compared with Results text and figures in the entries; the quotes below are anchored in the body, tables or figure images.",
+  "note": "ADV-218 reading, question-driven by the OPEN rows NR-03, WO-08 and WO-22. Text, Tables 1 to 5, all seven figure images and both additional files read.",
+  "entries": [
+   {
+    "proposition": "LOSS-OF-WWOX RAISES THE DYE READOUT: the sgWWOX variant has significantly higher 'mitochondrial redox activity' than its control (resazurin-type reagent, kinetic read). It is a dye conversion in one bladder line, not oxygen consumption or complex I activity; NR-03 stays OPEN.",
+    "snippet": "Lastly, sgWWOX variant was significantly associated with increased mitochondrial redox activity compared to its control (Fig. 2c).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33691672_Kaluzinska2021_PMC7944886_epmc.xml",
+    "anchor": "Results, The effect of WWOX on bladder cancer cell proliferation, clonogenic survival and mitochondrial activity",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE ASSAY IS A COMMERCIAL VIABILITY REAGENT, named as a redox-activity estimate.",
+    "snippet": "The mitochondrial redox activity was estimated with Presto reagent (Invitrogen).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33691672_Kaluzinska2021_PMC7944886_epmc.xml",
+    "anchor": "Methods, Proliferation and cell viability assays with an evaluation of mitochondrial redox activity",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE 2C AND 2D AS DRAWN: in the knockdown pair (2C) sgWWOX is above control from 15 min with significance marks at most later time points (about 830,000 against 690,000 RFU at 90 min); in the overexpression pair (2D) every time point is marked n.s. (about 660,000 against 630,000 RFU at 90 min). So the dye readout moves with loss of WWOX and does not fall with gain of WWOX. Values read from the axes, approximate.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2c (sgWWOX against control): sgWWOX above control from 15 min, stars at 15 to 90 min, about 830,000 against 690,000 RFU at 90 min. Figure 2d (WWOX overexpression against control): every time point n.s., about 660,000 against 630,000 RFU at 90 min. Values read from the axes, approximate.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33691672/12894_2021_806_Fig2_HTML.jpg",
+    "anchor": "Figure 2c and 2d, image 12894_2021_806_Fig2_HTML.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "THE DISCUSSION SAYS 'THIS PROVES' ON THE LOSS ARM ALONE and leans on another paper (colon line SW480) for the gain arm that its own Figure 2d does not show.",
+    "snippet": "This proves that potentiated mitochondrial activity is visible during WWOX depletion, which is consistent with available literature [49].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33691672_Kaluzinska2021_PMC7944886_epmc.xml",
+    "anchor": "Discussion, paragraph before the survival analysis",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE 2A AS DRAWN: the two control lines differ about two-fold at baseline (BrdU signal about 195,000 for the sgWWOX control and about 385,000 for the overexpression control), so only within-pair comparisons are meaningful; the abstract's 'proliferation' statement is correct within each pair.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2a bars: sgWWOX about 440,000, sgWWOX control about 195,000, WWOX-up about 215,000, WWOX-up control about 385,000 (BrdU fluorescence); the two control lines differ about two-fold. Values read from the axis, approximate.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33691672/12894_2021_806_Fig2_HTML.jpg",
+    "anchor": "Figure 2a, image 12894_2021_806_Fig2_HTML.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "AP-2 GAMMA RISES WITH BOTH GAIN AND LOSS OF WWOX: after knockdown it stays HIGHER than its control (0.14 against 0.05, p = 0.0483), and after overexpression it is also higher; the abstract's 'AP-2 gamma remained high' glosses a significant increase on a blot whose AP-2 gamma lane is crossed by scratches.",
+    "snippet": "Surprisingly, the level of AP-2γ remained higher (p = 0.0483) in the sgWWOX variant (mean protein expression level 0.14 ± 0.01) than in sgWWOX contr (mean protein expression level 0.05 ± 0.03).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33691672_Kaluzinska2021_PMC7944886_epmc.xml",
+    "anchor": "Results, Construction of an in vitro CAL-29 cell line model",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE 1 AS DRAWN: panel b (sgWWOX) AP-2 gamma and GAPDH strips carry dark scratch-like lines across the lanes and the AP-2 alpha strip has an empty lane gap; panel a (overexpression) is cleaner. The AP-2 gamma densitometry of 0.05 to 0.15 sits near the background of these strips.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1b: AP-2 gamma and GAPDH strips crossed by dark scratch-like lines, AP-2 alpha strip with an empty gap between lanes; Figure 1a strips cleaner; AP-2 gamma bands faint in both panels.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33691672/12894_2021_806_Fig1_HTML.jpg",
+    "anchor": "Figure 1, image 12894_2021_806_Fig1_HTML.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "TP63 AND SMAD4 MOVE THE SAME WAY AFTER GAIN AND LOSS OF WWOX: a WWOX-dependent target would move in opposite directions.",
+    "snippet": "In the case of WWOX overexpression, the TP63 or SMAD4 genes respectively decreased by 2-fold (p = 0.0347) or increased by 2-fold (p = 0.0037) compared to the appropriate control. Analogously, the same tendencies were observed during WWOX silencing (3-fold decrease with p = 0.0038 for TP63; 5-fold increase with p = 0.0183 for SMAD4).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33691672_Kaluzinska2021_PMC7944886_epmc.xml",
+    "anchor": "Results, Correlation between WWOX level and expression changes of AP-2γ target genes",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE AUTHORS READ THAT PATTERN AS NO WWOX EFFECT FOR THOSE TARGETS.",
+    "snippet": "suggest no effect of WWOX on expression of certain AP-2γ targets",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33691672_Kaluzinska2021_PMC7944886_epmc.xml",
+    "anchor": "Discussion, paragraph on proliferation and AP-2 gamma targets",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SURVIVAL SUBGROUPS ARE POST HOC: eight groups of 38 to 84 patients cut at a z-score of 0, with 'chosen pairwise comparisons' tested; the headline hazard ratios (A against D 0.34, D against F 2.9) come from two chosen pairs of a possible 28.",
+    "snippet": "Kaplan–Meier plots presenting the expected duration of time until recurrence of a disease for all groups together and chosen pairwise comparisons were generated via survminer R package.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33691672_Kaluzinska2021_PMC7944886_epmc.xml",
+    "anchor": "Methods, Survival analysis",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE 6 AS DRAWN: panel a splits WWOX mRNA at the sign of the z-score into two near-equal halves; panels c and d show the two chosen pairs (A against D, log-rank p = 0.0064; D against F, p = 0.005) with step curves that cross the other six groups of panel b; no multiplicity adjustment is stated.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6a oncoprint with WWOX high and low in two near-equal halves; 6b eight survival curves; 6c group A against D log-rank p = 0.0064; 6d group D against F log-rank p = 0.005; no multiple-comparison correction stated.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33691672/12894_2021_806_Fig6_HTML.jpg",
+    "anchor": "Figure 6, image 12894_2021_806_Fig6_HTML.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "BEST-FITTING MECHANISM SENTENCE IS A HYPOTHESIS: 'WWOX modulates' AP-2 effectors is derived from clustering of public-database target lists on three group-mean expression columns; the authors themselves say they cannot conclude about AP-2 alpha.",
+    "snippet": "However, due to the lack of proper and significant bioinformatics model that will directly explain TFAP2A participation in specific biological processes, we cannot conclude about its characteristics.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33691672_Kaluzinska2021_PMC7944886_epmc.xml",
+    "anchor": "Discussion, paragraph on remaining clusters",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261124-33691672-01",
+   "reader": "orchestrator (IT successor, session 7cf5e85a), ADV-218",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "First ledger receipt for this paper. Complete read; the dye readout moves with loss of WWOX only, AP-2 gamma rises with both manipulations, and the survival subgroups are post hoc chosen pairs.",
+   "outputs": [
+    "disease-models/wwox/research/deepdive_manifests/PMID33691672.json",
+    "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/RESULT_ADV218_IT_20261124.md"
+   ]
+  }
+ ]
+}
