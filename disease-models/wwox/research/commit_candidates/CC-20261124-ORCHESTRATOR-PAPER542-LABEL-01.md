@@ -46,3 +46,9 @@ Figure-read values are approximate and stay out of the registry wording.
 (1) blind check of section 5 against the held text (fresh delegate, statements and anchors only, effort stated in the dispatch) at the time a batch is triggered; (2) one MINOR `BATCH_COMMIT` through `batch_commit.py propagate`, the four edits as record-scoped `replace-within` operations together with the other queued candidates; (3) regenerate the derived surfaces in the documented sequence (the depth-queue row follows by itself).
 
 **Not medical advice.**
+
+## BATCH DISPOSITION — `BATCH_20261124_001` (2026-11-24, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PROPAGATED
+
+4 record-scoped `replace-within` ops: `PAPER 542` `Transferability` and `Next action` (2 ops, paper registry) and `LIT-0814` `Transferability` and `Next action` (2 ops, literature tracking log); the new `Next action` sentence is the same in both. **Change class restated: MINOR** (no Status, identity, receipt, Evidence depth or LIT link changed; the grade stays T4; no claim, ranking or compound consequence). Blind check of section 5 by one fresh `legend-delegate` (sonnet, effort high, statements and anchors only, held XML, Figure 5 image and supplement): all five statements SUPPORTED. Caveats it returned, none of which enters the registry wording: (1) the paper does not say whether the siRNA is one oligo or a pool and gives no sequence (it cites an earlier paper for it); (3) 'n = 30 cells' appears only in the Fig 5 quantification legend and Supplementary Fig 4E and 4G, other panels give a different n or none, so 'per panel' in section 5 statement 3 was too broad; the registry wording says only 'unit = cells', which is supported. The numbers in the new text are the ones the candidate already carried; no figure-read value was added.
