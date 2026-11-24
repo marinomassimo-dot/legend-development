@@ -481,8 +481,11 @@ class MetadataIsNotProgress(unittest.TestCase):
             r = self.e.check([])
         self.assertEqual((r["state"], r["action"]), ("RUNNING", "NONE"), r)
 
-    def test_a_live_idle_session_keeps_its_mtime_rule(self):
-        """Out of this change's scope, pinned so it stays that way: a listed live process is not asked to prove progress by turns."""
+    def test_a_live_idle_session_is_judged_by_its_turns_too(self):
+        """The real IT59 case of 2026-11-24 (live, idle, last turn 367 min old, mtime 10 min old): it must not read RUNNING either."""
+        r = self.e.check([{"sessionId": SID, "status": "idle"}])
+        self.assertEqual((r["state"], r["action"]), ("STOPPED_RESUMABLE", "RESUME"), r)
+        self.real_turn_two_minutes_ago()
         r = self.e.check([{"sessionId": SID, "status": "idle"}])
         self.assertEqual((r["state"], r["action"]), ("RUNNING", "NONE"), r)
 

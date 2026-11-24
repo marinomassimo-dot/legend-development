@@ -23,9 +23,10 @@ State machine (derived from the mandate record, `claude agents --json`, and acti
 
   RUNNING            the session is busy, or its transcript / background tasks changed within
                      --quiet-minutes. Waiting for a subagent is running, not stopped.
-                     With NO live process behind the transcript, its mtime counts only up to
-                     its last real turn (a timestamped user or assistant entry): runtime
-                     metadata appended to the tail is not progress (ADV-206, 2026-11-24).
+                     The transcript's mtime counts only up to its last real turn (a timestamped
+                     user or assistant entry): runtime metadata appended to the tail is not
+                     progress, whether the session is absent from the listing or listed idle
+                     (ADV-206, 2026-11-24). A busy session and a live job are decided first.
   STOPPED_RESUMABLE  record verdict CONTINUE, session idle (or dead) for longer than
                      --quiet-minutes, and no request pending for the current queue state.
   PAUSED / COMPLETE  the record releases the mandate (MANDATE_STATE PAUSED / CANCELLED /
@@ -880,7 +881,7 @@ def last_activity(transcript: Path, tasks_root: Path | None = None, include_tran
     """Latest mtime of the transcript and of that session's background-task output files.
     A session calling the check on itself (the in-session cron) leaves its own transcript out:
     its turn is the request, and counting it would always read as activity.
-    `real_turns_only` (used when no live process backs the transcript): the transcript counts at its last real turn, never later than its mtime,
+    `real_turns_only`: the transcript counts at its last real turn, never later than its mtime,
     so runtime metadata written to the tail is not progress; a transcript with no timestamped turn keeps its mtime."""
     latest = 0.0
     if include_transcript:
@@ -1239,7 +1240,7 @@ def check(task: str, *, root: Path = ROOT, deliver: str = "none", quiet_minutes:
         act = last_activity(transcript, tasks_root, include_transcript=False, before=start)
         idle = (start - act) if act else None       # activity before the asking turn began
     else:
-        idle = (now - last_activity(transcript, tasks_root, real_turns_only=session is None)) if transcript else None   # no live session: metadata-only mtime is not progress
+        idle = (now - last_activity(transcript, tasks_root, real_turns_only=True)) if transcript else None   # metadata-only mtime is not progress (a busy session and a live job are decided before idle is read)
     pend = _load(task)
     jobs = summarise_jobs(load_jobs(task))
     push_missing = None
