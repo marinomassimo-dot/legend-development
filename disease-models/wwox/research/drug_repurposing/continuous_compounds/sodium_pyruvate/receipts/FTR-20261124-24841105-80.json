@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-24841105-80",
+  "event_at": "2026-11-24T05:50:40Z",
+  "analysis_at": "2026-11-24T05:50:40Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "24841105"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/sodium_pyruvate_loop_20261124/exercise.xml",
+  "source_fingerprint": "0ec14acc45a616ceb6c1193723e6f0f5232f299c60240e542c27dfad74bfb808",
+  "workflow": "Resolve oral exposure, specimen and clinical responder denominators.",
+  "evidence_basis": [
+    "Study participants and Results, Table 1 “60 min after ingestion”. Checked two phases and time effect."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/sodium_pyruvate/exposure.md"
+  ]
+}

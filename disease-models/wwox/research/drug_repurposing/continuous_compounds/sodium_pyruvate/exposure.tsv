@@ -1,0 +1,9 @@
+source	matrix	measure	value	unit
+Gibco 21331/Neurobasal	fresh basal mixture	equal-volume recipe	0.3636	mM
+Komaki p314	CSF	pretreatment	0.1374	mM
+Komaki p314	blood	pretreatment	0.1283	mM
+Komaki p314	blood	on treatment	0.0999	mM
+Fujii p136 patient 3	CSF	derived pretreatment from lactate and ratio	0.2600	mM
+Olek Table 1	capillary blood	60 min minus rest, placebo	48.0000	uM
+Olek Table 1	capillary blood	60 min minus rest, sodium pyruvate	81.0000	uM
+Olek Table 1	capillary blood	between-period difference of mean changes	33.0000	uM
