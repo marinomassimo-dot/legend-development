@@ -108,7 +108,7 @@ class TheReportClassifiesWhatItBuilt(unittest.TestCase):
 
     def test_the_totals_line_counts_the_classes(self) -> None:
         self.assertEqual("5 branches · 2 ahead-of-main commits total · 1 LAND_OVERDUE · "
-                         "1 DELETE_READY", self.report["totals"])
+                         "1 DELETE_READY · base `main` (named with --main)", self.report["totals"])
 
     def test_overdue_sorts_first(self) -> None:
         self.assertEqual(bh.LAND_OVERDUE, self.report["branches"][0]["class"])
@@ -222,6 +222,98 @@ class TheHealthyCaseIsQuiet(unittest.TestCase):
                  "--root", tmp], capture_output=True, text=True)
             self.assertEqual(2, result.returncode)
             self.assertIn("branch_hygiene:", result.stderr)
+
+
+class TheBaseIsWhereOtherActorsLanded(unittest.TestCase):
+    """2026-11-24: the root checkout's local `main` lagged `development/main` by 449 commits, so
+    the report called 25 branches LAND_OVERDUE and 7 DELETE_READY where the truth was 0 and 37.
+    The base is the furthest-ahead of local main and the remote-tracking main, says which it
+    used, and falls back to local main when there is no remote ref or it is not a descendant."""
+
+    def make(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        repo = Path(tmp.name) / "repo"
+        repo.mkdir()
+        run(["init", "-q", "-b", "main"], repo)
+        run(["config", "user.name", "hygiene-test"], repo)
+        run(["config", "user.email", "hygiene@example.invalid"], repo)
+        commit(repo, "base.txt", "base")
+        return repo
+
+    def landed_elsewhere(self, repo):
+        """A branch whose commit is already on the remote's main but not on local main."""
+        run(["checkout", "-q", "-b", "landed"], repo)
+        commit(repo, "landed.txt", "landed by another actor")
+        tip = run(["rev-parse", "HEAD"], repo).strip()
+        run(["checkout", "-q", "main"], repo)
+        return tip
+
+    def test_a_lagging_local_main_is_not_the_base(self) -> None:
+        repo = self.make()
+        tip = self.landed_elsewhere(repo)
+        run(["update-ref", "refs/remotes/development/main", tip], repo)
+        explicit = bh.build_report(repo, "main", 1, None, None)
+        auto = bh.build_report(repo, None, 1, None, None)
+        self.assertEqual("main", explicit["main"])
+        self.assertEqual("development/main", auto["main"])
+        by = {r["branch"]: r for r in auto["branches"]}
+        self.assertEqual("DELETE_READY", by["landed"]["class"])
+        self.assertEqual("MAIN", by["main"]["class"], "local main is never a task branch")
+        self.assertEqual(1, by["main"]["behind"], "how far it lags is shown, not hidden")
+        misread = {r["branch"]: r for r in explicit["branches"]}
+        self.assertNotEqual("DELETE_READY", misread["landed"]["class"],
+                            "the old base is the misreading this guards against")
+        self.assertIn("base `development/main` (local `main` is 1 commit(s) behind it)",
+                      auto["totals"])
+
+    def test_no_remote_ref_falls_back_to_local_main_and_says_so(self) -> None:
+        repo = self.make()
+        report = bh.build_report(repo, None, 1, None, None)
+        self.assertEqual("main", report["main"])
+        self.assertIn("base `main` (local; no remote-tracking main ahead of it)", report["totals"])
+
+    def test_a_remote_ref_that_is_not_a_descendant_is_ignored(self) -> None:
+        repo = self.make()
+        tip = self.landed_elsewhere(repo)
+        run(["update-ref", "refs/remotes/development/main", tip], repo)
+        commit(repo, "local-only.txt", "local main moved on")  # main now diverges from the remote
+        report = bh.build_report(repo, None, 1, None, None)
+        self.assertEqual("main", report["main"])
+
+    def test_the_furthest_ahead_remote_wins_and_origin_is_a_fallback(self) -> None:
+        repo = self.make()
+        mid = self.landed_elsewhere(repo)
+        run(["checkout", "-q", "landed"], repo)
+        commit(repo, "later.txt", "later")
+        later = run(["rev-parse", "HEAD"], repo).strip()
+        run(["checkout", "-q", "main"], repo)
+        run(["update-ref", "refs/remotes/origin/main", mid], repo)
+        self.assertEqual("origin/main", bh.build_report(repo, None, 1, None, None)["main"])
+        run(["update-ref", "refs/remotes/development/main", later], repo)
+        self.assertEqual("development/main", bh.build_report(repo, None, 1, None, None)["main"])
+
+    def test_a_named_base_wins(self) -> None:
+        repo = self.make()
+        tip = self.landed_elsewhere(repo)
+        run(["update-ref", "refs/remotes/development/main", tip], repo)
+        report = bh.build_report(repo, "main", 1, None, None)
+        self.assertEqual("main", report["main"])
+        self.assertIn("named with --main", report["totals"])
+
+    def test_the_command_line_and_json_say_which_base_was_used(self) -> None:
+        repo = self.make()
+        tip = self.landed_elsewhere(repo)
+        run(["update-ref", "refs/remotes/development/main", tip], repo)
+        script = str(ROOT / "framework" / "scripts" / "branch_hygiene.py")
+        text = subprocess.run([sys.executable, script, "--root", str(repo)],
+                              capture_output=True, text=True)
+        self.assertEqual(0, text.returncode, text.stderr)
+        self.assertIn("Compared with: base `development/main`", text.stdout)
+        data = json.loads(subprocess.run([sys.executable, script, "--root", str(repo), "--json"],
+                                         capture_output=True, text=True).stdout)
+        self.assertEqual("development/main", data["main"])
+        self.assertIn("development/main", data["base_note"])
 
 
 if __name__ == "__main__":

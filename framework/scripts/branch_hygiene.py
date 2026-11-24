@@ -108,6 +108,53 @@ def worktrees(root: Path) -> List[Dict[str, object]]:
     return out
 
 
+REMOTE_BASES = ("development/main", "origin/main")
+
+
+def _ref_exists(root: Path, ref: str) -> bool:
+    try:
+        git(["rev-parse", "--verify", "-q", ref], root)
+        return True
+    except GitError:
+        return False
+
+
+def _is_ancestor(root: Path, older: str, newer: str) -> bool:
+    try:
+        git(["merge-base", "--is-ancestor", older, newer], root)
+        return True
+    except GitError:
+        return False
+
+
+def resolve_base(root: Path, requested: Optional[str] = None) -> Dict[str, str]:
+    """The integration ref the report compares with, and a sentence saying which and why.
+
+    The root checkout's local `main` is not what other actors landed on: it lags whenever
+    nobody updated it, and on 2026-11-24 it was 449 commits behind `development/main`, so the
+    report called 25 branches LAND_OVERDUE and 7 DELETE_READY where the truth was 0 and 37.
+    Unless a base is named, the base is the furthest-ahead of local `main` and the
+    remote-tracking `development/main` / `origin/main` along one line of history; a remote
+    ref that is not a descendant of the base (a diverged or unpushed local `main`) is ignored,
+    and with no remote ref at all the base is local `main`, exactly as before."""
+    if requested:
+        return {"ref": requested, "note": f"base `{requested}` (named with --main)"}
+    best = "main" if _ref_exists(root, "main") else ""
+    for cand in REMOTE_BASES:
+        if not _ref_exists(root, f"refs/remotes/{cand}"):
+            continue
+        if not best or _is_ancestor(root, best, f"refs/remotes/{cand}"):
+            best = cand
+    if not best:
+        return {"ref": "main", "note": "base `main` (no local or remote-tracking main found)"}
+    if best == "main":
+        return {"ref": "main", "note": "base `main` (local; no remote-tracking main ahead of it)"}
+    if _ref_exists(root, "main"):
+        lag = git(["rev-list", "--count", f"main..{best}"], root).strip()
+        return {"ref": best, "note": f"base `{best}` (local `main` is {lag} commit(s) behind it)"}
+    return {"ref": best, "note": f"base `{best}` (there is no local `main`)"}
+
+
 def branches(root: Path, main: str, now: dt.datetime) -> List[Dict[str, object]]:
     rows: List[Dict[str, object]] = []
     listing = git(["for-each-ref", "--format=%(refname:short)%09%(committerdate:iso-strict)",
@@ -125,6 +172,12 @@ def branches(root: Path, main: str, now: dt.datetime) -> List[Dict[str, object]]
         age_days = int(age_seconds // 86400)
         if name == main:
             behind = ahead = 0
+        elif name == "main":
+            # The local integration branch when the base is a remote-tracking ref: it is
+            # never a task branch, but how far it lags is the reason the base was chosen.
+            counts = git(["rev-list", "--left-right", "--count", f"{main}...{name}"], root)
+            left, _, right = counts.strip().partition("\t")
+            behind, ahead = int(left or 0), int(right or 0)
         else:
             counts = git(["rev-list", "--left-right", "--count", f"{main}...{name}"], root)
             left, _, right = counts.strip().partition("\t")
@@ -141,7 +194,7 @@ def classify(rows: List[Dict[str, object]], trees: List[Dict[str, object]],
     for row in rows:
         name = str(row["branch"])
         row["checked_out_at"] = checked_out.get(name)
-        if name == main:
+        if name == main or name == "main":
             row["class"] = MAIN
         elif name.startswith("backup/"):
             # Preserved history is not a task awaiting landing. Keep its divergence and
@@ -197,8 +250,9 @@ def worktree_state(tree: Dict[str, object]) -> str:
 
 
 def render_markdown(root: Path, rows: List[Dict[str, object]],
-                    trees: List[Dict[str, object]], max_age_days: int) -> str:
+                    trees: List[Dict[str, object]], max_age_days: int, base_note: str = "") -> str:
     lines = [f"# Branch hygiene — {root}", "",
+             *([f"Compared with: {base_note}.", ""] if base_note else []),
              f"Rule: LEGEND_CORE §21e · a branch ahead of `main` for more than "
              f"{max_age_days} day(s) is LAND_OVERDUE.", "",
              "`backup/*` refs preserve history: their divergence stays visible, but they are "
@@ -224,9 +278,11 @@ def render_markdown(root: Path, rows: List[Dict[str, object]],
     return "\n".join(lines)
 
 
-def build_report(root: Path, main: str, max_age_days: int, include: Optional[str],
+def build_report(root: Path, main: Optional[str], max_age_days: int, include: Optional[str],
                  exclude: Optional[str], now: Optional[dt.datetime] = None) -> Dict[str, object]:
     now = now or dt.datetime.now(dt.timezone.utc)
+    base = resolve_base(root, main)
+    main = base["ref"]
     trees = worktrees(root)
     rows = branches(root, main, now)
     if include:
@@ -234,15 +290,19 @@ def build_report(root: Path, main: str, max_age_days: int, include: Optional[str
     if exclude:
         rows = [r for r in rows if not re.search(exclude, str(r["branch"])) or r["branch"] == main]
     rows = classify(rows, trees, main, max_age_days)
-    return {"root": str(root), "main": main, "max_age_days": max_age_days,
+    return {"root": str(root), "main": main, "base_note": base["note"],
+            "max_age_days": max_age_days,
             "generated": now.isoformat(), "branches": rows, "worktrees": trees,
-            "totals": totals_line(rows), "landing_recipe": landing_recipe(root)}
+            "totals": totals_line(rows) + f" · {base['note']}", "landing_recipe": landing_recipe(root)}
 
 
 def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--root", default=".", help="any path inside the repository")
-    parser.add_argument("--main", default="main", help="the integration branch (default: main)")
+    parser.add_argument("--main", default=None,
+                        help="the integration ref (default: the furthest-ahead of local main and "
+                             "the remote-tracking development/main or origin/main; the report "
+                             "says which it used)")
     parser.add_argument("--max-age-days", type=int, default=1,
                         help="a branch ahead of main and older than this is LAND_OVERDUE")
     parser.add_argument("--include-pattern", default=None, help="regex; keep matching branches")
@@ -260,7 +320,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         print(json.dumps(report, indent=2))
     else:
         print(render_markdown(root, list(report["branches"]), list(report["worktrees"]),
-                              args.max_age_days))
+                              args.max_age_days, str(report["base_note"])))
     return 0
 
 
