@@ -914,13 +914,12 @@
     },
     {
      "step": "launch SCI successor AC (old ff316249), bind, handoff, rename",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message 2026-11-23 (SCI successor launch, checkpoint AC digest 28b0c7d3)",
      "accepted_at": "2026-11-23T12:41:34Z",
-     "blocker": "Auto-mode classifier refused the claude --bg launch on 2026-11-24 evening ([Destructive or Unwanted Actions]) although the operator's instruction is on main verbatim (4371d8963); ADV told the operator, no answer yet. SCI continues ADV-210 in its own window by ADV's direction.",
-     "no_condition": "needs an operator permission rule or explicit go for claude --bg launches from this session; no file or commit can unblock it",
-     "updated_at": "2026-11-24T19:36:12Z"
+     "updated_at": "2026-11-24T22:04:59Z",
+     "evidence": "Launched by ADV 22:00:08Z (session 7fc66b5b, my brief); old ff316249 reported closed and released; handoff ELIGIBLE then BOUND 22:02:42Z; rename proved with claude agents --all --json: SCI - PREVIOUS ff316249 / SCI - CURRENT 7fc66b5b"
     },
     {
      "step": "ADV-201 ketamine report pilot, rendering side (renderer and one pilot PDF in report_pilot_ketamine_20261123/render/)",
@@ -978,13 +977,12 @@
     },
     {
      "step": "launch IT successor (old 748d7ec5, checkpoint 11 plus checkpoint 12), bind, handoff, rename",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message 2026-11-24 evening (ADV-211 delivery) under the operator instruction recorded verbatim on main, commit 4371d8963",
      "accepted_at": "2026-11-24T18:42:04Z",
-     "blocker": "Auto-mode classifier refused the claude --bg launch on 2026-11-24 evening ([Destructive or Unwanted Actions]) although the operator's instruction is on main verbatim (4371d8963); ADV told the operator, no answer yet. SCI continues ADV-210 in its own window by ADV's direction.",
-     "no_condition": "needs an operator permission rule or explicit go for claude --bg launches from this session; no file or commit can unblock it",
-     "updated_at": "2026-11-24T19:36:12Z"
+     "updated_at": "2026-11-24T22:04:59Z",
+     "evidence": "Launched by ADV 22:00:36Z (session 7cf5e85a, my brief); old 748d7ec5 wrote MANDATE_RELEASED; handoff RUNNING, BOUND 22:02:23Z; rename proved with claude agents --all --json: IT Orchestrator - PREVIOUS 748d7ec5 / IT Orchestrator - CURRENT 7cf5e85a"
     }
    ]
   }
