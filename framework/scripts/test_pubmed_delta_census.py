@@ -116,7 +116,7 @@ class TheDelta(unittest.TestCase):
 
 class TheTransport(unittest.TestCase):
     def test_the_request_carries_no_email_and_no_key_whatever_the_environment_holds(self):
-        with mock.patch.dict(os.environ, {"NCBI_EMAIL": "someone@example.org",
+        with mock.patch.dict(os.environ, {"NCBI_EMAIL": "contact-token-for-the-test",
                                           "NCBI_API_KEY": "secret-key"}):
             seen = []
 
@@ -126,7 +126,7 @@ class TheTransport(unittest.TestCase):
             self.assertEqual(pdc.fetch_pmids("WWOX", fake, lambda s: None),
                              {"40000001", "40000002", "1234567"})
         self.assertEqual(len(seen), 1)
-        for forbidden in ("email", "someone", "api_key", "secret"):
+        for forbidden in ("email", "contact-token", "api_key", "secret"):
             self.assertNotIn(forbidden, seen[0].lower())
         self.assertIn("retmax=10000", seen[0])
         self.assertNotIn("efetch", seen[0])
