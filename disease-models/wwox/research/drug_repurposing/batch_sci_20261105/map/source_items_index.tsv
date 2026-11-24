@@ -157,8 +157,8 @@ IT30 step S14	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S14	primary
 CQ-IT30-01	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv	IT30-CQ1	primary		
 CQ-IT30-02	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv	IT30-CQ2	primary		
 CQ-IT30-03	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv	IT30-CQ3	primary		
-CQ-IT30-04	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv	IT30-CQ4	primary		
-CQ-IT30-05	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv	IT30-CQ5	primary		
+CQ-IT30-05	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv	IT30-CQ4	primary	renumbered on main by 8b01ff1da; pinned id was CQ-IT30-04	
+CQ-IT30-06	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv	IT30-CQ5	primary	renumbered on main by 8b01ff1da; pinned id was CQ-IT30-05	
 roadmap R1	roadmap_current.md Work order table	RM-R1	primary		
 roadmap R3	roadmap_current.md Work order table	RM-R3	primary		
 roadmap R4	roadmap_current.md Work order table	RM-R4	primary		
@@ -215,3 +215,7 @@ needs.json NEED-WWOX-ENDOGENOUS-BOOST	needs/needs.json		not_a_question	allele-de
 this batch: BRIEF_A1/A2 (CH-SB-CONCORDANCE)	batch_sci_20261105/BRIEF_A1.md BRIEF_A2.md	WO-19	primary		
 this batch: BRIEF_B1 (CH-SB-VGB-WHITEMATTER)	batch_sci_20261105/BRIEF_B1.md	WO-26	primary		
 this batch: BRIEF_R1/R2 (CH-SB-POSTONSET-RESTORATION)	batch_sci_20261105/BRIEF_R1.md BRIEF_R2.md	WO-01	primary		
+CQ-IT30-04	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv (on main)	IT30-CQ6	primary	added 2026-11-24	
+CQ-IT30-07	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv (on main)	IT30-CQ7	primary	added 2026-11-24	
+CQ-IT30-08	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv (on main)	IT30-CQ8	primary	added 2026-11-24	
+CQ-IT30-09	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv (on main)	IT30-CQ9	primary	added 2026-11-24	
