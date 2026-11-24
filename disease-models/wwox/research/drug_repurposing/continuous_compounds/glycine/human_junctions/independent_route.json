@@ -1,0 +1,16 @@
+[
+  {
+    "status": 403,
+    "message": "{\"errorMessage\":\"Study not accessible\"}",
+    "role": "WWOX",
+    "url": "https://www.ebi.ac.uk/biostudies/api/v1/studies/E-MTAB-14792",
+    "accessed": "2026-11-24T12:43:21.379784+00:00"
+  },
+  {
+    "status": 200,
+    "accession_returned": "E-MTAB-2836",
+    "role": "public_control",
+    "url": "https://www.ebi.ac.uk/biostudies/api/v1/studies/E-MTAB-2836",
+    "accessed": "2026-11-24T12:43:21.502234+00:00"
+  }
+]
