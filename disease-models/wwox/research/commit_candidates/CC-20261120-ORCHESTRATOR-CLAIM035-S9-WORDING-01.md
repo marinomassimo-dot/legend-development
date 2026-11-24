@@ -45,3 +45,8 @@ Check 1: `research/locator_audits/2026-11-20_claim035_wording_it59/AUDIT_REPORT_
 
 1 record-scoped op on `CLAIM 035`: the additive Evidence-boundary field (B1 to B6 and the unchanged D6 use constraint). **Change class restated: MINOR** (additive; Status, Type, Source, Title, Summary, Clinical meaning and the S9-independence assertion untouched; 'in observation'; no baseline reversal). Part 2 (G1 Title, G4 S9 sentence, G6 Clinical-meaning warning) is **class MAJOR under the D6 ruling of the claim** and stays PROPOSED; the three small repairs of section 4 after check 2 are unaudited and narrowing only. LINT after propagation: no BLOCK (WARN as before). Ranking digest `ff38fcaa61295a5a` to be re-checked after the derived pages are regenerated.
 
+## BATCH DISPOSITION — `BATCH_20261124_001` (2026-11-24, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PART 2 STAYS PROPOSED (stays queued)
+
+Part 1 was propagated in `BATCH_20261120_001`. Part 2 (rewording of Title, Summary, Clinical meaning and the S9-independence assertion) is class MAJOR under the claim's own D6 ruling and is a reserved item for the operator; the operator's text of 2026-11-24 does not widen that. Nothing to propagate here.

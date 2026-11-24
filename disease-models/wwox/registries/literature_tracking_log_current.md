@@ -21838,12 +21838,12 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none for this gene — Golgi CATCHR complexes as hubs for vesicle tethering and fusion
-**Transferability:** T4 — NOT WWOX EVIDENCE
+**Transferability:** T4 — WWOX perturbation present (one siRNA, hTERT-RPE1 cells, unit = cells, no rescue or second reagent); controls missing; ambiguity kept visible (SCI ADV-205; see [[paper_registry_current#PAPER 542]])
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
 **Claim links:** none
 **Working Model impact:** none
 **Report mentions:** the research or analysis note(s) named by its receipt
-**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**Next action:** none now; revival condition (ADV-205): a second independent siRNA or a knockout with the lectin readout in independent experiments, a rescue, or a published version adding them would move this to direct controlled WWOX perturbation evidence in a non-neural context
 **Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260921-42523332-01`; landing [[paper_registry_current#PAPER 542]]
 **Note:** class-level record. Not medical advice.
 

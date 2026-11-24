@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261120_002
-last_batch_commit_date: 2026-11-20
+last_batch_commit_id: BATCH_20261124_001
+last_batch_commit_date: 2026-11-24
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 1
+commit_candidates_propagated: 2
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV's word for part 1 YES, part 2 stays the operator's). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: ONE candidate, PART 1 ONLY (CC-20261120-ORCHESTRATOR-WM103-DOSE-WORDING-01): three dated notes appended after working-model lines 103, 148 and 251 (3 record-scoped replace-within ops, each original sentence kept byte for byte, each new line proved to be the old line plus the note), after two blind checks (16 statements, then 4 with one overshoot repaired in the wording of the verifier); pathograph surface regenerated. Part 2 (class MAJOR: rewording of the three sentences; the coordinated change of the CLAIM 011 Title and flag and of the BLOCK 2 row 011 is a separate candidate) stays PROPOSED and is a reserved item for the operator. The previous batch text follows only as history in state_history.
+trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV-212, candidate backlog at the trigger of five). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: TWO candidates propagated, CC-20261124-ORCHESTRATOR-PAPER542-LABEL-01 (4 record-scoped ops: PAPER 542 and LIT-0814 Transferability and Next action, after one blind check, five statements all SUPPORTED) and CC-20261121-ORCHESTRATOR-ADV140-FIG6-WORDING-01 (3 record-scoped ops: CLAIM 002 wave note and PAPER 094 clinical relevance). Left queued with the reason recorded in each file: CC-20260826-PROVENANCE-01 (the CLAIM 002 Source repoint, MAJOR by consequence, audit-gated), CC-20261120-ORCHESTRATOR-CLAIM035-S9-WORDING-01 and CC-20261120-ORCHESTRATOR-WM103-DOSE-WORDING-01 (part 2 of each is the operator's reserved item). The previous batch text follows only as history in state_history.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,8 +126,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261120_BATCH_20261120_002
-last_lint_date: 2026-11-20
+last_lint_id: LINT_20261124_BATCH_20261124_001
+last_lint_date: 2026-11-24
 last_lint_result: WARN
 ```
 
