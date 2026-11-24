@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-29621776-81",
+  "event_at": "2026-11-24T06:28:39Z",
+  "analysis_at": "2026-11-24T06:28:39Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "29621776"
+  },
+  "prior_receipt": "FTR-20261124-29621776-80",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://d-nb.info/1157006043/34",
+  "source_fingerprint": null,
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Fig. 6 caption, “Formation of MG-H1”; six-hour tubular-cell challenge and Discussion on cellular MG-H1. Earlier receipt covered the chemistry and MTT comparison."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_carnosine/kinetics.md"
+  ]
+}

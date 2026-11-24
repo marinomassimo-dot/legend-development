@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-40647235-81",
+  "event_at": "2026-11-24T06:28:39Z",
+  "analysis_at": "2026-11-24T06:28:39Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "40647235"
+  },
+  "prior_receipt": "FTR-20261124-40647235-80",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/l_carnosine_loop_20261124/oral.xml",
+  "source_fingerprint": "082a48184ce7b5c87e3554c1e74944f53f301acaaa068c1235e09601674f554f",
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Statistical analysis, “subtracting the baseline”; Table 4 separate carnosine and histidine AUC blocks for all four oral arms. Prior question concerned peak exposure and spectroscopy."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_carnosine/kinetics.md"
+  ]
+}

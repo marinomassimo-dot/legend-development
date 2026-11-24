@@ -1,0 +1,17 @@
+adult_arm	reactant	aldehyde	k_per_M_s	incremental_AUC_uM_h	k_times_AUC	model_incremental_loss_percent	half_time_at_1mM_min
+4 g	carnosine	4-HNE	0.048	39.6	0.006843	0.682	240.68
+4 g	carnosine	Acrolein	0.51	39.6	0.072706	7.013	22.65
+6 g	carnosine	4-HNE	0.048	113.0	0.019526	1.934	240.68
+6 g	carnosine	Acrolein	0.51	113.0	0.207468	18.736	22.65
+10 g	carnosine	4-HNE	0.048	450.6	0.077864	7.491	240.68
+10 g	carnosine	Acrolein	0.51	450.6	0.827302	56.277	22.65
+15 g	carnosine	4-HNE	0.048	762.1	0.131691	12.339	240.68
+15 g	carnosine	Acrolein	0.51	762.1	1.399216	75.321	22.65
+4 g	histidine	4-HNE	0.0017	456.7	0.002795	0.279	6795.56
+4 g	histidine	Acrolein	0.14	456.7	0.230177	20.561	82.52
+6 g	histidine	4-HNE	0.0017	786.9	0.004816	0.480	6795.56
+6 g	histidine	Acrolein	0.14	786.9	0.396598	32.740	82.52
+10 g	histidine	4-HNE	0.0017	1256.0	0.007687	0.766	6795.56
+10 g	histidine	Acrolein	0.14	1256.0	0.633024	46.902	82.52
+15 g	histidine	4-HNE	0.0017	1791.0	0.010961	1.090	6795.56
+15 g	histidine	Acrolein	0.14	1791.0	0.902664	59.451	82.52
