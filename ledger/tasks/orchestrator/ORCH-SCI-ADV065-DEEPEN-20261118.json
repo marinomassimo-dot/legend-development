@@ -876,6 +876,13 @@
      "accepted_at": "2026-11-24T19:07:21Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv213_unmapped_phenotypes_sci_20261124/RESULT_ADV213_UNMAPPED_PHENOTYPES_SCI_20261124.md: 16-class map, 3 ranked gaps, recommend S1 GSK3B-Tau limb, drop G1, shared anchor across the 58",
      "updated_at": "2026-11-24T19:11:31Z"
+    },
+    {
+     "step": "ADV-214: GSK3B-Tau limb, one held-table search (phospho-protein versus RNA-only), plus standalone note on the shared measurement anchor",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-214 (ADV direction message 2026-11-24; assignments/ADV-214.md; operator verbatim text in meetings/MEETING-20261121T113510Z-83lyojx8.md)",
+     "accepted_at": "2026-11-24T19:24:32Z"
     }
    ]
   }
@@ -1550,6 +1557,13 @@
    "at": "2026-11-24T19:07:21Z",
    "source": "ADV-213 (ADV direction message 2026-11-24; assignments/ADV-213.md; operator verbatim text in meetings/MEETING-20261121T113510Z-83lyojx8.md)",
    "step_sha256": "0a2cc0e66b1e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T19:24:32Z",
+   "source": "ADV-214 (ADV direction message 2026-11-24; assignments/ADV-214.md; operator verbatim text in meetings/MEETING-20261121T113510Z-83lyojx8.md)",
+   "step_sha256": "f9522691388b",
    "reopened_block": false,
    "authorised_by": null
   }
