@@ -440,6 +440,72 @@ class Jobs(unittest.TestCase):
         self.assertEqual((paused["state"], paused["action"]), ("PAUSED", "NONE"))
 
 
+class MetadataIsNotProgress(unittest.TestCase):
+    """ADV-206 (Codex review 22): runtime metadata appended to a transcript's tail moves its mtime with nobody working. With no live process behind the
+    transcript that is not progress; a live busy session, a live job, a real recent turn and the pending-request grace still are."""
+
+    def setUp(self):
+        self.e = Env(record())
+        iso = lambda t: time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(t))
+        self.iso = iso
+        lines = [{"type": "assistant", "cwd": "/work/dir", "timestamp": iso(NOW - 5 * 3600), "message": {"content": [{"type": "text", "text": f"MANDATE_BOUND: {TASK}"}]}},
+                 {"type": "assistant", "timestamp": iso(NOW - 5 * 3600 + 30), "message": {"content": [{"type": "text", "text": "last real turn"}]}},
+                 # what the runtime writes afterwards: timestamped queue record, untimestamped title/cost/bridge records
+                 {"type": "queue-operation", "timestamp": iso(NOW - 120)}, {"type": "custom-title", "customTitle": "IT"}, {"type": "cost-state"}, {"type": "last-prompt"}]
+        self.e.tr.write_text("".join(json.dumps(x) + "\n" for x in lines))
+        os.utime(self.e.tr, (NOW - 120, NOW - 120))                    # metadata moved the mtime two minutes ago
+
+    def tearDown(self):
+        self.e.close()
+
+    def real_turn_two_minutes_ago(self):
+        with self.e.tr.open("a") as fh:
+            fh.write(json.dumps({"type": "assistant", "timestamp": self.iso(NOW - 120), "message": {"content": [{"type": "text", "text": "working"}]}}) + "\n")
+        os.utime(self.e.tr, (NOW - 120, NOW - 120))
+
+    def test_the_four_outcomes(self):
+        # 1. no live session, no live job, metadata-only mtime: the quiet threshold must not hide the stop
+        r = self.e.check([])
+        self.assertEqual((r["state"], r["action"]), ("STOPPED_RESUMABLE", "RESUME"), r)
+        # 2. the same, with a real turn two minutes ago (a listing that cannot see the process): still RUNNING
+        self.real_turn_two_minutes_ago()
+        r = self.e.check([])
+        self.assertEqual((r["state"], r["action"]), ("RUNNING", "NONE"), r)
+        # 3. a live busy session over a metadata-only transcript
+        self.e.close()
+        self.setUp()
+        r = self.e.check([{"sessionId": SID, "status": "busy"}])
+        self.assertEqual((r["state"], r["action"]), ("RUNNING", "NONE"), r)
+        # 4. a known live job with no live session
+        with mock.patch.object(mw, "load_jobs", return_value=[{"state": "ALIVE", "label": "battery", "pid": 1}]):
+            r = self.e.check([])
+        self.assertEqual((r["state"], r["action"]), ("RUNNING", "NONE"), r)
+
+    def test_a_live_idle_session_is_judged_by_its_turns_too(self):
+        """The real IT59 case of 2026-11-24 (live, idle, last turn 367 min old, mtime 10 min old): it must not read RUNNING either."""
+        r = self.e.check([{"sessionId": SID, "status": "idle"}])
+        self.assertEqual((r["state"], r["action"]), ("STOPPED_RESUMABLE", "RESUME"), r)
+        self.real_turn_two_minutes_ago()
+        r = self.e.check([{"sessionId": SID, "status": "idle"}])
+        self.assertEqual((r["state"], r["action"]), ("RUNNING", "NONE"), r)
+
+    def test_the_startup_grace_and_pending_suppression_are_unchanged(self):
+        mw._save(TASK, {"requested_at": NOW - 120, "signature": mw.mc._queue_signature(self.e.root, mw.mc.status_for(self.e.root, TASK).get("record")), "session": SID})
+        r = self.e.check([])
+        self.assertEqual((r["state"], r["action"]), ("STOPPED_RESUMABLE", "NONE"), r)
+        self.assertIn("pending", r["why"])
+
+    def test_a_transcript_without_a_timestamped_turn_keeps_its_mtime(self):
+        self.e.tr.write_text(json.dumps({"type": "assistant", "message": {"content": [{"type": "text", "text": f"MANDATE_BOUND: {TASK}"}]}}) + "\n")
+        os.utime(self.e.tr, (NOW - 120, NOW - 120))
+        self.assertEqual(self.e.check([])["state"], "RUNNING")
+
+    def test_last_real_turn_reads_back_across_blocks_and_skips_metadata(self):
+        self.assertEqual(mw.last_real_turn(self.e.tr), NOW - 5 * 3600 + 30)
+        self.assertEqual(mw.last_real_turn(self.e.tr, block=40), NOW - 5 * 3600 + 30)       # lines cut by every block boundary
+        self.assertIsNone(mw.last_real_turn(self.e.tr.with_name("absent.jsonl")))
+
+
 class BusyIsNotProgress(unittest.TestCase):
     """IT39: a session reported busy while its record still lists authorised work must say so (a session that stopped to wait on a monitor read 'session busy' as progress)."""
 

@@ -23,6 +23,10 @@ State machine (derived from the mandate record, `claude agents --json`, and acti
 
   RUNNING            the session is busy, or its transcript / background tasks changed within
                      --quiet-minutes. Waiting for a subagent is running, not stopped.
+                     The transcript's mtime counts only up to its last real turn (a timestamped
+                     user or assistant entry): runtime metadata appended to the tail is not
+                     progress, whether the session is absent from the listing or listed idle
+                     (ADV-206, 2026-11-24). A busy session and a live job are decided first.
   STOPPED_RESUMABLE  record verdict CONTINUE, session idle (or dead) for longer than
                      --quiet-minutes, and no request pending for the current queue state.
   PAUSED / COMPLETE  the record releases the mandate (MANDATE_STATE PAUSED / CANCELLED /
@@ -841,14 +845,52 @@ def turn_start(transcript: Path) -> float | None:
     return last
 
 
-def last_activity(transcript: Path, tasks_root: Path | None = None, include_transcript: bool = True, before: float | None = None) -> float:
+def last_real_turn(transcript: Path, block: int = 1 << 20) -> float | None:
+    """Epoch time of the latest `user` or `assistant` entry that carries a timestamp: a real turn (a message, a tool call or its result).
+    The runtime also appends title, mode, cost, bridge and queue records to the tail, and those move the file's mtime with nobody working
+    (measured 2026-11-24: IT59 and SCI65 read 'active 2 min ago' on a last turn five hours old). Read backwards in blocks; None when none is found."""
+    try:
+        with transcript.open("rb") as fh:
+            pos = fh.seek(0, os.SEEK_END)
+            carry = b""
+            while pos > 0:
+                step = min(block, pos)
+                pos -= step
+                fh.seek(pos)
+                lines = (fh.read(step) + carry).split(b"\n")
+                carry = lines[0] if pos > 0 else b""        # the first line of a block may be cut: it is completed by the next block back
+                for raw in reversed(lines[1:] if pos > 0 else lines):
+                    if b'"user"' not in raw and b'"assistant"' not in raw:
+                        continue
+                    try:
+                        e = json.loads(raw)
+                    except ValueError:
+                        continue
+                    ts = e.get("timestamp") if isinstance(e, dict) and e.get("type") in ("user", "assistant") else None
+                    if isinstance(ts, str):
+                        try:
+                            return datetime.fromisoformat(ts.replace("Z", "+00:00")).timestamp()
+                        except ValueError:
+                            continue
+    except OSError:
+        pass
+    return None
+
+
+def last_activity(transcript: Path, tasks_root: Path | None = None, include_transcript: bool = True, before: float | None = None, real_turns_only: bool = False) -> float:
     """Latest mtime of the transcript and of that session's background-task output files.
     A session calling the check on itself (the in-session cron) leaves its own transcript out:
-    its turn is the request, and counting it would always read as activity."""
+    its turn is the request, and counting it would always read as activity.
+    `real_turns_only`: the transcript counts at its last real turn, never later than its mtime,
+    so runtime metadata written to the tail is not progress; a transcript with no timestamped turn keeps its mtime."""
     latest = 0.0
     if include_transcript:
         try:
             latest = transcript.stat().st_mtime
+            if real_turns_only:
+                turn = last_real_turn(transcript)
+                if turn is not None:
+                    latest = min(latest, turn)
         except OSError:
             pass
     sid = transcript.stem
@@ -1198,7 +1240,7 @@ def check(task: str, *, root: Path = ROOT, deliver: str = "none", quiet_minutes:
         act = last_activity(transcript, tasks_root, include_transcript=False, before=start)
         idle = (start - act) if act else None       # activity before the asking turn began
     else:
-        idle = (now - last_activity(transcript, tasks_root)) if transcript else None
+        idle = (now - last_activity(transcript, tasks_root, real_turns_only=True)) if transcript else None   # metadata-only mtime is not progress (a busy session and a live job are decided before idle is read)
     pend = _load(task)
     jobs = summarise_jobs(load_jobs(task))
     push_missing = None
