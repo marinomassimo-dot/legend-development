@@ -879,10 +879,12 @@
     },
     {
      "step": "ADV-214: GSK3B-Tau limb, one held-table search (phospho-protein versus RNA-only), plus standalone note on the shared measurement anchor",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-214 (ADV direction message 2026-11-24; assignments/ADV-214.md; operator verbatim text in meetings/MEETING-20261121T113510Z-83lyojx8.md)",
-     "accepted_at": "2026-11-24T19:24:32Z"
+     "accepted_at": "2026-11-24T19:24:32Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv214_gsk3b_tau_held_tables_sci_20261124/RESULT_ADV214_GSK3B_TAU_HELD_TABLES_SCI_20261124.md: disposition (b) with searched-tables list; no held phospho-protein table; Zeng proteome total GSK3B unchanged; shared-anchor note delivered",
+     "updated_at": "2026-11-24T19:44:47Z"
     }
    ]
   }
