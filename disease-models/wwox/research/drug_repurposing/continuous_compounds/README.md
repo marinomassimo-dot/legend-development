@@ -54,7 +54,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: sulforaphane.** SLC7A11 falls across all three untreated tissues, while ligase subunits diverge. In a separate pediatric trial, plasma exposure was detectable and glutathione redox ratios fell. Next compare parent and conjugates over time against cystine supply, astrocyte dependence and neuronal recovery. [Baseline comparison and prediction](sulforaphane/README.md)
+**Active compound: sulforaphane.** Adult serial CSF and mouse tissue measurements constrain the parent exposure. A regional human GSH signal and a possible astrocyte sulfur bypass leave a transient mechanism open. Conditioned rat astrocyte medium supports neuronal survival. A developmental valproate study reports a mouse firing response and an inconclusive human functional comparison. Next check donor-medium carryover and whether published treatment contrasts can distinguish a WWOX-relevant sulfur response from a valproate interaction. Pediatric trial priority remains low. [Exposure, WWOX bypass test and discriminating prediction](sulforaphane/exposure.md)
 
 **Gabapentin parked for trial prioritization.** WWOX cortical miniature currents, a rat injury model and a sensory–spinal TSP4 comparison do not establish selective reduction of excess new recurrent contacts with interneuron recruitment preserved. [Disposition and reopening criterion](gabapentin/recipient.md)
 

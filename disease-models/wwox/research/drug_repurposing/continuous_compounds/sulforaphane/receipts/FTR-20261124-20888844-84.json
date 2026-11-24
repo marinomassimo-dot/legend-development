@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-20888844-84",
+  "event_at": "2026-11-24T07:12:03Z",
+  "analysis_at": "2026-11-24T07:12:03Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "20888844"
+  },
+  "prior_receipt": "FTR-20261112-20888844-73",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "https://pubmed.ncbi.nlm.nih.gov/20888844/",
+  "source_fingerprint": null,
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Abstract “more than 20 h” for glutathione and peroxide clearance after four-hour astrocyte stimulation. Earlier laboratory coverage concerned NRF2 loss. No full-text access claimed."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/sulforaphane/exposure.md"
+  ]
+}

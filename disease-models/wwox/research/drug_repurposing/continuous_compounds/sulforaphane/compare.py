@@ -8,6 +8,6 @@ from screen import run as bulk
 from cell_types import run as nuclei
 
 files, out = map(Path, sys.argv[1:])
-genes = 'Nfe2l2 Keap1 Gclc Gclm Gss Nqo1 Slc7a11'.split()
+genes = 'Nfe2l2 Keap1 Gclc Gclm Gss Nqo1 Slc7a11 Cbs Cth Slc1a1 Abcc1'.split()
 bulk(files, target_genes=genes, output=out/'bulk.tsv', missing_value='NA')
 nuclei(files, genes=genes, output_dir=out)
