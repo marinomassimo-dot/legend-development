@@ -8628,3 +8628,12 @@ unread reference supports any statement. **Nothing here is evidence.** Whoever n
 **Next action:** none; reopen only if a WWOX-deficient neural culture isotope-tracing design is drafted and needs the assay precedent.
 
 ---
+
+## FT-208
+**Paper:** PMID 42991897 — Lai 2026, nucleotide-resolved gnomAD v4.1.1 comparison of ClinVar pathogenic and likely pathogenic variants of 199 epilepsy genes between East Asian and non-Finnish European populations (Front Genet; CC BY; four WWOX alleles among 17 enriched variants; not a WWOX-directed study)
+**Priority:** LOW
+**Why:** surfaced by the ADV-215 PubMed delta intake; ADV-218 asked whether any allele frequency bears on a registry statement about the reference genotype class or penetrance. Answer: none does (no registry sentence quotes a frequency for the four alleles; the paper offers no penetrance estimate).
+**Current status:** ✅ complete read — receipt `FTR-20261124-42991897-01` (2026-11-24, task ORCH-ROADMAP-IT59-20261119, ADV-218); work manifest `deepdive_manifests/PMID42991897.json`; result `drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/RESULT_ADV218_IT_20261124.md`. The CORPUS-STUB candidate of ADV-215 (`CC-20261124-ORCHESTRATOR-ADV215-CORPUS-STUBS-01`, row 2) is still queued for the next batch.
+**Next action:** none; reopen if a homozygote count or a gene-level frequency specification for WWOX is needed (the paper reports no homozygote counts).
+
+---

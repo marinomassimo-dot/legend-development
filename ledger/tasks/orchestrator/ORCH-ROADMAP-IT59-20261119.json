@@ -295,10 +295,19 @@
     },
     {
      "step": "ADV-215: PubMed WWOX delta intake (triage of PMIDs absent from the repository, abstract-level sweep, top 5 free full text, count true misses vs false absent)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message 2026-11-24 22:0xZ; assignment text adv215.txt assignment 1 (ADV-215)",
-     "accepted_at": "2026-11-24T22:02:37Z"
+     "accepted_at": "2026-11-24T22:02:37Z",
+     "evidence": "on main f7743335e (safe_push, gate PASS, ls-remote verified): it_adv215_20261124 RESULT, TRIAGE tsv, CC-20261124-ORCHESTRATOR-ADV215-CORPUS-STUBS-01; ADV accepted 2026-11-24",
+     "updated_at": "2026-11-24T22:27:02Z"
+    },
+    {
+     "step": "ADV-218: read three catalogued-only no-receipt records completely (PREREG first) and complete read plus receipt for 42991897 (gnomAD EAS vs NFE)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-24 (ADV-218; text /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv218.txt)",
+     "accepted_at": "2026-11-24T22:27:02Z"
     }
    ]
   }
@@ -532,6 +541,13 @@
    "at": "2026-11-24T22:02:37Z",
    "source": "ADV message 2026-11-24 22:0xZ; assignment text adv215.txt assignment 1 (ADV-215)",
    "step_sha256": "f6fd0ece3892",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T22:27:02Z",
+   "source": "ADV message 2026-11-24 (ADV-218; text /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv218.txt)",
+   "step_sha256": "4afa812aa85d",
    "reopened_block": false,
    "authorised_by": null
   }
