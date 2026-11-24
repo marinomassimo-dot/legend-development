@@ -42,3 +42,7 @@ For the single verified control, 1/12 informative reads support inclusion (8.3%)
 For 1/8, the exact two-sided 95% binomial interval is 0.32–52.65% under independent, equally capturable informative reads. This is technical uncertainty within the library.
 
 **Disposition for trial priority.** Park oral glycine and retain the preclinical comparison. The four remaining KO libraries are descriptive. Neither their read depth nor their observed fractions can restore the failed control coverage criterion. [Decision and observations that would reopen it](disposition.md) · [Acute GlyR network alternative](native_network.md) · [Independent human study and counter replay](human_junctions/capture_geometry.md)
+
+**First KO library verified.** SRR12453542 yielded 1 inclusion and 15 skipping reads in 44,698,561 reads under the primary rule (16 informative; zero conflicts). Centered Q30 gave 1/13 included. No biological contrast is estimated. [Run-level results](first_ko.tsv)
+
+A human SLC6A9 loss-of-function comparator supports testing whether diminished uptake can increase CNS glycine despite normal serum. This narrows the interpretation of transporter RNA in WWOX. [Human and mouse compartment controls](human_transport_control.md)
