@@ -858,6 +858,24 @@
      "accepted_at": "2026-11-23T23:37:27Z",
      "evidence": "ADV-205 (id corrected from ADV-204): RESULT_ADV205_PAPER542_GOLGI_WWOX_SCOPE_SCI_20261123.md; disposition b; receipt FTR-20261123-42523332-01; landed a7a1fa75b",
      "updated_at": "2026-11-23T23:49:52Z"
+    },
+    {
+     "step": "ADV-210: L-ascorbic acid resume steps 1 and 2 (pediatric CSF ascorbate baseline; opposite mouse and human SLC23A2 bulk directions: composition vs uptake) while the Codex lane is out",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-210 (ADV direction message 2026-11-24; operator verbatim text in meetings/MEETING-20261121T113510Z-83lyojx8.md commit 4371d8963)",
+     "accepted_at": "2026-11-24T18:46:15Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv210_ascorbate_resume_sci_20261124/RESULT_ADV210_ASCORBATE_RESUME_SCI_20261124.md: disposition (c) parked; step 2 organoid sign survives CPM normalisation but oligodendroglia absent, mouse sign composition-sensitive but collinear; step 1 abstract-level, assay exposure nominal only",
+     "updated_at": "2026-11-24T18:54:24Z"
+    },
+    {
+     "step": "ADV-213: map reproducible WWOX phenotypes not reached by the 58 continuous-compound dossiers (Expansion step)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-213 (ADV direction message 2026-11-24; assignments/ADV-213.md; operator verbatim text in meetings/MEETING-20261121T113510Z-83lyojx8.md)",
+     "accepted_at": "2026-11-24T19:07:21Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv213_unmapped_phenotypes_sci_20261124/RESULT_ADV213_UNMAPPED_PHENOTYPES_SCI_20261124.md: 16-class map, 3 ranked gaps, recommend S1 GSK3B-Tau limb, drop G1, shared anchor across the 58",
+     "updated_at": "2026-11-24T19:11:31Z"
     }
    ]
   }
@@ -1518,6 +1536,20 @@
    "at": "2026-11-23T23:37:27Z",
    "source": "ADV-204 (assignments/ADV-204.md; ADV message 2026-11-23 23:3xZ)",
    "step_sha256": "35336a6774ed",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T18:46:15Z",
+   "source": "ADV-210 (ADV direction message 2026-11-24; operator verbatim text in meetings/MEETING-20261121T113510Z-83lyojx8.md commit 4371d8963)",
+   "step_sha256": "7e3c9abf3be8",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T19:07:21Z",
+   "source": "ADV-213 (ADV direction message 2026-11-24; assignments/ADV-213.md; operator verbatim text in meetings/MEETING-20261121T113510Z-83lyojx8.md)",
+   "step_sha256": "0a2cc0e66b1e",
    "reopened_block": false,
    "authorised_by": null
   }

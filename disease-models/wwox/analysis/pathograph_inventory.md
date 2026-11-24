@@ -33,11 +33,11 @@ annotations is reported below whatever it happens to be.
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 594 |
-| …of which bound to at least one claim | 95 |
+| …of which bound to at least one claim | 96 |
 | Propositions scanned | 9566 |
 | …carrying a relational connective | 2015 |
 | …locator-backed candidates | 1975 |
-| …locator-backed and bound to a claim | 422 |
+| …locator-backed and bound to a claim | 435 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -51,7 +51,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | Node | Declared title | Status | Type | Pathway | Scale | Deg | Papers |
 |---|---|---|---|---|---|---|---|
 | CLAIM 001 | Vigabatrin associated with VABAM in WWOX-DEE | conflicting evidence | DATO | P2 — GABAergic vulnerability / safety | NOT_ANNOTATED | 5 | 9 |
-| CLAIM 002 | WWOX loss is associated with network hyperexcitability in human organoids; re-expression by AAVS | consolidated baseline | DATO + INFERENZA prudente | P1 — Ca²⁺ / network dysregulation; P7 —  | NOT_ANNOTATED | 2 | 3 |
+| CLAIM 002 | WWOX loss is associated with network hyperexcitability in human organoids; re-expression by AAVS | consolidated baseline | DATO + INFERENZA prudente | P1 — Ca²⁺ / network dysregulation; P7 —  | NOT_ANNOTATED | 2 | 4 |
 | CLAIM 003 | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination | consolidated baseline | DATO | P4 — myelination / white matter | NOT_ANNOTATED | 3 | 1 |
 | CLAIM 004 | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement | consolidated baseline | DATO | P7 — gene therapy readiness | NOT_ANNOTATED | 10 | 1 |
 | CLAIM 005 | Reduced GABAergic interneurons and glial activation in WWOX-KO | consolidated baseline | DATO | P2 — GABAergic vulnerability; P6 — neuro | NOT_ANNOTATED | 20 | 6 |
@@ -360,7 +360,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 462 bound candidates; the
+Showing 12 of 475 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -377,6 +377,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 597 input files; digest
-`1b38cfd60f2d97af`. Sources: the claim, paper and
+`f9f2db56b0c517bb`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

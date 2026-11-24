@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261120_002
-last_batch_commit_date: 2026-11-20
+last_batch_commit_id: BATCH_20261124_002
+last_batch_commit_date: 2026-11-24
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 1
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV's word for part 1 YES, part 2 stays the operator's). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: ONE candidate, PART 1 ONLY (CC-20261120-ORCHESTRATOR-WM103-DOSE-WORDING-01): three dated notes appended after working-model lines 103, 148 and 251 (3 record-scoped replace-within ops, each original sentence kept byte for byte, each new line proved to be the old line plus the note), after two blind checks (16 statements, then 4 with one overshoot repaired in the wording of the verifier); pathograph surface regenerated. Part 2 (class MAJOR: rewording of the three sentences; the coordinated change of the CLAIM 011 Title and flag and of the BLOCK 2 row 011 is a separate candidate) stays PROPOSED and is a reserved item for the operator. The previous batch text follows only as history in state_history.
+trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV-212 follow-up, ADV's word to write the repoint without triples 4 and 5). MAJOR by consequence as the candidate declares it (the Source of a consolidated baseline moves), not a baseline reversal, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: ONE candidate, CC-20260826-PROVENANCE-01 (the last open step, item C second half): the Source of CLAIM 002 repointed to PAPER 094 and the Claim links of PAPER 094 set to 002 (2 record-scoped ops), written without the Fig 2F and supplementary-volume triples; identifiers checked against the receipt ledger. The previous batch (BATCH_20261124_001: PAPER 542 and LIT-0814 label, CLAIM 002 and PAPER 094 Fig 6 wording) follows only as history in state_history.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,8 +126,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261120_BATCH_20261120_002
-last_lint_date: 2026-11-20
+last_lint_id: LINT_20261124_BATCH_20261124_002
+last_lint_date: 2026-11-24
 last_lint_result: WARN
 ```
 
@@ -164,8 +164,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 2707
-fulltext_ledger_head: 333427da0e374fed8749c80e4e3e64ebead300475ceb2f6ca478f1202cd60262
+fulltext_ledger_events: 2709
+fulltext_ledger_head: e6750531cd19e4dbf5f9fee1219db58ef8c6314e16281f1a4d022abb82315757
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
