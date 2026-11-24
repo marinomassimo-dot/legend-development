@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-38366086-93",
+  "event_at": "2026-11-24T09:45:22Z",
+  "analysis_at": "2026-11-24T09:45:22Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "38366086"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/cannabidiol_loop_20261124/38366086.xml",
+  "source_fingerprint": "2de107cb253ec5ce2ad61e86bee971e412b61e6fbb9c4ca3b02792558fe990a6",
+  "workflow": "Question-driven analysis of CBD exposure, purine transfer and neural response.",
+  "evidence_basis": [
+    "Tables 8 and 9 on shared sampling time, age, tissue radioactivity, CSF and in vitro binding; analyte caveat on radioactivity and metabolites."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/cannabidiol/exposure_and_flux.md"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-37631333-93",
+  "event_at": "2026-11-24T09:45:22Z",
+  "analysis_at": "2026-11-24T09:45:22Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "37631333"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/cannabidiol_loop_20261124/PMC10459683.xml",
+  "source_fingerprint": "ce112f034c00c08590754d59991e1ab511d3c81b822cf98e7d246b72f23507fd",
+  "workflow": "Question-driven analysis of CBD exposure, purine transfer and neural response.",
+  "evidence_basis": [
+    "Methods for steady-state sampling and responder selection, Results on 25 samples in 22 children, and Table 1 trough summaries."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/cannabidiol/exposure_and_flux.md"
+  ]
+}

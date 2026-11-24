@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-16672367-93",
+  "event_at": "2026-11-24T09:45:22Z",
+  "analysis_at": "2026-11-24T09:45:22Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "16672367"
+  },
+  "prior_receipt": "FTR-20261124-16672367-92",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://medicinalgenomics.com/wp-content/uploads/2013/01/Inhibition_of_eq_nucleoside_transporter_by_CBD_PNAS-2006-Carrier-7895-900.pdf",
+  "source_fingerprint": null,
+  "workflow": "Question-driven analysis of CBD exposure, purine transfer and neural response.",
+  "evidence_basis": [
+    "Results on EOC-20 and RAW264.7 adenosine influx, competition binding at 37 C, and Materials and Methods on salt solution and uptake timing."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/cannabidiol/exposure_and_flux.md"
+  ]
+}
