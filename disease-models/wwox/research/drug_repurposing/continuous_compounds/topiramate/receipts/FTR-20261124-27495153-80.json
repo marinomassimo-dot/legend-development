@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-27495153-80",
+  "event_at": "2026-11-24T04:49:27Z",
+  "analysis_at": "2026-11-24T04:49:27Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "27495153",
+    "doi": "10.1186/s12881-016-0317-z"
+  },
+  "prior_receipt": "FTR-20261003-27495153-01",
+  "reread_reason": "inadequate_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID27495153_Elsaadany2016_PMC.xml",
+  "source_fingerprint": "b574b819c05b13d6a62b48411fbd0e88b348a8210eb70624939e52f9bd447703",
+  "workflow": "Distinguish timed single-drug response from concurrent treatment and developmental status in the WWOX topiramate dossier.",
+  "evidence_basis": [
+    "Case narrative, combined antiepileptic medications with partial response, followed by progression and admissions. Locator: “showed partial response”."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/topiramate/clinical_timeline.md"
+  ]
+}

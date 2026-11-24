@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-30362252-80",
+  "event_at": "2026-11-24T04:49:27Z",
+  "analysis_at": "2026-11-24T04:49:27Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "30362252",
+    "doi": "10.1002/humu.23675"
+  },
+  "prior_receipt": "FTR-20261123-30362252-91",
+  "reread_reason": "inadequate_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
+  "source_fingerprint": "4bfc73890bf903a8dcfd36fb0ea7f8970eed808581c08160f1def7335999d6ca",
+  "workflow": "Distinguish timed single-drug response from concurrent treatment and developmental status in the WWOX topiramate dossier.",
+  "evidence_basis": [
+    "Case narrative, combination including phenobarbital, topiramate and pyridoxine; temporal attribution cannot be determined. Locator: “optimized to a regimen”."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/topiramate/clinical_timeline.md"
+  ]
+}

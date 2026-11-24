@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-12086975-80",
+  "event_at": "2026-11-24T04:51:17Z",
+  "analysis_at": "2026-11-24T04:51:17Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "12086975",
+    "doi": "10.1038/sj.bjp.0704766"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/levetiracetam_loop_20261124/rigo.html",
+  "source_fingerprint": "c7246a24f47477c6d3ef9fc14990c666ef898ad411ea9076ae04ca20aa9e04cc",
+  "workflow": "Distinguish hippocampal zinc-dependent current rescue from a general GABA potentiating effect of levetiracetam.",
+  "evidence_basis": [
+    "Selected Results, whole-cell chloride conditions, Fig. 3I–J and 4G–H captions plus accompanying text. Checked different zinc challenges in two preparations and negative blocker controls. Short locator: “affording complete reversal at 30 μM”. Figure images not separately inspected."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/levetiracetam/README.md"
+  ]
+}

@@ -21,3 +21,7 @@
 **WWOX checkpoint.** The sIPSC deficit was measured with imposed high intracellular chloride; early and late burst reversal potentials reflect mixed currents. This supports a prospective timing test but leaves native GABA polarity open. Next reconcile the WWOX clinical treatment timelines and co-medications before disposition. [Mouse comparison and timing prediction](circuit.md)
 
 **Direct human evidence.** Four WWOX histories in AlBaradie et al. span combination control, refractory events, other drug additions and uncertain timing. No attributable single-drug effect emerges from these reports. A separate local index identifies six exact-name records; check the larger cohort and dated add-on or withdrawal histories next. [Case attribution and bounded index](clinical_timeline.md)
+
+**Timed human checkpoint.** In a WWOX child a roughly three-month reported respite followed topiramate, as had a similar interval on earlier drugs for a different seizure phenotype. In the 13-person cohort four had tried topiramate; the table supplies no drug-specific response. Next check the remaining exact-name case leads for withdrawal, rechallenge or time-aligned EEG at stable co-treatment. [Cohort extraction and within-child comparison](clinical_timeline.md)
+
+**Disposition.** Park topiramate for an unselected WWOX trial. The remaining exact-name case histories did not isolate a drug response. A timed response with stable co-medications or selective functional circuit rescue would reopen priority. [Final case audit](clinical_timeline.md)
