@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-32614402-80",
+  "event_at": "2026-11-24T05:25:48Z",
+  "analysis_at": "2026-11-24T05:25:48Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "32614402",
+    "doi": "10.1093/jn/nxaa174"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7467853/",
+  "source_fingerprint": null,
+  "workflow": "Compare exposure between two acetate formulations with the dietary, plasma and tissue denominators preserved.",
+  "evidence_basis": [
+    "Methods, Diets, “added as the acetate derivative”; analytical methods and Results Tables 1, 3 and 6, formula composition, plasma and regional brain entries. Figures and supplements were not scored."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/tocopheryl_acetate/exposure.md"
+  ]
+}

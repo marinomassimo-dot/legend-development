@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-19265499-80",
+  "event_at": "2026-11-24T05:18:55Z",
+  "analysis_at": "2026-11-24T05:18:55Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "19265499",
+    "doi": "10.1089/thy.2008.0397"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/sodium_selenite_loop_20261124/sbp2.html",
+  "source_fingerprint": "c4fe17037cb9464b51eb84d550567f8589d87b55f30ecacba2afe465d7385bcc",
+  "workflow": "Test whether selenite-dependent functional rescue reflects substrate supply, local delivery or impaired selenoprotein biosynthesis.",
+  "evidence_basis": [
+    "Methods: affected subjects age 9, 11, 18 and two heterozygous siblings. The selenite phase followed a washout from selenium-rich yeast. Fig. 1 associated text and discussion compare GPX3 and SELENOP. Short locator: “wash-out period of 3 months”."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/sodium_selenite/repletion.md"
+  ]
+}

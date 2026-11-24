@@ -1,0 +1,13 @@
+{
+  "record_kind": "product_document_read_receipt",
+  "source": "Eisai Juvela Tablets and Granules interview form, 2016, active ingredient identities",
+  "source_locator": "https://image.packageinsert.jp/pdf.php?mode=1&yjcode=3150002D1041",
+  "time_utc": "2026-11-24T05:22:05Z",
+  "coverage": "Targeted identity/CAS entry in product documentation, not the historical dispensed lot.",
+  "locators": [
+    "Active ingredient, CAS 7695-91-2, dl-α-Tocopherol Acetate."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/tocopheryl_acetate/README.md"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-26411970-80",
+  "event_at": "2026-11-24T05:22:05Z",
+  "analysis_at": "2026-11-24T05:22:05Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "26411970",
+    "doi": "10.1194/jlr.M059105"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/tocopheryl_acetate_loop_20261124/sbp2_lipids.xml",
+  "source_fingerprint": "a30a884ee87a93e493f754c5ff4d923d1fa5b8b3ad80330a495ac3aced367a89",
+  "workflow": "Compare parent-normalized lipid ratios and tocopherol profiles during treatment and withdrawal in a selenoprotein-incorporation disorder.",
+  "evidence_basis": [
+    "Subjects, lipid quantitation Methods, Tables 1–2 and accompanying Results for Figs. 4–5. Short locator: “simultaneously started with vitamin E treatment”. Checked age, formulation, continued T3 and repeat-sample denominator. No figure images inspected."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/tocopheryl_acetate/README.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/tocopheryl_acetate/lipid_markers.tsv"
+  ]
+}

@@ -38,6 +38,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 32 | Topiramate, GluK1-dependent inhibitory recruitment | Do spontaneous bursts and evoked inhibitory charge respond differently with preserved physiological transmission? |
 | 33 | Levetiracetam, zinc-sensitive inhibitory currents and presynaptic release | Is restoration of a zinc-suppressed inhibitory current separable from SV2A-dependent changes in release in a WWOX context? |
 | 34 | Sodium selenite, selenium delivery and phospholipid peroxide control | Does substrate repletion restore neuronal GPX4 activity and function when the untreated WWOX culture already receives selenium? |
+| 35 | RRR-alpha-tocopheryl acetate, nonenzymatic lipid oxidation | Does membrane delivery of free alpha-tocopherol suppress excess oxidation per unit parent lipid and improve neural function in WWOX? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -48,7 +49,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: sodium selenite.** The N-2 contribution to fresh maturation medium is nominally 15 nM selenite. GPX4 RNA decreased in three bulk datasets, with little change in the excitatory nuclear pool. Next compare repletion on a selenium-containing background with impaired transport or incorporation and measure GPX4 activity. [Opening comparison](sodium_selenite/README.md)
+**Active compound: RRR-alpha-tocopheryl acetate.** TTPA RNA was lower in three WWOX preparations. In a separate child on a related ester, oxidized linoleate rebounded after withdrawal but oxidized cholesterol barely did. Infant macaque data distinguish brain stereoisomer profiles between formulas. Next audit pediatric versus crossover seizure evidence and test the connection to neural recovery. [Central exposure](tocopheryl_acetate/exposure.md) [Prespecified comparison](tocopheryl_acetate/README.md)
+
+**Sodium selenite parked for an unselected trial.** The medium already supplies selenium, the neuronal rescue assay used an aggregate GPX activity readout at higher exposure than the protection EC50s, and an incorporation disorder separates blood selenium from functional recovery. Reopen for selective neural GPX4 turnover and function after measured repletion. [Data and disposition](sodium_selenite/repletion.md)
 
 **Levetiracetam parked for an unselected WWOX trial.** A positive short pediatric trial supports focal-seizure efficacy. WWOX clinical attribution, local zinc engagement and developmental benefit remain unresolved. Human cortical exposure crossed the culture reference in two of three surgical cases although all exceeded it in CSF. [Clinical decision](levetiracetam/pediatric.md) · [Circuit and exposure](levetiracetam/zinc_and_exposure.md)
 

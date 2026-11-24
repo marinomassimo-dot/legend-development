@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-32278283-80",
+  "event_at": "2026-11-24T05:18:55Z",
+  "analysis_at": "2026-11-24T05:18:55Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "32278283",
+    "doi": "10.1016/j.redox.2020.101518"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/sodium_selenite_loop_20261124/gpx_assay.xml",
+  "source_fingerprint": "1f64c16c48a826b6ed8845573d4415f75258ef02226794d4aeb93754b11be67a",
+  "workflow": "Test whether selenite-dependent functional rescue reflects substrate supply, local delivery or impaired selenoprotein biosynthesis.",
+  "evidence_basis": [
+    "Substrate-specific validation, sodium selenite versus SLM toxicity, and identity of the supplement used for the activity plateau in Figs. 7–9. Short locator: “background oxidation of NADPH”. No figure images inspected."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/sodium_selenite/repletion.md"
+  ]
+}

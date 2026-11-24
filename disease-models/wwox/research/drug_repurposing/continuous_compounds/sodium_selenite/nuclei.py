@@ -6,4 +6,4 @@ here = Path(__file__).resolve().parent
 sys.path.insert(0, str(here.parent / "thiamine"))
 from cell_types import run
 
-run(Path(sys.argv[1]), genes="Sepsecs Gpx4 Txnrd1 Acsl4".split(), output_dir=here)
+run(Path(sys.argv[1]), genes="Sepsecs Gpx4 Txnrd1 Acsl4 Selenop Lrp8 Secisbp2".split(), output_dir=here)

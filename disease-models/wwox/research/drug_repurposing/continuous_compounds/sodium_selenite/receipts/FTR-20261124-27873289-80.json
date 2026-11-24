@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-27873289-80",
+  "event_at": "2026-11-24T05:18:55Z",
+  "analysis_at": "2026-11-24T05:18:55Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "27873289"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "https://pubmed.ncbi.nlm.nih.gov/27873289/",
+  "source_fingerprint": null,
+  "workflow": "Test whether selenite-dependent functional rescue reflects substrate supply, local delivery or impaired selenoprotein biosynthesis.",
+  "evidence_basis": [
+    "PubMed abstract. Patient selection, follow-up, ketogenic diet and serum selenium only. No full-text credit."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/sodium_selenite/repletion.md"
+  ]
+}

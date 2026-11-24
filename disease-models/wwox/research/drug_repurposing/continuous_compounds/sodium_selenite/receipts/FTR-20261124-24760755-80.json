@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-24760755-80",
+  "event_at": "2026-11-24T05:18:55Z",
+  "analysis_at": "2026-11-24T05:18:55Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "24760755",
+    "doi": "10.1096/fj.14-252874"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/sodium_selenite_loop_20261124/burk.html",
+  "source_fingerprint": "33e288296583e1f3d0e02a329207b24399457c7310b4eadbc43d2bcc742de3f2",
+  "workflow": "Test whether selenite-dependent functional rescue reflects substrate supply, local delivery or impaired selenoprotein biosynthesis.",
+  "evidence_basis": [
+    "Diet definitions and timing, results accompanying Figs. 6–8, and distinction between hippocampal assays in WWOX and whole-brain selenium in this study. Short locator: “weakness of the hind limbs”. No panel images inspected."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/sodium_selenite/repletion.md"
+  ]
+}

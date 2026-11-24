@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-27181635-80",
+  "event_at": "2026-11-24T05:25:48Z",
+  "analysis_at": "2026-11-24T05:25:48Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "27181635",
+    "doi": "10.1017/S0007114516001719"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/tocopheryl_acetate_loop_20261124/human_infant_brain.pdf",
+  "source_fingerprint": "a7b485a89ca78f9be4d159b7a32aa13e5564450849556d3f4c883b6902e92d09",
+  "workflow": "Compare human infant brain stereoisomer profiles and their sampling denominator.",
+  "evidence_basis": [
+    "Methods, p. 127, “A total of seventy-nine samples”; Results, pp. 128–129, regional RRR to other 2R ratios and Fig. 3 caption. Individual concentrations and figure images were not scored."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/tocopheryl_acetate/exposure.md"
+  ]
+}
