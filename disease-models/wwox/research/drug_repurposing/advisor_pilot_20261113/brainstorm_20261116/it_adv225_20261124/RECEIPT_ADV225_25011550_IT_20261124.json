@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-24T23:41Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-24T23:44:56Z",
+ "event_id": "FTR-20261124-25011550-01",
+ "evidence_basis": [
+  "coverage_map",
+  "files/fulltext/wo32_lit_20261118/PMID25011550_PMC4099093_epmc.xml (the file the latest earlier receipt names; sha256 equal to that receipt's fingerprint)",
+  "read with the open-question and card statements of the repurposing module in mind: Table 1 (localisation; the antibody and primer tables are reagent tables and were skipped) and the Results in full: HDAC9 cytoplasmic, HDAC7 protein not determined",
+  "scope: only the section(s) named as read were read in this reading; every other section is not_read here and keeps the state of the earlier receipts in the union",
+  "selection: computed by the frozen rule of PREREG_ADV225_IT_20261124.md (decision-bearing files first)"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv225_20261124/RESULT_ADV225_IT_20261124.md"
+ ],
+ "prior_receipt": "FTR-20261118-25011550-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "eba43ff36ef96a7a49533166a0176b2deeb1824f651f714d40e66412ec76fcdc",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/wo32_lit_20261118/PMID25011550_PMC4099093_epmc.xml",
+ "study_id": {
+  "pmid": "25011550"
+ },
+ "workflow": "IT reading of the section(s) named read, from the held file, selected by a rule frozen before any section was opened (ADV-225); the held file was read directly; no contact, no e-mail to any service, no paid route."
+}
