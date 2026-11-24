@@ -1,0 +1,5 @@
+accession	control_prefix	KO_prefix	coding_delta_pp	delta_pp_if_all_unknown_skip	delta_pp_if_all_unknown_include	free_assignment_lower_pp	free_assignment_upper_pp	fixed_transcript_lower_pp	fixed_transcript_upper_pp	included_TPM_WT	included_TPM_KO	skipped_TPM_WT	skipped_TPM_KO
+GSE158681	S_Ctrl_	S_KO_	10.141	5.595	5.615	-39.552	50.762	-8.171	19.381	33.279	40.474	116.838	85.588
+GSE158681	N_Ctrl_	N_KO_	9.125	0.435	17.539	-41.119	59.094	-14.297	32.271	24.944	45.124	108.692	119.555
+GSE158681	WT_	KO_	3.796	1.734	1.669	-55.644	59.047	1.440	1.962	20.335	21.781	71.778	61.960
+GSE158682	CRTX_S_Ctrl_	CRTX_S_KO_	3.621	-3.641	21.425	-39.162	56.946	-3.848	21.632	79.864	91.846	270.775	235.790
