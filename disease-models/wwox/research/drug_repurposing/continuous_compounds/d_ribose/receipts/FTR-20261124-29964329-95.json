@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-29964329-95",
+  "event_at": "2026-11-24T10:13:25Z",
+  "analysis_at": "2026-11-24T10:13:25Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "29964329"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/d_ribose_loop_20261124/PMC6220757.xml",
+  "source_fingerprint": "7af9a20ef83d32591bf3ab1540763103f6e1dd5d2a4636bad5246ef097f3d251",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Selected results accompanying Figures 2, 4 and 5, especially comparison group in post hoc tests and inter-burst vs within-burst endpoints."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_ribose/exposure.md"
+  ]
+}

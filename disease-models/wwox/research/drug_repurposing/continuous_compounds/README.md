@@ -52,6 +52,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 46 | Purified cannabidiol, equilibrative adenosine transport and A1-mediated recovery | Does inhibiting nucleoside transport prolong extracellular adenosine after activity or reduce its release under metabolic stress? |
 | 47 | Inosine, purine salvage and ATP recovery after activity | Does parent inosine restore the adenylate pool and function in WWOX at physiological glucose, or primarily supply ribose fuel or peripheral urate? |
 | 48 | D-ribose, pentose supply and adenylate regeneration | Does D-ribose improve functional recovery beyond matched glucose when base supply is controlled, or does conversion stall downstream? |
+| 49 | Anhydrous betaine, neural osmolyte replacement and methyl-group availability | At measured exposure, does betaine improve volume and firing recovery or displace endogenous osmolytes with a functional cost? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -62,7 +63,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: D-ribose.** The human neuronal pentose comparison distinguishes D-ribose from L-ribose. Next resolve parent CNS exposure, glucose effects and downstream limits. [Opening evidence and prediction](d_ribose/README.md)
+**Active compound: anhydrous betaine.** Mouse cortex accumulated supplied betaine; slice results flag displacement of other osmolytes. Compare central disposition, osmotic recovery and methyl-group transfer. [Initial evidence and opposing predictions](betaine/README.md)
+
+**D-ribose parked for WWOX trial priority.** Direct brain entry under experimental conditions and high-concentration preconditioning have support. A specific benefit after oral exposure in developing WWOX systems remains unestablished. [Exposure, reproducible contrasts and review question](d_ribose/exposure.md)
 
 **Inosine parked for WWOX trial priority.** Transport blockade separated the response to exogenous inosine from endogenous mobilization. Human evidence leaves the neural exposure and net adenylate response unresolved. [Reanalysis, clinical denominators and reopening criterion](inosine/salvage.md)
 

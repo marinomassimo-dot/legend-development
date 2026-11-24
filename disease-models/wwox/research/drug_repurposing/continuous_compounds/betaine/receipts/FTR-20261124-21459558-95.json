@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-21459558-95",
+  "event_at": "2026-11-24T10:21:10Z",
+  "analysis_at": "2026-11-24T10:21:10Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "21459558"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/betaine_loop_20261124/PMC3376448.xml",
+  "source_fingerprint": "445ee0a1f34e92c628f65e81cc45d062f3d803a89c1cd33ef67c9f075f3539ee",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Selected Results on electrical thresholds, kindling and comparison with GABA uptake inhibitors in BGT1-deficient mice."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/betaine/README.md"
+  ]
+}

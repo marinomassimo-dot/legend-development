@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-31255657-95",
+  "event_at": "2026-11-24T10:21:10Z",
+  "analysis_at": "2026-11-24T10:21:10Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "31255657"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/betaine_loop_20261124/PMC6642071.xml",
+  "source_fingerprint": "2b85a9071710097366f13834a100a2a99175f1d83ef9378874c2631246e8ff87",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Selected Fig. 2a\u2013i Results and caption. Cortex betaine, plasma and brain homocysteine, glutathione, group sizes and oral route."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/betaine/README.md"
+  ]
+}

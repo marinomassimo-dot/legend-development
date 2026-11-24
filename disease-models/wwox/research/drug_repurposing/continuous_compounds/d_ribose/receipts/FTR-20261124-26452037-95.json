@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-26452037-95",
+  "event_at": "2026-11-24T10:21:10Z",
+  "analysis_at": "2026-11-24T10:21:10Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "26452037"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/d_ribose_loop_20261124/PMC4741441.xml",
+  "source_fingerprint": "a9c32bfe506fd80064218cc6cc1a70f83a2eead0d64392121cc575bcf4daccf6",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Methods (animals, oral groups, blood glucose/insulin); Results (brain and behavioral endpoints). No central parent concentration series identified in those sections."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_ribose/exposure.md"
+  ]
+}

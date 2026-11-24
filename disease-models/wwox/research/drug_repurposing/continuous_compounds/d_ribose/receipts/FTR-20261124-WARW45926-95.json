@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-WARW45926-95",
+  "event_at": "2026-11-24T10:21:10Z",
+  "analysis_at": "2026-11-24T10:21:10Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "doi": "10.82444/warw.33664381"
+  },
+  "prior_receipt": "FTR-20261124-WARW45926-94",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/d_ribose_loop_20261124/Zur_Nedden_thesis.pdf",
+  "source_fingerprint": "15344c3c0363030523f86c1ec42c932c6241f9a99e37428595a1e4d0ff1c36fc",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "New question outside Table 5.1: chapter 8 sections 8.2.3\u20138.2.4, Figs. 8.4\u20138.7 adjoining Results pp. 190\u2013195; viability before versus after deprivation and independent nucleotide measurements."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_ribose/exposure.md"
+  ]
+}
