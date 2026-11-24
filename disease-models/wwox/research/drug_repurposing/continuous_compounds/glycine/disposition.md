@@ -1,4 +1,4 @@
-# Glycine decision while descriptive counts finish
+# Glycine decision after six verified human libraries
 
 **Disposition.** Park oral glycine for pediatric WWOX trial prioritization. Retain the molecule as a preclinical probe of glycine transport, acute chloride conductance and activity-dependent NMDA receptor trafficking. The human splice criterion has already failed in both controls. Completing the four KO libraries describes coverage and can guide the choice of a future assay. Those libraries cannot reverse this criterion even if they yield many reads.
 
@@ -7,3 +7,5 @@
 **Observation that would reopen prioritization.** In developmentally matched WWOX and isogenic controls, show reproducible functional improvement across an independently justified, attainable free-exposure range; examine both event incidence and within-event burden, acute and delayed responses and washout. Relate the effect to local glycine time course, a native-chloride readout and surface NMDA receptors at comparable activation. Reopen for pharmacological assessment if the phenotype improves selectively and the lower tested exposures do not increase pathological activity. An isolated transcript shift, positive effect only after high-dose priming, or reduction common to both genotypes would leave the selective disease-modifying rationale unresolved. A general antiseizure effect is a distinct possible outcome.
 
 Quantitative anchors and source coverage are preserved in the compound README, transporter_crossover.md, challenge_history.md, native_network.md, pediatric_bridge.md and the per-library junction records. Administrative closure follows verified descriptive counts or a documented terminal acquisition failure. No new compound has been started in parallel.
+
+**Closed sequencing follow-up.** All six run files passed size, compressed digest, and read-count checks (252,931,601 reads). Primary informative counts in archive order were 12, 8, 16, 9, 11 and 18. The planned genotype comparison failed coverage. [Results by library](human_junctions/per_library_counts.tsv) · [Technical intervals](human_junctions/per_library_precision.tsv)

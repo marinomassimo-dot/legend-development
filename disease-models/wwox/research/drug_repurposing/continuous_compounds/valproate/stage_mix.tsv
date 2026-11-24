@@ -1,0 +1,11 @@
+pool	stage	nuclei	classified_lineage_nuclei	percent
+ctrl	OPC	242	731	33.11
+ctrl	COP	63	731	8.62
+ctrl	NFOL	121	731	16.55
+ctrl	MFOL	186	731	25.44
+ctrl	MOL	119	731	16.28
+ko	OPC	352	668	52.69
+ko	COP	78	668	11.68
+ko	NFOL	95	668	14.22
+ko	MFOL	49	668	7.34
+ko	MOL	94	668	14.07

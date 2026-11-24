@@ -1,0 +1,7 @@
+run	group	included	informative	included_pct	lower_95_pct	upper_95_pct	status
+SRR12453540	control	1	12	8.33	0.21	38.48	low_coverage
+SRR12453541	control	1	8	12.50	0.32	52.65	low_coverage
+SRR12453542	KO	1	16	6.25	0.16	30.23	low_coverage
+SRR12453543	KO	1	9	11.11	0.28	48.25	low_coverage
+SRR12453544	KO	3	11	27.27	6.02	60.97	low_coverage
+SRR12453545	KO	2	18	11.11	1.38	34.71	low_coverage
