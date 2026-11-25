@@ -1122,11 +1122,12 @@
     },
     {
      "step": "SCI-proposed (no idle laboratory): positive-control audit of the ten null-worded repurposing-card notes (DR-A01-003, -004, DR-A02-002, -009, DR-E03-001, DR-H01-001, -003, DR-L01-001, DR-M01-001, DR-P11-006): for each, does the held source carry an activity or engagement check for the manipulation; sentence-level blind check; wording to IT, report to ADV",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator standing rule no idle laboratory; proposal sent to ADV 2026-11-25 after ADV-280 (RESULT_ADV280_INC2_SCI_20261125.md section 4)",
      "accepted_at": "2026-11-25T18:33:39Z",
-     "updated_at": "2026-11-25T18:55:12Z"
+     "updated_at": "2026-11-25T19:19:55Z",
+     "evidence": "ADV-281 complete: RESULT_ADV281_SCI_20261125.md in brainstorm_20261116/adv281_null_note_control_audit_sci_20261125/; 63 null rows listed by two routes, 15 audited (13 assessable, 2 bytes not held), blind sentence reading by legend-delegate sonnet-5-5 (asked high), 2 MUST CHANGE (DR-A02-009, DR-P11-004), loose 4 of 7 assessable of the ten; wording to IT, report to ADV"
     }
    ]
   }
