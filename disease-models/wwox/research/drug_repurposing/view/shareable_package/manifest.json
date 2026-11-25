@@ -199,11 +199,11 @@
   },
   "identifiers": {
    "CAT": 2386,
-   "CHEMBL": 380,
+   "CHEMBL": 387,
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
-   "PMID": 150
+   "PMID": 152
   },
   "links": {
    "distinct_hrefs": 235,
@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3568,
+    "forbidden-name": 3585,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -328,7 +328,7 @@
    "access_text": 7,
    "actions": 9,
    "asserts": 2,
-   "brief": 3,
+   "brief": 2,
    "card_path": 35,
    "country": 5,
    "for": 2,
@@ -518,7 +518,7 @@
  "files": {
   "COMPARISON.md": {
    "bytes": 7408,
-   "sha256": "82e02c76079721af686392feb5ebd6ac7603edab09f523b84866192a16ce8479"
+   "sha256": "b710cd495ee3e12a0a87a312eba8315023df1ce4b3dd134d6959e639c4f8b382"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -538,7 +538,7 @@
   },
   "NOTICE.md": {
    "bytes": 13731,
-   "sha256": "2056619e657ff6b7b7bf05db9678d3c1af5126837eafb6816ffa960da5839e0d"
+   "sha256": "5674011b4fe12350cd5dfe9abc6b7a390ab9a8a17e4902ae1e30c453911f571c"
   },
   "README.md": {
    "bytes": 4730,
@@ -546,7 +546,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2162,
-   "sha256": "32c5c54597c2f912d37f972e959b4cc58589ab9412c452c5bd88dbc53ee3b81b"
+   "sha256": "7b6d5afdaa1bb1af1636cc21ad2bfad86b924477ec1408f8b7b3ba35a0e63ad9"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -561,8 +561,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5069752,
-   "sha256": "837a8c55c279a0fb8988a9a8b6a742e7be050a0ceb6d852633f6bef3616e3dfd"
+   "bytes": 5078173,
+   "sha256": "332223ab78d5d470bd2f0c67a07b49725367fedbd2c5c22899cb402d41119653"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 168171,
