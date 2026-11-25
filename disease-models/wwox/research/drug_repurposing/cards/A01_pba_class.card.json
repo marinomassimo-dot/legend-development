@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "b902ff1a43427fc0e0ef5f162e6014bf7508be9974155716cf1e34ecc8c74d5c",
+  "input_sha256": "8def1aaff0d6114a2a18195a174d8f9092bc621bac7bbd416512e8982bdcadf6",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -249,7 +249,7 @@
           "cell_type": "HEK293 and fly astrocytes",
           "developmental_stage": "adult flies and cell line"
         },
-        "measured_result_note": "MEASURED NO RESCUE (behaviour unchanged). Encoded NO_CHANGE: a reported null, not an unmeasured cell. In the same paper glycerol, an osmolyte-type chemical chaperone, did rescue G443D in vitro: the partly trafficked branch was outside the reach of this class, not of every chemical chaperone.",
+        "measured_result_note": "MEASURED NO RESCUE (behaviour unchanged). Encoded NO_CHANGE: a reported null, not an unmeasured cell. In the same paper glycerol, an osmolyte-type chemical chaperone, did rescue G443D in vitro: the partly trafficked branch was outside the reach of 4-PBA, not of every chemical chaperone. [IT 2026-11-25, ADV-281: the null arm is 4-PBA 1 millimolar for 48 h in G443D flies (Fig 6G, seizure behaviour unaltered); in G443D flies the transporter already shows a wild-type-like expression pattern (Fig 6C legend, Fig 6E, Supp Fig 4C), so the fly arm does not test a trafficking defect; 10 % glycerol was also not significant in G443D flies, so no tested chaperone rescued G443D in vivo; the same 4-PBA dose reduced seizures in G443V flies (Fig 6H); 4-PBA 10 millimolar also did not rescue G443D uptake in HEK293 cells (Fig 3B).]",
         "receipt": "FTR-20261021-40485335-01"
       },
       {

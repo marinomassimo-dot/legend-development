@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "07de9777549ba6a4c34b15e8d29beff69a0f8222f03b18374d14bb51425b15ab",
+  "input_sha256": "3e4cba1ccc7c57abb6aa392dcd78174623079ad18753edc948bbac632042db90",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -95,7 +95,7 @@
         "cell_type": "cerebral organoid progenitors (SOX2+ MYC+)",
         "developmental_stage": "organoid, culture weeks 8 to 15"
       },
-      "measured_result_note": "Knockout above wild type. The panel values are NO LONGER RE-AUDITABLE: the published supplement exists in no checkout and the preprint does not contain the A51 experiment."
+      "measured_result_note": "Knockout above wild type. The published supplementary figures are held since 2026-11-21, so the panel values can be re-read (this row's values were not re-audited on 2026-11-25); the preprint does not contain the A51 experiment."
     },
     "drug_assertions": [
       {
@@ -135,7 +135,7 @@
           "cell_type": "cerebral organoid progenitors (SOX2+ MYC+)",
           "developmental_stage": "organoid, culture weeks 8 to 15"
         },
-        "measured_result_note": "MEASURED NO RECOVERY: knockout-versus-treated not significant for both markers, CTIP2 remaining far below wild type. Encoded NO_CHANGE; it stays UNRESOLVED because the single disease assertion is on a different endpoint (gap G-2). This row is the split that the first row hides.",
+        "measured_result_note": "MEASURED NO RECOVERY: knockout-versus-treated not significant for both markers, CTIP2 remaining far below wild type. Encoded NO_CHANGE; it stays UNRESOLVED because the single disease assertion is on a different endpoint (gap G-2). This row is the split that the first row hides. [IT 2026-11-25, ADV-281: the two markers are CTIP2 (Supplementary Fig 7G) and SATB2 (Supplementary Fig 7F); NEUN does rise; CTIP2 is near zero in both knockout arms (about 0.1 and 0.7 % of cells by eye), so a floor limits the test; for SATB2 the knockout plus A51 arm is also not significantly different from wild type (about 0.7 against about 1.4 % of cells by eye), so SATB2 recovery is neither shown nor excluded; in wild type DMSO lowers CTIP2 (about 12.6 to about 5.6 % of cells by eye) and the knockout comparator is not labelled as vehicle; one knockout clone, one experiment, week-15 harvest.]",
         "receipt": "FTR-20260810-42397075-04"
       }
     ],

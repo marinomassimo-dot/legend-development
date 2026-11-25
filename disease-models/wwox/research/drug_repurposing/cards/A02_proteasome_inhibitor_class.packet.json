@@ -60,7 +60,7 @@
     "cell_type": "HEK293T landing-pad cells",
     "developmental_stage": "culture"
    },
-   "measured_result_note": "Flow shift of a library, not a protein recovery measure; a lysosome-inhibitor control did nothing, placing the loss on the proteasome.",
+   "measured_result_note": "Flow shift of a library, not a protein recovery measure; chloroquine (20 micromolar, 16 h) gave little shift ('no substantial changes', Clausen Fig 3C; 'little effect', Gronbaek-Thygesen Fig 4F) and no readout in either paper shows that it blocked lysosomal degradation in these cells; proteasome-pathway perturbations shift part of the low-abundance population and the authors attribute most low-abundance variants, not all, to proteasomal degradation; the ASPA authors write that they cannot exclude a role for autophagy where expression persists longer. [IT 2026-11-25, ADV-281: no activity check for chloroquine; searched 2026-11-25.]",
    "receipt": "FTR-20261021-38378758-01; FTR-20261021-38740822-01"
   },
   {
@@ -188,7 +188,7 @@
     "cell_type": "A23 fibroblast",
     "developmental_stage": "culture, 48 h after transfection"
    },
-   "measured_result_note": "Soluble protein of both alleles rose; activity of R125Q rose 5 to 7-fold to about a tenth of wild type, while I278T activity did not rise at all although the same allele is rescued by proteasome inhibition in mice and in the kidney line. Endpoint recorded for I278T: protein up, activity unchanged (NO_CHANGE for activity). Different intervention and a cell line with strong baseline ER stress, so this is not a clean test of expression context, but it is a measured protein-up activity-flat case for a cytosolic enzyme."
+   "measured_result_note": "Soluble protein of both alleles rose; activity of R125Q rose 5 to 7-fold to about a tenth of wild type, while I278T activity was not rescued (text statement; the figure bars were not viewed), although the paper cites rescue of I278T by proteasome inhibitor treatment in yeast, human patient fibroblasts and transgenic mice (its refs 15, 25, 28); proteasome inhibitors were tested in this paper on R125Q only; the Discussion adds that blocking proteasomal degradation of all cellular proteins was by itself insufficient to restore I278T activity and that induction of the unfolded protein response and specifically of HSP70 was required for the bortezomib rescue (its ref 15), and that short-term high-dose proteasome inhibitor treatment is accompanied with substantial toxicity while long-term low-dose treatment was ineffective (its ref 28). Endpoint recorded for I278T: protein up, activity unchanged (NO_CHANGE for activity). Different intervention and a cell line with strong baseline ER stress, so this is not a clean test of expression context, but it is a measured protein-up activity-flat case for a cytosolic enzyme."
   },
   {
    "id": "DR-A02-010",

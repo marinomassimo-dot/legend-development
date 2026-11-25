@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "3d65deff0334f01e1e4e48e2cda73a57055fef7ad61d9bad6bf19bb17c788ac1",
+  "input_sha256": "4ef2f7e3f4f976df3e7678637ee06920b0c0f1b380170e7d49cbb3b0ca21f128",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -745,7 +745,7 @@
           "developmental_stage": "9 days to 22 months at first exposure across groups"
         },
         "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "A diffusion metric of the optic nerve is not a myelination measurement, and the tract is also the retinotoxicity target; the target here is therefore the metric, not CNS_myelination. Fractional anisotropy was lower in the group with the deep-grey finding than in unexposed controls and rose after stopping; the diffusion coefficient was unchanged. Full text (ADV-276, 2026-11-25, receipt FTR-20261125-40670421-01): the rise after stopping is Table 3, six of the 11 children of the imaging-finding group (left 0.273 to 0.367, p = 0.044; right 0.286 to 0.437, p = 0.050, which is not below 0.05 although the text says P < 0.05), with no unexposed time control. In Table 2 the exposed group with normal imaging is not significantly below controls (right median 0.463 against 0.427; left 0.390 against 0.410); the starred difference is the imaging-finding group against controls. Medians with quartiles are reported while the test named is a one-way analysis of variance."
+        "note": "A diffusion metric of the optic nerve is not a myelination measurement, and the tract is also the retinotoxicity target; the target here is therefore the metric, not CNS_myelination. Fractional anisotropy was lower in the group with the deep-grey finding than in unexposed controls and rose after stopping; the diffusion coefficient did not differ significantly (right median 1209 in the finding group against 1280 in controls, left 1427 against 1366; the authors call the differences not consistent between the two optic nerves). Full text (ADV-276, 2026-11-25, receipt FTR-20261125-40670421-01): the rise after stopping is Table 3, six of the 11 children of the imaging-finding group (left 0.273 to 0.367, p = 0.044; right 0.286 to 0.437, p = 0.050, which is not below 0.05 although the text says P < 0.05), with no unexposed time control. In Table 2 the exposed group with normal imaging is not significantly below controls (right median 0.463 against 0.427; left 0.390 against 0.410); the starred difference is the imaging-finding group against controls. Medians with quartiles are reported while the test named is a one-way analysis of variance. [IT 2026-11-25, ADV-281: groups of 11, 11 and 13 children, the exposed groups defined by the imaging finding; no drug-level or GABA measure in the children with normal imaging; the follow-up is six of the 11 'owing to patient partial compliance'.]"
       },
       {
         "id": "DR-H02-020",

@@ -91,7 +91,7 @@
         "cell_type": "enzyme and fibroblast",
         "developmental_stage": "UNKNOWN"
       },
-      "measured_result_note": "Curated PDK inhibitor. In the measurements retrieved the enzyme assay shows no half-maximal inhibition at the highest concentration tested and a fibroblast lactate-oxidation effect appears at a high micromolar concentration: weak in vitro. The repository's existing safety position (peripheral neuropathy, BLOCK-1) is unchanged by this card.",
+      "measured_result_note": "Curated PDK inhibitor. Among the measurements retrieved, three enzyme rows record no half-maximal inhibition (IC50 above 1 millimolar; CHEMBL1133665, CHEMBL1132309, CHEMBL1133733, which carry identical companion values and record no top concentration), other enzyme-level rows differ (EC50 180 micromolar, CHEMBL5370584; EC50 5.7 millimolar with 64.2 % inhibition at 10 millimolar, CHEMBL4308888; Kd above 1 millimolar, CHEMBL3813671; EC50 above 100 millimolar, CHEMBL4732185) and a fibroblast lactate-oxidation effect appears at a high micromolar concentration: weak in vitro. The repository's existing safety position (peripheral neuropathy, BLOCK-1) is unchanged by this card.",
       "evidence_scope": "EXTERNAL_DATABASE_RECORD"
     },
     {
