@@ -1254,10 +1254,12 @@
     },
     {
      "step": "Replay landing_suites.py against the red CI streaks on main, count escapes, add rules only for observed escapes",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "HE proposal to ADV 2026-11-25 (operator standing rule: no idle laboratory)",
-     "accepted_at": "2026-11-25T09:42:23Z"
+     "accepted_at": "2026-11-25T09:42:23Z",
+     "evidence": "same work as ADV-274; ADV-274: published 6dcfa4935 (gate PASS, ls-remote); record checkpoint_he_20261120/HE_RED_STREAKS_ADV274_20261125.md; sent to ADV 2026-11-25",
+     "updated_at": "2026-11-25T10:27:18Z"
     },
     {
      "step": "From the first CI run holding 670251825: name the suites that hold the gate's 50-88 minutes and propose the one change with the best minutes per risk",
@@ -1268,10 +1270,19 @@
     },
     {
      "step": "ADV-274: attribute every red streak of gate runs #2340-#2432, replay the landing selection, count named and escaped, median hours red, add rules only for observed escapes",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-274",
-     "accepted_at": "2026-11-25T09:43:25Z"
+     "accepted_at": "2026-11-25T09:43:25Z",
+     "evidence": "ADV-274: published 6dcfa4935 (gate PASS, ls-remote); record checkpoint_he_20261120/HE_RED_STREAKS_ADV274_20261125.md; sent to ADV 2026-11-25",
+     "updated_at": "2026-11-25T10:27:18Z"
+    },
+    {
+     "step": "safe_push --serialize runs the selected landing suites by default and refuses a push that turns one red (opt-out --no-landing-suites visible in log and history); self-test replays the causing diffs and a clean one; land after ADV's word",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad decision to HE, 2026-11-25, after ADV-274",
+     "accepted_at": "2026-11-25T10:32:52Z"
     }
    ]
   }
@@ -2261,6 +2272,13 @@
    "at": "2026-11-25T09:43:25Z",
    "source": "ADV-274",
    "step_sha256": "8e4c7d6859be",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T10:32:52Z",
+   "source": "ADV a5e6f2ad decision to HE, 2026-11-25, after ADV-274",
+   "step_sha256": "b3fd708046a8",
    "reopened_block": false,
    "authorised_by": null
   }
