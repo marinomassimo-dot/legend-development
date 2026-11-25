@@ -537,6 +537,13 @@
      "accepted_at": "2026-11-25T08:44:11Z",
      "evidence": "it_adv273_20261125/RESULT_ADV273_IT_20261125.md; PREREG f9ce8c5a8; search_log.tsv; candidate CC-20261125-ORCHESTRATOR-ADV273-INDEPENDENCE-01",
      "updated_at": "2026-11-25T09:52:40Z"
+    },
+    {
+     "step": "ADV-275: existence check of deposited neural-lineage expression datasets measuring WWOX after valproate or another HDAC inhibitor (key held-neural-hdac-inhibitor-expression-tables-with-wwox; consumer DL-REPO-003 neural gap)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV brief assignments/ADV-275.md on main; operator dispatch of successor window 2026-11-25",
+     "accepted_at": "2026-11-25T10:13:58Z"
     }
    ]
   }
@@ -952,6 +959,13 @@
    "at": "2026-11-25T08:44:11Z",
    "source": "ADV message 2026-11-25 (ADV-273, brief assignments/ADV-273.md)",
    "step_sha256": "0e99eff73310",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T10:13:58Z",
+   "source": "ADV brief assignments/ADV-275.md on main; operator dispatch of successor window 2026-11-25",
+   "step_sha256": "abcd5a8f2a76",
    "reopened_block": false,
    "authorised_by": null
   }
