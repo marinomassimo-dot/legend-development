@@ -1477,7 +1477,7 @@ Modello **statico**, **wild-type**, **AlphaFold** (nessuna struttura sperimental
 ### DL-MECH-057 — Predizione terapeutica richiede interazione trattamento×genotipo
 
 - **Status:** `promoted-to-CC` · **Tag:** ASSOCIAZIONE POST-HOC + meccanismo incompleto
-- **Fonte:** Chen et al. 2022, PMID 36530994 / PMCID PMC9756969; main text, otto figure, cinque figure e dieci tabelle supplementari letti integralmente. Dossier: `staging/deepdive_PMID36530994_Chen2022.md`.
+- **Fonte:** Chu et al. 2022 [corrected 2026-11-25 (IT, from SCI's ADV-276b batch 1; IT checked the held XML: Chu is first author and Chen third; the dossier file name keeps the old label)], PMID 36530994 / PMCID PMC9756969; main text, otto figure, cinque figure e dieci tabelle supplementari letti integralmente. Dossier: `staging/deepdive_PMID36530994_Chen2022.md`.
 - **Statement:** `outcome migliore nei trattati GG —non dimostra→ efficacia differenziale di ADI-PEG20 per genotipo` senza confronto controllo e test di interazione.
 - **DATO:** nella coorte ADI-PEG20 monoterapia, `GG n=9` associa OS con HR aggiustato `0,420` (`0,180–0,980`; `p=0,045`). Il segnale e' nullo nella coorte ADI-PEG20+mFOLFOX (`GG n=5`) e nel pooled (`GG n=14`).
 - **DATO BIOLOGICO:** GG associa WWOX/ASS1 T/N inferiori nei tessuti resecati; shWWOX sotto CoCl2 aumenta HIF1A, riduce ASS1 e attenua Alamar Blue sotto ADI-PEG20.

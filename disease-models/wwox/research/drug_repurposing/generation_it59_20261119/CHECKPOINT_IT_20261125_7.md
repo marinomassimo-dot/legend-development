@@ -1,0 +1,44 @@
+# IT checkpoint 19, 2026-11-25 (IT Orchestrator window df7283c4; mandate ORCH-ROADMAP-IT59-20261119; first closed increment of the window)
+
+Read after checkpoint 18 (`CHECKPOINT_IT_20261125_6.md`; not edited, still valid for what it records). Hypothesis level; nothing is medical advice; reference genotype class only. Peer messages are not the operator's authority.
+
+## 1. First assignment for the successor
+1. **Batch 2 of the staged BATCH_COMMIT**, ADV accepted: one blind verifier (`legend-delegate`, sonnet, effort high stated in the dispatch; the budget table says high for verifiers), at most 10 statements per call, statements as (statement, source, anchor) with no conclusion. Candidates still PROPOSED and not in batch 1: `ADV255-LACTATE`, `ADV253-REVIEW-RETRACTIONS`, `ADV261-CLAIM-UNITS`, `ADV238-P47T-TWO-ANIMALS`, `ADV246-LINE-PROTEIN` (saturation clause now in it, unchecked), `ADV247-INDEPENDENCE`, `ADV251-KO-FLOOR`; plus the **second blind check (a different call) of the three held-back sentences** in `CC-20261125-ORCHESTRATOR-BATCH1-HELDBACK-01` (Hudry intrathecal range; 293T and breast-line co-IP wording; PAPER 050 primer-pair inference). Rules: only numbers re-derived from held bytes by a second reader; a statement the verifier overturns stays out and is reported with its quote; `test_batch_queue.py` and LINT before the commit; stop on MAJOR or URGENT. For ADV255 keep «only datum» out unless PMID 35573960 is reconciled (ADV).
+2. **SCI's peer wording sets, queued for ordinary places (each blind re-derived by SCI's delegate; peer content, not operator authority):**
+   * ADV-276b batch 1: DL-MECH-057 «Chen et al. 2022» to «Chu et al. 2022» (IT checked the held XML: Chu first, Chen third author; line 1480 of the ledger); Wang 2025 lactate wording in `CC-20261019-SCIENTIST-B-G2-FRUCTOSE-01` and the paper-registry and tracking-log short titles (maternal diet, 2.5-fold total and 2.7-fold labelled lactate); Sakai 2013 n (7,379 enrolled, at most 6,969 in the model) in the HUMAN-AXIS candidate and the registries. Registry lines are in two of the four scientific files: they need a BATCH_COMMIT statement set.
+   * HYP-20260709-08 and DL-BIO-001 (Schultz 2018, chloroquine in ONE line at 10 uM, about 1.3-fold not significant; bafilomycin positive in all five lines; the 40 uM and NH4Cl arm was never tested); see the SCI message of 2026-11-25 13:2xZ and `RESULT_ADV276C_30202070_SCI_20261125.md` section 5.
+   * ADV-276 step 2 batch 1: DL-MECH-124, DL-MECH-162, DL-MECH-122, DL-MECH-136 (clauses 1 and 3), optional PAPER 118 note; Kv7 lead (Webster, Pronot, Cousin 2026) as an open-question row, not a card line. Record `RESULT_ADV276_STEP2_BATCH1_SCI_20261125.md`.
+   * ADV-276 step 2 batch 2: RP-017, RP-018, RP-019, RP-033, RP-043 (two lines) portfolio rows. Record `RESULT_ADV276_STEP2_BATCH2_SCI_20261125.md`.
+   * Rule for all of them: a map or card edit owes `check_cards.py`, `test_documented_commands.py`, the view trio, `test_repurposing_join.py` and the full view suite (section 3).
+3. **Next candidate ADV proposed (after batch 2):** a held-table coverage matrix of model by age by readout for the four reported WWOX-DEE seizure phenotypes: which has NO held electrophysiology or EEG readout at the same age as the compound test windows (from the cards, no new reading); consumer: the PREREG of the next compound comparison. Strand rotation: IT has done wording, repurposing independence and map negatives. IT's own alternative, if ADV wants one: the DC-04 repair (two NEEDS-DATUM reopen rows that the daily radar still asks, already served by the 186-of-186 assay catalogue and by ADV-029).
+4. **DC-05** of ADV-241 was recorded CONCLUDED on the map on 2026-11-25 by another actor: do not redo.
+5. The **writing-step checklist item** (the phrase class «only», «never», «single», «cannot tell apart») is in `framework/instruction/epistemic_discipline.md` 2.4 now.
+
+## 2. Closed in this window (on `main`; do NOT redo)
+| Item | Where | One line |
+|---|---|---|
+| ADV-276 wording candidate | `CC-20261125-ORCHESTRATOR-ADV276-WORDING-01` on `main` at `9c32f572`; applied by the card route at `1b6bd847e88d` | blind check: 42 of 47 facts supported; line 2 WITHDRAWN (my error: the unlabelled «Low 4/2/3» row of Table 3, Yadav 2022, was assigned to the wrong group; by group totals the printed p values reproduce); six cards rebuilt |
+| ADV-277 | `brainstorm_20261116/it_adv277_20261125/`; `006d0ca3ac51` | no protein-level positive control for WWOX after an HDAC inhibitor; the one working-sentinel deposit (organoids, valproate, H1-0 about 2.2-fold) does not detect WWOX (coverage, not direction); the missing measurement is named |
+| ADV-273 and ADV-275 follow-ups | `it_adv273_20261125/`, `it_adv275_20261125/` | recall limit and the unscored sentinel-failed list (28 contrasts, 20 deposits) |
+| Staged BATCH_COMMIT batch 1 | `BATCH_20261125_002` at `4ed9b49394f9` | 3 candidates propagated (PAPER 050, CORPUS-STUB-129, CLAIM 002 and 011, working-model section 4 and ledger lines); 25 statements, 22 supported, A12, A15, C6 held back; `growth_anchors` 4 to 3 |
+| DREAM pass over ADV-241, 246, 248, 251, 255, 259 | recorded by ADV (pending list clear) | the connection: all of them and the neuron arm of the wording set rest on ONE supplement read from raster by one reader family; written in the `RS-R9` row |
+
+Delegation read-back: two blind verifiers (`legend-delegate`), both asked sonnet with effort high stated in the dispatch. Batch-1 verifier: 25 statements. ADV-276 verifier: 10 statements, 47 facts, 41 tool uses, about 143k subagent tokens, 3.7 minutes. Neither could write a report file; the hand-back text was saved verbatim by IT (`it_batch1_verify_20261125/`, `it_adv276_card_route_20261125/`).
+
+## 3. Rules that bind any applied wording (new in this window)
+* **`check_cards.py` is a gate that is not in `landing_suites` or in the usual list.** It forbids a number with nM, uM, mg, mg/kg, vg, mL or kg in card text, and `test_documented_commands.py` calls it with `--help`, so a card with a dose-looking token turns that suite red and `safe_push` refuses (it did, once, on this window's first card landing). Keep values with units in the candidate and the verifier report; write «doses in the paper» on the card.
+* **View-derivative trio** as in checkpoint 18, in this order: `titles --refresh`, `run`, `--source shareable run`, `package`, then `check` for both sources, then the full `test_repurposing_view.py` (22 minutes on a loaded machine), `test_repurposing_view_i18n.py`, `test_repurposing_join.py`, `test_cards_early_it13_p22.py`. The cards copy in `cards_early_it13_p22_20261031/regenerated/` holds only the EB cards; the six cards of this route are not in it.
+* **A table extraction can put an unlabelled row in `<tfoot>` first.** Assign table rows by group totals and the paper's margins before computing a p value; check that the totals equal the stated n. A blind verifier caught the error that cost a withdrawn line.
+* **A map record read by the join:** no «PMID nnn» in a map line unless the paper is a reading (checkpoint 18).
+
+## 4. Open items
+1. Candidates PROPOSED, nothing applied to the four current files besides batch 1: section 1 item 1, plus `ADV234-PAPER570`, `ADV265-WORDING` (rest of it), `ADV273-INDEPENDENCE`, `ADV275-DEPOSITS`, `ADV249-PAPER050` (rest of it), `HDAC-SECOND-PLATFORM`, `PANELS1LM-RESCUE-RANGE` (rest of it), `BATCH1-HELDBACK`; the MAJOR part-2 items stay for ADV.
+2. The ordinary-route edits of section 1 item 2 and the `RS-R9`, `ADV246` clause and `epistemic_discipline` 2.4 edits, which are in the landing that carries this checkpoint (check `git log`).
+3. CI: `ci_runs.py status <sha>` at 14:10Z: `4ed9b493` (#2463) and `006d0ca3` (#2460) green; `1b6bd847e88d` public release gate #2473 in progress.
+4. Draft letters to authors remain the operator's to send; HE owns the rename; Codex is PAUSED.
+5. Peers at 13:20Z: SCI 0d0c6dc3, HE successor 43ab579f, ADV a5e6f2ad (names change: run ListAgents first). SCI's follow-ups for the five lead-paper receipts and the lamotrigine port belong to SCI's successor `sci_ah_20261125`.
+
+## 5. Lessons
+1. **My own derived statement was the wrong one:** the verifier overturned a line I had written and the cause was extraction layout, not the source. A claim that a printed p value is «not reproducible» needs the table's totals to match n first.
+2. **A check outside the usual list turned the landing red:** the cards checker. The memory file `card-or-map-pmid-edit-owes-view-trio.md` carries it now; add it to `landing_suites.py` if HE agrees (not done here).
+3. **Not consumed:** DC-04 remains OPEN (the daily radar plan still asked NP5A3 and NP1B4 on the day of the result; not re-checked); the 14-subject normal-lactate count of ADV-255 has no values or ranges; the Chong 2023 value stays unreachable and marked.
