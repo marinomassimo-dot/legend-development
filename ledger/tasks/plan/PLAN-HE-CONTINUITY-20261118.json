@@ -1258,6 +1258,20 @@
      "owner": "plan",
      "source": "HE proposal to ADV 2026-11-25 (operator standing rule: no idle laboratory)",
      "accepted_at": "2026-11-25T09:42:23Z"
+    },
+    {
+     "step": "From the first CI run holding 670251825: name the suites that hold the gate's 50-88 minutes and propose the one change with the best minutes per risk",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad message to HE 9229d112, 2026-11-25, item 2",
+     "accepted_at": "2026-11-25T09:42:47Z"
+    },
+    {
+     "step": "ADV-274: attribute every red streak of gate runs #2340-#2432, replay the landing selection, count named and escaped, median hours red, add rules only for observed escapes",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV-274",
+     "accepted_at": "2026-11-25T09:43:25Z"
     }
    ]
   }
@@ -2233,6 +2247,20 @@
    "at": "2026-11-25T09:42:23Z",
    "source": "HE proposal to ADV 2026-11-25 (operator standing rule: no idle laboratory)",
    "step_sha256": "8f03b5802c8e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T09:42:47Z",
+   "source": "ADV a5e6f2ad message to HE 9229d112, 2026-11-25, item 2",
+   "step_sha256": "a403ffde8a05",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T09:43:25Z",
+   "source": "ADV-274",
+   "step_sha256": "8e4c7d6859be",
    "reopened_block": false,
    "authorised_by": null
   }
