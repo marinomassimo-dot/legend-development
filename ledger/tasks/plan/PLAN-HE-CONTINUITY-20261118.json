@@ -1083,11 +1083,20 @@
     },
     {
      "step": "ADV-243: fix the stale recall-minute comment in strategic_advisor.py; measure the friction of ADV's root-only record path and propose three designs (propose only)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-243 (ADV - CURRENT a5e6f2ad message 2026-11-25; assignments/ADV-243.md)",
      "accepted_at": "2026-11-25T02:23:46Z",
-     "updated_at": "2026-11-25T02:23:46Z"
+     "updated_at": "2026-11-25T02:35:34Z",
+     "evidence": "comment fix 3c25cd68d (test_strategic_advisor rc 0); measurement HE_RECORD_PATH_FRICTION_ADV243_20261125.md; landed cf923972a (gate PASS, ls-remote verified); designs and four follow-up answers sent to ADV 2026-11-25"
+    },
+    {
+     "step": "ADV-245: repair the DC-05 dated headers at their source and the EN-03 generic radar terms, with test and before/after",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "source": "ADV-245 (ADV - CURRENT a5e6f2ad message 2026-11-25; assignments/ADV-245.md)",
+     "accepted_at": "2026-11-25T02:35:34Z",
+     "updated_at": "2026-11-25T02:35:34Z"
     }
    ]
   }
@@ -1930,6 +1939,13 @@
    "at": "2026-11-25T02:23:46Z",
    "source": "ADV-243 (ADV - CURRENT a5e6f2ad message 2026-11-25; assignments/ADV-243.md)",
    "step_sha256": "0aedcd7e04af",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T02:35:34Z",
+   "source": "ADV-245 (ADV - CURRENT a5e6f2ad message 2026-11-25; assignments/ADV-245.md)",
+   "step_sha256": "96ad21edfdde",
    "reopened_block": false,
    "authorised_by": null
   }
