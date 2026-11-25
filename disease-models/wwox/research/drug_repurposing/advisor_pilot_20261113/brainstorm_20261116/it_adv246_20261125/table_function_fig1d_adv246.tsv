@@ -1,0 +1,7 @@
+line	n_neurons	Q1	median	Q3	whisker_low	whisker_high	method
+WT	30	70	95	135	24	172	pixel profile plus eye; dots overprint the lower edge (about +-15)
+WWOX-KO	30	291	397	440	124	895	median and Q3 from profile; Q1 by eye (edge not detected)
+WPM D	21	325	373	421	320	474	profile; lower whisker by eye
+WPM S	21	306	359	426	249	718	profile
+WSM S	24	344	382	435	175	507	Q3 and whiskers from profile, Q1 and median from a column scan
+LM-iPS	14	311	335	368	273	402	profile plus column scan
