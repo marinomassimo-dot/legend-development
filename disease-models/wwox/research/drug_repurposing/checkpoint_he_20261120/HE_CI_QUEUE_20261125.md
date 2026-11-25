@@ -36,3 +36,35 @@ Source: the public Actions API, read about 13:25Z without a login. One list of t
 A first, as a trial with a rejecting observation: in a scratch clone, run the whole inventory serially and on 4 workers back to back. Reject A if any suite is green serially and red in parallel and cannot be named as needing to run alone, or if the wall time does not fall by at least half. B stays on the operator list whatever A gives.
 
 Not measured: the effect of 4 workers on a hosted runner; the browser suites under contention.
+
+## 5. Trial of option A (ADV: go, opt-in and default off; same day)
+
+`--jobs N` or `LEGEND_REGRESSION_JOBS` in `scripts/run_release_regressions.py`; without it the run is serial as before. Both runs: one commit (a2b46d713 plus the switch), one isolated clone without `files/`, one 4-core host shared with other sessions.
+
+| measure | serial | 4 workers |
+|---|---|---|
+| window (UTC) | 13:30 to 14:36 | 14:36 to 15:00 |
+| wall seconds | 3,965 | 1,437 |
+| suites / verdict | 276, PASS WITH SKIPS (45) | 276, PASS WITH SKIPS (45) |
+| summed suite seconds | 3,578 | 4,796 (contention) |
+| `test_repurposing_view.py` | 1,214 s | 1,434 s |
+| `test_repository_surface_determinism.py` | 568 s | 804 s |
+| load average | 3.3 at start, 2.9 at end (not sampled between) | 6.0 to 8.2 in the first 20 min, 3.3 to 3.6 after; 2 to 5 other test or gate processes |
+
+Same suite list, same exit code per suite, same skip reasons, same number of tests per suite, no tracked write, clone clean before and after. **No suite had to run alone.** The parallel phase (1,434 s) lasted exactly as long as the view suite, which is now the bound: splitting that suite is the only further lever inside this design, and the floor under it (summed time over 4 workers) is about 1,200 s here.
+
+Overlap with my own landings (gate and suites on the same host): 14:18 to 14:40Z, so the last 18 minutes of the serial run and the first 3 of the parallel one.
+
+**Not measured:** the hosted runner. **Enabling it there is a workflow edit, reserved to the operator**, one line under `jobs.release-gate.env` of `.github/workflows/public-release-gate.yml`:
+
+```yaml
+      LEGEND_REGRESSION_JOBS: "4"
+```
+
+Cost if it is enabled and a suite later collides: a red run that a serial run does not reproduce; the remedy is one `RUN_ALONE` entry. Revert: delete the line.
+
+## 6. Repeat of the 4-worker run, and the one red (same commit, same day)
+
+15:01:10 to 15:26:46Z, load 4.1 at start and 3.4 at end, 2.7 to 11.6 between (1 to 4 other test or gate processes). **1,536 s wall, 276 suites, 45 skips, verdict FAIL: one suite green serially and red here**, `framework/scripts/test_verify_run.py` (one error of 20 tests). Everything else as in the serial run: same list, other exit codes, skip reasons, test counts; no tracked write.
+
+Cause, named: a race inside that test, not a shared resource. `wait_state` waited for the run directory and read `manifest.json`, which `verify_run.py` writes after making the directory. Shown deterministically (manifest written 0.5 s late: `FileNotFoundError` before, state returned after); the test now waits for the file. So no `RUN_ALONE` entry; **no 4-worker run has been made since the fix**, and one clean run is owed before the workflow line is put to the operator. Two runs are a small sample: a rarer race would not show in them.
