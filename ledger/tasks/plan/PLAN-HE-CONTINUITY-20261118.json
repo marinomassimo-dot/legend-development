@@ -1265,11 +1265,12 @@
     },
     {
      "step": "From the first CI run holding 670251825: name the suites that hold the gate's 50-88 minutes and propose the one change with the best minutes per risk",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad message to HE 9229d112, 2026-11-25, item 2",
      "accepted_at": "2026-11-25T09:42:47Z",
-     "updated_at": "2026-11-25T11:06:14Z"
+     "updated_at": "2026-11-25T11:27:23Z",
+     "evidence": "HE_CI_MINUTES_GATECACHE_20261125.md and commit 4c4bca0a9: view 996 s + surface determinism 758 s = 52% of 3385 s; one change applied after ADV's acceptance (--cache in the stray-git test), 396 s to 251 s; warm run sees a planted block; mutated predicate makes the test fail"
     },
     {
      "step": "ADV-274: attribute every red streak of gate runs #2340-#2432, replay the landing selection, count named and escaped, median hours red, add rules only for observed escapes",
@@ -1282,13 +1283,12 @@
     },
     {
      "step": "safe_push --serialize runs the selected landing suites by default and refuses a push that turns one red (opt-out --no-landing-suites visible in log and history); self-test replays the causing diffs and a clean one; land after ADV's word",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad decision to HE, 2026-11-25, after ADV-274",
      "accepted_at": "2026-11-25T10:32:52Z",
-     "blocker": "built on local branch task/he-landing-refuse-20261125 (338ed811a); lands on ADV's word once IT's join fix a86667e8c is on main",
-     "no_condition": "waits for ADV's word, which no repository condition expresses",
-     "updated_at": "2026-11-25T10:49:32Z"
+     "updated_at": "2026-11-25T11:22:08Z",
+     "evidence": "Landed d3d1f94b13cd on ADV's word (2026-11-25 ~11:07Z): test_safe_push 42 OK on the merged tree; push log first line is the NOTICE; 7 selected suites PASS, gate PASS, ls-remote; replays in CHECKPOINT_HE_20261125_Q_ADDENDUM.md"
     }
    ]
   }
