@@ -1101,6 +1101,13 @@
      "accepted_at": "2026-11-25T10:52:54Z",
      "evidence": "ADV-276 closed by ADV 2026-11-25 (campaign ledger EXECUTED). Cumulative strict 17 of 43, loose 27 of 43, reversals 0 of 43. Last item: adv276c_six_newly_held_sci_20261125/RESULT_ADV276_SIX_NEWLY_HELD_SCI_20261125.md, six receipts FTR-20261125-{27845895,39178853,27641496,33363507,33854788,34210081}-01, on main at ea12cde65; wording sent to IT 6739e4ff.",
      "updated_at": "2026-11-25T15:57:34Z"
+    },
+    {
+     "step": "ADV-279: read the next ten held partials by consumer count (wider held-bytes rule stated first; text-class and figure-class yield separate; two increments of five; PREREG first; blind second reading; wording to IT per batch)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "assignments/ADV-279.md (on main at 874f91438) and ADV message of 2026-11-25 on the wider rule",
+     "accepted_at": "2026-11-25T16:13:22Z"
     }
    ]
   }
@@ -1950,6 +1957,13 @@
    "at": "2026-11-25T10:52:54Z",
    "source": "ADV-276",
    "step_sha256": "6aa20a1cb828",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T16:13:22Z",
+   "source": "assignments/ADV-279.md (on main at 874f91438) and ADV message of 2026-11-25 on the wider rule",
+   "step_sha256": "4534848d121c",
    "reopened_block": false,
    "authorised_by": null
   }
