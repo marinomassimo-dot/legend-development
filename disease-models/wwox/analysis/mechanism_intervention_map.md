@@ -347,6 +347,7 @@ WWOX loss
   holds only for PDH **phosphorylation**, for isotope-tracer flux, and for any of these in a WWOX-deficient
   **neural** system, in the records read for ADV-266 (not a complete search). The original lines stay as
   the record of what was claimed.
+  **Dated addition (IT, 2026-11-25, ADV-270 follow-up).** The knockout oxygen consumption of PMID 25012504 is drawn per well: no normalisation by cell number or protein after the run is stated in the main text or in the supplement legends (two routes: the held text; the publisher supplement files, whose digests match the manifest), and the knockout-to-control ratio is 0.53 to 0.64 in every phase of the trace, including after respiratory-chain inhibitors (ratios traced from the publisher image). Read: *reduced per well; per-cell reduction not shown.* Only the authors could say; outside contact is reserved. Details: `research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_norm_25012504_20261125/RESULT_NORM_25012504_IT_20261125.md`.
 - **Human metabolism is reported normal where it was checked; "four times" is a count NOT reconciled with N-06 (2026-10-24: one complete screen plus one MRS case in the opposite direction).** Lactate, ammonia, acylcarnitines,
   uric acid, homocysteine, plasma amino acids, urinary organic acids, transferrin isoforms — normal;
   a complete metabolic and mitochondrial screen including muscle biopsy — normal; MRS — normal. The
