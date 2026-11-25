@@ -193,15 +193,29 @@ class TheStateOfAFinishedCheck(unittest.TestCase):
 
 
 class TheChecksRunInOneCall(unittest.TestCase):
-    def setUp(self) -> None:
-        self._tmp = tempfile.TemporaryDirectory()
-        self.out = Path(self._tmp.name)
+    """One real run of the check set, read by every case below.
 
-    def tearDown(self) -> None:
-        self._tmp.cleanup()
+    Each case used to start its own run over the same paper with the same arguments: five runs of
+    40 to 130 s, about 400 s of the suite's 700 (measured 2026-11-25), for assertions that all
+    read one report. The tree is read before and after that run, for the write-nothing case.
+    """
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        tmp = tempfile.TemporaryDirectory()
+        cls.addClassCleanup(tmp.cleanup)
+        cls.out = Path(tmp.name)
+        cls.before = cls.tree_state()
+        cls.report = pp.run_checks(ROOT, "wwox", PARTIAL_PMID, out_dir=cls.out)
+        cls.after = cls.tree_state()
+
+    @staticmethod
+    def tree_state() -> str:
+        return subprocess.run(["git", "-C", str(ROOT), "status", "--porcelain"],
+                              capture_output=True, text=True, check=True).stdout
 
     def test_one_call_produces_one_line_per_check_and_a_detail_file(self) -> None:
-        report = pp.run_checks(ROOT, "wwox", PARTIAL_PMID, out_dir=self.out)
+        report = self.report
         self.assertGreaterEqual(report["calls"], 3)
         self.assertEqual(report["calls"], len(report["results"]))
         detail = self.out / f"PMID{PARTIAL_PMID}.txt"
@@ -213,35 +227,27 @@ class TheChecksRunInOneCall(unittest.TestCase):
     def test_a_reach_limit_and_a_refusal_are_printed_apart_and_neither_is_a_pass(self) -> None:
         """MF-6's rule, kept: INSUFFICIENT_DATA is not a pass. But a flag-drift check that
         exits 2 on every single-revision manifest must not train a reader to ignore reds."""
-        report = pp.run_checks(ROOT, "wwox", PARTIAL_PMID, out_dir=self.out)
-        states = {row["state"] for row in report["results"]}
+        states = {row["state"] for row in self.report["results"]}
         self.assertTrue(states <= {"ok", "nothing-to-screen", "refused"}, states)
-        rendered = pp.render_checks(report)
-        void = [row for row in report["results"] if row["state"] == "nothing-to-screen"]
+        rendered = pp.render_checks(self.report)
+        void = [row for row in self.report["results"] if row["state"] == "nothing-to-screen"]
         if void:
             self.assertIn("established nothing (not a pass)", rendered)
             self.assertNotIn("ok " + void[0]["check"], rendered)
 
     def test_a_reach_limit_carries_its_reason_so_the_detail_file_stays_shut(self) -> None:
-        report = pp.run_checks(ROOT, "wwox", PARTIAL_PMID, out_dir=self.out)
-        for row in report["results"]:
+        for row in self.report["results"]:
             if row["state"] == "nothing-to-screen":
                 self.assertGreater(len(row["headline"]), 30, row)
                 self.assertNotIn("VERDICT:", row["headline"])
 
     def test_the_run_reports_calls_and_seconds(self) -> None:
-        report = pp.run_checks(ROOT, "wwox", PARTIAL_PMID, out_dir=self.out)
-        self.assertIsInstance(report["seconds"], float)
-        self.assertGreater(report["seconds"], 0)
+        self.assertIsInstance(self.report["seconds"], float)
+        self.assertGreater(self.report["seconds"], 0)
 
     def test_the_checks_write_nothing_into_the_repository(self) -> None:
         """A preparation step that mutates tracked state is not a preparation step."""
-        before = subprocess.run(["git", "-C", str(ROOT), "status", "--porcelain"],
-                                capture_output=True, text=True).stdout
-        pp.run_checks(ROOT, "wwox", PARTIAL_PMID, out_dir=self.out)
-        after = subprocess.run(["git", "-C", str(ROOT), "status", "--porcelain"],
-                               capture_output=True, text=True).stdout
-        self.assertEqual(before, after)
+        self.assertEqual(self.before, self.after)
 
 
 class ThePacketNamesTheTreeItDescribes(unittest.TestCase):
