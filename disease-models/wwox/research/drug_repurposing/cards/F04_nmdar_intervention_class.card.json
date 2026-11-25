@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "11486fe85f07bbb4e0d5f05ee94b6150335dd909e0386fc39d1594da194173ca",
+  "input_sha256": "8e68a0cb44ec1788a19dd77e750a6575c9f8fea3b0167aaeb96319f9efdbd6c2",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -559,7 +559,8 @@
       "Whether any such block affects maturation in a developing Wwox-deficient brain.",
       "NBQX and GYKI 52466 have no primary mechanism source read in this work: an AMPA arm that uses them is use-only, mechanism not read.",
       "The removable share of a GluN2B-selective negative modulator is bounded by receptor composition and by zinc (recombinant values, transfer); no subunit-selective drug has been applied to a Wwox system.",
-      "The two noncompetitive AMPA tools (perampanel and the 2,3-benzodiazepine) share one binding pocket in structures, so agreement between them is not independent confirmation; no AMPA drug has been applied to a Wwox system."
+      "The two noncompetitive AMPA tools (perampanel and the 2,3-benzodiazepine) share one binding pocket in structures, so agreement between them is not independent confirmation; no AMPA drug has been applied to a Wwox system.",
+      "Whether any organoid transcript difference or null on this card (deposit GSE156243) is independent of the CRISPR clone and of the batch: the sequenced knockout organoids are four of ONE clone (1B, from edit-spanning reads, ADV-244, SCI, 2026-11-25), the other clone (A2) was not sequenced, the comparator is two organoids of the parental line (the authors removed two of four wild-type libraries, one for failed quality control and one for not clustering), and the organoids appear to come from one batch (the authors' Methods: organoids from the same batch were used for all analyses unless stated otherwise; their reply to reviewers speaks of the batch of the RNA-seq; not stated as a measured fact for these six libraries), so a difference here is not shown to be a property of the knockout rather than of the clone or the batch. [IT 2026-11-25, ADV-244]"
     ],
     "evidence_against": [
       "NMDAR dependence is not NMDAR gain: depolarised resting potential and reduced inhibition suffice (not tested). The largest synaptic change in the source is inhibitory (sIPSC amplitude 27.5 against 57.3 pA in controls, frequency also reduced), not excitatory.",
