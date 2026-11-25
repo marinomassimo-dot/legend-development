@@ -1131,10 +1131,11 @@
     },
     {
      "step": "ADV-282: audit the activity or engagement check of the 48 queued null notes, ordered by HE consumer_count.py, increments of eight, PREREG calibrated on ADV-281 (loose 4 of 9 of the ten); part A (Hou, Kobayashi) and part C (equivalence rows) were done by the previous window",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "source": "ADV-282 (assignments/ADV-282.md)",
-     "accepted_at": "2026-11-25T19:45:11Z"
+     "accepted_at": "2026-11-25T19:45:11Z",
+     "updated_at": "2026-11-25T20:11:50Z"
     }
    ]
   }
