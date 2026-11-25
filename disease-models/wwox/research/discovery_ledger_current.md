@@ -3919,12 +3919,12 @@ Leads staged in the candidates of `BATCH_20261019_001` (groups G1 to G4). All ar
 - **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
 - **Not medical advice.**
 
-### DL-MECH-123 — A diet exposure alone raises neonatal brain lactate about 2.7-fold, so a lactate difference in a Wwox-null brain is not by itself a HIF1A-driven glycolytic shift
+### DL-MECH-123 — Brain lactate in P7 pups of fructose-fed dams is about 2.5-fold higher after a fructose injection, so a lactate difference in a Wwox-null brain is not by itself a HIF1A-driven glycolytic shift
 
 - **Tag:** INFERENZA
 - **Status:** open
 - **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-B-G2-FRUCTOSE-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
-- **Causal statement:** High-fructose exposure moves whole-brain lactate from about 4 to about 11 umol/g in neonatal mice through microglial GLUT5 ([[paper_registry_current#PAPER 276]]).
+- **Causal statement:** In P7 mouse pups born to and nursed by dams on a 15 kcal% fructose or control diet, each injected with 4 g/kg [2-13C]-fructose 15 minutes before harvest, the total brain lactate pool was about 10.7 against 4.3 umol/g (5 against 4 pups; image readings) and GLUT5-null exposed pups stayed near control ([[paper_registry_current#PAPER 276]]). The labelled species rose by only about 0.24 umol/g and no uninjected value is reported, so this does not show a rise from diet alone. [Corrected 2026-11-25, IT blind check; the earlier title said a diet exposure alone raises it about 2.7-fold.]
 - **Falsifying experiment / counter:** Matched-diet Wwox-null versus wild-type brain lactate with cell-type resolution.
 - **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
 - **Not medical advice.**

@@ -53,3 +53,7 @@ Receipts `FTR-20261019-40500435-01` and `-37907746-01` first.
 **What landed:** 2 PAPER record(s) (PAPER 276, PAPER 277) with their LIT records. 
 **Status / Type / Summary:** unchanged by this candidate.
 **Not medical advice.** Class level only; no individual-level record is carried.
+
+## Dated note, 2026-11-25 (IT, blind check; `CC-20261125-ORCHESTRATOR-ADV276C-SIX-HELD-01` section 5)
+
+The wording "neonatal high fructose ... raises whole-brain neonatal lactate about 2.7-fold" above is corrected: the Figure 3b values are from P7 pups born to and nursed by dams on a fructose or control diet, every pup injected with 4 g/kg [2-13C]-fructose 15 minutes before harvest; the total pool is about 2.5-fold higher (about 4.3 to 10.7 umol/g, 4 against 5 pups, image readings) and the labelled lactate about 2.7-fold. No uninjected value is reported. The entries above are left as written.
