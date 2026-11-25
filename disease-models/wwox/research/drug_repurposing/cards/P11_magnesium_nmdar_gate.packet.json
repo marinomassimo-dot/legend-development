@@ -151,7 +151,7 @@
     "cell_type": "children 3 months to 5 years",
     "developmental_stage": "UNKNOWN"
    },
-   "measured_result_note": "Open-label randomised, 52 recruited and 48 analysed per protocol, comparator syrup held calcium and vitamin D without magnesium, no blinding. Seizure control p 0.69 and development p 0.09 (no difference); EEG improvement p 0.04 in the Results and p 0.003 in the Discussion (internal inconsistency). No post-treatment serum magnesium is reported in the text read although the Discussion says supplementation raised it. The EEG p value is not reproducible from Table 2 (about 0.10 by a Fisher test), EEG denominators differ (26 and 22), and Table 3 margins disagree with Table 2.",
+   "measured_result_note": "Open-label randomised, 52 recruited and 48 analysed per protocol, comparator syrup held calcium and vitamin D without magnesium, no blinding. Seizure control p 0.69 and development p 0.09 (no difference); EEG improvement p 0.04 in the Results and p 0.003 in the Discussion (internal inconsistency). No post-treatment serum magnesium is reported in the text read although the Discussion says supplementation raised it. The EEG p value is not reproducible from Table 2 (about 0.10 by a Fisher test), EEG denominators differ (26 and 22), and Table 3's margins agree with Table 2 once its unlabelled 'Low' row (4/2/3, printed in the table footer of the XML) is assigned to the non-intervention group by the group totals (an earlier statement that they disagreed is not reproducible from the table, probably because that row was read as belonging to the intervention group; corrected 2026-11-25, ADV-276, after a blind check). Table 3's printed p values (0.003 intervention, 0.42 non-intervention) reproduce by chi-square from the counts (0.0029 and 0.418; intervention Low 4/4/0 and Normal 2/3/13, non-intervention Low 4/2/3 and Normal 3/2/8); Table 4's 0.004 and the seizure-control 0.69 also reproduce, and only the EEG p value of Table 2 does not.",
    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
   },
   {
@@ -170,7 +170,7 @@
     "cell_type": "infants and young children 2 to 24 months",
     "developmental_stage": "UNKNOWN"
    },
-   "measured_result_note": "Retrospective, 229 enrolled, no control group (the authors say so); 48.5 per cent seizure-free and 72.1 per cent resolution of hypsarrhythmia; 21.4 per cent had adverse events. Direction is UNKNOWN because there is no comparator in the study.",
+   "measured_result_note": "Retrospective, 229 enrolled, no control group (the authors say so); 48.5 per cent seizure-free and 72.1 per cent resolution of hypsarrhythmia; 21.4 per cent had adverse events. Direction is UNKNOWN because there is no comparator in the study. Full text (ADV-276, 2026-11-25, receipt FTR-20261125-36967744-01): 302 patients collected, 229 enrolled; 64 of the 229 had failed a first adrenocorticotropic hormone course (50 not seizure-free at its end, 14 relapsed within 1 to 12 months) and all 229 received it with magnesium, so magnesium cannot be separated; the paper states that it lacked a control group. UNKNOWN stands.",
    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
   },
   {
