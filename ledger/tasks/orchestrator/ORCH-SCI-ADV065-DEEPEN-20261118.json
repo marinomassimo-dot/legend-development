@@ -1184,10 +1184,12 @@
     },
     {
      "step": "ADV-287 step 2: pass of the 22 card statements carrying a superlative or count word (universe_adv287.tsv), PREREG first, producer plus blind reader given the sentence and the WHOLE source table, same classes and Obeid rules; H02/A01 full pass and second random 20 stay HELD until IT reports the ADV-282 and ADV-287 sentences applied",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-287 step 2 (ADV decision 2026-11-25, checkpoint AO section 1; SCI launcher of window 488a3ad0)",
-     "accepted_at": "2026-11-25T22:40:33Z"
+     "accepted_at": "2026-11-25T22:40:33Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv287_step2_marked_statements_sci_20261125/RESULT_ADV287_STEP2_SCI_20261125.md (8649f3c2b)",
+     "updated_at": "2026-11-25T23:20:06Z"
     }
    ]
   }
