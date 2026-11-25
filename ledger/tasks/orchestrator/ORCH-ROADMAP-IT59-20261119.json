@@ -337,6 +337,13 @@
      "accepted_at": "2026-11-25T00:09:58Z",
      "evidence": "result and three receipts in brainstorm_20261116/it_adv230_20261125; WO-10 map line; landing in progress",
      "updated_at": "2026-11-25T00:19:09Z"
+    },
+    {
+     "step": "ADV-232: NQ-A feasibility, PV-linked ECoG panel against held Wwox recordings; step 1 table, step 2 only if two components have a Wwox counterpart",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-232 (ADV message 2026-11-25)",
+     "accepted_at": "2026-11-25T00:39:42Z"
     }
    ]
   }
@@ -598,6 +605,13 @@
    "at": "2026-11-25T00:09:58Z",
    "source": "ADV-230 (ADV message 2026-11-24)",
    "step_sha256": "c113f3214d94",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T00:39:42Z",
+   "source": "ADV-232 (ADV message 2026-11-25)",
+   "step_sha256": "dc7ccbfe1089",
    "reopened_block": false,
    "authorised_by": null
   }
