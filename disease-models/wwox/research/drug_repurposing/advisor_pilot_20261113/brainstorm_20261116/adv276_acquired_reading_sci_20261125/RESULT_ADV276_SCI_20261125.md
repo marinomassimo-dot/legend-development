@@ -66,3 +66,11 @@ Depth recorded per receipt in `RECEIPT_ADV276_<pmid>_SCI_20261125.json`: 3522265
 ## 5. Wording for IT (all as wording, none applied)
 
 Carried in the sections above under "Wording for IT" for 35222658, 40670421, 40994429, 38605177, 20810895, 28447936 and the 42470358 and 24321005 notes. A card-packet edit owes the view derivatives (IT's line of 2026-11-25), so IT takes these only as a queued item.
+
+## Update 2026-11-25 (SCI, after IT's second read of the held bytes; the sentences above are kept as written)
+
+Four corrections, each re-checked by me against the acquired text, none changes a direction:
+1. **20810895 (section 3.9):** the seizure-induced chloride rise is **187 cells from 4 intact CLM-1 hippocampi** in control low-Mg2+ ACSF and 185 cells from 4 hippocampi with bumetanide (Fig 5d text and Table 2, mean +/- SE; P5 to P6). The 468 cells, 423 inhibited by GABA and 10 hippocampi I gave belong to the GABA-polarity and resting-chloride analyses, not to the chloride-rise result.
+2. **28447936 (section 3.10):** guanabenz was tested **only in the enzymatic assay, at 50 micromolar (Fig 8D)**; the three assays (biolayer interferometry association, dissociation and the tripartite enzymatic assay) are Sephin1's.
+3. **40994429 (section 3.6):** the vehicle n for the first myoclonic jerk in S810R mice is 21 in the Results text and 20 in Table 3; I used 21 (text). The Table 3 column labels are not printed in my extraction; I took the second column as S810R because its vehicle values (207 +/- 23 s, 20/21 seized) match the text.
+4. **24321005 (section 3.5):** the abstract and Table 1 give 100 percent mortality by PN8 at 5 mg/kg/day (the 5 mg/kg group was not assessable after PN6), and 28 and 16 percent by PN20 at 1 and 0.1 mg/kg/day.
