@@ -1,0 +1,42 @@
+# RESULT, ADV-284: equivalence-margin audit of the "not different from wild type" restoration rows (SCI, 2026-11-25)
+
+Hypothesis level; reference genotype class; nothing is medical advice. Session ae0002e7 (claude-sonnet-5-5, effort high). Rules: `PREREG_ADV284_SCI_20261125.md` (hash 128d77d3, 2026-11-25T20:45Z, before any n or spread of the row's source was read; commit in the same folder's first commit). First reading: `FIRST_READ_ADV284_SCI_20261125.tsv`, `sdd_dr_d01_001_adv284.py`; files viewed with hashes (page renders and the panel crop): `FILES_VIEWED_ADV284_SCI_20261125.tsv`. Blind reader: `legend-delegate`, claude-sonnet-5-5, effort `high` on 26 of 26 turns (census of its transcript); it received the verbatim card sentence (built by script) and the paths of the whole source (all panels of the supplementary figure, the whole legend, the methods, the main text), not my numbers or class (`BLIND_SENTENCES_ADV284_SCI_20261125.md`, `BLIND_REPORT_ADV284_SCI_20261125.md`).
+
+## 1. Scope: one of six rows audited
+
+Five of the six rows tabled in `equivalence_rows_adv281.tsv` (DR-AAV-GFAP-P5HD, DR-AAV-GFAPAREA-HD, DR-AAV-GLU20-HD, DR-AAV-MOTOR-HD, DR-C01-001) have as their only source Obeid 2026 (PMID 42422765, PAPER 011), the article on which a safety classifier stopped this session's response in ADV-282. The stop was not retried, rephrased or substituted, and the article's manifest, receipts and supplement were not opened. ADV agreed (message of 2026-11-25; the conflict with the perimeter line was ADV's) and took the stop to the operator list. **These five rows are "not audited, classifier stop, operator list"**, beside DA-W2-011 and DA-I01-006 of ADV-282. The audited row is DR-D01-001 (card D01_a51; Steinberg 2026, PMID 42397075).
+
+## 2. DR-D01-001: class, SDD and verdict
+
+| item | first reading | blind reader |
+|---|---|---|
+| margin or power statement | none. Query 2026-11-25: equivalen*, TOST, power analys*, power calc*, statistical power, sample size, confidence interval, non-inferior*, margin, smallest in the accepted manuscript and Brain supplement Files 008-012 | none (same terms plus SD, SEM, 2026-11-25) |
+| class | DERIVABLE (bounded: per-organoid values not held) | DERIVABLE (bounded) |
+| n and unit | legend n = organoids: WT NT 4, WT DMSO 4, WiBR3 WKO-1B 6, second "WKO-1B" 7 (read as knockout and A51-treated); plotted SOX2+MYC+ points about 6, 13, 22, 15 (by eye) | 6, 11, 24, 15 (counted in a 600 dpi render); SOX2+ panel 7, 9-10, 10, 15; the unit entered into the ANOVA is not stated |
+| disease effect (SOX2+MYC+, knockout minus wild type) | about 25.5 percentage points (72 against 46.5, by eye) | 24 to 27 (measured: knockout 73.0, WT NT 48.7, WT DMSO 45.5; A51 51.2) |
+| SDD (alpha .05, power .80) | 12.5 to 31.4 at organoid n 8 v 7 for pooled SD 8 to 20 (0.49 to 1.23 of the effect); 8.0 to 20.0 at plotted-point n (0.31 to 0.78) | 17.7 (pooled WT, plotted points) to 31.7 (WT NT, legend n 4 v 7): 67 to 130 percent of the effect |
+| sentence claims more than the data bear (PREREG rule: sameness implied AND SDD at least half the effect) | **yes** | **yes**: every scenario is at least 67 percent of the effect |
+| verdict on the sentence | ADD | **ADD** |
+
+Both readers agree on class, direction and the answer under the one frozen rule. The first reading's lowest SDD ratios (0.31 to 0.47) come only from a plotted-point unit with a small spread; the blind reader measured the spread from pixels and finds no scenario below 0.67. Where the two differ I carry the blind values (pixel measurement over my by-eye reading).
+
+What the blind reader added that I had not stated: (a) the knockout-against-wild-type contrast is itself only one star in this panel (WT NT against knockout), so the panel barely resolves the disease effect it is meant to restore (SDD 22.5 against an effect of 24.3 with the same method); (b) there is no knockout vehicle arm (the only vehicle arm is wild-type DMSO); (c) the SOX2+ panel has a different point count for the knockout than the SOX2+MYC+ panel.
+
+**Scoring against the PREREG:** prior for the one assessable row, class DERIVABLE 50 percent (occurred), claims more than the data bear 70 percent (occurred). The rejecting observation (a margin given, or an SDD below half the effect with a confined sentence) is **not met**. The six-row range ADV asked for is not testable with five rows blocked.
+
+## 3. Corrected sentence for IT (card D01_a51, row DR-D01-001)
+
+"Treated knockout organoids: SOX2+MYC+ about 73 percent (knockout) to about 51 with A51, significant against the untreated knockout and not significant against wild type (WT NT about 49, WT DMSO about 46; Supplementary Fig. 7F, one-way ANOVA with Tukey), but this is a non-significant P, not equivalence: the paper gives no margin, power calculation or interval; the legend n is 4, 4, 6 and 7 organoids from one experiment while about 6, 11, 24 and 15 points are plotted (the unit entered into the ANOVA is not stated); from the plotted spread the smallest detectable difference from wild type is about 18 to 32 percentage points against a knockout-minus-wild-type effect of about 24 to 27, so normalisation is not supported. SOX2+ about 60 to about 33, same pattern. No treated wild-type arm, no knockout vehicle arm, one dose (125 nM), no randomisation or blinding, one of the three experiments the paper excludes from independent differentiations. The compound suppresses two pathways (Wnt and MYC): causal attribution to MYC inherits the ambiguity." (The reader's own corrected text, `BLIND_REPORT_ADV284_SCI_20261125.md` section 5, adds the paper's phrase "a marked reduction in both progenitor populations".)
+
+Consumers (leads from `git grep` of the row and of DL-THER-089): the card, its packet and the coverage matrix of `drug_repurposing/`; `disease-models/wwox/research/discovery_ledger_current.md` (DL-THER-089, the entry that reads A51 as recovering progenitors); analyses `a51_antiproliferative_confound_20260921.md`, `a51_deconvolution_and_repurposing_20260921.md`, `downstream_wwox_independent_rescue_census_20260921.md`, `postdiagnosis_window_evidence_20260922.md`; commit candidate `CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01.md`. Whether the ledger entry's "recovers the progenitors" wording needs the same bound is for IT.
+
+## 4. Card-template decision (IT decides, with the positive-control field)
+
+An equivalence-margin field would classify this row as NONE GIVEN (DERIVABLE); the two fields together separate the cases: the null-note audit (was the manipulation active) and the restoration audit (was the difference bounded). For restoration rows the field that would have caught this is the **unit of the plotted spread against the legend's n**, which no template field records now.
+
+## 5. Limits
+
+* One row of six; one blind reader. The five rows on the stopped article are not audited; the result says nothing about their margins.
+* Per-organoid values are not held: the SDD is bounded by two unit assumptions, both shown; spread from a pixel measurement of a raster figure (reading error about 1.5 points on the means).
+* The legend lists "WiBR3 WKO-1B" twice; the two are read as untreated and A51-treated knockout (both readers).
+* Nothing in this result is a statement about whether A51 restores progenitors in vivo or in other lines.
