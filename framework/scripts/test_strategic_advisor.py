@@ -9,6 +9,8 @@ call is the smoke invocation recorded in the build report.
 from __future__ import annotations
 
 import datetime as dt
+import contextlib
+import io
 import json
 import re
 import ast
@@ -1073,6 +1075,7 @@ class Proactive(ProactiveFixture):
                 self.assertTrue(sa.primary_refusal(), cmd)
             self.assertEqual(sa.main(["tick", "--campaign", str(self.campaign)]), 2)      # refused before it touches any state
             self.assertEqual(sa.main(["meeting", "--campaign", str(self.campaign), "--open"]), 2)
+            self.assertEqual(sa.main(["refresh", "--campaign", str(self.campaign)]), 2)
         finally:
             sa.ROOT = saved
         self.assertEqual(sa.primary_refusal(), "")                                   # the primary checkout has a .git directory
@@ -2283,6 +2286,127 @@ class ObservedRef(ProactiveFixture):
             self.assertEqual((t["verdict"], t["events"]), ("NONE", []))
             first = first or (t["reference"]["sha"], t["evaluation_clock"])
             self.assertEqual((t["reference"]["sha"], t["evaluation_clock"]), first)
+
+
+class CampaignHome(ProactiveFixture):
+    """ADV-243: the primary checkout is the one campaign home and had stayed 1,535 commits behind the published main, so `assign` and `deliver` read old files. A fixture home with a real bare remote."""
+
+    git, remote = ObservedRef.git, ObservedRef.remote
+
+    def setUp(self) -> None:
+        super().setUp()
+        self.other = self.remote()
+        self.home = self.repo / "campaign"
+        self.log = "campaign/assignments.jsonl"
+        self.write(self.other, self.log, '{"id": "ADV-001"}\n')
+        self.send(self.other, "ADV: first row")
+        self.git(self.repo, "pull", "-q", "--ff-only", "development", "main")
+
+    def write(self, where: Path, rel: str, text: str) -> None:
+        (where / rel).parent.mkdir(parents=True, exist_ok=True)
+        (where / rel).write_text(text, encoding="utf-8")
+
+    def send(self, other: Path, subject: str) -> str:
+        self.git(other, "add", "."); self.git(other, "commit", "-q", "-m", subject)
+        self.git(other, "push", "-q", "origin", "main")
+        return self.git(other, "rev-parse", "HEAD")
+
+    def head(self) -> str:
+        return self.git(self.repo, "rev-parse", "HEAD")
+
+    def refresh(self) -> tuple[int, str]:
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out), contextlib.redirect_stderr(out):
+            code = sa.main(["refresh", "--campaign", str(self.home)])
+        return code, out.getvalue()
+
+    def stale(self) -> str:
+        with contextlib.redirect_stderr(io.StringIO()):
+            return sa.stale_refusal(self.home)
+
+    def test_a_commit_that_touches_nothing_the_commands_read_stops_nothing(self) -> None:
+        self.write(self.other, "notes/unrelated.md", "x\n"); self.send(self.other, "unrelated")
+        self.assertEqual(self.stale(), "")
+
+    def test_a_published_task_record_or_campaign_file_refuses_assign_and_deliver_and_writes_nothing(self) -> None:
+        for rel in ("ledger/tasks/orchestrator/NEW.json", "campaign/assignments/ADV-002.md"):
+            self.write(self.other, rel, "{}\n"); self.send(self.other, rel)
+            self.assertIn("refresh --campaign", self.stale(), rel)
+        before = (self.repo / self.log).read_bytes()
+        err = io.StringIO()
+        with contextlib.redirect_stderr(err):
+            self.assertEqual(sa.main(["deliver", "--campaign", str(self.home), "--id", "ADV-001", "--state", "UNREACHABLE", "--evidence", "x"]), 2)
+            self.assertEqual(sa.main(["assign", "--campaign", str(self.home), "--text-file", str(self.brief)]), 2)
+        self.assertEqual(err.getvalue().count("is behind development/main"), 2)
+        self.assertEqual((self.repo / self.log).read_bytes(), before)
+        self.assertEqual(self.refresh()[0], 0)
+        self.assertEqual(self.stale(), "")
+
+    def test_refresh_replaces_only_what_main_already_holds_keeps_a_copy_and_leaves_other_changes(self) -> None:
+        self.write(self.other, self.log, '{"id": "ADV-001"}\n{"id": "ADV-002"}\n{"id": "ADV-003"}\n')
+        self.write(self.other, "campaign/assignments/ADV-002.md", "brief two\n")
+        tip = self.send(self.other, "ADV: landed from a worktree")
+        self.write(self.repo, self.log, '{"id": "ADV-001"}\n{"id": "ADV-002"}\n')       # the rows the home wrote, all published
+        self.write(self.repo, "campaign/assignments/ADV-002.md", "brief two\n")          # untracked, in a new directory, identical to main
+        self.write(self.repo, "campaign/scratch.txt", "mine\n")                          # nothing on main has this path
+        code, said = self.refresh()
+        self.assertEqual(code, 0, said)
+        self.assertEqual(self.head(), tip)
+        self.assertIn("ADV-003", (self.repo / self.log).read_text())
+        self.assertEqual((self.repo / "campaign/scratch.txt").read_text(), "mine\n")
+        copies = {p.name for p in (sa.STATE_DIR / "campaign" / "refresh").rglob("*") if p.is_file()}
+        self.assertEqual(copies, {"assignments.jsonl", "ADV-002.md"})
+        self.assertIn("already at", self.refresh()[1])
+
+    def test_a_local_row_or_file_that_main_does_not_hold_stops_the_refresh_before_anything_is_touched(self) -> None:
+        self.write(self.other, self.log, '{"id": "ADV-001"}\n{"id": "ADV-002"}\n')
+        self.write(self.other, "campaign/assignments/ADV-002.md", "brief two\n")
+        self.write(self.other, "campaign/assignments/ADV-003.md", "published text\n")
+        self.send(self.other, "ADV: landed")
+        self.write(self.repo, self.log, '{"id": "ADV-001"}\n{"id": "ADV-002"}\n{"id": "ADV-009", "unlanded": true}\n')
+        self.write(self.repo, "campaign/assignments/ADV-002.md", "brief two\n")
+        self.write(self.repo, "campaign/assignments/ADV-003.md", "my own text\n")
+        head, row = self.head(), (self.repo / self.log).read_bytes()
+        code, said = self.refresh()
+        self.assertEqual(code, 2)
+        self.assertIn(f"KEEP {self.log}", said)
+        self.assertIn("KEEP campaign/assignments/ADV-003.md", said)
+        self.assertNotIn("KEEP campaign/assignments/ADV-002.md", said)
+        self.assertEqual((self.head(), (self.repo / self.log).read_bytes()), (head, row))
+        self.assertTrue((self.repo / "campaign/assignments/ADV-002.md").exists())
+
+    def test_a_fast_forward_git_refuses_puts_the_local_files_back(self) -> None:
+        self.write(self.other, "campaign/assignments/ADV-002.md", "brief two\n")
+        self.write(self.other, "campaign/ignored.txt", "published\n")
+        self.send(self.other, "ADV: landed")
+        (self.repo / ".git/info").mkdir(exist_ok=True)
+        (self.repo / ".git/info/exclude").write_text("ignored.txt\n", encoding="utf-8")
+        self.write(self.repo, "campaign/ignored.txt", "only here\n")                     # ignored, so `status` does not list it: git itself must refuse
+        self.write(self.repo, "campaign/assignments/ADV-002.md", "brief two\n")
+        head = self.head()
+        code, said = self.refresh()
+        self.assertEqual(code, 2, said)
+        self.assertEqual(self.head(), head)
+        self.assertEqual((self.repo / "campaign/assignments/ADV-002.md").read_text(), "brief two\n")
+        self.assertEqual((self.repo / "campaign/ignored.txt").read_text(), "only here\n")
+
+    def test_a_home_with_its_own_commits_is_never_reset(self) -> None:
+        self.write(self.other, "notes/a.md", "a\n"); self.send(self.other, "theirs")
+        self.write(self.repo, "notes/b.md", "b\n"); self.git(self.repo, "add", "."); self.git(self.repo, "commit", "-q", "-m", "mine")
+        head = self.head()
+        code, said = self.refresh()
+        self.assertEqual(code, 2)
+        self.assertIn("land them first", said)
+        self.assertEqual(self.head(), head)
+
+    def test_an_unreachable_remote_is_said_and_the_last_fetched_ref_still_counts(self) -> None:
+        self.write(self.other, "ledger/tasks/orchestrator/NEW.json", "{}\n"); self.send(self.other, "record")
+        self.git(self.repo, "fetch", "-q", "development", "main")
+        self.git(self.repo, "remote", "set-url", "development", str(self.tmp / "gone.git"))
+        err = io.StringIO()
+        with contextlib.redirect_stderr(err):
+            self.assertIn("REFUSED", sa.stale_refusal(self.home))
+        self.assertIn("UNVERIFIED", err.getvalue())
 
 
 class LivingPortfolio(Base):

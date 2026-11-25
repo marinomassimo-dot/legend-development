@@ -410,6 +410,147 @@ def primary_refusal() -> str:
     return ""
 
 
+# What the id-allocating commands read from disk (ADV-243, 2026-11-25): the primary checkout is the one campaign home, and it had stayed 1,535 commits behind the published main for four days, so its commands
+# read old task records, portfolio and roadmap and a draft could be numbered on old rows. A commit that touches none of these does not stop anything.
+HOME_INPUTS = (":(glob)ledger/tasks/*/*.json", PORTFOLIO_REL, "disease-models/wwox/research/drug_repurposing/roadmap_current.md", "framework/protocols/cross_session_transport.md",
+               "disease-models/wwox/research/drug_repurposing/view/shareable_package", "framework/scripts/strategic_advisor.py", "framework/scripts/mandate_continuity.py", "framework/scripts/mandate_watch.py")
+
+
+def _git_run(*args: str) -> subprocess.CompletedProcess:
+    return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True)
+
+
+def _published_tip() -> tuple[str, str]:
+    """(tip, warning) of the published main after one bounded fetch that moves only the remote-tracking ref. No remote: nothing to compare with. A failed fetch is said and the last fetched ref is used."""
+    if not _git("remote", "get-url", PUBLISHED_REMOTE):
+        return "", ""
+    warning = ""
+    if os.environ.get("LEGEND_ADVISOR_NOFETCH") != "1":
+        try:
+            done = subprocess.run(["git", "fetch", "-q", PUBLISHED_REMOTE, "main"], cwd=ROOT, capture_output=True, text=True, timeout=FETCH_TIMEOUT_S)
+            if done.returncode != 0:
+                warning = (done.stderr.strip().splitlines() or ["fetch failed"])[-1][:160]
+        except (OSError, subprocess.SubprocessError) as exc:
+            warning = type(exc).__name__
+    tip = _git("rev-parse", "--verify", "--quiet", f"refs/remotes/{PUBLISHED_REMOTE}/main")
+    if warning or not tip:
+        warning = f"UNVERIFIED: {PUBLISHED_REMOTE}/main could not be fetched ({warning or 'no remote-tracking ref'}); compared with the last fetched ref"
+    return tip, warning
+
+
+def stale_refusal(campaign: Path) -> str:
+    """`assign` and `deliver` read this checkout's files: refuse while a published commit this checkout lacks touches one of them."""
+    tip, warning = _published_tip()
+    if warning:
+        print("WARNING: " + warning, file=sys.stderr)
+    if not tip:
+        return ""
+    paths = list(HOME_INPUTS)
+    folder = Path(campaign).resolve()
+    if ROOT.resolve() in folder.parents:
+        paths.append(folder.relative_to(ROOT.resolve()).as_posix())
+    done = _git_run("log", "--format=", "--name-only", f"HEAD..{tip}", "--", *paths)
+    if done.returncode != 0:
+        return f"REFUSED: cannot compare this checkout with {PUBLISHED_REMOTE}/main: {done.stderr.strip()[:160]}"
+    touched = sorted({line for line in done.stdout.splitlines() if line.strip()})
+    if not touched:
+        return ""
+    return (f"REFUSED: this checkout is behind {PUBLISHED_REMOTE}/main on {len(touched)} file(s) that `assign` and `deliver` read ({', '.join(touched[:3])}{', …' if len(touched) > 3 else ''}). "
+            f"Bring it current, then repeat: python3 framework/scripts/strategic_advisor.py refresh --campaign {campaign}")
+
+
+def _blob(ref: str, path: str) -> str:
+    return _git("rev-parse", "--verify", "--quiet", f"{ref}:{path}")
+
+
+def _work_blob(path: str) -> str:
+    full = ROOT / path
+    return _git("hash-object", "--", path) if full.is_file() and not full.is_symlink() else ""
+
+
+def _dirty_paths() -> dict[str, str]:
+    """path -> porcelain XY. `-uall`: a new directory is listed file by file, not as one entry; `--no-renames`: one path per entry."""
+    done = _git_run("status", "--porcelain", "-z", "--untracked-files=all", "--no-renames")
+    if done.returncode != 0:
+        raise OSError(done.stderr.strip()[:200])
+    return {entry[3:]: entry[:2] for entry in done.stdout.split("\0") if entry}
+
+
+def refresh(campaign: Path) -> int:
+    """Fast-forward the campaign home to the published main without losing a byte. All or nothing: a local change that is not already on the published main, in a file that main changed, stops the
+    refresh before anything is touched. What is replaced (bytes equal to main's, or an `assignments.jsonl` whose every line is on main) is first copied under the host state folder."""
+    lock = _state_path(Path(campaign)).parent / "assignments.lock"
+    lock.parent.mkdir(parents=True, exist_ok=True)
+    with lock.open("a") as guard:
+        fcntl.flock(guard, fcntl.LOCK_EX)
+        return _refresh(lock.parent / "refresh" / _utc(_now()).replace(":", ""))
+
+
+def _refresh(backup: Path) -> int:
+    tip, warning = _published_tip()
+    if warning:
+        print("WARNING: " + warning, file=sys.stderr)
+    if not tip:
+        print("refresh: no published remote here; nothing to do"); return 0
+    head = _git("rev-parse", "HEAD")
+    if head == tip:
+        print(f"refresh: already at {PUBLISHED_REMOTE}/main {tip[:9]}"); return 0
+    if _git_run("merge-base", "--is-ancestor", head, tip).returncode != 0:
+        if _git_run("merge-base", "--is-ancestor", tip, head).returncode == 0:
+            print(f"refresh: {head[:9]} already contains {PUBLISHED_REMOTE}/main {tip[:9]}"); return 0
+        print(f"REFUSED: HEAD {head[:9]} has commits that are not on {PUBLISHED_REMOTE}/main; land them first. Nothing was changed.", file=sys.stderr); return 2
+    changed = set(_git_run("diff", "--name-only", "-z", "--no-renames", head, tip).stdout.split("\0")) - {""}
+    replace, kept, blockers = [], [], []
+    for path, code in sorted(_dirty_paths().items()):
+        if path not in changed:
+            kept.append(path); continue
+        full = ROOT / path
+        there, here = _blob(tip, path), _work_blob(path)
+        absent = not full.exists() and not full.is_symlink()
+        same = (bool(here) and here == there) or (absent and not there)
+        if not same and here and there and Path(path).name == "assignments.jsonl":
+            published = set(_git_run("show", f"{tip}:{path}").stdout.splitlines())
+            same = all(line in published for line in full.read_text(encoding="utf-8").splitlines())
+        (replace if same else blockers).append(path)
+    if blockers:
+        print(f"REFUSED: {len(blockers)} local change(s) are not on {PUBLISHED_REMOTE}/main, in files it changed. Nothing was changed. Land them from a task worktree, then run `refresh` again:", file=sys.stderr)
+        for path in blockers:
+            print(f"  KEEP {path}", file=sys.stderr)
+        return 2
+    saved: dict[str, bytes | None] = {}
+    for path in replace:
+        full = ROOT / path
+        saved[path] = full.read_bytes() if full.is_file() else None
+        if saved[path] is not None:
+            (backup / path).parent.mkdir(parents=True, exist_ok=True)
+            (backup / path).write_bytes(saved[path])
+    for path in replace:
+        if _blob("HEAD", path):
+            step = _git_run("restore", "--source=HEAD", "--staged", "--worktree", "--", path)
+        else:
+            step = _git_run("rm", "-q", "--cached", "--force", "--ignore-unmatch", "--", path)
+            (ROOT / path).unlink(missing_ok=True)
+        if step.returncode != 0:
+            break
+    else:
+        step = _git_run("merge", "--ff-only", "--no-overwrite-ignore", "-q", tip)
+    if step.returncode != 0:
+        for path, data in saved.items():
+            full = ROOT / path
+            if data is None:
+                full.unlink(missing_ok=True)
+            else:
+                full.parent.mkdir(parents=True, exist_ok=True)
+                full.write_bytes(data)
+        print(f"REFUSED: git could not fast-forward: {step.stderr.strip()[:400]}. The local files were put back.", file=sys.stderr); return 2
+    copies = sum(data is not None for data in saved.values())
+    print(f"refresh: {head[:9]} -> {tip[:9]} ({PUBLISHED_REMOTE}/main); {len(replace)} local file(s) already on main replaced" + (f", copies in {backup}" if copies else "")
+          + f"; {len(kept)} other local change(s) left as they were")
+    for path in kept:
+        print(f"  left {path}")
+    return 0
+
+
 CONTRACT = ("Return one assessment with the headings given in your definition. Name every file or page you opened under "
             "'Inspected'. You cannot write, run commands or start agents. The entry points are starting places; follow references past them. "
             "This brief is your prompt: the copy saved in the campaign folder is the same text, so do not open it. A file the table marks over 20,000 bytes is paid for again on every later turn: "
@@ -2759,6 +2900,7 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("--extra-attempt", default="", help="reason; allows one recorded attempt beyond the ceiling when every earlier attempt of the stage failed")
     e = sub.add_parser("extract"); e.add_argument("--transcript", required=True); e.add_argument("--out", required=True)
     c = sub.add_parser("check"); c.add_argument("--campaign", required=True)
+    rf = sub.add_parser("refresh", help="fast-forward this campaign home to development/main without losing a local byte; refuses, changing nothing, while a local change is not on main"); rf.add_argument("--campaign", required=True)
     t = sub.add_parser("tick", help="the hourly bounded check (no model unless you then run `evaluate`)"); t.add_argument("--campaign", required=True)
     ev = sub.add_parser("evaluate", help="one strategic evaluation, counted in the campaign budget"); ev.add_argument("--campaign", required=True)
     ha = sub.add_parser("assign", help="register the continuous ADV host's decision in the existing assignment channel, without a consultant call or a send")
@@ -2853,8 +2995,17 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd == "check":
         return check(Path(args.campaign))
     campaign = Path(args.campaign)
-    if args.cmd in ("recall", "tick", "evaluate", "assign", "meeting", "deliver", "activate", "disable", "authorise-continuous", "end-continuous") and primary_refusal():
+    if args.cmd in ("recall", "tick", "evaluate", "assign", "meeting", "deliver", "activate", "disable", "authorise-continuous", "end-continuous", "refresh") and primary_refusal():
         print(primary_refusal(), file=sys.stderr); return 2
+    if args.cmd == "refresh":
+        try:
+            return refresh(campaign)
+        except OSError as exc:
+            print(f"refresh: {exc}", file=sys.stderr); return 2
+    if args.cmd in ("assign", "deliver"):
+        stale = stale_refusal(campaign)
+        if stale:
+            print(stale, file=sys.stderr); return 2
     if args.cmd == "recall":
         print(recall_prompt(campaign)); return 0
     if args.cmd == "recall-armed":
