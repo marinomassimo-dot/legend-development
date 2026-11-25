@@ -1,0 +1,12 @@
+line	blot	week	printed_value_relative_to_JH_WT_same_membrane	note
+JH WT	1L,1M,1K	16	1	L: WT band saturated (black, no internal texture); M: not saturated
+WSM S2	1L	16	none printed	faint trace at 46 kDa by eye; HSP90 lane heavier than neighbours
+WSM S5	1L	16	none printed	no visible band by eye
+LM-iPS	1L	16	0.2	faint band; denominator is the saturated WT band, so the true ratio is at most this value
+WPM S1	1M	16	0.1	faint band
+WPM D1	1M	16	0.1	faint band
+WPM D3	1M	16	0.3	faint band
+WSM S2 AAV9	1L	16	0.4	rescue arm, not used in ordering
+WSM S5 AAV9	1L	16	0.4	rescue arm, not used in ordering
+LM-iPS AAV9	1L	16	0.9	rescue arm, not used in ordering
+WPM S1 AAV9	1M	16	7	rescue arm, not used in ordering
