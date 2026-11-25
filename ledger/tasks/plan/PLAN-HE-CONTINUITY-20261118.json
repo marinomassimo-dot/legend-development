@@ -1328,10 +1328,12 @@
     },
     {
      "step": "CI queue measurement (ADV item 2) and trial of proposal A: opt-in parallel release runner, one serial and one 4-worker full run of the same commit, same suite list and pass/fail set, list of suites that must run alone, measured step times; no default flip, no workflow edit",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad messages to HE 43ab579f, 2026-11-25 (direction round 13:20Z item 2; GO on proposal A)",
-     "accepted_at": "2026-11-25T13:38:47Z"
+     "accepted_at": "2026-11-25T13:38:47Z",
+     "evidence": "HE_CI_QUEUE_20261125.md sections 1-6: serial 3965 s; 4 workers 1437 s (identical results) and 1536 s (one red, a race in test_verify_run.py, fixed); switch default off; no workflow edit",
+     "updated_at": "2026-11-25T15:30:42Z"
     },
     {
      "step": "Pre-registered read of the safe_push landing-suite rule after 2026-11-26T11:21Z: count CI reds on suites the default selection did run",
@@ -1342,10 +1344,28 @@
     },
     {
      "step": "landing_suites.py selects check_cards for card and packet paths, with a mutation check that a card line carrying a unit value is refused before the push; minutes per risk reported",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad message to HE 43ab579f, 2026-11-25, after IT's refused landing",
-     "accepted_at": "2026-11-25T14:16:28Z"
+     "accepted_at": "2026-11-25T14:16:28Z",
+     "evidence": "33e2b73a10c4 on development/main; test_landing_suites 18/18 (red before the rule); mutation: json-only packet with a unit value REFUSED by safe_push.landing_check, NOT REFUSED with the rule removed",
+     "updated_at": "2026-11-25T14:40:33Z"
+    },
+    {
+     "step": "A test_ suite that runs both card checkers, so the release battery and CI run their real checks (cards_early is never run today)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "HE need-driven micro-upgrade announced to ADV a5e6f2ad, 2026-11-25, found while adding the landing rule",
+     "accepted_at": "2026-11-25T14:40:33Z",
+     "updated_at": "2026-11-25T15:30:42Z",
+     "evidence": "framework/scripts/test_card_checkers.py (2 tests, under 1 s), landed with checkpoint HE-T"
+    },
+    {
+     "step": "Disk survey by unique inode, report only: where space went, growth per hour per area, safe-to-remove list with the rule for each; ADV decides the cleanup",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad message to HE 43ab579f, 2026-11-25 round 15:15Z",
+     "accepted_at": "2026-11-25T15:17:59Z"
     }
    ]
   }
@@ -2391,6 +2411,20 @@
    "at": "2026-11-25T14:16:28Z",
    "source": "ADV a5e6f2ad message to HE 43ab579f, 2026-11-25, after IT's refused landing",
    "step_sha256": "3b30beda5665",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T14:40:33Z",
+   "source": "HE need-driven micro-upgrade announced to ADV a5e6f2ad, 2026-11-25, found while adding the landing rule",
+   "step_sha256": "83b039657db2",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T15:17:59Z",
+   "source": "ADV a5e6f2ad message to HE 43ab579f, 2026-11-25 round 15:15Z",
+   "step_sha256": "ed08bcc8f1ca",
    "reopened_block": false,
    "authorised_by": null
   }

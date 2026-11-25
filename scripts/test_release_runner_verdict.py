@@ -202,6 +202,71 @@ class ExitCodeMatchesTheVerdict(unittest.TestCase):
         self.assertNotEqual(0, done.returncode, done.stdout + done.stderr)
 
 
+class ParallelSwitchTests(unittest.TestCase):
+    """`--jobs` is opt-in: it must run every selected suite once, keep the verdict, and leave the serial run as the default."""
+
+    WAIT_FOR_PEER = ("import pathlib, sys, time\n"
+                     "pathlib.Path('{me}').write_text('up')\n"
+                     "end = time.time() + {seconds}\n"
+                     "while not pathlib.Path('{peer}').exists():\n"
+                     "    if time.time() > end:\n"
+                     "        sys.exit('no peer ran beside this suite')\n"
+                     "    time.sleep(0.02)\n"
+                     "print('ok')\n")
+
+    def run_runner(self, suites, *extra, env_jobs=None):
+        with tempfile.TemporaryDirectory(prefix="legend-runner-jobs-") as temporary:
+            root = Path(temporary)
+            (root / "scripts").mkdir()
+            shutil.copy2(RUNNER_PATH, root / "scripts" / RUNNER_PATH.name)
+            for name, body in suites.items():
+                (root / name).write_text(body, encoding="utf-8")
+            env = {k: v for k, v in os.environ.items() if k != "LEGEND_REGRESSION_JOBS"}
+            if env_jobs is not None:
+                env["LEGEND_REGRESSION_JOBS"] = env_jobs
+            return subprocess.run(
+                [sys.executable, "scripts/run_release_regressions.py", *extra,
+                 *[arg for name in suites for arg in ("--only", name)]],
+                cwd=root, capture_output=True, text=True, env=env, timeout=120)
+
+    def pair(self, seconds):
+        return {"test_a.py": self.WAIT_FOR_PEER.format(me="a.up", peer="b.up", seconds=seconds),
+                "test_b.py": self.WAIT_FOR_PEER.format(me="b.up", peer="a.up", seconds=seconds)}
+
+    def test_two_workers_run_suites_beside_each_other_by_flag_and_by_environment(self):
+        for extra, env_jobs in ((("--jobs", "2"), None), ((), "2")):
+            done = self.run_runner(self.pair(60), *extra, env_jobs=env_jobs)
+            self.assertEqual(done.returncode, 0, done.stdout + done.stderr)
+            self.assertIn("PARALLEL 2 suite(s) on 2 workers, then 0 alone", done.stdout)
+            self.assertEqual(done.stdout.count("TIME test_"), 2)
+
+    def test_the_default_is_serial(self):
+        done = self.run_runner(self.pair(1))
+        self.assertNotEqual(done.returncode, 0, done.stdout)
+        self.assertNotIn("PARALLEL", done.stdout)
+
+    def test_a_failure_in_the_parallel_phase_fails_the_run_and_every_suite_still_runs(self):
+        done = self.run_runner({"test_fails.py": "raise SystemExit(1)\n", "test_passes.py": "print('ok')\n",
+                                "test_emptied.py": ""}, "--jobs", "2")
+        self.assertEqual(done.returncode, 1, done.stdout + done.stderr)
+        self.assertIn("test_fails.py: exit 1", done.stderr)
+        self.assertIn("test_emptied.py: exit 0 (ZERO_TESTS)", done.stderr)
+        self.assertEqual(done.stdout.count("TIME test_"), 3)
+
+    def test_a_job_count_that_is_not_a_positive_integer_is_an_error(self):
+        for bad in ("0", "four"):
+            done = self.run_runner({"test_passes.py": "print('ok')\n"}, env_jobs=bad)
+            self.assertEqual(done.returncode, 2, done.stdout + done.stderr)
+            self.assertNotIn("RUN ", done.stdout)
+
+    def test_every_selected_suite_is_planned_exactly_once_and_the_alone_list_names_real_suites(self):
+        shared, alone = runner.plan_parallel(runner.TESTS, runner.RUN_ALONE)
+        self.assertEqual(sorted(shared + alone), sorted(runner.TESTS))
+        self.assertEqual(sorted(set(runner.RUN_ALONE) - set(runner.TESTS)), [])
+        shared, alone = runner.plan_parallel(("x.py", "framework/scripts/test_repurposing_view.py", "y.py"), {"y.py": "why"})
+        self.assertEqual((shared, alone), (["framework/scripts/test_repurposing_view.py", "x.py"], ["y.py"]))
+
+
 class ArchiveVerdictIntegrationTests(unittest.TestCase):
     def test_archive_runner_qualifies_git_anchor_skip(self) -> None:
         with tempfile.TemporaryDirectory(prefix="legend-runner-archive-") as temporary:

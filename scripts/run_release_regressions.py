@@ -11,6 +11,7 @@ import re
 import subprocess
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 
@@ -257,6 +258,42 @@ def battery(priority: tuple[str, ...], discovered: tuple[str, ...],
 DISCOVERED_TESTS = discover_tests(ROOT)
 # Preserve the established execution order, but no suite needs manual enrollment.
 TESTS = battery(PRIORITY_TESTS, DISCOVERED_TESTS, NOT_RUN_BY_DESIGN)
+
+
+#: Used only with `--jobs` above 1 (default: serial). A suite named here runs by itself after the parallel ones, and each entry says what it would collide on.
+RUN_ALONE: dict[str, str] = {}
+
+#: Started first with `--jobs`, longest first, so that no long suite begins near the end (CI times of #2460, 2026-11-25).
+LONGEST_FIRST = (
+    "framework/scripts/test_repurposing_view.py",
+    "scripts/test_repository_surface_determinism.py",
+    "framework/scripts/test_self_test_coverage.py",
+    "framework/scripts/test_safe_push.py",
+)
+
+
+def plan_parallel(selected: tuple[str, ...], alone: dict[str, str]) -> tuple[list[str], list[str]]:
+    """(suites that share the workers, in start order; suites that run by themselves afterwards, in inventory order). Every selected suite is in exactly one."""
+    shared = [name for name in selected if name not in alone]
+    shared.sort(key=lambda name: LONGEST_FIRST.index(name) if name in LONGEST_FIRST else len(LONGEST_FIRST))
+    return shared, [name for name in selected if name in alone]
+
+
+def worker_count(flag: int | None, environ) -> int:
+    """`--jobs`, else `LEGEND_REGRESSION_JOBS`, else 1. Anything that is not a positive integer is an error, never a silent serial run."""
+    raw = str(flag) if flag is not None else environ.get("LEGEND_REGRESSION_JOBS", "") or "1"
+    if not raw.isdigit() or int(raw) < 1:
+        raise ValueError(f"the number of jobs must be a positive integer, not {raw!r}")
+    return int(raw)
+
+
+def run_suite(relative: str, stdin=None):
+    """One suite in its own interpreter: (name, completed process, start, end)."""
+    started = time.time()
+    result = subprocess.run(
+        [sys.executable, relative], cwd=ROOT, stdin=stdin,
+        stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    return relative, result, started, time.time()
 
 
 SKIP_REASON_RE = re.compile(r"\.\.\. skipped ['\"](.+?)['\"]\s*$")
@@ -515,11 +552,23 @@ def main() -> int:
              "`framework/scripts/process_wait.py --pid-file` reads, and remove it at exit. "
              "Untracked paths only; the identity is printed either way.",
     )
+    parser.add_argument(
+        "--jobs", type=int, metavar="N",
+        help="run suites on N workers (default 1, serial; LEGEND_REGRESSION_JOBS sets it where "
+             "the command line cannot change). Suites in RUN_ALONE still run one at a time, "
+             "after the others. A tracked write during the shared phase fails the run and is "
+             "attributed only by a serial re-run.",
+    )
     args = parser.parse_args()
 
     if args.list:
         print("\n".join(TESTS))
         return 0
+
+    try:
+        jobs = worker_count(args.jobs, os.environ)
+    except ValueError as error:
+        parser.error(str(error))
 
     announce_identity(args.pid_file)
 
@@ -543,43 +592,64 @@ def main() -> int:
     writers: list[tuple[str, list[str]]] = []
     durations: list[tuple[str, float]] = []
     baseline = tracked_state(GUARDED_TREES)
-    for relative in selected:
-        print(f"RUN {relative}", flush=True)
-        started = time.time()
-        result = subprocess.run(
-            [sys.executable, relative], cwd=ROOT,
-            stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
-        finished = time.time()
+
+    def check_writes(label: str, started: float, finished: float) -> None:
+        nonlocal baseline
+        after = tracked_state(GUARDED_TREES)
+        if after == baseline:
+            return
+        changed = sorted(set(after.items()) ^ set(baseline.items()))
+        paths = sorted({path for path, _ in changed})
+        declared = [path for path in paths if path_is_declared(path, args.expect_write)]
+        undeclared = [path for path in paths if path not in declared]
+        verdicts = {path: mtime_verdict(ROOT / path, started, finished)
+                    for path in undeclared}
+        if undeclared:
+            writers.append((label, undeclared, verdicts))
+        print(f"TRACKED_FILES_WRITTEN_BY_SUITE {label}: {len(paths)} path(s)"
+              + (f" ({len(declared)} declared with --expect-write)" if declared else ""),
+              flush=True)
+        for path in declared[:20]:
+            print(f"  wrote {path}  DECLARED CONCURRENT WRITE — excluded from the verdict, "
+                  f"printed anyway ({mtime_verdict(ROOT / path, started, finished)})",
+                  flush=True)
+        for path in undeclared[:20]:
+            print(f"  wrote {path}  {verdicts[path]}", flush=True)
+        baseline = after
+
+    def account(relative: str, result, started: float, finished: float) -> None:
         sys.stdout.write(result.stdout)
         durations.append((relative, finished - started))
         print(f"TIME {relative}: {finished - started:.1f}s (exit {result.returncode})",
               flush=True)
-        after = tracked_state(GUARDED_TREES)
-        if after != baseline:
-            changed = sorted(set(after.items()) ^ set(baseline.items()))
-            paths = sorted({path for path, _ in changed})
-            declared = [path for path in paths if path_is_declared(path, args.expect_write)]
-            undeclared = [path for path in paths if path not in declared]
-            verdicts = {path: mtime_verdict(ROOT / path, started, finished)
-                        for path in undeclared}
-            if undeclared:
-                writers.append((relative, undeclared, verdicts))
-            print(f"TRACKED_FILES_WRITTEN_BY_SUITE {relative}: {len(paths)} path(s)"
-                  + (f" ({len(declared)} declared with --expect-write)" if declared else ""),
-                  flush=True)
-            for path in declared[:20]:
-                print(f"  wrote {path}  DECLARED CONCURRENT WRITE — excluded from the verdict, "
-                      f"printed anyway ({mtime_verdict(ROOT / path, started, finished)})",
-                      flush=True)
-            for path in undeclared[:20]:
-                print(f"  wrote {path}  {verdicts[path]}", flush=True)
-            baseline = after
         skips.extend((relative, reason) for reason in extract_skip_reasons(result.stdout))
         status = classify_suite(result.returncode, result.stdout)
         if status in ("ZERO_TESTS", "STARTUP_ERROR"):
             print(f"SUITE_STATUS {relative}: {status}", flush=True)
         if result.returncode or status == "ZERO_TESTS":
             failures.append((relative, result.returncode, status))
+
+    one_by_one = list(selected)
+    if jobs > 1:
+        shared, one_by_one = plan_parallel(selected, RUN_ALONE)
+        print(f"PARALLEL {len(shared)} suite(s) on {jobs} workers, then {len(one_by_one)} alone",
+              flush=True)
+        phase = time.time()
+        with ThreadPoolExecutor(max_workers=jobs) as pool:
+            # A suite's block is printed whole when it ends, so two outputs never interleave.
+            for done in as_completed([pool.submit(run_suite, name, subprocess.DEVNULL)
+                                      for name in shared]):
+                relative, result, started, finished = done.result()
+                print(f"RUN {relative}", flush=True)
+                account(relative, result, started, finished)
+        print(f"PARALLEL PHASE: {time.time() - phase:.1f}s wall", flush=True)
+        check_writes("(a suite of the parallel phase: re-run serially to name it)",
+                     phase, time.time())
+    for relative in one_by_one:
+        print(f"RUN {relative}", flush=True)
+        relative, result, started, finished = run_suite(relative)
+        account(relative, result, started, finished)
+        check_writes(relative, started, finished)
 
     for line in format_timing_summary(durations):
         print(line)
