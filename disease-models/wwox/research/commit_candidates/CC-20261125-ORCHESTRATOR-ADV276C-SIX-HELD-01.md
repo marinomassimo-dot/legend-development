@@ -43,3 +43,9 @@ One verifier (`legend-delegate`, sonnet, effort high stated in the dispatch, rea
 
 ## 6 · What this does NOT do
 No claim, grade or ranking change beyond the narrowing above. No protein-level datum is created. Cho 2012 and Jamaspishvili 2019 were not re-opened. No receipt is added by IT: the reading of record is SCI's `queried_not_full_read` receipt.
+
+## BATCH DISPOSITION — `BATCH_20261125_005` (2026-11-25, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PROPAGATED
+
+`batch_commit.py propagate`, record-scoped, dry run then apply: `CLAIM 027` (Summary sentence and one evidence-boundary paragraph), `PAPER 276` (2 ops), `PAPER 264` (3 ops), `PAPER 266` (1 op), `LIT-0572` and `LIT-0562` (short titles). Ordinary-route edits of the same landing are listed in sections 4 and 5. **Change class restated: MINOR**, `WM_v7.29` preserved.

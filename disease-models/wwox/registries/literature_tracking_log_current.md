@@ -15642,7 +15642,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 ---
 
 ## LIT-0562
-**Short title:** Sakai 2013 PLoS ONE — Bonferroni-corrected Japanese replication of nine East Asian type-2-diabetes loci (7,379 subjects); WWOX rs17797882 not replicated, no HOMA-beta association
+**Short title:** Sakai 2013 PLoS ONE — Bonferroni-corrected Japanese replication of nine East Asian type-2-diabetes loci (7,379 enrolled; adjusted model at most 6,969); WWOX rs17797882 not replicated, no HOMA-beta association
 **Authors:** Sakai K, Imamura M, Tanaka Y, Iwata M, Hirose H, Kaku K, et al.
 **Year:** 2013
 **Source type:** primary research — human genetic association replication (Japanese)
@@ -15892,7 +15892,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 ---
 
 ## LIT-0572
-**Short title:** Wang 2025 Nature — neonatal high fructose via microglial GLUT5 lowers microglia phagocytosis and raises whole-brain neonatal lactate about 2.7-fold; WWOX absent
+**Short title:** Wang 2025 Nature — early-life high-fructose exposure lowers microglia phagocytosis via microglial GLUT5; after a labelled fructose injection, P7 pups of fructose-fed dams have about 2.5-fold more total brain lactate (labelled lactate about 2.7-fold); WWOX absent
 **Authors:** Wang Z, Lipshutz A, Martínez de la Torre C, Trzeciak AJ, Liu ZL, Miranda IC, et al.
 **Year:** 2025
 **Source type:** primary research — murine (diet exposure, GLUT5 knockouts, NMR tracing)
