@@ -35,17 +35,19 @@ def latest(pmid):
         except Exception: continue
         if d.get('study_id', {}).get('pmid') == pmid: best = d
     return best
-def main(outdir):
+QUERIED = {'24935251', '35229008', '41345172'}  # targeted searches of held supplements: no article section read, so the honest depth is queried_not_full_read
+def main(outdir, only=None):
     Path(outdir).mkdir(parents=True, exist_ok=True)
     now = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
     for pmid, p in PAP.items():
+        if only and pmid not in only: continue
         prev = latest(pmid)
         sha = hashlib.sha256((ROOT/p['src']).read_bytes()).hexdigest()
         r = dict(analysis_at=now[:16]+'Z', analysis_time_precision='minute', coverage=p['cov'], event_at=now,
                  event_id=f'FTR-20261125-{pmid}-01', evidence_basis=['coverage_map', p['basis'], 'Result and per-consumer wording: '+OUT],
-                 evidence_depth='partial_fulltext_read', outputs=[OUT], prior_receipt=prev['event_id'], record_kind='contemporaneous_receipt',
-                 reread_reason='inadequate_prior_coverage', source_fingerprint=sha, source_kind='fulltext_local', source_locator=p['src'],
+                 evidence_depth=('queried_not_full_read' if pmid in QUERIED else 'partial_fulltext_read'), outputs=[OUT], prior_receipt=prev['event_id'], record_kind='contemporaneous_receipt',
+                 reread_reason=('new_question_outside_prior_coverage' if pmid in QUERIED else 'inadequate_prior_coverage'), source_fingerprint=sha, source_kind='fulltext_local', source_locator=p['src'],
                  study_id=prev['study_id'], workflow='SCI ADV-269 (held partials, unread classes inside held bytes; held bytes only, no contact, no spend); not a complete read, figure images remain unread')
         Path(outdir, f'RECEIPT_ADV269_{pmid}_SCI_20261125.json').write_text(json.dumps(r, indent=1, sort_keys=True)+'\n')
         print(pmid, 'prior', prev['event_id'], 'sha', sha[:12])
-main(sys.argv[1])
+main(sys.argv[1], set(sys.argv[2:]) or None)
