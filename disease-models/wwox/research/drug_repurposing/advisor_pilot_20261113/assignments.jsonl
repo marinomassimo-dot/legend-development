@@ -598,3 +598,5 @@
 {"evidence": "SendMessage 04:29Z; queued behind IT's two items", "id": "ADV-257", "receipt": ["81277433-291c-47a6-af49-cfead5275887"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 06001577"], "utc": "2026-11-25T04:29:55Z"}
 {"assessment": "HOST", "id": "ADV-258", "key": "notice-sweep-tool-and-weekly-flag", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-25T04:40:23Z"}
 {"evidence": "SendMessage 04:40Z with brief pointer", "id": "ADV-258", "receipt": ["899a82c5-747e-43ae-86b0-3297ea0ef464"], "state": "SENT", "to": ["HE - CURRENT 9884af3f"], "utc": "2026-11-25T04:40:38Z"}
+{"assessment": "HOST", "id": "ADV-259", "key": "chong-2023-lactate-source-route-and-claim-009", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T04:49:50Z"}
+{"evidence": "SendMessage 04:49Z with brief pointer", "id": "ADV-259", "receipt": ["640f06cd-5764-4c43-a7fb-1d1d913ca1e3"], "state": "SENT", "to": ["SCI - CURRENT e8081cc5"], "utc": "2026-11-25T04:49:57Z"}
