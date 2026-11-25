@@ -339,6 +339,36 @@ class SafePushSerialize(unittest.TestCase):
             self.assertEqual(len(log.read_text().splitlines()), 2, "one gate run (start and end) on the merged commit")
             self.assertEqual(subprocess.run(["git", "-C", str(root), "status", "--porcelain"], capture_output=True, text=True).stdout, "")
 
+    def test_a_merge_that_changes_the_tool_refuses_and_the_second_run_publishes(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._slow_remote(td)
+            tool = root / "framework" / "scripts" / "safe_push.py"                     # the tool runs from inside the repository it publishes, as in a worktree
+            tool.parent.mkdir(parents=True, exist_ok=True)
+            tool.write_bytes(TOOL.read_bytes())
+            subprocess.run(["git", "-C", str(root), "add", "framework"], check=True)
+            subprocess.run(["git", "-C", str(root), "commit", "-qm", "the tool"], check=True)
+            subprocess.run(["git", "-C", str(root), "push", "-q", "origin", "HEAD:refs/heads/main"], check=True)
+            other = self._other_clone(td, bare)
+            with (other / "framework" / "scripts" / "safe_push.py").open("a", encoding="utf-8") as f:
+                f.write("# a newer sequence\n")
+            subprocess.run(["git", "-C", str(other), "commit", "-qam", "newer tool"], check=True)
+            subprocess.run(["git", "-C", str(other), "push", "-q", "origin", "HEAD:refs/heads/main"], check=True)
+            theirs = self._remote_main(bare)
+            log = Path(td) / "gate.log"
+            mine = self._commit(root, "mine.txt")
+            env = dict(os.environ, LEGEND_SAFE_PUSH_ROOT=str(root), LEGEND_SAFE_PUSH_GATE=str(root / "scripts" / "gate.py"), LEGEND_TEST_LOG=str(log), LEGEND_TEST_SLEEP="0")
+            push = lambda sha: subprocess.run([sys.executable, "-B", str(tool), "origin", "main", "--serialize", "--expect-sha", sha], capture_output=True, text=True, env=env)
+            first = push(mine)
+            merged = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
+            self.assertEqual(first.returncode, 1, first.stdout)
+            self.assertIn("changed safe_push.py itself", first.stderr)
+            self.assertIn(f"--expect-sha {merged[:12]}", first.stderr)
+            self.assertEqual(self._remote_main(bare), theirs)
+            self.assertFalse(log.exists(), "no gate run by the old process")
+            second = push(merged)
+            self.assertEqual(second.returncode, 0, second.stderr)
+            self.assertEqual(self._remote_main(bare), merged)
+
     def test_a_conflicting_remote_leaves_the_tree_as_it_was_and_gates_nothing(self) -> None:
         with TemporaryDirectory() as td:
             root, bare = self._slow_remote(td)
