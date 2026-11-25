@@ -360,10 +360,12 @@
     },
     {
      "step": "Organoid one-clone wording (SCI ADV-244 section 6): place it in the card-lane consumers K01, D01, D02, M01, E02, I01 and INV-16 by the ordinary route and carry CLAIM 002 and RP-008 through a candidate and ADV; each consumer opened in place before listing",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "SCI message 2026-11-25 relayed for ADV (ADV-244 section 6, replaces ADV-242 section 6)",
-     "accepted_at": "2026-11-25T02:30:20Z"
+     "accepted_at": "2026-11-25T02:30:20Z",
+     "evidence": "placed: not_known item in packets and rebuilt cards K01, D01, D02, M01, E02, I01; INV-16 clause (investigations.tsv, investigations_it20.tsv, ranking.json) translated it/fr/es/de; views and package regenerated; guard suites exit 0; folder brainstorm_20261116/it_adv244wording_20261125 (WORDING note, apply script); 'apparently one batch' not placed (unverified in held text); CLAIM 002 and RP-008 carry no placeable clone statement (RP-008 is ADV's); landing from task/it-adv241-20261125",
+     "updated_at": "2026-11-25T02:45:57Z"
     }
    ]
   }
