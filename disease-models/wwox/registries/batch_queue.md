@@ -39,7 +39,7 @@ a corrigendum says the record was repaired, a retraction says it should not have
 | [23446842](https://pubmed.ncbi.nlm.nih.gov/23446842/) | retracted | tracking log | `disease-models/wwox/registries/literature_tracking_log_current.md`<br>`disease-models/wwox/registries/paper_registry_current.md` | may not support or promote any claim; audit every claim already resting on it; readable for audit only |
 | [12719539](https://pubmed.ncbi.nlm.nih.gov/12719539/) | concern | — | — | no canonical promotion until the concern is resolved; readable for audit |
 | [25447306](https://pubmed.ncbi.nlm.nih.gov/25447306/) | retracted | — | `disease-models/wwox/research/record_repair_queue_current.md` | may not support or promote any claim; audit every claim already resting on it; readable for audit only |
-| [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | retracted | tracking log | `disease-models/wwox/registries/literature_tracking_log_current.md`<br>`disease-models/wwox/registries/paper_registry_current.md`<br>`disease-models/wwox/registries/working_model_current.md`<br>`disease-models/wwox/research/discovery_ledger_current.md` | may not support or promote any claim; audit every claim already resting on it; readable for audit only |
+| [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | retracted | receipt FTR-20261125-28151481-01 | `disease-models/wwox/registries/literature_tracking_log_current.md`<br>`disease-models/wwox/registries/paper_registry_current.md`<br>`disease-models/wwox/registries/working_model_current.md`<br>`disease-models/wwox/research/discovery_ledger_current.md` | may not support or promote any claim; audit every claim already resting on it; readable for audit only |
 | [16223882](https://pubmed.ncbi.nlm.nih.gov/16223882/) | concern | PAPER 082 | `disease-models/wwox/registries/literature_tracking_log_current.md`<br>`disease-models/wwox/registries/paper_registry_current.md`<br>`disease-models/wwox/research/discovery_ledger_current.md`<br>`disease-models/wwox/research/full_text_queue_current.md` | no canonical promotion until the concern is resolved; readable for audit |
 
 
@@ -81,11 +81,11 @@ time; it does not redistribute or license the article text.
 
 | Status | Records | Share |
 |---|---:|---:|
-| **Not found by identifier** — run the intake gate | 259 | 37% |
+| **Not found by identifier** — run the intake gate | 257 | 36% |
 | **Catalogued, never processed** — the reading debt | 113 | 16% |
-| Known to the tracking log only | 72 | 10% |
+| Known to the tracking log only | 71 | 10% |
 | Processed from the abstract | 12 | 2% |
-| Partial full text read | 82 | 12% |
+| Partial full text read | 85 | 12% |
 | Full text read | 168 | 24% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
@@ -359,7 +359,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [36975604](https://pubmed.ncbi.nlm.nih.gov/36975604/) | 2023 | ✅ | Journal Article | unmatched | Epigenome-Wide Changes in the Cell Layers of the Vein Wall When Exposing the Venous Endothelium to Oscillatory Shear Stress. |
 | [36874126](https://pubmed.ncbi.nlm.nih.gov/36874126/) | 2023 | ✅ | Editorial | unmatched | ✎ corrected — Editorial: The role of STAT3 signaling pathway in tumor progression. |
 | [35383826](https://pubmed.ncbi.nlm.nih.gov/35383826/) | 2023 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Plasma biomarkers and genetics in the diagnosis and prediction of Alzheimer's disease. |
-| [36572560](https://pubmed.ncbi.nlm.nih.gov/36572560/) | 2022 | ✅ | Journal Article | unmatched | Glycogen Synthase Kinase-3 Interaction Domain Enhances Phosphorylation of SARS-CoV-2 Nucleocapsid Protein. |
 | [36553611](https://pubmed.ncbi.nlm.nih.gov/36553611/) | 2022 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Detection of Association Features Based on Gene Eigenvalues and MRI Imaging Using Genetic Weighted Random Forest. |
 | [36316632](https://pubmed.ncbi.nlm.nih.gov/36316632/) | 2022 | ✅ | Journal Article | unmatched | Genome-wide detection of RNA editing events during the hair follicles cycle of Tianzhu white yak. |
 | [36071494](https://pubmed.ncbi.nlm.nih.gov/36071494/) | 2022 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Identification of recurrent variants implicated in disease in bicuspid aortic valve patients through whole-exome sequencing. |
@@ -381,7 +380,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [30619734](https://pubmed.ncbi.nlm.nih.gov/30619734/) | 2018 | ✅ | Journal Article; Review | unmatched | WW-Domain Containing Protein Roles in Breast Tumorigenesis. |
 | [29481666](https://pubmed.ncbi.nlm.nih.gov/29481666/) | 2018 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, N.I.H., Intramural; Research Support, Non-U.S. Gov't | unmatched | Identification of seven novel loci associated with amino acid levels using single-variant and gene-based tests in 8545 Finnish men from the METSIM study. |
 | [29551923](https://pubmed.ncbi.nlm.nih.gov/29551923/) | 2017 | ✅ | Journal Article | unmatched | Establishment of optimal regulatory network of colorectal cancer based on p42.3 protein. |
-| [29108237](https://pubmed.ncbi.nlm.nih.gov/29108237/) | 2017 | ✅ | Journal Article | unmatched | The circRNA interactome-innovative hallmarks of the intra- and extracellular radiation response. |
 | [29100284](https://pubmed.ncbi.nlm.nih.gov/29100284/) | 2017 | ✅ | Journal Article | unmatched | Exosomes containing differential expression of microRNA and mRNA in osteosarcoma that can predict response to chemotherapy. |
 | [28943951](https://pubmed.ncbi.nlm.nih.gov/28943951/) | 2017 | ✅ | Journal Article | unmatched | Recurrent alterations of the WW domain containing oxidoreductase gene spanning the common fragile site FRA16D in multiple myeloma and monoclonal gammopathy of undetermined significance. |
 | [28787462](https://pubmed.ncbi.nlm.nih.gov/28787462/) | 2017 | ✅ | Journal Article | unmatched | Novel near-diploid ovarian cancer cell line derived from a highly aneuploid metastatic ovarian tumor. |
@@ -547,9 +545,8 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [14555208](https://pubmed.ncbi.nlm.nih.gov/14555208/) | 2003 | — | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Molecular mechanisms underlying WOX1 activation during apoptotic and stress responses. |
 | [11719429](https://pubmed.ncbi.nlm.nih.gov/11719429/) | 2001 | — | Journal Article; Research Support, U.S. Gov't, P.H.S. | unmatched | WWOX, the FRA16D gene, behaves as a suppressor of tumor growth. |
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
-| [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 444 outstanding records)*
+*(showing all 441 outstanding records)*
 
 ## Already processed from this seed
 
@@ -621,6 +618,8 @@ for an entirely unprocessed record.
 | [15692750](https://pubmed.ncbi.nlm.nih.gov/15692750/) | 2005 | ✅ | full text | CORPUS P324 | Frequent loss of WWOX expression in breast cancer: correlation with estrogen receptor status. |
 | [15266310](https://pubmed.ncbi.nlm.nih.gov/15266310/) | 2004 | ✅ | full text | CORPUS P244 | Frequent downregulation and loss of WWOX gene expression in human hepatocellular carcinoma. |
 | [30470736](https://pubmed.ncbi.nlm.nih.gov/30470736/) | 2018 | ✅ | full text | receipt FTR-20260909-30470736-01 | ℹ️ CORRECTION NOTICE — Author Correction: WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia. |
+| [36572560](https://pubmed.ncbi.nlm.nih.gov/36572560/) | 2022 | ✅ | partial full text | receipt FTR-20261125-36572560-01 | Glycogen Synthase Kinase-3 Interaction Domain Enhances Phosphorylation of SARS-CoV-2 Nucleocapsid Protein. |
+| [29108237](https://pubmed.ncbi.nlm.nih.gov/29108237/) | 2017 | ✅ | partial full text | receipt FTR-20261125-29108237-01 | The circRNA interactome-innovative hallmarks of the intra- and extracellular radiation response. |
 | [39933386](https://pubmed.ncbi.nlm.nih.gov/39933386/) | 2025 | ✅ | abstract only | receipt FTR-20261108-39933386-38 | Infantile Epileptic Spasms Syndrome: Unveiling clinical and genetic variability in a case series from Argentina. |
 | [15126504](https://pubmed.ncbi.nlm.nih.gov/15126504/) | 2004 | ✅ | abstract only | receipt FTR-20261107-15126504-70 | Down-regulation of WW domain-containing oxidoreductase induces Tau phosphorylation in vitro. A potential role in Alzheimer's disease. |
 | [30783266](https://pubmed.ncbi.nlm.nih.gov/30783266/) | 2019 | ✅ | partial full text | receipt FTR-20260921-30783266-01 | ℹ️ CORRECTION NOTICE — Correction: The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature. |
@@ -663,6 +662,7 @@ for an entirely unprocessed record.
 | [29581896](https://pubmed.ncbi.nlm.nih.gov/29581896/) | 2018 | ✅ | partial full text | PAPER 403 | Chasing the signaling run by tri-molecular time-lapse FRET microscopy. |
 | [29310447](https://pubmed.ncbi.nlm.nih.gov/29310447/) | 2018 | ✅ | partial full text | PAPER 359 | Phosphorylation/de-phosphorylation in specific sites of tumor suppressor WWOX and control of distinct biological events. |
 | [28763065](https://pubmed.ncbi.nlm.nih.gov/28763065/) | 2017 | ✅ | partial full text | PAPER 132 | Genome-wide association analysis identifies common variants influencing infant brain volumes. |
+| [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | partial full text | receipt FTR-20261125-28151481-01 | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 | [27845895](https://pubmed.ncbi.nlm.nih.gov/27845895/) | 2017 | ✅ | partial full text | PAPER 530 | Hyaluronan activates Hyal-2/WWOX/Smad4 signaling and causes bubbling cell death when the signaling complex is overexpressed. |
 | [27773744](https://pubmed.ncbi.nlm.nih.gov/27773744/) | 2017 | ✅ | partial full text | PAPER 404 | Fhit and Wwox loss-associated genome instability: A genome caretaker one-two punch. |
 | [27339895](https://pubmed.ncbi.nlm.nih.gov/27339895/) | 2016 | ✅ | partial full text | PAPER 362 | Role of WW Domain-containing Oxidoreductase WWOX in Driving T Cell Acute Lymphoblastic Leukemia Maturation. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 | [16288044](https://pubmed.ncbi.nlm.nih.gov/16288044/) | 2005 | — | full text | PAPER 569 | Activated tyrosine kinase Ack1 promotes prostate tumorigenesis: role of Ack1 in polyubiquitination of tumor suppressor Wwox. |
 
-*(showing all 262 processed records from the seed)*
+*(showing all 265 processed records from the seed)*
 
 ## How to work one
 
