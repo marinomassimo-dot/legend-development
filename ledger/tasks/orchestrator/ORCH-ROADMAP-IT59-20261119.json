@@ -585,17 +585,21 @@
     },
     {
      "step": "IT20: batch 2 of the staged BATCH_COMMIT (remaining candidates ADV253, ADV261, ADV238, ADV246, ADV247, ADV251; blind verifier sonnet/high, at most 10 statements per call), then SCI peer sets for ordinary places",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "CHECKPOINT_IT_20261125_7.md section 1 (first assignment, ADV addition in the successor brief)",
-     "accepted_at": "2026-11-25T15:13:19Z"
+     "accepted_at": "2026-11-25T15:13:19Z",
+     "evidence": "published 0f0e64ddc (BATCH_20261125_005 landing; earlier parts at 9f8ab5639e and bdade3826); ADV238 rows 1, 3, 4 applied, row 2 and ADV-239 consumers open in CHECKPOINT_IT_20261125_9.md section 1",
+     "updated_at": "2026-11-25T17:54:32Z"
     },
     {
      "step": "IT21: checkpoint 20 section 1: SCI six-paper set (CC ADV276C-SIX-HELD-01 with own blind verifier), ADV-276b registry lines, RP rows to ADV, ADV238 card rows with view trio, coverage-matrix proposal",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "CHECKPOINT_IT_20261125_8.md section 1 (first assignment, ADV addition in the successor brief, 2026-11-25)",
-     "accepted_at": "2026-11-25T17:01:57Z"
+     "accepted_at": "2026-11-25T17:01:57Z",
+     "evidence": "published 0f0e64ddc: CC ADV276C-SIX-HELD-01 propagated with two blind verifiers, ADV-276b lines, RP rows applied by ADV (a6f42486a), ADV238 card rows, coverage matrix; Kv7 open-question row not done, queued in CHECKPOINT_IT_20261125_9.md section 1",
+     "updated_at": "2026-11-25T17:54:32Z"
     }
    ]
   }
