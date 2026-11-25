@@ -1103,10 +1103,19 @@
     },
     {
      "step": "ADV-252: repair the main red from test_landing_suites.py (closed-world guard) without weakening the guard, and explain why the selector missed it",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-252 (peer message 2026-11-25 ~03:31Z)",
-     "accepted_at": "2026-11-25T03:31:55Z"
+     "accepted_at": "2026-11-25T03:31:55Z",
+     "evidence": "published f0daa021 (gate PASS, ls-remote): justified ALLOWED entry, selector rule and test; guard and test_landing_suites rc 0 locally; CI run #2353 queued, not yet read",
+     "updated_at": "2026-11-25T03:44:42Z"
+    },
+    {
+     "step": "Campaign home (ADV-243 decision): assign and deliver refuse when a commit in HEAD..development/main touches an input; reword roles/advisor.md and the strategic-advisor SKILL.md; tests; ADV reviews; then read CI run #2353",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV decision 2 on ADV-243, peer message 2026-11-25; checkpoint HE-M section 2",
+     "accepted_at": "2026-11-25T03:44:42Z"
     }
    ]
   }
@@ -1963,6 +1972,13 @@
    "at": "2026-11-25T03:31:55Z",
    "source": "ADV-252 (peer message 2026-11-25 ~03:31Z)",
    "step_sha256": "c0cf3e68f2bd",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T03:44:42Z",
+   "source": "ADV decision 2 on ADV-243, peer message 2026-11-25; checkpoint HE-M section 2",
+   "step_sha256": "2228252fc401",
    "reopened_block": false,
    "authorised_by": null
   }
