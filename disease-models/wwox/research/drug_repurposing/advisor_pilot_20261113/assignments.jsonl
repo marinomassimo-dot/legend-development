@@ -681,3 +681,4 @@
 {"evidence": "SendMessage 08:43Z with brief pointer", "id": "ADV-273", "receipt": ["2cc930f7-605a-4d57-9108-743c1143fd99"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 0d3f20fd"], "utc": "2026-11-25T08:43:56Z"}
 {"assessment": "HOST", "id": "ADV-274", "key": "red-streak-attribution-and-landing-suite-escape-count", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-25T09:42:44Z"}
 {"evidence": "SendMessage 09:42Z with brief pointer", "id": "ADV-274", "receipt": ["15f4e3fe-9692-4e80-9b79-9637d356ead0"], "state": "SENT", "to": ["HE - CURRENT 9229d112"], "utc": "2026-11-25T09:42:55Z"}
+{"assessment": "HOST", "id": "ADV-275", "key": "held-neural-hdac-inhibitor-expression-tables-with-wwox", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-25T09:58:02Z"}
