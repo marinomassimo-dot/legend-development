@@ -596,3 +596,5 @@
 {"evidence": "SendMessage 04:19Z; order ADV-254, 256, 255", "id": "ADV-256", "receipt": ["4d77611b-3ea3-4e2e-957c-8c4a63efe886"], "state": "SENT", "to": ["SCI - CURRENT e8081cc5"], "utc": "2026-11-25T04:19:36Z"}
 {"assessment": "HOST", "id": "ADV-257", "key": "acceptor-site-rescue-rejecting-observation-mechanism-map-r08", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-25T04:29:37Z"}
 {"evidence": "SendMessage 04:29Z; queued behind IT's two items", "id": "ADV-257", "receipt": ["81277433-291c-47a6-af49-cfead5275887"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 06001577"], "utc": "2026-11-25T04:29:55Z"}
+{"assessment": "HOST", "id": "ADV-258", "key": "notice-sweep-tool-and-weekly-flag", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-25T04:40:23Z"}
+{"evidence": "SendMessage 04:40Z with brief pointer", "id": "ADV-258", "receipt": ["899a82c5-747e-43ae-86b0-3297ea0ef464"], "state": "SENT", "to": ["HE - CURRENT 9884af3f"], "utc": "2026-11-25T04:40:38Z"}
