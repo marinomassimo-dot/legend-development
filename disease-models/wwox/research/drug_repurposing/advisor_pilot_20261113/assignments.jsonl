@@ -570,3 +570,11 @@
 {"evidence": "SendMessage 02:15Z with brief pointer", "id": "ADV-243", "receipt": ["9ae7bc82-3700-4b94-bafd-a60028465b63"], "state": "SENT", "to": ["HE - CURRENT a930ffce"], "utc": "2026-11-25T02:15:57Z"}
 {"assessment": "HOST", "id": "ADV-244", "key": "organoid-clone-assignment-from-raw-reads-probe", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T02:20:09Z"}
 {"evidence": "SendMessage 02:20Z with brief pointer", "id": "ADV-244", "receipt": ["33850f86-bf2e-4236-9149-1a98575fa4d5"], "state": "SENT", "to": ["SCI - CURRENT ac5ef625"], "utc": "2026-11-25T02:20:24Z"}
+{"assessment": "HOST", "id": "ADV-245", "key": "dc05-dated-headers-and-en03-derived-terms", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-25T02:32:32Z"}
+{"assessment": "HOST", "id": "ADV-246", "key": "per-line-protein-vs-function-table-severity-premise", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-25T02:32:34Z"}
+{"evidence": "SendMessage 02:32Z with brief pointer", "id": "ADV-245", "receipt": ["80051c3c-3c71-4b34-8d6a-f6f7d7a068b0"], "state": "SENT", "to": ["HE - CURRENT a930ffce"], "utc": "2026-11-25T02:32:56Z"}
+{"evidence": "SendMessage 02:32Z with brief pointer", "id": "ADV-246", "receipt": ["bebcdff5-53f3-47fb-902e-9b8b8a0a4a5c"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 45a8b15c"], "utc": "2026-11-25T02:32:57Z"}
+{"assessment": "HOST", "id": "ADV-247", "key": "independence-audit-units-clones-dishes", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T02:56:34Z"}
+{"assessment": "HOST", "id": "ADV-248", "key": "cell-attached-firing-assay-saturation-week7-plateau", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-25T02:56:36Z"}
+{"evidence": "SendMessage 02:56Z with brief pointer (message sent before the root refresh; record registered after it)", "id": "ADV-247", "receipt": ["cdebacac-6af5-4ab7-bf80-e48a450c0e81"], "state": "SENT", "to": ["SCI - CURRENT ac5ef625"], "utc": "2026-11-25T02:56:43Z"}
+{"evidence": "SendMessage 02:56Z with brief pointer (message sent before the root refresh)", "id": "ADV-248", "receipt": ["fd832b1a-b280-4aea-9d47-7713d64943b9"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 45a8b15c"], "utc": "2026-11-25T02:56:45Z"}
