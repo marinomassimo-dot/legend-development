@@ -578,3 +578,5 @@
 {"assessment": "HOST", "id": "ADV-248", "key": "cell-attached-firing-assay-saturation-week7-plateau", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-25T02:56:36Z"}
 {"evidence": "SendMessage 02:56Z with brief pointer (message sent before the root refresh; record registered after it)", "id": "ADV-247", "receipt": ["cdebacac-6af5-4ab7-bf80-e48a450c0e81"], "state": "SENT", "to": ["SCI - CURRENT ac5ef625"], "utc": "2026-11-25T02:56:43Z"}
 {"evidence": "SendMessage 02:56Z with brief pointer (message sent before the root refresh)", "id": "ADV-248", "receipt": ["fd832b1a-b280-4aea-9d47-7713d64943b9"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 45a8b15c"], "utc": "2026-11-25T02:56:45Z"}
+{"assessment": "HOST", "id": "ADV-249", "key": "primaries-behind-ledger-leads-never-read", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T03:09:50Z"}
+{"evidence": "SendMessage 03:10Z with brief pointer", "id": "ADV-249", "receipt": ["271f9dd7-c7b3-4f33-acd1-3b889a59bc70"], "state": "SENT", "to": ["SCI - CURRENT ac5ef625"], "utc": "2026-11-25T03:10:22Z"}

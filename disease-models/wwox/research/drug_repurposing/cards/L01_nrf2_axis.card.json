@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "f8172f4a7480e134cff8e8ac6c28e1ed543fdd4da4a3bd357ef491f2673f2a66",
+  "input_sha256": "3bbe37c82c0dc96d73495c5557eb1240f6fc549e43648f1592034951a655b61b",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -356,7 +356,9 @@
       "Whether reactivity, ROS or NRF2 tone is protective, harmful, mixed or composition in WWOX-deficient brain.",
       "Whether omaveloxolone or monomethyl fumarate acts on Il6/Il1b in microglia at tolerable exposure.",
       "GSK3 to NRF2 through the Neh6 and beta-TrCP phosphodegron is reported in two papers from one laboratory line (abstract level); no WWOX measurement; lithium acts in wild type too.",
-      "Whether omaveloxolone acts on NRF2 at a measured concentration in a mouse or human neural cell: no KEAP1 or NRF2 potency row and no mouse brain concentration were found by the routes read [IT59 2026-11-20 third packet change]."
+      "Whether omaveloxolone acts on NRF2 at a measured concentration in a mouse or human neural cell: no KEAP1 or NRF2 potency row and no mouse brain concentration were found by the routes read [IT59 2026-11-20 third packet change].",
+      "Whether any organoid transcript difference or null on this card (deposit GSE156243) is independent of the CRISPR clone and of the batch: the sequenced knockout organoids are four of ONE clone (1B, from edit-spanning reads, ADV-244, SCI, 2026-11-25), the other clone (A2) was not sequenced, the comparator is two organoids of the parental line (the authors removed two of four wild-type libraries, one for failed quality control and one for not clustering), and the organoids appear to come from one batch (the authors' Methods: organoids from the same batch were used for all analyses unless stated otherwise; their reply to reviewers speaks of the batch of the RNA-seq; not stated as a measured fact for these six libraries), so a difference here is not shown to be a property of the knockout rather than of the clone or the batch. [IT 2026-11-25, ADV-244]",
+      "Whether agreement across the P47T brain regions on this card is replication: the hippocampus, prefrontal cortex, parietal cortex and cerebellum libraries come from the same mice (five per group; cerebellum four against three), so agreement across regions is one set of animals seen several times, not replication. [IT 2026-11-25, ADV-247]"
     ],
     "evidence_against": [
       "Tnf-a is not significant in the null hippocampus (Il6 only).",
