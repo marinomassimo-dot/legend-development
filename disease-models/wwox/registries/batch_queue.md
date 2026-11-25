@@ -8,12 +8,12 @@
 
 ## ▶ Start here
 
-**238 records have not been processed.** **114** of them have a free full text and can be worked immediately.
+**233 records have not been processed.** **109** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
 | 🟢 **`NEW`** | 52 | never seen by the system — **the front of the queue** |
-| 🟢 **`CORPUS_CATALOGUED`** | 186 | catalogued and deduplicated, never analytically processed |
+| 🟢 **`CORPUS_CATALOGUED`** | 181 | catalogued and deduplicated, never analytically processed |
 | 🟡 `OUT_OF_SCOPE_LIKELY` | 176 | no scope signal in the title — later in the queue, **never discarded** |
 | 🟡 `AMBIGUOUS` | 4 | identifiers must be resolved before ingest |
 | ⏳ `IN_PIPELINE` | 35 | already in flight |
@@ -82,10 +82,10 @@ time; it does not redistribute or license the article text.
 | Status | Records | Share |
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 259 | 37% |
-| **Catalogued, never processed** — the reading debt | 114 | 16% |
-| Known to the tracking log only | 76 | 11% |
+| **Catalogued, never processed** — the reading debt | 113 | 16% |
+| Known to the tracking log only | 72 | 10% |
 | Processed from the abstract | 12 | 2% |
-| Partial full text read | 77 | 11% |
+| Partial full text read | 82 | 12% |
 | Full text read | 168 | 24% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
@@ -164,7 +164,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [30307120](https://pubmed.ncbi.nlm.nih.gov/30307120/) | 2018 | ✅ | Journal Article | catalogued only | Inhibition of miR-24 suppresses malignancy of human non-small cell lung cancer cells by targeting WWOX in vitro and in vivo. |
 | [30242144](https://pubmed.ncbi.nlm.nih.gov/30242144/) | 2018 | ✅ | Journal Article | catalogued only | Expression of B Cell-Specific Moloney Murine Leukemia Virus Integration Site 1 (BMI-1) and WW Domain-Containing Oxidoreductase (WWOX) in Liver Cancer Tissue and Normal Liver Tissue. |
 | [29662317](https://pubmed.ncbi.nlm.nih.gov/29662317/) | 2018 | ✅ | Journal Article | catalogued only | Association between WWOX and the risk of malignant tumor, especially among Asians: evidence from a meta-analysis. |
-| [29164763](https://pubmed.ncbi.nlm.nih.gov/29164763/) | 2018 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | TMEM207 hinders the tumour suppressor function of WWOX in oral squamous cell carcinoma. |
 | [31966760](https://pubmed.ncbi.nlm.nih.gov/31966760/) | 2017 | ✅ | Journal Article | catalogued only | Expression of ORAOV1, CD133 and WWOX correlate with metastasis and prognosis in gastric adenocarcinoma. |
 | [31966369](https://pubmed.ncbi.nlm.nih.gov/31966369/) | 2017 | ✅ | Journal Article | catalogued only | Exogenous WWOX enhances apoptosis and weakens metastasis in CNE2 nasopharyngeal carcinoma cells through the intrinsic apoptotic pathway. |
 | [29152092](https://pubmed.ncbi.nlm.nih.gov/29152092/) | 2017 | ✅ | Journal Article | catalogued only | The long non-coding RNA PARTICLE is associated with WWOX and the absence of FRA16D breakage in osteosarcoma patients. |
@@ -272,12 +271,10 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [40198927](https://pubmed.ncbi.nlm.nih.gov/40198927/) | 2025 | ✅ | Journal Article | screened | ✎ corrected — WWOX attenuates the progression of gallbladder cancer by suppressing cellular glycolysis through the modulation of the P73/HIF-1α signaling pathway. |
 | [40139278](https://pubmed.ncbi.nlm.nih.gov/40139278/) | 2025 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | Influence of WWOX/MAF genes on cognitive performance in patients with Parkinson's disease. |
 | [39473747](https://pubmed.ncbi.nlm.nih.gov/39473747/) | 2024 | ✅ | Journal Article | screened | Loss of WWOX contributes to cisplatin resistance in triple-negative breast cancer cells by modulating miR-182 and miR-214. |
-| [37324196](https://pubmed.ncbi.nlm.nih.gov/37324196/) | 2023 | ✅ | Journal Article | screened | WWOX Polymorphisms as Predictors of the Biochemical Recurrence of Localized Prostate Cancer after Radical Prostatectomy. |
 | [35563688](https://pubmed.ncbi.nlm.nih.gov/35563688/) | 2022 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | Determination of WWOX Function in Modulating Cellular Pathways Activated by AP-2α and AP-2γ Transcription Factors in Bladder Cancer. |
 | [35290621](https://pubmed.ncbi.nlm.nih.gov/35290621/) | 2022 | ✅ | Journal Article | screened | TGFα-EGFR pathway in breast carcinogenesis, association with WWOX expression and estrogen activation. |
 | [35107375](https://pubmed.ncbi.nlm.nih.gov/35107375/) | 2022 | ✅ | Journal Article; Research Support, N.I.H., Extramural | screened | WWOX-Mediated Degradation of AMOTp130 Negatively Affects Egress of Filovirus VP40 Virus-Like Particles. |
 | [34204827](https://pubmed.ncbi.nlm.nih.gov/34204827/) | 2021 | ✅ | Journal Article | screened | WWOX Loses the Ability to Regulate Oncogenic AP-2γ and Synergizes with Tumor Suppressor AP-2α in High-Grade Bladder Cancer. |
-| [33946771](https://pubmed.ncbi.nlm.nih.gov/33946771/) | 2021 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Review | screened | Molecular Functions of WWOX Potentially Involved in Cancer Development. |
 | [33718178](https://pubmed.ncbi.nlm.nih.gov/33718178/) | 2021 | ✅ | Journal Article | screened | ✎ corrected — Fragile Gene WWOX Guides TFAP2A/TFAP2C-Dependent Actions Against Tumor Progression in Grade II Bladder Cancer. |
 | [33565365](https://pubmed.ncbi.nlm.nih.gov/33565365/) | 2021 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | Cellular Expression and Subcellular Localization of Wwox Protein During Testicular Development and Spermatogenesis in Rats. |
 | [33105088](https://pubmed.ncbi.nlm.nih.gov/33105088/) | 2021 | ✅ | Comment; Editorial; Research Support, N.I.H., Extramural; Research Support, U.S. Gov't, Non-P.H.S. | screened | ✎ corrected — Loss of Endothelial WWOX: A Risk Factor for ARDS in Smokers? |
@@ -286,14 +283,12 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [32931356](https://pubmed.ncbi.nlm.nih.gov/32931356/) | 2020 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | LncRNA WWOX-AS1 sponges miR-20b-5p in hepatocellular carcinoma and represses its progression by upregulating WWOX. |
 | [32096174](https://pubmed.ncbi.nlm.nih.gov/32096174/) | 2020 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | WWOX regulates the Elf5/Snail1 pathway to affect epithelial-mesenchymal transition of ovarian carcinoma cells in vitro. |
 | [30211123](https://pubmed.ncbi.nlm.nih.gov/30211123/) | 2018 | ✅ | Journal Article; Review | screened | WWOX Tumor Suppressor Gene in Breast Cancer, a Historical Perspective and Future Directions. |
-| [30154439](https://pubmed.ncbi.nlm.nih.gov/30154439/) | 2018 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | Loss of Wwox drives metastasis in triple-negative breast cancer by JAK2/STAT3 axis. |
 | [29845204](https://pubmed.ncbi.nlm.nih.gov/29845204/) | 2018 | ✅ | Journal Article | screened | LncRNA WWOX‑AS1 inhibits the proliferation, migration and invasion of osteosarcoma cells. |
 | [31966718](https://pubmed.ncbi.nlm.nih.gov/31966718/) | 2017 | ✅ | Journal Article | screened | EBV-LMP1 regulating AKT/mTOR signaling pathway and WWOX in nasopharyngeal carcinoma. |
 | [31966508](https://pubmed.ncbi.nlm.nih.gov/31966508/) | 2017 | ✅ | Journal Article | screened | WWOX suppresses proliferation and induces apoptosis via G2 arrest and caspase 3 pathway in nasopharyngeal carcinoma cells. |
 | [29200707](https://pubmed.ncbi.nlm.nih.gov/29200707/) | 2017 | ✅ | Journal Article | screened | WWOX rs11644322 Polymorphism, Gemcitabine, and Pancreatic Cancer. |
 | [29085479](https://pubmed.ncbi.nlm.nih.gov/29085479/) | 2017 | ✅ | Journal Article | screened | Correlation between osteosarcoma and the expression of WWOX and p53. |
 | [28977834](https://pubmed.ncbi.nlm.nih.gov/28977834/) | 2017 | ✅ | Journal Article | screened | Decreased WWOX expression promotes angiogenesis in osteosarcoma. |
-| [28045433](https://pubmed.ncbi.nlm.nih.gov/28045433/) | 2017 | ✅ | Comparative Study; Journal Article; Review | screened | Functions and Epigenetic Regulation of Wwox in Bone Metastasis from Breast Carcinoma: Comparison with Primary Tumors. |
 | [25802472](https://pubmed.ncbi.nlm.nih.gov/25802472/) | 2015 | ✅ | Introductory Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S. | screened | Introduction to a thematic issue for WWOX. |
 | [25681467](https://pubmed.ncbi.nlm.nih.gov/25681467/) | 2015 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Review | screened | Alteration of WWOX in human cancer: a clinical view. |
 | [25595185](https://pubmed.ncbi.nlm.nih.gov/25595185/) | 2015 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Review | screened | WWOX, large common fragile site genes, and cancer. |
@@ -554,7 +549,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 449 outstanding records)*
+*(showing all 444 outstanding records)*
 
 ## Already processed from this seed
 
@@ -577,14 +572,19 @@ for an entirely unprocessed record.
 | [42523332](https://pubmed.ncbi.nlm.nih.gov/42523332/) | 2026 | ✅ | partial full text | PAPER 542 | Golgi CATCHR complexes function as organizing hubs for vesicle tethering and fusion. |
 | [41228229](https://pubmed.ncbi.nlm.nih.gov/41228229/) | 2025 | ✅ | partial full text | receipt FTR-20260921-41228229-01 | The Role of WWOX in Cancer Progression: Mechanisms and Therapeutic Potential. |
 | [37897534](https://pubmed.ncbi.nlm.nih.gov/37897534/) | 2023 | ✅ | partial full text | PAPER 130 | Loss of fragile WWOX gene leads to senescence escape and genome instability. |
+| [37324196](https://pubmed.ncbi.nlm.nih.gov/37324196/) | 2023 | ✅ | partial full text | receipt FTR-20261124-37324196-01 | WWOX Polymorphisms as Predictors of the Biochemical Recurrence of Localized Prostate Cancer after Radical Prostatectomy. |
 | [34140629](https://pubmed.ncbi.nlm.nih.gov/34140629/) | 2021 | ✅ | partial full text | PAPER 096 | Normal cells repel WWOX-negative or -dysfunctional cancer cells via WWOX cell surface epitope 286-299. |
+| [33946771](https://pubmed.ncbi.nlm.nih.gov/33946771/) | 2021 | ✅ | partial full text | receipt FTR-20261124-33946771-01 | Molecular Functions of WWOX Potentially Involved in Cancer Development. |
 | [33612478](https://pubmed.ncbi.nlm.nih.gov/33612478/) | 2021 | ✅ | partial full text | CORPUS-STUB-109 | Associations between TUBB-WWOX SNPs, their haplotypes, gene-gene, and gene-environment interactions and dyslipidemia. |
 | [33195192](https://pubmed.ncbi.nlm.nih.gov/33195192/) | 2020 | ✅ | partial full text | PAPER 129 | Wwox Deficiency Causes Downregulation of Prosurvival ERK Signaling and Abnormal Homeostatic Responses in Mouse Skin. |
 | [32764489](https://pubmed.ncbi.nlm.nih.gov/32764489/) | 2020 | ✅ | partial full text | receipt FTR-20260920-32764489-01 | Therapeutic Zfra4-10 or WWOX7-21 Peptide Induces Complex Formation of WWOX with Selective Protein Targets in Organs that Leads to Cancer Suppression and Spleen Cytotoxic Memory Z Cell Activation In Vivo. |
 | [31123603](https://pubmed.ncbi.nlm.nih.gov/31123603/) | 2019 | ✅ | partial full text | CORPUS P239 | Strategies by which WWOX-deficient metastatic cancer cells utilize to survive via dodging, compromising, and causing damage to WWOX-positive normal microenvironment. |
 | [30335523](https://pubmed.ncbi.nlm.nih.gov/30335523/) | 2018 | ✅ | partial full text | receipt FTR-20261117-30335523-01 | The downregulation of WWOX induces epithelial-mesenchymal transition and enhances stemness and chemoresistance in breast cancer. |
 | [30214895](https://pubmed.ncbi.nlm.nih.gov/30214895/) | 2018 | ✅ | partial full text | receipt FTR-20261119-30214895-71 | Cancerous Protein Network That Inhibits the Tumor Suppressor Function of WW Domain-Containing Oxidoreductase (WWOX) by Aberrantly Expressed Molecules. |
+| [30154439](https://pubmed.ncbi.nlm.nih.gov/30154439/) | 2018 | ✅ | partial full text | receipt FTR-20261124-30154439-01 | Loss of Wwox drives metastasis in triple-negative breast cancer by JAK2/STAT3 axis. |
+| [29164763](https://pubmed.ncbi.nlm.nih.gov/29164763/) | 2018 | ✅ | partial full text | receipt FTR-20261124-29164763-01 | TMEM207 hinders the tumour suppressor function of WWOX in oral squamous cell carcinoma. |
 | [28749468](https://pubmed.ncbi.nlm.nih.gov/28749468/) | 2017 | ✅ | partial full text | CORPUS-STUB-126 | WWOX sensitises ovarian cancer cells to paclitaxel via modulation of the ER stress response. |
+| [28045433](https://pubmed.ncbi.nlm.nih.gov/28045433/) | 2017 | ✅ | partial full text | receipt FTR-20261124-28045433-01 | Functions and Epigenetic Regulation of Wwox in Bone Metastasis from Breast Carcinoma: Comparison with Primary Tumors. |
 | [25891642](https://pubmed.ncbi.nlm.nih.gov/25891642/) | 2015 | ✅ | partial full text | receipt FTR-20261117-25891642-01 | Effect of the WWOX gene on the regulation of the cell cycle and apoptosis in human ovarian cancer stem cells. |
 | [25789010](https://pubmed.ncbi.nlm.nih.gov/25789010/) | 2015 | ✅ | partial full text | receipt FTR-20261117-25789010-01 | Ectopic expression of the WWOX gene suppresses stemness of human ovarian cancer stem cells. |
 | [25708809](https://pubmed.ncbi.nlm.nih.gov/25708809/) | 2015 | ✅ | partial full text | PAPER 566 | MicroRNA-153 promotes Wnt/β-catenin activation in hepatocellular carcinoma through suppression of WWOX. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 | [16288044](https://pubmed.ncbi.nlm.nih.gov/16288044/) | 2005 | — | full text | PAPER 569 | Activated tyrosine kinase Ack1 promotes prostate tumorigenesis: role of Ack1 in polyubiquitination of tumor suppressor Wwox. |
 
-*(showing all 257 processed records from the seed)*
+*(showing all 262 processed records from the seed)*
 
 ## How to work one
 
