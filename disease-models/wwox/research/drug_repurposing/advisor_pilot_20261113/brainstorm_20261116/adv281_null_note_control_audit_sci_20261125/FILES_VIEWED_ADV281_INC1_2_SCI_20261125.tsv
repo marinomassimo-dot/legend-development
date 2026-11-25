@@ -1,0 +1,28 @@
+assertion_ids	file	sha256	kind	how_viewed
+DR-A01-003	files/fulltext/PMID40485335_Shah2025_PMC12146831.xml	7cf47b9080ec95603ada7891b49d07d0174aa145e5f4c2833777afe85062af4c	text	text of XML read in full text extraction; Figures 3 and 6 legends and Results read, figure images NOT viewed
+DR-A01-004	files/fulltext/PMID42268630_Frick2026_PMC13251787.xml	46339bfe62204c7a61143732ab88f2c4b1b3a81e76c820dceeedf0796d2fd949	text	text of XML searched and read around drug, control and toxicity passages
+DR-A01-004	files/supplement/PMID42268630/PRP2-14-e70285-s001.xlsx	2f1b9b365495a8dfd0b9e58af8d0cf481dafef41d6132d2c00a5870ec2dff0b1	table	all 128 rows of the statistics sheet read (zipfile)
+DR-A02-002	files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml	a8e2eba966a9424550f918669a4f320d66ee594b9b736831f30f1910501b6510	text	Results section 'Low abundance variants are thermolabile proteasome targets', Fig 3 legend, Methods Drugs
+DR-A02-002	files/fulltext/PMID38740822_Gronbaek2024_PMC11091098.xml	6b0512a00fec5ae457a77b7d94e8863ff64d79f23aaf68d874c0b66ce0385170	text	Results around Fig 4 and Methods perturbations
+DR-A02-002	files/supplement/PMID38378758/41467_2024_45829_MOESM1_ESM.pdf	fda8614487901f8be9893984ff8bebd756d4ac33e2b989147aabb1a5f5815b97	grep	pdftotext, searched for chloroquine, bafilomycin, lysosom, LC3, p62, autophag, CQ
+DR-A02-002	files/supplement/PMID38378758/41467_2024_45829_MOESM2_ESM.pdf	a84d9e70474ca9f3418626f5d01f073ea51e3ec0848fb3690c40242d5430bef7	grep	pdftotext, same search; peer review file, one hit read
+DR-A02-002	files/supplement/PMID38378758/41467_2024_45829_MOESM3_ESM.pdf	32e5beab9c941cd8140f6790630c765dc3fcfbacd0b4d81dfa468f26a10774c4	grep	pdftotext, same search, 0 hits
+DR-A02-002	files/supplement/PMID38740822/41467_2024_48481_MOESM1_ESM.pdf	273b6aba364de5a1139f9b5657738780cfea9d76aa02f701710b1a74a0a0ebe1	grep	pdftotext, same search; supplementary Fig 8 legend read
+DR-A02-002	files/supplement/PMID38740822/41467_2024_48481_MOESM2_ESM.pdf	09abed0813fc071aac8fe309f56e15f2b77e87391daf813b929cfe51ddfb45e6	grep	pdftotext; peer-review file, reviewer point 9 and reply read
+DR-A02-002	files/supplement/PMID38740822/41467_2024_48481_MOESM3_ESM.pdf	a77670f98f3ae36f132bcc4d1a448b8b43be546f0830a6750fa225b70adf51fd	grep	pdftotext, same search, 0 hits
+DR-A02-009	files/fulltext/PMID38051092_Collard2023_PMC10761163_epmc_2026-10-29.xml	aa01f68b07f97b306df5b3399b1699f52ef0feca2643e0d5da80a7efc6984d37	text	Results on HSP co-expression, abstract, Discussion
+DR-E03-001	disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026/chembl_named_activities.tsv	224c6c6cf7e32fbf74f8767bb914b6854d4dd47c6b85dd6e9eb620e091ef707f	table	rows for CHEMBL306823 and the three source documents read
+DR-E03-001	disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026/chembl_mechanisms.tsv	8c5c2b7ef5ff43e1033eda22c82b32407bc7abe299e4aafdd3e505f6fe19dd3a	table	rows for CHEMBL306823 read
+DR-E03-001	disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026/chembl_activities.tsv	02ab1800292586660f44b08547519322351840cc4eb873f08465e440d1a31cc1	table	filtered for CHEMBL306823 and the three documents, 0 rows
+DR-H01-003	files/fulltext/adv051_it_20261118/A/PMID40165594_europepmc_core.json	e5dd4337a27d0760c995c057d733a771a26027a07b85b474888a57739c60b419	text	abstract read; no full text held
+DR-M01-001;DR-D01-002	files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt	fbe34f985dba064a83fc40a997658a8d210955b7fcdd33e0b349bbbcfcea099c	text	A51 paragraph in Results read
+DR-M01-001;DR-D01-002	files/fulltext/PMID42397075_Steinberg2026_OUP-Supplement/brain-2025-03809-File010.pdf	aa86f300c7f5333db95f5e0c80a462b8c7f2a290409cd7c5e61527a810dffc42	image	page 12 (Supplementary Fig 7 F and G) rendered and viewed; page 13 legend read
+DR-M01-001;DR-D01-002	files/fulltext/PMID42397075_Steinberg2026_OUP-Supplement/brain-2025-03809-File009.txt	71ad45e33f2b25cdd493fc35b852075fa76d0ba96da71ea080638159f06b088c	text	Methods 'MYC inhibition' read
+DR-M01-001;DR-D01-002	job_scratch/render/s7p-12.png	66855185374dc6b970060d7130f71164593f89c2df3fa22e02dc7a15d7f56c43	image	rendered page 12, 130 dpi (pdftoppm), viewed
+DR-M01-001;DR-D01-002	job_scratch/render/s7fg-12.png	16d6efe42dc46370be77cb9ae96da0a0f355584db653ed79501873ff627bf97d	image	crop of panels F and G quantification, 300 dpi, viewed
+DA-LC-ATF4-002	files/fulltext/PMID42909904_PMC13684411.xml	4e571e24a85342f2a72d92a18df1acdebd9efa89dcdf5754c092078d112a23a4	text	Results on Wwox knockdown, Fig 5 and Atf4 passages
+DA-LC-ATF4-002	files/fulltext/PMID42909904_supplement/Supplementary_material_derived.txt	326a1be18b73f4d6af477f4fcd233566262681f6ed276ae44e35dbc41c12348d	text	Supplementary Figure 1 and 5 legends read
+DR-AAV-GLU10-HD;DR-AAV-GLU10-LD	files/fulltext/PMID42422765_Obeid2026_PMC_r2.xml	7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2	text	Results on dose study, Fig 3 legend, expression passages
+DR-AAV-GLU10-HD;DR-AAV-GLU10-LD	files/figures/PMID42422765_r2/gr3.jpg	c63f930cf5c558aea1d5c1bf90bd1d3dbf72e94ec378bd9f499748c768b4997d	image	Figure 3 viewed (panels E to H read)
+DR-P11-004	files/fulltext/PMID35222658_ADV272_PMC8752995_epmc_20261125.xml	6f8ae74e32433cdcb0347bf364b9dc4c52e676d1a924740797687c96f23ab348	text	Methods and Results on serum magnesium
+DR-H02-019	files/fulltext/PMID40670421_ADV272_PMC12267420_epmc_20261125.xml	df2f1db7425b25c921ccdeb95368ad2ff33d94d2bd44163f3e257c885fdacf34	text	Results Tables 2 and 3, Discussion on ADC
