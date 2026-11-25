@@ -30,6 +30,12 @@ an anti-automation challenge the record says so and the item sits in § 2, not �
 | 16 | 25792327 · 10.1126/science.aaa1299 | Sada 2015, *Science* | the stiripentol-LDH precedent in epilepsy models: `E02` row `DR-E02-005`, `HYP-20261026-11`, `DL-REPO-004`; every secondary description of it (about 40 percent inhibition at one concentration; non-competitive; brain LDH inhibition in mice; an analogue that suppressed seizures) is second-hand | Added 2026-10-26 by `scientist-b` (P2a). Closed in the cascade run that day: Europe PMC (`inPMC N`, subscription link only), OpenAlex (`closed`, no repository copy), Semantic Scholar (`CLOSED`), the publisher (HTTP 403 on the landing, full and PDF routes, unauthenticated); no PMCID; no preprint. No registration, no e-mail, no author contact was used. A Science perspective on it (`PMID 25792315`, Science 347:1312) exists and is closed likewise. Needs the article **and its supplement**: the enzyme data, the exposures, the analogue's identity and the mouse seizure controls are what the card cannot state. |
 | 17 | 31539780 · 10.1016/j.ejmech.2019.111650 | Bai 2019, *Eur J Med Chem* | the ChEMBL measure of stiripentol on LDH (7 percent at 2 mM, document `CHEMBL4311969`): what substrate level, enzyme source and replicates sit behind the repository's one database datum | Added 2026-10-26 by `scientist-b` (P2a). No PMCID, not open access in Europe PMC; the figure is a database row and the paper has not been read. Lower priority than 16. |
 
+**Added 2026-11-25 by `SCI` (ADV-259), to row 2 (Chong 2023):** also needed for the lactate value. The registry gives
+"mildly elevated lactate, 2.4 to 3.3 mmol/L" for one of five subjects (`PAPER 017`, card `E04`; `CLAIM 009` and
+`meta_metabolism` carry it without the number) and no stored quote or held passage supports it. Wanted from the PDF: the sentence, the sample (blood or CSF), the reference
+range and which subject. Routes tried the same day: publisher page 403, no PMC record, no open copy in OpenAlex or
+Semantic Scholar. A re-delivery through the Scholar Gateway connector would also need the operator (it asks for sign-in).
+
 Lower tier, confirmation only, in the batch-selection BLOCKED tables: 34034642, 25716914, 39039877,
 40088508, 36621327, 39894307, 41443103, 34533693, 29481666, 21444760, 25595186, 25595191, and the
 four Carvalho-2022 reference reviews.
