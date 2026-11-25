@@ -1181,6 +1181,13 @@
      "accepted_at": "2026-11-25T22:02:23Z",
      "evidence": "RESULT_ADV287_SCI_20261125.md (rejecting observation not met: 6 of 17 assessable INCOMPLETE or WRONG, 35 percent, exact 95 percent interval 14 to 62; PREREG A 0d0f2fae45055823, B e0275945644cda73; producer and blind reader sonnet high)",
      "updated_at": "2026-11-25T22:31:37Z"
+    },
+    {
+     "step": "ADV-287 step 2: pass of the 22 card statements carrying a superlative or count word (universe_adv287.tsv), PREREG first, producer plus blind reader given the sentence and the WHOLE source table, same classes and Obeid rules; H02/A01 full pass and second random 20 stay HELD until IT reports the ADV-282 and ADV-287 sentences applied",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-287 step 2 (ADV decision 2026-11-25, checkpoint AO section 1; SCI launcher of window 488a3ad0)",
+     "accepted_at": "2026-11-25T22:40:33Z"
     }
    ]
   }
@@ -2093,6 +2100,13 @@
    "at": "2026-11-25T22:02:23Z",
    "source": "assignments/ADV-287.md (sha256 a49f73ec8f4168da…)",
    "step_sha256": "6771e3ba9cef",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T22:40:33Z",
+   "source": "ADV-287 step 2 (ADV decision 2026-11-25, checkpoint AO section 1; SCI launcher of window 488a3ad0)",
+   "step_sha256": "198c4c33dc36",
    "reopened_block": false,
    "authorised_by": null
   }
