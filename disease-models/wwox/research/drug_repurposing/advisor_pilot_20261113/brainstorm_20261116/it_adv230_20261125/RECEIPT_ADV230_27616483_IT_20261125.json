@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T00:10Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-25T00:12:10Z",
+ "event_id": "FTR-20261125-27616483-01",
+ "evidence_basis": [
+  "coverage_map",
+  "files/fulltext/PMID27616483_Li2016_AJHG_PMC5065652_articlepage_20261125.html (the PMC article page, one plain request, HTTP 200, no challenge)",
+  "read for the abstract, the Clinical Response section (both probands) and the Discussion paragraph on timing of treatment; the in vitro oocyte and culture sections were read only where they state memantine sensitivity; the Supplemental Note with pre-treatment details was not opened",
+  "not covered: introduction, methods, figures, tables, supplementary"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv230_20261125/RESULT_ADV230_IT_20261125.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "dc4d660603be88a72d790dbf0c8ba4b3a4ad594310e1825d55a7f2be490a5dc0",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID27616483_Li2016_AJHG_PMC5065652_articlepage_20261125.html",
+ "study_id": {
+  "pmid": "27616483"
+ },
+ "workflow": "IT ADV-230, question-driven partial reading of the PMC article page; no contact, no e-mail to any service, no paid route."
+}
