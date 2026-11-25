@@ -949,8 +949,8 @@ def meeting_status(campaign: Path, saved: dict[str, Any] | None = None) -> dict[
     if not held and _running(_load_state(campaign)):
         held = "a strategic evaluation is running; align at its next safe boundary"
     ready = bool(active or requests or _now() >= due_at)
-    # 2026-11-20 (ADV, 'Reliable autonomy'): the six-hourly times fall at :18:14 and the hourly recall fires at about :17 to :18, so a meeting due at 12:18:14 was a coin flip that cost a full hour when missed (the 05:36Z one
-    # was opened 41 minutes late). A meeting due within the next `meeting_lead_minutes` (default 45) is actionable as DUE_SOON, so the check just before the due time opens it; no second timer. Opening early moves the next
+    # 2026-11-20 (ADV, 'Reliable autonomy'): a due time that fell within a minute of the hourly recall was a coin flip that cost a full hour when missed (the 05:36Z meeting was opened 41 minutes late). The minutes of both are
+    # not fixed: due times follow the previous meeting's start and the recall follows whatever job the host armed. A meeting due within the next `meeting_lead_minutes` (default 45) is actionable as DUE_SOON, so the check just before the due time opens it; no second timer. Opening early moves the next
     # due time earlier by at most that lead (a reasoned shift, recorded in the new minutes' Started UTC).
     lead = float(mode.get("meeting_lead_minutes", MEETING_LEAD_MIN))
     soon = (not ready) and lead > 0 and _now() >= due_at - dt.timedelta(minutes=lead)
