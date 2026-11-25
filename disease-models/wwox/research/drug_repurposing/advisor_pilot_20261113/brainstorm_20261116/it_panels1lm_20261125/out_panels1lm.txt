@@ -1,0 +1,54 @@
+=== 1L: lanes 7 (threshold 0.4); centres on WWOX strip [137, 243, 343, 435, 529, 627, 717]; y0 99 of 190; D 18; h 8; HSP peaks [35, 44, 43, 41, 40, 41, 40]; shifts [0, 9, 8, 6, 5, 6, 5]
+    saturation: darkest grey in WT 46 kDa window 24; image minimum 0; rows reaching the minimum 0
+    V2 HSP90               REPRODUCED        gm r 1.13 | JH WT=1.000; WSM S2=0.019; WSM S5=0.012(below); LM-iPS=0.175[print 0.2, r 0.88]; WSM S2 AAV9=0.488[print 0.4, r 1.22]; WSM S5 AAV9=0.450[print 0.4, r 1.12]; LM-iPS AAV9=1.204[print 0.9, r 1.34]
+    V2 alone               UP_TO_ONE_FACTOR  gm r 0.62 | JH WT=1.000; WSM S2=0.025; WSM S5=0.011(below); LM-iPS=0.131[print 0.2, r 0.66]; WSM S2 AAV9=0.311[print 0.4, r 0.78]; WSM S5 AAV9=0.250[print 0.4, r 0.62]; LM-iPS AAV9=0.419[print 0.9, r 0.47]
+    V1 HSP90               NOT_REPRODUCED    gm r 0.33 | JH WT=1.000; WSM S2=0.024; WSM S5=0.009(below); LM-iPS=0.042[print 0.2, r 0.21]; WSM S2 AAV9=0.103[print 0.4, r 0.26]; WSM S5 AAV9=0.147[print 0.4, r 0.37]; LM-iPS AAV9=0.511[print 0.9, r 0.57]
+    V1 alone               UP_TO_ONE_FACTOR  gm r 0.18 | JH WT=1.000; WSM S2=0.031; WSM S5=0.008(below); LM-iPS=0.031[print 0.2, r 0.16]; WSM S2 AAV9=0.066[print 0.4, r 0.16]; WSM S5 AAV9=0.081[print 0.4, r 0.20]; LM-iPS AAV9=0.178[print 0.9, r 0.20]
+    V2shift HSP90          NOT_REPRODUCED    gm r 0.94 | JH WT=1.000; WSM S2=0.020; WSM S5=0.011(below); LM-iPS=0.118[print 0.2, r 0.59]; WSM S2 AAV9=0.391[print 0.4, r 0.98]; WSM S5 AAV9=0.406[print 0.4, r 1.02]; LM-iPS AAV9=1.181[print 0.9, r 1.31]
+    V2shift alone          UP_TO_ONE_FACTOR  gm r 0.52 | JH WT=1.000; WSM S2=0.025; WSM S5=0.010(below); LM-iPS=0.089[print 0.2, r 0.44]; WSM S2 AAV9=0.250[print 0.4, r 0.62]; WSM S5 AAV9=0.225[print 0.4, r 0.56]; LM-iPS AAV9=0.411[print 0.9, r 0.46]
+    V1shift HSP90          NOT_REPRODUCED    gm r 0.16 | JH WT=1.000; WSM S2=0.009; WSM S5=0.002(below); LM-iPS=0.017[print 0.2, r 0.08]; WSM S2 AAV9=0.058[print 0.4, r 0.14]; WSM S5 AAV9=0.075[print 0.4, r 0.19]; LM-iPS AAV9=0.284[print 0.9, r 0.32]
+    V1shift alone          UP_TO_ONE_FACTOR  gm r 0.09 | JH WT=1.000; WSM S2=0.012; WSM S5=0.002(below); LM-iPS=0.013[print 0.2, r 0.06]; WSM S2 AAV9=0.037[print 0.4, r 0.09]; WSM S5 AAV9=0.041[print 0.4, r 0.10]; LM-iPS AAV9=0.099[print 0.9, r 0.11]
+    V2bgBelow* HSP90       REPRODUCED        gm r 1.08 | JH WT=1.000; WSM S2=0.024; WSM S5=0.011; LM-iPS=0.172[print 0.2, r 0.86]; WSM S2 AAV9=0.462[print 0.4, r 1.15]; WSM S5 AAV9=0.428[print 0.4, r 1.07]; LM-iPS AAV9=1.132[print 0.9, r 1.26]
+    V2bgBelow* alone       UP_TO_ONE_FACTOR  gm r 0.59 | JH WT=1.000; WSM S2=0.031; WSM S5=0.010; LM-iPS=0.129[print 0.2, r 0.64]; WSM S2 AAV9=0.295[print 0.4, r 0.74]; WSM S5 AAV9=0.238[print 0.4, r 0.59]; LM-iPS AAV9=0.394[print 0.9, r 0.44]
+    V1bgBelow* HSP90       NOT_REPRODUCED    gm r 0.34 | JH WT=1.000; WSM S2=0.024; WSM S5=0.008(below); LM-iPS=0.048[print 0.2, r 0.24]; WSM S2 AAV9=0.109[print 0.4, r 0.27]; WSM S5 AAV9=0.145[print 0.4, r 0.36]; LM-iPS AAV9=0.518[print 0.9, r 0.58]
+    V1bgBelow* alone       UP_TO_ONE_FACTOR  gm r 0.19 | JH WT=1.000; WSM S2=0.031; WSM S5=0.008(below); LM-iPS=0.036[print 0.2, r 0.18]; WSM S2 AAV9=0.070[print 0.4, r 0.17]; WSM S5 AAV9=0.080[print 0.4, r 0.20]; LM-iPS AAV9=0.181[print 0.9, r 0.20]
+    V2shiftBgBelow* HSP90  UP_TO_ONE_FACTOR  gm r 0.88 | JH WT=1.000; WSM S2=0.024; WSM S5=0.010; LM-iPS=0.120[print 0.2, r 0.60]; WSM S2 AAV9=0.360[print 0.4, r 0.90]; WSM S5 AAV9=0.374[print 0.4, r 0.94]; LM-iPS AAV9=1.088[print 0.9, r 1.21]
+    V2shiftBgBelow* alone  UP_TO_ONE_FACTOR  gm r 0.49 | JH WT=1.000; WSM S2=0.031; WSM S5=0.009; LM-iPS=0.090[print 0.2, r 0.45]; WSM S2 AAV9=0.230[print 0.4, r 0.57]; WSM S5 AAV9=0.208[print 0.4, r 0.52]; LM-iPS AAV9=0.379[print 0.9, r 0.42]
+    WWOX nets and noise (V2): [(4104, 461), (101, 4), (46, 26), (539, 16), (1278, 31), (1024, 12), (1721, 52)]
+    HSP90 nets: [2618, 3368, 2356, 1960, 1671, 1453, 912]
+=== 1M: lanes 7 (threshold 0.5); centres on WWOX strip [118, 224, 325, 420, 528, 635, 733]; y0 102 of 215; D 18; h 7; HSP peaks [102, 109, 108, 112, 111, 110, 107]; shifts [0, 7, 6, 11, 9, 8, 5]
+    saturation: darkest grey in WT 46 kDa window 31; image minimum 0; rows reaching the minimum 0
+    V2 HSP90               NOT_REPRODUCED    gm r 0.44 | JH WT=1.000; WPM S1=0.080[print 0.1, r 0.80]; WPM D1=0.037(below)[print 0.1, r 0.37]; WPM D3=0.049(below)[print 0.3, r 0.16]; WPM S1 AAV9=1.681[print 7, r 0.24]; WPM D1 AAV9=0.312; WPM D3 AAV9=1.295
+    V2 alone               NOT_REPRODUCED    gm r 0.52 | JH WT=1.000; WPM S1=0.091[print 0.1, r 0.91]; WPM D1=0.042(below)[print 0.1, r 0.42]; WPM D3=0.050(below)[print 0.3, r 0.17]; WPM S1 AAV9=2.108[print 7, r 0.30]; WPM D1 AAV9=0.429; WPM D3 AAV9=1.545
+    V1 HSP90               NOT_REPRODUCED    gm r 0.52 | JH WT=1.000; WPM S1=0.102[print 0.1, r 1.02]; WPM D1=0.098[print 0.1, r 0.98]; WPM D3=0.189[print 0.3, r 0.63]; WPM S1 AAV9=0.820[print 7, r 0.12]; WPM D1 AAV9=0.131; WPM D3 AAV9=0.422
+    V1 alone               NOT_REPRODUCED    gm r 0.59 | JH WT=1.000; WPM S1=0.115[print 0.1, r 1.15]; WPM D1=0.111[print 0.1, r 1.11]; WPM D3=0.193[print 0.3, r 0.64]; WPM S1 AAV9=1.028[print 7, r 0.15]; WPM D1 AAV9=0.180; WPM D3 AAV9=0.504
+    V2shift HSP90          NOT_REPRODUCED    gm r 0.67 | JH WT=1.000; WPM S1=0.140[print 0.1, r 1.40]; WPM D1=0.107(below)[print 0.1, r 1.07]; WPM D3=0.276[print 0.3, r 0.92]; WPM S1 AAV9=1.607[print 7, r 0.23]; WPM D1 AAV9=0.298; WPM D3 AAV9=1.111
+    V2shift alone          NOT_REPRODUCED    gm r 0.76 | JH WT=1.000; WPM S1=0.159[print 0.1, r 1.59]; WPM D1=0.121(below)[print 0.1, r 1.21]; WPM D3=0.282[print 0.3, r 0.94]; WPM S1 AAV9=2.015[print 7, r 0.29]; WPM D1 AAV9=0.409; WPM D3 AAV9=1.327
+    V1shift HSP90          NOT_REPRODUCED    gm r 0.48 | JH WT=1.000; WPM S1=0.096[print 0.1, r 0.96]; WPM D1=0.114[print 0.1, r 1.14]; WPM D3=0.197[print 0.3, r 0.66]; WPM S1 AAV9=0.523[print 7, r 0.07]; WPM D1 AAV9=0.105; WPM D3 AAV9=0.311
+    V1shift alone          NOT_REPRODUCED    gm r 0.55 | JH WT=1.000; WPM S1=0.109[print 0.1, r 1.09]; WPM D1=0.129[print 0.1, r 1.29]; WPM D3=0.201[print 0.3, r 0.67]; WPM S1 AAV9=0.656[print 7, r 0.09]; WPM D1 AAV9=0.144; WPM D3 AAV9=0.371
+    V2bgBelow* HSP90       NOT_REPRODUCED    gm r 0.58 | JH WT=1.000; WPM S1=0.126[print 0.1, r 1.26]; WPM D1=0.067[print 0.1, r 0.67]; WPM D3=0.222[print 0.3, r 0.74]; WPM S1 AAV9=1.290[print 7, r 0.18]; WPM D1 AAV9=0.292; WPM D3 AAV9=1.171
+    V2bgBelow* alone       NOT_REPRODUCED    gm r 0.66 | JH WT=1.000; WPM S1=0.143[print 0.1, r 1.43]; WPM D1=0.076[print 0.1, r 0.76]; WPM D3=0.227[print 0.3, r 0.76]; WPM S1 AAV9=1.617[print 7, r 0.23]; WPM D1 AAV9=0.401; WPM D3 AAV9=1.398
+    V1bgBelow* HSP90       NOT_REPRODUCED    gm r 0.54 | JH WT=1.000; WPM S1=0.109[print 0.1, r 1.09]; WPM D1=0.092[print 0.1, r 0.92]; WPM D3=0.240[print 0.3, r 0.80]; WPM S1 AAV9=0.741[print 7, r 0.11]; WPM D1 AAV9=0.134; WPM D3 AAV9=0.442
+    V1bgBelow* alone       NOT_REPRODUCED    gm r 0.61 | JH WT=1.000; WPM S1=0.124[print 0.1, r 1.24]; WPM D1=0.104[print 0.1, r 1.04]; WPM D3=0.245[print 0.3, r 0.82]; WPM S1 AAV9=0.929[print 7, r 0.13]; WPM D1 AAV9=0.185; WPM D3 AAV9=0.528
+    V2shiftBgBelow* HSP90  NOT_REPRODUCED    gm r 0.74 | JH WT=1.000; WPM S1=0.162[print 0.1, r 1.62]; WPM D1=0.099[print 0.1, r 0.99]; WPM D3=0.317[print 0.3, r 1.06]; WPM S1 AAV9=1.263[print 7, r 0.18]; WPM D1 AAV9=0.260; WPM D3 AAV9=1.047
+    V2shiftBgBelow* alone  NOT_REPRODUCED    gm r 0.84 | JH WT=1.000; WPM S1=0.184[print 0.1, r 1.84]; WPM D1=0.111[print 0.1, r 1.11]; WPM D3=0.324[print 0.3, r 1.08]; WPM S1 AAV9=1.584[print 7, r 0.23]; WPM D1 AAV9=0.358; WPM D3 AAV9=1.250
+    WWOX nets and noise (V2): [(1926, 138), (176, 47), (81, 101), (97, 114), (4059, 519), (825, 98), (2976, 329)]
+    HSP90 nets: [2838, 3218, 3211, 2901, 3559, 3899, 3388]
+=== 1K: lanes 5 (threshold None); centres on WWOX strip [130, 227, 325, 422, 526]; y0 93 of 203; D 16; h 6; HSP peaks [64, 70, 70, 74, 70]; shifts [0, 6, 6, 10, 6]
+    saturation: darkest grey in WT 46 kDa window 88; image minimum 2; rows reaching the minimum 0
+    V2 HSP90               UP_TO_ONE_FACTOR  gm r 0.38 | JH WT=1.000; JH WKO-1C=0.042(below); JH WKO-2C=0.086; JH WKO-1C AAV9=0.311[print 0.8, r 0.39]; JH WKO-2C AAV9=0.510[print 1.4, r 0.36]
+    V2 alone               UP_TO_ONE_FACTOR  gm r 0.33 | JH WT=1.000; JH WKO-1C=0.042(below); JH WKO-2C=0.066; JH WKO-1C AAV9=0.341[print 0.8, r 0.43]; JH WKO-2C AAV9=0.363[print 1.4, r 0.26]
+    V1 HSP90               UP_TO_ONE_FACTOR  gm r 0.11 | JH WT=1.000; JH WKO-1C=0.053; JH WKO-2C=0.106; JH WKO-1C AAV9=0.069[print 0.8, r 0.09]; JH WKO-2C AAV9=0.194[print 1.4, r 0.14]
+    V1 alone               UP_TO_ONE_FACTOR  gm r 0.10 | JH WT=1.000; JH WKO-1C=0.054; JH WKO-2C=0.081; JH WKO-1C AAV9=0.076[print 0.8, r 0.10]; JH WKO-2C AAV9=0.138[print 1.4, r 0.10]
+    V2shift HSP90          UP_TO_ONE_FACTOR  gm r 0.24 | JH WT=1.000; JH WKO-1C=0.055; JH WKO-2C=0.126; JH WKO-1C AAV9=0.142[print 0.8, r 0.18]; JH WKO-2C AAV9=0.466[print 1.4, r 0.33]
+    V2shift alone          UP_TO_ONE_FACTOR  gm r 0.21 | JH WT=1.000; JH WKO-1C=0.056; JH WKO-2C=0.097; JH WKO-1C AAV9=0.156[print 0.8, r 0.19]; JH WKO-2C AAV9=0.332[print 1.4, r 0.24]
+    V1shift HSP90          UP_TO_ONE_FACTOR  gm r 0.09 | JH WT=1.000; JH WKO-1C=0.020(below); JH WKO-2C=0.055; JH WKO-1C AAV9=0.020(below)[print 0.8, r 0.03]; JH WKO-2C AAV9=0.132[print 1.4, r 0.09]
+    V1shift alone          UP_TO_ONE_FACTOR  gm r 0.07 | JH WT=1.000; JH WKO-1C=0.020(below); JH WKO-2C=0.042; JH WKO-1C AAV9=0.022(below)[print 0.8, r 0.03]; JH WKO-2C AAV9=0.094[print 1.4, r 0.07]
+    V2bgBelow* HSP90       UP_TO_ONE_FACTOR  gm r 0.41 | JH WT=1.000; JH WKO-1C=0.089(below); JH WKO-2C=0.179(below); JH WKO-1C AAV9=0.325[print 0.8, r 0.41]; JH WKO-2C AAV9=0.577[print 1.4, r 0.41]
+    V2bgBelow* alone       UP_TO_ONE_FACTOR  gm r 0.36 | JH WT=1.000; JH WKO-1C=0.090(below); JH WKO-2C=0.137(below); JH WKO-1C AAV9=0.357[print 0.8, r 0.45]; JH WKO-2C AAV9=0.411[print 1.4, r 0.29]
+    V1bgBelow* HSP90       UP_TO_ONE_FACTOR  gm r 0.12 | JH WT=1.000; JH WKO-1C=0.062; JH WKO-2C=0.129; JH WKO-1C AAV9=0.077[print 0.8, r 0.10]; JH WKO-2C AAV9=0.205[print 1.4, r 0.15]
+    V1bgBelow* alone       UP_TO_ONE_FACTOR  gm r 0.11 | JH WT=1.000; JH WKO-1C=0.063; JH WKO-2C=0.099; JH WKO-1C AAV9=0.085[print 0.8, r 0.11]; JH WKO-2C AAV9=0.146[print 1.4, r 0.10]
+    V2shiftBgBelow* HSP90  UP_TO_ONE_FACTOR  gm r 0.25 | JH WT=1.000; JH WKO-1C=0.085(below); JH WKO-2C=0.163(below); JH WKO-1C AAV9=0.150[print 0.8, r 0.19]; JH WKO-2C AAV9=0.467[print 1.4, r 0.33]
+    V2shiftBgBelow* alone  UP_TO_ONE_FACTOR  gm r 0.22 | JH WT=1.000; JH WKO-1C=0.086(below); JH WKO-2C=0.125(below); JH WKO-1C AAV9=0.165[print 0.8, r 0.21]; JH WKO-2C AAV9=0.332[print 1.4, r 0.24]
+    WWOX nets and noise (V2): [(1664, 75), (70, 24), (109, 23), (567, 13), (604, 19)]
+    HSP90 nets: [2614, 2650, 2003, 2867, 1862]
