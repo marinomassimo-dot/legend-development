@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-25T07:45Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "captions_only",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T07:45:25Z",
+ "event_id": "FTR-20261125-41404412-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Held supplement mmc1 text: Tables S1 (fold-change columns recomputed on three animals), S2 and S5 read, S3-S4 listed not recomputed, Figure S11-S12 captions read; main-text day-5, EM and euthanasia sentences located.",
+  "Result and per-consumer wording: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261004-41404412-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "9c9f8a5bff55b0fa6c5483d854a24a4ad5e4f33b05735ddbb9d1eb2f6297c685",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID41404412_Grubor2025_PMC.xml",
+ "study_id": {
+  "doi": "10.1016/j.omtm.2025.101643",
+  "pmid": "41404412"
+ },
+ "workflow": "SCI ADV-269 (held partials, unread classes inside held bytes; held bytes only, no contact, no spend); not a complete read, figure images remain unread"
+}

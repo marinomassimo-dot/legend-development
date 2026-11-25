@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T07:45Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T07:45:25Z",
+ "event_id": "FTR-20261125-31353122-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Held PDF: figure pages 16 and 17 (Figures 1 and 2) opened as images and read with their captions; Figure 3 was read in an earlier wave; WWOX passages of the text located.",
+  "Result and per-consumer wording: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261124-31353122-87",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "116861b6a010ff93b77a516e39429b8268555fdfefde9b1fa1ac7c4d60ed6aec",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID31353122_Mori2019_IR.pdf",
+ "study_id": {
+  "pmid": "31353122"
+ },
+ "workflow": "SCI ADV-269 (held partials, unread classes inside held bytes; held bytes only, no contact, no spend); not a complete read, figure images remain unread"
+}

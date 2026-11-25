@@ -1199,6 +1199,15 @@
      "accepted_at": "2026-11-25T07:30:22Z",
      "evidence": "framework/scripts/window_handoff.py + test_window_handoff.py (11 tests); live probe of the agents view reached a row and rename mode without saving; prepare, verify and rename --dry-run run on the real HE handoff",
      "updated_at": "2026-11-25T07:33:13Z"
+    },
+    {
+     "step": "Index receipt-ledger sequence validation by PMID and DOI; identical error lists and identical verify output; measure",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "HE routine micro-upgrade, ADV YES 2026-11-25 (verify must give byte-identical output)",
+     "accepted_at": "2026-11-25T07:57:32Z",
+     "evidence": "load_ledger 6.99 s to 0.23 s (best of 3); identical error lists on the real ledger and 600 altered ledgers (4,450 messages); verify output byte-identical on the real checkout and six altered cases; test_fulltext_receipts 123 OK",
+     "updated_at": "2026-11-25T07:57:32Z"
     }
    ]
   }
@@ -2125,6 +2134,13 @@
    "at": "2026-11-25T07:30:22Z",
    "source": "ADV direction round 2026-11-25 07:30Z (GO on the handoff tool: prepare / rename / verify)",
    "step_sha256": "fece7ea2b94a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T07:57:32Z",
+   "source": "HE routine micro-upgrade, ADV YES 2026-11-25 (verify must give byte-identical output)",
+   "step_sha256": "49ca580e8de5",
    "reopened_block": false,
    "authorised_by": null
   }

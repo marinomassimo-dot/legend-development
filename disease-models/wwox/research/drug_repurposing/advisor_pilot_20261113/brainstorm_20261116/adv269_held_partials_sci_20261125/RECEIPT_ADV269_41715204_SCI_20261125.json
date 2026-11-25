@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-25T07:45Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "captions_only",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T07:45:25Z",
+ "event_id": "FTR-20261125-41715204-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Held supplement workbooks MOESM6 (Table S1, 403 rows, group means and per-animal separation of cholesteryl esters) and MOESM9 (Table S4, 265 printed ratios recomputed) read with a stdlib parser; MOESM4 and MOESM8 titles only; main-text sample sizes located.",
+  "Result and per-consumer wording: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261019-41715204-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "fc8c26696b5ca08a41acc511499efa2f37eb3d7099770c7266d5a83c882cb7ef",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID41715204_Sun2026_PMC.xml",
+ "study_id": {
+  "doi": "10.1186/s12967-026-07881-0",
+  "pmid": "41715204"
+ },
+ "workflow": "SCI ADV-269 (held partials, unread classes inside held bytes; held bytes only, no contact, no spend); not a complete read, figure images remain unread"
+}
