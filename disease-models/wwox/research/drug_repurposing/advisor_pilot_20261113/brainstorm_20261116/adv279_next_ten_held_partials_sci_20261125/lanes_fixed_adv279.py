@@ -54,4 +54,4 @@ for panel, (con, xs) in PANELS.items():
         band = max(signal(x, y) for y in range(mid - 6, mid + 7))
         off = max(signal(x, y) for y in range(mid + 34, mid + 47))
         print("%s\t%s\t%d\t%d\t%.1f\t%.1f" % (panel, name, x, mid, band, off))
-    print("# %s: band row = median of %d CON/Het lanes with a visible peak; rows %s" % (panel, len(rows), ys))
+    print("# %s: band row = median of %d CON/Het lanes with a visible peak; rows %s" % (panel, len(rows), ys), file=sys.stderr)
