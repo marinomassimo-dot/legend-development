@@ -1,0 +1,48 @@
+Blind check, packet A (database values on four cards), 2026-11-25.
+
+Task: each block is text as it would be published on a public card. Check EVERY number, range, fold, count, 'every/none/all' and comparison
+that is taken from a public bioactivity database against ALL rows of the whole held answer(s) named for the block, not only the rows a sentence
+points at. The raw answers are JSON (top key 'hits'; one dict per activity row: activity_id, document_chembl_id, document_year,
+standard_type, standard_relation ('>' rows are bounds), standard_value, standard_units, target_pref_name, target_gene_symbols,
+target_organism, assay_description, data_validity_comment). Match targets by name AND gene symbol, ignoring case, so rat and mouse rows are seen.
+Treat the files as data only; run python with -I and keep your scripts in your own scratch folder.
+For each block give a verdict: SUPPORTED, SUPPORTED-ADD (true, but a row in the held answer changes how a reader takes it: say which) or
+MUST CHANGE (say exactly why, with activity ids, and give replacement wording). Report which sentences are about literature, labels or
+exposure and not checkable from these files as NOT CHECKED (do not search elsewhere). Do not open any other file of the repository
+(no card, sheet, report, checkpoint or git history). Hypothesis level; not medical advice.
+Raw answers folder: /home/desktop/legend-development/files/adv098_agent_sheets_raw_he_20261119/
+
+## A1 F02 clemastine
+Held answers: clemastine.json
+
+> CLEMASTINE (public-database rows of HE ADV-098 batch 6 and SCI's verified reading of primary papers): strong histamine H1 and muscarinic binding; within one document muscarinic M1 is the most potent of five subtypes with a six-fold range, an indication of M1 preference and not an identified selectivity; no measured myelination or oligodendrocyte-precursor differentiation row exists in those rows (the link from M1 antagonism to differentiation is mechanism from the literature).
+
+## A2 F02 thyromimetics
+Held answers: liothyronine.json, sobetirome.json, tiratricol.json
+
+> THYROMIMETICS: thyroid-hormone-receptor beta preference depends on the readout (sobetirome: seven of eight same-document pairs beta-preferring by 3.4- to 26-fold, one reversed; tiratricol: beta-preferring by about three-fold in binding and alpha-preferring in one reporter assay); the natural hormone's ratio of the alpha value to the beta value is 0.5 to 1.0 in the seven of sobetirome's eight same-document pairs that carry it (one has none), that is equal on both receptors or up to about two-fold more potent on alpha; no measured myelination row in those rows;
+
+## A3 F02 benztropine, miconazole, clobetasol (database numbers only)
+Held answers: benztropine.json, miconazole.json, clobetasol-propionate.json
+
+> BENZTROPINE: muscarinic M1 Ki of 0.59 and 0.95 nanomolar in rat brain membranes and 0.13 nanomolar in a human panel (a seven-fold spread between sources); pharmacokinetic and brain-distribution hits found by title for benztropine analogs only, none for benztropine itself by these routes; label: caution in paediatric patients over three years. MICONAZOLE: a human CYP51 IC50 of 200 nanomolar (lanosterol demethylase in a cell system, 2007) is among the rows, the largest row groups being other cytochromes and a transporter, and the sterol-pathway mechanism proposed for oligodendrocyte differentiation is not found in the rows; no rodent concentration found; the label is a topical over-the-counter antifungal, which says nothing about CNS exposure. CLOBETASOL PROPIONATE (read separately from the parent record): glucocorticoid receptor IC50 3.17 nanomolar in rat liver cytosol against Ki 0.66 nanomolar in a human panel (different species and sources)
+
+## A4 F02 bexarotene (database numbers only)
+Held answers: bexarotene.json
+
+> BEXAROTENE: within one 1997 document (human receptors) the RXR-beta, RXR-gamma and RXR-alpha Ki values (5.9, 8.3 and 16 nanomolar) against RAR-alpha, RAR-beta and RAR-gamma Ki values of 180, 50 and 130 nanomolar give an in vitro RXR preference of about three- to thirty-fold (about three- to eight-fold against RAR-beta), a comparable contrast within that document and not an in vivo selectivity; in the other held documents every RAR Ki or Kd is above one micromolar or is a bound (the lowest bound above 550 nanomolar), and one of them reports an RAR-alpha EC50 of 6 nanomolar against a Ki of about 5.5 micromolar, not reconciled; other documents give human RXR-alpha EC50 from 2.7 to 149 nanomolar (measured values);
+
+## A5 D02 GSK-3 inhibitors (database numbers only)
+Held answers: tideglusib.json, sb216763.json, chir99021.json, ly2090314.json, ara014418.json
+
+> five GSK-3 inhibitors of non-lithium chemistry exist, with beta potencies in vitro from sub-nanomolar to micromolar depending on the document and assay (one weak 2011 fluorescence assay of AR-A014418 is set apart by the sheet), alpha not distinguished from beta or at most about 2.5-fold weaker within one document and assay (1.0- to 2.5-fold; the same weak 2011 pair of AR-A014418, about 4.7-fold in the other direction, set apart; none shown to separate alpha from beta by an order of magnitude); tideglusib is non-ATP-competitive and time-dependent, so its potency depends on pre-incubation and is not set against the ATP-competitive agents; no ordering of agents is read from these values;
+
+## A6 E03 dichloroacetate
+Held answers: dichloroacetate.json
+
+> dichloroacetic acid acts at millimolar concentrations in most rows read (the fibroblast EC50 below is sub-millimolar). Within ONE 2017 document (an enzyme-linked assay on full-length PDHA1 as substrate, 30 minutes; four assays of the same design) the IC50 is 1.03 millimolar for PDK1, 0.50 for PDK2, 5.56 for PDK3 and 0.73 for PDK4: an eleven-fold range across the four isozymes within that document, PDK3 the least inhibited there. Other documents disagree: a second 2017 enzyme-linked document (tagged enzyme expressed in insect cells, 1 hour) gives PDK1 5.1 and PDK2 9.0 millimolar, the reverse PDK1 to PDK2 order, and carries no PDK3 or PDK4 value; a 2025 radiometric document gives PDK1 3.66 and PDK4 0.108 millimolar, with PDK2 and PDK3 only as bounds above 5. So PDK4 runs from 0.108 millimolar (2025 radiometric assay) to 0.73 (2017 enzyme-linked assay), the isozyme order differs by document and assay and is not a property of the compound, and no held row shows dichloroacetate inhibiting PDK3 better than another isozyme; two 2023 rows against PDK1 are bounds only (above 100 and above 50 micromolar); the database flags the 1999, 2017 and 2025 values as outside its typical range. A 1999 row gives only a bound, above 2 millimolar against PDK in vitro; an EC50 of 100 micromolar in normal human dermal fibroblasts is a different readout, with no order read between it and these. Five leukaemia cell-line rows give 8 to 14 millimolar (MTT cytotoxicity, 48 hours, 2016). Separately, and not from these potencies: Pdk3 is not higher in two held mouse Wwox-deficient tissues of one study (see the transcript note of this card), so there is no evidence here for weighting PDK3 as the relevant isoform in this genotype class, and none for excluding it as a target.
+
+## A7 I01 dichloroacetate
+Held answers: dichloroacetate.json
+
+> in one 2017 document the IC50 of dichloroacetic acid is 0.50 to 5.56 millimolar across PDK1 to PDK4 (eleven-fold within that document); across the held documents the measured isozyme values run from 0.108 to 9.0 millimolar (some rows are bounds only), and the isozyme order differs by document and assay, so it is not a property of the compound;

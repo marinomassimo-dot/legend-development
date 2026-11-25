@@ -1,0 +1,178 @@
+Blind check, packet B (narrow recheck of composed wording), 2026-11-25.
+
+Each block is a card note as it would be published. An earlier blind reader checked these notes and gave replacement texts; the clauses named under
+'Check' were then re-assembled by the editor. Check those clauses (and anything in the note they change the meaning of) against the held sources:
+every number, which gene, region, arm, figure or file it belongs to, and the unit and n. Verdict per block: SUPPORTED or MUST CHANGE (say why,
+with file and locator, and give replacement wording). Open only the held sources named in the block and, for ENSG-to-symbol mapping, a held
+mapping file of the same folder. Do not open any other file of the repository (no card, report, checkpoint, ledger or git history). Run python
+with -I, scripts in your own scratch folder. 'By eye' marks a value read from a figure image. Hypothesis level; not medical advice.
+
+## DA-GSE-PDK-003
+
+Check: the PDK1 clause from 'PDK1 -0.34' to 'not meaningful with 2 wild-type libraries'; the PDK/PDH set parenthesis
+
+Row fields: target_id: human PDK1 transcript and the PDK/PDH transcript set; endpoint: log2 shift, knockout minus wild type
+
+> PDK1 -0.34 (mean of log2(CPM+1), knockout minus wild type; log2 of the ratio of mean CPM is -0.36) and -0.39 (log2 of the ratio of mean median-of-ratios counts, which is the IT5 same-sets re-analysis), the same six libraries; PDK1 is in neither deposited list and is lower in sign only (lower in all four knockout libraries than in both wild-type libraries, a pattern that is common in this deposit: of 2,804 genes with mean CPM within 1.5-fold of PDK1's, 663, 24 percent, are lower in all four knockout libraries than in both wild-type libraries and 570, 20 percent, higher, against about 6.7 percent each way expected for exchangeable 4 against 2 libraries; inside the single-gene null, p about 0.30, where the null is not defined in the held files, an empirical version gives 0.27 to 0.39, and a recompute of the share of expression-matched genes with an equal or larger shift gave 0.33 to 0.35; with 4 against 2 libraries no rank test can reach a two-sided P below 0.13, and a Welch t-test on log2(CPM+1) would give about 0.03 and is not meaningful with 2 wild-type libraries; the datum is the absence of support for a raised PDK1, not a demonstrated decrease; see card I01); the PDK/PDH set +0.17 (P 0.22 from the repository's own set test, rerun at 0.2265; the set is not defined in the held files and the +0.17 is not reproduced: plausible memberships tried gave +0.15 to +0.24, and a second reader's random sets of plausible membership gave P 0.33 to 0.81; the set mean averages away PDHA1, PDPR and LDHA, which are in the authors' up list at adjusted P 5.8E-10, 1.3E-04 and 4.9E-06, and PDK3, higher in all four knockout libraries at 1.55 times, nominal P 7.39E-03, adjusted P 5.65E-02); the LDH-to-PDH transcript ratio depends on the pairing (log2 of (LDHA+LDHB) over (PDHA1+PDHB+DLAT+DLD), knockout minus wild type, -0.14; LDHA over PDHA1 0.72 against 0.86, three of four knockout libraries below both wild-type libraries; LDHA over (PDHA1+PDHB) 0.54 against 0.56), and no pairing was fixed in advance in the held sources. EXPLORATORY NEGATIVES: transcripts are not PDH activity, flux or metabolite, and do not show that PDH or lactate are normal.
+
+Source label the repository gives: GSE156243, the deposit of the 2021 organoid paper (PMID 34268881); exploratory set-level analysis by scientist-c
+
+Held source files for every block:
+- /home/desktop/legend-development/files/geo/GSE156243/ (Salmon gene count table, two deposited differential-gene lists, family SOFT file)
+- /home/desktop/legend-development/files/fulltext/PMID34268881_Steinberg2021_PMC_r2.xml (article of the deposit)
+- /home/desktop/legend-development/files/figures/PMID34268881_r2/ (article figures, incl. expanded view)
+- /home/desktop/legend-development/files/geo/GSE150123/ (series matrix and raw tar of an unperturbed time course; only where a sentence leans on culture time)
+
+## DA-I01-001
+
+Check: the first sentence (statistics behind each PDK1 number); the 'differ by normalisation and by the statistic' clause; the PDK set sentence
+
+Row fields: target_id: human PDK1 transcript (WWOX-knockout cerebral organoid); endpoint: log2 shift, knockout minus wild type (sign only)
+
+> PDK1 -0.39 (log2 of the ratio of mean median-of-ratios counts; -0.34 is the mean of the log2(CPM+1) difference, -0.36 the log2 of the ratio of mean CPM; the same six libraries; lower in all four knockout libraries than in both wild-type libraries), LOWER IN SIGN ONLY: inside the single-gene null (p about 0.30) (null not defined in the held files; an expression-matched empirical null gave 0.33 to 0.35 on recompute; a Welch t-test on log2(CPM+1) would give about 0.03 and is not meaningful with 2 wild-type libraries), so the datum is the absence of support for a raised PDK1, not a demonstrated decrease (the earlier card E03 prints -0.34 for the same comparison: the two values differ by normalisation and by the statistic; with 4 against 2 libraries no rank test can reach a two-sided P below 0.13, so 'inside the null' reflects the size of the shift and the small n). The PDK set as a whole is indistinguishable from chance (the set is not defined in the held files; PDK1 to PDK4 unweighted mean of the four printed log2 shifts +0.11, +0.15 on the ratio of mean CPM; random 4-gene sets of similar expression give a mean shift as large in absolute value in about 63 percent of draws), but it hides opposite signs (log2, median-of-ratios): PDK1 -0.39, PDK2 -0.17, PDK3 +0.59 (higher in all four knockout libraries, in the authors' up list, nominal P 7.39E-03, adjusted P 5.65E-02, above 0.05), PDK4 +0.40; a statement of no support for a raised PDK is not a statement about PDK3. Transcript, not PDK protein, PDH phosphorylation or activity. The maturity confound of this deposit applies.
+
+Source label the repository gives: GSE156243 (deposit of PMID 34268881), set-level and gene-level re-analysis by scientist-c; wwox_systems_comparison_it5_20261029.md section 2
+
+Held source files for every block:
+- /home/desktop/legend-development/files/geo/GSE156243/ (Salmon gene count table, two deposited differential-gene lists, family SOFT file)
+- /home/desktop/legend-development/files/fulltext/PMID34268881_Steinberg2021_PMC_r2.xml (article of the deposit)
+- /home/desktop/legend-development/files/figures/PMID34268881_r2/ (article figures, incl. expanded view)
+- /home/desktop/legend-development/files/geo/GSE150123/ (series matrix and raw tar of an unperturbed time course; only where a sentence leans on culture time)
+
+## DA-L01-003
+
+Check: the first sentence on IL6, IL1B, TNF, P2RY12 and other cytokines; the lower-in-knockout gene list and the median-of-ratios values assigned to named genes
+
+Row fields: target_id: IL1B, IL6, TNF, NFE2L2, KEAP1 and NRF2 target transcripts, human KO organoid; endpoint: descriptive cpm ratio KO/WT (4 v 2 libraries), no test
+
+> IL6 0 counts in all six libraries; IL1B 0-11; TNF 0-1; P2RY12 0: IL6 and P2RY12 not detected, IL1B and TNF at or near zero (0 to 11 and 0 to 1 counts per library), while other cytokines (TGFB1, MIF, IL33, CSF1) are expressed and weak AIF1 and CD68 signal is present, so a cytokine-expressing or myeloid-like compartment is not excluded. NFE2L2 0.75x, KEAP1 0.93x, NQO1 0.73x, G6PD 0.75x, SLC7A11 0.65x, BACH1 0.73x; HMOX1 1.67x, SRXN1 1.33x, GSR 1.20x (higher on group means, and above both wild-type libraries in 3 of 4 knockout libraries, not 4): mixed direction in the named panel, so no coherent NRF2 signature by that criterion; outside the named genes GSTP1, PRDX1, TXNRD1, PGD, FTH1 and GCLM are also lower in all four knockout libraries than in both wild-type libraries, and FTL in 3 of 4 (ratios 0.76 to 0.91; FTL 0.81) and GCLC is 1.14 times. The ratios here are of mean CPM; with median-of-ratios normalisation NFE2L2, KEAP1, NQO1, G6PD, SLC7A11 and BACH1 are 0.73, 0.90, 0.71, 0.73, 0.64 and 0.72, and HMOX1, SRXN1 and GSR are 1.61, 1.29 and 1.17; the authors' list value for NFE2L2, log2FC -0.58, differs from the mean-ratio value -0.41 because it is a DESeq2 estimate. Unplanned look at a deposit used by other packages; 4 v 2 libraries, one laboratory; transcripts are not NRF2 activity. Design (IT11 P2.3 verification, deposit and paper read): WT is one parental line; the 2 WT libraries are the survivors of a post hoc exclusion (one low-quality, one non-clustering); KO clone and batch are not assigned in the deposit; NFE2L2 (adjusted P 1.43E-02, log2FC -0.58) and G6PD (adjusted P 7.15E-03, log2FC -0.42) are in the authors' DE list, as are GSTP1 (4.38E-03) and PRDX1 (2.44E-02), both lower; the lists are cut at nominal P below 0.01 and fold change above 1.2 (adjusted P up to 0.068), which is why NFE2L2 is in them above the stated alpha 0.01; NQO1 0.73x, HMOX1 1.67x and the other genes named in this note are in neither list. NFE2L2 and NQO1 transcripts are lower in all four KO libraries (the arm-R-compatible direction) while HMOX1, SRXN1 and GSR are higher (the adaptive direction): descriptive, not a test.
+
+Source label the repository gives: GSE156243 (deposit of PMID 34268881); unplanned descriptive reading in this package
+
+Held source files for every block:
+- /home/desktop/legend-development/files/geo/GSE156243/ (Salmon gene count table, two deposited differential-gene lists, family SOFT file)
+- /home/desktop/legend-development/files/fulltext/PMID34268881_Steinberg2021_PMC_r2.xml (article of the deposit)
+- /home/desktop/legend-development/files/figures/PMID34268881_r2/ (article figures, incl. expanded view)
+- /home/desktop/legend-development/files/geo/GSE150123/ (series matrix and raw tar of an unperturbed time course; only where a sentence leans on culture time)
+
+## DA-J01-002
+
+Check: the area-fraction parenthesis (which percentage and P value belongs to which region and marker); the last sentence about the Discussion
+
+Row fields: target_id: IBA1 and GFAP area fraction in the Wwox-null mouse hippocampus; endpoint: area fraction of IBA1 and of GFAP immunoreactivity, CA1, CA3 and whole hippocampus
+
+> Area fraction, not cell number (IBA1 n 6 against 6, GFAP n 8 knockout against 6 wild type, mice; whole hippocampus IBA1 p below .005 and GFAP +30 percent, p below .05; CA1 and CA3 GFAP +36 and +53 percent); dentate gyrus 'marginal' in the text and not marked as significant; Il6 and Tnf-a transcripts both about 1.5-fold or more up by qPCR (n 4 per group), but only Il6 reaches p below 0.05: Results 3.3 reads '( Il6 significant at p < .05)', and Fig 4E was read by eye on 2026-10-31 as Il6 about 1.48x with one asterisk and Tnf-a about 1.85x with a large error bar and no mark (the figure image is no longer held, so the two readings cannot be re-checked and sit slightly against the text's more than 1.5 fold for both; no significance is claimed for Tnf-a; loss of Wwox mRNA or protein is not shown for these animals in this paper); full text re-read 2026-10-31 (IT10 P2.2, publisher text and figure image), which restores the original registry reading 'Il6 but not Tnf-a' and corrects the 2026-10-30 'correction' that had dropped the word Il6; the authors' own abstract and Discussion nevertheless state that both cytokines are increased, which the text's own significance statement (Il6 only) does not support for Tnf-a (n 4 v 4 gives little power, so absence of significance is not absence of effect); the paper records no seizure measurement for these animals and leaves cause versus consequence open. Its Discussion nevertheless writes of 'the epileptic phenotype observed in these mice', with no measurement in this paper.
+
+Source label the repository gives: Hussain 2019 (PMID 30290271), Figures 3 and 4
+
+Held source files (root path /home/desktop/legend-development/files/ unless a repository path is given):
+- /home/desktop/legend-development/files/fulltext/PMID30290271_Hussain2019_PMC_r2.xml
+- /home/desktop/legend-development/files/figures/PMID30290271_r2/ and F + supplement/PMID30290271_r2/ (both folders may be empty)
+
+## DA-J01-007
+
+Check: the PTPRC parenthesis
+
+Row fields: target_id: reactive-astrocyte and cytokine transcripts in the WWOX-deficient human organoid; endpoint: counts per million, four knockout against two wild-type libraries; classified by the rule declared before the data were opened
+
+> Microglial markers are at or near zero (P2RY12, CX3CR1, PTPRC, TREM2; these are microglial or myeloid markers, PTPRC being a pan-leukocyte marker, which is general knowledge and not settled by a held source; AIF1 and CD68 are detectable at 3.8 to 14.6 and 8.8 to 38 CPM) so the tissue cannot test a microglial arm; of seven reactive-pan genes above 5 counts (the unit is counts; SERPINA3 is 0.4 to 3 CPM and C3 1.5 to 7.6 CPM) only VIM and CD44 are raised (a radial-glia or progenitor association of the two is not stated in a held source; one reader's check of an unperturbed cortical spheroid time course from another laboratory, GSE150123, found CD44 rising with culture age, rho +0.92, recomputed by a second blind reader), SERPINA3, TIMP1 and SOCS3 are lower, C3 is not separated, and STAT3 is higher in all four knockout libraries (1.46 times, in the authors' up list, adjusted P 5.74E-03) but below the 1.5-fold cut of the declared rule; IL1B, IL6, TNF are not informative (under 20 raw counts). GFAP RNA is not raised (ratio 0.88; median-of-ratios 0.84; in neither list) and the article's week-15 qPCR for GFAP is flat (by eye about 1.1 against 1.0, no mark, n 4 v 4, one batch), while S100B and AQP4 are higher at week 15 (by eye about 2.7 and 2.4, one asterisk). The week-15 GFAP immunofluorescence (Fig 3A) is one unquantified representative field per genotype, by eye somewhat brighter in the knockout, and S100beta is the clearer difference. The authors write that GFAP also marks radial glia at week 15; GFAP rises clearly only later (week-24 qPCR, by eye about 26-fold; immunoblot at week 20 or 24). So at week 15 RNA and the qPCR are flat for GFAP and the protein evidence is weak, not clearly higher. Not a gliosis measurement and not myelin or seizure evidence.
+
+Source label the repository gives: GSE156243 (the deposit of PMID 34268881), descriptive panel by scientist-a
+
+Held source files for every block:
+- /home/desktop/legend-development/files/geo/GSE156243/ (Salmon gene count table, two deposited differential-gene lists, family SOFT file)
+- /home/desktop/legend-development/files/fulltext/PMID34268881_Steinberg2021_PMC_r2.xml (article of the deposit)
+- /home/desktop/legend-development/files/figures/PMID34268881_r2/ (article figures, incl. expanded view)
+- /home/desktop/legend-development/files/geo/GSE150123/ (series matrix and raw tar of an unperturbed time course; only where a sentence leans on culture time)
+(GSE150123 is for a culture-time statement only.)
+
+## DA-J01-006
+
+Check: the first sentence (rat panels, antibody control)
+
+Row fields: target_id: cell-type expression and cell-type deletion of Wwox; endpoint: Wwox protein in microglia; phenotype after astrocyte-specific (GFAP-Cre) deletion
+
+> In the wild-type rat (postnatal day 21; one double-staining panel, Fig 6D, two fields (cortex layer V and corpus callosum), representative of three independent experiments, no count) no Wwox signal was seen in Iba1-positive microglia by that assay, while Wwox signal was seen in neurons, oligodendrocytes and astrocytes in sibling panels A to C of the same figure (same age and sex, postnatal day 21 male wild-type rats; the legend does not say they are the same sections) (no Wwox-null section control in that figure; a Wwox-null antibody control exists elsewhere in the paper: no band and no immunohistochemical signal in lde/lde cortex and corpus callosum, Fig 2A to C); in the mouse, astrocyte-specific (GFAP-Cre) deletion was scored for delay, weight and survival (control 8, knockout 9, the n of the weight and appearance panels; survival n not separately stated; log-rank P 1.0 is reported) with no abnormality; GFAP staining is shown only to mark astrocytes for the WWOX-loss validation (Supplementary Fig 1F, one representative field, day 18), and no GFAP or Iba1 reactivity measure, EEG or seizure record is reported for it; the authors write that they cannot exclude cell-autonomous functions of WWOX in oligodendrocytes or astrocytes in other neurological disorders.
+
+Source label the repository gives: Tochigi 2019 (PMID 31340538) Figure 6D; Repudi 2021 (PMID 33914858) Figure 1J-O and Supplementary Figure 1
+
+Held source files (root path /home/desktop/legend-development/files/ unless a repository path is given):
+- /home/desktop/legend-development/files/fulltext/PMID31340538_Tochigi2019_PMC_r2.xml
+- /home/desktop/legend-development/files/figures/PMID31340538_r2/ (figures)
+- /home/desktop/legend-development/files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.txt and .pdf (article)
+- /home/desktop/legend-development/files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.pdf and .txt (supplement, figures at pdf page 7)
+
+## DA-K01-002
+
+Check: the culture-time sentence with the per-gene rho values and median ratios (which value belongs to which gene)
+
+Row fields: target_id: EPAS1, HK2, SLC2A1, ARNT, HIF1A transcripts; endpoint: ratio of normalised counts, knockout over wild type
+
+> EPAS1 3.80 times, HK2 4.73 times, SLC2A1 2.67 times, ARNT 1.46 times; HIF1A mRNA 0.84 times (not in the authors' list and lower in 3 of 4 knockout libraries, so 'flat' here means not in the list; as expected for a protein-level axis); PDK1 0.78 times (lower in all four knockout libraries; not in the list). All printed ratios are ratios of mean CPM; with median-of-ratios normalisation they are 3.70, 4.60, 2.59 and 1.42 for EPAS1, HK2, SLC2A1 and ARNT. Four versus two libraries, one laboratory; HK2, SLC2A1, LDHA and DDIT4 also fall with elapsed culture time in unperturbed human cortical spheroids (GSE150123, another laboratory, 62 libraries, day 25 to 652; one reader's computation: median CPM from day 220 on is 0.37 to 0.42 of that up to day 80, Spearman rho -0.46 to -0.60), but ADM (rho -0.08), BHLHE40 (-0.00) and EGLN3 (+0.38, rises) do not, and P4HA1 (-0.23, median ratio 0.71) and ANKRD37 (-0.40, median ratio 0.62) fall less than the four above; the flat genes, checked by a second reader, are PGK1 rho -0.01, ALDOA -0.22, ENO1 -0.26, PKM +0.01, PFKP +0.23, NDRG1 +0.14, CA9 +0.25, HIF1A -0.06 and PDK1 -0.45 (median ratio 0.62), and EPAS1 itself rises with culture age (rho +0.44, median ratio 3.9), so composition or maturity can contribute. IT10 P2.1 (premises a2, a3): the elevation is selective, a partly canonical hypoxia-response pattern and not a uniform glycolytic upshift (ADM, HK2, P4HA1, SLC2A1, BHLHE40, ANKRD37, EGLN3, DDIT4 up; PGK1, ALDOA, ENO1, PKM, PFKP, NDRG1, CA9 flat), compatible with HIF activity, with oxygen limitation of the organoid and with MYC (MYC +0.56 log2 of the ratio of mean median-of-ratios counts, +0.61 with CPM; not in the authors' list); the knockout's offsets in 12 progenitor and neuronal marker genes predict only a small maturity-related shift (median +0.08 to +0.16 log2 for HK2, SLC2A1, LDHA) against the observed +2.18, +1.40 and +0.75 (mean log2 of CPM plus 1; a recompute gives +2.17, +1.38 and +0.74, the printed values differing by up to 0.02; the authors' list gives log2 fold changes of 2.46, 1.44 and 0.91), which makes marker-measured maturity a minor contributor but does not exclude composition by unmeasured subpopulations or culture state (exploratory, calibration from another laboratory). HK2, SLC2A1 and PDK1 belong to the six-gene IT7 readout (guard IT7_READOUT6): they are observations here and cannot be used to evaluate any compound.
+
+Source label the repository gives: GSE156243, the deposit of the 2021 organoid paper (PMID 34268881); descriptive extraction in the IT9 P4c-e package (organoid_target_gene_rows.tsv); not an evaluation by reversal of any gene set
+
+Held source files for every block:
+- /home/desktop/legend-development/files/geo/GSE156243/ (Salmon gene count table, two deposited differential-gene lists, family SOFT file)
+- /home/desktop/legend-development/files/fulltext/PMID34268881_Steinberg2021_PMC_r2.xml (article of the deposit)
+- /home/desktop/legend-development/files/figures/PMID34268881_r2/ (article figures, incl. expanded view)
+- /home/desktop/legend-development/files/geo/GSE150123/ (series matrix and raw tar of an unperturbed time course; only where a sentence leans on culture time)
+(GSE150123 is for a culture-time statement only.)
+
+## DA-K01-008
+
+Check: the reporter-identity parenthesis; the oxygen clause
+
+Row fields: target_id: sima:GFP (the single Drosophila HIF-alpha) fluorescence, adult fly brain; endpoint: whole-brain ROI fluorescence of a sima:GFP reporter after neuronal Wwox knockdown, amyloid-beta 42 background
+
+> No change (t = 0.6623, P = 0.5185, N = 7 to 9 brains; amyloid background, one genotype pair, oxygen conditions not stated (flies at 25 degrees Celsius, 12 hours light and 12 dark), not measured without the transgene or under hypoxia). The reporter's identity is internally inconsistent in the paper: the Results (and legend) say 'endogenously tagged sima:GFP', the Methods name 'the genetically encoded reporter line UAS-sima:GFP' (read as a driver-expressed transgene, whose level would report protein stability and not transcription, if the Methods' UAS name is meant; the genotype table of the supplement shows no UAS element and the stock is PBac{sima-GFP.AC.FPTB}VK00037 (BDSC 42672), a PBac-inserted GFP-tagged sima transgene at a landing site on chromosome 2, carried in one copy (sima:GFP/+) in addition to the endogenous sima (by the stock name; the paper's 'endogenously tagged' is not substantiated by the stock table), so the Methods' UAS name is not matched and this reading is one of two). The paper calls sima the fly HIF1-alpha orthologue; whether it is the single fly HIF-alpha, and so whether a HIF-1 versus HIF-2 split is possible, is not stated in the held paper. The authors suggest Atf4, not sima, as the likely route to the Ldh and lactate rise (hedged in the Results, 'could be the mechanism'; the Discussion is stronger: 'Atf4, rather than the HIF1alpha orthologue sima, is primarily responsible'). Invertebrate, and not evidence of absence in mammals; that it is the only neural HIF-alpha protein readout in a WWOX-loss model is a literature-scope statement that no held file supports. Readout: fluorescence averaged over four regions of 415.1 square micrometres per unfixed brain (as the Methods describe it, not whole-brain fluorescence), day-14 females; the replicate unit is the brain (P 0.5185 fits 7 and 9 brains, 14 degrees of freedom). Knockdown check: Wwox mRNA in fly heads by qPCR (Supplementary Fig 1; three replicates of 15 heads, newly eclosed, no amyloid, so not matched in age or background), and an effect of the same manipulation at day 14 in the same tissue (Atf4 immunostain higher, P 0.0022; lactate). No control shows that the reporter can move (no hypoxia and no sima manipulation; searched hypox and sima over the main text and the supplement text, 2026-11-25).
+
+Source label the repository gives: PMID 42909904 (Lucas-Clarke 2026), Results (Figure 5F and G), Methods (imaging of the sima:GFP reporter) and supplementary stock table
+
+Held source files (root path /home/desktop/legend-development/files/ unless a repository path is given):
+- /home/desktop/legend-development/files/fulltext/PMID42909904_PMC13684411.xml
+- /home/desktop/legend-development/files/fulltext/PMID42909904_supplement/ (Supplementary_material.docx, Supplementary_material_derived.txt, Supplementary_tables_derived.txt)
+
+## DA-M01-002
+
+Check: the second by-eye reading of Fig 3K; the last sentence on the SCAR12 dissociation
+
+Row fields: target_id: MYC-positive fraction of SOX2-positive cells; endpoint: fraction of SOX2-positive cells that are MYC-positive by immunostaining
+
+> Higher in all three mutant lines (box medians read by eye: wild type about 18, knockout about 68, SCAR12 about 45, WOREE about 55 percent, wide scatter). SCAR12's lower whisker overlaps the wild-type interquartile range (by eye). A second by-eye reading of the Fig 3K medians gave about 67 for knockout and 47 for SCAR12. Protein-level; n 7, 5, 8 and 11 organoids for wild type, knockout, SCAR12 and WOREE, with more plotted points than organoids and the unit of the points not stated; one laboratory (not checked). In SCAR12 the week-16 single-cell radial-glia and neuron-cluster fractions are wild-type-like (DA-M01-003) and CTIP2 and SATB2 are wild-type-like (Fig 6B; WOREE shows reduced CTIP2 and SATB2), but the week-7 immunostaining shows SOX2-positive cells increased (median about 47 against about 13 percent) and SATB2-positive cells decreased against wild type (Fig 1F, by eye); MYC (Fig 3K, week 16) is raised in all three lines, so SCAR12 is a partial dissociation, not a clean one (the readouts and weeks differ: week-7 immunostaining and week-16 single-cell RNA sequencing and CTIP2 and SATB2 immunostaining; whether it is time-dependent is not shown).
+
+Source label the repository gives: PMID 42397075, Results and Fig 3J-K; knockout, WOREE-derived and SCAR12-derived organoids
+
+Held source files (root path /home/desktop/legend-development/files/ unless a repository path is given):
+- /home/desktop/legend-development/files/fulltext/PMID42397075_Steinberg2026_OUP-AM.pdf and PMID42397075_Steinberg2026_OUP-AM_fitz.txt (accepted manuscript; Figure 3 is on pdf page 34)
+- /home/desktop/legend-development/files/fulltext/PMID42397075_Steinberg2026_OUP-Supplement/ (File008 to File012 pdf and txt)
+
+## DA-M01-007
+
+Check: the parenthesis on the representative fields (which field is the astrocyte control and which the oligodendrocyte knockout); the survival-curve clause
+
+Row fields: target_id: survival and seizures after conditional Wwox deletion by cell compartment; endpoint: survival to four weeks, seizures, growth, nestin-Cre versus Synapsin-Cre versus Olig2-Cre and GFAP-Cre
+
+> Both progenitor-stage (nestin-Cre) and neuron-stage (Synapsin-Cre) deletion reproduce growth retardation, seizures and premature death (death by 3 to 4 weeks is stated for nestin-Cre, 100 percent, n 14, and for Synapsin-Cre, n 15, Fig 1I); that progenitors are largely WWOX-intact under Synapsin-Cre is an inference, not a measurement (WWOX loss was measured in NeuN-positive neurons and WWOX was intact in CC1-positive oligodendrocytes of Synapsin-Cre mice; progenitors were not stained); oligodendrocyte and astrocyte deletion do not reproduce growth retardation or premature death (measured: delay, weight and survival for both lines; hind-limb clasping and MBP staining at postnatal day 17, 'no major changes', for the oligodendrocyte deletion only, Supplementary Figs 2D and 8), seizures were not recorded for them and the authors state no phenotypic abnormalities; their WWOX loss is shown in one representative field each at day 18 (Supplementary Fig 1E, 1F; by eye, WWOX signal in the astrocyte-control field is itself faint and some WWOX-positive cells remain in the oligodendrocyte-knockout field, so deletion efficiency is not quantified), while the survival curves of the oligodendrocyte-deletion and astrocyte-deletion lines run to about 120 days (by eye, Fig 1L and 1O). Radial-glia state and MYC were not measured in these mice, and the mouse cortex is not the human outer-radial-glia system.
+
+Source label the repository gives: PMID 33914858 (Repudi 2021, Brain), Results and Fig 1; text read in the operator-supplied copy
+
+Held source files (root path /home/desktop/legend-development/files/ unless a repository path is given):
+- /home/desktop/legend-development/files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.txt and .pdf (article)
+- /home/desktop/legend-development/files/fulltext/PMID33914858_Repudi2021_OUP_browserprint_pdftotext.txt (second copy)
+- /home/desktop/legend-development/files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.pdf and .txt (supplement, figures at pdf page 7)
+
+## DA-W2-002
+
+Check: the ACSF magnesium sentence; the isolation sentence; the 'same preparation' clause
+
+Row fields: target_id: postsynaptic miniature excitatory current (mEPSC, clamp at a hyperpolarised potential); endpoint: mEPSC amplitude
+
+> Amplitude shifted up in knockout (cumulative distributions, KS test, taken here as on pooled events: the paper says only KS test on cumulative plots and the very small P values imply events as the unit; 10 cells per genotype from 4 wild-type, 5 heterozygote and 5 knockout animals); frequency is not different from the heterozygote but does differ from wild type (KS P about 2.4e-4; direction not stated in the text and not readable by eye from the curves); the heterozygote itself also differs from wild type in amplitude (P about 2.0e-4) and in frequency (P about 0.0018), so the frequency difference between knockout and wild type is shared with the heterozygote and cannot be assigned to complete loss specifically (with 4 wild-type animals, animal or litter differences are also possible); decay time constant not different, which the authors read as no overt change of the NMDAR:AMPA proportion. INFERENZA (the producer's, not the paper's): at the -70 mV holding potential NMDAR current is largely magnesium-blocked, so the recording is probably AMPAR-weighted; a residual NMDAR component is not excluded and no NMDAR current was measured. The incubation ACSF contains 1.3 millimolar MgSO4; the recording perfusate is not described separately. An NMDAR-dependent component is shown elsewhere in the paper (the delayed evoked field response is suppressed by d-APV, Supplementary Fig S3C, 6 slices from 3 animals); excitatory currents are said to be 'isolated by voltage-clamping at -70 mV' with a K-gluconate pipette solution; no GABA-A or AMPA or NMDA antagonist is named (searched picrotoxin, bicuculline, gabazine, CNQX, NBQX, DNQX: none). Loss of the target protein is not shown in this paper (the floxed allele and Cre line are cited; the knockout characterisation is in another paper), but an effect of the same manipulation in the same preparation is shown (the amplitude shift itself; sIPSC reduction in amplitude and frequency, Fig 4G-H, recorded in other cells: S-KO n 9 cells from 5 animals, with a high-chloride pipette solution). The text cites Fig 4C for amplitude where the legend assigns amplitude to 4B and frequency to 4C.
+
+Source label the repository gives: PAPER 031 (Breton 2021, neuron-specific Wwox knockout mouse slices)
+
+Held source files (root path /home/desktop/legend-development/files/ unless a repository path is given):
+- /home/desktop/legend-development/files/fulltext/PMID34634460_Wwox_osc2021_PMC_r2.xml
+- /home/desktop/legend-development/files/supplement/PMID34634460_r2/ (mmc1.docx, mmc1_text.txt)
+- /home/desktop/legend-development/files/figures/PMID34634460_r2/
