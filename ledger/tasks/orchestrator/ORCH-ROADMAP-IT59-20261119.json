@@ -531,10 +531,12 @@
     },
     {
      "step": "ADV-273: second platform for WWOX after an HDAC inhibitor (DL-REPO-003 independence): PREREG, systematic search with dated negatives, independence statement",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message 2026-11-25 (ADV-273, brief assignments/ADV-273.md)",
-     "accepted_at": "2026-11-25T08:44:11Z"
+     "accepted_at": "2026-11-25T08:44:11Z",
+     "evidence": "it_adv273_20261125/RESULT_ADV273_IT_20261125.md; PREREG f9ce8c5a8; search_log.tsv; candidate CC-20261125-ORCHESTRATOR-ADV273-INDEPENDENCE-01",
+     "updated_at": "2026-11-25T09:52:40Z"
     }
    ]
   }
