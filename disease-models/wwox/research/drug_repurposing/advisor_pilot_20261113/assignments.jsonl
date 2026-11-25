@@ -696,3 +696,5 @@
 {"evidence": "SendMessage 15:54Z", "id": "ADV-279", "receipt": ["54a158d3-143c-41b5-9741-cf26f40e4fe3"], "state": "SENT", "to": ["SCI - CURRENT 8ee4045d"], "utc": "2026-11-25T15:54:27Z"}
 {"assessment": "HOST", "id": "ADV-280", "key": "next-ten-readable-held-records-wider-rule-supplement-and-figure-class", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T17:26:25Z"}
 {"evidence": "SendMessage 17:26Z", "id": "ADV-280", "receipt": ["c6d04c46-e1f4-4a8f-aa86-c883b2d44afd"], "state": "SENT", "to": ["SCI - CURRENT 8ee4045d"], "utc": "2026-11-25T17:26:46Z"}
+{"assessment": "HOST", "id": "ADV-281", "key": "positive-control-audit-of-null-wording-card-notes", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T18:33:49Z"}
+{"evidence": "SendMessage 18:34Z", "id": "ADV-281", "receipt": ["208ee909-952f-4950-aa13-0082d9546beb"], "state": "SENT", "to": ["SCI - CURRENT a25686e1"], "utc": "2026-11-25T18:34:09Z"}
