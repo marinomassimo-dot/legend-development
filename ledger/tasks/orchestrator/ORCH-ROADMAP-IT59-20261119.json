@@ -544,8 +544,8 @@
      "owner": "orchestrator",
      "source": "ADV brief assignments/ADV-275.md on main; operator dispatch of successor window 2026-11-25",
      "accepted_at": "2026-11-25T10:13:58Z",
-     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv275_20261125/RESULT_ADV275_IT_20261125.md; CC-20261125-ORCHESTRATOR-ADV275-DEPOSITS-01 PROPOSED; delivered to ADV by name (headline and correction)",
-     "updated_at": "2026-11-25T11:01:20Z"
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv275_20261125/RESULT_ADV275_IT_20261125.md; CC-20261125-ORCHESTRATOR-ADV275-DEPOSITS-01 PROPOSED; delivered to ADV by name (headline and correction), consumed by ADV; landed 920fdd627901 and ce65951fb318; delegation: blind verifier legend-delegate asked sonnet medium, read back claude-sonnet-5-5 medium, 10 turns, 13391 output, cache creation 77651, cache read 438171",
+     "updated_at": "2026-11-25T11:26:22Z"
     }
    ]
   }
