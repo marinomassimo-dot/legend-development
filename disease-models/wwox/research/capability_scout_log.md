@@ -3392,7 +3392,7 @@ verify routing and schema behaviour; universal future model obedience is not dem
 
 **Proof.** https://github.com/mims-harvard/ToolUniverse/releases
 
-**Outcome.** TO_TRIAGE (a detected change is not a reading)
+**Outcome.** TRIAGED 2026-11-25 (plan, release notes read): no reopen. v1.5.11 repairs return schemas and loaders and adds Health Canada drug-product, PubMLST and pharmacogenomic tools; no capability the adapters lack was named by an open question, licence unchanged.
 
 ## 2026-11-25 · scout_daily · Discovery:diagnosis:compound-with-several-or-opposed-actions
 
@@ -3412,4 +3412,10 @@ verify routing and schema behaviour; universal future model obedience is not dem
 
 **Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
 
-**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+**Outcome.** TRIAGED 2026-11-25 (plan, title depth): no reopen; the three hits are an insomnia transcriptomics preprint, a dental image model and a commentary on missing marks, matched on one word.
+
+## 2026-11-25 — HE successor, title-depth triage of the radar backlog
+
+**Population.** The 83 blocks still reading `TO_TRIAGE` above, dated 2026-10-29 to 2026-11-25 (the two of 25 November carry their own outcome). Definition of yield, frozen first: `drug_repurposing/checkpoint_he_20261120/HE_RADAR_YIELD_PREREG_20261125.md`. Figures and candidates: `HE_RADAR_YIELD_20261125.md` in the same folder.
+
+**Outcome.** TRIAGED 2026-11-25 (plan), title depth, covering those blocks: 0 yield at triage time by definition; 0 adoptions; the candidates listed in the result file are discovery hits, not readings. The earlier `TO_TRIAGE` lines stay as written (the log is append-only).
