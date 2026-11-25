@@ -1199,6 +1199,13 @@
      "accepted_at": "2026-11-25T23:42:39Z",
      "updated_at": "2026-11-25T23:53:57Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv289_breton_s3c_dapv_block_sci_20261125/RESULT_ADV289_SCI_20261125.md"
+    },
+    {
+     "step": "ADV direction (after ADV-289): ONE bounded design check of the brief's washout reading rule (evoked response back within 10 percent of baseline) against the held evoked overshoot on washout: two-sided bound or other reference, which readouts share the rule; PREREG first",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message to SCI cfe92e9d after ADV-289 (2026-11-25)",
+     "accepted_at": "2026-11-25T23:57:40Z"
     }
    ]
   }
@@ -2125,6 +2132,13 @@
    "at": "2026-11-25T23:42:39Z",
    "source": "ADV-289",
    "step_sha256": "fae00d9ae8d4",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T23:57:40Z",
+   "source": "ADV message to SCI cfe92e9d after ADV-289 (2026-11-25)",
+   "step_sha256": "bd51dbaa7583",
    "reopened_block": false,
    "authorised_by": null
   }
