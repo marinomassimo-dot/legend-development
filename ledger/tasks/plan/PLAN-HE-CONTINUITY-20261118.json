@@ -1422,6 +1422,22 @@
      "accepted_at": "2026-11-25T18:03:07Z",
      "evidence": "consumer_count.py + test_consumer_count.py (4 ok, old rule asserted to join); ranking recomputed; checkpoint_he_20261120/HE_CONSUMER_JOINS_20261125.md",
      "updated_at": "2026-11-25T18:09:30Z"
+    },
+    {
+     "step": "Profile the whole landing-lock hold over the last ~15 landings (wait excluded): median seconds per stage (gate, landing suites, derived regeneration, view checks, push, ls-remote); name the largest remaining stage with one proposed change, minutes saved per risk; report only",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad message to HE 2140fbda 2026-11-25, NEXT item",
+     "accepted_at": "2026-11-25T18:22:05Z",
+     "evidence": "report only: checkpoint_he_20261120/HE_LANDING_SLOT_PROFILE2_20261125.md, sent to ADV",
+     "updated_at": "2026-11-25T18:50:16Z"
+    },
+    {
+     "step": "Run view checks, gate and landing suites concurrently under the lock: suites in a throwaway clone removed on exit and failure, 3 identical trials, serial flag with trailer, NOTICE, landed alone, ten-landing read (CHECKPOINT_HE_20261125_V section 2 item 2)",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad GO on the lock profile, to HE 2140fbda, 2026-11-25",
+     "accepted_at": "2026-11-25T18:51:47Z"
     }
    ]
   }
@@ -2523,6 +2539,20 @@
    "at": "2026-11-25T18:03:07Z",
    "source": "ADV a5e6f2ad decision (2) on HE ADV-279 report, 2026-11-25",
    "step_sha256": "d0229f361bf7",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T18:22:05Z",
+   "source": "ADV a5e6f2ad message to HE 2140fbda 2026-11-25, NEXT item",
+   "step_sha256": "289781c99f35",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T18:51:47Z",
+   "source": "ADV a5e6f2ad GO on the lock profile, to HE 2140fbda, 2026-11-25",
+   "step_sha256": "4a5576ef962c",
    "reopened_block": false,
    "authorised_by": null
   }
