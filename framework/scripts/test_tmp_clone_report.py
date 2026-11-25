@@ -281,5 +281,54 @@ class Remove(unittest.TestCase):
         self.assertTrue(d.is_dir())
 
 
+class NestedClones(unittest.TestCase):
+    """2026-11-25 (ADV): a 17-day-old `tmp*` folder holding `trial_clone/` was not listed at all."""
+
+    def setUp(self):
+        self.f = Fixture()
+
+    def tearDown(self):
+        self.f.close()
+
+    def holder(self, name):
+        (self.f.tmp / name).mkdir()
+        return self.f.tmp / name, self.f.clone(f"{name}/trial_clone")
+
+    def test_a_tmp_folder_holding_only_a_published_clone_is_listed_and_removable(self):
+        d, _ = self.holder("tmpabc")
+        self.assertIn(d, tcr.candidates(self.f.tmp))
+        r = self.f.examine(d)
+        self.assertEqual((r["verdict"], r["reasons"]), ("REMOVABLE", []))
+
+    def test_anything_beside_the_clone_keeps_the_folder_and_is_named(self):
+        d, _ = self.holder("tmpbeside")
+        (d / "result.tsv").write_text("only copy\n")
+        r = self.f.examine(d)
+        self.assertEqual(r["verdict"], "KEEP")
+        self.assertTrue(any("beside the clone" in x and "result.tsv" in x for x in r["reasons"]), r)
+        self.assertEqual(self.f.cli("--remove", str(d)).returncode, 1)
+        self.assertTrue((d / "result.tsv").is_file())
+
+    def test_a_nested_clone_with_unpublished_work_keeps_the_folder_and_names_the_clone(self):
+        d, clone = self.holder("tmpwork")
+        (clone / "b.txt").write_text("b\n")
+        git(clone, "add", "b.txt")
+        git(clone, "commit", "-qm", "mine")
+        r = self.f.examine(d)
+        self.assertEqual(r["verdict"], "KEEP")
+        self.assertTrue(any(x.startswith("trial_clone: ") and "unpublished commit" in x for x in r["reasons"]), r)
+
+    def test_a_folder_of_another_name_holding_a_clone_is_still_not_a_candidate(self):
+        d, _ = self.holder("somebody-work")
+        self.assertNotIn(d, tcr.candidates(self.f.tmp))
+
+    def test_a_leftover_suite_clone_of_safe_push_needs_only_the_process_and_age_checks(self):
+        d = self.f.tmp / "legend-landing-suites-dead"
+        d.mkdir()
+        self.f.clone("legend-landing-suites-dead/repo")
+        r = self.f.examine(d)
+        self.assertEqual((r["verdict"], r["reasons"]), ("REMOVABLE", []))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
