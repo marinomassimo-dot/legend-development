@@ -1465,6 +1465,34 @@
      "owner": "plan",
      "source": "ADV GO with five conditions, 2026-11-25, condition (d)",
      "accepted_at": "2026-11-25T21:34:53Z"
+    },
+    {
+     "step": "Wire repurposing_coverage.py check into candidate_tree_freshness.py, then regenerate coverage once as a separate landing (Y section 2 item 3)",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "CHECKPOINT_HE_20261125_Y.md (sha256 a734e82c); HE launch brief of session 6e20e53e; ADV queue item 2",
+     "accepted_at": "2026-11-25T22:10:22Z"
+    },
+    {
+     "step": "Add a check subcommand to repurposing_join.py, last; regenerate join/ once by the writer if IT agrees nobody reads it that day; then add join/ to the copied-sentence check surfaces (Y section 2 item 4)",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "CHECKPOINT_HE_20261125_Y.md (sha256 a734e82c); HE launch brief of session 6e20e53e; ADV queue item 3",
+     "accepted_at": "2026-11-25T22:10:22Z"
+    },
+    {
+     "step": "Copied-card-sentence check (d37743c77): watch its refusals for the first ten landings, count true lags against false refusals, and inspect the other 8 of the 12 replayed refusals",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "CHECKPOINT_HE_20261125_Y.md (sha256 a734e82c); HE launch brief of session 6e20e53e; ADV queue item 1",
+     "accepted_at": "2026-11-25T22:10:22Z"
+    },
+    {
+     "step": "Write in the next HE checkpoint the list of the eight ADV-098 sheets with no blind check (sheet, batch, claim count, consumers) so ADV can route a blind pass; do not run the pass",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad message to HE 6e20e53e, 2026-11-25",
+     "accepted_at": "2026-11-25T22:10:48Z"
     }
    ]
   }
@@ -2601,6 +2629,34 @@
    "at": "2026-11-25T21:34:53Z",
    "source": "ADV GO with five conditions, 2026-11-25, condition (d)",
    "step_sha256": "363bebb4d836",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T22:10:22Z",
+   "source": "CHECKPOINT_HE_20261125_Y.md (sha256 a734e82c); HE launch brief of session 6e20e53e; ADV queue item 2",
+   "step_sha256": "8d4d1a2f9d4c",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T22:10:22Z",
+   "source": "CHECKPOINT_HE_20261125_Y.md (sha256 a734e82c); HE launch brief of session 6e20e53e; ADV queue item 3",
+   "step_sha256": "57c6879ea61d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T22:10:22Z",
+   "source": "CHECKPOINT_HE_20261125_Y.md (sha256 a734e82c); HE launch brief of session 6e20e53e; ADV queue item 1",
+   "step_sha256": "423670cd2c69",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T22:10:48Z",
+   "source": "ADV a5e6f2ad message to HE 6e20e53e, 2026-11-25",
+   "step_sha256": "ab99e139743f",
    "reopened_block": false,
    "authorised_by": null
   }
