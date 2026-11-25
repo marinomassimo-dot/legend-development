@@ -1,0 +1,5 @@
+# ADV-265 pre-registration, amendment 1 (declared after the first ranking run, before any paper was read)
+
+* The first run used the registry ids PAPER, CORPUS and LIT as identity alternatives (the PREREG rule). Checking the first-ranked consumer units showed that `CORPUS P216` in the claim registry is a placeholder number of another paper ("paper 216 (corpus 181-220)", `Identifier: PENDING`), so CLAIM 022 was counted as a consumer of PMID 42137291 wrongly. Both routes shared the same id set, so their agreement did not catch it.
+* Rule changed: **route 1 (file level) uses PMID and DOI only; route 2 (unit level) uses PMID, DOI and `PAPER nnn` (the number the paper registry gives the study); CORPUS and LIT ids are dropped.** The ranking is re-run; the six are taken from the re-run. The consumer units of each of the six are then read one by one (a unit counts only if its text names the study).
+* The containment step (ADV-219 scan rules) is the PREREG's step 2, implemented in `containment_adv265.py` after the first ranking; it removes studies whose unread classes the held bytes do not contain (figure images not in the XML, supplements not held).

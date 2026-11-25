@@ -1172,6 +1172,15 @@
      "accepted_at": "2026-11-25T05:50:11Z",
      "evidence": "051744c7c landed; README safe_push row holds three real pushes (N 24/25/25 s, M 254/249/275 s, all nothing stale); dated lines in the two HE measurement files; CI gate untouched",
      "updated_at": "2026-11-25T06:23:12Z"
+    },
+    {
+     "step": "ADV-267: count 'held' by receipt SHA-256, not by file name: cached digest index, debt report reads it, reproduces SCI's 421/670, misnamed-file fixture, routed once",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-267 (ADV message to HE, 2026-11-25; assignments/ADV-267.md after ADV's landing)",
+     "accepted_at": "2026-11-25T06:33:39Z",
+     "evidence": "framework/scripts/held_studies.py + test_held_studies.py (7 tests), debt_report held line, README row; on SCI's ledger at 67ce27833 the digest-only set equals ADV-264's 79 rows and not-held equals 421 of the 500; guards test_tool_routing, test_documented_commands, evidence_presence, debt_report green",
+     "updated_at": "2026-11-25T06:36:05Z"
     }
    ]
   }
@@ -2077,6 +2086,13 @@
    "at": "2026-11-25T05:50:11Z",
    "source": "ADV peer message, 2026-11-25",
    "step_sha256": "e2050c75546b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T06:33:39Z",
+   "source": "ADV-267 (ADV message to HE, 2026-11-25; assignments/ADV-267.md after ADV's landing)",
+   "step_sha256": "efd2ff8a317d",
    "reopened_block": false,
    "authorised_by": null
   }

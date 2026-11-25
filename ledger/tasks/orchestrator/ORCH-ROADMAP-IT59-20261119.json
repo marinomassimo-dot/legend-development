@@ -479,6 +479,13 @@
      "owner": "orchestrator",
      "source": "ADV message 2026-11-25 (decisions on ADV-263 ready items 1 and 2)",
      "accepted_at": "2026-11-25T06:28:56Z"
+    },
+    {
+     "step": "ADV-268: next 20 map negatives with the pre-write check, edit the three other carriers of the Seahorse/flux negative, propose the one-line writing-step rule and its location",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-25 (ADV-268, brief adv268.txt)",
+     "accepted_at": "2026-11-25T06:40:26Z"
     }
    ]
   }
@@ -852,6 +859,13 @@
    "at": "2026-11-25T06:28:56Z",
    "source": "ADV message 2026-11-25 (decisions on ADV-263 ready items 1 and 2)",
    "step_sha256": "6653474442e9",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T06:40:26Z",
+   "source": "ADV message 2026-11-25 (ADV-268, brief adv268.txt)",
+   "step_sha256": "511bf615c693",
    "reopened_block": false,
    "authorised_by": null
   }

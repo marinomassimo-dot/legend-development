@@ -49,6 +49,8 @@ The four levels above cover only **positive assertions**. A knowledge system tha
 
 **2.3 · Re-audit rule** — the loop that makes this compound. **Every time a new mechanistic `DATO` arrives, re-scan the dismissal ledger** for rejections whose premise that datum touches. Without this step you have self-*correction*, not self-*improvement*.
 
+**2.4 · `NEGATIVE_SEARCH` (added 2026-11-25, ADV-266 and ADV-268) — a negative about the corpus or the world carries its search.** Write what was searched and when ("in the records read or the index queried, by the query, on the date: none"). For a negative about a WWOX system, search the held records (paper registry, deep-dive manifests, receipts ledger) for the negated object **before** writing it, because the negatives that failed on the mechanism map were already contradicted by a source the repository held; and when a claim title is corrected, search its phrase in the copies. Evidence: 7 of 40 dated map negatives moved, 6 of them contradicted by a record held on the day written or a copy of a corrected title (`disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv268_20261125/RESULT_ADV268_IT_20261125.md`).
+
 ## 3. Defaults that have bitten this domain
 
 Before discarding anything, consult the **`DEFAULTS THAT BIT US`** table — textbook defaults that, in real rare-disease work, turned out false:
