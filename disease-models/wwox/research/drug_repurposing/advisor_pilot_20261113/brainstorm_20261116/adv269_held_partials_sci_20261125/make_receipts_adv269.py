@@ -27,6 +27,24 @@ PAP = {
  '41345172': dict(src='files/fulltext/PMID41345172_De2025_PMC.xml', doi=None,
    cov=cov(supplementary=CC),
    basis='Held XML: every WWOX passage of the body read (Results, Methods, Discussion); supplement MOESM4 Supplementary Table 4 (three sheets) parsed and WWOX association p values compared inside and outside chr16:78,371,638-78,385,000; MOESM12 (Table 12) read; MOESM8 title only; MOESM15 pdf text captions read; other workbooks and figure images not opened.'),
+ '42601505': dict(src='files/fulltext/PMID42601505_Puertas2026_PMC.xml', doi=None,
+   cov=cov(),
+   basis='Held XML only: supplementary-material list and the Reagents and tools table inspected; statements on abolished respiration, MERRF cohort size and the exploratory caveat located in the text; Tables EV1-EV3, Appendix, source data and Expanded View are not in the held bytes.'),
+ '25779665': dict(src='files/fulltext/PMID25779665_Chen2015_PMC.xml', doi=None,
+   cov=cov(supplementary=RD),
+   basis='Held supplement text files/fulltext/PMID25779665_Chen2015_supp_pdftotext.txt read in full (Figures S1-S5 and Videos 1-9 captions); main-text references to the supplement located; figure images and the movies are not held or not opened.'),
+ '31353122': dict(src='files/fulltext/PMID31353122_Mori2019_IR.pdf', doi=None,
+   cov=cov(figures=RD),
+   basis='Held PDF: figure pages 16 and 17 (Figures 1 and 2) opened as images and read with their captions; Figure 3 was read in an earlier wave; WWOX passages of the text located.'),
+ '40191585': dict(src='files/fulltext/PMID40191585_Robertson2025_PMC.xml', doi=None,
+   cov=cov(supplementary=CC),
+   basis='Held supplement pdf text searched for WWOX and E17K (Note 3, Figure 12 caption, Tables 5-6 read, percentages recomputed); zip members listed (pdf and figure images only); main-text Epi25 and 172-carrier sentences located.'),
+ '41404412': dict(src='files/fulltext/PMID41404412_Grubor2025_PMC.xml', doi=None,
+   cov=cov(supplementary=CC),
+   basis='Held supplement mmc1 text: Tables S1 (fold-change columns recomputed on three animals), S2 and S5 read, S3-S4 listed not recomputed, Figure S11-S12 captions read; main-text day-5, EM and euthanasia sentences located.'),
+ '41715204': dict(src='files/fulltext/PMID41715204_Sun2026_PMC.xml', doi=None,
+   cov=cov(supplementary=CC),
+   basis='Held supplement workbooks MOESM6 (Table S1, 403 rows, group means and per-animal separation of cholesteryl esters) and MOESM9 (Table S4, 265 printed ratios recomputed) read with a stdlib parser; MOESM4 and MOESM8 titles only; main-text sample sizes located.'),
 }
 def latest(pmid):
     best = None
@@ -35,7 +53,7 @@ def latest(pmid):
         except Exception: continue
         if d.get('study_id', {}).get('pmid') == pmid: best = d
     return best
-QUERIED = {'24935251', '35229008', '41345172'}  # targeted searches of held supplements: no article section read, so the honest depth is queried_not_full_read
+QUERIED = {'24935251', '35229008', '41345172', '42601505', '40191585', '41404412', '41715204'}  # targeted searches of held supplements: no article section read, so the honest depth is queried_not_full_read
 def main(outdir, only=None):
     Path(outdir).mkdir(parents=True, exist_ok=True)
     now = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())

@@ -1878,5 +1878,34 @@ class SourceSanityTests(unittest.TestCase):
         self.assertTrue(any("WARNING" in str(call) for call in err.write.call_args_list))
 
 
+class TheSequenceIndexAsksOnlyAboutSharingRecords(unittest.TestCase):
+    """The sequence rules look records up by PMID and DOI instead of walking the ledger (2026-11-25).
+
+    What must not move: which records are found, their order, each found once, and one error per
+    earlier record that conflicts.
+    """
+
+    @staticmethod
+    def row(pmid: str = "", doi: str = "") -> dict:
+        return {"study_id": {key: value for key, value in (("pmid", pmid), ("doi", doi)) if value}}
+
+    def test_a_record_sharing_both_identifiers_is_found_once_and_in_order(self) -> None:
+        rows = [self.row(doi="10.1/A."), self.row("1", "10.1/a"), self.row("2", "10.1/b"),
+                self.row("1"), self.row()]
+        found = receipts._StudyIndex(rows).sharing("1", "10.1/a")
+        self.assertEqual([rows.index(item) for item in found], [0, 1, 3])
+        self.assertEqual(found, [item for item in rows if receipts.same_study(item, "1", "10.1/a")])
+        self.assertEqual(receipts._StudyIndex(rows).sharing("", ""), [])
+
+    def test_the_index_finds_every_pair_the_conflict_rule_can_refuse(self) -> None:
+        values = [("", ""), ("1", ""), ("", "10.1/a"), ("1", "10.1/a"), ("1", "10.1/b"), ("2", "10.1/a")]
+        rows = [self.row(*pair) for pair in values]
+        for pmid, doi in values:
+            late = self.row(pmid, doi)
+            shared = receipts._StudyIndex(rows).sharing(pmid, receipts.normalise_doi(doi))
+            self.assertEqual([r for r in shared if receipts.study_identity_conflict(r, late)],
+                             [r for r in rows if receipts.study_identity_conflict(r, late)], (pmid, doi))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

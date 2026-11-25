@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-25T07:45Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T07:45:25Z",
+ "event_id": "FTR-20261125-42601505-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Held XML only: supplementary-material list and the Reagents and tools table inspected; statements on abolished respiration, MERRF cohort size and the exploratory caveat located in the text; Tables EV1-EV3, Appendix, source data and Expanded View are not in the held bytes.",
+  "Result and per-consumer wording: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261019-42601505-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "d414a68bd9c69642116e9540a24da64a9852b5d38d0460f262732c6ad26e9d2a",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+ "study_id": {
+  "doi": "10.1038/s44319-026-00898-y",
+  "pmid": "42601505"
+ },
+ "workflow": "SCI ADV-269 (held partials, unread classes inside held bytes; held bytes only, no contact, no spend); not a complete read, figure images remain unread"
+}
