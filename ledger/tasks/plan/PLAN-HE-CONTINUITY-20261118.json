@@ -1319,10 +1319,26 @@
     },
     {
      "step": "Source fix for the orphaned headless Chromium (repurposing_view.py Cdp): a killed parent leaves no browser, with a test that kills the parent of a real browser; existing orphans are not touched",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad via CHECKPOINT_HE_20261125_S_ADDENDUM1 and the launch brief of HE 43ab579f, 2026-11-25",
-     "accepted_at": "2026-11-25T13:19:30Z"
+     "accepted_at": "2026-11-25T13:19:30Z",
+     "evidence": "a2b46d713081 on development/main (gate PASS, 9 landing suites green); tests CdpStartup + CdpOrphanRealBrowser red before, green after; RealViewports 7/7; existing orphans untouched (operator)",
+     "updated_at": "2026-11-25T13:38:47Z"
+    },
+    {
+     "step": "CI queue measurement (ADV item 2) and trial of proposal A: opt-in parallel release runner, one serial and one 4-worker full run of the same commit, same suite list and pass/fail set, list of suites that must run alone, measured step times; no default flip, no workflow edit",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad messages to HE 43ab579f, 2026-11-25 (direction round 13:20Z item 2; GO on proposal A)",
+     "accepted_at": "2026-11-25T13:38:47Z"
+    },
+    {
+     "step": "Pre-registered read of the safe_push landing-suite rule after 2026-11-26T11:21Z: count CI reds on suites the default selection did run",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad, 2026-11-25; launch brief of HE 43ab579f",
+     "accepted_at": "2026-11-25T13:38:47Z"
     }
    ]
   }
@@ -2347,6 +2363,20 @@
    "at": "2026-11-25T13:19:30Z",
    "source": "ADV a5e6f2ad via CHECKPOINT_HE_20261125_S_ADDENDUM1 and the launch brief of HE 43ab579f, 2026-11-25",
    "step_sha256": "2db3bb332c26",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T13:38:47Z",
+   "source": "ADV a5e6f2ad messages to HE 43ab579f, 2026-11-25 (direction round 13:20Z item 2; GO on proposal A)",
+   "step_sha256": "375d78c86471",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T13:38:47Z",
+   "source": "ADV a5e6f2ad, 2026-11-25; launch brief of HE 43ab579f",
+   "step_sha256": "21bc1b8f532d",
    "reopened_block": false,
    "authorised_by": null
   }
