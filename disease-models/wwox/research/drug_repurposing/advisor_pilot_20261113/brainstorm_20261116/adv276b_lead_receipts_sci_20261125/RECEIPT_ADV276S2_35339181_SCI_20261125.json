@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T12:59Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T12:59:00Z",
+ "event_id": "FTR-20261125-35339181-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Abstract, Figure 1 legend, Table 1 and its footnote, the microinfusion passages."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276b_lead_receipts_sci_20261125/RESULT_ADV276_STEP2_BATCH1_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261019-35339181-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "eba62130df03c532ddd16e8dbcdf518010ff7ac1ab24b1faad6907fee4ecc07c",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID35339181_ADV272_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.2174/1570159X20666220327213615",
+  "pmid": "35339181"
+ },
+ "workflow": "SCI ADV-276 step 2 batch 1 (not a complete read)"
+}
