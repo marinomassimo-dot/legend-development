@@ -1014,11 +1014,12 @@
     },
     {
      "step": "ADV-255: human lactate per-report table from held sources (DL-BIO-009 test), check Chong 2023 against its source, PREREG with the prediction first",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-255",
      "accepted_at": "2026-11-25T04:16:16Z",
-     "updated_at": "2026-11-25T04:35:02Z"
+     "updated_at": "2026-11-25T04:59:02Z",
+     "evidence": "landed on development/main ec2b02f7b1 (commit 0f876a182), brainstorm_20261116/adv255_lactate_table_sci_20261125/RESULT; wording sent to IT"
     },
     {
      "step": "ADV-256: Europe PMC retraction and correction notice sweep over the catalogued WWOX PMIDs: PREREG first, 19357348 first, compare with the 10-21 snapshot, consumers per hit, propose flag rows (no state-file edit)",
@@ -1028,6 +1029,14 @@
      "accepted_at": "2026-11-25T04:19:53Z",
      "updated_at": "2026-11-25T04:43:46Z",
      "evidence": "landed on development/main 63739fc9fd (commit ca5c14e7), brainstorm_20261116/adv256_notice_sweep_sci_20261125/RESULT"
+    },
+    {
+     "step": "ADV-259: find a lawful route to the Chong 2023 text and check the 2.4 to 3.3 mmol/L lactate value: PREREG first; VERIFIED, CONTRADICTED or UNREACHABLE; receipt; wording for IT",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "source": "ADV-259",
+     "accepted_at": "2026-11-25T04:50:04Z",
+     "updated_at": "2026-11-25T04:50:04Z"
     }
    ]
   }
@@ -1821,6 +1830,13 @@
    "at": "2026-11-25T04:19:53Z",
    "source": "ADV-256",
    "step_sha256": "7540e44a7dad",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T04:50:04Z",
+   "source": "ADV-259",
+   "step_sha256": "184eb99334a8",
    "reopened_block": false,
    "authorised_by": null
   }
