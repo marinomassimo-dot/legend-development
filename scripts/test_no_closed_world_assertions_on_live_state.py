@@ -77,6 +77,12 @@ ALLOWED = {
         "assertion is that the reminder text is ABSENT when the ledger path is not among the paths: the absence is "
         "created by the fixture and by the arguments of the call, a property of the experiment and of the reminder's "
         "condition, not of the live ledger, which the test never reads (the file name only triggers this detector).",
+    "test_landing_suites.py::test_a_registry_change_selects_the_queue_and_the_pathograph"
+    "::negative-on-append-only":
+        "reads no registry: the registry path is a literal INPUT to `landing_suites.select`, which matches it against "
+        "the rule table in the code and only checks that each suite file exists. The absent suite name is a property "
+        "of that table (a registry change is not a receipt change), nothing appended to state can alter it, and a "
+        "rule change that did would fail this test at its next run instead of going stale.",
     "test_derive_dismech_sidecar.py::test_no_record_carries_a_measured_artefact_state"
     "::negative-on-append-only":
         "asserts the absence of a KEY, not of a value: no record may ever carry "

@@ -1,0 +1,19 @@
+WT WWOX peak row 93
+WWOX window 87 99 bg rows 37 149
+perlane_peak
+  WT      WWOX net   1384.0 (bg 6)  HSP90 net   2607.2 (rows 56-72, bg 13)  ratio 1.000 (floored 1.000)
+  1C      WWOX net     74.1 (bg 5)  HSP90 net   2624.0 (rows 61-77, bg 11)  ratio 0.053 (floored 0.053)
+  2C      WWOX net    123.9 (bg 5)  HSP90 net   2005.8 (rows 62-78, bg 9)  ratio 0.116 (floored 0.116)
+  1C_AAV  WWOX net    105.1 (bg 5)  HSP90 net   2897.1 (rows 66-82, bg 9)  ratio 0.068 (floored 0.068)
+  2C_AAV  WWOX net    191.0 (bg 6)  HSP90 net   1881.1 (rows 62-78, bg 3)  ratio 0.191 (floored 0.191)
+fixedwin
+  WT      WWOX net   1384.0 (bg 6)  HSP90 net   2607.2 (rows 56-72, bg 13)  ratio 1.000 (floored 1.000)
+  1C      WWOX net     74.1 (bg 5)  HSP90 net   2086.3 (rows 56-72, bg 11)  ratio 0.067 (floored 0.067)
+  2C      WWOX net    123.9 (bg 5)  HSP90 net   1612.0 (rows 56-72, bg 10)  ratio 0.145 (floored 0.145)
+  1C_AAV  WWOX net    105.1 (bg 5)  HSP90 net   1636.8 (rows 56-72, bg 10)  ratio 0.121 (floored 0.121)
+  2C_AAV  WWOX net    191.0 (bg 6)  HSP90 net   1505.0 (rows 56-72, bg 4)  ratio 0.239 (floored 0.239)
+image min grey (WWOX strip) 2
+WT band: per-row min grey in window [(87, 148), (88, 133), (89, 117), (90, 100), (91, 92), (92, 88), (93, 89), (94, 90), (95, 91), (96, 99), (97, 111), (98, 130), (99, 149)]
+WT band: per-row mean darkness [(87, 73), (88, 87), (89, 99), (90, 115), (91, 127), (92, 137), (93, 142), (94, 141), (95, 136), (96, 124), (97, 110), (98, 93), (99, 78)]
+EXPLORATORY 1C_AAV band at own peak row 77 net 430.1
+EXPLORATORY 2C_AAV band at own peak row 78 net 433.6
