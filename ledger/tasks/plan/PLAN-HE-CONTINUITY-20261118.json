@@ -1316,6 +1316,13 @@
      "accepted_at": "2026-11-25T12:58:45Z",
      "evidence": "HE_RADAR_READER_20261125.md on main (97e079860)",
      "updated_at": "2026-11-25T12:58:45Z"
+    },
+    {
+     "step": "Source fix for the orphaned headless Chromium (repurposing_view.py Cdp): a killed parent leaves no browser, with a test that kills the parent of a real browser; existing orphans are not touched",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad via CHECKPOINT_HE_20261125_S_ADDENDUM1 and the launch brief of HE 43ab579f, 2026-11-25",
+     "accepted_at": "2026-11-25T13:19:30Z"
     }
    ]
   }
@@ -2333,6 +2340,13 @@
    "at": "2026-11-25T12:58:45Z",
    "source": "ADV a5e6f2ad message to HE 4fab51c6, 2026-11-25",
    "step_sha256": "1f4ef9f1f02f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T13:19:30Z",
+   "source": "ADV a5e6f2ad via CHECKPOINT_HE_20261125_S_ADDENDUM1 and the launch brief of HE 43ab579f, 2026-11-25",
+   "step_sha256": "2db3bb332c26",
    "reopened_block": false,
    "authorised_by": null
   }
