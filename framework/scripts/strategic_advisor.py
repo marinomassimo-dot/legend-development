@@ -1105,11 +1105,12 @@ def _meeting_saved(campaign: Path) -> dict[str, Any]:
         text = p.read_text(encoding="utf-8")
         stamp = re.search(r"^Started UTC: (\S+)$", text, re.M)
         if stamp:
-            rows.append((stamp[1], p.stat().st_mtime_ns, p.name, bool(re.search(r"^Closed UTC: \S+$", text, re.M))))
+            # Among records of one start second the open one is the newest (a new one opens only after the last closed); file times can tie or invert.
+            rows.append((stamp[1], not re.search(r"^Closed UTC: \S+$", text, re.M), p.stat().st_mtime_ns, p.name))
     if not rows:
         return {}
-    started, _, name, closed = max(rows)
-    return {"last_started_utc": started, "active": "" if closed else name,
+    started, still_open, _, name = max(rows)
+    return {"last_started_utc": started, "active": name if still_open else "",
             "recovered_from_minutes": True}
 
 
