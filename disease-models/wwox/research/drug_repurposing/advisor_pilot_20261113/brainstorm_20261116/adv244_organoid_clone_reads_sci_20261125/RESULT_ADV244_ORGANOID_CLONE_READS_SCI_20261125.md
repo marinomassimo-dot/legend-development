@@ -57,3 +57,5 @@ For the organoid rows (K01, D01, D02, M01, E02, I01, INV-16, RP-008, CLAIM 002; 
 ## 8. DREAM
 
 Not yet consumed: the wording of section 6. A method that costs minutes and no disk (streaming reads for an edit-spanning pattern) can assign clone identity in any CRISPR-model deposit whose clones' edits are published; no other deposit has been checked.
+
+**Dated line, 2026-11-25, after publication.** Section 5's "no independent re-run" is now partly closed: IT (session `45a8b15c`) read Fig EV1C from its own 500 dpi render of the embedded raster and reports the same pairs (KO1: 5 T and 2 T; KO2: 3 T and 2 T), with the base letters legible. That is a second reading of the figure, as reported to me. The read counts still have no second reader.
