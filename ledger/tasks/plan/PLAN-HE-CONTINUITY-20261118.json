@@ -1211,10 +1211,12 @@
     },
     {
      "step": "window_handoff rename: match the view's name column only (the summary column matched the successor's temporary name), refuse and name any other row renamed, test on screen text",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message to HE 00c83fd0, 2026-11-25 ~08:37Z",
-     "accepted_at": "2026-11-25T08:35:19Z"
+     "accepted_at": "2026-11-25T08:35:19Z",
+     "evidence": "44a7debda on main in 816dc1a94 (gate PASS); 14/14 tests, 3 new fail on the old code; 40 live names each match one row",
+     "updated_at": "2026-11-25T08:49:16Z"
     },
     {
      "step": "CI number for 576abf92 (faster test_paper_packet, run #2405) and for the ledger-index change (49a9dd56), sent to ADV",
@@ -1225,10 +1227,12 @@
     },
     {
      "step": "Propose to ADV the smallest route to read Krug 2013's .xls supplement without xlrd (licence and cost; release gate unchanged)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message to HE 00c83fd0, 2026-11-25 ~08:37Z, item 3",
-     "accepted_at": "2026-11-25T08:35:39Z"
+     "accepted_at": "2026-11-25T08:35:39Z",
+     "evidence": "SendMessage to ADV and SCI 2026-11-25 ~08:40Z: xlrd 2.0.2 already installed, hidden by python3 -I; python3 -P -E sees it; Krug WWOX rows re-parsed equal to SCI's dump",
+     "updated_at": "2026-11-25T08:49:16Z"
     },
     {
      "step": "Routine need-driven micro-upgrade with a named consumer and a measured benefit",
