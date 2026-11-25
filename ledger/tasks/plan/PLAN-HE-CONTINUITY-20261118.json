@@ -1247,10 +1247,12 @@
     },
     {
      "step": "Close checkpoint P items 1 and 3: send ADV the per-suite CI times of f093ab03 and the CI verdict of IT's red-main fix once on main",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "CHECKPOINT_HE_20261125_P section 2 items 1 and 3",
-     "accepted_at": "2026-11-25T09:42:23Z"
+     "accepted_at": "2026-11-25T09:42:23Z",
+     "evidence": "per-suite times of #2428 and verdict of #2434 (failure on the join only) sent to ADV 2026-11-25",
+     "updated_at": "2026-11-25T10:49:32Z"
     },
     {
      "step": "Replay landing_suites.py against the red CI streaks on main, count escapes, add rules only for observed escapes",
@@ -1279,10 +1281,13 @@
     },
     {
      "step": "safe_push --serialize runs the selected landing suites by default and refuses a push that turns one red (opt-out --no-landing-suites visible in log and history); self-test replays the causing diffs and a clean one; land after ADV's word",
-     "status": "TODO",
+     "status": "BLOCKED",
      "owner": "plan",
      "source": "ADV a5e6f2ad decision to HE, 2026-11-25, after ADV-274",
-     "accepted_at": "2026-11-25T10:32:52Z"
+     "accepted_at": "2026-11-25T10:32:52Z",
+     "blocker": "built on local branch task/he-landing-refuse-20261125 (338ed811a); lands on ADV's word once IT's join fix a86667e8c is on main",
+     "no_condition": "waits for ADV's word, which no repository condition expresses",
+     "updated_at": "2026-11-25T10:49:32Z"
     }
    ]
   }
