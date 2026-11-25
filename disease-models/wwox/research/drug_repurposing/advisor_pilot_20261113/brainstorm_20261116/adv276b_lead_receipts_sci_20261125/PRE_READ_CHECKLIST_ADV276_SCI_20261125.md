@@ -22,6 +22,14 @@ Hypothesis level; reference genotype class; nothing here is medical advice. Sour
 * **A clause in the brief that belongs to another source** (our own data set beside the paper's) must be labelled as such, or a reader will search the paper for it.
 * **A negative has a date and a query** (epistemic_discipline section 2.4): an access failure, a 503 or a timeout is a route result, not a finding.
 
+* **A table printed as an image is invisible to a text search:** look at the supplement pages (ADV-279: the fit table of 37275776 showed that a value written for the wild-type channel mixed in the patient variant).
+
+* **Sibling panel:** before carrying a number from one panel, find the same condition in every other panel (ADV-279, 30266908: 1.8 fold in panel a, 1.0 in panel b).
+
+* **A micrograph location statement covers every arrowhead in every enlarged panel,** not only the boxed regions (27845895: one intranuclear cluster overturned "outside the nucleus"). Word the blind statement the same way.
+
+* **A held file is not a read until its bytes are what its name says:** HTML error pages saved as figures or PDFs exist (ADV-279: 39 mismatches in 6,100 held files).
+
 ## Use
 
 Before the first read: write the five questions on the PREREG with the paper's consumer sentence. After the read: one line per class in the result (the class of correction this batch found), and the second reader (a blind delegate, stated model and effort) judges every sentence proposed for change. Observed rate: about two reads in five need a strict correction (16 of 37) and about three in five some change (23 of 37), on consumers that were mostly narrow earlier readings; a result with none is possible and must not be forced.

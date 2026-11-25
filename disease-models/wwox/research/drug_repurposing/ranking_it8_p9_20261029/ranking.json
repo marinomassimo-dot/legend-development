@@ -6091,7 +6091,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 2826
+   "receipt_ledger_lines": 2836
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -7100,7 +7100,7 @@
    "inputs": {
     "T1_cards": "814082cd51a7d8e3",
     "T2_pertinence": "91e62b924fe30a2a",
-    "T3_receipts": "bb42cf66c0eeefbc",
+    "T3_receipts": "5ee84fa3a6a38158",
     "T4_needs": "9ae567485b16c45c",
     "T5_pharmacology": "be0a401756e3e8c1",
     "T6_identity": "37847be0f29d1700"
@@ -7200,7 +7200,7 @@
     "41124647",
     "41274966"
    ],
-   "receipts_on_cited_pmids": 12,
+   "receipts_on_cited_pmids": 13,
    "research_objective": "broad_durable_recovery (restoring the function of residual protein)",
    "tracks": [
     "B"
@@ -10534,7 +10534,7 @@
    "inputs": {
     "T1_cards": "215e1e472d3f44ec",
     "T2_pertinence": "1959a04e90dbf178",
-    "T3_receipts": "2af097124669b66f",
+    "T3_receipts": "43b7514b02c05f61",
     "T4_needs": "a3face7aa0d2e275",
     "T5_pharmacology": "07a3719a2976ec86",
     "T6_identity": "b95d3d12430d688c"
@@ -10702,7 +10702,7 @@
     "42035940",
     "42909904"
    ],
-   "receipts_on_cited_pmids": 61,
+   "receipts_on_cited_pmids": 63,
    "research_objective": "useful_partial_benefit",
    "tracks": [
     "A"
@@ -11975,7 +11975,7 @@
    "inputs": {
     "T1_cards": "07e764647bdb542b",
     "T2_pertinence": "8b0a047e9ce40434",
-    "T3_receipts": "9ca986d8cea1f51a",
+    "T3_receipts": "361e8bf6ef39af68",
     "T4_needs": "503be10cec75e346",
     "T5_pharmacology": "5da5f03bb1490bdc",
     "T6_identity": "589dd4de63446384"
@@ -12127,7 +12127,7 @@
     "36537114",
     "37275776"
    ],
-   "receipts_on_cited_pmids": 33,
+   "receipts_on_cited_pmids": 34,
    "research_objective": "",
    "tracks": [
     "A"

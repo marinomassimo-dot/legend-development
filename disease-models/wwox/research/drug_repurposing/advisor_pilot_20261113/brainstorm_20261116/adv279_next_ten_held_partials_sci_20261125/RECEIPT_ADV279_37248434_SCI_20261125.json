@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T16:47Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T16:47:46Z",
+ "event_id": "FTR-20261125-37248434-01",
+ "evidence_basis": [
+  "coverage_map",
+  "reader: the six figure images opened, printed densities of Figures 1B and 4A recomputed; blind delegate (sonnet, high) on the Y33R densities. Classes left not_read here were not re-read in this event."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv279_next_ten_held_partials_sci_20261125/RESULT_ADV279_INC2_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261004-37248434-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "6698dd632a1b1abcb610567997439be82e13fa2afddcb4afdcf96dd29a06a447",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID37248434_Taouis2023_PMC.xml",
+ "study_id": {
+  "doi": "10.1038/s41417-023-00626-x",
+  "pmid": "37248434"
+ },
+ "workflow": "SCI ADV-279 next ten held partials, increment 2 (not a complete read)"
+}

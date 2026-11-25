@@ -20,6 +20,74 @@ sys.modules[SPEC.name] = GATE
 SPEC.loader.exec_module(GATE)
 
 
+def planted_cases():
+    """(file name, text, finding code): one positive for EVERY alternative of every search the privacy scan guards with a
+    literal, and the forms a guard special-cases. A guard that forgets an alternative loses the finding silently; this
+    list is what makes that loss visible, so a new alternative in a pattern gets a new line here with its literal there.
+    """
+    a, b = "Q230P", "c.1057-2A>G"
+    word = "".join(map(chr, (66, 105, 109, 98, 97)))
+    homonym = GateTests.homonym()
+    cases = [("id.md", "note " + word + " here\n", "DIRECT_IDENTIFIER"),
+             ("registries/corpus_seed_pubmed_20260101.jsonl", '{"fore_name": "' + word + '"}\n', "PUBLIC_BIBLIOGRAPHIC_AUTHOR")]
+    for root in ("/Users/", "/home/", "/var/folders/", "~/", "C:\\Users\\"):
+        cases.append(("path.md", "see " + root + homonym + "\n", "DIRECT_IDENTIFIER"))
+    cases.append(("mail.md", "write to someone@institute.org today\n", "EMAIL_ADDRESS"))
+    for text in ("report NG12345", "referto ID NG-12345", "REPORT id NG123456"):
+        cases.append(("r.md", text + "\n", "REPORT_IDENTIFIER"))
+    for kind in ("", "RSA ", "EC ", "OPENSSH "):
+        cases.append(("k.md", "-----BEGIN " + kind + "PRIVATE KEY-----\n", "PRIVATE_KEY"))
+    for text in ("source_scope: PRIVATE", "provenance: MIXED", "PROVENANCE : private", "Source_Scope: mixed"):
+        cases.append(("t.md", text + "\n", "NON_PUBLIC_PROVENANCE"))
+    key = "a1B2" * 8
+    cases += [("s.md", "sk-" + key + "\n", "OPENAI_KEY"), ("s.md", "ghp_" + key + "\n", "GITHUB_TOKEN"),
+              ("s.md", "github_pat_" + key + "\n", "GITHUB_TOKEN"), ("s.md", "AKIA" + "ABCDEFGH23456789" + "\n", "AWS_KEY")]
+    for text in ("password: abcdefgh12", "PASSWD=abcdefgh12", "pwd : abcdefgh12"):
+        cases.append(("s.md", text + "\n", "PASSWORD_ASSIGNMENT"))
+    for form in ("Q230P", "Q 230 P", "p.Gln230Pro", "p.(Gln230Pro)", "Gln 230 Pro"):
+        cases.append(("v.md", form + " and " + b + " occur in trans.\n", "REIDENTIFYING_VARIANT_COMBINATION"))
+    for form in ("c.1057-2A>G", "c.1057\u22122A>G", "c.1057\u20132A>G", "C. 1057 - 2 a > g"):
+        cases.append(("v.md", a + " and " + form + " are biallelic.\n", "REIDENTIFYING_VARIANT_COMBINATION"))
+    for closing in ("These two variants are in trans.", "Together they are biallelic alleles.",
+                    "The alleles together are in trans.", "Combining both variants gives a compound genotype."):
+        cases.append(("x.md", "First " + a + ".\n\nThen " + b + ".\n\n" + closing + "\n", "REIDENTIFYING_VARIANT_COMBINATION"))
+    maternal = ("maternal", "maternally", "mother", "mothers", "mother's", "materno", "materna", "madre")
+    paternal = ("paternal", "paternally", "father", "fathers", "father's", "paterno", "paterna", "padre")
+    for side, other in [(m, "paternal") for m in maternal] + [("maternal", p) for p in paternal]:
+        cases.append(("p.md", "A " + side + " change and a " + other + " change.\n", "PARENT_OF_ORIGIN_PAIRING"))
+    cases.append(("p.md", "PMID 12345678: a MATERNAL change and a FATHER change.\n", "PARENT_OF_ORIGIN_ATTRIBUTED"))
+    cases.append(("p.jsonl", '{"n": "the mother and the father"}\n', "PARENT_OF_ORIGIN_PAIRING"))
+    cases.append(("p.html", "x " * 900 + "the madre and the padre " + "y " * 900 + "\n", "PARENT_OF_ORIGIN_PAIRING"))
+    for side in maternal + paternal + ("parent-of-origin", "parent of origin"):
+        cases.append(("l.md", "The " + side + " " + a + " call.\n", "PARENT_OF_ORIGIN_VARIANT_LINKAGE"))
+    cases.append(("l.md", "The maternal " + b + " call.\n", "PARENT_OF_ORIGIN_VARIANT_LINKAGE"))
+    for reference in ("reference genotype", "genotipo di riferimento", "worked example alleles", "worked-example allele"):
+        cases.append(("g.md", "A maternal part of the " + reference + " here.\n", "PARENT_OF_ORIGIN_REFERENCE_GENOTYPE"))
+    nouns = ("the proband", "The\nproband", "proband", "index patient", "patient-specific", "patient-derived",
+             "individual patient", "index case", "case subject", "affected child", "affected individual", "study participant")
+    for noun in nouns:
+        cases.append(("c.md", "Data of " + noun + " at 5 mg/kg.\n", "CLINICAL_CASE_LINKAGE"))
+    for term in ("folinate", "folinato", "lamotrigine", "levetiracetam", "ketogenic diet", "AED titration",
+                 "clinical record", "clinical regimen", "patient cell", "patient cells", "cellule del proband",
+                 "cellule di proband", "cellule the proband"):
+        cases.append(("c.md", "A proband and " + term + " appear.\n", "CLINICAL_CASE_LINKAGE"))
+    for country in ("Italy", "Italia", "Italian"):
+        cases.append(("c.md", "A proband seen in " + country + ".\n", "GEOGRAPHIC_CASE_LINKAGE"))
+    cases.append(("c.md", "THE PROBAND SEEN IN ITALY.\n", "GEOGRAPHIC_CASE_LINKAGE"))
+    cases.append(("c.md", "The proband has " + a + ".\n\nAlso " + b + ".\n", "REIDENTIFYING_VARIANT_COMBINATION"))
+    cases.append(("c.md", "The proband carries a maternal " + a + ".\n", "PARENT_OF_ORIGIN_LINKAGE"))
+    cases.append(("c.js", "/* the affected child, " + a + ", father side */\n", "PARENT_OF_ORIGIN_LINKAGE"))
+    # non-ASCII letters that (?i) reads as i, s or k: lowercasing does not (except the Kelvin sign), so the guards must not rely on it
+    cases += [("u.md", "A \u017ftudy participant at 5 mg/kg.\n", "CLINICAL_CASE_LINKAGE"),
+              ("u.md", "PAT\u0130ENT-DERIVED line, ketogenic diet.\n", "CLINICAL_CASE_LINKAGE"),
+              ("u.md", "The affected ch\u0131ld, folinate.\n", "CLINICAL_CASE_LINKAGE"),
+              ("u.md", "A proband on a \u212aetogenic diet.\n", "CLINICAL_CASE_LINKAGE"),
+              ("u.md", "A proband on lamotr\u0131g\u0131ne.\n", "CLINICAL_CASE_LINKAGE"),
+              ("u.md", "A proband seen in \u0130taly.\n", "GEOGRAPHIC_CASE_LINKAGE"),
+              ("u.md", "pa\u017f\u017fword: abcdefgh12\n", "PASSWORD_ASSIGNMENT"),
+              ("u.md", "\u017fource_scope: PRIVATE\n", "NON_PUBLIC_PROVENANCE")]
+    return cases
+
 class GateTests(unittest.TestCase):
     def make_repo(self) -> Path:
         temp = tempfile.TemporaryDirectory()
@@ -42,6 +110,45 @@ class GateTests(unittest.TestCase):
     @staticmethod
     def homonym() -> str:
         return "".join(map(chr, (77, 97, 115, 115, 105, 109, 111))).lower()
+
+    def test_search_guards_are_in_force(self) -> None:
+        """A changed scan is searched in full, so a stale digest costs minutes and loses nothing. This says so."""
+        self.assertEqual(
+            GATE.scan_source_digest(), GATE.GUARDS_WRITTEN_FOR,
+            "The privacy scan or its patterns changed, so its search guards are OFF (correct, slower). Re-read every "
+            "guard against the changed pattern or finding, add a planted case, then set GUARDS_WRITTEN_FOR to the "
+            "first value above.")
+
+    def test_a_changed_scan_is_searched_in_full(self) -> None:
+        """An alternative added to a pattern, with no literal in its guard, must still be found."""
+        source = GATE_PATH.read_text(encoding="utf-8")
+        needle = 'private_key = re.compile(r"-----BEGIN'
+        self.assertEqual(source.count(needle), 1)
+        root = self.make_repo()
+        mutant = root.parent / (root.name + "_mutant.py")
+        self.addCleanup(mutant.unlink, missing_ok=True)
+        mutant.write_text(source.replace(needle, 'private_key = re.compile(r"QXZ-TEST-MARKER|-----BEGIN'), encoding="utf-8")
+        spec = importlib.util.spec_from_file_location("public_release_gate_mutant", mutant)
+        module = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = module
+        self.addCleanup(sys.modules.pop, spec.name, None)
+        spec.loader.exec_module(module)
+        (root / "marker.md").write_text("contains QXZ-TEST-MARKER here\n", encoding="utf-8")
+        findings = []
+        module.scan_privacy_and_secrets(root, findings)
+        self.assertIn("PRIVATE_KEY", {item.code for item in findings})
+
+    def test_every_alternative_behind_a_search_guard_is_still_reached(self) -> None:
+        """The privacy scan skips a search when a file holds none of the literals a match needs (speed, 2026-11-25).
+        One planted positive per alternative: a guard that forgets one would lose its finding without a sound."""
+        for name, text, code in planted_cases():
+            with self.subTest(name=name, text=text[:80], code=code):
+                root = self.make_repo()
+                (root / name).parent.mkdir(parents=True, exist_ok=True)
+                (root / name).write_text(text, encoding="utf-8")
+                findings = []
+                GATE.scan_privacy_and_secrets(root, findings)
+                self.assertIn(code, {item.code for item in findings})
 
     def test_jsonl_is_scanned_like_json(self) -> None:
         """`.jsonl` was absent from TEXT_SUFFIXES while `.json` was present, so every

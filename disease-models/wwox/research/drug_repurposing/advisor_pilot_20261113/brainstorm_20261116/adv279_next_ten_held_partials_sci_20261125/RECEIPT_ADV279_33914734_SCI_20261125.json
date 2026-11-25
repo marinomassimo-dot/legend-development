@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T16:36Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T16:36:52Z",
+ "event_id": "FTR-20261125-33914734-01",
+ "evidence_basis": [
+  "coverage_map",
+  "reader: supplementary figures S1 to S8 opened as images, S1 Dataset workbook read and its frequencies set against the main figures, response-to-reviewers document read in full; blind delegate (sonnet, high) on the activity statement. Classes left not_read here were not re-read in this event."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv279_next_ten_held_partials_sci_20261125/RESULT_ADV279_INC1_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261029-33914734-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "b21196f0f48864b045617e2d78f5e99ef215776f6cfca90d6fe4565be8ad63ea",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+ "study_id": {
+  "doi": "10.1371/journal.pgen.1009539",
+  "pmid": "33914734"
+ },
+ "workflow": "SCI ADV-279 next ten held partials, increment 1 (not a complete read)"
+}

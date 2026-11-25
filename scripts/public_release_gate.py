@@ -17,6 +17,7 @@ import argparse
 import fnmatch
 import functools
 import hashlib
+import inspect
 import importlib.util
 import json
 import os
@@ -711,6 +712,21 @@ def scan_privacy_cached(root: Path, findings: list[Finding], verify: bool = Fals
     return {"files": len(files), "hits": len(answered), "misses": len(misses), "stored": stored_now, "mismatch": mismatch}
 
 
+# The search guards inside `scan_privacy_and_secrets` skip a search for a file that cannot match it. They were written
+# for ONE version of the scan: this is its digest. Any other version is searched in full (slower, never blind).
+GUARDS_WRITTEN_FOR = "0de73db64a94cc0b014a5210f7aee747a21e87739d069744908babad18d9f7f1"
+
+
+def scan_source_digest() -> str:
+    """Digest of everything that decides what the privacy scan can match; "" when the source cannot be read."""
+    try:
+        parts = [inspect.getsource(part) for part in SCAN_PARTS]
+    except (OSError, TypeError):
+        return ""
+    parts += [pattern.pattern for pattern in (MATERNAL_ORIGIN, PATERNAL_ORIGIN, PARENT_ORIGIN)]
+    return hashlib.sha256("\0".join(parts).encode("utf-8")).hexdigest()
+
+
 def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
     private_identifier_digests = frozenset({
         "56a9baaa78e21fd28508d820a750a3bdab648145046ae5d2e91ef2480fcb240b",
@@ -890,6 +906,19 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
             in casefold_identifier_digests
         )
 
+    # 🔴 SPEED ONLY (HE, 2026-11-25): a search is skipped for a file that cannot match it. Every guard below names, for
+    # EVERY alternative of the pattern it guards, a literal that any match must contain. The guards are in force only
+    # while this function and its patterns are the ones they were written for (`GUARDS_WRITTEN_FOR`): after ANY change
+    # everything is searched in full until the guards have been re-read and the digest updated, which
+    # `test_search_guards_are_in_force` asks for. `test_every_alternative_behind_a_search_guard_is_still_reached`
+    # plants one positive per alternative. The guards read the lowercased text, which says the same as `(?i)` for ASCII
+    # letters except for three non-ASCII characters (İ ı ſ): a file holding any of them is searched in full. (The
+    # fourth such character, the Kelvin sign, lowercases to k and needs nothing.)
+    guarding = scan_source_digest() == GUARDS_WRITTEN_FOR
+    unusual_case = ("\u0130", "\u0131", "\u017f")
+    letter_runs = re.compile(r"[A-Za-z]{3,}")
+    harmless: set[str] = set()             # words already hashed and found not sensitive
+
     for path in iter_privacy_files(root):
         if not in_scope(root, path):
             continue
@@ -897,12 +926,33 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
         rel = str(path.relative_to(root))
         if rel in GATE_INTERNAL_FILES:
             continue
-        digest_spans = [m.span() for m in hex_run.finditer(text)]
-        digest_spans += [m.span() for m in hex_fragment.finditer(text)]
-        # Not added to `digest_spans`: these spans change no verdict, only a message.
-        short_spans = [m.span() for m in short_hex_fragment.finditer(text)]
+        lowered = text.lower()
+        search_all = not guarding or any(char in text for char in unusual_case)
+
+        def may(*literals: str) -> bool:               # for a case-insensitive pattern
+            return search_all or any(literal in lowered for literal in literals)
+
+        def has(*literals: str) -> bool:               # for a case-sensitive one
+            return search_all or any(literal in text for literal in literals)
+
+        has_230, has_1057 = has("230"), has("1057")                # variant_a, variant_b
+        has_maternal = may("materna", "materno", "mother", "madre")
+        has_paternal = may("paterna", "paterno", "father", "padre")
+        has_parent = has_maternal or has_paternal or may("parent")
+        # an identifier is a whole run of 3 to 24 letters: with none of them sensitive, the loop below finds nothing
+        new_words = set(letter_runs.findall(text)) - harmless
+        sensitive = {word for word in new_words if len(word) <= 24 and is_sensitive(word)}
+        harmless.update(new_words - sensitive)
+        if sensitive or not guarding:
+            digest_spans = [m.span() for m in hex_run.finditer(text)]
+            digest_spans += [m.span() for m in hex_fragment.finditer(text)]
+            # Not added to `digest_spans`: these spans change no verdict, only a message.
+            short_spans = [m.span() for m in short_hex_fragment.finditer(text)]
+            identifiers = identifier_token.finditer(text)
+        else:
+            digest_spans, short_spans, identifiers = [], [], ()
         uuid_spans: list[tuple[int, int]] | None = None
-        for match in identifier_token.finditer(text):
+        for match in identifiers:
             if not is_sensitive(match.group(0)):
                 continue
             if any(start <= match.start() and match.end() <= end
@@ -949,7 +999,7 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
                     "Legacy personal identifier remains in public material." + hint,
                 )
             )
-        for root_match in path_root.finditer(text):
+        for root_match in path_root.finditer(text) if has("Users", "/home/", "/var/folders/", "~/") else ():
             run = path_run.match(text, root_match.start())
             if run is None:
                 continue
@@ -966,7 +1016,7 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
                         "Personal identifier inside a machine-local path in public material.",
                     )
                 )
-        for match in email_address.finditer(text):
+        for match in email_address.finditer(text) if has("@") else ():
             address = match.group(0).lower()
             if (
                 address in PLACEHOLDER_TOKENS
@@ -983,23 +1033,31 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
                     "A non-placeholder email address remains in public material.",
                 )
             )
-        add_matches(
-            findings, root, path, text, "REPORT_IDENTIFIER",
-            report_id, "A case/report identifier remains in public material.",
-        )
-        add_matches(
-            findings, root, path, text, "PRIVATE_KEY",
-            private_key, "Private key material detected.",
-        )
-        add_matches(
-            findings, root, path, text, "NON_PUBLIC_PROVENANCE",
-            public_taint, "Explicit PRIVATE/MIXED provenance is not publishable.",
-        )
+        if has("NG") and may("report", "referto"):
+            add_matches(
+                findings, root, path, text, "REPORT_IDENTIFIER",
+                report_id, "A case/report identifier remains in public material.",
+            )
+        if has("PRIVATE KEY-----"):
+            add_matches(
+                findings, root, path, text, "PRIVATE_KEY",
+                private_key, "Private key material detected.",
+            )
+        if may("source_scope", "provenance"):
+            add_matches(
+                findings, root, path, text, "NON_PUBLIC_PROVENANCE",
+                public_taint, "Explicit PRIVATE/MIXED provenance is not publishable.",
+            )
 
-        lowered = text.lower()
         is_placeholder_file = any(token in lowered for token in PLACEHOLDER_TOKENS)
+        token_possible = {
+            "OPENAI_KEY": has("sk-"),
+            "GITHUB_TOKEN": has("ghp_", "github_pat_"),
+            "AWS_KEY": has("AKIA"),
+            "PASSWORD_ASSIGNMENT": may("passw", "pwd"),
+        }
         for code, pattern in token_patterns:
-            for match in pattern.finditer(text):
+            for match in pattern.finditer(text) if token_possible.get(code, True) else ():
                 matched = match.group(0).lower()
                 if is_placeholder_file and any(
                     token in matched for token in PLACEHOLDER_TOKENS
@@ -1015,8 +1073,11 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
         # A linked two-variant genotype can re-identify even when words such as
         # "proband" have been removed. A generic disease-level genotype rule
         # beside independent worked examples must remain allowed.
-        for block_offset, block in record_blocks(text, rel):
-            relationship = compound_linkage.search(block)
+        # both findings of a record need the two variants, or the two parental sides, inside it
+        variants_here, sides_here = has_230 and has_1057, has_maternal and has_paternal
+        for block_offset, block in record_blocks(text, rel) if variants_here or sides_here else ():
+            relationship = (compound_linkage.search(block)
+                            if search_all or (variants_here and "230" in block and "1057" in block) else None)
             if (
                 relationship
                 and variant_a.search(block)
@@ -1031,8 +1092,8 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
                         "An exact two-variant combination is linked as one genotype/case.",
                     )
                 )
-            maternal = maternal_origin.search(block)
-            paternal = paternal_origin.search(block)
+            maternal = maternal_origin.search(block) if sides_here else None
+            paternal = paternal_origin.search(block) if maternal else None
             if (
                 maternal
                 and paternal
@@ -1109,7 +1170,7 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
                     )
         # Catch a concluding cross-paragraph reassembly only when it uses
         # explicit pairing language such as "these two variants" or "together".
-        for pairing in cross_paragraph_pairing.finditer(text):
+        for pairing in cross_paragraph_pairing.finditer(text) if has_230 and has_1057 else ():
             start = max(0, pairing.start() - 2200)
             end = min(len(text), pairing.end() + 500)
             window = text[start:end]
@@ -1132,7 +1193,9 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
         # Parent-of-origin plus an exact variant is itself identifying linkage;
         # it does not require an explicit person noun. Explicit statements that
         # the relationship was removed or decoupled are allowed.
-        for marker in parent_origin.finditer(text):
+        # both findings need a parental word and, near it, a variant or the reference genotype
+        near = has_230 or has_1057 or may("reference genotype", "genotipo di riferimento", "example allele")
+        for marker in parent_origin.finditer(text) if has_parent and near else ():
             start = max(0, marker.start() - 350)
             end = min(len(text), marker.end() + 350)
             if rel.endswith(".jsonl"):
@@ -1170,7 +1233,12 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
                 )
 
         # Semantic/case-linkage checks use local windows, not isolated keywords.
-        for marker in person_context.finditer(text):
+        # a person noun is a finding only beside: both variants; a parental word and one variant; a clinical term; a country
+        person_possible = may("proband", "patient", "index case", "case subject", "affected ", "study participant") and (
+            (has_230 and has_1057) or (has_parent and (has_230 or has_1057))
+            or may("folinat", "lamotrigine", "levetiracetam", "mg/kg", "ketogenic", "titration", "clinical r",
+                   "patient cell", "cellule", "italy", "italia"))
+        for marker in person_context.finditer(text) if person_possible else ():
             local_context = text[
                 max(0, marker.start() - 120):min(len(text), marker.end() + 120)
             ]
@@ -1219,6 +1287,10 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
                         "Geography is linked to a person/proband context.",
                     )
                 )
+
+
+# bound here, not by name at call time: a test that wraps the scan must not read as a changed scan
+SCAN_PARTS = (scan_privacy_and_secrets, record_blocks, semantic_blocks)
 
 
 def scan_links(root: Path, findings: list[Finding]) -> None:

@@ -1104,10 +1104,12 @@
     },
     {
      "step": "ADV-279: read the next ten held partials by consumer count (wider held-bytes rule stated first; text-class and figure-class yield separate; two increments of five; PREREG first; blind second reading; wording to IT per batch)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "assignments/ADV-279.md (on main at 874f91438) and ADV message of 2026-11-25 on the wider rule",
-     "accepted_at": "2026-11-25T16:13:22Z"
+     "accepted_at": "2026-11-25T16:13:22Z",
+     "evidence": "main 449e8c300: brainstorm_20261116/adv279_next_ten_held_partials_sci_20261125/ (RESULT inc1 and inc2, two blind reports, ten receipts); strict 5 of 10, loose 9 of 10; consumed by ADV 2026-11-25; wording sent to IT in two messages, received",
+     "updated_at": "2026-11-25T17:28:26Z"
     }
    ]
   }

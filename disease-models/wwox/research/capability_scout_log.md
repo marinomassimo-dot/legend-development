@@ -3419,3 +3419,9 @@ verify routing and schema behaviour; universal future model obedience is not dem
 **Population.** The 83 blocks still reading `TO_TRIAGE` above, dated 2026-10-29 to 2026-11-25 (the two of 25 November carry their own outcome). Definition of yield, frozen first: `drug_repurposing/checkpoint_he_20261120/HE_RADAR_YIELD_PREREG_20261125.md`. Figures and candidates: `HE_RADAR_YIELD_20261125.md` in the same folder.
 
 **Outcome.** TRIAGED 2026-11-25 (plan), title depth, covering those blocks: 0 yield at triage time by definition; 0 adoptions; the candidates listed in the result file are discovery hits, not readings. The earlier `TO_TRIAGE` lines stay as written (the log is append-only).
+
+## 2026-11-25 — SCI (ADV-279): held files whose bytes are not what their name says
+
+**Gap (with evidence).** To count a study as readable from held bytes we lack a content check at that step: study 30362252 was selected for its two "figures", which are HTML "HTTP 404" pages saved under image names; a magic-bytes pass over 6,100 held files (host of this session; ImageMagick, pdftoppm and PyMuPDF present, ffmpeg absent) found 39 mismatches, 27 of them HTML or empty (`brainstorm_20261116/adv279_next_ten_held_partials_sci_20261125/PREREG_ADV279_AMENDMENT1_SCI_20261125.md`). Search of this log on 2026-11-25 for "magic", "error page" and "content check": no earlier record.
+
+**Outcome.** Gap recorded (new). No change made by Science and no external search; routed to Harness Engineering through ADV (acquisition step and held-file count). Interim: ADV-280 excludes error-page and empty files first. No cost, API or privacy risk. Strategic Advisor: assess these leads against the standing roadmap and current work; apply cross-session transport section 12 (Route useful signals) and contact the relevant Harness or Science owner when worthwhile.
