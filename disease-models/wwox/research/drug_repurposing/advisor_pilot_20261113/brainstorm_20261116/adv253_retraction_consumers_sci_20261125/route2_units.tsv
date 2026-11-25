@@ -1,0 +1,65 @@
+file	first_line	unit	identifiers	value_patterns
+analysis/lodz_node_discriminator_20260921.md	466	6 · NEW PRIMARIES	-	hif1_stabilised
+analysis/metabolic_differential_vulnerability_reposed_20260922.md	66	1.1 What is already held. I did not redo any of it and I claim none of it.	-	hif1_stabilised
+analysis/new_discovery_node_20260922.md	60	1.1 What I deliberately did NOT propose, because the repository already holds it	-	hgf_met_taz
+analysis/superior_node_search_20260922.md	267	❌ NODE 4 — **YAP/TAZ–TEAD de-repression** — **CONSIDERED AND KILLED BY THIS REPOSITORY'S O	-	hgf_met_taz
+analysis/wwox_activity_sensor_census_20260921.md	47	1.2 🔴 Fidelity note on R2 — declared, not hidden	-	decitabine
+analysis/wwox_activity_sensor_census_20260921.md	257	4.6 Search line 6 — degradation / stability reporters	25447306	-
+analysis/wwox_expression_boost_census_20260922.md	132	2.1 · Class A — DNA-methyltransferase inhibitors (5-aza-2'-deoxycytidine / decitabine)	28045433;28151481	decitabine;cell_1833
+analysis/wwox_expression_boost_census_20260922.md	191	2.6 · Verified zeros, each labelled	-	decitabine
+analysis/wwox_expression_boost_census_20260922.md	208	3.1 · Tumour-suppressor risk — what the repo actually measured	-	decitabine
+analysis/wwox_expression_boost_census_20260922.md	293	3.4 · CNS penetration, by class	-	decitabine
+analysis/wwox_expression_boost_census_20260922.md	305	4 · SPECIFICITY — is anything here WWOX-selective?	-	decitabine
+analysis/wwox_metabolism_reviews_audit_20260921.md	495	10.2 What the hypotheses may NOT assume	-	hif1_stabilised
+analysis/wwox_missense_stability_census_20260922.md	305	3.2 The method block — and the 100% miss rate, re-verified	25447306	-
+analysis/wwox_mtor_autophagy_axis_census_20260921.md	19	1 · The census	28045433	-
+analysis/wwox_mtor_autophagy_axis_census_20260921.md	43	1.1 What the census measures	28045433	-
+analysis/wwox_mtor_autophagy_axis_census_20260921.md	51	1.2 The finding the reasoning files did not have	28045433	cell_1833
+analysis/wwox_mtor_autophagy_axis_census_20260921.md	65	1.3 A pattern the census exposes, tagged as hypothesis	28045433	bone_metastasis
+analysis/wwox_mtor_autophagy_axis_census_20260921.md	78	2 · The reading — **did not happen**	28045433	bone_metastasis
+analysis/wwox_mtor_autophagy_axis_census_20260921.md	90	2.1 Retrievability was measured, not assumed	28045433	-
+analysis/wwox_mtor_autophagy_axis_census_20260921.md	126	3 · Does the standing negative conclusion survive?	28045433	-
+analysis/wwox_mtor_autophagy_axis_census_20260921.md	146	4 · Queries actually run, verbatim	28045433	-
+analysis/wwox_mtor_autophagy_axis_census_20260921.md	166	5 · Declared limits	28045433	-
+disease_model.md	21	Mechanistic architecture (disease-level)	28045433;28151481	hgf_met_taz
+meta/meta_metabolism_current.md	25	Supporting	-	hif1_stabilised
+meta/meta_metabolism_current.md	32	Core Findings (DATO)	-	hif1_stabilised
+registries/literature_tracking_log_current.md	4	WWOX — Literature Tracking Log	28151481;LIT-0085;LIT-0401	-
+registries/literature_tracking_log_current.md	675	LIT-0019	-	hif1_stabilised
+registries/literature_tracking_log_current.md	2727	LIT-0085	28045433;28151481;LIT-0085	bone_metastasis
+registries/literature_tracking_log_current.md	8649	LIT-0303	26041563;LIT-0303	-
+registries/literature_tracking_log_current.md	11220	LIT-0378	-	decitabine
+registries/literature_tracking_log_current.md	11772	LIT-0394	-	hgf_met_taz;bone_metastasis
+registries/literature_tracking_log_current.md	11841	LIT-0396	-	hgf_met_taz;bone_metastasis
+registries/literature_tracking_log_current.md	12013	LIT-0401	28045433;28151481;CORPUS-STUB-061;LIT-0085;LIT-0401	hgf_met_taz;bone_metastasis
+registries/paper_registry_current.md	1371	CORPUS-STUB-061	28045433;28151481;CORPUS-STUB-061	bone_metastasis
+registries/paper_registry_current.md	4258	CORPUS P303	26041563;CORPUS P303;LIT-0303	-
+registries/paper_registry_current.md	5778	CORPUS P378	-	decitabine
+registries/paper_registry_current.md	6105	CORPUS P394	-	hgf_met_taz;bone_metastasis
+registries/paper_registry_current.md	6146	CORPUS P396	-	hgf_met_taz;bone_metastasis
+registries/working_model_current.md	78	Metabolic branch refinement	28045433;28151481	hgf_met_taz
+research/commit_candidates/CC-20260914-25024751-01.md	1	COMMIT CANDIDATE — CC-20260914-25024751-01	-	decitabine
+research/commit_candidates/CC-20260914-25024751-01.md	15	1 · Why this candidate exists, and what it is not	-	decitabine
+research/commit_candidates/CC-20260914-25024751-01.md	23	2 · The identity record — promotion proposed	-	decitabine
+research/commit_candidates/CC-20260914-25024751-01.md	77	5 · Consistency surface the orchestrator must read at propagation	-	decitabine
+research/commit_candidates/CC-20260914-25024751-01.md	85	6 · Reading debt to queue (the queue is not this actor's path)	-	decitabine
+research/commit_candidates/CC-20260914-LIT-VOCAB-01.md	8	1 · The defect	LIT-0401	-
+research/commit_candidates/CC-20260914-LIT-VOCAB-01.md	21	2 · The proposed change	LIT-0401	-
+research/commit_candidates/CC-20260914-LIT-VOCAB-01.md	44	4 · What this candidate does not do	LIT-0085;LIT-0401	-
+research/commit_candidates/CC-20260914-LIT-VOCAB-01.md	88	BATCH DISPOSITION — `BATCH_20260926_LITVOCAB` (2026-09-26, ACTOR_ID `plan`), append-only	LIT-0085;LIT-0401	-
+research/commit_candidates/CC-20260922-TAU-DIRECTION-01.md	116	5 · 🔴 The wave's main output is a NEGATIVE, and it should be recorded as one	-	hgf_met_taz
+research/commit_candidates/CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01.md	38	LOCATOR TRIPLES FOR BLIND AUDIT	-	hif1_stabilised
+research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md	42	4 · Reading debts carried	25447306	hgf_met_taz
+research/discovery_ledger_current.md	406	DL-BIO-005 — Pannello funzionale WWOX–HIF1α/GLUT1/PKM2 + alanina	-	hif1_stabilised
+research/discovery_ledger_current.md	436	DL-MECH-025 — Retraction-dependency cluster WWOX/HIF/Met nelle metastasi ossee	28045433;28151481;DL-MECH-025	decitabine;hgf_met_taz;bone_metastasis
+research/discovery_ledger_current.md	610	Failure mode registrati (run 2026-07-09)	26041563;CORPUS P303	-
+research/drug_repurposing/ranking_it8_p9_20261029/informative_negatives_it21.tsv	5	NEG-04	-	hif1_stabilised
+research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv	17	7	-	hif1_stabilised
+research/drug_repurposing/ranking_it8_p9_20261029/investigations_it20.tsv	17	INV-16	-	hif1_stabilised
+research/drug_repurposing/ranking_it8_p9_20261029/units.tsv	38	U32	-	hif1_stabilised
+research/drug_repurposing/wwox_function_reference_it6_20261029.md	11	2. Reading depth and re-read declarations	25447306	-
+research/drug_repurposing/wwox_function_reference_it6_20261029.md	30	3. Comparison table (what each assay measured and with which controls)	25447306	hgf_met_taz;hif1_bone;bone_metastasis
+research/drug_repurposing/wwox_function_reference_it6_20261029.md	52	4. Transferability and counter-evidence, row by row	-	hif1_stabilised
+research/drug_repurposing/wwox_function_reference_it6_20261029.md	136	11. Items marked UNVERIFIED	-	hgf_met_taz
+research/full_text_queue_current.md	6718	FT-139	-	decitabine
+research/record_repair_queue_current.md	497	REP-18 · ✅ Verified clean — retraction hygiene	25447306	-

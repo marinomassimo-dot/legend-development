@@ -993,6 +993,29 @@
      "accepted_at": "2026-11-25T03:20:46Z",
      "evidence": "brainstorm_20261116/adv249_unread_lead_primaries_sci_20261125/RESULT_ADV249_UNREAD_LEAD_PRIMARIES_SCI_20261125.md: 10 never-read primaries, 3 readable plus one outside the class; 1 of 3 overstates (2 of 4); four receipts",
      "updated_at": "2026-11-25T03:26:15Z"
+    },
+    {
+     "step": "ADV-253: review PMID 28045433 Figure 3 against the retracted panels of PMID 28151481 (notice PMID 35680840): PREREG first, list consumers by two routes, per-row disposition depends/independent/unclear, IT wording",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "source": "ADV-253",
+     "accepted_at": "2026-11-25T04:05:35Z",
+     "updated_at": "2026-11-25T04:05:47Z"
+    },
+    {
+     "step": "ADV-254: for the ledger leads with no primary PMID that consumers lean on, identify (not read) a primary: PREREG first, per lead found/not found/model inference, consumers' wording labels",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "source": "ADV-254",
+     "accepted_at": "2026-11-25T04:05:35Z",
+     "updated_at": "2026-11-25T04:16:42Z"
+    },
+    {
+     "step": "ADV-255: human lactate per-report table from held sources (DL-BIO-009 test), check Chong 2023 against its source, PREREG with the prediction first",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-255",
+     "accepted_at": "2026-11-25T04:16:16Z"
     }
    ]
   }
@@ -1758,6 +1781,27 @@
    "at": "2026-11-25T03:20:46Z",
    "source": "ADV-249",
    "step_sha256": "7b8630dc70b7",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T04:05:35Z",
+   "source": "ADV-253",
+   "step_sha256": "4b71ae177dbd",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T04:05:35Z",
+   "source": "ADV-254",
+   "step_sha256": "028815ecd9a1",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T04:16:16Z",
+   "source": "ADV-255",
+   "step_sha256": "b702af71f67e",
    "reopened_block": false,
    "authorised_by": null
   }
