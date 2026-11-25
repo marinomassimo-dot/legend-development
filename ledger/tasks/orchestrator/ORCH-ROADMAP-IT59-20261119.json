@@ -351,11 +351,12 @@
     },
     {
      "step": "ADV-241: re-triage the ten oldest-touched OPEN open-question rows against everything held or landed since each last touch (PREREG first, two-hit read for absences); answer one answerable row or queue it as a portfolio candidate for ADV",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-241 (ADV message 2026-11-25; assignments/ADV-241.md)",
      "accepted_at": "2026-11-25T02:04:24Z",
-     "updated_at": "2026-11-25T02:04:32Z"
+     "updated_at": "2026-11-25T02:28:35Z",
+     "evidence": "landed on main 8f86db944 (safe_push, gate PASS, ls-remote verified); folder brainstorm_20261116/it_adv241_20261125 (PREREG with amendment, RESULT, map script); 11 map rows dated, DC-05 not checked and carried; DC-04 repair (NP1B4 and NP5A3 verdicts, triggers, default view pages and package) landing from task/it-adv241b-20261125; delivered to ADV 2026-11-25"
     },
     {
      "step": "Organoid one-clone wording (SCI ADV-244 section 6): place it in the card-lane consumers K01, D01, D02, M01, E02, I01 and INV-16 by the ordinary route and carry CLAIM 002 and RP-008 through a candidate and ADV; each consumer opened in place before listing",
