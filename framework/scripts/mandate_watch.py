@@ -1375,10 +1375,27 @@ def published_copies(root: Path, trees: list[Path], task: str, ref: str = "devel
     return found
 
 
+def note_checkout_behind(root: Path, ref: str = "development/main", say: bool = True) -> list[str]:
+    """The watch classifies records read from `root`. When `root` is behind the published ref on task records, say it (2026-11-25: root stayed 1,535 commits behind for four days and one
+    resume carried a stale step count). No fetch: the ref is as the last fetch left it. Logged once per set of files, printed at every run. Never changes a classification."""
+    if not (root / ".git").exists():
+        return []                                                  # not a checkout: nothing to compare with, and no process to start
+    touched = mc.files_behind(root, ref, (":(glob)ledger/tasks/*/*.json",)) or []
+    if _load("checkout-behind") != {"files": touched}:
+        _save("checkout-behind", {"files": touched})
+        if touched:
+            log_event("checkout_behind", root=str(root), files=touched[:10], count=len(touched))
+    if touched and say:
+        print(f"CHECKOUT_BEHIND {root}: {len(touched)} task record(s) are older here than on {ref} ({', '.join(touched[:3])}{', …' if len(touched) > 3 else ''}); "
+              "records read from here may be stale (the campaign home is advanced with `strategic_advisor.py refresh`)")
+    return touched
+
+
 def _check_all(a) -> int:
     sessions = list_sessions()
     results = []
     root = Path(a.root)
+    note_checkout_behind(root, say=not getattr(a, "json", False))
     candidates = {}
     for tree in registered_worktrees(root):
         for task in open_tasks(tree):

@@ -438,6 +438,23 @@ def _published_tip() -> tuple[str, str]:
     return tip, warning
 
 
+def home_inputs(campaign: Path | None) -> list[str]:
+    paths = list(HOME_INPUTS)
+    folder = Path(campaign).resolve() if campaign else None
+    if folder and ROOT.resolve() in folder.parents:
+        paths.append(folder.relative_to(ROOT.resolve()).as_posix())
+    return paths
+
+
+def behind_line(campaign: Path, tip: str) -> str:
+    """The tick reads this checkout's files: say when they are older than the ref it observed. A line, never a refusal."""
+    touched = mc.files_behind(ROOT, tip, home_inputs(campaign)) if tip else []
+    if not touched:
+        return ""
+    return (f"CHECKOUT BEHIND on {len(touched)} file(s) this tick read ({', '.join(touched[:3])}{', …' if len(touched) > 3 else ''}): "
+            f"run `strategic_advisor.py refresh --campaign {campaign}`, then tick again")
+
+
 def stale_refusal(campaign: Path) -> str:
     """`assign` and `deliver` read this checkout's files: refuse while a published commit this checkout lacks touches one of them."""
     tip, warning = _published_tip()
@@ -445,14 +462,9 @@ def stale_refusal(campaign: Path) -> str:
         print("WARNING: " + warning, file=sys.stderr)
     if not tip:
         return ""
-    paths = list(HOME_INPUTS)
-    folder = Path(campaign).resolve()
-    if ROOT.resolve() in folder.parents:
-        paths.append(folder.relative_to(ROOT.resolve()).as_posix())
-    done = _git_run("log", "--format=", "--name-only", f"HEAD..{tip}", "--", *paths)
-    if done.returncode != 0:
-        return f"REFUSED: cannot compare this checkout with {PUBLISHED_REMOTE}/main: {done.stderr.strip()[:160]}"
-    touched = sorted({line for line in done.stdout.splitlines() if line.strip()})
+    touched = mc.files_behind(ROOT, tip, home_inputs(campaign))
+    if touched is None:
+        return f"REFUSED: cannot compare this checkout with {PUBLISHED_REMOTE}/main"
     if not touched:
         return ""
     return (f"REFUSED: this checkout is behind {PUBLISHED_REMOTE}/main on {len(touched)} file(s) that `assign` and `deliver` read ({', '.join(touched[:3])}{', …' if len(touched) > 3 else ''}). "
@@ -1799,6 +1811,9 @@ def tick(campaign: Path) -> dict[str, Any]:
     if verdict == "NONE" and not first and obs["portfolio"].get("actionable"):
         # ADV-047: NONE answers "did an event, a roadmap change or a met resume condition arrive", not "is there work"; the tick line itself names the ready rows so a quiet hour is not read as an empty portfolio
         why += "; this says nothing about opportunities, ready portfolio rows: " + ", ".join(obs["portfolio"]["actionable"][:6])
+    behind = behind_line(campaign, ref.get("sha", "")) if ref["state"] != "NO_REMOTE" else ""
+    if behind:
+        why += "; " + behind
     activity = session_activity(now, recipients=_budget(campaign).get("recipients"))
     named = idle_without_blocker((activity.get("recipients") or {}), obs["waits"]) if activity.get("available") else []
     if not activity.get("available"):
