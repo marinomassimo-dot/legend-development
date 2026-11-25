@@ -1145,6 +1145,13 @@
      "accepted_at": "2026-11-25T20:22:29Z",
      "evidence": "PREREG 6854b24d frozen 2026-11-25T20:23Z; rejecting observation met (PDK3 fails in D2 global KO 0.689 and D3 cortex 1.020); blind reader S1-S5 reconciled; RESULT_ADV283_SCI_20261125.md",
      "updated_at": "2026-11-25T20:29:44Z"
+    },
+    {
+     "step": "ADV-284: equivalence-margin audit of the six 'not different from WT' restoration rows (MARGIN GIVEN / DERIVABLE / NOT DERIVABLE), PREREG first, blind reader on the sentences",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "assignments/ADV-284.md",
+     "accepted_at": "2026-11-25T20:44:55Z"
     }
    ]
   }
@@ -2029,6 +2036,13 @@
    "at": "2026-11-25T20:22:29Z",
    "source": "assignments/ADV-283.md",
    "step_sha256": "b3aaf416b0ad",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T20:44:55Z",
+   "source": "assignments/ADV-284.md",
+   "step_sha256": "6902c49aedc3",
    "reopened_block": false,
    "authorised_by": null
   }
