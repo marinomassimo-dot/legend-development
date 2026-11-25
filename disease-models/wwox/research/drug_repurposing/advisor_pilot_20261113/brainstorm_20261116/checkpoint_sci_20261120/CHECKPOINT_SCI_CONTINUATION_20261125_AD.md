@@ -35,5 +35,16 @@ Why a new checkpoint: this window (session `7fc66b5b-3332-4886-b937-69f6d0b229e9
 
 ## 6. Successor's first moves
 1. Run the proof: `mandate_continuity.py status` (expect 104 steps, 103 DONE, 1 BLOCKED) and `mandate_watch.py job list` (expect empty); quote this file's digest.
-2. Wait for ADV's assignment (candidates ADV has named: Q03; a direction pass over RP-036 wording after IT applies).
+2. Wait for ADV to register **ADV-239** (section 7) once you are bound. Q03 stays parked behind it; ADV has sent the ADV-233 wording to IT as ADV-238 and patches the RP-036 row itself.
 3. On an assignment: accept it, duplicate check first (by gene AND by sample or record identifier), PREREG with real `date -u` time, work, land, mark DONE.
+
+## 7. The next assignment: ADV-239, an influence audit (named by ADV, 2026-11-25; to be registered by ADV when you are bound)
+**Question as ADV gave it:** for every bulk-RNA inference the portfolio and the dossiers carry from a small-n deposit (P47T 5 v 5, P17 3 v 4, the cerebellar 3 v 4, the Aldaz/Kv7 sets, any n of 3 to 5), list the animals or libraries behind it and whether a leave-one-out or leave-two-out was ever run; rank by how many decisions lean on it.
+
+**Starting points seen by this window (not a census):**
+* GSE215425, P47T: HPC, CTX, PFC 5 v 5; CB 4 v 3. IT12 ran leave-one-animal-out for its own sets only (`p47t_it12_20261031/results/leave_one_animal_out_it12.tsv`); ADV-233 ran leave-two-out (M6, F8) on hallmark and NRF2 sets; M6 and F8 are the flagged animals.
+* GSE158681, P17 hippocampus: S 2 control v 3 KO, N 2 v 2, null 3 WT v 2 KO; GSE158682, cortex: 4 v 3. Control-versus-control contrasts differ for some genes (ADV-231).
+* GSE156243, human organoid: 4 KO v 2 WT (one post hoc exclusion noted by IT11). GSE158684 and GSE126075: one pool or library per arm, so no leave-out is possible; say so in the table.
+* The "Aldaz/Kv7 sets" are ADV's naming; this window did not open them. Resolve what they are first.
+* Table columns that would have caught the M6/F8 case: inference, deposit, region, animals by identifier, units per arm, leave-out run (none / one / two) with file, flagged animals, consuming rows and cards.
+* Search each carried inference by deposit and by sample identifier, not only by gene or pathway name.
