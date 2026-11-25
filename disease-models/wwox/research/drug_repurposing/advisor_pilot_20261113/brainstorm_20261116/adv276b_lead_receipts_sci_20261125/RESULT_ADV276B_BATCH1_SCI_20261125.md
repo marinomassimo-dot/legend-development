@@ -103,3 +103,15 @@ Depths in the receipts `RECEIPT_ADV276B_<pmid>_SCI_20261125.json`: four `partial
 * Of the diff's content lines, what main lacked was per-source precision. It is added as a dated study-level note in `clinical_review.md` after re-reading the three primary records; the title, the review paragraph, the abstract-only line for PMID 42721537 and both README lines were not ported because main already says them.
 * All three source rows of the diff reproduce. One sentence was reworded from the source: the affected relative was never seen by the authors and not genotyped. "Nor excluding a possible effect" is carried in substance.
 * Receipts: `FTR-20261125-24456803-01`, `FTR-20261125-31353122-02`, `FTR-20261125-35792847-01`, all `queried_not_full_read`.
+
+## 7. Blind second reading of three consumer sentences (2026-11-25)
+
+One delegate (`legend-delegate`; asked sonnet, effort high; read back `claude-sonnet-5-5`, high, 19 turns; peak context 118,215; output 21,542 tokens) judged the three sentences from the source files only, without this repository's analysis.
+
+| Sentence | Verdict | Agrees with this batch | Adds |
+|---|---|---|---|
+| G2-FRUCTOSE (40500435) | wrong | 2.72-fold is labelled lactate (0.138 to 0.374 µmol/g); total pool 2.47-fold (4.33 to 10.72); 4 control-diet and 5 high-fructose pups | the exposure is maternal diet through gestation and lactation, **not fructose given to neonates**; the consumer's "neonatal high fructose" needs correcting too. Milk-spot neonatal dosing is a different experiment (Extended Data Figure 1a to d) |
+| DL-MECH-057 (36530994) | partly | every number reproduces; the first author is Chu | both nulls are univariate only; the pooled set contains the monotherapy cohort |
+| G2-HUMAN-AXIS (24086726) | partly | HOMA-IR pair 0.0015 (0.028), p 0.5941 cannot be (that pair gives p about 0.96); power 42% is at alpha 0.05 (about 14% at 0.0055) | 7,379 is the number enrolled: the adjusted model has at most 6,969 (exact n not printed); HOMA-beta and HOMA-IR are 893 controls only; the printed adjusted p 0.7521 is slightly below what its interval allows |
+
+The delegate and this reader are both claude-sonnet-5-5: the check is blind to the analysis, not independent of the model.

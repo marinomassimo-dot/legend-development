@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T12:44Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T12:44:28Z",
+ "event_id": "FTR-20261125-42441989-01",
+ "evidence_basis": [
+  "coverage_map",
+  "XML: abstract, introduction, illustrative case and discussion read; figure images not opened."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276b_lead_receipts_sci_20261125/RESULT_ADV276D_ROUTED_LEADS_SCI_20261125.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "8063b308c13c4e1ca10f11099cbd30bb61d1dcc0f840e3c33ee0c2ade5c201d4",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42441989_VigabatrinMRI2026_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3171/CASE26183",
+  "pmid": "42441989"
+ },
+ "workflow": "SCI ADV-276 continued: 30202070 and routed leads (not a complete read)"
+}
