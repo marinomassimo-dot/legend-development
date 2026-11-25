@@ -1244,6 +1244,50 @@
      "accepted_at": "2026-11-25T08:35:39Z",
      "evidence": "9e434d902 on main (gate PASS): xlsx_to_text.py reads .xls; 12 of 12 held BIFF files open, the 13th is a saved reCAPTCHA page (PMID 24932569) and is named NOT_READ; consumer SCI told",
      "updated_at": "2026-11-25T09:02:09Z"
+    },
+    {
+     "step": "Close checkpoint P items 1 and 3: send ADV the per-suite CI times of f093ab03 and the CI verdict of IT's red-main fix once on main",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "CHECKPOINT_HE_20261125_P section 2 items 1 and 3",
+     "accepted_at": "2026-11-25T09:42:23Z",
+     "evidence": "per-suite times of #2428 and verdict of #2434 (failure on the join only) sent to ADV 2026-11-25",
+     "updated_at": "2026-11-25T10:49:32Z"
+    },
+    {
+     "step": "Replay landing_suites.py against the red CI streaks on main, count escapes, add rules only for observed escapes",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "HE proposal to ADV 2026-11-25 (operator standing rule: no idle laboratory)",
+     "accepted_at": "2026-11-25T09:42:23Z",
+     "evidence": "same work as ADV-274; ADV-274: published 6dcfa4935 (gate PASS, ls-remote); record checkpoint_he_20261120/HE_RED_STREAKS_ADV274_20261125.md; sent to ADV 2026-11-25",
+     "updated_at": "2026-11-25T10:27:18Z"
+    },
+    {
+     "step": "From the first CI run holding 670251825: name the suites that hold the gate's 50-88 minutes and propose the one change with the best minutes per risk",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad message to HE 9229d112, 2026-11-25, item 2",
+     "accepted_at": "2026-11-25T09:42:47Z"
+    },
+    {
+     "step": "ADV-274: attribute every red streak of gate runs #2340-#2432, replay the landing selection, count named and escaped, median hours red, add rules only for observed escapes",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-274",
+     "accepted_at": "2026-11-25T09:43:25Z",
+     "evidence": "ADV-274: published 6dcfa4935 (gate PASS, ls-remote); record checkpoint_he_20261120/HE_RED_STREAKS_ADV274_20261125.md; sent to ADV 2026-11-25",
+     "updated_at": "2026-11-25T10:27:18Z"
+    },
+    {
+     "step": "safe_push --serialize runs the selected landing suites by default and refuses a push that turns one red (opt-out --no-landing-suites visible in log and history); self-test replays the causing diffs and a clean one; land after ADV's word",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad decision to HE, 2026-11-25, after ADV-274",
+     "accepted_at": "2026-11-25T10:32:52Z",
+     "blocker": "built on local branch task/he-landing-refuse-20261125 (338ed811a); lands on ADV's word once IT's join fix a86667e8c is on main",
+     "no_condition": "waits for ADV's word, which no repository condition expresses",
+     "updated_at": "2026-11-25T10:49:32Z"
     }
    ]
   }
@@ -2205,6 +2249,41 @@
    "at": "2026-11-25T08:35:39Z",
    "source": "ADV message to HE 00c83fd0, 2026-11-25 ~08:37Z, item 4",
    "step_sha256": "3f493f001f7d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T09:42:23Z",
+   "source": "CHECKPOINT_HE_20261125_P section 2 items 1 and 3",
+   "step_sha256": "7e1fcadf4249",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T09:42:23Z",
+   "source": "HE proposal to ADV 2026-11-25 (operator standing rule: no idle laboratory)",
+   "step_sha256": "8f03b5802c8e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T09:42:47Z",
+   "source": "ADV a5e6f2ad message to HE 9229d112, 2026-11-25, item 2",
+   "step_sha256": "a403ffde8a05",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T09:43:25Z",
+   "source": "ADV-274",
+   "step_sha256": "8e4c7d6859be",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T10:32:52Z",
+   "source": "ADV a5e6f2ad decision to HE, 2026-11-25, after ADV-274",
+   "step_sha256": "b3fd708046a8",
    "reopened_block": false,
    "authorised_by": null
   }

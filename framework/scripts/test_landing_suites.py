@@ -62,6 +62,16 @@ class Selection(unittest.TestCase):
         got = names([("M", "disease-models/wwox/research/drug_repurposing/needs/needs.json")])
         self.assertLessEqual({"test_candidate_tree_freshness.py", "test_ranking_it8.py"}, got)
 
+    def test_a_current_file_outside_the_registries_selects_the_batch_queue(self) -> None:
+        got = names([("M", "disease-models/wwox/research/discovery_ledger_current.md")])
+        self.assertIn("test_batch_queue.py", got)
+        self.assertNotIn("test_batch_queue.py", names([("M", "disease-models/wwox/research/notes.md")]))
+
+    def test_a_mechanism_map_change_selects_only_the_curated_link_class_of_the_join(self) -> None:
+        got = ls.select([("M", "disease-models/wwox/analysis/mechanism_intervention_map.md")], REPO)
+        self.assertIn("framework/scripts/test_repurposing_join.py CuratedLink", got)
+        self.assertNotIn("framework/scripts/test_repurposing_join.py", got)
+
     def test_a_path_no_rule_knows_selects_nothing(self) -> None:
         self.assertEqual(set(), names([("M", "disease-models/wwox/research/x/notes.txt")]))
 
