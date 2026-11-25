@@ -9888,7 +9888,7 @@
     "P_pharmacology": {
      "brain_penetration": "UNKNOWN",
      "human_exposure": "UNKNOWN",
-     "potency_with_assay_context": "NOT WWOX EVIDENCE, class level (HE ADV-098 batch 9, public databases, 2026-11-20): five GSK-3 inhibitors of non-lithium chemistry exist, with beta potencies in vitro from sub-nanomolar to micromolar depending on the document and assay (one weak 2011 fluorescence assay of AR-A014418 is set apart by…",
+     "potency_with_assay_context": "NOT WWOX EVIDENCE, class level (HE ADV-098 batch 9, public databases, 2026-11-20): five non-lithium GSK-3 inhibitors were queried, with beta potencies in vitro from sub-nanomolar to micromolar depending on the document and assay (tideglusib also has bound-only rows above ten and above thirty microm…",
      "record": "",
      "state": "not in the pharmacological comparison table; card text only (potency, exposure and nervous-system data UNKNOWN unless the card says otherwise)"
     },
