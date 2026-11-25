@@ -1,0 +1,29 @@
+accession	species	system	exposure	n_control	n_treated	tier	H1F0_ratio	CDKN1A_ratio	WWOX_row_ratio_p_call	series_call	same_deposit_has_a_passing_contrast
+GSE64123	human	hESC embryoid-body neuroectoderm (ESNATS UKK)	VPA 0.33 mM, 1 days	11	6	A	1.414	0.903	51741_at: 1.144 (p=0.00084; not distinguished)	not distinguished	yes
+GSE64123	human	hESC embryoid-body neuroectoderm (ESNATS UKK)	VPA 1 mM, 7 days	12	6	A	1.421	1.073	51741_at: 1.511 (p=3.48e-12; up)	up	yes
+GSE214885	human	MECP2-null hESC neurons/organoids, day 8	VPA	2	2	A	1.023	0.804	ENSG00000186153.17: 0.922 (p=None; descriptive)	descriptive (n<3)	no
+GSE214885	human	MECP2-null hESC neurons/organoids, day 20	VPA	2	2	A	0.965	1.056	ENSG00000186153.17: 0.867 (p=None; descriptive)	descriptive (n<3)	no
+GSE256142	human	iPSC brain organoids d90 (control line)	VPA	2	2	A	0.919	0.863	ENSG00000186153: 1.895 (p=None; descriptive)	descriptive (n<3)	no
+GSE256142	human	iPSC brain organoids d90 (Dravet line)	VPA	2	2	A	0.547	1.14	ENSG00000186153: 0.494 (p=None; descriptive)	descriptive (n<3)	no
+GSE222509	human	iPSC neurons day 64	VPA 200 ug/ml, 24 h	3	3	A	1.358	0.756	51741: 1.343 (p=0.114; not distinguished)	not distinguished	no
+GSE166297	human	ESC-derived neural progenitors / neuron-astrocyte co-culture	VPA IC20	8	8	A	0.905	0.616	51741: 1.175 (p=None; descriptive)	descriptive (n<3)	yes
+GSE164788	human	ReNcell VM neural cells (v-myc immortalised progenitor line)	vorinostat 1 uM	12	3	A	1.687	2.376	ENSG00000186153: 1.413 (p=0.428; near background)	near background	yes
+GSE164788	human	ReNcell VM neural cells (v-myc immortalised progenitor line)	entinostat 1 uM	11	3	A	3.034	3.02	ENSG00000186153: 0.719 (p=0.685; near background)	near background	yes
+GSE197966	human	NT2-N neuron-like cells (teratocarcinoma origin)	VPA	4	4	B	1.276	0.789	51741: 1.248 (p=0.043; not distinguished)	not distinguished	no
+GSE17735	mouse	frontal cortex, wild type, chronic in vivo	VPA chronic	3	5	A	1.397	0.842;0.875;0.942	ILMN_1252913: 1.2 (p=0.0972; near background) | ILMN_2480178: 0.88 (p=0.156; not distinguished) | ILMN_2485055: 1.046 (p=0.761; not distinguished)	not distinguished	no
+GSE17735	mouse	hippocampus, wild type, chronic in vivo	VPA chronic	5	5	A	1.005	1.025;1.036;1.155	ILMN_1252913: 0.964 (p=0.474; near background) | ILMN_2480178: 0.979 (p=0.785; not distinguished) | ILMN_2485055: 1.005 (p=0.891; not distinguished)	not distinguished	no
+GSE17735	mouse	striatum, wild type, chronic in vivo	VPA chronic	3	5	A	1.397	1.174;0.969;0.991	ILMN_1252913: 0.919 (p=0.678; near background) | ILMN_2480178: 1.111 (p=0.271; not distinguished) | ILMN_2485055: 1.298 (p=0.00607; up)	up	no
+GSE17735	mouse	brain stem, wild type, chronic in vivo	VPA chronic	3	6	A	0.748	0.848;1.032;0.812	ILMN_1252913: 0.942 (p=0.645; near background) | ILMN_2480178: 1.182 (p=0.124; not distinguished) | ILMN_2485055: 0.91 (p=0.422; not distinguished)	not distinguished	no
+GSE42904	mouse	E18 forebrain after maternal dosing	VPA prenatal	3	3	A	0.849;0.817	0.831;1.102	1416334_at: 0.944 (p=0.699; not distinguished) | 1431942_at: 1.2 (p=0.349; not distinguished) | 1431960_at: 0.907 (p=0.624; not distinguished) | 1438517_at: 0.891 (p=0.596; not distinguished)	not distinguished	yes
+GSE101239	mouse	E15 forebrain neural stem/progenitor cells	VPA 300 mg/kg/day maternal, E12-E14	3	3	A	1.017	1.573	Wwox: 0.936 (p=0.698; near background)	near background	no
+GSE56780	mouse	half brain, Mecp2 knockout, in vivo	VPA	3	3	A	0.855;0.959	0.784;0.938	1416334_at: 0.833 (p=0.13; not distinguished) | 1431942_at: 1.721 (p=0.221; not distinguished) | 1431960_at: 0.934 (p=0.722; not distinguished) | 1438517_at: 0.81 (p=0.29; not distinguished)	not distinguished	no
+GSE43051	mouse	hippocampus, wild type, standard cage	TSA in vivo	3	3	A	0.987	1.069	10575706: 1.036 (p=0.647; not distinguished)	not distinguished	no
+GSE29419	mouse	frontal cortex	SAHA 20 mg/kg x 21 days	3	3	A	0.976	1.052	10575706: 0.955 (p=0.419; not distinguished)	not distinguished	no
+GSE62240	mouse	hippocampus, Tg model, chronic	SAHA chronic	7	3	A	0.95	1.041	17505881: 1.089 (p=0.23; not distinguished)	not distinguished	no
+GSE132382	mouse	L4-L6 dorsal root ganglia after axotomy	MS-275 12 mg/kg	3	3	A	1.282	1.275	Wwox: 1.042 (p=0.335; not distinguished)	not distinguished	no
+GSE176194	mouse	embryonic cortex, Baf155 knockout	TSA	8	8	A	0.779	1.07	ENSMUSG00000004637: 1.079 (p=0.982; not distinguished)	not distinguished	no
+GSE115205	human	iPSC-derived neurons, tau A152T line	SAHA 1 uM	5	4	A	1.333	0.669	ENSG00000186153: 1.998 (p=0.00168; up)	up	yes
+GSE115205	human	iPSC-derived neurons, tau A152T line	SAHA 2.5 uM	5	5	A	1.385	0.507	ENSG00000186153: 2.072 (p=6.39e-05; up)	up	yes
+GSE115206	mouse	primary cortical neurons, control virus	SAHA 1 uM	5	6	A	not found	0.996	ENSMUSG00000004637: 1.919 (p=2.48e-08; up)	up	no
+GSE160374	mouse	ventral tegmental area, wild type, in vivo	VPA	3	8	A	1.024	1.4	Wwox: 1.177 (p=5.68e-05; not distinguished)	not distinguished	no
+GSE328496	mouse	hippocampal neurons, trisomic (Ts65Dn-type) mice, in vivo	SAHA	4	3	A	1.027	1.341	ENSMUSG00000004637: 1.156 (p=0.405; not distinguished)	not distinguished	no

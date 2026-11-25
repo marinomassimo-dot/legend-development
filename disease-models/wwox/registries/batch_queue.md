@@ -85,8 +85,8 @@ time; it does not redistribute or license the article text.
 | **Catalogued, never processed** — the reading debt | 113 | 16% |
 | Known to the tracking log only | 71 | 10% |
 | Processed from the abstract | 12 | 2% |
-| Partial full text read | 86 | 12% |
-| Full text read | 168 | 24% |
+| Partial full text read | 87 | 12% |
+| Full text read | 167 | 24% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
 `fulltext_read_receipts.jsonl`. Historical registry-only full-text declarations remain
@@ -666,6 +666,7 @@ for an entirely unprocessed record.
 | [27845895](https://pubmed.ncbi.nlm.nih.gov/27845895/) | 2017 | ✅ | partial full text | PAPER 530 | Hyaluronan activates Hyal-2/WWOX/Smad4 signaling and causes bubbling cell death when the signaling complex is overexpressed. |
 | [27773744](https://pubmed.ncbi.nlm.nih.gov/27773744/) | 2017 | ✅ | partial full text | PAPER 404 | Fhit and Wwox loss-associated genome instability: A genome caretaker one-two punch. |
 | [27339895](https://pubmed.ncbi.nlm.nih.gov/27339895/) | 2016 | ✅ | partial full text | PAPER 362 | Role of WW Domain-containing Oxidoreductase WWOX in Driving T Cell Acute Lymphoblastic Leukemia Maturation. |
+| [26857392](https://pubmed.ncbi.nlm.nih.gov/26857392/) | 2016 | ✅ | partial full text | receipt FTR-20261125-26857392-01 | ✎ corrected — Relevance of Sp Binding Site Polymorphism in WWOX for Treatment Outcome in Pancreatic Cancer. |
 | [25779665](https://pubmed.ncbi.nlm.nih.gov/25779665/) | 2015 | ✅ | partial full text | PAPER 411 | UV irradiation/cold shock-mediated apoptosis is switched to bubbling cell death at low temperatures. |
 | [25612104](https://pubmed.ncbi.nlm.nih.gov/25612104/) | 2015 | ✅ | partial full text | PAPER 369 | Epigenetic and genetic alterations affect the WWOX gene in head and neck squamous cell carcinoma. |
 | [25331887](https://pubmed.ncbi.nlm.nih.gov/25331887/) | 2014 | ✅ | partial full text | PAPER 027 | WWOX, the common fragile site FRA16D gene product, regulates ATM activation and the DNA damage response. |
@@ -758,7 +759,6 @@ for an entirely unprocessed record.
 | [27655721](https://pubmed.ncbi.nlm.nih.gov/27655721/) | 2016 | ✅ | full text | PAPER 368 | Functional genetic variant in the Kozak sequence of WW domain-containing oxidoreductase (WWOX) gene is associated with oral cancer risk. |
 | [27550453](https://pubmed.ncbi.nlm.nih.gov/27550453/) | 2016 | ✅ | full text | PAPER 065 | WWOX and p53 Dysregulation Synergize to Drive the Development of Osteosarcoma. |
 | [27495153](https://pubmed.ncbi.nlm.nih.gov/27495153/) | 2016 | ✅ | full text | PAPER 049 | W44X mutation in the WWOX gene causes intractable seizures and developmental delay: a case report. |
-| [26857392](https://pubmed.ncbi.nlm.nih.gov/26857392/) | 2016 | ✅ | full text | PAPER 050 | ✎ corrected — Relevance of Sp Binding Site Polymorphism in WWOX for Treatment Outcome in Pancreatic Cancer. |
 | [26675548](https://pubmed.ncbi.nlm.nih.gov/26675548/) | 2016 | ✅ | full text | PAPER 080 | WWOX modulates the ATR-mediated DNA damage checkpoint response. |
 | [27551470](https://pubmed.ncbi.nlm.nih.gov/27551470/) | 2015 | ✅ | full text | PAPER 090 | Current questions and controversies in chromosome fragile site research: does WWOX, the gene product of common fragile site FRA16D, have a passive or active role in cancer? |
 | [27551439](https://pubmed.ncbi.nlm.nih.gov/27551439/) | 2015 | ✅ | full text | PAPER 136 | WWOX dysfunction induces sequential aggregation of TRAPPC6AΔ, TIAF1, tau and amyloid β, and causes apoptosis. |

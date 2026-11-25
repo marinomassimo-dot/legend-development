@@ -2023,11 +2023,11 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 129
 **Full title:** Loss of Wwox drives metastasis in triple-negative breast cancer by JAK2/STAT3 axis
 **Identifier:** PMID 30154439 / DOI 10.1038/s41467-018-05852-8
-**Status:** not_processed
+**Status:** partial_fulltext_read — receipt FTR-20261124-30154439-01 (results, methods, introduction, discussion read; figures captions only; supplementary not read)
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
-**Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
+**Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record. Dated note 2026-11-25 (ADV-265, `CC-20261125-ORCHESTRATOR-ADV265-WORDING-01`, BATCH_20261125_002): primary of the WWOX to JAK2/STAT3 interaction; in vivo arms are all Wwox-overexpression xenografts; no neural STAT3-target echo where measurable (ADV-231); ADV228-Q02 stays open.
 
 ## CORPUS-STUB-130
 **Corpus paper no:** 130
@@ -6758,7 +6758,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Journal/source:** *J Natl Cancer Inst* 2016;108(5):djv387
 **Identifier:** PMID 26857392 / PMCID PMC4859408 / DOI 10.1093/jnci/djv387
 **Status:** claim_linked
-**Evidence depth:** full text reviewed (coverage_status: complete_fulltext_read; supplementary non recuperati)
+**Evidence depth:** partial full-text read (`FTR-20261125-26857392-01`: main text and three tables; figures from captions only; supplements not opened). The earlier 'complete' declaration is not attested by a receipt (`FTR-20260726-26857392-01`: all sections unknown_legacy).
 **Primary pathway:** transcriptional regulation of WWOX; assay design
 **Model/species:** human — 381 pazienti PDAC, 89 linfoblastoidi, linee cellulari
 **Genotype/model:** rs11644322 G>A, **introne 8** — sito Sp1/Sp3
@@ -6766,7 +6766,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **clinical relevance:** MODERATE-HIGH — **fonte dell'assay di inclusione dell'esone 9**
 **Claim links:** none — biomarker/assay seed
 **Role:** origine metodologica dell'assay qPCR region-specifico; nessun claim canonico
-**Note:** Promosso in BATCH_20260710_B da [[paper_registry_current#CORPUS P312]]. **Perché è a registro nonostante sia oncologico:** gli autori quantificano separatamente i **trascritti della giunzione esone 8→esone 9** e i **trascritti core (esoni 4-6)** (rapporto ~67%; r=0.68 intra-linea). L'allele di sito accettore `c.1057-2A>G` è esattamente la **perdita dell'accettore dell'esone 9**: esiste dunque **un assay pubblicato e validato** che misura la regione d'interesse. ⭐ **Doppio valore per il modello di malattia:** (a) è il baseline per **qualunque** strategia di correzione dell'allele di sito accettore; (b) può fornire l'evidenza funzionale (**criterio ACMG PS3**) capace di **riclassificare la VUS** dell'allele di sito accettore. ⚠️ **Da riprogettare prima dell'uso:** loro misurano *espressione*, non *splicing aberrante*; e poiché l'esone 9 è l'**ultimo** (PTC → **NMD-escape**), un calo di abbondanza **potrebbe non osservarsi**. Servono primer che spannino la giunzione + sequenziamento, non solo qPCR. **Segnale su Sp1:** l'allele G lega Sp1/Sp3 più forte → più WWOX (EMSA + supershift + siRNA). ⚠️ **Non un candidato terapeutico**: quasi tutti i modulatori di Sp1 disponibili lo **inibiscono** (direzione sbagliata), e Sp1 controlla migliaia di geni. Coautore **Markus A. Schirmer**, anche di [[paper_registry_current#PAPER 041]] (Johannsen, Q230P) → **lo stesso gruppo possiede i pezzi sperimentali per entrambi gli alleli worked-example**.
+**Note:** Promosso in BATCH_20260710_B da [[paper_registry_current#CORPUS P312]]. **Perché è a registro nonostante sia oncologico:** gli autori quantificano separatamente i **trascritti della giunzione esone 8→esone 9** e i **trascritti core (esoni 4-6)** (rapporto ~67%; r=0.68 intra-linea). L'allele di sito accettore `c.1057-2A>G` è esattamente la **perdita dell'accettore dell'esone 9**: esiste dunque **un assay pubblicato e validato** che misura la regione d'interesse. ⭐ **Doppio valore per il modello di malattia:** (a) è il baseline per **qualunque** strategia di correzione dell'allele di sito accettore; (b) può fornire l'evidenza funzionale (**criterio ACMG PS3**) capace di **riclassificare la VUS** dell'allele di sito accettore. ⚠️ **Da riprogettare prima dell'uso:** loro misurano *espressione*, non *splicing aberrante*; e poiché l'esone 9 è l'**ultimo** (PTC → **NMD-escape**), un calo di abbondanza **potrebbe non osservarsi**. Servono primer che spannino la giunzione + sequenziamento, non solo qPCR. **Segnale su Sp1:** l'allele G lega Sp1/Sp3 più forte → più WWOX (EMSA + supershift + siRNA). ⚠️ **Non un candidato terapeutico**: quasi tutti i modulatori di Sp1 disponibili lo **inibiscono** (direzione sbagliata), e Sp1 controlla migliaia di geni. Coautore **Markus A. Schirmer**, anche di [[paper_registry_current#PAPER 041]] (Johannsen, Q230P) → **lo stesso gruppo possiede i pezzi sperimentali per entrambi gli alleli worked-example**. Correction 2026-11-25 (ADV-249): this is a junction-versus-core RT-qPCR used in lymphoblastoid lines; it is not validated for detecting exon 9 loss. Alternative 3' ends in intron 8 are cited from databases, not measured by the authors. The paper does not try the assay on a splice-altering variant (no search for later use was run); the exon 8-9 to core ratio (mean 67 %) was measured in 88 of 89 lines. The words 'pubblicato e validato' above overstate. (`CC-20261125-ORCHESTRATOR-ADV249-PAPER050-01`, BATCH_20261125_002.)
 **Wikilinks:** [[paper_registry_current#PAPER 041]]
 
 ---

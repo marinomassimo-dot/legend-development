@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261125_001
+last_batch_commit_id: BATCH_20261125_002
 last_batch_commit_date: 2026-11-25
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 1
+commit_candidates_propagated: 3
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV-234, main's CI red on test_batch_queue: one candidate, CC-20261125-ORCHESTRATOR-ADV234-PAPER570-01, one new PAPER identity record for a complete read, no version bump, WM_v7.29 preserved) — prior line: (ADV-212 candidate backlog at the trigger of five; three candidates, wording and depth lines, no version bump; the earlier same-day batch follows) — prior line: (ADV-212 follow-up, ADV's word to write the repoint without triples 4 and 5). MAJOR by consequence as the candidate declares it (the Source of a consolidated baseline moves), not a baseline reversal, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: ONE candidate, CC-20260826-PROVENANCE-01 (the last open step, item C second half): the Source of CLAIM 002 repointed to PAPER 094 and the Claim links of PAPER 094 set to 002 (2 record-scoped ops), written without the Fig 2F and supplementary-volume triples; identifiers checked against the receipt ledger. The previous batch (BATCH_20261124_001: PAPER 542 and LIT-0814 label, CLAIM 002 and PAPER 094 Fig 6 wording) follows only as history in state_history.
+trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV's staged BATCH_COMMIT after a blind check by one verifier, sonnet, effort high, on 25 statements; the statements it overturned stay out). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: THREE candidates, verified remainder only: CC-20261125-ORCHESTRATOR-ADV249-PAPER050-01 (PAPER 050 Evidence depth and Note correction), CC-20261125-ORCHESTRATOR-ADV265-WORDING-01 (CORPUS-STUB-129, one dated note on CLAIM 011 and working-model section 4; ledger bullets by the ordinary route), CC-20261125-ORCHESTRATOR-PANELS1LM-RESCUE-RANGE-01 (one line on CLAIM 002) — prior line: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV-234, main's CI red on test_batch_queue: one candidate, CC-20261125-ORCHESTRATOR-ADV234-PAPER570-01, one new PAPER identity record for a complete read, no version bump, WM_v7.29 preserved) — prior line: (ADV-212 candidate backlog at the trigger of five; three candidates, wording and depth lines, no version bump; the earlier same-day batch follows) — prior line: (ADV-212 follow-up, ADV's word to write the repoint without triples 4 and 5). MAJOR by consequence as the candidate declares it (the Source of a consolidated baseline moves), not a baseline reversal, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: ONE candidate, CC-20260826-PROVENANCE-01 (the last open step, item C second half): the Source of CLAIM 002 repointed to PAPER 094 and the Claim links of PAPER 094 set to 002 (2 record-scoped ops), written without the Fig 2F and supplementary-volume triples; identifiers checked against the receipt ledger. The previous batch (BATCH_20261124_001: PAPER 542 and LIT-0814 label, CLAIM 002 and PAPER 094 Fig 6 wording) follows only as history in state_history.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,8 +126,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261124_BATCH_20261124_002
-last_lint_date: 2026-11-24
+last_lint_id: LINT_20261125_BATCH_20261125_002
+last_lint_date: 2026-11-25
 last_lint_result: WARN
 ```
 
@@ -213,8 +213,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 67
-growth_anchor_head: 4605e32cb298e02882b7637794e6db4a83e88007a70fa02eb7588168b07eb5e1
+growth_anchor_events: 68
+growth_anchor_head: 04a0e9ad3d7a35849cd17f51b926ab3acbf269b828130695767fec3e35e8b5a6
 ```
 
 ```bash
@@ -241,8 +241,8 @@ must be backed by a persisted `complete_fulltext_read` receipt, or `LINT_AUTOMAT
 `BLOCK_BATCH_COMMIT`.
 
 ```yaml
-registry_only_fulltext_declarations_baseline: 4
-registry_only_fulltext_declaration_ids: ["PAPER 014", "PAPER 028", "PAPER 044", "PAPER 050"]
+registry_only_fulltext_declarations_baseline: 3
+registry_only_fulltext_declaration_ids: ["PAPER 014", "PAPER 028", "PAPER 044"]
 ```
 
 Lowering the baseline is the intended direction of travel: back-fill a record with real

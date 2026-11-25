@@ -20,3 +20,13 @@ No printed value is changed; no claim about conduct (the legend says the panels 
 2. File012 page 7 holds seven sample lanes (JH WT, WPM S1, WPM D1, WPM D3, WPM S1 AAV9, WPM D1 AAV9, WPM D3 AAV9); the File010 panel shows five.
 3. File009, Immunoblot analysis: "Blots were repeated and quantified 2–3 times per experiment in Bio-Rad's Image Lab software. Representative images of those repeated experiments are shown."
 4. The HSP90 strip of panel M has 34 to 72 percent of the pixels in each lane's band window at grey 5 or below.
+
+## 5 · Blind check of the text statements, 2026-11-25 (IT dispatch; one verifier, sonnet, effort high)
+
+Report as delivered: `it_batch1_verify_20261125/VERIFIER_REPORT_AS_DELIVERED_BATCH1_IT_20261125.md`. Statements 1 to 3 of section 4 and the legend sentence (panels L and M show the lines included in the single-cell experiment) were SUPPORTED, from page images at 300 dpi. The densitometry itself was blind-read earlier (`it_panels1lm_20261125/VERIFIER_REPORT_AS_DELIVERED_PANELS1LM_IT_20261125.md`). Detail: panel L prints no value under WSM S2 or WSM S5 in the text layer. Status: PROPOSED, blind-checked.
+
+## BATCH DISPOSITION — `BATCH_20261125_002` (2026-11-25, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PROPAGATED
+
+1 record-scoped `replace-within` op on `claim_registry_current.md` CLAIM 002: the delivered-protein-range sentence added as its own line after the provenance note that lists the qualifications the deferred repointing would carry. **Change class restated: MINOR** (additive; `WM_v7.29` preserved). The densitometry was blind-read earlier; the text statements were checked in this batch's blind check (4 statements, SUPPORTED).
