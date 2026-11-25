@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T18:18Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T18:18:33Z",
+ "event_id": "FTR-20261125-35883580-01",
+ "evidence_basis": [
+  "coverage_map",
+  "reader: the eight figure images opened in sheets and the yeast and sphere figures enlarged; the three supplementary videos not watched (outside the figure class); blind delegate (sonnet, high) on the pivotal items. Classes left not_read here were not re-read in this event."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv280_next_ten_held_partials_sci_20261125/RESULT_ADV280_INC2_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261019-35883580-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "2b818e9726ce68fac8005531123252ee3c01c10e275b1da68c1f8c28b8875a8d",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID35883580_Liu2022_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3390/cells11142137",
+  "pmid": "35883580"
+ },
+ "workflow": "SCI ADV-280 next ten held partials, increment 2 (not a complete read)"
+}

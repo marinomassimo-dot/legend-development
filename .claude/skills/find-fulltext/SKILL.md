@@ -171,6 +171,8 @@ curl -sL --max-time 90 -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Apple
 - size sane: reject < ~20 KB (error/stub page);
 - **content sanity for HIGH-value or ambiguous hits:** `Read` the first page and confirm (a) the title/first-author matches the requested paper (guards against wrong-article redirects) and (b) it is not a cover/paywall page (no "Access Denied", "Purchase PDF", "Sign in to read"). *(We have no `pdfinfo`/`pdftotext`, so page-count/full-text mining isn't available offline — use `Read` for the spot-check.)*
 
+- **every file saved** (article, figure, supplement, archive): `python3 framework/scripts/held_content_check.py <file or folder>` — exit 1 lists the error pages, empty downloads and damaged archives, which count as a failed download.
+
 If validation fails: delete the bad file and fall through to the next tier/URL. On success: copy to the final path and **append the result to `_retrieval_manifest.jsonl`** (with `sha256`).
 
 ## Output (final message)

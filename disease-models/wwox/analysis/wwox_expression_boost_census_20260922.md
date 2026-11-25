@@ -129,7 +129,7 @@ Compiled from PubMed searches run 2026-09-22 (every `query_translation` inspecte
 cleanly). **Every row's surrounding text was read** — the table relays no unread count.
 Evidence class per the brief: `DIRECTLY MEASURED` / `INFERRED` / `AUTHOR INTERPRETATION` / `NOT PRESENT`.
 
-> 🔴 **Correction, 2026-11-25 (IT; blind check, then the registry read directly).** Rows **A2** and **B1** use HO-8910, which Cellosaurus (`CVCL_6868`) registers as a problematic, contaminated line, a **HeLa derivative**; neither is evidence from an ovarian carcinoma cell. B1 and U4: the journal's open PDF was read on 2026-11-25, so the «no open access» statement was a route failure; the direction (UP) is one blot image in that line plus xenografts, with no replicate number for the blot. A2's paper was not re-read for this note.
+> 🔴 **Correction, 2026-11-25 (IT; blind check, then the registry read directly).** Rows **A2** and **B1** use HO-8910, which Cellosaurus (`CVCL_6868`) registers as a problematic, contaminated line, a **HeLa derivative**; neither is evidence from an ovarian carcinoma cell. B1 and U4: the journal's open PDF was read on 2026-11-25, so the «no open access» statement was a route failure; the direction (UP) is one blot image in that line plus xenografts, with no replicate number for the blot. A2's paper was not re-read for this note. Row **A7** (PMID 25720522): SGC-7901 and BGC-823 are also registered HeLa derivatives; per its abstract the WWOX rise is stated for SNU-719, and no per-line result is given for the other three, so the row is not evidence from three gastric lines.
 
 ### 2.1 · Class A — DNA-methyltransferase inhibitors (5-aza-2'-deoxycytidine / decitabine)
 
