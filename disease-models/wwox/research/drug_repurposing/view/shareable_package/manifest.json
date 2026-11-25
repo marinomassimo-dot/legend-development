@@ -203,7 +203,7 @@
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
-   "PMID": 147
+   "PMID": 150
   },
   "links": {
    "distinct_hrefs": 235,
@@ -538,7 +538,7 @@
   },
   "NOTICE.md": {
    "bytes": 13731,
-   "sha256": "f33a810a095daeaacc4c3a0641bee2101f96fe3175bd77f3ce0adc3b6059cb52"
+   "sha256": "2056619e657ff6b7b7bf05db9678d3c1af5126837eafb6816ffa960da5839e0d"
   },
   "README.md": {
    "bytes": 4730,
@@ -546,7 +546,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2161,
-   "sha256": "ff9d590a136571c9ee2f36c1218627cfd9658d503f01574c9ac2eac74b8ce910"
+   "sha256": "e37d239a9d2a00fbac16d614c6c45e44b2fba2bcc678f892c431062644167f15"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -561,8 +561,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5039828,
-   "sha256": "c8760ff6f7548175a223a946ba7d81565d26268ec3777a9f706a15a8a56efc10"
+   "bytes": 5040330,
+   "sha256": "38af0be45f8cb32595a5193d7ddfa986e4807039c2674b1beee00468e3c5abb1"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 168171,

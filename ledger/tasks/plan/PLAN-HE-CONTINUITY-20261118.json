@@ -986,10 +986,12 @@
     },
     {
      "step": "ADV-235: repair the debt_report red in the Advisor isolation test, land, and report to ADV every other failing suite on main in one table",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-235 (ADV message to HE window 3b826442, 2026-11-25)",
-     "accepted_at": "2026-11-25T01:02:20Z"
+     "accepted_at": "2026-11-25T01:02:20Z",
+     "evidence": "742b32225 landed; CI #2313 failed only on test_batch_queue (ADV-234, repaired d8911b9b2), #2317 failed only on test_pathograph (regenerated 1f44861f6); both green locally at 2d3e35b51; table sent to ADV 2026-11-25; runs from #2319 still open at send time",
+     "updated_at": "2026-11-25T02:42:58Z"
     },
     {
      "step": "ADV-237: measure the red-main episodes by failing suite and touched files; build a print-only diff-selected suite selector only on a clear majority; report the numbers",

@@ -1968,7 +1968,7 @@ class It6P13Data(unittest.TestCase):
         by = {e["need"]: e for e in self.wo_doc["entries"]}
         for nid, upd in (("NEED-NEUROINFLAMMATION-GLIA", "P10"), ("NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR", "P11"), ("NEED-ISR-ATTENUATION", "P4"), ("NEED-WWOX-MISSENSE-PROTEIN-RESCUE", "P6"), ("NEED-WWOX-GENE-ADDITION", "P7")):
             self.assertIn(upd, by[nid]["updated_by"], nid)
-        self.assertEqual(self.wo_doc["research_update"], "2026-10-29")      # unchanged by pview
+        self.assertEqual(self.wo_doc["research_update"], max(e["date"] for e in self.wo_doc["entries"]))      # DC-05: the work order is never dated before its newest entry
 
     def mutated_wo(self, fn):
         d = json.loads(json.dumps(self.wo_doc))
@@ -2002,7 +2002,7 @@ class It6P13Data(unittest.TestCase):
         wo = self.cur["work_order"]
         self.assertEqual(sec.count('class="wo-item"'), len(wo["entries"]))
         self.assertEqual([m for m in re.findall(r'data-need="([^"]+)" data-kind', sec)], [e["need"] for e in wo["entries"]])
-        self.assertIn('data-k="cur.work_order_date" data-v="2026-10-29"', sec)
+        self.assertIn(f'data-k="cur.work_order_date" data-v="{wo["research_update"]}"', sec)
         self.assertIn(f'data-k="cur.catalogue_generated" data-v="{self.cur["meta"]["catalogue_generated"]}"', sec)
         self.assertIn("due date diverse", sec)
         for e in wo["entries"]:

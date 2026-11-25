@@ -5237,7 +5237,7 @@
    },
    "counter_evidence": [
     "Map N-01 (INSUFFICIENT): mTORC1 signalling is not measured at protein level in the WWOX sources it read; its autophagy direction contradicts its mTOR direction.",
-    "Three paper-registry stubs name WWOX and autophagy in two opposite directions; none has been read (map stress-test table)."
+    "Three paper-registry stubs name WWOX and autophagy in two opposite directions (map stress-test table). Two were later read in full and both report lower autophagy markers with higher p-mTOR in drug-treated cancer cell lines, without a flux clamp on a WWOX arm (PAPER 148, PMID 24008736; PAPER 152, PMID 33300063); the third, which names activation (PMID 36621327), has not been read."
    ],
    "sources": {
     "cards": [

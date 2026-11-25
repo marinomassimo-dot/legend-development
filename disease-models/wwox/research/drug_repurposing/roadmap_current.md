@@ -201,7 +201,9 @@ return from open questions to research active.
 
 Updated 2026-11-01 by `orchestrator`, runtime Codex, following the operator's requests to
 consolidate the Unravel/BioNAV/rareSHIFT and ALS discussion, state the guiding principle
-explicitly and define balanced, priority-driven external discovery in this roadmap.
+explicitly and define balanced, priority-driven external discovery in this roadmap. Later additions
+below (for example the points marked IT28 and IT29 under the standing method) were written after
+that date, which does not cover them.
 
 **Planning, not an implementation or efficacy report.** This is the home of the next
 increments. The newest measured iteration in [README.md](README.md) describes what actually

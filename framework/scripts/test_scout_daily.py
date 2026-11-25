@@ -1482,5 +1482,22 @@ class ReopenRowQueries(unittest.TestCase):
         self.assertNotIn("gse158684", qs["R4"]["epmc"].lower())
 
 
+class PlanShowsWhatIsSearched(unittest.TestCase):
+    """EN-03 (ADV-245): the plan line is the query, not the frequency words of the sentence."""
+
+    def test_a_question_that_names_objects_prints_them_not_its_sentence_words(self):
+        item = dict(surface="work_order", lid="N", locator="e", weight=3, path="p", blob="b" * 10, sha="s" * 12, decision="d",
+                    text="Is PDH higher in neural cells, and does a PDK inhibitor need an effect? effect effect need need neural neural cells cells")
+        q = sd.build_questions([item])[0][0]
+        line = sd.searched_line(q)
+        self.assertIn("TITLE_ABS:pdh AND TITLE_ABS:pdk", line)
+        self.assertIn(f"searched '{q['kw']}'", line)
+        self.assertNotIn("need", line.split("'")[1].split())
+        self.assertNotIn("cells", line.split("'")[1].split())
+
+    def test_a_question_without_a_europe_pmc_query_still_prints_its_words(self):
+        self.assertEqual(sd.searched_line({"kw": "myelin repair", "epmc": None}), "searched 'myelin repair'")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
