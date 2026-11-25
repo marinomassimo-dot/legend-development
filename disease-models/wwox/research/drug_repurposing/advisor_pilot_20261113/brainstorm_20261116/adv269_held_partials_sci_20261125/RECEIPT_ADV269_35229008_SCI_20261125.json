@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-25T07:24Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "captions_only",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T07:24:43Z",
+ "event_id": "FTR-20261125-35229008-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Held supplement mmc1 (text of the pdf, plus a rendered image of the Table S3 page): Tables S1, S2, S3, S5, S6, S7 and S17 read and cross-checked (S2 against S3 and S5 per animal); Tables S8-S16 and S18-S25, mmc2 and figure images not read.",
+  "Result and per-consumer wording: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261004-35229008-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "69caee35c1c2eaf78d50634ed515743ca778258e42cf40c867203322539f71a3",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+ "study_id": {
+  "doi": "10.1016/j.omtm.2022.01.013",
+  "pmid": "35229008"
+ },
+ "workflow": "SCI ADV-269 (held partials, unread classes inside held bytes; held bytes only, no contact, no spend); not a complete read, figure images remain unread"
+}
