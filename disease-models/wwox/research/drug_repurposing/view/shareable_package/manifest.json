@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3569,
+    "forbidden-name": 3570,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -561,8 +561,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5068026,
-   "sha256": "a78b073af0729ff39c5a64c06bc2400d49216233ae85958a4d981113a84e5988"
+   "bytes": 5068338,
+   "sha256": "97e022ba97402113d37383eddcd9bb0ccbcd976952761183013283f3ec9afa39"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 168171,
