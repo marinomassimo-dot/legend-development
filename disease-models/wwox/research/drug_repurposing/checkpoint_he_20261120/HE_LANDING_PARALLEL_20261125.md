@@ -73,3 +73,22 @@ given; remove the NOTICE then. One revert of the commit undoes it.
 `565196e5e`, the change itself, published 2026-11-25 about 20:07Z with a merge under the lock: 7 suites, all
 PASS; `LANDING CHECKS parallel: wall 110s (views 35s, gate 110s, suites 97s, suite clone 12s)`; **lock held
 137 s**; gate PASS, `ls-remote` equal; no clone left in `/tmp`.
+
+## 7 The ten-landing read (HE 9c2cb46c, 2026-11-25 about 20:45Z): KEPT, notice removed
+
+The first ten published landings with a `LANDING CHECKS parallel:` line, 20:07Z to 20:39Z, from the job logs, trial
+logs excluded.
+
+| Measure | before (section 5) | after |
+|---|---:|---:|
+| lock held, median | 250 s | **138.5 s** (113 to 173) |
+| landing suites per push, median | 6 | 6 (1 to 9) |
+
+Lock held, in order: 137, 121, 141, 120, 118, 113, 151, 146, 173, 140 s. The gate is the longest part in all ten
+(89 to 138 s). No red suite and no refusal appears in any log of the window.
+
+Read with these limits: the "before" and "after" windows are different hours of one shared machine; landings 7 to 10
+ran while HE was timing the gate and the suite clone, which loaded it; a landing whose output was not saved to a job
+folder is not counted. No red occurred, so the refusal order under a red is still shown only by the unit tests.
+
+The temporary `PARALLEL_NOTICE` and its print are removed. `--serial-checks` stays.
