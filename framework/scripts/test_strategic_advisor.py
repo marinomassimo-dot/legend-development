@@ -2722,6 +2722,8 @@ class Meeting(unittest.TestCase):
 class OrdinaryWorkDoesNotNeedIt(unittest.TestCase):
     def test_ordinary_tools_do_not_require_the_advisor_and_measurement_only_reads_it(self) -> None:
         here = Path(__file__).resolve().parent
+        measurement_readers = {"trial_window_table.py": {"_agents", "incomplete_run", "mc"},
+                               "debt_report.py": {"rotation_status", "assignment_states"}}
         for path in here.glob("*.py"):
             if path.name in ("strategic_advisor.py", "test_strategic_advisor.py"):
                 continue
@@ -2729,18 +2731,17 @@ class OrdinaryWorkDoesNotNeedIt(unittest.TestCase):
             imports = [node for node in ast.walk(tree) if
                        (isinstance(node, ast.Import) and any(a.name == "strategic_advisor" for a in node.names)) or
                        (isinstance(node, ast.ImportFrom) and node.module == "strategic_advisor")]
-            if path.name == "trial_window_table.py":
-                # HE61 measures existing metadata, runtime names and task verdicts.
-                # It reuses their readers; it must never drive the Advisor or research.
+            if path.name in measurement_readers:
+                # HE61 / ADV-221: a measurement tool reads existing metadata, runtime names and task verdicts.
+                # It reuses the named readers and nothing else; it must never drive the Advisor or research.
                 aliases = {a.asname or a.name for node in imports if isinstance(node, ast.Import)
                            for a in node.names if a.name == "strategic_advisor"}
                 self.assertFalse(any(isinstance(node, ast.ImportFrom) for node in imports))
                 attrs = {node.attr for node in ast.walk(tree) if isinstance(node, ast.Attribute)
                          and isinstance(node.value, ast.Name) and node.value.id in aliases}
-                self.assertLessEqual(attrs, {"_agents", "incomplete_run", "mc"}, path.name)
+                self.assertLessEqual(attrs, measurement_readers[path.name], path.name)
             else:
                 self.assertFalse(imports, path.name)
-
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
