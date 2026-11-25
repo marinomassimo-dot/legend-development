@@ -1371,17 +1371,34 @@
     },
     {
      "step": "window_handoff verify prints the old worktree's removal check (eligible after, processes) and the worktrees with no reason to keep, report only",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad GO to HE 02915fa6, 2026-11-25",
-     "accepted_at": "2026-11-25T16:39:14Z"
+     "accepted_at": "2026-11-25T16:39:14Z",
+     "evidence": "main 1a0e45c777d2 (commit f5f5ad308), gate PASS, ls-remote; test_window_handoff.py and test_branch_hygiene.py OK",
+     "updated_at": "2026-11-25T17:44:54Z"
     },
     {
      "step": "Speed the publication gate privacy scan with identical findings: whole-tree and 50-commit differential, seeded positives per pattern class, landed alone, read the first three real landings",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
      "source": "ADV a5e6f2ad GO with five conditions to HE 02915fa6, 2026-11-25",
-     "accepted_at": "2026-11-25T16:39:14Z"
+     "accepted_at": "2026-11-25T16:39:14Z",
+     "updated_at": "2026-11-25T17:44:54Z"
+    },
+    {
+     "step": "Held files that do not match their name (SCI ADV-279: 39 of about 6,100; 27 HTML or empty as figure or PDF): list with citing receipt or card, propose a save-time check; report only until ADV says",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad message to HE 02915fa6, 2026-11-25",
+     "accepted_at": "2026-11-25T17:44:54Z"
+    },
+    {
+     "step": "Two false consumer joins (SCI ADV-279: '33958783 paper 204' as P204; DL-MECH-056 in a skip list): find the matching rule and count the other joins it made",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad message to HE 02915fa6, 2026-11-25, item 2 of 2",
+     "accepted_at": "2026-11-25T17:45:03Z"
     }
    ]
   }
@@ -2455,6 +2472,20 @@
    "at": "2026-11-25T16:39:14Z",
    "source": "ADV a5e6f2ad GO with five conditions to HE 02915fa6, 2026-11-25",
    "step_sha256": "960fa26fa7d7",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T17:44:54Z",
+   "source": "ADV a5e6f2ad message to HE 02915fa6, 2026-11-25",
+   "step_sha256": "0cefbcf3e33f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T17:45:03Z",
+   "source": "ADV a5e6f2ad message to HE 02915fa6, 2026-11-25, item 2 of 2",
+   "step_sha256": "5903c2c83d8b",
    "reopened_block": false,
    "authorised_by": null
   }
