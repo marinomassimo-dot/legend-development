@@ -996,26 +996,37 @@
     },
     {
      "step": "ADV-253: review PMID 28045433 Figure 3 against the retracted panels of PMID 28151481 (notice PMID 35680840): PREREG first, list consumers by two routes, per-row disposition depends/independent/unclear, IT wording",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-253",
      "accepted_at": "2026-11-25T04:05:35Z",
-     "updated_at": "2026-11-25T04:05:47Z"
+     "updated_at": "2026-11-25T04:29:05Z",
+     "evidence": "landed on development/main 5b8f059926 (commit fa2df9545), brainstorm_20261116/adv253_retraction_consumers_sci_20261125/RESULT"
     },
     {
      "step": "ADV-254: for the ledger leads with no primary PMID that consumers lean on, identify (not read) a primary: PREREG first, per lead found/not found/model inference, consumers' wording labels",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-254",
      "accepted_at": "2026-11-25T04:05:35Z",
-     "updated_at": "2026-11-25T04:16:42Z"
+     "updated_at": "2026-11-25T04:29:05Z",
+     "evidence": "landed on development/main 5b8f059926 (commit b33967437), brainstorm_20261116/adv254_unsourced_leads_sci_20261125/RESULT"
     },
     {
      "step": "ADV-255: human lactate per-report table from held sources (DL-BIO-009 test), check Chong 2023 against its source, PREREG with the prediction first",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "source": "ADV-255",
-     "accepted_at": "2026-11-25T04:16:16Z"
+     "accepted_at": "2026-11-25T04:16:16Z",
+     "updated_at": "2026-11-25T04:35:02Z"
+    },
+    {
+     "step": "ADV-256: Europe PMC retraction and correction notice sweep over the catalogued WWOX PMIDs: PREREG first, 19357348 first, compare with the 10-21 snapshot, consumers per hit, propose flag rows (no state-file edit)",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "source": "ADV-256",
+     "accepted_at": "2026-11-25T04:19:53Z",
+     "updated_at": "2026-11-25T04:19:53Z"
     }
    ]
   }
@@ -1802,6 +1813,13 @@
    "at": "2026-11-25T04:16:16Z",
    "source": "ADV-255",
    "step_sha256": "b702af71f67e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T04:19:53Z",
+   "source": "ADV-256",
+   "step_sha256": "7540e44a7dad",
    "reopened_block": false,
    "authorised_by": null
   }

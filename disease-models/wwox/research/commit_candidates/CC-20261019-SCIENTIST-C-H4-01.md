@@ -42,6 +42,7 @@ The Orchestrator owns `PAPER` and `LIT` numbering across four Scientists. Placeh
 ## 4 · Reading debts carried
 
 - **Closed-body WWOX-direct papers (cascade: Europe PMC search, OpenAlex open-access flag, 2026-10-19; Unpaywall not used because it needs an e-mail parameter):** PMID 23566416 (TAZ versus WWOX in HIF-1 activation under hypoxia), PMID 25447306 (hypoxia, HIF-1 alpha and Hippo regulators, WWOX mentioned), PMID 19737107 (hypoxia-regulated WWOX adenovirus), PMID 26390919 (WWOX and the respiratory complex; already BLOCKED). All four: not in Europe PMC, OpenAlex closed. Manual PDF requests.
+- *Dated note, 2026-11-25 (IT, ADV-253):* PMID 25447306 is a **retracted publication** (PubMed type; notice PMID 32746981 per SCI's ADV-253 table; one of five retracted articles cited by the review PMID 28045433). Drop it from any manual-PDF request; it is not a source for this candidate.
 - **Two WWOX/WOX1 Alzheimer's-disease reviews** (PMIDs 22202011 and 23277037, same title, 2012 and 2013): no PMC body; ROS and cell-death content only.
 - **Primaries behind the oxygen reviews, not opened:** the SUPPORT, BOOST II, COT, STOP-ROP and BOOST I reports (Perrone), the 1994 CPAP series (Ma), Farrell 2016 postictal hypoxia (Villa), Yuen 2014 and Allan 2021 HIF-1/Olig2 (Moore).
 - **Supplements declared not_read** in four partial receipts: Zhao Tables S1-S17 and S1-S2 figures; Liang Tables S1 and S3; Serdar nine supplementary figure panels; June (three identical workbooks, structure only).
