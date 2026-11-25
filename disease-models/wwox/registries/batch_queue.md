@@ -17,7 +17,7 @@
 | 🟡 `OUT_OF_SCOPE_LIKELY` | 176 | no scope signal in the title — later in the queue, **never discarded** |
 | 🟡 `AMBIGUOUS` | 4 | identifiers must be resolved before ingest |
 | ⏳ `IN_PIPELINE` | 35 | already in flight |
-| ✅ `KNOWN_INTEGRATED` | 197 | done — read depth in the table below |
+| ✅ `KNOWN_INTEGRATED` | 198 | done — read depth in the table below |
 
 The two green rows are the answer to *"where do I start?"*. The table further down lists
 every record in this order, so a second person can take the next unclaimed row without
@@ -606,7 +606,6 @@ for an entirely unprocessed record.
 | [31075076](https://pubmed.ncbi.nlm.nih.gov/31075076/) | 2019 | ✅ | full text | CORPUS P022 | Decoding the link between WWOX and p53 in aggressive breast cancer. |
 | [30619736](https://pubmed.ncbi.nlm.nih.gov/30619736/) | 2018 | ✅ | full text | PAPER 032 | Delineating WWOX Protein Interactome by Tandem Affinity Purification-Mass Spectrometry: Identification of Top Interactors and Key Metabolic Pathways Involved. |
 | [27308504](https://pubmed.ncbi.nlm.nih.gov/27308504/) | 2015 | ✅ | full text | CORPUS P123 | WWOX guards genome stability by activating ATM. |
-| [25051421](https://pubmed.ncbi.nlm.nih.gov/25051421/) | 2014 | ✅ | full text | CORPUS-STUB-162 | WWOX modulates the gene expression profile in the T98G glioblastoma cell line rendering its phenotype less malignant. |
 | [25024751](https://pubmed.ncbi.nlm.nih.gov/25024751/) | 2014 | ✅ | full text | CORPUS P378 | Impact of decitabine on immunohistochemistry expression of the putative tumor suppressor genes FHIT, WWOX, FUS1 and PTEN in clinical tumor samples. |
 | [24550385](https://pubmed.ncbi.nlm.nih.gov/24550385/) | 2014 | ✅ | full text | CORPUS P272 | Characterizing WW domain interactions of tumor suppressor WWOX reveals its association with multiprotein networks. |
 | [24510053](https://pubmed.ncbi.nlm.nih.gov/24510053/) | 2014 | ✅ | full text | CORPUS P308 | WW domain-containing oxidoreductase's role in myriad cancers: clinical significance and future implications. |
@@ -775,6 +774,7 @@ for an entirely unprocessed record.
 | [25416187](https://pubmed.ncbi.nlm.nih.gov/25416187/) | 2015 | ✅ | full text | PAPER 364 | The fragile site WWOX gene and the developing brain. |
 | [25245215](https://pubmed.ncbi.nlm.nih.gov/25245215/) | 2014 | ✅ | full text | PAPER 088 | The common fragile site FRA16D gene product WWOX: roles in tumor suppression and genomic stability. |
 | [25238781](https://pubmed.ncbi.nlm.nih.gov/25238781/) | 2014 | ✅ | full text | PAPER 087 | Role of common fragile sites and corresponding genes in cancer development. |
+| [25051421](https://pubmed.ncbi.nlm.nih.gov/25051421/) | 2014 | ✅ | full text | PAPER 570 | WWOX modulates the gene expression profile in the T98G glioblastoma cell line rendering its phenotype less malignant. |
 | [25012504](https://pubmed.ncbi.nlm.nih.gov/25012504/) | 2014 | ✅ | full text | PAPER 024 | Tumor suppressor WWOX regulates glucose metabolism via HIF1α modulation. |
 | [24949445](https://pubmed.ncbi.nlm.nih.gov/24949445/) | 2014 | ✅ | full text | PAPER 122 | The analysis of genetic aberrations in children with inherited neurometabolic and neurodevelopmental disorders. |
 | [24932569](https://pubmed.ncbi.nlm.nih.gov/24932569/) | 2014 | ✅ | full text | PAPER 053 | WWOX at the crossroads of cancer, metabolic syndrome related traits and CNS pathologies. |
