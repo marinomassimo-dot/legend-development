@@ -1,0 +1,23 @@
+# IT checkpoint 24, addendum 1, 2026-11-25 (window 8e1d62bc)
+
+Read with `CHECKPOINT_IT_20261125_12.md` (not edited). Hypothesis level; nothing is medical advice.
+
+## Second landing
+Pushed boundary: `development/main` at `a6d534d4783c05aa2d272dab03009225c762adf5` (safe_push `--serialize`, gate PASS, verified by ls-remote): coverage, ranking and views rebuilt, because the pages still showed card D01's replaced sentence "progenitor identity is restored" (37 occurrences in 12 current files before, 0 after; `copied_card_sentences.py --base d37743c77` 0 still held). Before the push: full `test_repurposing_view.py` and eleven other checks green, `test_repurposing_coverage.py` among them. CI #2547 and #2543 in progress at the last tick: tick them first.
+
+## The LIVE public page is out of date (operator list)
+`Publish the shareable view` runs #129 (`b29ec350f`) and #130 (`a6d534d47`) both failed in the `deploy` job, step `actions/deploy-pages`: `No artifacts named "github-pages" were found for this workflow run` / `Fetching artifact metadata failed`; the `verify` job passed in both, and githubstatus.com listed no open incident. Last green run: #128 (`1a7cfb79b`). Read 2026-11-25, about 22:50Z, `https://marinomassimo-dot.github.io/legend-development/` answers 200 and is byte-identical to the package of `1a7cfb79b` (sha256 `332223ab78d5d470bd2f0c67a07b49725367fedbd2c5c22899cb402d41119653`): it still shows "progenitor identity is restored" (3 times) and the ketogenic-diet sentence without its qualifier (2 times). The package on main is `e0e11e60...` and carries neither. Re-running or editing the workflow is operator-reserved (ADV): neither was done. After a green run, compare the live bytes with `view/shareable_package/index.html`.
+
+## Self-evaluation, scouting, DREAM (short)
+Error of the window: I reported a card field as "not rendered" from a hand-made search of changed fragments; the field was on the public pages through `coverage/priorities.json`. HE's check found it. Upgrade already in place: `copied_card_sentences.py` runs in `safe_push`; the rebuild order is in checkpoint 24 section 3. Blind readers changed wording in 10 of 14 blocks (A and B together): whole-source packets stay. Capability gap: a failed Pages deploy is visible only when somebody reads the run list (for HE: a tick line comparing the live page bytes with the package; no workflow change). DREAM: no new association beyond these; nothing else changed.
+
+## Added to the queue (section 1)
+**SCI's ADV-287 card sentences** (on main from `298c9c42b`; both readers agree they are incomplete or wrong): corrected wording in `advisor_pilot_20261113/brainstorm_20261116/adv287_card_statements_sci_20261125/producer/STEP1_TABLE_ADV287.tsv`, column `corrected_sentence`, rows n = 1 (H02, "three independent centres": the table has seven), 2 (A01, "8 to 78 times": about 2 to 156 over all levels), 3 (H02, "the one cohort reporting its exposed denominator"; keep "derived" beside Dammam 34 of about 132 and Toronto 25 of 95), 14 (A02, T191M "very small amount of activity"; G307S was not tested in that paper), 15 (B01, "largest genotype-classified cohort": Oliver 2023 has 75, 45 of 75 = 60.0 percent), 20 (H02, "age range of the N=205 study is not stated": its abstract gives 24 months or less). Row n = 16 (H02 label wording) is contested between the two readers: optional. Evidence in the result file, section 3.
+
+These are counts, ranges and "only / largest" statements: apply them with the same whole-source packet rule, then the rebuild order of checkpoint 24 section 3.
+
+## Wording rule for the card-edit recipe (from ADV)
+Before writing "the one", "only", "largest", "N independent", "not at all" or "not stated": print every row, and every other cohort, of the source table, and say in the edit note which rows were read. Failed examples: "three independent centres" (seven in the table), "largest genotype-classified cohort" (Oliver 2023 has 75), a range taken over two concentrations only (about 2 to 156 over all levels), "age range not stated" (the abstract gives up to 24 months). ADV-287 base rate: of 17 assessable statements in a random sample of 20, 6 were incomplete or wrong by two blind readers.
+
+## Order of the queue (ADV, final)
+1. ADV-287 sentences. 2. ADV-282 increment 3 (the three verified errors). 3. ADV-285 S1 to S8 with the ADV-288 corrections (Cheng Fig 2b and 2c brackets; Palma P value; 24 per arm, not 12). 4. ADV-286: freeze no later than 2026-12-04, so start it no later than 2026-12-01. Also queued, no order given: the two author drafts (never sent). ADV-284: the D01 row is applied; its other five rows are classifier-stopped (operator list, nothing to do).
