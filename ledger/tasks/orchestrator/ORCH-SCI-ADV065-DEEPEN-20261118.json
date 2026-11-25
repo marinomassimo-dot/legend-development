@@ -939,6 +939,13 @@
      "accepted_at": "2026-11-25T00:31:30Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv231_stat3_echo_sci_20261125/RESULT_ADV231_STAT3_ECHO_SCI_20261125.md",
      "updated_at": "2026-11-25T00:33:28Z"
+    },
+    {
+     "step": "ADV-233: pre-registered test of whether P47T animals M6 and F8 carry the other P47T signatures (leave-two-out, matched random sets, primary and GEO metadata, wording proposals)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-233 (ADV message 2026-11-25, assignments/ADV-233.md)",
+     "accepted_at": "2026-11-25T00:52:09Z"
     }
    ]
   }
@@ -1662,6 +1669,13 @@
    "at": "2026-11-25T00:31:30Z",
    "source": "ADV-231 (ADV message 2026-11-25, assignments/ADV-231.md)",
    "step_sha256": "841478b923a1",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T00:52:09Z",
+   "source": "ADV-233 (ADV message 2026-11-25, assignments/ADV-233.md)",
+   "step_sha256": "8e8228861d82",
    "reopened_block": false,
    "authorised_by": null
   }
