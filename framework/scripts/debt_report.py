@@ -3,7 +3,8 @@
 
 The operator's standing rule is that no actor is idle and that the debt is measured at every
 round. Measuring it used to take five commands and one wrong number: this is the one command.
-It prints, it never writes, it has no output path, and it runs from a linked worktree.
+It prints, it writes nothing but the held digest index cache in the host state folder, it has no
+output path, and it runs from a linked worktree.
 
     python3 framework/scripts/debt_report.py                 # everything, about 50 s
     python3 framework/scripts/debt_report.py --offline       # no network: skips the PubMed delta and the CI queue
@@ -22,6 +23,10 @@ What each block is, and where it comes from (each printed line names its file)
                              of earlier receipts marks `read` that the latest receipt does not.
    The section figures are this tool's own definition (below); SCI's ADV-219 counts them under
    its own, and the two are not claimed equal.
+   One more line says which latest-receipt partial and complete studies have their BYTES on this
+   host (`held_studies.py`: file name, else receipt SHA-256). It reads that tool's cached digest
+   index, hashing only files new or changed since; it never builds the index cold and says so.
+   `coverage_report.md` is not touched: it is committed, and `files/` differs from host to host.
 2. PUBMED DELTA. `pubmed_delta_census.py` over the repository (one esearch call, plus one esummary
    for the PMIDs absent by PMID); skipped with --offline.
 3. OPEN QUESTIONS. `research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv`:
@@ -175,6 +180,24 @@ def coverage_block(root: Path, events: list[dict] | None = None) -> tuple[list[s
     return lines, data
 
 
+def held_lines(root: Path, cache: Path | None = None) -> tuple[list[str], dict]:
+    """Studies whose bytes are on this host, by name or by receipt digest. A fact about this disk, never about reading."""
+    try:
+        import held_studies
+        cache = cache or held_studies.default_cache()
+        if held_studies.files_dir(root) is None:
+            return ["held bytes: not measured, this host holds no files/ (held_studies.py)"], {}
+        if not cache.is_file():
+            return ["held bytes: not indexed yet; run python3 framework/scripts/held_studies.py once (about 2 minutes)"], {}
+        rows, numbers = held_studies.measure(root, cache)
+        data = {name: held_studies.counts(rows, held_studies.DEPTHS[name]) for name in ("partial", "complete")}
+        text = " · ".join(f"latest-{name} {c['studies']}: held {c['held']} (by name {c['held_by_name']}, by digest only "
+                          f"{c['held_by_digest_only']}), not held {c['not_held']}" for name, c in data.items())
+        return [f"held bytes on this host ({numbers['files_dir']}; held_studies.py, name or receipt SHA-256): {text}"], data
+    except Exception as error:  # noqa: BLE001 — a failed count is a printed fact, not a crash
+        return [f"held bytes: not measured ({type(error).__name__}: {error})"], {}
+
+
 # ----------------------------------------------------------------------------- 2 delta
 
 def delta_block(root: Path, offline: bool, runner: Callable | None = None) -> tuple[list[str], dict]:
@@ -292,7 +315,9 @@ def ci_block(offline: bool, fetcher: Callable | None = None) -> tuple[list[str],
 def build(root: Path, offline: bool = False, advisor: bool = True, parts: dict | None = None) -> dict:
     parts = parts or {}
     sections: list[tuple[str, list[str], dict]] = []
-    sections.append(("COVERAGE", *coverage_block(root, parts.get("events"))))
+    lines, data = coverage_block(root, parts.get("events"))
+    held, data["held"] = held_lines(root, parts.get("held_cache"))
+    sections.append(("COVERAGE", lines + held, data))
     sections.append(("PUBMED DELTA", *delta_block(root, offline, parts.get("delta"))))
     sections.append(("OPEN QUESTIONS", *questions_block(root)))
     sections.append(("PORTFOLIO", *portfolio_block(root)))
