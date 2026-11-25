@@ -3,8 +3,12 @@
 import contextlib
 import hashlib
 import io
+import json
+import os
+import re
 import subprocess
 import tempfile
+import time
 import unittest
 from pathlib import Path
 from types import SimpleNamespace
@@ -219,6 +223,46 @@ class Prepare(unittest.TestCase):
             with self.subTest(template=template, extra=extra), self.assertRaises(wh.Refused):
                 self.prepare(template, **extra)
             self.assertFalse(self.out.exists())
+
+
+class VerifyShowsTheCleanup(unittest.TestCase):
+    """At each handoff: what keeps the old window's worktree, with the time it stops keeping it, and the free ones."""
+
+    def test_the_old_worktree_line_and_the_free_paths(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        box = Path(tmp.name).resolve()
+        root, projects, old_tree, idle_tree = box / "repo", box / "projects", box / "old_tree", box / "idle_tree"
+        root.mkdir()
+        git = ["git", "-C", str(root), "-c", "user.name=t", "-c", "user.email=t@example.invalid"]
+        subprocess.run([*git, "init", "-q", "-b", "main"], check=True)
+        subprocess.run([*git, "commit", "-q", "--allow-empty", "-m", "c"], check=True)
+        for tree in (old_tree, idle_tree):
+            subprocess.run([*git, "worktree", "add", "-q", "--detach", str(tree)], check=True)
+        folder = projects / re.sub(r"[^A-Za-z0-9]", "-", str(old_tree))
+        folder.mkdir(parents=True)
+        (folder / "s.jsonl").write_text("{}\n", encoding="utf-8")
+        os.utime(folder / "s.jsonl", (time.time() - 3600,) * 2)
+        listing = sessions()
+        listing[1]["cwd"] = str(old_tree)
+        report = {"verdict": "RUNNING", "session_names": {"state": "CURRENT"}, "new": {}}
+        real = wh.watch
+        wh.watch = lambda r, verb, *a: SimpleNamespace(stdout=json.dumps(report) if verb == "handoff" else "RELEASED (x)", returncode=0)
+        self.addCleanup(setattr, wh, "watch", real)
+        said = []
+        wh.verify(SimpleNamespace(old=OLD[:8], new=NEW[:8], task="T", projects_dir=str(projects)), root, say=said.append, sessions=listing)
+        text = "\n".join(said)
+        self.assertRegex(text, rf"old worktree   {old_tree}  keep: .*eligible after \d{{4}}-\d\d-\d\dT\d\d:\d\dZ")
+        self.assertIn("removable      1 worktree(s)", text)
+        self.assertIn(f"               {idle_tree}", text)
+        self.assertTrue(idle_tree.is_dir() and old_tree.is_dir())
+
+    def test_a_check_that_cannot_run_is_said_and_changes_nothing(self):
+        said = []
+        with tempfile.TemporaryDirectory() as not_a_repository:
+            wh.cleanup(Path(not_a_repository), {}, said.append, Path(not_a_repository))
+        self.assertEqual(1, len(said))
+        self.assertIn("not checked", said[0])
 
 
 class TheToolStartsAndRetiresNothing(unittest.TestCase):
