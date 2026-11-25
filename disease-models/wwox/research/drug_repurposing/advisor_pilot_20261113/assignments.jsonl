@@ -702,3 +702,5 @@
 {"evidence": "SendMessage 19:22Z", "id": "ADV-282", "receipt": ["f7739481-4e5a-4ff3-8860-c9a6396a1185"], "state": "SENT", "to": ["SCI - CURRENT 9cc174db"], "utc": "2026-11-25T19:22:51Z"}
 {"assessment": "HOST", "id": "ADV-283", "key": "pdk-isoform-pattern-second-held-dataset-vs-dca-isozyme-sheet", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T20:12:13Z"}
 {"evidence": "SendMessage 20:12Z", "id": "ADV-283", "receipt": ["61256db0-38dc-4d10-a6e0-1fa5e5ef6e20"], "state": "SENT", "to": ["SCI - CURRENT ae0002e7"], "utc": "2026-11-25T20:12:32Z"}
+{"assessment": "HOST", "id": "ADV-284", "key": "equivalence-class-restoration-rows-margin-audit", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T20:33:43Z"}
+{"evidence": "SendMessage 20:34Z", "id": "ADV-284", "receipt": ["215ad9e4-6749-4b26-bd80-8e419d1b8d19"], "state": "SENT", "to": ["SCI - CURRENT ae0002e7"], "utc": "2026-11-25T20:34:05Z"}
