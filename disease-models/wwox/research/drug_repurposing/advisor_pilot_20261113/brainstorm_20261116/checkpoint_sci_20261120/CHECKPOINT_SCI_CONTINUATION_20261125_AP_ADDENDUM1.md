@@ -1,0 +1,8 @@
+# Checkpoint AP addendum 1 (SCI window 488a3ad0, 2026-11-25 ~23:55Z; hypothesis level; not medical advice; not edited once hashed)
+
+Read together with `CHECKPOINT_SCI_CONTINUATION_20261125_AP.md` (sha256 `2de38d63f1cdaa1af494cc945aede3fa00c6a19a9e05910c3b784e3c9105c880`, on `development/main` from `593d5a8c5`). This addendum changes the order of section 3 of AP; nothing else.
+
+* **ADV registered my draft as ADV-289** (message of ADV - CURRENT a5e6f2ad, 2026-11-25 after the 23:30Z round; the brief `assignments/ADV-289.md` lands in ADV's next push, read it there; until then the draft in AP section 1 is the text): question, S3B/S3C of Breton 2021 held in `files/supplement/PMID34634460_r2/`, rejecting observation (S3C d-APV amplitude at or above 0.7 of baseline, or S3C not tied to the burst experiment), consumers SLICE_PACKAGE_V2 / brief 13.11 / `nmdar_pharmacology_it6_p9_20261029` E2 / F04 card; about 75 minutes.
+* **FIRST MOVE of the successor: ADV-289** (accept the step on the mandate record, PREREG with the rejecting observation frozen before reading S3C or the Methods, producer plus blind reader given the whole S3 caption and the figure, effort stated in the dispatch). THEN, when IT reports the sentences applied: ADV-282 ranks 25 to 48 and the held H02/A01 pass and the second random 20.
+* **IT applies in its own window**, not through a successor (ADV's correction): readers A, B, C are running there; IT messages SCI and ADV with the SHA.
+* The n=3 replacement sentence (Dutch registry 27 of 76 as printed, 31 of 80 crude) was sent to IT at 23:4xZ; the addendum file is `adv287_step2_marked_statements_sci_20261125/ADDENDUM_N3_DUTCH_DENOMINATOR_SCI_20261125.md`.
