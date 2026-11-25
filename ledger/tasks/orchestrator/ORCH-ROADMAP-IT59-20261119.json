@@ -402,6 +402,15 @@
      "accepted_at": "2026-11-25T03:25:47Z",
      "evidence": "result brainstorm_20261116/it_adv250_20261125: 1 of 7 resolved (H1, RESOLVED_ANIMAL weak), 6 NOT_RESOLVABLE (hippocampal libraries; GEO and BioSample records name no animal; ENA no run rows), library count = upper bound on independent n, S-Control hippocampal 2 < cortical 4; live consumer functional_it13_p3a README dated line; P1 P2 P4 met, P3 not met; landing from task/it-adv250-20261125",
      "updated_at": "2026-11-25T03:25:47Z"
+    },
+    {
+     "step": "ADV-250 follow-up: upper-bound wording on J01, F03, INV-06, INV-15, table column copy; correction of the conditional controls statement",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-25 (approve upper-bound extension)",
+     "accepted_at": "2026-11-25T03:38:57Z",
+     "evidence": "it_adv250wording_20261125: apply script, cards J01 F03 rebuilt, INV-06/15 clause with 4-language translation (INV-15 it gap baseline), table copy with n_as_stated_is_upper_bound; RESULT and README controls statement corrected to conditional",
+     "updated_at": "2026-11-25T03:38:57Z"
     }
    ]
   }
@@ -712,6 +721,13 @@
    "at": "2026-11-25T03:25:47Z",
    "source": "ADV-250 (ADV message 2026-11-25; brief adv250.txt)",
    "step_sha256": "fb065f9dfd51",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T03:38:57Z",
+   "source": "ADV message 2026-11-25 (approve upper-bound extension)",
+   "step_sha256": "6567b3027d23",
    "reopened_block": false,
    "authorised_by": null
   }
