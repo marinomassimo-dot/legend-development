@@ -1458,6 +1458,13 @@
      "accepted_at": "2026-11-25T20:08:15Z",
      "evidence": "HE_LANDING_PARALLEL_20261125.md section 7: first ten published parallel landings, median lock held 138.5 s against 250 s, median 6 suites both; no red or refusal in the logs; PARALLEL_NOTICE removed from safe_push.py (test_safe_push.py 52 tests OK); ADV counted it",
      "updated_at": "2026-11-25T20:44:40Z"
+    },
+    {
+     "step": "Gate side scans (9be73bce4): when ten later publications exist, run files/coordination/he_gate_proto_20261125/read_ten_landings.sh b07ec007b <ten SHAs> outside the lock; any stdout difference reverts 9be73bce4's commit; report gate seconds and lock seconds to ADV",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV GO with five conditions, 2026-11-25, condition (d)",
+     "accepted_at": "2026-11-25T21:34:53Z"
     }
    ]
   }
@@ -2587,6 +2594,13 @@
    "at": "2026-11-25T20:08:15Z",
    "source": "ADV a5e6f2ad GO condition 5, 2026-11-25",
    "step_sha256": "2710c20101da",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T21:34:53Z",
+   "source": "ADV GO with five conditions, 2026-11-25, condition (d)",
+   "step_sha256": "363bebb4d836",
    "reopened_block": false,
    "authorised_by": null
   }
