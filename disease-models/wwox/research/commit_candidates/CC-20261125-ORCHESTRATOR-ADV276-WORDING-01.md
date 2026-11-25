@@ -1,7 +1,7 @@
 # COMMIT CANDIDATE — CC-20261125-ORCHESTRATOR-ADV276-WORDING-01
 
 **Actor:** `orchestrator` (IT) · **Task:** ORCH-ROADMAP-IT59-20261119 (ADV-276 increment 1, one queued candidate at ADV's word; SCI's wording message is peer content, not operator authority) · **Date:** 2026-11-25 · **target_wm_version:** `WM_v7.29` (unchanged)
-**Origin of the finding:** `disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276_acquired_reading_sci_20261125/RESULT_ADV276_SCI_20261125.md` section 3 (SCI, one reader). **IT read the passages behind all ten lines again from the held bytes on 2026-11-25** (section 4) and changed five of SCI's lines where the source says something different or more (marked **IT** below).
+**Origin of the finding:** `disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276_acquired_reading_sci_20261125/RESULT_ADV276_SCI_20261125.md` section 3 (SCI, one reader). **IT read the passages behind all ten lines again from the held bytes on 2026-11-25** (section 4) and changed five of SCI's lines where the source says something different or more (marked **IT** below). SCI checked the three that correct it (lines 1, 9, 10) and the mortality addition (line 6) against the held bytes and accepted them (peer message, 2026-11-25).
 **Status:** PROPOSED. Nothing is applied to any card, ranking row, coverage table or registry by this act.
 
 > Public, disease-level, de-identified. Hypothesis level; nothing here is medical advice. Reference genotype class only. None of these ten papers is WWOX evidence. None was completely read; figures are captions only and supplements are not held.
