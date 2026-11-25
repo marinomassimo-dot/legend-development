@@ -30,6 +30,14 @@ Hypothesis level; reference genotype class; nothing here is medical advice. Sour
 
 * **A held file is not a read until its bytes are what its name says:** HTML error pages saved as figures or PDFs exist (ADV-279: 39 mismatches in 6,100 held files).
 
+* **The blind reader gets the repository sentence, not the fact** (ADV-280: a facts-only second reading agreed with the first reader on every fact and the batch scored strict 0 of 10; a second reader given the verbatim consumer sentences found both strict items, one of them a card parenthesis that called all of a paper's NADH assays dye-reduction measures when only one was, and a ledger line that called every figure republished when two legends said so). Build the sentence file first (verbatim, verdicts MUST CHANGE / ADD / STANDS, "do not assume right or wrong") and send it with the sources.
+
+* **A description of the source's own assays, figures or concentrations repeated from memory** is the commonest strict error: reopen the Methods and the legend that the sentence describes, and count the conditions in the panel against the number the sentence names (ADV-280: "three concentrations" where six were tested).
+
+* **A null needs its activity check:** an inhibitor arm read as "did nothing" (chloroquine at one dose, 16 h, in two variant maps) is a placed route only if the paper shows the inhibitor acted; search text, supplement and source data for the positive control and date the negative.
+
+* **A faint band on a very small strip is measured, not judged:** average the band rows against the rows above and below per column block before changing "faint residual" (ADV-280, 36926521: a shallow dip of 9 to 19 grey levels in every block, which a second reader had called "not a band").
+
 ## Use
 
 Before the first read: write the five questions on the PREREG with the paper's consumer sentence. After the read: one line per class in the result (the class of correction this batch found), and the second reader (a blind delegate, stated model and effort) judges every sentence proposed for change. Observed rate: about two reads in five need a strict correction (16 of 37) and about three in five some change (23 of 37), on consumers that were mostly narrow earlier readings; a result with none is possible and must not be forced.

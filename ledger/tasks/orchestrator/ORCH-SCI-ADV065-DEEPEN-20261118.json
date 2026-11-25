@@ -1113,10 +1113,19 @@
     },
     {
      "step": "ADV-280: next ten readable held records under the wider rule (defective held files excluded first), two increments of five, blind second reading, wording to IT, report to ADV",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "assignment ADV-280 (advisor_pilot_20261113/assignments/ADV-280.md, c779c76bb)",
-     "accepted_at": "2026-11-25T17:42:14Z"
+     "accepted_at": "2026-11-25T17:42:14Z",
+     "evidence": "ADV-280 complete on development/main 65e1ff7da: RESULT_ADV280_INC1/INC2_SCI_20261125.md, ten receipts FTR-20261125-*, strict 2 of 10, loose 9 of 10, wording sent to IT, report sent to ADV",
+     "updated_at": "2026-11-25T18:33:33Z"
+    },
+    {
+     "step": "SCI-proposed (no idle laboratory): positive-control audit of the ten null-worded repurposing-card notes (DR-A01-003, -004, DR-A02-002, -009, DR-E03-001, DR-H01-001, -003, DR-L01-001, DR-M01-001, DR-P11-006): for each, does the held source carry an activity or engagement check for the manipulation; sentence-level blind check; wording to IT, report to ADV",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator standing rule no idle laboratory; proposal sent to ADV 2026-11-25 after ADV-280 (RESULT_ADV280_INC2_SCI_20261125.md section 4)",
+     "accepted_at": "2026-11-25T18:33:39Z"
     }
    ]
   }
@@ -1982,6 +1991,13 @@
    "step_sha256": "ff20e7359253",
    "reopened_block": false,
    "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T18:33:39Z",
+   "source": "operator standing rule no idle laboratory; proposal sent to ADV 2026-11-25 after ADV-280 (RESULT_ADV280_INC2_SCI_20261125.md section 4)",
+   "step_sha256": "9ce04be4e86c",
+   "reopened_block": false,
+   "authorised_by": null
   }
  ],
  "DELEGATIONS": [
@@ -2021,6 +2037,17 @@
   "ADV-095 verifier pass 2 on the exposure round numbers (legend-delegate, 2026-11-20): asked sonnet/high; read back in the census: claude-sonnet-5-5 x48 turns, effort high x48; 58 tool uses, 32,685 output tokens, 3,852,512 cache-read tokens, peak context 163,553; blind; no repository writes (report persisted verbatim: VERIFIER_PASS_2_REPORT_AS_DELIVERED_20261120.md). Result: values verified; qualifiers: ethosuximide 72.3 mg/kg is a dose given in both groups (ED50 with sildenafil) and the 1:2 homogenate correction is not stated; memantine mouse half-life 2.2 to 3.1 h not 3.8; ketamine value from chronic restraint stress mice; ganaxolone plasma Cmax is the first sample; both absence claims (lithium, d-AP5) not supported as absolute.",
   "ADV-099 blind recompute of the neuron-internal discovery (legend-delegate, 2026-11-20): asked sonnet/high; read back in the census: claude-sonnet-5-5 x8 turns, effort high x8; 9 tool uses, 14,004 output tokens, 250,167 cache-read tokens, peak context 49,052; blind (pre-registration text and held data only; no result, script or out/ table); no repository writes (report persisted verbatim: BLIND_RECOMPUTE_REPORT_AS_DELIVERED_ADV099_20261120.md). Result: same registered verdict in all four cells (NOTHING_REPLICATES_BEYOND_CHANCE), organoid pass counts agree to one gene, nuclei counts differ by open choices, Spearman about -0.05 to -0.03.",
   "Interactome round: blind verification of the GSK3B partner row (Wang 2012, Cheng 2020, GSK-3 pharmacology) (legend-delegate, 2026-11-20): asked sonnet/high; read back in the census: claude-sonnet-5-5 x17 turns, effort high x17; 22 tool uses, 11,978 output tokens, 864,048 cache-read tokens, peak context 83,058; blind (triples and primary sources only; no registry claim, no producer reasoning); no repository writes (report persisted verbatim: VERIFIER_REPORT_GSK3B_AS_DELIVERED_20261120.md). Result: row meets (i) to (iii) at the registered levels with narrowings: directness not shown (no purified-to-purified binding), S9-independence not supported as worded (a correlative retinoic-acid time course; Cheng reports lower pS9 in the null brain), neuronal readout is SH-SY5Y with retinoic acid, no beta-specific constant for a non-lithium class read.",
-  "GSK-3 shared-premise follow-up: blind verification of the harm-cell statements (Ma 2017, Kim 2009, Hashimoto 2003 abstract, lithium label record, Cheng 2020 Fig 7 legends, tau anaesthesia source) (legend-delegate, 2026-11-20): asked sonnet/high; read back in the census: claude-sonnet-5-5 x10 turns, effort high x10; 16 tool uses, 9,716 output tokens, 527,975 cache-read tokens, born 22,643, peak context 93,115; blind (triples and primary sources only); no repository writes (report persisted verbatim: gsk3_shared_premise_sci_20261120/VERIFIER_REPORT_HARM_CELL_AS_DELIVERED_20261120.md). Result: all statements supported; narrowings applied: Kim 2009 mutant is Gsk3a-/- with conditional Gsk3b (alpha germline null), single-deletion no-phenotype is an unpublished observation; Ma 2017 n = 3 brains, genetic knockdown in a subset of cells; label statements carry hedges (may, bipolar I monotherapy only, hypo- or hyperthyroidism); Cheng 2020 text names only Wwox-/- for the LiCl result; tau hypothermia/anaesthesia source at abstract level (Planel 2007), post-mortem delay unreachable."
- ]
+  "GSK-3 shared-premise follow-up: blind verification of the harm-cell statements (Ma 2017, Kim 2009, Hashimoto 2003 abstract, lithium label record, Cheng 2020 Fig 7 legends, tau anaesthesia source) (legend-delegate, 2026-11-20): asked sonnet/high; read back in the census: claude-sonnet-5-5 x10 turns, effort high x10; 16 tool uses, 9,716 output tokens, 527,975 cache-read tokens, born 22,643, peak context 93,115; blind (triples and primary sources only); no repository writes (report persisted verbatim: gsk3_shared_premise_sci_20261120/VERIFIER_REPORT_HARM_CELL_AS_DELIVERED_20261120.md). Result: all statements supported; narrowings applied: Kim 2009 mutant is Gsk3a-/- with conditional Gsk3b (alpha germline null), single-deletion no-phenotype is an unpublished observation; Ma 2017 n = 3 brains, genetic knockdown in a subset of cells; label statements carry hedges (may, bipolar I monotherapy only, hypo- or hyperthyroidism); Cheng 2020 text names only Wwox-/- for the LiCl result; tau hypothermia/anaesthesia source at abstract level (Planel 2007), post-mortem delay unreachable.",
+  "ADV-280 increment 1: blind second reading of facts, five records (legend-delegate, 2026-11-25): asked sonnet/high; read back in the census: claude-sonnet-5-5 x31 turns, effort high x31; 56 tool uses, 27,937 output tokens, 3,360,709 cache-read tokens, peak context 198,004; blind (copies of the held source files and questions only; no repository, no first-reader conclusion); report returned as text (file write refused to it), condensed in BLIND_REPORT_INC1_SCI_20261125.md. Result: facts agreed with the first reader on all five records; its extra observations (unfilled placeholder, abstract against figure, identical SEMs) went into the result file.",
+  "ADV-280 sentence-level second reading, ten records (legend-delegate, 2026-11-25): asked sonnet/high; read back in the census: claude-sonnet-5-5 x40 turns, effort high x40; 73 tool uses, 44,239 output tokens, 6,770,474 cache-read tokens, peak context 297,292; blind (copies of the held sources and the verbatim repository sentences; no first-reader conclusion); report returned as text, condensed in BLIND_SENTENCES_REPORT_ADV280_SCI_20261125.md. Result: MUST CHANGE on three sentences (two verified on the held files and graded strict, one kept loose), ADD on eight, STANDS on seven; the first reader's fact-level grading of strict 0 of 10 was thereby corrected to strict 2 of 10."
+ ],
+ "WAVE_1_RESULT": {
+  "WAVE": "ADV-280 (increments 1 and 2)",
+  "DEFAULTS_TAKEN": [
+   "graded loose, not strict, the first clause of the card E01 AFG3L2 sentence that the second reader graded MUST CHANGE (the same sentence states the siRNA-in-fibroblasts limit); both gradings reported",
+   "kept the 37804316 receipt at supplementary not_read although the pre-registration lets unwatched videos be listed, because the stricter checklist rule applies",
+   "kept 35883580 in the batch although the corrected consumer count is 1: it was read before HE's count arrived"
+  ],
+  "STOP_LOG": []
+ }
 }
