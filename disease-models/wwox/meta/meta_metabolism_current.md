@@ -26,6 +26,7 @@ The metabolic role of WWOX, glycolytic shift, HIF1A/AMPK regulation, energetic v
 - Baryła 2022 (LIT-002 / PAPER 002) — metabolic/redox framework
 - Baryła 2025 (LIT-0019) — WWOX/HIF1A ratio in cancers; WWOX sequesters HIF1A in the cytoplasm
 - Chong 2023 (LIT-0017 / PAPER 017) — mildly elevated lactate in a null/null case → small human clinical signal
+  - *Dated note, 2026-11-25 (IT, ADV-259 via SCI):* this value is a registry statement with no stored quote and no held passage (the held copy is an 8-chunk surface without a lactate passage; no open copy). Do not use the number until the page is seen. Human blood lactate is stated normal in 5 publications; spectroscopy is mixed.
 
 ---
 
