@@ -50,3 +50,6 @@ Changed: the IT6 P47T pathway-positive entry should carry "two of five animals" 
 
 ## 11. Files
 `PREREG_ADV231_SCI_20261125.md` (+ digest, time) · `stat3_echo_adv231.py` · `stat3_echo_animals_adv231.tsv` (per animal, every contrast and gene) · `stat3_echo_verdicts_adv231.tsv` · `p47t_animal_posthoc_adv231.py` · `p47t_animal_scores_posthoc_adv231.tsv`.
+
+## Correction (2026-11-25, after ADV-233)
+Two statements above are wrong or incomplete. (1) The two-animal (M6, F8) observation of section 4(b) and section 9 was **not new**: IT12 (`p47t_it12_20261031`, 2026-10-31) had already identified these animals by their Nptx2 and Bdnf surge; my duplicate check searched gene names, not animal identifiers. (2) The P47T table holds integer counts, not "normalised counts" (section 8); the frozen calls are not affected (median-centred contrasts) but the post hoc score of section 4(b) used no library-size normalisation. ADV-233 repeats it with normalisation and a leave-two-out test.

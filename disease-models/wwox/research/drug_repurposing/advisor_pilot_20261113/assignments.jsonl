@@ -552,3 +552,7 @@
 {"assessment": "HOST", "id": "ADV-235", "key": "ci-red-on-main-debt-report-advisor-import-test", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-25T00:53:15Z"}
 {"evidence": "SendMessage 00:53Z with brief pointer", "id": "ADV-234", "receipt": ["485021ab-d680-4325-b976-b5ab017388ec"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 7cf5e85a"], "utc": "2026-11-25T00:53:38Z"}
 {"evidence": "SendMessage 00:53Z with brief pointer", "id": "ADV-235", "receipt": ["ea055283-eba5-4e9d-b989-4a3c51ce7996"], "state": "SENT", "to": ["HE - CURRENT 3b826442"], "utc": "2026-11-25T00:53:39Z"}
+{"assessment": "HOST", "id": "ADV-236", "key": "raw-eeg-holders-data-availability-hussain-obeid", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-25T00:58:07Z"}
+{"assessment": "HOST", "id": "ADV-237", "key": "red-main-episodes-measured-and-diff-selected-local-run", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-25T00:58:24Z"}
+{"evidence": "SendMessage 00:58Z with brief pointer", "id": "ADV-236", "receipt": ["fdbb31cc-eb6e-42aa-acf9-129ca21da082"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 7cf5e85a"], "utc": "2026-11-25T00:58:25Z"}
+{"evidence": "SendMessage 00:58Z, named ADV-237 in the message", "id": "ADV-237", "receipt": ["1f22acd8-e2f2-4fa1-b60f-4aac5fc279fd"], "state": "SENT", "to": ["HE - CURRENT 3b826442"], "utc": "2026-11-25T00:58:26Z"}
