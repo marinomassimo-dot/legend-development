@@ -17,7 +17,8 @@ is the builder's choice and no rebuild changes it.
 What it sees: exact copies of a card string, or of a sentence of it, of at least 60 characters and 8 words. Not
 paraphrases, not translations, not a clipped copy shorter than 200 characters that is not a whole sentence.
 
-A refusal on a generated file is repaired by rebuilding in order: `repurposing_coverage.py run`, `ranking_it8.py run`,
+A refusal on a generated file is repaired by rebuilding in order: `repurposing_join.py run` (for `join/cards.json`;
+first, because coverage reads `join/measure_next.json`), `repurposing_coverage.py run`, `ranking_it8.py run`,
 `repurposing_view.py run` and its package. A page of a language other than the default one (`index.<lang>.html`) moves
 only with `run --lang all` (and `--source shareable --lang all`). `investigations_it*.tsv` and `assertion_pertinence.tsv` are kept by hand
 (`investigations.tsv` is built from the former): there the row is edited first.
@@ -35,10 +36,10 @@ from pathlib import Path
 MIN_CHARS, MIN_WORDS = 60, 8
 MODULE = re.compile(r"^(disease-models/[^/]+/research/drug_repurposing)/")
 CARD = re.compile(r"/drug_repurposing/(?:cards|cards_early)/[^/]+\.(?:card|packet)\.json$")
-#: Relative to the module. `join/` is left out on purpose: nothing rebuilds or checks it yet, so it is already behind.
+#: Relative to the module. Of `join/`, `cards.json` is the file that copies packet text (`repurposing_join.py run` rebuilds it, `check` says whether it is current).
 SURFACES = re.compile(
     r"^(?:view/index[^/]*\.html|view/shareable_package/index\.html"
-    r"|coverage/(?:priorities\.json|coverage_matrix\.json|assertion_pertinence\.tsv)"
+    r"|coverage/(?:priorities\.json|coverage_matrix\.json|assertion_pertinence\.tsv)|join/cards\.json"
     r"|ranking_it8_p9_[0-9]+/(?:ranking\.json|units\.tsv|unit_members\.tsv|selections\.tsv|member_evidence\.tsv"
     r"|investigations\.tsv|investigations_it[0-9]+\.tsv))$")
 ADDED_MIN, ADDED_PREFIX = 20, 60
@@ -177,7 +178,7 @@ def report(findings: list[dict]) -> str:
         out.append("    still held by: " + ", ".join(finding["files"]))
         out.append(f"    old text: {finding['old']}")
     out.append("hand-kept tables (investigations_it*.tsv, assertion_pertinence.tsv): edit the row. Everything else is built: rebuild in order "
-               "(repurposing_coverage.py run, ranking_it8.py run, repurposing_view.py run and package; a language page index.<lang>.html needs run --lang all, "
+               "(repurposing_join.py run for join/cards.json, then repurposing_coverage.py run, ranking_it8.py run, repurposing_view.py run and package; a language page index.<lang>.html needs run --lang all, "
                "also with --source shareable)")
     return "\n".join(out)
 
