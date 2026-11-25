@@ -501,6 +501,24 @@
      "accepted_at": "2026-11-25T07:38:59Z",
      "updated_at": "2026-11-25T07:49:36Z",
      "evidence": "RESULT_ADV270_IT_20261125.md (brainstorm_20261116/it_adv270_20261125); R-11 and NR-03 dated corrections; branch task/it-adv270-20261125; suites and lint green"
+    },
+    {
+     "step": "Map negatives residual unit (second item after ADV-270): remaining undated negatives checked by the ADV-268 method; result to ADV",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-25 (ADV-270 assignment, second item)",
+     "accepted_at": "2026-11-25T08:00:13Z",
+     "evidence": "it_map_negatives_residual_20261125/RESULT_MAP_NEGATIVES_RESIDUAL_IT_20261125.md: six sentences, one narrowed; N-11 dated correction; suites and lint green",
+     "updated_at": "2026-11-25T08:00:14Z"
+    },
+    {
+     "step": "Candidate CC-20261125-ORCHESTRATOR-ADV265-WORDING-01: SCI ADV-265 wording lines plus ADV-228 hand-off items (ii), (iii); numerics re-derived from held bytes; filed PROPOSED",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "SCI message 2026-11-25 (ADV-265); checkpoint 16 section 3 item 1",
+     "accepted_at": "2026-11-25T08:00:14Z",
+     "evidence": "disease-models/wwox/research/commit_candidates/CC-20261125-ORCHESTRATOR-ADV265-WORDING-01.md filed PROPOSED; blind checks pending at propagation; Rempel and ADV-269 excluded",
+     "updated_at": "2026-11-25T08:00:14Z"
     }
    ]
   }
@@ -888,6 +906,20 @@
    "at": "2026-11-25T07:38:59Z",
    "source": "ADV-270 (assignments/ADV-270.md; ADV message 2026-11-25)",
    "step_sha256": "595b2e7643e1",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T08:00:13Z",
+   "source": "ADV message 2026-11-25 (ADV-270 assignment, second item)",
+   "step_sha256": "0cb194964b8f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T08:00:14Z",
+   "source": "SCI message 2026-11-25 (ADV-265); checkpoint 16 section 3 item 1",
+   "step_sha256": "207b6c5a19bb",
    "reopened_block": false,
    "authorised_by": null
   }
