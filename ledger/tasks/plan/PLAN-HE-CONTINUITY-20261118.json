@@ -993,10 +993,12 @@
     },
     {
      "step": "ADV-237: measure the red-main episodes by failing suite and touched files; build a print-only diff-selected suite selector only on a clear majority; report the numbers",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-237 (ADV message to HE window 3b826442, 2026-11-25)",
-     "accepted_at": "2026-11-25T01:02:20Z"
+     "accepted_at": "2026-11-25T01:02:20Z",
+     "evidence": "25c2114a4 on development/main (gate PASS): framework/scripts/landing_suites.py print-only with 11 tests, routed once; record checkpoint_he_20261120/HE_RED_MAIN_ADV237_20261125.md; 25 of 31 failed runs of ADV's window flagged, 5 of 5 causes since the view checks, 10 of 16 replayed causes",
+     "updated_at": "2026-11-25T01:41:55Z"
     },
     {
      "step": "ADV-217: PubMed delta census tool, wired into the weekly scout start",
@@ -1060,6 +1062,13 @@
      "accepted_at": "2026-11-25T01:23:41Z",
      "evidence": "2026-11-25 01:23Z: mandate_watch handoff RUNNING; claude agents --all --json shows 'SCI - PREVIOUS 7fc66b5b' and 'SCI - CURRENT ac5ef625'; mandate_watch labels CURRENT; retire-old not run, reported to ADV",
      "updated_at": "2026-11-25T01:23:41Z"
+    },
+    {
+     "step": "Protocol paragraph: which suites a change must run locally before a push, from the ADV-237 table, and a one-line DREAM",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV direction round 01:40Z, 2026-11-25",
+     "accepted_at": "2026-11-25T01:41:55Z"
     }
    ]
   }
@@ -1881,6 +1890,13 @@
    "at": "2026-11-25T01:23:41Z",
    "source": "ADV message 2026-11-25 (SCI successor launched)",
    "step_sha256": "e3777e52f9c6",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T01:41:55Z",
+   "source": "ADV direction round 01:40Z, 2026-11-25",
+   "step_sha256": "476717802f53",
    "reopened_block": false,
    "authorised_by": null
   }

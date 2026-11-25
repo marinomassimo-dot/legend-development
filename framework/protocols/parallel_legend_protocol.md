@@ -53,6 +53,24 @@ Conflicts between branches:
   itself. The reasons and the incidents live in that tool's docstring, not here.
 - Another session's release battery may run as `python3 -B scripts/run_release_regressions.py`; a pattern written for the plain command line misses it and two batteries overlap (2026-11-10). List the processes in both forms, or ask the owner for the PID, before starting one.
 
+### 1.6 Before you push: run the suites your own change can turn red
+The publisher runs the publication gate and the committed-view checks, no regression suite, and a CI run takes more than an hour. On your committed branch, run what
+[`landing_suites.py`](../scripts/landing_suites.py) prints (about 45 to 150 s), with `< /dev/null`:
+
+| Your change touches | Suites that have turned main red this way |
+|---|---|
+| a new or edited `.md` or `.py` | documented commands |
+| a `.py` under `framework/scripts/` | the Advisor isolation test in `test_strategic_advisor.py` |
+| a registry | batch queue, pathograph |
+| the receipts ledger | coverage report, reading state |
+| a `.tsv`, `.csv`, `.json` or `.jsonl` | structured data integrity |
+| a `test_*.py` under `disease-models/` | that file itself |
+
+The tool also names a few cheap suites with no such episode behind them. A suite already red on main stays red for you too (`ci_runs.py status <sha>`): say so in your report and tell its owner,
+do not silence it. Stale committed views were the other large cause and the publisher already refuses them. This selection is **not** the release battery and does not satisfy the battery
+condition of the push rule in `LEGEND_CORE` §21d; it adds no gate. Evidence and limits: the
+[ADV-237 measurement](../../disease-models/wwox/research/drug_repurposing/checkpoint_he_20261120/HE_RED_MAIN_ADV237_20261125.md).
+
 ---
 
 ## 2. WHEN TO USE PARALLEL BRANCHES
