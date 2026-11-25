@@ -586,3 +586,7 @@
 {"assessment": "HOST", "id": "ADV-252", "key": "ci-red-test-landing-suites-closed-world-assertion", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-25T03:31:37Z"}
 {"evidence": "SendMessage 03:31Z with brief pointer", "id": "ADV-251", "receipt": ["f659806d-2eae-4279-b3ff-decc779c3adc"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 45a8b15c"], "utc": "2026-11-25T03:31:51Z"}
 {"evidence": "SendMessage 03:31Z with brief pointer", "id": "ADV-252", "receipt": ["e096d7d8-a412-4478-a6a5-95bfb63cc354"], "state": "SENT", "to": ["HE - CURRENT a930ffce"], "utc": "2026-11-25T03:31:51Z"}
+{"assessment": "HOST", "id": "ADV-253", "key": "review-28045433-figure3-against-retracted-panels", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T04:05:19Z"}
+{"assessment": "HOST", "id": "ADV-254", "key": "ledger-leads-with-no-primary-pmid-that-cards-lean-on", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T04:05:19Z"}
+{"evidence": "SendMessage 04:05Z; ADV-254 queued behind ADV-253 (one active)", "id": "ADV-253", "receipt": ["f7435bfd-ee32-4661-856d-6c31d5825b4f"], "state": "SENT", "to": ["SCI - CURRENT e8081cc5"], "utc": "2026-11-25T04:05:29Z"}
+{"evidence": "SendMessage 04:05Z; ADV-254 queued behind ADV-253 (one active)", "id": "ADV-254", "receipt": ["f7435bfd-ee32-4661-856d-6c31d5825b4f"], "state": "SENT", "to": ["SCI - CURRENT e8081cc5"], "utc": "2026-11-25T04:05:29Z"}
