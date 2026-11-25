@@ -1,0 +1,13 @@
+carried_inference	set_used	regions_threshold_met_all_animals	regions_still_met_without_M6_F8	M6_F8_ranks_1_2_regions	disposition	rp_or_card
+TNF_NFkB_IL1B_RELA_inference_it6_row5	TNFA_SIGNALING_VIA_NFKB	HPC,CTX,PFC	none	HPC,CTX,PFC	CARRIED_BY_TWO_ANIMALS	it6_p10 row 5
+IL6_JAK_STAT3_positive_it6_row5	IL6_JAK_STAT3_SIGNALING	HPC,CTX,PFC	none	CTX,PFC	CARRIED_BY_TWO_ANIMALS	it6_p10 row 5
+inflammatory_response	INFLAMMATORY_RESPONSE	HPC,PFC	HPC	CTX,PFC	NOT_RESOLVABLE	it12 hallmark
+hypoxia	HYPOXIA	HPC,CTX,PFC	HPC	HPC,CTX,PFC	CARRIED_BY_TWO_ANIMALS	K01
+glycolysis	GLYCOLYSIS	HPC,CTX,PFC	HPC,CTX,PFC	CTX,PFC	ROBUST	K01
+mtorc1_forebrain	MTORC1_SIGNALING	HPC,CTX,PFC	HPC	PFC	NOT_RESOLVABLE	RP-036 (forebrain side)
+fatty_acid_forebrain_hpc	FATTY_ACID_METABOLISM	HPC	HPC	none_in_two	ROBUST	RP-036 (forebrain side)
+cholesterol_forebrain	CHOLESTEROL_HOMEOSTASIS	none	none	CTX,PFC	NEVER_MET	RP-036 (forebrain side)
+cholesterol_cerebellum	CHOLESTEROL_HOMEOSTASIS	CB	not_testable_one_mutant_left	all_three_mutants_above_every_WT	ROBUST_PER_ANIMAL	RP-036
+fatty_acid_cerebellum	FATTY_ACID_METABOLISM	CB	not_testable_one_mutant_left	all_three_mutants_above_every_WT	ROBUST_PER_ANIMAL	RP-036
+mtorc1_cerebellum	MTORC1_SIGNALING	CB	not_testable_one_mutant_left	all_three_mutants_above_every_WT	ROBUST_PER_ANIMAL	RP-036
+nrf2_5	NRF2_5_IT12_rule	HPC	none	CTX,PFC	NOT_RESOLVABLE	L01
