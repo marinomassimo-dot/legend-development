@@ -378,7 +378,11 @@ class TheRemovalCheckNamesEveryReasonToKeep(unittest.TestCase):
         self.assertIn("HEAD not on main", keep["unmerged"])
         self.assertIn("locked", keep["locked"])
         self.assertIn("wrote 2.0 h ago", keep["recent"])
-        self.assertIn("process", keep["held"])
+        eligible = dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=22)
+        stated = dt.datetime.strptime(keep["recent"].split("eligible after ")[1].split(" ")[0], "%Y-%m-%dT%H:%MZ")
+        self.assertLess(abs((stated.replace(tzinfo=dt.timezone.utc) - eligible).total_seconds()), 180)
+        self.assertIn(f"{holder.pid} ", keep["held"])
+        self.assertIn("(cwd)", keep["held"])
         self.assertTrue((ignored / "backup" / "only_copy.md").exists(), "a report removes nothing")
 
     def test_the_flag_prints_the_section_and_the_default_report_does_not(self) -> None:

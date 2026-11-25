@@ -7,7 +7,9 @@ earns a tool only if the tool PRINTS what it checked, so each line below is a me
 
     prepare  digests recomputed from <remote>/main, the brief filled from a template, the launch commands PRINTED
     rename   demote the old window to PREVIOUS, then promote the new one to CURRENT; each step proved by the listing
-    verify   released / bound / first action / labels, all read from `mandate_watch.py` (no logic of its own)
+    verify   released / bound / first action / labels, all read from `mandate_watch.py` (no logic of its own); then,
+             report only, what keeps the old window's worktree and every worktree with no reason to keep
+             (`branch_hygiene.py --removal`), so that a cleanup is seen at each handoff and not at the disk alarm
 
 What it never does: it does not start a model (`claude --bg`), stop, retire or delete a session, or write a repository file.
 The launch stays a command the launcher types, so a permission control judges that act itself and never a wrapper around it.
@@ -38,6 +40,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from repo_root import add_root_argument, resolve_root_argument  # noqa: E402
+import branch_hygiene as bh  # noqa: E402
 
 HEX64 = re.compile(r"(?<![0-9a-f])[0-9a-f]{64}(?![0-9a-f])")
 PLACEHOLDER = re.compile(r"__[A-Z0-9][A-Z0-9_]*?__")
@@ -299,6 +302,25 @@ def rename(args, root: Path, say=print, listing=inventory, view_factory=Tmux, st
 
 # ------------------------------------------------------------------------------------------------- verify
 
+def cleanup(root: Path, old: dict, say, projects: Path) -> None:
+    """Report only. A check that cannot run says so; it never changes the verdict of the handoff."""
+    try:
+        rows = bh.removal_rows(root, bh.worktrees(root), bh.resolve_base(root, None)["ref"], projects)
+    except (bh.GitError, OSError) as why:
+        say(f"cleanup        not checked: {str(why)[:200]}")
+        return
+    where = old.get("cwd")
+    mine = next((r for r in rows if r["path"] == where), None)
+    if mine:
+        say(f"old worktree   {where}  keep: {'; '.join(mine['keep']) or 'no reason found'}")
+    else:
+        say(f"old worktree   no linked worktree ({where or 'no directory in the listing'})")
+    free = [r["path"] for r in rows if not r["keep"]]
+    say(f"removable      {len(free)} worktree(s) with no reason found to keep; nothing is removed, ask the owner first")
+    for path in free:
+        say(f"               {path}")
+
+
 def verify(args, root: Path, say=print, sessions: list[dict] | None = None) -> None:
     sessions = inventory() if sessions is None else sessions
     old, new = find_session(sessions, args.old), find_session(sessions, args.new)
@@ -314,6 +336,7 @@ def verify(args, root: Path, say=print, sessions: list[dict] | None = None) -> N
         f"successor tool calls {report.get('new', {}).get('tool_calls_after_bind')}")
     names = report.get("session_names") or {}
     say(f"labels         {names.get('state')}  pending renames {len(names.get('renames') or [])}")
+    cleanup(root, old, say, Path(getattr(args, "projects_dir", "~/.claude/projects")).expanduser())
     if report.get("verdict") != "RUNNING" or names.get("state") != "CURRENT":
         raise Refused(f"handoff not complete: {report.get('next')}")
 
