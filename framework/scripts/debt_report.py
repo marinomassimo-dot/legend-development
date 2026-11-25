@@ -166,7 +166,12 @@ def coverage_block(root: Path, events: list[dict] | None = None) -> tuple[list[s
     lines.append(f"  best-state sections: of {readings['multi_receipt_studies']} studies with 2+ receipts, "
                  f"{readings['latest_narrower']} have a latest receipt narrower than the union of earlier ones; "
                  f"{readings['section_flags_lost']} of {readings['section_flags_union']} read-section flags "
-                 f"vanish under 'latest' (this tool's definition; SCI ADV-219 counts under its own)")
+                 f"vanish under 'latest' (this tool's own count: union of every earlier receipt, any study; "
+                 f"coverage_report.md prints the same idea with the surviving-receipt rule, event_at order)")
+    lines.append("  against SCI ADV-219 (primary flags, 2026-11-24): 428 multi-receipt studies and 172 narrower are reproduced exactly; "
+                 "its '300 flags gone' is 294 'an earlier receipt already marks the section read' (286 class B + 8 class A) plus 6 "
+                 "'an earlier receipt gives a better non-read label' (its best_state ranks read, not_present, captions_only, unavailable, "
+                 "not_read across all receipts): a rule difference, stated, not an unknown; 294 is the clean 'already read' figure")
     return lines, data
 
 
