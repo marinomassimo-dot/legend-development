@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261125_002
+last_batch_commit_id: BATCH_20261125_003
 last_batch_commit_date: 2026-11-25
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 3
+commit_candidates_propagated: 2
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV's staged BATCH_COMMIT after a blind check by one verifier, sonnet, effort high, on 25 statements; the statements it overturned stay out). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: THREE candidates, verified remainder only: CC-20261125-ORCHESTRATOR-ADV249-PAPER050-01 (PAPER 050 Evidence depth and Note correction), CC-20261125-ORCHESTRATOR-ADV265-WORDING-01 (CORPUS-STUB-129, one dated note on CLAIM 011 and working-model section 4; ledger bullets by the ordinary route), CC-20261125-ORCHESTRATOR-PANELS1LM-RESCUE-RANGE-01 (one line on CLAIM 002) — prior line: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV-234, main's CI red on test_batch_queue: one candidate, CC-20261125-ORCHESTRATOR-ADV234-PAPER570-01, one new PAPER identity record for a complete read, no version bump, WM_v7.29 preserved) — prior line: (ADV-212 candidate backlog at the trigger of five; three candidates, wording and depth lines, no version bump; the earlier same-day batch follows) — prior line: (ADV-212 follow-up, ADV's word to write the repoint without triples 4 and 5). MAJOR by consequence as the candidate declares it (the Source of a consolidated baseline moves), not a baseline reversal, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: ONE candidate, CC-20260826-PROVENANCE-01 (the last open step, item C second half): the Source of CLAIM 002 repointed to PAPER 094 and the Claim links of PAPER 094 set to 002 (2 record-scoped ops), written without the Fig 2F and supplementary-volume triples; identifiers checked against the receipt ledger. The previous batch (BATCH_20261124_001: PAPER 542 and LIT-0814 label, CLAIM 002 and PAPER 094 Fig 6 wording) follows only as history in state_history.
+trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV's staged BATCH_COMMIT, batch 2: one blind verifier, sonnet, effort high, on 8 statements and 26 facts, 24 supported and 2 undershoot corrected before propagation). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: TWO candidates, verified remainder, record-scoped, CLAIM 009, PAPER 017, PAPER 050 and CORPUS-STUB-129 (scope in state_history section 4).
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261125_BATCH_20261125_002
+last_lint_id: LINT_20261125_BATCH_20261125_003
 last_lint_date: 2026-11-25
 last_lint_result: WARN
 ```
