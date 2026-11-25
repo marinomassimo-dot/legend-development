@@ -6051,6 +6051,35 @@ def browser_preflight(out=print) -> int:
     return 0
 
 
+_BROWSER_WATCH = """
+import os, shutil, signal, sys, time
+pgid, profile = int(sys.argv[1]), sys.argv[2]
+if os.read(0, 1):          # a byte: the owner closed the browser itself
+    sys.exit(0)
+try:                       # end of file: the owner is gone, whatever ended it
+    os.killpg(pgid, signal.SIGKILL)
+except OSError:
+    pass
+for _ in range(100):       # a helper may still be writing for a moment
+    try:
+        shutil.rmtree(profile)
+        break
+    except FileNotFoundError:
+        break
+    except OSError:
+        time.sleep(0.1)
+"""
+
+
+def _watch_browser(pgid: int, profile: str):
+    """Start the process that stops a browser whose owner died (HE 2026-11-25). The browser runs in its own session so that close() can signal its whole group; the price was that nothing
+    stopped it when this Python process was killed or timed out (24 orphan trees, about 290 processes on one host). Only this process holds the write end of the watcher's pipe, so end of
+    file means it is gone: SIGKILL included, which runs no `finally`. The watcher has its own session, so a signal sent to the owner's group does not reach it."""
+    import subprocess
+    return subprocess.Popen([sys.executable, "-I", "-S", "-c", _BROWSER_WATCH, str(pgid), profile],
+                            stdin=subprocess.PIPE, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+
+
 class Cdp:
     """A minimal websocket client (RFC 6455, text frames) for one Chromium page target. Launches the browser WITHOUT any sandbox-bypass flag.
     The window size is irrelevant: Emulation.setDeviceMetricsOverride sets the real layout viewport, which is then MEASURED, not assumed."""
@@ -6072,6 +6101,11 @@ class Cdp:
         with open(stderr_path, "wb") as stderr:
             self.proc = subprocess.Popen([binary, "--headless=new", "--disable-gpu", f"--remote-debugging-port={self.port}", f"--user-data-dir={self.profile}", "about:blank"],
                                          stdout=subprocess.DEVNULL, stderr=stderr, start_new_session=True)
+        try:
+            self.watch = _watch_browser(self.proc.pid, self.profile)
+        except Exception:
+            self.close()
+            raise
         url = None
         last_error = "no page target returned"
         while time.monotonic() < deadline:
@@ -6226,7 +6260,7 @@ class Cdp:
             except (OSError, RuntimeError, subprocess.TimeoutExpired):
                 pass
         try:
-            self.sock.close()
+            self.sock.close()          # absent when the start failed before the connection
         except Exception:
             pass
         if not closed_cleanly:
@@ -6265,6 +6299,12 @@ class Cdp:
                 if time.time() > end:
                     raise
                 time.sleep(0.1)
+        watch, self.watch = getattr(self, "watch", None), None
+        if watch is not None:              # last: if anything above raised, the watcher still acts when this process ends
+            try:
+                watch.communicate(b"x", timeout=10)
+            except (OSError, subprocess.TimeoutExpired):
+                pass
 
 
 MEASURE_JS = r"""(function(){var iw=__REQ__,de=document.documentElement,off=[];

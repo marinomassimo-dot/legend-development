@@ -1626,6 +1626,143 @@ server.serve_forever()
             with self.assertRaises(ProcessLookupError):
                 os.kill(pid, 0)
 
+    def test_release_signals_nothing_and_a_lost_owner_kills_the_group_and_removes_the_profile(self):
+        """The two ways the watcher's pipe can end: a byte first (close() did the work) and a bare end of file (the owner is gone)."""
+        import subprocess
+        with tempfile.TemporaryDirectory() as td:
+            for released in (True, False):
+                with self.subTest(released=released):
+                    profile = Path(td) / f"profile-{released}"
+                    profile.mkdir()
+                    stand_in = subprocess.Popen([sys.executable, "-c", "import time; time.sleep(60)"], start_new_session=True)
+                    try:
+                        watch = rv._watch_browser(stand_in.pid, str(profile))
+                        watch.communicate(b"x" if released else b"", timeout=30)
+                        self.assertEqual(watch.returncode, 0)
+                        if released:
+                            self.assertIsNone(stand_in.poll(), "a released watcher must signal nothing")
+                            self.assertTrue(profile.exists())
+                        else:
+                            self.assertEqual(stand_in.wait(timeout=10), -9)
+                            self.assertFalse(profile.exists())
+                    finally:
+                        stand_in.kill()
+                        stand_in.wait()
+
+    @unittest.skipUnless(Path("/proc/self/stat").exists(), "needs /proc to see processes that are not our children")
+    def test_a_killed_parent_leaves_no_browser_process_and_no_profile(self):
+        """HE 2026-11-25: the browser starts in its own session, so a parent killed by a timeout left it running (24 orphan trees, about 290 processes on one host).
+        A fake browser with a helper stands for Chromium. The parent's whole group gets SIGKILL, which runs no `finally` and no atexit handler."""
+        body = """import os, pathlib, subprocess, sys, time
+helper = subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(60)'])
+os.makedirs(next(a.split('=', 1)[1] for a in sys.argv if a.startswith('--user-data-dir=')), exist_ok=True)
+part = pathlib.Path(__file__).with_suffix('.part')
+part.write_text(f'{os.getpid()} {helper.pid}')
+part.rename(part.with_suffix('.pids'))
+time.sleep(60)
+"""
+        with tempfile.TemporaryDirectory() as td:
+            binary = self.browser(td, body)
+            pids_file = Path(binary).with_suffix(".pids")
+            _killed_parent(self, "rv.Cdp(sys.argv[2], sys.argv[3], startup_timeout=60)", [binary, td],
+                           ready=lambda: [int(p) for p in pids_file.read_text().split()] if pids_file.exists() else None,
+                           profile=Path(td) / "profile")
+
+
+def _running(pid: int) -> bool:
+    try:
+        stat = Path(f"/proc/{pid}/stat").read_text()
+    except OSError:
+        return False
+    return stat[stat.rindex(")") + 2] != "Z"
+
+
+def _with_profile(profile: Path) -> list[int]:
+    """Every running process started with this browser profile (the watcher names the directory too, but not with this option)."""
+    option = f"--user-data-dir={profile}".encode()
+    found = []
+    for entry in Path("/proc").iterdir():
+        if entry.name.isdigit():
+            try:
+                if option in (entry / "cmdline").read_bytes() and _running(int(entry.name)):
+                    found.append(int(entry.name))
+            except OSError:
+                continue
+    return found
+
+
+def _killed_parent(case, statement: str, args: list[str], *, ready, profile: Path) -> None:
+    """Run `statement` in a child interpreter, wait until `ready()` names the browser's processes, SIGKILL the child's process group, and require that every one of them and the profile go away.
+    Whatever is left is killed in `finally`, so a failing run does not add an orphan of its own."""
+    import os
+    import signal
+    import subprocess
+    import time
+    code = f"import sys, time; sys.path.insert(0, sys.argv[1]); import repurposing_view as rv; c = {statement}; time.sleep(120)"
+    parent = subprocess.Popen([sys.executable, "-B", "-c", code, str(Path(__file__).parent), *args], start_new_session=True, stdout=subprocess.DEVNULL)
+    pids: list[int] = []
+    try:
+        end = time.monotonic() + 60
+        while not (pids := ready() or []):
+            case.assertIsNone(parent.poll(), "the parent ended before the browser was up")
+            case.assertLess(time.monotonic(), end, "the browser never came up")
+            time.sleep(0.05)
+        time.sleep(0.5)                       # the parent has returned from the browser's Popen and started its watcher
+        case.assertTrue(profile.exists())
+        case.assertNotEqual(_with_profile(profile), [], "no process names the profile: the check after the kill would prove nothing")
+        os.killpg(parent.pid, signal.SIGKILL)
+        parent.wait()
+        end = time.monotonic() + 20
+        while (any(map(_running, pids)) or _with_profile(profile) or profile.exists()) and time.monotonic() < end:
+            time.sleep(0.1)
+        case.assertEqual([p for p in pids if _running(p)], [], "browser processes outlived the killed parent")
+        case.assertEqual(_with_profile(profile), [], "a process of this profile outlived the killed parent")
+        case.assertFalse(profile.exists(), "the profile outlived the killed parent")
+    finally:
+        for pid in [*pids, parent.pid]:
+            if _running(pid):
+                os.kill(pid, signal.SIGKILL)
+        parent.wait()
+
+
+class CdpOrphanRealBrowser(unittest.TestCase):
+    """The same promise on the installed browser, whose launcher chain and crash handlers the fake does not have (the handlers sit in their own process groups)."""
+
+    @unittest.skipUnless(Path("/proc/self/stat").exists(), "needs /proc")
+    def test_a_killed_parent_leaves_none_of_the_real_browser_running(self):
+        import os
+        binary = rv.find_chromium()
+        if not binary:
+            self.skipTest("no Chromium binary: the orphan case was NOT exercised")
+
+        def cgroup(pid):
+            try:
+                return Path(f"/proc/{pid}/cgroup").read_text()
+            except OSError:
+                return None
+
+        def tree(leader):
+            """Processes of the browser's group, plus those of its own cgroup when the launcher gave it one (a snap does)."""
+            own = cgroup(os.getpid())
+            scope = cgroup(leader) if cgroup(leader) != own else None
+            out = []
+            for entry in Path("/proc").iterdir():
+                if entry.name.isdigit():
+                    pid = int(entry.name)
+                    try:
+                        group = os.getpgid(pid)
+                    except OSError:
+                        continue
+                    if group == leader or (scope and cgroup(pid) == scope):
+                        out.append(pid)
+            return out
+        with tempfile.TemporaryDirectory() as td:
+            note = Path(td) / "leader"
+            # after the constructor the child names the browser's process; the one-second pause lets the late helpers start
+            statement = ("rv.Cdp(sys.argv[2], sys.argv[3]); import pathlib; time.sleep(1); part = pathlib.Path(sys.argv[3], 'leader.part'); "
+                         "part.write_text(str(c.proc.pid)); part.rename(part.with_suffix(''))")
+            _killed_parent(self, statement, [binary, td], ready=lambda: tree(int(note.read_text())) if note.exists() else None, profile=Path(td) / "profile")
+
 
 class WaitPolls(unittest.TestCase):
     """IT8: the browser-driven checks poll for a ready marker instead of sleeping a fixed time after the load event (a fixed 350 ms crashed the audit on a loaded host)."""
