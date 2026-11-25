@@ -1289,6 +1289,33 @@
      "accepted_at": "2026-11-25T10:32:52Z",
      "updated_at": "2026-11-25T11:22:08Z",
      "evidence": "Landed d3d1f94b13cd on ADV's word (2026-11-25 ~11:07Z): test_safe_push 42 OK on the merged tree; push log first line is the NOTICE; 7 selected suites PASS, gate PASS, ls-remote; replays in CHECKPOINT_HE_20261125_Q_ADDENDUM.md"
+    },
+    {
+     "step": "Per-test times of test_repurposing_view.py and one change for it with minutes per risk",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad message to HE 4fab51c6, 2026-11-25, item 1",
+     "accepted_at": "2026-11-25T12:58:45Z",
+     "evidence": "HE_CI_MINUTES_GATECACHE_20261125.md section 5: A4 print test measures print only, 111 s to 19 s, mutation caught",
+     "updated_at": "2026-11-25T12:58:45Z"
+    },
+    {
+     "step": "Triage the radar backlog with a yield figure defined before counting",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad message to HE 4fab51c6, 2026-11-25, item 2",
+     "accepted_at": "2026-11-25T12:58:45Z",
+     "evidence": "HE_RADAR_YIELD_PREREG_20261125.md and HE_RADAR_YIELD_20261125.md on main: 2 of 13, slot 1 of 9; cut rule not triggered",
+     "updated_at": "2026-11-25T12:58:45Z"
+    },
+    {
+     "step": "One-page radar reader of the untriaged hits grouped by consumer, ranked",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad message to HE 4fab51c6, 2026-11-25",
+     "accepted_at": "2026-11-25T12:58:45Z",
+     "evidence": "HE_RADAR_READER_20261125.md on main (97e079860)",
+     "updated_at": "2026-11-25T12:58:45Z"
     }
    ]
   }
@@ -2285,6 +2312,27 @@
    "at": "2026-11-25T10:32:52Z",
    "source": "ADV a5e6f2ad decision to HE, 2026-11-25, after ADV-274",
    "step_sha256": "b3fd708046a8",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T12:58:45Z",
+   "source": "ADV a5e6f2ad message to HE 4fab51c6, 2026-11-25, item 1",
+   "step_sha256": "5b271c4879c1",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T12:58:45Z",
+   "source": "ADV a5e6f2ad message to HE 4fab51c6, 2026-11-25, item 2",
+   "step_sha256": "1d54e36fb9a4",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T12:58:45Z",
+   "source": "ADV a5e6f2ad message to HE 4fab51c6, 2026-11-25",
+   "step_sha256": "1f4ef9f1f02f",
    "reopened_block": false,
    "authorised_by": null
   }
