@@ -1083,6 +1083,13 @@
      "accepted_at": "2026-11-25T07:11:35Z",
      "evidence": "ADV-269 both increments: twelve held partials read in their unread classes; RESULT_ADV269_SCI_20261125.md (brainstorm_20261116/adv269_held_partials_sci_20261125/), twelve receipts FTR-20261125-<pmid>-01, landed 222c8690; Rempel numbers corrected same day after wrong-sheet error",
      "updated_at": "2026-11-25T08:24:07Z"
+    },
+    {
+     "step": "ADV-272: rank the 421 not-held partials by consumer units, record open-access flags for the top 25, acquire the open-access ones by permitted routes only, list the rest as a new file for the operator PDF list, read one acquired paper if time remains (about 120 minutes, two increments)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-272",
+     "accepted_at": "2026-11-25T09:01:04Z"
     }
    ]
   }
@@ -1918,6 +1925,13 @@
    "at": "2026-11-25T07:11:35Z",
    "source": "ADV-269 (peer assignment by ADV - CURRENT a5e6f2ad, 2026-11-25)",
    "step_sha256": "508c38f0e7ae",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T09:01:04Z",
+   "source": "ADV-272",
+   "step_sha256": "6db3f5ec87ad",
    "reopened_block": false,
    "authorised_by": null
   }

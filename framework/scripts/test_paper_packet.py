@@ -198,6 +198,12 @@ class TheChecksRunInOneCall(unittest.TestCase):
     Each case used to start its own run over the same paper with the same arguments: five runs of
     40 to 130 s, about 400 s of the suite's 700 (measured 2026-11-25), for assertions that all
     read one report. The tree is read before and after that run, for the write-nothing case.
+
+    Effect measured 2026-11-25: on the authoring host the suite went from 702 s to 347 s. In CI no
+    gain was seen: the regression step divided by the same run's release-gate step had a median of
+    10.45 before (6 runs) and 10.5 after (7 runs), within about 0.3 noise, where about 0.6 less was
+    expected. All seven later runs, and one of the earlier six, were red for another cause, which
+    confounds the comparison, and the suite's own CI time could not be read without a login.
     """
 
     @classmethod

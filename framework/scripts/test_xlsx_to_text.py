@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Tests for xlsx_to_text.py: shared strings, sheet names, identity grouping, control reporting."""
-import sys, tempfile, unittest, zipfile
+import contextlib, io, sys, tempfile, unittest, zipfile
 from pathlib import Path
+from types import SimpleNamespace
+from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import xlsx_to_text as X
@@ -46,6 +48,41 @@ class XlsxToText(unittest.TestCase):
             self.assertEqual(out.count("IDENTICAL"), 1)
             self.assertIn("a.xlsx, b.xlsx", out)
             self.assertIn("unique", out)
+
+    def test_a_legacy_xls_is_read_through_xlrd_and_printed_like_xlsx(self):
+        sheet = SimpleNamespace(name="S1", nrows=3,
+                                row_values=lambda i: [["Gene", "FC"], ["WWOX", 3.0], ["X", 7]][i],
+                                row_types=lambda i: [[1, 1], [1, 2], [1, 5]][i])
+        fake = SimpleNamespace(__version__="0.test", XL_CELL_ERROR=5, error_text_from_code={7: "#DIV/0!"},
+                               open_workbook=lambda p: SimpleNamespace(sheet_names=lambda: ["S1"], sheets=lambda: [sheet]))
+        with tempfile.TemporaryDirectory() as d, mock.patch.dict(sys.modules, {"xlrd": fake}):
+            p = Path(d) / "named.xlsx"                     # the bytes decide, not the name
+            p.write_bytes(X.OLE2 + b"rest")
+            out = X.read_workbook(p)
+            self.assertIn("SHEETS S1", out)
+            self.assertIn("WWOX\t3\n", out)
+            self.assertIn("X\t#DIV/0!", out)
+            self.assertIn("1 further rows not printed", X.read_workbook(p, max_rows=2))
+
+    def test_without_xlrd_an_xls_says_why_and_how(self):
+        with tempfile.TemporaryDirectory() as d, mock.patch.dict(sys.modules, {"xlrd": None}):
+            p = Path(d) / "a.xls"
+            p.write_bytes(X.OLE2)
+            with self.assertRaises(X.NotRead) as why:
+                X.read_workbook(p)
+            self.assertIn("python3 -P -E", str(why.exception))
+
+    def test_a_web_page_saved_as_xls_is_not_read_and_the_run_exits_1(self):
+        with tempfile.TemporaryDirectory() as d:
+            bad = Path(d) / "page.xls"
+            bad.write_bytes(b"<!doctype html><title>challenge</title>")
+            good = make(Path(d) / "a.xlsx")
+            said = io.StringIO()
+            with contextlib.redirect_stdout(said):
+                code = X.main([str(bad), str(good)])
+            self.assertEqual(code, 1)
+            self.assertIn("NOT_READ page.xls is neither", said.getvalue())
+            self.assertIn("SHEETS HI | LPS", said.getvalue())
 
     def test_control_characters_are_reported_not_stripped(self):
         with tempfile.TemporaryDirectory() as d:

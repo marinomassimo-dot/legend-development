@@ -675,3 +675,9 @@
 {"evidence": "SendMessage 07:39Z with brief pointer", "id": "ADV-270", "receipt": ["7754b434-1912-43f7-90a0-672a39d4c702"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 0d3f20fd"], "utc": "2026-11-25T07:39:08Z"}
 {"assessment": "HOST", "id": "ADV-271", "key": "peo1-wwox-null-vs-addback-direction-of-ire1-eif2a-readouts", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-25T08:18:21Z"}
 {"evidence": "SendMessage 08:18Z with brief pointer", "id": "ADV-271", "receipt": ["9b30ea4c-2d6c-45b6-880f-1b5bf5b6268b"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 0d3f20fd"], "utc": "2026-11-25T08:18:37Z"}
+{"assessment": "HOST", "id": "ADV-272", "key": "acquire-the-not-held-partials-with-consumers-by-permitted-open-routes", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T08:30:29Z"}
+{"evidence": "SendMessage 08:30Z with brief pointer", "id": "ADV-272", "receipt": ["54452c5f-514e-45c5-b7b7-7cb0c1635537"], "state": "SENT", "to": ["SCI - CURRENT 48889001"], "utc": "2026-11-25T08:30:36Z"}
+{"assessment": "HOST", "id": "ADV-273", "key": "hdac-inhibitor-wwox-direction-in-a-second-platform-dl-repo-003-independence", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-25T08:43:37Z"}
+{"evidence": "SendMessage 08:43Z with brief pointer", "id": "ADV-273", "receipt": ["2cc930f7-605a-4d57-9108-743c1143fd99"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 0d3f20fd"], "utc": "2026-11-25T08:43:56Z"}
+{"assessment": "HOST", "id": "ADV-274", "key": "red-streak-attribution-and-landing-suite-escape-count", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-25T09:42:44Z"}
+{"evidence": "SendMessage 09:42Z with brief pointer", "id": "ADV-274", "receipt": ["15f4e3fe-9692-4e80-9b79-9637d356ead0"], "state": "SENT", "to": ["HE - CURRENT 9229d112"], "utc": "2026-11-25T09:42:55Z"}

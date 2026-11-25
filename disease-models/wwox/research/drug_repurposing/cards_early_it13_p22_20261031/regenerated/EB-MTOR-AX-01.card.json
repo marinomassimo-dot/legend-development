@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "a22ef3817ba33b8f6647eea47743c48616339ca42796c34c839384c0f465ed31",
+  "input_sha256": "292f271f96523136a821c9b3bded850612f37c00e6dd85063c63cc7ae3a7fa26",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -25,7 +25,7 @@
   },
   "p4_fields": {
     "endpoint_pursued": "UNKNOWN: no WOREE-relevant endpoint is supported for this class",
-    "functional_evidence_available": "none in a WWOX system; the class evidence comes from genetic mTOR-pathway reduction in a Tsc1 model (NOT WWOX EVIDENCE)",
+    "functional_evidence_available": "none in a WWOX-deficient neural system (non-neural carcinoma cells have protein-level readouts, PMID 24008736); the class evidence comes from genetic mTOR-pathway reduction in a Tsc1 model (NOT WWOX EVIDENCE)",
     "temporal_or_model_limit": "the infant record is in tuberous sclerosis, an mTOR-driven disease; it does not transfer to WOREE",
     "cellular_context": {
       "target_expression": "UNKNOWN",
@@ -44,7 +44,7 @@
     "disease_assertion": {
       "id": "D-MTOR-1",
       "target_id": "mTOR_pathway_activity",
-      "endpoint": "mTOR pathway activity in a WWOX-deficient system",
+      "endpoint": "mTOR pathway activity in a WWOX-deficient neural system",
       "direction": "UNKNOWN",
       "source": "DIS-37 premise and R3 note 1.3",
       "locator": "dismissal_ledger_current.md DIS-37 PREMISE: PubMed counts of 2026-10-19; R3 note section 1.3",
@@ -57,7 +57,7 @@
         "cell_type": "UNKNOWN",
         "developmental_stage": "UNKNOWN"
       },
-      "note": "The repository records WWOX-with-mTOR-or-AMPK counts at title and abstract level and a blocked WWOX/mTOR paper whose full text is unread; direction in a WWOX system is not established here."
+      "note": "The repository records WWOX-with-mTOR-or-AMPK counts at title and abstract level and a blocked WWOX/mTOR paper whose full text is unread; direction in a WWOX-deficient neural system is not established here; protein-level readouts exist in non-neural carcinoma cells (PMID 24008736)."
     },
     "drug_assertions": [],
     "label_lookup": {
@@ -65,7 +65,7 @@
     },
     "p4_fields": {
       "endpoint_pursued": "UNKNOWN: no WOREE-relevant endpoint is supported for this class",
-      "functional_evidence_available": "none in a WWOX system; the class evidence comes from genetic mTOR-pathway reduction in a Tsc1 model (NOT WWOX EVIDENCE)",
+      "functional_evidence_available": "none in a WWOX-deficient neural system (non-neural carcinoma cells have protein-level readouts, PMID 24008736); the class evidence comes from genetic mTOR-pathway reduction in a Tsc1 model (NOT WWOX EVIDENCE)",
       "temporal_or_model_limit": "the infant record is in tuberous sclerosis, an mTOR-driven disease; it does not transfer to WOREE",
       "cellular_context": {
         "target_expression": "UNKNOWN",
@@ -77,7 +77,7 @@
     "p4_roadmap_fields": {
       "identity": "Sirolimus, mTOR-inhibitor class; no formulation, dose, trough target or schedule is carried.",
       "indication_and_transfer": "Origin: tuberous sclerosis infants (NOT WWOX EVIDENCE). Bridge to WOREE: not established.",
-      "novelty_for_woree": "Not found in the research for a WWOX-deficient system at this card's depth. The mTOR/autophagy stubs and the blocked paper are an owed read (FT-074; DIS-37 revival trigger).",
+      "novelty_for_woree": "Not found in the research for a WWOX-deficient neural system at this card's depth. The mTOR/autophagy stubs and the blocked paper are an owed read (FT-074; DIS-37 revival trigger).",
       "known_roads_state": "UNKNOWN.",
       "path_and_objective": "Declared BENEFICIO_PRECOCE for this card because only the safety record is visible; the pathway rationale belongs to the deep-recovery path (scientist-a's cards), which this card does not enter.",
       "expected_contribution": "None claimed.",
@@ -91,12 +91,12 @@
       "verification_scope": "R3 readings: blind locator audit OWED (declared in that note). This card: audit OWED.",
       "question_history": "R3 note; FT-074; DIS-37.",
       "predictions": "None.",
-      "next_measure": "Does the blocked WWOX/mTOR paper (full text unread) report a direction of mTOR activity in a WWOX-deficient system?",
-      "status": "ASTENSIONE. Missing datum: a direction of mTOR activity in a WWOX system and any WOREE endpoint.",
+      "next_measure": "Does the blocked WWOX/mTOR paper (full text unread) report a direction of mTOR activity in a WWOX-deficient neural system?",
+      "status": "ASTENSIONE. Missing datum: a direction of mTOR activity in a WWOX-deficient neural system and any WOREE endpoint.",
       "value_added": "Shows that an infant safety record can exist while the benefit axis is empty, so safety visibility is not candidacy."
     },
     "not_known": [
-      "direction of mTOR activity in a WWOX-deficient system",
+      "direction of mTOR activity in a WWOX-deficient neural system",
       "full text of the blocked WWOX/mTOR paper",
       "any WOREE endpoint for this class",
       "growth effect"

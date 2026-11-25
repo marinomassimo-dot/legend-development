@@ -78,3 +78,5 @@ bridge result"; CLAIM 031 unchanged).
 ## What a verifier needs
 
 The decisive datum: rerun `python3 cards_early/check_cards.py` after `git apply` of the patch and see `PASS`; and `python3 semantic_diff_it13_p22.py` showing the differing keys are only `endpoint_outcomes` (+`input_sha256` for VGB). Not verified here: that downstream regenerated surfaces (view, coverage, ranking) stay semantically unchanged; no source was re-read, no quote re-checked beyond the checker's own check #5 (which passes).
+
+* **2026-11-25 (IT, red main after the ADV-263 follow-up):** `regenerated/EB-MTOR-AX-01.card.json` is refreshed to the card the unmodified bridge now builds from the edited packet (neural-system wording of the ADV-263 follow-up, commit 5d6d583a7); the other six copies are unchanged. The copies equal the applied cards by test (`test_applied_cards_equal_the_regenerated_copies`), so a later packet edit owes its copy.

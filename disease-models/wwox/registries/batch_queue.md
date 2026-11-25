@@ -81,11 +81,11 @@ time; it does not redistribute or license the article text.
 
 | Status | Records | Share |
 |---|---:|---:|
-| **Not found by identifier** — run the intake gate | 257 | 36% |
+| **Not found by identifier** — run the intake gate | 256 | 36% |
 | **Catalogued, never processed** — the reading debt | 113 | 16% |
 | Known to the tracking log only | 71 | 10% |
 | Processed from the abstract | 12 | 2% |
-| Partial full text read | 85 | 12% |
+| Partial full text read | 86 | 12% |
 | Full text read | 168 | 24% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
@@ -407,7 +407,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [24127039](https://pubmed.ncbi.nlm.nih.gov/24127039/) | 2014 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | WW domain containing oxidoreductase induces apoptosis in gallbladder-derived malignant cell by upregulating expression of P73 and PUMA. |
 | [27234387](https://pubmed.ncbi.nlm.nih.gov/27234387/) | 2013 | ✅ | Journal Article | unmatched | Self-aggregating TIAF1 in lung cancer progression. |
 | [24098343](https://pubmed.ncbi.nlm.nih.gov/24098343/) | 2013 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | unmatched | ✎ corrected — Genome-wide association study of gene by smoking interactions in coronary artery calcification. |
-| [23464470](https://pubmed.ncbi.nlm.nih.gov/23464470/) | 2012 | ✅ | Journal Article | unmatched | Effects of sodium valproate on the growth of human ovarian cancer cell line HO8910. |
 | [23317259](https://pubmed.ncbi.nlm.nih.gov/23317259/) | 2012 | ✅ | Comparative Study; Journal Article; Research Support, Non-U.S. Gov't | unmatched | Ectopic overexpression of COTE1 promotes cellular invasion of hepatocellular carcinoma. |
 | [23028374](https://pubmed.ncbi.nlm.nih.gov/23028374/) | 2012 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | unmatched | De novo CNV formation in mouse embryonic stem cells occurs in the absence of Xrcc4-dependent nonhomologous end joining. |
 | [22860045](https://pubmed.ncbi.nlm.nih.gov/22860045/) | 2012 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | A comprehensive characterization of genome-wide copy number aberrations in colorectal cancer reveals novel oncogenes and patterns of alterations. |
@@ -546,7 +545,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [11719429](https://pubmed.ncbi.nlm.nih.gov/11719429/) | 2001 | — | Journal Article; Research Support, U.S. Gov't, P.H.S. | unmatched | WWOX, the FRA16D gene, behaves as a suppressor of tumor growth. |
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 
-*(showing all 441 outstanding records)*
+*(showing all 440 outstanding records)*
 
 ## Already processed from this seed
 
@@ -620,6 +619,7 @@ for an entirely unprocessed record.
 | [30470736](https://pubmed.ncbi.nlm.nih.gov/30470736/) | 2018 | ✅ | full text | receipt FTR-20260909-30470736-01 | ℹ️ CORRECTION NOTICE — Author Correction: WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia. |
 | [36572560](https://pubmed.ncbi.nlm.nih.gov/36572560/) | 2022 | ✅ | partial full text | receipt FTR-20261125-36572560-01 | Glycogen Synthase Kinase-3 Interaction Domain Enhances Phosphorylation of SARS-CoV-2 Nucleocapsid Protein. |
 | [29108237](https://pubmed.ncbi.nlm.nih.gov/29108237/) | 2017 | ✅ | partial full text | receipt FTR-20261125-29108237-01 | The circRNA interactome-innovative hallmarks of the intra- and extracellular radiation response. |
+| [23464470](https://pubmed.ncbi.nlm.nih.gov/23464470/) | 2012 | ✅ | partial full text | receipt FTR-20261125-23464470-01 | Effects of sodium valproate on the growth of human ovarian cancer cell line HO8910. |
 | [39933386](https://pubmed.ncbi.nlm.nih.gov/39933386/) | 2025 | ✅ | abstract only | receipt FTR-20261108-39933386-38 | Infantile Epileptic Spasms Syndrome: Unveiling clinical and genetic variability in a case series from Argentina. |
 | [15126504](https://pubmed.ncbi.nlm.nih.gov/15126504/) | 2004 | ✅ | abstract only | receipt FTR-20261107-15126504-70 | Down-regulation of WW domain-containing oxidoreductase induces Tau phosphorylation in vitro. A potential role in Alzheimer's disease. |
 | [30783266](https://pubmed.ncbi.nlm.nih.gov/30783266/) | 2019 | ✅ | partial full text | receipt FTR-20260921-30783266-01 | ℹ️ CORRECTION NOTICE — Correction: The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 | [16288044](https://pubmed.ncbi.nlm.nih.gov/16288044/) | 2005 | — | full text | PAPER 569 | Activated tyrosine kinase Ack1 promotes prostate tumorigenesis: role of Ack1 in polyubiquitination of tumor suppressor Wwox. |
 
-*(showing all 265 processed records from the seed)*
+*(showing all 266 processed records from the seed)*
 
 ## How to work one
 

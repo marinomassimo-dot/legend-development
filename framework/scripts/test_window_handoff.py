@@ -23,9 +23,10 @@ def sessions(old_name="HE - CURRENT 11111111", new_name="he_o_20260101"):
 class FakeView:
     """The agents view as the rename sees it: a pointer that wraps, a rename mode, a name column that cuts long names."""
 
-    def __init__(self, listing, hint=True, mangle=False):
+    def __init__(self, listing, hint=True, mangle=False, summaries=None, resort=False, saves_elsewhere=None):
         self.listing, self.at, self.editing, self.buffer = listing, 0, False, ""
         self.hint, self.mangle, self.keys = hint, mangle, []
+        self.summaries, self.resort, self.saves_elsewhere = summaries or {}, resort, saves_elsewhere
 
     def __call__(self, root):
         return self
@@ -41,7 +42,7 @@ class FakeView:
         for n, s in enumerate(self.listing):
             name = self.buffer if self.editing and n == self.at else s["name"]
             shown = name if len(name) <= 24 else "…" + name[-23:]
-            lines.append(f"{wh.POINTER if n == self.at else ' '} ✻ {shown}   some summary")
+            lines.append(f"{wh.POINTER if n == self.at else ' '} ✻ {shown}   {self.summaries.get(s['sessionId'], 'some summary')}")
         if self.editing and self.hint:
             lines.append("  enter to save · esc to cancel")
         return "\n".join(lines)
@@ -57,7 +58,11 @@ class FakeView:
         elif key == "Escape":
             self.editing = False
         elif key == "Enter" and self.editing:
-            self.listing[self.at]["name"], self.editing = self.buffer, False
+            target = self.at if self.saves_elsewhere is None else self.saves_elsewhere
+            self.listing[target]["name"], self.editing = self.buffer, False
+            if self.resort:                  # the view moves the row just saved to the top
+                self.listing.insert(0, self.listing.pop(target))
+                self.at = 0
 
     def type(self, text):
         self.buffer += text[:-1] if self.mangle else text
@@ -85,6 +90,32 @@ class Rename(unittest.TestCase):
         proofs = [line for line in said if line.startswith("proof")]
         self.assertTrue(proofs[0].startswith("proof demote") and proofs[0].endswith("OK"), proofs)
         self.assertTrue(proofs[1].startswith("proof promote") and proofs[1].endswith("OK"), proofs)
+
+    def test_a_summary_naming_the_successor_is_not_its_row_after_a_re_sort(self):
+        # 2026-11-25: the demoted row moved first and its summary said "successor <temporary name> launched".
+        listing = sessions()
+        view = FakeView(listing, resort=True, summaries={OLD: "successor he_o_20260101 launched; writing release"})
+        do_rename(listing, view)
+        self.assertEqual({s["sessionId"]: s["name"] for s in listing}[OLD], "HE - PREVIOUS 11111111")
+        self.assertEqual({s["sessionId"]: s["name"] for s in listing}[NEW], "HE - CURRENT 22222222")
+
+    def test_only_the_name_column_of_a_captured_row_counts(self):
+        captured = "  ✻ HE - PREVIOUS 70b134a9               successor he_o_20261125 launched; verifying        2h"
+        new_row = "❯ * he_o_20261125                        HE bind checks and reading addenda                 4m"
+        self.assertFalse(wh.shows(captured, "he_o_20261125"))
+        self.assertTrue(wh.shows(new_row, "he_o_20261125"))
+        self.assertTrue(wh.shows(captured, "HE - PREVIOUS 70b134a9"))
+        self.assertFalse(wh.shows("  ∙ SCI - PREVIOUS ff316249   released", "SCI"))
+        self.assertTrue(wh.shows("  ∙ SCI                         released", "SCI"))
+        self.assertTrue(wh.shows("  ∙ …strator - CURRENT 11111111   x", "IT Orchestrator - CURRENT 11111111"))
+        self.assertFalse(wh.shows("❯ describe a task for a new session", "a task for a new session"))
+
+    def test_another_row_changing_name_is_reported_and_stops_the_run(self):
+        listing = sessions()
+        with self.assertRaises(wh.Refused) as why:
+            do_rename(listing, FakeView(listing, saves_elsewhere=0))
+        self.assertIn("ANOTHER ROW CHANGED NAME", str(why.exception))
+        self.assertEqual(listing[2]["name"], "he_o_20260101")
 
     def test_a_long_name_cut_by_the_column_is_still_matched(self):
         listing = sessions(old_name="IT Orchestrator - CURRENT 11111111", new_name="it_17_20260101")
