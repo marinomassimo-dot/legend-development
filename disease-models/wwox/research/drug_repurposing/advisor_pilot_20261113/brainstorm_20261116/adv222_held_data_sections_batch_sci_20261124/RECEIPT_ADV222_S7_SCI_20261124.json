@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-24T22:50Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-24T22:58:40Z",
+ "event_id": "FTR-20261124-42190665-97",
+ "evidence_basis": [
+  "coverage_map",
+  "Read in this pass: Results in full including every figure legend (figure panels not opened, so figures stay captions_only). Earlier read sections carried forward."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv222_held_data_sections_batch_sci_20261124/RESULT_ADV222_HELD_DATA_SECTIONS_SCI_20261124.md"
+ ],
+ "prior_receipt": "FTR-20261029-42190665-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "86388e4f28c11e60b4d81d5e3f0f7ef4e39f2d758ae1dd411906f7951db7aced",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMC13293933_PMID42190665_europepmc_fulltext_2026-10-29.xml (held copy, not in git)",
+ "study_id": {
+  "doi": "10.1016/j.xcrm.2026.102832",
+  "pmid": "42190665"
+ },
+ "workflow": "SCI window AC ADV-222 section 7 of 8 (owed-and-held data section, best-state class B of ADV-219)"
+}

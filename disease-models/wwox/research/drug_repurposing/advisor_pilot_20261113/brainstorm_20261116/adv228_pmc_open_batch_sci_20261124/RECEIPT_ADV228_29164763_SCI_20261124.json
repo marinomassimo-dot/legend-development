@@ -1,0 +1,37 @@
+{
+  "analysis_at": "2026-11-24T23:58Z",
+  "analysis_time_precision": "minute",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "read",
+    "methods": "read",
+    "results": "read",
+    "discussion": "read",
+    "limitations": "not_present",
+    "tables": "read",
+    "figures": "captions_only",
+    "supplementary": "not_present",
+    "references": "not_read"
+  },
+  "event_at": "2026-11-25T00:02:02Z",
+  "event_id": "FTR-20261124-29164763-01",
+  "evidence_basis": [
+    "coverage_map",
+    "files/fulltext/PMID29164763_Bunai2018_PMC.xml (Europe PMC JATS, structured text, read whole, quotations matched to it by exact string)",
+    "Text, Table 1 read; Figures 1 to 5 legends only; references not read."
+  ],
+  "evidence_depth": "partial_fulltext_read",
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv228_pmc_open_batch_sci_20261124/RESULT_ADV228_PMC_OPEN_BATCH_SCI_20261124.md"
+  ],
+  "prior_receipt": null,
+  "record_kind": "contemporaneous_receipt",
+  "reread_reason": "first_read",
+  "source_fingerprint": "dc51d21f17cacffb545d5a92cad51b8843005fc75f42479e88d5ea24c725d1f4",
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID29164763_Bunai2018_PMC.xml",
+  "study_id": {
+    "pmid": "29164763"
+  },
+  "workflow": "SCI window AC ADV-228, PMC-open catalogued-only record 5 of 6, read by one reader holding a frozen selection rule and a prediction fixed before the text was opened; public Europe PMC route, no e-mail sent, no contact"
+}
