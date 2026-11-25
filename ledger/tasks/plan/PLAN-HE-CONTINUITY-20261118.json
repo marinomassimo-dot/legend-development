@@ -1100,6 +1100,13 @@
      "accepted_at": "2026-11-25T02:35:34Z",
      "updated_at": "2026-11-25T03:20:55Z",
      "evidence": "385eb88c9: DC-05 needs.json counter-evidence repaired; EN-03 was a display defect in scout_daily.py --plan (searched_line), queries unchanged; coverage and views regenerated; view suite 1209s rc 0 and 12 further suites rc 0; open_questions_map DC-05 and EN-03 CONCLUDED"
+    },
+    {
+     "step": "ADV-252: repair the main red from test_landing_suites.py (closed-world guard) without weakening the guard, and explain why the selector missed it",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV-252 (peer message 2026-11-25 ~03:31Z)",
+     "accepted_at": "2026-11-25T03:31:55Z"
     }
    ]
   }
@@ -1949,6 +1956,13 @@
    "at": "2026-11-25T02:35:34Z",
    "source": "ADV-245 (ADV - CURRENT a5e6f2ad message 2026-11-25; assignments/ADV-245.md)",
    "step_sha256": "96ad21edfdde",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T03:31:55Z",
+   "source": "ADV-252 (peer message 2026-11-25 ~03:31Z)",
+   "step_sha256": "c0cf3e68f2bd",
    "reopened_block": false,
    "authorised_by": null
   }
