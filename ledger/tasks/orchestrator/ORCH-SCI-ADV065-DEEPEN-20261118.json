@@ -1047,6 +1047,15 @@
      "accepted_at": "2026-11-25T05:07:19Z",
      "updated_at": "2026-11-25T05:15:07Z",
      "evidence": "RESULT_ADV261_CLAIMS_N_SCI_20261125.md in disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/claims_n_independence_sci_20261125; 14 of 33 n non-independent; wording for IT; landing in progress"
+    },
+    {
+     "step": "ADV-262: acquire and read PMIDs 17803050, 34214506, 40875931 behind the claims n; PREREG first; receipts; effect on the ADV-261 table; unreachable to the operator PDF list",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-262",
+     "accepted_at": "2026-11-25T05:26:44Z",
+     "updated_at": "2026-11-25T05:44:06Z",
+     "evidence": "RESULT_ADV262_SCI_20261125.md in disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv262_unheld_primaries_sci_20261125; Saadane 2021 n=2 replications of one cell line (receipt FTR-20261125-34214506-01); Suzuki 2007 and Gao 2025 unreachable, on the operator PDF list; landing in progress"
     }
    ]
   }
@@ -1854,6 +1863,13 @@
    "at": "2026-11-25T05:07:19Z",
    "source": "ADV-261",
    "step_sha256": "eb3a144f4f77",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T05:26:44Z",
+   "source": "ADV-262",
+   "step_sha256": "bbda423a86c9",
    "reopened_block": false,
    "authorised_by": null
   }
