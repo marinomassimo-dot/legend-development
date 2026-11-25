@@ -566,3 +566,7 @@
 {"assessment": "HOST", "id": "ADV-242", "key": "gse156243-library-clone-batch-map-organoid-removals", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T02:02:54Z"}
 {"evidence": "SendMessage 02:03Z with brief pointer", "id": "ADV-242", "receipt": ["63b94f11-cebc-4625-a88e-3c0a1ead88ed"], "state": "SENT", "to": ["SCI - CURRENT ac5ef625"], "utc": "2026-11-25T02:03:04Z"}
 {"evidence": "SendMessage 02:04Z with brief pointer to the bound successor (name before the HE rename)", "id": "ADV-241", "receipt": ["198cd175-4091-49af-83e4-edfe280ab3c7"], "state": "SENT", "to": ["it_14_20261125"], "utc": "2026-11-25T02:04:26Z"}
+{"assessment": "HOST", "id": "ADV-243", "key": "advisor-record-path-friction-and-stale-comment", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-25T02:15:51Z"}
+{"evidence": "SendMessage 02:15Z with brief pointer", "id": "ADV-243", "receipt": ["9ae7bc82-3700-4b94-bafd-a60028465b63"], "state": "SENT", "to": ["HE - CURRENT a930ffce"], "utc": "2026-11-25T02:15:57Z"}
+{"assessment": "HOST", "id": "ADV-244", "key": "organoid-clone-assignment-from-raw-reads-probe", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T02:20:09Z"}
+{"evidence": "SendMessage 02:20Z with brief pointer", "id": "ADV-244", "receipt": ["33850f86-bf2e-4236-9149-1a98575fa4d5"], "state": "SENT", "to": ["SCI - CURRENT ac5ef625"], "utc": "2026-11-25T02:20:24Z"}
