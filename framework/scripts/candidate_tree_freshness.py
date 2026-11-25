@@ -108,6 +108,8 @@ class Generator:
 
 
 _EXPORT = "disease-models/{disease}/analysis/data/pathograph_export.jsonl"
+# The drug-repurposing module exists for one disease model and its tool takes no --disease, so these paths are literal.
+_DR = "disease-models/wwox/research/drug_repurposing/"
 GENERATORS: dict[str, Generator] = {
     "framework/scripts/coverage_report.py": Generator(
         inputs=("disease-models/{disease}/registries/", "disease-models/{disease}/research/"),
@@ -136,6 +138,15 @@ GENERATORS: dict[str, Generator] = {
         regenerate="python3 framework/scripts/surface_census.py --disease {disease} --out {surface}",
         note="a dated photograph of gitignored files/fulltext/, which no candidate tree holds; "
              "no freshness check by design (prompt_batch_commit.md Phase 4.7)"),
+    # 2026-11-25 (ADV): coverage/ fed ranking.json and the views and nothing on the landing path re-checked it, so a stale coverage passed every
+    # downstream check (they compare against their inputs). `check` recomputes the three JSON files in memory (about 7 s).
+    "framework/scripts/repurposing_coverage.py": Generator(
+        inputs=tuple(_DR + p for p in ("needs/needs.json", "catalog/", "cards/", "cards_early/", "join/measure_next.json", "coverage/target_roles.tsv",
+                                       "coverage/source_artefacts.tsv", "coverage/assertion_pertinence.tsv")),
+        check=("check",),
+        regenerate="python3 -B framework/scripts/repurposing_coverage.py run",
+        surfaces=(_DR + "coverage/coverage_matrix.json",),
+        outputs=tuple(_DR + "coverage/" + n for n in ("priorities.json", "coverage_summary.json", "associations.jsonl.gz"))),
     # Declared, not self-declaring: the sidecar is a `.jsonl` whose every byte is pinned by
     # `dismech_phase2_baseline.json`, so a provenance header would change the hash the seal
     # exists to fix. BATCH_20260927_003 corrected `CLAIM 016`, the sidecar drifted, and its
@@ -503,6 +514,9 @@ class RegenerationError(RuntimeError):
     """A regeneration command failed, or its result is still not fresh; nothing committed."""
 
 
+REGENERATION_PASSES = 3
+
+
 def regenerate_and_commit(repo: Path, stale: list[SurfaceResult] | None = None, *,
                           message: str = "repository: regenerate derived surfaces on main",
                           timeout: float = DEFAULT_TIMEOUT,
@@ -530,42 +544,48 @@ def regenerate_and_commit(repo: Path, stale: list[SurfaceResult] | None = None, 
     if not stale:
         return []
     table = GENERATORS if generators is None else generators
-    unsealable = {key.format(disease=disease_of(r.surface) or "")
-                  for r in stale for key, g in table.items() if not g.auto_regenerate}
-    sealed = [r for r in stale if r.generator in unsealable]
-    if sealed:
-        raise RegenerationError(
-            "these surfaces break a seal when regenerated and are left to the person who "
-            "re-seals them (prompt_batch_commit.md Phase 4.7): "
-            + "; ".join(f"{r.surface}: {r.regenerate}" for r in sealed))
     written: list[str] = []
 
     def dirty() -> set[str]:
         out = _git(repo, "status", "--porcelain", "--no-renames", "-z", "--untracked-files=all").stdout
         return {entry[3:] for entry in out.split("\0") if entry}
 
-    for result in stale:
-        before = dirty()
-        done = subprocess.run(shlex.split(result.regenerate), cwd=repo, capture_output=True,
-                              text=True, timeout=timeout)
-        if done.returncode != 0:
-            raise RegenerationError(f"`{result.regenerate}` exited {done.returncode}: "
-                                    + (done.stderr or done.stdout).strip()[-800:])
-        # 2026-11-25, CI #2353: `ranking_it8.py run` rewrites companions of its surface that no declaration lists (unit_inputs.tsv); only ranking.json was committed, the companion stayed
-        # modified and safe_push refused its own regeneration. What this generator newly dirtied beside its surface is part of what it regenerated.
-        beside = sorted(p for p in dirty() - before if p.startswith(Path(result.surface).parent.as_posix() + "/"))
-        for path in [result.surface, *result.outputs, *beside]:
-            if path not in written and (repo / path).exists():
-                written.append(path)
-    changed = [p for p in written
-               if _git(repo, "status", "--porcelain", "--", p).stdout.strip()]
-    if not changed:
-        return []
-    verify = evaluate(repo, mode="paths", paths=changed, timeout=timeout,
-                      generators=generators)
-    if verify.exit_code != 0:
-        raise RegenerationError("regenerated, but the result is still not fresh; nothing "
-                                "committed:\n" + render(verify))
+    # A surface can read another generated surface (ranking.json reads coverage/): regenerating one makes the next one stale, and only the
+    # verification sees it. Each pass regenerates what the last verification found stale; a surface still stale after REGENERATION_PASSES is refused.
+    for attempt in range(1, REGENERATION_PASSES + 1):
+        unsealable = {key.format(disease=disease_of(r.surface) or "")
+                      for r in stale for key, g in table.items() if not g.auto_regenerate}
+        sealed = [r for r in stale if r.generator in unsealable]
+        if sealed:
+            raise RegenerationError(
+                "these surfaces break a seal when regenerated and are left to the person who "
+                "re-seals them (prompt_batch_commit.md Phase 4.7): "
+                + "; ".join(f"{r.surface}: {r.regenerate}" for r in sealed))
+        for result in stale:
+            before = dirty()
+            done = subprocess.run(shlex.split(result.regenerate), cwd=repo, capture_output=True,
+                                  text=True, timeout=timeout)
+            if done.returncode != 0:
+                raise RegenerationError(f"`{result.regenerate}` exited {done.returncode}: "
+                                        + (done.stderr or done.stdout).strip()[-800:])
+            # 2026-11-25, CI #2353: `ranking_it8.py run` rewrites companions of its surface that no declaration lists (unit_inputs.tsv); only ranking.json was committed, the companion stayed
+            # modified and safe_push refused its own regeneration. What this generator newly dirtied beside its surface is part of what it regenerated.
+            beside = sorted(p for p in dirty() - before if p.startswith(Path(result.surface).parent.as_posix() + "/"))
+            for path in [result.surface, *result.outputs, *beside]:
+                if path not in written and (repo / path).exists():
+                    written.append(path)
+        changed = [p for p in written
+                   if _git(repo, "status", "--porcelain", "--", p).stdout.strip()]
+        if not changed:
+            return []
+        verify = evaluate(repo, mode="paths", paths=changed, timeout=timeout,
+                          generators=generators)
+        if verify.exit_code == 0:
+            break
+        stale = verify.stale()
+        if verify.exit_code == 2 or attempt == REGENERATION_PASSES:
+            raise RegenerationError("regenerated, but the result is still not fresh; nothing "
+                                    "committed:\n" + render(verify))
     common = Path(_git(repo, "rev-parse", "--path-format=absolute",
                        "--git-common-dir").stdout.strip())
     with open(os.environ.get("LEGEND_COMMIT_LOCK", str(common / "legend_commit.lock")),

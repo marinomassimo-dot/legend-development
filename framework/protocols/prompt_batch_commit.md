@@ -405,6 +405,14 @@ the exact tree they are about to land and refuse a STALE surface, naming the com
 that regenerates it. A new generated surface needs a declaration there too (its inputs and its
 check); until it has one, every landing reports it as CHECK_ERROR.
 
+**The drug-repurposing coverage layer is regenerated the same way, and before the ranking (2026-11-25).** `coverage/` reads the cards, needs, catalogue and the curated pertinence and role tables, and `ranking.json` and the views read `coverage/`:
+
+```bash
+python3 -B framework/scripts/repurposing_coverage.py run
+```
+
+It is declared in `candidate_tree_freshness.py` with its `check` (about 7 s). After it, run the ranking below and rebuild the views.
+
 **The drug-repurposing ranking is regenerated the same way (HE62, 2026-11-15).** `ranking.json` stamps the length of the receipt ledger, so every receipt that lands without it is a STALE surface and turned the release workflow red until a person refreshed it:
 
 ```bash
