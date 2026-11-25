@@ -11,11 +11,15 @@ changed between two commits with the surfaces at the newer one.
 Reads git objects only; writes nothing. Exit 0: nothing found. Exit 1: findings, each with the file, the card and the
 exact old text. Exit 3: the check could not be run.
 
+A copy that is a marked cut of the current string (the shareable page's `pharm_cut`, an ellipsis) is current: the cut
+is the builder's choice and no rebuild changes it.
+
 What it sees: exact copies of a card string, or of a sentence of it, of at least 60 characters and 8 words. Not
 paraphrases, not translations, not a clipped copy shorter than 200 characters that is not a whole sentence.
 
 A refusal on a generated file is repaired by rebuilding in order: `repurposing_coverage.py run`, `ranking_it8.py run`,
-`repurposing_view.py run` and its package. `investigations_it*.tsv` and `assertion_pertinence.tsv` are kept by hand
+`repurposing_view.py run` and its package. A page of a language other than the default one (`index.<lang>.html`) moves
+only with `run --lang all` (and `--source shareable --lang all`). `investigations_it*.tsv` and `assertion_pertinence.tsv` are kept by hand
 (`investigations.tsv` is built from the former): there the row is edited first.
 """
 from __future__ import annotations
@@ -39,6 +43,8 @@ SURFACES = re.compile(
     r"|investigations\.tsv|investigations_it[0-9]+\.tsv))$")
 ADDED_MIN, ADDED_PREFIX = 20, 60
 CLIP = 200      # some columns keep only the start of a card string (the ranking table clips): that start is looked for too
+#: What a surface prints right after a string it cut on purpose: the page's cut flag (the shareable edition clips pharmacology and says so) or the ellipsis of ranking.json's clip.
+CUT_MARK = re.compile(r'\s?\u2026|",\s?"pharm_cut":\s?true')
 SENTENCE_END = re.compile(r"(?<=[.;])\s+(?=[A-Z\[(\"'])")
 
 
@@ -103,6 +109,19 @@ def has_the_addition(text: str, old: str, holder: str) -> bool:
     return bool(added) and all(part[:ADDED_PREFIX] in text for part in added)
 
 
+def inside_a_marked_cut(text: str, old: str, holders: list[str]) -> int:
+    """Occurrences of `old` inside a marked cut of a current card string: the surface prints the start of the NEW string and says it stopped.
+    Rebuilding cannot add what the cut leaves out, so these are not behind (2026-11-25: four of the replayed refusals were only this)."""
+    seen: set[int] = set()
+    for holder in holders:
+        at, start = holder.find(old), holder[:40]
+        for mark in CUT_MARK.finditer(text):
+            begin = text.rfind(start, 0, mark.start())
+            if begin >= 0 and mark.start() - begin >= at + len(old) and holder.startswith(text[begin:mark.start()]):
+                seen.add(begin + at)
+    return len(seen)
+
+
 def find(repo: Path, base: str, head: str = "HEAD") -> tuple[list[dict], dict]:
     """(findings, counts). A finding: card file, old text, surfaces still holding it."""
     changed = [line.split("\t") for line in git(repo, "diff", "--name-status", "--no-renames", base, head).splitlines()]
@@ -141,7 +160,7 @@ def find(repo: Path, base: str, head: str = "HEAD") -> tuple[list[dict], dict]:
         counts["surfaces"] += len(surfaces)
         for card, old, holders in sorted(candidates, key=lambda c: (c[0], -len(c[1]), c[1])):
             stale = [path for path, text in surfaces.items()
-                     if old in text and text.count(old) > sum(text.count(h) * h.count(old) for h in holders)
+                     if old in text and text.count(old) > sum(text.count(h) * h.count(old) for h in holders) + inside_a_marked_cut(text, old, holders)
                      and not any(has_the_addition(text, old, h) for h in holders)]
             if not stale:
                 continue
@@ -158,7 +177,8 @@ def report(findings: list[dict]) -> str:
         out.append("    still held by: " + ", ".join(finding["files"]))
         out.append(f"    old text: {finding['old']}")
     out.append("hand-kept tables (investigations_it*.tsv, assertion_pertinence.tsv): edit the row. Everything else is built: rebuild in order "
-               "(repurposing_coverage.py run, ranking_it8.py run, repurposing_view.py run and package)")
+               "(repurposing_coverage.py run, ranking_it8.py run, repurposing_view.py run and package; a language page index.<lang>.html needs run --lang all, "
+               "also with --source shareable)")
     return "\n".join(out)
 
 
