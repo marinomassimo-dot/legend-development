@@ -714,3 +714,5 @@
 {"assessment": "HOST", "id": "ADV-288", "key": "pro-myelinating-comparison-arm-set-from-two-wwox-conduction-readouts", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T21:45:41Z"}
 {"evidence": "SendMessage 21:49Z, successor accepted ADV-288", "id": "ADV-288", "receipt": ["c842c2ed-3072-47c4-a7f1-835ecc2ad1d4"], "state": "SENT", "to": ["SCI - CURRENT fcd3025a"], "utc": "2026-11-25T21:49:39Z"}
 {"changed": [], "note": "", "residual": [], "result": "NO_CHANGE", "rome_date": "2026-11-26", "state": "RECONCILED", "utc": "2026-11-25T23:27:09Z"}
+{"assessment": "HOST", "id": "ADV-289", "key": "breton-s3c-dapv-block-fraction-upper-depth-arm", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T23:32:16Z"}
+{"evidence": "SendMessage 23:32Z, SCI's own draft registered as written", "id": "ADV-289", "receipt": ["416d11e6-4d22-4f0b-9d84-89bc156f888e"], "state": "SENT", "to": ["SCI - CURRENT 488a3ad0"], "utc": "2026-11-25T23:32:33Z"}
