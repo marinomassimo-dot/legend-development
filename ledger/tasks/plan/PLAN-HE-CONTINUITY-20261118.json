@@ -1065,10 +1065,21 @@
     },
     {
      "step": "Protocol paragraph: which suites a change must run locally before a push, from the ADV-237 table, and a one-line DREAM",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV direction round 01:40Z, 2026-11-25",
-     "accepted_at": "2026-11-25T01:41:55Z"
+     "accepted_at": "2026-11-25T01:41:55Z",
+     "evidence": "6ba95cbd8 on development/main (gate PASS): framework/protocols/parallel_legend_protocol.md section 1.6; DREAM line dated at the foot of HE_RED_MAIN_ADV237_20261125.md (landing with checkpoint L)",
+     "updated_at": "2026-11-25T01:56:45Z"
+    },
+    {
+     "step": "IT handoff 45a8b15c: verify, rename natively, prove",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-25 (IT successor launched)",
+     "accepted_at": "2026-11-25T02:07:36Z",
+     "evidence": "2026-11-25 02:06Z: old 7cf5e85a RELEASED, 45a8b15c BOUND; claude agents --all --json shows 'IT Orchestrator - PREVIOUS 7cf5e85a' and 'IT Orchestrator - CURRENT 45a8b15c'; mandate_watch labels CURRENT; no retire-old",
+     "updated_at": "2026-11-25T02:07:36Z"
     }
    ]
   }
@@ -1897,6 +1908,13 @@
    "at": "2026-11-25T01:41:55Z",
    "source": "ADV direction round 01:40Z, 2026-11-25",
    "step_sha256": "476717802f53",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T02:07:36Z",
+   "source": "ADV message 2026-11-25 (IT successor launched)",
+   "step_sha256": "7b83f5c102c1",
    "reopened_block": false,
    "authorised_by": null
   }

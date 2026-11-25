@@ -957,6 +957,15 @@
      "accepted_at": "2026-11-25T01:21:56Z",
      "evidence": "443451fae: brainstorm_20261116/adv239_influence_audit_sci_20261125/RESULT_ADV239_INFLUENCE_AUDIT_SCI_20261125.md and out/ranked_inferences_adv239.tsv (35 rows); guard suites and lint exit 0 at b4075dfc4",
      "updated_at": "2026-11-25T01:47:17Z"
+    },
+    {
+     "step": "ADV-242: GSE156243 library-to-clone/batch map from GEO records and PMID 34268881 (20-minute exit if not stated), clone-level removals for the organoid rows if mapped, units of GSE268132, GSE327470, GSE274921; PREREG first",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-242",
+     "accepted_at": "2026-11-25T02:10:59Z",
+     "evidence": "brainstorm_20261116/adv242_organoid_clone_map_sci_20261125/RESULT_ADV242_ORGANOID_CLONE_MAP_SCI_20261125.md: map not stated, exit applied, units of three deposits from GEO metadata",
+     "updated_at": "2026-11-25T02:11:23Z"
     }
    ]
   }
@@ -1694,6 +1703,13 @@
    "at": "2026-11-25T01:21:56Z",
    "source": "ADV message 2026-11-25 (assignment ADV-239, brief /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv239.txt), named in checkpoint AD section 7",
    "step_sha256": "3541ead7d7aa",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T02:10:59Z",
+   "source": "ADV-242",
+   "step_sha256": "4e61faf45866",
    "reopened_block": false,
    "authorised_by": null
   }
