@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T12:59Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T12:59:00Z",
+ "event_id": "FTR-20261125-39505840-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Abstract and the result passages on antagonist timing, status epilepticus phases and chronic seizures."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276b_lead_receipts_sci_20261125/RESULT_ADV276_STEP2_BATCH1_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261019-39505840-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "c3bab50ec45bd5c70a1d10b614b3d1a6421f6ceed3c4939fe72ca71d0cb661a3",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID39505840_ADV272_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1038/s41467-024-53430-y",
+  "pmid": "39505840"
+ },
+ "workflow": "SCI ADV-276 step 2 batch 1 (not a complete read)"
+}

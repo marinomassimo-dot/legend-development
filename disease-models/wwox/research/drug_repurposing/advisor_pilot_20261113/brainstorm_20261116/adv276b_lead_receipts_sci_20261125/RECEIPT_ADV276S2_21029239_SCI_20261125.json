@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T12:59Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T12:59:00Z",
+ "event_id": "FTR-20261125-21029239-01",
+ "evidence_basis": [
+  "coverage_map",
+  "PMC article page: abstract, introduction, behaviour and survival results, Figure 3 legend, discussion, dose and animal statements."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276b_lead_receipts_sci_20261125/RESULT_ADV276_STEP2_BATCH1_SCI_20261125.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "eeced1775ce57c21a7db1baf423fe584a79416b830560eee89f256ece371b4e5",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID21029239_Yeh2010_PMC8094320_pmcpage_20261125.html",
+ "study_id": {
+  "doi": "10.1111/j.1750-3639.2010.00443.x",
+  "pmid": "21029239"
+ },
+ "workflow": "SCI ADV-276 step 2 batch 1 (not a complete read)"
+}
