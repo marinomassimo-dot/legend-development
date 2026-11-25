@@ -9,8 +9,8 @@ checkpoint). A SELECTION, never the release battery: running what it prints mean
     python3 framework/scripts/landing_suites.py --base <rev>     # another base
 
 The change judged is `merge-base(base, HEAD)..HEAD`, the author's own work, not what others landed since; only committed changes are seen. The rules are RULES below, one line each, with the
-red run that earned it. A suite already red on main stays red here too (`ci_runs.py status <sha>` says which). Not selected on purpose: `test_repurposing_view.py` (about 20 minutes; the
-landing tool already checks the committed views) and the other long suites.
+red run that earned it. A suite already red on main stays red here too (`ci_runs.py status <sha>` says which). Not selected on purpose: the whole of `test_repurposing_view.py` (about 20 minutes; the
+landing tool already checks the committed views; one 2-second class of it is selected for card, needs and ranking changes) and the other long suites.
 Exit codes: 0 the selection was printed (possibly empty) · 2 invalid invocation or the base cannot be resolved.
 """
 from __future__ import annotations
@@ -48,6 +48,17 @@ RULES = [
     # #1994, #2109: a receipt recorded and the two derived pages not regenerated
     ("framework/scripts/test_coverage_report.py", lambda c: _any(c, "*fulltext_read_receipts.jsonl", "*coverage_report*")),
     ("framework/scripts/test_reading_state.py", lambda c: _any(c, "*fulltext_read_receipts.jsonl", "*reading_state*")),
+    # #2404: a card changed and the suite that keeps its reviewed copy went red (0.1 s)
+    ("disease-models/wwox/research/drug_repurposing/cards_early_it13_p22_20261031/test_cards_early_it13_p22.py",
+     lambda c: _any(c, "disease-models/*/drug_repurposing/cards_early/*", "framework/scripts/repurposing_bridge.py")),
+    # #2404: a card named a PMID the title cache does not hold. Only this class of the long view suite (about 2 s)
+    ("framework/scripts/test_repurposing_view.py Titles",
+     lambda c: _any(c, "disease-models/*/drug_repurposing/cards*", "disease-models/*/drug_repurposing/needs/*", "disease-models/*/drug_repurposing/ranking_it8*",
+                    "disease-models/*/drug_repurposing/view/source_titles.json")),
+    # #2353: needs.json changed and the ranking was not regenerated (about 30 s and 95 s)
+    ("framework/scripts/test_candidate_tree_freshness.py", lambda c: _any(c, "disease-models/*/drug_repurposing/needs/*")),
+    ("disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/test_ranking_it8.py",
+     lambda c: _any(c, "disease-models/*/drug_repurposing/needs/*")),
 ]
 
 
@@ -68,11 +79,11 @@ def changes(root: Path, base: str) -> list[tuple[str, str]]:
 
 
 def select(changed: list[tuple[str, str]], root: Path) -> list[str]:
-    """Suite paths for the changed paths. A rule whose suite is not in this checkout is skipped; a `test_*.py` the change adds or edits under disease-models/ is named itself (#2023)."""
-    picked = [suite for suite, wanted in RULES if (root / suite).is_file() and wanted(changed)]
+    """Suites for the changed paths: a path, or a path and one class of it. A rule whose suite is not in this checkout is skipped; a `test_*.py` the change adds or edits under disease-models/ is named itself (#2023)."""
+    picked = [suite for suite, wanted in RULES if (root / suite.split()[0]).is_file() and wanted(changed)]
     picked += [path for st, path in changed
                if st != "D" and path.startswith("disease-models/") and Path(path).name.startswith("test_") and path.endswith(".py") and (root / path).is_file()]
-    return picked
+    return list(dict.fromkeys(picked))
 
 
 def command_for(picked: list[str]) -> str:

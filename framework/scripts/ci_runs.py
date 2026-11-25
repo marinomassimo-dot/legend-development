@@ -6,6 +6,7 @@ the run ever ended. The supported way to hold such a wait is a BLOCKED step whos
 (cross_session_transport.md section 12); this tool reads the conclusion so that the step can be closed with evidence (run number, workflow, SHA, conclusion).
 
     python3 framework/scripts/ci_runs.py status <sha>                 # one line per workflow run on that commit
+    python3 framework/scripts/ci_runs.py times <sha>                  # the slowest suites a concluded gate run published (public annotation; exit 3 = none published)
     python3 framework/scripts/ci_runs.py status <sha>                 # a red gate run also lists its failing suites and tests, read from the public annotations (no login)
     python3 framework/scripts/ci_runs.py wait <sha> --timeout 1800    # progressive polling (2, 4, then 8 minutes), ONE shared read of the latest runs serves every commit and every waiter on the machine; exit 0 all runs concluded success
     python3 framework/scripts/ci_runs.py queue                        # the open runs of the public release gate (in progress or queued): position, run, sha, branch, age; the count, the age of the oldest and the conclusions of the last 100 runs, so a change to the gate's concurrency can be measured before and after; ONE request, exit 0 whenever the API was read, 2 when it was not (a rate limit is printed with its reset)
@@ -81,6 +82,21 @@ def failing_tests(run_id: int, repo: str, fetch=fetch_json) -> list[str]:
             if note.get("title") == "release regression":
                 out.append(" ".join(str(note.get("message", "")).split())[:170])
     return out
+
+
+def suite_times(runs: list[dict], repo: str, fetch=fetch_json) -> list[str]:
+    """The per-suite times the regression runner published as a `suite time` annotation on a concluded gate run (two requests per run).
+    Empty when no concluded gate run carries one: a run from before 2026-11-25, or one that never reached the runner's last line."""
+    lines: list[str] = []
+    for r in runs:
+        if r.get("name") != GATE or r.get("status") != "completed" or not r.get("id"):
+            continue
+        for job in fetch(f"https://api.github.com/repos/{repo}/actions/runs/{r['id']}/jobs").get("jobs", []):
+            for note in fetch(f"https://api.github.com/repos/{repo}/check-runs/{job['id']}/annotations?per_page=100"):
+                if note.get("title") == "suite time":
+                    lines.append(f"#{r['run_number']} {r.get('conclusion')} ({r['head_sha'][:8]})")
+                    lines += [f"  {part}" for part in str(note.get("message", "")).split("; ")]
+    return lines
 
 
 def failure_lines(runs: list[dict], repo: str, fetch=fetch_json) -> list[str]:
@@ -263,7 +279,7 @@ def queue_command(a) -> int:
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
-    for name in ("status", "wait"):
+    for name in ("status", "wait", "times"):
         p = sub.add_parser(name)
         p.add_argument("sha")
         p.add_argument("--remote", default="development")
@@ -320,6 +336,14 @@ def main(argv=None) -> int:
         except Exception as exc:  # network: say so, never read it as "no run"
             print(f"cannot read the API: {exc}", file=sys.stderr)
             return 2
+        if a.cmd == "times":
+            try:
+                lines = suite_times(runs, repo)
+            except Exception as exc:  # network or rate limit: said, never read as "no times published"
+                print(f"cannot read the annotations: {exc}", file=sys.stderr)
+                return 2
+            print("\n".join(lines) if lines else "no `suite time` annotation on a concluded gate run of this commit")
+            return 0 if lines else 3
         code, lines = verdict(runs)
         if a.cmd == "status" or code in (0, 1) or time.time() >= end:
             if code == 1:

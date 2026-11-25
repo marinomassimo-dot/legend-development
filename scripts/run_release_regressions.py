@@ -333,6 +333,28 @@ def format_timing_summary(durations: list[tuple[str, float]], top: int = 5) -> l
 
 
 
+def format_timing_annotation(durations: list[tuple[str, float]], environ, top: int = 15) -> list[str]:
+    """One GitHub `::notice` line with the slowest suites, only inside Actions.
+
+    Measurement only, like the summary above. A job's log needs a login to read; annotations are served without one, so this is the
+    only way a per-suite CI time can be read from outside (`ci_runs.py times <sha>`). 2026-11-25: a speed-up measured locally could
+    not be confirmed or refuted in CI because only the whole step's duration was public.
+    """
+    if environ.get("GITHUB_ACTIONS") != "true" or not durations:
+        return []
+    ranked = sorted(durations, key=lambda item: item[1], reverse=True)[:top]
+    parts = [f"total {sum(s for _, s in durations):.0f}s over {len(durations)} suite(s)"]
+    parts += [f"{seconds:.0f}s {relative}" for relative, seconds in ranked]
+    return ["::notice title=suite time::" + "; ".join(parts)]
+
+
+def print_timing_annotation(durations: list[tuple[str, float]]) -> None:
+    """Printed LAST: the workflow shows only the tail of the log, and a command line it does not show is no annotation."""
+    sys.stderr.flush()
+    for line in format_timing_annotation(durations, os.environ):
+        print(line, flush=True)
+
+
 # Trees a regression suite may READ and must never WRITE. On 2026-09-10, during an
 # unattended run, 54 tracked dossiers under disease-models/ were overwritten with the seven
 # bytes "touched" while three suites were being exercised, and no suite, tool or transcript
@@ -600,9 +622,11 @@ def main() -> int:
             print(f"NOT VERIFIED IN THIS RUN ({len(skips)} skipped):", file=sys.stderr)
             for line in format_success_verdict(len(selected), skips)[1:]:
                 print(line, file=sys.stderr)
+        print_timing_annotation(durations)
         return 1
     for line in format_success_verdict(len(selected), skips):
         print(line)
+    print_timing_annotation(durations)
     return 0
 
 

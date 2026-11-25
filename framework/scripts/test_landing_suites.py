@@ -22,7 +22,7 @@ def names(changed):
 
 class Selection(unittest.TestCase):
     def test_every_rule_names_a_suite_that_exists_here(self) -> None:
-        self.assertEqual([], [suite for suite, _ in ls.RULES if not (REPO / suite).is_file()])
+        self.assertEqual([], [suite for suite, _ in ls.RULES if not (REPO / suite.split()[0]).is_file()])
 
     def test_a_new_script_selects_the_command_routing_and_isolation_suites(self) -> None:
         self.assertEqual({"test_release_surface.py", "test_documented_commands.py", "test_tool_routing.py", "test_strategic_advisor.py"}, names([("A", "framework/scripts/new_tool.py")]))
@@ -45,6 +45,22 @@ class Selection(unittest.TestCase):
     def test_a_table_selects_the_integrity_suite_only_among_the_document_suites(self) -> None:
         got = names([("A", "disease-models/wwox/research/x/table.tsv")])
         self.assertEqual({"test_release_surface.py", "test_structured_data_integrity.py"}, got)
+
+    def test_a_card_change_selects_its_copy_suite_and_the_title_class(self) -> None:
+        got = ls.select([("M", "disease-models/wwox/research/drug_repurposing/cards_early/EB-X-01.card.json")], REPO)
+        self.assertIn("framework/scripts/test_repurposing_view.py Titles", got)
+        self.assertTrue(any(suite.endswith("test_cards_early_it13_p22.py") for suite in got), got)
+        self.assertNotIn("framework/scripts/test_repurposing_view.py", got)
+        self.assertIn("python3 -B framework/scripts/test_repurposing_view.py Titles < /dev/null", ls.command_for(got))
+
+    def test_a_title_cache_change_selects_the_title_class_and_not_the_long_view_suite(self) -> None:
+        got = ls.select([("M", "disease-models/wwox/research/drug_repurposing/view/source_titles.json")], REPO)
+        self.assertIn("framework/scripts/test_repurposing_view.py Titles", got)
+        self.assertNotIn("framework/scripts/test_repurposing_view.py", got)
+
+    def test_a_needs_change_selects_the_freshness_and_ranking_suites(self) -> None:
+        got = names([("M", "disease-models/wwox/research/drug_repurposing/needs/needs.json")])
+        self.assertLessEqual({"test_candidate_tree_freshness.py", "test_ranking_it8.py"}, got)
 
     def test_a_path_no_rule_knows_selects_nothing(self) -> None:
         self.assertEqual(set(), names([("M", "disease-models/wwox/research/x/notes.txt")]))
