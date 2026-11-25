@@ -694,3 +694,5 @@
 {"evidence": "SendMessage 14:06Z", "id": "ADV-278", "receipt": ["7f3ae10f-167d-41f3-89f3-fcf8c9be1ac0"], "state": "SENT", "to": ["SCI - CURRENT 0d0c6dc3"], "utc": "2026-11-25T14:06:50Z"}
 {"assessment": "HOST", "id": "ADV-279", "key": "next-ten-held-partials-by-consumer-count-with-the-preread-checklist", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T15:54:06Z"}
 {"evidence": "SendMessage 15:54Z", "id": "ADV-279", "receipt": ["54a158d3-143c-41b5-9741-cf26f40e4fe3"], "state": "SENT", "to": ["SCI - CURRENT 8ee4045d"], "utc": "2026-11-25T15:54:27Z"}
+{"assessment": "HOST", "id": "ADV-280", "key": "next-ten-readable-held-records-wider-rule-supplement-and-figure-class", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T17:26:25Z"}
+{"evidence": "SendMessage 17:26Z", "id": "ADV-280", "receipt": ["c6d04c46-e1f4-4a8f-aa86-c883b2d44afd"], "state": "SENT", "to": ["SCI - CURRENT 8ee4045d"], "utc": "2026-11-25T17:26:46Z"}
