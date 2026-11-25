@@ -951,10 +951,12 @@
     },
     {
      "step": "ADV-239: influence audit of every carried small-n bulk-RNA inference (animals/libraries, leave-out history by id, consuming decisions and cards, first-read influence, disposition robust / one-animal-driven / not testable, wording for IT); PREREG first",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message 2026-11-25 (assignment ADV-239, brief /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv239.txt), named in checkpoint AD section 7",
-     "accepted_at": "2026-11-25T01:21:56Z"
+     "accepted_at": "2026-11-25T01:21:56Z",
+     "evidence": "443451fae: brainstorm_20261116/adv239_influence_audit_sci_20261125/RESULT_ADV239_INFLUENCE_AUDIT_SCI_20261125.md and out/ranked_inferences_adv239.tsv (35 rows); guard suites and lint exit 0 at b4075dfc4",
+     "updated_at": "2026-11-25T01:47:17Z"
     }
    ]
   }
