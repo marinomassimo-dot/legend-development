@@ -2,6 +2,7 @@
 """The join: LEGEND's own receipted evidence bound to the external sources, one command.
 
     repurposing_join.py run [--axis NAME] [--live] [--out DIR]
+    repurposing_join.py check [--out DIR]      the committed files against an offline run (exit 1 on drift)
 
 This is the part of the repurposing module that nothing outside LEGEND can have. It is
 deterministic (same inputs, same bytes), re-runnable, and incremental: `run` compares its output
@@ -37,6 +38,7 @@ import hashlib
 import json
 import re
 import sys
+import tempfile
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
@@ -1016,9 +1018,13 @@ def previous_state(out_dir: Path) -> dict:
         return {}
 
 
-def run(out_dir: Path, axis: str = "", live: bool = False, limit: int = 0) -> dict:
+RUN_FILES = ("queries.json", "evidence.json", "cards.json", "measure_next.json", "state.json")
+
+
+def run(out_dir: Path, axis: str = "", live: bool = False, limit: int = 0, cache_root: Path | None = None) -> dict:
     out_dir.mkdir(parents=True, exist_ok=True)
-    cache_dir = out_dir / "adapter_cache"
+    caches = cache_root or out_dir      # `check` writes elsewhere and reads the caches of the folder it judges
+    cache_dir = caches / "adapter_cache"
     queries = derive_queries(axis=axis)
     if limit:
         queries = queries[:limit]
@@ -1026,7 +1032,7 @@ def run(out_dir: Path, axis: str = "", live: bool = False, limit: int = 0) -> di
     tables, cards = [], []
     for query in queries:
         # only a one-paper query is later a REPLICATE row, and only there does the binding matter
-        checks = ({pmid: bound_check(pmid, query, out_dir / "pubmed_cache", live) for pmid in query["pmids"]}
+        checks = ({pmid: bound_check(pmid, query, caches / "pubmed_cache", live) for pmid in query["pmids"]}
                   if len(query.get("pmids", [])) == 1 else None)
         table = evidence_for(query, receipts, checks)
         tables.append(table)
@@ -1051,6 +1057,15 @@ def run(out_dir: Path, axis: str = "", live: bool = False, limit: int = 0) -> di
             "cards": len(cards),
             "abstentions": sum(1 for t in tables if t["abstention"]),
             "changes": changes, "out_dir": relative(out_dir)}
+
+
+def check(out_dir: Path) -> list[str]:
+    """The files of `out_dir` that differ from an offline run over the current records and that folder's own caches, on its committed axis. Writes nothing there."""
+    axis = previous_state(out_dir).get("axis", "all")
+    with tempfile.TemporaryDirectory(prefix="legend-join-check-") as tmp:
+        run(Path(tmp), axis="" if axis == "all" else axis, cache_root=out_dir)
+        return [name for name in RUN_FILES
+                if not (out_dir / name).is_file() or (out_dir / name).read_bytes() != (Path(tmp) / name).read_bytes()]
 
 
 def change_report(before: dict, after: dict) -> dict:
@@ -1549,6 +1564,8 @@ def main(argv: list[str] | None = None) -> int:
         if name == "run":
             sp.add_argument("--live", action="store_true", help="call the adapters; otherwise cached or NOT_ATTEMPTED")
             sp.add_argument("--json", action="store_true")
+    p_check = sub.add_parser("check", help="exit 1 if the committed files differ from an offline run (nothing is written)")
+    p_check.add_argument("--out", type=Path, default=DEFAULT_OUT)
     p_hand = sub.add_parser("handoff", help="rows for the next batch from join/cards.json (SELECT / READ / REPLICATE / AUDIT)")
     p_hand.add_argument("--out", type=Path, default=DEFAULT_OUT)
     p_hand.add_argument("--date", required=True, help="YYYY-MM-DD written into the file (deterministic, never the clock)")
@@ -1562,6 +1579,11 @@ def main(argv: list[str] | None = None) -> int:
     p_diff.add_argument("handmade", type=Path)
     p_diff.add_argument("--out", type=Path, default=DEFAULT_OUT)
     args = parser.parse_args(argv)
+    if args.command == "check":
+        drift = check(args.out)
+        print(f"OK: {relative(args.out)} matches an offline run" if not drift else "DRIFT: " + ", ".join(drift)
+              + " - regenerate with: python3 -B framework/scripts/repurposing_join.py run")
+        return 1 if drift else 0
     if args.command == "handoff":
         cards = json.loads((args.out / "cards.json").read_text(encoding="utf-8"))
         queries = {q["query_id"]: q for q in json.loads((args.out / "queries.json").read_text(encoding="utf-8"))}

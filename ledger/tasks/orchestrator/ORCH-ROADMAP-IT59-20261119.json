@@ -627,6 +627,13 @@
      "accepted_at": "2026-11-25T20:56:32Z",
      "evidence": "landed b29ec350f (gate PASS, ls-remote); RESULT_IT24_20261125.md; two blind readers; CHECKPOINT_IT_20261125_12.md",
      "updated_at": "2026-11-25T22:04:18Z"
+    },
+    {
+     "step": "IT25: checkpoint 24 queue in ADV final order: ADV-287 sentences, ADV-282 increment 3 (three verified errors and additions), ADV-285 S1-S8 with ADV-288 corrections, ADV-286 prospective hold (start by 2026-12-01, freeze by 2026-12-04), two author-request drafts kept unsent, CI tick, Pages deploy #129/#130 as operator item",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator launch message 2026-11-25 (successor window b0ccd111); CHECKPOINT_IT_20261125_12.md section 1 and ADDENDUM1",
+     "accepted_at": "2026-11-25T22:44:04Z"
     }
    ]
   }
@@ -1112,6 +1119,13 @@
    "at": "2026-11-25T20:56:32Z",
    "source": "operator launch message 2026-11-25 (successor window 8e1d62bc); CHECKPOINT_IT_20261125_11.md section 1 items 2-5",
    "step_sha256": "37a5aa2a06ff",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T22:44:04Z",
+   "source": "operator launch message 2026-11-25 (successor window b0ccd111); CHECKPOINT_IT_20261125_12.md section 1 and ADDENDUM1",
+   "step_sha256": "224eb69233ed",
    "reopened_block": false,
    "authorised_by": null
   }

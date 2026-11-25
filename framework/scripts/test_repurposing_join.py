@@ -286,6 +286,14 @@ class Run(unittest.TestCase):
             self.assertEqual(second["changes"][section]["removed"], [])
             self.assertGreater(second["changes"][section]["unchanged"], 0)
 
+    def test_check_names_the_drifted_file_on_the_committed_axis_and_writes_nothing(self):
+        rj.run(self.tmp, axis="wnt", live=False)
+        self.assertEqual(rj.check(self.tmp), [])
+        (self.tmp / "measure_next.json").write_text("[]", encoding="utf-8")
+        before = {p.name: p.read_bytes() for p in self.tmp.iterdir() if p.is_file()}
+        self.assertEqual(rj.check(self.tmp), ["measure_next.json"])
+        self.assertEqual({p.name: p.read_bytes() for p in self.tmp.iterdir() if p.is_file()}, before)
+
     def test_a_narrower_run_reports_the_dropped_queries_as_removed(self):
         rj.run(self.tmp, axis="wnt", live=False)
         narrowed = rj.run(self.tmp, axis="wnt", live=False, limit=3)
