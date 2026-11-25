@@ -1257,7 +1257,7 @@
    "chembl_ids": "",
    "decisive_uncertainty": "Which of the six layers moves, per animal. A lower transcript does not show fewer cells, lower activity or less inhibition; an absent change in GSE158684 is not evidence of no change; the oligodendrocyte-lineage shift could be consequence or cause of an excitation-inhibition change and the data cannot say which. Whether any parvalbumin-cell change is a deficit, a compensation or a delayed maturation is unresolved, so the need direction stays unresolved and no lever sign is derived. Whether recombination reaches parvalbumin cells, and glia, in this deletion is not known from any source read, and a reporter measured in another context does not measure the excision of Wwox in parvalbumin cells. [IT36] Whether the parvalbumin deficit and the maturation block of the myelin model share a cause is open.",
    "direction_state": "unresolved",
-   "evidence_available": "WWOX-system, transcript: a lower Pvalb transcript in the neuron-targeted deletion in bulk hippocampus (log2 -1.70, GSE158681 S contrast, as quoted in IT13b) and about half that size in the nuclear data (GSE158684: Pvalb 70 against 37 UMI in 3182 against 2920 nuclei; nuclei Pvalb share ratio 0.59). GSE158684 holds one pooled library per arm (library and animal index absent; the paper states n = 1 per arm), so nuclei are not biological replicates and the GSM records of the series are not independent experiments; PV-class nuclei number 12 to 19 per arm under the producer rules, the independent recompute disagrees on the specific counts, and PV composition and Pvalb per cell are undecidable under every rule tried. Kcnc1 is lower in inhibitory nuclei (one pool, not a replicate result). Immature-neuron markers (Sox11, Dcx, Igfbpl1) are higher in knockout neurons in direction; the larger composition change is oligodendrocyte-class nuclei, about 3- to 5-fold fewer. Wwox also falls in glia-called nuclei, unexplained. Protein and function, from the need file: PV-positive counts reduced by 44 percent in the whole hippocampus of a systemic constitutive knockout (PMID 30290271) and spontaneous inhibitory current amplitude more than halved in layer II/III pyramidal neurons of the neuron-specific knockout (PMID 34634460; unit of the KS test not declared; the size of the p values is compatible with events and not with one value per cell). Raw reads of the eight snRNA experiments (SRX9206272 to SRX9206279) carried NCBI status hup on 2026-10-31. A public conference abstract (poster 014, Curing the Epilepsies 2026 programme, NINDS; the whole abstract was read, abstract level) describes a programme that combines genetic mouse models, in vivo electrophysiology, ex vivo slice recordings, cell type-specific manipulations and targeted pharmacological modulation of neuronal activity in WWOX deficiency, and, in a background sentence only, states that parvalbumin-expressing interneurons regulate network excitability and synchronisation (it names no population of interest and no PV change; see nappi_poster_it32_20261107/README.md); it reports no quantitative result, no molecule, no rescue and no target. IT33 reading of the glial signal (NB-4 pilot, independently audited): the deletion is neuron-targeted by design (Synapsin-Cre) and a lower Wwox transcript also appears in glia-annotated nuclei of one pool (oligodendrocyte-called 193 to 1 UMI, astrocyte-called 156 to 9: very small counts on the deleted side, one pool per arm, so a count of cells or a statement of glial loss is not supported); the readings are several and not exclusive (lower transcript in the annotated class, class definition and detectability, ambient RNA, recombination beyond the expected cells, a change of state or composition), and none is isolated. Two abstract-level sources describe the Synapsin-Cre line: germline recombination through male carriers (PMID 16419044) and non-cell-autonomous astrogliosis after a neuronal deletion of another gene (PMID 11297510); neither shows or excludes recombination in glia or in parvalbumin cells of this deletion. IT33 verified delta (independent audit, 19 of 21 rows supported, two narrowed): an independent characterisation of the same Cre line with an X-linked Mecp2 reporter in adult male mice (PMID 35966957, full text without the figures) found reporter activation in 36 percent of NeuN-high brain nuclei, incomplete in cortex and minimal in cerebellum, and could not exclude activity in a subset of glia; the reporter, locus, age and cross differ from the Wwox deletion, so these percentages are not carried to the excision of Wwox or to parvalbumin cells; in the Wwox paper's P17 cortical field WWOX is retained in some NeuN-positive cells, and in one callosal field in some CC1-positive cells of the knockout; no tdTomato panel was found in the surfaces read. [IT36] no WWOX bridge to the perineuronal-net matrix found (PubMed 0 hits; Europe PMC titles only); the only lead (HYAL2/WWOX complex) concerns neuronal death, not nets. [IT36] The mean of the declared inhibitory current amplitude comes from events of 9 to 14 cells and 5 to 7 animals; no animal-level statistic is given for current amplitudes; 10 of 18 reported KS p values lie below the one-value-per-cell floor and 8 do not, and no contradiction of the paper is asserted. [IT39] Model identity of the conditional line is Synapsin-Cre; a statement of zero hits for parvalbumin loss is wrong (about 44 percent fewer PV-positive cells in the 2-week full-knockout hippocampus); perineuronal-net counter-evidence exists and two explanations of an external report are mutually inconsistent. [Update 2026-11-21, ADV-139 (advisor_pilot_20261113/brainstorm_20261116/adv139_nappi_inv15_sci_20261121/RESULT_ADV139_NAPPI_INV15_SCI_20261121.md): two newer public abstracts of the same programme (SfN Neuroscience 2026 NANO11.01 and AES 2026 1.019, public 17 Nov 2026) supply result statements, not per-animal data: 2026-11-21: an inhibitory-neuron-restricted deletion is now reported at abstract level (AES 2026, 1.019, public 17 Nov 2026): class only, no Cre line, no subtype, no recombination check, no age, no n; not a parvalbumin result; unverifiable until a manuscript, poster or slides state them. The treatment statements (reduced seizure burden in vivo; partly restored or improved firing) are L1-unanchored and L2-unanchored; L3 (recovery explains the EEG effect) is not met; neither abstract names parvalbumin, so the PV question does not move and the RP-019 trigger is not met.] [IT 2026-11-25, ADV-247: one single-nucleus dataset per genotype; number of animals not stated; nuclei are not replicates.] [IT 2026-11-25, ADV-247: hippocampal bulk arms of 2 or 3 libraries; one mouse per library is not stated.]",
+   "evidence_available": "WWOX-system, transcript: a lower Pvalb transcript in the neuron-targeted deletion in bulk hippocampus (log2 -1.70, GSE158681 S contrast, as quoted in IT13b) and about half that size in the nuclear data (GSE158684: Pvalb 70 against 37 UMI in 3182 against 2920 nuclei; nuclei Pvalb share ratio 0.59). GSE158684 holds one pooled library per arm (library and animal index absent; the paper states n = 1 per arm), so nuclei are not biological replicates and the GSM records of the series are not independent experiments; PV-class nuclei number 12 to 19 per arm under the producer rules, the independent recompute disagrees on the specific counts, and PV composition and Pvalb per cell are undecidable under every rule tried. Kcnc1 is lower in inhibitory nuclei (one pool, not a replicate result). Immature-neuron markers (Sox11, Dcx, Igfbpl1) are higher in knockout neurons in direction; the larger composition change is oligodendrocyte-class nuclei, about 3- to 5-fold fewer. Wwox also falls in glia-called nuclei, unexplained. Protein and function, from the need file: PV-positive counts reduced by 44 percent in the whole hippocampus of a systemic constitutive knockout (PMID 30290271) and spontaneous inhibitory current amplitude more than halved in layer II/III pyramidal neurons of the neuron-specific knockout (PMID 34634460; unit of the KS test not declared; the size of the p values is compatible with events and not with one value per cell). Raw reads of the eight snRNA experiments (SRX9206272 to SRX9206279) carried NCBI status hup on 2026-10-31. A public conference abstract (poster 014, Curing the Epilepsies 2026 programme, NINDS; the whole abstract was read, abstract level) describes a programme that combines genetic mouse models, in vivo electrophysiology, ex vivo slice recordings, cell type-specific manipulations and targeted pharmacological modulation of neuronal activity in WWOX deficiency, and, in a background sentence only, states that parvalbumin-expressing interneurons regulate network excitability and synchronisation (it names no population of interest and no PV change; see nappi_poster_it32_20261107/README.md); it reports no quantitative result, no molecule, no rescue and no target. IT33 reading of the glial signal (NB-4 pilot, independently audited): the deletion is neuron-targeted by design (Synapsin-Cre) and a lower Wwox transcript also appears in glia-annotated nuclei of one pool (oligodendrocyte-called 193 to 1 UMI, astrocyte-called 156 to 9: very small counts on the deleted side, one pool per arm, so a count of cells or a statement of glial loss is not supported); the readings are several and not exclusive (lower transcript in the annotated class, class definition and detectability, ambient RNA, recombination beyond the expected cells, a change of state or composition), and none is isolated. Two abstract-level sources describe the Synapsin-Cre line: germline recombination through male carriers (PMID 16419044) and non-cell-autonomous astrogliosis after a neuronal deletion of another gene (PMID 11297510); neither shows or excludes recombination in glia or in parvalbumin cells of this deletion. IT33 verified delta (independent audit, 19 of 21 rows supported, two narrowed): an independent characterisation of the same Cre line with an X-linked Mecp2 reporter in adult male mice (PMID 35966957, full text without the figures) found reporter activation in 36 percent of NeuN-high brain nuclei, incomplete in cortex and minimal in cerebellum, and could not exclude activity in a subset of glia; the reporter, locus, age and cross differ from the Wwox deletion, so these percentages are not carried to the excision of Wwox or to parvalbumin cells; in the Wwox paper's P17 cortical field WWOX is retained in some NeuN-positive cells, and in one callosal field in some CC1-positive cells of the knockout; no tdTomato panel was found in the surfaces read. [IT36] no WWOX bridge to the perineuronal-net matrix found (PubMed 0 hits; Europe PMC titles only); the only lead (HYAL2/WWOX complex) concerns neuronal death, not nets. [IT36] The mean of the declared inhibitory current amplitude comes from events of 9 to 14 cells and 5 to 7 animals; no animal-level statistic is given for current amplitudes; 10 of 18 reported KS p values lie below the one-value-per-cell floor and 8 do not, and no contradiction of the paper is asserted. [IT39] Model identity of the conditional line is Synapsin-Cre; a statement of zero hits for parvalbumin loss is wrong (about 44 percent fewer PV-positive cells in the 2-week full-knockout hippocampus); perineuronal-net counter-evidence exists and two explanations of an external report are mutually inconsistent. [Update 2026-11-21, ADV-139 (advisor_pilot_20261113/brainstorm_20261116/adv139_nappi_inv15_sci_20261121/RESULT_ADV139_NAPPI_INV15_SCI_20261121.md): two newer public abstracts of the same programme (SfN Neuroscience 2026 NANO11.01 and AES 2026 1.019, public 17 Nov 2026) supply result statements, not per-animal data: 2026-11-21: an inhibitory-neuron-restricted deletion is now reported at abstract level (AES 2026, 1.019, public 17 Nov 2026): class only, no Cre line, no subtype, no recombination check, no age, no n; not a parvalbumin result; unverifiable until a manuscript, poster or slides state them. The treatment statements (reduced seizure burden in vivo; partly restored or improved firing) are L1-unanchored and L2-unanchored; L3 (recovery explains the EEG effect) is not met; neither abstract names parvalbumin, so the PV question does not move and the RP-019 trigger is not met.] [IT 2026-11-25, ADV-247: one single-nucleus dataset per genotype; number of animals not stated; nuclei are not replicates.] [IT 2026-11-25, ADV-247: hippocampal bulk arms of 2 or 3 libraries; one mouse per library is not stated.] [IT 2026-11-25, ADV-250: a hippocampal library is at most one independent unit, so the library count is an upper bound on n; if a library is one mouse, the 2 control libraries cover at most 2 of the 4 control cortices.]",
    "evidence_depth": "Premise measurement: the transcript deficit is observed in bulk and in one nuclear pool per arm; cell number, identity, intrinsic properties, synaptic input and circuit function are not measured at animal level by any file read here (no ranked unit, so no evaluation depth applies: this is not a depth of zero)",
    "feasibility": "Not executable from this module: no animals or tissue are held and the raw reads are not public. Feasible only by data holders or a new dataset; nothing is sent to anyone from here. Zero-spend preparation is limited to fixing the readout table before any data arrive.",
    "intervention": "No compound: measurement of the parvalbumin interneuron population in neuron-targeted Wwox deletion, with cell number, identity and maturation, marker expression, intrinsic properties, synaptic input and circuit function read as six separate questions",
@@ -1519,7 +1519,7 @@
    "decisive_uncertainty": "Whether the neuron still emits the activity-dependent signal that a pro-myelinating agent would amplify. If it does not, the whole class is not a lever here regardless of its pharmacology. IT29: even where an intrinsic route works, whether it acts when the lesion is neuronal is untested. [IT36] no evidence of early hyperactivity exists for the neuronal-deletion model before P13; activity effects on markers in the neonate (P0-P8) do not speak to the burst window. [IT36] The cue from the neuron to the precursor is not sourced; the neuregulin-ErbB version is counter-evidenced in vivo to postnatal day 11.",
    "direction_state": "unresolved",
    "direction_state_label": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding",
-   "evidence_available": "WWOX-system: the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window; the treated arms of the source are unquantified, and whether an established deficit re-myelinates is unmeasured. IT29: perturbation evidence from other systems signs several intrinsic precursor-differentiation routes (muscarinic-receptor, lipid-synthesis, thyroid- and RXR-type receptor) in wild-type or injury settings and none in a neuron-driven hypomyelination model; HDAC3 loss is adverse for maturation; an independent screen disagrees with some signs. [IT36] GSK3 sign on oligodendrocyte differentiation is divided (inhibitors raise it in one source, lower it in another after Foxg1 knockdown; genetic loss in mature cells changed survival); recorded as undetermined. [IT39] GSK3 context rows: a GSK3 inhibitor run after Foxg1 knockdown goes the opposite way to the inhibitor-raises-differentiation reports, and a 2026 review holds both directions; the slice paper's finding is neuron-specific wording, not oligodendrocyte-wide. [ADV-001] The muscarinic-receptor route rests on genetic rows (culture; abstract level) with a ceiling caveat; for two antimuscarinic drugs of the class the drug-class support carries a documented EBP-inhibition route whose attribution is unsettled, and EBP activity is unmeasured for the other antimuscarinics named. A profile of the pathway intermediates per compound before target attribution is a design position (INFERENZA); this does not say that EBP explains the muscarinic route, that unmeasured compounds act through EBP, or that M1 is irrelevant. The 216-row signed layer is not committed and no number is reproduced on it. [IT 2026-11-25, ADV-244: the organoid transcript set behind this row is four knockout organoids of one CRISPR clone (1B) against two parental organoids, apparently from one batch (authors' Methods: organoids from the same batch unless stated otherwise), so it is not shown to be independent of the clone; the other clone was not sequenced.] [IT 2026-11-25, ADV-247: hippocampal bulk arms of 2 or 3 libraries; one mouse per library is not stated.]",
+   "evidence_available": "WWOX-system: the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window; the treated arms of the source are unquantified, and whether an established deficit re-myelinates is unmeasured. IT29: perturbation evidence from other systems signs several intrinsic precursor-differentiation routes (muscarinic-receptor, lipid-synthesis, thyroid- and RXR-type receptor) in wild-type or injury settings and none in a neuron-driven hypomyelination model; HDAC3 loss is adverse for maturation; an independent screen disagrees with some signs. [IT36] GSK3 sign on oligodendrocyte differentiation is divided (inhibitors raise it in one source, lower it in another after Foxg1 knockdown; genetic loss in mature cells changed survival); recorded as undetermined. [IT39] GSK3 context rows: a GSK3 inhibitor run after Foxg1 knockdown goes the opposite way to the inhibitor-raises-differentiation reports, and a 2026 review holds both directions; the slice paper's finding is neuron-specific wording, not oligodendrocyte-wide. [ADV-001] The muscarinic-receptor route rests on genetic rows (culture; abstract level) with a ceiling caveat; for two antimuscarinic drugs of the class the drug-class support carries a documented EBP-inhibition route whose attribution is unsettled, and EBP activity is unmeasured for the other antimuscarinics named. A profile of the pathway intermediates per compound before target attribution is a design position (INFERENZA); this does not say that EBP explains the muscarinic route, that unmeasured compounds act through EBP, or that M1 is irrelevant. The 216-row signed layer is not committed and no number is reproduced on it. [IT 2026-11-25, ADV-244: the organoid transcript set behind this row is four knockout organoids of one CRISPR clone (1B) against two parental organoids, apparently from one batch (authors' Methods: organoids from the same batch unless stated otherwise), so it is not shown to be independent of the clone; the other clone was not sequenced.] [IT 2026-11-25, ADV-247: hippocampal bulk arms of 2 or 3 libraries; one mouse per library is not stated.] [IT 2026-11-25, ADV-250: a hippocampal library is at most one independent unit, so the library count is an upper bound on n; if a library is one mouse, the 2 control libraries cover at most 2 of the 4 control cortices.]",
    "evidence_depth": "E2 - card reviewed, abstention (premise named, no test designed)",
    "feasibility": "A measurement in an existing system; no compound and no new model.",
    "intervention": "Pro-myelinating agents (class)",
@@ -6083,11 +6083,11 @@
    "coverage_generated_from": {
     "assertion_pertinence.tsv": "c9a9c8fa92207fb3",
     "card_links.json": "2aac19ca3b0b7686",
-    "cards_and_packets": "f6bea0b587873984",
+    "cards_and_packets": "d990d30757a14936",
     "catalog.jsonl.gz": "75652786013b931d",
     "catalog_stats.json": "87ac308ce3ab9b3f",
-    "measure_next.json": "bca46967510475c5",
-    "needs.json": "d529d1e5d837aa8f",
+    "measure_next.json": "21b677f4c770b780",
+    "needs.json": "1f66ad766bcc1609",
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
@@ -7098,7 +7098,7 @@
    ],
    "exploratory_it7": "None. Not in the P3 universe (card-linked families were firewalled out of every method) and P3 tested a transcript module, not protein fate. P2: a class with a catalogued target row only for HDAC at enzyme level; no chaperone target row in ChEMBL, GtoPdb or DGIdb.",
    "inputs": {
-    "T1_cards": "c1e8de137ed7b7f1",
+    "T1_cards": "814082cd51a7d8e3",
     "T2_pertinence": "91e62b924fe30a2a",
     "T3_receipts": "bb42cf66c0eeefbc",
     "T4_needs": "9ae567485b16c45c",
@@ -7396,7 +7396,7 @@
    ],
    "exploratory_it7": "None; outside the P3 universe and not a transcript question.",
    "inputs": {
-    "T1_cards": "87b5881f4585aad8",
+    "T1_cards": "d116834afa44649d",
     "T2_pertinence": "a99cbab9e0538513",
     "T3_receipts": "3bc6767930a125a4",
     "T4_needs": "9ae567485b16c45c",
@@ -7649,7 +7649,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "b14301e1da56d634",
+    "T1_cards": "80a880af3bfceacd",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "2985f0604e1f1074",
     "T4_needs": "9ae567485b16c45c",
@@ -7880,7 +7880,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "0da9ed7d524bdba3",
+    "T1_cards": "2353b936d0da223a",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "f2357c73cbfbf215",
     "T4_needs": "9ae567485b16c45c",
@@ -8110,7 +8110,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "3bf9b367b6db2d22",
+    "T1_cards": "3c204ea2bff50ee3",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "f2357c73cbfbf215",
     "T4_needs": "9ae567485b16c45c",
@@ -8376,7 +8376,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "84d47fa6d7690ab4",
+    "T1_cards": "6344cf6d5129f3c3",
     "T2_pertinence": "e8ab801c472fdfe7",
     "T3_receipts": "0efa01184c6ba643",
     "T4_needs": "aa528d3f09f497b0",
@@ -8731,7 +8731,7 @@
    ],
    "exploratory_it7": "None. Gene addition is not a compound question; P2 counts it as direction-evaluable by target only (zero signed records on the need target) and P3 did not touch it.",
    "inputs": {
-    "T1_cards": "7fbc794abf82e087",
+    "T1_cards": "6d121483649952fb",
     "T2_pertinence": "59d15d3c06233d6c",
     "T3_receipts": "6f2932095c72fb80",
     "T4_needs": "87e24b6b4eb37de3",
@@ -9126,7 +9126,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "24ae43258322573a",
+    "T1_cards": "0acc5df989db915b",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "4c5d7ee4b7cf4a15",
     "T4_needs": "66cebf15a40b040e",
@@ -9357,7 +9357,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "394cb0e2ff7b9f2c",
+    "T1_cards": "5782b12d507224c7",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "b86f28328b22bd29",
     "T4_needs": "10a1be2af4314710",
@@ -9601,7 +9601,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "0ba65c1a2e9f1685",
+    "T1_cards": "c9d1f11fce3b89b3",
     "T2_pertinence": "8e52657c67b7cf9d",
     "T3_receipts": "bf9783aa2f62c7c9",
     "T4_needs": "a7a80e55c71b1e22",
@@ -9954,7 +9954,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "728f99dd6a975dad",
+    "T1_cards": "4be03f1a02e3c51b",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "e2d1e3f9381e5903",
     "T4_needs": "55ff62f47762bab4",
@@ -10240,7 +10240,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "c7e9265c60f481f4",
+    "T1_cards": "678ea613afa1a1a5",
     "T2_pertinence": "079230f81c69cb2e",
     "T3_receipts": "a4b047cd0a784e35",
     "T4_needs": "ac27518af19cc333",
@@ -10532,7 +10532,7 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, minimum detectable effect about rho 0.15, independently verified): NO ADDED VALUE of a signed external network (rho 0.047) or a WWOX-enriched network (difference -0.0015) for ranking compounds by opposition of the six-gene module; the signature route is effect not detected, not excluded (rho 0.143, 0.007 under the 0.15 threshold, 90 pe…",
    "inputs": {
-    "T1_cards": "3a737e5c38d10eb4",
+    "T1_cards": "215e1e472d3f44ec",
     "T2_pertinence": "1959a04e90dbf178",
     "T3_receipts": "2af097124669b66f",
     "T4_needs": "a3face7aa0d2e275",
@@ -10930,7 +10930,7 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, independently verified): the same result as CMP-04 - network routes NO ADDED VALUE, signature route not detected and not excluded (weak positive counter-evidence: lower bound 0.039, top-decile hit rate 15 percent); module transfer inconclusive (null 95th percentile 0.389 and p 0.060 on the producer's draw, 0.396 and 0.0595 on the verif…",
    "inputs": {
-    "T1_cards": "c75b657a12dda9af",
+    "T1_cards": "322e986ea3b78add",
     "T2_pertinence": "4f588d870d868008",
     "T3_receipts": "0a5f91853ce0a465",
     "T4_needs": "364bca1d317075b9",
@@ -11346,7 +11346,7 @@
    ],
    "exploratory_it7": "None. A diet has no compound target row, so neither P2 method applies, and the P3 negative says nothing about it.",
    "inputs": {
-    "T1_cards": "f5ccb4e69a05357c",
+    "T1_cards": "4ce41c99dec5b569",
     "T2_pertinence": "d95f7e8dcd00a63d",
     "T3_receipts": "4a37063d1cf1cd4c",
     "T4_needs": "744c0fd8813698d6",
@@ -11669,7 +11669,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "807ab22644877b23",
+    "T1_cards": "da38f074054baa16",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "5814cc40fa21030d",
     "T4_needs": "c2293d59cfe3febe",
@@ -11973,7 +11973,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "83b2674992cfc4da",
+    "T1_cards": "07e764647bdb542b",
     "T2_pertinence": "8b0a047e9ce40434",
     "T3_receipts": "9ca986d8cea1f51a",
     "T4_needs": "503be10cec75e346",
@@ -12325,7 +12325,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "2b625f704d61fedf",
+    "T1_cards": "29240274218304ed",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "5814cc40fa21030d",
     "T4_needs": "c2293d59cfe3febe",
@@ -12573,7 +12573,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "69d51528816aabd4",
+    "T1_cards": "7deb366b9c1d291b",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "61c5923f21668088",
     "T4_needs": "e47c99263fff82cc",
@@ -12898,7 +12898,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "e7c4cc4144cc76ec",
+    "T1_cards": "d449635e73f4b981",
     "T2_pertinence": "40d3f822d9a26184",
     "T3_receipts": "e41e687149b8705b",
     "T4_needs": "614b4e0a41c6a227",
@@ -13460,7 +13460,7 @@
    ],
    "exploratory_it7": "None from P3 (a receptor-physiology question, not a transcript module; memantine and perampanel are card-linked and firewalled). P2: memantine and perampanel are usable by the network method (signed antagonist actions on GRIN and GRIA targets) and have no neural LINCS signature, so the signature method does not apply; the need has 179 linked records by targ…",
    "inputs": {
-    "T1_cards": "45e69a3bcee400f5",
+    "T1_cards": "6c3d512235c1b0a6",
     "T2_pertinence": "4744af9e5e721d31",
     "T3_receipts": "5b3168491b35fe2b",
     "T4_needs": "a9f2ecba72fedb1c",
@@ -13914,7 +13914,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "7c2e0dbb3fec763e",
+    "T1_cards": "9cd5677b0d9d75b7",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "680077e476c3fea7",
     "T4_needs": "c3cb663b4a8f81ca",
@@ -14167,7 +14167,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "e5f873d116363e69",
+    "T1_cards": "313ae28eb03413b3",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "85029a2f97e7b3d1",
     "T4_needs": "6cb13a89d47f10ac",
@@ -14500,7 +14500,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "1a622c7722d2c0fa",
+    "T1_cards": "907fbdcfb332d9a7",
     "T2_pertinence": "db0343ccb25dda32",
     "T3_receipts": "bf1a16e303205a2c",
     "T4_needs": "f8af163a656e7af1",
@@ -14855,7 +14855,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "8ab9f9bd9c0880a2",
+    "T1_cards": "1ab72655b7adbce5",
     "T2_pertinence": "904f40dca9a2c7f5",
     "T3_receipts": "16fff434102ccf5f",
     "T4_needs": "503be10cec75e346",
@@ -15192,7 +15192,7 @@
    ],
    "exploratory_it7": "None from P3 (not the glycolysis module). P2: the need is exploration-only (direction uncertain) with 521 linked records by target association, 331 usable by the network method and 4 neural-signature records among them; association only, no direction toward a need, nothing evaluated.",
    "inputs": {
-    "T1_cards": "439292e6a92aadb9",
+    "T1_cards": "7b364e6c108498eb",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "49e6cd9a3c6cf489",
     "T4_needs": "34001ad580d89a15",
@@ -15489,7 +15489,7 @@
    ],
    "exploratory_it7": "None. An ion has no signed target row for the network method and no neural LINCS perturbation; the P3 negative does not apply.",
    "inputs": {
-    "T1_cards": "3591a7a4f7509a64",
+    "T1_cards": "b066e7591769cbe0",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d330ad231d74de27",
     "T4_needs": "a9f2ecba72fedb1c",
@@ -15818,7 +15818,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "876cf7a0e39f757d",
+    "T1_cards": "ae7e9d2c8ddf8a88",
     "T2_pertinence": "419afd58578b735f",
     "T3_receipts": "86e7bf3d67cc468a",
     "T4_needs": "bbaa10de8747dfa1",
@@ -16147,7 +16147,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "2107f67028e43668",
+    "T1_cards": "bcc1f6a4c851c503",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "5814cc40fa21030d",
     "T4_needs": "c2293d59cfe3febe",
@@ -16309,7 +16309,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "2b73f7ddb61652c0",
+    "T1_cards": "5ee0192a9ecef982",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "63b4ad5bf04f0622",
     "T4_needs": "e8f542e80e326fc9",
@@ -16469,7 +16469,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "3306140986a64f8f",
+    "T1_cards": "256c92d88e258edf",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
     "T4_needs": "97e5657152aa720b",
@@ -16662,7 +16662,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "78539b81aa4fc4fb",
+    "T1_cards": "13d4bd4027a61bb3",
     "T2_pertinence": "1d8e37b50e10f4e0",
     "T3_receipts": "8c4d50ad536361a1",
     "T4_needs": "04b598094105956f",
@@ -17118,7 +17118,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "a6bdc8a8a9890ac0",
+    "T1_cards": "47e5089ca9921b80",
     "T2_pertinence": "403956ddfaf8ef49",
     "T3_receipts": "09aefab52f8d99a3",
     "T4_needs": "492f1e05d520cfd1",
