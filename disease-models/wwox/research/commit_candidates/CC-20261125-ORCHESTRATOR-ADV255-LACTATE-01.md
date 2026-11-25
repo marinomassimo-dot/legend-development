@@ -2,7 +2,7 @@
 
 **Actor:** `orchestrator` (IT) · **Task:** ORCH-ROADMAP-IT59-20261119 (ADV-255 and ADV-259 wording, relayed by SCI at ADV's request; peer messages, not operator authority) · **Date:** 2026-11-25 · **target_wm_version:** `WM_v7.29` (unchanged)
 **Origin of the findings:** `advisor_pilot_20261113/brainstorm_20261116/adv255_lactate_table_sci_20261125/RESULT_ADV255_LACTATE_TABLE_SCI_20261125.md` (SCI: per-report table of lactate statements) and `adv259_chong_route_sci_20261125/RESULT_ADV259_CHONG_ROUTE_SCI_20261125.md` (SCI: the Chong 2023 passage is UNREACHABLE by every route tried). IT did not re-read the reports.
-**Status:** PROPOSED, for the next `BATCH_COMMIT` that the queue triggers. No registry file is edited by this act. Ordinary-route lines (discovery ledger `DL-BIO-009`, `HYP-20260709-01`, mechanism map `N-06`, `meta_metabolism_current.md`, cards E02 and E04 with rebuilt cards) were placed the same day and are not part of this candidate.
+**Status:** PROPAGATED (`BATCH_20261125_003`; see the BATCH DISPOSITION block at the foot). No registry file is edited by this act. Ordinary-route lines (discovery ledger `DL-BIO-009`, `HYP-20260709-01`, mechanism map `N-06`, `meta_metabolism_current.md`, cards E02 and E04 with rebuilt cards) were placed the same day and are not part of this candidate.
 
 > Public, disease-level, de-identified. Hypothesis level; nothing here is medical advice. Reference genotype class only.
 
@@ -22,3 +22,9 @@ No change to status, grade, wikilinks or the dietary-response sentence of the sa
 1. The held copy of PMID 36537114 has no sentence containing the word lactate (SCI, ADV-255 and ADV-259 route table).
 2. Lactate is named normal in blood or an unspecified sample in publications 24456803, 27495153, 30361190, 30746283, 35792847, and the registry statement for Chong has no quote attached.
 3. `CLAIM 009` and `PAPER 017` contain the clause to be amended, read in place at propagation.
+
+## BATCH DISPOSITION — `BATCH_20261125_003` (2026-11-25, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PROPAGATED (verified remainder; wording corrected by the blind check)
+
+2 record-scoped `replace-within` ops: `claim_registry_current.md` CLAIM 009 (correction sentence after the Chong 2023 clause) and `paper_registry_current.md` PAPER 017 (the correction placed inline after the raised-lactate value in the Note). **Change class restated: MINOR.** **Blind check:** one verifier (sonnet, effort high; call A of batch 2, report as delivered in `drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_batch2_verify_20261125/VERIFIER_REPORT_AS_DELIVERED_BATCH2A_IT_20261125.md`): the held copy of PMID 36537114 has no sentence with lactate (8 of at least 26 chunks; says nothing about the rest): SUPPORTED; lactate stated normal in 14 subjects of five publications, no value or range printed: SUPPORTED; small lactate peaks at 4 months and none at 2 years 4 months (PMID 35573960): SUPPORTED. **UNDERSHOOT, corrected before propagation:** the sample type is not only «blood or unspecified» (serum and CSF in Al-Baradie patient 1.2, serum, plasma); the propagated sentence says so. Not propagated here: nothing; the ordinary-route lines of this candidate were placed earlier the same day. Limits: IT did not re-read the SCI reports; the raised value itself (2.4 to 3.3 mmol/L) is not verified or contradicted.
