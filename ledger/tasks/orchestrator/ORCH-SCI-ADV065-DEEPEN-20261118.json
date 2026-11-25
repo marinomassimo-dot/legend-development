@@ -1065,6 +1065,15 @@
      "accepted_at": "2026-11-25T05:47:11Z",
      "updated_at": "2026-11-25T06:02:36Z",
      "evidence": "RESULT_ADV264_SCI_20261125.md in disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv264_unheld_not_unread_sci_20261125; 1 of 500 earlier complete; 79 held by digest; 42 of 313 complete reads without bytes; 1 restorable; landing in progress"
+    },
+    {
+     "step": "ADV-265: rank held partials by consumers and unread section class, read the top six missing sections, PREREG, receipts, PAPER candidates, wording for IT; Tanna 2018 restored (ADV-264)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-265",
+     "accepted_at": "2026-11-25T06:14:23Z",
+     "updated_at": "2026-11-25T06:32:22Z",
+     "evidence": "RESULT_ADV265 in brainstorm_20261116/adv265_held_partials_sci_20261125; six read from held bytes, six receipts, five of six change a consumer wording; no PAPER candidate (figure images unread); landing at the commit that carries this record"
     }
    ]
   }
@@ -1886,6 +1895,13 @@
    "at": "2026-11-25T05:47:11Z",
    "source": "ADV-264",
    "step_sha256": "775269859f08",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T06:14:23Z",
+   "source": "ADV-265",
+   "step_sha256": "514d343de437",
    "reopened_block": false,
    "authorised_by": null
   }
