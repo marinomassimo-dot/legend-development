@@ -167,7 +167,7 @@ sessions' already authorised work continues.
 **Who holds the presidio, and what survives.** The operator hosts the recall in a dedicated session (`ADV`, ACTOR_ID `advisor`, [role contract](../../../roles/advisor.md)); the earlier assignment as `orchestrator` remains historical, superseded by `DEC-20261118-ADVISOR-ACTOR` (reconciled 2026-11-19).
 The evaluations are still run by `legend-strategic-advisor` in a separate read-only context, and the hosting session runs `tick`, starts `evaluate`, critically judges incoming signals and decisive premises, delivers scoped work and follows its result. Operational execution remains with the recipients; ADV is not an approval step. One campaign, one
 state: run every command from the **primary checkout** (the campaign folder, `budget.json` and the counters are files there; the state directory is keyed by the campaign name; a linked worktree
-holds its own copy, so `tick`, `evaluate`, `deliver`, `activate`, `disable` and `recall` refuse to run from one). Transfer = the new host reads the campaign and the state, the old host
+holds its own copy, so `tick`, `evaluate`, `assign`, `deliver`, `activate`, `disable` and `recall` refuse to run from one). The primary checkout is the campaign's one home and must be current: `assign` and `deliver` also refuse while `development/main` holds a commit it lacks that touches a task record, the portfolio, the roadmap, the transport protocol, the shareable package, the campaign folder or the tool itself; `strategic_advisor.py refresh --campaign <DIR>` fast-forwards it, all or nothing, after copying what it replaces under the host state folder. Transfer = the new host reads the campaign and the state, the old host
 `CronDelete`s only its Advisor recall (never another mandate's job), the new host creates its own with the text `strategic_advisor.py recall --campaign <DIR>` prints, and verifies its first fire.
 **Restore on restart:** use the current [Wake-up durability rule](../../../framework/protocols/cross_session_transport.md#wake-up-durability-the-presidio-belongs-to-the-adv-campaign-not-to-a-chat-operator-2026-11-18-permanent). The initial pilot's account of losing a recall at every process death is superseded by the later measured resume behaviour. Inspect `CronList` before creating or replacing the one job; do not infer job loss from process loss.
 
@@ -207,7 +207,7 @@ linked from the roadmap's Work order. The canonical feeding/consultation habit l
 `strategic_advisor.py portfolio` prints its index; `portfolio --id RP-003` reads a whole row;
 `portfolio --upsert /tmp/opportunity.json` merges a partial text-valued object by stable id,
 preserving the other fields and rows. Writes use a host-local lock and atomic replacement;
-use the primary checkout so writers share one file. No new service or approval is required.
+use the primary checkout so writers share one file (a row written there and not yet on main stops the next `refresh` once main changes the portfolio: land it first). No new service or approval is required.
 
 `observe` reads the rows and derives execution from linked mandate records. A changed
 opportunity/priority, released mandate needing consumption review or met dependency is a
