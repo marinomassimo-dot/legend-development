@@ -930,6 +930,13 @@
      "accepted_at": "2026-11-25T00:01:55Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv228_pmc_open_batch_sci_20261124/RESULT_ADV228_PMC_OPEN_BATCH_SCI_20261124.md; six receipts FTR-20261124-28045433-01 to 37324196-01 recorded",
      "updated_at": "2026-11-25T00:12:30Z"
+    },
+    {
+     "step": "ADV-231: per-animal STAT3-axis transcript echo in held Wwox-deficient brain tables (ADV228-Q01), duplicate check first, PREREG first",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-231 (ADV message 2026-11-25, assignments/ADV-231.md)",
+     "accepted_at": "2026-11-25T00:31:30Z"
     }
    ]
   }
@@ -1646,6 +1653,13 @@
    "at": "2026-11-25T00:01:55Z",
    "source": "ADV-228 (ADV message 2026-11-24, brief adv228.txt)",
    "step_sha256": "7847b888a7f2",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T00:31:30Z",
+   "source": "ADV-231 (ADV message 2026-11-25, assignments/ADV-231.md)",
+   "step_sha256": "841478b923a1",
    "reopened_block": false,
    "authorised_by": null
   }
