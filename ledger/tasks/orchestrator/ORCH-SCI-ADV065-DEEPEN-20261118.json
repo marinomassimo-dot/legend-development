@@ -1068,11 +1068,12 @@
     },
     {
      "step": "ADV-265: rank held partials by consumers and unread section class, read the top six missing sections, PREREG, receipts, PAPER candidates, wording for IT; Tanna 2018 restored (ADV-264)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-265",
      "accepted_at": "2026-11-25T06:14:23Z",
-     "updated_at": "2026-11-25T06:26:46Z"
+     "updated_at": "2026-11-25T06:32:22Z",
+     "evidence": "RESULT_ADV265 in brainstorm_20261116/adv265_held_partials_sci_20261125; six read from held bytes, six receipts, five of six change a consumer wording; no PAPER candidate (figure images unread); landing at the commit that carries this record"
     }
    ]
   }
