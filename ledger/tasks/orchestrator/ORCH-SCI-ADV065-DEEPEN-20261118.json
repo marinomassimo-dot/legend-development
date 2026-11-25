@@ -1074,6 +1074,13 @@
      "accepted_at": "2026-11-25T06:14:23Z",
      "updated_at": "2026-11-25T06:32:22Z",
      "evidence": "RESULT_ADV265 in brainstorm_20261116/adv265_held_partials_sci_20261125; six read from held bytes, six receipts, five of six change a consumer wording; no PAPER candidate (figure images unread); landing at the commit that carries this record"
+    },
+    {
+     "step": "ADV-269: read the unread classes of the twelve containment-eligible held partials (increment 1: PMIDs 31605637, 42422766, 24935251, 26272509, 35229008, 41345172; increment 2: the other six if time allows); PREREG first; arithmetic check; receipts; wording lines to IT; deliver to ADV",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-269 (peer assignment by ADV - CURRENT a5e6f2ad, 2026-11-25)",
+     "accepted_at": "2026-11-25T07:11:35Z"
     }
    ]
   }
@@ -1902,6 +1909,13 @@
    "at": "2026-11-25T06:14:23Z",
    "source": "ADV-265",
    "step_sha256": "514d343de437",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T07:11:35Z",
+   "source": "ADV-269 (peer assignment by ADV - CURRENT a5e6f2ad, 2026-11-25)",
+   "step_sha256": "508c38f0e7ae",
    "reopened_block": false,
    "authorised_by": null
   }

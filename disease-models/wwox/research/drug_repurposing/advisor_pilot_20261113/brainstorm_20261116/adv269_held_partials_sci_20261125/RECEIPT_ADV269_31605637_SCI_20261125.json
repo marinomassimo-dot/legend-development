@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-25T07:22Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-25T07:22:21Z",
+ "event_id": "FTR-20261125-31605637-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Held Europe PMC XML: Discussion read in full; Results subsections Binding and stabilizing effect, Inhibition and activation assays, Steady-state kinetics read; Methods subsections thermal shift, steady-state kinetics, inhibition and activation read, other Methods subsections listed only; Table 2 read and kcat/KM recomputed; Acknowledgements sentence on preliminary cell culture read; cell-culture search of the whole body; figures captions only; Tables S1 and S2 are not in the XML.",
+  "Result and per-consumer wording: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261124-31605637-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "61b26bc7af69a4a9d73639eb4462e9e89dfe2efc19be7fe16f8d254c1bf289c1",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID31605637_NQO1_P187S_PMC7027498_epmc_2026-10-29.xml",
+ "study_id": {
+  "doi": "10.1002/1873-3468.13636",
+  "pmid": "31605637"
+ },
+ "workflow": "SCI ADV-269 (held partials, unread classes inside held bytes; held bytes only, no contact, no spend); not a complete read, figure images remain unread"
+}

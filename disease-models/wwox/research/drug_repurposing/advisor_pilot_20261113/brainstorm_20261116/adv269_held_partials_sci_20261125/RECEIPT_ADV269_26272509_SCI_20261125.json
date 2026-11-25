@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-25T07:22Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "captions_only",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T07:22:21Z",
+ "event_id": "FTR-20261125-26272509-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Held supplement MOESM2 (full probe-set tables, 14 sheets) searched for the five WWOX probe sets in every sheet, contents sheet read, fold-change direction checked on CDKN1A and MT1X; MOESM3 searched for WWOX; main-text Methods sentences on the VPA stock and concentration read; MOESM1 pdf and figures not read.",
+  "Result and per-consumer wording: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261004-26272509-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "3368affd5d32b40b428440331f8f009ff1aef60cd32eba82ce9af81f0bb2d5fd",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID26272509_Rempel2015_PMC.xml",
+ "study_id": {
+  "doi": "10.1007/s00204-015-1573-y",
+  "pmid": "26272509"
+ },
+ "workflow": "SCI ADV-269 (held partials, unread classes inside held bytes; held bytes only, no contact, no spend); not a complete read, figure images remain unread"
+}
