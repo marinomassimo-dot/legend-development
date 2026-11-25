@@ -712,3 +712,5 @@
 {"evidence": "SendMessage 21:21Z", "id": "ADV-287", "receipt": ["e98495d5-21b0-480f-b0dc-88897274b5e5"], "state": "SENT", "to": ["SCI - CURRENT ae0002e7"], "utc": "2026-11-25T21:21:24Z"}
 {"evidence": "SendMessage 21:21Z", "id": "ADV-286", "receipt": ["0b8b1926-972a-4603-88a2-767ea48b5e0a"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 8e1d62bc"], "utc": "2026-11-25T21:21:27Z"}
 {"assessment": "HOST", "id": "ADV-288", "key": "pro-myelinating-comparison-arm-set-from-two-wwox-conduction-readouts", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T21:45:41Z"}
+{"evidence": "SendMessage 21:49Z, successor accepted ADV-288", "id": "ADV-288", "receipt": ["c842c2ed-3072-47c4-a7f1-835ecc2ad1d4"], "state": "SENT", "to": ["SCI - CURRENT fcd3025a"], "utc": "2026-11-25T21:49:39Z"}
+{"changed": [], "note": "", "residual": [], "result": "NO_CHANGE", "rome_date": "2026-11-26", "state": "RECONCILED", "utc": "2026-11-25T23:27:09Z"}
