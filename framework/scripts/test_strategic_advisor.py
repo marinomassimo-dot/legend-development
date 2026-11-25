@@ -2860,6 +2860,11 @@ class Meeting(unittest.TestCase):
         self.assertNotEqual(first, second)
         sa._state_path(self.campaign).with_name("meeting.json").unlink()
         self.assertEqual(sa.meeting_status(self.campaign)["record"], second)
+        # File times do not order two records written within one filesystem tick (this test was red once in a loaded landing run, 2026-11-25):
+        # give the closed record the later time, and the open one must still be recovered.
+        later = os.stat(second).st_mtime_ns + 1_000_000_000
+        os.utime(first, ns=(later, later))
+        self.assertEqual(sa.meeting_status(self.campaign)["record"], second)
 
     def test_empty_notes_invalid_requests_and_missing_open_record_are_honest_errors(self) -> None:
         with self.assertRaises(ValueError):
