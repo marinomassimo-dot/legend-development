@@ -1244,6 +1244,20 @@
      "accepted_at": "2026-11-25T08:35:39Z",
      "evidence": "9e434d902 on main (gate PASS): xlsx_to_text.py reads .xls; 12 of 12 held BIFF files open, the 13th is a saved reCAPTCHA page (PMID 24932569) and is named NOT_READ; consumer SCI told",
      "updated_at": "2026-11-25T09:02:09Z"
+    },
+    {
+     "step": "Close checkpoint P items 1 and 3: send ADV the per-suite CI times of f093ab03 and the CI verdict of IT's red-main fix once on main",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "CHECKPOINT_HE_20261125_P section 2 items 1 and 3",
+     "accepted_at": "2026-11-25T09:42:23Z"
+    },
+    {
+     "step": "Replay landing_suites.py against the red CI streaks on main, count escapes, add rules only for observed escapes",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "HE proposal to ADV 2026-11-25 (operator standing rule: no idle laboratory)",
+     "accepted_at": "2026-11-25T09:42:23Z"
     }
    ]
   }
@@ -2205,6 +2219,20 @@
    "at": "2026-11-25T08:35:39Z",
    "source": "ADV message to HE 00c83fd0, 2026-11-25 ~08:37Z, item 4",
    "step_sha256": "3f493f001f7d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T09:42:23Z",
+   "source": "CHECKPOINT_HE_20261125_P section 2 items 1 and 3",
+   "step_sha256": "7e1fcadf4249",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T09:42:23Z",
+   "source": "HE proposal to ADV 2026-11-25 (operator standing rule: no idle laboratory)",
+   "step_sha256": "8f03b5802c8e",
    "reopened_block": false,
    "authorised_by": null
   }
