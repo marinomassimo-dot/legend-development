@@ -582,3 +582,7 @@
 {"evidence": "SendMessage 03:10Z with brief pointer", "id": "ADV-249", "receipt": ["271f9dd7-c7b3-4f33-acd1-3b889a59bc70"], "state": "SENT", "to": ["SCI - CURRENT ac5ef625"], "utc": "2026-11-25T03:10:22Z"}
 {"assessment": "HOST", "id": "ADV-250", "key": "resolve-the-seven-not-stated-unit-rows", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-25T03:19:40Z"}
 {"evidence": "SendMessage 03:22Z with brief pointer", "id": "ADV-250", "receipt": ["0096077f-db03-43f6-9ffa-a8c62adb5de1"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 45a8b15c"], "utc": "2026-11-25T03:22:13Z"}
+{"assessment": "HOST", "id": "ADV-251", "key": "knockout-floor-on-the-authors-own-scale-supp-fig-1k", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-25T03:31:35Z"}
+{"assessment": "HOST", "id": "ADV-252", "key": "ci-red-test-landing-suites-closed-world-assertion", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-25T03:31:37Z"}
+{"evidence": "SendMessage 03:31Z with brief pointer", "id": "ADV-251", "receipt": ["f659806d-2eae-4279-b3ff-decc779c3adc"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 45a8b15c"], "utc": "2026-11-25T03:31:51Z"}
+{"evidence": "SendMessage 03:31Z with brief pointer", "id": "ADV-252", "receipt": ["e096d7d8-a412-4478-a6a5-95bfb63cc354"], "state": "SENT", "to": ["HE - CURRENT a930ffce"], "utc": "2026-11-25T03:31:51Z"}
