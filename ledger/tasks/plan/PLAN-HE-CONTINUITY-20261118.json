@@ -1208,6 +1208,34 @@
      "accepted_at": "2026-11-25T07:57:32Z",
      "evidence": "load_ledger 6.99 s to 0.23 s (best of 3); identical error lists on the real ledger and 600 altered ledgers (4,450 messages); verify output byte-identical on the real checkout and six altered cases; test_fulltext_receipts 123 OK",
      "updated_at": "2026-11-25T07:57:32Z"
+    },
+    {
+     "step": "window_handoff rename: match the view's name column only (the summary column matched the successor's temporary name), refuse and name any other row renamed, test on screen text",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message to HE 00c83fd0, 2026-11-25 ~08:37Z",
+     "accepted_at": "2026-11-25T08:35:19Z"
+    },
+    {
+     "step": "CI number for 576abf92 (faster test_paper_packet, run #2405) and for the ledger-index change (49a9dd56), sent to ADV",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message to HE 00c83fd0, 2026-11-25 ~08:37Z, item 2",
+     "accepted_at": "2026-11-25T08:35:39Z"
+    },
+    {
+     "step": "Propose to ADV the smallest route to read Krug 2013's .xls supplement without xlrd (licence and cost; release gate unchanged)",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message to HE 00c83fd0, 2026-11-25 ~08:37Z, item 3",
+     "accepted_at": "2026-11-25T08:35:39Z"
+    },
+    {
+     "step": "Routine need-driven micro-upgrade with a named consumer and a measured benefit",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message to HE 00c83fd0, 2026-11-25 ~08:37Z, item 4",
+     "accepted_at": "2026-11-25T08:35:39Z"
     }
    ]
   }
@@ -2141,6 +2169,34 @@
    "at": "2026-11-25T07:57:32Z",
    "source": "HE routine micro-upgrade, ADV YES 2026-11-25 (verify must give byte-identical output)",
    "step_sha256": "49ca580e8de5",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T08:35:19Z",
+   "source": "ADV message to HE 00c83fd0, 2026-11-25 ~08:37Z",
+   "step_sha256": "d887c8a92374",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T08:35:39Z",
+   "source": "ADV message to HE 00c83fd0, 2026-11-25 ~08:37Z, item 2",
+   "step_sha256": "51cfae1af46a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T08:35:39Z",
+   "source": "ADV message to HE 00c83fd0, 2026-11-25 ~08:37Z, item 3",
+   "step_sha256": "e109afa1cb83",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T08:35:39Z",
+   "source": "ADV message to HE 00c83fd0, 2026-11-25 ~08:37Z, item 4",
+   "step_sha256": "3f493f001f7d",
    "reopened_block": false,
    "authorised_by": null
   }
