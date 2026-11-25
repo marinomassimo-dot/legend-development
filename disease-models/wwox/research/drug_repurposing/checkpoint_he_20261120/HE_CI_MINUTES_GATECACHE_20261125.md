@@ -46,9 +46,27 @@ The one test, back to back, same host, load average about 3 to 4:
 
 **145 s saved, 37% of that test.** The same test took 503 s in an earlier full run of its suite, so the host's load moves the figure. The CI effect is not measured; read it from the per-suite time of `test_repository_surface_determinism.py` in a run holding this change, against 758 s in #2428 (one run each, so a difference under about 100 s says nothing).
 
-## 5. Not done
+## 5. The view suite, per test, and its one change (added the same day)
 
-`test_repurposing_view.py` is the larger consumer (996 s). Its per-test times were not collected here.
+`test_repurposing_view.py`, the larger consumer (996 s in CI): 238 tests in 1,314 s on this host.
+
+| test | local seconds |
+|---|---|
+| `test_no_horizontal_overflow_at_360_and_390` | 213 |
+| `test_the_public_edition_fits_a4_print_width` | 111 |
+| `test_mutation_bc_only_pair_in_a_lead_sentence_and_in_a_card` | 79 |
+| `test_rendered_exports_standalone_comparison_and_pdf_text_pass` | 65 |
+| `test_package_is_current_deterministic_and_self_describing` | 48 |
+
+**Change: the A4 test measures print layout only.** It loaded 40 screen views and asserted none of them (a view that never became ready would still have passed). The test now empties the viewport list for its own call; the view builder is unchanged.
+
+| measure | before | after |
+|---|---|---|
+| the measurement alone, same page | 92.5 s, 49 entries | 17.2 s, the same 9 print entries |
+| the test | 111 s (inside the suite) | 19 s (alone) |
+| print page widened to 1,200 px | not run | **the changed test fails** |
+
+About 1.5 minutes of local suite time. The CI effect is not measured; scaled by the two suite totals it is near 1 minute per run. **Risk:** a script error raised only while the English page loads a screen view at 360 px would no longer surface in this test; those views were never asserted, and the 360 and 390 test asserts them in Italian.
 
 ## 6. Baseline for the landing refusal (frozen before any later read)
 

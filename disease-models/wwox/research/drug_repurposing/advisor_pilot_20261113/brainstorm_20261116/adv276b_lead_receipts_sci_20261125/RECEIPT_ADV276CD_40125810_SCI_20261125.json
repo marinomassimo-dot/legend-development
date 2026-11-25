@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T12:44Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T12:44:28Z",
+ "event_id": "FTR-20261125-40125810-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Abstract; Methods passages on animals and doses; figure legends in part; supplement brain exposure and liver sections; searches for tolerability terms."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276b_lead_receipts_sci_20261125/RESULT_ADV276D_ROUTED_LEADS_SCI_20261125.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "14eca0124019b3ee8001c581d46eca2e2fd4fbfb4e89365ddd2d0af62ab44764",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40125810_Wang2025QO83_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1111/cns.70334",
+  "pmid": "40125810"
+ },
+ "workflow": "SCI ADV-276 continued: 30202070 and routed leads (not a complete read)"
+}

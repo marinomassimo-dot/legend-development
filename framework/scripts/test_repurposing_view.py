@@ -1723,14 +1723,19 @@ class RealViewports(unittest.TestCase):
                 self.assertLess(b, h, f"{w}x{h}: the start-here row must end, and the general note begin, above the fold")
 
     def test_the_public_edition_fits_a4_print_width(self):
+        from unittest.mock import patch
         if not rv.find_chromium():
             self.skipTest("no Chromium binary: print layout was NOT measured")
         with tempfile.TemporaryDirectory() as td:
             f = Path(td) / "v.html"
             f.write_text(rv.build(DR, "shareable"), encoding="utf-8")
-            res = rv.measure_viewports(f, None, [360])
-        self.assertTrue(res, "no measurement")
-        self.assertEqual([(m["scenario"], m["scrollWidth"]) for m in res if str(m["scenario"]).startswith("print") and m["overflow"]], [])
+            # Print layout only: with no screen viewport the measurement skips the screen passes, which this test never asserted
+            # (92 s with them, 17 s without, identical print entries, 2026-11-25). Screen widths are asserted by the 360/390 test below.
+            with patch.object(rv, "VIEWPORTS", []):
+                res = rv.measure_viewports(f)
+        printed = [m for m in res if str(m["scenario"]).startswith("print")]
+        self.assertTrue(printed, "no measurement")
+        self.assertEqual([(m["scenario"], m["scrollWidth"]) for m in printed if m["overflow"]], [])
 
     def test_the_kind_filter_hides_rows_across_the_queue_and_a_stable_id_link_reopens_the_row(self):
         """IT35 P9, in the browser: the kind-of-row filter hides rows in every list; #INV-nn then shows a hidden row again; the lists stay complete without a click."""

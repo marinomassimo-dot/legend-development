@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T12:59Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T12:59:00Z",
+ "event_id": "FTR-20261125-37907746-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Abstract, introduction passages, animal and viral-vector Methods, result passages on KHK, NOX4 and knockdown; supplement Methods on AAV timing and primary microglia isolation."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276b_lead_receipts_sci_20261125/RESULT_ADV276_STEP2_BATCH1_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261019-37907746-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "0d49ce828770547859f825ca54022b48dfcce5d28854929046ba75f2bb2924d2",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID37907746_ADV272_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1038/s12276-023-01112-y",
+  "pmid": "37907746"
+ },
+ "workflow": "SCI ADV-276 step 2 batch 1 (not a complete read)"
+}
