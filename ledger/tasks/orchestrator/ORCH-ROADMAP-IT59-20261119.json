@@ -459,10 +459,33 @@
     },
     {
      "step": "ADV-263: audit of unsupported superlatives and negatives on reader surfaces (cards, INV-nn, mechanism map rows, HYP-* rows, portfolio next_action, claim registry sentences): PREREG first, two enumeration routes, top 20 by consumers checked, rewording with denominators, which surfaces generate most",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-263 (assignments/ADV-263.md on main; launch prompt of IT window 13f5248b)",
-     "accepted_at": "2026-11-25T05:56:54Z"
+     "accepted_at": "2026-11-25T05:56:54Z",
+     "evidence": "brainstorm_20261116/it_adv263_20261125/RESULT_ADV263_IT_20261125.md; main 3200cd87c; consumed by ADV (message 2026-11-25)",
+     "updated_at": "2026-11-25T06:28:56Z"
+    },
+    {
+     "step": "ADV-266: date every negative on the mechanism map, list later receipts on the negated object, compare with the revival trigger, correct what moved, one-line writing rule",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-25 (ADV-266, brief assignments/ADV-266.md)",
+     "accepted_at": "2026-11-25T06:28:56Z"
+    },
+    {
+     "step": "ADV-263 follow-up: apply the neural-system wording on card EB-MTOR-AX-01 and the pooled-class wording on INV-08, regenerate views and four languages",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-25 (decisions on ADV-263 ready items 1 and 2)",
+     "accepted_at": "2026-11-25T06:28:56Z"
+    },
+    {
+     "step": "ADV-268: next 20 map negatives with the pre-write check, edit the three other carriers of the Seahorse/flux negative, propose the one-line writing-step rule and its location",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-25 (ADV-268, brief adv268.txt)",
+     "accepted_at": "2026-11-25T06:40:26Z"
     }
    ]
   }
@@ -822,6 +845,27 @@
    "at": "2026-11-25T05:56:54Z",
    "source": "ADV-263 (assignments/ADV-263.md on main; launch prompt of IT window 13f5248b)",
    "step_sha256": "23545f31b45c",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T06:28:56Z",
+   "source": "ADV message 2026-11-25 (ADV-266, brief assignments/ADV-266.md)",
+   "step_sha256": "65deea895511",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T06:28:56Z",
+   "source": "ADV message 2026-11-25 (decisions on ADV-263 ready items 1 and 2)",
+   "step_sha256": "6653474442e9",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T06:40:26Z",
+   "source": "ADV message 2026-11-25 (ADV-268, brief adv268.txt)",
+   "step_sha256": "511bf615c693",
    "reopened_block": false,
    "authorised_by": null
   }
