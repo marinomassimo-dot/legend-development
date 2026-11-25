@@ -1,0 +1,18 @@
+lead	pmid	primary_from	n_consumers	n_pmid_consumers	n_hypothesis_records	receipts	held_files	consumers	heading
+DL-MOL-003	19465938	source line	2	0	0	0		card D01; card D02	DL-MOL-003 — Asse Wnt: direzione RISOLTA (WWOX-loss → IPER-attivazione) → leva = INIBIZIONE Wnt; ⚠️ litio CONTRO-indicato dal meccanismo
+DL-MOL-003	23030478	source line	2	0	0	0		card D01; card D02	DL-MOL-003 — Asse Wnt: direzione RISOLTA (WWOX-loss → IPER-attivazione) → leva = INIBIZIONE Wnt; ⚠️ litio CONTRO-indicato dal meccanismo
+DL-MOL-001	42190144	source line	1	1	1	0		card F01	DL-MOL-001 — Antagonismo NMDAR come leva di rescue del bursting da WWOX-loss
+DL-MOL-004	34015398	source line	1	0	0	0		card C03	DL-MOL-004 — Upregolazione del WWOX endogeno residuo (dCas9-CRISPRa / piccola-molecola agonista) per lo stato ipomorfo Q230P
+DL-MECH-032	36572560	source line	1	0	0	0		card D02	"DL-MECH-032 — WWOX è una GSK-3β-binding protein via motivo GID (ago d'oro da un paper ""rumore"" su SARS-CoV-2)"
+DL-MECH-001	42190144	source line	0	1	0	0			DL-MECH-001 — WWOX confermato tra le cause di EIDEE con burst-suppression (cohort grande)
+DL-REPO-001	42190144	source line	0	1	0	0			DL-REPO-001 — Na-channel blockers: leva per le channelopatie BS, NON per WWOX (differenziale terapeutico)
+DL-MECH-025	28151481	first mentioned	0	1	0	0			DL-MECH-025 — Retraction-dependency cluster WWOX/HIF/Met nelle metastasi ossee
+DL-MECH-049	25703206	source line	0	1	0	0			DL-MECH-049 — In WWOX **stabilità e funzione sono in TENSIONE STRUTTURALE**: la stabilità si compra con l'occlusione. Vincolo di progetto per qualunque stabilizzatore di Q230P.
+DL-BIO-003	26857392	source line	0	0	2	1			DL-BIO-003 — Assay qPCR region-specifico esone 8–9 vs core (esoni 4–6): misura diretta dell'effetto dell'allele di sito accettore
+DL-MOL-008	18371080	source line	0	0	1	0			"DL-MOL-008 — Peptide pTyr33-WWOX: un candidato di ""restoration"" già testato in vivo su un modello neurologico"
+DL-MECH-014	42275215	source line	0	0	1	0			DL-MECH-014 — Asse RNF138→hnRNPA0→WWOX mRNA→JAK2/STAT3/PD-L1: WWOX come freno di segnale immuno-oncologico
+DL-BIO-006	29108237	first mentioned	0	0	0	0			DL-BIO-006 — circRNA KIRKOS + WWOX mRNA esosomale come readout liquido del locus
+DL-MECH-008	19465938	source line	0	0	0	0			DL-MECH-008 — La funzione anti-Wnt di WWOX è WW-scaffold (sequestro DVL2), non enzimatica → potenzialmente *risparmiata* dalla variante SDR del genotipo di riferimento
+DL-BIO-013	20067585	source line	0	0	0	1			DL-BIO-013 — Il rapporto di splicing **β1:β2** di GSK3B come candidato modificatore genetico della severità
+DL-MECH-066	20067585	source line	0	0	0	1			DL-MECH-066 — L'**isoforma GSK3β2 neurone-specifica** potrebbe risolvere la contraddizione storica GSK3β↔neurite (e cambia la lettura del litio)
+DL-MECH-067	20067585	source line	0	0	0	1			DL-MECH-067 — 🔑 WWOX lega **il sito di Axin**, ed è quindi la classe di inibitore che la letteratura raccomanda per **risparmiare** l'isoforma neuronale
