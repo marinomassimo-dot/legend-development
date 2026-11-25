@@ -420,6 +420,23 @@
      "accepted_at": "2026-11-25T03:38:57Z",
      "evidence": "it_adv250wording_20261125: apply script, cards J01 F03 rebuilt, INV-06/15 clause with 4-language translation (INV-15 it gap baseline), table copy with n_as_stated_is_upper_bound; RESULT and README controls statement corrected to conditional",
      "updated_at": "2026-11-25T03:38:57Z"
+    },
+    {
+     "step": "ADV-249 wording: dated corrections on DL-MECH-032, DL-MECH-025, DL-BIO-003 and their consumers; PAPER 050 candidate",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "IT checkpoint 14 section 2 item 6; ADV-249 result (SCI)",
+     "accepted_at": "2026-11-25T04:19:22Z",
+     "evidence": "disease-models/wwox/research/commit_candidates/CC-20261125-ORCHESTRATOR-ADV249-PAPER050-01.md and dated corrections on the ledger, TX-001 packet and HYP-20260709-06",
+     "updated_at": "2026-11-25T04:20:19Z"
+    },
+    {
+     "step": "Pre-registered re-read of the printed densitometry on Supp Fig 1L and 1M against the File012 strips, with the 46 and 48 kDa band definitions",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "source": "IT checkpoint 14 section 2 item 2; ADV-251 result section 8; launch prompt",
+     "accepted_at": "2026-11-25T04:19:22Z",
+     "updated_at": "2026-11-25T04:20:19Z"
     }
    ]
   }
@@ -744,6 +761,20 @@
    "at": "2026-11-25T03:38:57Z",
    "source": "ADV message 2026-11-25 (approve upper-bound extension)",
    "step_sha256": "6567b3027d23",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T04:19:22Z",
+   "source": "IT checkpoint 14 section 2 item 6; ADV-249 result (SCI)",
+   "step_sha256": "302fc5882377",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T04:19:22Z",
+   "source": "IT checkpoint 14 section 2 item 2; ADV-251 result section 8; launch prompt",
+   "step_sha256": "0eb2c29a63b7",
    "reopened_block": false,
    "authorised_by": null
   }

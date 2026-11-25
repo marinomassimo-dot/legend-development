@@ -1125,6 +1125,13 @@
      "accepted_at": "2026-11-25T03:59:03Z",
      "evidence": "old RELEASED, new BOUND 03:56:27Z; claude agents --all --json shows SCI - CURRENT e8081cc5 and SCI - PREVIOUS ac5ef625; labels CURRENT",
      "updated_at": "2026-11-25T03:59:03Z"
+    },
+    {
+     "step": "Micro-upgrade (checkpoint HE-M section 2 item 3): tick and mandate_watch say when the checkout they run from is behind development/main on files they read",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV yes to the proposal, recorded in checkpoint HE-M section 2 item 3",
+     "accepted_at": "2026-11-25T04:22:21Z"
     }
    ]
   }
@@ -1995,6 +2002,13 @@
    "at": "2026-11-25T03:59:03Z",
    "source": "ADV peer message 2026-11-25 ~03:57Z",
    "step_sha256": "1b6f85dce1eb",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T04:22:21Z",
+   "source": "ADV yes to the proposal, recorded in checkpoint HE-M section 2 item 3",
+   "step_sha256": "e8f9c5a81205",
    "reopened_block": false,
    "authorised_by": null
   }
