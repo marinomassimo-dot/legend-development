@@ -2328,6 +2328,13 @@ class CampaignHome(ProactiveFixture):
         self.write(self.other, "notes/unrelated.md", "x\n"); self.send(self.other, "unrelated")
         self.assertEqual(self.stale(), "")
 
+    def test_the_tick_says_when_the_files_it_read_are_older_than_the_ref_it_observed(self) -> None:
+        self.assertNotIn("CHECKOUT BEHIND", sa.tick(self.campaign)["why"])
+        self.write(self.other, "ledger/tasks/orchestrator/NEW.json", "{}\n"); self.send(self.other, "record")
+        why = sa.tick(self.campaign)["why"]
+        self.assertIn("CHECKOUT BEHIND on 1 file(s)", why)
+        self.assertIn("refresh --campaign", why)
+
     def test_a_published_task_record_or_campaign_file_refuses_assign_and_deliver_and_writes_nothing(self) -> None:
         for rel in ("ledger/tasks/orchestrator/NEW.json", "campaign/assignments/ADV-002.md"):
             self.write(self.other, rel, "{}\n"); self.send(self.other, rel)

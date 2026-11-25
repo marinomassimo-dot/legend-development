@@ -91,6 +91,26 @@ class Watch(unittest.TestCase):
             p.write_text(json.dumps(rec))
         self.assertEqual(set(mw.open_tasks(e.root)), {TASK, "plan-work", "scientist-a-work"})
 
+    def test_all_says_once_in_the_log_and_every_run_when_its_checkout_lacks_published_records(self):
+        e = self.env(record())
+        env = {**os.environ, "GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@example.invalid", "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@example.invalid"}
+        def git(*args):
+            return subprocess.run(["git", *args], cwd=e.root, check=True, capture_output=True, text=True, env=env).stdout.strip()
+        git("init", "-q", "-b", "main"); git("add", "."); git("commit", "-q", "-m", "base")
+        base = git("rev-parse", "HEAD")
+        git("update-ref", "refs/remotes/development/main", base)
+        self.assertEqual(mw.note_checkout_behind(e.root, say=False), [])
+        (e.root / "ledger/tasks/orchestrator/NEW.json").write_text("{}\n")
+        git("add", "."); git("commit", "-q", "-m", "published record")
+        git("update-ref", "refs/remotes/development/main", git("rev-parse", "HEAD"))
+        git("reset", "-q", "--hard", base)                                   # this fixture checkout is the lagging one
+        out = io.StringIO()
+        with mock.patch.object(mw, "log_event") as logged, contextlib.redirect_stdout(out):
+            self.assertEqual(mw.note_checkout_behind(e.root), ["ledger/tasks/orchestrator/NEW.json"])
+            mw.note_checkout_behind(e.root)
+        self.assertEqual(out.getvalue().count("CHECKOUT_BEHIND"), 2)
+        self.assertEqual(logged.call_count, 1)
+
     def test_all_observes_failed_runtime_once_and_reports_json_without_revival(self):
         e = self.env(record())
         args = SimpleNamespace(root=str(e.root), deliver="resume", quiet_minutes=25, resume_arg=[], json=True)
