@@ -1,0 +1,784 @@
+pmid	year	title	functional_term	treatment_term	has_abstract	stage1	strings_and_routes
+20310	1977	Adult metachromatic leukodystrophy. I. Clinical manifestation in a female aged 44 years, previously diagnosed in the preclinical state.	True	False	True	DROP	S4PE
+58977	1976	The differential diagnosis of scapuloperoneal amyotrophy.	True	False	True	DROP	S4P
+65272	1977	Absence of thermoregulatory vasomotor responses during fast wave sleep in cats.	False	False	True	DROP	S4P
+67195	1977	Motor and sensory conduction velocity in Charcot-Marie-Tooth disease.	True	False	False	DROP	S4PE
+93622	1979	Charcot-Marie-Tooth disease associated with retinal pigment dystrophy and protanopia. Neurological, ophthalmological and genetic study of a family.	True	False	True	DROP	S4PE
+200717	1977	A micro-electrode study of peripheral neuropathy in man. Part 1. Responses to single graded stimuli.	True	True	True	KEEP	S4P
+200718	1977	A micro-electrode study of peripheral neuropathy in man. Part 2. Responses to conditioning stimuli.	True	False	True	DROP	S4P
+230782	1979	Disturbances of rapid-eye-movement sleep in 3 brothers with Pelizaeus-Merzbacher disease.	True	False	True	DROP	S4PE
+436863	1979	Charcot-Marie-Tooth disease associated with 'essential tremor' and normal and/or slightly diminished motor conduction velocity. Report of 7 cases.	True	False	True	DROP	S4PE
+438848	1979	Intranervous regeneration. The study of motor axon reflexes.	True	False	True	DROP	S4PE
+443714	1979	Bilateral abductor vocal cord paralysis in Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+525113	1979	[Electoneuromyography in the study of diseases of the neuromuscular system].	True	False	True	DROP	S4P
+572495	1979	Brainstem auditory evoked responses in leukodystrophies.	True	False	True	DROP	S4P
+619845	1978	Sensory nerve conduction velocity in children using cerebral evoked potentials.	True	False	True	DROP	S4P
+687159	1978	[Interstitial hypertrophic neuritis. Study of 3 cases].	True	False	True	DROP	S4PE
+750920	1978	Sensory (1a) and F-wave conduction velocity in the proximal segment of the tibial nerve.	True	False	True	DROP	S4PE
+752107	1978	F-wave conduction velocity in the deep peroneal nerve: Charcot-Marie-Tooth disease and dystrophia myotonica.	True	False	True	DROP	S4PE
+834195	1977	[EEG changes in the course of progressive cerebral disorders in children (author's transl)].	True	False	True	DROP	S4P
+968423	1976	Motor and sensory conduction velocity in patients with Charcot-Marie-Tooth disease exposed to carbon disulphide.	True	False	False	DROP	S4PE
+988509	1976	Krabbe's leukodystrophy without globoid cells.	True	False	True	DROP	S4PE
+988510	1976	Electrophysiologic observations in the classical form of Pelizaeus-Merzbacher disease.	False	False	True	DROP	S4P
+1015851	1976	Motor nerve conduction velocity in spinal muscular atrophy of childhood.	True	False	True	DROP	S4P
+1117308	1975	Motor conduction velocity in patients with Friedreich's ataxia. Report of 12 cases.	True	False	False	DROP	S4P
+1149757	1975	Unusual motor conduction velocity values in Charcot-Marie-Tooth disease associated with essential tremor: report of a kinship.	True	False	True	DROP	S4PE
+1151398	1975	Peripheral neuropathy detected on electrophysiological study as first manifestation of metachromatic leucodystrophy in infancy.	True	False	True	DROP	S4P
+1200820	1975	F-wave conduction velocity in the central segment of the peroneal and tibial nerves.	True	False	True	DROP	S4PE
+1292972	1992	Optic atrophy, sensorineural hearing loss and polyneuropathy--a case of sporadic Rosenberg-Chutorian syndrome.	True	False	True	DROP	S4PE
+1296437	1992	Late infantile form metachromatic leukodystrophy: report of one case.	True	False	True	DROP	S4PE
+1320219	1992	Adult-onset metachromatic leukodystrophy presenting as isolated peripheral neuropathy.	True	False	True	DROP	S4PE
+1338151	1992	[The diagnostic significance of evoked cutaneous sympathetic potentials].	False	True	True	DROP	S4P
+1366103	1991	[Magnetic stimulation of the central nervous system as an aid in neurophysiology].	False	False	False	DROP	S4P
+1370784	1992	Auditory brain-stem response in zitter rats with genetic spongiform encephalopathy.	True	False	True	DROP	S4P
+1389290	1992	[Metachromatic leukodystrophy: an exceptional cause of dementia in the adult].	True	False	True	DROP	S4PE
+1417517	1992	Longitudinal neurophysiologic studies in a patient with metachromatic leukodystrophy following bone marrow transplantation.	False	True	True	DROP	S4P
+1428798	1992	Metachromatic leukodystrophy: on an atypical case.	True	False	True	DROP	S4PE
+1453432	1992	Duplication within chromosome 17p11.2 in 12 families of French ancestry with Charcot-Marie-Tooth disease type 1a. The French CMT Research Group.	True	False	True	DROP	S4PE
+1469398	1992	F response and somatosensory and brainstem auditory evoked potential studies in HMSN type I and II.	True	False	True	DROP	S4P
+1513466	1992	Autosomal recessive form of hereditary motor and sensory neuropathy type I.	True	False	True	DROP	S4P
+1607892	1992	Somatosensory evoked potentials, sensory nerve potentials and sensory nerve conduction in hereditary motor and sensory neuropathy type I.	True	False	True	DROP	S4P
+1626451	1992	A study of genetic leukodystrophies in Chinese children.	True	False	True	DROP	S4PE
+1654397	1991	Ultralate cerebral potentials in a patient with hereditary motor and sensory neuropathy type I indicate preserved C-fibre function.	False	False	True	DROP	S4P
+1663306	1991	Central motor pathways conduction after magnetic stimulation of the brain in Cockayne's syndrome.	True	False	True	DROP	S4PE
+1696024	1990	Visual and somatosensory evoked potentials in hereditary motor-sensory neuropathies.	True	False	True	DROP	S4P
+1745280	1991	Central conduction and autonomic nervous function in HMSN I.	True	False	True	DROP	S4P
+1857497	1991	Pelizaeus-Merzbacher disease: classical or connatal?	True	False	True	DROP	S4PE
+1892226	1991	Three modality evoked potentials in Charcot-Marie-Tooth disease (HMSN-1).	True	False	True	DROP	S4PE
+1980099	1990	Adult metachromatic leukodystrophy without deficiency of arylsulphatase.	True	False	True	DROP	S4PE
+2047923	1991	Failure of somatosensory-evoked-potential monitoring in sensorimotor neuropathy.	False	False	False	DROP	S4P
+2110121	1990	Late onset globoid leukodystrophy: unusual clinical and CSF findings.	True	False	True	DROP	S4PE
+2140641	1990	[A gait disorder caused by hereditary motor-sensory neuropathy].	True	False	True	DROP	S4P
+2215948	1990	Cortical tremor: a variant of cortical reflex myoclonus.	True	True	True	KEEP	S4P
+2234324	1990	Megalencephaly with dysmyelination, spasticity, ataxia, seizures and distinctive neurophysiological findings in two siblings.	True	False	True	DROP	S4PE
+2240458	1990	Studies on pediatric patients with absent auditory brainstem response (ABR) later components.	True	False	True	DROP	S4PE
+2240467	1990	A possible Japanese male case of Pelizaeus-Merzbacher disease.	True	False	True	DROP	S4PE
+2275366	1990	Charcot-Marie-Tooth disease: a case presenting with hyperreflexia.	True	False	True	DROP	S4PE
+2281721	1990	[The nosological situation of hereditary motor and sensory neuropathies (HMSN, Charcot-Marie-Tooth disease, neural muscular atrophy)].	True	False	True	DROP	S4PE
+2289435	1990	Evoked potentials in Charcot-Marie-Tooth disease.	True	False	False	DROP	S4PE
+2328119	1990	The otolaryngologic manifestations of Pelizaeus-Merzbacher disease.	False	False	True	DROP	S4P
+2401109	1990	[Central motor conduction time (CMCT) in hereditary motor sensory neuropathy type I (HMSN type I)].	True	False	True	DROP	S4P
+2411502	1985	Automatic analysis of surface EMG (preliminary findings in healthy subjects and in patients with neurogenic motor diseases).	True	True	True	KEEP	S4P
+2413343	1985	Hereditary and acquired polyneuropathies. Electrophysiologic aspects.	False	True	True	DROP	S4P
+2436044	1987	Potassium channel blockers and impulse propagation in murine motor endplate disease.	True	True	True	KEEP	S4PE
+2525492	1989	Effect of prostaglandin E1 analogue TFC 612 on diabetic neuropathy in streptozocin-induced diabetic rats. Comparison with aldose reductase inhibitor ONO 2235.	True	True	True	KEEP	S5P
+2529984	1989	[Clinical electrophysiological studies of peroneal muscular atrophy--report of 32 cases].	True	False	True	DROP	S4P
+2608082	1989	AAEE case report #20: hereditary motor and sensory neuropathy, type I.	True	True	True	KEEP	S4P
+2615747	1989	Somatosensory evoked potentials in Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+2766989	1989	Electrophysiological study (EEG, VEPs, BAEPs) in patients with Charcot Marie Tooth (type HMSN I) disease.	True	False	True	DROP	S4P
+2803811	1989	[Clinical diagnoses of pediatric patients without detectable auditory brainstem response (ABR)].	True	False	True	DROP	S4PE
+2870748	1986	Bone marrow transplantation in metachromatic leukodystrophy.	False	False	False	DROP	S4P
+2900478	1988	[Metachromatic leukodystrophy. Results of laboratory chemical, neurophysiologic, histologic and imaging procedures within the scope of a family study].	False	False	True	DROP	S4P
+2983258	1985	Heterogeneity of congenital motor and sensory neuropathies.	True	False	True	DROP	S4PE
+2984874	1985	Short latency somatosensory evoked potentials in Charcot-Marie-Tooth disease. A family with an intermediate form.	True	False	True	DROP	S4PE
+3012388	1986	[Hereditary motor and sensory neuropathy. I. Principles of classification and clinical picture].	True	False	True	DROP	S4P
+3022527	1986	Heterogeneity of hereditary motor and sensory neuropathy type I (HMSN I): electroneurographical findings, visual evoked potentials and blood group markers in a 	True	False	True	DROP	S4PE
+3123790	1987	Cherry red spot in association with galactosylceramide-beta-galactosidase deficiency.	False	False	False	DROP	S4P
+3125426	1987	[Leigh's subacute necrotizing encephalomyelopathy due to decreased activity of the pyruvate dehydrogenase complex].	True	True	True	KEEP	S5PE
+3188839	1988	Changes of the ratio between myelin thickness and axon diameter in human developing sural, femoral, ulnar, facial, and trochlear nerves.	True	False	True	DROP	S4PE
+3218703	1988	Auditory brainstem responses (ABR) in children with neurological disorders.	True	False	True	DROP	S4PE
+3242527	1988	Histopathologic and biochemical analysis of classic Pelizaeus-Merzbacher disease.	True	False	True	DROP	S4PE
+3307409	1987	Prevention of deterioration in metachromatic leukodystrophy by bone marrow transplantation.	True	False	True	DROP	S4P
+3345458	1988	Multimodal evoked potential studies in leukodystrophies of children.	True	False	True	DROP	S4PE
+3362311	1988	Galactosylceramide-beta-galactosidase deficiency in association with cherry red spot.	False	False	True	DROP	S4P
+3450486	1987	[Progressive neuropathic muscular atrophy with pattern reversal visual evoked potentials].	True	False	False	DROP	S4P
+3462518	1986	[Heterogeneity of neural muscular atrophies].	True	False	True	DROP	S4P
+3471036	1987	Auditory function in hereditary motor and sensory neuropathy (Charcot-Marie-Tooth disease).	True	False	True	DROP	S4PE
+3481153	1987	Hypertrophic neuropathy in spinocerebellar degeneration. Morphological study of the superficial peroneal nerve in fourteen cases.	True	False	True	DROP	S4PE
+3525759	1986	Nerve conduction studies in the Twitcher mouse (murine globoid cell leukodystrophy).	True	True	True	KEEP	S4PE
+3569372	1987	Somatosensory and brainstem auditory evoked potentials in neurodegenerative system disorders.	True	False	True	DROP	S4P
+3580199	1987	[Auditory brainstem response, CT and MR imaging in a family with classical type Pelizaeus-Merzbacher disease].	True	False	False	DROP	S4PE
+3598116	1986	Globoid cell leukodystrophy: cranial computed tomography and evoked potentials.	True	False	True	DROP	S4PE
+3683760	1987	Late infantile Krabbe leukodystrophy: MRI and evoked potentials in a Japanese girl.	True	False	True	DROP	S4PE
+3707440	1986	Otoneurological findings in Friedreich's ataxia and other inherited neuropathies.	True	False	True	DROP	S4P
+3751424	1986	[Electrophysiologic analysis of the selectivity of action of anticholinesterase preparations in hereditary ataxias].	False	True	True	DROP	S4P
+3762870	1986	Neurophysiological and anatomical correlations in neonatal nonketotic hyperglycinemia.	True	False	True	DROP	S4P
+3793530	1986	[Deafness as a symptom of neural muscular atrophy (Charcot-Marie-Tooth disease)].	False	False	True	DROP	S4P
+4058465	1985	Acquired versus familial demyelinative neuropathies in children.	True	False	True	DROP	S4P
+4060727	1985	[Involvement of the optic nerve in neural muscular atrophy].	True	False	True	DROP	S4PE
+4061780	1985	Multimodality evoked potentials in progression of metachromatic leukodystrophy.	True	False	True	DROP	S4PE
+4069371	1985	Adult metachromatic leukodystrophy: neurophysiologic findings.	True	False	True	DROP	S4PE
+4072710	1985	Functional development of the visual system in normal and protein deprived rats. II. Morphometric and biochemical studies on adult optic nerve.	True	False	True	DROP	S4PE
+4080337	1985	Auditory brain stem response in neuropathological mutant mice (shiverer and reeler).	True	False	True	DROP	S4P
+4103557	1971	A comparative clinical and electrophysiological study of Charcot-Marie-Tooth disease and of Friedreich's ataxia.	False	False	False	DROP	S4P
+4112813	1972	Study of the dispersion of motor nerve conduction velocity in charcot-marie-tooth-hoffmann disease and in steinert's syndrome.	True	False	False	DROP	S4PE
+4338447	1972	A preclinical case of late adult metachromatic leukodystrophy? Manifestation only with lipid abnormalities in urine, enzyme deficiency and decrease of nerve con	True	False	True	DROP	S4PE
+4377697	1974	[Globoid cell leucodystrophy (Krabbe's disease). Peripheral nerve lesion (author's transl)].	True	False	True	DROP	S4P
+4429124	1974	Afferent sympathetic nerve fibers originating in left atrial wall.	False	False	False	DROP	S5P
+4844598	1974	Sympathetic skin nerve activity and skin temperature changes in man.	False	False	False	DROP	S4P
+4855423	1974	Wide spectrum of motor conduction velocity in Charcot-Marie-Tooth disease. An anatomico-physiological interpretation.	True	False	False	DROP	S4PE
+5080641	1972	On the pathogenesis of Charcot-Marie-Tooth disease. A study of the sensory and motor conduction velocity in the median nerve.	True	False	False	DROP	S4PE
+5088981	1971	Severe hypomyelination and marked abnormality of conduction in Dejerine-Sottas hypertrophic neuropathy: myelin thickness and compound action potential of sural 	True	True	False	KEEP	S4PE
+5457823	1970	Sensory and motor conduction velocity in the median nerve in the Charcot-Marie-Tooth disease.	True	False	False	DROP	S4PE
+6088706	1984	Effects of experimental radiation-induced hypomyelinating neuropathy on motor end-plates and neuromuscular transmission.	True	False	True	DROP	S4PE
+6095734	1984	Galactosylceramide lipidosis: novel presentation as a slowly progressive spinocerebellar degeneration.	True	False	True	DROP	S4PE
+6100795	1984	Pathophysiological aspects of central and peripheral myelin lesions.	True	False	True	DROP	S4PE
+6110417	1980	[Metachromatic leukodystrophy: report of 2 cases with histochemistry of nerves and muscles].	True	False	True	DROP	S4PE
+6115337	1981	Auditory evoked brainstem response and high-performance liquid chromatography sulfatide assay as early indices of metachromatic leukodystrophy.	False	False	False	DROP	S4P
+6146562	1984	Atypical metachromatic leukodystrophy? Problems with the biochemical diagnosis.	True	False	True	DROP	S4PE
+6157795	1980	Distal and scapuloperoneal distributions of muscle involvement occurring within a family with type I hereditary motor and sensory neuropathy.	True	False	True	DROP	S4PE
+6157801	1980	Pattern shift visual evoked potentials in Charcot-Marie-Tooth disease, HMSN type I.	True	False	True	DROP	S4PE
+6177516	1982	Brain stem auditory, visual and somatosensory evoked potentials in leukodystrophies.	True	False	True	DROP	S4PE
+6186770	1982	Ataxia and other data reviewed in Charcot-Marie-Tooth and Refsum's disease.	True	False	True	DROP	S4PE
+6241088	1984	[Visual, auditory and somatosensory pathway involvement in Charcot-Marie-Tooth disease].	False	False	False	DROP	S4P
+6281434	1982	A family study of Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+6282388	1982	Changes produced by a hypomyelinating neuropathy in muscle and its innervation. Morphological and physiological studies in the Trembler mouse.	True	False	True	DROP	S4P
+6282391	1982	Intrahypothalamic colchicine infusions disrupt lordotic responsiveness in estrogen-treated female rats.	False	True	True	DROP	S4P
+6287357	1982	Brainstem auditory evoked responses in hereditary motor-sensory neuropathy: site of origin of wave II.	True	False	True	DROP	S4P
+6317809	1983	Peroneal muscular atrophy. Part 1. Clinical and electrophysiological study.	True	False	True	DROP	S4PE
+6330834	1983	[Anatomo-clinical study of a neuronal form of Charcot-Marie-Tooth disease].	True	False	True	DROP	S4PE
+6463303	1984	[Motor nerve conduction velocity in children: normal values and application to a few pathologic cases].	True	False	True	DROP	S4P
+6470743	1984	Specific impairment of BAER's in Friedreich's ataxia. Auditory evoked responses in clinical evaluation and differential diagnosis.	False	False	True	DROP	S4P
+6510424	1984	Early auditory evoked potentials: developmental aspects and validity in neuropaediatric and audiologic disorders.	True	False	True	DROP	S4P
+6516797	1984	Hereditary motor and sensory neuropathy of demyelinating and remyelinating type in children. Ultrastructural and morphometric studies on sural nerve biopsy spec	True	False	True	DROP	S4P
+6631447	1983	Visual evoked potential abnormalities in Charcot-Marie-Tooth disease and comparison with Friedreich's ataxia.	True	False	True	DROP	S4PE
+6631449	1983	Peripheral and central sensory nerve conduction in Charcot-Marie-Tooth disease and comparison with Friedreich's ataxia.	True	False	True	DROP	S4PE
+6655490	1983	Peroneal muscular atrophy. Part 2. Nerve biopsy studies.	True	False	True	DROP	S4P
+6660130	1983	F-wave determination in nerve conduction studies.	True	False	False	DROP	S4P
+6675359	1983	[Evoked potentials of the somatosensory system in patients with progressive muscular dystrophies].	True	False	True	DROP	S4P
+6675814	1983	The visual system in myelin disorders. Human and animal myelin disorders: neurophysiological diagnostic methods.	False	False	False	DROP	S4P
+6683385	1983	Usefulness of BAER studies in the early diagnosis of Pelizaeus-Merzbacher disease.	True	False	True	DROP	S4P
+6707656	1984	Peroneal muscular atrophy with pyramidal features.	True	False	True	DROP	S4P
+6798846	1982	Subcortical and cortical somatosensory evoked potentials: characteristic waveform changes associated with disorders of the peripheral and central nervous system	True	False	False	DROP	S4P
+6798847	1982	Multimodality evoked responses in leukodystrophies.	False	False	False	DROP	S4P
+6830154	1983	Juvenile metachromatic leukodystrophy: evoked potentials and computed tomography.	True	False	False	DROP	S4PE
+6942240	1981	[Spinal cord tumors simulating the clinical course of Charcot-Marie disease].	True	False	True	DROP	S4PE
+6953877	1982	Clinical applications of short-latency somatosensory evoked potentials.	True	False	False	DROP	S4P
+7069437	1982	Should Charcot-Marie-Tooth disease be genetically subgrouped on motor conduction velocity.	True	False	False	DROP	S4PE
+7070119	1982	Prednisone-responsive hereditary motor and sensory neuropathy.	True	True	True	KEEP	S4P
+7073297	1982	Metachromatic leucodystrophy: review of 38 cases.	True	False	True	DROP	S4P
+7104897	1982	A case of Charcot-Marie-Tooth disease mimicking Friedreich's ataxia: is there any association between friedreich's ataxia and Charcot-Marie-Tooth disease?	True	False	True	DROP	S4PE
+7203475	1980	Sex-linked recessive inheritance in Charcot-Marie-tooth disease with partial clinical manifestations in female carriers.	True	False	True	DROP	S4PE
+7214250	1980	Study of a family with progressive ataxia, tremor and severe distal amyotrophy.	True	False	True	DROP	S4P
+7218272	1980	Genetic aspects of hereditary motor and sensory neuropathy (types I and II).	True	False	True	DROP	S4P
+7229662	1981	Unusual presentation of Charcot Marie-Tooth disease-incoordination with absent of minimal wasting-Report of 2 cases.	True	False	True	DROP	S4PE
+7231442	1981	Dominantly inherited peroneal muscular atrophy (hereditary motor and sensory neuropathy type I) in infancy and childhood.	True	False	True	DROP	S4P
+7264702	1981	[Peroneal atrophy in Tunisia. Study of 70 cases, pure or associated with other heredodegenerative diseases].	True	False	True	DROP	S4PE
+7269937	1981	[Hereditary areflexic dysstasia (Roussy-Lévy syndrome)].	True	False	True	DROP	S4P
+7316837	1981	Pattern reversal visual evoked potentials. Studies in Charcot-Marie-Tooth hereditary neuropathy.	True	False	True	DROP	S4PE
+7323363	1981	[The study of distal sensitive conduction in the child: some observations (author's transl)].	True	False	True	DROP	S4P
+7347789	1981	[Ocular findings in Charcot-Marie-Tooth disease, HMSN type I].	True	False	True	DROP	S4PE
+7416937	1980	[Investigations of peripheral and central somatosensory pathways in peroneal muscular atrophy and Friedreich's heredoataxia (author's transl)].	True	False	True	DROP	S4PE
+7458758	1980	A study of cases with partial disappearance of the waves in the auditory brain stem response.	True	False	True	DROP	S4P
+7465631	1981	Charcot-Marie-Tooth disease: case report of electroneuromyographic abnormalities.	True	False	True	DROP	S4PE
+7511516	1994	Repetitive discharge due to self-ephaptic excitation of a motor unit.	True	False	True	DROP	S4P
+7515606	1994	Restoration of brain stem auditory-evoked potentials by gene transfer in shiverer mice.	True	True	True	KEEP	S4PE
+7537189	1994	[A familial Charcot-Marie-Tooth disease type 1B (CMTD1B) manifesting a new mutation of myelin P0 gene].	True	False	True	DROP	S4PE
+7539211	1995	Girl with signs of Pelizaeus-Merzbacher disease heterozygous for a mutation in exon 2 of the proteolipid protein gene.	False	False	True	DROP	S4P
+7540258	1995	Motor conduction parameters in neuropathies associated with anti-MAG antibodies and other types of demyelinating and axonal neuropathies.	True	False	True	DROP	S4P
+7573756	1995	Neurophysiological study in Pelizaeus-Merzbacher disease.	True	False	True	DROP	S4PE
+7594996	1995	Treatment of the upper limb in Charcot-Marie-Tooth disease.	True	True	True	KEEP	S4PE
+7598259	1995	Unrecognized Charcot-Marie-Tooth disease: diagnostic difficulties in the assessment of recovery from paralysis.	False	False	False	DROP	S4P
+7652980	1995	[Hereditary motor and sensory neuropathy (Charcot-Marie-Tooth disease). Molecular-genetic aspects].	True	False	True	DROP	S4PE
+7686848	1993	Sensitivity and specificity of diagnostic criteria for conduction block in chronic inflammatory demyelinating polyneuropathy.	True	True	True	KEEP	S4P
+7738590	1995	Effect of thyroxine on the development of somatosensory and visual evoked potentials in the rat.	True	True	True	KEEP	S5PE
+7748360	1995	Neurophysiologic studies and MRI in Pelizaeus-Merzbacher disease: comparison of classic and connatal forms.	True	False	True	DROP	S4PE
+7756815	1995	Late onset globoid cell leukodystrophy (Krabbe's disease)--Swedish case with 15 years of follow-up.	True	False	True	DROP	S4PE
+7781221	1995	[Sensory nerve conduction velocity determined by somatosensory evoked potentials in patients with hereditary motor and sensory neuropathy type I].	True	False	True	DROP	S4P
+7825607	1995	A 1.5-Mb deletion in 17p11.2-p12 is frequently observed in Italian families with hereditary neuropathy with liability to pressure palsies.	True	False	True	DROP	S4PE
+7853375	1994	Non-radioactive detection of 17p11.2 duplication in CMT1A: a study of 78 patients.	True	False	True	DROP	S4PE
+7943607	1994	MR diffusion imaging in Pelizaeus-Merzbacher disease.	True	False	True	DROP	S4PE
+7953603	1994	Distal accentuation of conduction slowing in polyneuropathy associated with antibodies to myelin-associated glycoprotein and sulphated glucuronyl paragloboside.	True	False	True	DROP	S4PE
+7965430	1994	Presymptomatic late-infantile metachromatic leukodystrophy treated with bone marrow transplantation.	False	True	True	DROP	S4P
+8011484	1993	Hereditary motor and sensory neuropathy. Clinical, genetic and electrodiagnostic studies.	True	False	True	DROP	S4PE
+8042923	1994	Clinical and pathological features of an autosomal dominant, adult-onset leukodystrophy simulating chronic progressive multiple sclerosis.	True	False	True	DROP	S4PE
+8089042	1994	Electrodiagnosis in paediatric ophthalmogenetics.	True	True	True	KEEP	S4PE
+8124880	1993	[An adult patient with Krabbe's disease--the first case reported in Japan].	True	False	True	DROP	S4P
+8128981	1993	Molecular basis of Charcot-Marie-Tooth disease type 1A: gene dosage as a novel mechanism for a common autosomal dominant condition.	True	False	True	DROP	S4PE
+8214336	1993	Two possible cases of Alexander disease. Multimodal evoked potentials and MRI.	True	False	True	DROP	S4PE
+8255457	1993	Intermediate nerve conduction velocities define X-linked Charcot-Marie-Tooth neuropathy families.	True	False	True	DROP	S4PE
+8255473	1993	Uniform slowing of conduction velocities in Charcot-Marie-Tooth polyneuropathy type 1.	True	False	True	DROP	S4PE
+8256624	1993	Bone marrow transplantation for late infantile metachromatic leukodystrophy: pathogenic investigation for graft rejection.	False	False	True	DROP	S4P
+8264707	1994	Hereditary motor and sensory neuropathy type I: clinical and neurographical features of the 17p duplication subtype.	True	True	True	KEEP	S4PE
+8268915	1993	Linkage of a locus (CMT4A) for autosomal recessive Charcot-Marie-Tooth disease to chromosome 8q.	True	False	True	DROP	S4PE
+8279652	1993	A case of Canavan disease: the first biochemically proven case in a Japanese girl.	True	False	True	DROP	S4PE
+8290299	1994	The First Jerger Lecture. Contralateral suppression of otoacoustic emissions: an index of the function of the medial olivocochlear system.	True	False	True	DROP	S4P
+8292134	1993	Occurrence of Andermann syndrome out of French Canada--agenesis of the corpus callosum with neuronopathy.	True	False	True	DROP	S4PE
+8292212	1993	Is demyelination a feature of maple syrup urine disease?	True	True	True	KEEP	S4PE
+8292214	1993	Auditory evoked responses in Krabbe disease.	True	False	True	DROP	S4P
+8293175	1993	Hereditary demyelinating motor and sensory neuropathy.	True	False	True	DROP	S4PE
+8338696	1993	[A girl presenting clinical course and neuroimagings on MRI compatible with Pelizaeus-Merzbacher disease].	True	False	True	DROP	S4PE
+8363453	1993	Visual evoked potential characteristics and early diagnosis of Pelizaeus-Merzbacher disease.	True	False	True	DROP	S4PE
+8365058	1993	[A case of hereditary motor and sensory neuropathy type I with optic atrophy, neural deafness and pyramidal tract signs].	True	False	True	DROP	S4PE
+8406488	1993	Localization of a gene (CMT2A) for autosomal dominant Charcot-Marie-Tooth disease type 2 to chromosome 1p and evidence of genetic heterogeneity.	True	False	True	DROP	S4PE
+8414036	1993	Nerve conduction studies in Charcot-Marie-Tooth polyneuropathy associated with a segmental duplication of chromosome 17.	True	False	True	DROP	S4PE
+8529708	1995	The value of family investigations in newly detected Charcot-Marie-Tooth disease in children.	True	False	True	DROP	S4PE
+8584809	1995	[Activity of aryl sulfatase A enzyme in patients with schizophrenic disorders].	True	False	True	DROP	S4PE
+8585809	1995	[Charcot-Marie-Tooth disease. Clinical study in 45 patients].	True	False	True	DROP	S4PE
+8585811	1995	[Charcot-Marie-Tooth disease. Study of sural nerve biopsy in 41 patients].	True	False	True	DROP	S4PE
+8665730	1995	[An unusual case of peroneal muscular atrophy with rigidity, polyneuropathy, mental retardation, and diabetes mellitus developed in familial Parkinson's disease	True	True	True	KEEP	S4PE
+8676156	1996	Chronic dysimmune demyelinating polyneuropathy: a clinical and electrophysiological study of 93 patients.	True	True	True	KEEP	S4PE
+8676158	1996	Slowing of central conduction in X-linked Charcot-Marie-Tooth neuropathy shown by brain stem auditory evoked responses.	True	False	True	DROP	S4P
+8689791	1996	[Electrophysiological assessment of median sensory nerve function in HMSN type I by intraneural neurography].	True	True	True	KEEP	S4P
+8733901	1996	Pelizaeus-Merzbacher-like disease: female case report.	True	False	True	DROP	S4P
+8785933	1995	Acoustic nerve in peripheral neuropathy: a BAEP study. Brainstem Auditory Evoked Potentials.	True	False	True	DROP	S4P
+8814426	1996	Modelization of motor nerve conduction velocities for Charcot-Marie-Tooth (Type-1) patients. CMT-France Network.	True	False	True	DROP	S4PE
+8821490	1995	[Phenotypic heterogeneity in Japanese Charcot-Marie-Tooth disease type 1A patients with PMP-22 gene duplication].	True	False	True	DROP	S4PE
+8880692	1996	Effect of digitalis on conduction dysfunction in Pelizaeus-Merzbacher disease.	True	True	True	KEEP	S4PE
+8892368	1996	Visual-evoked potentials in long-term survivors of acute lymphoblastic leukemia in childhood. The German Late Effects Working Group.	True	True	True	KEEP	S4PE
+8916164	1996	Serial MRI and neurophysiological studies in late-infantile Krabbe disease.	True	False	True	DROP	S4P
+8962139	1996	Phenotype of arylsulfatase A-deficient mice: relationship to human metachromatic leukodystrophy.	True	False	True	DROP	S4PE
+9050052	1996	The central nervous system in Tay syndrome.	True	False	True	DROP	S4PE
+9126058	1997	The phenotypic manifestations of chromosome 17p11.2 duplication.	True	False	True	DROP	S4PE
+9183252	1997	Charcot-Marie-Tooth disease type 1A with 17p11.2 duplication. Clinical and electrophysiological phenotype study and factors influencing disease severity in 119 	True	True	True	KEEP	S4PE
+9258968	1997	Familial Dandy-Walker malformation and leukodystrophy.	True	False	True	DROP	S4PE
+9294313	1997	[A case of congenital hypomyelination neuropathy with type I Chiari malformation and mental retardation].	True	False	True	DROP	S4PE
+9308980	1997	De novo mutation of Charcot-Marie-Tooth disease type 1A.	True	False	True	DROP	S4PE
+9408597	1997	Early infantile Krabbe disease: deceptively normal magnetic resonance imaging and serial neurophysiological studies.	True	False	True	DROP	S4P
+9409358	1997	Linkage mapping of the gene for Charcot-Marie-Tooth disease type 2 to chromosome 1p (CMT2A) and the clinical features of CMT2A.	True	False	True	DROP	S4PE
+9449482	1997	Adult onset Krabbe's leukodystrophy: a report of 2 cases.	True	False	True	DROP	S4P
+9467003	1998	Correlation between varying levels of PMP22 expression and the degree of demyelination and reduction in nerve conduction velocity in transgenic mice.	True	False	True	DROP	S4PE
+9482781	1998	Myelin-associated glycoprotein is a myelin signal that modulates the caliber of myelinated axons.	True	False	True	DROP	S4PE
+9507402	1998	A molecular, cytogenetic, and clinical evaluation of mosaic tandem duplication 17p and Charcot-Marie-Tooth type 1A neuropathy.	True	False	True	DROP	S4PE
+9522263	1997	Central motor pathway evaluation using magnetic coil stimulation in hereditary motor and sensory neuropathy type I (HMSN type I, Charcot-Marie-Tooth disease).	True	False	True	DROP	S4PE
+9553747	1998	Electrophysiological findings in hereditary motor and sensory neuropathy type I and II--a conduction velocity study.	True	False	True	DROP	S4P
+9560463	1998	Galactosphingolipids and axono-glial interaction in myelin of the central nervous system.	True	False	True	DROP	S4PE
+9566397	1998	X-linked Charcot-Marie-Tooth disease with connexin 32 mutations: clinical and electrophysiologic study.	True	True	True	KEEP	S4PE
+9608561	1998	Demyelinating neuropathy in a patient with multiple sclerosis and genotypical HMSN-1.	False	False	True	DROP	S4P
+9626246	1998	Clinical and pathological correlations in Charcot-Marie-Tooth neuropathy type 1A with the 17p11.2p12 duplication: a cross-sectional morphometric and immunohisto	True	False	True	DROP	S4PE
+9631398	1998	Charcot-Marie-Tooth disease--muscle biopsy findings in relation to neurophysiology.	True	False	True	DROP	S4PE
+9637937	1998	Neurophysiological study in an Italian family with autosomal dominant late-onset leukodystrophy.	True	False	True	DROP	S4PE
+9672525	1998	Bone marrow transplantation in metachromatic leukodystrophy caused by saposin-B deficiency: a case report with a 3-year follow-up period.	True	False	True	DROP	S4PE
+9741878	1998	MRI and electrophysiological abnormalities in a case of canine globoid cell leucodystrophy.	True	False	True	DROP	S4P
+9744637	1998	Brainstem lesion in Aicardi-Goutières syndrome.	True	False	True	DROP	S4PE
+9760549	1998	[Hereditary sensorimotor neuropathy in electrophysiological studies].	True	False	True	DROP	S4P
+9780014	1998	Magnetic stimulation of the corticospinal tracts in Pelizaeus-Merzbacher disease.	False	False	True	DROP	S4P
+9783119	1998	Correlation between denervation activity and compound muscle action potential amplitude in hereditary motor and sensory neuropathy I and II.	True	True	True	KEEP	S4PE
+9805987	1998	[A case of spastic paraparesis with mental deterioration and markedly thin corpus callosum--callosal dysfunction demonstrated by magnetic stimulation].	True	False	True	DROP	S4P
+9818870	1998	Efficient neurophysiologic selection of X-linked Charcot-Marie-Tooth families: ten novel mutations.	True	False	True	DROP	S4P
+9818933	1998	Myelin mosaicism and brain plasticity in heterozygous females of a canine X-linked trait.	True	False	True	DROP	S4P
+9856562	1998	Four novel mutations of the connexin 32 gene in four Japanese families with Charcot-Marie-Tooth disease type 1.	True	False	True	DROP	S4PE
+10071056	1999	The Thr124Met mutation in the peripheral myelin protein zero (MPZ) gene is associated with a clinically distinct Charcot-Marie-Tooth phenotype.	True	False	True	DROP	S4PE
+10071100	1999	Central visual, acoustic, and motor pathway involvement in a Charcot-Marie-Tooth family with an Asn205Ser mutation in the connexin 32 gene.	True	False	True	DROP	S4PE
+10080192	1999	Neuronal defects and posterior pituitary hypoplasia in mice lacking the receptor tyrosine phosphatase PTPsigma.	True	False	True	DROP	S4PE
+10102421	1999	Sensorineural deafness in X-linked Charcot-Marie-Tooth disease with connexin 32 mutation (R142Q).	True	False	True	DROP	S4PE
+10191641	1999	[Connatal type of Pelizaeus-Merzbacher disease: a case report].	True	False	True	DROP	S4PE
+10198910	1999	[A 40-year-old woman with progressive dementia and abnormal behavior].	True	False	True	DROP	S4PE
+10360766	1999	Congenital cataracts facial dysmorphism neuropathy syndrome, a novel complex genetic disease in Balkan Gypsies: clinical and electrophysiological observations.	True	False	True	DROP	S4P
+10371530	1999	Novel missense mutation in the early growth response 2 gene associated with Dejerine-Sottas syndrome phenotype.	True	False	True	DROP	S4PE
+10372908	1999	Protracted course of N-acetylaspartic aciduria in two non-Jewish siblings: identical clinical and magnetic resonance imaging findings.	False	False	True	DROP	S4P
+10388355	1999	[Hereditary neuropathy with liability to pressure palsies].	True	False	True	DROP	S4P
+10390891	1999	[Acute vincristine neurotoxicity in a non-Hodgkin's lymphoma patient with Charcot-Marie-Tooth disease].	True	True	True	KEEP	S4PE
+10396746	1999	[Comparison of electrophysiological findings between CIDP and HMSN-1].	True	True	True	KEEP	S4P
+10442556	1999	Peripheral nerve abnormalities in the congenital cataracts facial dysmorphism neuropathy (CCFDN) syndrome.	True	False	True	DROP	S4PE
+10451742	1999	Clinical and electrophysiological study in French-Canadian population with Charcot-Marie-tooth disease type 1A associated with 17p11.2 duplication.	True	False	True	DROP	S4PE
+10460258	1999	Dependence of nodal sodium channel clustering on paranodal axoglial contact in the developing CNS.	True	False	True	DROP	S4PE
+10521546	1999	X-linked dominant Charcot-Marie-Tooth neuropathy: clinical, electrophysiological, and morphological phenotype in four families with different connexin32 mutatio	True	False	True	DROP	S4P
+10575108	1999	Decline in brainstem auditory-evoked potentials coincides with loss of spiral ganglion cells in arylsulfatase A-deficient mice.	True	False	True	DROP	S4PE
+10586223	1999	Overview of Charcot-Marie-Tooth disease type 1A.	True	False	True	DROP	S4PE
+10586234	1999	Schwann cell-axon interactions in Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+10586262	1999	Mutation testing in Charcot-Marie-Tooth neuropathy.	True	False	True	DROP	S4PE
+10593679	1999	Neurophysiology and MRI in late-infantile metachromatic leukodystrophy.	True	False	True	DROP	S4PE
+10597050	1999	Progressive resistance training in neuromuscular patients. Effects on force and surface EMG.	False	False	True	DROP	S4P
+10639608	2000	Unusual electrophysiological findings in X-linked dominant Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+10669205	2000	Clinical and cerebral FDG PET scan in a patient with Krabbe's disease.	True	False	True	DROP	S4P
+10716658	1999	Inherited peripheral neuropathy.	True	False	True	DROP	S4PE
+10737979	2000	Screening for mutations in the peripheral myelin genes PMP22, MPZ and Cx32 (GJB1) in Russian Charcot-Marie-Tooth neuropathy patients.	True	False	True	DROP	S4PE
+10751814	2000	Characterization of gait parameters in patients with Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+10762521	2000	Cranial nerve involvement in CMT disease type 1 due to early growth response 2 gene mutation.	False	False	True	DROP	S4P
+10805704	2000	Thyroid hormone deficiency before the onset of hearing causes irreversible damage to peripheral and central auditory systems.	False	True	True	DROP	S5P
+10885340	2000	[A case of Charcot-Marie-Tooth disease 1 B with Val 146Phe mutation of myelin protein zero showing a severe clinical phenotype].	True	False	True	DROP	S4PE
+10891641	2000	Otoacoustic emission in patients with neurological disorders who have auditory brainstem response abnormality.	True	False	True	DROP	S4PE
+10891913	2000	Central and peripheral nervous system dysfunction in the clinical variation of Salla disease.	True	False	True	DROP	S4PE
+10908191	2000	Phenotypic and genotypic heterogeneity in hereditary motor neuronopathy type V: a clinical, electrophysiological and genetic study.	True	True	True	KEEP	S4P
+10915613	2000	A novel locus for autosomal recessive peripheral neuropathy in the EGR2 region on 10q23.	True	False	True	DROP	S4PE
+10929359	2000	Connatal Pelizaeus-Merzbacher disease in two girls.	False	False	True	DROP	S4P
+10941617	2000	Brainstem auditory evoked potential responses in iron-deficient anemic children.	True	False	True	DROP	S4PE
+10942065	2000	Acute deterioration of Charcot-Marie-Tooth disease IA (CMT IA) following 2 mg of vincristine chemotherapy.	True	True	True	KEEP	S4PE
+10962051	2000	Neurophysiology and molecular genetics of Charcot-Marie-Tooth type 1 neuropathy in Croatian children: follow-up study.	True	True	True	KEEP	S4PE
+11061266	2000	Adult-onset MLD: a gene mutation with isolated polyneuropathy.	True	False	True	DROP	S4P
+11131499	2000	Loss of large-diameter spindle afferent fibres is not detrimental to the control of body sway during upright stance: evidence from neuropathy.	True	False	True	DROP	S4PE
+11222967	2001	Terminal latency index and modified F ratio in distinction of chronic demyelinating neuropathies.	True	False	True	DROP	S4PE
+11239949	2001	A novel missense mutation in the early growth response 2 gene associated with late-onset Charcot--Marie--Tooth disease type 1.	True	False	True	DROP	S4PE
+11257785	2000	[X-Linked Charcot-Marie-Tooth disease with a new mutation (Thr191Ala) in the connexin32].	True	True	True	KEEP	S4PE
+11317491	2000	[Genotype-phenotype correlation in hereditary motor-sensory neuropathy type IA associated with duplication in chromosome 17p11.2-12].	True	False	True	DROP	S4P
+11360116	2001	Four year follow-up of a case of fucosidosis treated with unrelated donor bone marrow transplantation.	True	True	True	KEEP	S4PE
+11404117	2001	The frequency of 17p11.2 duplication and Connexin 32 mutations in 282 Charcot-Marie-Tooth families in relation to the mode of inheritance and motor nerve conduc	True	False	True	DROP	S4PE
+11433771	2001	[A family of early childhood-onset Charcot-Marie-Tooth disease type 2].	True	True	True	KEEP	S4PE
+11504584	2001	Sensitivity of vagal afferent endings to chemical irritants in the rat lung.	True	True	True	KEEP	S5P
+11562788	2001	Charcot-Marie-Tooth type X: A novel mutation in the Cx32 gene with central conduction slowing.	True	False	True	DROP	S4P
+11562920	2001	Nerve conduction abnormalities in aging mice deficient for myelin-associated glycoprotein.	True	True	True	KEEP	S4PE
+11709000	2001	Clinical and molecular studies in a family with probable X-linked dominant Charcot-Marie-Tooth disease involving the central nervous system.	True	False	True	DROP	S4P
+11732532	2000	Prolonged vecuronium neuromuscular blockade associated with Charcot Marie Tooth neuropathy.	True	True	True	KEEP	S4PE
+11746409	2001	Metabolic substrates other than glucose support axon function in central white matter.	True	True	True	KEEP	S5PE
+11761472	2001	Compensating for central nervous system dysmyelination: females with a proteolipid protein gene duplication and sustained clinical improvement.	True	False	True	DROP	S4PE
+11839567	2002	Stathmin-deficient mice develop an age-dependent axonopathy of the central and peripheral nervous systems.	True	False	True	DROP	S4PE
+11853325	2001	Pelizaeus-Merzbacher disease: electrophysiological study of two sibs with the classic form and of their relatives.	True	True	True	KEEP	S4PE
+11949811	2002	Flash visual evoked potentials in the hypomyelinated mutant mouse shiverer.	True	False	True	DROP	S4PE
+11975098	2002	[Goose flesh and cold sensation. Symptoms of visceral epilepsy].	False	False	True	DROP	S4P
+12018344	2002	Electrical stimulation of the auditory nerve via cochlear implants in patients with auditory neuropathy.	False	False	True	DROP	S4P
+12035837	2002	Isolated peripheral neuropathy in atypical metachromatic leukodystrophy: a recurrent mutation.	True	False	True	DROP	S4PE
+12072826	2002	[Hereditary neuropathy with liability to pressure palsies: study of six Spanish families].	True	False	True	DROP	S4PE
+12116203	2002	Investigations of micro-organic brain damage (MOBD) in heterozygotes of metachromatic leukodystrophy.	True	True	True	KEEP	S4PE
+12185164	2002	Six novel connexin32 (GJB1) mutations in X-linked Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+12362307	2002	[A new mutation in the connexin 32 gene of a Chinese family with Charcot-Marie-Tooth disease associated with central conduction slowing].	True	False	True	DROP	S4PE
+12466206	2003	Hypogonadotropic hypogonadism and peripheral neuropathy in Ebf2-null mice.	True	False	True	DROP	S4PE
+12477701	2003	Demyelinating and axonal features of Charcot-Marie-Tooth disease with mutations of myelin-related proteins (PMP22, MPZ and Cx32): a clinicopathological study of	True	True	True	KEEP	S4PE
+12485517	2002	[The clinical and pathologic features of Charcot-Marie-Tooth disease].	True	False	True	DROP	S4PE
+12578939	2003	Deafness and CMT disease associated with a novel four amino acid deletion in the PMP22 gene.	False	False	True	DROP	S4P
+12580714	2003	Unusual clinical and magnetic resonance imaging findings in a family with proteolipid protein gene mutation.	True	False	True	DROP	S4PE
+12661049	2003	Inherited polyneuropathy in Leonberger dogs: a mixed or intermediate form of Charcot-Marie-Tooth disease?	True	True	True	KEEP	S4PE
+12767505	2003	Axonal Guillain-Barré syndrome associated with axonal Charcot-Marie-Tooth disease.	True	True	True	KEEP	S4P
+12805291	2003	Kv3.1b is a novel component of CNS nodes.	True	True	True	KEEP	S4PE
+12821518	2003	Clinical, electrophysiological and morphological findings of Charcot-Marie-Tooth neuropathy with vocal cord palsy and mutations in the GDAP1 gene.	True	False	True	DROP	S4PE
+12910435	2003	Degree of hypomyelination and magnetic resonance spectroscopy findings in patients with Pelizaeus Merzbacher phenotype.	False	False	True	DROP	S4P
+12948789	2003	Autonomic and respiratory dysfunction in Charcot-Marie-Tooth disease due to Thr124Met mutation in the myelin protein zero gene.	True	False	True	DROP	S4P
+13888818	1961	Conduction velocity of nerves in a family with Charcot-Marie-Tooth disease: detection of latent involvement.	True	False	False	DROP	S4PE
+14060360	1963	[METACHROMATIC LEUKODYSTROPHY. DIAGNOSIS BY MEANS OF BIOPSY AND DEMONSTRATION OF A STRONG REDUCTION OF NERVE CONDUCTION VELOCITY IN A CASE IN EARLY INFANTILE FO	True	False	False	DROP	S4PE
+14561495	2003	Identification of novel GDAP1 mutations causing autosomal recessive Charcot-Marie-Tooth disease.	True	True	True	KEEP	S4PE
+14597327	2003	Counting motor units in chronic motor neuropathies.	True	True	True	KEEP	S4PE
+14598376	2004	Functions of intermediate filaments in neuronal development and disease.	True	False	True	DROP	S4PE
+14600466	2003	Auditory processing in patients with Charcot-Marie-Tooth disease type 1A.	True	False	True	DROP	S4P
+14607793	2004	Phenotypic variability in autosomal recessive axonal Charcot-Marie-Tooth disease due to the R298C mutation in lamin A/C.	True	True	True	KEEP	S4PE
+14706470	2004	Inter-nerves and intra-nerve conduction heterogeneity in CMTX with Arg(15)Gln mutation.	True	True	True	KEEP	S4PE
+14714050	2003	[Hereditary neuropathies].	True	False	True	DROP	S4PE
+14727565	2003	[A case of mitochondrial myopathy with external ophthalmoplegia and ataxic neuropathy].	True	False	True	DROP	S5P
+14733962	2004	The novel neurofilament light (NEFL) mutation Glu397Lys is associated with a clinically and morphologically heterogeneous type of Charcot-Marie-Tooth neuropathy	True	False	True	DROP	S4PE
+15019704	2004	Vocal cord and diaphragm paralysis, as clinical features of a French family with autosomal recessive Charcot-Marie-Tooth disease, associated with a new mutation	True	False	True	DROP	S4P
+15026124	2004	Expression of WW domain-containing oxidoreductase WOX1 in the developing murine nervous system.	False	False	True	KEEP	S2PE
+15044753	2004	Axonal neuregulin-1 regulates myelin sheath thickness.	True	False	True	DROP	S4PE
+15052618	2004	Multifocal slowing of nerve conduction in metachromatic leukodystrophy.	True	True	True	KEEP	S4PE
+15150710	2004	[Different phenotypes of Charcot-Marie-Tooth disease caused by mutations in the same gene. Are classical criteria for classification still valid?].	True	False	True	DROP	S4PE
+15203066	2004	Brain-stem auditory and visual evoked potentials in children with Krabbe disease.	True	False	True	DROP	S4P
+15230698	2004	Propofol treatment of refractory status epilepticus: a study of 31 episodes.	True	True	True	KEEP	S4P
+15326231	2004	Krabbe disease: neurophysiologic studies and MRI correlations.	True	False	True	DROP	S4PE
+15326244	2004	Five new cases of a recently described leukoencephalopathy with high brain lactate.	False	True	True	DROP	S4P
+15377707	2004	Charcot-Marie-Tooth families in Japan with MPZ Thr124Met mutation.	True	False	True	DROP	S4PE
+15465101	2004	Epilepsia partialis continua as an isolated manifestation of motor cortical dysplasia.	True	False	True	DROP	S4PE
+15473994	2004	Early abnormalities in sciatic nerve function and structure in a rat model of Charcot-Marie-Tooth type 1A disease.	True	False	True	DROP	S4PE
+15508871	2004	Clinical and electrophysiological studies of a family with probable X-linked dominant Charcot-Marie-Tooth neuropathy and ptosis.	True	False	True	DROP	S4PE
+15710861	2005	Adult onset metachromatic leukodystrophy without electroclinical peripheral nervous system involvement: a new mutation in the ARSA gene.	False	False	True	DROP	S4P
+15729519	2005	Median nerve motor conduction velocity is concordant with myelin protein zero gene mutation.	True	False	True	DROP	S4PE
+15776672	2002	[Charcot-Marie-Tooth disease associated with a pyramidal syndrome: clinical, electrophysiological, and neuropathological study of neuro-muscular biopsies in 14 	True	False	True	DROP	S4PE
+15826856	2005	Differences in potentials and excitability properties in simulated cases of demyelinating neuropathies. Part I.	True	False	True	DROP	S4PE
+15835292	2005	[A pedigree of Charcot-Marie-Tooth disease type 4F (Periaxin mutation)].	True	False	True	DROP	S4PE
+15869936	2005	Structural and functional alterations of spinal cord axons in adult Long Evans Shaker (LES) dysmyelinated rats.	True	True	True	KEEP	S4PE
+15896962	2006	Balance control in peripheral neuropathy: are patients equally unstable under static and dynamic conditions?	True	False	True	DROP	S4PE
+15897517	2005	The electrophysiological profile of hereditary motor and sensory neuropathy-Lom.	True	False	True	DROP	S4P
+15901860	2005	Transplantation of umbilical-cord blood in babies with infantile Krabbe's disease.	False	True	True	DROP	S4P
+15937878	2005	Serial electrophysiologic studies in rhesus monkeys with Krabbe disease.	True	True	True	KEEP	S4PE
+15948181	2005	Myelin deterioration in Twitcher mice: motor evoked potentials and magnetic resonance imaging as in vivo monitoring tools.	True	False	True	DROP	S4PE
+15954036	2005	[Muscle-eye-brain disease. Presentation of one case with genetic study].	True	False	True	DROP	S4PE
+15975985	2005	Identification and properties of parietal pleural afferents in rabbits.	True	False	True	DROP	S5P
+16049176	2005	Region-specific myelin pathology in mice lacking the golli products of the myelin basic protein gene.	True	False	True	DROP	S4PE
+16051098	2005	Corticospinal tract MRI hyperintensity in X-linked Charcot-Marie-Tooth Disease.	False	False	True	DROP	S4P
+16162938	2005	Loss of Mtmr2 phosphatase in Schwann cells but not in motor neurons causes Charcot-Marie-Tooth type 4B1 neuropathy with myelin outfoldings.	True	False	True	DROP	S4PE
+16193596	2005	Three young adult patients with Pelizaeus-Merzbacher disease who showed only waves I and II in auditory brainstem responses but had good auditory perception.	True	False	True	DROP	S4PE
+16319208	2006	Functional changes in genetically dysmyelinated spinal cord axons of shiverer mice: role of juxtaparanodal Kv1 family K+ channels.	True	True	True	KEEP	S4PE
+16331815	2005	[Clinical, pathological and genetic studies in a Chinese Charcot-Marie-Tooth disease type 2 family].	True	False	True	DROP	S4PE
+16360123	2006	Developmental impairment of compound action potential in the optic nerve of myelin mutant taiep rats.	True	True	True	KEEP	S4PE
+16551448	2006	Early clinical and electrophysiologic features of the two most common autosomal recessive forms of Charcot-Marie-Tooth disease in the Roma (Gypsies).	True	False	True	DROP	S4PE
+16554459	2006	Neuregulin 1-erbB signaling is necessary for normal myelination and sensory function.	True	False	True	DROP	S4PE
+16607474	2006	GDAP1 mutation in autosomal recessive Charcot-Marie-Tooth with pyramidal features.	False	False	False	DROP	S4P
+16688595	2006	A novel Cx32 mutation causes X-linked Charcot-Marie-Tooth disease with brainstem involvement and brain magnetic resonance spectroscopy abnormalities.	True	False	True	DROP	S4PE
+16775366	2006	Molecular genetics of autosomal-dominant demyelinating Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+16775377	2006	Animal models of Charcot-Marie-Tooth disease type 1A.	True	True	True	KEEP	S4PE
+16791058	2006	Prevalence of Charcot-Marie-Tooth disease in patients who have bilateral cavovarus feet.	True	False	True	DROP	S4PE
+16856148	2006	Schwann cells and the pathogenesis of inherited motor and sensory neuropathies (Charcot-Marie-Tooth disease).	True	False	True	DROP	S4PE
+16864819	2006	Peripheral neuropathy in Krabbe disease: electrodiagnostic findings.	True	True	True	KEEP	S4P
+16864820	2006	Peripheral neuropathy in Krabbe disease: effect of hematopoietic stem cell transplantation.	True	False	True	DROP	S4P
+16883521	2006	[Analysis of ARSA mutations in a Chinese family with metachromatic leukodystrophy].	True	True	True	KEEP	S4PE
+16893119	2006	Multimodal evoked potentials in patients with pediatric leukodystrophy.	True	False	False	DROP	S4PE
+16893123	2006	Neurophysiologic studies in Krabbe disease.	False	False	False	DROP	S4P
+16924012	2006	Spine deformities in Charcot-Marie-Tooth 4C caused by SH3TC2 gene mutations.	True	False	True	DROP	S4PE
+16927171	2007	T(2)-weighted microMRI and evoked potential of the visual system measurements during the development of hypomyelinated transgenic mice.	True	True	True	KEEP	S4PE
+16941225	2006	WWOX protein expression in normal human tissues.	False	False	True	KEEP	S2PE
+16967355	2006	[Charcot-Marie-Tooth disorders: past, today and tomorrow].	True	False	True	DROP	S4PE
+17044038	2006	Myelin deficiencies visualized in vivo: visually evoked potentials and T2-weighted magnetic resonance images of shiverer mutant and wild-type mice.	True	False	True	DROP	S4PE
+17052987	2007	Charcot-Marie-Tooth disease type 2E, a disorder of the cytoskeleton.	True	False	True	DROP	S4PE
+17166763	2007	Experienced and physiological fatigue in neuromuscular disorders.	True	False	True	DROP	S4P
+17364021	2006	Oligodendrocytes regulate formation of nodes of Ranvier via the recognition molecule OMgp.	True	False	True	DROP	S4PE
+17392458	2007	Myelination of congenitally dysmyelinated spinal cord axons by adult neural precursor cells results in formation of nodes of Ranvier and improved axonal conduct	False	False	True	DROP	S4P
+17572665	2007	Mutation of FIG4 causes neurodegeneration in the pale tremor mouse and patients with CMT4J.	True	True	True	KEEP	S4PE
+17600367	2007	The neurotrophin receptor p75NTR in Schwann cells is implicated in remyelination and motor recovery after peripheral nerve injury.	True	False	True	DROP	S4PE
+17620124	2007	Two novel connexin32 mutations cause early onset X-linked Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+17620368	2007	Mice deficient for the type II transmembrane serine protease, TMPRSS1/hepsin, exhibit profound hearing loss.	False	True	True	DROP	S5P
+17641267	2007	Peripheral neuropathy in a child with Cree leukodystrophy.	True	False	True	DROP	S4PE
+17683097	2007	Phenotypic characterization of hypomyelination and congenital cataract.	True	False	True	DROP	S4PE
+17728461	2007	Increasing sulfatide synthesis in myelin-forming cells of arylsulfatase A-deficient mice causes demyelination and neurological symptoms reminiscent of human met	True	False	True	DROP	S4PE
+17845789	2007	[Research about schwann cells and PLGA implanted to rat transected spinal cord].	True	True	True	KEEP	S5P
+17855448	2007	Mtmr13/Sbf2-deficient mice: an animal model for CMT4B2.	True	True	True	KEEP	S4PE
+17888682	2009	Conduction velocity of the human phrenic nerve in the neck.	True	False	True	DROP	S4PE
+17890417	2007	Stabilization of juvenile metachromatic leukodystrophy after bone marrow transplantation: a 13-year follow-up.	False	True	True	DROP	S4P
+18023247	2008	Auditory nerve is affected in one of two different point mutations of the neurofilament light gene.	True	False	True	DROP	S4PE
+18029128	2008	Discrepancy between auditory brainstem responses, auditory steady-state responses, and auditory behavior in two patients with Pelizaeus-Merzbacher disease.	True	False	True	DROP	S4PE
+18205176	2008	Remodeling of motor nerve terminals in demyelinating axons of periaxin-null mice.	True	False	True	DROP	S4PE
+18337101	2008	A patient with both Charcot-Marie-Tooth disease (CMT 1A) and mild spinal muscular atrophy (SMA 3).	True	False	True	DROP	S4PE
+18349142	2008	Loss of the inactive myotubularin-related phosphatase Mtmr13 leads to a Charcot-Marie-Tooth 4B2-like peripheral neuropathy in mice.	True	False	True	DROP	S4PE
+18396631	2007	[Repair of facial nerve with bioactive artificial nerve conduit: experiment with rats].	True	True	True	KEEP	S5P
+18421608	2008	Hearing profile and MRI myelination of auditory pathway in Pelizaeus-Merzbacher disease.	True	False	True	DROP	S4P
+18571943	2009	Peripheral neuropathy as the sole initial finding in three children with infantile metachromatic leukodystrophy.	True	False	True	DROP	S4PE
+18795595	2008	Central motor and sensory pathway involvement in an X-linked Charcot-Marie-Tooth family.	True	False	True	DROP	S4PE
+18797198	2008	Severe neurotoxicities in a case of Charcot-Marie-Tooth disease type 2 caused by vincristine for acute lymphoblastic leukemia.	True	True	True	KEEP	S4PE
+18844790	2008	Neurophysiologic abnormalities in children with Charcot-Marie-Tooth disease type 1A.	True	True	True	KEEP	S4PE
+18851904	2009	Diffuse cerebral hypomyelination with cerebellar atrophy and hypoplasia of the corpus callosum.	True	False	True	DROP	S4PE
+18923982	2008	TEOAE suppression in adults with learning disabilities.	False	False	True	DROP	S4P
+19035257	2008	[Establishment and rudimentary application of the method of recording auditory brainstem responses electrically stimulated via round-window niche in cochlear im	True	False	True	DROP	S4PE
+19056803	2009	Hereditary spastic paraplegia is a novel phenotype for GJA12/GJC2 mutations.	False	False	True	DROP	S4P
+19300973	2008	Diagnostic algorithm for the differentiation of leukodystrophies in early MS.	True	False	True	DROP	S4PE
+19302934	2009	Newborn screening for Krabbe disease: the New York State model.	False	True	True	DROP	S4P
+19321787	2009	A laminin-2, dystroglycan, utrophin axis is required for compartmentalization and elongation of myelin segments.	True	False	True	DROP	S4PE
+19383832	2009	The effect of N-acetyl-aspartyl-glutamate and N-acetyl-aspartate on white matter oligodendrocytes.	False	False	True	DROP	S4P
+19427269	2009	Ascorbic acid for Charcot-Marie-Tooth disease type 1A in children: a randomised, double-blind, placebo-controlled, safety and efficacy trial.	True	True	True	KEEP	S4PE
+19458253	2009	Erbin regulates NRG1 signaling and myelination.	True	False	True	DROP	S4PE
+19534778	2009	Functional and comparative genomics analyses of pmp22 in medaka fish.	True	False	True	DROP	S4PE
+19805030	2009	SH3TC2/KIAA1985 protein is required for proper myelination and the integrity of the node of Ranvier in the peripheral nervous system.	True	False	True	DROP	S4PE
+19843647	2009	The natural history of Charcot-Marie-Tooth type 1A in adults: a 5-year follow-up study.	True	True	True	KEEP	S4PE
+19909499	2009	Oral high dose ascorbic acid treatment for one year in young CMT1A patients: a randomised, double-blind, placebo-controlled phase II trial.	True	True	True	KEEP	S4PE
+19942244	2009	[Molecular diagnosis of axonal forms of Charcot-Marie-Tooth disease].	True	False	True	DROP	S4PE
+19955111	2010	Hereditary spastic paraplegia caused by the PLP1 'rumpshaker mutation'.	True	False	True	DROP	S4PE
+20008656	2009	Genotype-phenotype correlations in Charcot-Marie-Tooth disease type 2 caused by mitofusin 2 mutations.	True	False	True	DROP	S4PE
+20034518	2010	Modular double sucrose gap apparatus for improved recording of compound action potentials from rat and mouse spinal cord white matter preparations.	True	True	True	KEEP	S4PE
+20127809	2010	Oligodendrogenesis in iron-deficient rats: effect of apotransferrin.	True	True	True	KEEP	S4PE
+20127814	2010	Thyroid hormone enhances transected axonal regeneration and muscle reinnervation following rat sciatic nerve injury.	True	True	True	KEEP	S5P
+20149822	2010	A non-linear regression analysis method for quantitative resolution of the stimulus-evoked compound action potential from rodent optic nerve.	True	True	True	KEEP	S4PE
+20193560	2009	[Two novel mutations of GJB1 gene associated with typical X-linked Charcot-Marie-Tooth disease].	True	False	True	DROP	S4PE
+20303224	2011	Sequential neuroradiological and neurophysiological studies in a Japanese girl with merosin-deficient congenital muscular dystrophy.	True	True	True	KEEP	S4PE
+20334975	2010	Mechanisms of neuropathic pain in patients with Charcot-Marie-Tooth 1 A: a laser-evoked potential study.	True	False	True	DROP	S4PE
+20336740	2010	PLGA conduit seeded with olfactory ensheathing cells for bridging sciatic nerve defect of rats.	True	True	True	KEEP	S5P
+20443018	2010	Clinical progression in Charcot-Marie-Tooth disease type 1A duplication: clinico-electrophysiological and MRI longitudinal study of a family.	True	True	True	KEEP	S4PE
+20448149	2010	Dlg1-PTEN interaction regulates myelin thickness to prevent damaging peripheral nerve overmyelination.	True	False	True	DROP	S4PE
+20482598	2011	Genetic epidemiology of Charcot-Marie-Tooth in the general population.	True	False	True	DROP	S4PE
+20513814	2010	Clinical neurophysiology in GJA12-related hypomyelination vs Pelizaeus-Merzbacher disease.	True	False	True	DROP	S4PE
+20593665	2010	[Novel mutation in X-linked Charcot-Marie-tooth (CMTXI) disease associated with central conduction slowing on brainstem auditory evoked potential (BAEP)].	True	False	True	DROP	S4PE
+20627571	2010	Clinical characterization and genetic analysis of a possible novel type of dominant Charcot-Marie-Tooth disease.	True	False	True	DROP	S4P
+20800346	2010	Late-onset CMT2 associated with a novel missense mutation in the cytoplasmic domain of the MPZ gene.	False	False	True	DROP	S4P
+21034560	2010	Functional recovery following traumatic spinal cord injury mediated by a unique polymer scaffold seeded with neural stem cells and Schwann cells.	True	False	True	DROP	S5P
+21211919	2011	A case of congenital axonal neuropathy associated with West syndrome.	True	False	True	DROP	S4PE
+21220016	2011	Both Schwann cell and axonal defects cause motor peripheral neuropathy in Ebf2-/- mice.	True	False	True	DROP	S4PE
+21252112	2011	Inherited demyelinating neuropathies with micromutations of peripheral myelin protein 22 gene.	True	False	True	DROP	S4PE
+21340203	2011	[Audiological findings in the Charcot-Marie-Tooth disease].	False	False	False	DROP	S4P
+21352918	2011	Oligodendrocyte differentiation and myelination defects in OMgp null mice.	True	False	True	DROP	S4PE
+21404297	2011	Nerve conduction studies in Charcot-Marie-Tooth disease in a cohort from Turkey.	True	False	True	DROP	S4PE
+21703725	2012	[Guidelines for molecular diagnosis of Charcot-Marie-Tooth disease].	True	False	True	DROP	S4PE
+21824559	2011	Early infantile Krabbe disease: results of the World-Wide Krabbe Registry.	True	False	True	DROP	S4P
+21849115	2011	[Studies of electromyography and genetics in children with Charcot-Marie-Tooth disease type 1].	True	False	True	DROP	S4PE
+21934695	2012	Altered postnatal development of cortico-hippocampal neuronal electric activity in mice deficient for the mitochondrial aspartate-glutamate transporter.	True	False	True	DROP	S4PE
+22007951	2012	Functional and molecular evidence of myelin- and neuroprotection by thyroid hormone administration in experimental allergic encephalomyelitis.	True	True	True	KEEP	S5PE
+22091729	2011	Phenotypic variability in a large Czech family with a dynamin 2-associated Charcot-Marie-Tooth neuropathy.	True	False	True	DROP	S4PE
+22176150	2011	Congenital hypomyelinating neuropathy due to a novel MPZ mutation.	True	False	True	DROP	S4PE
+22264126	2012	Development of speech and hearing of two children with Pelizaeus-Merzbacher disease presenting only waves I and II of the auditory brainstem response.	True	False	True	DROP	S4PE
+22285450	2013	Overlapping molecular pathological themes link Charcot-Marie-Tooth neuropathies and hereditary spastic paraplegias.	False	False	True	DROP	S4P
+22288874	2012	Expressing hNF-LE397K results in abnormal gaiting in a transgenic model of CMT2E.	True	False	True	DROP	S4PE
+22331326	2012	Hereditary polyneuropathy in the Alaskan Malamute.	True	False	True	DROP	S4PE
+22388935	2012	Efficacy of enzyme replacement therapy in an aggravated mouse model of metachromatic leukodystrophy declines with age.	True	True	True	KEEP	S4PE
+22401669	2012	Clinical and genetic characterization of a 2-year-old boy with complete PLP1 deletion.	True	False	True	DROP	S4PE
+22422208	2012	Pelizaeus-Merzbacher disease, Pelizaeus-Merzbacher-like disease 1, and related hypomyelinating disorders.	True	True	True	KEEP	S4PE
+22445798	2012	The role of auditory brainstem response in diagnosing auditory impairments of Dejerine-Sottas.	True	False	True	DROP	S4PE
+22464564	2012	Hand weakness in Charcot-Marie-Tooth disease 1X.	True	True	True	KEEP	S4P
+22522939	2012	Auditory function in children with Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+22656320	2013	Progressive diffuse brain atrophy in West syndrome with marked hypomyelination due to SPTAN1 gene mutation.	False	True	True	DROP	S4P
+22704856	2012	Intermediate Charcot-Marie-Tooth disease due to a novel Trp101Stop myelin protein zero mutation associated with debilitating neuropathic pain.	True	False	True	DROP	S4PE
+22787498	2012	Comparison between clinical disabilities and electrophysiological values in Charcot-Marie-Tooth 1A patients with PMP22 duplication.	True	True	True	KEEP	S4P
+22798296	2010	Diffusion and ADC-map images detect ongoing demyelination on subcortical white matter in an adult metachromatic leukodystrophy patient with autoimmune Hashimoto	True	False	True	DROP	S4PE
+22907236	2012	Neuromuscular function after muscle fatigue in Charcot-Marie-Tooth type 1A patients.	True	False	True	DROP	S4PE
+22907640	2012	Clinical and radiological characteristics in multiple sclerosis patients with large cavitary lesions.	True	False	True	DROP	S4PE
+22944031	2012	[Analysis of CX32 gene mutation and related clinical features in Chinese Han Charcot-Marie-Tooth families].	True	False	True	DROP	S4PE
+22959700	2013	Isolated pyramidal tract impairment in the central nervous system of adult-onset Krabbe disease with novel mutations in the GALC gene.	False	False	True	DROP	S4P
+22978647	2013	Genetics of the Charcot-Marie-Tooth disease in the Spanish Gypsy population: the hereditary motor and sensory neuropathy-Russe in depth.	True	False	True	DROP	S4PE
+22987707	2012	Spinal Charcot-Marie-Tooth disease: a reappraisal.	True	False	True	DROP	S4PE
+23034913	2012	Schwann cell glycogen selectively supports myelinated axon function.	True	True	True	KEEP	S5PE
+23171661	2012	Myelin is dependent on the Charcot-Marie-Tooth Type 4H disease culprit protein FRABIN/FGD4 in Schwann cells.	False	False	True	DROP	S4P
+23224912	2013	Structural bases for central nervous system malfunction in the quaking mouse: dysmyelination in a potential model of schizophrenia.	True	False	True	DROP	S4PE
+23250879	2012	Curcumin derivatives promote Schwann cell differentiation and improve neuropathy in R98C CMT1B mice.	True	True	True	KEEP	S4PE
+23250881	2012	The human OPA1delTTAG mutation induces premature age-related systemic neurodegeneration in mouse.	False	True	True	DROP	S5P
+23279342	2012	Unusual features of central nervous system involvement in CMTX associated with a novel mutation of GJB1 gene.	False	False	True	DROP	S4P
+23322581	2013	A critical role for the cholesterol-associated proteolipids PLP and M6B in myelination of the central nervous system.	False	False	True	DROP	S4P
+23348427	2013	Neurodevelopmental outcomes of umbilical cord blood transplantation in metachromatic leukodystrophy.	True	True	True	KEEP	S4PE
+23359569	2013	Motor and sensory neuropathy due to myelin infolding and paranodal damage in a transgenic mouse model of Charcot-Marie-Tooth disease type 1C.	True	True	True	KEEP	S4PE;S5P
+23489801	2013	Co-transplantation of neural stem cells and Schwann cells within poly (L-lactic-co-glycolic acid) scaffolds facilitates axonal regeneration in hemisected rat sp	True	False	True	DROP	S5P
+23494530	2013	Coordinated control of oligodendrocyte development by extrinsic and intrinsic signaling cues.	True	False	True	DROP	S4PE
+23622380	2013	Inborn errors of brain myelin formation.	True	False	True	DROP	S4PE
+23633387	2013	Glycogen function in adult central and peripheral nerves.	True	True	True	KEEP	S5PE
+23719808	2013	Dysmyelination of auditory afferent axons increases the jitter of action potential timing during high-frequency firing.	True	False	True	DROP	S4PE
+23781967	2013	Coexistence of Charcot-Marie-Tooth disease type 1A and anti-MAG neuropathy.	True	True	True	KEEP	S4PE
+23825401	2013	Genetic deletion of Cadm4 results in myelin abnormalities resembling Charcot-Marie-Tooth neuropathy.	True	False	True	DROP	S4PE
+23843435	2013	Central dysmyelination reduces the temporal fidelity of synaptic transmission and the reliability of postsynaptic firing during high-frequency stimulation.	True	False	True	DROP	S4P
+23891256	2013	Influence of comorbidities on the phenotype of patients affected by Charcot-Marie-Tooth neuropathy type 1A.	True	False	True	DROP	S4PE
+23931785	2013	Evaluation of a patient with suspected chronic demyelinating polyneuropathy.	True	True	True	KEEP	S4PE
+23948160	2014	Afferent control of walking: are there distinct deficits associated to loss of fibres of different diameter?	True	False	True	DROP	S4PE
+23990019	2013	Mesenchymal stromal-cell transplants induce oligodendrocyte progenitor migration and remyelination in a chronic demyelination model.	True	True	True	KEEP	S4PE
+24095575	2013	Partial PLP1 deletion causing X-linked dominant spastic paraplegia type 2.	True	False	True	DROP	S4PE
+24175617	2013	Biochemical characterization of protein quality control mechanisms during disease progression in the C22 mouse model of CMT1A.	True	False	True	DROP	S4PE
+24220426	2013	Combination of chondroitinase ABC, glial cell line-derived neurotrophic factor and Nogo A antibody delayed-release microspheres promotes the functional recovery	True	True	True	KEEP	S5P
+24259772	2013	Electrophysiological evaluation of chronic inflammatory demyelinating polyneuropathy and charcot-marie-tooth type 1: dispersion and correlation analysis.	True	True	True	KEEP	S4PE
+24291934	2013	[Nerve ultrasound is useful for the diagnosis of neuromuscular diseases].	True	False	True	DROP	S4PE
+24423646	2014	Mice with a deletion of the major central myelin protein exhibit hypersensitivity to noxious thermal stimuli: involvement of central sensitization.	True	False	True	DROP	S4P
+24523557	2014	Auditory nerve perinodal dysmyelination in noise-induced hearing loss.	True	True	True	KEEP	S4PE
+24571608	2014	Optic and auditory pathway dysfunction in demyelinating neuropathies.	True	False	True	DROP	S4PE
+24589341	2014	Autosomal recessive phosphoglucomutase 3 (PGM3) mutations link glycosylation defects to atopy, immune deficiency, autoimmunity, and neurocognitive impairment.	True	False	True	DROP	S4PE
+24682784	2014	A new mouse model of Canavan leukodystrophy displays hearing impairment due to central nervous system dysmyelination.	True	False	True	DROP	S4PE
+24685771	2015	Brain magnetic resonance imaging findings and auditory brainstem response in a child with spastic paraplegia 2 due to a PLP1 splice site mutation.	True	False	True	DROP	S4PE
+24826990	2014	Loss of central auditory processing in a mouse model of Canavan disease.	True	False	True	DROP	S4PE
+24878229	2014	Whole exome sequencing identifies three recessive FIG4 mutations in an apparently dominant pedigree with Charcot-Marie-Tooth disease.	True	True	True	KEEP	S4PE
+24906712	2014	Usefulness of the modified F-ratio for assessments of proximal conduction in chronic inflammatory demyelinating polyneuropathy superimposed on Charcot Marie-Too	False	False	False	DROP	S4P
+24974158	2015	A de novo TUBB4A mutation in a patient with hypomyelination mimicking Pelizaeus-Merzbacher disease.	True	False	True	DROP	S4PE
+25043250	2015	A novel PLP1 frameshift mutation causing a milder form of Pelizaeus-Merzbacher disease.	True	False	True	DROP	S4P
+25059390	2014	A new mutation in GJC2 associated with subclinical leukodystrophy.	False	False	True	DROP	S4P
+25091364	2015	Nerve ultrasound depicts peripheral nerve enlargement in patients with genetically distinct Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+25136296	2014	Computational modeling of the effects of auditory nerve dysmyelination.	True	False	True	DROP	S4PE
+25201224	2015	Charcot Marie Tooth disease (CMT): historical perspectives and evolution.	True	False	True	DROP	S4PE
+25206829	2014	A novel transgenic mouse model of Chinese Charcot-Marie-Tooth disease type 2L.	True	True	True	KEEP	S4PE
+25237436	2014	A case of cauda equina syndrome in early-onset chronic inflammatory demyelinating polyneuropathy clinically similar to charcot-marie-tooth disease type 1.	True	False	True	DROP	S4PE
+25310982	2014	mTORC1 controls PNS myelination along the mTORC1-RXRγ-SREBP-lipid biosynthesis axis in Schwann cells.	True	False	True	DROP	S4PE
+25326399	2014	Intermediate Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+25337104	2012	Rapid genetic screening of Charcot-Marie-Tooth disease type 1A and hereditary neuropathy with liability to pressure palsies patients.	True	True	True	KEEP	S4PE
+25363904	2015	Electromyographic tendon reflex recording: An accurate and comfortable method for diagnosis of charcot-marie-tooth disease type 1a.	True	False	True	DROP	S4P
+25440412	2015	Steroid-dependent sensorineural hearing loss in a patient with Charcot-Marie-Tooth disease showing auditory neuropathy.	True	True	True	KEEP	S4PE
+25500726	2015	Severe phenotypes in a Charcot-Marie-Tooth 1A patient with PMP22 triplication.	True	False	True	DROP	S4PE
+25538751	2012	Platelet-rich plasma gel in combination with Schwann cells for repair of sciatic nerve injury.	True	True	True	KEEP	S5P
+25695920	2015	A novel mutation in motor domain of KIF5A associated with an HSP/axonal neuropathy phenotype.	True	False	True	DROP	S4P
+25698761	2015	Spiral ganglion degeneration and hearing loss as a consequence of satellite cell death in saposin B-deficient mice.	False	False	True	DROP	S4P
+25716865	2015	Anti-muscarinic adjunct therapy accelerates functional human oligodendrocyte repair.	True	True	True	KEEP	S4PE
+25788925	2015	Local administration of icariin contributes to peripheral nerve regeneration and functional recovery.	True	True	True	KEEP	S5P
+25792482	2015	Molecular regulators of nerve conduction - Lessons from inherited neuropathies and rodent genetic models.	True	False	True	DROP	S4P
+25850958	2016	Diagnostic algorithms in Charcot-Marie-Tooth neuropathies: experiences from a German genetic laboratory on the basis of 1206 index patients.	True	False	True	DROP	S4PE
+25877835	2015	NEFL E396K mutation is associated with a novel dominant intermediate Charcot-Marie-Tooth disease phenotype.	True	False	True	DROP	S4PE
+26000324	2015	Sulfatide levels correlate with severity of neuropathy in metachromatic leukodystrophy.	True	False	True	DROP	S4PE
+26141737	2015	Overexpression of mutant HSP27 causes axonal neuropathy in mice.	True	True	True	KEEP	S4PE
+26173348	2015	Case Studies of Transcranial Electrical Motor Evoked Potentials (TCeMEP) on Patients with Charcot-Marie-Tooth Disease during Posterior Spinal Instrumentation an	True	False	True	DROP	S4PE
+26205832	2015	Enhanced Action Potential Passage Through the Node of Ranvier of Myelinated Axons via Proton Hopping.	True	False	True	DROP	S4PE
+26206779	2015	Van der Knaap disease: a rare disease with atypical features.	False	False	True	DROP	S4P
+26245762	2015	Long-term outcomes after allogeneic hematopoietic stem cell transplantation for metachromatic leukodystrophy: the largest single-institution cohort report.	True	True	True	KEEP	S4PE
+26345274	2015	Severe CNS involvement in WWOX mutations: Description of five new cases.	False	False	True	KEEP	S2PE
+26382835	2015	A cohort study of Han Chinese MFN2-related Charcot-Marie-Tooth 2A.	True	False	True	DROP	S4PE
+26423936	2015	Exacerbation of Charcot-Marie-Tooth type 2E neuropathy following traumatic nerve injury.	True	False	True	DROP	S4PE
+26541248	2016	Leukemia Inhibitory Factor Haplodeficiency Desynchronizes Glial Reactivity and Exacerbates Damage and Functional Deficits after a Concussive Brain Injury.	True	True	True	KEEP	S4PE
+26553228	2015	Late infantile metachromatic leukodystrophy: Clinical manifestations of five Taiwanese patients and Genetic features in Asia.	True	False	True	DROP	S4PE
+26611342	2015	Auditory neuropathy spectrum disorder in hypomyelinating leukodystrophy--A case study.	False	False	False	DROP	S4P
+26840509	2016	Adult-onset Krabbe disease presenting with an isolated form of peripheral neuropathy.	True	False	True	DROP	S4PE
+26921370	2016	Structural and Functional Abnormalities of the Neuromuscular Junction in the Trembler-J Homozygote Mouse Model of Congenital Hypomyelinating Neuropathy.	True	False	True	DROP	S4PE
+26956144	2016	A novel p.Val244Leu mutation in MFN2 leads to Charcot-Marie-Tooth disease type 2.	True	True	True	KEEP	S4PE
+27098243	2016	CNS involvement in CMTX1 caused by a novel connexin 32 mutation: a 6-year follow-up in neuroimaging and nerve conduction.	True	False	True	DROP	S4P
+27113066	2016	[Clinical features and diagnosis of Pelizaeus-Merzbacher disease: five case reports].	True	False	True	DROP	S4PE
+27168396	2016	Functional and structural properties of ion channels at the nerve terminal depends on compact myelin.	True	False	True	DROP	S4PE
+27246907	2016	Characterization of SPATA5-related encephalopathy in early childhood.	True	True	True	KEEP	S4PE
+27291881	2016	Ultrasound pattern sum score, homogeneity score and regional nerve enlargement index for differentiation of demyelinating inflammatory and hereditary neuropathi	True	False	True	DROP	S4PE
+27412484	2016	Nerve conduction velocity in CMT1A: what else can we tell?	True	True	True	KEEP	S4PE
+27476972	2016	Msh2 deficiency leads to dysmyelination of the corpus callosum, impaired locomotion, and altered sensory function in mice.	True	False	True	DROP	S4P
+27614087	2017	Preferential conduction block of myelinated axons by nitric oxide.	True	True	True	KEEP	S4PE
+27638585	2016	Clinical, electrophysiological, and biochemical markers of peripheral and central nervous system disease in canine globoid cell leukodystrophy (Krabbe's disease	True	False	True	DROP	S4P
+27643807	2017	Muscle spindle alterations precede onset of sensorimotor deficits in Charcot-Marie-Tooth type 2E.	True	False	True	DROP	S4PE
+27654412	2016	Modeling the Chronic Loss of Optic Nerve Axons and the Effects on the Retinal Nerve Fiber Layer Structure in Primary Disorder of Myelin.	True	False	True	DROP	S4PE
+27785412	2016	Neuroradiological, neurophysiological and molecular findings in infantile Krabbe disease: two case reports.	True	False	True	DROP	S4P
+27869163	2017	Wwox-Brca1 interaction: role in DNA repair pathway choice.	True	True	True	KEEP	S1P
+27882734	2016	Novel mutations in SH3TC2 in a young Japanese girl with Charcot-Marie-Tooth disease type 4C.	True	False	True	DROP	S4PE
+27941501	2017	Isoflurane Sedation on the ICU in Cardiac Arrest Patients Treated With Targeted Temperature Management: An Observational Propensity-Matched Study.	False	True	True	DROP	S4P
+28072961	2017	[A case report of childhood Farber's disease and literature review].	True	True	True	KEEP	S4PE
+28108290	2017	Pmp22 mutant allele-specific siRNA alleviates demyelinating neuropathic phenotype in vivo.	True	True	True	KEEP	S4PE
+28130616	2017	Investigation of the motor system in two siblings with Canavan's disease: a combined transcranial magnetic stimulation (TMS) - diffusion tensor imaging (DTI) st	False	False	True	DROP	S4P
+28170189	2017	Mesenchymal Stem Cells Yield Transient Improvements in Motor Function in an Infant Rhesus Macaque with Severe Early-Onset Krabbe Disease.	True	True	True	KEEP	S4PE
+28211240	2017	Phenotypic spectrum of Charcot-Marie-Tooth disease due to LITAF/SIMPLE mutations: a study of 18 patients.	True	False	True	DROP	S4PE
+28214652	2017	Unilateral oculomotor palsy in Charcot-Marie-Tooth disease 1A (CMT 1A).	True	False	True	DROP	S4PE
+28364294	2017	Intermediate Charcot-Marie-Tooth disease: an electrophysiological reappraisal and systematic review.	True	True	True	KEEP	S4PE
+28448691	2017	Clinical characterization and genetic analysis of Korean patients with X-linked Charcot-Marie-Tooth disease type 1.	True	True	True	KEEP	S4P
+28469666	2017	Anatomical distributional defects in mutant genes associated with dominant intermediate Charcot-Marie-Tooth disease type C in an adenovirus-mediated mouse model	True	True	True	KEEP	S4PE
+28500667	2017	Magnetic resonance neurography and diffusion tensor imaging of the peripheral nerves in patients with Charcot-Marie-Tooth Type 1A.	True	False	True	DROP	S4PE
+28544110	2017	Waardenburg syndrome: a rare cause of inherited neuropathy due to SOX10 mutation.	True	False	True	DROP	S4PE
+28555600	2017	Audiological Findings in Charcot-Marie-Tooth Disease Type 4C.	True	False	True	DROP	S4PE
+28709447	2017	Cryptic amyloidogenic elements in mutant NEFH causing Charcot-Marie-Tooth 2 trigger aggresome formation and neuronal death.	True	False	True	DROP	S4PE
+28747762	2017	Molecular mechanisms of Charcot-Marie-Tooth neuropathy linked to mutations in human myelin protein P2.	True	False	True	DROP	S4PE
+28763065	2017	Genome-wide association analysis identifies common variants influencing infant brain volumes.	False	False	True	KEEP	S2PE
+28948533	2017	Remyelinating Pharmacotherapies in Multiple Sclerosis.	True	True	True	KEEP	S5P
+28969374	2017	Biallelic mutations in the homeodomain of NKX6-2 underlie a severe hypomyelinating leukodystrophy.	False	True	True	DROP	S4P
+29029896	2017	Clemastine fumarate as a remyelinating therapy for multiple sclerosis (ReBUILD): a randomised, controlled, double-blind, crossover trial.	True	True	True	KEEP	S5PE
+29036910	2017	Melatonin Treatment Reduces Oxidative Damage and Normalizes Plasma Pro-Inflammatory Cytokines in Patients Suffering from Charcot-Marie-Tooth Neuropathy: A Pilot	True	True	True	KEEP	S4PE
+29063243	2017	Characterization of Charcot-Marie-Tooth optic neuropathy.	True	False	True	DROP	S4PE
+29086919	1999	Overview of Charcot-Marie-Tooth Disease Type 1A.	True	False	True	DROP	S4PE
+29086947	1999	Mutation Testing in Charcot-Marie-Tooth Neuropathy.	True	False	True	DROP	S4PE
+29086989	1999	Schwann Cell-Axon Interactions in Charcot-Marie-Tooth Disease.	True	False	True	DROP	S4PE
+29116375	2018	Uncoupling N-acetylaspartate from brain pathology: implications for Canavan disease gene therapy.	False	True	True	DROP	S4P
+29136549	2018	The spectrum of Charcot-Marie-Tooth disease due to myelin protein zero: An electrodiagnostic, nerve ultrasound and histological study.	True	False	True	DROP	S4PE
+29164357	2018	Reversible inflammatory neuropathy superimposed on Charcot-Marie-Tooth type 1A disease.	False	False	False	DROP	S4P
+29165835	2018	The function of contactin-2/TAG-1 in oligodendrocytes in health and demyelinating pathology.	False	False	True	DROP	S4P
+29191368	2018	A novel homozygous nonsense mutation in NEFL causes autosomal recessive Charcot-Marie-Tooth disease.	True	True	True	KEEP	S4PE
+29202483	2018	PMP22 antisense oligonucleotides reverse Charcot-Marie-Tooth disease type 1A features in rodent models.	True	True	True	KEEP	S4PE
+29211920	2018	Miconazole enhances nerve regeneration and functional recovery after sciatic nerve crush injury.	True	True	True	KEEP	S5PE
+29490274	2018	Oligodendrocytes in the Mouse Corpus Callosum Maintain Axonal Function by Delivery of Glucose.	True	True	True	KEEP	S5P
+29517809	2018	Fibre sub-type specific conduction reveals metabolic function in mouse sciatic nerve.	True	True	True	KEEP	S5PE
+29603094	2018	HERC1 Ubiquitin Ligase Is Required for Normal Axonal Myelination in the Peripheral Nervous System.	True	False	True	DROP	S4P
+29618326	2018	A novel homozygous mutation in POLR3A gene causing 4H syndrome: a case report.	True	False	True	DROP	S4PE
+29623298	2018	A murine model of Charcot-Marie-Tooth disease 4F reveals a role for the C-terminus of periaxin in the formation and stabilization of Cajal bands.	True	False	True	DROP	S4PE
+29625343	2018	Rapid exhaustion of auditory neural conduction in a prototypical mitochondrial disease, Friedreich ataxia.	True	False	True	DROP	S4P
+29626178	2018	Unique clinical and neurophysiologic profile of a cohort of children with CMTX3.	True	False	True	DROP	S4PE
+29644578	2018	Functional MRI and laser-evoked potentials evaluation in Charcot-Marie-Tooth syndrome.	True	False	True	DROP	S4PE
+29661920	2018	DHTKD1 Deficiency Causes Charcot-Marie-Tooth Disease in Mice.	True	False	True	DROP	S4PE
+29720552	2018	R-Ras1 and R-Ras2 Are Essential for Oligodendrocyte Differentiation and Survival for Correct Myelination in the Central Nervous System.	True	False	True	DROP	S4PE
+29724652	2018	A novel homozygous NDRG1 mutation in a Chinese patient with Charcot-Marie-Tooth disease 4D.	True	True	True	KEEP	S4PE
+29725841	2018	Auditory function in Pelizaeus-Merzbacher disease.	True	False	True	DROP	S4PE
+29755326	2018	Transient Hypothyroidism During Lactation Arrests Myelination in the Anterior Commissure of Rats. A Magnetic Resonance Image and Electron Microscope Study.	True	True	True	KEEP	S5PE
+29940160	2018	Myelinated axons fail to develop properly in a genetically authentic mouse model of Charcot-Marie-Tooth disease type 2E.	True	False	True	DROP	S4PE
+29985472	2018	Hidden hearing loss in patients with Charcot-Marie-Tooth disease type 1A.	True	False	True	DROP	S4PE
+30013503	2018	The Electrophysiological Features in X-Linked Charcot-Marie-Tooth Disease With Transient Central Nervous System Deficits.	True	True	True	KEEP	S4PE
+30089515	2018	A prospective natural history study of Krabbe disease in a patient cohort with onset between 6 months and 3 years of life.	True	True	True	KEEP	S4P
+30216910	2018	Nerve ultrasound findings differentiate Charcot-Marie-Tooth disease (CMT) 1A from other demyelinating CMTs.	True	False	True	DROP	S4PE
+30560219	2018	Reversible conduction failure on the deep tendon reflex response recording in early Guillain-Barré syndrome.	True	False	True	DROP	S4P
+30657060	2019	Preventive action of benztropine on platinum-induced peripheral neuropathies and tumor growth.	True	True	True	KEEP	S5PE
+31138995	2019	miR-381 Attenuates Peripheral Neuropathic Phenotype Caused by Overexpression of PMP22.	True	True	True	KEEP	S4PE
+31211173	2019	Mutation spectrum of Charcot-Marie-Tooth disease among the Han Chinese in Taiwan.	True	False	True	DROP	S4PE
+31213528	2019	Peripheral myelin protein 22 modulates store-operated calcium channel activity, providing insights into Charcot-Marie-Tooth disease etiology.	False	False	True	DROP	S4P
+31318166	2019	Mouse Nr2f1 haploinsufficiency unveils new pathological mechanisms of a human optic atrophy syndrome.	True	True	True	KEEP	S4PE;S5P
+31318300	2019	The audiologic profile of patients with Charcot-Marie Tooth neuropathy can be characterised by both cochlear and neural deficits.	True	True	True	KEEP	S4P
+31340538	2019	Loss of Wwox Causes Defective Development of Cerebral Cortex with Hypomyelination in a Rat Model of Lethal Dwarfism with Epilepsy.	False	False	True	KEEP	S2PE
+31393643	2019	Phrenic nerve involvement and respiratory muscle weakness in patients with Charcot-Marie-Tooth disease 1A.	True	True	True	KEEP	S4PE
+31434166	2019	A novel mutation in PRPS1 causes X-linked Charcot-Marie-Tooth disease-5.	True	True	True	KEEP	S4PE
+31453649	2020	Monocarboxylate transporter 1 in Schwann cells contributes to maintenance of sensory nerve myelination during aging.	True	False	True	DROP	S4PE;S5P
+31469427	2019	Nerve size correlates with clinical severity in Charcot-Marie-Tooth disease 1A.	True	True	True	KEEP	S4PE
+31527119	2019	β-Secretase BACE1 Is Required for Normal Cochlear Function.	True	True	True	KEEP	S4PE
+31680196	2020	Visual pathways evaluation in Kearns Sayre syndrome: a diffusion tensor imaging study.	True	False	True	DROP	S4P
+31685456	2019	Is psychosis a dysmyelination-related information-processing disorder?	True	False	True	DROP	S4PE
+31829048	2020	An update on clinical, pathological, diagnostic, and therapeutic perspectives of childhood leukodystrophies.	True	True	True	KEEP	S4PE;S5PE
+31842800	2019	Recurrent episodes of reversible posterior leukoencephalopathy in three Chinese families with GJB1 mutations in X-linked Charcot-Marie-tooth type 1 disease: cas	True	False	True	DROP	S4PE
+31853710	2020	BAG3 p.Pro209Ser mutation identified in a Chinese family with Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+32000863	2020	Wwox deficiency leads to neurodevelopmental and degenerative neuropathies and glycogen synthase kinase 3β-mediated epileptic seizure activity in mice.	True	False	True	KEEP	S1PE;S2PE;S3PE;S4PE
+32120028	2020	Phase I randomized trial of liothyronine for remyelination in multiple sclerosis: A dose-ranging study with assessment of reliability of visual outcomes.	True	True	True	KEEP	S5PE
+32184918	2020	Neuroprotective Effect of Salvianolic Acid A against Diabetic Peripheral Neuropathy through Modulation of Nrf2.	True	True	True	KEEP	S5P
+32215716	2020	Neurophysiologic intraoperative monitoring (NIOM) in pediatric patients with polyneuropathy.	True	False	True	DROP	S4PE
+32232809	2020	[Hereditary Polyneuropathies].	True	False	True	DROP	S4PE
+32445516	2020	Disruption of dystonin in Schwann cells results in late-onset neuropathy and sensory ataxia.	True	False	True	DROP	S4PE
+32453729	2020	Congenital hearing impairment associated with peripheral cochlear nerve dysmyelination in glycosylation-deficient muscular dystrophy.	True	False	True	DROP	S4PE
+32589817	2021	White matter alterations in Williams syndrome related to behavioral and motor impairments.	True	True	True	KEEP	S5P
+32592472	2020	C1orf194 deficiency leads to incomplete early embryonic lethality and dominant intermediate Charcot-Marie-Tooth disease in a knockout mouse model.	True	True	True	KEEP	S4PE
+32595021	2020	A recurrent TMEM106B mutation in hypomyelinating leukodystrophy: A rapid diagnostic assay.	True	False	True	DROP	S4PE
+32610343	2020	Suppression of proteolipid protein rescues Pelizaeus-Merzbacher disease.	True	True	True	KEEP	S4PE
+32642785	2020	Yield of the PMP22 deletion analysis in patients with compression neuropathies.	True	False	True	DROP	S4P
+32665875	2020	A Rare Case of Charcot-Marie-Tooth Disease Type 1C With an Unusual Presentation.	True	False	True	DROP	S4PE
+32666699	2020	A novel TFG c.793C>G mutation in a Chinese pedigree with Charcot-Marie-Tooth disease 2.	True	True	True	KEEP	S4PE
+32681585	2021	Auditory impairment in H-ABC tubulinopathy.	True	False	True	DROP	S4PE
+32910272	2020	Early clinical course after hematopoietic stem cell transplantation in children with juvenile metachromatic leukodystrophy.	True	False	True	DROP	S4PE
+33070894	2020	Central nervous system impairment detected by somatosensory evoked potentials in patients with Charcot-Marie-Tooth disease type 1A.	True	False	True	DROP	S4PE
+33106410	2020	Myelination of peripheral nerves is controlled by PI4KB through regulation of Schwann cell Golgi function.	True	False	True	DROP	S4PE
+33127910	2020	A role of oligodendrocytes in information processing.	True	False	True	DROP	S4PE
+33173958	2020	Short hairpin RNA treatment improves gait in a mouse model of Charcot‑Marie‑Tooth disease type 1A.	True	True	True	KEEP	S4PE
+33178108	2020	Pathogenic Variants in GALC Gene Correlate With Late Onset Krabbe Disease and Vision Loss: Case Series and Review of Literature.	True	True	True	KEEP	S4P
+33191002	2021	Virus-encoded miR-155 ortholog in Marek's disease virus promotes cell proliferation via suppressing apoptosis by targeting tumor suppressor WWOX.	True	False	True	KEEP	S1PE
+33294372	2020	Atypical presentation of Arts syndrome due to a novel hemizygous loss-of-function variant in the PRPS1 gene.	True	False	True	DROP	S4PE
+33314704	2021	Systematic review of CMTX1 patients with episodic neurological dysfunction.	True	True	True	KEEP	S4PE
+33405618	2019	Sericin Nerve Guidance Conduit Delivering Therapeutically Repurposed Clobetasol for Functional and Structural Regeneration of Transected Peripheral Nerves.	True	True	True	KEEP	S5PE
+33542455	2022	AAV1.NT-3 gene therapy for X-linked Charcot-Marie-Tooth neuropathy type 1.	True	True	True	KEEP	S4PE
+33625198	2021	Charcot-Marie-Tooth Disease With Long-Term Follow-Up on Auditory Neuropathy-After Cochlear Implantation Or Hearing Aid Use.	True	False	True	DROP	S4PE
+33653295	2021	Case report: exome sequencing achieved a definite diagnosis in a Chinese family with muscle atrophy.	True	False	True	DROP	S4PE
+33790768	2021	A Patient with Noonan Syndrome with a KRAS Mutation Who Presented Severe Nerve Root Hypertrophy.	True	False	True	DROP	S4PE
+33883545	2021	AAV2/9-mediated silencing of PMP22 prevents the development of pathological features in a rat model of Charcot-Marie-Tooth disease 1 A.	True	True	True	KEEP	S4PE
+33914858	2021	Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects.	False	False	True	KEEP	S2PE
+34071515	2021	Clinical and Neuroimaging Features in Charcot-Marie-Tooth Patients with GNB4 Mutations.	True	False	True	DROP	S4PE
+34134969	2021	[A novel frameshift NDUFV1 mutation in a child with the phenotype of optic nerve atrophy].	True	False	True	DROP	S4PE
+34375587	2021	Clustered mutations in the GRIK2 kainate receptor subunit gene underlie diverse neurodevelopmental disorders.	False	False	True	DROP	S4P
+34382059	2022	Raising cGMP restores proteasome function and myelination in mice with a proteotoxic neuropathy.	True	True	True	KEEP	S4PE
+34434289	2011	Auditory testing profiles of Pelizaeus-Merzbacher disease.	True	False	True	DROP	S4PE
+34540429	2021	Impact of Customized and Sustained Physiotherapy in Charcot-Marie-Tooth Disease.	True	True	True	KEEP	S4PE
+34544838	2021	CNS Hypomyelination Disrupts Axonal Conduction and Behavior in Larval Zebrafish.	True	False	True	DROP	S4PE
+34561841	2022	Use of transcranial motor-evoked potentials to provide reliable intraoperative neuromonitoring for the Charcot-Marie-Tooth population undergoing spine deformity	True	False	True	DROP	S4PE
+34577609	2021	Transient Receptor Potential Ankyrin-1 (TRPA1) Block Protects against Loss of White Matter Function during Ischaemia in the Mouse Optic Nerve.	True	True	True	KEEP	S4P
+34582724	2022	Spinal and corticospinal excitability in response to reductions in skin and core temperatures via whole-body cooling.	True	True	True	KEEP	S4P
+34630290	2021	Infantile-Onset Charcot-Marie-Tooth Disease With Pyramidal Features and White Matter Abnormalities Due to a De novo MORC2 Gene Variant: A Case Report and Brief 	True	False	True	DROP	S4PE
+34686718	2021	Clemastine improves electrophysiologic and histomorphometric changes through promoting myelin repair in a murine model of compression neuropathy.	True	True	True	KEEP	S5PE
+34747138	2021	Neonatal neuronal WWOX gene therapy rescues Wwox null phenotypes.	False	True	True	KEEP	S2PE
+34752805	2022	Loss of ABCA8B decreases myelination by reducing oligodendrocyte precursor cells in mice.	True	False	True	DROP	S4P
+34755279	2022	Adult-onset vanishing white matter in a patient with EIF2B3 variants misdiagnosed as multiple sclerosis.	True	True	True	KEEP	S4PE
+34786417	2021	Missense mutation in DYNC1H1 gene caused psychomotor developmental delay and muscle weakness: A case report.	True	True	True	KEEP	S4PE
+34889893	2021	Farnesol Ameliorates Demyelinating Phenotype in a Cellular and Animal Model of Charcot-Marie-Tooth Disease Type 1A.	True	True	True	KEEP	S4PE
+34902106	2022	Rocuronium-induced respiratory paralysis refractory to sugammadex in Charcot-Marie-Tooth disease.	True	True	True	KEEP	S4PE
+35044100	2022	Phenotypic heterogeneity in patients with NEFL-related Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+35084734	2022	[Optic neuritis: aetiopathogenesis, diagnosis, prognosis and management].	True	True	True	KEEP	S5PE
+35121177	2022	Cytokines secreted by mesenchymal stem cells reduce demyelination in an animal model of Charcot-Marie-Tooth disease.	True	True	True	KEEP	S4PE
+35129250	2022	Neuropathic pain in Charcot-Marie-Tooth disease: A clinical and laser-evoked potential study.	True	True	True	KEEP	S4PE
+35176805	2021	Audiovestibular Dysfunction in Siblings with Charcot-Marie-Tooth Disease 4F: A Case Series.	True	False	True	DROP	S4PE
+35297028	2022	Unexpected Intermediate Nerve Conduction Velocity Findings in Charcot-Marie-Tooth Syndromes Classified as Demyelinated or Axonal in a Pediatric Population.	True	False	True	DROP	S4PE
+35372341	2022	Clemastine Induces an Impairment in Developmental Myelination.	True	True	True	KEEP	S5PE
+35485770	2022	Partial loss-of-function variant in neuregulin 1 identified in family with heritable peripheral neuropathy.	True	False	True	DROP	S4PE
+35678509	2022	Validating visual evoked potentials as a preclinical, quantitative biomarker for remyelination efficacy.	True	True	True	KEEP	S5PE
+35733399	2022	Novel heterozygous variants of SLC12A6 in Japanese families with Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+35842440	2022	C698R mutation in Lrsam1 gene impairs nerve regeneration in a CMT2P mouse model.	True	True	True	KEEP	S4PE
+35911843	2022	Case Report: Early-Onset Charcot-Marie-Tooth 2N With Reversible White Matter Lesions Repeatedly Mimicked Stroke or Encephalitis.	True	True	True	KEEP	S4PE
+35936615	2022	Genetic Spectrum of Inherited Neuropathies in India.	True	False	True	DROP	S4PE
+35953577	2023	Evaluation of optical coherence tomography findings and visual evoked potentials in Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+36046422	2022	Severe Epilepsy and Movement Disorder May Be Early Symptoms of TMEM106B-Related Hypomyelinating Leukodystrophy.	True	False	True	DROP	S4PE
+36253232	2022	Young infants with PMP22 duplication can have minor nerve conduction study abnormalities.	True	False	True	DROP	S4P
+36333862	2022	Compound Heterozygote Mutation in the SMPD1 Gene Leading to Nieman-Pick Disease Type A.	True	True	True	KEEP	S4PE
+36378242	2023	Targeted inactivation of the Septin2 and Septin9 genes in myelinating Schwann cells of mice.	True	False	True	DROP	S4P
+36403785	2023	Knock-in mouse models for CMTX1 show a loss of function phenotype in the peripheral nervous system.	True	True	True	KEEP	S4PE
+36567457	2022	Novel mutation in the MPZ gene causes early-onset but slow-progressive Charcot-Marie-Tooth disease in a Russian family: a case report.	True	False	True	DROP	S4PE
+36718706	2023	[Diagnostic value of F wave changes in patients with Charcot-Marie-Tooth1A and chronic inflammatory demyelinating polyneuropathy].	True	False	True	DROP	S4P
+36779245	2023	WWOX developmental and epileptic encephalopathy: Understanding the epileptology and the mortality risk.	False	False	True	KEEP	S2PE
+36798471	2023	Pharmacologic Targeting of the C-Terminus of Heat Shock Protein 90 Improves Neuromuscular Function in Animal Models of Charcot Marie Tooth X1 Disease.	True	True	True	KEEP	S4PE
+36948577	2023	Clinical phenotypic diversity of NOTCH2NLC-related disease in the largest case series of inherited peripheral neuropathy in Japan.	True	False	True	DROP	S4PE
+36968992	2023	An unusual case of a toddler with Canavan disease with frequent intractable seizures: A case report and review of the literature.	True	True	True	KEEP	S4PE
+37155847	2023	MWF of the corpus callosum is a robust measure of remyelination: Results from the ReBUILD trial.	True	True	True	KEEP	S5PE
+37171481	2023	Adult-onset leukodystrophy with vanishing white matter: a case series of 19 patients.	True	False	True	DROP	S4PE
+37335503	2023	Clinical and electrophysiological characteristics of women with X-linked Charcot-Marie-Tooth disease.	True	False	True	DROP	S4PE
+37369047	2023	Evaluation of the median nerve by shear wave elastography in patients with Charcot-Marie-Tooth disease type 1A.	True	False	True	DROP	S4PE
+37561040	2024	Targeting SARM1 improves autophagic stress-induced axonal neuropathy.	True	False	True	DROP	S4PE
+37749855	2023	Diagnostic value of nerve conduction study in NOTCH2NLC-related neuronal intranuclear inclusion disease.	True	True	True	KEEP	S4PE
+37828657	2024	Preserved Auditory Steady State Response and Envelope-Following Response in Severe Brainstem Dysfunction Highlight the Need for Cross-Checking.	True	False	True	DROP	S4PE
+37899433	2023	High-dose pharmaceutical-grade biotin in patients with demyelinating neuropathies: a phase 2b open label, uncontrolled, pilot study.	True	True	True	KEEP	S4PE
+37927275	2024	Gene Distribution in Pediatric-Onset Inherited Peripheral Neuropathy: A Single Tertiary Center in Thailand.	True	False	True	DROP	S4PE
+37929431	2023	Characterisation of Patients with SH3TC2 Associated Neuropathy in an Indian Cohort.	True	False	True	DROP	S4PE
+37952085	2024	Combination HSCT and intravenous AAV-mediated gene therapy in a canine model proves pivotal for translation of Krabbe disease therapy.	True	True	True	KEEP	S4PE
+38079473	2024	PAK2 is necessary for myelination in the peripheral nervous system.	True	True	True	KEEP	S4PE
+38134864	2024	An Open-Label Administration of Bioavailable-Form Curcumin in Patients With Pelizaeus-Merzbacher Disease.	True	True	True	KEEP	S4PE
+38146590	2024	Effects of sulfatide on peripheral nerves in metachromatic leukodystrophy.	True	True	True	KEEP	S4PE
+38253744	2024	Deep neurological phenotyping in oculo-dento-digital syndrome.	True	False	True	DROP	S4PE
+38409938	2024	Intermediate conduction velocity in two cases of Charcot-Marie-Tooth disease type 1A.	True	False	True	DROP	S4PE
+38427650	2024	4-aminopyridine improves evoked potentials and ambulation in the taiep rat: A model of hypomyelination with atrophy of basal ganglia and cerebellum.	True	True	True	KEEP	S4PE
+38551018	2024	Lack of effect from genetic deletion of Hdac6 in a humanized mouse model of CMT2D.	True	True	True	KEEP	S4PE
+38600691	2024	Conduction slowing, conduction block and temporal dispersion in demyelinating, dysmyelinating and axonal neuropathies: Electrophysiology meets pathology.	True	False	True	DROP	S4PE
+38610891	2024	Remediation of Perceptual Deficits in Progressive Auditory Neuropathy: A Case Study.	True	False	True	DROP	S4PE
+38745059	2024	p62/sequestosome-1 as a severity-reflecting plasma biomarker in Charcot-Marie-Tooth disease type 1A.	True	False	True	DROP	S4PE
+38796453	2024	Use of transcranial motor evoked potentials (TcMEPs) in spine deformity surgery in a case of Charcot-Marie-tooth disease-what we should know? A case report.	True	False	True	DROP	S4PE
+38829008	2024	Remyelination-oriented clemastine treatment attenuates neuropathies of optic nerve and retina in glaucoma.	False	True	True	DROP	S5P
+38866601	2024	Do oligodendrocytes regulate axonal glucose uptake and consumption?	False	True	True	DROP	S5P
+38956759	2024	Charcot-Marie-Tooth Disease and Hearing Loss: A Systematic Review With Meta-Analysis.	True	False	True	DROP	S4PE
+39027825	2024	Electrophysiological and radiological diagnosis of hereditary motor and sensory polyneuropathy.	False	False	True	DROP	S4P
+39039877	2024	[Genotype and phenotype of WWOX gene related developmental and epileptic encephalopathy].	False	True	True	KEEP	S2PE
+39145320	2024	Developmental Delay, Hypomyelination, and Nystagmus: Case and Approach.	True	False	True	DROP	S4PE
+39162067	2024	Audio-vestibular Findings in a Patient with Pelizaeus- Merzbacher Disease.	True	False	True	DROP	S4PE
+39232641	2024	Hereditary spastic paraplegia and extensive leukoencephalopathy: a case report of a unique phenotype associated with a GJB1/Cx32 p.Pro174Ser variant.	True	False	True	DROP	S4PE
+39274327	2024	Overview of Neuro-Ophthalmic Findings in Leukodystrophies.	True	False	True	DROP	S4PE
+39457026	2024	Monitoring Myelin Lipid Composition and the Structure of Myelinated Fibers Reveals a Maturation Delay in CMT1A.	True	False	True	DROP	S4PE
+39499628	2024	Infantile Krabbe disease (0-12 months), progression, and recommended endpoints for clinical trials.	True	True	True	KEEP	S4P
+39544702	2024	AAV1.tMCK.NT-3 gene therapy improves phenotype in Sh3tc2-/- mouse model of Charcot-Marie-Tooth Type 4C.	True	True	True	KEEP	S4PE
+39687448	2024	Peripheral Neuropathy in Mitochondrial Trifunctional Protein Deficiency due to a Variant in HADHA Gene.	True	True	True	KEEP	S4PE
+39801067	2025	Distinguishing Chronic Inflammatory Demyelinating Polyneuropathy From Mimic Disorders: The Role of Statistical Modeling.	True	False	True	DROP	S4PE
+39804930	2025	IP3 receptor depletion in a spontaneous canine model of Charcot-Marie-Tooth disease 1J with amelogenesis imperfecta.	True	False	True	DROP	S4PE
+39816792	2025	Cemdomespib Therapy Slows the Progression of Neuromuscular Weakness and Demyelination in the R75W-Connexin 32 Animal Model of Charcot-Marie-Tooth 1X Disease.	True	True	True	KEEP	S4PE
+39835292	2024	Nerve repair with polylactic acid and inosine treatment enhance regeneration and improve functional recovery after sciatic nerve transection.	True	True	True	KEEP	S5P
+39855282	2025	Therapeutic potential of siRNA PMP22-SQ nanoparticles for Charcot-Marie-Tooth 1A neuropathy in rodents and non-human primates.	True	True	True	KEEP	S4PE
+39961410	2025	Two novel SH3TC2 mutations predispose to Charcot-Marie-Tooth disease type 4C by mistargeting away from TFRC.	True	False	True	DROP	S4PE
+39975190	2025	Novel neurofilament light (Nefl) E397K mouse models of Charcot-Marie-Tooth type 2E (CMT2E) present early and chronic axonal neuropathy.	True	True	True	KEEP	S4P
+39975380	2025	The Nefl E397K mouse model demonstrates muscle pathology and motor function deficits consistent with CMT2E.	True	True	True	KEEP	S4P
+40262821	2025	Genetic and clinical spectrum of early growth response 2-related Charcot-Marie-Tooth disease in a Brazilian cohort.	True	False	True	DROP	S4PE
+40286327	2025	Effects of atidarsagene autotemcel gene therapy on peripheral nerves in late-infantile metachromatic leukodystrophy.	True	True	True	KEEP	S4PE
+40393003	2025	Interventions promoting remyelination in multiple sclerosis: a systematic review of clinical trials.	True	True	True	KEEP	S5PE
+40413792	2025	The NeflE397K mouse model demonstrates muscle pathology and motor function deficits consistent with CMT2E.	True	True	True	KEEP	S4PE
+40635134	2025	Novel neurofilament light (Nefl) E397K mouse models of Charcot-Marie-tooth type 2E (CMT2E) present early and chronic axonal neuropathy.	True	True	True	KEEP	S4PE
+40636623	2025	Clinical Characteristics of Gait Disturbance in Charcot-Marie-Tooth Disease and Future Directions in Physical Therapy.	True	True	True	KEEP	S4PE
+40782937	2025	Ketogenic diet and quercetin promote the recovery of motor function in rats with spinal cord injury.	True	True	True	KEEP	S5PE
+40833646	2025	An effective framework to study signal transmission due to non-homogeneous extracellular space in neuron.	True	False	True	DROP	S4PE
+40930584	2025	Electrophysiological findings in SH3TC2 neuropathy mimicking inflammatory neuropathies.	True	True	True	KEEP	S4PE
+41234933	2025	Characterization of a humanized mouse model of Charcot-Marie-Tooth type 1A for the discovery of human PMP22-targeting drugs.	True	True	True	KEEP	S4PE
+41361285	2025	The Cambridge Centre for Myelin Repair trial Two (CCMR Two): a trial protocol for a phase 2a, randomised, double-blind, placebo-controlled clinical trial of the	True	True	True	KEEP	S5PE
+41442931	2026	Vigabatrin-Associated Brain Magnetic Resonance Imaging Abnormalities in Two Children With WW domain-containing oxidoreductase-Related Epileptic Encephalopathy S	False	True	True	KEEP	S2PE
+41566774	2026	Therapeutic suppression of Tubb4a rescues H-ABC leukodystrophy.	True	True	True	KEEP	S4PE
+41581204	2026	White Matter Microstructural Correlates of Auditory Brainstem Responses in Patients With Charcot-Marie-Tooth Disease.	True	False	True	DROP	S4PE
+41604001	2026	Long-term neurological outcome after hematopoietic stem cell transplant in juvenile Krabbe disease.	True	True	True	KEEP	S4PE
+41719338	2026	Clemastine fumarate promotes myelin repair in a nonhuman primate model of demyelination characterized by absent spontaneous remyelination.	True	True	True	KEEP	S5PE
+42061272	2026	Spinal hypomyelination in a child with classic hypomyelination with atrophy of the basal ganglia and cerebellum (H-ABC): expanding the neuroradiological spectru	True	False	True	DROP	S4PE
+42089726	2026	Clinical and pathological findings in two Italian siblings of Romani ancestry with charcot-marie-tooth type 4D and review of the current literature.	True	False	True	DROP	S4PE
+42128308	2026	WWOX in brain development and disease: Molecular mechanisms and therapeutic opportunities.	False	True	True	KEEP	S2PE
+42200920	2026	From Axonal Growth to Neurodegeneration: The Dual Role of Neurofilament Dynamics in Health and Disease.	True	False	True	DROP	S4PE
+42206668	2026	Early Myelination Supports the Establishment of Consistent Handedness.	True	False	True	DROP	S4PE
+42278657	2026	Control of Schwann Cell Myelination by DDR1 Receptor Tyrosine Kinase.	True	False	True	DROP	S4PE
+42291697	2026	Transcranial Motor-Evoked Potentials Provide More Reliable Intraoperative Neuromonitoring Than Somatosensory-Evoked Potentials in Charcot-Marie-Tooth Patients U	True	False	True	DROP	S4PE
+42306397	2026	A Case of Advanced Charcot-Marie-Tooth Disease Showing Extreme Lumbosacral Nerve Root Hypertrophy.	True	False	True	DROP	S4PE
+42398168	2026	YTHDF1 promotes myelin phagocytosis through m6A-dependent regulation of Galectin-3 to enhance macrophage glycolysis in painful diabetic neuropathy.	True	True	True	KEEP	S5PE
+42422765	2026	Neuron-specific WWOX gene therapy produces dose-dependent, durable rescue in a model of WWOX-related epileptic encephalopathy.	False	True	True	KEEP	S2PE
+42496329	2026	Late-Onset Rapidly Progressive Spastic Paraplegia with Extensive White Matter Abnormalities Associated with an MFN2 Variant.	True	False	True	DROP	S4PE
+42703926	2026	Tyrosyl-tRNA sequestration triggers tyrosyl-tRNA synthetase-associated peripheral neuropathy.	True	True	True	KEEP	S4PE
+42721537	2026	WWOX-related developmental and epileptic encephalopathy (WOREE): A case series of seven patients from Argentina.	False	True	True	KEEP	S2PE
+42749946	2026	Distinct small-fiber dysfunction profiles in CMT1A and RFC1 disease: a multimodal study.	True	True	True	KEEP	S4PE
+42799779	2026	Late-onset CMT neuropathy in the NGS era: a 10-year retrospective study.	True	False	True	DROP	S4PE
+42838502	2026	Neural mobilization combined with a polylactic acid conduit enhances functional and morphological recovery following median nerve repair.	True	False	True	DROP	S5P
+42924061	2026	A genetic profile of hereditary neuropathies in two Southern African cohorts.	True	True	True	KEEP	S4PE
+42931738	2026	Gain-of-Function Variants in PLAAT4 and Spinal Predominant Demyelinating Leukodystrophy.	True	False	True	DROP	S4PE
+43034470	2026	Multimodal Intraoperative Neurophysiological Monitoring in TUBB4A-Related Hypomyelinating Leukodystrophy During Scoliosis Correction: A Case Report.	True	False	True	DROP	S4PE

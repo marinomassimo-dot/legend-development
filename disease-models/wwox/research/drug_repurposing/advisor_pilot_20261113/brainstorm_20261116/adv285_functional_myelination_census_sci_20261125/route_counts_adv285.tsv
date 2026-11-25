@@ -1,0 +1,11 @@
+string	route	http_status	reported_count	pmids_collected
+S1	PubMed	200	3	3
+S1	EuropePMC	200	2	2
+S2	PubMed	200	14	14
+S2	EuropePMC	200	17	14
+S3	PubMed	200	1	1
+S3	EuropePMC	200	1	1
+S4	PubMed	200	722	722
+S4	EuropePMC	200	541	525
+S5	PubMed	200	52	52
+S5	EuropePMC	200	29	24
