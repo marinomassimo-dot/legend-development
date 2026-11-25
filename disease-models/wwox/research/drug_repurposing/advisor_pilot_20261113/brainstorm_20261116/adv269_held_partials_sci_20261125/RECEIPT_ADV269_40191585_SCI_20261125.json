@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-25T07:45Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "captions_only",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T07:45:25Z",
+ "event_id": "FTR-20261125-40191585-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Held supplement pdf text searched for WWOX and E17K (Note 3, Figure 12 caption, Tables 5-6 read, percentages recomputed); zip members listed (pdf and figure images only); main-text Epi25 and 172-carrier sentences located.",
+  "Result and per-consumer wording: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261004-40191585-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "f1b4cb31a4898024a1fe9bc0420f53150952074c20d2a8e41a8b44ba617e4691",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40191585_Robertson2025_PMC.xml",
+ "study_id": {
+  "doi": "10.1093/nargab/lqaf033",
+  "pmid": "40191585"
+ },
+ "workflow": "SCI ADV-269 (held partials, unread classes inside held bytes; held bytes only, no contact, no spend); not a complete read, figure images remain unread"
+}
