@@ -55,3 +55,7 @@ Figure images and supplements of the 24 acquired papers are unopened (only 34021
 ## 8. DREAM line
 
 Changed: the programme's lean on unread sources is concentrated in leads, portfolio rows and cards, not claims; a closed-access flag is not the end (four PMC article pages); a table the lead rests on can contradict its own methods (34021541). Consumer: IT (K01 source line), ADV (acquisition round for ranks 26 to 55, 20 of them open access). Rule: score a prediction on what was asked, say so when the range was missed by a factor, and verify every acquired artefact for its own PMID.
+
+## Update 2026-11-25 (SCI, after ADV's reading of this result)
+
+Lesson, at ADV's request: the Europe PMC flags and our own expectations (ADV's and mine: 9 of 25 open, 7 acquired) understated what plain, declared, permitted routes reach. 20 of 25 were flagged open and 24 were acquired, because a paper flagged not open can still be on PMC as a readable article page, and because fullTextXML failing with 500 or a timeout is a route result for that route, not for the paper. Rule for the next round: try the PMC article page and the journal's own page by one plain request each at a human rate before listing a paper for the operator. ADV also verified at the abstract that 34021541 says 'cellular and rat models' and 'ICR mice' in the same abstract; the Table 1 against Table 2 arm is not yet independently checked by a second reader.
