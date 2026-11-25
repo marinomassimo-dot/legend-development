@@ -1092,6 +1092,13 @@
      "accepted_at": "2026-11-25T09:01:04Z",
      "evidence": "ADV-272: 421 ranked, 55 with consumers; 24 of top 25 acquired and verified (held 664 to 688); operator list PDF_REQUEST_LIST_ADV272_20261125.md; 34021541 read, receipt FTR-20261125-34021541-01; RESULT_ADV272_SCI_20261125.md; predictions P1, P2, P5 rejected",
      "updated_at": "2026-11-25T10:19:35Z"
+    },
+    {
+     "step": "ADV-276: read the newly acquired papers that cards and leads lean on, in order of the lean, with the ADV-269 rules; ranks 26 to 55 acquisition as step 2; lamotrigine port after increment 1",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-276",
+     "accepted_at": "2026-11-25T10:52:54Z"
     }
    ]
   }
@@ -1934,6 +1941,13 @@
    "at": "2026-11-25T09:01:04Z",
    "source": "ADV-272",
    "step_sha256": "6db3f5ec87ad",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T10:52:54Z",
+   "source": "ADV-276",
+   "step_sha256": "6aa20a1cb828",
    "reopened_block": false,
    "authorised_by": null
   }
