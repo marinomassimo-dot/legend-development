@@ -1499,5 +1499,29 @@ class PlanShowsWhatIsSearched(unittest.TestCase):
         self.assertEqual(sd.searched_line({"kw": "myelin repair", "epmc": None}), "searched 'myelin repair'")
 
 
+class WeeklyNoticeSweepTests(unittest.TestCase):
+    class Fake:
+        def __init__(self, is_due, fail=False):
+            self.is_due, self.fail, self.ran = is_due, fail, 0
+
+        def due(self):
+            return self.is_due
+
+        def run_catalogue(self):
+            self.ran += 1
+            if self.fail:
+                raise OSError("no route")
+            return {}
+
+        def summary_text(self, summary):
+            return "NOTICE SWEEP ok"
+
+    def test_runs_only_when_due_and_a_failure_is_a_line_not_a_crash(self):
+        idle, busy, broken = self.Fake(False), self.Fake(True), self.Fake(True, fail=True)
+        self.assertEqual((sd.weekly_notice_sweep(idle), idle.ran), ("", 0))
+        self.assertEqual((sd.weekly_notice_sweep(busy), busy.ran), ("NOTICE SWEEP ok", 1))
+        self.assertIn("not completed: OSError", sd.weekly_notice_sweep(broken))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
