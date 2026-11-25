@@ -1,0 +1,4 @@
+stratum	draw_order	card	sentence	reason
+route1	10	E02_ldh_inhibition	the liver-to-plasma ratio was measured 1 h after an intravenous injection.]	the word ratio, no value
+route2_only	2	P11_magnesium_nmdar_gate	infants and young children 2 to 24 months	label (age band), no computed quantity
+route2_only	6	E01_isr_modulators	Compounds range from research tools to clinical-stage;	the word range, no value

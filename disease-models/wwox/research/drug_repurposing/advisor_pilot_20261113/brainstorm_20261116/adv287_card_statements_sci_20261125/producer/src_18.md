@@ -1,0 +1,12 @@
+# src_18 — H02 p4_card.next_measurement: "survival is to be checked first) against control littermates, vigabatrin against vehicle at an exposure window and level taken from the published rat studies, with confirmed brain exposure, blinded electron microscopy for intramyelinic splits, myelin markers and g-ratio, and a pre-planned genotype-by-treatment interaction test;"
+
+Card: H02_gabaat_inactivator_myelin_exposure, /p4_card/next_measurement. Full string: "Rodent: a Wwox-deficient juvenile model that survives the exposure window (the neuron-specific deletion is the candidate; survival is to be checked first) against control littermates, vigabatrin against vehicle at an exposure window and level taken from the published rat studies, with confirmed brain exposure, blinded electron microscopy for intramyelinic splits, myelin markers and g-ratio, and a pre-planned genotype-by-treatment interaction test; a sibling arm only if a supply exists. Human, no contact made: a structured case count of every WWOX-DEE child given vigabatrin (denominator), with follow-up MRI done or not, age at start, duration, hormonal co-therapy and outcome, in the natural-history or registry route already noted in the clinical census."
+
+## What kind of statement this is
+A proposed experimental design (a "next measurement"). It prints no number, ratio, range, percent, count or unit, quotes no table and carries no locator or receipt of its own (the string sits in p4_card.next_measurement, not in an assertion). It is not a statement of one source. The only checkable pieces are its premises in other fields of the same card: (i) "a Wwox-deficient juvenile model that survives the exposure window (the neuron-specific deletion is the candidate)" and (ii) "exposure window and level taken from the published rat studies" (DR-H02-001 to -003 of the same packet: PMID 21473881, dosing from postnatal day 4 for up to 9 weeks; PMID 25554247, dosing windows PND 4-7, 7-14, 14-30; label 8.4 juvenile rat 5, 15, 50 mg/kg/day PND 4-65). Those are separate assertions with their own sources and are outside this statement; the sentence itself states no source value to recompute.
+
+## Access routes checked
+The card packet (this string, all fields read: drug_assertions DR-H02-001 to DR-H02-029 and the p4 fields); no source file is pointed to by this string. Date 2026-11-25.
+
+## Recomputation
+Nothing to recompute (no printed arithmetic, no source value).

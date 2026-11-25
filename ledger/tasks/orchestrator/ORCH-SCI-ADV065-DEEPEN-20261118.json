@@ -1172,6 +1172,15 @@
      "accepted_at": "2026-11-25T21:47:05Z",
      "evidence": "RESULT_ADV288_SCI_20261125.md in advisor_pilot_20261113/brainstorm_20261116/adv288_functional_myelination_arm_set_sci_20261125/ (step 0 not already specified; PREREG 3715785d8e14e87d; blind reader sonnet high, 3 of 8 MUST CHANGE verified; spec and corrected sentences)",
      "updated_at": "2026-11-25T21:58:34Z"
+    },
+    {
+     "step": "ADV-287: stratified sample of 20 fold, ratio and range statements in the cards, each recomputed from the whole source table; universe counted by two routes and frozen first; blind reader with the whole table; rate at or below 10 percent of assessable statements stops the audit",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "assignments/ADV-287.md (sha256 a49f73ec8f4168da…)",
+     "accepted_at": "2026-11-25T22:02:23Z",
+     "evidence": "RESULT_ADV287_SCI_20261125.md (rejecting observation not met: 6 of 17 assessable INCOMPLETE or WRONG, 35 percent, exact 95 percent interval 14 to 62; PREREG A 0d0f2fae45055823, B e0275945644cda73; producer and blind reader sonnet high)",
+     "updated_at": "2026-11-25T22:31:37Z"
     }
    ]
   }
@@ -2077,6 +2086,13 @@
    "at": "2026-11-25T21:47:05Z",
    "source": "assignments/ADV-288.md (sha256 20aa9a3dd65ef1ba41c500002cfc7cdb2a8005fa9e1ba23d97eea78805b46f89, root checkout, not yet on main) and the SCI launcher of 2026-11-25",
    "step_sha256": "61cdbd830bfc",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T22:02:23Z",
+   "source": "assignments/ADV-287.md (sha256 a49f73ec8f4168da…)",
+   "step_sha256": "6771e3ba9cef",
    "reopened_block": false,
    "authorised_by": null
   }
