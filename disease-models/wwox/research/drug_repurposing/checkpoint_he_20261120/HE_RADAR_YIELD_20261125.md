@@ -33,9 +33,11 @@ Yield at triage time: 0, by definition, because nobody had acted on them. Most h
 | doi 10.1038/s42003-026-10958-7, axon initial segment development and Kv7 dysfunction, Fmr1 knockout | same strand, circuit mechanism | not read; only in a radar rating sheet |
 | PMID 42723519, vigabatrin loading-dose pharmacokinetics by enteral tube | exposure data for a drug used in infantile spasms | not read |
 | PMID 42441989, vigabatrin-related MRI changes and tapering, one infant (open access) | safety signal, single case | not read |
-| PMID 41757738, knowledge graphs for target prioritisation | method precedent | not read |
+| PMID 42614934, knowledge graphs for target prioritisation (corrected: first written as 41757738, a paper on ring systems) | method precedent | not read |
 | github K-Dense-AI/drug-discovery-agent-skills | agent skills for drug discovery | not read; licence unread |
 
 ## 4. What this says about the slot
 
 The slot's one scientific yield came when a hit was opened and judged the same day. The 83 blocks had no reader: that is the failure measured here, and the title screen of a month of hits took one pass of one table. So the smaller repair is a reader, not a cut: a short grouped list of the untriaged hits that a weekly triage can read in one pass. Proposed to ADV; not built.
+
+**Correction, same day.** The extraction behind the title screen joined some titles to the next hit's address and hid 26 of 360 hits. The block counts and the yield of section 2 do not depend on it. The hidden hits are screened, and the one wrong identifier corrected, in `HE_RADAR_READER_20261125.md`.
