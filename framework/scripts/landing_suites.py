@@ -53,7 +53,8 @@ RULES = [
      lambda c: _any(c, "disease-models/*/drug_repurposing/cards_early/*", "framework/scripts/repurposing_bridge.py")),
     # #2404: a card named a PMID the title cache does not hold. Only this class of the long view suite (about 2 s)
     ("framework/scripts/test_repurposing_view.py Titles",
-     lambda c: _any(c, "disease-models/*/drug_repurposing/cards*", "disease-models/*/drug_repurposing/needs/*", "disease-models/*/drug_repurposing/ranking_it8*")),
+     lambda c: _any(c, "disease-models/*/drug_repurposing/cards*", "disease-models/*/drug_repurposing/needs/*", "disease-models/*/drug_repurposing/ranking_it8*",
+                    "disease-models/*/drug_repurposing/view/source_titles.json")),
     # #2353: needs.json changed and the ranking was not regenerated (about 30 s and 95 s)
     ("framework/scripts/test_candidate_tree_freshness.py", lambda c: _any(c, "disease-models/*/drug_repurposing/needs/*")),
     ("disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/test_ranking_it8.py",

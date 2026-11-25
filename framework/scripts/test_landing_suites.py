@@ -53,6 +53,11 @@ class Selection(unittest.TestCase):
         self.assertNotIn("framework/scripts/test_repurposing_view.py", got)
         self.assertIn("python3 -B framework/scripts/test_repurposing_view.py Titles < /dev/null", ls.command_for(got))
 
+    def test_a_title_cache_change_selects_the_title_class_and_not_the_long_view_suite(self) -> None:
+        got = ls.select([("M", "disease-models/wwox/research/drug_repurposing/view/source_titles.json")], REPO)
+        self.assertIn("framework/scripts/test_repurposing_view.py Titles", got)
+        self.assertNotIn("framework/scripts/test_repurposing_view.py", got)
+
     def test_a_needs_change_selects_the_freshness_and_ranking_suites(self) -> None:
         got = names([("M", "disease-models/wwox/research/drug_repurposing/needs/needs.json")])
         self.assertLessEqual({"test_candidate_tree_freshness.py", "test_ranking_it8.py"}, got)
