@@ -72,10 +72,16 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      suite red"). A selection that cannot be built is said and does not refuse. `--no-landing-suites` (with `--serialize`) skips them and adds an empty commit carrying the trailer `Landing-Suites: skipped
      (--no-landing-suites)`, so the skip is in the published history. This holds the landing lock for as long as the suites take (95 s for an 8-suite selection on 2026-11-25). A selection is not the release battery.
 
-Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived] [--no-landing-suites]] [--landing-suites]      (default branch: main)
+  14. Concurrent checks (THE DEFAULT under `--serialize`, 2026-11-25, ADV): the view checks, the gate and the landing suites start together instead of one after another. The gate reads the live worktree, so the
+     suites do not run in it: they run in a throwaway clone of the commit being gated (`git clone --no-hardlinks`, only `files/` hard-linked when the checkout has one), removed by this tool on success, refusal,
+     error, SIGTERM and Ctrl-C (a SIGKILL leaves `<tmp>/legend-landing-suites-*`). Refusals and their order are unchanged: suites, unclean tree, views, gate; a refusal stops what is still running. When no clone
+     can be built the suites run in the worktree after the gate and the views have finished. `--serial-checks` runs everything one after another and adds an empty commit with the trailer
+     `Landing-Checks: serial (--serial-checks)`. `LANDING CHECKS parallel: ...` gives the wall time and each part. A NOTICE is printed until the first ten such landings have been read.
+
+Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived] [--no-landing-suites] [--serial-checks]] [--landing-suites]      (default branch: main)
 """
 from __future__ import annotations
-import atexit, fcntl, importlib.util, os, shutil, signal, subprocess, sys, tempfile, time
+import atexit, contextlib, fcntl, importlib.util, os, shutil, signal, subprocess, sys, tempfile, threading, time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -147,12 +153,12 @@ def run(*cmd, **kw):
     return subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, **kw)
 
 
-def stale_derived_views() -> str:
+def stale_derived_views(runner=None) -> str:
     """'' when the committed repurposing views and the i18n inventory are current (or the repository has no such tool); otherwise the tool's own words. Read-only: neither check writes."""
     if not VIEWTOOL.is_file():
         return ""
     for args in (["check"], ["i18n", "--what", "check"], ["package", "--check"]):
-        r = run(sys.executable, "-B", str(VIEWTOOL), *args)
+        r = (runner or run)(sys.executable, "-B", str(VIEWTOOL), *args)
         words = [l.strip() for l in (r.stdout + r.stderr).splitlines() if "STALE" in l]
         if r.returncode != 0 or words:
             return (f"[repurposing_view.py {' '.join(args)}] " + (" | ".join(words) or f"exited {r.returncode}"))[:600]
@@ -187,6 +193,87 @@ SKIP_TRAILER = "Landing-Suites: skipped (--no-landing-suites)"
 NOTICE_UNTIL = "2026-11-26"   # UTC date, inclusive: the one-day announcement in every serialized push log
 NOTICE = ("NOTICE (until " + NOTICE_UNTIL + "): safe_push --serialize now runs the selected landing suites and REFUSES a push that turns one red "
           "(a failure already on the remote tip does not refuse); --no-landing-suites skips them and records the skip in the history.")
+
+
+PARALLEL_NOTICE = ("NOTICE (until the first ten concurrent landings are read): safe_push --serialize runs the view checks, the gate and the landing suites at the same time, the suites in a "
+                   "throwaway clone; --serial-checks runs them one after another and records it in the history.")
+SERIAL_TRAILER = "Landing-Checks: serial (--serial-checks)"
+SUITE_CLONE_PREFIX = "legend-landing-suites-"
+_CHILDREN: list[subprocess.Popen] = []      # the processes of the checks that run beside the suites, so that a refusal or a signal leaves none of them running
+_STOPPING = threading.Event()
+
+
+def run_stoppable(*cmd) -> subprocess.CompletedProcess:
+    """`run`, with the process on a list that `stop_background` kills."""
+    if _STOPPING.is_set():
+        return subprocess.CompletedProcess(cmd, -9, "", "stopped")
+    process = subprocess.Popen(cmd, cwd=ROOT, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    _CHILDREN.append(process)
+    out, err = process.communicate()
+    return subprocess.CompletedProcess(cmd, process.returncode, out, err)
+
+
+def stop_background() -> None:
+    _STOPPING.set()
+    for process in list(_CHILDREN):
+        if process.poll() is None:
+            process.kill()
+    _CHILDREN.clear()
+
+
+class Background:
+    """One check on a daemon thread; `get` waits for it and returns what it returned."""
+
+    def __init__(self, job):
+        self.seconds, self._value, self._error = 0.0, None, None
+        self._thread = threading.Thread(target=self._go, args=(job,), daemon=True)
+        self._thread.start()
+
+    def _go(self, job) -> None:
+        started = time.time()
+        try:
+            self._value = job()
+        except BaseException as exc:      # raised again by get(), in the thread that decides
+            self._error = exc
+        self.seconds = time.time() - started
+
+    def get(self):
+        self._thread.join()
+        if self._error is not None:
+            raise self._error
+        return self._value
+
+
+@contextlib.contextmanager
+def suite_clone(sha: str, remote: str):
+    """(clone, '') of `sha` in a throwaway folder, or (None, why). The recipe of the release battery: `git clone --no-hardlinks`, only `files/` hard-linked (a hard-linked whole copy lets a suite
+    rewrite tracked files of the real checkout). The remote-tracking refs of `remote` are copied so a suite sees them as in the worktree. The folder is removed on the way out, whatever happened."""
+    holder, clone, why = None, None, ""
+    try:
+        try:
+            holder = Path(tempfile.mkdtemp(prefix=SUITE_CLONE_PREFIX))
+            target = holder / "repo"
+            steps = [("git", "clone", "-q", "--no-hardlinks", "--no-checkout", str(ROOT), str(target))]
+            if (ROOT / "files").exists():
+                steps.append(("cp", "-al", str(ROOT / "files"), str(target / "files")))
+            if remote in run("git", "remote").stdout.split():      # a URL or a path has no remote-tracking refs to copy
+                steps.append(("git", "-C", str(target), "fetch", "-q", str(ROOT), f"+refs/remotes/{remote}/*:refs/remotes/{remote}/*"))
+            steps.append(("git", "-C", str(target), "checkout", "-q", "--detach", sha))
+            for step in steps:
+                done = run(*step)
+                if done.returncode != 0:
+                    why = f"{step[0]} {step[3] if step[1] == '-C' else step[1]} failed: {done.stderr.strip()[:200]}"
+                    break
+            else:
+                clone = target
+        except OSError as exc:
+            why = f"{type(exc).__name__}: {str(exc)[:200]}"
+        yield clone, why
+    finally:
+        if holder is not None:
+            shutil.rmtree(holder, ignore_errors=True)
+            if holder.exists():
+                print(f"WARNING: the suite clone {holder} could not be removed completely; remove it by hand", flush=True)
 
 
 def _run_suite(entry: str, cwd: Path) -> tuple[str, set[str], str, float]:
@@ -227,8 +314,8 @@ def _red_at_base(base: str, reds: dict[str, set[str]]) -> dict[str, set[str]]:
         shutil.rmtree(holder, ignore_errors=True)
 
 
-def landing_check(base: str) -> str:
-    """Run the suites the selector names for what `base..HEAD` changes. Returns '' when nothing this push turns red, else the refusal text."""
+def landing_selection(base: str) -> list[str] | None:
+    """The suites the selector names for what `base..HEAD` changes, or None when no selection can be built (said here; it does not refuse)."""
     selector_path = ROOT / "framework" / "scripts" / "landing_suites.py"
     if not selector_path.is_file():
         selector_path = Path(__file__).resolve().parent / "landing_suites.py"
@@ -237,15 +324,19 @@ def landing_check(base: str) -> str:
         spec = importlib.util.spec_from_file_location("landing_suites_for_push", selector_path)
         selector = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(selector)
-        picked = selector.select(selector.changes(ROOT, base), ROOT)
+        return selector.select(selector.changes(ROOT, base), ROOT)
     except Exception as exc:   # a selection that cannot be built is said and does not refuse
         print(f"LANDING SUITES not run: {type(exc).__name__}: {str(exc)[:200]} (the push is not refused for this)", flush=True)
-        return ""
+        return None
     finally:
         sys.dont_write_bytecode = wrote_bytecode
+
+
+def landing_check(base: str, picked: list[str], where: Path) -> str:
+    """Run `picked` in `where`. Returns '' when nothing this push turns red, else the refusal text."""
     reds: dict[str, set[str]] = {}
     for entry in picked:
-        word, failing, why, seconds = _run_suite(entry, ROOT)
+        word, failing, why, seconds = _run_suite(entry, where)
         if word != "PASS":
             reds[entry] = failing
         print(f"LANDING-SUITE {word} {entry} ({seconds:.0f}s)" + (f": {why[:200]}" if why else ""), flush=True)
@@ -266,6 +357,65 @@ def landing_check(base: str) -> str:
     return ("this push turns a suite red that passes (or does not fail this way) on the remote tip:\n" + shown +
             "\nFix: run the suite in your worktree (python3 -B <suite>), repair, commit, run safe_push again. "
             "If the red must be published, --no-landing-suites skips the suites and records that in the history. Nothing was gated or pushed.")
+
+
+def checks(remote: str, base: str, sha: str, landing: bool, parallel: bool) -> str:
+    """The landing suites, the view checks and the gate on commit `sha`: '' when all pass, else the first refusal in that order. With `parallel` they run at the same time, the suites in a
+    throwaway clone, because the gate reads the worktree."""
+    views_job = gate_job = None
+    started, suites_s, clone_s = time.time(), 0.0, 0.0
+    if parallel:
+        short = free_space_refusal()      # a waiter can sit in the queue for many minutes while other clones fill the disk
+        if short:
+            return short
+        print(PARALLEL_NOTICE, flush=True)
+        _STOPPING.clear()
+        atexit.register(stop_background)
+        views_job = Background(lambda: stale_derived_views(run_stoppable))
+        gate_job = Background(lambda: run_stoppable(sys.executable, str(GATE)))
+
+    if landing:
+        picked = landing_selection(base)
+        refusal, dirty = "", ""
+        if picked is not None and parallel and picked:
+            clone_from = time.time()
+            with suite_clone(sha, remote) as (clone, why):
+                clone_s = time.time() - clone_from
+                if clone is None:
+                    print(f"PARALLEL CHECKS: no suite clone ({why}); the suites run in the worktree after the gate and the view checks", flush=True)
+                    views_job.get()
+                    gate_job.get()
+                suites_from = time.time()
+                refusal = landing_check(base, picked, clone or ROOT)
+                suites_s = time.time() - suites_from
+                if clone is not None:
+                    dirty = run("git", "-C", str(clone), "status", "--porcelain").stdout.strip()
+        elif picked is not None:
+            refusal = landing_check(base, picked, ROOT)
+        if dirty or run("git", "status", "--porcelain").stdout.strip():
+            return "a landing suite left the working tree unclean, so the gate would not be judging HEAD. Nothing was gated or pushed."
+        if refusal:
+            return refusal
+
+    if not parallel:
+        short = free_space_refusal()
+        if short:
+            return short
+
+    stale = views_job.get() if views_job else stale_derived_views()
+    if stale:
+        return ("a committed derived view is behind its sources on the commit that would be gated, so CI would go red on it (2026-11-24: CI red from #2129). " + stale +
+                "\nRegenerate on the merged tip, commit, and run safe_push again:\n  " + VIEW_FIX + "\nNothing was gated or pushed.")
+
+    gate = gate_job.get() if gate_job else run(sys.executable, str(GATE))
+    if parallel:
+        print(f"LANDING CHECKS parallel: wall {time.time() - started:.0f}s (views {views_job.seconds:.0f}s, gate {gate_job.seconds:.0f}s, suites {suites_s:.0f}s, suite clone {clone_s:.0f}s)", flush=True)
+    verdict = [l for l in gate.stdout.splitlines() if l.startswith("VERDICT")]
+    print(verdict[0] if verdict else "(gate printed no VERDICT line)", flush=True)
+    if gate.returncode != 0:
+        return (f"publication gate exit {gate.returncode} -- not PASS. Nothing was pushed.\n"
+                + "\n".join(l for l in gate.stdout.splitlines() if "[BLOCK]" in l))
+    return ""
 
 
 def fail(msg: str) -> int:
@@ -290,6 +440,10 @@ def main(argv: list[str]) -> int:
     # 2026-11-25 (ADV after ADV-274: a red suite the selection had named was landed anyway): the default under --serialize, and a suite this push turns red refuses it.
     landing = suites_asked or (serialize and not suites_declined)
     skip_recorded = serialize and suites_declined
+    serial_asked = "--serial-checks" in args
+    while "--serial-checks" in args:
+        args.remove("--serial-checks")
+    parallel = serialize and landing and not serial_asked      # without the lock, or with nothing to run beside them, the checks stay one after another
     asked, declined = "--regenerate-derived" in args, "--no-regenerate-derived" in args
     for flag in ("--regenerate-derived", "--no-regenerate-derived"):
         while flag in args:
@@ -317,7 +471,7 @@ def main(argv: list[str]) -> int:
             del args[i]
             break
     if not 1 <= len(args) <= 2:
-        return fail("usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived] [--no-landing-suites]] [--landing-suites]")
+        return fail("usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived] [--no-landing-suites] [--serial-checks]] [--landing-suites]")
     remote, branch = args[0], (args[1] if len(args) == 2 else "main")
 
     for bad in ("+", "--force", "-f", "--force-with-lease"):
@@ -433,29 +587,23 @@ def main(argv: list[str]) -> int:
         before = run("git", "rev-parse", "HEAD").stdout.strip()
         print(f"LANDING SUITES SKIPPED (--no-landing-suites): recorded in the empty commit {before[:12]} ({SKIP_TRAILER})", flush=True)
 
+    if serialize and serial_asked:
+        marked = run("git", "commit", "--allow-empty", "-m", "safe_push: checks run one after another\n\n" + SERIAL_TRAILER)
+        if marked.returncode != 0:
+            return fail(f"--serial-checks: the commit that records it failed: {marked.stderr.strip()[:300]}. Nothing was gated or pushed.")
+        before = run("git", "rev-parse", "HEAD").stdout.strip()
+        print(f"SERIAL CHECKS (--serial-checks): recorded in the empty commit {before[:12]} ({SERIAL_TRAILER})", flush=True)
+
+    base = ""
     if landing:
         known = run("git", "rev-parse", "--verify", "--quiet", f"refs/remotes/{remote}/{branch}").stdout.strip()
-        refusal = landing_check(tip if serialize else known or f"{remote}/{branch}")
-        if run("git", "status", "--porcelain").stdout.strip():
-            return fail("a landing suite left the working tree unclean, so the gate would not be judging HEAD. Nothing was gated or pushed.")
-        if refusal:
-            return fail(refusal)
-
-    short = free_space_refusal()      # a waiter can sit in the queue for many minutes while other clones fill the disk
-    if short:
-        return fail(short)
-
-    stale = stale_derived_views()
-    if stale:
-        return fail("a committed derived view is behind its sources on the commit that would be gated, so CI would go red on it (2026-11-24: CI red from #2129). " + stale +
-                    "\nRegenerate on the merged tip, commit, and run safe_push again:\n  " + VIEW_FIX + "\nNothing was gated or pushed.")
-
-    gate = run(sys.executable, str(GATE))
-    verdict = [l for l in gate.stdout.splitlines() if l.startswith("VERDICT")]
-    print(verdict[0] if verdict else "(gate printed no VERDICT line)")
-    if gate.returncode != 0:
-        return fail(f"publication gate exit {gate.returncode} -- not PASS. Nothing was pushed.\n"
-                    + "\n".join(l for l in gate.stdout.splitlines() if "[BLOCK]" in l))
+        base = tip if serialize else known or f"{remote}/{branch}"
+    try:
+        refusal = checks(remote, base, before, landing, parallel)
+    finally:
+        stop_background()
+    if refusal:
+        return fail(refusal)
 
     after = run("git", "rev-parse", "HEAD").stdout.strip()
     if after != before:
