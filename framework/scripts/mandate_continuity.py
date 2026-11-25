@@ -140,6 +140,17 @@ class Malformed(ValueError):
 
 
 # ---------------------------------------------------------------- record and queue
+def files_behind(root: Path, tip: str, paths: tuple[str, ...] | list[str]) -> list[str] | None:
+    """Files among `paths` touched by commits of `tip` that the checkout at `root` does not contain; None when git cannot answer. Reads only, fetches nothing."""
+    try:
+        done = subprocess.run(["git", "-C", str(root), "log", "--format=", "--name-only", f"HEAD..{tip}", "--", *paths], capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if done.returncode != 0:
+        return None
+    return sorted({line for line in done.stdout.splitlines() if line.strip()})
+
+
 def find_records(root: Path, task_id: str) -> list[Path]:
     return sorted((root / "ledger" / "tasks").glob(f"*/{task_id}.json"))
 
