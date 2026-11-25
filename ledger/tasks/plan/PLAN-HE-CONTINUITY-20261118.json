@@ -1143,6 +1143,13 @@
      "accepted_at": "2026-11-25T04:50:51Z",
      "evidence": "a869a52b6 on main, gate PASS, ls-remote; live run 2026-11-25T05:13Z: 1083 PMIDs, 6 retracted, 2 concern, 21 corrected, same 29 rows as SCI ADV-256; proposed flag only PMID 19357348 (notice 42583763)",
      "updated_at": "2026-11-25T05:13:39Z"
+    },
+    {
+     "step": "ADV follow-ups after ADV-258: end the flow flag 'TAKEN, no output' for a DONE step (ADV-226); safe_push --landing-suites, opt-in and print-only",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV peer message after ADV-258 acceptance, 2026-11-25",
+     "accepted_at": "2026-11-25T05:23:11Z"
     }
    ]
   }
@@ -2027,6 +2034,13 @@
    "at": "2026-11-25T04:50:51Z",
    "source": "ADV-258",
    "step_sha256": "0753b7eba3f7",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T05:23:11Z",
+   "source": "ADV peer message after ADV-258 acceptance, 2026-11-25",
+   "step_sha256": "cc835b8de4ba",
    "reopened_block": false,
    "authorised_by": null
   }

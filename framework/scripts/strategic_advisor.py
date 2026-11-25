@@ -2498,7 +2498,7 @@ def assignment_flow(campaign: Path, now: dt.datetime | None = None, ref: str | N
     """2026-11-20 (ADV, 'Reliable autonomy'): 'message sent' proves neither take-in-charge, start nor consumption. One row per assignment SENT in the last `window_h` hours: SENT (the receipt event) -> TAKEN (a record of a
     RECIPIENT, not of the presidio, names the exact id in a step, with that step's accepted or updated time) -> FIRST OUTPUT (the earliest commit subject on the observed ref, or file added under the repository, naming the id
     after the send). Only subjects, file names and record text are read for the exact token; nothing is matched fuzzily. A reply message leaves no durable trace and is not seen. Flags: 'SENT, NOT TAKEN after N min' (30)
-    and 'TAKEN, no output after N h' (3 by default; a DRAFTED row may carry `expect_hours`). The ids are the tokens; an id that appears in a recipient record before the send (a carried-over mention) does not count as TAKEN."""
+    and 'TAKEN, no output after N h' (3 by default; a DRAFTED row may carry `expect_hours`; not raised once a recipient record holds a DONE step with the id). The ids are the tokens; an id that appears in a recipient record before the send (a carried-over mention) does not count as TAKEN."""
     now = now or _now()
     events = _events(campaign)
     drafted = {e["id"]: e for e in events if e.get("state") == "DRAFTED"}
@@ -2557,6 +2557,8 @@ def assignment_flow(campaign: Path, now: dt.datetime | None = None, ref: str | N
             # the first one AFTER the recipient's record took it: a checkpoint that merely names the id as next work comes earlier and is not the work (ADV-101: named at +3 min, first work at +18)
             if what and row["taken_utc"] and at >= _stamp(row["taken_utc"]) and (row.get("output_after_take_utc") is None or at < _stamp(row["output_after_take_utc"])):
                 row["output_after_take_utc"], row["output_after_take"] = _utc(at), f"{sha} {what[:90]}"
+    # 2026-11-25 (ADV-226): the result was in a record and in the assignment file, which is not "output" here, and the line kept saying 'no output' for hours about work already DONE.
+    executed = {i for i, state in assignment_states(campaign).items() if "EXECUTED" in state["levels"]}
     out = []
     for i, row in sorted(rows.items()):
         sent_at = _stamp(row["sent_utc"])
@@ -2567,7 +2569,7 @@ def assignment_flow(campaign: Path, now: dt.datetime | None = None, ref: str | N
             pass          # older than the flag window: listed by `status`, not raised again (a historical gap is not today's prompt)
         elif row["taken_utc"] is None and row["output_utc"] is None and age > FLOW_NOT_TAKEN_MIN:
             flag = f"SENT, NOT TAKEN after {age} min"
-        elif row["output_utc"] is None and row["taken_utc"] is not None:
+        elif row["output_utc"] is None and row["taken_utc"] is not None and i not in executed:
             held = (now - _stamp(row["taken_utc"])).total_seconds() / 3600
             if held > row["expect_hours"]:
                 flag = f"TAKEN, no output after {round(held, 1)} h"

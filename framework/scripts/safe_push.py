@@ -64,10 +64,15 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      default checks and with `--all`, so the release-mode clone is the larger of the two. The merge writes only the changed files; the 2 GB is headroom for the larger run and the object store.
      `LEGEND_SAFE_PUSH_MIN_FREE_GB` overrides the threshold (tests, or an operator who knows better). Read-only; an unreadable filesystem does not refuse.
 
-Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--regenerate-derived]]      (default branch: main)
+  13. `--landing-suites` (opt-in, 2026-11-25, ADV): after the merge and any regeneration, before the gate, the suites that `landing_suites.py` selects for the paths this push adds to the branch
+     are run one by one and each result is PRINTED (`LANDING-SUITE PASS|RED|TIMEOUT <path>`), with a count at the end. IT PRINTS AND NEVER REFUSES: a red suite does not stop the push; reading
+     the lines is the publisher's. (A suite that leaves the working tree dirty meets the existing clean-tree refusal, since the gate would no longer judge HEAD.) With `--serialize` this holds the
+     landing lock for as long as the suites take (95 s for an 8-suite selection on 2026-11-25). Without the flag nothing changes.
+
+Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--regenerate-derived]] [--landing-suites]      (default branch: main)
 """
 from __future__ import annotations
-import atexit, fcntl, os, shutil, signal, subprocess, sys, tempfile, time
+import atexit, fcntl, importlib.util, os, shutil, signal, subprocess, sys, tempfile, time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -174,6 +179,40 @@ def free_space_refusal() -> str:
             "Nothing was gated or pushed.")
 
 
+SUITE_TIMEOUT_S = 1500
+
+
+def print_landing_suites(base: str) -> None:
+    """Run the suites the selector names for what `base..HEAD` changes and print each result. Prints only: nothing here decides whether the push goes ahead."""
+    selector_path = ROOT / "framework" / "scripts" / "landing_suites.py"
+    if not selector_path.is_file():
+        selector_path = Path(__file__).resolve().parent / "landing_suites.py"
+    wrote_bytecode, sys.dont_write_bytecode = sys.dont_write_bytecode, True      # importing the selector must not add a file to the tree the gate judges
+    try:
+        spec = importlib.util.spec_from_file_location("landing_suites_for_push", selector_path)
+        selector = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(selector)
+        picked = selector.select(selector.changes(ROOT, base), ROOT)
+    except Exception as exc:   # an advisory that cannot be built says so and stops there
+        print(f"LANDING SUITES not run: {type(exc).__name__}: {str(exc)[:200]} (printed only; the push is not refused)", flush=True)
+        return
+    finally:
+        sys.dont_write_bytecode = wrote_bytecode
+    red = 0
+    env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
+    for path in picked:
+        started = time.time()
+        try:
+            done = subprocess.run([sys.executable, "-B", path], cwd=ROOT, env=env, stdin=subprocess.DEVNULL, capture_output=True, text=True, errors="replace", timeout=SUITE_TIMEOUT_S)
+            word = "PASS" if done.returncode == 0 else "RED"
+            why = "" if done.returncode == 0 else next((l for l in (done.stderr + "\n" + done.stdout).splitlines() if l.startswith(("FAIL", "ERROR", "AssertionError"))), f"exit {done.returncode}")
+        except (subprocess.TimeoutExpired, OSError) as exc:
+            word, why = "TIMEOUT" if isinstance(exc, subprocess.TimeoutExpired) else "RED", type(exc).__name__
+        red += word != "PASS"
+        print(f"LANDING-SUITE {word} {path} ({time.time() - started:.0f}s)" + (f": {why[:200]}" if why else ""), flush=True)
+    print(f"LANDING SUITES: {len(picked)} run, {red} not passing (printed only; the push is not refused)", flush=True)
+
+
 def fail(msg: str) -> int:
     print(f"REFUSED: {msg}", file=sys.stderr)
     return 1
@@ -187,6 +226,9 @@ def main(argv: list[str]) -> int:
     if "--serialize" in args:
         serialize = True
         args.remove("--serialize")
+    landing = "--landing-suites" in args
+    if landing:
+        args.remove("--landing-suites")
     regenerate = "--regenerate-derived" in args
     if regenerate:
         args.remove("--regenerate-derived")
@@ -305,6 +347,12 @@ def main(argv: list[str]) -> int:
         if regenerated != before:
             print(f"REGENERATED derived surfaces under the landing lock: {before[:12]} -> {regenerated[:12]}", flush=True)
             before = regenerated
+
+    if landing:
+        known = run("git", "rev-parse", "--verify", "--quiet", f"refs/remotes/{remote}/{branch}").stdout.strip()
+        print_landing_suites(tip if serialize else known or f"{remote}/{branch}")
+        if run("git", "status", "--porcelain").stdout.strip():
+            return fail("a landing suite left the working tree unclean, so the gate would not be judging HEAD. Nothing was gated or pushed.")
 
     short = free_space_refusal()      # a waiter can sit in the queue for many minutes while other clones fill the disk
     if short:
