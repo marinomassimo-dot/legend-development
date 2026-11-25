@@ -322,10 +322,12 @@
     },
     {
      "step": "ADV-225: second class B batch, eight further data-bearing sections chosen by a frozen rule, complete reads with receipts, merged ranked question list with SCI's seven",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-225 (ADV message 2026-11-24)",
-     "accepted_at": "2026-11-24T23:40:44Z"
+     "accepted_at": "2026-11-24T23:40:44Z",
+     "evidence": "landed on main 3f4accb4324d (gate PASS, ls-remote verified); folder it_adv225_20261124: PREREG, SELECTION, RESULT with merged ranked list, seven receipts",
+     "updated_at": "2026-11-25T00:01:35Z"
     }
    ]
   }
