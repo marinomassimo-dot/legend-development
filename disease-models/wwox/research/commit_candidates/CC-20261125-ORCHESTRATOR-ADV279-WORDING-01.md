@@ -38,3 +38,7 @@
 
 ## 5 · What is left as it stands
 Dated snapshot artefacts that quote the old A02 text (`p5/cells.json`, `p5/tables_deep.md`), the IT6 P6 card copy (noted in its README) and the generated pathograph rows are not rewritten. The deepdive manifest of PMID 34359949 keeps its old proposition; the dossier note supersedes it. A dream-pass line from SCI (of card A02's three precedents only the CBS mouse work, not re-read here, still carries an activity measurement in either direction) changes no ranking.
+
+## BATCH DISPOSITION — `BATCH_20261125_006` (2026-11-25, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PROPAGATED. Section 3 landed by the ordinary route in the commit before the batch; section 4 by `batch_commit.py propagate`, record-scoped, 5 ops on `CLAIM 043`, `PAPER 141`, `PAPER 434` (two) and `LIT-0706`. Change class restated: MINOR. `WM_v7.29` preserved.

@@ -17,3 +17,7 @@
 3. PMID 15266310 (held XML): "the combined treatment did not increase the level of WWOX mRNA expression (not shown)".
 4. PMID 18460020 (held text): supplementary Fig S1B legend, 5-aza-dC (5 uM) and/or TSA (1 uM), genomic DNA and lysate 5 days after treatment; figure not held.
 5. Abstract sentences of PMIDs 16818616, 25720522, 20737170, 17019711 as quoted in the result (PubMed efetch, 2026-11-25).
+
+## BATCH DISPOSITION — `BATCH_20261125_006` (2026-11-25, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PROPAGATED IN CORRECTED FORM to `DL-REPO-003`. One blind check overturned parts of section 2 (HO8910 is a registered HeLa derivative; six of six use 5-aza; 17019711 reports restored Wwox; the sixth report is the null; the Rempel cut-off). Section 2 above is not what propagated. MINOR.
