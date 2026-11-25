@@ -445,6 +445,13 @@
      "owner": "orchestrator",
      "source": "ADV-257 assignment message (adv257, delivered by ADV 2026-11-25)",
      "accepted_at": "2026-11-25T04:47:45Z"
+    },
+    {
+     "step": "ADV-260: receipts for 35433113 and 40225931, Figure 3B read, PDF request for 25421123 (R-08), narrower-statement line and decisive measurement; plus consume SCI's ADV-255 lactate wording",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-260 assignment message (delivered by ADV 2026-11-25)",
+     "accepted_at": "2026-11-25T05:02:22Z"
     }
    ]
   }
@@ -790,6 +797,13 @@
    "at": "2026-11-25T04:47:45Z",
    "source": "ADV-257 assignment message (adv257, delivered by ADV 2026-11-25)",
    "step_sha256": "2d1c5f55830a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T05:02:22Z",
+   "source": "ADV-260 assignment message (delivered by ADV 2026-11-25)",
+   "step_sha256": "2275989460ce",
    "reopened_block": false,
    "authorised_by": null
   }

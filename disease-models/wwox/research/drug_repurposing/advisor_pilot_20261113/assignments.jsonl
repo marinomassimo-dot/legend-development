@@ -600,3 +600,7 @@
 {"evidence": "SendMessage 04:40Z with brief pointer", "id": "ADV-258", "receipt": ["899a82c5-747e-43ae-86b0-3297ea0ef464"], "state": "SENT", "to": ["HE - CURRENT 9884af3f"], "utc": "2026-11-25T04:40:38Z"}
 {"assessment": "HOST", "id": "ADV-259", "key": "chong-2023-lactate-source-route-and-claim-009", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T04:49:50Z"}
 {"evidence": "SendMessage 04:49Z with brief pointer", "id": "ADV-259", "receipt": ["640f06cd-5764-4c43-a7fb-1d1d913ca1e3"], "state": "SENT", "to": ["SCI - CURRENT e8081cc5"], "utc": "2026-11-25T04:49:57Z"}
+{"assessment": "HOST", "id": "ADV-260", "key": "slc26a4-hit-receipts-and-figure-3b-junction", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-25T05:06:54Z"}
+{"assessment": "HOST", "id": "ADV-261", "key": "independence-audit-of-numeric-n-behind-working-model-claims", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T05:06:57Z"}
+{"evidence": "SendMessage 05:07Z with brief pointer", "id": "ADV-260", "receipt": ["1bc1a53f-0954-46af-b0f9-212a05b29b50"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 06001577"], "utc": "2026-11-25T05:07:17Z"}
+{"evidence": "SendMessage 05:07Z with brief pointer", "id": "ADV-261", "receipt": ["0ba56316-20b0-4c22-9f7a-185fe7186f68"], "state": "SENT", "to": ["SCI - CURRENT e8081cc5"], "utc": "2026-11-25T05:07:19Z"}
