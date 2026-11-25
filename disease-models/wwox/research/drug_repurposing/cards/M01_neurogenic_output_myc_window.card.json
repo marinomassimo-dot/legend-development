@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "40f90b5af31203cd73b53396af61c54fb3ab2159e1156d9ef58506749af8d66c",
+  "input_sha256": "845e0bb812570738b1ecc40e1e75680b47a731db86f357ce1452971795e4eb38",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -157,7 +157,7 @@
           "cell_type": "cerebral organoid SOX2-positive cells",
           "developmental_stage": "organoid, culture week 10 to 16"
         },
-        "measured_result_note": "Higher in all three mutant lines (box medians read by eye: wild type about 18, knockout about 68, SCAR12 about 45, WOREE about 55 percent, wide scatter). SCAR12 overlaps the wild-type lower tail. Protein-level, small organoid numbers, one laboratory. In SCAR12 the radial-glia fraction is wild-type-like and the single-cell neuron-cluster fraction is not reduced (DA-M01-003; WOREE shows reduced CTIP2 and SATB2, Fig 6B, so SCAR12 is the clean dissociation case), so the MYC rise is present without that composition phenotype.",
+        "measured_result_note": "Higher in all three mutant lines (box medians read by eye: wild type about 18, knockout about 68, SCAR12 about 45, WOREE about 55 percent, wide scatter). SCAR12's lower whisker overlaps the wild-type interquartile range (by eye). A second by-eye reading of the Fig 3K medians gave about 67 for knockout and 47 for SCAR12. Protein-level; n 7, 5, 8 and 11 organoids for wild type, knockout, SCAR12 and WOREE, with more plotted points than organoids and the unit of the points not stated; one laboratory (not checked). In SCAR12 the week-16 single-cell radial-glia and neuron-cluster fractions are wild-type-like (DA-M01-003) and CTIP2 and SATB2 are wild-type-like (Fig 6B; WOREE shows reduced CTIP2 and SATB2), but the week-7 immunostaining shows SOX2-positive cells increased (median about 47 against about 13 percent) and SATB2-positive cells decreased against wild type (Fig 1F, by eye); MYC (Fig 3K, week 16) is raised in all three lines, so SCAR12 is a partial dissociation, not a clean one (the readouts and weeks differ: week-7 immunostaining and week-16 single-cell RNA sequencing and CTIP2 and SATB2 immunostaining; whether it is time-dependent is not shown).",
         "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
       },
       {
@@ -252,7 +252,7 @@
           "cell_type": "neural stem and progenitor cells; post-mitotic neurons",
           "developmental_stage": "postnatal pups to four weeks"
         },
-        "measured_result_note": "Both progenitor-stage (nestin-Cre) and neuron-stage (Synapsin-Cre) deletion reproduce growth retardation, seizures and premature death (death by four weeks is stated for nestin-Cre; the Synapsin-Cre survival age is not stated); that progenitors are largely WWOX-intact under Synapsin-Cre is an inference, not a measurement; oligodendrocyte and astrocyte deletion do not. Radial-glia state and MYC were not measured in these mice, and the mouse cortex is not the human outer-radial-glia system.",
+        "measured_result_note": "Both progenitor-stage (nestin-Cre) and neuron-stage (Synapsin-Cre) deletion reproduce growth retardation, seizures and premature death (death by 3 to 4 weeks is stated for nestin-Cre, 100 percent, n 14, and for Synapsin-Cre, n 15, Fig 1I); that progenitors are largely WWOX-intact under Synapsin-Cre is an inference, not a measurement (WWOX loss was measured in NeuN-positive neurons and WWOX was intact in CC1-positive oligodendrocytes of Synapsin-Cre mice; progenitors were not stained); oligodendrocyte and astrocyte deletion do not reproduce growth retardation or premature death (measured: delay, weight and survival for both lines; hind-limb clasping and MBP staining at postnatal day 17, 'no major changes', for the oligodendrocyte deletion only, Supplementary Figs 2D and 8), seizures were not recorded for them and the authors state no phenotypic abnormalities; their WWOX loss is shown in one representative field each at day 18 (Supplementary Fig 1E, 1F; by eye, WWOX signal in the astrocyte-control field is itself faint and some WWOX-positive cells remain in the oligodendrocyte-knockout field, so deletion efficiency is not quantified), while the survival curves of the oligodendrocyte-deletion and astrocyte-deletion lines run to about 120 days (by eye, Fig 1L and 1O). Radial-glia state and MYC were not measured in these mice, and the mouse cortex is not the human outer-radial-glia system.",
         "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
       },
       {
