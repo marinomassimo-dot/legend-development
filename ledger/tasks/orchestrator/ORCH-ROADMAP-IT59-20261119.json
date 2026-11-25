@@ -609,6 +609,13 @@
      "accepted_at": "2026-11-25T19:40:54Z",
      "evidence": "published 9177e56c89507aab14f78d84276db3519caab2cd on development main (safe_push, gate PASS, ls-remote verified); view and i18n suites green on the merged tree; CI #2511 in progress at writing",
      "updated_at": "2026-11-25T19:40:54Z"
+    },
+    {
+     "step": "IT23: checkpoint 22 queue (ADV238 remainder, SCI ADV-280 wording, SCI ADV-281 wording through a blind check of each verbatim sentence, positive-control-field decision for the card template, CI #2511 tick)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "CHECKPOINT_IT_20261125_10.md section 1 (first assignment, operator brief with ADV addition)",
+     "accepted_at": "2026-11-25T19:49:13Z"
     }
    ]
   }
@@ -1080,6 +1087,13 @@
    "at": "2026-11-25T19:40:54Z",
    "source": "CHECKPOINT_IT_20261125_9.md section 1 (operator brief with ADV addition) and ADV message 2026-11-25 (cell-line question)",
    "step_sha256": "53968f1149e4",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T19:49:13Z",
+   "source": "CHECKPOINT_IT_20261125_10.md section 1 (first assignment, operator brief with ADV addition)",
+   "step_sha256": "eb0b1cc954b3",
    "reopened_block": false,
    "authorised_by": null
   }

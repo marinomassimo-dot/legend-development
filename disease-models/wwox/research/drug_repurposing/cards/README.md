@@ -61,6 +61,13 @@ sign comparison inside an engineered-null mouse on one endpoint; its packet carr
 - The cards were rebuilt after that bridge change; `translation` (including `access` = time to
   access and `time_to_benefit`) is now filled from the packet, and `p4_roadmap_fields` carries the
   two roadmap rows the bridge validates.
+- A null written in a note (whatever the row's `direction`; many nulls are side arms of an `INCREASE` or
+  `DECREASE` row) names the activity or engagement check **matched to the null's own compound, dose, exposure
+  and system**, or says that none was found in the held source, with the search date. No separate
+  positive-control field was added to the card template (IT, 2026-11-25): in SCI's ADV-281 audit two readers
+  gave different classes to 4 of 13 nulls, a field keyed to `NO_CHANGE` would miss the nulls found only by
+  text, and no script or ranking reads such a field today. Reopen when a comparison or ranking has to filter
+  nulls by that property, with the base rate of the remaining audit (ADV-282) in hand.
 - After the blind audit of R1 (2026-10-22) the R1 statements used here were re-read against the repaired note:
   no card cites the withdrawn PB-4 limitation of polysome-based evidence; `DR-A01-005` and the
   `P4-A-01` text were corrected (butyrate is a partial, variant-dependent dissociation of quantity

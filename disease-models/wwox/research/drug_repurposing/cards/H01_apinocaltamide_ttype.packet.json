@@ -90,7 +90,7 @@
         "cell_type": "whole animal",
         "developmental_stage": "not stated in the abstract"
       },
-      "measured_result_note": "'No effect on focal onset seizures' (abstract). A measured null in a seizure type that is not the WWOX provoked-seizure phenotype; shown so that the class is not read as broad-spectrum.",
+      "measured_result_note": "'No effect on focal onset seizures' (abstract). A measured null in a seizure type that is not the WWOX provoked-seizure phenotype; shown so that the class is not read as broad-spectrum. [IT 2026-11-25, ADV-281: one model only (rat amygdala kindling), known from the abstract, which gives no dose or exposure for that arm; the same abstract reports suppression of spike-wave discharges in two rat strains and reduced severity of generalized convulsive seizures in two mouse tests, the latter at higher concentration.]",
       "evidence_scope": "OTHER_DISEASE_PRECEDENT"
     },
     {

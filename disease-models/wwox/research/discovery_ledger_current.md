@@ -452,7 +452,7 @@ current state. A new row is appended there; a new lead is appended here.
 - **Safety:** possibile riduzione di WWOX residuo + target/off-target ignoti. Non sale a Layer 9; solo probe con proteomica/LC-MS e controlli isogenici.
 
 ### Lead molecole parcheggiati
-- **Evodiamina (PMID 28708106):** `parked`; aumenta WWOX protein in modelli HCC, ma l'effetto è citotossico, solo parzialmente WWOX-dipendente, senza target engagement/BBB/PK/safety pediatrica. Potrebbe aumentare Q230P misfolded.
+- **Evodiamina (PMID 28708106):** `parked`; aumenta WWOX protein in modelli HCC, ma l'effetto è citotossico, solo parzialmente WWOX-dipendente, senza target engagement/BBB/PK/safety pediatrica. Potrebbe aumentare Q230P misfolded. [cell-line identity, 2026-11-25: the cell models of PMID 28708106 are HepG2, which Cellosaurus 57.0 registers as misclassified (a hepatoblastoma, not a hepatocellular carcinoma line, CVCL_0027), and the mouse hepatoma line Hepa 1-6 (CVCL_0327, no problematic-line flag), plus Hepa 1-6 tumour-bearing mice; label only: no other human liver line is used, and the direction of the finding is unchanged.]
 - **Digossina (PMID 29724996):** `not-a-il genotipo di riferimento-candidate`; rescue HIF1α in oncologia epatica cronica, finestra terapeutica/cardiotossicità incompatibili con estrapolazione.
 - **Paclitaxel/KIRA6/GSK2656157:** probe oncologici/UPR, non repurposing per WWOX-DEE.
 
@@ -1500,10 +1500,10 @@ Modello **statico**, **wild-type**, **AlphaFold** (nessuna struttura sperimental
 ### DL-MECH-058 — pY33→pS14 e' un modello di stato, non uno switch molecolare dimostrato
 
 - **Status:** `promoted-to-CC` · **Tag:** REVIEW/BACKGROUND + declassificazione causale
-- **Fonte:** Liu et al. 2022, PMID 35883580 / PMCID PMC9323965; testo, otto figure, legenda PDF e tre video letti integralmente. Dossier: `staging/deepdive_PMID35883580_Liu2022.md`.
+- **Fonte:** Liu et al. 2022, PMID 35883580 / PMCID PMC9323965; testo, otto figure, legenda PDF e tre video letti integralmente. Dossier: `staging/deepdive_PMID35883580_Liu2022.md`. [IT 2026-11-25, ADV-280: the receipts record the figures (FTR-20261019-35883580-01 captions only; FTR-20261125-35883580-01 read) and the supplementary material not read; none records reading the three videos, so «tre video letti integralmente» has no receipt behind it.]
 - **Statement:** `pattern pY33/pS14 fra contesti —non dimostra→ conversione temporale diretta o switch causale universale`.
 - **Evidenza:** la review aggrega studi precedenti con pY33 associata a stress/apoptosi e pS14 a lesioni tumorali/AD. Non presenta cinetica nello stesso sistema, identità di chinasi/fosfatasi, mutanti phospho-null/mimetic validati o rescue.
-- **Lineage:** 30/86 referenze includono N.S. Chang; figure e video sono dati adattati/ripubblicati. La coerenza interna non e' replica indipendente.
+- **Lineage:** 30/86 referenze includono N.S. Chang; [corrected 2026-11-25, ADV-280: only Figures 5 and 6 are declared adaptations of earlier data (refs [44] and [54]); Figures 1 to 3, 7 and 8 are schematics and Figure 4 a STRING output run for the review; the origin of the three videos is not stated.] La coerenza interna non e' replica indipendente.
 - **Video:** tre sferoidi 4T1 qualitativi supportano differenze con anticorpi sotto ceritinib, ma sono campi diversi senza quantificazione/repliche e S3 ha PI già al basale.
 - **NON DATO:** nessuna PTM in WOREE/Q230P, nessuna efficacia clinica di Zfra/WWOX7-21/HAson8/Z cells, nessuna validazione della transizione in neuroni di paziente.
 - **Belief:** basso sulla transizione come meccanismo universale; medio su pY33/pS14 come readout contestuali da validare; nullo su trasferimento terapeutico al genotipo di riferimento.
