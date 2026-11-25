@@ -1,0 +1,21 @@
+id	list_no	phrase	object_terms	statement
+G01	15	*unmeasured*	E_GABA|intracellular chloride|NKCC1|KCC2|SLC12A[25]	chloride gradient unmeasured
+G02	17	nobody has read it, so it cannot carry a direction	PMID 36621327	LPS lung-injury study never read
+G03	18	with no WWOX model and no CNS anchor	senolytic|navitoclax|dasatinib|senescen	senolytics: no WWOX model
+G04	20	no proteolysis was ever	calpain	calpain proteolysis never measured
+G05	21	has not been used in this direction	Synapsin-Cre|Nestin-Cre|conditional (Wwox|allele)|Wwox\^?fl	conditional allele not used to separate the systemic confounder
+G06	25	leaving the residual gap untested	CC1|PDGFR	residual myelin gap untested against wild type
+G07	26	measured how much WWOX neurodevelopment requires	hypomorph|threshold|WWOX (dose|level).{0,40}(requir|suffic)	required WWOX amount never measured
+G08	27	a bounded search for inducible neural Wwox models found none	inducible|tamoxifen|CreERT	no inducible neural Wwox model
+G09	28	No treated-after-onset mouse arm exists	post-onset|after (seizure )?onset|P21|symptomatic	no treated-after-onset mouse arm
+G10	30	a RAISED NMDAR function is NOT shown	NMDA|GluN|GRIN	raised NMDAR function not shown
+G11	32	is a tool for an untested node	gap junction|carbenoxolone|connexin|pannexin	gap-junction node untested
+G12	34	memantine has still never been given to a WWOX system	memantine	memantine never given
+G13	35	no NMDAR-specific measurement exists in any Wwox system	NMDA|GluN|GRIN	no NMDAR-specific measurement in any Wwox system
+G14	37	phosphorylation, activity and flux are not measured in any WWOX system	pyruvate dehydrogenase|PDH|PDHA1	PDH phosphorylation activity flux never measured
+G15	38	Seahorse, no fluxomics, in any WWOX system.	Seahorse|ECAR|oxygen consumption|OCR|fluxomic|13C|metabolic flux|extracellular acidification	no Seahorse or fluxomics in any WWOX system
+G16	46	keeps any residual correct product is unmeasured	1057-2	residual correct product of the acceptor allele unmeasured
+G17	50	efficacy in humans **not demonstrated**	clinical trial|first-in-human|NCT\d	no open trial; human efficacy not demonstrated
+G18	55	none of these is measured	cognit|learning|memory|cerebell|post-neonatal	cognition, trajectory, cerebellum, post-neonatal not measured
+G19	62	no paediatric-profiled candidate identified	tankyrase|XAV939	no paediatric tankyrase candidate
+G20	65	No cited source reports elevated abundance	GSK3	no cited source reports elevated GSK3beta abundance
