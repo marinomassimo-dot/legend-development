@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-25T00:09Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "read"
+ },
+ "event_at": "2026-11-25T00:12:08Z",
+ "event_id": "FTR-20261125-41489401-01",
+ "evidence_basis": [
+  "coverage_map",
+  "files/fulltext/ketamine_kds_it_20261117/p4_harms/PMID41489401_Karnstedt2026_europepmc-fulltextxml.xml (the file the latest earlier receipt names; sha256 equal to that receipt's fingerprint; Results 3.4 and the Discussion paragraph on same-variant pairs read in full)",
+  "files/fulltext/PMID41489401_Karnstedt2026_Epilepsia_PMC13075606_supp_S1_functional.docx sha256 6709c948374146fc93373538d5f440a58709921271cc42e457441f1848d6d39c (functional table, all 29 variant rows read)",
+  "files/fulltext/PMID41489401_Karnstedt2026_Epilepsia_PMC13075606_supp_S2_clinical.xlsx sha256 3a5e5df1d3a3236500f55a00b7b32165d84c57180edeab2dd0d0dfe120dd59d0 (clinical sheet, one column per individual and 67 rows; the per-individual age-at-start, dose, duration, co-medication and conclusion rows used)",
+  "supplementary was declared not_present by the receipt of 2026-11-17; the open-data bucket of PMC lists both supplementary files, so this receipt supersedes that label for the coverage union",
+  "not covered: introduction, methods and limitations text; figures were not opened in this reading"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv230_20261125/RESULT_ADV230_IT_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261124-41489401-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "250da51ddd131541048f205e33c1343f1c8aee193e649cb7e7d0bdb3ba495656",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/ketamine_kds_it_20261117/p4_harms/PMID41489401_Karnstedt2026_europepmc-fulltextxml.xml",
+ "study_id": {
+  "pmid": "41489401"
+ },
+ "workflow": "IT ADV-230, reading frozen by a PREREG committed before any primary was opened; held text and both supplementary files read directly; no contact, no e-mail to any service, no paid route."
+}

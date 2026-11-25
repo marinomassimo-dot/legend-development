@@ -328,6 +328,15 @@
      "accepted_at": "2026-11-24T23:40:44Z",
      "evidence": "landed on main 3f4accb4324d (gate PASS, ls-remote verified); folder it_adv225_20261124: PREREG, SELECTION, RESULT with merged ranked list, seven receipts",
      "updated_at": "2026-11-25T00:01:35Z"
+    },
+    {
+     "step": "ADV-230: responder table behind 41489401 Table 1 (IT-A), PREREG first, disposition a/b/c, attach to WO-10 by the ordinary route",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-230 (ADV message 2026-11-24)",
+     "accepted_at": "2026-11-25T00:09:58Z",
+     "evidence": "result and three receipts in brainstorm_20261116/it_adv230_20261125; WO-10 map line; landing in progress",
+     "updated_at": "2026-11-25T00:19:09Z"
     }
    ]
   }
@@ -582,6 +591,13 @@
    "at": "2026-11-24T23:40:44Z",
    "source": "ADV-225 (ADV message 2026-11-24)",
    "step_sha256": "133e2c37010b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T00:09:58Z",
+   "source": "ADV-230 (ADV message 2026-11-24)",
+   "step_sha256": "c113f3214d94",
    "reopened_block": false,
    "authorised_by": null
   }
