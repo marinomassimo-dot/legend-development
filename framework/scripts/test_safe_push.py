@@ -536,6 +536,57 @@ VIEW_STUB_STALE_INVENTORY = ("import sys\nif sys.argv[1:3] == ['i18n', '--what']
                              "print('view is current (stub)')\nsys.exit(0)\n")
 
 
+class SafePushCopiedSentences(unittest.TestCase):
+    """The copied-card-sentence step (2026-11-25, ADV): the default under `--serialize`, a stub tool stands for the real one, which has its own tests."""
+    _repo = SafePushRefusals._repo
+    _with_bare_remote = SafePushRefusals._with_bare_remote
+    _remote_main = SafePushRefusals._remote_main
+
+    def publish(self, td: str, code: int, *args: str):
+        root, bare = self._with_bare_remote(td)
+        tool = Path(td) / "copies.py"
+        tool.write_text("import sys\nprint('COPIED_CARD_SENTENCES: stub', ' '.join(sys.argv[1:]))\nprint('[1] card c\\n    old text: the old words')\n"
+                        f"sys.exit({code})\n", encoding="utf-8")
+        (root / "b.txt").write_text("b\n", encoding="utf-8")
+        subprocess.run(["git", "-C", str(root), "add", "-A"], check=True)
+        subprocess.run(["git", "-C", str(root), "commit", "-qm", "b"], check=True)
+        before = self._remote_main(bare)
+        env = dict(os.environ, LEGEND_SAFE_PUSH_ROOT=str(root), LEGEND_SAFE_PUSH_GATE=str(root / "scripts" / "gate.py"),
+                   LEGEND_SAFE_PUSH_REGEN=str(root.parent / "no_regen.py"), LEGEND_SAFE_PUSH_COPIES=str(tool))
+        done = subprocess.run([sys.executable, str(TOOL), "origin", "main", *args], capture_output=True, text=True, env=env)
+        return root, done, before, self._remote_main(bare)
+
+    def test_a_held_sentence_refuses_before_the_gate_and_names_the_text(self) -> None:
+        with TemporaryDirectory() as td:
+            _, done, before, after = self.publish(td, 1, "--serialize")
+            self.assertEqual((done.returncode, after), (1, before), done.stdout)
+            self.assertIn("old text: the old words", done.stderr)
+            self.assertIn("--no-copied-sentence-check", done.stderr)
+            self.assertIn(f"--base {before}", done.stdout)
+            self.assertNotIn("VERDICT", done.stdout)
+
+    def test_a_check_that_cannot_run_refuses(self) -> None:
+        with TemporaryDirectory() as td:
+            _, done, before, after = self.publish(td, 3, "--serialize")
+            self.assertEqual((done.returncode, after), (1, before), done.stdout)
+            self.assertIn("could not run (exit 3)", done.stderr)
+
+    def test_a_clean_check_publishes(self) -> None:
+        with TemporaryDirectory() as td:
+            _, done, before, after = self.publish(td, 0, "--serialize")
+            self.assertEqual(done.returncode, 0, done.stdout + done.stderr)
+            self.assertNotEqual(after, before)
+
+    def test_the_opt_out_skips_the_check_and_is_recorded_in_the_history(self) -> None:
+        with TemporaryDirectory() as td:
+            root, done, before, after = self.publish(td, 1, "--serialize", "--no-copied-sentence-check")
+            self.assertEqual(done.returncode, 0, done.stdout + done.stderr)
+            self.assertNotEqual(after, before)
+            message = subprocess.run(["git", "-C", str(root), "log", "-1", "--format=%B"], capture_output=True, text=True).stdout
+            self.assertIn("Copied-Sentence-Check: skipped (--no-copied-sentence-check)", message)
+            self.assertNotIn("COPIED_CARD_SENTENCES: stub", done.stdout)
+
+
 class SafePushLandingSuites(unittest.TestCase):
     """Landing suites (2026-11-25, ADV): the default under `--serialize`; a suite the push turns red refuses, one already red on the remote tip does not; the opt-out is recorded in the history.
     Fixture repository with a stub selector; the real selector has its own tests."""
