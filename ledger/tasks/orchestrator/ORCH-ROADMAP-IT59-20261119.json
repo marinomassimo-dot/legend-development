@@ -549,17 +549,21 @@
     },
     {
      "step": "ADV-276 increment-1 wording set as one queued candidate (CC-20261125-ORCHESTRATOR-ADV276-WORDING-01, PROPOSED, nothing applied)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "IT checkpoint 18 section 1 item 1; ADV's launch instruction 2026-11-25",
-     "accepted_at": "2026-11-25T11:44:53Z"
+     "accepted_at": "2026-11-25T11:44:53Z",
+     "evidence": "CC-20261125-ORCHESTRATOR-ADV276-WORDING-01 on development/main at 9c32f572c52ffcc4146b153dd844237573b1cdad (gate PASS, ls-remote verified)",
+     "updated_at": "2026-11-25T12:12:26Z"
     },
     {
      "step": "ADV-277 WWOX protein after an HDAC inhibitor in neural material in proteomic repositories (consumer DL-REPO-003)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "assignment ADV-277 (advisor_pilot_20261113/assignments/ADV-277.md); ADV message 2026-11-25",
-     "accepted_at": "2026-11-25T11:44:53Z"
+     "accepted_at": "2026-11-25T11:44:53Z",
+     "evidence": "advisor_pilot_20261113/brainstorm_20261116/it_adv277_20261125/RESULT_ADV277_IT_20261125.md; answer sent to ADV by message msg b87cb5c9",
+     "updated_at": "2026-11-25T12:12:26Z"
     }
    ]
   }

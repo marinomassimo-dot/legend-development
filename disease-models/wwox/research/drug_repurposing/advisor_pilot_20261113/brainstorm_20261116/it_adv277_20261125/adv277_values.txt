@@ -1,0 +1,21 @@
+# organoid row H1-0 Protein.Group P07305 Genes H1-0
+organoid-proteome | BIONi D35 | H1-0 | n 3/3 ratio 1.97 [95% 1.49 to 2.59] p 0.003992 up | ctrl 4.559e+05,5.242e+05,5.2e+05 | trt 8.394e+05,1.086e+06,1.028e+06
+organoid-proteome | BIONi D35 | WWOX | not in table
+organoid-proteome | BIONi D50 | H1-0 | n 3/3 ratio 2.14 [95% 1.54 to 3.01] p 0.007753 up | ctrl 5.49e+05,5.532e+05,4.251e+05 | trt 1.093e+06,1.034e+06,1.137e+06
+organoid-proteome | BIONi D50 | WWOX | not in table
+organoid-proteome | HMGU1 D35 | H1-0 | n 3/3 ratio 2.52 [95% 2.12 to 2.99] p 0.000231 up | ctrl 4.588e+05,4.212e+05,4.138e+05 | trt 1.094e+06,9.932e+05,1.174e+06
+organoid-proteome | HMGU1 D35 | WWOX | not in table
+organoid-proteome | HMGU1 D50 | H1-0 | n 3/3 ratio 1.82 [95% 1.56 to 2.14] p 0.003459 up | ctrl 6.685e+05,5.928e+05,6.019e+05 | trt 1.129e+06,1.141e+06,1.121e+06
+organoid-proteome | HMGU1 D50 | WWOX | not in table
+organoid-proteome | KOLF2 D35 | H1-0 | not quantified in 2 units of each arm (n 1/3) | ctrl NA,2.444e+05,NA | trt 9.031e+05,8.955e+05,7.955e+05
+organoid-proteome | KOLF2 D35 | WWOX | not in table
+organoid-proteome | KOLF2 D50 | H1-0 | n 3/3 ratio 2.59 [95% 1.01 to 7.54] p 0.04923 up | ctrl 3.228e+05,6.949e+05,3.502e+05 | trt 1.183e+06,1.098e+06,1.269e+06
+organoid-proteome | KOLF2 D50 | WWOX | not in table
+organoid-proteome | lines as units D35 | H1-0 | 3 lines, ratios 1.97,2.52,3.54, geometric mean 2.60 [95% 1.25 to 5.40] one-sample p 0.03026
+organoid-proteome | lines as units D35 | WWOX | not in table
+organoid-proteome | lines as units D50 | H1-0 | 3 lines, ratios 2.14,1.82,2.59, geometric mean 2.16 [95% 1.39 to 3.36] one-sample p 0.01726
+organoid-proteome | lines as units D50 | WWOX | not in table
+prenatal-VPA PFC | offspring | H1-0 | n 4/4 ratio 1.40 [95% 0.63 to 2.95] p 0.3634 not distinguished | ctrl 9.24e+04,1.592e+05,2.581e+05,1.65e+05 | trt 4.072e+05,2.311e+05,1.567e+05,1.467e+05
+prenatal-VPA PFC | offspring | WWOX | n 4/4 ratio 0.88 [95% 0.68 to 1.16] p 0.2712 not distinguished | ctrl 9252,9178,9867,1.327e+04 | trt 9302,8536,9430,9267
+prenatal-VPA striatum | offspring | H1-0 | n 3/3 ratio 0.84 [95% 0.73 to 0.97] p 0.03051 not distinguished | ctrl 2.803e+04,3.1e+04,3.179e+04 | trt 2.631e+04,2.469e+04,2.548e+04
+prenatal-VPA striatum | offspring | WWOX | n 3/3 ratio 0.99 [95% 0.90 to 1.09] p 0.7441 not distinguished | ctrl 8320,8736,8926 | trt 8392,8258,9028
