@@ -468,24 +468,30 @@
     },
     {
      "step": "ADV-266: date every negative on the mechanism map, list later receipts on the negated object, compare with the revival trigger, correct what moved, one-line writing rule",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message 2026-11-25 (ADV-266, brief assignments/ADV-266.md)",
-     "accepted_at": "2026-11-25T06:28:56Z"
+     "accepted_at": "2026-11-25T06:28:56Z",
+     "evidence": "main 40a78e0bf; RESULT in brainstorm_20261116; consumed by ADV 2026-11-25",
+     "updated_at": "2026-11-25T07:15:27Z"
     },
     {
      "step": "ADV-263 follow-up: apply the neural-system wording on card EB-MTOR-AX-01 and the pooled-class wording on INV-08, regenerate views and four languages",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message 2026-11-25 (decisions on ADV-263 ready items 1 and 2)",
-     "accepted_at": "2026-11-25T06:28:56Z"
+     "accepted_at": "2026-11-25T06:28:56Z",
+     "evidence": "main 40a78e0bf: card EB-MTOR-AX-01, INV-08, views, ranking, translated scope",
+     "updated_at": "2026-11-25T07:15:27Z"
     },
     {
      "step": "ADV-268: next 20 map negatives with the pre-write check, edit the three other carriers of the Seahorse/flux negative, propose the one-line writing-step rule and its location",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message 2026-11-25 (ADV-268, brief adv268.txt)",
-     "accepted_at": "2026-11-25T06:40:26Z"
+     "accepted_at": "2026-11-25T06:40:26Z",
+     "evidence": "main 40a78e0bf; RESULT in brainstorm_20261116; consumed by ADV 2026-11-25",
+     "updated_at": "2026-11-25T07:15:27Z"
     }
    ]
   }
