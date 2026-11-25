@@ -402,6 +402,15 @@
      "accepted_at": "2026-11-25T03:25:47Z",
      "evidence": "result brainstorm_20261116/it_adv250_20261125: 1 of 7 resolved (H1, RESOLVED_ANIMAL weak), 6 NOT_RESOLVABLE (hippocampal libraries; GEO and BioSample records name no animal; ENA no run rows), library count = upper bound on independent n, S-Control hippocampal 2 < cortical 4; live consumer functional_it13_p3a README dated line; P1 P2 P4 met, P3 not met; landing from task/it-adv250-20261125",
      "updated_at": "2026-11-25T03:25:47Z"
+    },
+    {
+     "step": "ADV-251: knockout floor on the authors' own scale (Supp Fig 1K): read-off densitometry, PREREG first, WT saturation check, cross-membrane order of magnitude only; consumers RS-R9, IT18, CLAIM 030 candidate",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-251 (ADV message 2026-11-25; brief adv251.txt)",
+     "accepted_at": "2026-11-25T03:35:34Z",
+     "evidence": "result brainstorm_20261116/it_adv251_20261125: KO lanes 0.07 and 0.15 of WT (HSP90-normalised, read-off), WT not saturated, calibration vs printed rescue 0.8/1.4 failed (factor ~6), rule FLOOR_AT_OR_ABOVE_0.1; CC-20261125-ORCHESTRATOR-ADV251-KO-FLOOR-01 PROPOSED; P1 P4 met, P2 P3 not met",
+     "updated_at": "2026-11-25T03:35:34Z"
     }
    ]
   }
@@ -712,6 +721,13 @@
    "at": "2026-11-25T03:25:47Z",
    "source": "ADV-250 (ADV message 2026-11-25; brief adv250.txt)",
    "step_sha256": "fb065f9dfd51",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T03:35:34Z",
+   "source": "ADV-251 (ADV message 2026-11-25; brief adv251.txt)",
+   "step_sha256": "2965eea97717",
    "reopened_block": false,
    "authorised_by": null
   }
