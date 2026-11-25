@@ -1,0 +1,67 @@
+{
+ "counts": {
+  "seed": 706,
+  "paper_registry": 814,
+  "route_a": 1082,
+  "batch_queue": 706,
+  "tracking_log": 794,
+  "route_b": 1073,
+  "union": 1083,
+  "only_route_a": 10,
+  "only_route_b": 1
+ },
+ "indexed": 1077,
+ "not_indexed": [
+  "39868255",
+  "40166234",
+  "40463067",
+  "42395553",
+  "42523332",
+  "42818975"
+ ],
+ "link_types_seen": [
+  "Comment in",
+  "Comment on",
+  "Erratum for",
+  "Erratum in",
+  "Expression of concern for",
+  "Expression of concern in",
+  "Preprint in",
+  "Retraction in",
+  "Retraction of",
+  "Update of"
+ ],
+ "records_that_are_notices": [
+  "28373548",
+  "30470736",
+  "30783266",
+  "32799870",
+  "34513711",
+  "38282791",
+  "38355659",
+  "40263068",
+  "42464650"
+ ],
+ "snapshot_retraction_not_marked_by_europepmc": [
+  "28386169"
+ ],
+ "hits_by_kind": {
+  "retraction": 6,
+  "concern": 2,
+  "correction": 21
+ },
+ "unflagged_by_kind": {
+  "retraction": [
+   "19357348"
+  ],
+  "concern": [],
+  "correction": [
+   "26419537",
+   "38144875",
+   "39934240",
+   "41069084",
+   "41210171",
+   "42769206"
+  ]
+ }
+}

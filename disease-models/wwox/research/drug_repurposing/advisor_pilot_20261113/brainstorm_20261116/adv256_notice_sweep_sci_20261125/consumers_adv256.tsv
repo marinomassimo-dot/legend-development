@@ -1,0 +1,30 @@
+pmid	kind	repository_note	registry_ids	n_units_route2	units_route2	files_route1
+19357348	retraction	none	-	0	-	-
+23446842	retraction	batch_queue,registry_or_log	CORPUS-STUB-179,LIT-0195	5	analysis:legacy_reconstruction_sweep_20260922.md:2 · Task 1 — The class, enumerated; analysis:legacy_reconstruction_sweep_20260922.md:3 · Task 2 — Ranking by what each sits under; analysis:legacy_reconstruction_sweep_20260922.md:8 · Task 4 — The prediction's status; analysis:legacy_reconstruction_sweep_20260922.md:9 · Declaration; analysis:next_node_scout_20260921_orchestrator.md:§ 1 · The publication-integrity sweep — a clean NEGATIVE, an	legacy_reconstruction_sweep_20260922.md; next_node_scout_20260921_orchestrator.md
+25447306	retraction	batch_queue	-	2	analysis:wwox_activity_sensor_census_20260921.md:4.6 Search line 6 — degradation / stability reporters; analysis:wwox_missense_stability_census_20260922.md:3.2 The method block — and the 100% miss rate, re-verified	wwox_activity_sensor_census_20260921.md; wwox_missense_stability_census_20260922.md
+26041563	retraction	batch_queue,registry_or_log	CORPUS P303,LIT-0303	1	lead:discovery_ledger_current.md:Failure mode registrati (run 2026-07-09)	discovery_ledger_current.md
+28151481	retraction	batch_queue,registry_or_log	LIT-0401	4	analysis:wwox_expression_boost_census_20260922.md:2.1 · Class A — DNA-methyltransferase inhibitors (5-aza-2'-d; lead:discovery_ledger_current.md:DL-MECH-025 — Retraction-dependency cluster WWOX/HIF/Met nel; model:disease_model.md:Mechanistic architecture (disease-level); model:working_model_current.md:Metabolic branch refinement	discovery_ledger_current.md; disease_model.md; working_model_current.md; wwox_expression_boost_census_20260922.md
+32606933	retraction	batch_queue,registry_or_log	CORPUS P310,LIT-0310	0	-	-
+12719539	concern	batch_queue	-	0	-	-
+16223882	concern	batch_queue,registry_or_log	CORPUS-STUB-119,LIT-0138,PAPER 082	5	analysis:next_node_scout_20260921_orchestrator.md:§ 1 · The publication-integrity sweep — a clean NEGATIVE, an; analysis:wwox_antibody_epitope_census_20260922.md:3 · THE REPOSITORY'S REAGENT BLOCKERS, GATHERED; claim:claim_registry_current.md:CLAIM 011; lead:discovery_ledger_current.md:DL-MECH-106 — **In SAOS-2 WWOX mRNA sits at ~45% of normal w; lead:discovery_ledger_current.md:DL-THER-115 — Tre organismi, una direzione: il restauro di W	2026-09-08.md; 2026-09-09.md; 2026-09-09_NM-02.md; 2026-09-09_actor_retrospective.md; 2026-09-09_audit_31_excluded.md; 2026-09-09_reconciliation_54.md; 2026-09-09_residual_cases.md; 2026-09-10_scientist_improvement_roadmap.md; claim_registry_current.md; discovery_ledger_current.md; index.md; next_node_scout_20260921_orchestrator.md; wwox_antibody_epitope_census_20260922.md
+26419537	correction	none	LIT-0721,PAPER 449	1	lead:discovery_ledger_current.md:DL-MECH-170 — Ethosuximide suppressed a provoked seizure gen	discovery_ledger_current.md
+38144875	correction	none	LIT-0784,PAPER 512	0	-	-
+39934240	correction	none	LIT-0667,PAPER 386	0	-	-
+41069084	correction	none	LIT-0644,PAPER 352	0	-	-
+41210171	correction	none	LIT-0466,PAPER 178	1	lead:discovery_ledger_current.md:DL-METH-118 — A primate dorsal-root-ganglion finding without	discovery_ledger_current.md
+42769206	correction	none	LIT-0678,PAPER 398	0	-	-
+16007179	correction	batch_queue	CORPUS P344,LIT-0344	0	-	-
+24098343	correction	batch_queue	-	0	-	-
+29724996	correction	batch_queue,registry_or_log	CORPUS-STUB-073,LIT-0096,PAPER 091	8	claim:claim_registry_current.md:CLAIM 025; lead:discovery_ledger_current.md:DL-BIO-005 — Pannello funzionale WWOX–HIF1α/GLUT1/PKM2 + ala; lead:discovery_ledger_current.md:DL-BIOM-014 — **Il set di geni glicolitici che riporta la pe; lead:discovery_ledger_current.md:DL-METH-079 — Un **titolo** che afferma il contrario del pro; lead:discovery_ledger_current.md:DL-METH-082 — **Una coppia è una contraddizione solo se il p; lead:discovery_ledger_current.md:DL-THER-080 — Simvastatina→MCM7 in osteosarcoma *Wwox/Trp53*; lead:discovery_ledger_current.md:Lead molecole parcheggiati; lead:discovery_ledger_current.md:Un negativo adiacente che fa lavoro positivo, e un programma	claim_registry_current.md; discovery_ledger_current.md
+30356099	correction	batch_queue,registry_or_log	CORPUS-STUB-059,LIT-0083,PAPER 117	4	claim:claim_registry_current.md:CLAIM 018; claim:claim_registry_current.md:CLAIM 019; lead:discovery_ledger_current.md:DL-MECH-011 — Finestra terapeutica P1–P5 nel topo: efficace ; lead:discovery_ledger_current.md:DL-MECH-166 — Share of WWOX among early-infantile epileptic 	claim_registry_current.md; discovery_ledger_current.md
+30820047	correction	batch_queue	-	0	-	-
+31618474	correction	batch_queue,registry_or_log	LIT-0460,PAPER 172	0	-	-
+32214227	correction	batch_queue,registry_or_log	LIT-0463,PAPER 175	0	-	-
+33074286	correction	batch_queue	-	0	-	-
+33718178	correction	batch_queue	CORPUS-STUB-112,LIT-0132	0	-	-
+37095367	correction	batch_queue,registry_or_log	LIT-0421,PAPER 120	1	lead:discovery_ledger_current.md:DL-MECH-056 — Un'associazione SNP nominale non e' ancora fun	discovery_ledger_current.md
+37461096	correction	batch_queue	-	0	-	-
+38182577	correction	batch_queue,registry_or_log	CORPUS P027,CORPUS-STUB-027,LIT-0054	6	card:M01_neurogenic_output_myc_window.card.json:M01; card:M01_neurogenic_output_myc_window.packet.json:M01; lead:discovery_ledger_current.md:DL-METH-079 — Un **titolo** che afferma il contrario del pro; lead:discovery_ledger_current.md:DL-METH-081 — **Le superfici-titolo si invertono, la scienza; lead:discovery_ledger_current.md:DL-METH-082 — **Una coppia è una contraddizione solo se il p; lead:discovery_ledger_current.md:DL-THER-080 — Simvastatina→MCM7 in osteosarcoma *Wwox/Trp53*	M01_neurogenic_output_myc_window.card.json; M01_neurogenic_output_myc_window.packet.json; discovery_ledger_current.md
+40119223	correction	registry_or_log	LIT-0637,PAPER 345	0	-	-
+40198927	correction	batch_queue	CORPUS-STUB-065,LIT-0088	0	-	-
+40507943	correction	batch_queue	LIT-0492,PAPER 200	1	claim:claim_registry_current.md:CLAIM 027	claim_registry_current.md
