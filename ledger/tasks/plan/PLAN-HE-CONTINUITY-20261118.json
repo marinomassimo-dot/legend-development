@@ -1094,11 +1094,12 @@
     },
     {
      "step": "ADV-245: repair the DC-05 dated headers at their source and the EN-03 generic radar terms, with test and before/after",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-245 (ADV - CURRENT a5e6f2ad message 2026-11-25; assignments/ADV-245.md)",
      "accepted_at": "2026-11-25T02:35:34Z",
-     "updated_at": "2026-11-25T02:35:34Z"
+     "updated_at": "2026-11-25T03:20:55Z",
+     "evidence": "385eb88c9: DC-05 needs.json counter-evidence repaired; EN-03 was a display defect in scout_daily.py --plan (searched_line), queries unchanged; coverage and views regenerated; view suite 1209s rc 0 and 12 further suites rc 0; open_questions_map DC-05 and EN-03 CONCLUDED"
     }
    ]
   }
