@@ -1434,10 +1434,28 @@
     },
     {
      "step": "Run view checks, gate and landing suites concurrently under the lock: suites in a throwaway clone removed on exit and failure, 3 identical trials, serial flag with trailer, NOTICE, landed alone, ten-landing read (CHECKPOINT_HE_20261125_V section 2 item 2)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad GO on the lock profile, to HE 2140fbda, 2026-11-25",
-     "accepted_at": "2026-11-25T18:51:47Z"
+     "accepted_at": "2026-11-25T18:51:47Z",
+     "evidence": "565196e5e (gate PASS, ls-remote); HE_LANDING_PARALLEL_20261125.md: 3 trials, gate byte-identical, 20 suites same results; first real landing lock 137 s",
+     "updated_at": "2026-11-25T20:08:15Z"
+    },
+    {
+     "step": "tmp_clone_report: also list tmp* folders holding their own .git or a trial_clone/.git, same REMOVABLE rule (ancestor of main, no holder, no unrecorded receipt); report only; after the lock change",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad direction round 2026-11-25 19:25Z, to HE 305f10c3",
+     "accepted_at": "2026-11-25T19:22:47Z",
+     "evidence": "commit 1f0f107e0; framework/scripts/test_tmp_clone_report.py 26 tests; nested-clone and landing-clone cases; removal rule unchanged",
+     "updated_at": "2026-11-25T20:09:49Z"
+    },
+    {
+     "step": "Ten-landing read of the concurrent checks: median lock held after (logs with LANDING CHECKS parallel) against the frozen 250 s before; remove the NOTICE if kept (HE_LANDING_PARALLEL_20261125.md section 5)",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad GO condition 5, 2026-11-25",
+     "accepted_at": "2026-11-25T20:08:15Z"
     }
    ]
   }
@@ -2553,6 +2571,20 @@
    "at": "2026-11-25T18:51:47Z",
    "source": "ADV a5e6f2ad GO on the lock profile, to HE 2140fbda, 2026-11-25",
    "step_sha256": "4a5576ef962c",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T19:22:47Z",
+   "source": "ADV a5e6f2ad direction round 2026-11-25 19:25Z, to HE 305f10c3",
+   "step_sha256": "a936f944fced",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T20:08:15Z",
+   "source": "ADV a5e6f2ad GO condition 5, 2026-11-25",
+   "step_sha256": "2710c20101da",
    "reopened_block": false,
    "authorised_by": null
   }
