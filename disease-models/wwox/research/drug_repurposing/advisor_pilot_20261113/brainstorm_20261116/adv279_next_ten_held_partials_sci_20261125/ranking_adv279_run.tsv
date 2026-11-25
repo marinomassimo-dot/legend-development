@@ -1,0 +1,680 @@
+study_key	consumers_route2	files_route1	unread_classes	n_unread	n_data_unread	discussion_unread	kinds	units	held_file	latest_event
+34268881	43	23	-	0	0	0	card20,claim4,hypothesis2,lead17	card:E01_isr_modulators.card.json:E01; card:E01_isr_modulators.packet.json:E01; card:E02_ldh_inhibition.card.json:E02; card:E02_ldh_inhibition.packet.json:E02; card:E03_pdk_inhibition_dca.card.json:E03; card:E03_pdk_inhibition_dca.packet.json:E03; card:F01_glutamate_receptor_node.card.json:F01; card	files/fulltext/PMID34268881_Steinberg2021.pdf	FTR-20261124-34268881-96
+42422765	28	15	-	0	0	0	card10,claim7,lead8,model1,ranking2	card:C01_aav9_wwox.card.json:C01; card:C01_aav9_wwox.packet.json:C01; card:C04_aav9_endpoint_families.card.json:C04; card:C04_aav9_endpoint_families.packet.json:C04; card:F02_myelination_activity_sign.card.json:F02; card:F02_myelination_activity_sign.packet.json:F02; card:I01_pdk_inhibition_dca_prem	files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml	FTR-20261119-42422765-70
+29808465	23	16	-	0	0	0	card14,claim3,lead6	card:A01_pba_class.card.json:A01; card:A01_pba_class.packet.json:A01; card:A02_proteasome_inhibitor_class.card.json:A02; card:A02_proteasome_inhibitor_class.packet.json:A02; card:A03_client_binding_chaperone.card.json:A03; card:A03_client_binding_chaperone.packet.json:A03; card:A04_er_proteostasis_r	files/fulltext/PMID29808465_Johannsen2018.pdf	FTR-20261105-29808465-21
+42397075	20	9	-	0	0	0	card4,claim3,hypothesis1,lead8,model1,portfolio1,ranking2	card:D01_a51.card.json:D01; card:D01_a51.packet.json:D01; card:M01_neurogenic_output_myc_window.card.json:M01; card:M01_neurogenic_output_myc_window.packet.json:M01; claim:claim_registry_current.md:CLAIM 002; claim:claim_registry_current.md:CLAIM 003; claim:claim_registry_current.md:CLAIM 005; hypot	files/fulltext/PMID42397075_Steinberg2026_OUP-AM_layout.txt	FTR-20261124-42397075-89
+42909904	20	13	-	0	0	0	card10,claim1,hypothesis4,lead5	card:E01_isr_modulators.card.json:E01; card:E01_isr_modulators.packet.json:E01; card:E02_ldh_inhibition.card.json:E02; card:E02_ldh_inhibition.packet.json:E02; card:E03_pdk_inhibition_dca.card.json:E03; card:E03_pdk_inhibition_dca.packet.json:E03; card:E04_ketogenic_lactate_axis.card.json:E04; card:	files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf	FTR-20261124-42909904-97
+34634460	19	11	-	0	0	0	card10,claim3,model2,ranking4	card:F01_glutamate_receptor_node.card.json:F01; card:F01_glutamate_receptor_node.packet.json:F01; card:F02_myelination_activity_sign.card.json:F02; card:F02_myelination_activity_sign.packet.json:F02; card:F03_bumetanide_chloride_gradient.card.json:F03; card:F03_bumetanide_chloride_gradient.packet.js	files/fulltext/PMID34634460_Wwox_osc2021_PMC_r2.xml	FTR-20261124-34634460-98
+22193544	17	4	-	0	0	0	card2,claim2,lead11,model2	card:G01_lithium_gsk3.card.json:G01; card:G01_lithium_gsk3.packet.json:G01; claim:claim_registry_current.md:CLAIM 016; claim:claim_registry_current.md:CLAIM 035; lead:discovery_ledger_current.md:Append 2026-08-10 — rimisurato dopo una contestazione, e il ; lead:discovery_ledger_current.md:DL-BIO-012	files/fulltext/PMID22193544_Wang2012_PMC.xml	FTR-20260927-22193544-06
+24369382	17	5	-	0	0	0	claim6,hypothesis1,lead8,model2	claim:claim_registry_current.md:CLAIM 005; claim:claim_registry_current.md:CLAIM 019; claim:claim_registry_current.md:CLAIM 030; claim:claim_registry_current.md:CLAIM 032; claim:claim_registry_current.md:CLAIM 033; claim:claim_registry_current.md:CLAIM 037; hypothesis:therapeutic_hypotheses_ledger_c	files/fulltext/PMID24369382_Mallaret2014_PMCreader.html	FTR-20260927-24369382-04
+25331887	17	2	-	0	0	0	claim4,lead10,model3	claim:claim_registry_current.md:CLAIM 024; claim:claim_registry_current.md:CLAIM 029; claim:claim_registry_current.md:CLAIM 030; claim:claim_registry_current.md:WWOX Claim Registry; lead:discovery_ledger_current.md:DL-MECH-006 — Dissociazione enzima-vs-scaffold via modellazi; lead:discovery_ledger_c	files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html	FTR-20260909-25331887-02
+19936220	14	3	-	0	0	0	claim4,lead9,model1	claim:claim_registry_current.md:CLAIM 005; claim:claim_registry_current.md:CLAIM 036; claim:claim_registry_current.md:CLAIM 037; claim:claim_registry_current.md:CLAIM 038; lead:discovery_ledger_current.md:DL-MECH-072 — Il KO murino definisce vulnerabilità PV pan-ip; lead:discovery_ledger_current.md:	files/fulltext/PMID19936220_LudesMeyers2009_PMC2777388_epmc.xml	FTR-20261124-19936220-86
+30290271	14	9	-	0	0	0	card4,claim2,lead5,model1,ranking2	card:J01_glial_reactivity_modulation.card.json:J01; card:J01_glial_reactivity_modulation.packet.json:J01; card:L01_nrf2_axis.card.json:L01; card:L01_nrf2_axis.packet.json:L01; claim:claim_registry_current.md:CLAIM 005; claim:claim_registry_current.md:CLAIM 036; lead:discovery_ledger_current.md:DL-ME	files/fulltext/PMID30290271_Hussain2019_PMC_r2.xml	FTR-20261123-30290271-97
+31340538	14	4	-	0	0	0	card2,claim4,lead8	card:J01_glial_reactivity_modulation.card.json:J01; card:J01_glial_reactivity_modulation.packet.json:J01; claim:claim_registry_current.md:CLAIM 005; claim:claim_registry_current.md:CLAIM 014; claim:claim_registry_current.md:CLAIM 015; claim:claim_registry_current.md:CLAIM 032; lead:discovery_ledger_	files/fulltext/PMID31340538_Tochigi2019_PMC_r2.xml	FTR-20261029-31340538-01
+32000863	14	11	-	0	0	0	card8,claim4,lead1,model1	card:D02_wnt_tankyrase.card.json:D02; card:D02_wnt_tankyrase.packet.json:D02; card:EB-ETX-01.card.json:EB-ETX-01.card.json; card:EB-ETX-01.packet.json:EB-ETX-01.packet.json; card:G01_lithium_gsk3.card.json:G01; card:G01_lithium_gsk3.packet.json:G01; card:H01_apinocaltamide_ttype.card.json:H01; card:	files/fulltext/PMID32000863_Cheng2020_PMC.xml	FTR-20261123-32000863-99
+33914858	14	10	-	0	0	0	card8,claim4,lead1,model1	card:F02_myelination_activity_sign.card.json:F02; card:F02_myelination_activity_sign.packet.json:F02; card:H02_gabaat_inactivator_myelin_exposure.card.json:H02; card:H02_gabaat_inactivator_myelin_exposure.packet.json:H02; card:J01_glial_reactivity_modulation.card.json:J01; card:J01_glial_reactivity_	files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf	FTR-20261124-33914858-89
+25012504	13	6	-	0	0	0	card4,hypothesis1,lead8	card:I01_pdk_inhibition_dca_premise_seizure_glycaemia.card.json:I01; card:I01_pdk_inhibition_dca_premise_seizure_glycaemia.packet.json:I01; card:K01_hif_axis_glycolytic_shift.card.json:K01; card:K01_hif_axis_glycolytic_shift.packet.json:K01; hypothesis:therapeutic_hypotheses_ledger_current.md:HYP-20	files/fulltext/PMC4211377_PMID25012504_pmc_html_fulltext_2026-10-30.txt	FTR-20261124-25012504-90
+30361190	12	5	-	0	0	0	card4,claim3,lead5	card:EB-VGB-01.card.json:EB-VGB-01.card.json; card:EB-VGB-01.packet.json:EB-VGB-01.packet.json; card:F03_bumetanide_chloride_gradient.card.json:F03; card:F03_bumetanide_chloride_gradient.packet.json:F03; claim:claim_registry_current.md:CLAIM 001; claim:claim_registry_current.md:CLAIM 031; claim:clai	files/fulltext/PMID30361190_Shaukat2018_JLE.txt	FTR-20261123-30361190-85
+35573960	11	7	-	0	0	0	card4,claim1,hypothesis1,lead5	card:EB-KD-01.card.json:EB-KD-01.card.json; card:EB-KD-01.packet.json:EB-KD-01.packet.json; card:EB-VGB-01.card.json:EB-VGB-01.card.json; card:EB-VGB-01.packet.json:EB-VGB-01.packet.json; claim:claim_registry_current.md:CLAIM 001; hypothesis:therapeutic_hypotheses_ledger_current.md:HYP-20260709-01 —	files/fulltext/PMID35573960_Riva2022_PMC.xml	FTR-20261124-35573960-98
+36779245	11	2	-	0	0	0	claim5,lead5,model1	claim:claim_registry_current.md:CLAIM 017; claim:claim_registry_current.md:CLAIM 019; claim:claim_registry_current.md:CLAIM 030; claim:claim_registry_current.md:CLAIM 031; claim:claim_registry_current.md:CLAIM 033; lead:discovery_ledger_current.md:Append 2026-08-10 — rimisurato dopo una contestazion	files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml	FTR-20261124-36779245-97
+31543760	10	5	-	0	0	0	card2,claim1,lead5,portfolio2	card:I01_pdk_inhibition_dca_premise_seizure_glycaemia.card.json:I01; card:I01_pdk_inhibition_dca_premise_seizure_glycaemia.packet.json:I01; claim:claim_registry_current.md:CLAIM 014; lead:discovery_ledger_current.md:DL-MECH-020 — WWOX-loss induce un fenotipo Warburg-like via ; lead:discovery_ledger_	files/fulltext/PMID31543760_Kosla2019_EPMC.xml	FTR-20261122-31543760-08
+35716775	10	2	-	0	0	0	claim1,lead7,model2	claim:claim_registry_current.md:CLAIM 024; lead:discovery_ledger_current.md:Change-log; lead:discovery_ledger_current.md:DL-BIO-011 — Pannello multivalente PPxY come endpoint prossi; lead:discovery_ledger_current.md:DL-MECH-017 — WW2 come chaperone intramolecolare che stabili; lead:discovery_ledger_	files/fulltext/b_ww1_ppxy_20261119/Rotem-Bamberger2022_PMC9293652.xml	FTR-20261119-35716775-71
+35328751	8	7	-	0	0	0	card4,claim1,hypothesis1,lead2	card:I01_pdk_inhibition_dca_premise_seizure_glycaemia.card.json:I01; card:I01_pdk_inhibition_dca_premise_seizure_glycaemia.packet.json:I01; card:K01_hif_axis_glycolytic_shift.card.json:K01; card:K01_hif_axis_glycolytic_shift.packet.json:K01; claim:claim_registry_current.md:CLAIM 009; hypothesis:ther	files/fulltext/PMID35328751_Baryla2022_PMC.xml	FTR-20261026-35328751-05
+41489401	7	7	figures;limitations	2	1	0	card4,hypothesis1,lead1,portfolio1	card:F01_glutamate_receptor_node.card.json:F01; card:F01_glutamate_receptor_node.packet.json:F01; card:F04_nmdar_intervention_class.card.json:F04; card:F04_nmdar_intervention_class.packet.json:F04; hypothesis:therapeutic_hypotheses_ledger_current.md:HYP-20261027-01 — Which glutamate receptor carries	files/fulltext/PMID41489401_Karnstedt2026_Epilepsia_PMC13075606.xml	FTR-20261125-41489401-01
+32581702	7	2	-	0	0	0	claim3,lead4	claim:claim_registry_current.md:CLAIM 014; claim:claim_registry_current.md:CLAIM 015; claim:claim_registry_current.md:CLAIM 039; lead:discovery_ledger_current.md:Append 2026-08-10 — rimisurato dopo una contestazione, e il ; lead:discovery_ledger_current.md:DL-META-093 — Tre modi in cui il riassunto 	files/fulltext/PMID32581702_Iacomino2020_PMC_r2.xml	FTR-20261019-32581702-01
+41380592	7	6	-	0	0	0	card4,hypothesis2,lead1	card:E01_isr_modulators.card.json:E01; card:E01_isr_modulators.packet.json:E01; card:E02_ldh_inhibition.card.json:E02; card:E02_ldh_inhibition.packet.json:E02; hypothesis:therapeutic_hypotheses_ledger_current.md:HYP-20261026-10 — Attenuating the integrated stress response; hypothesis:therapeutic_hyp	files/fulltext/PMID41380592_Xu2026_PMC_r2.xml	FTR-20261105-41380592-04
+42137291	6	1	figures;supplementary	2	2	0	claim1,lead2,model3	claim:claim_registry_current.md:CLAIM 022; lead:discovery_ledger_current.md:DL-MECH-114 — A muscle-restricted AAV9 given into CSF reache; lead:discovery_ledger_current.md:DL-METH-117 — A CSF-route dose carried without its scalar is; model:disease_model.md:Mechanistic architecture (disease-level); mo	files/fulltext/PMID42137291_Thomsen2026_PMC.xml	FTR-20261125-42137291-01
+30362252	6	4	figures	1	1	0	card2,hypothesis2,lead1,model1	card:I01_pdk_inhibition_dca_premise_seizure_glycaemia.card.json:I01; card:I01_pdk_inhibition_dca_premise_seizure_glycaemia.packet.json:I01; hypothesis:therapeutic_hypotheses_ledger_current.md:HYP-20260709-01 — Dieta chetogenica con razionale WWOX-speci; hypothesis:therapeutic_hypotheses_ledger_curre	files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml	FTR-20261124-30362252-80
+36537114	6	4	figures	1	1	0	card2,claim3,model1	card:EB-VGB-01.card.json:EB-VGB-01.card.json; card:EB-VGB-01.packet.json:EB-VGB-01.packet.json; claim:claim_registry_current.md:CLAIM 001; claim:claim_registry_current.md:CLAIM 009; claim:claim_registry_current.md:CLAIM 042; model:working_model_current.md:Trial-readiness actions (generic)	files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt	FTR-20261117-36537114-01
+18487609	6	2	-	0	0	0	claim1,lead5	claim:claim_registry_current.md:CLAIM 037; lead:discovery_ledger_current.md:Append 2026-08-10 — rimisurato dopo una contestazione, e il ; lead:discovery_ledger_current.md:🔴 AGGIUNTA 2026-08-11 — il corollario sulla NON-SELETTIVITÀ ; lead:discovery_ledger_current.md:🔴 DL-MECH-096 — `RUNX2` a valle di	files/deepening_downloads/magnesium_chloride_loop_20261124/wwox_chemistry_supplement.pdf	FTR-20261124-18487609-86
+34214506	6	1	-	0	0	0	claim2,lead3,model1	claim:claim_registry_current.md:CLAIM 009; claim:claim_registry_current.md:CLAIM 034; lead:discovery_ledger_current.md:DL-BIO-010 — ERG scotopico (ampiezza onda-b + implicit time); lead:discovery_ledger_current.md:DL-MECH-061 — Ca²⁺→calpaina come regolatore dell'ABBONDANZA ; lead:discovery_ledger_cu	files/fulltext/adv262_20261125/PMID34214506_Saadane2021_epmc.xml	FTR-20261125-34214506-01
+34747138	6	2	-	0	0	0	claim2,lead4	claim:claim_registry_current.md:CLAIM 003; claim:claim_registry_current.md:CLAIM 004; lead:discovery_ledger_current.md:DL-MECH-141 — Counter-regulation versus energy failure in th; lead:discovery_ledger_current.md:DL-MECH-180 — One measurement set in the existing Wwox-null ; lead:discovery_ledger_cu	files/fulltext/PMID34747138_Repudi2021_PMC.xml	FTR-20261123-34747138-93
+38182577	6	3	-	0	0	0	card2,lead4	card:M01_neurogenic_output_myc_window.card.json:M01; card:M01_neurogenic_output_myc_window.packet.json:M01; lead:discovery_ledger_current.md:DL-METH-079 — Un **titolo** che afferma il contrario del pro; lead:discovery_ledger_current.md:DL-METH-081 — **Le superfici-titolo si invertono, la scienza; le	files/fulltext/adv256_sci_20261125/PMID38182577_notice_PMC10867017.xml	FTR-20261107-38182577-60
+33914734	5	5	supplementary	1	1	0	card4,hypothesis1	card:A02_proteasome_inhibitor_class.card.json:A02; card:A02_proteasome_inhibitor_class.packet.json:A02; card:A05_hsp70_axis.card.json:A05; card:A05_hsp70_axis.packet.json:A05; hypothesis:therapeutic_hypotheses_ledger_current.md:HYP-20260709-08 — Allele missense SDR: distinguere difetto d	files/fulltext/PMID33914734_ASPA_C152W_PMC8084241_epmc_2026-10-29.xml	FTR-20261029-33914734-02
+24932569	5	1	-	0	0	0	claim1,lead3,model1	claim:claim_registry_current.md:CLAIM 032; lead:discovery_ledger_current.md:DL-MECH-036 — Vie di degradazione di WWOX già note e druggab; lead:discovery_ledger_current.md:⭐ DL-MECH-033 — La serie allelica di WWOX: **la quantità di ; lead:discovery_ledger_current.md:🥇 DL-MECH-046 — **L'aploinsufficie	files/fulltext/PMID24932569_Aldaz2014.pdf	FTR-20260920-24932569-01
+33255508	5	1	-	0	0	0	lead5	lead:discovery_ledger_current.md:Append 2026-08-10 — rimisurato dopo una contestazione, e il ; lead:discovery_ledger_current.md:DL-MECH-070 — Il ponte WWOX–lipidi/traffico–mielina è una si; lead:discovery_ledger_current.md:DL-METH-097 — **In nove superfici su trentaquattro le didasc; lead:discovery_	files/fulltext/PMID33255508_Aldaz2020.xml	FTR-20260927-33255508-02
+37583270	5	3	-	0	0	0	card2,claim1,lead2	card:EB-VGB-01.card.json:EB-VGB-01.card.json; card:EB-VGB-01.packet.json:EB-VGB-01.packet.json; claim:claim_registry_current.md:CLAIM 001; lead:discovery_ledger_current.md:DL-MECH-059 — Una doppia diagnosi impedisce attribuzioni WWO; lead:discovery_ledger_current.md:DL-MECH-060 — La composizione dei	files/fulltext/PMID37583270_Nagarajan2023_PMC.xml	FTR-20261117-37583270-01
+39101447	5	5	-	0	0	0	card2,claim1,lead1,model1	card:EB-VGB-01.card.json:EB-VGB-01.card.json; card:EB-VGB-01.packet.json:EB-VGB-01.packet.json; claim:claim_registry_current.md:CLAIM 001; lead:discovery_ledger_current.md:DL-MECH-020 — WWOX-loss induce un fenotipo Warburg-like via ; model:working_model_current.md:Genotype interpretation rules (meth	files/fulltext/PMID39101447_You2024_PMC.xml	FTR-20261124-39101447-80
+39507621	5	3	-	0	0	0	card2,claim2,lead1	card:F01_glutamate_receptor_node.card.json:F01; card:F01_glutamate_receptor_node.packet.json:F01; claim:claim_registry_current.md:CLAIM 017; claim:claim_registry_current.md:CLAIM 020; lead:discovery_ledger_current.md:DL-MECH-143 — WWOX case-report oximetry scan: reports alread	files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml	FTR-20261124-39507621-80
+42511902	5	1	-	0	0	0	claim1,lead1,model3	claim:claim_registry_current.md:CLAIM 027; lead:discovery_ledger_current.md:DL-METH-117 — A CSF-route dose carried without its scalar is; model:disease_model.md:Mechanistic architecture (disease-level); model:working_model_current.md:Research-facing, not yet core; model:working_model_current.md:Tria	files/fulltext/PMID42511902_Gao2026_PMC.xml	FTR-20261004-42511902-02
+34021541	4	4	figures;supplementary	2	2	0	card2,ranking2	card:K01_hif_axis_glycolytic_shift.card.json:K01; card:K01_hif_axis_glycolytic_shift.packet.json:K01; ranking:investigations.tsv:7; ranking:investigations_it20.tsv:INV-16	files/fulltext/PMID34021541_ADV272_PMC8202868_epmc_20261125.xml	FTR-20261125-34021541-01
+33958783	4	0	supplementary	1	1	0	claim1,model3	claim:claim_registry_current.md:CLAIM 024; model:disease_model.md:Mechanistic architecture (disease-level); model:working_model_current.md:Domain cooperativity; model:working_model_current.md:Trial-readiness actions (generic)	files/fulltext/PMID33958783_Liu2021_PMC.xml	FTR-20261019-33958783-02
+37781246	4	3	figures	1	1	0	claim1,lead2,model1	claim:claim_registry_current.md:CLAIM 011; lead:discovery_ledger_current.md:DL-MECH-053 — Una chiamata exon-level corretta puo' nasconde; lead:discovery_ledger_current.md:DL-MECH-054 — Espressione WWOX alta non identifica da sola u; model:working_model_current.md:4) Note on missense alleles and gene	files/fulltext/PMID37781246_KaluzinskaKolat2023_PMC.xml	FTR-20261004-37781246-02
+39769031	4	3	supplementary	1	1	0	card2,hypothesis1,lead1	card:E02_ldh_inhibition.card.json:E02; card:E02_ldh_inhibition.packet.json:E02; hypothesis:therapeutic_hypotheses_ledger_current.md:HYP-20261026-11 — LDH lowering as a partial-benefit lever: o; lead:discovery_ledger_current.md:DL-REPO-004 — LDH lowering rescued fly locomotion once in th	files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml	FTR-20261124-39769031-01
+39850204	4	0	figures	1	1	0	claim1,model3	claim:claim_registry_current.md:CLAIM 025; model:disease_model.md:Mechanistic architecture (disease-level); model:working_model_current.md:Metabolic branch refinement; model:working_model_current.md:Trial-readiness actions (generic)	files/fulltext/PMID39850204_Zhu2025_PMC.xml	FTR-20261003-39850204-01
+42875792	4	4	supplementary	1	1	0	card4	card:A02_proteasome_inhibitor_class.card.json:A02; card:A02_proteasome_inhibitor_class.packet.json:A02; card:A05_hsp70_axis.card.json:A05; card:A05_hsp70_axis.packet.json:A05	files/fulltext/PMID42875792_RathanKumar2026_PMC13670827.xml	FTR-20261021-42875792-01
+25649963	4	3	-	0	0	0	card2,lead2	card:C02_splice_aso.card.json:C02; card:C02_splice_aso.packet.json:C02; lead:discovery_ledger_current.md:DL-MECH-021 — Perdita di wwox altera in vivo le dinamiche de; lead:discovery_ledger_current.md:DL-METH-114 — Which WWOX-loss endpoints are rescue READOUTS,	files/fulltext/PMID25649963_Tsuruwaka2015_PMC.xml	FTR-20261029-25649963-01
+27495153	4	1	-	0	0	0	claim1,lead3	claim:claim_registry_current.md:CLAIM 032; lead:discovery_ledger_current.md:DL-BIO-009 — Il metabolismo umano nel deficit di WWOX è, per; lead:discovery_ledger_current.md:DL-MECH-022 — Posizionamento genotipo-fenotipo: il genotipo ; lead:discovery_ledger_current.md:FM-022 — Tre errori strutturali ne	files/fulltext/PMID27495153_Elsaadany2016_PMC.xml	FTR-20261124-27495153-80
+27869163	4	1	-	0	0	0	lead4	lead:discovery_ledger_current.md:DL-MECH-024 — WWOX–BRCA1/WW1 regola end-resection e scelta d; lead:discovery_ledger_current.md:DL-METH-084 — **Due paper dello stesso laboratorio si contra; lead:discovery_ledger_current.md:DL-METH-094 — **L'autorialità non è condizione sufficiente d; lead:discovery_	files/fulltext/PMID27869163_pmc.pdf	FTR-20260921-27869163-01
+29463073	4	4	-	0	0	0	card4	card:EB-ETX-01.card.json:EB-ETX-01.card.json; card:EB-ETX-01.packet.json:EB-ETX-01.packet.json; card:H01_apinocaltamide_ttype.card.json:H01; card:H01_apinocaltamide_ttype.packet.json:H01	files/fulltext/PMID29463073_Kim2018_PMC_r2.xml	FTR-20261105-29463073-05
+30356099	4	2	-	0	0	0	claim2,lead2	claim:claim_registry_current.md:CLAIM 018; claim:claim_registry_current.md:CLAIM 019; lead:discovery_ledger_current.md:DL-MECH-011 — Finestra terapeutica P1–P5 nel topo: efficace ; lead:discovery_ledger_current.md:DL-MECH-166 — Share of WWOX among early-infantile epileptic 	files/fulltext/PMID30356099_Piard2019_EPMC.xml	FTR-20261105-30356099-21
+30853297	4	2	-	0	0	0	claim3,lead1	claim:claim_registry_current.md:CLAIM 017; claim:claim_registry_current.md:CLAIM 018; claim:claim_registry_current.md:CLAIM 019; lead:discovery_ledger_current.md:DL-MECH-020 — WWOX-loss induce un fenotipo Warburg-like via 	files/fulltext/PMID30853297_WeiszHubshman2019_fitz.txt	FTR-20260928-30853297-03
+36498839	4	3	-	0	0	0	claim2,lead1,model1	claim:claim_registry_current.md:CLAIM 032; claim:claim_registry_current.md:CLAIM 043; lead:discovery_ledger_current.md:DL-MECH-057 — Predizione terapeutica richiede interazione tr; model:working_model_current.md:Trial-readiness actions (generic)	files/fulltext/PMID36498839_Lin2022_PMC.xml	FTR-20261003-36498839-02
+37897534	4	2	-	0	0	0	card2,lead2	card:L01_nrf2_axis.card.json:L01; card:L01_nrf2_axis.packet.json:L01; lead:discovery_ledger_current.md:DL-MECH-153 — Direction of the G6PD and NFE2L2 contribution ; lead:discovery_ledger_current.md:DL-MECH-154 — ROS re-measurement under NAC in Wwox-null fibr	files/fulltext/PMID37897534_Cheng2023_PMC.xml	FTR-20261123-37897534-75
+42092735	4	2	-	0	0	0	card2,claim1,lead1	card:EB-VGB-01.card.json:EB-VGB-01.card.json; card:EB-VGB-01.packet.json:EB-VGB-01.packet.json; claim:claim_registry_current.md:CLAIM 001; lead:discovery_ledger_current.md:DL-MECH-135 — A single CSF monoamine panel (HVA, 5-HIAA, rat	files/fulltext/PMID42092735_SercePehlevan2026_PMC.xml	FTR-20261123-42092735-85
+23435430	3	1	figures;supplementary	2	2	0	lead3	lead:discovery_ledger_current.md:Append 2026-08-10 — rimisurato dopo una contestazione, e il ; lead:discovery_ledger_current.md:DL-METH-093 — **La catena a tre: l'affermazione è più ferma ; lead:discovery_ledger_current.md:DL-METH-097 — **In nove superfici su trentaquattro le didasc	files/fulltext/PMID23435430_ADV272_PMC3938399_epmc_20261125.xml	FTR-20261125-23435430-01
+26857392	3	2	figures;supplementary	2	2	0	hypothesis1,lead2	hypothesis:therapeutic_hypotheses_ledger_current.md:HYP-20260709-06 — Assay di inclusione dell'esone 9 come biom; lead:discovery_ledger_current.md:DL-BIO-003 — Assay qPCR region-specifico esone 8–9 vs core (; lead:discovery_ledger_current.md:🔴 DL-MECH-029 — Q230P: trascritto normale, **proteina non 	files/fulltext/adv249_sci_20261125/PMID26857392_PMC4859408_EPMC.xml	FTR-20261125-26857392-01
+28151481	3	3	figures;supplementary	2	2	0	lead1,model2	lead:discovery_ledger_current.md:DL-MECH-025 — Retraction-dependency cluster WWOX/HIF/Met nel; model:disease_model.md:Mechanistic architecture (disease-level); model:working_model_current.md:Metabolic branch refinement	files/fulltext/adv249_sci_20261125/PMID28151481_PMC5386451_EPMC.xml	FTR-20261125-28151481-01
+37248434	3	1	figures;supplementary	2	2	0	lead2,model1	lead:discovery_ledger_current.md:DL-MECH-056 — Un'associazione SNP nominale non e' ancora fun; lead:discovery_ledger_current.md:DL-MECH-115 — The SDR region of WWOX carries a measured prot; model:working_model_current.md:WWOX loss-of-function (WOREE / WWOX-DEE) — disease-level wor	files/fulltext/PMID37248434_Taouis2023_PMC.xml	FTR-20261004-37248434-01
+37319242	3	3	figures;supplementary	2	2	0	card2,hypothesis1	card:A02_proteasome_inhibitor_class.card.json:A02; card:A02_proteasome_inhibitor_class.packet.json:A02; hypothesis:therapeutic_hypotheses_ledger_current.md:HYP-20260709-08 — Allele missense SDR: distinguere difetto d	files/fulltext/PMID37319242_Gupta2023_PMC10270616_epmc_2026-10-29.xml	FTR-20261029-37319242-01
+37515322	3	1	figures;supplementary	2	2	0	lead3	lead:discovery_ledger_current.md:DL-METH-118 — A primate dorsal-root-ganglion finding without; lead:discovery_ledger_current.md:DL-METH-120 — A nonclinical tolerability statement is not re; lead:discovery_ledger_current.md:DL-THER-116 — Two endpoints, two dials: a CSF-route AAV prog	files/fulltext/PMID37515322_Hudry2023_PMC.xml	FTR-20261125-37515322-01
+38051092	3	3	figures;supplementary	2	2	0	card2,hypothesis1	card:A02_proteasome_inhibitor_class.card.json:A02; card:A02_proteasome_inhibitor_class.packet.json:A02; hypothesis:therapeutic_hypotheses_ledger_current.md:HYP-20260709-08 — Allele missense SDR: distinguere difetto d	files/fulltext/PMID38051092_Collard2023_PMC10761163_epmc_2026-10-29.xml	FTR-20261029-38051092-01
+39041895	3	3	figures;supplementary	2	2	0	card2,hypothesis1	card:A02_proteasome_inhibitor_class.card.json:A02; card:A02_proteasome_inhibitor_class.packet.json:A02; hypothesis:therapeutic_hypotheses_ledger_current.md:HYP-20260709-08 — Allele missense SDR: distinguere difetto d	files/fulltext/PMID39041895_Mijatovic2024_PMC11264351_epmc_2026-10-29.xml	FTR-20261029-39041895-01
+41948127	3	0	figures;supplementary	2	2	0	lead3	lead:discovery_ledger_current.md:DL-METH-117 — A CSF-route dose carried without its scalar is; lead:discovery_ledger_current.md:DL-METH-118 — A primate dorsal-root-ganglion finding without; lead:discovery_ledger_current.md:DL-METH-119 — A carried quantity is not verified until it ha	files/fulltext/PMID41948127_Stavrou2026_PMC.xml	FTR-20261124-41948127-01
+42395553	3	2	figures;supplementary	2	2	0	claim1,lead1,model1	claim:claim_registry_current.md:CLAIM 011; lead:discovery_ledger_current.md:Append 2026-08-10 — rimisurato dopo una contestazione, e il ; model:working_model_current.md:4) Note on missense alleles and gene therapy	files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.pdf	FTR-20261125-42395553-01
+27339895	3	0	supplementary	1	1	0	claim1,lead2	claim:claim_registry_current.md:CLAIM 009; lead:discovery_ledger_current.md:DL-MECH-156 — Antibody specificity for the pS14 model: blot ; lead:discovery_ledger_current.md:DL-MECH-159 — Mitochondrial purity controls for WWOX fractio	files/fulltext/PMID27339895_Huang2016_PMC5016130_wayback20250308.html	FTR-20261019-27339895-01
+28045433	3	3	figures	1	1	0	lead1,model2	lead:discovery_ledger_current.md:DL-MECH-025 — Retraction-dependency cluster WWOX/HIF/Met nel; model:disease_model.md:Mechanistic architecture (disease-level); model:working_model_current.md:Metabolic branch refinement	files/fulltext/PMID28045433_Maroni2017_PMC.xml	FTR-20261124-28045433-01
+28749468	3	1	supplementary	1	1	0	lead3	lead:discovery_ledger_current.md:DL-MECH-023 — WWOX orienta UPR adattativa-vs-terminale sotto; lead:discovery_ledger_current.md:DL-METH-114 — Which WWOX-loss endpoints are rescue READOUTS,; lead:discovery_ledger_current.md:DL-THER-115 — Tre organismi, una direzione: il restauro di W	files/fulltext/PMID28749468_Janczar2017_PMC.xml	FTR-20261029-28749468-02
+30266908	3	2	supplementary	1	1	0	card2,hypothesis1	card:A01_pba_class.card.json:A01; card:A01_pba_class.packet.json:A01; hypothesis:therapeutic_hypotheses_ledger_current.md:HYP-20260709-08 — Allele missense SDR: distinguere difetto d	files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml	FTR-20261028-30266908-02
+34359949	3	2	figures	1	1	0	claim2,model1	claim:claim_registry_current.md:CLAIM 043; claim:claim_registry_current.md:CLAIM 044; model:working_model_current.md:Trial-readiness actions (generic)	files/fulltext/PMID34359949_Hsu2021_PMC.xml	FTR-20261003-34359949-02
+37275776	3	3	supplementary	1	1	0	card2,lead1	card:EB-ETX-01.card.json:EB-ETX-01.card.json; card:EB-ETX-01.packet.json:EB-ETX-01.packet.json; lead:discovery_ledger_current.md:DL-MECH-170 — Ethosuximide suppressed a provoked seizure gen	files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml	FTR-20261105-37275776-05
+41066510	3	1	figures	1	1	0	portfolio3	portfolio:research_portfolio.tsv:RP-012; portfolio:research_portfolio.tsv:RP-036; portfolio:research_portfolio.tsv:RP-039	files/fulltext/PMID41066510_ADV272_PMC12520403_epmc_20261125.xml	FTR-20261122-41066510-02
+41744777	3	2	figures	1	1	0	claim1,model2	claim:claim_registry_current.md:CLAIM 047; model:working_model_current.md:Trial-readiness actions (generic); model:working_model_current.md:WWOX loss-of-function (WOREE / WWOX-DEE) — disease-level wor	files/fulltext/PMID41744777_Nabakowski2026_PMC.xml	FTR-20261004-41744777-01
+24953239	3	3	-	0	0	0	card2,lead1	card:EB-ETX-01.card.json:EB-ETX-01.card.json; card:EB-ETX-01.packet.json:EB-ETX-01.packet.json; lead:discovery_ledger_current.md:DL-MECH-170 — Ethosuximide suppressed a provoked seizure gen	files/fulltext/PMID24953239_Kanyshkova2015_PMC_r2.xml	FTR-20261108-24953239-52
+30755385	3	2	-	0	0	0	claim1,lead2	claim:claim_registry_current.md:CLAIM 009; lead:discovery_ledger_current.md:DL-BIOM-014 — **Il set di geni glicolitici che riporta la pe; lead:discovery_ledger_current.md:DL-METH-097 — **In nove superfici su trentaquattro le didasc	files/fulltext/PMID30755385_AbuRemaileh2019_PMC_r2.xml	FTR-20261124-30755385-82
+32023956	3	3	-	0	0	0	card2,portfolio1	card:A03_client_binding_chaperone.card.json:A03; card:A03_client_binding_chaperone.packet.json:A03; portfolio:research_portfolio.tsv:RP-048	files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml	FTR-20261124-32023956-01
+33195192	3	2	-	0	0	0	claim1,lead1,model1	claim:claim_registry_current.md:CLAIM 011; lead:discovery_ledger_current.md:DL-MECH-152 — Weight-matched or pair-fed controls for the Ww; model:working_model_current.md:4) Note on missense alleles and gene therapy	files/fulltext/PMID33195192_Chou2020_PMC.xml	FTR-20261019-33195192-03
+35501379	3	3	-	0	0	0	card2,lead1	card:F02_myelination_activity_sign.card.json:F02; card:F02_myelination_activity_sign.packet.json:F02; lead:discovery_ledger_current.md:DL-MECH-031 — L'ipomielinizzazione WWOX è **secondaria al ne	files/fulltext/PMID35501379_R3b_PMC_r2.xml	FTR-20261105-35501379-06
+38161429	3	1	-	0	0	0	lead3	lead:discovery_ledger_current.md:DL-MECH-022 — Posizionamento genotipo-fenotipo: il genotipo ; lead:discovery_ledger_current.md:DL-MECH-042 — Il quadro di neuroimaging del WOREE: cosa è co; lead:discovery_ledger_current.md:🟢 DL-MOL-012 — **Q230P è un hotspot ricorrente (8 casi)**: u	files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml	FTR-20261105-38161429-06
+39868255	3	3	-	0	0	0	card2,lead1	card:J01_glial_reactivity_modulation.card.json:J01; card:J01_glial_reactivity_modulation.packet.json:J01; lead:discovery_ledger_current.md:DL-MECH-012 — WWOX è un *freno* del segnale infiammatorio: l	files/fulltext/PMID39868255_DeLaCruz2025_preprint.pdf	FTR-20260923-39868255-01
+42134074	3	0	-	0	0	0	lead3	lead:discovery_ledger_current.md:DL-METH-117 — A CSF-route dose carried without its scalar is; lead:discovery_ledger_current.md:DL-METH-118 — A primate dorsal-root-ganglion finding without; lead:discovery_ledger_current.md:DL-METH-119 — A carried quantity is not verified until it ha	files/fulltext/PMID42134074_Kagiava2026_PMC.xml	FTR-20261003-42134074-01
+31572723	2	2	figures;tables;supplementary;limitations	4	3	0	ranking2	ranking:investigations.tsv:7; ranking:investigations_it20.tsv:INV-16	files/fulltext/PMID31572723_ADV272_PMC6753186_epmc_20261125.xml	FTR-20261107-31572723-32
+39923817	2	2	figures;tables;supplementary;limitations	4	3	0	ranking2	ranking:investigations.tsv:7; ranking:investigations_it20.tsv:INV-16	files/fulltext/PMID39923817_ADV272_PMC13078857_epmc_20261125.xml	FTR-20261107-39923817-32
+19261873	2	2	discussion;figures;supplementary;limitations	4	2	1	card2	card:F04_nmdar_intervention_class.card.json:F04; card:F04_nmdar_intervention_class.packet.json:F04	files/fulltext/adv050_20261118/PMC2679254.html	FTR-20261118-19261873-01
+20152124	2	2	discussion;tables;supplementary;limitations	4	2	1	card2	card:P11_magnesium_nmdar_gate.card.json:P11; card:P11_magnesium_nmdar_gate.packet.json:P11	files/deepening_downloads/magnesium_chloride_loop_20261124/Slutsky2010.pdf	FTR-20261124-20152124-86
+10.1101/2025.05.01.651195	2	1	figures;supplementary	2	2	0	claim1,lead1	claim:claim_registry_current.md:CLAIM 025; lead:discovery_ledger_current.md:DL-META-088 — Due fonti non referate, lo stesso statuto, due	files/fulltext/PPR1015434_LucasClarke2025_EPMC.xml	FTR-20261003-PPR1015434-01
+22938201	2	2	figures;supplementary	2	2	0	card2	card:B01_amlexanox.card.json:B01; card:B01_amlexanox.packet.json:B01	files/fulltext/PMID22938201_GonzalezHilarion2012_PMC_2026-10-20.xml	FTR-20261020-22938201-01
+23141539	2	2	figures;tables;limitations	3	2	0	ranking2	ranking:investigations.tsv:7; ranking:investigations_it20.tsv:INV-16	files/fulltext/PMID23141539_ADV272_PMC3496186_pmcpage_20261125.html	FTR-20261105-23141539-04
+23179753	2	1	figures;supplementary	2	2	0	lead1,model1	lead:discovery_ledger_current.md:DL-REPO-003 — A curated database says valproate LOWERS WWOX ; model:working_model_current.md:WWOX loss-of-function (WOREE / WWOX-DEE) — disease-level wor	files/fulltext/PMID23179753_Krug2013_PMC.xml	FTR-20261125-23179753-01
+23536761	2	2	figures;tables;limitations	3	2	0	card2	card:F03_bumetanide_chloride_gradient.card.json:F03; card:F03_bumetanide_chloride_gradient.packet.json:F03	files/fulltext/adv065b_20261118/PMID23536761_PMC3594228_efetch_pmc.xml	FTR-20261118-23536761-66
+26061431	2	2	figures;supplementary;limitations	3	2	0	ranking2	ranking:investigations.tsv:7; ranking:investigations_it20.tsv:INV-16	files/fulltext/PMID26061431_ADV272_PMC4614078_epmc_20261125.xml	FTR-20261108-26061431-96
+29472387	2	2	figures;tables;limitations	3	2	0	ranking2	ranking:investigations.tsv:7; ranking:investigations_it20.tsv:INV-16	files/fulltext/PMID29472387_ADV272_PMC5881490_epmc_20261125.xml	FTR-20261105-29472387-09
+30946030	2	2	figures;tables	2	2	0	card2	card:E02_ldh_inhibition.card.json:E02; card:E02_ldh_inhibition.packet.json:E02	files/fulltext/PMID30946030_LeDudal2019_PMC_r2.xml	FTR-20261027-30946030-01
+35966957	2	2	figures;supplementary	2	2	0	ranking2	ranking:investigations.tsv:6; ranking:investigations_it20.tsv:INV-15	files/fulltext/PMID35966957_ADV272_PMC9353198_epmc_20261125.xml	FTR-20261107-35966957-50
+36278433	2	2	figures;supplementary	2	2	0	card2	card:E02_ldh_inhibition.card.json:E02; card:E02_ldh_inhibition.packet.json:E02	files/fulltext/PMID36278433_Guyon2022_PMC_r2.xml	FTR-20261027-36278433-02
+36530994	2	1	figures;supplementary	2	2	0	lead2	lead:discovery_ledger_current.md:DL-MECH-056 — Un'associazione SNP nominale non e' ancora fun; lead:discovery_ledger_current.md:DL-MECH-057 — Predizione terapeutica richiede interazione tr	files/fulltext/PMID36530994_ADV272_PMC9756969_epmc_20261125.xml	FTR-20261125-36530994-01
+36926521	2	2	figures;supplementary	2	2	0	claim1,lead1	claim:claim_registry_current.md:CLAIM 033; lead:discovery_ledger_current.md:DL-BIO-002 — Trascritto/proteina dell'allele di sito accetto	files/fulltext/PMID36926521_Colin2023_PMC.xml	FTR-20261004-36926521-02
+36951961	2	1	figures;supplementary	2	2	0	lead2	lead:discovery_ledger_current.md:DL-METH-118 — A primate dorsal-root-ganglion finding without; lead:discovery_ledger_current.md:DL-THER-116 — Two endpoints, two dials: a CSF-route AAV prog	files/fulltext/PMID36951961_Chen2023_PMC.xml	FTR-20261003-36951961-01
+37324196	2	1	figures;supplementary	2	2	0	lead2	lead:discovery_ledger_current.md:DL-MECH-055 — LINC01137/miR-186/WWOX e' un circuito predetto; lead:discovery_ledger_current.md:DL-MECH-056 — Un'associazione SNP nominale non e' ancora fun	files/fulltext/PMID37324196_Lin2023_PMC.xml	FTR-20261124-37324196-01
+37804316	2	2	figures;supplementary	2	2	0	card2	card:E01_isr_modulators.card.json:E01; card:E01_isr_modulators.packet.json:E01	files/fulltext/PMC10907083_PMID37804316_europepmc_fulltext_2026-10-29.xml	FTR-20261124-37804316-91
+39570186	2	0	figures;supplementary	2	2	0	claim1,lead1	claim:claim_registry_current.md:CLAIM 001; lead:discovery_ledger_current.md:DL-MECH-133 — Retrieve the WWOX VABAM anchor and read its tr	files/fulltext/PMID39570186_Sathe2025_PMC.xml	FTR-20261019-39570186-01
+39641935	2	0	figures;supplementary	2	2	0	claim1,lead1	claim:claim_registry_current.md:CLAIM 001; lead:discovery_ledger_current.md:DL-MECH-133 — Retrieve the WWOX VABAM anchor and read its tr	files/fulltext/PMID39641935_Stevering2025_PMC.xml	FTR-20261019-39641935-01
+40544182	2	2	figures;supplementary	2	2	0	card2	card:B01_amlexanox.card.json:B01; card:B01_amlexanox.packet.json:B01	files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml	FTR-20261020-40544182-01
+41036104	2	2	figures;supplementary	2	2	0	claim1,model1	claim:claim_registry_current.md:CLAIM 047; model:working_model_current.md:Trial-readiness actions (generic)	files/fulltext/PMID41036104_Chornyy2025_PMC.xml	FTR-20261004-41036104-01
+41078870	2	1	figures;supplementary	2	2	0	lead2	lead:discovery_ledger_current.md:DL-METH-120 — A nonclinical tolerability statement is not re; lead:discovery_ledger_current.md:DL-THER-116 — Two endpoints, two dials: a CSF-route AAV prog	files/fulltext/PMID41078870_Okai2025_PMC.xml	FTR-20261125-41078870-01
+41570991	2	2	figures;supplementary	2	2	0	card2	card:E02_ldh_inhibition.card.json:E02; card:E02_ldh_inhibition.packet.json:E02	files/fulltext/PMID41570991_Bouchez2026_PMC_r2.xml	FTR-20261124-41570991-01
+41664646	2	2	figures;supplementary	2	2	0	ranking2	ranking:investigations.tsv:3; ranking:investigations_it20.tsv:INV-06	files/fulltext/PMID41664646_Ahuja2026_imec_VoR.pdf	FTR-20261124-41664646-01
+41706892	2	2	figures;supplementary	2	2	0	card2	card:E01_isr_modulators.card.json:E01; card:E01_isr_modulators.packet.json:E01	files/fulltext/PMC12933080_PMID41706892_europepmc_fulltext_2026-10-29.xml	FTR-20261029-41706892-01
+42137269	2	2	figures;supplementary	2	2	0	claim1,model1	claim:claim_registry_current.md:CLAIM 047; model:working_model_current.md:Trial-readiness actions (generic)	files/fulltext/PMID42137269_Chauhan2026_PMC.xml	FTR-20261004-42137269-01
+42205472	2	0	figures;supplementary	2	2	0	lead2	lead:discovery_ledger_current.md:DL-METH-117 — A CSF-route dose carried without its scalar is; lead:discovery_ledger_current.md:DL-METH-119 — A carried quantity is not verified until it ha	files/fulltext/PMID42205472_Engelhard2026_PMC.xml	FTR-20261125-42205472-01
+32753675	2	2	discussion;tables;limitations	3	1	1	ranking2	ranking:investigations.tsv:4; ranking:investigations_it20.tsv:INV-08	files/deepening_downloads/zonisamide_loop_20261124/spinal_supp.pdf	FTR-20261124-32753675-81
+18620777	2	1	figures	1	1	0	portfolio2	portfolio:research_portfolio.tsv:RP-004; portfolio:research_portfolio.tsv:RP-022	files/fulltext/rp004_lens_20261115/PMC2574998_pmc_article_page.html	FTR-20261115-18620777-01
+19366691	2	2	supplementary	1	1	0	card2	card:C02_splice_aso.card.json:C02; card:C02_splice_aso.packet.json:C02	files/fulltext/PMID19366691_Hsu2009_PMC2708898_wayback20251104.html	FTR-20261019-19366691-01
+21901168	2	0	supplementary	1	1	0	claim1,lead1	claim:claim_registry_current.md:CLAIM 009; lead:discovery_ledger_current.md:DL-MECH-159 — Mitochondrial purity controls for WWOX fractio	files/fulltext/PMID21901168_Lin2011_PMC3161421_wayback20250315.html	FTR-20261019-21901168-01
+22479346	2	1	supplementary	1	1	0	lead2	lead:discovery_ledger_current.md:DL-MECH-142 — Blood-pressure or autonomic data in WWOX-DEE c; lead:discovery_ledger_current.md:DL-MECH-180 — One measurement set in the existing Wwox-null 	files/fulltext/PMID22479346_ADV272_PMC3315540_epmc_20261125.xml	FTR-20261125-22479346-01
+24086726	2	0	supplementary	1	1	0	lead2	lead:discovery_ledger_current.md:DL-MECH-118 — The effect-allele convention at rs17797882 con; lead:discovery_ledger_current.md:DL-MECH-119 — A citation chain ends in an unreproduced datum	files/fulltext/PMID24086726_ADV272_PMC3783369_epmc_20261125.xml	FTR-20261125-24086726-01
+27668180	2	2	figures	1	1	0	card2	card:H02_gabaat_inactivator_myelin_exposure.card.json:H02; card:H02_gabaat_inactivator_myelin_exposure.packet.json:H02	files/fulltext/PMID27668180_Doumlele2016_PMC5024311.xml	FTR-20261028-27668180-01
+35222658	2	2	figures	1	1	0	card2	card:P11_magnesium_nmdar_gate.card.json:P11; card:P11_magnesium_nmdar_gate.packet.json:P11	files/fulltext/PMID35222658_ADV272_PMC8752995_epmc_20261125.xml	FTR-20261125-35222658-01
+35883580	2	1	figures	1	1	0	lead2	lead:discovery_ledger_current.md:DL-MECH-057 — Predizione terapeutica richiede interazione tr; lead:discovery_ledger_current.md:DL-MECH-058 — pY33→pS14 e' un modello di stato, non uno swit	files/fulltext/PMID35883580_Liu2022_PMC_r2.xml	FTR-20261019-35883580-01
+38378758	2	2	supplementary	1	1	0	card2	card:A02_proteasome_inhibitor_class.card.json:A02; card:A02_proteasome_inhibitor_class.packet.json:A02	files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml	FTR-20261021-38378758-01
+38443647	2	2	figures;limitations	2	1	0	card2	card:E02_ldh_inhibition.card.json:E02; card:E02_ldh_inhibition.packet.json:E02	files/fulltext/PMID38443647_Bacq2024_PMC_r2.xml	FTR-20261110-38443647-97
+38731820	2	2	supplementary	1	1	0	card2	card:A04_er_proteostasis_regulators.card.json:A04; card:A04_er_proteostasis_regulators.packet.json:A04	files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml	FTR-20261021-38731820-01
+38740822	2	2	supplementary	1	1	0	card2	card:A02_proteasome_inhibitor_class.card.json:A02; card:A02_proteasome_inhibitor_class.packet.json:A02	files/fulltext/PMID38740822_Gronbaek2024_PMC11091098.xml	FTR-20261021-38740822-01
+39216838	2	2	supplementary	1	1	0	card2	card:A03_client_binding_chaperone.card.json:A03; card:A03_client_binding_chaperone.packet.json:A03	files/fulltext/PMID39216838_Wang2024_PMC_r2.xml	FTR-20261021-39216838-01
+40301740	2	1	figures	1	1	0	lead2	lead:discovery_ledger_current.md:DL-METH-120 — A nonclinical tolerability statement is not re; lead:discovery_ledger_current.md:DL-THER-116 — Two endpoints, two dials: a CSF-route AAV prog	files/fulltext/PMID40301740_Ma2025_PMC.xml	FTR-20261004-40301740-02
+40485335	2	2	supplementary	1	1	0	card2	card:A01_pba_class.card.json:A01; card:A01_pba_class.packet.json:A01	files/fulltext/PMID40485335_Shah2025_PMC12146831.xml	FTR-20261021-40485335-01
+41178115	2	2	supplementary	1	1	0	card2	card:A04_er_proteostasis_regulators.card.json:A04; card:A04_er_proteostasis_regulators.packet.json:A04	files/fulltext/PMID41178115_Fu2025_PMC12679549.xml	FTR-20261021-41178115-01
+42268630	2	2	supplementary	1	1	0	card2	card:A01_pba_class.card.json:A01; card:A01_pba_class.packet.json:A01	files/fulltext/PMID42268630_Frick2026_PMC13251787.xml	FTR-20261105-42268630-06
+42422766	2	1	figures	1	1	0	lead2	lead:discovery_ledger_current.md:DL-METH-120 — A nonclinical tolerability statement is not re; lead:discovery_ledger_current.md:DL-THER-116 — Two endpoints, two dials: a CSF-route AAV prog	files/fulltext/PMID42422766_Amaral2026_PMC.xml	FTR-20261125-42422766-01
+10.1101/2025.11.22.689900	2	2	-	0	0	0	claim1,lead1	claim:claim_registry_current.md:CLAIM 003; lead:discovery_ledger_current.md:DL-META-088 — Due fonti non referate, lo stesso statuto, due	files/fulltext/PPR1124524_Abudiab2025_bioRxiv.pdf	FTR-20261124-PPR1124524-01
+21075834	2	0	-	0	0	0	claim2	claim:claim_registry_current.md:CLAIM 009; claim:claim_registry_current.md:CLAIM 034	files/fulltext/PMID21075834_OKeefe2011_PMC_r2.xml	FTR-20261110-21075834-83
+26302329	2	1	-	0	0	0	lead2	lead:discovery_ledger_current.md:DL-METH-114 — Which WWOX-loss endpoints are rescue READOUTS,; lead:discovery_ledger_current.md:DL-THER-115 — Tre organismi, una direzione: il restauro di W	files/fulltext/PMID26302329_OKeefe2015_PMC.xml	FTR-20261110-26302329-83
+28763065	2	1	-	0	0	0	lead2	lead:discovery_ledger_current.md:DL-MECH-107 — **WWOX has a regulatory architecture in intron; lead:discovery_ledger_current.md:DL-MECH-180 — One measurement set in the existing Wwox-null 	files/fulltext/PMID28763065_Xia2017_PMC.xml	FTR-20261004-28763065-02
+32368285	2	1	-	0	0	0	lead1,model1	lead:discovery_ledger_current.md:DL-MOL-003 — Asse Wnt: direzione RISOLTA (WWOX-loss → IPER-a; model:working_model_current.md:WWOX loss-of-function (WOREE / WWOX-DEE) — disease-level wor	files/fulltext/PMID32368285_Celebi2020_publisher.pdf	FTR-20261004-32368285-01
+34766906	2	2	-	0	0	0	ranking2	ranking:investigations.tsv:7; ranking:investigations_it20.tsv:INV-18	files/fulltext/rescued_from_scratch_he46/c761c11be887__a.txt	FTR-20261111-34766906-96
+35460704	2	2	-	0	0	0	claim1,model1	claim:claim_registry_current.md:CLAIM 045; model:working_model_current.md:Trial-readiness actions (generic)	files/fulltext/PMID35460704_Dong2022_PMC.xml	FTR-20261019-35460704-03
+36432491	2	2	-	0	0	0	card2	card:I01_pdk_inhibition_dca_premise_seizure_glycaemia.card.json:I01; card:I01_pdk_inhibition_dca_premise_seizure_glycaemia.packet.json:I01	files/fulltext/PMID36432491_Lee2022_PMC_r2.xml	FTR-20261110-36432491-98
+38563965	2	1	-	0	0	0	lead2	lead:discovery_ledger_current.md:DL-MECH-012 — WWOX è un *freno* del segnale infiammatorio: l; lead:discovery_ledger_current.md:DL-MECH-173 — Integrated stress response in WWOX loss: the f	files/fulltext/PMID38563965_Zeng2024_PMC.html	FTR-20261029-38563965-02
+39416860	2	1	-	0	0	0	lead2	lead:discovery_ledger_current.md:Append 2026-08-10 — rimisurato dopo una contestazione, e il ; lead:discovery_ledger_current.md:DL-META-088 — Due fonti non referate, lo stesso statuto, due	files/fulltext/PMID39416860_Feng2024_PMC_r2.xml	FTR-20261124-39416860-80
+39952983	2	1	-	0	0	0	lead2	lead:discovery_ledger_current.md:DL-MECH-013 — WWOX come regolatore di sleep/network-state: D; lead:discovery_ledger_current.md:DL-METH-114 — Which WWOX-loss endpoints are rescue READOUTS,	files/fulltext/PMID39952983_Kim2025_EPMC.xml	FTR-20261110-39952983-83
+41966056	2	0	-	0	0	0	lead2	lead:discovery_ledger_current.md:DL-METH-117 — A CSF-route dose carried without its scalar is; lead:discovery_ledger_current.md:DL-METH-119 — A carried quantity is not verified until it ha	files/fulltext/PMID41966056_Wang2026_PMC.xml	FTR-20261004-41966056-02
+42035940	2	2	-	0	0	0	card2	card:E02_ldh_inhibition.card.json:E02; card:E02_ldh_inhibition.packet.json:E02	files/fulltext/PMID42035940_GBM2026_PMC_r2.xml	FTR-20261027-42035940-01
+42136830	2	2	-	0	0	0	claim1,model1	claim:claim_registry_current.md:CLAIM 047; model:working_model_current.md:Trial-readiness actions (generic)	files/fulltext/PMID42136830_Haque2026_PMC.xml	FTR-20261004-42136830-02
+32248813	1	1	discussion;figures;supplementary;limitations	4	2	1	portfolio1	portfolio:research_portfolio.tsv:RP-019	files/fulltext/PMID32248813_ADV272_PMC7132998_epmc_20261125.xml	FTR-20261123-32248813-01
+26272509	1	1	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-REPO-003 — A curated database says valproate LOWERS WWOX 	files/fulltext/PMID26272509_Rempel2015_PMC.xml	FTR-20261125-26272509-01
+26419537	1	1	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-MECH-170 — Ethosuximide suppressed a provoked seizure gen	files/fulltext/PMID26419537_Chen2015_PMC_r2.xml	FTR-20261021-26419537-01
+29108237	1	1	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-BIO-006 — circRNA KIRKOS + WWOX mRNA esosomale come reado	files/fulltext/adv249_sci_20261125/PMID29108237_PMC5667970_EPMC.xml	FTR-20261125-29108237-01
+30154439	1	1	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-MECH-014 — Asse RNF138→hnRNPA0→WWOX mRNA→JAK2/STAT3/PD-L1	files/fulltext/PMID30154439_Chang2018_PMC.xml	FTR-20261124-30154439-01
+31605637	1	1	figures;supplementary	2	2	0	hypothesis1	hypothesis:therapeutic_hypotheses_ledger_current.md:HYP-20260709-08 — Allele missense SDR: distinguere difetto d	files/fulltext/PMID31605637_NQO1_P187S_PMC7027498_epmc_2026-10-29.xml	FTR-20261125-31605637-01
+31781019	1	1	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-MECH-170 — Ethosuximide suppressed a provoked seizure gen	files/fulltext/PMID31781019_Kam2019_PMC_r2.xml	FTR-20261124-31781019-01
+36282524	1	1	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-MECH-170 — Ethosuximide suppressed a provoked seizure gen	files/fulltext/PMID36282524_Barker2023_PMC_r2.xml	FTR-20261124-36282524-01
+36572560	1	1	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-MECH-032 — WWOX è una GSK-3β-binding protein via motivo G	files/fulltext/adv249_sci_20261125/PMID36572560_PMC9794558_EPMC.xml	FTR-20261125-36572560-01
+36700120	1	1	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-METH-118 — A primate dorsal-root-ganglion finding without	files/fulltext/PMID36700120_Johnson2022_PMC.xml	FTR-20261003-36700120-01
+37443770	1	0	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-MECH-135 — A single CSF monoamine panel (HVA, 5-HIAA, rat	files/fulltext/PMID37443770_Ng2023_PMC.xml	FTR-20261019-37443770-01
+37946251	1	0	figures;supplementary	2	2	0	claim1	claim:claim_registry_current.md:CLAIM 033	files/fulltext/PMID37946251_Pagnamenta2023_PMC.xml	FTR-20261004-37946251-01
+38719828	1	1	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-MECH-116 — Assay specification for any future WWOX domain	files/fulltext/PMID38719828_MartinezLumbreras2024_PMC.xml	FTR-20261004-38719828-01
+40858643	1	0	figures;supplementary	2	2	0	claim1	claim:claim_registry_current.md:CLAIM 033	files/fulltext/PMID40858643_Hamanaka2025_PMC.xml	FTR-20261004-40858643-01
+41134821	1	1	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-METH-121 — A dorsal-root-ganglion imaging endpoint exists	files/fulltext/PMID41134821_Zhao2025_PMC.xml	FTR-20261004-41134821-01
+41254692	1	1	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-REPO-003 — A curated database says valproate LOWERS WWOX 	files/fulltext/PMID41254692_Qin2025_PMC.xml	FTR-20261004-41254692-01
+41314141	1	0	figures;supplementary	2	2	0	model1	model:working_model_current.md:WWOX loss-of-function (WOREE / WWOX-DEE) — disease-level wor	files/fulltext/PMID41314141_Greenberg2026_PMC.xml	FTR-20261003-41314141-01
+41470225	1	0	figures;supplementary;limitations	3	2	0	lead1	lead:discovery_ledger_current.md:DL-MECH-134 — ACTH-responsiveness and neurosteroid readouts 	files/fulltext/PMID41470225_Abdygalyk2025_PMC.xml	FTR-20261019-41470225-01
+42157962	1	0	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-THER-116 — Two endpoints, two dials: a CSF-route AAV prog	files/fulltext/PMID42157962_DuBreuil2026_PMC.xml	FTR-20261003-42157962-01
+42245405	1	0	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-METH-122 — Method: canonical splice-site alleles are clas	files/fulltext/PMID42245405_Almutair2026_PMC.xml	FTR-20261019-42245405-01
+42483444	1	0	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-MECH-135 — A single CSF monoamine panel (HVA, 5-HIAA, rat	files/fulltext/PMID42483444_NaranjoLobo2026_PMC.xml	FTR-20261019-42483444-01
+42643745	1	0	figures;supplementary	2	2	0	lead1	lead:discovery_ledger_current.md:DL-METH-122 — Method: canonical splice-site alleles are clas	files/fulltext/PMID42643745_Nikkhah2026_PMC.xml	FTR-20261019-42643745-01
+23583307	1	1	discussion;figures	2	1	1	lead1	lead:discovery_ledger_current.md:DL-MECH-011 — Finestra terapeutica P1–P5 nel topo: efficace 	files/fulltext/PMID23583307_Semple2013_PMC.xml	FTR-20261105-23583307-06
+39546604	1	1	discussion;figures	2	1	1	portfolio1	portfolio:research_portfolio.tsv:RP-033	files/fulltext/PMID39546604_ADV272_PMC_r2.xml	FTR-20261123-39546604-01
+21964341	1	1	figures	1	1	0	lead1	lead:discovery_ledger_current.md:DL-MECH-011 — Finestra terapeutica P1–P5 nel topo: efficace 	files/fulltext/PMID21964341_Sanai2011_PMC.xml	FTR-20260927-21964341-01
+25612104	1	0	supplementary	1	1	0	lead1	lead:discovery_ledger_current.md:DL-MECH-161 — Same-tissue test of the Kozak variant: measure	files/fulltext/PMID25612104_Ekizoglu2015_plos.pdf	FTR-20261019-25612104-01
+27188386	1	1	figures	1	1	0	lead1	lead:discovery_ledger_current.md:DL-REPO-003 — A curated database says valproate LOWERS WWOX 	files/fulltext/PMID27188386_Shinde2016_PMC.xml	FTR-20261004-27188386-02
+29164763	1	1	figures	1	1	0	lead1	lead:discovery_ledger_current.md:DL-BIO-005 — Pannello funzionale WWOX–HIF1α/GLUT1/PKM2 + ala	files/fulltext/PMID29164763_Bunai2018_PMC.xml	FTR-20261124-29164763-01
+29310447	1	0	supplementary	1	1	0	lead1	lead:discovery_ledger_current.md:DL-MECH-156 — Antibody specificity for the pS14 model: blot 	files/fulltext/PMID29310447_Huang2018_epmc.pdf	FTR-20261019-29310447-01
+32142409	1	1	figures	1	1	0	portfolio1	portfolio:research_portfolio.tsv:RP-033	files/fulltext/PMID32142409_ADV272_PMC7077990_epmc_20261125.xml	FTR-20261123-32142409-01
+32389029	1	1	figures	1	1	0	claim1	claim:claim_registry_current.md:CLAIM 032	files/fulltext/PMID32389029_Kosla2020_PMC.xml	FTR-20261003-32389029-01
+32719346	1	1	supplementary	1	1	0	lead1	lead:discovery_ledger_current.md:DL-MECH-170 — Ethosuximide suppressed a provoked seizure gen	files/fulltext/PMID32719346_Liu2020_PMC_r2.xml	FTR-20261022-32719346-02
+33704440	1	1	supplementary	1	1	0	lead1	lead:discovery_ledger_current.md:DL-MECH-170 — Ethosuximide suppressed a provoked seizure gen	files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml	FTR-20261124-33704440-01
+35079122	1	1	supplementary	1	1	0	lead1	lead:discovery_ledger_current.md:DL-MECH-170 — Ethosuximide suppressed a provoked seizure gen	files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml	FTR-20261022-35079122-02
+35243344	1	1	supplementary	1	1	0	lead1	lead:discovery_ledger_current.md:DL-MECH-170 — Ethosuximide suppressed a provoked seizure gen	files/fulltext/PMID35243344_Yang2022_PMC_r2.xml	FTR-20261022-35243344-02
+36979157	1	1	figures	1	1	0	lead1	lead:discovery_ledger_current.md:DL-MECH-056 — Un'associazione SNP nominale non e' ancora fun	files/fulltext/PMID36979157_Kaluzinska2023_PMC_r2.xml	FTR-20261124-36979157-01
+40126049	1	1	figures	1	1	0	lead1	lead:discovery_ledger_current.md:DL-MECH-030 — Genotipo e mortalità in WWOX-DEE: il dato prog	files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml	FTR-20261003-40126049-01
+40217411	1	1	figures	1	1	0	lead1	lead:discovery_ledger_current.md:DL-MECH-030 — Genotipo e mortalità in WWOX-DEE: il dato prog	files/fulltext/PMID40217411_Yuan2025_PMC.xml	FTR-20261003-40217411-01
+40336300	1	1	figures	1	1	0	lead1	lead:discovery_ledger_current.md:DL-BIO-001 — Livello + attività ossidoreduttasica di WWOX in	files/fulltext/PMID40336300_Lawrence2025_PMC.xml	FTR-20261004-40336300-01
+40827489	1	1	supplementary	1	1	0	lead1	lead:discovery_ledger_current.md:DL-MECH-170 — Ethosuximide suppressed a provoked seizure gen	files/fulltext/PMID40827489_Hristova2025_PMC_r2.xml	FTR-20261022-40827489-02
+40834072	1	1	supplementary	1	1	0	lead1	lead:discovery_ledger_current.md:DL-MECH-170 — Ethosuximide suppressed a provoked seizure gen	files/fulltext/PMID40834072_Jang2025_PMC_r2.xml	FTR-20261022-40834072-02
+41210171	1	0	figures	1	1	0	lead1	lead:discovery_ledger_current.md:DL-METH-118 — A primate dorsal-root-ganglion finding without	files/fulltext/PMID41210171_Vono2025_PMC.xml	FTR-20261003-41210171-01
+42068099	1	1	figures	1	1	0	lead1	lead:discovery_ledger_current.md:DL-MECH-030 — Genotipo e mortalità in WWOX-DEE: il dato prog	files/fulltext/PMID42068099_Mohammad2026_PMC.xml	FTR-20261003-42068099-01
+42401046	1	1	supplementary	1	1	0	lead1	lead:discovery_ledger_current.md:DL-THER-089 — A51, primo intervento farmacologico su un mode	files/fulltext/PMID42401046_Helton2026_PMC_r2.xml	FTR-20261021-42401046-01
+42536722	1	1	supplementary	1	1	0	lead1	lead:discovery_ledger_current.md:DL-MECH-170 — Ethosuximide suppressed a provoked seizure gen	files/fulltext/PMID42536722_Miao2026_PMC_r2.xml	FTR-20261105-42536722-05
+42807679	1	1	figures	1	1	0	claim1	claim:claim_registry_current.md:CLAIM 032	files/fulltext/PMID42807679_Khadija2026_PMC.xml	FTR-20261004-42807679-02
+17909041	1	1	-	0	0	0	portfolio1	portfolio:research_portfolio.tsv:RP-038	files/fulltext/PMID17909041_Aqeilan2007_CancerRes_fulltext.pdf	FTR-20261124-17909041-01
+25779665	1	0	-	0	0	0	lead1	lead:discovery_ledger_current.md:DL-MECH-165 — Temperature as an in vivo variable in Wwox-nul	files/fulltext/PMID25779665_Chen2015_PMC.xml	FTR-20261125-25779665-01
+27773744	1	1	-	0	0	0	lead1	lead:discovery_ledger_current.md:DL-MECH-024 — WWOX–BRCA1/WW1 regola end-resection e scelta d	files/fulltext/PMID27773744_Schrock2017_PMC_r2.xml	FTR-20261019-27773744-01
+29390993	1	1	-	0	0	0	claim1	claim:claim_registry_current.md:CLAIM 032	files/fulltext/PMID29390993_Rim2018_PMC.xml	FTR-20261004-29390993-02
+29899766	1	0	-	0	0	0	lead1	lead:discovery_ledger_current.md:DL-MECH-169 — No WWOX-null amino-acid, folate, carnitine or 	files/fulltext/PMID29899766_Mastrangelo2018_PMC.xml	FTR-20261020-29899766-01
+36587184	1	0	-	0	0	0	lead1	lead:discovery_ledger_current.md:DL-MECH-164 — Count WWOX loss properly in the NASH-associate	files/fulltext/PMID36587184_Friemel2022_PMC.xml	FTR-20261020-36587184-01
+37686047	1	0	-	0	0	0	lead1	lead:discovery_ledger_current.md:DL-MECH-163 — WWOX expression against alkylator sensitivity 	files/fulltext/PMID37686047_Rushing2023_PMC.xml	FTR-20261020-37686047-01
+37974179	1	1	-	0	0	0	lead1	lead:discovery_ledger_current.md:DL-MECH-053 — Una chiamata exon-level corretta puo' nasconde	files/fulltext/PMID37974179_Dong2023_PMC.xml	FTR-20261124-37974179-80
+40377402	1	1	-	0	0	0	lead1	lead:discovery_ledger_current.md:DL-MOL-003 — Asse Wnt: direzione RISOLTA (WWOX-loss → IPER-a	files/fulltext/PMID40377402_Pascual2025_PMC.xml	FTR-20261003-40377402-01
+40524961	1	1	-	0	0	0	lead1	lead:discovery_ledger_current.md:DL-MOL-003 — Asse Wnt: direzione RISOLTA (WWOX-loss → IPER-a	files/fulltext/PMID40524961_Sengupta2025_PMC.xml	FTR-20261004-40524961-02
+40825030	1	1	-	0	0	0	lead1	lead:discovery_ledger_current.md:DL-MECH-170 — Ethosuximide suppressed a provoked seizure gen	files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml	FTR-20261022-40825030-02
+41257285	1	1	-	0	0	0	lead1	lead:discovery_ledger_current.md:DL-METH-118 — A primate dorsal-root-ganglion finding without	files/fulltext/PMID41257285_Aihara2025_PMC.xml	FTR-20261004-41257285-02
+41751597	1	0	-	0	0	0	claim1	claim:claim_registry_current.md:WWOX Claim Registry	files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt	FTR-20261004-41751597-02
+42193054	1	1	-	0	0	0	claim1	claim:claim_registry_current.md:CLAIM 012	files/fulltext/PMID42193054_Sapuppo2026_PMC.xml	FTR-20261107-42193054-93
+42274296	1	1	-	0	0	0	lead1	lead:discovery_ledger_current.md:DL-MECH-170 — Ethosuximide suppressed a provoked seizure gen	files/fulltext/PMID42274296_Harman2026_PMC_r2.xml	FTR-20261118-42274296-53
+42523332	1	1	limitations	1	0	0	portfolio1	portfolio:research_portfolio.tsv:RP-033	files/fulltext/PMID42523332_Aragon2026_PMC13405132_v3_epmc.xml	FTR-20261123-42523332-01
+42589397	1	1	-	0	0	0	claim1	claim:claim_registry_current.md:CLAIM 025	files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml	FTR-20261124-42589397-01
+12086975	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/levetiracetam_loop_20261124/rigo.html	FTR-20261124-12086975-80
+12118259	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/lamotrigine_loop_20261124/dendritic_primary.pdf	FTR-20261124-12118259-87
+12904467	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/topiramate_loop_20261124/gluK1_classic.html	FTR-20261124-12904467-80
+13539215	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/d_ribose_loop_20261124/JCI103658.pdf	FTR-20261124-13539215-95
+15492224	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/fulltext/wo11_mierau_20261115/PMC524435_article_page.html	FTR-20261115-15492224-01
+15611021	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/fulltext/it44_k2p_20261115/PMC1665531.html	FTR-20261115-15611021-01
+15634765	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/fulltext/it45_ph_20261115/PMC6725198.html	FTR-20261115-15634765-01
+17070687	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/l_glutamine_loop_20261124/Tani_2007_author.pdf	FTR-20261124-17070687-98
+19616603	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/sodium_pyruvate_loop_20261124/mhlw_201024218A0010.pdf	FTR-20261124-19616603-80
+20089937	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/topiramate_loop_20261124/infant.html	FTR-20261124-20089937-80
+20167261	0	0	discussion;figures;tables;supplementary	4	3	1	-	-	files/deepening_downloads/lamotrigine_loop_20261124/20167261.xml	FTR-20261124-20167261-89
+21273422	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/fulltext/it44_k2p_20261115/PMC6623616.html	FTR-20261115-21273422-01
+21459558	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/betaine_loop_20261124/PMC3376448.xml	FTR-20261124-21459558-95
+21508245	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/d_ribose_loop_20261124/PMC6632980.html	FTR-20261124-21508245-94
+22137594	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/acetylcysteine_loop_20261123/PMC3340445.html	FTR-20261123-22137594-77
+22544747	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/taurine_loop_20261123/PMC3375508.html	FTR-20261123-22544747-99
+22585572	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/l_carnosine_loop_20261124/mg_receptor.pdf	FTR-20261124-22585572-80
+22766033	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/gabapentin_loop_20261124/cortical_injury.xml	FTR-20261124-22766033-82
+22830360	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/l_glutamine_loop_20261124/PMC3495849.xml	FTR-20261124-22830360-98
+23022402	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/ubiquinol_loop_20261124/PMC3975832.xml	FTR-20261124-23022402-80
+23713028	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/cannabidiol_loop_20261124/23713028.html	FTR-20261124-23713028-92
+23881097	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/acetazolamide_loop_20261123/PMC3746197-az.xml	FTR-20261123-23881097-83
+24101301	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/fulltext/adv050_20261118/PMC3834148.html	FTR-20261118-24101301-01
+24253200	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/riboflavin_loop_20261123/PMC3891447.xml	FTR-20261123-24253200-94
+24341803	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/r_lipoic_loop_20261124/LIPT1.xml	FTR-20261124-24341803-80
+24366103	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/inosine_loop_20261124/PMC3940333.xml	FTR-20261124-24366103-94
+24550782	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/taurine_loop_20261123/PMC3912439.1.xml	FTR-20261123-24550782-74
+24559677	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/l_glutamine_loop_20261124/PMC4001919.xml	FTR-20261124-24559677-98
+24760755	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/sodium_selenite_loop_20261124/burk.html	FTR-20261124-24760755-80
+24992948	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/l_glutamine_loop_20261124/PMC4227121.xml	FTR-20261124-24992948-99
+26273099	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/magnesium_chloride_loop_20261124/26273099.xml	FTR-20261124-26273099-86
+26452037	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/d_ribose_loop_20261124/PMC4741441.xml	FTR-20261124-26452037-95
+26572666	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/acetylcysteine_loop_20261123/PMC4720670.html	FTR-20261123-26572666-77
+27181635	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/tocopheryl_acetate_loop_20261124/human_infant_brain.pdf	FTR-20261124-27181635-80
+27217553	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/myoinositol_loop_20261124/pubmed.xml	FTR-20261124-27217553-81
+27455251	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/lamotrigine_loop_20261124/27455251.xml	FTR-20261124-27455251-87
+27903293	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/vigabatrin_loop_20261124/mild.xml	FTR-20261124-27903293-82
+28119481	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/lacosamide_loop_20261123/PMC5363714.html	FTR-20261123-28119481-92
+29216042	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/fulltext/adv065b_20261118/PMID29216042_PMC7371006_efetch_pmc.xml	FTR-20261118-29216042-66
+29423921	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/fulltext/PMID29423921_Guo2018_PMC6001564_bucket.xml	FTR-20261124-29423921-02
+29685734	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/nr_loop_20261124/tracer.xml	FTR-20261124-29685734-80
+29964329	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/d_ribose_loop_20261124/PMC6220757.xml	FTR-20261124-29964329-95
+30031689	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/folinic_loop_20261124/MTHFS.xml	FTR-20261124-30031689-80
+30037851	0	0	discussion;figures;tables;supplementary	4	3	1	-	-	files/fulltext/rescued_from_scratch_he46/c630d495d90f__e_PMC6080888.xml	FTR-20261111-30037851-84
+30191330	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/l_carnosine_loop_20261124/pmid_30191330.xml	FTR-20261124-30191330-81
+30214895	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/fulltext/b_ww1_ppxy_20261119/Saigo2018_review_PMC6125347.xml	FTR-20261119-30214895-71
+30224722	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/dha_loop_20261124/basket_ncbi.xml	FTR-20261124-30224722-80
+30551998	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/acetylcysteine_loop_20261123/PMC6371057.html	FTR-20261123-30551998-75
+31011227	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/clemastine_loop_20261123/clemastine-gtf2i.pdf	FTR-20261123-31011227-80
+31239460	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/fulltext/adv065c_20261118/PMID31239460_PMC6592949_efetch_pmc.xml	FTR-20261118-31239460-67
+31255657	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/betaine_loop_20261124/PMC6642071.xml	FTR-20261124-31255657-95
+31548413	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/l_serine_loop_20261124/6789919_pmc.html	FTR-20261124-31548413-99
+31625159	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/clobazam_loop_20261124/PMC6900043.xml	FTR-20261124-31625159-92
+31757819	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/d_bhb_loop_20261123/manville.html	FTR-20261123-31757819-98
+32096676	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/betaine_loop_20261124/PMC7518703.html	FTR-20261124-32096676-97
+32516974	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/zonisamide_loop_20261124/hemichannel.xml	FTR-20261124-32516974-80
+32592183	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/cannabidiol_loop_20261124/32592183.xml	FTR-20261124-32592183-93
+32668809	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/l_glutamine_loop_20261124/7407890.xml	FTR-20261124-32668809-98
+32788298	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/fulltext/b_ww1_ppxy_20261119/Mennesson2020_PMC7470932.xml	FTR-20261119-32788298-71
+33317017	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/riboflavin_loop_20261123/PMC7763948.html	FTR-20261123-33317017-95
+33385945	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/vigabatrin_loop_20261124/retina.xml	FTR-20261124-33385945-80
+33733036	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/tocopheryl_acetate_loop_20261124/adult_ttpa.xml	FTR-20261124-33733036-80
+33952316	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/d_pantothenate_loop_20261124/8101147.xml	FTR-20261124-33952316-80
+34187890	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/glycine_loop_20261124/34187890.bioc.json	FTR-20261124-34187890-88
+34479615	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/decanoic_loop_20261124/astro_tracer.xml	FTR-20261124-34479615-99
+34752143	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/fulltext/adv065b_20261118/PMID34752143_PMC8763016_efetch_pmc.xml	FTR-20261118-34752143-66
+34829573	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/sulforaphane_loop_20261124/34829573.xml	FTR-20261124-34829573-83
+34948401	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/lamotrigine_loop_20261124/34948401.xml	FTR-20261124-34948401-87
+35235774	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/nr_loop_20261124/nadpark.pdf	FTR-20261124-35235774-80
+35524446	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/fulltext/adv065b_20261118/PMID35524446_PMC9545618_efetch_pmc.xml	FTR-20261118-35524446-66
+35562864	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/brivaracetam_loop_20261123/PMC9101419.1.xml	FTR-20261123-35562864-96
+35945593	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/d_pantothenate_loop_20261124/9364590.xml	FTR-20261124-35945593-80
+36287209	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/nr_loop_20261124/hypomorph.xml	FTR-20261124-36287209-80
+36889319	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/fulltext/adv065b_20261118/PMID36889319_PMC10040380_efetch_pmc.xml	FTR-20261118-36889319-66
+37046296	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/r_lipoic_loop_20261124/PKAN.xml	FTR-20261124-37046296-80
+37100056	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/citicoline_loop_20261123/PMC10367582.html	FTR-20261123-37100056-97
+39291745	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/inosine_loop_20261124/PMC11670813.xml	FTR-20261124-39291745-94
+39307309	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/ivabradine_loop_20261123/human_hcn1.xml	FTR-20261123-39307309-98
+40848165	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/inosine_loop_20261124/PMC12374869.xml	FTR-20261124-40848165-93
+42624371	0	0	discussion;figures;tables;supplementary;limitations	5	3	1	-	-	files/deepening_downloads/r_lipoic_loop_20261124/partition.xml	FTR-20261124-42624371-80
+10.48550/arXiv.2512.13724	0	0	figures;tables;supplementary	3	3	0	-	-	files/fulltext/ARXIV2512.13724v1_Noori2025_PROTON.pdf	FTR-20261101-ARXIV2512.13724-01
+10.6032/gnam.41.171	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/deepening_downloads/inosine_loop_20261124/human-purines-gnam-41-171.pdf	FTR-20261124-GNAM41171-94
+18690052	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/deepening_downloads/gabapentin_loop_20261124/trafficking_timecourse.pdf	FTR-20261124-18690052-82
+18974016	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/deepening_downloads/d_biotin_loop_20261124/2630166.xml	FTR-20261124-18974016-80
+19265499	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/deepening_downloads/sodium_selenite_loop_20261124/sbp2.html	FTR-20261124-19265499-80
+19751803	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/deepening_downloads/l_glutamine_loop_20261124/2789247.xml	FTR-20261124-19751803-99
+21674654	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/deepening_downloads/ascorbate_loop_20261124/adult_mrs.xml	FTR-20261124-21674654-01
+21681606	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/deepening_downloads/sulforaphane_loop_20261124/21681606.xml	FTR-20261124-21681606-84
+24081159	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/deepening_downloads/levetiracetam_loop_20261124/grauert.xml	FTR-20261124-24081159-80
+24699222	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/deepening_downloads/magnesium_chloride_loop_20261124/24699222.xml	FTR-20261124-24699222-86
+25008524	0	0	figures;tables;supplementary	3	3	0	-	-	files/fulltext/rescued_from_scratch_he46/ad761bc382a0__25008524.xml	FTR-20261111-25008524-99
+26029047	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/fulltext/adv065c_20261118/PMID26029047_PMC4429249_efetch_pmc.xml	FTR-20261118-26029047-67
+27616483	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/fulltext/PMID27616483_Li2016_AJHG_PMC5065652_articlepage_20261125.html	FTR-20261125-27616483-01
+27618672	0	0	figures;tables;supplementary	3	3	0	-	-	files/fulltext/rescued_from_scratch_he46/58712f3b0784__y2.xml	FTR-20261109-27618672-81
+30136373	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/fulltext/adv065c_20261118/PMID30136373_PMC6214781_efetch_pmc.xml	FTR-20261118-30136373-67
+30996233	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/fulltext/adv065c_20261118/PMID30996233_PMC6470170_efetch_pmc.xml	FTR-20261118-30996233-67
+32278283	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/deepening_downloads/sodium_selenite_loop_20261124/gpx_assay.xml	FTR-20261124-32278283-80
+32546684	0	0	figures;tables;supplementary	3	3	0	-	-	files/fulltext/PMID32546684_Shi2020_PMC.xml	FTR-20261019-32546684-01
+33711029	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/fulltext/adv065b_20261118/PMID33711029_PMC7954344_efetch_pmc.xml	FTR-20261118-33711029-66
+34227748	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/fulltext/PMID34227748_Recurrent_GRIN1_PMC8283169_bucket_20261125.xml	FTR-20261125-34227748-01
+35524444	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/fulltext/adv065b_20261118/PMID35524444_PMC9283319_efetch_pmc.xml	FTR-20261118-35524444-66
+36244590	0	0	figures;tables;supplementary	3	3	0	-	-	files/deepening_downloads/sulforaphane_loop_20261124/stroke.xml	FTR-20261124-36244590-83
+36692168	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/fulltext/it45_ph_20261115/PMC9970648.html	FTR-20261115-36692168-01
+36998780	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/fulltext/adv065c_20261118/PMID36998780_PMC10043303_efetch_pmc.xml	FTR-20261118-36998780-67
+37069177	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/fulltext/adv065c_20261118/PMID37069177_PMC10110603_efetch_pmc.xml	FTR-20261118-37069177-67
+37438524	0	0	figures;tables;supplementary	3	3	0	-	-	files/fulltext/PMID37438524_Kim2023_PMC_r2.xml	FTR-20261023-37438524-01
+38950809	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/fulltext/adv065c_20261118/PMID38950809_PMC11825064_efetch_pmc.xml	FTR-20261118-38950809-67
+40225931	0	0	figures;tables;supplementary	3	3	0	-	-	files/fulltext/it_adv260_20261125/PMID40225931_PMC11925005_EPMC.xml	FTR-20261125-40225931-01
+41774803	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/fulltext/adv065b_20261118/PMID41774803_PMC12974483_efetch_pmc.xml	FTR-20261118-41774803-66
+41977367	0	0	figures;tables;supplementary	3	3	0	-	-	files/fulltext/PMID41977367_Dumitrescu2026_PMC.xml	FTR-20261019-41977367-01
+42441989	0	0	figures;tables;supplementary;limitations	4	3	0	-	-	files/fulltext/PMID42441989_VigabatrinMRI2026_PMC_r2.xml	FTR-20261125-42441989-01
+42738851	0	0	figures;tables;supplementary	3	3	0	-	-	files/fulltext/PMID42738851_Pozhitnova2026_PMC_r2.xml	FTR-20261019-42738851-01
+42782811	0	0	figures;tables;supplementary	3	3	0	-	-	files/fulltext/PMID42782811_Bagyinszky2026_PMC.xml	FTR-20261019-42782811-01
+10.29011/JVM-106.100006	0	0	discussion;figures;supplementary	3	2	1	-	-	files/deepening_downloads/d_pantothenate_loop_20261124/rao.pdf	FTR-20261124-10.29011-JVM-106.100006-80
+10536022	0	0	discussion;tables;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/pyridoxine_loop_20261123/tian.html	FTR-20261123-10536022-98
+10627592	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/fulltext/PMID10627592_PMC6774109_Nehring2000_page.html	FTR-20261117-10627592-01
+12214565	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/d_biotin_loop_20261124/suormala.pdf	FTR-20261124-12214565-81
+12534635	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/betaine_loop_20261124/PMC1884185.html	FTR-20261124-12534635-95
+13539206	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/d_ribose_loop_20261124/JCI103649.pdf	FTR-20261124-13539206-95
+15897262	0	0	discussion;tables;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/valproate_loop_20261124/15897262.xml	FTR-20261124-15897262-02
+16275822	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/oxcarbazepine_loop_20261124/pediatric_fda.pdf	FTR-20261124-16275822-01
+16650136	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/stiripentol_loop_20261124/Quilichini_2006.pdf	FTR-20261124-16650136-88
+17035501	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/thiamine_loop_20261123/thiamine-carrier.pdf	FTR-20261123-17035501-81
+17541788	0	0	discussion;figures;supplementary	3	2	1	-	-	files/fulltext/rescued_from_scratch_he46/e28956b67ae2__PMC2492388.txt	FTR-20261111-17541788-87
+182198	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/d_pantothenate_loop_20261124/dastur.pdf	FTR-20261124-182198-80
+18615011	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/tiagabine_loop_20261124/pet.xml	FTR-20261124-18615011-80
+18996865	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/d_biotin_loop_20261124/3097470.xml	FTR-20261124-18996865-80
+19158287	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/fulltext/PMID19158287_PMC2744993_Chen2009_page.html	FTR-20261123-19158287-95
+19367790	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/stiripentol_loop_20261124/19367790.xml	FTR-20261124-19367790-89
+19571146	0	0	discussion;figures;supplementary	3	2	1	-	-	files/fulltext/it44_k2p_20261115/PMC6665656.html	FTR-20261115-19571146-01
+19703964	0	0	discussion;figures;supplementary	3	2	1	-	-	files/fulltext/rescued_from_scratch_he46/8368afe3a5a2__PMC2770146.txt	FTR-20261111-19703964-87
+20225289	0	0	discussion;tables;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/dha_loop_20261124/zonisamide_primary_excerpt.pdf	FTR-20261124-20225289-80
+20464498	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/triacetin_loop_20261124/20464498.xml	FTR-20261124-20464498-90
+21362619	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/fulltext/it45_ph_20261115/PMC3077598.html	FTR-20261115-21362619-01
+21379380	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/uridine_triacetate_loop_20261124/adult.xml	FTR-20261124-21379380-80
+21855607	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/sodium_pyruvate_loop_20261124/201231106A0010.pdf	FTR-20261124-21855607-80
+23559625	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/l_carnosine_loop_20261124/pmid_23559625.xml	FTR-20261124-23559625-81
+24635129	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/rufinamide_loop_20261123/channels.html	FTR-20261123-24635129-98
+24734001	0	0	discussion;tables;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/taurine_loop_20261123/Furukawa2014_F9.jpg	FTR-20261123-24734001-99
+24841105	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/sodium_pyruvate_loop_20261124/exercise.xml	FTR-20261124-24841105-80
+25444522	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/brivaracetam_loop_20261123/PMC4359682.1.xml	FTR-20261123-25444522-97
+25506250	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/r_lipoic_loop_20261124/hermann.xml	FTR-20261124-25506250-80
+25738457	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/vigabatrin_loop_20261124/abat.xml	FTR-20261124-25738457-94
+25760040	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/pyridoxine_loop_20261123/albersen.xml	FTR-20261123-25760040-98
+25903138	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/l_serine_loop_20261124/4505526_pmc.html	FTR-20261124-25903138-99
+26133962	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/tiagabine_loop_20261124/pet_exposure.xml	FTR-20261124-26133962-80
+26411970	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/tocopheryl_acetate_loop_20261124/sbp2_lipids.xml	FTR-20261124-26411970-80
+26558787	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/betaine_loop_20261124/PMC6605362.html	FTR-20261124-26558787-97
+26571146	0	0	discussion;tables;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/zonisamide_loop_20261124/neurites.xml	FTR-20261124-26571146-80
+26608744	0	0	discussion;tables;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/triheptanoin_loop_20261123/PMC4805082.xml	FTR-20261124-26608744-99
+26907087	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/creatine_mrs_20261123/PMC4974294.1.xml	FTR-20261123-26907087-91
+26912815	0	0	discussion;figures;supplementary	3	2	1	-	-	files/fulltext/rescued_from_scratch_he46/d6dfb08efd2f__26912815.xml	FTR-20261111-26912815-96
+27099849	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/tocopheryl_acetate_loop_20261124/epilepsy_2016.xml	FTR-20261124-27099849-80
+27103982	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/acetylcysteine_loop_20261123/PMC4839099.1.xml	FTR-20261123-27103982-77
+27721479	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/deepening_downloads/nr_loop_20261124/human_plasma_s1.pdf	FTR-20261124-27721479-80
+28280887	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/brivaracetam_loop_20261123/PMC5423986.1.xml	FTR-20261123-28280887-95
+28374007	0	0	discussion;tables;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/ganaxolone_chloride_recovery_20261123/source.xml	FTR-20261123-28374007-81
+28491900	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/stiripentol_loop_20261124/28491900.bioc.json	FTR-20261124-28491900-88
+29021617	0	0	discussion;tables;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/ubiquinol_loop_20261124/PMC5636788.xml	FTR-20261124-29021617-81
+29561203	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/acetylcysteine_loop_20261123/PMC5999009.html	FTR-20261123-29561203-76
+29666206	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/taurine_loop_20261123/PMC6581075.1.xml	FTR-20261123-29666206-74
+29793153	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/fulltext/adv050_20261118/PMC6050087.html	FTR-20261118-29793153-01
+29805740	0	0	discussion;tables;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/fenfluramine_loop_20261124/nr1.xml	FTR-20261124-29805740-81
+30029003	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/l_lysine_loop_20261124/PMC6516488_ncbi.xml	FTR-20261124-30029003-92
+30659174	0	0	discussion;figures;supplementary	3	2	1	-	-	files/fulltext/rescued_from_scratch_he46/cf8afd511fbf__e_PMC6338780.xml	FTR-20261111-30659174-83
+30696941	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/fulltext/PMID30696941_PMC6756203_Picard2019_epmc.xml	FTR-20261123-30696941-95
+30835490	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/fulltext/it49q06_20261115/p6479253.html	FTR-20261115-30835490-01
+30868125	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/triheptanoin_loop_20261123/PMC6398112.xml	FTR-20261123-30868125-89
+30874549	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/fulltext/adv065c_20261118/PMID30874549_PMC6420604_efetch_pmc.xml	FTR-20261123-30874549-81
+30924924	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/brivaracetam_loop_20261123/PMC6532410.1.xml	FTR-20261123-30924924-95
+31049885	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/cannabidiol_loop_20261124/pediatric_synthetic.xml	FTR-20261124-31049885-93
+31541561	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/memantine_magnesium_20261123/PMC6858497.1.xml	FTR-20261124-31541561-86
+31723543	0	0	discussion;figures;supplementary	3	2	1	-	-	files/deepening_downloads/levetiracetam_loop_20261124/zampella.xml	FTR-20261124-31723543-80
+32169824	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/fenfluramine_loop_20261124/primary.xml	FTR-20261124-32169824-81
+32317978	0	0	discussion;figures;supplementary	3	2	1	-	-	files/fulltext/rescued_from_scratch_he46/9e475f3c92f0__PMC7154116.txt	FTR-20261111-32317978-87
+32652616	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/clobazam_loop_20261124/32652616.xml	FTR-20261124-32652616-93
+33468503	0	0	discussion;tables;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/riboflavin_loop_20261123/PMC7927654.html	FTR-20261123-33468503-95
+33657413	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/nr_loop_20261124/axon.xml	FTR-20261124-33657413-80
+33916190	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/brivaracetam_loop_20261123/PMC8067033.1.xml	FTR-20261123-33916190-97
+34034808	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/sulforaphane_loop_20261124/34034808.xml	FTR-20261124-34034808-83
+34354080	0	0	discussion;figures;supplementary	3	2	1	-	-	files/fulltext/rescued_from_scratch_he46/80f808a11675__PMC8342458.xml	FTR-20261111-34354080-83
+34385458	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/deepening_downloads/calcium_akg_loop_20261124/34385458.xml	FTR-20261124-34385458-91
+34498224	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/sodium_selenite_loop_20261124/neuronal_comparison.html	FTR-20261124-34498224-80
+34729477	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/decanoic_loop_20261124/PMC8557697.xml	FTR-20261124-34729477-80
+34753794	0	0	discussion;figures;supplementary	3	2	1	-	-	files/fulltext/rescued_from_scratch_he46/65eee7d65eb6__e_PMC8626789.xml	FTR-20261111-34753794-83
+35013551	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/d_pantothenate_loop_20261124/8747999.xml	FTR-20261124-35013551-80
+35441706	0	0	discussion;figures;supplementary	3	2	1	-	-	files/deepening_downloads/triheptanoin_loop_20261123/PMC9546029.xml	FTR-20261123-35441706-87
+35817569	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/fulltext/ketamine_kds_it_20261117/p2_ketamine_series/PMID35817569_Jacobwitz2022_PMCpage.html	FTR-20261117-35817569-01
+36346513	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/brivaracetam_loop_20261123/PMC9643320.1.xml	FTR-20261123-36346513-95
+36460779	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/deepening_downloads/citicoline_loop_20261123/choline-supp.docx	FTR-20261123-36460779-98
+36996110	0	0	discussion;tables;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/cannabidiol_loop_20261124/36996110.xml	FTR-20261124-36996110-93
+37173784	0	0	discussion;figures;supplementary	3	2	1	-	-	files/deepening_downloads/citicoline_loop_20261123/PMC10182621.html	FTR-20261123-37173784-97
+37268656	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/triheptanoin_loop_20261123/PMC10238483.xml	FTR-20261123-37268656-90
+37329181	0	0	discussion;tables;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/rufinamide_loop_20261123/dup15q.html	FTR-20261123-37329181-98
+37631333	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/cannabidiol_loop_20261124/PMC10459683.xml	FTR-20261124-37631333-93
+37798473	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/deepening_downloads/inosine_loop_20261124/PMC10626993.xml	FTR-20261124-37798473-94
+38122823	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/fulltext/PMID38122823_Nascimento2023_PMC.xml	FTR-20260927-38122823-01
+38366086	0	0	discussion;figures;supplementary	3	2	1	-	-	files/deepening_downloads/cannabidiol_loop_20261124/38366086.xml	FTR-20261124-38366086-93
+38960035	0	0	discussion;tables;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/inosine_loop_20261124/PMC11342100.xml	FTR-20261124-38960035-94
+39044608	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/nr_loop_20261124/human_acute.xml	FTR-20261124-39044608-80
+39158787	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/fulltext/PMID39158787_PMC11387441_europepmc.xml	FTR-20261117-39158787-01
+39180515	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/acetazolamide_loop_20261123/az-chd2.xml	FTR-20261123-39180515-84
+39212337	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/stiripentol_loop_20261124/39212337.xml	FTR-20261124-39212337-88
+39535276	0	0	discussion;figures;supplementary	3	2	1	-	-	files/fulltext/rescued_from_scratch_he46/462908642227__PMC12000947.txt	FTR-20261111-39535276-88
+39637865	0	0	discussion;figures;supplementary	3	2	1	-	-	files/fulltext/rescued_from_scratch_he46/3d35ff2aa112__PMC7617898.txt	FTR-20261111-39637865-88
+40175519	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/deepening_downloads/sulforaphane_loop_20261124/vpa_development.xml	FTR-20261124-40175519-85
+40371642	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/deepening_downloads/clemastine_loop_20261123/clemastine-trap.xml	FTR-20261123-40371642-79
+40586768	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/stiripentol_loop_20261124/40586768.xml	FTR-20261124-40586768-88
+40647235	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/l_carnosine_loop_20261124/oral.xml	FTR-20261124-40647235-81
+40692288	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/fulltext/kds_pk_20261117/PMID40692288_PMC12280840_epmc.xml	FTR-20261117-40692288-01
+40880844	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/deepening_downloads/myoinositol_loop_20261124/DEE_supp.docx	FTR-20261124-40880844-81
+40925986	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/deepening_downloads/d_pantothenate_loop_20261124/liu.xml	FTR-20261124-40925986-80
+40943218	0	0	discussion;tables;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/thiamine_loop_20261123/thiamine-rat.xml	FTR-20261123-40943218-82
+41054910	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/d_bhb_loop_20261123/adult.pdf	FTR-20261124-41054910-98
+41131961	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/acetazolamide_loop_20261123/az-slc6a1.xml	FTR-20261123-41131961-84
+41233736	0	0	discussion;figures;supplementary	3	2	1	-	-	files/fulltext/rescued_from_scratch_he46/a51f1d9ec172__a.txt	FTR-20261111-41233736-96
+41536056	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/deepening_downloads/calcium_akg_loop_20261124/ja5c19753_si_001.pdf	FTR-20261124-41536056-91
+41974795	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/fulltext/it48q01_it_20261117/PMC13265741.xml	FTR-20261117-41974795-01
+42794650	0	0	discussion;figures;tables;limitations	4	2	1	-	-	files/fulltext/PMID42794650_PMC13607510_Riepe2026_epmc.xml	FTR-20261123-42794650-98
+6500847	0	0	discussion;figures;supplementary;limitations	4	2	1	-	-	files/deepening_downloads/d_biotin_loop_20261124/krause.pdf	FTR-20261124-6500847-80
+10.82444/warw.33664381	0	0	figures;supplementary;limitations	3	2	0	-	-	files/deepening_downloads/d_ribose_loop_20261124/Zur_Nedden_thesis.pdf	FTR-20261124-WARW45926-95
+16177047	0	0	figures;tables	2	2	0	-	-	files/fulltext/it48q01_it_20261117/PMC6725503.txt	FTR-20261117-16177047-02
+16847353	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMC1536060_PMID16847353_pmc_html_fulltext_2026-10-30.txt	FTR-20261030-16847353-01
+20713726	0	0	figures;tables	2	2	0	-	-	files/fulltext/PMID20713726_PMC2932566_Caballero2010_page.html	FTR-20261117-20713726-01
+21237147	0	0	figures;supplementary	2	2	0	-	-	files/deepening_downloads/stiripentol_loop_20261124/21237147.xml	FTR-20261124-21237147-89
+21822218	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/rescued_from_scratch_he46/d29a7f8bae11__PMC3181484.txt	FTR-20261111-21822218-87
+21883211	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/rescued_from_scratch_he46/97738593920a__e_PMC3360518.xml	FTR-20261111-21883211-83
+22197913	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/rescued_from_scratch_he46/54698c3eab91__22197913.xml	FTR-20261111-22197913-99
+22578034	0	0	figures;supplementary;limitations	3	2	0	-	-	files/deepening_downloads/stiripentol_loop_20261124/Cao_collection.pdf	FTR-20261124-22578034-88
+24830361	0	0	figures;supplementary;limitations	3	2	0	-	-	files/deepening_downloads/sodium_pyruvate_loop_20261124/201415023A0004.pdf	FTR-20261124-24830361-80
+24990963	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMC4083087_PMID24990963_europepmc_fulltext_2026-10-30.txt	FTR-20261030-24990963-01
+25011550	0	0	figures;supplementary;limitations	3	2	0	-	-	files/fulltext/wo32_lit_20261118/PMID25011550_PMC4099093_epmc.xml	FTR-20261124-25011550-01
+25017033	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/rescued_from_scratch_he46/5616bf416238__PMC4160056.txt	FTR-20261111-25017033-87
+25221474	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/rescued_from_scratch_he46/03e85432fb03__t.txt	FTR-20261111-25221474-96
+25539952	0	0	figures;supplementary;limitations	3	2	0	-	-	files/deepening_downloads/folinic_loop_20261124/KSS.xml	FTR-20261124-25539952-80
+25938437	0	0	figures;tables;limitations	3	2	0	-	-	files/fulltext/PMID25938437_PMC4418701_Yang2015_epmc.xml	FTR-20261117-25938437-01
+26274319	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/adv052_he_20261118/PMID26274319_PMC4537250_europepmc.xml	FTR-20261118-26274319-53
+26917100	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/rescued_from_scratch_he46/4f73e74fb62f__e_PMC5312704.xml	FTR-20261111-26917100-83
+27259049	0	0	figures;supplementary;limitations	3	2	0	-	-	files/deepening_downloads/riboflavin_loop_20261123/PMC4908180.xml	FTR-20261123-27259049-93
+27683846	0	0	figures;supplementary;limitations	3	2	0	-	-	files/deepening_downloads/clobazam_loop_20261124/27683846.xml	FTR-20261124-27683846-92
+28232581	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/rescued_from_scratch_he46/b1718b4552da__28232581.xml	FTR-20261111-28232581-99
+28434841	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID28434841_R3b_PMC_r2.xml	FTR-20261022-28434841-01
+28504693	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID28504693_R3b_PMC_r2.xml	FTR-20261022-28504693-01
+28940353	0	0	figures;supplementary;limitations	3	2	0	-	-	files/deepening_downloads/acetylcysteine_loop_20261123/PMC5762253.1.xml	FTR-20261123-28940353-77
+29581896	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID29581896_Kuo2018_PMC_r2.xml	FTR-20261019-29581896-01
+30046109	0	0	figures;tables	2	2	0	-	-	files/fulltext/PMC6423962_PMID30046109_europepmc_fulltext_2026-11-13.xml	FTR-20261113-30046109-64
+30073178	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID30073178_Hordeaux2018b_PMC.xml	FTR-20261004-30073178-01
+30284397	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/rescued_from_scratch_he46/0c585f641705__PMC6170881.txt	FTR-20261111-30284397-87
+30335523	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID30335523_PMC6434457_epmc.xml	FTR-20261117-30335523-01
+30353770	0	0	figures;supplementary;limitations	3	2	0	-	-	files/deepening_downloads/d_bhb_loop_20261123/interstitial.html	FTR-20261124-30353770-99
+30497978	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID30497978_Fog2018_PMC_r2.xml	FTR-20261023-30497978-01
+31058209	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/adv065b_20261118/PMID31058209_PMC6498421_efetch_pmc.xml	FTR-20261118-31058209-66
+31411465	0	0	figures;supplementary;limitations	3	2	0	-	-	files/fulltext/rescued_from_scratch_he46/0c3748cb9227__PMID31411465_tran.txt	FTR-20261111-31411465-78
+32140650	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/adv052_he_20261118/PMID32140650_PMC7049796_europepmc.xml	FTR-20261118-32140650-53
+32355866	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID32355866_Bey2020_PMC.xml	FTR-20261004-32355866-01
+32470040	0	0	tables;supplementary;limitations	3	2	0	-	-	files/deepening_downloads/d_biotin_loop_20261124/7259710.xml	FTR-20261124-32470040-80
+33243296	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/adv052_he_20261118/PMID33243296_PMC7690142_europepmc.xml	FTR-20261118-33243296-53
+34204789	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID34204789_Kaluzinska2021_PMC.xml	FTR-20261004-34204789-02
+34253921	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMC8410666_PMID34253921_ncbi_efetch_pmc_2026-10-29.xml	FTR-20261124-34253921-01
+34399820	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/adv052_he_20261118/PMID34399820_PMC8365958_europepmc.xml	FTR-20261118-34399820-53
+34519802	0	0	figures;supplementary;limitations	3	2	0	-	-	files/deepening_downloads/inosine_loop_20261124/SURE-PD3-author-site.pdf	FTR-20261124-34519802-94
+35053314	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID35053314_Ferraro2022_PMC.xml	FTR-20261019-35053314-01
+35076395	0	0	figures;tables;limitations	3	2	0	-	-	files/fulltext/wo32_lit_20261118/PMID35076395_PMC8853665_epmc.xml	FTR-20261118-35076395-01
+35134125	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID35134125_Salvati2022_PMC.xml	FTR-20261019-35134125-01
+35331006	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID35331006_Tukov2022_PMC.xml	FTR-20261003-35331006-01
+35333110	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID35333110_Hordeaux2022_PMC.xml	FTR-20261004-35333110-01
+35433113	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/it_adv260_20261125/PMID35433113_PMC8987850_EPMC.xml	FTR-20261125-35433113-01
+36537292	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/adv052_he_20261118/PMID36537292_PMC9764106_europepmc.xml	FTR-20261118-36537292-53
+36909817	0	0	figures;tables;limitations	3	2	0	-	-	files/fulltext/kds_pk_20261117/PMID36909817_PMC9996394_epmc.xml	FTR-20261117-36909817-01
+37296418	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID37296418_Brown2023_PMC_r2.xml	FTR-20261021-37296418-01
+37328865	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID37328865_Wainberg2023_PMC.xml	FTR-20261019-37328865-01
+37822150	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/adv052_he_20261118/PMID37822150_PMC11591408_europepmc.xml	FTR-20261118-37822150-53
+38116420	0	0	figures;tables	2	2	0	-	-	files/fulltext/rescued_from_scratch_he46/2d10b13db0e8__PMID38116420_pmc.html	FTR-20261112-38116420-75
+38330420	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID38330420_Bian2024_PMC.xml	FTR-20261019-38330420-01
+38375995	0	0	figures;supplementary;limitations	3	2	0	-	-	files/deepening_downloads/lacosamide_loop_20261123/PMC10963285.xml	FTR-20261123-38375995-91
+38509072	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID38509072_Mangkalaphiban2024_PMC_r2.xml	FTR-20261022-38509072-01
+38683369	0	0	figures;tables;limitations	3	2	0	-	-	files/fulltext/PMID38683369_PMC11422472_Li2024_epmc.xml	FTR-20261117-38683369-01
+38840775	0	0	figures;supplementary;limitations	3	2	0	-	-	files/fulltext/PMID38840775_PMC11150584_europepmc.xml	FTR-20261117-38840775-01
+38942888	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID38942888_Odell2024_PMC_r2.xml	FTR-20261021-38942888-01
+38983107	0	0	figures;supplementary;limitations	3	2	0	-	-	files/deepening_downloads/d_bhb_loop_20261123/PMC11231749.1.xml	FTR-20261124-38983107-98
+39337309	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/adv052_he_20261118/PMID39337309_PMC11432152_europepmc.xml	FTR-20261118-39337309-53
+39559284	0	0	figures;supplementary;limitations	3	2	0	-	-	files/deepening_downloads/l_glutamine_loop_20261124/PMC11570421.xml	FTR-20261124-39559284-98
+39762658	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID39762658_OKeeffe2025_PMC_r2.xml	FTR-20261021-39762658-01
+39771507	0	0	tables;supplementary	2	2	0	-	-	files/fulltext/PMID39771507_PopPK2024_PMC_r2.xml	FTR-20261022-39771507-01
+39847501	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID39847501_Chen2025_PMC.xml	FTR-20261105-39847501-25
+40139194	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID40139194_Cheerie2025_PMC_r2.xml	FTR-20261023-40139194-01
+40166234	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID40166234_Jang2025_bioRxiv.pdf	FTR-20261022-40166234-01
+40263630	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID40263630_Wagner2025_PMC.xml	FTR-20261003-40263630-01
+40291937	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID40291937_AlSari2025_PMC.xml	FTR-20261019-40291937-01
+40349107	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID40349107_Aeran2025_PMC.xml	FTR-20261003-40349107-01
+40590574	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID40590574_Wong2025_PMC.xml	FTR-20261019-40590574-01
+40809677	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID40809677_DubaKiss2025_PMC.xml	FTR-20261003-40809677-01
+40911604	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID40911604_Murray2025_PMC_r2.xml	FTR-20261021-40911604-01
+40937943	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID40937943_Ramirez2025_PMC.xml	FTR-20261004-40937943-01
+41111510	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/adv052_he_20261118/PMID41111510_PMC12528054_europepmc.xml	FTR-20261118-41111510-53
+41137852	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID41137852_wwoxrows_main.xml	FTR-20261124-41137852-01
+41278988	0	0	tables;supplementary	2	2	0	-	-	files/fulltext/PMID41278988_PMC12632464_Prakash2025_epmc.xml	FTR-20261123-41278988-01
+41438872	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID41438872_Fortuna2025_PMC.xml	FTR-20261004-41438872-01
+41477840	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID41477840_Stamouli2026_PMC.xml	FTR-20261004-41477840-01
+41559192	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMC13472943_Hu2026_BioPathNet.xml	FTR-20261102-41559192-01
+41573381	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID41573381_Alammary2026_PMC.xml	FTR-20261019-41573381-01
+41709000	0	0	tables;supplementary;limitations	3	2	0	-	-	files/fulltext/adv065b_20261118/PMID41709000_supplement_MOESM1.pdf	FTR-20261118-41709000-67
+41835067	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID41835067_Yigit2026_PMC.xml	FTR-20261004-41835067-01
+41914335	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID41914335_Li2026_PMC.xml	FTR-20261019-41914335-01
+41934115	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/adv052_he_20261118/PMID41934115_PMC13052111_europepmc.xml	FTR-20261118-41934115-53
+41992613	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID41992613_Song2026_PMC.xml	FTR-20261003-41992613-01
+42137263	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID42137263_Moeini2026_PMC.xml	FTR-20261004-42137263-01
+42181696	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID42181696_Diaz2026_PMC.xml	FTR-20261003-42181696-01
+42190665	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMC13293933_PMID42190665_europepmc_fulltext_2026-10-29.xml	FTR-20261125-42190665-01
+42198847	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID42198847_BoespflugTanguy2026_PMC.xml	FTR-20261004-42198847-01
+42213372	0	0	figures;tables;limitations	3	2	0	-	-	files/fulltext/kds_pk_20261117/PMID42213372_PMC13275523_epmc.xml	FTR-20261117-42213372-01
+42240040	0	0	figures;tables;limitations	3	2	0	-	-	files/fulltext/ketamine_kds_it_20261117/p4_harms/PMID42240040_Sarkar2026_europepmc-fulltextxml.xml	FTR-20261117-42240040-01
+42349402	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID42349402_Fukai2026_PMC.xml	FTR-20261003-42349402-01
+42436860	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml	FTR-20261004-42436860-01
+42458834	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID42458834_Boitnott2026_PMC.xml	FTR-20261003-42458834-01
+42521212	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID42521212_Saravanan2026_PMC.xml	FTR-20261003-42521212-01
+42538560	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml	FTR-20261004-42538560-01
+42587157	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMC13531005_PMID42587157_europepmc_fulltext_2026-10-29.xml	FTR-20261029-42587157-01
+42650333	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/adv052_he_20261118/PMID42650333_PMC13510780_europepmc.xml	FTR-20261118-42650333-53
+42654068	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID42654068_Autism_XAV2026_PMC_r2.xml	FTR-20261021-42654068-01
+42723519	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID42723519_VigabatrinPK2026_PMC13563110_pmcpage_20261125.html	FTR-20261125-42723519-01
+42770556	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID42770556_Lima2026_PMC.xml	FTR-20261004-42770556-01
+42771216	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID42771216_Kohler2026_PMC.xml	FTR-20261004-42771216-01
+42807309	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID42807309_16q231_pancreatitis_2026.pdf	FTR-20261004-42807309-01
+42812991	0	0	figures;supplementary	2	2	0	-	-	files/fulltext/PMID42812991_AAV_AD_review_2026.txt	FTR-20261004-42812991-01
+10.11588/heidok.00008349	0	0	discussion;figures	2	1	1	-	-	files/fulltext/it48q01_fwd_it_20261121/Fucke2008_thesis_heiDOK8349.pdf	FTR-20261121-00008349-48
+22609537	0	0	discussion;supplementary;limitations	3	1	1	-	-	files/deepening_downloads/r_lipoic_loop_20261124/adult_pk.pdf	FTR-20261124-22609537-82
+22812691	0	0	discussion;supplementary;limitations	3	1	1	-	-	files/deepening_downloads/oxcarbazepine_loop_20261124/fda.pdf	FTR-20261124-22812691-01
+23464470	0	0	discussion;figures;limitations	3	1	1	-	-	files/fulltext/PMID23464470_Yan2012_APJCP_journal_pdf_2026-11-25.pdf	FTR-20261125-23464470-01
+24802902	0	0	discussion;figures	2	1	1	-	-	files/deepening_downloads/vigabatrin_loop_20261124/brain.xml	FTR-20261124-24802902-80
+26657515	0	0	discussion;figures;limitations	3	1	1	-	-	files/deepening_downloads/thiamine_loop_20261123/thiamine-thesis.pdf	FTR-20261123-26657515-81
+28079396	0	0	discussion;supplementary;limitations	3	1	1	-	-	files/deepening_downloads/creatine_mrs_20261123/PMID28079396.pdf	FTR-20261123-28079396-91
+34261823	0	0	discussion;supplementary;limitations	3	1	1	-	-	files/deepening_downloads/potassium_bromide_loop_20261124/IndustrialHealth_59_239.pdf	FTR-20261124-34261823-99
+34515380	0	0	discussion;figures	2	1	1	-	-	files/deepening_downloads/nr_loop_20261124/ataxia.xml	FTR-20261124-34515380-81
+34977503	0	0	discussion;tables;limitations	3	1	1	-	-	files/deepening_downloads/glycine_loop_20261124/34977503_supp.pdf	FTR-20261124-34977503-02
+35495038	0	0	discussion;supplementary	2	1	1	-	-	files/fulltext/rescued_from_scratch_he46/ecb47dec4938__PMC9051405.txt	FTR-20261111-35495038-87
+36717752	0	0	discussion;tables;limitations	3	1	1	-	-	files/deepening_downloads/hydroxocobalamin_loop_20261124/forny.xml	FTR-20261124-36717752-80
+39215006	0	0	discussion;supplementary	2	1	1	-	-	files/fulltext/rescued_from_scratch_he46/7b8fe9725ed1__PMC11364637.txt	FTR-20261111-39215006-87
+39352636	0	0	discussion;tables;limitations	3	1	1	-	-	files/deepening_downloads/nr_loop_20261124/endogenous_supp.pdf	FTR-20261124-39352636-81
+40959251	0	0	discussion;figures	2	1	1	-	-	files/fulltext/it49q11_20261115/p12434521.html	FTR-20261121-40959251-01
+41357861	0	0	discussion;figures;limitations	3	1	1	-	-	files/fulltext/kds_pk_20261117/PMID41357861_pubmed_efetch.xml	FTR-20261117-41357861-01
+41858901	0	0	discussion;figures	2	1	1	-	-	files/deepening_downloads/nr_loop_20261124/human_time.xml	FTR-20261124-41858901-96
+42051565	0	0	discussion;figures;limitations	3	1	1	-	-	files/deepening_downloads/hydroxocobalamin_loop_20261124/selvanathan.xml	FTR-20261124-42051565-80
+42934349	0	0	discussion;tables;limitations	3	1	1	-	-	files/deepening_downloads/squalene_loop_20261124/plp1_supp.pdf	FTR-20261124-42934349-01
+10.1101/2023.09.25.559198	0	0	figures	1	1	0	-	-	files/fulltext/ih_rin_it_20261121/p1/biorxiv_2023.09.25.559198v1.pdf	FTR-20261121-IHRIN-01
+10.21203/rs.3.rs-9950101/v1	0	0	figures	1	1	0	-	-	files/fulltext/PPR1316475_Carter2026_ResearchSquare.pdf	FTR-20261004-PPR1316475-01
+10.64898/2026.01.16.26344264	0	0	figures	1	1	0	-	-	files/fulltext/PPR1269651_vanderSanden2026_medRxiv.xml	FTR-20261004-PPR1269651-01
+10.64898/2026.02.03.703439	0	0	figures	1	1	0	-	-	files/fulltext/ih_rin_it_20261121/p2/biorxiv_2026.02.03.703439v1.pdf	FTR-20261121-IHRIN-02
+10922063	0	0	figures	1	1	0	-	-	files/fulltext/PMC16825_PMID10922063_pmc_html_fulltext_2026-10-30.txt	FTR-20261030-10922063-01
+11572989	0	0	figures	1	1	0	-	-	files/fulltext/PMID11572989_Paige2001_PMC_2026-09-27.html	FTR-20260927-11572989-01
+17679088	0	0	figures	1	1	0	-	-	files/fulltext/PMID17679088_Zhang2007_PMC.html	FTR-20261004-17679088-02
+18989370	0	0	supplementary	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/51b79fe8b1fb__18989370.xml	FTR-20261111-18989370-99
+19017396	0	0	supplementary	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/f397b02be93f__19017396.xml	FTR-20261111-19017396-99
+20146584	0	0	figures	1	1	0	-	-	files/fulltext/PMID20146584_Salah2010_PMC.xml	FTR-20260909-20146584-01
+21368882	0	0	figures	1	1	0	-	-	files/fulltext/PMID21368882_Lee2010_PMC.xml	FTR-20261003-21368882-01
+21765396	0	0	figures	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/51e961aa3593__t.txt	FTR-20261111-21765396-85
+21964340	0	0	figures	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/08a575e0c750__PMID21964340_nat.xml	FTR-20261112-21964340-75
+22728824	0	0	supplementary	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/5c2189605f26__PMC3411076.txt	FTR-20261111-22728824-87
+24002024	0	0	figures	1	1	0	-	-	files/fulltext/PMID24002024_Baraban2013_PMC_r2.xml	FTR-20261124-24002024-01
+24607230	0	0	figures	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/53c1465c1a4a__e_PMC3957490.xml	FTR-20261111-24607230-84
+25537520	0	0	figures	1	1	0	-	-	files/fulltext/PMID25537520_Chang2014_PMC.xml	FTR-20261002-25537520-01
+25708809	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID25708809_Hua2015_PMC_r2.xml	FTR-20261023-25708809-01
+25789010	0	0	figures	1	1	0	-	-	files/fulltext/PMID25789010_PMC4356412_epmc.xml	FTR-20261117-25789010-01
+25891642	0	0	figures	1	1	0	-	-	files/fulltext/PMID25891642_PMC4464321_epmc.xml	FTR-20261117-25891642-01
+27062927	0	0	figures	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/d0a85a9943a0__27062927.xml	FTR-20261111-27062927-99
+27264091	0	0	supplementary;limitations	2	1	0	-	-	files/deepening_downloads/d_biotin_loop_20261124/rat_diet.pdf	FTR-20261124-27264091-80
+28276488	0	0	supplementary	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/127577e20314__PMC5343576.txt	FTR-20261111-28276488-87
+28919853	0	0	figures	1	1	0	-	-	files/fulltext/PMID28919853_CDK5astro2017_PMC_r2.xml	FTR-20261022-28919853-01
+29449567	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID29449567_Mathieson2018_PMC5814408.xml	FTR-20261021-29449567-01
+29533123	0	0	tables	1	1	0	-	-	files/fulltext/PMC6365596_PMID29533123_pmc_html_2026-11-12.html	FTR-20261112-29533123-73
+29785012	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID29785012_Matreyek2018_PMC5980760.xml	FTR-20261021-29785012-01
+29940337	0	0	figures	1	1	0	-	-	files/fulltext/PMID29940337_R3b_PMC_r2.xml	FTR-20261124-29940337-01
+30073179	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID30073179_Hordeaux2018a_PMC.xml	FTR-20261004-30073179-01
+30175250	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml	FTR-20261022-30175250-02
+31117121	0	0	supplementary	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/738b3b372b4d__PMC6532698.txt	FTR-20261111-31117121-87
+31123603	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID31123603_Chou2019_PMC6529460_epmc.xml	FTR-20261124-31123603-01
+31164987	0	0	supplementary	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/5a1a88e1ecee__31164987.xml	FTR-20261111-31164987-99
+31263401	0	0	figures	1	1	0	-	-	files/fulltext/PMID31263401_PMC6585163_europepmc.xml	FTR-20261117-31263401-01
+31331032	0	0	figures	1	1	0	-	-	files/fulltext/PMID31331032_R3b_PMC_r2.xml	FTR-20261022-31331032-01
+31402619	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml	FTR-20261021-31402619-01
+31597037	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID31597037_Kim2019_PMC_r2.xml	FTR-20261023-31597037-01
+32180707	0	0	supplementary	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/eaeb788248ae__e_PMC7059123.xml	FTR-20261111-32180707-83
+33033238	0	0	supplementary	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/818976b423b5__PMC7545092.txt	FTR-20261111-33033238-87
+33053775	0	0	figures	1	1	0	-	-	files/fulltext/PMID33053775_Aquilino2020_EPMC.xml	FTR-20261023-33053775-01
+33726816	0	0	figures	1	1	0	-	-	files/fulltext/PMID33726816_Stranneheim2021_PMC.xml	FTR-20261124-33726816-01
+33946771	0	0	figures	1	1	0	-	-	files/fulltext/PMID33946771_Taouis2021_PMC.xml	FTR-20261124-33946771-01
+34649609	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID34649609_Matreyek2021_PMC8518224.xml	FTR-20261021-34649609-01
+35499850	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID35499850_Knupp2022_PMC_r2.xml	FTR-20261022-35499850-02
+35589394	0	0	figures	1	1	0	-	-	files/fulltext/PMID35589394_Hyperoxia2022_PMC_r2.xml	FTR-20261022-35589394-01
+35611273	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID35611273_Hanson2022_PMC_r2.xml	FTR-20261022-35611273-01
+35945201	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml	FTR-20261021-35945201-01
+36235546	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID36235546_Morris2022_PMC.xml	FTR-20261019-36235546-01
+36980111	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID36980111_Mastrangelo2023_PMC.xml	FTR-20261020-36980111-01
+37139250	0	0	figures;limitations	2	1	0	-	-	files/fulltext/ketamine_kds_it_20261117/p2_ketamine_series/PMID37139250_DeVine2023_PMCpage.html	FTR-20261117-37139250-01
+37629153	0	0	supplementary	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/43ff32a601fe__e_PMC10455551.xml	FTR-20261111-37629153-83
+37733345	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID37733345_Chock2023_PMC.xml	FTR-20261019-37733345-01
+37876811	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID37876811_Liang2023_PMC.xml	FTR-20261019-37876811-01
+38042867	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID38042867_Everolimus2023_PMC_r2.xml	FTR-20261022-38042867-01
+38162029	0	0	figures	1	1	0	-	-	files/fulltext/kds_pk_20261117/PMID38162029_PMC10755719_epmc.xml	FTR-20261123-38162029-99
+38206902	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID38206902_June2024_PMC.xml	FTR-20261019-38206902-01
+38396641	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID38396641_Pandey2024_PMC10888012.xml	FTR-20261021-38396641-01
+38942186	0	0	supplementary	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/8e2f94481e7a__a.txt	FTR-20261111-38942186-96
+39013852	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml	FTR-20261022-39013852-01
+39087877	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID39087877_Zhao2025_PMC.xml	FTR-20261019-39087877-01
+39148107	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml	FTR-20261022-39148107-01
+39239479	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID39239479_Porras2024_PMC.xml	FTR-20261019-39239479-01
+39409184	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml	FTR-20261022-39409184-01
+39934240	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml	FTR-20261019-39934240-01
+39981749	0	0	figures	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/822941d98b2b__PMC11887051.txt	FTR-20261111-39981749-85
+40019827	0	0	figures	1	1	0	-	-	files/fulltext/PMID40019827_Innes2025_PMC.xml	FTR-20261003-40019827-01
+40022130	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID40022130_Serdar2025_PMC.xml	FTR-20261019-40022130-01
+40871085	0	0	figures	1	1	0	-	-	files/fulltext/PMID40871085_DiDeo2025_PMC_r2.xml	FTR-20261021-40871085-01
+40952239	0	0	figures	1	1	0	-	-	files/fulltext/PMID40952239_Carpanese2025_PMC.xml	FTR-20261004-40952239-01
+40988338	0	0	figures	1	1	0	-	-	files/fulltext/PMID40988338_Quinlan2025_PMC_supp_mmc1.pdf	FTR-20261003-40988338-01
+40998695	0	0	supplementary	1	1	0	-	-	files/fulltext/rescued_from_scratch_he46/8f9a40636d9e__PMC12590121.txt	FTR-20261111-40998695-87
+41069084	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID41069084_Burst2026_PMC.xml	FTR-20261019-41069084-01
+41104520	0	0	tables	1	1	0	-	-	files/fulltext/it45_ph_20261115/PMC12621189.html	FTR-20261115-41104520-01
+41118244	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID41118244_Jeong2026_PMC.xml	FTR-20261019-41118244-01
+41144763	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID41144763_Slc35a22026_PMC_r2.xml	FTR-20261022-41144763-01
+41346378	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID41346378_Jiang2025_PMC.xml	FTR-20261019-41346378-01
+41618072	0	0	figures	1	1	0	-	-	files/fulltext/PMID41618072_PMC12894180_europepmc.xml	FTR-20261117-41618072-01
+41712282	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID41712282_Bailey2026_PMC.xml	FTR-20261004-41712282-02
+41933112	0	0	figures;limitations	2	1	0	-	-	files/fulltext/kds_pk_20261117/PMID41933112_PMC13221361_epmc.xml	FTR-20261117-41933112-01
+42360174	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID42360174_Hahn2026_PMC.xml	FTR-20261019-42360174-01
+42384016	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID42384016_Trico2026_PMC.xml	FTR-20261019-42384016-01
+42494992	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml	FTR-20261022-42494992-01
+42542632	0	0	supplementary	1	1	0	-	-	files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml	FTR-20261022-42542632-01
+42661025	0	0	figures	1	1	0	-	-	files/fulltext/PMID42661025_Uzay2026_publisher_fitz.txt	FTR-20261023-42661025-01
+42720877	0	0	tables	1	1	0	-	-	files/fulltext/PMID42720877_Schatz2026_PMC_r2.xml	FTR-20261019-42720877-01
+42738875	0	0	figures	1	1	0	-	-	files/fulltext/PMID42738875_Tang2026_PMC.xml	FTR-20261004-42738875-01
+9634550	0	0	supplementary	1	1	0	-	-	files/fulltext/adv052_he_20261118/PMID9634550_PMC6792570_pmcpage.html	FTR-20261123-9634550-82
+40595546	0	0	discussion	1	0	1	-	-	files/fulltext/rescued_from_scratch_he46/1b453b7b219c__a.txt	FTR-20261111-40595546-96
+42846717	0	0	discussion	1	0	1	-	-	files/fulltext/PMID42846717_Samanta2026_PMC_r2.xml	FTR-20261019-42846717-01
+22842668	0	0	-	0	0	0	-	-	files/fulltext/PMID22842668_Pluciennik2012.pdf	FTR-20261020-22842668-01
+23611579	0	0	-	0	0	0	-	-	files/fulltext/PMID23611579_Abdelmalak2013_PMC_r2.xml	FTR-20261124-23611579-95
+24949445	0	0	-	0	0	0	-	-	files/fulltext/PMID24949445_Szymanska2014_PMC.xml	FTR-20261004-24949445-02
+25814935	0	0	-	0	0	0	-	-	files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml	FTR-20261019-25814935-01
+26459563	0	0	-	0	0	0	-	-	files/fulltext/PMC4653701_PMID26459563_pmc_html_2026-11-12.html	FTR-20261112-26459563-73
+27392635	0	0	-	0	0	0	-	-	files/deepening_downloads/clobazam_loop_20261124/27392635.xml	FTR-20261124-27392635-92
+28721938	0	0	-	0	0	0	-	-	files/fulltext/PMID28721938_TartaArsene2017_JLE.txt	FTR-20261105-28721938-21
+30158849	0	0	-	0	0	0	-	-	files/fulltext/PMID30158849_Liu2018_PMC.xml	FTR-20261004-30158849-03
+31001961	0	0	-	0	0	0	-	-	files/fulltext/rescued_from_scratch_he46/56d8d6981797__cpb.pdf	FTR-20261111-31001961-85
+32878331	0	0	-	0	0	0	-	-	files/fulltext/PMID32878331_Berecki2020_PMC_r2.xml	FTR-20261118-32878331-53
+33405376	0	0	-	0	0	0	-	-	files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml	FTR-20261022-33405376-01
+33547201	0	0	-	0	0	0	-	-	files/fulltext/PMID33547201_Hanson2021b_PMC_r2.xml	FTR-20261022-33547201-01
+33612478	0	0	-	0	0	0	-	-	files/fulltext/PMID33612478_Liu2021_PMC.xml	FTR-20261019-33612478-02
+35372341	0	0	-	0	0	0	-	-	files/fulltext/PMID35372341_Palma2022_PMC_r2.xml	FTR-20261123-35372341-78
+35712340	0	0	-	0	0	0	-	-	files/fulltext/PMID35712340_Sukkar2022_PMC.xml	FTR-20261124-35712340-97
+36117414	0	0	-	0	0	0	-	-	files/fulltext/PMID36117414_Dienel2023_PMC.xml	FTR-20261019-36117414-01
+36300716	0	0	-	0	0	0	-	-	files/fulltext/PMID36300716_Bleakley2023_PMC_r2.xml	FTR-20261105-36300716-05
+37082241	0	0	-	0	0	0	-	-	files/fulltext/PMID37082241_Harman2023_PMC_r2.xml	FTR-20261105-37082241-05
+37321992	0	0	-	0	0	0	-	-	files/fulltext/rescued_from_scratch_he46/403df05dd471__t.txt	FTR-20261111-37321992-96
+38540325	0	0	-	0	0	0	-	-	files/fulltext/PMID38540325_Snyder2024_PMC.xml	FTR-20261003-38540325-01
+38681648	0	0	-	0	0	0	-	-	files/fulltext/PMID38681648_Tao2024_PMC.xml	FTR-20261019-38681648-01
+38978529	0	0	-	0	0	0	-	-	files/fulltext/PMID38978529_Girgis2024_PMC.xml	FTR-20261020-38978529-01
+39358605	0	0	-	0	0	0	-	-	files/fulltext/PMID39358605_Wiseman2024_PMC.xml	FTR-20261004-39358605-02
+39439575	0	0	-	0	0	0	-	-	files/fulltext/PMID39439575_Berg2024comm_PMC.xml	FTR-20261022-39439575-02
+39762914	0	0	-	0	0	0	-	-	files/fulltext/PMID39762914_Driedger2025_PMC_r2.xml	FTR-20261022-39762914-02
+39861362	0	0	-	0	0	0	-	-	files/fulltext/PMID39861362_Tesser2025_PMC.xml	FTR-20261019-39861362-01
+39871710	0	0	-	0	0	0	-	-	files/fulltext/PMID39871710_Abbas2025_PMC.xml	FTR-20261019-39871710-01
+40068874	0	0	-	0	0	0	-	-	files/fulltext/PMID40068874_Sack2025_PMC_r2.xml	FTR-20261105-40068874-05
+40119223	0	0	-	0	0	0	-	-	files/fulltext/PMID40119223_Garg2025_PMC.xml	FTR-20261019-40119223-01
+40183601	0	0	-	0	0	0	-	-	files/fulltext/PMID40183601_Henry2025_PMC.xml	FTR-20261004-40183601-02
+40327201	0	0	-	0	0	0	-	-	files/fulltext/PMID40327201_Hammouz2025_PMC_r2.xml	FTR-20261019-40327201-01
+40365404	0	0	-	0	0	0	-	-	files/fulltext/rescued_from_scratch_he46/0fd006949e81__PMC12067145.txt	FTR-20261111-40365404-85
+40589985	0	0	-	0	0	0	-	-	files/fulltext/PMID40589985_Sun2025_PMC.xml	FTR-20261019-40589985-01
+40635742	0	0	-	0	0	0	-	-	files/fulltext/rescued_from_scratch_he46/2070949985f4__PMC12237960.txt	FTR-20261111-40635742-85
+40943441	0	0	-	0	0	0	-	-	files/fulltext/PMID40943441_Panchenko2025_PMC.xml	FTR-20261004-40943441-01
+40944047	0	0	-	0	0	0	-	-	files/fulltext/PMID40944047_Ziaka2025_PMC.xml	FTR-20261019-40944047-01
+41141138	0	0	-	0	0	0	-	-	files/fulltext/PMID41141138_Sharma2025_PMC.xml	FTR-20261020-41141138-01
+41324728	0	0	-	0	0	0	-	-	files/fulltext/PMID41324728_Kuang2025_PMC.xml	FTR-20261109-41324728-82
+41712149	0	0	-	0	0	0	-	-	files/fulltext/PMID41712149_Balestrini2026_PMC.xml	FTR-20261124-41712149-01
+41980417	0	0	-	0	0	0	-	-	files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml	FTR-20261107-41980417-95
+42087252	0	0	-	0	0	0	-	-	files/fulltext/PMID42087252_Funayama2026_PMC.xml	FTR-20261019-42087252-01
+42638834	0	0	-	0	0	0	-	-	files/fulltext/PMID42638834_Sobrinho2026_PMC.xml	FTR-20261019-42638834-01
