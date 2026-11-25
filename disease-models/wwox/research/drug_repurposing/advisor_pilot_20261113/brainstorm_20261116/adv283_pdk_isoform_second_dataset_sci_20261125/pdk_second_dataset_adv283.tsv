@@ -1,0 +1,31 @@
+dataset	comparison	gene	n_deficient_v_control	mean_TPM_deficient_or_total_UMI	mean_TPM_control_or_nuclei_nonzero	ratio	ordering	detected_mean_TPM_ge_1	verdict	deficient_libraries_TPM	control_libraries_TPM
+D2 GSE158681 hippocampus P17 mouse	KO v WT (primary, global null)	Pdk1	2 v 3	16.160	17.145	0.943	overlap	yes	FAILS TO SUPPORT	13.08 19.24	15.04 20.76 15.63
+D2 GSE158681 hippocampus P17 mouse	KO v WT (primary, global null)	Pdk2	2 v 3	46.359	59.586	0.778	all deficient below all control	yes	no prediction	52.68 40.04	66.59 53.38 58.79
+D2 GSE158681 hippocampus P17 mouse	KO v WT (primary, global null)	Pdk3	2 v 3	15.126	21.954	0.689	all deficient below all control	yes	FAILS TO SUPPORT	14.87 15.38	23.83 21.37 20.66
+D2 GSE158681 hippocampus P17 mouse	KO v WT (primary, global null)	Pdk4	2 v 3	3.207	7.296	0.440	all deficient below all control	yes	no prediction	2.73 3.68	7.98 7.23 6.67
+D2 GSE158681 hippocampus P17 mouse	S KO v S Ctrl (secondary, Synapsin-Cre)	Pdk1	3 v 2	14.760	22.340	0.661	all deficient below all control	yes	SUPPORTS	12.02 15.51 16.75	20.75 23.93
+D2 GSE158681 hippocampus P17 mouse	S KO v S Ctrl (secondary, Synapsin-Cre)	Pdk2	3 v 2	109.622	83.273	1.316	all deficient above all control	yes	no prediction	119.53 97.48 111.85	76.64 89.90
+D2 GSE158681 hippocampus P17 mouse	S KO v S Ctrl (secondary, Synapsin-Cre)	Pdk3	3 v 2	29.272	26.873	1.089	overlap	yes	FAILS TO SUPPORT	33.33 25.24 29.25	28.04 25.70
+D2 GSE158681 hippocampus P17 mouse	S KO v S Ctrl (secondary, Synapsin-Cre)	Pdk4	3 v 2	4.068	3.732	1.090	overlap	yes	no prediction	2.17 4.97 5.06	3.87 3.59
+D2 GSE158681 hippocampus P17 mouse	N KO v N Ctrl (secondary, nestin-Cre)	Pdk1	2 v 2	15.341	14.648	1.047	overlap	yes	FAILS TO SUPPORT	15.22 15.46	13.06 16.23
+D2 GSE158681 hippocampus P17 mouse	N KO v N Ctrl (secondary, nestin-Cre)	Pdk2	2 v 2	109.443	81.308	1.346	all deficient above all control	yes	no prediction	121.48 97.40	88.09 74.53
+D2 GSE158681 hippocampus P17 mouse	N KO v N Ctrl (secondary, nestin-Cre)	Pdk3	2 v 2	26.387	28.906	0.913	all deficient below all control	yes	FAILS TO SUPPORT	24.82 27.95	29.36 28.45
+D2 GSE158681 hippocampus P17 mouse	N KO v N Ctrl (secondary, nestin-Cre)	Pdk4	2 v 2	1.972	3.218	0.613	all deficient below all control	yes	no prediction	2.65 1.29	3.12 3.31
+D3 GSE158682 cortex P17 mouse	S KO v S Ctrl (primary)	Pdk1	3 v 4	6.374	7.919	0.805	overlap	yes	FAILS TO SUPPORT	8.91 3.81 6.40	9.98 11.65 4.30 5.74
+D3 GSE158682 cortex P17 mouse	S KO v S Ctrl (primary)	Pdk2	3 v 4	170.188	134.441	1.266	overlap	yes	no prediction	125.60 187.67 197.30	134.58 120.53 136.88 145.78
+D3 GSE158682 cortex P17 mouse	S KO v S Ctrl (primary)	Pdk3	3 v 4	19.284	18.906	1.020	overlap	yes	FAILS TO SUPPORT	13.83 18.65 25.38	19.14 21.90 17.27 17.31
+D3 GSE158682 cortex P17 mouse	S KO v S Ctrl (primary)	Pdk4	3 v 4	1.600	2.600	0.615	overlap	yes	no prediction	1.49 1.44 1.87	3.06 2.62 1.65 3.08
+D4 GSE126075 human CAGE (descriptive)	hNSC WWOX-del v control	Pdk1	1 v 1	3.558	5.156	0.690	n of 1: no ordering	yes	DESCRIPTIVE	3.56	5.16
+D4 GSE126075 human CAGE (descriptive)	neurons WWOX-del v control	Pdk1	1 v 1	1.571	3.304	0.476	n of 1: no ordering	yes	DESCRIPTIVE	1.57	3.30
+D4 GSE126075 human CAGE (descriptive)	hNSC WWOX-del v control	Pdk2	1 v 1	34.398	32.818	1.048	n of 1: no ordering	yes	DESCRIPTIVE	34.40	32.82
+D4 GSE126075 human CAGE (descriptive)	neurons WWOX-del v control	Pdk2	1 v 1	7.194	37.110	0.194	n of 1: no ordering	yes	DESCRIPTIVE	7.19	37.11
+D4 GSE126075 human CAGE (descriptive)	hNSC WWOX-del v control	Pdk3	1 v 1	14.164	15.566	0.910	n of 1: no ordering	yes	DESCRIPTIVE	14.16	15.57
+D4 GSE126075 human CAGE (descriptive)	neurons WWOX-del v control	Pdk3	1 v 1	4.272	12.972	0.329	n of 1: no ordering	yes	DESCRIPTIVE	4.27	12.97
+D5 GSE158684 snRNA mouse hippocampal nuclei (coverage only)	ctrl	Pdk1	1 library, 3182 nuclei	394	340			yes	COVERAGE ONLY		
+D5 GSE158684 snRNA mouse hippocampal nuclei (coverage only)	ctrl	Pdk2	1 library, 3182 nuclei	261	249			yes	COVERAGE ONLY		
+D5 GSE158684 snRNA mouse hippocampal nuclei (coverage only)	ctrl	Pdk3	1 library, 3182 nuclei	628	515			yes	COVERAGE ONLY		
+D5 GSE158684 snRNA mouse hippocampal nuclei (coverage only)	ctrl	Pdk4	1 library, 3182 nuclei	30	28			yes	COVERAGE ONLY		
+D5 GSE158684 snRNA mouse hippocampal nuclei (coverage only)	ko	Pdk1	1 library, 2920 nuclei	409	350			yes	COVERAGE ONLY		
+D5 GSE158684 snRNA mouse hippocampal nuclei (coverage only)	ko	Pdk2	1 library, 2920 nuclei	159	151			yes	COVERAGE ONLY		
+D5 GSE158684 snRNA mouse hippocampal nuclei (coverage only)	ko	Pdk3	1 library, 2920 nuclei	489	415			yes	COVERAGE ONLY		
+D5 GSE158684 snRNA mouse hippocampal nuclei (coverage only)	ko	Pdk4	1 library, 2920 nuclei	15	15			yes	COVERAGE ONLY		
