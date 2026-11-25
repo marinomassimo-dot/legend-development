@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T18:18Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T18:18:33Z",
+ "event_id": "FTR-20261125-38443647-01",
+ "evidence_basis": [
+  "coverage_map",
+  "reader: the five figure images opened (all schematics); exposure sentences re-read in the text; blind delegate (sonnet, high) on the pivotal items. Classes left not_read here were not re-read in this event."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv280_next_ten_held_partials_sci_20261125/RESULT_ADV280_INC2_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261110-38443647-97",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "a96482832ce91c8e072d0b4b4549d0fd59f1c65e4e1dc1efe0ea999d791e007d",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID38443647_Bacq2024_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1007/s12325-024-02813-0",
+  "pmid": "38443647"
+ },
+ "workflow": "SCI ADV-280 next ten held partials, increment 2 (not a complete read)"
+}
