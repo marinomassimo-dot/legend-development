@@ -527,38 +527,106 @@ VIEW_STUB_STALE_INVENTORY = ("import sys\nif sys.argv[1:3] == ['i18n', '--what']
 
 
 class SafePushLandingSuites(unittest.TestCase):
-    """`--landing-suites` prints what the selector's suites say and never refuses on it (ADV, 2026-11-25). Fixture repository with a stub selector; the real selector has its own tests."""
+    """Landing suites (2026-11-25, ADV): the default under `--serialize`; a suite the push turns red refuses, one already red on the remote tip does not; the opt-out is recorded in the history.
+    Fixture repository with a stub selector; the real selector has its own tests."""
     _repo = SafePushRefusals._repo
     _with_bare_remote = SafePushRefusals._with_bare_remote
     _remote_main = SafePushRefusals._remote_main
     SELECTOR = ("def changes(root, base):\n    return [('M', 'x')]\n"
                 "def select(changed, root):\n    return sorted(str(p.relative_to(root)) for p in (root / 'suites').glob('*.py'))\n")
+    RED = "import sys\nprint('FAIL: test_x (s.C.test_x)')\nsys.exit(1)\n"
 
     def publish(self, root: Path, *args: str):
-        env = dict(os.environ, LEGEND_SAFE_PUSH_ROOT=str(root), LEGEND_SAFE_PUSH_GATE=str(root / "scripts" / "gate.py"))
+        env = dict(os.environ, LEGEND_SAFE_PUSH_ROOT=str(root), LEGEND_SAFE_PUSH_GATE=str(root / "scripts" / "gate.py"), LEGEND_SAFE_PUSH_REGEN=str(root.parent / "no_regen.py"))
         return subprocess.run([sys.executable, str(TOOL), "origin", "main", *args], capture_output=True, text=True, env=env)
 
-    def with_suites(self, td: str, suites: dict):
+    def commit_all(self, root: Path, message: str) -> None:
+        subprocess.run(["git", "-C", str(root), "add", "-A"], check=True)
+        subprocess.run(["git", "-C", str(root), "commit", "-qm", message], check=True)
+
+    def with_suites(self, td: str, suites: dict, selector: str = ""):
         root, bare = self._with_bare_remote(td)
         (root / "framework" / "scripts").mkdir(parents=True)
-        (root / "framework" / "scripts" / "landing_suites.py").write_text(self.SELECTOR, encoding="utf-8")
+        (root / "framework" / "scripts" / "landing_suites.py").write_text(selector or self.SELECTOR, encoding="utf-8")
         (root / "suites").mkdir()
         for name, text in suites.items():
             (root / "suites" / name).write_text(text, encoding="utf-8")
-        subprocess.run(["git", "-C", str(root), "add", "-A"], check=True)
-        subprocess.run(["git", "-C", str(root), "commit", "-qm", "suites"], check=True)
+        self.commit_all(root, "suites")
         return root, bare
 
-    def test_a_red_suite_is_printed_and_the_push_still_happens(self) -> None:
+    def on_the_remote(self, root: Path) -> None:
+        subprocess.run(["git", "-C", str(root), "push", "-q", "origin", "HEAD:refs/heads/main"], check=True)
+
+    def test_a_suite_the_push_turns_red_refuses_by_default_under_serialize(self) -> None:
         with TemporaryDirectory() as td:
-            root, bare = self.with_suites(td, {"a_ok.py": "print('ok')\n", "b_red.py": "import sys\nprint('FAIL: test_x')\nsys.exit(1)\n"})
-            r = self.publish(root, "--landing-suites")
-            self.assertEqual(r.returncode, 0, r.stderr)
+            root, bare = self.with_suites(td, {"a_ok.py": "print('ok')\n", "b_red.py": self.RED})
+            before = self._remote_main(bare)
+            r = self.publish(root, "--serialize")
+            self.assertEqual(r.returncode, 1, r.stdout)
             self.assertIn("LANDING-SUITE PASS suites/a_ok.py", r.stdout)
             self.assertIn("LANDING-SUITE RED suites/b_red.py", r.stdout)
-            self.assertIn("FAIL: test_x", r.stdout)
-            self.assertIn("2 run, 1 not passing (printed only; the push is not refused)", r.stdout)
+            self.assertIn("2 run, 1 not passing, 1 turned red by this push", r.stdout)
+            self.assertIn("FAIL: test_x", r.stderr)
+            self.assertIn("--no-landing-suites", r.stderr)
+            self.assertEqual(self._remote_main(bare), before)
+
+    def test_a_green_selection_is_published(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self.with_suites(td, {"a_ok.py": "print('ok')\n"})
+            r = self.publish(root, "--serialize")
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertIn("1 run, 0 not passing, 0 turned red by this push", r.stdout)
             self.assertIn("PUBLISHED", r.stdout)
+
+    def test_a_suite_already_red_on_the_remote_tip_does_not_refuse(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self.with_suites(td, {"b_red.py": self.RED})
+            self.on_the_remote(root)
+            (root / "mine.txt").write_text("mine", encoding="utf-8")
+            self.commit_all(root, "mine")
+            r = self.publish(root, "--serialize")
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertIn("LANDING-SUITE PRE-EXISTING RED suites/b_red.py", r.stdout)
+            self.assertIn("FAIL: test_x", r.stdout.split("PRE-EXISTING RED", 1)[1])
+            self.assertIn("PUBLISHED", r.stdout)
+
+    def test_a_new_failing_test_in_an_already_red_suite_refuses(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self.with_suites(td, {"b_red.py": self.RED})
+            self.on_the_remote(root)
+            (root / "suites" / "b_red.py").write_text("print('FAIL: test_y (s.C.test_y)')\n" + self.RED, encoding="utf-8")
+            self.commit_all(root, "one more failure")
+            before = self._remote_main(bare)
+            r = self.publish(root, "--serialize")
+            self.assertEqual(r.returncode, 1, r.stdout)
+            self.assertIn("FAIL: test_y", r.stderr)
+            self.assertNotIn("FAIL: test_x", r.stderr)
+            self.assertEqual(self._remote_main(bare), before)
+
+    def test_a_class_entry_is_run_as_a_file_and_an_argument(self) -> None:
+        with TemporaryDirectory() as td:
+            selector = "def changes(root, base):\n    return []\ndef select(changed, root):\n    return ['suites/c.py Named']\n"
+            root, bare = self.with_suites(td, {"c.py": "import sys\nsys.exit(0 if sys.argv[1:] == ['Named'] else 1)\n"}, selector)
+            r = self.publish(root, "--serialize")
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertIn("LANDING-SUITE PASS suites/c.py Named", r.stdout)
+
+    def test_the_opt_out_runs_nothing_and_is_recorded_in_the_history(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self.with_suites(td, {"b_red.py": self.RED})
+            r = self.publish(root, "--serialize", "--no-landing-suites")
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertNotIn("LANDING-SUITE ", r.stdout)
+            self.assertIn("LANDING SUITES SKIPPED", r.stdout)
+            message = subprocess.run(["git", "-C", str(bare), "log", "-1", "--format=%B", "main"], capture_output=True, text=True, check=True).stdout
+            self.assertIn("Landing-Suites: skipped (--no-landing-suites)", message)
+
+    def test_both_flags_are_refused(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self.with_suites(td, {})
+            r = self.publish(root, "--serialize", "--landing-suites", "--no-landing-suites")
+            self.assertEqual(r.returncode, 1, r.stdout)
+            self.assertIn("together", r.stderr)
 
     def test_without_the_flag_no_suite_runs(self) -> None:
         with TemporaryDirectory() as td:
