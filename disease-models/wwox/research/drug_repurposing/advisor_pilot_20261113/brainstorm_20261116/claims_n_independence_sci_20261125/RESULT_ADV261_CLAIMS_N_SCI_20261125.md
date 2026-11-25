@@ -53,3 +53,8 @@ Actor `orchestrator` (SCI). Hypothesis level; nothing here is medical advice. No
 * The listing script finds n in the claim records only; the headline rows (002-H1 to H3, 011-H1, 038-H1) were found by reading the papers and are a post-hoc extension, so both shares are given.
 * 005-07's sentence names no PMID; the paper was matched by content and the printed density values were not re-read from the figure.
 * A claim's effect on strength is a proposal; no claim was edited.
+
+## 8. Update 2026-11-25 (after IT's check, SCI)
+
+* Wording line 2: the WOREE AAV9-WWOX arm is n = 7 for validation and layer markers and **n = 6 for the Ca2+ imaging** in the Figure 6 legend; "7 organoids" was incomplete.
+* The family structure of that arm (WPM S and D as siblings of the SCAR12 family; LM-iPS7 as a third family) is read from the 2021 paper's family naming and the 2026 supplementary legend, not from a sentence of the 2026 manuscript; it is a reading, not a quoted statement.
