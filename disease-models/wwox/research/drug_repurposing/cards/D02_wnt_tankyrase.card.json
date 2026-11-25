@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "da812e1c8b715c39a45b4fb2d97b1e345d22f7777e777fca304bf0357435e529",
+  "input_sha256": "151a6155fe16c1ef28a9e1558de0b897db2b5a658be53d7778757f369b5f892e",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -105,7 +105,7 @@
       },
       "time_to_access": "UNKNOWN",
       "time_to_benefit": "UNKNOWN",
-      "pharmacology": "NOT WWOX EVIDENCE, class level (HE ADV-098 batch 9, public databases, 2026-11-20): five GSK-3 inhibitors of non-lithium chemistry exist, with beta potencies in vitro from sub-nanomolar to micromolar depending on the document and assay (one weak 2011 fluorescence assay of AR-A014418 is set apart by the sheet), alpha about 1.4- to 2.5-fold weaker than beta at most within one document and assay (none shown to separate alpha from beta by an order of magnitude); tideglusib is non-ATP-competitive and time-dependent, so its potency depends on pre-incubation and is not set against the ATP-competitive agents; no ordering of agents is read from these values; no brain or plasma concentration was found for any of the five; selectivity is not assessed; no US label was found for tideglusib; paediatric programmes of tideglusib exist as registry statuses only, results not read [IT59 2026-11-20 packet change].",
+      "pharmacology": "NOT WWOX EVIDENCE, class level (HE ADV-098 batch 9, public databases, 2026-11-20): five non-lithium GSK-3 inhibitors were queried, with beta potencies in vitro from sub-nanomolar to micromolar depending on the document and assay (tideglusib also has bound-only rows above ten and above thirty micromolar; two AR-A014418 beta values above one hundred micromolar, 2011 and 2023, and a 2015 LY2090314 pair of 1.5 and 0.9 micromolar carry database validity flags); a measured alpha-to-beta pair within one document exists only for CHIR99021, LY2090314 and AR-A014418 (SB-216763 has none and tideglusib only bounds), and there alpha is not distinguished from beta or is at most about 2.5-fold weaker (0.8- to 2.5-fold, the low end a pair of LY2090314 mutant-enzyme constructs; the weak 2011 AR-A014418 pair, about 4.7-fold in the other direction, set apart; none shown to separate alpha from beta by an order of magnitude); tideglusib is non-ATP-competitive and time-dependent, so its potency depends on pre-incubation and is not set against the ATP-competitive agents; no ordering of agents is read from these values; no brain or plasma concentration was found for any of the five; selectivity is not assessed; no US label was found for tideglusib; paediatric programmes of tideglusib exist as registry statuses only, results not read [IT59 2026-11-20 packet change].",
       "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
       "scope_of_checks": {
         "support_and_replication": "None.",

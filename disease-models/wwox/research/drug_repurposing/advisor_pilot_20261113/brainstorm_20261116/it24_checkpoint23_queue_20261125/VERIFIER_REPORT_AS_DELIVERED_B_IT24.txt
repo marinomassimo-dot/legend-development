@@ -1,0 +1,134 @@
+Blind verifier B (legend-delegate, sonnet, effort high; census read-back: claude-sonnet-5-5 65 of 65 turns, effort high 65 of 65, 67,443 output tokens), IT24, 2026-11-25.
+Input: BLIND_PACKET_B_IT24.txt and the held sources it names (narrow recheck of composed ADV-282 wording, ADV-284 card D01, H01). Report as delivered (final message). Hypothesis level; not medical advice.
+
+BLIND VERIFIER report, packet B (IT24), 2026-11-25. All blocks were checked and no tool or classifier refused a source. I opened only the packet and held sources under /home/desktop/legend-development/files/ (including the HGNC mapping JSON). I did not open framework brief files, other repository files or git history. Scripts are in /home/desktop/.claude/jobs/8e1d62bc/tmp/verB/. Nothing in the repository was changed and nothing was sent outside. Hypothesis level, not medical advice.
+
+SUMMARY
+- SUPPORTED: DA-GSE-PDK-003, DA-I01-001, DA-L01-003, DA-J01-002, DA-J01-007, DA-M01-002
+- MUST CHANGE: DA-J01-006, DA-K01-002, DA-K01-008, DA-M01-007 (error outside the named clauses), DA-W2-002, DR-D01-001 (note, card sentences and ledger note), H01
+
+## DA-GSE-PDK-003: SUPPORTED
+Source: files/geo/GSE156243 count table and lists.
+- Reproduced: PDK1 -0.341, -0.356, -0.392; 2,804 genes, 663, 570; 6.7 percent; Welch P 0.030; PDK3 and PDHA1/PDPR/LDHA list values; every LDH/PDH ratio.
+- My expression-matched null gave 0.31 to 0.35.
+- Not checkable: the repository set test (0.22, 0.2265) and the second reader's random sets (0.33 to 0.81).
+
+## DA-I01-001: SUPPORTED
+- First sentence, the normalisation/statistic clause and the four gene shifts reproduce. I did not open card E03.
+- "About 63 percent" reproduces only approximately: 0.64 to 0.66 for the +0.11 statistic, 0.53 to 0.56 for +0.15, 0.61 to 0.63 for the log2(CPM+1) version.
+- Optional wording: "in about 55 to 65 percent of draws, depending on the statistic".
+
+## DA-L01-003: SUPPORTED
+- Counts, ratios, the lower-in-knockout list, list cut-offs and adjusted P values reproduce.
+- SLC7A11 median-of-ratios sits on a rounding boundary (0.6346 raw counts, 0.6351 rounded counts), so 0.64 is acceptable.
+
+## DA-J01-002: SUPPORTED
+Source: PMID30290271 XML, Results 3.2 and 3.3, legends, Discussion.
+- The percentages and P values are assigned correctly, and the Discussion quote is exact.
+- Not checkable (figure not held): the Fig 4E by-eye readings and "not marked as significant" for dentate gyrus.
+- Outside the named clauses: "the two readings ... sit slightly against the text's more than 1.5 fold for both" is wrong for Tnf-a, since 1.85 is above 1.5. Suggested: "(the figure image is no longer held, so the two readings cannot be re-checked; the Il6 reading sits slightly below the text's more than 1.5 fold)".
+- Optional: the paper's Introduction cites the group's earlier reports of epileptogenesis in Wwox-deleted mice. Add after the last sentence: "(its Introduction cites earlier reports for epileptogenesis in Wwox-deleted mice)".
+
+## DA-J01-007: SUPPORTED
+- PTPRC is 0.03 to 0.33 CPM. The held article text mentions neither PTPRC nor CD45, so "not settled by a held source" holds.
+
+## DA-J01-006: MUST CHANGE (antibody control)
+Deciding source: PMID31340538 XML, Results on Fig 2, the Discussion, and Fig 2 image.
+- "No band and no immunohistochemical signal in lde/lde" is false.
+- Results: "a very weak band of slightly lower mobility was detected (Figure 2A,B asterisk)".
+- Discussion: "slight immunofluorescence of lde/lde brain sections ... (Figure 2C)".
+- The rat panels, age, sex, regions and the mouse n values are supported.
+- Replace the parenthesis from "no Wwox-null section control" to "Fig 2A to C" with:
+"(no Wwox-null section control in that figure; elsewhere in the paper the antibody was run on Wwox-mutant lde/lde rats: no immunoblot band at the wild-type position, though an extremely weak band of slightly different mobility remains (Fig 2A and B), and no intense signal in lde/lde cortex layer V and corpus callosum (Fig 2C), where the authors also describe a slight residual immunofluorescence)"
+
+## DA-K01-002: MUST CHANGE (label only; values belong to the right genes)
+Source: files/geo/GSE150123.
+- "The flat genes" reads as flat over culture time. PDK1 (rho -0.45, ratio 0.62) is not flat and matches ANKRD37 (-0.40, 0.62), which the same sentence says falls.
+- Replace from "the flat genes, checked by a second reader" to "(median ratio 0.62)," with:
+"among genes not raised in the knockout, checked against culture age by a second reader, PGK1 has rho -0.01, ALDOA -0.22, ENO1 -0.26, PKM +0.01, PFKP +0.23, NDRG1 +0.14, CA9 +0.25 and HIF1A -0.06, while PDK1 falls with culture age (rho -0.45, median ratio 0.62, much as ANKRD37),"
+- EPAS1 (0.435) and HIF1A (-0.055) are on rounding boundaries; +0.44 and -0.06 are acceptable.
+
+## DA-K01-008: MUST CHANGE (small)
+Source: Supplementary_tables_derived.txt, Table 1B.
+- "The genotype table of the supplement shows no UAS element" is literally false: the table has many UAS entries. Only the sima reporter has none.
+- Replace with: "the genotype table of the supplement shows no UAS element for this reporter"
+- The oxygen clause, P 0.5185 (14 degrees of freedom), N, temperature, light cycle and the knockdown check are supported.
+- Optional: the Discussion quote drops its hedge. Use: "the Discussion is stronger: 'our data suggest that Atf4, rather than the HIF1alpha orthologue sima, is primarily responsible'".
+- Optional: lactate was measured in pooled heads, not brain, so "in the same tissue" fits only the Atf4 immunostain.
+
+## DA-M01-002: SUPPORTED
+- Fig 3K medians by my pixel reading: about 19, 68, 47, 55.
+- Fig 1F, Fig 2E/F, the Fig 6B text and the legend n values agree with the note. I did not open DA-M01-003.
+
+## DA-M01-007: MUST CHANGE (outside the two named clauses)
+- The representative-field parenthesis is SUPPORTED (Supp Fig 1E is the oligodendrocyte knockout, 1F the astrocyte control).
+- The survival-curve clause is SUPPORTED (Fig 1L and 1O run to about 120 days).
+- Error: hind-limb clasping was at postnatal day 18, not 17 (File009 legend of Supplementary Fig 2D). Only the MBP staining was at day 17 (Supp Fig 8).
+- Replace with: "(measured: delay, weight and survival for both lines; for the oligodendrocyte deletion only, hind-limb clasping at postnatal day 18 and MBP staining at postnatal day 17, 'no major changes' in the latter, Supplementary Figs 2D and 8)"
+
+## DA-W2-002: MUST CHANGE (isolation sentence)
+Source: PMID34634460 XML Methods, Results and Fig 3; mmc1_text Fig S3.
+- The magnesium sentence and the "same preparation" clause are SUPPORTED.
+- The quotation is not verbatim. The paper says "Spontaneous EPSCs and IPSCs were isolated by voltage-clamping pyramidal neurons at -70 mV ...", and it refers to spontaneous currents.
+- "No ... NMDA antagonist is named" contradicts the previous sentence, because d-APV is named.
+- Replace from "excitatory currents are said to be" to "(searched ...: none)" with:
+"spontaneous excitatory currents are said to be 'isolated by voltage-clamping pyramidal neurons' at minus 70 millivolts with a K-gluconate pipette solution, and the miniature currents were recorded at the same potential with TTX added; for these whole-cell recordings no GABA-A, AMPA or NMDA antagonist is named (searched picrotoxin, bicuculline, gabazine, CNQX, NBQX, DNQX: none; d-APV appears only in the field-potential experiments)."
+
+## DR-D01-001: MUST CHANGE
+Source: File010 pages 12 and 13, File009 "MYC inhibition", accepted manuscript Results and Statistical analysis.
+
+Supported:
+- Bar values (SOX2+MYC+ 72.8, 51.0, 48.5, 45.6; SOX2+ about 60 to 33) and the significance marks.
+- Legend n 4, 4, 6, 7; point counts 6, 11, 24, 15.
+- Knockout effect 24 to 27; one experiment; 125 nanomolar; no randomisation or blinding; excluded from independent differentiations.
+- The paper's "marked reduction" wording.
+
+Required changes:
+1. "Smallest detectable difference 18 to 32" is undefined.
+   - It reproduces only as the Tukey critical difference: 18.7 and 22.8 with points as the unit, about 31 with organoid n (assuming the same spread).
+   - At 80 percent power it would be about 25 to 40.
+   - "Close to or above the knockout effect" does not fit a range starting at 18.
+2. "No knockout vehicle arm" and "untreated knockout" go further than the source. The bar is labelled only "KO-1B". The methods say "A51 drug or DMSO" and do not say whether that bar had DMSO.
+3. "Layer-neuron production is not recovered" and "did not move" turn non-significance into absence. SATB2 treated is not significant against the knockout or either wild type (about 0.4 to 0.75), and the paper calls it a mild increase. CTIP2 stays significantly below both wild types.
+
+Replacement, note, first sentence:
+"Treated knockout organoids: SOX2+MYC+ about 73 percent (knockout control) to about 51 with A51, significant against the knockout control and not significant against wild type (untreated wild type about 49, vehicle wild type about 46; Supplementary Fig. 7F, one-way ANOVA with Tukey), but this is a non-significant P, not equivalence: the paper gives no margin, power calculation or interval; the legend n is 4, 4, 6 and 7 organoids from one experiment while about 6, 11, 24 and 15 points are plotted (the unit entered into the ANOVA is not stated); recomputed from the plotted spread, the smallest difference from wild type that the Tukey test would have called significant is about 18 to 32 percentage points (points or organoids taken as the unit; a difference detected with 80 percent power would be larger, about 25 to 40) against a knockout-minus-wild-type effect of about 24 to 27, so normalisation is not demonstrated."
+
+Replacement, later sentences of the note:
+- "The comparison with the knockout control therefore exists (...)"
+- "No treated wild-type arm and no labelled knockout vehicle arm (the knockout control is labelled only KO-1B, and whether it received DMSO is not stated), one dose (125 nanomolar), no randomisation or blinding, ..."
+
+Replacement, card sentence 1:
+"Restoration of cortical neurogenesis in a WWOX-deficient neural model; progenitor fractions fall with the compound (not significant against wild type, which does not show restoration), layer-neuron recovery is not shown (CTIP2 stays significantly below wild type; SATB2 is not significant against either the knockout or wild type)."
+
+Replacement, card sentence 2:
+"UNKNOWN for WWOX; in the organoid, the progenitor fractions fell (not significant against wild type, which does not show normalisation) and the layer-neuron markers CTIP2 and SATB2 showed no significant change against the knockout control."
+
+Replacement, card sentence 3:
+"Progenitor identity and pan-neuronal marking (NeuN) read as recovered in the discovery ledger in the knockout organoid; not significant against wild type is not equivalence (NeuN about 18 percent treated, about 7 knockout control, about 30 and 22 in the two wild-type arms, by eye), and for SOX2+MYC+ the smallest difference from wild type that the test would have called significant (about 18 to 32 percentage points) is of the same order as the knockout effect itself (about 24 to 27)."
+
+Replacements, ledger note:
+- Use "recomputed from the plotted spread, the smallest difference from wild type that the Tukey test would have called significant is about 18 to 32 percentage points against a knockout-minus-wild-type effect of about 24 to 27."
+- Use "The treated arm differs from the knockout control; normalisation is not demonstrated. There is no treated wild-type arm and no labelled knockout vehicle arm."
+- I did not open the ledger table, so its "ns vs WT" rows and the "restores progenitor identity" sentence are unchecked.
+
+Optional facts for the same note:
+- The drawn error bars equal SD divided by the square root of the plotted point count in all four SOX2+MYC+ arms, so the bars were computed on points.
+- The legend labels both knockout entries "WiBR3 WKO-1B", so n 7 for the treated arm is inferred from order.
+
+## H01 apinocaltamide: MUST CHANGE
+Source: files/adv098_agent_sheets_raw_he_20261119/apinocaltamide.json, all 24 hits.
+
+Supported:
+- 24 rows, all from document CHEMBL4177680 (2017).
+- Every potency value and fold comparison, species counts, the Ki, Cav1.2 and hERG.
+
+Problems:
+- "The IC50 values are from HEK293 cells" is false as a blanket statement. Only the human-assigned Cav3 and Cav1.2 descriptions name HEK293. Animal-species, hERG and CYP rows name no cell.
+- Those Cav3 and Cav1.2 descriptions say "(unknown origin)". "Human" is the database's target assignment.
+- "Discovery paper" cannot be checked from this file.
+
+Replacement:
+"the database holds 24 potency rows for apinocaltamide, ALL from one document (dated 2017), so every figure comes from that one source: recombinant Cav3.1, Cav3.2 and Cav3.3 (assigned to human by the database; the assay descriptions say unknown origin) with IC50 values of 6.4, 18 and 7.5 nanomolar in a calcium-flux plate assay with 3 minutes of pre-incubation; values for rat (three channels), mouse (two), dog (three) and monkey (one) within about 3-fold of the human-assigned ones (dog Cav3.1 3.1-fold) except rat Cav3.3 (IC50 about 4-fold lower); binding to the inactivated state of recombinant human Cav3.3 by patch clamp in CHO cells with a Ki of 20 nanomolar (the human-assigned Cav3 and Cav1.2 IC50 assays name HEK293 cells; the animal-species rows name no cell); L-type Cav1.2 IC50 2.41 micromolar and hERG 5.5 micromolar"
+
+Packet file: /home/desktop/legend-development/.claude/worktrees/it_24_20261125/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it24_checkpoint23_queue_20261125/BLIND_PACKET_B_IT24.txt

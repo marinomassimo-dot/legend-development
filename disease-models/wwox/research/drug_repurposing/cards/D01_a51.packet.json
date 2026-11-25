@@ -42,7 +42,7 @@
         "cell_type": "cerebral organoid progenitors (SOX2+ MYC+)",
         "developmental_stage": "organoid, culture weeks 8 to 15"
       },
-      "measured_result_note": "Treated knockout organoids: SOX2+MYC+ about 72 percent (knockout) to about 50 with A51, significant against the untreated knockout and not significant against wild type; SOX2+ about 60 to about 33, same pattern (Supplementary Fig. 7F; the paper's text: 'a marked reduction in both progenitor populations'). The comparison with the untreated knockout therefore exists (corrected IT6 P2: an earlier note said treated versus wild type only). No treated-wild-type arm, no dose-response, no randomisation or blinding, one of three experiments the paper excludes from independent differentiations. The compound suppresses two pathways: causal attribution to MYC inherits the ambiguity.",
+      "measured_result_note": "Treated knockout organoids: SOX2+MYC+ about 73 percent (knockout control) to about 51 with A51, significant against the knockout control and not significant against wild type (untreated wild type about 49, vehicle wild type about 46; Supplementary Fig. 7F, one-way ANOVA with Tukey), but this is a non-significant P, not equivalence: the paper gives no margin, power calculation or interval; the legend n is 4, 4, 6 and 7 organoids from one experiment while about 6, 11, 24 and 15 points are plotted (the unit entered into the ANOVA is not stated); recomputed from the plotted spread, the smallest difference from wild type that the Tukey test would have called significant is about 18 to 32 percentage points (points or organoids taken as the unit; a difference detected with 80 percent power would be larger, about 25 to 40) against a knockout-minus-wild-type effect of about 24 to 27, so normalisation is not demonstrated. SOX2+ about 60 to about 33, same pattern (the paper's text: 'a marked reduction in both progenitor populations'). The comparison with the knockout control therefore exists (corrected IT6 P2: an earlier note said treated versus wild type only). No treated wild-type arm and no labelled knockout vehicle arm (the knockout control is labelled only KO-1B, and whether it received DMSO is not stated), one dose (125 nanomolar), no randomisation or blinding, one of the three experiments the paper excludes from independent differentiations. The compound suppresses two pathways (Wnt and MYC): causal attribution to MYC inherits the ambiguity. [IT 2026-11-25, ADV-284]",
       "receipt": "FTR-20260810-42397075-04"
     },
     {
@@ -67,7 +67,7 @@
     }
   ],
   "p4_fields": {
-    "endpoint_pursued": "Restoration of cortical neurogenesis in a WWOX-deficient neural model; progenitor identity is restored, layer-neuron production is not.",
+    "endpoint_pursued": "Restoration of cortical neurogenesis in a WWOX-deficient neural model; progenitor fractions fall with the compound (not significant against wild type, which does not show restoration), layer-neuron recovery is not shown (CTIP2 stays significantly below wild type; SATB2 is not significant against either the knockout or wild type).",
     "functional_evidence_available": "Cell-identity markers only; no WWOX-function biomarker, no electrophysiology, no seizure endpoint, no myelin readout.",
     "temporal_or_model_limit": "Engineered knockout organoid, one dose level and one genotype, no treated-wild-type arm; the window between removing excess progenitors and preventing normal corticogenesis is measured nowhere.",
     "cellular_context": {
@@ -102,7 +102,7 @@
     },
     "evidence_for_and_against": {
       "for": [
-        "Progenitor identity and pan-neuronal marking (NeuN) read as recovered in the discovery ledger in the knockout organoid; not significant against wild type is not equivalence."
+        "Progenitor identity and pan-neuronal marking (NeuN) read as recovered in the discovery ledger in the knockout organoid; not significant against wild type is not equivalence (NeuN about 18 percent treated, about 7 knockout control, about 30 and 22 in the two wild-type arms, by eye), and for SOX2+MYC+ the smallest difference from wild type that the test would have called significant (about 18 to 32 percentage points) is of the same order as the knockout effect itself (about 24 to 27)."
       ],
       "against": [
         "Layer-neuron production did not move (SATB2, CTIP2).",
@@ -158,7 +158,7 @@
     "interactions": "UNKNOWN",
     "access": "UNKNOWN",
     "time_to_benefit": "UNKNOWN",
-    "functional_rescue": "UNKNOWN for WWOX; in the organoid, progenitor identity normalised and layer-neuron production did not."
+    "functional_rescue": "UNKNOWN for WWOX; in the organoid, the progenitor fractions fell (not significant against wild type, which does not show normalisation) and the layer-neuron markers CTIP2 and SATB2 showed no significant change against the knockout control."
   },
   "p4_roadmap_fields": {
     "indication_and_transfer": "WOREE as target; origin: a knockout human organoid, the only pharmacological intervention ever applied to a human WWOX-deficient neural model. No patient allele; no Q230P-class context.",
