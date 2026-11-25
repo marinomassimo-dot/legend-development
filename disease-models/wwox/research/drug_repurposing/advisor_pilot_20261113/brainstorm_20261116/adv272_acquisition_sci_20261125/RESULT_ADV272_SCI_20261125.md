@@ -30,7 +30,7 @@ Unit classes over the 55 papers with any consumer (route 2): cards 24 files, lea
 
 ## 4. Acquisition record (`acquisition_table_adv272.tsv`)
 
-Stored under `files/fulltext/PMID<pmid>_ADV272_<PMCID>_epmc_20261125.xml` (or `_pmcpage_20261125.html`) in the root checkout (gitignored), SHA-256, section/figure/table counts and the PMID found in the artefact are in the table. Not acquired in the top 25: 40875931 only. Open-access papers of ranks 26 to 55 (20 flagged Y, 8 N, 5 route results) were flagged, not acquired (outside the frozen scope); they are listed in section B of the operator list for the next round. Note on provenance: Europe PMC's own `fullTextUrlList` names an Unpaywall link for 16818616 (a supplementary figure on figshare, HTTP 202, empty body); no e-mail address went to any service.
+Stored under `files/fulltext/PMID<pmid>_ADV272_<PMCID>_epmc_20261125.xml` (or `_pmcpage_20261125.html`) in the root checkout (gitignored), SHA-256, section/figure/table counts and the PMID found in the artefact are in the table. Not acquired in the top 25: 40875931 only. Open-access papers of ranks 26 to 55 (of 30: 20 flagged Y, 5 N, 5 route results) were flagged, not acquired (outside the frozen scope); they are listed in section B of the operator list for the next round. Note on provenance: Europe PMC's own `fullTextUrlList` names an Unpaywall link for 16818616 (a supplementary figure on figshare, HTTP 202, empty body); no e-mail address went to any service.
 
 HE's report that `PMID24932569/NIHMS618643-supplement-01.xls` is a saved reCAPTCHA page was the verification precedent: every artefact above was opened and carries the paper's own PMID.
 
@@ -46,7 +46,7 @@ Source: Europe PMC fullTextXML (PMC8202868), sha256 `27e14928f361225fa0b7f62bf8b
 
 ## 6. Not acquired and the operator list
 
-New file `files/operator_inputs/PDF_REQUEST_LIST_ADV272_20261125.md` (root checkout, gitignored, next to the ADV-223 list, which is not edited): section A (one unacquired top-25 paper and the three ADV-273 targets, with route results; for 18460020 the specific need is Supplementary Fig S1B) and section B (ranks 26 to 55 with open-access flag and consumer classes: 20 open, 8 not, 5 route results). Journal-site attempt (ADV's pattern): doi.org for 40875931, 16818616 and 18460020 returned the same challenge page; the Springer page for 25720522 returned the abstract page; none bypassed.
+New file `files/operator_inputs/PDF_REQUEST_LIST_ADV272_20261125.md` (root checkout, gitignored, next to the ADV-223 list, which is not edited): section A (one unacquired top-25 paper and the three ADV-273 targets, with route results; for 18460020 the specific need is Supplementary Fig S1B) and section B (ranks 26 to 55 with open-access flag and consumer classes: 20 open, 5 not, 5 route results). Journal-site attempt (ADV's pattern): doi.org for 40875931, 16818616 and 18460020 returned the same challenge page; the Springer page for 25720522 returned the abstract page; none bypassed.
 
 ## 7. Limits
 
