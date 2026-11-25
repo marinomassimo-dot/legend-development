@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-25T10:57Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T10:57:24Z",
+ "event_id": "FTR-20261125-38605177-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Targeted: Introduction, Results opening, Methods patch-clamp and compound list, Discussion first paragraph, searches for IC50, epilepsy, apinocaltamide (0 hits). Acquired by a permitted route in ADV-272.",
+  "Result and per-consumer wording: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276_acquired_reading_sci_20261125/RESULT_ADV276_SCI_20261125.md"
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276_acquired_reading_sci_20261125/RESULT_ADV276_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261107-38605177-80",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "2827a124e03bcc67c78aba097e224f6868824550cc72f21f6f79f02433325327",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID38605177_ADV272_PMC11143251_epmc_20261125.xml",
+ "study_id": {
+  "doi": "10.1038/s41422-024-00959-8",
+  "pmid": "38605177"
+ },
+ "workflow": "SCI ADV-276 (newly acquired papers that cards rest on; not a complete read; figure images unread; supplement not held)"
+}
