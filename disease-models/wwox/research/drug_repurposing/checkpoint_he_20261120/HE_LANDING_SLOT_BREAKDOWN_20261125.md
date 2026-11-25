@@ -77,3 +77,5 @@ What this answers: the runner's guarded-tree hashing (checkpoint J, 283 s of a 9
 Fifteen logs, one machine, one commit; the profile is a single run; cold = page-cache eviction of this repository only; the
 `--regenerate-derived` time is the documented figure; the three view checks were timed warm only; no run was made while another
 publisher held the lock, so queue figures come from the logs.
+
+Dated line, 2026-11-25: derived-surface regeneration became the default of `safe_push --serialize` (`--no-regenerate-derived` opts out), after a stale ranking was published in CI run #2353; the CI gate is untouched.

@@ -261,11 +261,30 @@ class SafePushSerialize(unittest.TestCase):
             self.assertEqual(r.returncode, 1)
             self.assertIn("--regenerate-derived needs --serialize", r.stderr)
             self.assertEqual(subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip(), mine)
-            r2 = self._run(root, "origin", "main", "--serialize", "--expect-sha", mine, LEGEND_TEST_LOG=str(Path(td) / "g.log"), LEGEND_TEST_SLEEP="0", **self._with_regen(root, self.REGEN_OK))
+            r2 = self._run(root, "origin", "main", "--serialize", "--no-regenerate-derived", "--expect-sha", mine, LEGEND_TEST_LOG=str(Path(td) / "g.log"), LEGEND_TEST_SLEEP="0", **self._with_regen(root, self.REGEN_OK))
             self.assertEqual(r2.returncode, 0, r2.stderr)
-            self.assertNotIn("REGENERATED", r2.stdout)                               # no flag, no regeneration
+            self.assertNotIn("REGENERATED", r2.stdout)                               # opted out, no regeneration
             self.assertFalse((root / "derived.txt").exists())
             self.assertEqual(self._remote_main(bare), mine)
+
+    def test_serialize_regenerates_by_default_and_prints_the_two_times(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._slow_remote(td)
+            mine = self._commit(root, "mine.txt")
+            r = self._run(root, "origin", "main", "--serialize", "--expect-sha", mine, LEGEND_TEST_LOG=str(Path(td) / "g.log"), LEGEND_TEST_SLEEP="0", **self._with_regen(root, self.REGEN_OK))
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertIn("REGENERATED derived surfaces under the landing lock", r.stdout)
+            self.assertIn("derived-surface regeneration step", r.stdout)
+            self.assertIn("landing lock held", r.stdout)
+
+    def test_a_failed_default_regeneration_warns_and_the_push_goes_on(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._slow_remote(td)
+            mine = self._commit(root, "mine.txt")
+            r = self._run(root, "origin", "main", "--serialize", "--expect-sha", mine, LEGEND_TEST_LOG=str(Path(td) / "g.log"), LEGEND_TEST_SLEEP="0", **self._with_regen(root, self.REGEN_FAIL))
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertIn("WARNING: derived surfaces NOT regenerated", r.stdout)
+            self.assertIn("PUBLISHED", r.stdout)
 
     def test_regenerate_derived_commits_under_the_lock_and_the_gated_commit_is_the_pushed_one(self) -> None:
         with TemporaryDirectory() as td:

@@ -47,9 +47,11 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      try the lock: publishers land in arrival order. A ticket whose process is gone (killed, crashed) is pruned by the next waiter, so a dead waiter never blocks the queue; the holder's
      ticket is removed when it finishes. The position is printed once ('queue position 3 of 4'). The gate, the expectation, the merge under the lock, the HEAD re-read and the ls-remote
      confirmation are unchanged. A publisher running an OLDER copy of this tool does not take a ticket and still competes for the bare lock: the order is strict only among new copies.
-  10. `--regenerate-derived` (with `--serialize`, opt-in, 2026-11-19): after the merge, under the lock, `candidate_tree_freshness.py --regenerate` regenerates the derived surfaces that are stale
+  10. Derived-surface regeneration (THE DEFAULT under `--serialize` since 2026-11-25; `--no-regenerate-derived` opts out; `--regenerate-derived` asks by name; opt-in from 2026-11-19): after the merge, under the lock, `candidate_tree_freshness.py --regenerate` regenerates the derived surfaces that are stale
      on the merged tip and commits exactly those files; the gate then judges that commit and it is the one pushed (`REGENERATED ... a -> b` is printed). Used by whoever records receipts,
-     so that coverage_report.md and reading_state.md are never behind the ledger on the pushed SHA. About 80 s of lock time. Without the flag nothing changes.
+     so that coverage_report.md, reading_state.md and ranking.json are not behind their sources on the pushed SHA. About 80 s of lock time (the two lines `derived-surface regeneration step Ns` and
+     `landing lock held Ms` give it per push). A failed regeneration refuses only when the flag was asked by name; by default it prints a WARNING and the push goes on. The CI gate is untouched
+     (operator-reserved): this is a landing-path change. Without `--serialize` nothing is regenerated.
 
   11. Committed derived views are checked on the tip that is about to be gated (2026-11-24, ADV): `repurposing_view.py check` (the committed full and shareable pages equal a fresh build)
      `repurposing_view.py i18n --what check` (the committed i18n content inventory equals a fresh collection) and `repurposing_view.py package --check` (the committed `view/shareable_package/` and the DEPLOY.md file table equal a fresh build; about 22 s; added 2026-11-24 after CI #2187/#2188 went red because two page refreshes skipped the package and the first two checks cannot see it) run after the merge and any regeneration, before the gate, and a stale
@@ -69,7 +71,7 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      the lines is the publisher's. (A suite that leaves the working tree dirty meets the existing clean-tree refusal, since the gate would no longer judge HEAD.) With `--serialize` this holds the
      landing lock for as long as the suites take (95 s for an 8-suite selection on 2026-11-25). Without the flag nothing changes.
 
-Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--regenerate-derived]] [--landing-suites]      (default branch: main)
+Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived]] [--landing-suites]      (default branch: main)
 """
 from __future__ import annotations
 import atexit, fcntl, importlib.util, os, shutil, signal, subprocess, sys, tempfile, time
@@ -229,9 +231,14 @@ def main(argv: list[str]) -> int:
     landing = "--landing-suites" in args
     if landing:
         args.remove("--landing-suites")
-    regenerate = "--regenerate-derived" in args
-    if regenerate:
-        args.remove("--regenerate-derived")
+    asked, declined = "--regenerate-derived" in args, "--no-regenerate-derived" in args
+    for flag in ("--regenerate-derived", "--no-regenerate-derived"):
+        while flag in args:
+            args.remove(flag)
+    if asked and declined:
+        return fail("--regenerate-derived and --no-regenerate-derived together. Nothing was gated or pushed.")
+    # 2026-11-25 (ADV, CI #2353): the default under --serialize. Without it nothing on the landing path checked ranking.json, and a stale one was published.
+    regenerate = asked or (serialize and not declined)
     for i, a in enumerate(args):
         if a == "--lock-timeout":
             if i + 1 >= len(args) or not args[i + 1].isdigit():
@@ -251,7 +258,7 @@ def main(argv: list[str]) -> int:
             del args[i]
             break
     if not 1 <= len(args) <= 2:
-        return fail("usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--regenerate-derived]]")
+        return fail("usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived]] [--landing-suites]")
     remote, branch = args[0], (args[1] if len(args) == 2 else "main")
 
     for bad in ("+", "--force", "-f", "--force-with-lease"):
@@ -279,7 +286,7 @@ def main(argv: list[str]) -> int:
             return fail(f"HEAD is {before} but the caller expected {want} (a failed merge or checkout before this call?). "
                         "Nothing was gated or pushed.")
 
-    if regenerate and not serialize:
+    if asked and not serialize:
         return fail("--regenerate-derived needs --serialize: the derived surfaces are regenerated under the landing lock, on the tip being published. Nothing was gated or pushed.")
 
     lock_fh = None
@@ -307,6 +314,8 @@ def main(argv: list[str]) -> int:
                 return fail(f"the landing lock was not free within {lock_timeout}s. Nothing was gated or pushed.")
             time.sleep(2)
         print(f"landing lock acquired after {time.time() - t0:.0f}s", flush=True)
+        held_from = time.time()
+        atexit.register(lambda: print(f"landing lock held {time.time() - held_from:.0f}s", flush=True))
         current = run("git", "rev-parse", "HEAD").stdout.strip()
         if current != before:
             return fail(f"HEAD moved while waiting for the landing lock ({before} -> {current}). "
@@ -337,10 +346,18 @@ def main(argv: list[str]) -> int:
         # 2026-11-19, third recurrence in a day: a receipts landing left coverage_report.md and reading_state.md behind the ledger and CI failed on the pushed SHA. The repair is a
         # step of the sequence, not a refusal: under the lock, on the merged tip, the existing freshness tool regenerates what is stale and commits exactly those files; the gate then
         # judges the commit that is pushed. Opt-in; nothing happens without the flag.
-        regen = run(sys.executable, str(REGEN), "--regenerate", "--repo", str(ROOT))
+        if asked and not REGEN.is_file():
+            return fail(f"--regenerate-derived: no freshness tool at {REGEN}. Nothing was gated or pushed.")
+        regen_from = time.time()
+        regen = run(sys.executable, str(REGEN), "--regenerate", "--repo", str(ROOT)) if REGEN.is_file() else subprocess.CompletedProcess([], 0, "no freshness tool in this repository\n", "")
         print("\n".join(l for l in regen.stdout.splitlines() if l.strip())[-400:], flush=True)
+        print(f"derived-surface regeneration step {time.time() - regen_from:.0f}s", flush=True)
         if regen.returncode != 0:
-            return fail(f"--regenerate-derived: the freshness tool exited {regen.returncode}: {(regen.stderr or regen.stdout).strip()[-300:]}. Nothing was gated or pushed.")
+            said = (regen.stderr or regen.stdout).strip()[-300:]
+            if asked:
+                return fail(f"--regenerate-derived: the freshness tool exited {regen.returncode}: {said}. Nothing was gated or pushed.")
+            run("git", "restore", "--source=HEAD", "--staged", "--worktree", "--", ".")      # the tree was clean just before: tracked changes here are the failed regeneration's
+            print(f"WARNING: derived surfaces NOT regenerated (the freshness tool exited {regen.returncode}): {said}\nThe push goes on; a stale surface turns CI red, so regenerate it by hand.", flush=True)
         if run("git", "status", "--porcelain").stdout.strip():
             return fail("--regenerate-derived left the working tree unclean. Nothing was gated or pushed.")
         regenerated = run("git", "rev-parse", "HEAD").stdout.strip()
