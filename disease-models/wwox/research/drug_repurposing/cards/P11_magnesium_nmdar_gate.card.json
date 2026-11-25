@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "fcd5140e9b17ea0ed7430af07ce079562ab0760a7ad3c6ebfaac61caf559c7a6",
+  "input_sha256": "0ec26afc78ea874a71f2715addef63d09cb436a83861123a131aee4998bcb8b1",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -230,7 +230,7 @@
           "cell_type": "children 3 months to 5 years",
           "developmental_stage": "UNKNOWN"
         },
-        "measured_result_note": "Open-label randomised, 52 recruited and 48 analysed per protocol, comparator syrup held calcium and vitamin D without magnesium, no blinding. Seizure control p 0.69 and development p 0.09 (no difference); EEG improvement p 0.04 in the Results and p 0.003 in the Discussion (internal inconsistency). No post-treatment serum magnesium is reported in the text read although the Discussion says supplementation raised it. The EEG p value is not reproducible from Table 2 (about 0.10 by a Fisher test), EEG denominators differ (26 and 22), and Table 3's margins agree with Table 2 once its unlabelled 'Low' row (4/2/3, printed in the table footer of the XML) is assigned to the non-intervention group by the group totals (an earlier statement that they disagreed is not reproducible from the table, probably because that row was read as belonging to the intervention group; corrected 2026-11-25, ADV-276, after a blind check). Table 3's printed p values (0.003 intervention, 0.42 non-intervention) reproduce by chi-square from the counts (0.0029 and 0.418; intervention Low 4/4/0 and Normal 2/3/13, non-intervention Low 4/2/3 and Normal 3/2/8); Table 4's 0.004 and the seizure-control 0.69 also reproduce, and only the EEG p value of Table 2 does not.",
+        "measured_result_note": "Open-label randomised, 52 recruited and 48 analysed per protocol, comparator syrup held calcium and vitamin D without magnesium, no blinding. Seizure control p 0.69 and development p 0.09 (no difference); EEG improvement p 0.04 in the Results and p 0.003 in the Discussion (internal inconsistency). No post-treatment serum magnesium is reported in the text read although the Discussion says supplementation raised it. The EEG p value is not reproducible from Table 2 (about 0.10 by a Fisher test), EEG denominators differ (26 and 22), and Table 3's margins agree with Table 2 once its unlabelled 'Low' row (4/2/3, printed in the table footer of the XML) is assigned to the non-intervention group by the group totals (an earlier reading that they disagreed assigned that row to the intervention group; corrected 2026-11-25, ADV-276, after a blind check). Table 3's printed p values (0.003 intervention, 0.42 non-intervention) reproduce by chi-square from the counts (0.0029 and 0.418; intervention Low 4/4/0 and Normal 2/3/13, non-intervention Low 4/2/3 and Normal 3/2/8); Table 4's 0.004 and the seizure-control 0.69 also reproduce, and only the EEG p value of Table 2 does not.",
         "evidence_scope": "OTHER_DISEASE_PRECEDENT"
       },
       {

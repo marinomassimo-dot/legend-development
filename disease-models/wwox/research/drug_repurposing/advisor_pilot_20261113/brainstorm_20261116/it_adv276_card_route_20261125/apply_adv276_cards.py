@@ -2,7 +2,8 @@
 packets of cards F04, P11, H02, H01, F03 and E01, as corrected by the blind check (VERIFIER_REPORT_AS_DELIVERED_ADV276_IT_20261125.md),
 then rebuilds each card with framework/scripts/repurposing_bridge.py. Line 2 of the candidate (Table 3 of PMID 35222658 not
 reproducible) is NOT applied: the blind check showed that it came from assigning an unlabelled table row to the wrong group;
-the P11 row carries the corrected statement instead. Idempotent: every edit checks for its own marker first."""
+the P11 row carries the corrected statement instead. check_cards.py (cards/) forbids dose-, route- and concentration-looking tokens
+(a number with nM, uM, mg, mg/kg, vg, mL, kg) in card text, so the values with units stay in the candidate and the verifier report. Idempotent: every edit checks for its own marker first."""
 import json
 import subprocess
 from pathlib import Path
@@ -55,9 +56,9 @@ if MARK not in r["source"]:
     r["endpoint"] = sub(r["endpoint"], "delay of pentylenetetrazole seizures", "incidence of tonic-clonic seizures and latency among animals that seized after pentylenetetrazole")
     r["locator"] = r["locator"].rstrip() + " ; full text (ADV-276): Table 2, Table 3 'Rescue: animals' and the Results paragraph on S810R mice"
 add_note(r, "measured_result_note",
-    "Full text (ADV-276, 2026-11-25): radiprodil was equally or more effective than at wild type in 22 of 27 variants by potency (printed) and in 21 of 27 (77.8 percent) when maximal inhibition is also counted (our count from Table 2, not printed; I150V 33 nM and 31 percent against 35 nM and 85 percent at wild type). "
-    "S810R, the variant of the mouse model, is one of five potency losses: the text prints 1.9-fold; Table 2 prints 53 nM against a pooled wild-type 35 nM (a ratio of 1.5; the printed fold changes are not reproducible from the pooled value, and one paragraph reverses the two values). "
-    "S810R mice, radiprodil 3.0 mg/kg i.p. or vehicle, then pentylenetetrazole 40 mg/kg 30 minutes later (Table 3): latency to first myoclonic jerk 131 +/- 33 s (n = 26) against 99 +/- 8.4 s (vehicle; n = 21 in the Results text, 20 in Table 3), P = 0.40; "
+    "Full text (ADV-276, 2026-11-25): radiprodil was equally or more effective than at wild type in 22 of 27 variants by potency (printed) and in 21 of 27 (77.8 percent) when maximal inhibition is also counted (our count from Table 2, not printed; the one addition is I150V, which keeps potency but reaches 31 percent maximal inhibition against 85 percent at wild type). "
+    "S810R, the variant of the mouse model, is one of five potency losses: the text prints 1.9-fold; Table 2 gives a ratio of about 1.5 against the pooled wild type (the printed fold changes are not reproducible from the pooled value, and one paragraph reverses the two values). "
+    "S810R mice, radiprodil or vehicle, then pentylenetetrazole 30 minutes later (Table 3; doses in the paper): latency to first myoclonic jerk 131 +/- 33 s (n = 26) against 99 +/- 8.4 s (vehicle; n = 21 in the Results text, 20 in Table 3), P = 0.40; "
     "latency to generalised tonic-clonic seizure 458 +/- 90 s (the 16 mice that seized) against 207 +/- 23 s (the 20 that seized), mean +/- SEM, P = 0.0053 by unpaired t-test among animals that seized; 16 of 26 radiprodil mice against 20 of 21 vehicle mice seized (Fisher two-sided 0.013, our computation, not printed). "
     "Wild-type littermates: 6 of 18 radiprodil against 5 of 21 vehicle seized. The direction DECREASE stays at receptor level; the seizure endpoint is incidence and latency among animals that seized, not a general delay.")
 save(p, d, ind, ea, n)
@@ -86,10 +87,10 @@ add_note(row(d, "DR-H02-013"), "note",
     "Full text (ADV-276, 2026-11-25, receipt " + R + "36601084-01): concomitant rapamycin (60 children, all in the tuberous sclerosis group, none in the other group) is associated with lower odds of the abnormality (multivariate odds ratio 0.152, 95 percent interval 0.028 to 0.715, p = 0.019, Table 3); observational, and not separable from aetiology. "
     "The cohort-wide exposure of 170 +/- 12 days does not reconcile with the subgroup means (261 days, 80 children; 134 days, 92 children; weighted 193); peak dose shows the same mismatch (cohort 103.5, weighted subgroup mean 97.8). Not written as 'protective'.")
 add_note(row(d, "DR-H02-027"), "note",
-    "Full text (ADV-276, 2026-11-25, receipt " + R + "24321005-01; main text, supplement not opened): hippocampal histology on 23 brains (8 vehicle, 10 at 0.1 mg/kg, 5 at 1 mg/kg). 81 rats were included across vehicle (33) and CPP-115 0.1 (14), 1 (25) and 5 (9) mg/kg groups, plus 9 no-surgery controls; "
-    "the 5 mg/kg group was not assessed after postnatal day 6 because 8 of 9 rats had died by day 7, so no postnatal day 20 histology exists at that dose (our inference: histology was at day 20).")
+    "Full text (ADV-276, 2026-11-25, receipt " + R + "24321005-01; main text, supplement not opened): hippocampal histology on 23 brains (8 vehicle, 10 at the lowest dose, 5 at the middle dose). 81 rats were included across vehicle (33) and the CPP-115 low (14), middle (25) and highest (9) dose groups, plus 9 no-surgery controls; "
+    "the highest-dose group was not assessed after postnatal day 6 because 8 of 9 rats had died by day 7, so no postnatal day 20 histology exists at that dose (our inference: histology was at day 20).")
 add_note(row(d, "DR-H02-034"), "note",
-    "Full text (ADV-276, 2026-11-25, receipt " + R + "42470358-01): male mice, two-day subcutaneous infusion; n per group not stated in the passage read; values mean +/- SD; OV329 5 mg/kg/day against vigabatrin 80 mg/kg/day, not dose-matched (our label); the toxicology studies are attributed to the EILAT XVI progress report.")
+    "Full text (ADV-276, 2026-11-25, receipt " + R + "42470358-01): male mice, two-day subcutaneous infusion; n per group not stated in the passage read; values mean +/- SD; OV329 against vigabatrin at doses that were not matched (our label; doses in the paper); the toxicology studies are attributed to the EILAT XVI progress report.")
 save(p, d, ind, ea, n)
 
 # ---- H01 ----
@@ -116,6 +117,6 @@ n = "E01_isr_modulators"
 p, d, ind, ea = load(n)
 if not any(MARK in x for x in d["not_known"]):
     d["not_known"][6] = sub(d["not_known"][6], "and the compound's target is disputed (PMID 28447936).",
-        "and the compound's target is disputed: an in vitro study with purified PPP1R15A fragments found 50 uM Sephin1 without effect on complex association or dissociation (biolayer interferometry) and Sephin1 at escalating concentrations (top concentration not stated in the text or legend) without effect on eIF2alpha-P dephosphorylation, and guanabenz inert at 50 uM in the enzymatic assay (PMID 28447936, Figures 7 and 8; ADV-276, 2026-11-25); the authors limit the statement of no direct interference with complex assembly or stability to that experimental system.")
+        "and the compound's target is disputed: an in vitro study with purified PPP1R15A fragments found Sephin1 at the tested concentration without effect on complex association or dissociation (biolayer interferometry) and Sephin1 at escalating concentrations (top concentration not stated in the text or legend) without effect on eIF2alpha-P dephosphorylation, and guanabenz inert at the high concentration tested in the enzymatic assay (PMID 28447936, Figures 7 and 8; ADV-276, 2026-11-25); the authors limit the statement of no direct interference with complex assembly or stability to that experimental system.")
 save(p, d, ind, ea, n)
 print("ok")

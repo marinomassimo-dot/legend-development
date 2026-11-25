@@ -602,7 +602,7 @@
     "developmental_stage": "dosing from postnatal day 4, or a single injection at postnatal day 7"
    },
    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-   "note": "Histology scored cortical and hippocampal injury only; no myelin, white-matter or MRI endpoint appears anywhere in the article, so the sibling's white-matter endpoint is unmeasured here. CPP-115 only, not vigabatrin. Full text (ADV-276, 2026-11-25, receipt FTR-20261125-24321005-01; main text, supplement not opened): hippocampal histology on 23 brains (8 vehicle, 10 at 0.1 mg/kg, 5 at 1 mg/kg). 81 rats were included across vehicle (33) and CPP-115 0.1 (14), 1 (25) and 5 (9) mg/kg groups, plus 9 no-surgery controls; the 5 mg/kg group was not assessed after postnatal day 6 because 8 of 9 rats had died by day 7, so no postnatal day 20 histology exists at that dose (our inference: histology was at day 20)."
+   "note": "Histology scored cortical and hippocampal injury only; no myelin, white-matter or MRI endpoint appears anywhere in the article, so the sibling's white-matter endpoint is unmeasured here. CPP-115 only, not vigabatrin. Full text (ADV-276, 2026-11-25, receipt FTR-20261125-24321005-01; main text, supplement not opened): hippocampal histology on 23 brains (8 vehicle, 10 at the lowest dose, 5 at the middle dose). 81 rats were included across vehicle (33) and the CPP-115 low (14), middle (25) and highest (9) dose groups, plus 9 no-surgery controls; the highest-dose group was not assessed after postnatal day 6 because 8 of 9 rats had died by day 7, so no postnatal day 20 histology exists at that dose (our inference: histology was at day 20)."
   },
   {
    "id": "DR-H02-028",
@@ -742,7 +742,7 @@
     "developmental_stage": "age not stated; two days of exposure"
    },
    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-   "note": "The sibling was below the assay's lower limit of quantitation in brain as well as in the eye, so the comparison supports no brain inference in either direction. The standard toxicology package of OV329 is stated to be described in an earlier conference report that was not retrieved, so the sibling's white-matter endpoint is unmeasured by any reachable route; the toxicology package itself was not read. Full text (ADV-276, 2026-11-25, receipt FTR-20261125-42470358-01): male mice, two-day subcutaneous infusion; n per group not stated in the passage read; values mean +/- SD; OV329 5 mg/kg/day against vigabatrin 80 mg/kg/day, not dose-matched (our label); the toxicology studies are attributed to the EILAT XVI progress report."
+   "note": "The sibling was below the assay's lower limit of quantitation in brain as well as in the eye, so the comparison supports no brain inference in either direction. The standard toxicology package of OV329 is stated to be described in an earlier conference report that was not retrieved, so the sibling's white-matter endpoint is unmeasured by any reachable route; the toxicology package itself was not read. Full text (ADV-276, 2026-11-25, receipt FTR-20261125-42470358-01): male mice, two-day subcutaneous infusion; n per group not stated in the passage read; values mean +/- SD; OV329 against vigabatrin at doses that were not matched (our label; doses in the paper); the toxicology studies are attributed to the EILAT XVI progress report."
   },
   {
    "id": "DR-H02-035",
