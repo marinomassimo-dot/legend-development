@@ -1265,10 +1265,11 @@
     },
     {
      "step": "From the first CI run holding 670251825: name the suites that hold the gate's 50-88 minutes and propose the one change with the best minutes per risk",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
      "source": "ADV a5e6f2ad message to HE 9229d112, 2026-11-25, item 2",
-     "accepted_at": "2026-11-25T09:42:47Z"
+     "accepted_at": "2026-11-25T09:42:47Z",
+     "updated_at": "2026-11-25T11:06:14Z"
     },
     {
      "step": "ADV-274: attribute every red streak of gate runs #2340-#2432, replay the landing selection, count named and escaped, median hours red, add rules only for observed escapes",

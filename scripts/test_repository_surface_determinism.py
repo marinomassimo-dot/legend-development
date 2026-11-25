@@ -33,6 +33,7 @@ still catch a tracked document naming an executable that is not there.
 """
 from __future__ import annotations
 
+import os
 import shutil
 import subprocess
 import sys
@@ -172,9 +173,14 @@ class APruningMarkerCannotRemoveTrackedFiles(TheCheckoutUnderTest):
     """
 
     def _gate(self):
+        # The two gate runs of one test share a private privacy cache, outside the tree under
+        # test and empty at the start: the first run scans everything, the second only what
+        # changed. The cache answers content, never the population: which files are walked is
+        # decided again on every run, and the link scan these tests assert is never cached.
+        env = dict(os.environ, LEGEND_GATE_CACHE_FILE=str(self.box / "gate_cache.json"))
         return subprocess.run(
-            [sys.executable, str(self.tree / "scripts/public_release_gate.py")],
-            capture_output=True, text=True, cwd=str(self.tree))
+            [sys.executable, str(self.tree / "scripts/public_release_gate.py"), "--cache"],
+            capture_output=True, text=True, cwd=str(self.tree), env=env)
 
     def test_a_stray_git_file_does_not_remove_tracked_documents(self):
         before = markdown_population(self.tree)
