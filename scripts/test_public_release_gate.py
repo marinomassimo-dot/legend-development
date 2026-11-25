@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import importlib.util
+import time
+import os
 import shutil
 import subprocess
 import sys
@@ -1167,6 +1169,157 @@ class DocumentedCommandsPrecheckTests(unittest.TestCase):
         root = self.make_repo(doc="Run `python3 scripts/public_release_gate.py --help`.\n")
         done = self.run_gate(root, "--skip-clean-clone")
         self.assertNotIn("REMINDER", done.stdout)
+
+
+SIDE_INJECT = r"""
+import importlib.util, os, sys, time, json
+gate_path, mode, root, pidfile = sys.argv[1:5]
+spec = importlib.util.spec_from_file_location("gate_under_test", gate_path)
+g = importlib.util.module_from_spec(spec); sys.modules[spec.name] = g; spec.loader.exec_module(g)
+me = os.getpid()
+class Shim:
+    def __init__(self, real, **over): self._r, self._o = real, over
+    def __getattr__(self, n): return self._o.get(n, getattr(self._r, n))
+def boom(*a): raise ValueError("boom in a side scan")
+def killed(*a): os.kill(os.getpid(), 9)
+def silent(*a): os._exit(0)
+def sysexit(*a): raise SystemExit(0)
+def slow(*a):
+    open(pidfile + ".tmp", "w").write(str(os.getpid())); os.replace(pidfile + ".tmp", pidfile); time.sleep(60)
+def parent_boom(*a):
+    while not os.path.exists(pidfile): time.sleep(0.02)
+    raise ValueError("boom in the privacy scan")
+def parent_dies(*a):
+    while not os.path.exists(pidfile): time.sleep(0.02)
+    os.kill(os.getpid(), 9)
+def no_fork(): raise OSError("no process")
+def half(*a, **k):
+    text = json.dumps(*a, **k)
+    return text if os.getpid() == me else text[: len(text) // 2]
+if mode == "child_raises": g.scan_links = boom
+elif mode == "child_sigkill": g.scan_provenance = killed
+elif mode == "child_exits_0_silently": g.scan_readme_consistency = silent
+elif mode == "child_systemexit": g.scan_links = sysexit
+elif mode == "truncated_result": g.json = Shim(json, dumps=half)
+elif mode == "bad_wait_status": g.os = Shim(os, _exit=lambda s: os._exit(5))
+elif mode == "parent_raises": g.scan_links, g.scan_privacy_and_secrets = slow, parent_boom
+elif mode == "parent_sigkill": g.scan_links, g.scan_privacy_and_secrets = slow, parent_dies
+elif mode == "no_fork": g.os = Shim(os, fork=no_fork)
+sys.argv = ["gate", "--root", root]
+code = g.main()
+if mode == "parent_raises":     # main() has returned and this process is still alive: it must already have killed and reaped
+    try:
+        os.waitpid(int(open(pidfile).read()), os.WNOHANG); print("side process left behind")
+    except ChildProcessError:
+        print("side process reaped")
+sys.exit(code)
+"""
+
+
+@unittest.skipUnless(hasattr(os, "fork") and Path("/proc/self/stat").exists(), "the second scan process needs fork and /proc (Linux)")
+class SideScanTests(unittest.TestCase):
+    """The links, provenance and README scans run in a second process: same report, and no way to a PASS without its result."""
+
+    CODES = {"AWS_KEY", "BROKEN_MARKDOWN_LINK", "BROKEN_WIKILINK", "MISSING_PROVENANCE_FILE", "MISSING_RELEASE_CI",
+             "UNVERIFIED_SPONSORSHIP"}
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.holder = Path(tempfile.mkdtemp(prefix="gate-side-scans-"))
+        cls.root = cls.holder / "tree"
+        (cls.root / "docs").mkdir(parents=True)
+        (cls.root / "README.md").write_text("Sponsored by someone.\n[broken](docs/missing.md)\n[[NoSuchPage]]\n", encoding="utf-8")
+        (cls.root / "docs" / "a.md").write_text("key AKIA" + "ABCDEFGHIJKLMNOP\n", encoding="utf-8")
+        subprocess.run(["git", "-C", str(cls.root), "init", "-q"], check=True)
+        subprocess.run(["git", "-C", str(cls.root), "add", "-A"], check=True)
+        (cls.holder / "inject.py").write_text(SIDE_INJECT, encoding="utf-8")
+        cls.serial = cls.gate(serial="1")
+
+    @classmethod
+    def tearDownClass(cls) -> None:
+        shutil.rmtree(cls.holder, ignore_errors=True)
+
+    @classmethod
+    def environment(cls, serial: str = "") -> dict:
+        env = {k: v for k, v in os.environ.items() if k not in ("LEGEND_GATE_SERIAL", "LEGEND_GATE_CACHE")}
+        if serial:
+            env["LEGEND_GATE_SERIAL"] = serial
+        return env
+
+    @classmethod
+    def gate(cls, serial: str = ""):
+        return subprocess.run([sys.executable, "-B", str(GATE_PATH), "--root", str(cls.root)], capture_output=True, text=True,
+                              env=cls.environment(serial), timeout=120)
+
+    def injected(self, mode: str):
+        pidfile = self.holder / f"{mode}.pid"
+        done = subprocess.run([sys.executable, "-B", str(self.holder / "inject.py"), str(GATE_PATH), mode, str(self.root), str(pidfile)],
+                              capture_output=True, text=True, env=self.environment(), timeout=50)
+        return done, pidfile
+
+    def assert_gone(self, pidfile: Path) -> None:
+        pid = int(pidfile.read_text())
+        for _ in range(100):
+            try:
+                if Path(f"/proc/{pid}/stat").read_text().split(")")[1].split()[0] == "Z":
+                    return
+            except OSError:
+                return
+            time.sleep(0.05)
+        self.fail(f"the second scan process {pid} is still running")
+
+    def assert_failed_closed(self, mode: str):
+        done, pidfile = self.injected(mode)
+        self.assertEqual(done.returncode, 3, done.stdout + done.stderr)
+        self.assertIn("GATE_ERROR", done.stderr)
+        self.assertNotIn("VERDICT", done.stdout)
+        return pidfile
+
+    def test_each_scan_blocks_and_the_report_equals_the_serial_one(self) -> None:
+        parallel = self.gate()
+        codes = {line.split()[1] for line in parallel.stdout.splitlines() if line.startswith("[BLOCK]")}
+        self.assertEqual(codes, self.CODES)
+        self.assertEqual((parallel.returncode, parallel.stdout), (self.serial.returncode, self.serial.stdout))
+        self.assertIn("GATE_SIDE_SCANS: second process", parallel.stderr)
+
+    def test_the_opt_out_is_printed(self) -> None:
+        self.assertIn("GATE_SIDE_SCANS: serial (LEGEND_GATE_SERIAL=1)", self.serial.stderr)
+
+    def test_no_fork_runs_the_scans_serially_and_says_so(self) -> None:
+        done, _ = self.injected("no_fork")
+        self.assertEqual((done.returncode, done.stdout), (self.serial.returncode, self.serial.stdout))
+        self.assertIn("GATE_SIDE_SCANS: serial, FALLBACK (no second process: no process)", done.stderr)
+
+    def test_a_side_scan_that_raises_fails_the_gate(self) -> None:
+        self.assert_failed_closed("child_raises")
+
+    def test_a_killed_second_process_fails_the_gate(self) -> None:
+        self.assert_failed_closed("child_sigkill")
+
+    def test_a_second_process_that_ends_with_0_and_says_nothing_fails_the_gate(self) -> None:
+        self.assert_failed_closed("child_exits_0_silently")
+
+    def test_a_systemexit_in_the_second_process_fails_the_gate(self) -> None:
+        self.assert_failed_closed("child_systemexit")
+
+    def test_a_truncated_result_fails_the_gate(self) -> None:
+        self.assert_failed_closed("truncated_result")
+
+    def test_a_complete_result_with_a_bad_wait_status_fails_the_gate(self) -> None:
+        self.assert_failed_closed("bad_wait_status")
+
+    def test_a_failing_privacy_scan_fails_the_gate_and_leaves_no_second_process(self) -> None:
+        done, pidfile = self.injected("parent_raises")
+        self.assertEqual(done.returncode, 3, done.stdout + done.stderr)
+        self.assertIn("GATE_ERROR: ValueError: boom in the privacy scan", done.stderr)
+        self.assertEqual(done.stdout.strip(), "side process reaped")    # no verdict, and nothing left for the caller
+        self.assert_gone(pidfile)
+
+    def test_a_killed_gate_prints_no_verdict_and_takes_the_second_process_with_it(self) -> None:
+        done, pidfile = self.injected("parent_sigkill")
+        self.assertEqual(done.returncode, -9, done.stdout + done.stderr)
+        self.assertNotIn("VERDICT", done.stdout)
+        self.assert_gone(pidfile)
 
 
 if __name__ == "__main__":

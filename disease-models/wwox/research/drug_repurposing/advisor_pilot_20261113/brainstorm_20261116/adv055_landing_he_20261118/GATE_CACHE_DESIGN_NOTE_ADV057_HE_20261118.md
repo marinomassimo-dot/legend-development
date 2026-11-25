@@ -73,3 +73,9 @@ The privacy scan now skips a search for a file that cannot match it: each guard 
 * Time, one run each on a shared host: whole gate 217 s to 118 s (clean tree), 242 s to 112 s (planted); privacy scan alone 201 s to 68 s. The cache suite's exact-tree comparison (`GATE_CACHE_FULL_TREE=1`) was not run.
 
 **Open (ADV condition 5):** on each of the first three real landings after this one, read the findings count of the old and the new script on the landed commit and report.
+
+## Update 2026-11-25 (HE): second process for the side scans; pinned base-suite size now 87
+
+The base suite grew by the eleven `SideScanTests` (76 to 87). They run the gate in subprocesses, so they add no
+fixture to the differential comparison of this note: the privacy function, its cache and its comparison are unchanged.
+The command-line half of the proof (the whole base suite with the cache switched on) now runs those tests too.

@@ -85,6 +85,16 @@ class SafePushRefusals(unittest.TestCase):
             self.assertIn("not PASS", r.stderr)
             self.assertIn("Nothing was pushed", r.stderr)
 
+    def test_how_the_gate_ran_and_why_it_failed_closed_reach_the_log(self) -> None:
+        source = ("import sys\nsys.stderr.write('GATE_SIDE_SCANS: serial, FALLBACK (x)\\nnoise\\nGATE_ERROR: boom\\n')\n"
+                  "sys.exit(3)\n")
+        with TemporaryDirectory() as td:
+            r = self._run(self._repo(td, source), "origin", "main")
+            self.assertEqual(r.returncode, 1)
+            self.assertIn("GATE_SIDE_SCANS: serial, FALLBACK (x)", r.stdout)
+            self.assertIn("GATE_ERROR: boom", r.stdout)
+            self.assertNotIn("noise", r.stdout)
+
     def test_force_spellings_are_refused(self) -> None:
         with TemporaryDirectory() as td:
             root = self._repo(td, GATE_PASS)
