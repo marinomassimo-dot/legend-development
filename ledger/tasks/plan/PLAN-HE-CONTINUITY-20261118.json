@@ -986,10 +986,12 @@
     },
     {
      "step": "ADV-235: repair the debt_report red in the Advisor isolation test, land, and report to ADV every other failing suite on main in one table",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-235 (ADV message to HE window 3b826442, 2026-11-25)",
-     "accepted_at": "2026-11-25T01:02:20Z"
+     "accepted_at": "2026-11-25T01:02:20Z",
+     "evidence": "742b32225 landed; CI #2313 failed only on test_batch_queue (ADV-234, repaired d8911b9b2), #2317 failed only on test_pathograph (regenerated 1f44861f6); both green locally at 2d3e35b51; table sent to ADV 2026-11-25; runs from #2319 still open at send time",
+     "updated_at": "2026-11-25T02:42:58Z"
     },
     {
      "step": "ADV-237: measure the red-main episodes by failing suite and touched files; build a print-only diff-selected suite selector only on a clear majority; report the numbers",
@@ -1083,11 +1085,28 @@
     },
     {
      "step": "ADV-243: fix the stale recall-minute comment in strategic_advisor.py; measure the friction of ADV's root-only record path and propose three designs (propose only)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-243 (ADV - CURRENT a5e6f2ad message 2026-11-25; assignments/ADV-243.md)",
      "accepted_at": "2026-11-25T02:23:46Z",
-     "updated_at": "2026-11-25T02:23:46Z"
+     "updated_at": "2026-11-25T02:35:34Z",
+     "evidence": "comment fix 3c25cd68d (test_strategic_advisor rc 0); measurement HE_RECORD_PATH_FRICTION_ADV243_20261125.md; landed cf923972a (gate PASS, ls-remote verified); designs and four follow-up answers sent to ADV 2026-11-25"
+    },
+    {
+     "step": "ADV-245: repair the DC-05 dated headers at their source and the EN-03 generic radar terms, with test and before/after",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-245 (ADV - CURRENT a5e6f2ad message 2026-11-25; assignments/ADV-245.md)",
+     "accepted_at": "2026-11-25T02:35:34Z",
+     "updated_at": "2026-11-25T03:20:55Z",
+     "evidence": "385eb88c9: DC-05 needs.json counter-evidence repaired; EN-03 was a display defect in scout_daily.py --plan (searched_line), queries unchanged; coverage and views regenerated; view suite 1209s rc 0 and 12 further suites rc 0; open_questions_map DC-05 and EN-03 CONCLUDED"
+    },
+    {
+     "step": "ADV-252: repair the main red from test_landing_suites.py (closed-world guard) without weakening the guard, and explain why the selector missed it",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV-252 (peer message 2026-11-25 ~03:31Z)",
+     "accepted_at": "2026-11-25T03:31:55Z"
     }
    ]
   }
@@ -1930,6 +1949,20 @@
    "at": "2026-11-25T02:23:46Z",
    "source": "ADV-243 (ADV - CURRENT a5e6f2ad message 2026-11-25; assignments/ADV-243.md)",
    "step_sha256": "0aedcd7e04af",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T02:35:34Z",
+   "source": "ADV-245 (ADV - CURRENT a5e6f2ad message 2026-11-25; assignments/ADV-245.md)",
+   "step_sha256": "96ad21edfdde",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T03:31:55Z",
+   "source": "ADV-252 (peer message 2026-11-25 ~03:31Z)",
+   "step_sha256": "c0cf3e68f2bd",
    "reopened_block": false,
    "authorised_by": null
   }
