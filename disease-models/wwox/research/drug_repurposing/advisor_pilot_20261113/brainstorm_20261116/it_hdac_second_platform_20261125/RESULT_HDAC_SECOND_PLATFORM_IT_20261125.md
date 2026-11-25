@@ -1,5 +1,7 @@
 # Is there a second, independent platform for WWOX after an HDAC inhibitor? The one held candidate, read at figure level (IT, 2026-11-25)
 
+**Correction, 2026-11-25 (blind check).** HO8910 is registered by Cellosaurus (`CVCL_6868`) as a problematic line, a HeLa derivative: this is not an ovarian platform. The paper says nothing about WWOX status, so «wild-type WWOX» is withdrawn. The pixel fold depends on the method. See `DL-REPO-003`; the text below is kept as written.
+
 IT (Orchestrator, window 0d3f20fd). Own question; consumer DL-REPO-003 and its independence statement. PREREG committed first (`PREREG_HDAC_SECOND_PLATFORM_IT_20261125.md`, commit 94328339c) but **after** the Methods and the text of the Results had been read and before the blots of Figures 4 and 5 were opened: a weaker freeze than ADV-270 and ADV-271. Hypothesis level; no dose recommendation; nothing is medical advice; reference genotype class only. No contact, no spend, no e-mail to any service, default HTTP client throughout; PMIDs appear in this research file only.
 
 ## 1. Answer first

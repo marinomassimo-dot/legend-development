@@ -20,3 +20,7 @@
 2. Results text: tumour WWOX protein 0.46 +/- 0.065 against 0.15 +/- 0.025; mRNA 0.305 +/- 0.015 against 0.193 +/- 0.056; survival 47.12 +/- 0.73 against 34.58 +/- 0.46 days; no in vitro WWOX number printed.
 3. Figure 4 (one blot, five lanes: control, 1.0, 2.0, 3.0, 4.0): WWOX band increases with dose by eye; the pixel estimate (script in the result folder) is 1.09, 1.63, 2.72, 3.17 times control.
 4. Source file sha256 `c2a1066186030672a2a4c4ed0ad6efe82a594cb370073f41a2c4fc610485d778`.
+
+## BATCH DISPOSITION — `BATCH_20261125_006` (2026-11-25, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** CLOSED. Its `DL-REPO-003` line is replaced by the corrected independence statement of ADV-273 (the line is not an ovarian platform); the census note was written with the cell-line flag. «Wild-type WWOX» withdrawn.

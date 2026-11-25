@@ -16,3 +16,7 @@
 2. Already read blind (`verify275_report_AS_DELIVERED.md`): GSE241903, GSE166297, GSE129241 day 1, GSE305320. Not read a second time: GSE232218, GSE187006, GSE185453, which the proposed line also quotes.
 3. "No contrast calls it lower": column `series_call` of the table has no "down" and no "mixed".
 4. Replicate unit of GSE232218 ("each sample is replicated 4 times") and of GSE187006 (design text silent) comes from the deposit only.
+
+## BATCH DISPOSITION — `BATCH_20261125_006` (2026-11-25, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PROPAGATED IN CORRECTED FORM to `DL-REPO-003` (sentinel counts, series-level rule, CI-994, normalisation sensitivity). MINOR.
