@@ -23,7 +23,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 6313,
+    "values": 6324,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3539,
+    "forbidden-name": 3558,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -472,7 +472,7 @@
   "BIBLIO": 2465,
   "COUNT": 12405,
   "ID": 4861,
-  "OWN": 88905,
+  "OWN": 88916,
   "ROWNAME": 2408,
   "SRC_A": 186,
   "SRC_META": 261,
@@ -561,8 +561,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5048457,
-   "sha256": "234e5eba946368dad26668c8753e48480b5f235281e1f01b24a42bebd7b23b04"
+   "bytes": 5059309,
+   "sha256": "88c2247e0ce3419573b95d2435f0ea09fa5daf7157a02eb3e1451333215c117f"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 168171,
