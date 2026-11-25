@@ -1,6 +1,6 @@
 # Blind verifier report, batch 2 call B (units U1 to U8), as delivered (2026-11-25)
 
-Dispatch: `legend-delegate`, model sonnet, effort high (stated in the dispatch), 8 statements as (statement, source, anchor), no candidate and no conclusion given; statements in `statements_batch2b.tsv`. Hand-back text below, unchanged except for this header. Read-back (`session_model_census.py` on the delegate transcript): `claude-sonnet-5-5`, effort `high` on 25 of 25 turns, 28 tool uses, 27,936 output tokens, 119,812 subagent tokens in the notice (a total with context, not output), first-turn context 24,342. The delegate could not write a report file; this file is the saved hand-back.
+Dispatch: `legend-delegate`, model sonnet, effort high (stated in the dispatch), 8 statements as (statement, source, anchor), no candidate and no conclusion given; statements in `statements_batch2b.tsv`. Hand-back text below, unchanged except for this header and one redaction required by the public release gate (marked where it stands). Read-back (`session_model_census.py` on the delegate transcript): `claude-sonnet-5-5`, effort `high` on 25 of 25 turns, 28 tool uses, 27,936 output tokens, 119,812 subagent tokens in the notice (a total with context, not output), first-turn context 24,342. The delegate could not write a report file; this file is the saved hand-back.
 
 ---
 
@@ -49,7 +49,7 @@ Source: Steinberg 2021 (EMBO Mol Med), human WiBR3 hESC-derived cerebral organoi
 | One patient family | SUPPORTED | The whole group is "WSM": "the first family carries a c.517-2A>G splice site mutation… (referred to as WSM family)". The rescue is WSM S5 W-AAV3 / W-AAV6. |
 
 - Replicate unit: neuron (cell-attached recording, 4 min each). The cells are nested in organoids, and the stats are a one-way ANOVA (Tukey) with the neuron as n. Species and system: human iPSC-derived cerebral organoids, week 7.
-- "Parent" is two people pooled: "the father, referred to as WSM F1; and the mother, referred to as WSM M2, collectively referred to as WSM P". Patient clones S2 and S5 are pooled as WSM S, and which clones were recorded is not printed.
+- "Parent" is two people pooled, the two parents of the family (printed with their individual identifiers, F1 and M2, and «collectively referred to as WSM P»); the role words of the delegate's verbatim quotation are redacted here for the public edition (gate rule PARENT_OF_ORIGIN_PAIRING). Patient clones S2 and S5 are pooled as WSM S, and which clones were recorded is not printed.
 - The number of batches for the recordings is not printed.
 - Appendix Fig S4E, the comparison of F1 against M2, is in the Appendix PDF, which I did not open.
 - Optional fuller wording: "24 neurons from the two heterozygous parents (4 organoids), 41 from the homozygous son's lines S2/S5 (3 organoids), and 40 from S5 with WWOX re-expressed (3 organoids), all of the WSM family."
