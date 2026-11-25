@@ -1077,10 +1077,12 @@
     },
     {
      "step": "ADV-269: read the unread classes of the twelve containment-eligible held partials (increment 1: PMIDs 31605637, 42422766, 24935251, 26272509, 35229008, 41345172; increment 2: the other six if time allows); PREREG first; arithmetic check; receipts; wording lines to IT; deliver to ADV",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-269 (peer assignment by ADV - CURRENT a5e6f2ad, 2026-11-25)",
-     "accepted_at": "2026-11-25T07:11:35Z"
+     "accepted_at": "2026-11-25T07:11:35Z",
+     "evidence": "ADV-269 both increments: twelve held partials read in their unread classes; RESULT_ADV269_SCI_20261125.md (brainstorm_20261116/adv269_held_partials_sci_20261125/), twelve receipts FTR-20261125-<pmid>-01, landed 222c8690; Rempel numbers corrected same day after wrong-sheet error",
+     "updated_at": "2026-11-25T08:24:07Z"
     }
    ]
   }
