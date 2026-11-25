@@ -74,6 +74,32 @@ class CopiedSentences(unittest.TestCase):
         findings, _ = self.run_check({CARD: self.card(LEAD), TABLE: LEAD + "\n"}, {CARD: self.card(LEAD + " " + ADDED)})
         self.assertEqual([(f["old"], f["files"]) for f in findings], [(LEAD, [TABLE])])
 
+    @staticmethod
+    def cut_page(shown: str, **flag) -> str:
+        return "<script>const DATA=" + json.dumps({"pharm": shown, **flag, "pmids": []}, separators=(",", ":"), ensure_ascii=False) + ";</script>\n"
+
+    def test_a_marked_cut_of_the_new_string_is_not_behind(self) -> None:
+        """The shareable edition prints the first 360 characters and flags the cut; ranking.json ends a clip with an ellipsis."""
+        new = LEAD + " " + ADDED
+        ranking = f"{DR}/ranking_it8_p9_20261029/ranking.json"
+        for name, files in (("flag", {PAGE: self.cut_page(LEAD, pharm_cut=True)}),
+                            ("ellipsis in the addition", {ranking: json.dumps({"p": new[:len(LEAD) + 8] + "\u2026"})}),
+                            ("ellipsis at the old end", {ranking: json.dumps({"p": LEAD + "\u2026"})})):
+            with self.subTest(name):
+                self.assertEqual(self.run_check({CARD: self.card(LEAD)}, {CARD: self.card(new), **files})[0], [])
+
+    def test_a_cut_page_that_was_not_rebuilt_or_cuts_another_text_is_behind(self) -> None:
+        for name, new, page in (("whole old text, no flag", LEAD + " " + ADDED, self.cut_page(LEAD)),
+                                ("the new string starts otherwise", "A narrowing first sentence stands before it now. " + LEAD, self.cut_page(LEAD, pharm_cut=True))):
+            with self.subTest(name):
+                findings, _ = self.run_check({CARD: self.card(LEAD), PAGE: page}, {CARD: self.card(new)})
+                self.assertEqual([(f["old"], f["files"]) for f in findings], [(LEAD, [PAGE])])
+
+    def test_the_join_cards_are_a_surface(self) -> None:
+        join = f"{DR}/join/cards.json"
+        findings, _ = self.run_check({CARD: self.card(LEAD), join: json.dumps([{"card": {"input": LEAD}}])}, {CARD: self.card(LEAD + " " + ADDED)})
+        self.assertEqual([(f["old"], f["files"]) for f in findings], [(LEAD, [join])])
+
     def test_a_page_that_shows_the_new_string_in_parts_is_not_behind(self) -> None:
         findings, _ = self.run_check({CARD: self.card(LEAD), PAGE: self.page(LEAD)}, {CARD: self.card(LEAD + " " + ADDED), PAGE: self.page(LEAD, ADDED)})
         self.assertEqual(findings, [])
