@@ -555,6 +555,12 @@ def _plain(text: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"[`*]", "", text)).strip()
 
 
+def searched_line(q: dict) -> str:
+    """What the plan really sends out for one question: the keyword search and, when there is one, the Europe PMC query. 2026-11-25 (EN-03, ADV-245): `--plan` printed `terms`, the frequency words of the
+    question's sentence, which are not searched when the question names an object (9 of 15 work-order questions), and two reviews read them as the query."""
+    return f"searched '{q.get('kw', '')}'" + (f" | Europe PMC {q['epmc']}" if q.get("epmc") else "")
+
+
 def parse_roadmap(text: str, path: str) -> list[dict]:
     out = []
     for line in text.splitlines():
@@ -2173,7 +2179,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"plan at main {str(plan.get('sha'))[:12]} digest {plan.get('digest')} cache {plan.get('cache')} "
               f"provisional: {plan.get('provisional') or 'no'}")
         for q in plan.get("questions", []):
-            print(f"  w{q['weight']} {q['id']} [{q['category']}] terms {q['terms']}\n      because {origin_line(q['origin'])}"
+            print(f"  w{q['weight']} {q['id']} [{q['category']}] {searched_line(q)}\n      because {origin_line(q['origin'])}"
                   f"\n      decision: {q['decision']}")
         return 0
     if args.discover_only:
