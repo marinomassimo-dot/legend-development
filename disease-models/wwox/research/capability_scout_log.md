@@ -3456,3 +3456,6 @@ Gap: none beyond the one recorded under ADV-282; the merged-table column-total c
 
 ### 2026-11-25, SCI, ADV-282 increment 3
 Gap: a first reading that grades facts misses wording errors that follow from the sentence's own numbers. CHANGE = NONE in the harness: a column in the first-reading TSV ("sentence arithmetic against its own numbers", filled before any source is opened) is the fix, used from increment 4. A table printer for Table S1-style transposed clinical sheets (one column per individual) would have saved two extraction rounds; candidate for HE, not requested.
+
+### 2026-11-25, SCI, ADV-285
+Gap: an assignment premise ("no functional readout is held") was wrong because the repository already held it; CHANGE = NONE in the harness: a grep of the repository for the readout terms, named in the PREREG, before any external search. A route-count script (PubMed esearch plus Europe PMC, both with overlap) was reusable and is in `adv285_*/search_adv285.py`; candidate for HE as a shared tool, not requested.

@@ -78,7 +78,11 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      can be built the suites run in the worktree after the gate and the views have finished. `--serial-checks` runs everything one after another and adds an empty commit with the trailer
      `Landing-Checks: serial (--serial-checks)`. `LANDING CHECKS parallel: ...` gives the wall time and each part. Kept after the first ten such landings (median lock held 138.5 s against 250 s).
 
-Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived] [--no-landing-suites] [--serial-checks]] [--landing-suites]      (default branch: main)
+  15. Copied card sentences (THE DEFAULT under `--serialize`, 2026-11-25, ADV): before the heavy checks, `copied_card_sentences.py --base <remote tip>` asks whether a view page, a coverage or ranking file or a
+     hand-kept investigation table still holds a card sentence that this push replaced, and refuses naming the file, the card and the exact old text (exit 3 of the tool refuses too). Only pushes that change
+     a card are affected. `--no-copied-sentence-check` skips it and adds an empty commit with the trailer `Copied-Sentence-Check: skipped (--no-copied-sentence-check)`.
+
+Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived] [--no-landing-suites] [--serial-checks] [--no-copied-sentence-check]] [--landing-suites]      (default branch: main)
 """
 from __future__ import annotations
 import atexit, contextlib, fcntl, importlib.util, os, shutil, signal, subprocess, sys, tempfile, threading, time
@@ -91,6 +95,7 @@ from pathlib import Path
 ROOT = Path(os.environ.get("LEGEND_SAFE_PUSH_ROOT", Path(__file__).resolve().parents[2]))
 GATE = Path(os.environ.get("LEGEND_SAFE_PUSH_GATE", ROOT / "scripts" / "public_release_gate.py"))
 REGEN = Path(os.environ.get("LEGEND_SAFE_PUSH_REGEN", ROOT / "framework" / "scripts" / "candidate_tree_freshness.py"))
+COPIES = Path(os.environ.get("LEGEND_SAFE_PUSH_COPIES", ROOT / "framework" / "scripts" / "copied_card_sentences.py"))
 VIEWTOOL = Path(os.environ.get("LEGEND_SAFE_PUSH_VIEWTOOL", ROOT / "framework" / "scripts" / "repurposing_view.py"))
 VIEW_FIX = ("python3 -B framework/scripts/repurposing_view.py run && python3 -B framework/scripts/repurposing_view.py run --source shareable && "
             "python3 -B framework/scripts/repurposing_view.py package && python3 -B framework/scripts/repurposing_view.py i18n --what collect")
@@ -196,6 +201,24 @@ NOTICE = ("NOTICE (until " + NOTICE_UNTIL + "): safe_push --serialize now runs t
 
 
 SERIAL_TRAILER = "Landing-Checks: serial (--serial-checks)"
+COPIES_TRAILER = "Copied-Sentence-Check: skipped (--no-copied-sentence-check)"
+
+
+def held_card_sentences(base: str, sha: str) -> str:
+    """'' when no current surface still holds a card sentence that `base..sha` replaced (or the repository has no such tool); otherwise the refusal, in the tool's own words."""
+    if not COPIES.is_file():
+        return ""
+    started = time.time()
+    done = run(sys.executable, "-B", str(COPIES), "--repo", str(ROOT), "--base", base, "--head", sha)
+    said = (done.stdout + done.stderr).strip()
+    print(f"{said.splitlines()[0] if said else 'COPIED_CARD_SENTENCES: (no output)'} ({time.time() - started:.0f}s)", flush=True)
+    if done.returncode == 0:
+        return ""
+    head = ("a copy still holds a card sentence that this push replaced" if done.returncode == 1
+            else f"the copied-sentence check could not run (exit {done.returncode})")
+    return (f"{head}:\n{said[:6000]}\nRepair, commit, run safe_push again; --no-copied-sentence-check publishes anyway and records it in the history. "
+            "Nothing was gated or pushed.")
+
 SUITE_CLONE_PREFIX = "legend-landing-suites-"
 _CHILDREN: list[subprocess.Popen] = []      # the processes of the checks that run beside the suites, so that a refusal or a signal leaves none of them running
 _STOPPING = threading.Event()
@@ -443,6 +466,9 @@ def main(argv: list[str]) -> int:
     serial_asked = "--serial-checks" in args
     while "--serial-checks" in args:
         args.remove("--serial-checks")
+    copies_declined = "--no-copied-sentence-check" in args
+    while "--no-copied-sentence-check" in args:
+        args.remove("--no-copied-sentence-check")
     parallel = serialize and landing and not serial_asked      # without the lock, or with nothing to run beside them, the checks stay one after another
     asked, declined = "--regenerate-derived" in args, "--no-regenerate-derived" in args
     for flag in ("--regenerate-derived", "--no-regenerate-derived"):
@@ -471,7 +497,7 @@ def main(argv: list[str]) -> int:
             del args[i]
             break
     if not 1 <= len(args) <= 2:
-        return fail("usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived] [--no-landing-suites] [--serial-checks]] [--landing-suites]")
+        return fail("usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived] [--no-landing-suites] [--serial-checks] [--no-copied-sentence-check]] [--landing-suites]")
     remote, branch = args[0], (args[1] if len(args) == 2 else "main")
 
     for bad in ("+", "--force", "-f", "--force-with-lease"):
@@ -593,6 +619,17 @@ def main(argv: list[str]) -> int:
             return fail(f"--serial-checks: the commit that records it failed: {marked.stderr.strip()[:300]}. Nothing was gated or pushed.")
         before = run("git", "rev-parse", "HEAD").stdout.strip()
         print(f"SERIAL CHECKS (--serial-checks): recorded in the empty commit {before[:12]} ({SERIAL_TRAILER})", flush=True)
+
+    if serialize and copies_declined:
+        marked = run("git", "commit", "--allow-empty", "-m", "safe_push: copied-sentence check skipped\n\n" + COPIES_TRAILER)
+        if marked.returncode != 0:
+            return fail(f"--no-copied-sentence-check: the commit that records it failed: {marked.stderr.strip()[:300]}. Nothing was gated or pushed.")
+        before = run("git", "rev-parse", "HEAD").stdout.strip()
+        print(f"COPIED-SENTENCE CHECK SKIPPED (--no-copied-sentence-check): recorded in the empty commit {before[:12]} ({COPIES_TRAILER})", flush=True)
+    elif serialize:
+        refusal = held_card_sentences(tip, before)
+        if refusal:
+            return fail(refusal)
 
     base = ""
     if landing:

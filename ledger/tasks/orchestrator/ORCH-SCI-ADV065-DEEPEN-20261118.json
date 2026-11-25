@@ -1154,6 +1154,24 @@
      "accepted_at": "2026-11-25T20:44:55Z",
      "evidence": "PREREG 128d77d3 frozen 2026-11-25T20:45Z; DR-D01-001 DERIVABLE, claims more than the data bear (both readers); five rows on the Obeid article not audited (classifier stop, operator list); RESULT_ADV284_SCI_20261125.md",
      "updated_at": "2026-11-25T20:53:57Z"
+    },
+    {
+     "step": "ADV-285: functional myelination readout census (is there ANY functional readout - CAP, conduction velocity, VEP/ABR, propagation success - in a Wwox model or in adjacent hypomyelinating models with a pharmacological arm); one table, frozen search strings, PREREG; Kotler route-blocked, never bypassed; blind reader on final sentences; then ADV-287",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-285 (assignments/ADV-285.md, in root checkout until ADV's next push) and ADV direction round 21:30Z",
+     "accepted_at": "2026-11-25T21:21:18Z",
+     "evidence": "RESULT_ADV285_SCI_20261125.md: P1 rejecting observation met (2 Wwox models with functional readout), 13 adjacent papers, blind 4 of 8 sentences MUST CHANGE, corrected sentences in the result; landing pending",
+     "updated_at": "2026-11-25T21:41:45Z"
+    },
+    {
+     "step": "ADV-288: minimal arm set for a functional-myelination pharmacology test in a Wwox model; step 0 read pup brief v2 add-on 5(f) and slice package 3.5 and stop with 'already specified' if they carry the arm set",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "assignments/ADV-288.md (sha256 20aa9a3dd65ef1ba41c500002cfc7cdb2a8005fa9e1ba23d97eea78805b46f89, root checkout, not yet on main) and the SCI launcher of 2026-11-25",
+     "accepted_at": "2026-11-25T21:47:05Z",
+     "evidence": "RESULT_ADV288_SCI_20261125.md in advisor_pilot_20261113/brainstorm_20261116/adv288_functional_myelination_arm_set_sci_20261125/ (step 0 not already specified; PREREG 3715785d8e14e87d; blind reader sonnet high, 3 of 8 MUST CHANGE verified; spec and corrected sentences)",
+     "updated_at": "2026-11-25T21:58:34Z"
     }
    ]
   }
@@ -2045,6 +2063,20 @@
    "at": "2026-11-25T20:44:55Z",
    "source": "assignments/ADV-284.md",
    "step_sha256": "6902c49aedc3",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T21:21:18Z",
+   "source": "ADV-285 (assignments/ADV-285.md, in root checkout until ADV's next push) and ADV direction round 21:30Z",
+   "step_sha256": "1019d6331e4a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T21:47:05Z",
+   "source": "assignments/ADV-288.md (sha256 20aa9a3dd65ef1ba41c500002cfc7cdb2a8005fa9e1ba23d97eea78805b46f89, root checkout, not yet on main) and the SCI launcher of 2026-11-25",
+   "step_sha256": "61cdbd830bfc",
    "reopened_block": false,
    "authorised_by": null
   }

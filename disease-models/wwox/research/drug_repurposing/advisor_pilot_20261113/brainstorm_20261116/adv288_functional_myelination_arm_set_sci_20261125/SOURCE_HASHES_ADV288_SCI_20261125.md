@@ -1,0 +1,9 @@
+# Source hashes ADV-288 (sha256; held bytes read; rendered page made with pdftoppm -f 27 -l 27 -r 150 -png from the OUP browser print)
+
+9e4648590eec98e148f47c52a151d0bb2c93fa20438151743043fe5e7ae47d05  files/fulltext/PMID32000863_Cheng2020_assets/40478_2020_883_Fig2_HTML.png
+792b5b296863674d0295a7dba918ee7c59ade8cdff64ee8ec9d8f01bd12f00f5  files/fulltext/PMID32000863_Cheng2020_PMC_r2.xml
+6a9a7e2cd00da754623ed743cb3b0c187187b472f127646948e7b62d72f57f4b  files/figures/PMID35372341_r2/fcell-10-841548-g002.jpg
+3655dee8230fc8de28874769693312fd8b85d3f5d54cd447efe35993d31003aa  files/fulltext/PMID35372341_Palma2022_PMC_r2.xml
+8d1e751dbc31128431b9a4ae0c2cb68af90505fd8e8deaecdc46474df08a9d20  files/fulltext/PMID33914858_Repudi2021_OUP_browserprint.pdf
+665f777280b0476f6e5cb69997027c1b0ae0052e738a2b68fce0335ef40e7124  files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.txt
+2f5d4c5271cd55680c959b21fbb247a953d0149a0b1cfc831325d05f09416393  rendered page 27 (Repudi Fig 5), not stored: regenerate with the command above

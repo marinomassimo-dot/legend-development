@@ -1,0 +1,6 @@
+string	pubmed	europepmc	both	pubmed_only	europepmc_only	union
+S1	3	2	2	1	0	3
+S2	14	14	14	0	0	14
+S3	1	1	1	0	0	1
+S4	722	525	525	197	0	722
+S5	52	24	24	28	0	52
