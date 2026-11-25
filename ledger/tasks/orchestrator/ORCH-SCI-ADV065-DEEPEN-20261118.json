@@ -966,6 +966,15 @@
      "accepted_at": "2026-11-25T02:10:59Z",
      "evidence": "brainstorm_20261116/adv242_organoid_clone_map_sci_20261125/RESULT_ADV242_ORGANOID_CLONE_MAP_SCI_20261125.md: map not stated, exit applied, units of three deposits from GEO metadata",
      "updated_at": "2026-11-25T02:11:23Z"
+    },
+    {
+     "step": "ADV-244: feasibility probe (20-minute exit) to assign SRX8947985-88 to clones 1B/A2 from a subsample of free raw reads (under 2 GB, removed afterwards); PREREG calling rule with unassigned state; then send ADV-242 section 6 wording to the IT successor",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-244",
+     "accepted_at": "2026-11-25T02:20:29Z",
+     "evidence": "brainstorm_20261116/adv244_organoid_clone_reads_sci_20261125/RESULT_ADV244_ORGANOID_CLONE_READS_SCI_20261125.md: all four KO libraries call KO1; wild-type control passes; wording to IT sent after landing",
+     "updated_at": "2026-11-25T02:29:34Z"
     }
    ]
   }
@@ -1710,6 +1719,13 @@
    "at": "2026-11-25T02:10:59Z",
    "source": "ADV-242",
    "step_sha256": "4e61faf45866",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T02:20:29Z",
+   "source": "ADV-244",
+   "step_sha256": "6575283fbcf1",
    "reopened_block": false,
    "authorised_by": null
   }

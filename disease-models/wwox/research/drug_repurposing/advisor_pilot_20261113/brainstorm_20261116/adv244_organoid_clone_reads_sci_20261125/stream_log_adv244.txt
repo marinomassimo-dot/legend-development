@@ -1,0 +1,5 @@
+DONE reads=20000000 compressed_MB=930 s=265 counts={2: 3, 5: 7}
+DONE reads=20000000 compressed_MB=932 s=350 counts={2: 4, 5: 3}
+DONE reads=20000000 compressed_MB=931 s=257 counts={1: 1, 2: 3, 5: 6}
+DONE reads=20000000 compressed_MB=935 s=299 counts={2: 3, 5: 3}
+DONE reads=20000000 compressed_MB=927 s=267 counts={1: 15}
