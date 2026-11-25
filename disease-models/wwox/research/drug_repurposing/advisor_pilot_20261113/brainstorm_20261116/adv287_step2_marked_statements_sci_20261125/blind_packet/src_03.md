@@ -1,0 +1,42 @@
+# src_03 (card A01_pba_class, /p4_card/evidence_for_and_against/against/6)
+
+## Verbatim sentence (marked words: "the only" in "is not the only candidate")
+The measured turnover difference (about 1.5 to 3 fold) explains only a small part of a 12 to 25 fold steady-state deficit in the soluble precedent, so the 'made then cleared' branch is not the only candidate even where turnover is measured.
+
+## Source pointers
+- Card packet: disease-models/wwox/research/drug_repurposing/cards/A01_pba_class.packet.json, /p4_card/evidence_for_and_against/against/6.
+- The soluble precedent named by the card: Munc18-1 (STXBP1) missense variants P335L, R406H, P480L, G544D, G544V, Guiberson et al. 2018, PMID 30266908 (package disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/README.md, section 4, "soluble cytosolic protein"; section 6 item 2 carries the arithmetic: first-order rates from the chase "(WT about 45 percent left at 24 h; mutants about 10 to 30) differ by about 1.5 to 3 fold and the photoconversion data by about 1.2 to 2 fold, while the steady-state deficit is about 12 to 25 fold for four of five").
+- Held files: files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml; image files/figures/PMID30266908/41467_2018_6507_Fig3_HTML.jpg (672 x 734 pixels, Figure 3 with panels a to f). Species and unit: mouse primary cortical neurons (lentiviral expression in Munc18-1 knockout neurons) for panels a and b; human HEK293T cells for panels c to f; replicate unit "n = 3 independent experiments" (panel a legend).
+
+## Text and Figure 3 legend (verbatim)
+Mutations in Munc18-1 may impair its function by reducing protein levels. We thus first measured the total protein levels in primary Munc18-1 knockout neurons expressing WT or disease-linked mutants of Munc18-1. Compared to WT Munc18-1, all mutants exhibited a significant reduction in protein levels, with four out of the five mutants resulting in protein levels below 10% of WT levels (Fig. 3a). This change was not due to changes in mRNA levels (Supplementary Fig. 4a–c).Fig. 3Increased turnover of Munc18-1 mutants in neurons. a Total protein levels of Munc18-1. WT and mutant Munc18-1b were expressed in primary neurons infected with lentiviral vectors expressing cre recombinase. Total protein levels were quantified by immunoblotting, normalized to the levels of the synaptic protein synaptophysin-1 (SypI). Data are means ± SEM (*p < 0.05, ***p < 0.001 by Student’s t test; n = 3 independent experiments). b Turnover of Munc18-1 by cycloheximide chase. Neurons as in a were subjected to a cycloheximide (CHX) chase experiment for the indicated time to stop protein translation. Remaining protein levels were quantified by immunoblotting, normalized to α-tubulin levels. Data are means ± SEM (*p < 0.05, **p < 0.01, ***p < 0.001 by two-way ANOVA; n = 3 independent experiments). c–f Turnover of Munc18-1 by Dendra2 photoconversion. HEK293T cells were transfected with WT or mutant Munc18-1b:Dendra2 fusion constructs. Two days after transfection, expressed Dendra2 was photoconverted. The green signal was quantified before and after photoconversion (c, d), and the red signal was quantified at 0, 3, and 24 h after photoconversion (e, f). Data are means ± SEM (*p < 0.05, **p < 0.01, ***p < 0.001 by Student’s t test in d and f, and by two-way ANOVA in e; n = 4–6 independent experiments). Scale bar in c = 50 µm
+
+Reduced levels of a protein containing a point mutation, especially with the higher thermal sensitivity in our in vivo function studies (Fig. 1e, i), led us to hypothesize that mutant Munc18-1 is rapidly turned over. To measure Munc18-1 stability, we blocked protein translation using cycloheximide in primary Munc18-1 knockout neurons expressing WT or mutant Munc18-1. We found WT Munc18-1 to be significantly more stable compared to mutant variants (Fig. 3b). Since detectable protein levels for the Munc18-1 mutants were very low in neurons, we repeated the same experiments in heterologous cell lines. We found identical reductions in mutant Munc18-1 levels in transfected HEK293T and Neuro2a neuroblastoma cells (Supplementary Figs. 4d and 4e), enabling the use of these cell lines for testing the effect of mutations on protein stability. We then repeated the cycloheximide chase experiment in HEK293T cells, and found that all Munc18-1 mutants were turned over significantly faster compared to WT Munc18-1 (Supplementary Fig. 4f).
+
+Although cycloheximide at the used concentration and application time is not toxic to neurons42, cycloheximide non-specifically blocks translation of all proteins, including interactors of Munc18-1, which may affect its turnover. In parallel, we thus measured turnover of Munc18-1 variants using a Dendra2 photoconversion assay. We expressed Dendra2-tagged Munc18-1 fusion proteins in primary neurons and measured the rate of disappearance of the converted red signal after photoactivation (Supplementary Fig. 4g–j). Similar to the cycloheximide chase experiments, we found mutant Munc18-1 to turn over significantly faster compared to WT Munc18-1 (Supplementary Fig. 4i and 4j). Due to low mutant Munc18-1 protein levels and high signal/noise ratio in these imaging experiments, we repeated the same assay in transfected HEK293T cells which also allowed us live imaging of same cells over time due to overall higher signal strength (Fig. 3c). Similar to primary neurons and at similar photoconversion rates, mutant Munc18-1 variants turned over significantly faster compared to WT (Fig. 3c–f).
+
+## Figure 3 values read from the held image
+Panel a (total protein, Munc18-1b normalised to synaptophysin-1, percent of WT, neurons; axis 100 at row 205 and 0 at row 549 of the 6-times enlarged crop; bar tops at the centre of the outline; reading error about plus or minus 0.5 percentage point):
+| variant | percent of WT total protein |
+|---|---|
+| WT | 100 |
+| P335L | about 66 |
+| R406H | 8.7 |
+| P480L | 4.7 |
+| G544D | 7.0 |
+| G544V | 9.3 |
+(Package reading of the same panel in munc18_quantity_function_arithmetic_20261029.tsv, column total_%WT_baseline_Fig3a: R406H 8, P480L 5, G544D 4, G544V 7, P335L 65.)
+
+Panel b (cycloheximide chase in neurons, Munc18-1b levels as percent of the 0 h value; time points 0, 3, 8, 24 h; marker centres read by eye from the 5-times enlarged crop, markers of the five mutants overlap at 24 h): WT 100, 78, 54, 44; mutants at 3 h about 52 to 62, at 8 h about 22 to 37, at 24 h about 8 to 25 (the legend marks P335L "ns", R406H "*", P480L "**", G544D "***", G544V "*").
+
+Panel e (Dendra2 photoconversion in HEK293T, red signal as percent of 0 h; time points 0, 4, 24 h; read by eye): at 24 h WT about 53; P335L about 43; the other four about 26 to 35.
+
+Panel f (red signal at 24 h as percent of WT; bar heights read by eye): WT 100, P335L 82, R406H 56, P480L 55, G544D 49, G544V 62.
+
+## Package arithmetic table for the soluble precedent (munc18_quantity_function_arithmetic_20261029.tsv, verbatim)
+variant	total_%WT_baseline_Fig3a	PB_total_fold_Fig6a	soluble_fraction_control_Fig6b	soluble_fraction_PB_Fig6b	soluble_pool_fold_with_PB	mutant_soluble_pool_as_%_of_WT_soluble_baseline	mutant_soluble_pool_as_%_of_WT_soluble_with_PB	function_Fig6d_control_to_PB	note
+R406H	8	1.25	32	55	2.1	3.0	6.5	32 to 44 (WT about 55)	reader arithmetic from panel estimates across figures with different loading normalisers, error about plus or minus 10 percent of axis compounded; WT soluble taken as 0.85 of WT total; INFERENZA
+P480L	5	1.05	15	35	2.5	0.9	2.2	22 to 82 (WT about 55)	reader arithmetic from panel estimates across figures with different loading normalisers, error about plus or minus 10 percent of axis compounded; WT soluble taken as 0.85 of WT total; INFERENZA
+G544D	4	1.65	30	68	3.7	1.4	5.3	35 to 75 (WT about 55)	reader arithmetic from panel estimates across figures with different loading normalisers, error about plus or minus 10 percent of axis compounded; WT soluble taken as 0.85 of WT total; INFERENZA
+G544V	7	1.25	20	38	2.4	1.6	3.9	35 to 75 (WT about 55)	reader arithmetic from panel estimates across figures with different loading normalisers, error about plus or minus 10 percent of axis compounded; WT soluble taken as 0.85 of WT total; INFERENZA
+P335L	65	1.4	75	80	1.5	57.4	85.6	47 to 72 (WT about 55)	reader arithmetic from panel estimates across figures with different loading normalisers, error about plus or minus 10 percent of axis compounded; WT soluble taken as 0.85 of WT total; INFERENZA
