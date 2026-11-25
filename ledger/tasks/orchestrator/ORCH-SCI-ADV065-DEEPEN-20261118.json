@@ -1086,10 +1086,12 @@
     },
     {
      "step": "ADV-272: rank the 421 not-held partials by consumer units, record open-access flags for the top 25, acquire the open-access ones by permitted routes only, list the rest as a new file for the operator PDF list, read one acquired paper if time remains (about 120 minutes, two increments)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-272",
-     "accepted_at": "2026-11-25T09:01:04Z"
+     "accepted_at": "2026-11-25T09:01:04Z",
+     "evidence": "ADV-272: 421 ranked, 55 with consumers; 24 of top 25 acquired and verified (held 664 to 688); operator list PDF_REQUEST_LIST_ADV272_20261125.md; 34021541 read, receipt FTR-20261125-34021541-01; RESULT_ADV272_SCI_20261125.md; predictions P1, P2, P5 rejected",
+     "updated_at": "2026-11-25T10:19:35Z"
     }
    ]
   }

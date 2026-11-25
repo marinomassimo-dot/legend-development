@@ -1,0 +1,34 @@
+study_key	status	isOpenAccess	hasSuppl	pmcid	inPMC	title
+16818616	ok	N	N		N	A role for the WWOX gene in prostate cancer.
+25720522	ok	N	N		N	Aberrant gene promoter methylation of p16, FHIT, CRBP1, WWOX, and DLC-1 in Epstein-Barr virus-associated gastric carcinomas.
+18460020	ok	N	N		N	Role of the WWOX gene, encompassing fragile region FRA16D, in suppression of pancreatic carcinoma cells.
+16061658	ok	N	N		N	WW domain-containing proteins, WWOX and YAP, compete for interaction with ErbB-4 and modulate its transcriptional function.
+25738261	ok	N	N		N	ACK1 promotes hepatocellular carcinoma progression via downregulating WWOX and activating AKT signaling.
+27641496	ok	N	Y	PMC5310354	Y	Neuregulin-1/ErbB4 Signaling Regulates Visual Cortical Plasticity.
+27845895	route_result:The read operation timed out					
+32142409	ok	Y	Y	PMC7077990	Y	A highly responsive pyruvate sensor reveals pathway-regulatory role of the mitochondrial pyruvate carrier MPC.
+32248813	ok	Y	Y	PMC7132998	Y	The impact of hyperpolarization-activated cyclic nucleotide-gated (HCN) and voltage-gated potassium KCNQ/Kv7 channels on primary microglia f
+39178853	route_result:The read operation timed out					
+39546604	ok	Y	Y	PMC11567002	Y	Mitochondrial pyruvate transport regulates presynaptic metabolism and neurotransmission.
+40140574	ok	Y	Y	PMC12119373	Y	Plasticity of the mammalian integrated stress response.
+40674686	ok	Y	Y	PMC12406721	Y	Chronic integrated stress response causes dysregulated cholesterol synthesis in white matter disease.
+40925365	ok	Y	Y	PMC12674601	Y	Cortical versus hippocampal network dysfunction in a human brain assembloid model of epilepsy and intellectual disability.
+41423560	ok	Y	Y	PMC12859018	Y	Chromatin remodeling factor BAF155 coordinates oligodendroglial-neuronal communications linked to regional myelination and autism-like behav
+41496652	ok	Y	Y	PMC12775898	Y	Internalization of Exogenous Myelin by Oligodendroglia Promotes Lineage Progression.
+42011973	ok	Y	Y	PMC13097342	Y	Modelling precise responses to anti-seizure medication using brain organoids carrying SCN2A-GoF and SCN2A-LoF mutations.
+42213786	ok	N	N		N	NeuRoDev resolves lifelong temporal and cellular variation in human cortical gene expression.
+42249507	ok	N	N		N	Kv7.2 loss-of-function causes early hyperexcitability and network remodelling.
+42308317	ok	Y	Y	PMC13274620	Y	NPAS3-regulated astrocyte mitochondrial bioenergetics is required for cognition.
+42587153	ok	Y	Y	PMC13668663	Y	Temporal uncoupling of radial glia lineage progression in cortical organoids.
+42928124	ok	Y	Y	PMC13700501	Y	A subset of SLC2A1 missense variants interfere with GLUT1 trafficking in human brain endothelial cells.
+43047766	ok	Y	Y	PMC13774243	Y	Kcnq3 channels shape active membrane properties and firing signatures of thalamocortical neurons during postnatal development.
+25686832	ok	Y	Y	PMC4414150	Y	Zfra activates memory Hyal-2+ CD3- CD19- spleen cells to block cancer growth, stemness, and metastasis in vivo.
+33363507	route_result:The read operation timed out					
+33854788	route_result:The read operation timed out					
+34210081	route_result:The read operation timed out					
+35339181	ok	Y	Y	PMC10556380	Y	Noradrenaline and Seizures: A Perspective on the Role of Adrenergic Receptors in Limbic Seizures.
+37907746	ok	Y	Y	PMC10689812	Y	Ketohexokinase-dependent metabolism of cerebral endogenous fructose in microglia drives diabetes-associated cognitive dysfunction.
+39505840	ok	Y	Y	PMC11541706	Y	Enhancing glymphatic fluid transport by pan-adrenergic inhibition suppresses epileptogenesis in male mice.
+41007296	ok	Y	Y	PMC12467568	Y	Prognostic Significance of &lt;i&gt;WWOX&lt;/i&gt;/&lt;i&gt;HIF1A&lt;/i&gt; Ratio in Cancer Subtypes: Insights into Metabolism, ECM, and EMT
+42171828	ok	Y	N	PMC13197301	Y	Hypoxia inducible factor-1α-driven signaling networks regulating adult neurogenesis via Notch, Wnt, and MAPK pathways.
+42260675	ok	Y	Y	PMC13471612	Y	Evaluating intramuscular epinephrine in pediatric out-of-hospital cardiac arrest (the PRIME trial): study protocol for a multi-centre, stepp
