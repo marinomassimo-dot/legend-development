@@ -40,6 +40,16 @@ The two commonest classes hold 39 of 46.
 **By producer:** every sheet was written by an HE window itself (not by a delegate), Claude Sonnet 5.5 at effort high
 (commit trailers; session transcripts for the writes found). There is no second model or effort, so no rate comparison.
 
+## What this re-check missed (added after IT's blind check)
+
+IT gave a blind reader the card sentences and the whole held answers
+(`../../brainstorm_20261116/it24_checkpoint23_queue_20261125/VERIFIER_REPORT_AS_DELIVERED_A_IT24.txt`). It found nine
+points that also belong in the sheets, applied here with ids 6g, 7d to 7g, 8e, 8f, 9k, 9l: a second panel that moves a
+selectivity reading, two same-document values that change a comparison, two statements too strong ("that document's
+only", "not found in these rows"), a tissue named that the row does not name, and validity flags left out. So "46
+wrong or incomplete of 170" is what one reader found, not the number there was: the rate is higher by at least these
+nine, on the sheets IT's cards touch (6, 7, 8, 9). The other eight sheets have had no blind check.
+
 ## Method and limits
 
 Every fold, ratio, range, spread and row count that a sheet takes from the held ChEMBL answers was recomputed against
