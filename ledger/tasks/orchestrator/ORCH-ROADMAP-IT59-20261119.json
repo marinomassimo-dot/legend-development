@@ -540,10 +540,12 @@
     },
     {
      "step": "ADV-275: existence check of deposited neural-lineage expression datasets measuring WWOX after valproate or another HDAC inhibitor (key held-neural-hdac-inhibitor-expression-tables-with-wwox; consumer DL-REPO-003 neural gap)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV brief assignments/ADV-275.md on main; operator dispatch of successor window 2026-11-25",
-     "accepted_at": "2026-11-25T10:13:58Z"
+     "accepted_at": "2026-11-25T10:13:58Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv275_20261125/RESULT_ADV275_IT_20261125.md; CC-20261125-ORCHESTRATOR-ADV275-DEPOSITS-01 PROPOSED; delivered to ADV by name (headline and correction)",
+     "updated_at": "2026-11-25T11:01:20Z"
     }
    ]
   }

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """ADV-275 step 1: dated existence queries on GEO (E-utilities) and BioStudies/ArrayExpress.
 
 Usage: adv275_search.py <work_dir>
