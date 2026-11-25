@@ -2,6 +2,8 @@
 
 Hypothesis level; reference genotype class; nothing here is medical advice. Question accepted by ADV with five conditions; pre-registration: `PREREG_CELL_LINE_IDENTITY_IT_20261125.md`. Register: Cellosaurus flat file, version 57.0, retrieved 2026-11-25 by plain request, sha256 `3b5a9fc56b49854230ae90fb7cee57a3bf9f961df98be215a634203526f476ef`. ICLAC was not queried separately: its entries are cited inside the register comments and are not an independent source here.
 
+**In one line:** 8 of 78 lines named by text are flagged, against 1 of 42 named by structured fields; a field scan alone would have hidden seven of the eight.
+
 ## 1 · The denominator
 **78 lines** named in the perimeter (`census_lines.tsv`, sha256 `b0e26c77a23f106b8e7995aeecfe24938f736bc3879c0d11117aee9d5605f3f5`, frozen before the look-up): **42** by structured fields, **78** by text (36 text-only, none field-only, because the text route scans the whole perimeter, fields included).
 
