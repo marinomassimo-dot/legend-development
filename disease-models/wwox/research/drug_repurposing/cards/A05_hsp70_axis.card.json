@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "b99a0d888fbc8604fbfc789b0aa8f166c992d21ebf675c0779f3c3fd2cb50a04",
+  "input_sha256": "09ac1c68b3f4962239695375cc9fad5a156d1c45dae1e03f2abdbd4f288ccb88",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -74,10 +74,10 @@
     },
     "abstention_card": {
       "kind": "ABSTENTION",
-      "missing_datum": "The direction of effect of HSP70-axis modulation on Q230P: amplifying the axis may accelerate delivery of the mutant to degradation (HSC70 delivers it to the lysosome in the P252A bridge hypothesis), and blocking it stabilised an insoluble protein, with no measurable activity, in the adjacent enzyme. The sign for Q230P is unmeasured.",
+      "missing_datum": "The direction of effect of HSP70-axis modulation on Q230P: amplifying the axis may accelerate delivery of the mutant to degradation (HSC70 delivers it to the lysosome in the P252A bridge hypothesis), and blocking it stabilised an insoluble protein, whose activity was not measured, in the adjacent enzyme. The sign for Q230P is unmeasured.",
       "search_record": "NOT FOUND IN THE SEARCH RUN, not established as absent. Query run 2026-10-21 (session clock) on PubMed through the PubMed connector, title/abstract: WWOX AND (HSP70 OR HSC70 OR Hsp90 OR chaperone OR heat shock OR HSPA8 OR endoplasmic reticulum OR unfolded protein response OR ERAD): 11 records, of which one is a WWOX missense study with a measurement involving HSC70 (a co-immunoprecipitation with the P252A variant and not with wild type, no manipulation of HSC70, no function assay under lysosome inhibition; repository reading of PMID 41124647, body text re-inspected). Limits: a title/abstract query does not reach Methods or Results; PubMed zeros are not re-runnable offline; the arimoclomol-type candidate was proposed and withdrawn the same day on direction grounds (D-03), which is a withdrawal and not a search.",
       "adjacent_context_not_wwox_evidence": [
-        "ASPA C152W: Hsp70/Hsp110-dependent degradation of newly synthesised protein; stabilisation gave insoluble protein in which no enzyme activity could be measured",
+        "ASPA C152W: Hsp70/Hsp110-dependent degradation of newly synthesised protein; stabilisation gave insoluble protein whose activity was not measured",
         "the proteasome-inhibitor precedent also induces HSP70, confounding an HSP70 readout"
       ],
       "an_abstention_is_a_result": "The roadmap states it; this card names what would end it."
@@ -95,7 +95,7 @@
           "D-03"
         ],
         "external_not_wwox_evidence": [
-          "ASPA C152W: Hsp70/Hsp110-dependent degradation of newly synthesised protein; stabilisation gave insoluble protein in which no enzyme activity could be measured",
+          "ASPA C152W: Hsp70/Hsp110-dependent degradation of newly synthesised protein; stabilisation gave insoluble protein whose activity was not measured",
           "the proteasome-inhibitor precedent also induces HSP70, confounding an HSP70 readout"
         ]
       },
@@ -123,7 +123,7 @@
       "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded."
     },
     "not_known": [
-      "The direction of effect of HSP70-axis modulation on Q230P: amplifying the axis may accelerate delivery of the mutant to degradation (HSC70 delivers it to the lysosome in the P252A bridge hypothesis), and blocking it stabilised an insoluble protein, with no measurable activity, in the adjacent enzyme. The sign for Q230P is unmeasured."
+      "The direction of effect of HSP70-axis modulation on Q230P: amplifying the axis may accelerate delivery of the mutant to degradation (HSC70 delivers it to the lysosome in the P252A bridge hypothesis), and blocking it stabilised an insoluble protein, whose activity was not measured, in the adjacent enzyme. The sign for Q230P is unmeasured."
     ],
     "evidence_against": [],
     "bridge_gaps_exposed": [],

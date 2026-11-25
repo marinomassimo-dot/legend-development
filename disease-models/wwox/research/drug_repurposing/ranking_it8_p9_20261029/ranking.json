@@ -6091,7 +6091,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 2836
+   "receipt_ledger_lines": 2841
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -7100,7 +7100,7 @@
    "inputs": {
     "T1_cards": "814082cd51a7d8e3",
     "T2_pertinence": "91e62b924fe30a2a",
-    "T3_receipts": "5ee84fa3a6a38158",
+    "T3_receipts": "1d37aae77175fe9f",
     "T4_needs": "9ae567485b16c45c",
     "T5_pharmacology": "be0a401756e3e8c1",
     "T6_identity": "37847be0f29d1700"
@@ -7200,7 +7200,7 @@
     "41124647",
     "41274966"
    ],
-   "receipts_on_cited_pmids": 13,
+   "receipts_on_cited_pmids": 14,
    "research_objective": "broad_durable_recovery (restoring the function of residual protein)",
    "tracks": [
     "B"
@@ -11888,7 +11888,7 @@
     "P_pharmacology": {
      "brain_penetration": "UNKNOWN",
      "human_exposure": "UNKNOWN",
-     "potency_with_assay_context": "UNKNOWN for a Wwox system. The R2 note carries, from papers it read, that ethosuximide's own T-type potency is in the millimolar range and disputed at relevant concentrations; exposure and CNS exposure in WOREE: UNKNOWN. Its reported GIRK potency in oocytes is within or below the labelled plasma ra…",
+     "potency_with_assay_context": "UNKNOWN for a Wwox system. The R2 note carries, from papers it read, that ethosuximide's own T-type potency is in the millimolar range and disputed at relevant concentrations; exposure and CNS exposure in WOREE: UNKNOWN. Its reported GIRK potency in oocytes, against the figure band (about 0.25 to 0…",
      "qualification": [
       {
        "case": "Q07",
@@ -11975,7 +11975,7 @@
    "inputs": {
     "T1_cards": "07e764647bdb542b",
     "T2_pertinence": "8b0a047e9ce40434",
-    "T3_receipts": "361e8bf6ef39af68",
+    "T3_receipts": "dcab56eca1c75397",
     "T4_needs": "503be10cec75e346",
     "T5_pharmacology": "5da5f03bb1490bdc",
     "T6_identity": "589dd4de63446384"
@@ -12127,7 +12127,7 @@
     "36537114",
     "37275776"
    ],
-   "receipts_on_cited_pmids": 34,
+   "receipts_on_cited_pmids": 35,
    "research_objective": "",
    "tracks": [
     "A"

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "521fbe0a5b0cc6546ecb1b4aea1ebe6620eac1fd6daf8404798492b74141064e",
+  "input_sha256": "93dddd933cbed39c10b2bc8b7f9e225377aa519cbcc28595111c533743236db2",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -159,7 +159,7 @@
   },
   "p4_fields": {
     "endpoint_pursued": "Return of Q230P protein from an undetectable baseline by blocking its degradation, read as total, soluble and pellet protein, native-state fraction and then function against a wild-type ruler.",
-    "functional_evidence_available": "None for WWOX. CBS (cytosolic enzyme): activity and plasma homocysteine restored in mice for some alleles, none for others; ASPA C152W: insoluble protein, no activity detectable; HIKESHI: partial protein return with function-adjacent readouts.",
+    "functional_evidence_available": "None for WWOX. CBS (cytosolic enzyme): activity and plasma homocysteine restored in mice for some alleles, none for others; ASPA C152W: insoluble protein whose activity was not measured; HIKESHI: protein return weakly shown (authors' densitometry, one value per condition; at 48 h no homozygous band can be told from noise on the published unedited blot), with function-adjacent readouts that carry their own limits.",
     "temporal_or_model_limit": "Cell-culture and liver-transgene mouse precedents; best effect at exposures that caused toxicity; no brain exposure data.",
     "cellular_context": {
       "target_expression": "UNKNOWN for the relevant human neural cells.",
@@ -211,7 +211,7 @@
           "cell_type": "iPSC-derived oligodendrocytes",
           "developmental_stage": "culture stage"
         },
-        "measured_result_note": "Recovery from about 3 to about 20 percent of control only, in one dose-time series without drawn replicates; the inhibitor also induces HSP70 and changes many proteins; other treatment windows were toxic to all genotypes including controls.",
+        "measured_result_note": "Recovery from about 3 to about 20 percent of control only by the authors' densitometry, in one dose-time series without drawn replicates; on the published unedited blot no homozygous band at 48 h can be told from noise and faint homozygous bands are seen at 24 h, so the protein return is weakly shown (this does not show the densitometry wrong; corrected 2026-11-25, ADV-279); the inhibitor also induces HSP70 and changes many proteins; other treatment windows were toxic to all genotypes including controls.",
         "receipt": "FTR-20261021-42875792-01"
       },
       {
@@ -249,7 +249,7 @@
           "cell_type": "U2OS",
           "developmental_stage": "culture"
         },
-        "measured_result_note": "Stabilising the variant through the Hsp110 axis yielded protein that is insoluble; no enzyme activity could be measured in this study or was found in earlier mammalian-cell work, so activity is NOT MEASURED here, which is not a measured null. Encoded UNKNOWN.",
+        "measured_result_note": "Stabilising the variant through the Hsp110 axis yielded protein that is insoluble; this study could not test the activity of that protein; earlier work it cites found none in mammalian cells and, per its Discussion, very low activity in Pichia, so activity is NOT MEASURED here, which is not a measured null. Encoded UNKNOWN.",
         "receipt": "FTR-20261021-33914734-01"
       },
       {
@@ -381,7 +381,7 @@
     ],
     "p4_fields": {
       "endpoint_pursued": "Return of Q230P protein from an undetectable baseline by blocking its degradation, read as total, soluble and pellet protein, native-state fraction and then function against a wild-type ruler.",
-      "functional_evidence_available": "None for WWOX. CBS (cytosolic enzyme): activity and plasma homocysteine restored in mice for some alleles, none for others; ASPA C152W: insoluble protein, no activity detectable; HIKESHI: partial protein return with function-adjacent readouts.",
+      "functional_evidence_available": "None for WWOX. CBS (cytosolic enzyme): activity and plasma homocysteine restored in mice for some alleles, none for others; ASPA C152W: insoluble protein whose activity was not measured; HIKESHI: protein return weakly shown (authors' densitometry, one value per condition; at 48 h no homozygous band can be told from noise on the published unedited blot), with function-adjacent readouts that carry their own limits.",
       "temporal_or_model_limit": "Cell-culture and liver-transgene mouse precedents; best effect at exposures that caused toxicity; no brain exposure data.",
       "cellular_context": {
         "target_expression": "UNKNOWN for the relevant human neural cells.",
@@ -392,7 +392,7 @@
     },
     "p4_card": {
       "identity": "Proteasome-inhibitor class, research-grade or oncology agents, discussed at class level only. No named agent is proposed; formulation: UNKNOWN.",
-      "indication_and_transfer": "WOREE (Q230P-class) as target. Origin: a recessive missense protein in patient iPSC oligodendrocytes plus library studies (NOT WWOX EVIDENCE). This is the closest measured precedent to the Q230P premise in R1 (normal mRNA with no band detected, which does not separate a protein made and cleared from one never made; partial return with an inhibitor; the transcript level is cited from an earlier report, and whether the paper examined it itself is not established), at the cost of a narrow toxicity-bounded window.",
+      "indication_and_transfer": "WOREE (Q230P-class) as target. Origin: a recessive missense protein in patient iPSC oligodendrocytes plus library studies (NOT WWOX EVIDENCE). This is the closest measured precedent to the Q230P premise in R1 (normal mRNA with no band detected, which does not separate a protein made and cleared from one never made; a partial return with an inhibitor that is weakly shown; the transcript level is cited from an earlier report, and whether the paper examined it itself is not established), at the cost of a narrow toxicity-bounded window.",
       "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test in any WWOX system. IT6 P6 (2026-10-29) ran new queries on Europe PMC and PubMed: WWOX with proteasome-inhibitor names, 244 records, none a WWOX-variant inhibitor arm (the variant-route paper is the P252A study, which used proteasome and lysosome arms; see source list); WWOX with the Q230P protein change, 7 records, none with an inhibitor arm; WWOX with chaperone terms, 111 records, none a WWOX chaperone experiment. Counts are of records matched, not of relevant records; a title/abstract query does not reach Methods or Results. Not MAI_TENTATO.",
       "state_of_known_roads": "not verified for this disease; and exposure-or-toxicity limit shown by its own precedent (other windows toxic to controls).",
       "pathway_and_objective": "RECUPERO_PROFONDO.",
@@ -459,7 +459,7 @@
       "Which CBS allele class, if any, the Q230P class resembles: the analogy rests on a domain label and modelled burial, and the repository red-team record expects a lysosomal (chaperone-mediated autophagy) route rather than a proteasomal one."
     ],
     "evidence_against": [
-      "Insoluble stabilised variant with no measurable activity (ASPA C152W).",
+      "Insoluble stabilised variant whose activity was not measured (ASPA C152W; corrected 2026-11-25, ADV-279).",
       "Toxic windows including in controls.",
       "Gain applies to wild type (CBS wild-type half-life under proteasome inhibition).",
       "Protein-up activity-flat cases (CBS I278T with HSP70 or HSF1 co-expression).",
@@ -478,7 +478,7 @@
       "functional_rescue": "UNKNOWN for WWOX. Cytosolic-enzyme precedents (CBS) show activity restored for some alleles and not others; ASPA C152W returned insoluble protein with no activity detectable."
     },
     "p4_roadmap_fields": {
-      "indication_and_transfer": "WOREE (Q230P-class) as target. Origin: a recessive missense protein in patient iPSC oligodendrocytes plus library studies (NOT WWOX EVIDENCE). This is the closest measured precedent to the Q230P premise in R1 (normal mRNA with no band detected, which does not separate a protein made and cleared from one never made; partial return with an inhibitor; the transcript level is cited from an earlier report, and whether the paper examined it itself is not established), at the cost of a narrow toxicity-bounded window.",
+      "indication_and_transfer": "WOREE (Q230P-class) as target. Origin: a recessive missense protein in patient iPSC oligodendrocytes plus library studies (NOT WWOX EVIDENCE). This is the closest measured precedent to the Q230P premise in R1 (normal mRNA with no band detected, which does not separate a protein made and cleared from one never made; a partial return with an inhibitor that is weakly shown; the transcript level is cited from an earlier report, and whether the paper examined it itself is not established), at the cost of a narrow toxicity-bounded window.",
       "verification_scope": "{\"support_and_replication\": \"No replication of the HIKESHI result is recorded.\", \"formal_checks\": \"R1 receipts recorded, manifests PASS. The blind audit of six R1 manifests has run (95 triples: 76 supported, 15 overshoot, 2 undershoot, 2 unverifiable) and its repairs were applied at source; the repairs are not re-audited. This card was audited in page_adjudications/locator_audit_deep_cards_20261022.md; the defects named there are repaired here and the repair is not certified by its author.\", \"card_inferences_owed_audit\": \"None added beyond the R1 note.\"}"
     },
     "label_lookup": {
