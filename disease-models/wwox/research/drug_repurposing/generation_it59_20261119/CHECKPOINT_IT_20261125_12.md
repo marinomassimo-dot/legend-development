@@ -19,7 +19,8 @@ Package `advisor_pilot_20261113/brainstorm_20261116/it24_checkpoint23_queue_2026
 
 ## 3. Rules and traps (new in this window)
 * **After a card edit regenerate `ranking.json` BEFORE the view trio** (`ranking_it8.py run`): the ranking copies the clipped card text and the full view's compact column reads it. `repurposing_view.py check` said "current" while the page still showed the old D02 sentence.
-* **Check the rendered page, not the JSON**: search `view/index.html` and `view/shareable_package/index.html` for the OLD sentence. Disease-assertion notes are not rendered on either page (by design); `endpoint_pursued` and `translation.functional_rescue` are not rendered either.
+* **The rebuild order after a card edit is coverage (`repurposing_coverage.py run`), ranking (`ranking_it8.py run`), views, package.** `coverage/priorities.json` copies `p4_fields.endpoint_pursued`: skipping it left the replaced D01 sentence "progenitor identity is restored" on the pages after `b29ec350f` (repaired in a second landing).
+* **Run `copied_card_sentences.py --base <remote tip before your change>`** (HE; `safe_push` runs it by default). Do not rely on a hand-made fragment search: mine missed a whole replaced sentence. Disease-assertion notes are not rendered on either page (by design); `translation.functional_rescue` is not rendered.
 * `join/cards.json` also copies card text, is stale on main and has no freshness check: reported to HE, not touched here.
 * Re-folding after a verifier: restore the cards from development/main and re-apply the whole edit set (`apply_it24.py`), rather than patching edited packets; then run it a second time (0 edits expected).
 * A blind packet for a fold, range or "every pair" sentence carries the whole source table; a reader given only the quoted row cannot see an omission.
