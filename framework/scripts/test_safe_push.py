@@ -645,6 +645,161 @@ class SafePushLandingSuites(unittest.TestCase):
             self.assertEqual(self._remote_main(bare), before)
 
 
+class SafePushParallelChecks(unittest.TestCase):
+    """Concurrent checks (2026-11-25, ADV): under `--serialize` the view checks, the gate and the landing suites run together, the suites in a throwaway clone of the gated commit because the gate
+    reads the worktree. Refusals and their order are the serial ones; the clone is removed whatever happens; `--serial-checks` is recorded in the history."""
+    _repo = SafePushRefusals._repo
+    _with_bare_remote = SafePushRefusals._with_bare_remote
+    _remote_main = SafePushRefusals._remote_main
+    SELECTOR, RED = SafePushLandingSuites.SELECTOR, SafePushLandingSuites.RED
+    with_suites, commit_all = SafePushLandingSuites.with_suites, SafePushLandingSuites.commit_all
+    WHERE = "import os\nopen(os.environ['LEGEND_TEST_WHERE'], 'w').write(os.getcwd())\n"
+
+    def env(self, root: Path, **extra: str) -> dict:
+        clones = root.parent / "clones"                      # the tool's temporary folder, so that what it leaves behind can be listed
+        clones.mkdir(exist_ok=True)
+        return dict(os.environ, LEGEND_SAFE_PUSH_ROOT=str(root), LEGEND_SAFE_PUSH_GATE=str(root / "scripts" / "gate.py"), LEGEND_SAFE_PUSH_REGEN=str(root.parent / "no_regen.py"),
+                    LEGEND_TEST_WHERE=str(root.parent / "where.txt"), LEGEND_TEST_LOG=str(root.parent / "log.txt"), TMPDIR=str(clones), **extra)
+
+    def publish(self, root: Path, *args: str, **extra: str):
+        return subprocess.run([sys.executable, str(TOOL), "origin", "main", *args], capture_output=True, text=True, env=self.env(root, **extra))
+
+    def left_behind(self, root: Path) -> list:
+        return sorted(p.name for p in (root.parent / "clones").glob("legend-landing-suites-*"))
+
+    def test_the_suites_run_in_a_clone_of_the_gated_commit_which_is_removed(self) -> None:
+        with TemporaryDirectory() as td:
+            suite = self.WHERE + "import subprocess\nopen(os.environ['LEGEND_TEST_LOG'], 'w').write(subprocess.run(['git', 'rev-parse', 'HEAD'], capture_output=True, text=True).stdout.strip())\n"
+            root, bare = self.with_suites(td, {"where.py": suite})
+            r = self.publish(root, "--serialize")
+            self.assertEqual(r.returncode, 0, r.stderr)
+            where = Path((root.parent / "where.txt").read_text())
+            self.assertIn("legend-landing-suites-", str(where))
+            self.assertEqual((root.parent / "log.txt").read_text(), self._remote_main(bare))
+            self.assertFalse(where.exists())
+            self.assertEqual(self.left_behind(root), [])
+            self.assertIn("LANDING CHECKS parallel: wall ", r.stdout)
+            self.assertLess(r.stdout.index("LANDING SUITES: 1 run"), r.stdout.index("VERDICT"))
+
+    def test_the_gate_runs_while_a_suite_is_running(self) -> None:
+        with TemporaryDirectory() as td:
+            suite = ("import os, sys, time\nlog = os.environ['LEGEND_TEST_LOG']\nfor _ in range(600):\n"
+                     "    if os.path.exists(log) and 'gate' in open(log).read():\n        sys.exit(0)\n    time.sleep(0.05)\nsys.exit(1)\n")
+            root, bare = self.with_suites(td, {"waits_for_the_gate.py": suite})
+            (root / "scripts" / "gate.py").write_text("import os\nopen(os.environ['LEGEND_TEST_LOG'], 'a').write('gate\\n')\n" + GATE_PASS, encoding="utf-8")
+            self.commit_all(root, "gate that says it ran")
+            r = self.publish(root, "--serialize")
+            self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+
+    def test_a_red_suite_refuses_stops_the_gate_and_removes_the_clone(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self.with_suites(td, {"b_red.py": self.RED})
+            (root / "scripts" / "gate.py").write_text("import time\ntime.sleep(120)\n" + GATE_PASS, encoding="utf-8")
+            self.commit_all(root, "slow gate")
+            before, started = self._remote_main(bare), time.time()
+            r = self.publish(root, "--serialize")
+            self.assertEqual(r.returncode, 1, r.stdout)
+            self.assertLess(time.time() - started, 90, "a refusal must not wait for the gate")
+            self.assertIn("turns a suite red", r.stderr)
+            self.assertNotIn("VERDICT", r.stdout)
+            self.assertEqual(self._remote_main(bare), before)
+            self.assertEqual(self.left_behind(root), [])
+
+    def test_a_blocking_gate_refuses_after_green_suites(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self.with_suites(td, {"a_ok.py": "print('ok')\n"})
+            (root / "scripts" / "gate.py").write_text(GATE_BLOCK, encoding="utf-8")
+            self.commit_all(root, "blocking gate")
+            before = self._remote_main(bare)
+            r = self.publish(root, "--serialize")
+            self.assertEqual(r.returncode, 1, r.stdout)
+            self.assertIn("not PASS", r.stderr)
+            self.assertIn("EMAIL_ADDRESS", r.stderr)
+            self.assertEqual(self._remote_main(bare), before)
+
+    def test_a_suite_that_dirties_its_clone_or_the_worktree_is_refused(self) -> None:
+        for name, text in (("clone", "open('left_behind.txt', 'w').write('x')\n"),
+                           ("worktree", "import os\nopen(os.path.join(os.environ['LEGEND_SAFE_PUSH_ROOT'], 'left_behind.txt'), 'w').write('x')\n")):
+            with self.subTest(dirtied=name), TemporaryDirectory() as td:
+                root, bare = self.with_suites(td, {"w.py": text})
+                before = self._remote_main(bare)
+                r = self.publish(root, "--serialize")
+                self.assertEqual(r.returncode, 1, r.stdout)
+                self.assertIn("left the working tree unclean", r.stderr)
+                self.assertEqual(self._remote_main(bare), before)
+                self.assertEqual(self.left_behind(root), [])
+
+    def test_files_is_hard_linked_into_the_clone_and_survives_its_removal(self) -> None:
+        with TemporaryDirectory() as td:
+            suite = "import os, sys\nsys.exit(0 if os.stat('files/held.bin').st_nlink > 1 else 1)\n"
+            root, bare = self.with_suites(td, {"linked.py": suite})
+            (root / ".gitignore").write_text("files/\n", encoding="utf-8")
+            self.commit_all(root, "ignore files")
+            (root / "files").mkdir()
+            (root / "files" / "held.bin").write_text("held\n", encoding="utf-8")
+            r = self.publish(root, "--serialize")
+            self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+            self.assertEqual((root / "files" / "held.bin").read_text(), "held\n")
+            self.assertEqual((root / "files" / "held.bin").stat().st_nlink, 1)
+
+    def test_serial_checks_run_in_the_worktree_and_are_recorded_in_the_history(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self.with_suites(td, {"where.py": self.WHERE})
+            r = self.publish(root, "--serialize", "--serial-checks")
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertEqual(Path((root.parent / "where.txt").read_text()).resolve(), root.resolve())
+            self.assertNotIn("LANDING CHECKS parallel", r.stdout)
+            self.assertNotIn("concurrent landings", r.stdout)
+            message = subprocess.run(["git", "-C", str(bare), "log", "-1", "--format=%B", "main"], capture_output=True, text=True, check=True).stdout
+            self.assertIn("Landing-Checks: serial (--serial-checks)", message)
+
+    def test_without_the_lock_the_checks_stay_one_after_another(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self.with_suites(td, {"where.py": self.WHERE})
+            r = self.publish(root, "--landing-suites")
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertEqual(Path((root.parent / "where.txt").read_text()).resolve(), root.resolve())
+            self.assertNotIn("LANDING CHECKS parallel", r.stdout)
+
+    def test_when_no_clone_can_be_built_the_suites_run_in_the_worktree_after_the_gate(self) -> None:
+        with TemporaryDirectory() as td:
+            suite = self.WHERE + "import sys\nsys.exit(0 if 'gate' in open(os.environ['LEGEND_TEST_LOG']).read() else 1)\n"
+            root, bare = self.with_suites(td, {"where.py": suite})
+            (root / "scripts" / "gate.py").write_text("import os, time\ntime.sleep(1)\nopen(os.environ['LEGEND_TEST_LOG'], 'a').write('gate\\n')\n" + GATE_PASS, encoding="utf-8")
+            self.commit_all(root, "gate that says it ran")
+            shim = root.parent / "bin"
+            shim.mkdir()
+            (root / ".gitignore").write_text("files/\n", encoding="utf-8")
+            self.commit_all(root, "ignore files")
+            (root / "files").mkdir()
+            (shim / "cp").write_text("#!/bin/sh\necho no hard links here >&2\nexit 1\n", encoding="utf-8")
+            (shim / "cp").chmod(0o755)
+            r = self.publish(root, "--serialize", PATH=f"{shim}{os.pathsep}{os.environ['PATH']}")
+            self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+            self.assertIn("PARALLEL CHECKS: no suite clone", r.stdout)
+            self.assertEqual(Path((root.parent / "where.txt").read_text()).resolve(), root.resolve())
+            self.assertEqual(self.left_behind(root), [])
+
+    def test_a_terminated_publisher_removes_the_clone(self) -> None:
+        with TemporaryDirectory() as td:
+            suite = self.WHERE + "import time\ntime.sleep(120)\n"
+            root, bare = self.with_suites(td, {"slow.py": suite})
+            process = subprocess.Popen([sys.executable, str(TOOL), "origin", "main", "--serialize"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, env=self.env(root))
+            try:
+                deadline = time.time() + 60
+                while not (root.parent / "where.txt").exists() and time.time() < deadline:
+                    time.sleep(0.05)
+                self.assertEqual(len(self.left_behind(root)), 1)
+                process.terminate()
+                process.communicate(timeout=60)
+            finally:
+                if process.poll() is None:
+                    process.kill()
+                    process.communicate()
+            self.assertEqual(process.returncode, 143)
+            self.assertEqual(self.left_behind(root), [])
+
+
 class SafePushViewCurrency(unittest.TestCase):
     """2026-11-24 (ADV): a committed derived view that is behind its sources turned CI red for hours because nothing before the landing checked it. `check` and the i18n inventory check
     (about 12 s together) now run before the gate; a stale answer refuses and names the regeneration commands."""
