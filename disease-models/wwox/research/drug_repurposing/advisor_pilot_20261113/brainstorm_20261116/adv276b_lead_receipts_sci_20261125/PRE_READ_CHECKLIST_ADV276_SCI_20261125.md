@@ -1,0 +1,24 @@
+# Pre-read checklist for a paper that a consumer sentence leans on (closing item of ADV-276, SCI, 2026-11-25)
+
+Hypothesis level; reference genotype class; nothing here is medical advice. Source: the corrections found in ADV-276 (increment 1, five leads, 30202070, four routed leads, step 2 batches 1 and 2: 37 papers read from acquired bytes with a consumer sentence; 16 strict corrections and 23 changes in all; no reversal of a direction). The corrections were never about the sign: they were about what was measured, in whom, when, and from which unit. Use the list before a consumer sentence is written or repeated, and again before the paper is called read. It gates nothing; a line that does not apply is skipped.
+
+## The five classes (each with the question to ask and the cheapest place to look)
+
+| # | Class | Ask | Where to look |
+|---|---|---|---|
+| 1 | **Window** | For each number: who was exposed or recorded, at what age, when, for how long, at what temperature? Is the window the exposure, the recording, or only the recovery before it? | Methods sentence that gives the recording or dosing (not the legend); supplementary Methods; figure timeline. Examples: slice recovery at 23 C is not the recording temperature; 5-min DMSO baseline, 10-min drug equilibration, 5-min recording; fructose through the dam's diet, not given to neonates; maternal and neonatal windows are different exposures. |
+| 2 | **Unit under n** | What does each dot in the panel stand for (animal, litter, culture, well, cell, axon, organoid)? Is the printed n the unit the test used? Are before and after the same units? | Source-data sheet (count the rows), legend n, the test named in Methods. Examples: g-ratio per axon under "n = 3 mice"; wells under "3 experiments"; the same organoids before and after drug tested with unpaired tests; two lanes of the same animal as n = 2. |
+| 3 | **Species, preparation and age** | Which species, strain, sex, age and preparation carry the mechanism, and is it the same as the one the sentence names? | Supplementary Methods for primary cultures (primary microglia are usually pup-derived: the host's age is not the preparation's age); cell-line identity; promoter and driver specificity (a CMV-driven vector is not cell-type specific); which cells were in the dish. |
+| 4 | **The test behind the p** | Is the p value printed or computed? Does it reproduce under the test the legend names? Is a "significant" in one arm set against a "not significant" in another without an interaction test? Are the animals that were measured later survivors? | Recompute from the counts or the sheet (paired against unpaired; chi-square with and without correction); read the mortality or dropout figure before repeating a later benefit; look for "P =" printed in the figure, not only an asterisk. |
+| 5 | **"All", "every", "none", "absent"** | Does the paper's own table or source data contradict a general statement at one time point or one group? Before writing "absent", was the whole XML searched (title, abstract, legends, references) and the supplement text, and the query dated? | Source-data sheet behind the claim; the count per time point; a full-text search including the abstract. Example: "all division modes at every induction day" against D15 = 0 proliferative of 40; "myelinated area per cell" reported absent after a body-only search, present in the abstract. |
+
+## Four more checks that recurred
+
+* **Who was measured:** a receptor, a cell class or a compound named in the sentence must be the one on the axis (a non-selective inhibitor is not a selective one; a cocktail is not one drug; an opener-defined current is not a blocker-sensitive current).
+* **Which source holds the number:** label every number carried from a workbook or figure by sheet, panel and row, never by position; mark a figure reading as an image reading; when a ledger line says "read in full", open the artefact that carries the number.
+* **A clause in the brief that belongs to another source** (our own data set beside the paper's) must be labelled as such, or a reader will search the paper for it.
+* **A negative has a date and a query** (epistemic_discipline section 2.4): an access failure, a 503 or a timeout is a route result, not a finding.
+
+## Use
+
+Before the first read: write the five questions on the PREREG with the paper's consumer sentence. After the read: one line per class in the result (the class of correction this batch found), and the second reader (a blind delegate, stated model and effort) judges every sentence proposed for change. Observed rate: about two reads in five need a strict correction (16 of 37) and about three in five some change (23 of 37), on consumers that were mostly narrow earlier readings; a result with none is possible and must not be forced.
