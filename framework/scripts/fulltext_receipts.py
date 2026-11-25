@@ -778,6 +778,10 @@ class _StudyIndex:
     one of those two values, so these are the only records worth asking about. Walking every
     earlier line for each line made one load of the ledger take 7.0 s at 2,765 receipts,
     0.23 s with this index (measured 2026-11-25), and every consumer loads the ledger.
+
+    In CI (first two runs holding it, #2416 and #2417): the regression step divided by the same
+    job's release-gate step was 7.7 and 8.4, against 10.2 to 11.1 on the runs just before, about
+    10 to 17 minutes less per run. Confound: all runs compared were red for one other cause.
     """
 
     def __init__(self, receipts: list[dict[str, Any]] = ()) -> None:

@@ -1220,10 +1220,12 @@
     },
     {
      "step": "CI number for 576abf92 (faster test_paper_packet, run #2405) and for the ledger-index change (49a9dd56), sent to ADV",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message to HE 00c83fd0, 2026-11-25 ~08:37Z, item 2",
-     "accepted_at": "2026-11-25T08:35:39Z"
+     "accepted_at": "2026-11-25T08:35:39Z",
+     "evidence": "sent to ADV 2026-11-25: test_paper_packet no visible CI gain (test/gate step ratio 10.45 before, 10.5 after); ledger index 7.7 and 8.4 against 10.2-11.1; both recorded in the code notes, on main in 670251825 and 0e767b304",
+     "updated_at": "2026-11-25T09:33:48Z"
     },
     {
      "step": "Propose to ADV the smallest route to read Krug 2013's .xls supplement without xlrd (licence and cost; release gate unchanged)",
@@ -1236,10 +1238,12 @@
     },
     {
      "step": "Routine need-driven micro-upgrade with a named consumer and a measured benefit",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message to HE 00c83fd0, 2026-11-25 ~08:37Z, item 4",
-     "accepted_at": "2026-11-25T08:35:39Z"
+     "accepted_at": "2026-11-25T08:35:39Z",
+     "evidence": "9e434d902 on main (gate PASS): xlsx_to_text.py reads .xls; 12 of 12 held BIFF files open, the 13th is a saved reCAPTCHA page (PMID 24932569) and is named NOT_READ; consumer SCI told",
+     "updated_at": "2026-11-25T09:02:09Z"
     }
    ]
   }

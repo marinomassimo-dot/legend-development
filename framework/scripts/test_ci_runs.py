@@ -109,6 +109,23 @@ class FailingTests(unittest.TestCase):
         self.assertIn("no 'release regression' annotation", ci_runs.failure_lines([red], "o/r", empty)[0])
 
 
+class SuiteTimes(unittest.TestCase):
+    def test_a_concluded_gate_run_prints_its_published_suite_times_and_nothing_else_is_asked(self):
+        asked = []
+
+        def fetch(url):
+            asked.append(url)
+            if url.endswith("/jobs"):
+                return {"jobs": [{"id": 11, "conclusion": "success"}]}
+            return [{"title": "release regression", "message": "x"}, {"title": "suite time", "message": "total 34s over 3 suite(s); 30s b.py"}]
+
+        runs = [{"name": ci_runs.GATE, "status": "completed", "conclusion": "success", "id": 7, "run_number": 5, "head_sha": "a" * 40},
+                {"name": ci_runs.GATE, "status": "in_progress", "id": 8, "run_number": 6, "head_sha": "a" * 40}]
+        self.assertEqual(ci_runs.suite_times(runs, "o/r", fetch), ["#5 success (aaaaaaaa)", "  total 34s over 3 suite(s)", "  30s b.py"])
+        self.assertEqual(len(asked), 2)
+        self.assertEqual(ci_runs.suite_times(runs[1:], "o/r", fetch), [])
+
+
 class SharedRead(unittest.TestCase):
     """HE47 H6: waiters on one machine share a single API read per commit and one declared rate-limit pause."""
     def setUp(self):

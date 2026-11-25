@@ -106,6 +106,13 @@ class VerdictFormattingTests(unittest.TestCase):
         self.assertEqual([line.split()[-1] for line in lines[1:]], ["b.py", "c.py"])
         self.assertEqual(runner.format_timing_summary([]), [])
 
+    def test_the_timing_annotation_is_one_line_and_only_inside_actions(self) -> None:
+        durations = [("a.py", 1.0), ("b.py", 30.4), ("c.py", 2.5)]
+        self.assertEqual(runner.format_timing_annotation(durations, {}), [])
+        self.assertEqual(runner.format_timing_annotation([], {"GITHUB_ACTIONS": "true"}), [])
+        self.assertEqual(runner.format_timing_annotation(durations, {"GITHUB_ACTIONS": "true"}, top=2),
+                         ["::notice title=suite time::total 34s over 3 suite(s); 30s b.py; 2s c.py"])
+
     def test_timing_lines_cannot_be_read_as_failures(self) -> None:
         """`integration_matrix.failing_suites` reads `- <suite>: exit N` lines as failures."""
         lines = runner.format_timing_summary([("x.py", 1.0)])
