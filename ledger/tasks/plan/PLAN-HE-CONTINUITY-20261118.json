@@ -1080,6 +1080,14 @@
      "accepted_at": "2026-11-25T02:07:36Z",
      "evidence": "2026-11-25 02:06Z: old 7cf5e85a RELEASED, 45a8b15c BOUND; claude agents --all --json shows 'IT Orchestrator - PREVIOUS 7cf5e85a' and 'IT Orchestrator - CURRENT 45a8b15c'; mandate_watch labels CURRENT; no retire-old",
      "updated_at": "2026-11-25T02:07:36Z"
+    },
+    {
+     "step": "ADV-243: fix the stale recall-minute comment in strategic_advisor.py; measure the friction of ADV's root-only record path and propose three designs (propose only)",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "source": "ADV-243 (ADV - CURRENT a5e6f2ad message 2026-11-25; assignments/ADV-243.md)",
+     "accepted_at": "2026-11-25T02:23:46Z",
+     "updated_at": "2026-11-25T02:23:46Z"
     }
    ]
   }
@@ -1915,6 +1923,13 @@
    "at": "2026-11-25T02:07:36Z",
    "source": "ADV message 2026-11-25 (IT successor launched)",
    "step_sha256": "7b83f5c102c1",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T02:23:46Z",
+   "source": "ADV-243 (ADV - CURRENT a5e6f2ad message 2026-11-25; assignments/ADV-243.md)",
+   "step_sha256": "0aedcd7e04af",
    "reopened_block": false,
    "authorised_by": null
   }
