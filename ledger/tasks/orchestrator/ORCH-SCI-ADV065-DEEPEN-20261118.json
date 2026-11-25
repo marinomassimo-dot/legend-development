@@ -975,6 +975,15 @@
      "accepted_at": "2026-11-25T02:20:29Z",
      "evidence": "brainstorm_20261116/adv244_organoid_clone_reads_sci_20261125/RESULT_ADV244_ORGANOID_CLONE_READS_SCI_20261125.md: all four KO libraries call KO1; wild-type control passes; wording to IT sent after landing",
      "updated_at": "2026-11-25T02:29:34Z"
+    },
+    {
+     "step": "ADV-247: independence audit of the carried small-n transcript inferences (what the replicate units really are, effective n; unit taxonomy PREREG; two-hit read per unit statement; streaming-read method only where text cannot answer and edits are published; dispositions independent / non-independent / not stated; rank by consumers; wording for IT)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-247",
+     "accepted_at": "2026-11-25T02:48:30Z",
+     "evidence": "brainstorm_20261116/adv247_independence_audit_sci_20261125/RESULT_ADV247_INDEPENDENCE_AUDIT_SCI_20261125.md: 13 of 35 non-independent (all organoid), 15 independent, 7 not stated; wording for IT",
+     "updated_at": "2026-11-25T02:53:38Z"
     }
    ]
   }
@@ -1726,6 +1735,13 @@
    "at": "2026-11-25T02:20:29Z",
    "source": "ADV-244",
    "step_sha256": "6575283fbcf1",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T02:48:30Z",
+   "source": "ADV-247",
+   "step_sha256": "3dc4054535ca",
    "reopened_block": false,
    "authorised_by": null
   }
