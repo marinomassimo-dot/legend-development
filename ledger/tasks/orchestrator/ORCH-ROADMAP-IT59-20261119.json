@@ -582,6 +582,13 @@
      "accepted_at": "2026-11-25T12:40:28Z",
      "evidence": "BATCH_20261125_002, commit 359f6ef04: PAPER 050, CORPUS-STUB-129, CLAIM 011, WM section 4, CLAIM 002; blind check report it_batch1_verify_20261125",
      "updated_at": "2026-11-25T12:40:28Z"
+    },
+    {
+     "step": "IT20: batch 2 of the staged BATCH_COMMIT (remaining candidates ADV253, ADV261, ADV238, ADV246, ADV247, ADV251; blind verifier sonnet/high, at most 10 statements per call), then SCI peer sets for ordinary places",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "CHECKPOINT_IT_20261125_7.md section 1 (first assignment, ADV addition in the successor brief)",
+     "accepted_at": "2026-11-25T15:13:19Z"
     }
    ]
   }
@@ -1032,6 +1039,13 @@
    "at": "2026-11-25T12:40:28Z",
    "source": "ADV message 2026-11-25 (rotation option a accepted, staged)",
    "step_sha256": "ed3c0fcd85c6",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T15:13:19Z",
+   "source": "CHECKPOINT_IT_20261125_7.md section 1 (first assignment, ADV addition in the successor brief)",
+   "step_sha256": "02908522abef",
    "reopened_block": false,
    "authorised_by": null
   }

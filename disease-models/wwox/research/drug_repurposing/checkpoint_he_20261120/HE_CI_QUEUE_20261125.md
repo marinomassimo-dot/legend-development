@@ -68,3 +68,11 @@ Cost if it is enabled and a suite later collides: a red run that a serial run do
 15:01:10 to 15:26:46Z, load 4.1 at start and 3.4 at end, 2.7 to 11.6 between (1 to 4 other test or gate processes). **1,536 s wall, 276 suites, 45 skips, verdict FAIL: one suite green serially and red here**, `framework/scripts/test_verify_run.py` (one error of 20 tests). Everything else as in the serial run: same list, other exit codes, skip reasons, test counts; no tracked write.
 
 Cause, named: a race inside that test, not a shared resource. `wait_state` waited for the run directory and read `manifest.json`, which `verify_run.py` writes after making the directory. Shown deterministically (manifest written 0.5 s late: `FileNotFoundError` before, state returned after); the test now waits for the file. So no `RUN_ALONE` entry; **no 4-worker run has been made since the fix**, and one clean run is owed before the workflow line is put to the operator. Two runs are a small sample: a rarer race would not show in them.
+
+## 7. The clean 4-worker run owed after the race fix (same day, HE 02915fa6)
+
+Commit ea12cde65, an isolated clone without `files/` outside any dot-directory. 15:57:56 to 16:27:49Z, **1,789 s wall, 277 suites, 45 skips, verdict PASS WITH SKIPS, exit 0**, HEAD unchanged and no tracked or untracked change listed afterwards. No suite had to run alone; `test_verify_run.py` passed (26 s).
+
+Conditions were heavier than in the runs above: 1-minute load 3.2 to 13.3 (30 samples) on 4 cores, with another session's read-filter jobs and a landing gate running. Summed suite seconds 6,326 (4,796 before). The wall time again equals `test_repurposing_view.py` (1,785 s); `test_repository_surface_determinism.py` took 1,190 s. So 1,437 to 1,789 s is the observed range of the parallel run on this host, against 3,965 s serial. The hosted runner is still not measured, and the workflow line stays the operator's.
+
+What the run left in `/tmp`: 120 new entries, 37 MB, of which 34 MB are the four sandboxes of the test fixed the same day (this commit predates the fix). The rest is about 3 MB per run; a per-run temporary folder in the runner would not be worth its change.

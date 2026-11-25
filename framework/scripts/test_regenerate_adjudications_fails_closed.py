@@ -284,7 +284,9 @@ class NoDegradedStateLooksLikeACleanRun(unittest.TestCase):
         import hashlib
 
         def fresh():
-            box = build(Path(tempfile.mkdtemp()) / "repo")
+            # under self.tmp, which setUp removes: a bare mkdtemp left one copy of every
+            # script behind per arm, 805 folders and 5.5 GB by 2026-11-25
+            box = build(Path(tempfile.mkdtemp(dir=self.tmp)) / "repo")
             return box
 
         outputs = {}

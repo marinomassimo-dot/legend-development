@@ -2747,7 +2747,7 @@ Serves to:
 **Report mentions:** corpus alignment
 **Next action:** none — non usare come corroborazione; riaprire solo dopo audit indipendente fonte-per-fonte
 **Flags:** dependency-contaminated / retracted-primary dependency / integrity exclusion / background only
-**Note:** Title: Functions and Epigenetic Regulation of Wwox in Bone Metastasis from Breast Carcinoma. URG_2026-07-09_001: la review riusa dati del primario PMID 28151481 / DOI 10.1038/cddis.2016.403, ritirato nel 2022 (DOI 10.1038/s41419-022-04992-6) per problemi di integrità delle immagini western blot, e poggia su ulteriori fonti della stessa linea. Nessun claim canonico la usa.
+**Note:** Title: Functions and Epigenetic Regulation of Wwox in Bone Metastasis from Breast Carcinoma. URG_2026-07-09_001: la review riusa dati del primario PMID 28151481 / DOI 10.1038/cddis.2016.403, ritirato nel 2022 (DOI 10.1038/s41419-022-04992-6) per problemi di integrità delle immagini western blot, e poggia su ulteriori fonti della stessa linea. Nessun claim canonico la usa. Correction 2026-11-25 (ADV-253, blind check batch 2, `BATCH_20261125_004`, `CC-20261125-ORCHESTRATOR-ADV253-REVIEW-RETRACTIONS-01`): the review PMID 28045433 cites five retracted articles of its own group (25447306 retracted 2020, 26041563 2020, 28151481 2022, 19357348 2026, 15240510 2026) and cites 28151481 for its Figure 3B decitabine experiment on Wwox; in that article the decitabine result on Wwox protein is a bar chart of about 0.2 of control in vitro (xenograft IHC: Wwox increases), and no Beclin-1 or p62 blot was found in its text or in the blots viewed. Status unchanged.
 
 ---
 
@@ -12034,7 +12034,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Report mentions:** URG_2026-07-09_001 / CC-2026-07-09-002
 **Next action:** none — never use as evidence; retain permanently for dedup and dependency auditing
 **Flags:** RETRACTED / invalid evidence / western-blot integrity / category-5 urgent
-**Note:** Official 2022 retraction states that duplicated, reused or manipulated vinculin controls across Figures 3–6 invalidate confidence in the results. The derivative Maroni 2017 review (PMID 28045433; LIT-0085 / CORPUS-STUB-061) reuses data from this source and is therefore `dependency-contaminated / background_only`. No canonical claim depended on either record at the time of repair.
+**Note:** Official 2022 retraction states that duplicated, reused or manipulated vinculin controls across Figures 3–6 invalidate confidence in the results. The derivative Maroni 2017 review (PMID 28045433; LIT-0085 / CORPUS-STUB-061) cites this source for its Figure 3B decitabine experiment on Wwox and four other retracted articles of its group (25447306, 19357348, 26041563, 15240510; correction 2026-11-25, ADV-253, BATCH_20261125_004), and is therefore `dependency-contaminated / background_only`. No canonical claim depended on either record at the time of repair.
 
 ---
 
