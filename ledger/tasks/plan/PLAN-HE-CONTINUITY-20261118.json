@@ -1399,6 +1399,20 @@
      "owner": "plan",
      "source": "ADV a5e6f2ad message to HE 02915fa6, 2026-11-25, item 2 of 2",
      "accepted_at": "2026-11-25T17:45:03Z"
+    },
+    {
+     "step": "held_content_check.py: read-only list of unusable held files; one line in find-fulltext save step (stop and tell ADV if .claude edit refused)",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad decision (1) on HE ADV-279 report, 2026-11-25",
+     "accepted_at": "2026-11-25T18:03:07Z"
+    },
+    {
+     "step": "Fix the two consumer-join rules at the source with a test on two real examples; recompute the ranking; report rank changes in the top 60, the studies losing every consumer, and a note on ADV-265/269/276/279 orderings",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad decision (2) on HE ADV-279 report, 2026-11-25",
+     "accepted_at": "2026-11-25T18:03:07Z"
     }
    ]
   }
@@ -2486,6 +2500,20 @@
    "at": "2026-11-25T17:45:03Z",
    "source": "ADV a5e6f2ad message to HE 02915fa6, 2026-11-25, item 2 of 2",
    "step_sha256": "5903c2c83d8b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T18:03:07Z",
+   "source": "ADV a5e6f2ad decision (1) on HE ADV-279 report, 2026-11-25",
+   "step_sha256": "82446898790a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T18:03:07Z",
+   "source": "ADV a5e6f2ad decision (2) on HE ADV-279 report, 2026-11-25",
+   "step_sha256": "d0229f361bf7",
    "reopened_block": false,
    "authorised_by": null
   }
