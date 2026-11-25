@@ -1193,11 +1193,12 @@
     },
     {
      "step": "ADV-289: Breton S3B/S3C d-APV block fraction of the delayed evoked response and the upper depth arm of SLICE_PACKAGE_V2 / brief 13.11",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-289",
      "accepted_at": "2026-11-25T23:42:39Z",
-     "updated_at": "2026-11-25T23:42:39Z"
+     "updated_at": "2026-11-25T23:53:57Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv289_breton_s3c_dapv_block_sci_20261125/RESULT_ADV289_SCI_20261125.md"
     }
    ]
   }
