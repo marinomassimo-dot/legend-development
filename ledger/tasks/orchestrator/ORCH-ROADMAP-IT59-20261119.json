@@ -495,11 +495,12 @@
     },
     {
      "step": "ADV-270: held WWOX-deficient cell bioenergetics (PMID 25012504, PMID 35328751) read against a complex I inhibitor; PREREG first; disposition stressor / non-event / not decidable; consumers R-11 and NR-03",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-270 (assignments/ADV-270.md; ADV message 2026-11-25)",
      "accepted_at": "2026-11-25T07:38:59Z",
-     "updated_at": "2026-11-25T07:39:14Z"
+     "updated_at": "2026-11-25T07:49:36Z",
+     "evidence": "RESULT_ADV270_IT_20261125.md (brainstorm_20261116/it_adv270_20261125); R-11 and NR-03 dated corrections; branch task/it-adv270-20261125; suites and lint green"
     }
    ]
   }
