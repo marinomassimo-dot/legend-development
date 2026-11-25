@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T00:10Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-25T00:12:09Z",
+ "event_id": "FTR-20261125-34227748-01",
+ "evidence_basis": [
+  "coverage_map",
+  "files/fulltext/PMID34227748_Recurrent_GRIN1_PMC8283169_bucket_20261125.xml (PMC open-data bucket JATS XML, structured text)",
+  "read for the memantine-treatment section (age at start, dose steps, co-medication, seizure log, EEG), the abstract and the discussion paragraph on the blockers; the electrophysiology Methods, figures and tables were not read",
+  "not covered: introduction, methods, figures, tables, limitations"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv230_20261125/RESULT_ADV230_IT_20261125.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "fab7985164bf019c6d28ba71012026bb7c1d194e9080a9f7d532f635057eca5b",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID34227748_Recurrent_GRIN1_PMC8283169_bucket_20261125.xml",
+ "study_id": {
+  "pmid": "34227748"
+ },
+ "workflow": "IT ADV-230, question-driven partial reading from the PMC open-data bucket XML after Europe PMC's endpoint timed out once; no contact, no e-mail to any service, no paid route."
+}
