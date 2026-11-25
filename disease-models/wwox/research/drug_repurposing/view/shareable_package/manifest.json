@@ -88,7 +88,7 @@
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(pmids\\[\\]|views\\.(broad|partial)\\.evidence\\.pmids\\[\\])$": {
     "class": "BIBLIO",
-    "values": 247,
+    "values": 248,
     "why": "PMID of a cited work (ranking)"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -469,7 +469,7 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2470,
+  "BIBLIO": 2471,
   "COUNT": 12405,
   "ID": 4861,
   "OWN": 88916,
@@ -561,8 +561,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5062125,
-   "sha256": "6e6b711f1c055e394abbd441159ffe13a88bf3db39cfaa74176e4d28cccc6cf8"
+   "bytes": 5062469,
+   "sha256": "6e96945792f1fbd57cbcba93481f2de06e0b2b47e6c8103b62b234503204f247"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 168171,
