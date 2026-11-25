@@ -27,6 +27,12 @@ class Selection(unittest.TestCase):
     def test_a_new_script_selects_the_command_routing_and_isolation_suites(self) -> None:
         self.assertEqual({"test_release_surface.py", "test_documented_commands.py", "test_tool_routing.py", "test_strategic_advisor.py"}, names([("A", "framework/scripts/new_tool.py")]))
 
+    def test_a_test_file_change_selects_the_closed_world_guard(self) -> None:
+        guard = "test_no_closed_world_assertions_on_live_state.py"
+        for scope in ("framework/scripts", "scripts", "disease-models/wwox/analysis/scripts"):
+            self.assertIn(guard, names([("M", f"{scope}/test_something.py")]), scope)
+        self.assertNotIn(guard, names([("M", "framework/scripts/something.py")]))
+
     def test_a_registry_change_selects_the_queue_and_the_pathograph(self) -> None:
         got = names([("M", "disease-models/wwox/registries/paper_registry_current.md")])
         self.assertLessEqual({"test_batch_queue.py", "test_pathograph.py", "test_documented_commands.py", "test_link_targets.py"}, got)

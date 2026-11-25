@@ -37,6 +37,9 @@ RULES = [
     ("scripts/test_link_targets.py", lambda c: _any(c, "*.md")),
     ("scripts/test_section_references.py", lambda c: _any(c, "*.md")),
     ("scripts/test_tool_routing.py", lambda c: _any(c, "framework/scripts/*", "scripts/*")),
+    # #2322, #2325 (ADV-252): a new test asserted an absence in a body naming a registry path. The paths are the guard's own SCOPES
+    ("scripts/test_no_closed_world_assertions_on_live_state.py",
+     lambda c: _any(c, "framework/scripts/test_*.py", "scripts/test_*.py", "disease-models/wwox/analysis/scripts/test_*.py")),
     # #2289-#2297: debt_report.py imported the Advisor
     ("framework/scripts/test_strategic_advisor.py", lambda c: _any(c, "framework/scripts/*.py")),
     # #1981, #2289-#2297: a registry changed and the batch queue or the pathograph was not satisfied or not regenerated
