@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T13:55Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T13:55:06Z",
+ "event_id": "FTR-20261125-42308317-01",
+ "evidence_basis": [
+  "coverage_map",
+  "targeted reading by two blind delegates (sonnet, high) plus the reader's own checks of the pivotal items: Fig 2 and supplementary S3A as images, Methods, Discussion passages, searches for MCT, KATP and labelled lactate; peer-review file not read."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276b_lead_receipts_sci_20261125/RESULT_ADV276_STEP2_BATCH2_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261122-42308317-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "695340dc9fdba020ea01987cd8143783d210fb94bebc2f42b0928fc098f76e3b",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42308317_ADV272_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1126/sciadv.adt2527",
+  "pmid": "42308317"
+ },
+ "workflow": "SCI ADV-276 step 2 batch 2 (not a complete read)"
+}
