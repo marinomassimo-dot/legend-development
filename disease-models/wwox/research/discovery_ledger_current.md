@@ -3884,7 +3884,7 @@ Leads staged in the candidates of `BATCH_20261019_001` (groups G1 to G4). All ar
 - **Tag:** INFERENZA
 - **Status:** open
 - **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
-- **Causal statement:** The mGWAS report ([[paper_registry_current#PAPER 265]]) states that WWOX is related to HOMA-beta, citing the Han Chinese replication ([[paper_registry_current#PAPER 263]]), whose only support is a nominal control-only coefficient (P 0.014, uncorrected for about 64 tests, uninterpretable scale) not reproduced by the Japanese replication ([[paper_registry_current#PAPER 264]], P 0.91). Any registry sentence relaying the statement must carry this chain.
+- **Causal statement:** The mGWAS report ([[paper_registry_current#PAPER 265]]) states that WWOX is related to HOMA-beta, citing the Han Chinese replication ([[paper_registry_current#PAPER 263]]), whose only support is a nominal control-only coefficient (P 0.014, uncorrected for about 64 tests, uninterpretable scale) not reproduced by the Japanese replication ([[paper_registry_current#PAPER 264]], P 0.91). Any registry sentence relaying the statement must carry this chain. [Addition 2026-11-25, IT from SCI's re-read of PMID 33854788 (held text; SCI blind second reader): the mGWAS's own WWOX datum is one SNP, rs72487966 (allele G, MAF 0.03), with leucine/isoleucine, beta 0.411 ± 0.088, p 2.92 × 10⁻⁶ (human cohort; suggestive, not genome-wide; the authors write the correlations were suggestive and need validation). Its Mendelian randomisation concerns leucine/isoleucine and type 2 diabetes, not WWOX; the paper prints 'OR = 0.004, 95% CI 1.001–1.006'; the interval implies the printed figure is a log-odds or a rate (OR about 1.004), our inference, not the authors' statement. The chain above is unchanged.]
 - **Falsifying experiment / counter:** A reproduction of the HOMA-beta association in an independent cohort with the effect allele fixed.
 - **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
 - **Not medical advice.**
@@ -3894,7 +3894,7 @@ Leads staged in the candidates of `BATCH_20261019_001` (groups G1 to G4). All ar
 - **Tag:** INFERENZA
 - **Status:** open
 - **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
-- **Causal statement:** The metabolic-control literature supports both inhibiting glycolysis and supplying energy ([[paper_registry_current#PAPER 273]]); for WWOX loss the fibroblast lesion (lactate up) and the Wwox-null mouse (hypoglycaemic) point in different directions.
+- **Causal statement:** The metabolic-control literature supports both inhibiting glycolysis and supplying energy ([[paper_registry_current#PAPER 273]]); for WWOX loss the fibroblast lesion (lactate up) and the Wwox-null mouse (hypoglycaemic) point in different directions. [Addition 2026-11-25, IT from SCI's re-read of PMID 33363507 (held text; SCI blind second reader): the review frames the sign as state-dependent (hypometabolism may initiate seizures and energy supply is then proposed; reducing metabolism during seizures is called helpful); its 2-deoxyglucose evidence is animal models; its Conclusion states efficacy more flatly than its own section; its five figures are mechanism schematics (caption reading, images not opened by the verifier).]
 - **Falsifying experiment / counter:** A brain energy measurement in Wwox-null or hypomorph tissue showing hypermetabolism or hypometabolism.
 - **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
 - **Not medical advice.**
@@ -3919,12 +3919,12 @@ Leads staged in the candidates of `BATCH_20261019_001` (groups G1 to G4). All ar
 - **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
 - **Not medical advice.**
 
-### DL-MECH-123 — A diet exposure alone raises neonatal brain lactate about 2.7-fold, so a lactate difference in a Wwox-null brain is not by itself a HIF1A-driven glycolytic shift
+### DL-MECH-123 — Brain lactate in P7 pups of fructose-fed dams is about 2.5-fold higher after a fructose injection, so a lactate difference in a Wwox-null brain is not by itself a HIF1A-driven glycolytic shift
 
 - **Tag:** INFERENZA
 - **Status:** open
 - **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-B-G2-FRUCTOSE-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
-- **Causal statement:** High-fructose exposure moves whole-brain lactate from about 4 to about 11 umol/g in neonatal mice through microglial GLUT5 ([[paper_registry_current#PAPER 276]]).
+- **Causal statement:** In P7 mouse pups born to and nursed by dams on a 15 kcal% fructose or control diet, each injected with 4 g/kg [2-13C]-fructose 15 minutes before harvest, the total brain lactate pool was about 10.7 against 4.3 umol/g (5 against 4 pups; image readings) and GLUT5-null exposed pups stayed near control ([[paper_registry_current#PAPER 276]]). The labelled species rose by only about 0.24 umol/g and no uninjected value is reported, so this does not show a rise from diet alone. [Corrected 2026-11-25, IT blind check; the earlier title said a diet exposure alone raises it about 2.7-fold.]
 - **Falsifying experiment / counter:** Matched-diet Wwox-null versus wild-type brain lactate with cell-type resolution.
 - **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
 - **Not medical advice.**
@@ -4310,7 +4310,7 @@ Leads staged in the candidates of `BATCH_20261019_003` (groups H3, H4 and H5). A
 - **Tag:** IPOTESI
 - **Status:** open
 - **Created:** 2026-10-20 · `BATCH_20261019_004`, from `CC-20261019-SCIENTISTD-DEBT-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
-- **Causal statement:** [[paper_registry_current#PAPER 363]] summarises the fly design (reduced WWOX worsens tissue phenotypes caused by mitochondrial deficiency); the primary is unread (subscription).
+- **Causal statement:** [[paper_registry_current#PAPER 363]] summarises the fly design (reduced WWOX worsens tissue phenotypes caused by mitochondrial deficiency); the primary is unread (subscription). [Precision 2026-11-25, IT from SCI's re-read of PMID 34210081 (held text; SCI blind second reader): the review's fly sentence names no mitochondrial lesion and carries no citation, and the same review says fly WWOX deficiency alone has no phenotypic consequences.]
 - **Falsifying experiment / counter:** Falsifier: No differential sensitivity.
 - **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
 - **Not medical advice.**

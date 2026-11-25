@@ -83,3 +83,7 @@ Receipts `FTR-20261019-33520443-01`, `-31145772-01`, `-24086726-01`, `-33854788-
 **What landed:** 6 PAPER record(s) (PAPER 262, PAPER 263, PAPER 264, PAPER 265, PAPER 266, PAPER 267) with their LIT records. The PubMed identity defect of the Han Chinese report is recorded as an `identity_correction` on `PAPER 263`; the PubMed fact is not rewritten.
 **Status / Type / Summary:** unchanged by this candidate.
 **Not medical advice.** Class level only; no individual-level record is carried.
+
+## Dated note, 2026-11-25 (IT, blind check; `CC-20261125-ORCHESTRATOR-ADV276C-SIX-HELD-01` section 5)
+
+PMID 24086726 (Sakai 2013): 7,379 is the number enrolled; the BMI-adjusted model has at most 6,969 (exact n not printed) and the trait analyses use controls only (HOMA n 893, fasting glucose n 1,325 as printed, while Table 1 gives glucose for 1,320). The 42 percent power is at alpha 0.05 (Table S3 footnote); about 14 percent at the study's Bonferroni 0.0055 is our approximation. The printed HOMA-IR effect 0.0015 (SE 0.028) does not fit its p 0.5941 (it would give about 0.96); a misplaced digit is our inference. The entries above are left as written.

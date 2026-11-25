@@ -11098,7 +11098,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 ---
 
 ## PAPER 264
-**Short title:** Sakai 2013 PLoS ONE — Bonferroni-corrected Japanese replication of nine East Asian type-2-diabetes loci (7,379 subjects); WWOX rs17797882 not replicated, no HOMA-beta association
+**Short title:** Sakai 2013 PLoS ONE — Bonferroni-corrected Japanese replication of nine East Asian type-2-diabetes loci (7,379 enrolled; adjusted model at most 6,969); WWOX rs17797882 not replicated, no HOMA-beta association
 **Full title:** Replication Study for the Association of 9 East Asian GWAS-Derived Loci with Susceptibility to Type 2 Diabetes in a Japanese Population
 **Authors:** Sakai K, Imamura M, Tanaka Y, Iwata M, Hirose H, Kaku K, et al.
 **Year:** 2013
@@ -11109,12 +11109,12 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Record provenance:** created by `CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01` (metabolic batch 2026-10-19, Scientist B, group G2); identity authored by the batch integrator from the artefact's own front matter, and the number assigned from `registry_records.py catalog` (`PAPER` max was 246, `LIT` max 0548) in place of the candidate's provisional id.
 **Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-24086726-01`; manifest `deepdive_manifests/PMID24086726.json`; dossier `research/fulltext_dossiers/PMID24086726.md`; artefact `files/fulltext/PMID24086726_Sakai2013_PMC3783369.xml` (sha256 `694f06f3d7e15de850db4d3099181fd7fc2d1573a079f3d6629a73199340a885`); the depth is never upgraded from the receipt (coverage limits are in the receipt's `coverage` map)
 **Primary pathway:** P5 — metabolism / mitochondria / redox
-**Model/species:** human DNA, Japanese (7,379 subjects)
+**Model/species:** human DNA, Japanese (7,379 enrolled; the BMI-adjusted model has at most 6,969, its exact n not printed; trait analyses use controls only)
 **Genotype/model:** common intronic WWOX SNP; no loss-of-function allele
 **Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-neural, non-DEE context. Not medical advice.
 **Claim links:** none
-**Role:** WWOX rs17797882 (risk allele C, frequency about 0.79): adjusted OR 1.01 (0.91 to 1.12), P 0.75; no association with HOMA-beta (P 0.91, n 893), HOMA-IR (P 0.59) or fasting glucose (P 0.59). Power to replicate the original association was 42 percent (the lowest of the nine loci). With controls aged 50 or older the OR falls below 1 (0.94 unadjusted, 0.95 adjusted) and with controls aged 60 or older to 0.89 and 0.88: opposite to the original direction. The effect allele analysed here (C) differs from the one analysed in [[paper_registry_current#PAPER 263]] (T): the allele convention is unresolved (`DL-MECH-118`).
+**Role:** WWOX rs17797882 (risk allele C, frequency about 0.79): adjusted OR 1.01 (0.91 to 1.12), P 0.75; no association with HOMA-beta (P 0.91, n 893), HOMA-IR (P 0.59) or fasting glucose (P 0.59). Power to replicate the original association was 42 percent (the lowest of the nine loci) at alpha 0.05, not at the study's Bonferroni threshold (Table S3 footnote). With controls aged 50 or older the OR falls below 1 (0.94 unadjusted, 0.95 adjusted) and with controls aged 60 or older to 0.89 and 0.88: opposite to the original direction. The effect allele analysed here (C) differs from the one analysed in [[paper_registry_current#PAPER 263]] (T): the allele convention is unresolved (`DL-MECH-118`).
 **LIT link:** [[literature_tracking_log_current#LIT-0562]]
 **Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
 
@@ -11160,7 +11160,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — oncologic context. Not medical advice.
 **Claim links:** none
-**Role:** The ratio is not independently prognostic in six of seven multivariable models (glioblastoma HR 56.1, CI 0.03 to 99,080; low-grade glioma HR 0.54, CI 0.03 to 8.51); in luminal A it is significant with the opposite sign. Cutpoint groups are very unequal (glioblastoma 63 below, 96 above; low-grade glioma 40 below, 475 above) and the disease-status field is extremely skewed between them. The authors concede that independent prognostic value *«did not reach statistical significance in most cohorts»*, yet the Conclusions call the ratio a *«robust prognostic biomarker»* and state that WWOX loss triggers HIF1 alpha stabilisation and metabolic rewiring although only mRNA was analysed. The earlier abstract-level log entry is superseded by this reading.
+**Role:** The ratio is not independently prognostic in six of seven multivariable models (glioblastoma HR 56.1, CI 0.03 to 99,080; low-grade glioma HR 0.54, CI 0.03 to 8.51); in luminal A it is significant with the opposite sign. Cutpoint groups are very unequal (glioblastoma 63 below, 96 above; low-grade glioma 40 below, 475 above) and the disease-status field is extremely skewed between them. The authors concede that independent prognostic value *«did not reach statistical significance in most cohorts»*, yet the Conclusions call the ratio a *«robust prognostic biomarker»* and state that WWOX loss triggers HIF1 alpha stabilisation and metabolic rewiring although only mRNA was analysed. The earlier abstract-level log entry is superseded by this reading. In basal-like breast cancer (95 patients, 11 events; Supplementary Figure S1, forest plot not opened by the second reader) the text calls WWOX associated with improved survival while printing HR 1.014 per unit (1.001 to 1.027, p 0.034), which by the paper's own convention points to higher hazard; its unadjusted comparison (good-prognosis tumours express more WWOX, log2 fold change 1.17) points the other way, so neither is carried as a WWOX direction (2026-11-25).
 **LIT link:** [[literature_tracking_log_current#LIT-0019]]
 **Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
 
@@ -11374,7 +11374,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 ---
 
 ## PAPER 276
-**Short title:** Wang 2025 Nature — neonatal high fructose via microglial GLUT5 lowers microglia phagocytosis and raises whole-brain neonatal lactate about 2.7-fold; WWOX absent
+**Short title:** Wang 2025 Nature — early-life high-fructose exposure lowers microglia phagocytosis via microglial GLUT5; after a labelled fructose injection, P7 pups of fructose-fed dams have about 2.5-fold more total brain lactate (labelled lactate about 2.7-fold); WWOX absent
 **Full title:** Early life high fructose exposure disrupts microglia phagocytosis and impedes neurodevelopment
 **Authors:** Wang Z, Lipshutz A, Martínez de la Torre C, Trzeciak AJ, Liu ZL, Miranda IC, et al.
 **Year:** 2025
@@ -11390,7 +11390,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — mechanism context. Not medical advice.
 **Claim links:** none
-**Role:** High-fructose exposure acts through microglial GLUT5 and the hexokinase route (mitochondrial HK2 localisation); a high-glucose diet had no effect on phagocytosis, so the effect is not generic sugar excess. Whole-brain total lactate in exposed wild-type pups is about 11 umol/g against about 4 in controls and in GLUT5-null exposed pups (N 4 to 5): **a diet exposure alone moves neonatal brain lactate nearly three-fold**, so a lactate difference in a Wwox-null brain does not by itself indicate a HIF1A-driven glycolytic shift. Myeloid GLUT5 deletion rescues phagocytosis but not microglia number; novel-object and Barnes-maze readouts disagree. Methods skimmed (partial).
+**Role:** High-fructose exposure acts through microglial GLUT5 and the hexokinase route (mitochondrial HK2 localisation); a high-glucose diet had no effect on phagocytosis, so the effect is not generic sugar excess. In P7 pups born to and nursed by dams on a 15 kcal% fructose or control diet, each given 4 g/kg [2-13C]-fructose 15 minutes before harvest (Figure 3b; mouse; image readings), the total brain lactate pool was about 10.7 against 4.3 umol/g (5 against 4 wild-type pups; labelled lactate about 0.37 against 0.14) and GLUT5-null exposed pups stayed near control. The labelled species is a few per cent of the pool, and no uninjected value appears in the text or legends, so the figure does not show a rise from diet alone [corrected 2026-11-25, `CC-20261125-ORCHESTRATOR-ADV276C-SIX-HELD-01`: the earlier wording said a diet exposure alone]. Diet history and a substrate load can still move neonatal brain lactate, so a lactate difference in a Wwox-null brain does not by itself indicate a HIF1A-driven glycolytic shift. Myeloid GLUT5 deletion rescues phagocytosis but not microglia number; novel-object and Barnes-maze readouts disagree. Methods skimmed (partial).
 **LIT link:** [[literature_tracking_log_current#LIT-0572]]
 **Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
 

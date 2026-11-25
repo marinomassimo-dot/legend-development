@@ -60,3 +60,16 @@ The release battery on 6320348db5 failed `scripts/test_public_release_gate_cache
 
 ## Update 2026-11-19 (HE): the pinned base-suite size is now 73
 A third test in `scripts/test_public_release_gate.py` (the receipts-ledger reminder) raised the base gate suite from 72 to 73; the pinned count in `test_public_release_gate_cache.py` was updated in the same change, found by the lookup of suites that name the changed test file (README section 13), this time before the push.
+
+## Update 2026-11-25 (HE): search guards in the privacy scan; pinned base-suite size now 76
+The privacy scan now skips a search for a file that cannot match it: each guard names, for every alternative of its pattern, a literal that any match contains. Patterns, scope, allow-lists and verdicts did not change; the cache is as it was (off by default).
+
+**Rule.** A differential over today's tree cannot see a pattern added tomorrow. A short-cut or cache in a privacy gate therefore keys on a digest of its own source and patterns and falls back to the full search on any change. Here: guards run only while `scan_source_digest() == GUARDS_WRITTEN_FOR`; `test_search_guards_are_in_force` fails until someone has re-read the guards and updated the digest. The first version lacked this and failed the pattern-mutation test of the cache suite.
+
+**Proof, MEASURED on base 6af888dc5** (old script sha256 235e2854d11444b5…, new 81add1dcf1451910…):
+* Findings identical, field by field and in order: the whole tree (31 and 31), the added or changed files of the last 50 first-parent commits (34 and 34), 121 planted trees (127 and 127). Whole gate output and exit code identical on the clean tree (PASS) and with the planted files in it (122 BLOCKs).
+* One planted positive per guarded alternative, found by the old scan and the new. Each of 53 guard literals broken in turn: 53 detected.
+* Cache present: a new alternative added to a pattern in a throwaway copy (private key form, AWS prefix, maternal word, person noun, country), a matching file cached clean by the unchanged gate: the mutated copy reports it with 0 cache hits; the same copy with the fall-back forced off misses it, in all five.
+* Time, one run each on a shared host: whole gate 217 s to 118 s (clean tree), 242 s to 112 s (planted); privacy scan alone 201 s to 68 s. The cache suite's exact-tree comparison (`GATE_CACHE_FULL_TREE=1`) was not run.
+
+**Open (ADV condition 5):** on each of the first three real landings after this one, read the findings count of the old and the new script on the landed commit and report.
