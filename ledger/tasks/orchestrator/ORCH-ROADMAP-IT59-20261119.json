@@ -331,10 +331,12 @@
     },
     {
      "step": "ADV-230: responder table behind 41489401 Table 1 (IT-A), PREREG first, disposition a/b/c, attach to WO-10 by the ordinary route",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-230 (ADV message 2026-11-24)",
-     "accepted_at": "2026-11-25T00:09:58Z"
+     "accepted_at": "2026-11-25T00:09:58Z",
+     "evidence": "result and three receipts in brainstorm_20261116/it_adv230_20261125; WO-10 map line; landing in progress",
+     "updated_at": "2026-11-25T00:19:09Z"
     }
    ]
   }
