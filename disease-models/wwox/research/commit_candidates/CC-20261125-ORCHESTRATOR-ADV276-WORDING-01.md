@@ -1,0 +1,44 @@
+# COMMIT CANDIDATE — CC-20261125-ORCHESTRATOR-ADV276-WORDING-01
+
+**Actor:** `orchestrator` (IT) · **Task:** ORCH-ROADMAP-IT59-20261119 (ADV-276 increment 1, one queued candidate at ADV's word; SCI's wording message is peer content, not operator authority) · **Date:** 2026-11-25 · **target_wm_version:** `WM_v7.29` (unchanged)
+**Origin of the finding:** `disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276_acquired_reading_sci_20261125/RESULT_ADV276_SCI_20261125.md` section 3 (SCI, one reader). **IT read the passages behind all ten lines again from the held bytes on 2026-11-25** (section 4) and changed five of SCI's lines where the source says something different or more (marked **IT** below).
+**Status:** PROPOSED. Nothing is applied to any card, ranking row, coverage table or registry by this act.
+
+> Public, disease-level, de-identified. Hypothesis level; nothing here is medical advice. Reference genotype class only. None of these ten papers is WWOX evidence. None was completely read; figures are captions only and supplements are not held.
+
+## 1 · CHANGE CLASS
+**MINOR.** Wording, units, n and limits on rows of cards F03, F04, E01, H01, H02 and P11. No direction, status, flag or claim link changes.
+
+## 2 · Proposed lines (English; appends keep the original text unless a replacement is written)
+
+| # | Consumer (card, row) | Proposed wording |
+|---|---|---|
+| 1 | F04, `DR-P9-006` (PMID 40994429): `source`, `locator`, `reading_depth` | Replace "abstract only" by partial full text (receipt of ADV-276). "Radiprodil was equally or more effective than at wild type in 22 of 27 variants by potency and in 21 of 27 (77.8 percent) when maximal inhibition is also counted (Table 2: I150V 33 nM and 31 percent against 35 nM and 85 percent at wild type). S810R, the variant of the mouse model, is one of the five potency losses: the text prints 1.9-fold; Table 2 prints 53 nM against a pooled wild-type 35 nM." **IT:** "Table 3, S810R mice, radiprodil 3.0 mg/kg i.p. or vehicle, then pentylenetetrazole 40 mg/kg: latency to first myoclonic jerk 131 ± 33 s (radiprodil, n = 26) against 99 ± 8.4 s (vehicle; the Results text prints n = 21, Table 3 prints n = 20), P = 0.40; latency to generalised tonic-clonic seizure 458 ± 90 s (radiprodil, the 16 mice that seized) against 207 ± 23 s (vehicle, the 20 that seized), mean ± SEM, P = 0.0053 by unpaired t-test among animals that seized; 16 of 26 radiprodil mice against 20 of 21 vehicle mice seized (Fisher two-sided about 0.013, not printed by the paper). Wild-type littermates: 6 of 18 radiprodil against 5 of 21 vehicle seized." The direction DECREASE stays at receptor level. The endpoint phrase "delay of pentylenetetrazole seizures" should read "incidence of tonic-clonic seizures and latency among animals that seized". |
+| 2 | P11, `DR-P11-004` (PMID 35222658): `measured_result_note` | Append: "Table 3's printed p values (0.003 intervention, 0.42 non-intervention) are not reproducible from its counts (chi-square about 0.10 and 0.018; exact 0.12 and 0.014); Table 4's 0.004 reproduces." **IT:** the intervention-group cells are children 4/2/3 (low serum magnesium) and 2/3/13 (normal), the non-intervention cells 4/4/0 and 3/2/8. The row already says that Table 3 margins disagree with Table 2; the counts there are partial 5 against 7 and complete 16 against 13 in the intervention group. NO_CHANGE for seizure control (p = 0.69, reproduced) stands. |
+| 3 | P11, `DR-P11-005` (PMID 36967744) | Passes. Append: "229 of 302 patients collected were enrolled (73 excluded); 64 of the 229 had failed a first course of adrenocorticotropic hormone and received it again with magnesium, so magnesium cannot be separated; the paper states it lacked a control group." UNKNOWN stands. |
+| 4 | H02, `DR-H02-019` (PMID 40670421) | Append: "The rise after stopping is Table 3, six of the 11 children of the imaging-finding group (left 0.273 to 0.367, p = 0.044; right 0.286 to 0.437, p = 0.050), with no unexposed time control." **IT:** "In Table 2 the exposed group with normal imaging is not significantly below controls (right median 0.463 against 0.427; left 0.390 against 0.410); the starred difference is the imaging-finding group against controls. Medians with quartiles are reported while the test named is a one-way ANOVA." |
+| 5 | H02, `DR-H02-012` and `DR-H02-013` (PMID 36601084) | The sentences hold. Append: "Concomitant rapamycin (60 children, all in the tuberous sclerosis group) is **associated with lower odds** of the abnormality (multivariate odds ratio 0.152, 95 percent interval 0.028 to 0.715, p = 0.019, Table 3); observational, and not separable from aetiology. The cohort-wide exposure of 170 ± 12 days does not reconcile with the subgroup means (261 days, 80 children; 134 days, 92 children; weighted 193)." Do not write "protective". |
+| 6 | H02, `DR-H02-027` (PMID 24321005) | No white-matter endpoint: confirmed. Append: "Hippocampal histology on 23 brains (8 vehicle, 10 at 0.1 mg/kg, 5 at 1 mg/kg)." **IT:** "81 treated rats were included across four dose groups (33, 14, 25, 9); the 5 mg/kg group was not assessed after postnatal day 6 because 8 of 9 rats had died by day 7, so no histology exists at that dose." |
+| 7 | H02, `DR-H02-034` (PMID 42470358) | Below the limit of quantitation (3 ng/mL) in brain, eyeball and retina: confirmed. Append: "male mice, two-day infusion; n per group not stated in the passage read; values are printed as mean ± SD; OV329 5 mg/kg/day against vigabatrin 80 mg/kg/day, not dose-matched; the toxicology studies are attributed to the EILAT XVI progress report." |
+| 8 | H01, `p4_card.sources.external_not_wwox_evidence` (PMID 38605177) | Take 38605177 out of "abstract level; none carries a receipt" and add: "38605177, partial full text read 2026-11-25: cryo-EM structure of human Cav3.2 with ACT-709478, TTA-A2, TTA-P2 and ML218, and HEK293T electrophysiology; no epilepsy-model datum; the text never uses the name apinocaltamide (zero hits, 2026-11-25)." |
+| 9 | F03, `not_known` and `evidence_against` (PMID 20810895) | "in vitro, intact neonatal hippocampi, seizures induced in vitro." **IT, replacing SCI's unit:** "the seizure-induced chloride rise is Clomeleon imaging in neonatal CLM-1 mice, 187 cells from 4 intact hippocampi under low-magnesium solution (mean ± SE, Figure 5d legend and text)." The 468 cells and the 10 hippocampi belong to other analyses of the same paper (GABA polarity; resting chloride) and are not the unit of this statement. |
+| 10 | E01, `not_known` (PMID 28447936) | **IT, narrowing SCI's line:** "disputed: an in vitro study with purified PPP1R15A fragments found 50 µM Sephin1 without effect on complex association, dissociation or eIF2α-P dephosphorylation, and guanabenz inert in the enzymatic assay (Figure 8D); the authors limit the statement to that experimental system." SCI's line put both compounds in all three assays. |
+
+## 3 · What this does NOT do
+No direction moves. No line for the six lead papers of ADV-276 (not read yet), the ranking rows or the claims. The H02 row on CPP-115 efficacy (`DR-H02-008`, abstract level) is not rewritten here, although line 6 gives the number behind its "eventually lethal".
+
+## 4 · Statements for the blind check at application time (each seen by IT in the held bytes on 2026-11-25)
+Artefacts are the ADV-272 files under `files/fulltext/PMID<pmid>_ADV272_*` of the root checkout.
+1. 40994429 (sha256 begins `fe222c29bca4433c`): Table 2 rows WT, I150V, A639V, A652G, I655F, M818T, S810R; the variant paragraph naming five potency and five maximal-inhibition losses; Table 3 "Rescue: animals", columns Wild-type and GluN2B-S810R; the Results paragraph printing n = 26 and n = 21.
+2. 35222658 (`6f8ae74e32433cdc`): Tables 2 to 4; IT recomputed chi-square and exact tests with the standard library.
+3. 36967744 (`1f08e87990e3ba67`): Results first paragraph (302, 229, 64) and the limitation sentence.
+4. 40670421 (`df2f1db7425b25c9`): Tables 2 and 3 and the sentence "only 6 patients owing to patient partial compliance".
+5. 36601084 (`fc72399457369521`): the subgroup exposure rows, Table 3 multivariate block, the rapamycin row (60 against 0).
+6. 24321005 (`db4a171a15306b81`): the inclusions paragraph, the mortality sentence, the 23-brain sentence.
+7. 42470358 (`5409f901b358e52b`): the OV329 distribution paragraph.
+8. 38605177 (`2827a124e03bcc67`): term counts (ACT-709478 27; apinocaltamide 0; seizure 0).
+9. 20810895 (`dcb8963c20c9a131`): the Figure 5d sentence and the "468 cells" and "n = 10 hippocampi" sentences.
+10. 28447936 (`cced13ac80467cc6`): the Figure 7 and Figure 8D passages and the "in this experimental system" sentence.
+
+## 5 · Cost of applying
+Every line that edits a card or a packet owes the view trio before landing (titles refresh, the two view runs, package, the cards copy, then the full view suite) and `test_repurposing_join` if a map record is touched.
