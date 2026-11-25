@@ -1,73 +1,94 @@
 # Row-by-row re-check of the ADV-098 compound sheets (HE 9c2cb46c, 2026-11-25)
 
-Asked by ADV after two omissions of one class were found (a ratio computed against the quoted row only). Reference
-genotype class only; hypothesis level; no dose; not medical advice.
+Asked by ADV after omissions of one class were found (a ratio computed against the quoted row only). Reference genotype
+class only; hypothesis level; no dose; not medical advice.
 
-## Method
+## Result
+
+All twelve sheets. **170 claims checked, 46 wrong or incomplete (27 percent), all corrected.** Four further errors had been
+corrected earlier the same day by a sampled pass (bexarotene RAR rows, d-AP5, TMP195 document ratio, the PDK4 row);
+they are among the claims checked and not among the 46.
+
+| Batch | claims checked | wrong or incomplete, corrected |
+|---|---:|---:|
+| 1 | 15 | 5 |
+| 2 | 11 | 2 |
+| 3 | 13 | 3 |
+| 4 | 20 | 5 |
+| 5 | 11 | 2 |
+| 6 | 16 | 6 |
+| 7 | 12 | 3 |
+| 8 | 13 | 4 |
+| 9 | 22 | 10 |
+| 10 | 15 | 4 |
+| 11 | 14 | 1 |
+| 12 | 8 | 1 |
+
+## Error classes
+
+| Class | count | ids |
+|---|---:|---|
+| a row or comparator left out of a ratio, range or spread | 19 | 1d 1e 2b 3b 4e 6a 6b 7a 8b 8d 9a 9b 9c 9d 9e 9j 10b 11a 12a |
+| a count wrong or wrongly labelled | 20 | 1b 1c 2a 3a 3c 4a 4b 4c 4d 5a 5b 6d 6e 6f 7b 8c 9f 9h 9i 10d |
+| a whole document left out, or a quote of selected documents | 4 | 7c 8a 10a 10c |
+| a bound written as a measured value | 1 | 9g |
+| other (a flag omitted; a comparator said present where absent) | 2 | 1a 6c |
+| unit | 0 |  |
+
+The two commonest classes hold 39 of 46.
+
+**By producer:** every sheet was written by an HE window itself (not by a delegate), Claude Sonnet 5.5 at effort high
+(commit trailers; session transcripts for the writes found). There is no second model or effort, so no rate comparison.
+
+## Method and limits
 
 Every fold, ratio, range, spread and row count that a sheet takes from the held ChEMBL answers was recomputed against
-**all** rows of the held answer (root checkout `files/adv098_agent_sheets_raw_he_20261119/`, digests in
-`SHA256SUMS_raw_activities.txt`), matched by target name and by gene symbol without regard to case. Not covered: text
-from abstracts, titles, labels and trial registries; SCI-origin dated lines; values of compounds whose rows are not held
-(the sibling tetraamines of the 0.95 nM memantine assay). One reader, no blind check of this re-check.
+all rows of the held answers (root checkout `files/adv098_agent_sheets_raw_he_20261119/` and
+`files/adv113_m1_comparators_raw_he_20261120/`), matched by target name and by gene symbol without regard to case. Not
+covered: text from abstracts, titles, labels and trial registries; SCI-origin lines; counts from queries that are not
+held (the 334 EBP rows of batch 12); rows of compounds not held (the sibling tetraamines of the memantine 0.95 nM
+assay). One reader, the author of the sheets' own role, and **no blind check of this re-check**. Claim counts depend on
+how a sentence is cut; the list of corrections does not.
 
-## Counts
+## What changes for a reader
 
-| Batch | claims checked | wrong or incomplete | of which false as written | corrected |
-|---|---:|---:|---:|---:|
-| 1 | 15 | 5 | 1 | 5 |
-| 2 | 11 | 2 | 1 | 2 |
-| 3 | 13 | 3 | 3 | 3 |
-| 5 | 11 | 2 | 2 | 2 |
-| 6 | 16 | 6 | 6 | 6 |
-| 9 | 22 | 10 | 9 | 10 |
-| **total** | **88** | **28** | **22** | **28** |
-
-A claim is one sentence or one count; 6d and 6e are the same fact in two places. Batch 4 was not in the list asked for;
-the search for the third cause below found its two count lines (4a, 4b), corrected too and not counted in the table.
-
-## What changes and what does not
-
-No closing conclusion of a sheet is reversed. Five statements move by enough to matter to a reader:
-
-- 9d, 9e: three of the five GSK-3 beta ranges were narrower than the held rows (tideglusib spread: more than 2,000-fold,
-  not 400-fold; AR-A014418: 9 of 22 rows outside the quoted 38 to 104 nM).
-- 9g: three kinase lower bounds ("above") had been written as measured Ki values.
-- 6a: the muscarinic disagreement between two sources reaches 19-fold (the M4 pair had been left out).
-- 1e: memantine rows disagree by about two orders, not five, once the probable unit error is set aside.
-- 9a, 9j: GSK-3 alpha against beta is 1.0- to 2.5-fold (not 1.4-), with one weak 4.7-fold alpha-preferring pair. The
-  IT59 audit of the GSK-3 packet had reported that pair and the sheet was not changed then.
+- 10a: tazemetostat antiproliferation was shown only in lines above 3 microM; held rows reach 2.3 nM in EZH2-mutant
+  lymphoma lines. This was the most misleading sentence found.
+- 8a: dichloroacetate PDK values and their isozyme order are one document's; two other documents disagree.
+- 9d, 9e, 9g: GSK-3 ranges narrower than the rows; kinase lower bounds written as measured Ki.
+- 7c: bexarotene RXR-alpha quoted as two or three values; rows run 2.7 to 149 nM (EC50).
+- 6a: muscarinic disagreement between sources reaches 19-fold. 1e: memantine spread about two orders, not five.
+- ADV-283: SCI's judgement that PDK3 is not shown relevant rests on transcript data and reads the same; 'PDK3 least
+  inhibited' holds inside CHEMBL4007440 only.
 
 ## Causes
 
-1. A fold or range written from the rows in view, not from a query of all rows (6a, 9a, 9d, 9e, 2b, 3b).
-2. A table read in part and summarised as a whole (9g, 5b, 3a).
+1. A fold or range written from the rows in view, not from a query of all rows.
+2. A large answer read by its main groups and summarised as a whole.
 3. `recipe_tabulate_activities.txt` matches expected genes in upper case only, so rat and mouse rows of the same gene
-   were counted as "other targets" and left out of "rows on the symbols" (1b, 1c, 2a, 3c, 4a, 4b).
-4. "targets" used for "targets with a measured value" (9f, 9h, 9i).
+   were counted as "other targets".
+4. "targets" or "rows" used without saying which (for example targets with a measured value).
 
 ## Checklist before a number leaves a sheet (adopted by HE for this work)
 
-- Compute each fold, ratio or range with a query over every row of the held answer for that target and document; print
-  the rows; quote the extremes.
-- Say of a `>` row that it is a bound.
-- A count says what it counts (rows, targets, targets with a measured value).
+- Compute each fold, ratio or range with a query over every row of the held answer for that target; print the rows;
+  quote the extremes, and group by document before saying "one document".
+- Say of a `>` row that it is a bound. A count says what it counts.
 - **A blind verification packet carries the whole source table the number was computed from, not the one quoted row.**
-  A packet holding only the quoted row cannot see an omission, which is why the earlier checks passed these.
 
-## Cards and views that carry a changed value (for IT; HE edits no card)
+## Cards that carry a changed value (sent to IT; HE edits no card)
 
-| Card | text now | text the rows support | source rows |
-|---|---|---|---|
-| D02_wnt_tankyrase (`input.p4_card.pharmacology`, packet, join, views) | "alpha about 1.4- to 2.5-fold weaker than beta at most within one document and assay" | "alpha at most about 2.5-fold weaker than beta (1.0- to 2.5-fold) within one document and assay" | batch 9, 9a: CHIR-99021 2 against 2 nM, CHEMBL5728885; AR-A014418 Ki 25.1 against 25.1 nM, CHEMBL1201862 |
-| F02_myelination_activity_sign (same field) | "the natural hormone is about equipotent on both receptors in nearly every same-document pair" | "the natural hormone's alpha-to-beta ratio is 0.5 to 1.0 in the seven same-document pairs that carry it; one of the eight has none" | batch 6, 6b and 6c: liothyronine rows of CHEMBL1135520, CHEMBL1145987, CHEMBL1152303, CHEMBL3259553, CHEMBL5723379, CHEMBL5727487; none in CHEMBL2203261 |
-| F02, bexarotene sentence | already sent to IT (IT checkpoint 23 queue) | see batch 7 | CHEMBL1130267 |
+| Card | change | batch |
+|---|---|---|
+| D02_wnt_tankyrase | GSK-3 alpha/beta "1.4- to 2.5-fold" becomes "1.0- to 2.5-fold" | 9 |
+| F02_myelination_activity_sign | natural hormone ratio 0.5 to 1.0; RXR-alpha EC50 2.7 to 149 nM; bexarotene RXR preference | 6, 7 |
+| E03_pdk_inhibition_dca, I01 | four isozymes within one document; other documents disagree | 8 |
+| H01_apinocaltamide_ttype | its parenthesis "the sheet says about 2.5-fold" is now out of date: the sheet says about 3-fold | 11 |
 
-Cards that cite other batches (E01, E03, H01, I01, L01, M01) were not searched for these values beyond the literal
-patterns, which found none. Documents of SCI and IT that say "at most about 2.5-fold" (unit C v2.2, broad one page v3,
-ADV158) stay true with the weak pair set apart.
+E01, L01 and M01: read, no change required. No card cites batches 1 to 5 or 12.
 
 ## Sheet lines, before and after
+
 
 **1a** batch 1, line 8
 - before: a row ChEMBL leaves **without a mapped gene** (target "Unchecked"), so it does not count as CACNA1G, H or I.
@@ -188,3 +209,67 @@ ADV158) stay true with the weak pair set apart.
 **9j** batch 9, line 42
 - before: Alpha against beta: at most 2.5-fold in the same-document pairs;
 - after: Alpha against beta: at most 2.5-fold beta-preferring in the same-document pairs, the one weak FRET pair of AR-A014418 (4.7-fold, alpha-preferring) set apart;
+
+**4c** batch 4
+- before: (21 rows, 18 on the NMDA receptor or its binding site)
+- after: (21 rows, 19 on the NMDA receptor or its binding site; two of the 19, 170 and 2,260 nM, equal the ratios 280/1640 and 3710/1640 and look like subunit ratios stored as Ki)
+
+**4d** batch 4
+- before: appears on about 25 rows with
+- after: appears on 22 rows with
+
+**4e** batch 4
+- before: The values span 0.5 to 53 microM across assays:
+- after: The IC50 values span 0.5 to 53 microM across assays (Ki rows go down to 0.18 microM):
+
+**7a** batch 7
+- before: against 0.66 nM Ki (DrugMatrix, human): different species and sources.
+- after: against 0.66 nM Ki (DrugMatrix, human; the same panel gives IC50 1.46 nM): different species and sources.
+
+**7b** batch 7
+- before: cytochrome P450 3A5 and 3A4 rows and bile salt export pump rows (3 each) are the other groups.
+- after: cytochrome P450 3A5 (7 rows), 3A4 (4 rows) and bile salt export pump (3 rows) are the other groups.
+
+**7c** batch 7
+- before: other documents give RXR-alpha EC50 28 and 42 nM and Kd 36 nM (1995 and 2002).
+- after: other documents give human RXR-alpha EC50 from 2.7 to 149 nM and Kd from 14 to 1,890 nM (measured rows).
+
+**8a** batch 8
+- before: Another 1999 row gives IC50 above 2 mM for PDK in vitro
+- after: **The order and the size of these values are that document's only:** CHEMBL4177695 (2017, GST-tagged PDK from Sf9 cells) reads PDK1 5.1 mM and PDK2 9.0 mM, PDK1 and PDK2 in the reverse order; CHEMBL6121009 (2025, radiometric) reads PDK1 3.66 mM, PDK2 and PDK3 above 5 mM and PDK4 0.108 mM; two 2023 rows give PDK1 only as bounds (above 0.1 mM; EC50 above 0.05 mM). "PDK3 is the least inhibited" is therefore a statement about CHEMBL4007440. Another 1999 row gives IC50 above 2 mM for PDK in vitro
+
+**8b** batch 8
+- before: (DrugMatrix, [3H]ketanserin) against IC50 243 nM in an HTRF cAMP assay (2020): a 12-fold spread by assay type.
+- after: (DrugMatrix, [3H]ketanserin) against IC50 243 nM in an HTRF cAMP assay (2020): a 12-fold spread by assay type (14-fold when the rat receptor row, IC50 17 nM, 1999, is counted).
+
+**8c** batch 8
+- before: - **Potency (43 rows):** PDK isozymes as above (millimolar); 5 cytotoxicity rows in leukemia cell lines at 8 to 14 mM (MTT, 48 hours, 2016); five "non-protein target" rows. The compound acts at millimolar concentrations in these assays.
+- after: - **Potency (43 rows):** PDK isozymes as above (0.108 to 9.0 mM, plus bounds); five 2016 cytotoxicity rows at 8 to 14 mM (MTT, 48 hours), filed by ChEMBL as "non-protein target"; further cell-viability rows from other documents (measured values 11 to 40 mM, the rest bounds). The compound acts at about 0.1 mM and above in these assays.
+
+**8d** batch 8
+- before: Dichloroacetate acts at millimolar concentrations in the rows read:
+- after: Dichloroacetate acts at about 0.1 mM and above, mostly millimolar, in the rows read:
+
+**10a** batch 10
+- before: Antiproliferative IC50 is above 3 microM in six wild-type EZH2 lymphoma lines (2025) and 17.8 microM in one EZH2-overexpressing line (2020); one 2024 row gives 1.07 microM in MINO cells. The exposure time of those growth assays was not read for every row.
+- after: Antiproliferative values are not one number either: in EZH2-mutant lymphoma lines 2.3 to 299 nM in six documents (Pfeiffer, KARPAS-422, WSU-DLCL2), but 14 to 22 microM for lines of that kind in two others (an EZH2-overexpressing description of WSU-DLCL2 and SUDHL4, 2020; SU-DHL-6, 2024); above 3 microM in six wild-type lines (2025); 1.1 to 1.2 microM in MINO and OCI-Ly7 (2024); micromolar values or bounds in other cancer lines. The exposure time of those growth assays differs and was not read for every row.
+
+**10b** batch 10
+- before: about 6- to 370-fold (two places)
+- after: about 6- to 420-fold
+
+**10c** batch 10
+- before: (about 7-fold). The three documents disagree by more than tenfold on the ratio
+- after: (about 7-fold); CHEMBL5729508: 2.45 against 140 nM (about 57-fold). The four documents disagree by more than tenfold on the ratio
+
+**10d** batch 10
+- before: appears in five documents (2020 to 2023) as a quotation of the 2015 value (document CHEMBL3414551)
+- after: appears in five documents, the 2015 original (CHEMBL3414551) and four of 2020 to 2023 that quote it
+
+**11a** batch 11
+- before: species values within about 2.5-fold of the human ones, rat Cav3.3 (4-fold lower than human) the largest difference.
+- after: species values within about 3-fold of the human ones (dog Cav3.1 3.1-fold) except rat Cav3.3 (IC50 4-fold lower than human), the largest difference.
+
+**12a** batch 12
+- before: run from about 5-fold to about 180-fold depending on the document, subtype and species.
+- after: run from about 1.7-fold (M5 against M1, CHEMBL1137537, 2007) to about 180-fold depending on the document, subtype and species.
