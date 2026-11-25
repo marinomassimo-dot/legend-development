@@ -621,10 +621,12 @@
     },
     {
      "step": "IT24: checkpoint 23 queue in order: F02 bexarotene correction plus HE changed-value list, ADV-282 wording increment 2, ADV-283 E03/I01 wording, ADV-284 one row",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator launch message 2026-11-25 (successor window 8e1d62bc); CHECKPOINT_IT_20261125_11.md section 1 items 2-5",
-     "accepted_at": "2026-11-25T20:56:32Z"
+     "accepted_at": "2026-11-25T20:56:32Z",
+     "evidence": "landed b29ec350f (gate PASS, ls-remote); RESULT_IT24_20261125.md; two blind readers; CHECKPOINT_IT_20261125_12.md",
+     "updated_at": "2026-11-25T22:04:18Z"
     }
    ]
   }
