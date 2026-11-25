@@ -2105,6 +2105,19 @@ def team_step(result: dict | None, follow: dict, explored: dict, themes: list[di
     return summary, selected, new, events
 
 
+def weekly_notice_sweep(sweep=None) -> str:
+    """Once a week, from the daily run: has a catalogued paper been retracted or gained an expression of concern (ADV-258)? A failed sweep is one line and never fails the scout; it is retried the next day."""
+    try:
+        if sweep is None:
+            sys.path.insert(0, str(Path(__file__).resolve().parent))
+            import epmc_notice_sweep as sweep  # noqa: PLC0415
+        if not sweep.due():
+            return ""
+        return sweep.summary_text(sweep.run_catalogue())
+    except Exception as exc:  # network, parse or disk: say it, keep the briefing
+        return f"NOTICE SWEEP not completed: {type(exc).__name__}: {str(exc)[:200]}"
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("--append-log", action="store_true", help="move pending entries into the scout log")
@@ -2283,6 +2296,9 @@ def main(argv: list[str] | None = None) -> int:
         text += f"SAVE FAILED: briefing file ({why})\n"
     if args.briefing or report["selected"] or report["errors"] or persisted.get("state") != "ok":
         print(text, end="")
+    notice = weekly_notice_sweep()
+    if notice:
+        print(notice)
     return 0 if all(s == "ok" for s in persisted.values()) else 1
 
 

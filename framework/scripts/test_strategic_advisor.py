@@ -2434,6 +2434,18 @@ class CampaignHome(ProactiveFixture):
         self.assertIn("UNVERIFIED", err.getvalue())
 
 
+class NoticeNews(unittest.TestCase):
+    def test_a_flagged_notice_is_named_once_and_an_absent_or_empty_summary_says_nothing(self) -> None:
+        with tempfile.TemporaryDirectory() as folder:
+            path, state = Path(folder) / "summary.json", {}
+            self.assertEqual(sa.notice_news(state, path), "")
+            path.write_text(json.dumps({"new_flagged": [["19357348", "retraction", "42583763", "2026-08-12"]]}), encoding="utf-8")
+            line = sa.notice_news(state, path)
+            self.assertIn("NEW NOTICE", line)
+            self.assertIn("PMID 19357348 retraction (notice 42583763, 2026-08-12)", line)
+            self.assertEqual(sa.notice_news(state, path), "")
+
+
 class LivingPortfolio(Base):
     """Permanent opportunities reach a real brief and wake decisions without a new radar."""
 

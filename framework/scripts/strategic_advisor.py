@@ -1456,6 +1456,22 @@ def radar_news(state: dict[str, Any], briefing: Path | None = None) -> str:
             "by name; the harness and tool items are HE's to triage, the scientific ones go to SCI or IT")
 
 
+def notice_news(state: dict[str, Any], summary: Path | None = None) -> str:
+    """ADV-258: the weekly notice sweep (scout_daily) lists retractions and expressions of concern that appeared since its previous run. The tick names each one once; corrections are in the table, not flagged."""
+    path = summary or Path(os.environ.get("LEGEND_NOTICE_STATE") or STATE_HOME / "notice_sweep") / "summary.json"
+    try:
+        rows = json.loads(path.read_text(encoding="utf-8")).get("new_flagged") or []
+    except (OSError, ValueError, AttributeError):
+        return ""
+    told = set(state.get("notices_told") or [])
+    fresh = [r for r in rows if "|".join(r[:3]) not in told]
+    if not fresh:
+        return ""
+    state["notices_told"] = sorted(told | {"|".join(r[:3]) for r in fresh})
+    return ("NEW NOTICE on a catalogued paper: " + "; ".join(f"PMID {r[0]} {r[1]} (notice {r[2]}, {r[3]})" for r in fresh[:5])
+            + (f"; {len(fresh) - 5} more" if len(fresh) > 5 else "") + f": table {path.parent / 'notices.tsv'}; check what leans on each before building on it")
+
+
 def unchecked_waits(waits: list[dict[str, str]], state: dict[str, Any]) -> str:
     """2026-11-20 (ADV 'Reliable autonomy', item 3): IT listed SCI's GSK-3 reading as awaited for two hours after it had landed, because the awaited event was prose in a blocker and nothing evaluated it. SIZED: matching the
     prose against commit subjects was measured on the eight live waits and is too fuzzy (3 to 84 hits per wait, the matches carried generic words such as batch, table, decision, page, item), so it is NOT built. The existing precise
@@ -1869,6 +1885,9 @@ def tick(campaign: Path) -> dict[str, Any]:
     news = radar_news(state)
     if news:
         why += "; " + news
+    notices = notice_news(state)
+    if notices:
+        why += "; " + notices
     flagged = context_flags(activity.get("recipients") or {}) if activity.get("available") else []
     if flagged:
         why += "; CONTEXT AT A RESTART LINE (README section 13; last turn's input and cache tokens, not cost): " + "; ".join(flagged)
