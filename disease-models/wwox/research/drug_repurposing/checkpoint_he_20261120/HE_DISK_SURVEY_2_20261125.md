@@ -69,3 +69,11 @@ No `/tmp` clone is REMOVABLE by `tmp_clone_report.py` (106 candidates, 0). No ot
 2. Put to the operator, once: may the 19.4 GB scratchpad of the closed session `4325d70d` and the 5.47 GB of leaked test folders be removed? Together about 24 GB, which ends the pressure.
 3. Until then: remove `sci_ah_land` if SCI agrees (0.5 GB), and the four worktrees of section 4 row 1 on 2026-11-26.
 4. Standing cost to lower next: 0.5 GB per window worktree. A window that reuses its predecessor's worktree, or a retirement step that removes the predecessor's worktree after 24 h, are the two options; not measured further here.
+
+## 8 Done after the report (16:13 to 16:29Z)
+
+- **ADV's decision: remove the leaked sandboxes, bounded** (exact form `/tmp/tmp<8>/repo`, own user, unchanged for 6 h, no process with a working directory, open or mapped file inside, listed first, exact-path loop, parent removed only if empty). HE added one condition: `repo` holds exactly the test's three folders. List rebuilt just before: 793 pass, 16 modified in the last 6 h. **Removed 793 folders and their 793 empty parents; free space 18,847 to 23,918 MiB (+5.0 GiB)**; 16 `repo` folders remain. Own processes whose descriptor tables could not be read at the final listing: 4. List and removed list: `files/coordination/he_disk_survey_20261125/leaked_repo_{list,removed}.txt`.
+- **Ignored `backup/` folders** (it_19, it_fu, it_successor_n): one batch snapshot of 20 files each; 19 are byte-identical to blobs reachable from `development/main`, the 20th is a note naming the base commit (that commit is in main, nothing was dirty). ADV will not copy them.
+- **Correction to section 4:** `it_19` has an ignored `backup/` and a window that wrote on 2026-11-25 about 15:35Z, so it is eligible after about 15:40Z on 2026-11-26, not in the morning.
+- **The check is now a tracked tool:** `python3 framework/scripts/branch_hygiene.py --removal --main development/main` (report only).
+- **Browser profile folders** (`~/legend_browser_tmp`, 7 of 1.36 GB; those of section 5 in `/tmp`): the youngest seen dates from 2026-11-25 12:46Z, before the producer fix of 13:30Z (a2b46d713). None newer was seen. Not removed; not in ADV's decision.
