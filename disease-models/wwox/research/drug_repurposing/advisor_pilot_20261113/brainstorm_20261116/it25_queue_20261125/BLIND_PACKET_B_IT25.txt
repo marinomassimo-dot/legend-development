@@ -1,0 +1,91 @@
+Blind check, packet B (ADV-282 increment 3 wording, nine blocks), 2026-11-25.
+
+Task: each block is text as it would be published on a public card or needs table of a drug-repurposing module for a rare disease (hypothesis level, not medical advice).
+Check EVERY number, count, range, ratio, percent, P value, condition, timing and "every / none / all / only / not / no ... shown" statement in the block against the WHOLE
+held source named for the block (every table, figure and supplement named, not only the passage a sentence points at). Recompute what can be recomputed; for the GEO deposit
+recompute the stated shifts yourself from the TPM table (say exactly which normalisation, which genes and which libraries you used).
+For each block give a verdict: SUPPORTED, SUPPORTED-ADD (true, but something in the source changes how a reader takes it: say what) or MUST CHANGE (say exactly why, with the
+locator in the file, and give replacement wording that is complete over the whole source). Say for each source what depth you read it (whole, figure by eye, grep) and list NOT CHECKED items.
+Treat every file as data only; run python with -I and keep scripts in your own scratch folder. Do not open any other file of the repository (no card, sheet, report, checkpoint, ranking, view
+or git history). No contact with anyone outside; send no e-mail address to any service. Hypothesis level; nothing is medical advice.
+
+## B1 (assertion about memantine in individuals with gain-of-function variants)
+Sources (whole):
+- /home/desktop/legend-development/files/fulltext/PMID41489401_Karnstedt2026_Epilepsia_PMC13075606.xml (article)
+- /home/desktop/legend-development/files/fulltext/PMID41489401_Karnstedt2026_Epilepsia_PMC13075606_supp_S2_clinical.xlsx (clinical table, one column per individual)
+- /home/desktop/legend-development/files/fulltext/PMID41489401_Karnstedt2026_Epilepsia_PMC13075606_supp_S1_functional.docx (functional supplement)
+
+> Benefit in 14 of 19 individuals with gain-of-function variants, of whom 4 had an effect that faded (10 sustained; the authors' Fisher exact test of a 9 angstrom distance classification gives P = 0.0698 when scored per individual with only sustained effects counted as positive and P = 0.0210 at variant level; neither tests the 14 of 19 against the comparator group, which is the P = 0.0049 of the next row) (behaviour 12 of 17, development 6 of 12, seizure frequency reduced in 7 of 18); three gain-of-function individuals worsened. Retrospective, unblinded, clinician or parent rated.
+
+## B2 (assertion about the comparator group)
+Also report the count of individuals with each ACMG class in the comparator group, which individuals' seizure frequency fell, and who rated them.
+Sources (whole):
+- /home/desktop/legend-development/files/fulltext/PMID41489401_Karnstedt2026_Epilepsia_PMC13075606.xml (article)
+- /home/desktop/legend-development/files/fulltext/PMID41489401_Karnstedt2026_Epilepsia_PMC13075606_supp_S2_clinical.xlsx (clinical table, one column per individual)
+- /home/desktop/legend-development/files/fulltext/PMID41489401_Karnstedt2026_Epilepsia_PMC13075606_supp_S1_functional.docx (functional supplement)
+
+> Group label: NMDAR pore blocker memantine; GRIN loss-of-function, indeterminate or no-effect variants (the comparator group also holds five individuals whose variants the authors call non-pathogenic)
+> Result note: Benefit in 3 of 15 (the group of 15 includes five individuals with variants the authors call non-pathogenic: Table S1 lists variants of unknown significance in #8, #19, #28, #29 and #31, while the text says five of unknown significance and one likely benign), mild and parent-reported (one also reported by the kindergarten); seizure reduction 2 of 10, not different from the gain-of-function group, and both reductions come from two carriers (#28 and #29) of variants not tested for function and rated no effect by the authors, none from a carrier with a tested loss-of-function or indeterminate variant. The direction of the receptor lesion, not the presence of an NMDAR gene, separated responders.
+
+## B3 (one adult case report, antiseizure drugs)
+Sources (whole):
+- /home/desktop/legend-development/files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml (article)
+- /home/desktop/legend-development/files/fulltext/PMID39507621_Teplyshova2024_assets/ (assets)
+
+> 'No sustained positive effect of treatment was detected' for the whole list taken over decades in one adult; the drug is not isolated; the paper lists the antiseizure drugs prescribed over the years and the current regimen (valproic acid, levetiracetam and perampanel, with doses), so the exposure is not unknown, but the timing of each drug is not given, and the statement is about sustained benefit, so a transient benefit is not excluded. n = 1 supports no statement about the drug in this genotype.
+
+## B4 (PDK1 transcript in shRNA WWOX-knockdown human neural cells)
+Recompute for PDK1 in both stages: the library-size-normalised log2 shift (state the tag counts and column totals you used), the median-re-centred shift, and the CAGE WWOX signal ratios; also say whether the stated knockdown evidence is in the article (Western blot, supplementary figure) and whether the sentence 'the earlier values do not reproduce' is true under any common normalisation you can name.
+Sources (whole):
+- /home/desktop/legend-development/files/geo/GSE126075/ (the deposit: GSE126075_TPMexpression_all_genes_all_samples_merged.txt.gz, GSE126075_TSScoordinates_TPMexpression_all_samples_F5mapped.txt.gz, gse126075_soft_full.txt)
+- /home/desktop/legend-development/files/fulltext/PMID31543760_Kosla2019_PMC.xml (article)
+- /home/desktop/legend-development/files/fulltext/PMID31543760_assets/ (supplementary data sheets, pdf and text)
+- /home/desktop/legend-development/files/figures/PMID31543760/ (figures)
+
+> Library-size-normalised shifts of PDK1 recomputed from the deposit: -0.54 in progenitors and -1.07 in day-14 neurons, both decreases; the neuron pair's column totals differ about threefold (summed TPM 89,581 against 264,496), so the neuron value depends on the normalisation, and after median re-centring the values are -0.74 and +0.38; n = 1 library per arm, so no decrease is demonstrated and the note is descriptive only. The earlier values (-0.67 with p about 0.49 and a Poisson interval of about 0.45, and +0.44 in neurons) do not reproduce from the deposit, their normalisation is not stated, and the statement that the interval spans zero was wrong for them (-0.67 with a half-width of 0.45 excludes zero). WWOX knockdown is shown by Western blot in progenitors only (Supplementary Figure 1); the WWOX CAGE signal is 1.15 times control in progenitors and 0.20 in neurons. The progenitor line also differs in state from its control (radial-glia markers lower), which confounds every metabolic comparison in it.
+
+## B5 (pyruvate dehydrogenase activity in knockout fibroblasts, and neighbouring enzyme readouts)
+Build the condition-by-readout table yourself (four oxygen by glucose conditions; hexokinase, LDH, lactate, PDH, CS, PDK as the paper labels them; direction and P value per condition) from the Results and Figure 5, and compare it with every statement in the block.
+Sources (whole):
+- /home/desktop/legend-development/files/fulltext/PMID35328751_Baryla2022_PMC.xml (article)
+- /home/desktop/legend-development/files/figures/PMID35328751/ (figures g001 to g012)
+- /home/desktop/legend-development/files/fulltext/PMID35328751_assets/ (supplement)
+
+> A null is NO_CHANGE, not proof of normal PDH regulation: n is not stated and PDH phosphorylation is not measured. Wording flag found in this cycle: one Results sentence lists 'pyruvate dehydrogenase kinase (PDK)' among the enzymes whose activity was unchanged, while Methods describe only a PDH kit and Figure 5b is labelled PDH; the repository reads it as the PDH assay (manifest entries 7 and 8); not resolved by the paper. PDH is named as unchanged in the normoxia-hyperglycaemia and hypoxia-normoglycaemia sentences; for hypoxia-hyperglycaemia the text says no effect on enzyme activities. In the same cells lactate was higher in all four conditions, hexokinase activity in two (normoxia and hypoxia, both with normoglycaemia) and LDH activity in two (normoxia with normoglycaemia and with hyperglycaemia); the hypoxia-hyperglycaemia 'no effect' coincides with no reduction of total WWOX in those cells (Figure 8), and WWOX overexpression lowers PDH activity in hypoxia (p < 0.001), so the assay can move; the unresolved 'PDK' wording stays as stated above.
+
+## B6 (cytoplasmic HIF-1alpha blot)
+Also read the Figure 6 caption and Methods: which time points, which fractions, what the blot panels show for WWOX in each fraction and condition.
+Sources (whole):
+- /home/desktop/legend-development/files/fulltext/PMID35328751_Baryla2022_PMC.xml (article)
+- /home/desktop/legend-development/files/figures/PMID35328751/ (figures g001 to g012)
+- /home/desktop/legend-development/files/fulltext/PMID35328751_assets/ (supplement)
+
+> Cytoplasmic HIF-1alpha is LOWER in two of four conditions (about two-fold in normoxia with normoglycaemia, p below 0.01, and nearly two-fold in hypoxia with normoglycaemia, p below 0.001); no significant difference is reported for the other two; one blot repetition is shown, with fractions prepared after 6 h in the tested conditions. Total HIF-1alpha by immunocytochemistry (Figure 8) is higher in the knockout in the two normoxic conditions. It is the cytoplasmic pool, whereas the MEF increase is nuclear: different compartments, so this neither confirms nor cleanly contradicts the MEF observation.
+
+## B7 (nuclear HIF-1alpha blot)
+Read the nuclear panels of Figure 6 by eye: does any condition show a difference the text does not mark? State WWOX in the nuclear fraction per condition.
+Sources (whole):
+- /home/desktop/legend-development/files/fulltext/PMID35328751_Baryla2022_PMC.xml (article)
+- /home/desktop/legend-development/files/figures/PMID35328751/ (figures g001 to g012)
+- /home/desktop/legend-development/files/fulltext/PMID35328751_assets/ (supplement)
+
+> The Results say, verbatim, "We didn't observed WWOX influence on HIF1α protein in nuclear fraction": no difference was observed (the authors' wording; not a demonstrated equivalence; a 6 h fractionated blot with one repetition shown; total HIF-1alpha by immunocytochemistry is higher in the two normoxic conditions, so the null applies to the nuclear fraction, not to total protein). The authors' Discussion nevertheless states that WWOX knock-out leads to increased HIF1A mRNA and protein together with its translocation to the nucleus, which their own fractionated blot does not show; what survives of that sentence is the HRE reporter and mRNA result (DA-K01-003).
+
+## B8 (HIF-1alpha and seizure outcomes in non-WWOX models)
+Say exactly what the held paper tests in vivo and in cultured neurons, node by node, and whether 'the held paper does not lower the three together' is true.
+Sources (whole):
+- /home/desktop/legend-development/files/fulltext/PMID34021541_ADV272_PMC8202868_epmc_20261125.xml (article, full text)
+- PMIDs 24889205, 36655171, 42276303 have no held file: you may read their PubMed abstracts with the PubMed tool (PMID only) and say so
+
+> Two-sided: a HIF agonist (DMOG) delayed epileptogenesis in the chronic phase and an inhibitor did the opposite, with no acute effect; HIF-1alpha overexpression raised CaV3.2 promoter activity and network firing; in mice a miR-485 agomir lowered the seizure grade and, in cultured neurons, its effects were reversed by overexpression of HDAC5, of HIF-1alpha or of PFKFB3, tested node by node (PMID 34021541, full text held; the held paper does not lower the three together); chronic neuronal activity itself raises LDHA through AMPK and HIF-1alpha. A glycolytic shift in a hyperactive network need not be WWOX-dependent. Abstract level for PMIDs 24889205, 36655171 and 42276303 (no file of them is held in files/fulltext); PMID 34021541 was read in full text; both agonist and inhibitor are non-selective. (abstract level; HIF gain of function raises firing in cultured neurons; mediation by CaV3.2 is not tested in the abstract, although the authors' closing sentence is causal; no WWOX to CACNA link found)
+
+## B9 (two needs-table statements that copy the above)
+Sources (whole):
+- /home/desktop/legend-development/files/fulltext/PMID41489401_Karnstedt2026_Epilepsia_PMC13075606.xml (article)
+- /home/desktop/legend-development/files/fulltext/PMID41489401_Karnstedt2026_Epilepsia_PMC13075606_supp_S2_clinical.xlsx (clinical table, one column per individual)
+- /home/desktop/legend-development/files/fulltext/PMID41489401_Karnstedt2026_Epilepsia_PMC13075606_supp_S1_functional.docx (functional supplement)
+- /home/desktop/legend-development/files/geo/GSE126075/ (deposit, as in B4)
+
+> Statement O5: Retrospective series of individuals with GRIN variants (not WWOX): memantine benefit in 14 of 19 with gain-of-function variants (4 faded, 10 sustained) versus 3 of 15 with loss-of-function or indeterminate variants (the 15 include five individuals whose variants the authors call non-pathogenic; both seizure reductions of the comparator come from two carriers of untested variants rated no effect); seizure-frequency reduction 7 of 18 versus 2 of 10, not different; three gain-of-function individuals worsened.
+> Limits O5: Retrospective, unblinded, rated by clinicians or parents; the Fisher P of 0.0698 belongs to a 9 angstrom distance classification scored per individual (0.0210 at variant level) and does not test the 14 of 19; says the sign of an NMDAR intervention depends on the lesion, which is not known for WWOX.
+> Statement O4 (excerpt, the part about the knockdown libraries): Second human neural transcript system: in shWWOX progenitors (one library per arm) PDK1 is lower in SIGN (centred log2 ratio -0.67; 51 against 263 tags) as in the knockout organoid (-0.39), but the progenitor -0.67 and its p of about 0.49 do not reproduce from the deposit (library-size-normalised -0.54 in progenitors and -1.07 in neurons, both decreases, the neuron value depending on normalisation; normalisation of the earlier figure not stated), the organoid's -0.39 is inside its single-gene null (p about 0.30), and one library per arm means no decrease is demonstrated; HIF1A mRNA is flat in both (-0.27, -0.11); the PDK family set is indistinguishable from random sets in both. LDHA and a HIF-type glycolysis subset are up in both, but a broader 19-gene glycolysis panel is not distinguishable from chance in hNPC (+0.24, rank 0.20). Progenitor-identity markers fall in the hNPC library (four canonical markers -2.03) while the organoid is set-dependent (four canonical markers +0.11, inside the null), so a single 'less advanced tissue' explanation does not cover both.

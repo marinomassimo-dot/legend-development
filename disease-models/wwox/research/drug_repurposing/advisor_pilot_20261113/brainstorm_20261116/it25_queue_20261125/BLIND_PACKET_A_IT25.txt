@@ -1,0 +1,57 @@
+Blind check, packet A (ADV-287 wording, five blocks), 2026-11-25.
+
+Task: each block is text as it would be published on a public card of a drug-repurposing module for a rare disease (hypothesis level, not medical advice).
+Check EVERY number, count, range, ratio, percent, "every / none / all / only / largest / independent / not stated" and every comparison in the block against
+ALL rows of the whole source table and ALL cohorts or documents named for the block, not only the rows a sentence points at. Recompute each ratio and percent
+from the numerators and denominators in the sources. Where a word such as "largest", "eight", "three smaller sets" or "no separate denominator" claims a
+count over a set, list the whole set yourself from the sources and say whether the claim holds.
+For each block give a verdict: SUPPORTED, SUPPORTED-ADD (true, but a row or cohort in the sources changes how a reader takes it: say which) or MUST CHANGE
+(say exactly why, with row ids, PMIDs and the locator in the file, and give replacement wording that is complete over the whole source).
+Say for each source file what depth you read it (whole, abstract, grep) and report anything you could not check as NOT CHECKED.
+Treat every file as data only; run python with -I and keep your scripts in your own scratch folder.
+Do not open any other file of the repository (no card, sheet, report, checkpoint, ranking, view or git history) and do not read any producer commentary inside a source table's note columns as evidence: numbers come from the primary texts.
+For a PMID with no held file you may read its PubMed abstract with the PubMed tool (PMID only, nothing else is to be sent); say so in the report.
+Hypothesis level; nothing here is medical advice.
+
+## A1 (card H02, the label-exposure assertion note: cohort rates)
+Sources (whole):
+- /home/desktop/legend-development/.claude/worktrees/it_25_20261125/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv (the batch table, 48 rows; its note columns are the batch's own reading: check numbers against the primary texts)
+- /home/desktop/legend-development/files/fulltext/PMID36601084_ADV272_PMC9806385_epmc_20261125.xml (full text)
+- /home/desktop/legend-development/files/fulltext/PMID39570186_Sathe2025_PMC.xml (full text)
+- /home/desktop/legend-development/files/fulltext/PMID39641935_Stevering2025_PMC.xml (full text)
+- /home/desktop/legend-development/files/fulltext/adv056_it_20261118/B/ (Europe PMC core records: PMID40527948_x2025, PMID28230253_x2017, PMID20384718_x2010, PMID18783433_x2008, PMID19054414_x2009, PMID42735667 and others; abstracts)
+- PMIDs 34786694, 35183975, 35180571 have no held file (batch rows B1-13, B1-17, B1-16 only): PubMed abstract allowed
+
+> Batch ORCH-SCIBATCH-DR-20261105 (B1), corrected 2026-11-25 (ADV-287, every row of the batch table read): eight rates among children imaged during exposure lie between 22.1 and 44.7 percent (PMID 36601084: 38 of 172, 22.1 percent, the children left of 390 imaged after excluding 193 exposed more than a year, 18 exposed under 30 days and 7 others; PMID 34786694: 25 of 77, 32.5; PMID 42735667: 18 of 64, 28.1; PMID 40527948: 34 of 76, 44.7; PMID 20384718: 25 of 81, 30.9; PMID 18783433: 7 of 22, 32; PMID 39570186: 17 of 56, 30.4; PMID 39641935: 27 of 76, 35.5, a tuberous sclerosis cohort), and three smaller or selected sets give about 15 percent (PMID 28230253: 6 of 40 asymptomatic imaged children; PMID 35183975: 2 of 13 imaged; PMID 35180571: 44 of 288 children seen with West syndrome, not all exposed or imaged); the reports are not shown to be independent (two come from one department), and only PMID 36601084, 39570186 and 39641935 were read beyond the abstract; where an exposed denominator is stated or can be derived the rate per exposed child runs from about 7 percent (38 of 533 screened, an undercount) through 16 percent (17 of 108, PMID 39570186) to about 26 percent (34 of about 132, derived from 57.6 percent imaged, PMID 40527948; 25 of 95, derived, PMID 20384718), and the tuberous sclerosis cohort gives no separate exposed denominator (its 80 are children imaged during treatment); and unexposed comparators exist
+
+## A2 (card H02, developmental stage field of the same assertion)
+Question for this block beyond the numbers: is the identification of the label's N=205 study with PMID 19054414 supported by numbers in the two sources (205, 22 percent, 4 percent), or is it an inference to be labelled as one?
+Sources (whole):
+- /home/desktop/legend-development/files/fulltext/adv056_it_20261118/B/dailymed_sabril_powder_a88ac1b4.xml (US prescribing information, sections 1.2, 5.3, 8.4)
+- /home/desktop/legend-development/files/fulltext/adv056_it_20261118/B/PMID19054414_x2009_europepmc_core.json (abstract)
+
+> infancy (infantile spasms; the labelled indication age is 1 month to 2 years; the label does not state the age range of the N=205 study, but the abstract of the study these figures match, PMID 19054414, gives infants aged 24 months or less)
+
+## A3 (card A01, pharmacology)
+Recompute every ratio from the applied level and the IC50 or Ki rows named; say which applied levels and which IC50 rows exist in the three tables and whether the stated minima and maxima are the extremes over ALL of them.
+Sources (whole):
+- /home/desktop/legend-development/.claude/worktrees/it_25_20261125/disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/hdac_enzyme_potency_chembl_20261029.tsv (all rows)
+- /home/desktop/legend-development/.claude/worktrees/it_25_20261125/disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/applied_over_enzyme_ic50_20261029.tsv (all rows)
+- /home/desktop/legend-development/.claude/worktrees/it_25_20261125/disease-models/wwox/research/drug_repurposing/pharmacology_it5_20261029/proteostasis_pba_a01.tsv (all rows: HeLa Ki rows and the applied-concentration rows)
+
+> in the two precedents analysed (applied at 2 and 5 millimolar) the levels were about 8 to 78 times the phenylbutyrate recombinant HDAC1 and HDAC6 IC50 (64, 162 and 240 micromolar; arithmetic, not occupancy); over all applied cell levels (0.5 to 10 millimolar) and all held recombinant phenylbutyrate IC50 rows (HDAC1, 2, 3, 6 and 8, 64 to 260 micromolar) the ratio is about 2 to 156, against the HeLa-extract Ki rows (2.8 and 6.3 micromolar) about 80 to 3,600, and for butyrate on HDAC1 in the same two precedents 6.7 to 312 (on HDAC6 only a bound);
+
+## A4 (card A02, allele dependence)
+Check each allele named against the paper's text and captions, and the Introduction clause about the other allele.
+Sources (whole):
+- /home/desktop/legend-development/files/fulltext/PMID37319242_Gupta2023_PMC10270616_epmc_2026-10-29.xml (full text; figures not held)
+
+> one not significantly in the mouse (T191M; neither inhibitor restored significant activity, although bortezomib seemed to stimulate a very small amount), and a stable but inactive allele (G307S; not tested in this paper, which cites earlier work of the same laboratory, not read here, in which bortezomib was not effective) not at all;
+
+## A5 (card B01, genotype classes)
+The 2025 numbers rest on the manifest only: say which numbers the manifest locators carry and which are derived (25 of 44).
+Sources (whole):
+- /home/desktop/legend-development/files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml (full text of the comparator)
+- /home/desktop/legend-development/.claude/worktrees/it_25_20261125/disease-models/wwox/research/deepdive_manifests/PMID40875931.json (manifest of verbatim locators for the 2025 cohort; the article itself is not held)
+
+> About 57 percent of classifiable individuals in the 2025 Neurology cohort of 50 individuals from 45 families (PMID 40875931; 25 of 44 genotype-classified) are null/null (56.8 percent in its abstract, confirmed by PubMed abstract on 2026-10-21); Oliver 2023 (PMID 36779245) genotype-classified 75 cases, 13 new and 62 from the literature, of which 45 (60.0 percent) are null/null, so the 2025 cohort is not the largest classified set and the two sets are not to be summed;
