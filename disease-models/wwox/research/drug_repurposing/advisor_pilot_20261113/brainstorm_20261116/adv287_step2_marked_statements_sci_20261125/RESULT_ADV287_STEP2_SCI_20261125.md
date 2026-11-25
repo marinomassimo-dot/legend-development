@@ -1,6 +1,6 @@
 # RESULT ADV-287 step 2: the 22 card statements that carry a superlative or count word (SCI, 2026-11-25; hypothesis level; reference genotype class only; not medical advice)
 
-Frozen before any new source was opened: `PREREG_ADV287_STEP2_SCI_20261125.md` (22:42:23Z; sha256 16e5361a8cf7a78a...) and `list_adv287_step2.tsv` (script `list_adv287_step2.py`). Producer: legend-delegate, sonnet, effort high (read back on all 182 turns by `session_model_census.py`); blind reader: legend-delegate, sonnet, effort high (read back on all 42 turns), given only `blind_packet/src_KK.md` (copies of `producer/src_KK.md`), never the producer's table. Files: `producer/` (STEP2_TABLE.tsv, src_02 to src_22, PRODUCER_NOTE.md), `BLIND_REPORT_ADV287_STEP2_SCI_20261125.md`, `CORRECTED_SENTENCES_ADV287_STEP2_SCI_20261125.tsv` (wording for IT).
+Frozen before any new source was opened: `PREREG_ADV287_STEP2_SCI_20261125.md` (22:42:23Z; sha256 16e5361a8cf7a78a...) and `list_adv287_step2.tsv` (script `list_adv287_step2.py`). Producer: legend-delegate, sonnet, effort high (read back on all 182 turns by `session_model_census.py`); blind reader: legend-delegate, sonnet, effort high (read back on all 42 turns), given only byte-identical copies of `producer/src_KK.md` (the copies were deleted after the reading; sha256 of each is the one of the producer file), never the producer's table. Files: `producer/` (STEP2_TABLE.tsv, src_02 to src_22, PRODUCER_NOTE.md), `BLIND_REPORT_ADV287_STEP2_SCI_20261125.md`, `CORRECTED_SENTENCES_ADV287_STEP2_SCI_20261125.tsv` (wording for IT).
 
 ## 1. Answer
 
