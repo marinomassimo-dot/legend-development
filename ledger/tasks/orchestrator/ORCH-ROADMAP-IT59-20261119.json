@@ -319,6 +319,15 @@
      "accepted_at": "2026-11-24T22:58:49Z",
      "evidence": "landed on main 11e8d85ea3ea (gate PASS, ls-remote verified); folder it_adv223_20261124; operator file files/operator_inputs/PDF_REQUEST_LIST_ADV223_20261124.md; CCs ADV223-POOLED-DIRECTION-01 and ADV216-CONSUMERS-01",
      "updated_at": "2026-11-24T23:12:38Z"
+    },
+    {
+     "step": "ADV-225: second class B batch, eight further data-bearing sections chosen by a frozen rule, complete reads with receipts, merged ranked question list with SCI's seven",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-225 (ADV message 2026-11-24)",
+     "accepted_at": "2026-11-24T23:40:44Z",
+     "evidence": "landed on main 3f4accb4324d (gate PASS, ls-remote verified); folder it_adv225_20261124: PREREG, SELECTION, RESULT with merged ranked list, seven receipts",
+     "updated_at": "2026-11-25T00:01:35Z"
     }
    ]
   }
@@ -566,6 +575,13 @@
    "at": "2026-11-24T22:58:49Z",
    "source": "ADV message 2026-11-24 (ADV-223; /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv223.txt)",
    "step_sha256": "f1bc26b1a796",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T23:40:44Z",
+   "source": "ADV-225 (ADV message 2026-11-24)",
+   "step_sha256": "133e2c37010b",
    "reopened_block": false,
    "authorised_by": null
   }

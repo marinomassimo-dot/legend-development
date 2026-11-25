@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-24T23:41Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-24T23:44:56Z",
+ "event_id": "FTR-20261124-41712149-01",
+ "evidence_basis": [
+  "coverage_map",
+  "files/fulltext/PMID41712149_Balestrini2026_PMC.xml (the file the latest earlier receipt names; sha256 equal to that receipt's fingerprint)",
+  "read with the open-question and card statements of the repurposing module in mind: summary box and the early-stage studies table of a review: no new datum",
+  "scope: only the section(s) named as read were read in this reading; every other section is not_read here and keeps the state of the earlier receipts in the union",
+  "selection: computed by the frozen rule of PREREG_ADV225_IT_20261124.md (decision-bearing files first)"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv225_20261124/RESULT_ADV225_IT_20261124.md"
+ ],
+ "prior_receipt": "FTR-20261003-41712149-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "2fe8777e950cf88a451326c991d27e4ffbe6109b1a639ba49ffc41d1b341774c",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID41712149_Balestrini2026_PMC.xml",
+ "study_id": {
+  "doi": "10.1007/s40263-026-01276-x",
+  "pmid": "41712149"
+ },
+ "workflow": "IT reading of the section(s) named read, from the held file, selected by a rule frozen before any section was opened (ADV-225); the held file was read directly; no contact, no e-mail to any service, no paid route."
+}
