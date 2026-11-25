@@ -1,0 +1,8 @@
+WT basal mean 409.0 n_cols 11
+WT oligo mean 140.0 n_cols 7
+WT fccp first-third mean 356.0 last-third mean 406.0 n_cols 11
+WT rot mean 102.0 n_cols 6
+KO basal mean 260.0 n_cols 16
+KO oligo mean 75.0 n_cols 11
+KO fccp first-third mean 196.0 last-third mean 249.0 n_cols 16
+KO rot mean 54.0 n_cols 6

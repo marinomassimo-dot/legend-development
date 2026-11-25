@@ -1190,6 +1190,15 @@
      "accepted_at": "2026-11-25T07:04:18Z",
      "evidence": "five cases read one run: 66 s locally against 395 s of the same five in the 2026-11-25 durations run; full suite run before landing",
      "updated_at": "2026-11-25T07:04:18Z"
+    },
+    {
+     "step": "window_handoff tool: prepare (digests, brief, printed launch commands), rename (demote before promote, checked by listing), verify; no claude --bg or --retire-old inside",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV direction round 2026-11-25 07:30Z (GO on the handoff tool: prepare / rename / verify)",
+     "accepted_at": "2026-11-25T07:30:22Z",
+     "evidence": "framework/scripts/window_handoff.py + test_window_handoff.py (11 tests); live probe of the agents view reached a row and rename mode without saving; prepare, verify and rename --dry-run run on the real HE handoff",
+     "updated_at": "2026-11-25T07:33:13Z"
     }
    ]
   }
@@ -2109,6 +2118,13 @@
    "at": "2026-11-25T07:04:18Z",
    "source": "HE need-driven micro-upgrade (roadmap OPERATOR_GUIDANCE, no idle laboratory); proposed to ADV 2026-11-25 07:00Z",
    "step_sha256": "4832ab487ec3",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T07:30:22Z",
+   "source": "ADV direction round 2026-11-25 07:30Z (GO on the handoff tool: prepare / rename / verify)",
+   "step_sha256": "fece7ea2b94a",
    "reopened_block": false,
    "authorised_by": null
   }

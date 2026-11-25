@@ -758,6 +758,14 @@ Likewise *"no WWOX rationale beyond a fly precedent"* (CLINICAL_MATURITY) is nar
 and progenitor-library LDHA transcript rises, and than the non-neural lactate rise in Wwox knockout MEFs (PMID 25012504) and the fibroblasts
 above; read: *no neural WWOX rationale beyond a fly precedent and two transcript-level rises (confounded).* The original lines stay as the record.
 
+**Correction (ADV-270, 2026-11-25).** The row's complex I statement has a held counterpart in WWOX-deficient cells, all non-neural: whole-well
+oxygen consumption and ATP are drawn lower in Wwox knockout MEFs (PMID 25012504, Fig 2b and 2c; normalisation after the run is not stated, and
+the knockout-to-control ratio is 0.53 to 0.64 in every phase of the trace, including after respiratory-chain inhibitors); the uncoupler step
+shows about no reserve in either genotype; glycolytic capacity and lactate are higher in knockout MEFs and in knockout fibroblasts (PMID
+25012504; PMID 35328751), and respiration and ATP were not measured in the fibroblasts. A stressor wording and a non-event wording for a
+complex I-lowering compound in WWOX-deficient cells are both unsupported by held data; no neural system has a respiration readout.
+Result: `research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv270_20261125/RESULT_ADV270_IT_20261125.md`. The original lines stay as the record.
+
 **Class:** `READOUT_FIRST` — Track A, route BENEFICIO_PRECOCE. Fly content is NOT WWOX-DEE evidence. Not medical advice.
 
 🔵 **Update 2026-10-29 (`BATCH_20261019_027`, `CC-20261029-INTEGRATOR-IT6-REGISTRIES-01`; IT6 P4; COMPUTATIONAL_RESULT).** The LDHA and glycolysis rise is seen in two human neural transcript systems only and is not extended to mouse P17 brain with Wwox deletion (10-gene lactate set -0.09 and -0.19, 19-gene panel -0.07 and -0.09 in the cell-targeted hippocampal contrasts; nothing outside the null there); the statement stays set-dependent and two-system (see the discovery-ledger update of 2026-10-29 on LDH lowering).
