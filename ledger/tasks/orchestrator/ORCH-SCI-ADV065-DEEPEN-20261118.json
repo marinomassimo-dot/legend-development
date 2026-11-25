@@ -1095,10 +1095,12 @@
     },
     {
      "step": "ADV-276: read the newly acquired papers that cards and leads lean on, in order of the lean, with the ADV-269 rules; ranks 26 to 55 acquisition as step 2; lamotrigine port after increment 1",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-276",
-     "accepted_at": "2026-11-25T10:52:54Z"
+     "accepted_at": "2026-11-25T10:52:54Z",
+     "evidence": "ADV-276 closed by ADV 2026-11-25 (campaign ledger EXECUTED). Cumulative strict 17 of 43, loose 27 of 43, reversals 0 of 43. Last item: adv276c_six_newly_held_sci_20261125/RESULT_ADV276_SIX_NEWLY_HELD_SCI_20261125.md, six receipts FTR-20261125-{27845895,39178853,27641496,33363507,33854788,34210081}-01, on main at ea12cde65; wording sent to IT 6739e4ff.",
+     "updated_at": "2026-11-25T15:57:34Z"
     }
    ]
   }
