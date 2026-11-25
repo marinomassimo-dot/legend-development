@@ -26,6 +26,13 @@ Usage:
   python3 framework/scripts/branch_hygiene.py                 # markdown report
   python3 framework/scripts/branch_hygiene.py --json          # same data, machine-readable
   python3 framework/scripts/branch_hygiene.py --max-age-days 3 --exclude-pattern '^codex/'
+  python3 framework/scripts/branch_hygiene.py --removal      # what would keep each linked worktree
+
+`--removal` adds, per linked worktree, every reason found to keep it: HEAD not on the base, a changed or
+untracked file, an ignored file other than a regenerable cache (`git worktree remove` deletes ignored
+files WITHOUT asking), a lock, a process working in it or naming it, a window launched there that wrote its
+transcript in the last 24 hours. It removes nothing. It cannot see a window that works in a worktree it was
+not launched in, so an owner is still asked; and the act is `git worktree remove <path>`, never `--force`.
 """
 from __future__ import annotations
 
@@ -37,6 +44,8 @@ import subprocess
 import sys
 from pathlib import Path
 from typing import Dict, List, Optional
+
+from tmp_clone_report import is_regenerable, process_holders
 
 MAIN = "MAIN"
 LAND_OVERDUE = "LAND_OVERDUE"
@@ -249,6 +258,53 @@ def worktree_state(tree: Dict[str, object]) -> str:
     return "dirty" if tree.get("dirty") else "clean"
 
 
+def removal_blockers(root: Path, tree: Dict[str, object], base: str, projects_dir: Path,
+                     now: dt.datetime, idle_hours: float = 24.0) -> List[str]:
+    """Every reason found to keep one linked worktree. An empty list is "nothing found", not an order to remove."""
+    if tree.get("missing") or tree.get("prunable"):
+        return ["no checkout on disk: `git worktree prune`, not remove"]
+    path = Path(str(tree["path"]))
+    blockers = ["locked"] if tree.get("locked") else []
+    ancestor = subprocess.run(["git", "merge-base", "--is-ancestor", str(tree["head"]), base],
+                              cwd=str(root), capture_output=True, text=True)
+    if ancestor.returncode != 0:
+        blockers.append(f"HEAD not on {base}")
+    try:
+        status = git(["--no-optional-locks", "status", "--porcelain", "--ignored"], path).splitlines()
+    except GitError:
+        return blockers + ["git status failed"]
+    changed = [ln for ln in status if ln.strip() and not ln.startswith("!!")]
+    ignored = [ln[3:] for ln in status if ln.startswith("!!") and not is_regenerable(ln[3:])]
+    if changed:
+        blockers.append(f"{len(changed)} changed or untracked")
+    if ignored:
+        blockers.append(f"{len(ignored)} ignored, deleted silently by remove: {', '.join(ignored[:3])}")
+    holders = process_holders(path)
+    if holders:
+        blockers.append(f"{len(holders)} process(es), first {holders[0]}")
+    # the folder Claude Code keeps a worktree's transcripts in: the path with every other character as "-"
+    stamps = [t.stat().st_mtime for t in (projects_dir / re.sub(r"[^A-Za-z0-9]", "-", str(path))).glob("*.jsonl")]
+    if stamps and (now.timestamp() - max(stamps)) / 3600 < idle_hours:
+        blockers.append(f"a window launched here wrote {(now.timestamp() - max(stamps)) / 3600:.1f} h ago")
+    return blockers
+
+
+def removal_rows(root: Path, trees: List[Dict[str, object]], base: str, projects_dir: Path,
+                 now: Optional[dt.datetime] = None) -> List[Dict[str, object]]:
+    now = now or dt.datetime.now(dt.timezone.utc)
+    # git lists the primary checkout first; it is never a candidate
+    return [{"path": t["path"], "keep": removal_blockers(root, t, base, projects_dir, now)} for t in trees[1:]]
+
+
+def render_removal(rows: List[Dict[str, object]]) -> str:
+    lines = ["## Removal check", "", "| worktree | reasons to keep it |", "|---|---|"]
+    for r in sorted(rows, key=lambda r: (bool(r["keep"]), str(r["path"]))):
+        lines.append(f"| {r['path']} | {'; '.join(r['keep']) or 'none found'} |")
+    lines += ["", "Nothing was removed. A window working here but launched elsewhere is not seen: ask the owner. "
+              "The act is `git worktree remove <path>`, never `--force`.", ""]
+    return "\n".join(lines)
+
+
 def render_markdown(root: Path, rows: List[Dict[str, object]],
                     trees: List[Dict[str, object]], max_age_days: int, base_note: str = "") -> str:
     lines = [f"# Branch hygiene — {root}", "",
@@ -308,11 +364,18 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser.add_argument("--include-pattern", default=None, help="regex; keep matching branches")
     parser.add_argument("--exclude-pattern", default=None, help="regex; drop matching branches")
     parser.add_argument("--json", action="store_true", help="emit JSON instead of markdown")
+    parser.add_argument("--removal", action="store_true",
+                        help="also report, per linked worktree, every reason found to keep it; removes nothing")
+    parser.add_argument("--projects-dir", default="~/.claude/projects",
+                        help="with --removal: where the windows' transcripts are")
     args = parser.parse_args(argv)
     try:
         root = repo_root(Path(args.root).resolve())
         report = build_report(root, args.main, args.max_age_days,
                               args.include_pattern, args.exclude_pattern)
+        if args.removal:
+            report["removal"] = removal_rows(root, list(report["worktrees"]), str(report["main"]),
+                                             Path(args.projects_dir).expanduser())
     except GitError as exc:
         print(f"branch_hygiene: {exc}", file=sys.stderr)
         return 2
@@ -321,6 +384,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     else:
         print(render_markdown(root, list(report["branches"]), list(report["worktrees"]),
                               args.max_age_days, str(report["base_note"])))
+        if args.removal:
+            print(render_removal(report["removal"]))
     return 0
 
 

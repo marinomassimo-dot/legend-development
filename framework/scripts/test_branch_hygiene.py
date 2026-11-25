@@ -13,6 +13,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -314,6 +315,80 @@ class TheBaseIsWhereOtherActorsLanded(unittest.TestCase):
                                          capture_output=True, text=True).stdout)
         self.assertEqual("development/main", data["main"])
         self.assertIn("development/main", data["base_note"])
+
+
+class TheRemovalCheckNamesEveryReasonToKeep(unittest.TestCase):
+    """One linked worktree per reason, and two that give none. The ignored file is the one that matters:
+    `git worktree remove` takes it without a word."""
+
+    def setUp(self) -> None:
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        self.box = Path(tmp.name).resolve()
+        self.repo = self.box / "repo"
+        self.projects = self.box / "projects"
+        self.repo.mkdir()
+        self.projects.mkdir()
+        run(["init", "-q", "-b", "main"], self.repo)
+        run(["config", "user.name", "hygiene-test"], self.repo)
+        run(["config", "user.email", "hygiene@example.invalid"], self.repo)
+        commit(self.repo, ".gitignore", "backup/\n__pycache__/")
+
+    def tree(self, name):
+        path = self.box / name
+        run(["worktree", "add", "-q", "--detach", str(path), "main"], self.repo)
+        return path
+
+    def transcript(self, path, hours_ago):
+        folder = self.projects / re.sub(r"[^A-Za-z0-9]", "-", str(path))
+        folder.mkdir()
+        (folder / "s.jsonl").write_text("{}\n", encoding="utf-8")
+        when = dt.datetime.now().timestamp() - hours_ago * 3600
+        os.utime(folder / "s.jsonl", (when, when))
+
+    def keep(self):
+        report = bh.build_report(self.repo, "main", 1, None, None)
+        return {Path(str(r["path"])).name: "; ".join(r["keep"])
+                for r in bh.removal_rows(self.repo, report["worktrees"], "main", self.projects)}
+
+    def test_each_reason_is_named_and_a_clean_idle_tree_has_none(self) -> None:
+        self.tree("idle")
+        self.transcript(self.box / "idle", 30)
+        cached = self.tree("cached")
+        (cached / "__pycache__").mkdir()
+        (cached / "__pycache__" / "x.pyc").write_bytes(b"x")
+        ignored = self.tree("ignored")
+        (ignored / "backup").mkdir()
+        (ignored / "backup" / "only_copy.md").write_text("x\n", encoding="utf-8")
+        (self.tree("dirty") / "scratch.txt").write_text("x\n", encoding="utf-8")
+        commit(self.tree("unmerged"), "new.txt", "not on main")
+        run(["worktree", "lock", str(self.tree("locked"))], self.repo)
+        self.transcript(self.tree("recent"), 2)
+        held = self.tree("held")
+        holder = subprocess.Popen([sys.executable, "-c", "import time; time.sleep(60)"], cwd=str(held))
+        self.addCleanup(holder.wait)
+        self.addCleanup(holder.kill)
+        keep = self.keep()
+        self.assertNotIn("repo", keep, "the primary checkout is never a candidate")
+        self.assertEqual("", keep["idle"])
+        self.assertEqual("", keep["cached"])
+        self.assertIn("backup/", keep["ignored"])
+        self.assertIn("deleted silently", keep["ignored"])
+        self.assertIn("1 changed or untracked", keep["dirty"])
+        self.assertIn("HEAD not on main", keep["unmerged"])
+        self.assertIn("locked", keep["locked"])
+        self.assertIn("wrote 2.0 h ago", keep["recent"])
+        self.assertIn("process", keep["held"])
+        self.assertTrue((ignored / "backup" / "only_copy.md").exists(), "a report removes nothing")
+
+    def test_the_flag_prints_the_section_and_the_default_report_does_not(self) -> None:
+        self.tree("idle")
+        script = str(ROOT / "framework" / "scripts" / "branch_hygiene.py")
+        base = [sys.executable, script, "--root", str(self.repo), "--projects-dir", str(self.projects)]
+        plain = subprocess.run(base, capture_output=True, text=True, check=True).stdout
+        asked = subprocess.run(base + ["--removal"], capture_output=True, text=True, check=True).stdout
+        self.assertNotIn("Removal check", plain)
+        self.assertIn("none found", asked.split("## Removal check")[1])
 
 
 if __name__ == "__main__":
