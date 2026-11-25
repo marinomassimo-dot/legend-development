@@ -456,6 +456,13 @@
      "accepted_at": "2026-11-25T05:02:22Z",
      "evidence": "RESULT_ADV260_IT_20261125.md and receipts FTR-20261125-35433113-01, -40225931-01 landed 9147e69e7; consume SCI ADV-255/259/261 wording remains separate",
      "updated_at": "2026-11-25T05:19:53Z"
+    },
+    {
+     "step": "ADV-263: audit of unsupported superlatives and negatives on reader surfaces (cards, INV-nn, mechanism map rows, HYP-* rows, portfolio next_action, claim registry sentences): PREREG first, two enumeration routes, top 20 by consumers checked, rewording with denominators, which surfaces generate most",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-263 (assignments/ADV-263.md on main; launch prompt of IT window 13f5248b)",
+     "accepted_at": "2026-11-25T05:56:54Z"
     }
    ]
   }
@@ -808,6 +815,13 @@
    "at": "2026-11-25T05:02:22Z",
    "source": "ADV-260 assignment message (delivered by ADV 2026-11-25)",
    "step_sha256": "2275989460ce",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T05:56:54Z",
+   "source": "ADV-263 (assignments/ADV-263.md on main; launch prompt of IT window 13f5248b)",
+   "step_sha256": "23545f31b45c",
    "reopened_block": false,
    "authorised_by": null
   }

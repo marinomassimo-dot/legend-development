@@ -14,7 +14,7 @@
 "partial full-text read (`FTR-20261125-26857392-01`: main text and three tables; figures from captions only; supplements not opened). The earlier 'complete' declaration is not attested by a receipt (`FTR-20260726-26857392-01`: all sections unknown_legacy)."
 
 **B. `Note`, append (the existing text is kept):**
-"Correction 2026-11-25 (ADV-249): this is a junction-versus-core RT-qPCR used in lymphoblastoid lines; it is not validated for detecting exon 9 loss. Alternative 3' ends in intron 8 are cited from databases, not measured by the authors. The assay was never tried on a splice-altering variant and does not separate exon skipping, intron retention, a cryptic site or alternative termination; the exon 8-9 to core ratio (mean 67 %) was measured in 88 of 89 lines. The words 'pubblicato e validato' above overstate."
+"Correction 2026-11-25 (ADV-249): this is a junction-versus-core RT-qPCR used in lymphoblastoid lines; it is not validated for detecting exon 9 loss. Alternative 3' ends in intron 8 are cited from databases, not measured by the authors. The paper does not try the assay on a splice-altering variant (no search for later use was run), and the assay does not separate exon skipping, intron retention, a cryptic site or alternative termination; the exon 8-9 to core ratio (mean 67 %) was measured in 88 of 89 lines. The words 'pubblicato e validato' above overstate."
 
 ## 3 · What this does NOT do
 No change to `Status`, `Role`, `clinical relevance`, wikilinks or the literature tracking log. The note's other sentences (including the ACMG-criterion remark) were not re-assessed. The corpus table row elsewhere that reads "full text" is not touched.
@@ -29,3 +29,5 @@ Statements 1 to 3 were located by IT in the held Europe PMC XML on 2026-11-25; s
 
 ## 5 · Applied outside the registries (ordinary route, same day)
 Dated corrections on `DL-BIO-003`, `DL-MECH-032` and `DL-MECH-025` (discovery ledger), on the TX-001 experiment decision packet § B.3 and on `HYP-20260709-06`.
+
+Wording fix 2026-11-25 (ADV-263, same author): the earlier clause 'was never tried' stated a negative about all later use without a search; it is now bounded to the paper.

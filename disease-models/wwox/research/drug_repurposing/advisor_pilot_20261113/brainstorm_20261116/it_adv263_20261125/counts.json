@@ -1,0 +1,50 @@
+{
+ "CARD": {
+  "git_grep_lines": 867,
+  "sentences": 841,
+  "prefiltered": 49,
+  "records": 39,
+  "files": 39,
+  "sampled": 43
+ },
+ "INV": {
+  "git_grep_lines": 19,
+  "sentences": 152,
+  "prefiltered": 11,
+  "records": 19,
+  "files": 1,
+  "sampled": 8
+ },
+ "MAP": {
+  "git_grep_lines": 162,
+  "sentences": 163,
+  "prefiltered": 5,
+  "records": 44,
+  "files": 1,
+  "sampled": 8
+ },
+ "HYP": {
+  "git_grep_lines": 154,
+  "sentences": 203,
+  "prefiltered": 4,
+  "records": 30,
+  "files": 1,
+  "sampled": 11
+ },
+ "PORT": {
+  "git_grep_lines": 45,
+  "sentences": 207,
+  "prefiltered": 10,
+  "records": 35,
+  "files": 1,
+  "sampled": 10
+ },
+ "CLAIM": {
+  "git_grep_lines": 206,
+  "sentences": 373,
+  "prefiltered": 12,
+  "records": 49,
+  "files": 1,
+  "sampled": 20
+ }
+}

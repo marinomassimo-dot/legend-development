@@ -118,6 +118,9 @@ interest is not admission.
   status `not_processed`: **nobody has read it, so it cannot carry a direction** and is not cited
   here as evidence for or against. See §5, N-01. **This is a negative whose weight rests on one weak
   datum.**
+  **Correction (ADV-263, 2026-11-25).** *"The only WWOX-specific measurement that touches mTOR"* and
+  *"the only directional datum"* are false as written: protein-level mTOR readouts in non-neural cancer
+  cells are held and read; see the dated correction under N-01 in §5.
 - **Senolytics.** CLAIM 010 is `background only` / `IPOTESI`, with no WWOX model and no CNS anchor.
 - **DNA-damage-response / ATM.** CLAIM 029 is `in observation` and structurally important, but the
   therapeutic direction is inverted for a developing brain: WWOX loss causes progenitor
@@ -746,6 +749,17 @@ directional datum is unfavourable*.
 **`REVIVAL_TRIGGER`:** a protein-level mTORC1 readout (pS6, p4E-BP1) in a WWOX-deficient neuronal
 system; or any WWOX model showing mTORC1 **hyper**activation.
 
+**Correction (ADV-263, 2026-11-25).** *"Never measured at protein level in any WWOX system"* (heading and
+failure mode), *"the only WWOX-specific measurement"* and *"the only directional datum"* are **false as
+written**; the text above stays as the record of what was claimed. In methotrexate-treated squamous
+carcinoma lines, WWOX overexpression raised and WWOX siRNA suppressed the drug-stimulated phosphorylation
+of mTOR (Ser2448) and p70S6K (Thr389) ([[paper_registry_current#PAPER 148]], PMID 24008736; receipts
+`FTR-20260921-24008736-01` partial and `FTR-20261019-24008736-03` complete). PMID 33300063 (receipt
+`FTR-20261003-33300063-01`) also reads phospho-mTOR and phospho-4E-BP1 in paclitaxel-treated ovarian
+carcinoma cells. **What survives, in the sources held:** no protein-level mTORC1 readout in a
+WWOX-deficient **neural** system or tissue (`NR-01`, still open; PMID 36621327 still unread). The
+verdict, the tier and the `REVIVAL_TRIGGER` do not change, and no direction for a neural system is asserted.
+
 **Curated card (added 2026-10-27):** the abstention (mTOR activity in a WWOX system is unmeasured) is in `research/drug_repurposing/cards_early/EB-MTOR-AX-01.card.json`; `repurposing_join.py` reads it for this record.
 
 ### N-02 — Lithium as a WWOX-specific disease modifier → **the evidence does not say what it was read as saying**
@@ -1200,6 +1214,8 @@ and, in the same experiment: *"the neurite outgrowth stimulated by RA was abolis
    precedes the epileptic encephalopathy and does not improve when seizures are controlled. This
    re-scores the entire "buy time" logic and is why causal levers carry the portfolio.
 2. **mTOR inhibition has never been measured at the protein level in any WWOX system** (N-01) — demoted from this list by `BATCH_20260927_001` (`CC-20260826-MTOR-DIRECTION-01`), no direction asserted. The class stays out at every tier and stays in `DEPRIORITIZE`; what changes is the reason.
+   **Correction (ADV-263, 2026-11-25):** read this line as *"in no WWOX-deficient neural system, in the
+   sources held"*; protein-level readouts exist in non-neural cancer cells (see N-01).
 3. **Lithium's WWOX-specific rationale does not survive its own figure** (N-02). Seizure suppression
    in **all three genotypes including wild type** makes it an anticonvulsant, not a mechanism drug —
    and it activates Wnt, which is already hyperactivated.
