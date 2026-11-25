@@ -1112,10 +1112,12 @@
     },
     {
      "step": "Campaign home (ADV-243 decision): assign and deliver refuse when a commit in HEAD..development/main touches an input; reword roles/advisor.md and the strategic-advisor SKILL.md; tests; ADV reviews; then read CI run #2353",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV decision 2 on ADV-243, peer message 2026-11-25; checkpoint HE-M section 2",
-     "accepted_at": "2026-11-25T03:44:42Z"
+     "accepted_at": "2026-11-25T03:44:42Z",
+     "evidence": "5e37a5f18 and b63c22e61 on main, gate PASS; ADV accepted the review; ADV's first real dirty-root refresh at 05:16Z ran clean",
+     "updated_at": "2026-11-25T05:41:14Z"
     },
     {
      "step": "SCI handoff ac5ef625 to e8081cc5: verified and renamed",
@@ -1146,10 +1148,21 @@
     },
     {
      "step": "ADV follow-ups after ADV-258: end the flow flag 'TAKEN, no output' for a DONE step (ADV-226); safe_push --landing-suites, opt-in and print-only",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV peer message after ADV-258 acceptance, 2026-11-25",
-     "accepted_at": "2026-11-25T05:23:11Z"
+     "accepted_at": "2026-11-25T05:23:11Z",
+     "evidence": "35d16905a on main in ff53de07b, gate PASS, ls-remote; first live --landing-suites run: 8 suites, 0 red",
+     "updated_at": "2026-11-25T05:41:14Z"
+    },
+    {
+     "step": "Find what staled the derived surfaces in CI #2353 and fix --regenerate-derived for ranking companions (ADV)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV peer message on CI #2353, 2026-11-25",
+     "accepted_at": "2026-11-25T05:41:14Z",
+     "evidence": "cause 385eb88c9 (needs.json changed, ranking not regenerated); fix e17683ad4, test fails without it, on real stale commit 860d14108 commits ranking.json and unit_inputs.tsv",
+     "updated_at": "2026-11-25T05:41:15Z"
     }
    ]
   }
@@ -2041,6 +2054,13 @@
    "at": "2026-11-25T05:23:11Z",
    "source": "ADV peer message after ADV-258 acceptance, 2026-11-25",
    "step_sha256": "cc835b8de4ba",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T05:41:14Z",
+   "source": "ADV peer message on CI #2353, 2026-11-25",
+   "step_sha256": "5d4b0fdbe800",
    "reopened_block": false,
    "authorised_by": null
   }
