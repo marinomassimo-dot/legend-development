@@ -340,10 +340,12 @@
     },
     {
      "step": "ADV-232: NQ-A feasibility, PV-linked ECoG panel against held Wwox recordings; step 1 table, step 2 only if two components have a Wwox counterpart",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-232 (ADV message 2026-11-25)",
-     "accepted_at": "2026-11-25T00:39:42Z"
+     "accepted_at": "2026-11-25T00:39:42Z",
+     "evidence": "disposition b; result and receipt in brainstorm_20261116/it_adv232_20261125; map line on IT-ADV222-NQA",
+     "updated_at": "2026-11-25T00:46:38Z"
     }
    ]
   }
