@@ -560,3 +560,5 @@
 {"evidence": "SendMessage 01:11Z with brief pointer", "id": "ADV-238", "receipt": ["db4e8218-cad7-41f4-8b13-019895416ed0"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 7cf5e85a"], "utc": "2026-11-25T01:11:05Z"}
 {"assessment": "HOST", "id": "ADV-239", "key": "influence-audit-small-n-bulk-rna-inferences", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T01:21:33Z"}
 {"evidence": "SendMessage 01:22Z with brief pointer to the bound successor (name before the HE rename)", "id": "ADV-239", "receipt": ["9098e07f-3ca2-452d-af0d-29444e6dbd01"], "state": "SENT", "to": ["sci_ae_20261125"], "utc": "2026-11-25T01:22:02Z"}
+{"assessment": "HOST", "id": "ADV-240", "key": "solved-series-wwox-denominator-supplements-q03", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-25T01:29:50Z"}
+{"evidence": "SendMessage 01:30Z with brief pointer and duplicate hints", "id": "ADV-240", "receipt": ["40e4ba9a-59fe-4d19-843d-47c9a03aece1"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 7cf5e85a"], "utc": "2026-11-25T01:30:15Z"}
