@@ -948,6 +948,15 @@
      "accepted_at": "2026-11-25T00:52:09Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv233_p47t_two_animals_sci_20261125/RESULT_ADV233_P47T_TWO_ANIMALS_SCI_20261125.md",
      "updated_at": "2026-11-25T00:56:52Z"
+    },
+    {
+     "step": "ADV-239: influence audit of every carried small-n bulk-RNA inference (animals/libraries, leave-out history by id, consuming decisions and cards, first-read influence, disposition robust / one-animal-driven / not testable, wording for IT); PREREG first",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-25 (assignment ADV-239, brief /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv239.txt), named in checkpoint AD section 7",
+     "accepted_at": "2026-11-25T01:21:56Z",
+     "evidence": "443451fae: brainstorm_20261116/adv239_influence_audit_sci_20261125/RESULT_ADV239_INFLUENCE_AUDIT_SCI_20261125.md and out/ranked_inferences_adv239.tsv (35 rows); guard suites and lint exit 0 at b4075dfc4",
+     "updated_at": "2026-11-25T01:47:17Z"
     }
    ]
   }
@@ -1678,6 +1687,13 @@
    "at": "2026-11-25T00:52:09Z",
    "source": "ADV-233 (ADV message 2026-11-25, assignments/ADV-233.md)",
    "step_sha256": "8e8228861d82",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T01:21:56Z",
+   "source": "ADV message 2026-11-25 (assignment ADV-239, brief /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv239.txt), named in checkpoint AD section 7",
+   "step_sha256": "3541ead7d7aa",
    "reopened_block": false,
    "authorised_by": null
   }

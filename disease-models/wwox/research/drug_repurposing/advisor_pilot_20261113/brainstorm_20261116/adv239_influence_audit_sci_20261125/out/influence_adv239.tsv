@@ -1,0 +1,186 @@
+deposit	contrast	item	n_control	n_mutant	scale	effect_all	min_effect_leave_one_out	max_effect_leave_one_out	min_ratio_leave_one_out	unit_at_min	sign_flips	threshold_crossings	separation	first_read
+GSE215425	HPC	set:HYPOXIA	5	5	set mean centred log2CPM	0.234	0.147	0.288	0.629	M6			overlap	robust
+GSE215425	HPC	set:GLYCOLYSIS	5	5	set mean centred log2CPM	0.139	0.113	0.173	0.815	M6			overlap	robust
+GSE215425	HPC	set:APOPTOSIS	5	5	set mean centred log2CPM	0.242	0.178	0.315	0.737	M6			overlap	robust
+GSE215425	HPC	set:TNFA_SIGNALING_VIA_NFKB	5	5	set mean centred log2CPM	0.321	0.156	0.410	0.485	M6			overlap	one-animal-driven
+GSE215425	HPC	set:IL6_JAK_STAT3_SIGNALING	5	5	set mean centred log2CPM	0.316	0.198	0.401	0.628	M6			overlap	robust
+GSE215425	HPC	set:INFLAMMATORY_RESPONSE	5	5	set mean centred log2CPM	0.282	0.193	0.354	0.683	M6			overlap	robust
+GSE215425	HPC	set:MTORC1_SIGNALING	5	5	set mean centred log2CPM	0.123	0.058	0.162	0.473	M6			overlap	one-animal-driven
+GSE215425	HPC	set:CHOLESTEROL_HOMEOSTASIS	5	5	set mean centred log2CPM	0.177	0.088	0.260	0.498	M6			overlap	one-animal-driven
+GSE215425	HPC	set:FATTY_ACID_METABOLISM	5	5	set mean centred log2CPM	0.089	0.056	0.159	0.628	M1			overlap	robust
+GSE215425	HPC	set:REACTIVE_OXYGEN_SPECIES	5	5	set mean centred log2CPM	0.120	0.092	0.167	0.768	M1			overlap	robust
+GSE215425	HPC	set:HIF_SEL_UP6	5	5	set mean centred log2CPM	0.218	0.046	0.311	0.214	M6			overlap	one-animal-driven
+GSE215425	HPC	set:HIF_FLAT6	5	5	set mean centred log2CPM	0.121	0.091	0.156	0.753	M6			overlap	robust
+GSE215425	HPC	set:NRF2_5	5	5	set mean centred log2CPM	0.326	0.266	0.396	0.815	M6			overlap	robust
+GSE215425	HPC	gene:Hmox1	5	5	log2CPM difference	0.710	0.458	0.836	0.644	M6			overlap	robust
+GSE215425	HPC	gene:Srxn1	5	5	log2CPM difference	0.417	0.296	0.524	0.709	M6			overlap	robust
+GSE215425	HPC	gene:Nqo1	5	5	log2CPM difference	0.349	0.280	0.535	0.802	M7			overlap	robust
+GSE215425	HPC	gene:Hdac5	5	5	log2CPM difference	-0.161	-0.210	-0.127	0.791	M1			overlap	robust
+GSE215425	HPC	gene:Slc2a1	5	5	log2CPM difference	0.185	0.108	0.267	0.587	M1			overlap	robust
+GSE215425	HPC	gene:Erbb4	5	5	log2CPM difference	0.089	0.020	0.158	0.223	F5			overlap	not testable for absence (|E| < 0.20)
+GSE215425	HPC	gene:Wwox	5	5	log2CPM difference	-0.173	-0.247	-0.118	0.682	M6			overlap	not testable for absence (|E| < 0.20)
+GSE215425	CTX	set:HYPOXIA	5	5	set mean centred log2CPM	0.118	0.025	0.171	0.212	M6			overlap	one-animal-driven
+GSE215425	CTX	set:GLYCOLYSIS	5	5	set mean centred log2CPM	0.081	0.031	0.104	0.378	M6			overlap	one-animal-driven
+GSE215425	CTX	set:APOPTOSIS	5	5	set mean centred log2CPM	0.087	0.019	0.124	0.216	M6			overlap	one-animal-driven
+GSE215425	CTX	set:TNFA_SIGNALING_VIA_NFKB	5	5	set mean centred log2CPM	0.164	0.020	0.257	0.121	M6			overlap	one-animal-driven
+GSE215425	CTX	set:IL6_JAK_STAT3_SIGNALING	5	5	set mean centred log2CPM	0.202	0.110	0.257	0.545	M6			overlap	robust
+GSE215425	CTX	set:INFLAMMATORY_RESPONSE	5	5	set mean centred log2CPM	0.097	0.021	0.136	0.213	M6			overlap	one-animal-driven
+GSE215425	CTX	set:MTORC1_SIGNALING	5	5	set mean centred log2CPM	0.086	-0.004	0.115	-0.051	M6	M6		overlap	one-animal-driven
+GSE215425	CTX	set:CHOLESTEROL_HOMEOSTASIS	5	5	set mean centred log2CPM	0.069	-0.019	0.115	-0.273	M6	M6		overlap	one-animal-driven
+GSE215425	CTX	set:FATTY_ACID_METABOLISM	5	5	set mean centred log2CPM	0.026	-0.021	0.045	-0.801	M6	M6		overlap	one-animal-driven
+GSE215425	CTX	set:REACTIVE_OXYGEN_SPECIES	5	5	set mean centred log2CPM	0.030	-0.034	0.056	-1.133	M6	M6		overlap	one-animal-driven
+GSE215425	CTX	set:HIF_SEL_UP6	5	5	set mean centred log2CPM	0.108	-0.068	0.216	-0.632	M6	M6		overlap	one-animal-driven
+GSE215425	CTX	set:HIF_FLAT6	5	5	set mean centred log2CPM	0.248	0.206	0.272	0.831	M6			all mutant above all control	robust
+GSE215425	CTX	set:NRF2_5	5	5	set mean centred log2CPM	0.190	0.089	0.246	0.467	M6			overlap	one-animal-driven
+GSE215425	CTX	gene:Hmox1	5	5	log2CPM difference	0.512	0.226	0.604	0.441	M6			overlap	one-animal-driven
+GSE215425	CTX	gene:Srxn1	5	5	log2CPM difference	0.543	0.390	0.627	0.718	M6			overlap	robust
+GSE215425	CTX	gene:Nqo1	5	5	log2CPM difference	-0.156	-0.237	-0.051	0.329	F10			overlap	one-animal-driven
+GSE215425	CTX	gene:Hdac5	5	5	log2CPM difference	-0.383	-0.519	-0.334	0.873	M3			overlap	robust
+GSE215425	CTX	gene:Slc2a1	5	5	log2CPM difference	0.189	0.090	0.268	0.473	F5			overlap	one-animal-driven
+GSE215425	CTX	gene:Erbb4	5	5	log2CPM difference	-0.205	-0.280	-0.091	0.441	F5			overlap	one-animal-driven
+GSE215425	CTX	gene:Wwox	5	5	log2CPM difference	-0.019	-0.123	0.037	-1.905	F8	M3;M6;F9;F8		overlap	not testable for absence (|E| < 0.20)
+GSE215425	PFC	set:HYPOXIA	5	5	set mean centred log2CPM	0.142	0.087	0.185	0.616	M6			overlap	robust
+GSE215425	PFC	set:GLYCOLYSIS	5	5	set mean centred log2CPM	0.100	0.085	0.116	0.848	M6			overlap	robust
+GSE215425	PFC	set:APOPTOSIS	5	5	set mean centred log2CPM	0.107	0.079	0.127	0.742	F8			overlap	robust
+GSE215425	PFC	set:TNFA_SIGNALING_VIA_NFKB	5	5	set mean centred log2CPM	0.180	0.081	0.261	0.451	M6			overlap	one-animal-driven
+GSE215425	PFC	set:IL6_JAK_STAT3_SIGNALING	5	5	set mean centred log2CPM	0.214	0.156	0.263	0.728	M6			overlap	robust
+GSE215425	PFC	set:INFLAMMATORY_RESPONSE	5	5	set mean centred log2CPM	0.176	0.118	0.209	0.672	M6			overlap	robust
+GSE215425	PFC	set:MTORC1_SIGNALING	5	5	set mean centred log2CPM	0.052	0.026	0.068	0.500	M6			overlap	robust
+GSE215425	PFC	set:CHOLESTEROL_HOMEOSTASIS	5	5	set mean centred log2CPM	0.087	0.039	0.116	0.450	M6			overlap	one-animal-driven
+GSE215425	PFC	set:FATTY_ACID_METABOLISM	5	5	set mean centred log2CPM	0.079	0.055	0.109	0.694	M2			overlap	robust
+GSE215425	PFC	set:REACTIVE_OXYGEN_SPECIES	5	5	set mean centred log2CPM	0.010	-0.025	0.027	-2.584	F8	F4;F8		overlap	one-animal-driven
+GSE215425	PFC	set:HIF_SEL_UP6	5	5	set mean centred log2CPM	-0.068	-0.157	0.016	-0.237	F9	F9		overlap	one-animal-driven
+GSE215425	PFC	set:HIF_FLAT6	5	5	set mean centred log2CPM	0.119	0.087	0.150	0.733	F8			overlap	robust
+GSE215425	PFC	set:NRF2_5	5	5	set mean centred log2CPM	0.189	0.153	0.228	0.808	M6			overlap	robust
+GSE215425	PFC	gene:Hmox1	5	5	log2CPM difference	0.343	0.220	0.405	0.642	M6			overlap	robust
+GSE215425	PFC	gene:Srxn1	5	5	log2CPM difference	0.476	0.369	0.556	0.777	M6			overlap	robust
+GSE215425	PFC	gene:Nqo1	5	5	log2CPM difference	-0.014	-0.109	0.066	-4.906	F5	M3;F5;M6;F9;F10		overlap	one-animal-driven
+GSE215425	PFC	gene:Hdac5	5	5	log2CPM difference	-0.194	-0.240	-0.145	0.751	M1			overlap	robust
+GSE215425	PFC	gene:Slc2a1	5	5	log2CPM difference	0.272	0.202	0.342	0.742	F8			overlap	robust
+GSE215425	PFC	gene:Erbb4	5	5	log2CPM difference	-0.187	-0.268	-0.085	0.455	F8			overlap	not testable for absence (|E| < 0.20)
+GSE215425	PFC	gene:Wwox	5	5	log2CPM difference	-0.146	-0.182	-0.079	0.541	M6			overlap	not testable for absence (|E| < 0.20)
+GSE215425	CB	set:HYPOXIA	4	3	set mean centred log2CPM	0.031	0.005	0.055	0.163	F8			overlap	one-animal-driven
+GSE215425	CB	set:GLYCOLYSIS	4	3	set mean centred log2CPM	0.061	0.047	0.074	0.768	M6			all mutant above all control	robust
+GSE215425	CB	set:APOPTOSIS	4	3	set mean centred log2CPM	0.128	0.100	0.167	0.779	F8			overlap	robust
+GSE215425	CB	set:TNFA_SIGNALING_VIA_NFKB	4	3	set mean centred log2CPM	0.027	-0.011	0.061	-0.404	F5	F5;F8		overlap	one-animal-driven
+GSE215425	CB	set:IL6_JAK_STAT3_SIGNALING	4	3	set mean centred log2CPM	0.081	0.062	0.118	0.765	F8			overlap	robust
+GSE215425	CB	set:INFLAMMATORY_RESPONSE	4	3	set mean centred log2CPM	0.095	0.060	0.118	0.631	F8			all mutant above all control	robust
+GSE215425	CB	set:MTORC1_SIGNALING	4	3	set mean centred log2CPM	0.101	0.084	0.118	0.832	M3			all mutant above all control	robust
+GSE215425	CB	set:CHOLESTEROL_HOMEOSTASIS	4	3	set mean centred log2CPM	0.166	0.135	0.199	0.815	M3			all mutant above all control	robust
+GSE215425	CB	set:FATTY_ACID_METABOLISM	4	3	set mean centred log2CPM	0.209	0.166	0.237	0.794	M3			all mutant above all control	robust
+GSE215425	CB	set:REACTIVE_OXYGEN_SPECIES	4	3	set mean centred log2CPM	0.170	0.129	0.199	0.761	M6			all mutant above all control	robust
+GSE215425	CB	set:HIF_SEL_UP6	4	3	set mean centred log2CPM	0.187	0.157	0.226	0.837	M2			all mutant above all control	robust
+GSE215425	CB	set:HIF_FLAT6	4	3	set mean centred log2CPM	0.043	-0.044	0.097	-1.023	M6	M6		overlap	one-animal-driven
+GSE215425	CB	set:NRF2_5	4	3	set mean centred log2CPM	0.172	0.142	0.202	0.827	M6			all mutant above all control	robust
+GSE215425	CB	gene:Hmox1	4	3	log2CPM difference	0.297	0.208	0.368	0.701	M6			all mutant above all control	robust
+GSE215425	CB	gene:Srxn1	4	3	log2CPM difference	0.307	0.269	0.361	0.876	F8			all mutant above all control	robust
+GSE215425	CB	gene:Nqo1	4	3	log2CPM difference	0.425	0.251	0.557	0.591	M6			overlap	robust
+GSE215425	CB	gene:Hdac5	4	3	log2CPM difference	-0.024	-0.085	0.011	-0.453	F10	M3;M6;F10		overlap	one-animal-driven
+GSE215425	CB	gene:Slc2a1	4	3	log2CPM difference	-0.166	-0.273	-0.102	0.614	F8			overlap	robust
+GSE215425	CB	gene:Erbb4	4	3	log2CPM difference	0.125	-0.018	0.236	-0.148	F10	F10		overlap	not testable for absence (|E| < 0.20)
+GSE215425	CB	gene:Wwox	4	3	log2CPM difference	-0.120	-0.162	-0.065	0.540	M6			overlap	not testable for absence (|E| < 0.20)
+GSE158682	cortex Syn-Cre	gene:Pvalb [Pvalb]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.586	-0.839	-0.446	0.760	CRTX_S_KO_1			overlap	robust
+GSE158682	cortex Syn-Cre	gene:Gad1 [Gad1]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.405	-0.599	-0.142	0.351	CRTX_S_KO_2			overlap	one-animal-driven
+GSE158682	cortex Syn-Cre	gene:Npy [Npy]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	0.964	0.815	1.054	0.845	CRTX_S_KO_3			all mutant above all control	robust
+GSE158682	cortex Syn-Cre	gene:Slc12a5 [Slc12a5]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.652	-0.857	-0.471	0.723	CRTX_S_KO_2			all mutant below all control	robust
+GSE158682	cortex Syn-Cre	gene:Slc12a2 [Slc12a2]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.451	-0.670	-0.246	0.546	CRTX_S_Ctrl_4			overlap	robust
+GSE158682	cortex Syn-Cre	set:HIF_AXIS_K01 [Hif1a,Epas1,Hk2,Slc2a1,Ldha,Pgk1,Ndrg1,P4ha1]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.438	-0.524	-0.342	0.781	CRTX_S_KO_2			all mutant below all control	robust
+GSE158682	cortex Syn-Cre	gene:Hk2 [Hk2]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	0.017	-0.168	0.191	-10.082	CRTX_S_KO_2	CRTX_S_Ctrl_2;CRTX_S_Ctrl_3;CRTX_S_KO_2		overlap	not testable for absence (|E| < 0.20)
+GSE158682	cortex Syn-Cre	gene:Slc2a1 [Slc2a1]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.165	-0.518	-0.011	0.068	CRTX_S_KO_1			overlap	not testable for absence (|E| < 0.20)
+GSE158682	cortex Syn-Cre	gene:Ldha [Ldha]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.251	-0.435	-0.123	0.489	CRTX_S_KO_2			overlap	one-animal-driven
+GSE158682	cortex Syn-Cre	gene:Pgk1 [Pgk1]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.263	-0.474	-0.039	0.148	CRTX_S_KO_2			overlap	one-animal-driven
+GSE158682	cortex Syn-Cre	gene:Ndrg1 [Ndrg1]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	-1.250	-1.536	-1.084	0.867	CRTX_S_KO_2			all mutant below all control	robust
+GSE158682	cortex Syn-Cre	gene:P4ha1 [P4ha1]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.967	-1.253	-0.804	0.831	CRTX_S_KO_3			all mutant below all control	robust
+GSE158682	cortex Syn-Cre	gene:Hif1a [Hif1a]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.195	-0.356	-0.045	0.230	CRTX_S_KO_2			overlap	not testable for absence (|E| < 0.20)
+GSE158682	cortex Syn-Cre	gene:Epas1 [Epas1]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.428	-0.552	-0.296	0.690	CRTX_S_Ctrl_1			overlap	robust
+GSE158682	cortex Syn-Cre	set:ASTRO_ACTIVATION_J01 [Gfap,Vim,Serpina3n,Lcn2,Cd44]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	1.009	0.740	1.278	0.733	CRTX_S_KO_3			overlap	robust
+GSE158682	cortex Syn-Cre	gene:Gfap [Gfap]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	0.849	0.584	1.180	0.688	CRTX_S_KO_2			overlap	robust
+GSE158682	cortex Syn-Cre	gene:Serpina3n [Serpina3n]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	1.376	0.800	1.650	0.581	CRTX_S_KO_3			all mutant above all control	robust
+GSE158682	cortex Syn-Cre	gene:Lcn2 [Lcn2]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	2.366	1.792	2.850	0.757	CRTX_S_KO_2			overlap	robust
+GSE158682	cortex Syn-Cre	set:WNT_READOUT [Axin2,Lef1,Nkd1,Apcdd1]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.529	-1.057	-0.328	0.620	CRTX_S_KO_2			overlap	robust
+GSE158682	cortex Syn-Cre	gene:Wwox [Wwox]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	-1.586	-1.979	-1.364	0.860	CRTX_S_KO_2			overlap	robust
+GSE158682	cortex Syn-Cre	gene:Ctgf [Ctgf]	4	3	log2 ratio of mean TPM (+0.5), mean over genes	0.189	-0.367	0.460	-1.939	CRTX_S_KO_3	CRTX_S_KO_3		overlap	one-animal-driven
+GSE158682	cortex Syn-Cre	ratio:Slc12a2/Slc12a5	4	3	difference of mean log2 ratio	0.237	0.085	0.366	0.358	CRTX_S_Ctrl_1			overlap	one-animal-driven
+GSE158681	hippo Syn-Cre	gene:Pvalb [Pvalb]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	-1.701	-1.972	-1.491	0.876	S_KO_2			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Gad1 [Gad1]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.542	-0.744	-0.280	0.517	S_KO_2			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Npy [Npy]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	2.512	2.355	2.624	0.938	S_KO_3			all mutant above all control	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Slc12a5 [Slc12a5]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.546	-0.670	-0.355	0.650	S_KO_2			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Slc12a2 [Slc12a2]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	-1.090	-1.272	-0.883	0.809	S_Ctrl_2			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	set:HIF_AXIS_K01 [Hif1a,Epas1,Hk2,Slc2a1,Ldha,Pgk1,Ndrg1,P4ha1]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.531	-0.681	-0.390	0.735	S_Ctrl_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Hk2 [Hk2]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	0.136	-0.107	0.390	-0.783	S_KO_3	S_KO_3		overlap	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Slc2a1 [Slc2a1]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.399	-0.662	-0.246	0.617	S_KO_2			overlap	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Ldha [Ldha]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.491	-0.643	-0.253	0.515	S_KO_2			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Pgk1 [Pgk1]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	-1.012	-1.300	-0.732	0.723	S_Ctrl_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Ndrg1 [Ndrg1]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	-1.080	-1.442	-0.596	0.551	S_Ctrl_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:P4ha1 [P4ha1]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.665	-0.812	-0.523	0.787	S_KO_2			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Hif1a [Hif1a]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.163	-0.277	-0.040	0.243	S_Ctrl_1			overlap	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Epas1 [Epas1]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.575	-0.666	-0.439	0.764	S_KO_2			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	set:ASTRO_ACTIVATION_J01 [Gfap,Vim,Serpina3n,Lcn2,Cd44]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	1.671	0.812	2.120	0.486	S_KO_3			overlap	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Gfap [Gfap]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	2.117	1.665	2.495	0.787	S_KO_3			all mutant above all control	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Serpina3n [Serpina3n]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	0.060	-0.628	0.623	-10.494	S_KO_3	S_Ctrl_1;S_KO_3		overlap	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Lcn2 [Lcn2]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	2.337	1.274	2.853	0.545	S_KO_3			overlap	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	set:WNT_READOUT [Axin2,Lef1,Nkd1,Apcdd1]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	-0.045	-0.276	0.146	-3.234	S_Ctrl_2	S_Ctrl_2;S_KO_1;S_KO_2		overlap	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Wwox [Wwox]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	-1.966	-2.173	-1.862	0.947	S_KO_2			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	gene:Ctgf [Ctgf]	2	3	log2 ratio of mean TPM (+0.5), mean over genes	0.384	-0.086	0.640	-0.225	S_KO_3	S_KO_3		overlap	not testable (an arm below 3)
+GSE158681	hippo Syn-Cre	ratio:Slc12a2/Slc12a5	2	3	difference of mean log2 ratio	-0.529	-0.810	-0.210	0.396	S_KO_1			overlap	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Pvalb [Pvalb]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.855	-0.974	-0.745	0.872	N_KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Gad1 [Gad1]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	0.046	-0.238	0.283	-5.213	N_KO_2	N_Ctrl_1;N_KO_2		overlap	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Npy [Npy]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	0.692	0.554	0.817	0.801	N_KO_1			all mutant above all control	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Slc12a5 [Slc12a5]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	0.282	-0.049	0.550	-0.174	N_KO_2	N_KO_2		overlap	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Slc12a2 [Slc12a2]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.820	-1.190	-0.320	0.391	N_Ctrl_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	set:HIF_AXIS_K01 [Hif1a,Epas1,Hk2,Slc2a1,Ldha,Pgk1,Ndrg1,P4ha1]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.679	-0.882	-0.523	0.771	N_KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Hk2 [Hk2]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.013	-0.140	0.126	-9.680	N_Ctrl_1	N_Ctrl_1;N_KO_1		overlap	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Slc2a1 [Slc2a1]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.360	-0.444	-0.280	0.779	N_KO_2			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Ldha [Ldha]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	-1.263	-1.648	-0.959	0.759	N_KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Pgk1 [Pgk1]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	-1.169	-1.569	-0.855	0.732	N_KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Ndrg1 [Ndrg1]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.886	-1.371	-0.523	0.591	N_KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:P4ha1 [P4ha1]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	-1.246	-1.535	-1.005	0.806	N_KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Hif1a [Hif1a]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	0.025	-0.119	0.157	-4.662	N_KO_1	N_Ctrl_2;N_KO_1		overlap	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Epas1 [Epas1]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.521	-0.672	-0.384	0.737	N_KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	set:ASTRO_ACTIVATION_J01 [Gfap,Vim,Serpina3n,Lcn2,Cd44]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	0.128	0.001	0.521	0.004	N_Ctrl_1			overlap	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Gfap [Gfap]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	1.303	1.113	1.522	0.854	N_Ctrl_2			all mutant above all control	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Serpina3n [Serpina3n]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	0.640	0.413	0.836	0.645	N_KO_2			all mutant above all control	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Lcn2 [Lcn2]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	-1.065	-1.880	0.988	-0.928	N_Ctrl_2	N_Ctrl_2		overlap	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	set:WNT_READOUT [Axin2,Lef1,Nkd1,Apcdd1]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.028	-0.161	0.095	-3.449	N_Ctrl_1	N_Ctrl_1;N_KO_1		overlap	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Wwox [Wwox]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	-2.506	-2.855	-2.224	0.888	N_KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	gene:Ctgf [Ctgf]	2	2	log2 ratio of mean TPM (+0.5), mean over genes	0.843	0.251	1.262	0.297	N_KO_1			all mutant above all control	not testable (an arm below 3)
+GSE158681	hippo Nestin-Cre	ratio:Slc12a2/Slc12a5	2	2	difference of mean log2 ratio	-1.027	-1.538	-0.516	0.503	N_Ctrl_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Pvalb [Pvalb]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	-1.156	-1.490	-0.886	0.766	KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Gad1 [Gad1]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.354	-0.540	-0.188	0.533	KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Npy [Npy]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	0.718	0.644	0.819	0.897	WT_1			all mutant above all control	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Slc12a5 [Slc12a5]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.408	-0.456	-0.361	0.884	WT_3			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Slc12a2 [Slc12a2]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.642	-0.702	-0.586	0.912	KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo germline null	set:HIF_AXIS_K01 [Hif1a,Epas1,Hk2,Slc2a1,Ldha,Pgk1,Ndrg1,P4ha1]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.524	-0.692	-0.392	0.748	KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Hk2 [Hk2]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	0.281	-0.080	0.570	-0.286	KO_2	KO_2		overlap	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Slc2a1 [Slc2a1]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	-1.031	-1.179	-0.896	0.869	KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Ldha [Ldha]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.498	-0.753	-0.282	0.566	KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Pgk1 [Pgk1]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.559	-0.993	-0.227	0.405	KO_1			overlap	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Ndrg1 [Ndrg1]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	-1.217	-1.413	-1.044	0.858	KO_2			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:P4ha1 [P4ha1]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	-1.014	-1.260	-0.803	0.792	KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Hif1a [Hif1a]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	0.058	0.026	0.090	0.443	KO_2			all mutant above all control	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Epas1 [Epas1]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.211	-0.248	-0.174	0.827	KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo germline null	set:ASTRO_ACTIVATION_J01 [Gfap,Vim,Serpina3n,Lcn2,Cd44]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	0.036	-0.040	0.091	-1.115	KO_2	KO_2		overlap	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Gfap [Gfap]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	0.647	0.482	0.795	0.745	KO_2			all mutant above all control	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Serpina3n [Serpina3n]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	0.092	-0.094	0.256	-1.021	KO_2	KO_2		overlap	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Lcn2 [Lcn2]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.809	-0.903	-0.715	0.883	WT_2			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo germline null	set:WNT_READOUT [Axin2,Lef1,Nkd1,Apcdd1]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.193	-0.387	-0.037	0.193	KO_1			overlap	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Wwox [Wwox]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	-2.401	-2.498	-2.309	0.962	KO_1			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo germline null	gene:Ctgf [Ctgf]	3	2	log2 ratio of mean TPM (+0.5), mean over genes	-0.989	-1.209	-0.798	0.807	KO_2			all mutant below all control	not testable (an arm below 3)
+GSE158681	hippo germline null	ratio:Slc12a2/Slc12a5	3	2	difference of mean log2 ratio	-0.237	-0.299	-0.171	0.722	WT_1			all mutant below all control	not testable (an arm below 3)
+GSE156243	organoid	set:WNT_READOUT [AXIN2,LEF1,NKD1,APCDD1]	2	4	difference of mean log2(CPM+1)	1.193	1.025	1.360	0.859	cwt2			all mutant above all control	not testable (an arm below 3)
+GSE156243	organoid	set:ISR_ATF4_TARGETS [ATF4,ATF5,DDIT3,CHAC1,TRIB3,ASNS,PSAT1,PHGDH,PCK2,SLC7A11,SESN2,GADD45A]	2	4	difference of mean log2(CPM+1)	-0.295	-0.333	-0.257	0.872	cwt1			all mutant below all control	not testable (an arm below 3)
+GSE156243	organoid	gene:LDHA [LDHA]	2	4	difference of mean log2(CPM+1)	0.740	0.659	0.830	0.891	cko3			all mutant above all control	not testable (an arm below 3)
+GSE156243	organoid	gene:HK2 [HK2]	2	4	difference of mean log2(CPM+1)	2.174	1.954	2.393	0.899	cwt2			all mutant above all control	not testable (an arm below 3)
+GSE156243	organoid	gene:SLC2A1 [SLC2A1]	2	4	difference of mean log2(CPM+1)	1.382	1.233	1.475	0.892	cko3			all mutant above all control	not testable (an arm below 3)
+GSE156243	organoid	gene:EPAS1 [EPAS1]	2	4	difference of mean log2(CPM+1)	1.336	1.101	1.564	0.824	cko1			all mutant above all control	not testable (an arm below 3)
+GSE156243	organoid	gene:HIF1A [HIF1A]	2	4	difference of mean log2(CPM+1)	-0.245	-0.344	-0.146	0.596	cwt1			overlap	not testable (an arm below 3)
+GSE156243	organoid	gene:PDK1 [PDK1]	2	4	difference of mean log2(CPM+1)	-0.341	-0.401	-0.278	0.815	cko3			all mutant below all control	not testable (an arm below 3)
+GSE156243	organoid	gene:NFE2L2 [NFE2L2]	2	4	difference of mean log2(CPM+1)	-0.394	-0.475	-0.312	0.793	cwt1			all mutant below all control	not testable (an arm below 3)
+GSE156243	organoid	gene:CTGF [CTGF]	2	4	difference of mean log2(CPM+1)	1.092	0.922	1.285	0.844	cko3			all mutant above all control	not testable (an arm below 3)
+GSE156243	organoid	gene:NPY [NPY]	2	4	difference of mean log2(CPM+1)	-2.498	-3.015	-1.981	0.793	cwt1			all mutant below all control	not testable (an arm below 3)
+GSE156243	organoid	gene:GAD1 [GAD1]	2	4	difference of mean log2(CPM+1)	3.033	2.086	3.981	0.688	cwt2			all mutant above all control	not testable (an arm below 3)
+GSE156243	organoid	gene:GAD2 [GAD2]	2	4	difference of mean log2(CPM+1)	1.412	0.561	2.262	0.397	cwt2			overlap	not testable (an arm below 3)
+GSE156243	organoid	gene:MYC [MYC]	2	4	difference of mean log2(CPM+1)	0.543	0.428	0.612	0.788	cko3			all mutant above all control	not testable (an arm below 3)
+GSE156243	organoid	gene:GRIA1 [GRIA1]	2	4	difference of mean log2(CPM+1)	0.360	0.237	0.477	0.658	cko2			overlap	not testable (an arm below 3)
+GSE156243	organoid	set:ASTRO_REACTIVE_J01 [GFAP,VIM,SERPINA3,CD44]	2	4	difference of mean log2(CPM+1)	0.336	0.118	0.604	0.350	cko3			overlap	not testable (an arm below 3)
+GSE156243	organoid	ratio:SLC12A2/SLC12A5	2	4	difference of mean log2 ratio	-0.614	-0.807	-0.447	0.728	cko3			all mutant below all control	not testable (an arm below 3)
