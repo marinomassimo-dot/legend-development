@@ -6,4 +6,14 @@
 
 Two references outside ADV's examined records had been catalogued elsewhere by the laboratory. The biallelic cohort above had an accessible primary text. For PMID 42721537 the laboratory held abstract-level coverage only. Treatment attribution remains unverified in that source. [Prior reading record](../../batch_sci_20261105/a1_wwox_reports/receipts/FTR-20261106-42721537-21.json)
 
+**Update 2026-11-25 (SCI): treatment attribution re-checked against the three primary records.** The paragraphs above stand. These study-level precisions reproduce from the held texts:
+
+| Source | What it adds to the summary above |
+|---|---|
+| Familial report, [Results](https://pmc.ncbi.nlm.nih.gov/articles/PMC3918143/) | Partial seizure control under valproate plus lamotrigine is stated twice: once for the case with the confirmed homozygous truncating variant, and once for an affected relative whom the authors never saw and did not genotype. No dose, start date, duration or order of the two drugs is given. The second statement adds no genetically confirmed exposure. |
+| Chromosomal deletion report, [case report and genetic analysis](https://pubmed.ncbi.nlm.nih.gov/31353122/) | Phenobarbital and then valproate were insufficient; zonisamide was started and stopped for an adverse effect; seizures disappeared after the switch to valproate plus lamotrigine, and the EEG had normalised about six months later. The 6.8 Mb heterozygous deletion contains 57 genes. A targeted panel found no pathogenic variant on the other allele; it covered 12 of the 37 OMIM genes in the deleted region, and parental DNA was unavailable. No seizure counts are given. |
+| Biallelic cohort, [Results and Tables 1 to 3](https://pubmed.ncbi.nlm.nih.gov/35792847/) | The one lamotrigine exposure is in a case with a homozygous p.Pro47Thr missense variant, within a three-drug regimen (phenobarbital, topiramate, lamotrigine) during which epileptic discharges and seizures were recorded. The regimen at the time of writing no longer includes lamotrigine; when and why it stopped are not stated. The comparison table lists the familial report once with valproate plus lamotrigine, which is not a further observation. |
+
+What the three records lack is a comparison that isolates lamotrigine. That absence argues neither for an effect nor against one. Reading depth: targeted passages of each paper, not a complete read.
+
 **Decision.** Maintain preclinical priority for testing inhibition at measured extracellular exposure. The clinical evidence examined supplies no attributable WWOX-specific efficacy estimate. A comparison with stable co-medication, comparable seizure counts and adequate follow-up in genetically confirmed biallelic disease could change that assessment. Developmental benefit requires its own outcome. [Mechanistic comparison](integration.md)

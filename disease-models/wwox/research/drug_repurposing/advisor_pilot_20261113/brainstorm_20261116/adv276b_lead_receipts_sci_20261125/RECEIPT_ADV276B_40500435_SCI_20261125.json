@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-25T12:29Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T12:29:43Z",
+ "event_id": "FTR-20261125-40500435-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Targeted: Results subsections on microglial metabolism and behaviour, Figure 3 and 4 legends, Methods mice, diet, NMR and statistics; Figure 3 image opened and panel b measured (EMS206505-f003.jpg sha256 335ff7c7941d2e99f12d0350f2bef112a1abbb206262e18646a38fab4e30e310, PMC open-data bucket).",
+  "Result and per-consumer wording: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276b_lead_receipts_sci_20261125/RESULT_ADV276B_BATCH1_SCI_20261125.md"
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276b_lead_receipts_sci_20261125/RESULT_ADV276B_BATCH1_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261019-40500435-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "af43a9c3589a7ddd2c70e169f31c1be76b285e82f14c2a3e2cc6d33aced91f62",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40500435_ADV272_PMC7617807_epmc_20261125.xml",
+ "study_id": {
+  "doi": "10.1038/s41586-025-09098-5",
+  "pmid": "40500435"
+ },
+ "workflow": "SCI ADV-276 continued, batch 1 (re-open of five lead papers read earlier without a receipt; not a complete read)"
+}
