@@ -1380,39 +1380,48 @@
     },
     {
      "step": "Speed the publication gate privacy scan with identical findings: whole-tree and 50-commit differential, seeded positives per pattern class, landed alone, read the first three real landings",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad GO with five conditions to HE 02915fa6, 2026-11-25",
      "accepted_at": "2026-11-25T16:39:14Z",
-     "updated_at": "2026-11-25T17:44:54Z"
+     "updated_at": "2026-11-25T18:08:43Z",
+     "evidence": "bb3c81129 landed alone; three real landings read old (6af888dc5) vs landed script, whole output identical, 31 finding lines, PASS 0 blocks: b11fa45ca (193/85 s), 0f0e64ddc (200/131 s), f9f550d75 (245/174 s); logs files/coordination/he_gate_speedup_20261125/read_[123]_*.log"
     },
     {
      "step": "Held files that do not match their name (SCI ADV-279: 39 of about 6,100; 27 HTML or empty as figure or PDF): list with citing receipt or card, propose a save-time check; report only until ADV says",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad message to HE 02915fa6, 2026-11-25",
-     "accepted_at": "2026-11-25T17:44:54Z"
+     "accepted_at": "2026-11-25T17:44:54Z",
+     "evidence": "report files/coordination/he_adv279_defects_20261125/REPORT.md delivered to ADV and SCI; 61 of 11,322 unusable, no receipt names one",
+     "updated_at": "2026-11-25T18:09:24Z"
     },
     {
      "step": "Two false consumer joins (SCI ADV-279: '33958783 paper 204' as P204; DL-MECH-056 in a skip list): find the matching rule and count the other joins it made",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad message to HE 02915fa6, 2026-11-25, item 2 of 2",
-     "accepted_at": "2026-11-25T17:45:03Z"
+     "accepted_at": "2026-11-25T17:45:03Z",
+     "evidence": "report delivered: rules found (case-insensitive PAPER N; agenda lines), 35 of 1,272 joins",
+     "updated_at": "2026-11-25T18:09:24Z"
     },
     {
      "step": "held_content_check.py: read-only list of unusable held files; one line in find-fulltext save step (stop and tell ADV if .claude edit refused)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad decision (1) on HE ADV-279 report, 2026-11-25",
-     "accepted_at": "2026-11-25T18:03:07Z"
+     "accepted_at": "2026-11-25T18:03:07Z",
+     "evidence": "d39f4685e: framework/scripts/held_content_check.py + test (5 ok) + one line in find-fulltext (edit under .claude accepted)",
+     "updated_at": "2026-11-25T18:09:30Z"
     },
     {
      "step": "Fix the two consumer-join rules at the source with a test on two real examples; recompute the ranking; report rank changes in the top 60, the studies losing every consumer, and a note on ADV-265/269/276/279 orderings",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad decision (2) on HE ADV-279 report, 2026-11-25",
-     "accepted_at": "2026-11-25T18:03:07Z"
+     "accepted_at": "2026-11-25T18:03:07Z",
+     "evidence": "consumer_count.py + test_consumer_count.py (4 ok, old rule asserted to join); ranking recomputed; checkpoint_he_20261120/HE_CONSUMER_JOINS_20261125.md",
+     "updated_at": "2026-11-25T18:09:30Z"
     }
    ]
   }
