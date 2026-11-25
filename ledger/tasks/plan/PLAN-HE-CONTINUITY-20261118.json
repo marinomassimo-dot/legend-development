@@ -1163,6 +1163,13 @@
      "accepted_at": "2026-11-25T05:41:14Z",
      "evidence": "cause 385eb88c9 (needs.json changed, ranking not regenerated); fix e17683ad4, test fails without it, on real stale commit 860d14108 commits ranking.json and unit_inputs.tsv",
      "updated_at": "2026-11-25T05:41:15Z"
+    },
+    {
+     "step": "Regeneration of derived surfaces is the default under safe_push --serialize, opt-out flag, lock time printed, README numbers from three real pushes (ADV YES with four conditions)",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV peer message, 2026-11-25",
+     "accepted_at": "2026-11-25T05:50:11Z"
     }
    ]
   }
@@ -2061,6 +2068,13 @@
    "at": "2026-11-25T05:41:14Z",
    "source": "ADV peer message on CI #2353, 2026-11-25",
    "step_sha256": "5d4b0fdbe800",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T05:50:11Z",
+   "source": "ADV peer message, 2026-11-25",
+   "step_sha256": "e2050c75546b",
    "reopened_block": false,
    "authorised_by": null
   }
