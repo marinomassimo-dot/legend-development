@@ -21,8 +21,8 @@ the whole known corpus, not the part already processed.
 
 | Depth | Records | Share | What it means |
 |---|---:|---:|---|
-| **Full text depth** | 313 | 33% | complete receipt or legacy registry declaration; trace split below |
-| Partial full text | 304 | 32% | some sections read; explicitly declared incomplete |
+| **Full text depth** | 312 | 33% | complete receipt or legacy registry declaration; trace split below |
+| Partial full text | 305 | 32% | some sections read; explicitly declared incomplete |
 | Abstract / screened | 13 | 1% | classified from metadata and abstract; no full text read |
 | Catalogued only | 310 | 33% | known, deduplicated, never analytically processed — **the debt** |
 | Filtered / superseded | 10 | 1% | explicitly set aside, with the reason preserved |
@@ -38,7 +38,7 @@ the whole known corpus, not the part already processed.
 - Authoritative ledger: `disease-models/wwox/registries/fulltext_read_receipts.jsonl`
 - **2789** append-only events: **2764** contemporaneous · **22** conservative legacy reconstructions · **1** invalidation(s) · **2** identity correction(s)
 - **309** registry records have a persisted `complete_fulltext_read` receipt
-- **4** records still rely on a historical registry full-text declaration without a surviving complete coverage receipt
+- **3** records still rely on a historical registry full-text declaration without a surviving complete coverage receipt
 - **1656** receipt event(s) do not yet map to a registry record
 
 A full-text marker in the registry is preserved as historical state, but it is not
