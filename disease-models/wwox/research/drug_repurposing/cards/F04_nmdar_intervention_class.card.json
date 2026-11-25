@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "8e68a0cb44ec1788a19dd77e750a6575c9f8fea3b0167aaeb96319f9efdbd6c2",
+  "input_sha256": "a19b3a1432bdc29fd489ad9eac9909fa1305d2a2dc0df171c5257eaec28dbab6",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -319,12 +319,12 @@
       {
         "id": "DR-P9-006",
         "target_id": "GluN2B-selective negative allosteric modulator radiprodil",
-        "endpoint": "inhibition of disease-associated GRIN variants, synaptic GluN2B current in a gain-of-function knock-in mouse, delay of pentylenetetrazole seizures",
+        "endpoint": "inhibition of disease-associated GRIN variants, synaptic GluN2B current in a gain-of-function knock-in mouse, incidence of tonic-clonic seizures and latency among animals that seized after pentylenetetrazole",
         "direction": "DECREASE",
-        "source": "Banke et al 2026, Brain (PMID 40994429; abstract only; NOT WWOX EVIDENCE)",
-        "locator": "abstract (PMC12677382, publisher bars download of the body): effective at more than 80 percent of the 27 tested disease-associated GRIN1 and GRIN2B missense variants, equally or more effective than at wild-type receptors; blocks synaptic GluN2B receptors in GluN2B-Ser810Arg knock-in slices; delays pentylenetetrazole seizures",
+        "source": "Banke et al 2026, Brain (PMID 40994429; partial full text read 2026-11-25, ADV-276, receipt FTR-20261125-40994429-01; supplements not held; NOT WWOX EVIDENCE)",
+        "locator": "abstract (PMC12677382, publisher bars download of the body): effective at more than 80 percent of the 27 tested disease-associated GRIN1 and GRIN2B missense variants, equally or more effective than at wild-type receptors; blocks synaptic GluN2B receptors in GluN2B-Ser810Arg knock-in slices; delays pentylenetetrazole seizures ; full text (ADV-276): Table 2, Table 3 'Rescue: animals' and the Results paragraph on S810R mice",
         "epistemic_status": "DATO",
-        "reading_depth": "abstract_only",
+        "reading_depth": "partial_fulltext_read",
         "context": {
           "disease_id": "GRIN-related disorders and mouse models (not WWOX)",
           "genotype": "GRIN gain-of-function variants (and mixed comparators)",
@@ -332,7 +332,7 @@
           "cell_type": "individuals; knock-in mouse slices",
           "developmental_stage": "children (as reported)"
         },
-        "measured_result_note": "Receptor-level evidence for a gain-of-function lesion, where the sign is known. It does not show an effect in a WWOX system, and a GluN2B NAM acts on GluN2B-containing receptors only (the organoid shows GRIN2B and GRIN2D transcripts).",
+        "measured_result_note": "Receptor-level evidence for a gain-of-function lesion, where the sign is known. It does not show an effect in a WWOX system, and a GluN2B NAM acts on GluN2B-containing receptors only (the organoid shows GRIN2B and GRIN2D transcripts). Full text (ADV-276, 2026-11-25): radiprodil was equally or more effective than at wild type in 22 of 27 variants by potency (printed) and in 21 of 27 (77.8 percent) when maximal inhibition is also counted (our count from Table 2, not printed; the one addition is I150V, which keeps potency but reaches 31 percent maximal inhibition against 85 percent at wild type). S810R, the variant of the mouse model, is one of five potency losses: the text prints 1.9-fold; Table 2 gives a ratio of about 1.5 against the pooled wild type (the printed fold changes are not reproducible from the pooled value, and one paragraph reverses the two values). S810R mice, radiprodil or vehicle, then pentylenetetrazole 30 minutes later (Table 3; doses in the paper): latency to first myoclonic jerk 131 +/- 33 s (n = 26) against 99 +/- 8.4 s (vehicle; n = 21 in the Results text, 20 in Table 3), P = 0.40; latency to generalised tonic-clonic seizure 458 +/- 90 s (the 16 mice that seized) against 207 +/- 23 s (the 20 that seized), mean +/- SEM, P = 0.0053 by unpaired t-test among animals that seized; 16 of 26 radiprodil mice against 20 of 21 vehicle mice seized (Fisher two-sided 0.013, our computation, not printed). Wild-type littermates: 6 of 18 radiprodil against 5 of 21 vehicle seized. The direction DECREASE stays at receptor level; the seizure endpoint is incidence and latency among animals that seized, not a general delay.",
         "evidence_scope": "OTHER_DISEASE_PRECEDENT"
       },
       {

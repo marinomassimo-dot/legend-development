@@ -143,7 +143,7 @@
       ],
       "external_not_wwox_evidence": [
         "ChEMBL_37 mechanism row CHEMBL4217292 (reference ids PubMed 29116786, PubMed 31004346)",
-        "PubMed abstracts 29116786, 31004346, 31994022, 40165594, 38605177 (abstract level; none carries a receipt)"
+        "PubMed abstracts 29116786, 31004346, 31994022, 40165594 (abstract level; none carries a receipt); 38605177, partial full text read 2026-11-25 (ADV-276, receipt FTR-20261125-38605177-01): cryo-EM structure of human Cav3.2 with ACT-709478, TTA-A2, TTA-P2 and ML218, and HEK293T electrophysiology; no epilepsy-model datum; the text never uses the name apinocaltamide (zero hits, 2026-11-25)"
       ]
     },
     "evidence_for_and_against": {
