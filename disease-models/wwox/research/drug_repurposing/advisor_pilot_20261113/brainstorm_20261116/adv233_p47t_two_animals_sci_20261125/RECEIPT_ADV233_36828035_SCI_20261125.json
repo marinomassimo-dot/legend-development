@@ -1,0 +1,37 @@
+{
+  "analysis_at": "2026-11-25T00:54Z",
+  "analysis_time_precision": "minute",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read",
+    "references": "not_read"
+  },
+  "event_at": "2026-11-25T00:56:38Z",
+  "event_id": "FTR-20261125-36828035-06",
+  "evidence_basis": [
+    "coverage_map",
+    "files/fulltext/PMID36828035_Hussain2023_EPMC.xml (held copy, not in git) searched for animal identifiers, batch, litter, weight, health, sex, seizure and outlier terms; the paragraphs on survival and morbidity, seizures, mouse model development, video-EEG, RNA-seq and statistics read; no figure, table or supplement opened",
+    "The earlier complete read FTR-20260913-36828035-03 is not replaced; this event records a targeted question only"
+  ],
+  "evidence_depth": "queried_not_full_read",
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv233_p47t_two_animals_sci_20261125/RESULT_ADV233_P47T_TWO_ANIMALS_SCI_20261125.md"
+  ],
+  "prior_receipt": "FTR-20261123-36828035-05",
+  "record_kind": "contemporaneous_receipt",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "source_fingerprint": "bd08f4a28132600f4848a03c467da5a343ef8fcb42a5eb3ad58957c7b331c148",
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID36828035_Hussain2023_EPMC.xml",
+  "study_id": {
+    "pmid": "36828035"
+  },
+  "workflow": "SCI ADV-233, question: do the primary or GEO metadata carry per-animal health, seizure, batch or sex notes for P47T animals M6 and F8; no e-mail sent, no contact"
+}

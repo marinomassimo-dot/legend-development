@@ -2334,9 +2334,9 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 162
 **Full title:** WWOX modulates the gene expression profile in the T98G glioblastoma cell line rendering its phenotype
 **Identifier:** PMID 25051421 / DOI 10.3892/or.2014.3335
-**Status:** processed — read (`FTR-20261124-25051421-01`, `complete_fulltext_read`, **full text**)
+**Status:** upgraded to `PAPER 570` (2026-11-25, `BATCH_20261125_001`); read in full, receipt `FTR-20261124-25051421-01`
 **Registry role:** corpus placeholder only; read in full 2026-11-24 (ADV-218): transcript-level profile of WWOX gain in T98G, no protein-level mTORC1, autophagy or Wnt readout, the alamarBlue result carries no number; not WWOX-deficient neural evidence
-**Evidence depth:** `complete_fulltext_read` (**full text**) — receipt `FTR-20261124-25051421-01`; manifest `deepdive_manifests/PMID25051421.json`
+**Evidence depth:** see `PAPER 570` (receipt `FTR-20261124-25051421-01`; manifest `deepdive_manifests/PMID25051421.json`)
 **Claim links:** none
 **Next action:** screening / triage required
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
@@ -18504,3 +18504,25 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Next action:** none owed by this record; transfer to WWOX neural cells is UNVERIFIED.
 **LIT link:** none
 **Note:** class-level record; no individual-level detail. Not medical advice.
+## PAPER 570
+**Short title:** Kosla 2014 — WWOX gain in the T98G glioblastoma line changes a transcript profile; transcript level only, NOT a measurement in a WWOX-deficient neural system
+**Full title:** WWOX modulates the gene expression profile in the T98G glioblastoma cell line rendering its phenotype
+**Authors:** Kosla et al.
+**Year:** 2014
+**Source type:** primary research — cell line expression profiling (microarray, western, 3D culture)
+**Journal/source:** *Oncology Reports* 2014
+**Identifier:** PMID 25051421 / DOI 10.3892/or.2014.3335
+**Status:** processed
+**Record provenance:** created by `CC-20261125-ORCHESTRATOR-ADV234-PAPER570-01` (`BATCH_20261125_001`, IT, Orchestrator, ADV-234) as the PAPER identity record of receipt `FTR-20261124-25051421-01`, which was in the ledger with only a placeholder `CORPUS-STUB-162`; the stub is kept and points here.
+**Evidence depth:** `complete_fulltext_read` (**full text**) — receipt `FTR-20261124-25051421-01`; manifest `deepdive_manifests/PMID25051421.json`; read 2026-11-24 (ADV-218) from the open-access Europe PMC text; the findings and limits live in the manifest and in `RESULT_ADV218_IT_20261124.md` and are not restated further here.
+**Primary pathway:** WWOX-dependent transcript profile in a glioblastoma line (gain of WWOX)
+**Model/species:** T98G human glioblastoma line with WWOX gain
+**Genotype/model:** no WWOX-deficient system; gain of WWOX in a cancer line; no neuron, no Q230P or G372R
+**Transferability:** T4 — transcript-level and cancer-line; no protein-level mTORC1, autophagy or Wnt readout; the alamarBlue result carries no number.
+**clinical relevance:** BACKGROUND (non-neural cancer line). Not medical advice.
+**Claim links:** none
+**Role:** background source for the open rows that ask for protein-level readouts in WWOX-deficient neural cells (NR-01, WO-22); it narrows none of them.
+**Next action:** none owed by this record.
+**LIT link:** none
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
