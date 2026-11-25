@@ -384,6 +384,15 @@
      "accepted_at": "2026-11-25T02:59:03Z",
      "evidence": "result brainstorm_20261116/it_adv248_20261125: NO_HARD_CAP, soft saturation NOT_EXCLUDED, 2021 Fig 5C scale agrees (WSM S 1.67 Hz about 400 per 4 min), P1-P3 met; landing from task/it-adv246-20261125 (merged branch it-adv248)",
      "updated_at": "2026-11-25T02:59:12Z"
+    },
+    {
+     "step": "ADV-247 independence wording: place the unit statements by the ordinary route in the card and investigation consumers; claim text through a candidate; RP rows are ADV's",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-247 independence wording (SCI message 2026-11-25 relayed for ADV; section 4 of RESULT_ADV247)",
+     "accepted_at": "2026-11-25T03:16:04Z",
+     "evidence": "placed: P47T same-mice (K01 J01 L01 INV-16), hippocampal arms (J01 F03 INV-06 INV-15), single-nucleus (INV-15), shRNA (I01 INV-02), organoid clone and batch extended to F02 F03 F04 J01 L01 INV-02 06 07 08 19; translated; candidate CC-20261125-ORCHESTRATOR-ADV247-INDEPENDENCE-01 PROPOSED; H1 consumers are frozen seed tables, not edited; landing from task/it-adv241-20261125",
+     "updated_at": "2026-11-25T03:16:04Z"
     }
    ]
   }
@@ -680,6 +689,13 @@
    "at": "2026-11-25T02:59:03Z",
    "source": "ADV-248 (ADV message 2026-11-25, approved IT proposal; formal record follows)",
    "step_sha256": "175ed52d70da",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T03:16:04Z",
+   "source": "ADV-247 independence wording (SCI message 2026-11-25 relayed for ADV; section 4 of RESULT_ADV247)",
+   "step_sha256": "6e4b64ae911a",
    "reopened_block": false,
    "authorised_by": null
   }
