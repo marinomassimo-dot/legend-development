@@ -688,3 +688,7 @@ branch-dependent exactly as `q230p_structural_mechanism_20260922.md` §9 states.
 🔴 **Nothing here is medical advice.** No dose, route, schedule or clinical framing, for any genotype.
 
 [Update 2026-11-17, CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01 (IT; wording from the closure note IT56-Q05 of SCI, held files only): where this file says P47T protein is normal or at wild-type amount (lines 166), read "present, similar by the authors' wording, not quantified; folded state and stability untested". The inversion of the ddG predictor against the six measurements used P47T as "normal in two matrices": read "present in two matrices"; the inversion is then weaker for P47T and rests on the other measured variants. The original sentences above are not edited. Nothing else in this file changes.]
+
+## Correction note, 2026-11-25 (ADV-276 step 2: SCI reading of PMID 30202070, blind second reading; applied by IT)
+
+`DEC-2`: the statement that chloroquine was negative where bafilomycin was positive in the same primary-fibroblast experiment is true for Supplementary Figure 1b only with its dose and unit: one NPC1 line (I1061T/I1061T), chloroquine 10 µM for 24 h, about 1.3-fold and not significant, against bafilomycin A1 100 nM about 3.2-fold; chloroquine at 40 µM and NH₄Cl were not tested. The trap it names stands as a caution about reagent sensitivity, not as a demonstrated false negative for the 40 µM arm.
