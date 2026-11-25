@@ -1,0 +1,149 @@
+Blind verifier A (legend-delegate, sonnet, effort high; census read-back: claude-sonnet-5-5 28 of 28 turns, effort high 28 of 28, 44,796 output tokens), IT24, 2026-11-25.
+Input: BLIND_PACKET_A_IT24.txt and the whole held ChEMBL answers it names. Report as delivered (final message). Hypothesis level; not medical advice.
+
+**Blind check, packet A: report** (hypothesis level; not medical advice)
+
+I opened only the packet and the raw JSON answers it names, including both clobetasol records. No repository files, git history or outside contact. All held answers read COMPLETE, but each was queried for IC50, Ki, Kd and EC50 rows only. Scripts are in `/home/desktop/.claude/jobs/8e1d62bc/tmp/verA/`. No report file was written.
+
+| Block | Verdict |
+|---|---|
+| A1 clemastine | SUPPORTED-ADD |
+| A2 thyromimetics | SUPPORTED |
+| A3 benztropine / miconazole / clobetasol | MUST CHANGE (miconazole wording; two additions) |
+| A4 bexarotene | SUPPORTED-ADD (important) |
+| A5 GSK-3 | MUST CHANGE |
+| A6 DCA (E03) | MUST CHANGE |
+| A7 DCA (I01) | SUPPORTED-ADD |
+
+---
+
+## A1: SUPPORTED-ADD
+**Confirmed**
+- H1 Ki 0.049 nanomolar (7680257).
+- The 2020 document has M1 20, M5 27.5, M4 54, M3 56 and M2 117 (18838740-44), a 5.9-fold range.
+- No myelination or precursor-differentiation row. The only "myelin" hits are valueless kinase rows with myelin basic protein as substrate.
+
+**Rows that change the reading**
+- A second, undated panel (CHEMBL1909046) gives M4 Ki 2.8, M5 6.0 and M3 8.3 nanomolar (7680291, 7680293, 7680289).
+- Its M1 and M2 rows carry no value (7680284-87).
+- So the M1 indication rests on one document, and within it M5 is only 1.4-fold from M1.
+
+**Suggested addition**
+> a second, undated panel measures M4, M5 and M3 (Ki about 3 to 8 nanomolar) and carries M1 and M2 rows without a value, so the M1 indication rests on the one 2020 document, where M5 is within 1.4-fold of M1; no measured myelination or differentiation row exists in the held IC50, Ki, Kd and EC50 rows
+
+Optional: dopamine D3 Ki is 2.5 nanomolar (7680227), as potent as the strongest muscarinic row.
+
+NOT CHECKED: the primary-paper reading, and the literature link from M1 antagonism to differentiation.
+
+## A2: SUPPORTED
+**Sobetirome**
+- Seven pairs are beta-preferring at 3.4- to 26.5-fold (175864/5, 175867/9, 1225365/6, 2397550/77, 12183383/4, 27844268/71, 26335902/3).
+- One is reversed (14658924/28).
+
+**Tiratricol**
+- Binding ratios are 2.9 and 3.5 (1038855/6, 2056392/459).
+- The 2024 reporter pair is alpha-preferring 2-fold (26335914/5).
+
+**Liothyronine**
+- Seven of the eight sobetirome documents carry a pair, with alpha/beta ratios of 0.49 to 1.0. The 2012 document has none.
+- No myelination row in the three answers beyond the same valueless kinase-substrate rows.
+
+Optional only, because the sentence is already scoped: elsewhere the liothyronine answer has a 3-fold beta-preferring pair (24858591/2) and a 2.5-fold alpha-preferring pair (2187208/10).
+
+## A3: MUST CHANGE
+
+### Miconazole (MUST CHANGE, wording)
+- "The sterol-pathway mechanism ... is not found in the rows" sits beside a human CYP51 inhibition row (2122926, confirmed 200 nanomolar, 2007). It reads as contradictory. What is absent is any sterol-intermediate or differentiation measurement.
+- "No rodent concentration found" is false if read as rows: 732047 (rat aromatase), 1180568 (mouse ABCB1) and 24672716 (rat CYP1A2) exist. If exposure is meant, say so.
+- Add: other human cytochromes are inhibited below the CYP51 value, for example 7754143 (CYP2C19, 16), 25643679 (CYP3A4, 30), 25643675 (CYP2C19, 62) and 23308591 (CYP3A4, 74 nanomolar).
+- "Largest row groups" holds per named human target (CYP3A4 12 rows, ABCB1 11). Whole-organism antimicrobial rows taken together number 36.
+
+**Replacement**
+> MICONAZOLE: a human CYP51 IC50 of 200 nanomolar (lanosterol demethylase assay on enzyme expressed in a cell system, 2007) is among the rows; other human cytochromes (CYP3A4, CYP2C19) are inhibited at lower concentrations in several rows; the largest named human target groups are other cytochromes and a transporter; no row measures sterol intermediates or oligodendrocyte differentiation, so the proposed route from sterol-enzyme inhibition to differentiation is not tested in these rows; no rodent exposure measurement found;
+
+Keep the label sentence after this.
+
+### Clobetasol propionate (SUPPORTED-ADD, strongly advised)
+- 935741 (rat IC50 3.17) is set against 7693085 (human Ki 0.66), an IC50 against a Ki.
+- The same human panel has an IC50 of 1.46 (7693084), so like for like the gap is about 2.2-fold, not about 5-fold.
+
+**Replacement**
+> glucocorticoid receptor IC50 3.17 nanomolar in rat liver cytosol against IC50 1.46 (Ki 0.66) nanomolar in a human panel (about two-fold on IC50; different species and sources)
+
+The parent clobetasol record has no glucocorticoid receptor row.
+
+### Benztropine (numbers correct; small wording fix)
+- The 0.95 row (625603) names no tissue. Only the 0.59 rows (465357, 658596) say rat brain membranes.
+- 0.95 / 0.131 (7617938) is 7.3-fold.
+
+**Replacement**
+> muscarinic M1 Ki of 0.59 and 0.95 nanomolar at rat M1 (the 0.59 rows from rat brain membranes; the 0.95 row names no tissue) and 0.13 nanomolar in a human panel (up to about seven-fold between sources)
+
+Optional: the same human panel has M3 0.27, M4 0.33 and histamine H1 0.37 nanomolar (7617942, 7617944, 7617910), so this is no M1 selectivity.
+
+NOT CHECKED: title-search pharmacokinetic hits, the paediatric label, the over-the-counter label, exposure, and the literature sterol mechanism.
+
+## A4: SUPPORTED-ADD (important)
+**Confirmed**
+- The 1997 Ki values (659009-14) give 3.1- to 30.5-fold, and 3.1- to 8.5-fold against RAR-beta.
+- Every other RAR Ki or Kd is above one micromolar or a bound; the lowest bound is above 550 (216566).
+- RAR-alpha EC50 6 against Ki 5453 (1108538, 1108535).
+- Human RXR-alpha EC50 runs 2.7 to 149 (5207547, 13353390).
+
+**Rows that change the reading**
+1. In the same 1999 document, the RAR-alpha EC50 of 6 is below that document's RXR EC50 values of 28, 25 and 20 (1108544-46). RAR-beta and RAR-gamma EC50 are 282 and 648 (1108539, 1108540).
+2. The three- to thirty-fold contrast is narrow compared with the 1999 binding values: RXR 21 to 36 against RAR 3206 to 5453 (1108535-37, 1108541-43), about 90- to 260-fold. Bound documents give more than about 70-fold at the upper end (1072803 vs 1072800; 1093034 vs 1093031).
+3. Two calorimetry rows give RXR-alpha Kd above one micromolar (14727138, 1890; 15732964, 1590 nanomolar).
+
+**Suggested addition after "not reconciled"**
+> in that same 1999 document this RAR-alpha EC50 is also below its RXR EC50 values (20 to 28 nanomolar), with RAR-beta and RAR-gamma EC50 of 282 and 648 nanomolar, while its binding values favour RXR by about ninety-fold or more; two calorimetry rows elsewhere give an RXR-alpha Kd above one micromolar
+
+## A5: MUST CHANGE
+**Why**
+- **Only three of the five agents have a measured alpha/beta pair.** SB-216763 has none: 3447614 and 25070994 are alpha only, and 3447589 is a mixed alpha/beta value. Tideglusib has only the bounds 17905231 and 17905274.
+- **The range misses a pair.** LY2090314 18963838 / 18963940 (same 2019 document, parallel mutant constructs) gives alpha/beta 0.79, outside "1.0- to 2.5-fold".
+- **Further flagged rows are not mentioned.**
+  - AR-A014418 has a second weak, flagged beta value of 104 micromolar from 2023 (26184476), besides 2011 (6347904).
+  - A 2015 LY2090314 pair of 1.5 and 0.9 micromolar (26228923/4) is flagged "Potential transcription error".
+- **Tideglusib has non-inhibition rows.** One is above ten micromolar even with 15-minute pre-incubation (22489007), and one above thirty (17905274, kinobeads).
+- "Five ... exist" reads as if only five exist.
+
+**Confirmed**
+- Maximum 2.51-fold (CHIR99021, 9591574 / 9653216).
+- 2011 pair 4.7-fold in the other direction (6347904/5).
+- No other pair differs by ten-fold.
+- Tideglusib pre-incubation effect (23213393 vs 23213397).
+
+**Replacement**
+> five non-lithium GSK-3 inhibitors were queried, with beta potencies in vitro from sub-nanomolar to micromolar depending on the document and assay (tideglusib also has bound-only rows above ten and above thirty micromolar; two AR-A014418 beta values above one hundred micromolar, 2011 and 2023, and a 2015 LY2090314 pair of 1.5 and 0.9 micromolar carry database validity flags); a measured alpha-to-beta pair within one document exists only for CHIR99021, LY2090314 and AR-A014418 (SB-216763 has none and tideglusib only bounds), and there alpha is not distinguished from beta or is at most about 2.5-fold weaker (0.8- to 2.5-fold, the low end a pair of LY2090314 mutant-enzyme constructs; the weak 2011 AR-A014418 pair, about 4.7-fold in the other direction, set apart; none shown to separate alpha from beta by an order of magnitude); tideglusib is non-ATP-competitive and time-dependent, so its potency depends on pre-incubation and is not set against the ATP-competitive agents; no ordering of agents is read from these values;
+
+## A6: MUST CHANGE
+**Why**
+- "(the fibroblast EC50 below is sub-millimolar)" implies it is the only one. Four measured rows are sub-millimolar: 1115407 (0.1), 18040544 (0.504), 18040568 (0.727) and 29218524 (0.108 millimolar).
+
+**Replacement for the first sentence**
+> dichloroacetic acid acts at millimolar concentrations in most measured rows read (four are sub-millimolar: PDK2 at 0.50 and PDK4 at 0.73 millimolar in the 2017 document below, PDK4 at 0.108 millimolar in a 2025 one, and a fibroblast EC50 of 100 micromolar).
+
+**Addition that changes the reading of "order differs"**
+- Only PDK2's place moves.
+- PDK4 below PDK1 below PDK3 (by IC50) recurs in both documents carrying all three: 18040476, 18040554, 18040568 and 29218460, 29218515 (a bound), 29218524.
+- "No held row shows ... PDK3 better" should say "document": PDK3 5.56 (18040554) is numerically below the other 2017 document's PDK2 9.0 (18467689).
+
+**Replacement for the order clause**
+> the full isozyme order differs by document and assay because the place of PDK2 changes, so it is not read as a property of the compound; a lower IC50 for PDK4 than for PDK1, and for PDK1 than for PDK3, recurs in the first 2017 and the 2025 documents (the 2025 PDK3 value a bound); no held document shows dichloroacetate inhibiting PDK3 better than another isozyme;
+
+**Otherwise confirmed:** all isozyme values, the eleven-fold range, the second 2017 order, the 2023 bounds, the 1999 bound, and the five 2016 rows at 8.3 to 13.9 millimolar.
+
+**Minor points**
+- There is also a porcine PDK bound above 100 micromolar (19298775), not listed.
+- The 1999 fibroblast EC50 is not flagged, while the 2016 cell rows are. "Flags the 1999 PDK bound and the 2017 and 2025 PDK values" is more exact.
+- "Leukaemia" cannot be checked from the files, which give cell-line names only. From my background knowledge, unverified here, MAVER-1 is usually classed as mantle cell lymphoma. "Blood-cancer cell-line rows" would be safer.
+
+NOT CHECKED: the mouse Pdk3 tissue statement and the genotype-class inference drawn from it.
+
+## A7: SUPPORTED-ADD
+Confirmed: 0.50 to 5.56 millimolar (eleven-fold) and 0.108 to 9.0 millimolar across documents (18467689 is the maximum). The same recurring order as in A6 applies.
+
+**Replacement for the last clause**
+> and the full isozyme order differs by document and assay because the place of PDK2 changes, so it is not read as a property of the compound (a lower IC50 for PDK4 than for PDK1, and for PDK1 than for PDK3, recurs in the two documents that carry all three, one PDK3 value being a bound);
+
