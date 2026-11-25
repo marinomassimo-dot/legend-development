@@ -1122,10 +1122,11 @@
     },
     {
      "step": "SCI-proposed (no idle laboratory): positive-control audit of the ten null-worded repurposing-card notes (DR-A01-003, -004, DR-A02-002, -009, DR-E03-001, DR-H01-001, -003, DR-L01-001, DR-M01-001, DR-P11-006): for each, does the held source carry an activity or engagement check for the manipulation; sentence-level blind check; wording to IT, report to ADV",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "source": "operator standing rule no idle laboratory; proposal sent to ADV 2026-11-25 after ADV-280 (RESULT_ADV280_INC2_SCI_20261125.md section 4)",
-     "accepted_at": "2026-11-25T18:33:39Z"
+     "accepted_at": "2026-11-25T18:33:39Z",
+     "updated_at": "2026-11-25T18:55:12Z"
     }
    ]
   }
