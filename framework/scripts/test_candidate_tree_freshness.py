@@ -394,6 +394,34 @@ class RegenerationCommitsItsCompanions(ToyRepo):
         self.assertEqual(git(self.repo, "status", "--porcelain").split(), ["M", "unrelated.txt"])
 
 
+class RegenerationFollowsADependentSurface(ToyRepo):
+    """A surface that reads another generated surface is stale only after that one is regenerated (coverage/ then ranking.json)."""
+
+    SECOND = "disease-models/toy/registries/second.md"
+
+    def setUp(self) -> None:
+        super().setUp()
+        generator = TOY_GEN.replace("toy_gen.py", "toy_two.py").replace(INPUT, SURFACE)
+        self.assertNotEqual(generator, TOY_GEN)
+        self.write("framework/scripts/toy_two.py", generator)
+        subprocess.run([sys.executable, "framework/scripts/toy_two.py", "--out", self.SECOND], cwd=self.repo, check=True)
+        self.commit("a second surface that reads the first", "framework/scripts/toy_two.py", self.SECOND)
+        patcher = mock.patch.dict(ctf.GENERATORS, {"framework/scripts/toy_two.py": ctf.Generator(
+            inputs=("disease-models/{disease}/registries/toy_surface.md",), check=("--check", "{surface}"),
+            regenerate="python3 framework/scripts/toy_two.py --out {surface}")})
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
+    def test_both_are_regenerated_and_committed(self):
+        before = (self.repo / self.SECOND).read_text()
+        self.write(INPUT, "beta\n")
+        self.commit("input only", INPUT)
+        changed = ctf.regenerate_and_commit(self.repo)
+        self.assertEqual(sorted(changed), sorted([SURFACE, self.SECOND]))
+        self.assertNotEqual(before, (self.repo / self.SECOND).read_text())
+        self.assertEqual(git(self.repo, "status", "--porcelain"), "")
+
+
 def suite_discovery():
     sys.path.insert(0, str(ROOT / "scripts"))
     import test_generated_surfaces_are_regenerated as suite
@@ -478,11 +506,28 @@ class TheRealDeclarations(unittest.TestCase):
     def test_a_registry_edit_triggers_every_declared_surface(self):
         """The claim registry is the sidecar's input, so a claim edit must re-check it."""
         changed = "disease-models/wwox/registries/claim_registry_current.md"
-        for surface, scripts in ctf.declared_surfaces(ROOT).items():
-            for script in scripts:
+        dr = "disease-models/wwox/research/drug_repurposing/"
+        declared = ctf.declared_surfaces(ROOT)
+        # coverage/ is the one declared surface that reads no registry (test_a_card_edit_re_checks_the_coverage)
+        readers = sorted(set(declared) - {dr + "coverage/coverage_matrix.json"})
+        self.assertEqual(["disease-models/wwox/analysis/data/dismech_sidecar_016_024_035.jsonl",
+                          dr + "ranking_it8_p9_20261029/ranking.json"], readers)
+        for surface in readers:
+            for script in declared[surface]:
                 with self.subTest(surface=surface):
                     self.assertEqual([changed], ctf.triggers_for(
                         ROOT, surface, script, ctf.expand_generators(ROOT)[script], [changed]))
+
+    def test_a_card_edit_re_checks_the_coverage(self):
+        """2026-11-25: a stale coverage/ passed every downstream check because nothing on the landing path asked."""
+        dr = "disease-models/wwox/research/drug_repurposing/"
+        surface = dr + "coverage/coverage_matrix.json"
+        scripts = ctf.declared_surfaces(ROOT).get(surface)
+        self.assertEqual({"framework/scripts/repurposing_coverage.py"}, scripts)
+        generator = ctf.expand_generators(ROOT)["framework/scripts/repurposing_coverage.py"]
+        for changed in (dr + "cards/x.card.json", dr + "needs/needs.json", dr + "coverage/assertion_pertinence.tsv", dr + "coverage/priorities.json"):
+            with self.subTest(changed=changed):
+                self.assertEqual([changed], ctf.triggers_for(ROOT, surface, "framework/scripts/repurposing_coverage.py", generator, [changed]))
 
     def test_a_receipt_re_checks_the_ranking(self):
         """HE62: ranking.json stamps the receipt ledger's length; a receipt landing without it turned the release workflow red three times in one day."""
