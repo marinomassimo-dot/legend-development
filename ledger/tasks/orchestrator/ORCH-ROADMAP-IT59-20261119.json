@@ -519,6 +519,15 @@
      "accepted_at": "2026-11-25T08:00:14Z",
      "evidence": "disease-models/wwox/research/commit_candidates/CC-20261125-ORCHESTRATOR-ADV265-WORDING-01.md filed PROPOSED; blind checks pending at propagation; Rempel and ADV-269 excluded",
      "updated_at": "2026-11-25T08:00:14Z"
+    },
+    {
+     "step": "ADV-271: PEO1 WWOX-null vs add-back (PMID 28749468): direction of each stress-response readout vs Drosophila ATF4 (PMID 42909904) and organoid transcripts; consumer R-10; PREREG first",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-25 (ADV-271, brief assignments/ADV-271.md)",
+     "accepted_at": "2026-11-25T08:18:44Z",
+     "evidence": "it_adv271_20261125/RESULT_ADV271_IT_20261125.md; PREREG e24fce981 first; grid C: no stable direction, R-10 UNRESOLVED, time axis added",
+     "updated_at": "2026-11-25T08:22:21Z"
     }
    ]
   }
@@ -920,6 +929,13 @@
    "at": "2026-11-25T08:00:14Z",
    "source": "SCI message 2026-11-25 (ADV-265); checkpoint 16 section 3 item 1",
    "step_sha256": "207b6c5a19bb",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T08:18:44Z",
+   "source": "ADV message 2026-11-25 (ADV-271, brief assignments/ADV-271.md)",
+   "step_sha256": "045f7b24c7e6",
    "reopened_block": false,
    "authorised_by": null
   }
