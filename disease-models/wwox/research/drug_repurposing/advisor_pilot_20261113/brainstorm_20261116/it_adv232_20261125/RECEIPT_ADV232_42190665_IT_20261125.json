@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-25T00:39Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-25T00:42:50Z",
+ "event_id": "FTR-20261125-42190665-01",
+ "evidence_basis": [
+  "coverage_map",
+  "files/fulltext/PMC13293933_PMID42190665_europepmc_fulltext_2026-10-29.xml (sha256 equal to the fingerprint of the latest earlier receipt)",
+  "Results sections 3 and 5, the whole Methods (key resources, model details, behavioural and histology methods, AAV injection, ECoG recording, acquisition and preprocessing, spectral, coherence and Granger analyses) and the quantification and statistics section read in full for the ECoG panel question of ADV-232",
+  "figures: legends read only, no figure image opened; introduction not re-read; no supplementary file held (Figures S1 to S4 are in the Document S1 the paper names)"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv232_20261125/RESULT_ADV232_IT_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261124-42190665-97",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "86388e4f28c11e60b4d81d5e3f0f7ef4e39f2d758ae1dd411906f7951db7aced",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMC13293933_PMID42190665_europepmc_fulltext_2026-10-29.xml",
+ "study_id": {
+  "doi": "10.1016/j.xcrm.2026.102832",
+  "pmid": "42190665"
+ },
+ "workflow": "IT ADV-232, reading frozen by a PREREG committed before the ECoG section was read; held Europe PMC text read directly; no contact, no e-mail to any service, no paid route."
+}
