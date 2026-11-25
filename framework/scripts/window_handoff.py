@@ -197,9 +197,19 @@ def selected_line(screen: str) -> str:
     return next((line for line in screen.splitlines() if POINTER in line), "")
 
 
-def shows(line: str, name: str) -> bool:
-    """The pointer line carries this name: its readable tail, ended by a space or the end of the line."""
-    return re.search(re.escape(name[-NAME_TAIL:]) + r"(\s|$)", line) is not None
+def shows(line: str, name: str, end: str = r"(\s{2,}|\s*$)") -> bool:
+    """The row's NAME COLUMN (pointer, state glyph, name) is this name, whole or cut with '…' keeping its readable tail.
+    The summary on the same line never counts: on 2026-11-25 the old window's summary named the successor's temporary name and the old row was renamed."""
+    row = re.match(r"^[\s" + POINTER + r"]*[^\w\s…]\s+", line)
+    if not row:
+        return False
+    cell = line[row.end():]
+    if re.match(re.escape(name) + end, cell):
+        return True
+    head, cut, rest = cell.partition("…")
+    if not cut or len(name) <= NAME_TAIL or not name.startswith(head):
+        return False
+    return any(re.match(re.escape(name[-size:]) + end, rest) for size in range(len(name) - len(head) - 1, NAME_TAIL - 1, -1))
 
 
 def rename_row(view, current: str, wanted: str, steps: int = 80) -> str:
@@ -218,7 +228,7 @@ def rename_row(view, current: str, wanted: str, steps: int = 80) -> str:
     view.key("C-k")
     view.type(wanted)
     line = selected_line(view.screen())
-    if not shows(line, wanted):
+    if not shows(line, wanted, end=r"(\s|$)"):       # while typing, a name longer than the column may leave one space
         view.key("Escape")
         raise Refused(f"typed name not on the selected row; nothing saved. Seen: {line[:100]!r}")
     view.key("Enter")
@@ -243,7 +253,9 @@ def rename_plan(sessions: list[dict], role: str, old: dict, new: dict) -> list[t
 
 
 def unambiguous(sessions: list[dict], name: str) -> None:
-    same = [s.get("name") for s in sessions if shows(str(s.get("name", "")), name)]
+    tail = name[-NAME_TAIL:]
+    same = [s.get("name") for s in sessions
+            if s.get("name") == name or (len(name) > NAME_TAIL and str(s.get("name", "")).endswith(tail))]
     if len(same) != 1:
         raise Refused(f"'{name}' selects {len(same)} rows by its last {NAME_TAIL} characters ({same}); rename that one by hand")
 
@@ -276,6 +288,11 @@ def rename(args, root: Path, say=print, listing=inventory, view_factory=Tmux, st
                 break
             time.sleep(args.settle)
         say(f"proof {label:<7} listing now names {session['sessionId'][:8]} '{named}'  {'OK' if named == wanted else 'NOT AS PLANNED'}")
+        after = {s["sessionId"]: s.get("name") for s in listing()}
+        others = [f"{s['sessionId'][:8]} '{s.get('name')}' -> '{after[s['sessionId']]}'" for s in before
+                  if s["sessionId"] != session["sessionId"] and after.get(s["sessionId"], s.get("name")) != s.get("name")]
+        if others:
+            raise Refused(f"{label}: ANOTHER ROW CHANGED NAME, repair by hand before anything else: {'; '.join(others)}")
         if named != wanted:
             raise Refused(f"{label} not proved by the listing; later steps not run")
 
