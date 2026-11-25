@@ -1452,10 +1452,12 @@
     },
     {
      "step": "Ten-landing read of the concurrent checks: median lock held after (logs with LANDING CHECKS parallel) against the frozen 250 s before; remove the NOTICE if kept (HE_LANDING_PARALLEL_20261125.md section 5)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad GO condition 5, 2026-11-25",
-     "accepted_at": "2026-11-25T20:08:15Z"
+     "accepted_at": "2026-11-25T20:08:15Z",
+     "evidence": "HE_LANDING_PARALLEL_20261125.md section 7: first ten published parallel landings, median lock held 138.5 s against 250 s, median 6 suites both; no red or refusal in the logs; PARALLEL_NOTICE removed from safe_push.py (test_safe_push.py 52 tests OK); ADV counted it",
+     "updated_at": "2026-11-25T20:44:40Z"
     }
    ]
   }
