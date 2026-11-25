@@ -59,7 +59,7 @@ R = [
   "F02: write 'oligodendrocyte-lineage markers (SOX10, MOG, OLIG1) below 1 CPM; PLP1 is 48 to 198 CPM (isoforms not resolved)'"),
  ("H1", "Hussain 2019 (PMID 30290271): RNA-seq on neurospheres, qRT-PCR on hippocampus", "neurospheres 2 KO v 3 WT; hippocampi 4 v 4; no identifiers", "2 v 3 and 4 v 4",
   "Grin2c, Grm3 and Kcna2 transcripts down", "trigger T19; trigger T20", 2, NO,
-  "no per-animal values; no accession in the article text", NT,
+  "no per-animal values in the article, no accession in its text; the DEG supplement read in August (receipt FTR-20260806-30290271-01) is absent from this checkout and was not reopened; arm of 2 either way", NT,
   "T19: 'Grin2c and Grm3 transcripts down (qRT-PCR, 4 v 4 whole hippocampus; discovery RNA-seq on neurospheres 2 v 3)'; it is not 'NMDA receptor, glutamate receptor and Kv channel genes' as families. Kcna2 belongs to T20"),
  ("O2", ORG, ORGU, ORGN, "ATF4/ISR target set lower", "investigation INV-02; card E01", 2, NO,
   "-0.30; all 4 KO below both WT", NT, "keep 'exploratory, 4 v 2'"),
