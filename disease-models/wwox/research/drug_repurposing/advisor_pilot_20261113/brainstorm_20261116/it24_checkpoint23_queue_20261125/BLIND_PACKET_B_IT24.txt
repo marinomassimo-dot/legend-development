@@ -176,3 +176,27 @@ Held source files (root path /home/desktop/legend-development/files/ unless a re
 - /home/desktop/legend-development/files/fulltext/PMID34634460_Wwox_osc2021_PMC_r2.xml
 - /home/desktop/legend-development/files/supplement/PMID34634460_r2/ (mmc1.docx, mmc1_text.txt)
 - /home/desktop/legend-development/files/figures/PMID34634460_r2/
+
+## DR-D01-001
+
+Check: every clause of the note and of the three further card sentences below (values by eye or measured, n, unit, which arm, what the paper states or lacks; whether the smallest-detectable-difference statement follows from the plotted spread).
+
+Row fields: target_id: SOX2+MYC+ progenitor fraction; endpoint: fraction of SOX2+MYC+ progenitors in organoid sections; direction: DECREASE
+
+> Treated knockout organoids: SOX2+MYC+ about 73 percent (knockout) to about 51 with A51, significant against the untreated knockout and not significant against wild type (untreated wild type about 49, vehicle wild type about 46; Supplementary Fig. 7F, one-way ANOVA with Tukey), but this is a non-significant P, not equivalence: the paper gives no margin, power calculation or interval; the legend n is 4, 4, 6 and 7 organoids from one experiment while about 6, 11, 24 and 15 points are plotted (the unit entered into the ANOVA is not stated); from the plotted spread the smallest detectable difference from wild type is about 18 to 32 percentage points against a knockout-minus-wild-type effect of about 24 to 27, so normalisation is not supported. SOX2+ about 60 to about 33, same pattern (the paper's text: 'a marked reduction in both progenitor populations'). The comparison with the untreated knockout therefore exists (corrected IT6 P2: an earlier note said treated versus wild type only). No treated wild-type arm, no knockout vehicle arm, one dose (125 nanomolar), no randomisation or blinding, one of the three experiments the paper excludes from independent differentiations. The compound suppresses two pathways (Wnt and MYC): causal attribution to MYC inherits the ambiguity. [IT 2026-11-25, ADV-284]
+
+Other sentences of the same card:
+> Restoration of cortical neurogenesis in a WWOX-deficient neural model; progenitor fractions fall with the compound (not significant against wild type, which does not show restoration), layer-neuron production is not recovered.
+> UNKNOWN for WWOX; in the organoid, the progenitor fractions fell (not significant against wild type, which does not show normalisation) and layer-neuron production did not move.
+> Progenitor identity and pan-neuronal marking (NeuN) read as recovered in the discovery ledger in the knockout organoid; not significant against wild type is not equivalence, and for SOX2+MYC+ the smallest detectable difference (about 18 to 32 percentage points) is close to or above the knockout effect itself (about 24 to 27).
+
+Source label the repository gives: DL-THER-089 (same experiment; PMID 42397075)
+
+Held source files (the whole source, every panel of the figure and the whole legend, not only the quoted values):
+- /home/desktop/legend-development/files/fulltext/PMID42397075_Steinberg2026_OUP-Supplement/brain-2025-03809-File010.pdf : Supplementary Figures; Supplementary Figure 7 is on pdf page 12 (all panels A-G) with its legend on page 13
+- /home/desktop/legend-development/files/fulltext/PMID42397075_Steinberg2026_OUP-Supplement/brain-2025-03809-File009.pdf and .txt : Supplementary Methods (organoids, MYC inhibition, immunostaining, quantification, statistics)
+- /home/desktop/legend-development/files/fulltext/PMID42397075_Steinberg2026_OUP-Supplement/brain-2025-03809-File008.pdf/.txt, File011, File012 (other supplementary files; the supplementary tables and reagents)
+- /home/desktop/legend-development/files/fulltext/PMID42397075_Steinberg2026_OUP-AM.pdf and PMID42397075_Steinberg2026_OUP-AM_fitz.txt : accepted manuscript (the MYC inhibition paragraph is in the Results)
+
+A ledger note that would be appended under the same entry (check it too):
+> 🔵 **Append-only, 2026-11-25 (SCI, ADV-284; blind-checked; read through the table above).** The two rows read "normalised (`ns` vs WT)" for SOX2⁺ and SOX2⁺MYC⁺ say more than the panel bears. A non-significant difference from wild type is **not equivalence**: the paper gives no margin, power calculation or interval. For SOX2⁺MYC⁺ (Supplementary Fig. 7F; knockout about 73 %, with A51 about 51 %, untreated wild type about 49 %, vehicle wild type about 46 %, measured from the figure) the legend n is 4, 4, 6 and 7 organoids from one experiment while about 6, 11, 24 and 15 points are plotted, and the unit entered into the ANOVA is not stated; from the plotted spread the smallest detectable difference from wild type is about 18 to 32 percentage points against a knockout-minus-wild-type effect of about 24 to 27. The treated arm differs from the untreated knockout; **normalisation is not supported**. There is no knockout vehicle arm and no treated wild-type arm. The sentence below the table, "restores progenitor identity", is read with the same limit. Record: `drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv284_equivalence_margin_audit_sci_20261125/RESULT_ADV284_SCI_20261125.md`.

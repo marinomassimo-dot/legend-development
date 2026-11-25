@@ -34,3 +34,19 @@ S = (" [IT 2026-11-25, ADV-283, SCI's blind-checked wording] "
      "The mouse arms are not a like-for-like test of the human organoid.")
 e("U06", E03, "append", "EXPLORATORY NEGATIVES: transcripts are not PDH activity", S)
 e("U07", I01, "append", "The maturity confound of this deposit applies.", S)
+
+# ADV-284: SCI's corrected sentence for card D01, row DR-D01-001 (RESULT_ADV284_SCI_20261125.md section 3; units written in words), and the three
+# other places of the same card that read a non-significant difference as restoration (IT's wording).
+D01 = "D01_a51"
+e("V01", D01, "replace",
+  "Treated knockout organoids: SOX2+MYC+ about 72 percent (knockout) to about 50 with A51, significant against the untreated knockout and not significant against wild type; SOX2+ about 60 to about 33, same pattern (Supplementary Fig. 7F; the paper's text: 'a marked reduction in both progenitor populations'). The comparison with the untreated knockout therefore exists (corrected IT6 P2: an earlier note said treated versus wild type only). No treated-wild-type arm, no dose-response, no randomisation or blinding, one of three experiments the paper excludes from independent differentiations. The compound suppresses two pathways: causal attribution to MYC inherits the ambiguity.",
+  "Treated knockout organoids: SOX2+MYC+ about 73 percent (knockout) to about 51 with A51, significant against the untreated knockout and not significant against wild type (untreated wild type about 49, vehicle wild type about 46; Supplementary Fig. 7F, one-way ANOVA with Tukey), but this is a non-significant P, not equivalence: the paper gives no margin, power calculation or interval; the legend n is 4, 4, 6 and 7 organoids from one experiment while about 6, 11, 24 and 15 points are plotted (the unit entered into the ANOVA is not stated); from the plotted spread the smallest detectable difference from wild type is about 18 to 32 percentage points against a knockout-minus-wild-type effect of about 24 to 27, so normalisation is not supported. SOX2+ about 60 to about 33, same pattern (the paper's text: 'a marked reduction in both progenitor populations'). The comparison with the untreated knockout therefore exists (corrected IT6 P2: an earlier note said treated versus wild type only). No treated wild-type arm, no knockout vehicle arm, one dose (125 nanomolar), no randomisation or blinding, one of the three experiments the paper excludes from independent differentiations. The compound suppresses two pathways (Wnt and MYC): causal attribution to MYC inherits the ambiguity. [IT 2026-11-25, ADV-284]")
+e("V02", D01, "replace",
+  "progenitor identity is restored, layer-neuron production is not.",
+  "progenitor fractions fall with the compound (not significant against wild type, which does not show restoration), layer-neuron production is not recovered.")
+e("V03", D01, "replace",
+  "in the organoid, progenitor identity normalised and layer-neuron production did not.",
+  "in the organoid, the progenitor fractions fell (not significant against wild type, which does not show normalisation) and layer-neuron production did not move.")
+e("V04", D01, "replace",
+  "not significant against wild type is not equivalence.",
+  "not significant against wild type is not equivalence, and for SOX2+MYC+ the smallest detectable difference (about 18 to 32 percentage points) is close to or above the knockout effect itself (about 24 to 27).")
