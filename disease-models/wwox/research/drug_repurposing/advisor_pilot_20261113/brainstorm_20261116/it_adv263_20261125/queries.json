@@ -1,0 +1,284 @@
+[
+ {
+  "route": "PubMed E-utilities",
+  "key": "q08",
+  "query": "(ulixacaltamide OR \"PRAX-944\" OR apinocaltamide OR \"ACT-709478\" OR \"TTA-A2\") AND (neonatal OR juvenile OR pup OR pediatric) AND (brain OR pharmacokinetics)",
+  "count": 1,
+  "run_utc": "2026-11-25T06:00Z",
+  "ids": [
+   "42274296"
+  ]
+ },
+ {
+  "route": "PubMed E-utilities",
+  "key": "q36",
+  "query": "(WWOX OR \"WW domain-containing oxidoreductase\") AND (ACTH OR corticotropin OR corticosteroid OR prednisolone OR steroid) AND (spasms OR epilepsy OR encephalopathy)",
+  "count": 5,
+  "run_utc": "2026-11-25T06:00Z",
+  "ids": [
+   "38407561",
+   "32389029",
+   "32581702",
+   "25537520",
+   "15126504"
+  ]
+ },
+ {
+  "route": "PubMed E-utilities",
+  "key": "q38",
+  "query": "(WWOX OR \"WW domain-containing oxidoreductase\") AND (cannabidiol OR cannabinoid OR Epidiolex)",
+  "count": 0,
+  "run_utc": "2026-11-25T06:00Z",
+  "ids": []
+ },
+ {
+  "route": "PubMed E-utilities",
+  "key": "q42",
+  "query": "(WWOX OR \"WW domain-containing oxidoreductase\") AND (proteasome OR lysosome OR \"protein degradation\" OR \"protein stability\") AND (missense OR variant OR mutant)",
+  "count": 2,
+  "run_utc": "2026-11-25T06:00Z",
+  "ids": [
+   "41124647",
+   "37328865"
+  ]
+ },
+ {
+  "route": "PubMed E-utilities",
+  "key": "q87",
+  "query": "(WWOX OR \"WW domain-containing oxidoreductase\" OR \"Wox1 knockout\") AND (creatinine OR \"renal tubular\")",
+  "count": 0,
+  "run_utc": "2026-11-25T06:00Z",
+  "ids": []
+ },
+ {
+  "route": "PubMed E-utilities",
+  "key": "q93",
+  "query": "(WWOX OR \"WW domain-containing oxidoreductase\") AND biomarker AND (validation OR validated)",
+  "count": 12,
+  "run_utc": "2026-11-25T06:00Z",
+  "ids": [
+   "41228229",
+   "41141138",
+   "39955305",
+   "39322821",
+   "35383826",
+   "36553611",
+   "34204789",
+   "33854788",
+   "30385613",
+   "29100284",
+   "24585490",
+   "22806168"
+  ]
+ },
+ {
+  "route": "PubMed E-utilities",
+  "key": "q55",
+  "query": "(WWOX OR \"WW domain-containing oxidoreductase\") AND (pannexin OR probenecid OR \"brilliant blue\" OR mefloquine)",
+  "count": 0,
+  "run_utc": "2026-11-25T06:01Z",
+  "ids": []
+ },
+ {
+  "route": "PubMed E-utilities",
+  "key": "q57",
+  "query": "(WWOX OR \"WW domain-containing oxidoreductase\") AND (memantine OR \"NMDA antagonist\" OR ketamine)",
+  "count": 0,
+  "run_utc": "2026-11-25T06:01Z",
+  "ids": []
+ },
+ {
+  "route": "PubMed E-utilities",
+  "key": "q58",
+  "query": "(WWOX OR \"WW domain-containing oxidoreductase\") AND (mTOR OR mTORC1 OR rapamycin OR \"S6 kinase\" OR \"4E-BP1\")",
+  "count": 8,
+  "run_utc": "2026-11-25T06:01Z",
+  "ids": [
+   "41963310",
+   "37615513",
+   "36621327",
+   "33300063",
+   "31966718",
+   "24008736",
+   "23666471",
+   "22819381"
+  ]
+ },
+ {
+  "route": "PubMed E-utilities",
+  "key": "q63",
+  "query": "(WWOX OR \"WW domain-containing oxidoreductase\") AND (tankyrase OR \"GSK3 inhibitor\" OR \"XAV939\" OR tideglusib)",
+  "count": 2,
+  "run_utc": "2026-11-25T06:01Z",
+  "ids": [
+   "42790938",
+   "37248434"
+  ]
+ },
+ {
+  "route": "PubMed E-utilities",
+  "key": "q70",
+  "query": "(Zfra) AND (brain OR toxicity OR pharmacokinetics OR child OR pediatric)",
+  "count": 8,
+  "run_utc": "2026-11-25T06:01Z",
+  "ids": [
+   "35883580",
+   "34359949",
+   "32764489",
+   "30158849",
+   "29310447",
+   "29067327",
+   "27999774",
+   "15629131"
+  ]
+ },
+ {
+  "route": "PubMed E-utilities",
+  "key": "q79",
+  "query": "(WWOX OR \"WW domain-containing oxidoreductase\") AND (ErbB4 OR \"ERBB4\" OR neuregulin) AND (neuron OR neural OR brain OR astrocyte OR microglia OR interneuron)",
+  "count": 1,
+  "run_utc": "2026-11-25T06:01Z",
+  "ids": [
+   "20535528"
+  ]
+ },
+ {
+  "route": "PubMed E-utilities",
+  "key": "q91",
+  "query": "(WWOX OR \"WW domain-containing oxidoreductase\") AND (Tyr33 OR \"tyrosine 33\" OR \"Y33\") AND (localization OR translocation OR sequestration OR cytoplasm)",
+  "count": 13,
+  "run_utc": "2026-11-25T06:01Z",
+  "ids": [
+   "35984507",
+   "27339895",
+   "24899407",
+   "19484134",
+   "18460020",
+   "17567906",
+   "16219768",
+   "16115915",
+   "15580310",
+   "15664696",
+   "15548692",
+   "15070730",
+   "14555208"
+  ]
+ },
+ {
+  "route": "PubMed E-utilities",
+  "key": "q49",
+  "query": "Hcar2 microglia expression astrocytes neurons RNA-seq mouse brain",
+  "count": 1,
+  "run_utc": "2026-11-25T06:01Z",
+  "ids": [
+   "38106160"
+  ]
+ },
+ {
+  "route": "Europe PMC REST",
+  "key": "e55",
+  "query": "(WWOX) AND (\"pannexin\" OR \"probenecid\" OR \"brilliant blue FCF\")",
+  "count": 11,
+  "run_utc": "2026-11-25T06:03Z",
+  "ids": [
+   "34634460",
+   "40314374",
+   "34831305",
+   "33113804",
+   "42394985",
+   "32741357",
+   "38909013",
+   "25561905",
+   "34468792",
+   "19956559",
+   "PMC3684198"
+  ]
+ },
+ {
+  "route": "Europe PMC REST",
+  "key": "e57",
+  "query": "(TITLE:WWOX OR ABSTRACT:WWOX) AND (memantine)",
+  "count": 0,
+  "run_utc": "2026-11-25T06:03Z",
+  "ids": []
+ },
+ {
+  "route": "Europe PMC REST",
+  "key": "e38",
+  "query": "(TITLE:WWOX OR ABSTRACT:WWOX) AND (cannabidiol)",
+  "count": 1,
+  "run_utc": "2026-11-25T06:03Z",
+  "ids": [
+   "36779245"
+  ]
+ },
+ {
+  "route": "Europe PMC REST",
+  "key": "e87",
+  "query": "(TITLE:WWOX OR ABSTRACT:WWOX) AND (creatinine) AND (knockout OR mutant OR null)",
+  "count": 2,
+  "run_utc": "2026-11-25T06:03Z",
+  "ids": [
+   "35712340",
+   "34831305"
+  ]
+ },
+ {
+  "route": "Europe PMC REST",
+  "key": "e79",
+  "query": "(TITLE:WWOX OR ABSTRACT:WWOX) AND (ErbB4) AND (neuron OR \"neural\" OR interneuron OR astrocyte)",
+  "count": 20,
+  "run_utc": "2026-11-25T06:03Z",
+  "ids": [
+   "36271927",
+   "31543760",
+   "32389029",
+   "35883580",
+   "32581702",
+   "33718178",
+   "30285739",
+   "29310447",
+   "41154849",
+   "25681467",
+   "36975604",
+   "25432984",
+   "26499798",
+   "25595185",
+   "37501399",
+   "24369382",
+   "25051421",
+   "25537520",
+   "25300511",
+   "30805310"
+  ]
+ },
+ {
+  "route": "Europe PMC REST",
+  "key": "e63",
+  "query": "(TITLE:WWOX OR ABSTRACT:WWOX) AND (tankyrase OR XAV939 OR tideglusib OR \"GSK3 inhibitor\")",
+  "count": 6,
+  "run_utc": "2026-11-25T06:03Z",
+  "ids": [
+   "42790938",
+   "41228229",
+   "37248434",
+   "38499540",
+   "PPR583966",
+   "31123603"
+  ]
+ },
+ {
+  "route": "Europe PMC REST",
+  "key": "e70",
+  "query": "(\"Zfra\") AND (pharmacokinetics OR neonatal OR pediatric OR paediatric)",
+  "count": 5,
+  "run_utc": "2026-11-25T06:04Z",
+  "ids": [
+   "34831305",
+   "31884567",
+   "30746283",
+   "30805310",
+   "34468792"
+  ]
+ }
+]
