@@ -37,7 +37,7 @@ Why: ADV asked for it after ADV-249 because this window (session `ac5ef625-1ebc-
 * With an exon 9 acceptor-site allele, what does the exon 8 to 9 amplicon of PMID 26857392 actually lose (skipping, retention, cryptic site, alternative end)? Answered by RT-PCR from exon 7 into the 3' UTR, or long reads, on carrier and control RNA with and without blocking nonsense-mediated decay.
 
 **Elsewhere**
-* HE's ADV-252 fix for the red suite `test_no_closed_world_assertions_on_live_state.py` (from `test_landing_suites.py`) was not on main at 1bb57cbbbcc1; HE sends one line when it is. Do not repair it. CI #2352 on that SHA was queued.
+* HE's ADV-252 fix for the red suite `test_no_closed_world_assertions_on_live_state.py` is on main (commit 860d14108, merged at f0daa0213). Its CI conclusion was not checked here.
 * Open questions ADV228-Q02 (no held source). Standing waits of AC section 4 and its addendum are unchanged (S540E and E-MTAB-14792 not before 2026-12-06; AES poster 5 December 2026; RP-004 Sze 2004; RP-038; RP-018; RP-044; SCI-L).
 * Optional, not assigned: all-pairs leave-two-out control for ADV-233.
 
