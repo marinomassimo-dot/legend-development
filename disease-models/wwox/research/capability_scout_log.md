@@ -3453,3 +3453,6 @@ verify routing and schema behaviour; universal future model obedience is not dem
 ## 2026-11-25 - SCI (ADV-283): CHANGE = NONE
 
 Gap: none beyond the one recorded under ADV-282; the merged-table column-total check is one line of the analysis script's pattern and is carried by the self-evaluation addendum. No external search, no spend.
+
+### 2026-11-25, SCI, ADV-282 increment 3
+Gap: a first reading that grades facts misses wording errors that follow from the sentence's own numbers. CHANGE = NONE in the harness: a column in the first-reading TSV ("sentence arithmetic against its own numbers", filled before any source is opened) is the fix, used from increment 4. A table printer for Table S1-style transposed clinical sheets (one column per individual) would have saved two extraction rounds; candidate for HE, not requested.
