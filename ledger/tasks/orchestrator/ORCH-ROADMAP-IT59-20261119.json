@@ -326,6 +326,13 @@
      "owner": "orchestrator",
      "source": "ADV-225 (ADV message 2026-11-24)",
      "accepted_at": "2026-11-24T23:40:44Z"
+    },
+    {
+     "step": "ADV-230: responder table behind 41489401 Table 1 (IT-A), PREREG first, disposition a/b/c, attach to WO-10 by the ordinary route",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-230 (ADV message 2026-11-24)",
+     "accepted_at": "2026-11-25T00:04:24Z"
     }
    ]
   }
@@ -580,6 +587,13 @@
    "at": "2026-11-24T23:40:44Z",
    "source": "ADV-225 (ADV message 2026-11-24)",
    "step_sha256": "133e2c37010b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T00:04:24Z",
+   "source": "ADV-230 (ADV message 2026-11-24)",
+   "step_sha256": "c113f3214d94",
    "reopened_block": false,
    "authorised_by": null
   }
