@@ -6091,7 +6091,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 2810
+   "receipt_ledger_lines": 2820
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -13461,7 +13461,7 @@
    ],
    "exploratory_it7": "None from P3 (a receptor-physiology question, not a transcript module; memantine and perampanel are card-linked and firewalled). P2: memantine and perampanel are usable by the network method (signed antagonist actions on GRIN and GRIA targets) and have no neural LINCS signature, so the signature method does not apply; the need has 179 linked records by targ…",
    "inputs": {
-    "T1_cards": "6c3d512235c1b0a6",
+    "T1_cards": "89ce02e681f478ae",
     "T2_pertinence": "4744af9e5e721d31",
     "T3_receipts": "042e1e189d99e383",
     "T4_needs": "a9f2ecba72fedb1c",

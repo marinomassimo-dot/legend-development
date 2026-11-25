@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T13:55Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T13:55:06Z",
+ "event_id": "FTR-20261125-40925365-01",
+ "evidence_basis": [
+  "coverage_map",
+  "targeted reading by two blind delegates (sonnet, high) plus the reader's own checks of the pivotal items: neutral extraction of cell-number and fitting statements, Fig S3E,F, figure and table list; no judgement made."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276b_lead_receipts_sci_20261125/RESULT_ADV276_STEP2_BATCH2_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261123-40925365-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "512420ac62ca063169affd0fc05a4543e40ad764b4146b36188dd6d021ecb845",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40925365_ADV272_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1016/j.celrep.2025.116217",
+  "pmid": "40925365"
+ },
+ "workflow": "SCI ADV-276 step 2 batch 2 (not a complete read)"
+}

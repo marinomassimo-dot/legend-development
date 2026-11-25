@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3558,
+    "forbidden-name": 3569,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -545,8 +545,8 @@
    "sha256": "ce6624ae2a6b1c2bf18a83d6d914b6bf41813a6fe0038c7fdeae8bffc72a1a68"
   },
   "TEXT_PROVENANCE.json": {
-   "bytes": 2161,
-   "sha256": "28ff2a8cfcb67a94cf6b6d82ba5a0e3aa5dda1ab5ac981f09cf3d4b64d43e8cc"
+   "bytes": 2162,
+   "sha256": "4c3af785cc0331f0c280fc1ea22cec64b9c3efa90194f3a9c6351fecc9ff592f"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -561,8 +561,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5062584,
-   "sha256": "66045df7705b725b63eb54877699b287b5207c99bdca57dbc90add0b00af3ac0"
+   "bytes": 5068026,
+   "sha256": "c0d98f24b69cb379128bf1943280d49494f9546a505d670fbd8725740120f192"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 168171,

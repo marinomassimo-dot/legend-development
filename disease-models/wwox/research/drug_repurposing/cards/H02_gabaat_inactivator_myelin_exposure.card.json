@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "ee16845691dcb425a8fce6a76f42b16e9bd6048ef4391c036a84ad56c62a2ccc",
+  "input_sha256": "3d65deff0334f01e1e4e48e2cda73a57055fef7ad61d9bad6bf19bb17c788ac1",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -605,7 +605,7 @@
           "developmental_stage": "infancy; exposure began at or below 12 months in most"
         },
         "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "38 of 172 imaged children (22.1 percent) had the finding; the rate is per imaged child and 143 exposed children without an eligible examination were excluded; by aetiology 8 of 80 with tuberous sclerosis against 30 of 92 with other causes. A frequency in a selected cohort, not attributable risk in WWOX and not a WWOX denominator."
+        "note": "38 of 172 imaged children (22.1 percent) had the finding; the rate is per imaged child and 143 exposed children without an eligible examination were excluded; by aetiology 8 of 80 with tuberous sclerosis against 30 of 92 with other causes. A frequency in a selected cohort, not attributable risk in WWOX and not a WWOX denominator. Rapamycin association and the exposure figures of this cohort: see DR-H02-013 (ADV-276, 2026-11-25)."
       },
       {
         "id": "DR-H02-013",
@@ -625,7 +625,7 @@
           "developmental_stage": "infancy"
         },
         "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "Neither age at first exposure nor exposure during infancy was associated; peak amount, cumulative amount and days of exposure were not among the independent factors. Because exposure began almost entirely under 12 months, the cohort cannot test a within-infancy window, so the direction is UNKNOWN, not NO_CHANGE."
+        "note": "Neither age at first exposure nor exposure during infancy was associated; peak amount, cumulative amount and days of exposure were not among the independent factors. Because exposure began almost entirely under 12 months, the cohort cannot test a within-infancy window, so the direction is UNKNOWN, not NO_CHANGE. Full text (ADV-276, 2026-11-25, receipt FTR-20261125-36601084-01): concomitant rapamycin (60 children, all in the tuberous sclerosis group, none in the other group) is associated with lower odds of the abnormality (multivariate odds ratio 0.152, 95 percent interval 0.028 to 0.715, p = 0.019, Table 3); observational, and not separable from aetiology. The cohort-wide exposure of 170 +/- 12 days does not reconcile with the subgroup means (261 days, 80 children; 134 days, 92 children; weighted 193); peak dose shows the same mismatch (cohort 103.5, weighted subgroup mean 97.8). Not written as 'protective'."
       },
       {
         "id": "DR-H02-014",
@@ -745,7 +745,7 @@
           "developmental_stage": "9 days to 22 months at first exposure across groups"
         },
         "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "A diffusion metric of the optic nerve is not a myelination measurement, and the tract is also the retinotoxicity target; the target here is therefore the metric, not CNS_myelination. Fractional anisotropy was lower in the group with the deep-grey finding than in unexposed controls and rose after stopping; the diffusion coefficient was unchanged."
+        "note": "A diffusion metric of the optic nerve is not a myelination measurement, and the tract is also the retinotoxicity target; the target here is therefore the metric, not CNS_myelination. Fractional anisotropy was lower in the group with the deep-grey finding than in unexposed controls and rose after stopping; the diffusion coefficient was unchanged. Full text (ADV-276, 2026-11-25, receipt FTR-20261125-40670421-01): the rise after stopping is Table 3, six of the 11 children of the imaging-finding group (left 0.273 to 0.367, p = 0.044; right 0.286 to 0.437, p = 0.050, which is not below 0.05 although the text says P < 0.05), with no unexposed time control. In Table 2 the exposed group with normal imaging is not significantly below controls (right median 0.463 against 0.427; left 0.390 against 0.410); the starred difference is the imaging-finding group against controls. Medians with quartiles are reported while the test named is a one-way analysis of variance."
       },
       {
         "id": "DR-H02-020",
@@ -905,7 +905,7 @@
           "developmental_stage": "dosing from postnatal day 4, or a single injection at postnatal day 7"
         },
         "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "Histology scored cortical and hippocampal injury only; no myelin, white-matter or MRI endpoint appears anywhere in the article, so the sibling's white-matter endpoint is unmeasured here. CPP-115 only, not vigabatrin."
+        "note": "Histology scored cortical and hippocampal injury only; no myelin, white-matter or MRI endpoint appears anywhere in the article, so the sibling's white-matter endpoint is unmeasured here. CPP-115 only, not vigabatrin. Full text (ADV-276, 2026-11-25, receipt FTR-20261125-24321005-01; main text, supplement not opened): hippocampal histology on 23 brains (8 vehicle, 10 at the lowest dose, 5 at the middle dose). 81 rats were included across vehicle (33) and the CPP-115 low (14), middle (25) and highest (9) dose groups, plus 9 no-surgery controls; the highest-dose group was not assessed after postnatal day 6 because 8 of 9 rats had died by day 7, so no postnatal day 20 histology exists at that dose (our inference: histology was at day 20)."
       },
       {
         "id": "DR-H02-028",
@@ -1045,7 +1045,7 @@
           "developmental_stage": "age not stated; two days of exposure"
         },
         "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "The sibling was below the assay's lower limit of quantitation in brain as well as in the eye, so the comparison supports no brain inference in either direction. The standard toxicology package of OV329 is stated to be described in an earlier conference report that was not retrieved, so the sibling's white-matter endpoint is unmeasured by any reachable route; the toxicology package itself was not read."
+        "note": "The sibling was below the assay's lower limit of quantitation in brain as well as in the eye, so the comparison supports no brain inference in either direction. The standard toxicology package of OV329 is stated to be described in an earlier conference report that was not retrieved, so the sibling's white-matter endpoint is unmeasured by any reachable route; the toxicology package itself was not read. Full text (ADV-276, 2026-11-25, receipt FTR-20261125-42470358-01): male mice, two-day subcutaneous infusion; n per group not stated in the passage read; values mean +/- SD; OV329 against vigabatrin at doses that were not matched (our label; doses in the paper); the toxicology studies are attributed to the EILAT XVI progress report."
       },
       {
         "id": "DR-H02-035",
