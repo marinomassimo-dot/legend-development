@@ -76,7 +76,7 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      suites do not run in it: they run in a throwaway clone of the commit being gated (`git clone --no-hardlinks`, only `files/` hard-linked when the checkout has one), removed by this tool on success, refusal,
      error, SIGTERM and Ctrl-C (a SIGKILL leaves `<tmp>/legend-landing-suites-*`). Refusals and their order are unchanged: suites, unclean tree, views, gate; a refusal stops what is still running. When no clone
      can be built the suites run in the worktree after the gate and the views have finished. `--serial-checks` runs everything one after another and adds an empty commit with the trailer
-     `Landing-Checks: serial (--serial-checks)`. `LANDING CHECKS parallel: ...` gives the wall time and each part. A NOTICE is printed until the first ten such landings have been read.
+     `Landing-Checks: serial (--serial-checks)`. `LANDING CHECKS parallel: ...` gives the wall time and each part. Kept after the first ten such landings (median lock held 138.5 s against 250 s).
 
 Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived] [--no-landing-suites] [--serial-checks]] [--landing-suites]      (default branch: main)
 """
@@ -195,8 +195,6 @@ NOTICE = ("NOTICE (until " + NOTICE_UNTIL + "): safe_push --serialize now runs t
           "(a failure already on the remote tip does not refuse); --no-landing-suites skips them and records the skip in the history.")
 
 
-PARALLEL_NOTICE = ("NOTICE (until the first ten concurrent landings are read): safe_push --serialize runs the view checks, the gate and the landing suites at the same time, the suites in a "
-                   "throwaway clone; --serial-checks runs them one after another and records it in the history.")
 SERIAL_TRAILER = "Landing-Checks: serial (--serial-checks)"
 SUITE_CLONE_PREFIX = "legend-landing-suites-"
 _CHILDREN: list[subprocess.Popen] = []      # the processes of the checks that run beside the suites, so that a refusal or a signal leaves none of them running
@@ -368,7 +366,6 @@ def checks(remote: str, base: str, sha: str, landing: bool, parallel: bool) -> s
         short = free_space_refusal()      # a waiter can sit in the queue for many minutes while other clones fill the disk
         if short:
             return short
-        print(PARALLEL_NOTICE, flush=True)
         _STOPPING.clear()
         atexit.register(stop_background)
         views_job = Background(lambda: stale_derived_views(run_stoppable))

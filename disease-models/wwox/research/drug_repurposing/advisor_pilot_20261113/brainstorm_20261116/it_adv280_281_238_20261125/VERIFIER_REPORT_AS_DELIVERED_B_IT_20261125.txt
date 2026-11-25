@@ -1,0 +1,88 @@
+# Blind check B (2026-11-25)
+
+| id | verdict |
+|----|---------|
+| S25 | NOT VERIFIABLE (leave-two-out part); single-animal part SUPPORTED; SHOULD ADD the measure name |
+| S26 | SHOULD ADD (true in all three forebrain regions, not only cortex) |
+| S27 | MUST CHANGE (set naming; the sentence that now follows the clause) |
+| S28 | SUPPORTED |
+| S29 | MUST CHANGE (48 -> 49); MOG NOT VERIFIABLE; SHOULD ADD MBP |
+| S30 | MUST CHANGE |
+| S31 | SUPPORTED |
+| S32 | MUST CHANGE |
+| S33 | SHOULD ADD |
+| S35 | SUPPORTED |
+
+## What was opened (blindness)
+
+- SENTENCES_B.md; the named TSVs influence_adv239.tsv, gsea_loo_adv239.tsv, unit_values_adv239.tsv, organoid_panel_cpm.tsv.
+- The producing scripts influence_adv239.py and gsea_loo_collect_adv239.py, in full, to understand columns, set members and thresholds.
+- BY ACCIDENT: a header preview of every TSV in the adv239 out/ folder also showed the header and first 7 rows of ranked_inferences_adv239.tsv (not a named table; ranks 1 to 7; it holds the producer's dispositions and suggested wording, including a suggested F02 wording relevant to S29) and the first 7 rows of random_set_influence_adv239.tsv. The S29 verdict below rests on the panel table and disagrees with that wording.
+- File names only (not opened): the adv239 folder listing (PREREG, RESULT) and the ADV-233 folder listing.
+- No RESULT, PREREG, card, ledger or checkpoint file opened; no git history.
+
+Leave-one-out values were recomputed from unit_values_adv239.tsv and agree with influence_adv239.tsv to rounding. Mutant ids M6 and F8 are in the P47T (mutant) arm.
+
+## S25
+
+- "in cortex removing M6 alone reverses its enrichment score": gsea_loo, CTX TNFA_SIGNALING_VIA_NFKB: NES_all 1.47 (q 0.0306), min_NES_drop -0.71 at M6, sign_flip M6. SUPPORTED. The score is the repository re-run NES.
+- "without M6 and F8 it meets positive-direction q < 0.05 in no forebrain region": NOT VERIFIABLE from the named tables, which hold single-animal drops only. Missing: the two-animal drop table. By file name it is adv233_p47t_two_animals_sci_20261125/gsea_drop_M6_F8_forebrain_adv233.tsv (not opened). Consistent in direction only: set means from unit_values without M6 and F8 are HPC 0.014 (4 percent of 0.321), CTX -0.140, PFC -0.053. Set means are not q values.
+- "one or two animals": HPC keeps q < 0.05 under every single drop; CTX and PFC lose it on any one of M3, F5, M6, F8 (M3 and F5 are wild type).
+- SHOULD ADD the measure, because the field speaks of a "regulator-level inflammatory inference" and what was tested is a hallmark gene set. Replace "the TNFA/NF-kB part rests on one or two animals:" with "in the repository re-run, the hallmark TNFA/NF-kB gene-set enrichment rests on one or two animals:".
+
+## S26
+
+- influence, set:TNFA_SIGNALING_VIA_NFKB, min_ratio_leave_one_out at M6: CTX 0.121 (0.164 -> 0.020), HPC 0.485 (0.321 -> 0.156), PFC 0.451 (0.180 -> 0.081). Cortex statement true, but M6 removes more than half in all three; naming cortex alone implies otherwise.
+- Replacement: "[IT 2026-11-25, ADV-239: removing M6 alone also removes more than half of the TNFA set-mean rise in all three forebrain regions (left: hippocampus 0.49, cortex 0.12, prefrontal cortex 0.45 of it).]"
+
+## S27
+
+- influence, min_ratio: HPC HYPOXIA 0.629, GLYCOLYSIS 0.815, APOPTOSIS 0.737; PFC 0.616, 0.848, 0.742; no sign flips. CTX at M6: 0.212, 0.378, 0.216. SUPPORTED.
+- gsea_loo CTX APOPTOSIS: NES 1.19, q_all 0.267. SUPPORTED.
+- "six-gene glycolytic-enzyme shift in cortex holds without M6": the numbers hold (set:HIF_FLAT6 CTX 0.248 -> 0.206, ratio 0.831; all mutants above all controls with all animals), but the set (script) is Pgk1, Aldoa, Eno1, Pkm, Pfkp, Ndrg1. Ndrg1 is not a glycolytic enzyme. MUST CHANGE.
+- Replacement for the bracket: "[IT 2026-11-25, ADV-239: set means of HYPOXIA, GLYCOLYSIS and APOPTOSIS: hippocampus and prefrontal cortex keep the sign and at least 60 percent of the rise without any one animal, while in cortex removing M6 leaves about 0.21, 0.38 and 0.22 of it; in the repository re-run cortical APOPTOSIS does not reach q 0.05 even with all animals; the cortical rise of the six-gene control set (Pgk1, Aldoa, Eno1, Pkm, Pfkp, Ndrg1: five glycolytic enzymes and Ndrg1) holds without M6.]"
+- Field: the next sentence, "HYPOXIA keeps q < 0.05 only in hippocampus but keeps a positive score in all three (ADV-239)", now follows a single-animal clause and is false read that way, and with all animals. gsea_loo: HYPOXIA q_all HPC 0.0025, CTX 0.0085, PFC 0.0055; CTX loses q on F5 or M6; PFC never loses it on a single drop. It can only be the two-animal result.
+- Replacement: "Without mutants M6 and F8, HYPOXIA keeps q < 0.05 only in hippocampus but keeps a positive score in all three (ADV-233)." The content and the ADV-233 attribution are NOT VERIFIABLE from the named tables; confirm against the two-animal table named under S25. Alternative: place the new bracket after this sentence.
+- Also for the caller: without M6 and F8 the cortical SET MEANS are HYPOXIA -0.050, APOPTOSIS -0.042, GLYCOLYSIS +0.015 (0.18 of the rise). So the field's "positive score" and "GLYCOLYSIS stays enriched" must remain explicitly enrichment-score statements.
+- Optional addition: in the re-run, PFC APOPTOSIS loses q < 0.05 on 8 of 10 single drops (NES stays positive, minimum 1.14).
+
+## S28
+
+- gene:Srxn1 min_ratio HPC 0.709, CTX 0.718, PFC 0.777, CB 0.876: all at least 0.70, four regions.
+- CTX gene:Hmox1 0.441 at M6 (0.512 -> 0.226); CTX set:NRF2_5 0.467 at M6 (0.190 -> 0.089). Both more than half on M6. NRF2_5 = Nqo1, Hmox1, Gclm, Srxn1, Txnrd1 (script).
+- SUPPORTED. No contradiction in the field.
+
+## S29
+
+- organoid_panel_cpm: SOX10 0.05 to 0.18; OLIG1 0.03 to 0.86 (all six below 1). SUPPORTED.
+- PLP1 48.73 to 198.16: lower bound rounds to 49, not 48. MUST CHANGE.
+- MOG: no row in the panel table or in unit_values. NOT VERIFIABLE; missing a MOG row (the GSE156243 gene count table was not opened).
+- MBP, an oligodendrocyte marker, is 1.05 to 3.80, above 1 CPM in all six; OLIG2 0.63 to 1.83; PDGFRA 0.25 to 4.70.
+- Replacement (add MOG back only after reading it in the count table): "Oligodendrocyte-lineage markers SOX10 and OLIG1 are below 1 CPM in all six libraries of the week-15 organoid (4 knockout, 2 control), while PLP1 is 49 to 198 CPM (isoforms not resolved) and MBP about 1 to 4 CPM."
+
+## S30
+
+- influence, GSE158682 ratio:Slc12a2/Slc12a5: 4 control, 3 knockout, 0.237; leave-one-out 0.085 (at CRTX_S_Ctrl_1) to 0.366; no sign flip; overlap; label one-animal-driven.
+- Numbers SUPPORTED. "the cortical contrast ... is not informative" is not: the table shows a ratio reading dependent on one library with the sign kept. And "the cortical contrast" is wider than the item measured: in the same deposit Slc12a5 is -0.652, all knockouts below all controls (leave-one-out -0.857 to -0.471).
+- Replacement: "[IT 2026-11-25, ADV-239: in the cortex deposit of the neuron-targeted deletion (4 control, 3 knockout libraries) the Slc12a2/Slc12a5 ratio is higher by 0.24 log2 with overlapping libraries, and this falls to 0.085 when one control library is removed; Slc12a5 itself is lower in all three knockout libraries than in all four controls (log2 -0.65).]"
+- Field: "Slc12a5 higher in one" conflicts with these tables as a summary. Slc12a5 is higher only in hippocampal Nestin-Cre (+0.282, overlap, sign flips without N_KO_2) and is lower, all knockouts below all controls, in hippocampal Syn-Cre (-0.546), germline null (-0.408) and cortex (-0.652). The IT13 source of that phrase was not opened. "ratio not raised in the three hippocampal contrasts" agrees (-0.529, -1.027, -0.237).
+
+## S31
+
+- GSE158682 gene:Ctgf: 0.189; leave-one-out -0.367 to 0.460; sign flips on CRTX_S_KO_3; overlap; 4 v 3. Scale log2 ratio of mean TPM (+0.5). SUPPORTED.
+
+## S32
+
+- GSE158681 hippo Syn-Cre Pvalb: 2 v 3, -1.701; the three knockout values are below both controls. Cortex Syn-Cre: 4 v 3, -0.586, overlap (CRTX_S_KO_3 above CRTX_S_Ctrl_4). Those numbers hold.
+- "the hippocampal Pvalb fall rests on 2 control against 3 knockout libraries" is wrong as stated: there are three hippocampal contrasts. Nestin-Cre -0.855 (2 v 2) and germline null -1.156 (3 v 2) also fall, all knockouts below all controls. MUST CHANGE.
+- Replacement: "[IT 2026-11-25, ADV-239: in the neuron-targeted (Syn-Cre) deletion the hippocampal Pvalb fall comes from 2 control against 3 knockout libraries (all three below both controls); in cortex of the same deletion, 4 against 3, the fall is smaller (log2 -0.59 against -1.70) and the libraries overlap. The two other hippocampal contrasts also fall, with every knockout library below every control: Nestin-Cre log2 -0.86 (2 against 2), germline null -1.16 (3 against 2).]"
+
+## S33
+
+- GSE215425 gene:Slc2a1: HPC +0.185, CTX +0.189, PFC +0.272 (5 v 5), CB -0.166 (3 mutant v 4 wild type). Genotypes overlap in all four; no single drop flips a sign; CTX ratio 0.473 at F5 (wild type), label one-animal-driven.
+- Direction SUPPORTED; size and robustness missing.
+- Replacement: "[IT 2026-11-25, ADV-239: in the P47T mouse the higher SLC2A1 transcript is a forebrain reading (log2 +0.19 to +0.27, 5 against 5); cerebellum goes the other way (-0.17, 3 P47T against 4 wild type); the genotypes overlap in all four regions, and in cortex removing one wild-type animal (F5) leaves less than half of the rise.]"
+
+## S35
+
+- unit_values GSE156243 GAD2, log2(CPM+1): knockout 1.54, 1.60, 3.70, 2.76; control 1.84, 0.14. Higher on average (difference +1.41; +0.56 without cwt2), libraries overlap, 4 v 2. SUPPORTED. GAD2 is not in organoid_panel_cpm.tsv.

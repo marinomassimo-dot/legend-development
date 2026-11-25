@@ -81,8 +81,8 @@ time; it does not redistribute or license the article text.
 
 | Status | Records | Share |
 |---|---:|---:|
-| **Not found by identifier** — run the intake gate | 256 | 36% |
-| **Catalogued, never processed** — the reading debt | 113 | 16% |
+| **Not found by identifier** — run the intake gate | 255 | 36% |
+| **Catalogued, never processed** — the reading debt | 114 | 16% |
 | Known to the tracking log only | 71 | 10% |
 | Processed from the abstract | 12 | 2% |
 | Partial full text read | 87 | 12% |
@@ -337,8 +337,8 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [17163164](https://pubmed.ncbi.nlm.nih.gov/17163164/) | 2006 | — | Journal Article; Research Support, N.I.H., Extramural; Review | screened | WWOX, a chromosomal fragile site gene and its role in cancer. |
 | [15131042](https://pubmed.ncbi.nlm.nih.gov/15131042/) | 2004 | — | Journal Article; Research Support, U.S. Gov't, P.H.S. | screened | Loss of WWOX expression in gastric carcinoma. |
 | [34513711](https://pubmed.ncbi.nlm.nih.gov/34513711/) | 2021 | ✅ | Published Erratum | unmatched | ℹ️ CORRECTION NOTICE — Corrigendum: Fragile Gene WWOX Guides TFAP2A/TFAP2C-Dependent Actions Against Tumor Progression in Grade II Bladder Cancer. |
-| [28708106](https://pubmed.ncbi.nlm.nih.gov/28708106/) | 2017 | ✅ | Journal Article | unmatched | Evodiamine Exerts an Anti-Hepatocellular Carcinoma Activity through a WWOX-Dependent Pathway. |
 | [24503545](https://pubmed.ncbi.nlm.nih.gov/24503545/) | 2013 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Expression of WW domain-containing oxidoreductase WOX1 in human nervous system tumors. |
+| [28708106](https://pubmed.ncbi.nlm.nih.gov/28708106/) | 2017 | ✅ | Journal Article | catalogued only | Evodiamine Exerts an Anti-Hepatocellular Carcinoma Activity through a WWOX-Dependent Pathway. |
 | [42327583](https://pubmed.ncbi.nlm.nih.gov/42327583/) | 2026 | ✅ | Journal Article | unmatched | GALNT14-rs9679162 Genotypes Predict Post-immunotherapy Side Effect and Survival in Patients with Hepatitis B Virus-related Hepatocellular Carcinoma. |
 | [42275215](https://pubmed.ncbi.nlm.nih.gov/42275215/) | 2026 | ✅ | Journal Article | unmatched | RNF138 promotes cisplatin resistance and PD-L1-mediated immune evasion via JAK2/STAT3 activation in nasopharyngeal carcinoma. |
 | [41966396](https://pubmed.ncbi.nlm.nih.gov/41966396/) | 2026 | ✅ | Journal Article | unmatched | Comprehensive multi-omics analyses reveal small intestinal genetic mechanisms regulating milk protein traits in yak. |

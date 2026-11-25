@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "80679fef0024148693d3c4194e98a7a6bb4d0b8c1d3836589d7de3e9569de971",
+  "input_sha256": "cd55cb0de615fc13d7ddb0d0da3b70450924ea83a8e47f3933841dd3a6ffe59c",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -28,7 +28,7 @@
     "functional_evidence_available": "Neuron-specific, not oligodendrocyte-specific, Wwox loss reproduces the hypomyelination (genetic evidence of the earlier mouse work, PMID 33914858 manifest); neuronal gene replacement is reported to restore MBP by image. No pro-myelinating compound has been given to any Wwox system.",
     "temporal_or_model_limit": "Mouse, early postnatal window; the AAV rescue works to the earliest days tested and later ages were not testable in the null.",
     "cellular_context": {
-      "target_expression": "Oligodendrocyte-lineage transcripts are barely detectable in the week-15 organoid.",
+      "target_expression": "Oligodendrocyte-lineage markers SOX10 and OLIG1 are below 1 CPM in all six libraries of the week-15 organoid (4 knockout, 2 control), while PLP1 is 49 to 198 CPM (isoforms not resolved) and MBP about 1 to 4 CPM.",
       "cells_tissue_stage": "in-vivo mouse white matter for the disease rows.",
       "coverage": "UNKNOWN.",
       "limits": "Myelin is measured as MBP image intensity; the treated-arm quantification does not exist."
@@ -117,7 +117,7 @@
       "functional_evidence_available": "Neuron-specific, not oligodendrocyte-specific, Wwox loss reproduces the hypomyelination (genetic evidence of the earlier mouse work, PMID 33914858 manifest); neuronal gene replacement is reported to restore MBP by image. No pro-myelinating compound has been given to any Wwox system.",
       "temporal_or_model_limit": "Mouse, early postnatal window; the AAV rescue works to the earliest days tested and later ages were not testable in the null.",
       "cellular_context": {
-        "target_expression": "Oligodendrocyte-lineage transcripts are barely detectable in the week-15 organoid.",
+        "target_expression": "Oligodendrocyte-lineage markers SOX10 and OLIG1 are below 1 CPM in all six libraries of the week-15 organoid (4 knockout, 2 control), while PLP1 is 49 to 198 CPM (isoforms not resolved) and MBP about 1 to 4 CPM.",
         "cells_tissue_stage": "in-vivo mouse white matter for the disease rows.",
         "coverage": "UNKNOWN.",
         "limits": "Myelin is measured as MBP image intensity; the treated-arm quantification does not exist."
