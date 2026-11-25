@@ -66,12 +66,13 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      default checks and with `--all`, so the release-mode clone is the larger of the two. The merge writes only the changed files; the 2 GB is headroom for the larger run and the object store.
      `LEGEND_SAFE_PUSH_MIN_FREE_GB` overrides the threshold (tests, or an operator who knows better). Read-only; an unreadable filesystem does not refuse.
 
-  13. `--landing-suites` (opt-in, 2026-11-25, ADV): after the merge and any regeneration, before the gate, the suites that `landing_suites.py` selects for the paths this push adds to the branch
-     are run one by one and each result is PRINTED (`LANDING-SUITE PASS|RED|TIMEOUT <path>`), with a count at the end. IT PRINTS AND NEVER REFUSES: a red suite does not stop the push; reading
-     the lines is the publisher's. (A suite that leaves the working tree dirty meets the existing clean-tree refusal, since the gate would no longer judge HEAD.) With `--serialize` this holds the
-     landing lock for as long as the suites take (95 s for an 8-suite selection on 2026-11-25). Without the flag nothing changes.
+  13. Landing suites (THE DEFAULT under `--serialize` since 2026-11-25, ADV; `--landing-suites` asks by name, also without `--serialize`): after the merge and any regeneration, before the gate, the suites that
+     `landing_suites.py` selects for the paths this push adds to the branch are run one by one and printed (`LANDING-SUITE PASS|RED|TIMEOUT <entry>`). A suite this push turns red REFUSES the push: a red one is rerun
+     in a throwaway shared clone of the remote tip, and only a failing test line that is not there refuses (a suite already red on the tip prints `PRE-EXISTING RED` with the failing tests and the push goes on, the §21d wording "turns no green
+     suite red"). A selection that cannot be built is said and does not refuse. `--no-landing-suites` (with `--serialize`) skips them and adds an empty commit carrying the trailer `Landing-Suites: skipped
+     (--no-landing-suites)`, so the skip is in the published history. This holds the landing lock for as long as the suites take (95 s for an 8-suite selection on 2026-11-25). A selection is not the release battery.
 
-Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived]] [--landing-suites]      (default branch: main)
+Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived] [--no-landing-suites]] [--landing-suites]      (default branch: main)
 """
 from __future__ import annotations
 import atexit, fcntl, importlib.util, os, shutil, signal, subprocess, sys, tempfile, time
@@ -182,10 +183,52 @@ def free_space_refusal() -> str:
 
 
 SUITE_TIMEOUT_S = 1500
+SKIP_TRAILER = "Landing-Suites: skipped (--no-landing-suites)"
+NOTICE_UNTIL = "2026-11-26"   # UTC date, inclusive: the one-day announcement in every serialized push log
+NOTICE = ("NOTICE (until " + NOTICE_UNTIL + "): safe_push --serialize now runs the selected landing suites and REFUSES a push that turns one red "
+          "(a failure already on the remote tip does not refuse); --no-landing-suites skips them and records the skip in the history.")
 
 
-def print_landing_suites(base: str) -> None:
-    """Run the suites the selector names for what `base..HEAD` changes and print each result. Prints only: nothing here decides whether the push goes ahead."""
+def _run_suite(entry: str, cwd: Path) -> tuple[str, set[str], str, float]:
+    """(PASS|RED|TIMEOUT, the failing test lines, one line saying why, seconds) of one selector entry (`path` or `path Class`) run in `cwd`."""
+    started, env = time.time(), dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
+    try:
+        done = subprocess.run([sys.executable, "-B", *entry.split()], cwd=cwd, env=env, stdin=subprocess.DEVNULL, capture_output=True, text=True, errors="replace", timeout=SUITE_TIMEOUT_S)
+    except (subprocess.TimeoutExpired, OSError) as exc:
+        return ("TIMEOUT" if isinstance(exc, subprocess.TimeoutExpired) else "RED"), {type(exc).__name__}, type(exc).__name__, time.time() - started
+    if done.returncode == 0:
+        return "PASS", set(), "", time.time() - started
+    lines = (done.stderr + "\n" + done.stdout).splitlines()
+    failing = {l.strip() for l in lines if l.startswith(("FAIL: ", "ERROR: "))}
+    if not failing:   # a crash or a suite that is not unittest: its last line is its identity
+        failing = {next((l.strip() for l in reversed(lines) if l.strip()), f"exit {done.returncode}")}
+    why = next((l for l in lines if l.startswith(("FAIL", "ERROR", "AssertionError"))), f"exit {done.returncode}")
+    return "RED", failing, why, time.time() - started
+
+
+def _red_at_base(base: str, reds: dict[str, set[str]]) -> dict[str, set[str]]:
+    """The failing test lines of each of `reds` at `base`, in a throwaway shared clone. An empty set: the suite passes there, does not exist there, or could not be run there, so the push's red is its own."""
+    found = {entry: set() for entry in reds}
+    holder = Path(tempfile.mkdtemp(prefix="legend-landing-base-"))
+    try:
+        clone = holder / "base"
+        ready = run("git", "clone", "-q", "--shared", "--no-checkout", str(ROOT), str(clone)).returncode == 0
+        if not (ready and run("git", "-C", str(clone), "checkout", "-q", "--detach", base).returncode == 0):
+            print(f"LANDING SUITES: no clone of {base[:12]} could be built; a red suite counts as this push's own", flush=True)
+            return found
+        for entry in reds:
+            if not (clone / entry.split()[0]).is_file():
+                continue
+            word, failing, _, seconds = _run_suite(entry, clone)
+            found[entry] = failing
+            print(f"LANDING-SUITE AT-BASE {word} {entry} ({seconds:.0f}s) on {base[:12]}", flush=True)
+        return found
+    finally:
+        shutil.rmtree(holder, ignore_errors=True)
+
+
+def landing_check(base: str) -> str:
+    """Run the suites the selector names for what `base..HEAD` changes. Returns '' when nothing this push turns red, else the refusal text."""
     selector_path = ROOT / "framework" / "scripts" / "landing_suites.py"
     if not selector_path.is_file():
         selector_path = Path(__file__).resolve().parent / "landing_suites.py"
@@ -195,24 +238,34 @@ def print_landing_suites(base: str) -> None:
         selector = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(selector)
         picked = selector.select(selector.changes(ROOT, base), ROOT)
-    except Exception as exc:   # an advisory that cannot be built says so and stops there
-        print(f"LANDING SUITES not run: {type(exc).__name__}: {str(exc)[:200]} (printed only; the push is not refused)", flush=True)
-        return
+    except Exception as exc:   # a selection that cannot be built is said and does not refuse
+        print(f"LANDING SUITES not run: {type(exc).__name__}: {str(exc)[:200]} (the push is not refused for this)", flush=True)
+        return ""
     finally:
         sys.dont_write_bytecode = wrote_bytecode
-    red = 0
-    env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
-    for path in picked:
-        started = time.time()
-        try:
-            done = subprocess.run([sys.executable, "-B", path], cwd=ROOT, env=env, stdin=subprocess.DEVNULL, capture_output=True, text=True, errors="replace", timeout=SUITE_TIMEOUT_S)
-            word = "PASS" if done.returncode == 0 else "RED"
-            why = "" if done.returncode == 0 else next((l for l in (done.stderr + "\n" + done.stdout).splitlines() if l.startswith(("FAIL", "ERROR", "AssertionError"))), f"exit {done.returncode}")
-        except (subprocess.TimeoutExpired, OSError) as exc:
-            word, why = "TIMEOUT" if isinstance(exc, subprocess.TimeoutExpired) else "RED", type(exc).__name__
-        red += word != "PASS"
-        print(f"LANDING-SUITE {word} {path} ({time.time() - started:.0f}s)" + (f": {why[:200]}" if why else ""), flush=True)
-    print(f"LANDING SUITES: {len(picked)} run, {red} not passing (printed only; the push is not refused)", flush=True)
+    reds: dict[str, set[str]] = {}
+    for entry in picked:
+        word, failing, why, seconds = _run_suite(entry, ROOT)
+        if word != "PASS":
+            reds[entry] = failing
+        print(f"LANDING-SUITE {word} {entry} ({seconds:.0f}s)" + (f": {why[:200]}" if why else ""), flush=True)
+    new: dict[str, list[str]] = {}
+    if reds:
+        before = _red_at_base(base, reds)
+        for entry, failing in reds.items():
+            fresh = sorted(failing - before[entry])
+            if fresh:
+                new[entry] = fresh
+            else:
+                print(f"LANDING-SUITE PRE-EXISTING RED {entry}: the same failure is on {base[:12]}; not this push's, and main stays red until it is repaired: "
+                      + "; ".join(sorted(failing)[:6])[:600], flush=True)
+    print(f"LANDING SUITES: {len(picked)} run, {len(reds)} not passing, {len(new)} turned red by this push", flush=True)
+    if not new:
+        return ""
+    shown = "\n".join(f"  {entry}\n" + "\n".join(f"    {line[:200]}" for line in lines[:6]) for entry, lines in new.items())
+    return ("this push turns a suite red that passes (or does not fail this way) on the remote tip:\n" + shown +
+            "\nFix: run the suite in your worktree (python3 -B <suite>), repair, commit, run safe_push again. "
+            "If the red must be published, --no-landing-suites skips the suites and records that in the history. Nothing was gated or pushed.")
 
 
 def fail(msg: str) -> int:
@@ -228,9 +281,15 @@ def main(argv: list[str]) -> int:
     if "--serialize" in args:
         serialize = True
         args.remove("--serialize")
-    landing = "--landing-suites" in args
-    if landing:
-        args.remove("--landing-suites")
+    suites_asked, suites_declined = "--landing-suites" in args, "--no-landing-suites" in args
+    for flag in ("--landing-suites", "--no-landing-suites"):
+        while flag in args:
+            args.remove(flag)
+    if suites_asked and suites_declined:
+        return fail("--landing-suites and --no-landing-suites together. Nothing was gated or pushed.")
+    # 2026-11-25 (ADV after ADV-274: a red suite the selection had named was landed anyway): the default under --serialize, and a suite this push turns red refuses it.
+    landing = suites_asked or (serialize and not suites_declined)
+    skip_recorded = serialize and suites_declined
     asked, declined = "--regenerate-derived" in args, "--no-regenerate-derived" in args
     for flag in ("--regenerate-derived", "--no-regenerate-derived"):
         while flag in args:
@@ -258,7 +317,7 @@ def main(argv: list[str]) -> int:
             del args[i]
             break
     if not 1 <= len(args) <= 2:
-        return fail("usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived]] [--landing-suites]")
+        return fail("usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived] [--no-landing-suites]] [--landing-suites]")
     remote, branch = args[0], (args[1] if len(args) == 2 else "main")
 
     for bad in ("+", "--force", "-f", "--force-with-lease"):
@@ -277,6 +336,8 @@ def main(argv: list[str]) -> int:
         return fail("working tree is not clean, so the gate would not be judging HEAD:\n" + dirty)
 
     before = run("git", "rev-parse", "HEAD").stdout.strip()
+    if serialize and datetime.now(timezone.utc).strftime("%Y-%m-%d") <= NOTICE_UNTIL:
+        print(NOTICE, flush=True)
     print(f"HEAD before gate: {before}")
     if expect is not None:
         want = run("git", "rev-parse", "--verify", "--quiet", f"{expect}^{{commit}}").stdout.strip()
@@ -365,11 +426,20 @@ def main(argv: list[str]) -> int:
             print(f"REGENERATED derived surfaces under the landing lock: {before[:12]} -> {regenerated[:12]}", flush=True)
             before = regenerated
 
+    if skip_recorded:
+        marked = run("git", "commit", "--allow-empty", "-m", "safe_push: landing suites skipped\n\n" + SKIP_TRAILER)
+        if marked.returncode != 0:
+            return fail(f"--no-landing-suites: the commit that records the skip failed: {marked.stderr.strip()[:300]}. Nothing was gated or pushed.")
+        before = run("git", "rev-parse", "HEAD").stdout.strip()
+        print(f"LANDING SUITES SKIPPED (--no-landing-suites): recorded in the empty commit {before[:12]} ({SKIP_TRAILER})", flush=True)
+
     if landing:
         known = run("git", "rev-parse", "--verify", "--quiet", f"refs/remotes/{remote}/{branch}").stdout.strip()
-        print_landing_suites(tip if serialize else known or f"{remote}/{branch}")
+        refusal = landing_check(tip if serialize else known or f"{remote}/{branch}")
         if run("git", "status", "--porcelain").stdout.strip():
             return fail("a landing suite left the working tree unclean, so the gate would not be judging HEAD. Nothing was gated or pushed.")
+        if refusal:
+            return fail(refusal)
 
     short = free_space_refusal()      # a waiter can sit in the queue for many minutes while other clones fill the disk
     if short:
