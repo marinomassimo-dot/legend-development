@@ -1190,6 +1190,14 @@
      "accepted_at": "2026-11-25T22:40:33Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv287_step2_marked_statements_sci_20261125/RESULT_ADV287_STEP2_SCI_20261125.md (8649f3c2b)",
      "updated_at": "2026-11-25T23:20:06Z"
+    },
+    {
+     "step": "ADV-289: Breton S3B/S3C d-APV block fraction of the delayed evoked response and the upper depth arm of SLICE_PACKAGE_V2 / brief 13.11",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "source": "ADV-289",
+     "accepted_at": "2026-11-25T23:42:39Z",
+     "updated_at": "2026-11-25T23:42:39Z"
     }
    ]
   }
@@ -2109,6 +2117,13 @@
    "at": "2026-11-25T22:40:33Z",
    "source": "ADV-287 step 2 (ADV decision 2026-11-25, checkpoint AO section 1; SCI launcher of window 488a3ad0)",
    "step_sha256": "198c4c33dc36",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T23:42:39Z",
+   "source": "ADV-289",
+   "step_sha256": "fae00d9ae8d4",
    "reopened_block": false,
    "authorised_by": null
   }
