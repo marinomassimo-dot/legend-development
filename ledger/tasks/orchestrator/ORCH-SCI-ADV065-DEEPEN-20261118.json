@@ -984,6 +984,13 @@
      "accepted_at": "2026-11-25T02:48:30Z",
      "evidence": "brainstorm_20261116/adv247_independence_audit_sci_20261125/RESULT_ADV247_INDEPENDENCE_AUDIT_SCI_20261125.md: 13 of 35 non-independent (all organoid), 15 independent, 7 not stated; wording for IT",
      "updated_at": "2026-11-25T02:53:38Z"
+    },
+    {
+     "step": "ADV-249: primaries behind discovery-ledger leads never read (listing + PREREG first; rank by consumers; read the top six lawfully open; receipts; promote yes/no, new questions, IT wording where the lead overstates)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-249",
+     "accepted_at": "2026-11-25T03:20:46Z"
     }
    ]
   }
@@ -1742,6 +1749,13 @@
    "at": "2026-11-25T02:48:30Z",
    "source": "ADV-247",
    "step_sha256": "3dc4054535ca",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T03:20:46Z",
+   "source": "ADV-249",
+   "step_sha256": "7b8630dc70b7",
    "reopened_block": false,
    "authorised_by": null
   }
