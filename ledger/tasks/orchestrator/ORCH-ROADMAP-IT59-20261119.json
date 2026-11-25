@@ -356,6 +356,13 @@
      "source": "ADV-241 (ADV message 2026-11-25; assignments/ADV-241.md)",
      "accepted_at": "2026-11-25T02:04:24Z",
      "updated_at": "2026-11-25T02:04:32Z"
+    },
+    {
+     "step": "Organoid one-clone wording (SCI ADV-244 section 6): place it in the card-lane consumers K01, D01, D02, M01, E02, I01 and INV-16 by the ordinary route and carry CLAIM 002 and RP-008 through a candidate and ADV; each consumer opened in place before listing",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "SCI message 2026-11-25 relayed for ADV (ADV-244 section 6, replaces ADV-242 section 6)",
+     "accepted_at": "2026-11-25T02:30:20Z"
     }
    ]
   }
@@ -631,6 +638,13 @@
    "at": "2026-11-25T02:04:24Z",
    "source": "ADV-241 (ADV message 2026-11-25; assignments/ADV-241.md)",
    "step_sha256": "ca107d2bbf4c",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T02:30:20Z",
+   "source": "SCI message 2026-11-25 relayed for ADV (ADV-244 section 6, replaces ADV-242 section 6)",
+   "step_sha256": "6a587976da2c",
    "reopened_block": false,
    "authorised_by": null
   }
