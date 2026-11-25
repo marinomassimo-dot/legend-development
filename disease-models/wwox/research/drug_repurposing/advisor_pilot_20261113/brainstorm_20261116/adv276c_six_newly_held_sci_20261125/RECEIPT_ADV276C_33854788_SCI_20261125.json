@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T15:33Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T15:33:08Z",
+ "event_id": "FTR-20261125-33854788-01",
+ "evidence_basis": [
+  "coverage_map",
+  "reader plus one blind delegate (sonnet, high): Results and Discussion on WWOX, supplement Table S3 row and Methods text, reference entries 10, 11, 32, 33; Fig 2F image not opened."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276c_six_newly_held_sci_20261125/RESULT_ADV276_SIX_NEWLY_HELD_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261019-33854788-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "7bf79640180b5a74857bfcfb664798312f69f88a02be46d617e04132b6a1256f",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID33854788_ADV272_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1002/gch2.202000088",
+  "pmid": "33854788"
+ },
+ "workflow": "SCI ADV-276 six newly held papers (not a complete read)"
+}
