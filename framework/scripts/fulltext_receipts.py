@@ -771,9 +771,45 @@ def strictly_earliest_reading(receipt: dict[str, Any], others: list[dict[str, An
     return True
 
 
+class _StudyIndex:
+    """Receipts findable by PMID and by normalised DOI, in the order they were added.
+
+    `same_study` and `study_identity_conflict` can only answer True for two records that share
+    one of those two values, so these are the only records worth asking about. Walking every
+    earlier line for each line made one load of the ledger take 7.0 s at 2,765 receipts,
+    0.23 s with this index (measured 2026-11-25), and every consumer loads the ledger.
+    """
+
+    def __init__(self, receipts: list[dict[str, Any]] = ()) -> None:
+        self.items: list[dict[str, Any]] = []
+        self.by_pmid: dict[str, list[int]] = {}
+        self.by_doi: dict[str, list[int]] = {}
+        for receipt in receipts:
+            self.add(receipt)
+
+    def add(self, receipt: dict[str, Any]) -> None:
+        position = len(self.items)
+        self.items.append(receipt)
+        study = receipt["study_id"]
+        pmid, doi = str(study.get("pmid") or ""), normalise_doi(study.get("doi"))
+        if pmid:
+            self.by_pmid.setdefault(pmid, []).append(position)
+        if doi:
+            self.by_doi.setdefault(doi, []).append(position)
+
+    def sharing(self, pmid: str, doi: str) -> list[dict[str, Any]]:
+        """Every record that shares the PMID or the DOI, once each, in the order added."""
+        positions = set(self.by_pmid.get(pmid, ())) if pmid else set()
+        if doi:
+            positions.update(self.by_doi.get(doi, ()))
+        return [self.items[position] for position in sorted(positions)]
+
+
 def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
     errors: list[str] = []
     seen: list[dict[str, Any]] = []
+    seen_studies = _StudyIndex()
+    all_studies = _StudyIndex(receipts)
     event_ids: set[str] = set()
     # 🔴 Computed over the WHOLE file, before the walk, because supersession is a property of
     # the ledger and not of a prefix of it. A corrected record's old identifier stops being a
@@ -792,7 +828,7 @@ def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
         pmid = str(receipt["study_id"].get("pmid") or "")
         doi = normalise_doi(receipt["study_id"].get("doi"))
         if event_id not in superseded:
-            for earlier in seen:
+            for earlier in seen_studies.sharing(pmid, doi):
                 if earlier["event_id"] in superseded:
                     continue
                 if study_identity_conflict(earlier, receipt):
@@ -806,7 +842,7 @@ def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
         # this study") — retroactively reinterpreting a past reading, which is the one thing
         # this schema change is forbidden to do. Supersession narrows what a record ASSERTS
         # about identity, never what it was.
-        prior_for_study = [item for item in seen if same_study(item, pmid, doi)]
+        prior_for_study = seen_studies.sharing(pmid, doi)
         prior_id = receipt["prior_receipt"]
         # 🔴 MEMBERSHIP, not recency, and the change is the point rather than a relaxation.
         #
@@ -878,8 +914,7 @@ def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
         # analysis_at of every other receipt of the same study in the whole ledger; equal,
         # later, missing or unparsable stays refused. The event itself is never altered.
         earlier_independent = prior_id is None and strictly_earliest_reading(
-            receipt, [item for item in receipts
-                      if item is not receipt and same_study(item, pmid, doi)])
+            receipt, [item for item in all_studies.sharing(pmid, doi) if item is not receipt])
         if prior_for_study and prior_id is None and not earlier_independent and not (
             receipt["reread_reason"] == "first_read" and priors_are_all_legacy
         ):
@@ -923,6 +958,7 @@ def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
                         f"line {number}: receipt_correction changed substantive fields: "
                         "record_kind")
         seen.append(receipt)
+        seen_studies.add(receipt)
     return errors
 
 
