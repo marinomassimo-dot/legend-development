@@ -67,7 +67,11 @@ sign comparison inside an engineered-null mouse on one endpoint; its packet carr
   positive-control field was added to the card template (IT, 2026-11-25): in SCI's ADV-281 audit two readers
   gave different classes to 4 of 13 nulls, a field keyed to `NO_CHANGE` would miss the nulls found only by
   text, and no script or ranking reads such a field today. Reopen when a comparison or ranking has to filter
-  nulls by that property, with the base rate of the remaining audit (ADV-282) in hand.
+  nulls by that property, with the base rate of the remaining audit (ADV-282) in hand. ADV-282 (14 more rows, two
+  readers) gave that base rate: the readers still differ on the matching rule (loose class 0 of 14 by the first reader,
+  5 of 14 by the blind reader), so a yes/no flag would not be stable; the classes split cleanly by **where the
+  target-loss or engagement check sits** (same preparation and time / same paper at another time / another paper /
+  none). If a field is ever added, those four values are its definition, not a boolean (SCI's suggestion, ADV-282).
 - After the blind audit of R1 (2026-10-22) the R1 statements used here were re-read against the repaired note:
   no card cites the withdrawn PB-4 limitation of polysome-based evidence; `DR-A01-005` and the
   `P4-A-01` text were corrected (butyrate is a partial, variant-dependent dissociation of quantity
