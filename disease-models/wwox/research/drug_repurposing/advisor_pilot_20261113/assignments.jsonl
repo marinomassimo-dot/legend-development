@@ -594,3 +594,5 @@
 {"evidence": "SendMessage 04:14Z; queued behind ADV-254 (one active)", "id": "ADV-255", "receipt": ["d0b9dbde-82a1-4851-8f89-b8eaacda8c98"], "state": "SENT", "to": ["SCI - CURRENT e8081cc5"], "utc": "2026-11-25T04:14:18Z"}
 {"assessment": "HOST", "id": "ADV-256", "key": "retraction-and-correction-notice-sweep-catalogued-wwox-pmids", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T04:19:31Z"}
 {"evidence": "SendMessage 04:19Z; order ADV-254, 256, 255", "id": "ADV-256", "receipt": ["4d77611b-3ea3-4e2e-957c-8c4a63efe886"], "state": "SENT", "to": ["SCI - CURRENT e8081cc5"], "utc": "2026-11-25T04:19:36Z"}
+{"assessment": "HOST", "id": "ADV-257", "key": "acceptor-site-rescue-rejecting-observation-mechanism-map-r08", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-25T04:29:37Z"}
+{"evidence": "SendMessage 04:29Z; queued behind IT's two items", "id": "ADV-257", "receipt": ["81277433-291c-47a6-af49-cfead5275887"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 06001577"], "utc": "2026-11-25T04:29:55Z"}
