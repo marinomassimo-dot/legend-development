@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-25T07:22Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T07:22:21Z",
+ "event_id": "FTR-20261125-42422766-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Held supplement: mmc1.pdf text (Figures S1-S9 captions, 19 pages) and mmc2.xlsx cell-wise dump (Tables S2 and S4, every row); Table S2 parent totals checked against grade rows (68 blocks, 3 mismatches, confirmed on raw lines); figure images and the archive beyond these two files not opened.",
+  "Result and per-consumer wording: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv269_held_partials_sci_20261125/RESULT_ADV269_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261004-42422766-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "a24c49a3dbeb13351bb982237236ec664826d4d170b017422ef557634e37212c",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42422766_Amaral2026_PMC.xml",
+ "study_id": {
+  "doi": "10.1016/j.omta.2026.201779",
+  "pmid": "42422766"
+ },
+ "workflow": "SCI ADV-269 (held partials, unread classes inside held bytes; held bytes only, no contact, no spend); not a complete read, figure images remain unread"
+}
