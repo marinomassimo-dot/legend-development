@@ -3449,3 +3449,7 @@ verify routing and schema behaviour; universal future model obedience is not dem
 **Gap (with evidence).** In ADV-282 the verified errors were statements about what a deposited list contains ("only NFE2L2", G6PD missed) and about thresholds without units; each could be caught by a script that takes a card sentence, extracts the gene symbols and checks them against the deposited lists named in the same card. The `consumer_sentences.py` and `null_notes.py` candidates for HE recorded under ADV-281 already cover the extraction; the list check is the missing half (`adv282_null_note_control_audit_sci_20261125/`).
 
 **Outcome.** CHANGE = proportional, shipped: two lines in `PRE_READ_CHECKLIST_ADV276_SCI_20261125.md`. No external search, no spend. Candidate for Harness Engineering, not started here.
+
+## 2026-11-25 - SCI (ADV-283): CHANGE = NONE
+
+Gap: none beyond the one recorded under ADV-282; the merged-table column-total check is one line of the analysis script's pattern and is carried by the self-evaluation addendum. No external search, no spend.

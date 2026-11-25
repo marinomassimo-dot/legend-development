@@ -22,3 +22,7 @@ Two statements in my first draft of the RESULT were written from memory and corr
 ## Upgrade (the answer, not the promise)
 
 Two checklist lines added to `PRE_READ_CHECKLIST_ADV276_SCI_20261125.md` in the same commit (re-search a list for every gene a sentence names and state its cut and units; a "clean dissociation" or "wild-type-like" label names its time point and assay). A RESULT is built from the first-reading tables, not from memory: re-check every number against them before it is written.
+
+## Addendum: ADV-283 (same window, PDK isoform pattern in a second held dataset)
+
+PREREG (hash 6854b24d, 2026-11-25T20:23Z) frozen before any value of a candidate table was opened; rules (detection is coverage, ratio 1.2 and every-library ordering, no pooling) applied by script; rejecting observation met (PDK3 0.689 hippocampal null, 1.020 cortex). One blind reader (sonnet 5.5, high, 15 of 15 turns) found two MUST CHANGE sentences: S2 stated no criterion for "higher" and S3 compared CAGE columns on different scales (the PREREG had only called D4 descriptive for n of 1; the unequal column totals were found by the reader and verified by me). Grade: strong on the frozen rule; adequate on the dataset check (a column-sum look before the PREREG would have classed D4 as unusable). Upgrade: before any cross-dataset comparison, print column totals of every merged expression table and state the scale in the PREREG; a "pattern absent" sentence names its criterion and the nearest nominal case.
