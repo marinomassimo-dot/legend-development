@@ -480,6 +480,23 @@ def _work_blob(path: str) -> str:
     return _git("hash-object", "--", path) if full.is_file() and not full.is_symlink() else ""
 
 
+def _unlanded_rows(before: str, local: str, published: str) -> list[str] | None:
+    """The rows the home appended to `assignments.jsonl` that main does not hold, when they can be put back after the fast-forward; None when they cannot: the file is not a pure append to the
+    home's HEAD copy, a row is unreadable, or a draft takes a number main has already drafted (two allocations of one id). A SENT, STRAND or DREAM row naming a published id is not a collision."""
+    old, new, there = before.splitlines(), local.splitlines(), published.splitlines()
+    if new[:len(old)] != old:
+        return None
+    held = set(there)
+    rows = [line for line in new[len(old):] if line.strip() and line not in held]
+    try:
+        taken = {row.get("id") for row in map(json.loads, filter(str.strip, there)) if row.get("state") == "DRAFTED"}
+        if any(row.get("state") == "DRAFTED" and row.get("id") in taken for row in map(json.loads, rows)):
+            return None
+    except (ValueError, AttributeError):
+        return None
+    return rows
+
+
 def _dirty_paths() -> dict[str, str]:
     """path -> porcelain XY. `-uall`: a new directory is listed file by file, not as one entry; `--no-renames`: one path per entry."""
     done = _git_run("status", "--porcelain", "-z", "--untracked-files=all", "--no-renames")
@@ -490,7 +507,8 @@ def _dirty_paths() -> dict[str, str]:
 
 def refresh(campaign: Path) -> int:
     """Fast-forward the campaign home to the published main without losing a byte. All or nothing: a local change that is not already on the published main, in a file that main changed, stops the
-    refresh before anything is touched. What is replaced (bytes equal to main's, or an `assignments.jsonl` whose every line is on main) is first copied under the host state folder."""
+    refresh before anything is touched. What is replaced (bytes equal to main's, or an `assignments.jsonl` whose every line is on main) is first copied under the host state folder; unlanded rows
+    appended to `assignments.jsonl` are appended again after the fast-forward and named (ADV, 2026-11-25: the ordinary case, a registration not yet landed while main moved)."""
     lock = _state_path(Path(campaign)).parent / "assignments.lock"
     lock.parent.mkdir(parents=True, exist_ok=True)
     with lock.open("a") as guard:
@@ -513,6 +531,7 @@ def _refresh(backup: Path) -> int:
         print(f"REFUSED: HEAD {head[:9]} has commits that are not on {PUBLISHED_REMOTE}/main; land them first. Nothing was changed.", file=sys.stderr); return 2
     changed = set(_git_run("diff", "--name-only", "-z", "--no-renames", head, tip).stdout.split("\0")) - {""}
     replace, kept, blockers = [], [], []
+    carry: dict[str, list[str]] = {}
     for path, code in sorted(_dirty_paths().items()):
         if path not in changed:
             kept.append(path); continue
@@ -521,8 +540,14 @@ def _refresh(backup: Path) -> int:
         absent = not full.exists() and not full.is_symlink()
         same = (bool(here) and here == there) or (absent and not there)
         if not same and here and there and Path(path).name == "assignments.jsonl":
-            published = set(_git_run("show", f"{tip}:{path}").stdout.splitlines())
-            same = all(line in published for line in full.read_text(encoding="utf-8").splitlines())
+            theirs = _git_run("show", f"{tip}:{path}").stdout
+            local = full.read_text(encoding="utf-8")
+            published = set(theirs.splitlines())
+            same = all(line in published for line in local.splitlines())
+            if not same:
+                rows = _unlanded_rows(_git_run("show", f"{head}:{path}").stdout if _blob(head, path) else "", local, theirs)
+                if rows is not None:
+                    same, carry[path] = True, rows
         (replace if same else blockers).append(path)
     if blockers:
         print(f"REFUSED: {len(blockers)} local change(s) are not on {PUBLISHED_REMOTE}/main, in files it changed. Nothing was changed. Land them from a task worktree, then run `refresh` again:", file=sys.stderr)
@@ -555,6 +580,12 @@ def _refresh(backup: Path) -> int:
                 full.parent.mkdir(parents=True, exist_ok=True)
                 full.write_bytes(data)
         print(f"REFUSED: git could not fast-forward: {step.stderr.strip()[:400]}. The local files were put back.", file=sys.stderr); return 2
+    for path, rows in carry.items():
+        full = ROOT / path
+        text = full.read_text(encoding="utf-8")
+        full.write_text(text + ("" if not text or text.endswith("\n") else "\n") + "".join(row + "\n" for row in rows), encoding="utf-8")
+        named = [f"{row.get('id') or ','.join(row.get('ids') or []) or '-'} {row.get('state', '?')}" for row in map(json.loads, rows)]
+        print(f"refresh: re-appended {len(rows)} row(s) not yet on main to {path}: {', '.join(named)} — they still have to be landed")
     copies = sum(data is not None for data in saved.values())
     print(f"refresh: {head[:9]} -> {tip[:9]} ({PUBLISHED_REMOTE}/main); {len(replace)} local file(s) already on main replaced" + (f", copies in {backup}" if copies else "")
           + f"; {len(kept)} other local change(s) left as they were")
