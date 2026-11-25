@@ -485,7 +485,7 @@ a link adds, not by ease.
 | Q-R-01 | AAV9-hSynI-WWOX | (a)+(b), **linked now** | C01 (existing, spike-wave discharges) + C04 (new, six other endpoint families) |
 | Q-R-03 | Wnt / tankyrase inhibition | (a), **linked now** | D02 (existing, abstention; carries a route and no Track) |
 | Q-R-05 | Ketogenic diet | (a), **linked now** | EB-KD-01 (existing, seizure rows; early-benefit directory) + E04 (existing, lactate/PDH) |
-| Q-N-01 | mTOR inhibitors | (a), **linked 2026-10-27 follow-up** | EB-MTOR-AX-01 (abstention: mTOR activity in a WWOX system is unmeasured, as the record says) |
+| Q-N-01 | mTOR inhibitors | (a), **linked 2026-10-27 follow-up** | EB-MTOR-AX-01 (abstention: mTOR activity in a WWOX-deficient neural system is unmeasured, as the record says; protein-level readouts exist in non-neural carcinoma cells) |
 | Q-N-04 | Broad GABAergic push | (a), partial | EB-VGB-01 covers the vigabatrin limb only; benzodiazepines are uncovered, so a link would qualify half the record |
 | Q-N-05 | Boosting WWOX expression alone | (a), **linked 2026-10-27 follow-up** | C03 (abstention) |
 | Q-N-10 | Splice-switching ASO, canonical acceptor allele | (a), **linked 2026-10-27 follow-up** | C02 (abstention: no aberrant-to-normal transcript ratio exists) |

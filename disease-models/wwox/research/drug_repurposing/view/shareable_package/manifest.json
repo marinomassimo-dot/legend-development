@@ -28,7 +28,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 523,
+    "values": 525,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 777,
+    "values": 780,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -88,7 +88,7 @@
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(pmids\\[\\]|views\\.(broad|partial)\\.evidence\\.pmids\\[\\])$": {
     "class": "BIBLIO",
-    "values": 247,
+    "values": 248,
     "why": "PMID of a cited work (ranking)"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -469,7 +469,7 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2465,
+  "BIBLIO": 2471,
   "COUNT": 12405,
   "ID": 4861,
   "OWN": 88916,
@@ -546,7 +546,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2161,
-   "sha256": "e993974093b3b20f5ceee4d12296a753196d97fe1d761c961502fe31a0c8c06d"
+   "sha256": "3ac0b7bdd1e974403431f0e7db30e07049a39b0cdebdc6f178e53a5aa8079d1e"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -561,8 +561,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5061956,
-   "sha256": "9d7a550e9d4cdc097049790386283f0c9d2df534c73e5a3b8041561c8d41e65e"
+   "bytes": 5062469,
+   "sha256": "6e96945792f1fbd57cbcba93481f2de06e0b2b47e6c8103b62b234503204f247"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 168171,
