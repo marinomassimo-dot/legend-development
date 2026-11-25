@@ -23,7 +23,7 @@ Actor `orchestrator` (SCI). Hypothesis level; reference genotype class; nothing 
 | GSE158684 snRNA | one pool per genotype | none possible |
 | Hussain 2019 (PMID 30290271) | neurospheres 2 KO v 3 WT; hippocampi 4 v 4 | no per-animal values held |
 
-The brief's "Aldaz / Kv7 sets" are the Hussain 2019 set carried by matching triggers T19 and T20. Its RNA-seq is on neurospheres, not hippocampus; Kcna2 is Kv1.2, not Kv7.
+The brief's "Aldaz / Kv7 sets" are the Hussain 2019 set carried by matching triggers T19 and T20. Its RNA-seq is on neurospheres, not hippocampus; Kcna2 is Kv1.2, not Kv7. The August dossier (`fulltext_dossiers/PMID30290271.md`) already states the neurosphere arms of 2 and 3; only the trigger wording lost it. Its two supplement tables were read then; their bytes are absent from this checkout and were not reopened here.
 
 ## 3. Top of the ranking (number of consumers)
 
