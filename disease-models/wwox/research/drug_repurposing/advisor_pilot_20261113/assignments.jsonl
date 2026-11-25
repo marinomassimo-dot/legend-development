@@ -698,3 +698,5 @@
 {"evidence": "SendMessage 17:26Z", "id": "ADV-280", "receipt": ["c6d04c46-e1f4-4a8f-aa86-c883b2d44afd"], "state": "SENT", "to": ["SCI - CURRENT 8ee4045d"], "utc": "2026-11-25T17:26:46Z"}
 {"assessment": "HOST", "id": "ADV-281", "key": "positive-control-audit-of-null-wording-card-notes", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T18:33:49Z"}
 {"evidence": "SendMessage 18:34Z", "id": "ADV-281", "receipt": ["208ee909-952f-4950-aa13-0082d9546beb"], "state": "SENT", "to": ["SCI - CURRENT a25686e1"], "utc": "2026-11-25T18:34:09Z"}
+{"assessment": "HOST", "id": "ADV-282", "key": "null-note-control-audit-next-batch-48-queued", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T19:22:18Z"}
+{"evidence": "SendMessage 19:22Z", "id": "ADV-282", "receipt": ["f7739481-4e5a-4ff3-8860-c9a6396a1185"], "state": "SENT", "to": ["SCI - CURRENT 9cc174db"], "utc": "2026-11-25T19:22:51Z"}
