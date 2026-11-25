@@ -824,6 +824,8 @@ three sources was adjudicated by blind audit on 2026-10-24
 wording substituted for the ledger's compression on the same date and from `PAPER 043`'s artefact.*
 **`REVIVAL_TRIGGER`:** Seahorse/fluxomics showing a real bioenergetic shift in donor-derived cells.
 
+*Dated correction, 2026-11-25 (IT, SCI's ADV-255 table (`research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv255_lactate_table_sci_20261125/RESULT_ADV255_LACTATE_TABLE_SCI_20261125.md`) and ADV-259 (`research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv259_chong_route_sci_20261125/RESULT_ADV259_CHONG_ROUTE_SCI_20261125.md`); one reader, relayed at ADV's request; IT did not re-read the reports):* the second human source is not «the single MRS case»: a second report (PMID 35573960) gives small lactate peaks on spectroscopy at 4 months and none at 2 years 4 months, in the opposite direction at one age. The screen count rises from 3 to up to 14 subjects in 5 publications with blood lactate named normal. The conclusion («does not report reliably») stands. One raised value in the registry (Chong 2023, 2.4 to 3.3 mmol/L) has no stored quote and no held passage, and is not counted.
+
 ### N-07 — Digoxin (HIF1α inhibition) → **right target validation, wrong clinical object**
 **Source ids:** PAPER 091, CLAIM 025.
 **Failure mode:** *toxicity incompatible* + *wrong endpoint*. The only approved drug that corrects a

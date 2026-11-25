@@ -604,3 +604,42 @@
 {"assessment": "HOST", "id": "ADV-261", "key": "independence-audit-of-numeric-n-behind-working-model-claims", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T05:06:57Z"}
 {"evidence": "SendMessage 05:07Z with brief pointer", "id": "ADV-260", "receipt": ["1bc1a53f-0954-46af-b0f9-212a05b29b50"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 06001577"], "utc": "2026-11-25T05:07:17Z"}
 {"evidence": "SendMessage 05:07Z with brief pointer", "id": "ADV-261", "receipt": ["0ba56316-20b0-4c22-9f7a-185fe7186f68"], "state": "SENT", "to": ["SCI - CURRENT e8081cc5"], "utc": "2026-11-25T05:07:19Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-216", "state": "STRAND", "strand": "reading-debt-open-questions", "utc": "2026-11-25T05:18:08Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-218", "state": "STRAND", "strand": "reading-debt-open-questions", "utc": "2026-11-25T05:18:08Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-222", "state": "STRAND", "strand": "reading-debt-open-questions", "utc": "2026-11-25T05:18:08Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-224", "state": "STRAND", "strand": "reading-debt-open-questions", "utc": "2026-11-25T05:18:08Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-225", "state": "STRAND", "strand": "reading-debt-open-questions", "utc": "2026-11-25T05:18:09Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-228", "state": "STRAND", "strand": "reading-debt-open-questions", "utc": "2026-11-25T05:18:09Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-241", "state": "STRAND", "strand": "reading-debt-open-questions", "utc": "2026-11-25T05:18:09Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-219", "state": "STRAND", "strand": "reading-debt-open-questions", "utc": "2026-11-25T05:18:09Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-239", "state": "STRAND", "strand": "independence-and-unit-audit", "utc": "2026-11-25T05:18:09Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-242", "state": "STRAND", "strand": "independence-and-unit-audit", "utc": "2026-11-25T05:18:09Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-244", "state": "STRAND", "strand": "independence-and-unit-audit", "utc": "2026-11-25T05:18:09Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-247", "state": "STRAND", "strand": "independence-and-unit-audit", "utc": "2026-11-25T05:18:09Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-250", "state": "STRAND", "strand": "independence-and-unit-audit", "utc": "2026-11-25T05:18:09Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-261", "state": "STRAND", "strand": "independence-and-unit-audit", "utc": "2026-11-25T05:18:09Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-249", "state": "STRAND", "strand": "retraction-and-ledger-lead-audit", "utc": "2026-11-25T05:18:10Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-253", "state": "STRAND", "strand": "retraction-and-ledger-lead-audit", "utc": "2026-11-25T05:18:10Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-254", "state": "STRAND", "strand": "retraction-and-ledger-lead-audit", "utc": "2026-11-25T05:18:10Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-256", "state": "STRAND", "strand": "retraction-and-ledger-lead-audit", "utc": "2026-11-25T05:18:10Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-259", "state": "STRAND", "strand": "retraction-and-ledger-lead-audit", "utc": "2026-11-25T05:18:10Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-246", "state": "STRAND", "strand": "assay-and-premise-check", "utc": "2026-11-25T05:18:10Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-248", "state": "STRAND", "strand": "assay-and-premise-check", "utc": "2026-11-25T05:18:10Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-251", "state": "STRAND", "strand": "assay-and-premise-check", "utc": "2026-11-25T05:18:10Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-255", "state": "STRAND", "strand": "assay-and-premise-check", "utc": "2026-11-25T05:18:10Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-257", "state": "STRAND", "strand": "assay-and-premise-check", "utc": "2026-11-25T05:18:10Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-210", "state": "STRAND", "strand": "compound-and-signature-questions", "utc": "2026-11-25T05:18:11Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-213", "state": "STRAND", "strand": "compound-and-signature-questions", "utc": "2026-11-25T05:18:11Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-214", "state": "STRAND", "strand": "compound-and-signature-questions", "utc": "2026-11-25T05:18:11Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-230", "state": "STRAND", "strand": "compound-and-signature-questions", "utc": "2026-11-25T05:18:11Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-231", "state": "STRAND", "strand": "compound-and-signature-questions", "utc": "2026-11-25T05:18:11Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-232", "state": "STRAND", "strand": "compound-and-signature-questions", "utc": "2026-11-25T05:18:11Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-233", "state": "STRAND", "strand": "compound-and-signature-questions", "utc": "2026-11-25T05:18:11Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-236", "state": "STRAND", "strand": "compound-and-signature-questions", "utc": "2026-11-25T05:18:11Z"}
+{"basis": "assignment record result section, main 5d0aa3aca", "id": "ADV-240", "state": "STRAND", "strand": "compound-and-signature-questions", "utc": "2026-11-25T05:18:11Z"}
+{"assessment": "HOST", "id": "ADV-262", "key": "acquire-and-read-the-three-unheld-primaries-behind-claim-n", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-25T05:18:59Z"}
+{"evidence": "SendMessage 05:19Z; queued behind ADV-261 landing", "id": "ADV-262", "receipt": ["5183c5ba-90fd-4e27-b269-20247fef980c"], "state": "SENT", "to": ["SCI - CURRENT e8081cc5"], "utc": "2026-11-25T05:19:21Z"}
+{"assessment": "HOST", "id": "ADV-263", "key": "superlative-claims-audit-only-single-first-never", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-25T05:35:08Z"}
+{"evidence": "SendMessage 05:35Z with brief pointer", "id": "ADV-263", "receipt": ["21089fdf-bc30-4bb6-8212-7fcb21601cb5"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 06001577"], "utc": "2026-11-25T05:35:22Z"}
+{"connections": [{"to": "RP-043", "what": "the organoid clone-as-unit finding (one CRISPR clone, 4 libraries) and the library-is-at-most-one-unit upper-bound rule must be written into the per-line step before Table EV1 or E-MTAB-14792 is opened (re-check not before 2026-12-06): the unit of analysis is the clone and the animal, never the library or the well"}], "counter": "contrary: RP-043's own P-SCI-1 prediction is frozen and may already use line-level units; check before changing anything; context mismatch: the Brain 2026 Fig 6 lines are patient lines, not CRISPR clones", "ids": ["ADV-244", "ADV-247", "ADV-250", "ADV-261"], "none_reason": "", "state": "DREAM", "utc": "2026-11-25T05:35:30Z"}
+{"connections": [{"to": "RP-037", "what": "applicability of any RNA-level route to the c.1057-2A>G acceptor loss depends on one unmeasured quantity: residual correct exon 8 to 9 junction product in the sample with an allele-independent control (splice_allele_rna_evidence 3.3); the SLC26A4 hit raised residual use, it did not rebuild the AG"}], "counter": "contrary: a single gene, one allele, one group, liver rescue only; context mismatch: blood cells versus brain, an hnRNP-silencer ASO versus a destroyed AG; avoidable duplicate: none found", "ids": ["ADV-257", "ADV-260"], "none_reason": "", "state": "DREAM", "utc": "2026-11-25T05:35:30Z"}

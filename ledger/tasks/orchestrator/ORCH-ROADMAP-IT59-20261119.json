@@ -441,17 +441,21 @@
     },
     {
      "step": "ADV-257: search for the REJECTING observation to mechanism-map R-08 / DL-MOL-013 (RNA-level rescue of a destroyed canonical acceptor AG); prereg, per-hit table, disposition, wording; hypothesis level, no design",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-257 assignment message (adv257, delivered by ADV 2026-11-25)",
-     "accepted_at": "2026-11-25T04:47:45Z"
+     "accepted_at": "2026-11-25T04:47:45Z",
+     "evidence": "RESULT_ADV257_IT_20261125.md landed 40bb8f5b5",
+     "updated_at": "2026-11-25T05:19:53Z"
     },
     {
      "step": "ADV-260: receipts for 35433113 and 40225931, Figure 3B read, PDF request for 25421123 (R-08), narrower-statement line and decisive measurement; plus consume SCI's ADV-255 lactate wording",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-260 assignment message (delivered by ADV 2026-11-25)",
-     "accepted_at": "2026-11-25T05:02:22Z"
+     "accepted_at": "2026-11-25T05:02:22Z",
+     "evidence": "RESULT_ADV260_IT_20261125.md and receipts FTR-20261125-35433113-01, -40225931-01 landed 9147e69e7; consume SCI ADV-255/259/261 wording remains separate",
+     "updated_at": "2026-11-25T05:19:53Z"
     }
    ]
   }

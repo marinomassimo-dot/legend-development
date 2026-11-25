@@ -375,6 +375,25 @@ class ADeclaredSurfaceWithNoHeader(ToyRepo):
         self.assertEqual(0, report.exit_code)
 
 
+class RegenerationCommitsItsCompanions(ToyRepo):
+    """CI #2353 (2026-11-25): a generator that also rewrites a file nobody declared must have it committed with its surface; a file somebody else left modified elsewhere is not taken."""
+
+    def test_a_companion_beside_the_surface_is_committed_with_it(self):
+        companion = (Path(SURFACE).parent / "companion.tsv").as_posix()
+        generator = TOY_GEN.replace("Path(args.out).write_text(render())",
+                                    "Path(args.out).write_text(render())\nPath(args.out).with_name('companion.tsv').write_text(render())")
+        self.assertNotEqual(generator, TOY_GEN)
+        self.write("framework/scripts/toy_gen.py", generator)
+        self.write(companion, "old\n")
+        self.commit("generator with a companion", "framework/scripts/toy_gen.py", companion)
+        self.write(INPUT, "beta\n")
+        self.commit("input only", INPUT)
+        self.write("unrelated.txt", "in flight\n")
+        changed = ctf.regenerate_and_commit(self.repo)
+        self.assertEqual(sorted(changed), sorted([SURFACE, companion]))
+        self.assertEqual(git(self.repo, "status", "--porcelain").split(), ["M", "unrelated.txt"])
+
+
 def suite_discovery():
     sys.path.insert(0, str(ROOT / "scripts"))
     import test_generated_surfaces_are_regenerated as suite

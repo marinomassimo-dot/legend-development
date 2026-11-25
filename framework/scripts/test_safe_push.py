@@ -507,6 +507,57 @@ VIEW_STUB_STALE_INVENTORY = ("import sys\nif sys.argv[1:3] == ['i18n', '--what']
                              "print('view is current (stub)')\nsys.exit(0)\n")
 
 
+class SafePushLandingSuites(unittest.TestCase):
+    """`--landing-suites` prints what the selector's suites say and never refuses on it (ADV, 2026-11-25). Fixture repository with a stub selector; the real selector has its own tests."""
+    _repo = SafePushRefusals._repo
+    _with_bare_remote = SafePushRefusals._with_bare_remote
+    _remote_main = SafePushRefusals._remote_main
+    SELECTOR = ("def changes(root, base):\n    return [('M', 'x')]\n"
+                "def select(changed, root):\n    return sorted(str(p.relative_to(root)) for p in (root / 'suites').glob('*.py'))\n")
+
+    def publish(self, root: Path, *args: str):
+        env = dict(os.environ, LEGEND_SAFE_PUSH_ROOT=str(root), LEGEND_SAFE_PUSH_GATE=str(root / "scripts" / "gate.py"))
+        return subprocess.run([sys.executable, str(TOOL), "origin", "main", *args], capture_output=True, text=True, env=env)
+
+    def with_suites(self, td: str, suites: dict):
+        root, bare = self._with_bare_remote(td)
+        (root / "framework" / "scripts").mkdir(parents=True)
+        (root / "framework" / "scripts" / "landing_suites.py").write_text(self.SELECTOR, encoding="utf-8")
+        (root / "suites").mkdir()
+        for name, text in suites.items():
+            (root / "suites" / name).write_text(text, encoding="utf-8")
+        subprocess.run(["git", "-C", str(root), "add", "-A"], check=True)
+        subprocess.run(["git", "-C", str(root), "commit", "-qm", "suites"], check=True)
+        return root, bare
+
+    def test_a_red_suite_is_printed_and_the_push_still_happens(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self.with_suites(td, {"a_ok.py": "print('ok')\n", "b_red.py": "import sys\nprint('FAIL: test_x')\nsys.exit(1)\n"})
+            r = self.publish(root, "--landing-suites")
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertIn("LANDING-SUITE PASS suites/a_ok.py", r.stdout)
+            self.assertIn("LANDING-SUITE RED suites/b_red.py", r.stdout)
+            self.assertIn("FAIL: test_x", r.stdout)
+            self.assertIn("2 run, 1 not passing (printed only; the push is not refused)", r.stdout)
+            self.assertIn("PUBLISHED", r.stdout)
+
+    def test_without_the_flag_no_suite_runs(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self.with_suites(td, {"b_red.py": "raise SystemExit(1)\n"})
+            r = self.publish(root)
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertNotIn("LANDING", r.stdout)
+
+    def test_a_suite_that_dirties_the_tree_meets_the_clean_tree_refusal(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self.with_suites(td, {"w.py": "open('left_behind.txt', 'w').write('x')\n"})
+            before = self._remote_main(bare)
+            r = self.publish(root, "--landing-suites")
+            self.assertEqual(r.returncode, 1, r.stdout)
+            self.assertIn("left the working tree unclean", r.stderr)
+            self.assertEqual(self._remote_main(bare), before)
+
+
 class SafePushViewCurrency(unittest.TestCase):
     """2026-11-24 (ADV): a committed derived view that is behind its sources turned CI red for hours because nothing before the landing checked it. `check` and the i18n inventory check
     (about 12 s together) now run before the gate; a stale answer refuses and names the regeneration commands."""

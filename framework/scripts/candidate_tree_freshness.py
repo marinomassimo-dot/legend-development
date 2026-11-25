@@ -539,13 +539,22 @@ def regenerate_and_commit(repo: Path, stale: list[SurfaceResult] | None = None, 
             "re-seals them (prompt_batch_commit.md Phase 4.7): "
             + "; ".join(f"{r.surface}: {r.regenerate}" for r in sealed))
     written: list[str] = []
+
+    def dirty() -> set[str]:
+        out = _git(repo, "status", "--porcelain", "--no-renames", "-z", "--untracked-files=all").stdout
+        return {entry[3:] for entry in out.split("\0") if entry}
+
     for result in stale:
+        before = dirty()
         done = subprocess.run(shlex.split(result.regenerate), cwd=repo, capture_output=True,
                               text=True, timeout=timeout)
         if done.returncode != 0:
             raise RegenerationError(f"`{result.regenerate}` exited {done.returncode}: "
                                     + (done.stderr or done.stdout).strip()[-800:])
-        for path in [result.surface, *result.outputs]:
+        # 2026-11-25, CI #2353: `ranking_it8.py run` rewrites companions of its surface that no declaration lists (unit_inputs.tsv); only ranking.json was committed, the companion stayed
+        # modified and safe_push refused its own regeneration. What this generator newly dirtied beside its surface is part of what it regenerated.
+        beside = sorted(p for p in dirty() - before if p.startswith(Path(result.surface).parent.as_posix() + "/"))
+        for path in [result.surface, *result.outputs, *beside]:
             if path not in written and (repo / path).exists():
                 written.append(path)
     changed = [p for p in written

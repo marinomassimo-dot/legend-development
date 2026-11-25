@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "08c39dec9919ba1d4dc44296d5a1c596ef958afd01f8da6bb2ab1497659980f7",
+  "input_sha256": "32a4b520a634ee4992c2f214cc89598d7c6c38ee963ef8526841d169b8626577",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -519,7 +519,7 @@
       "Weak LDH inhibition by stiripentol in the retrieved measurements (a weak measure is not general inefficacy: assay, substrate level and enzyme source differ, and the 2015 report is unread).",
       "Direct inhibition of mitochondrial complex I by stiripentol, so a metabolic effect is not an LDH effect.",
       "An Ldh abundance rise also accompanies a complex I-reduced, ISR-activated fly model that has neither WWOX nor amyloid (DA-PARS2-LDH-001), so a raised Ldh in a Wwox-reduced fly does not by itself identify an LDH-specific lesion (INFERENZA: possible confounding by mitochondrial or ISR state).",
-      "Human lactate in WWOX deficiency reported normal or extremely low.",
+      "Human lactate in WWOX deficiency: blood normal where stated (5 publications, up to 14 subjects, no values printed); spectroscopy mixed (one report with small peaks in early infancy and none later, one report 'extremely low', confounded by a second candidate variant); one raised value in the registry is without a held source passage. [IT 2026-11-25, ADV-255 via SCI]",
       "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the network labelled WWOX-enriched in IT7 (four duplicated HIF1A edges, already in the external network; the comparison therefore tests nothing about WWOX knowledge in general, and no added value was measurable) showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data."
     ],
     "bridge_gaps_exposed": [
