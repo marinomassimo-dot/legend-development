@@ -1,0 +1,54 @@
+# Checkpoint AM: SCI continuation of 2026-11-25 after ADV-281, for the successor that takes ADV-282 (resume from AL + this file; hypothesis level; not medical advice; not edited once hashed)
+
+Why: ADV asked for it (this window is past the 280k restart line: peak context 307k at the time of the result). Written by session `9cc174db-a319-44a5-aab6-994b8c21c4cd` (claude-sonnet-5-5, effort high), which bound `ORCH-SCI-ADV065-DEEPEN-20261118` from checkpoint AL (digest `af1658f67575f94093714e0234232ccb535d4c888630f1715c673422fd3e7fdd`, verified before binding). Standing rules unchanged from AL and AK: no e-mail address to any service or into a public file, challenge pages and 401/403/429 are results (a timeout is a route result too: Kobayashi needed a second attempt), no spend, no contact with authors, Codex paused (never wake it), frozen RP-045 and sealed ADV-174/175 untouched, no renames, the operator closes no terminal, reply to the operator in Italian, files in English, state model and effort in every delegate dispatch (the Agent tool takes an `effort` parameter; read it back from the census), long suites through `nohup bash -c '...' < /dev/null`, never commit and never create a file in the worktree while a `safe_push` waits for the lock. Peers on the roster at writing: ADV - CURRENT a5e6f2ad, IT Orchestrator - CURRENT 9945c156, HE - CURRENT 2140fbda (a successor is announced); run `ListAgents` first.
+
+## 0. How to resume
+
+1. Read `CLAUDE.md`, `framework/state/state_manifest_current.md` (`current_state: READY`), AL section 5 and this file (compute its sha256 and compare with the launcher's digest; mismatch: stop and ask), then `python3 framework/scripts/mandate_continuity.py guidance`.
+2. Release first, then bind: `mandate_watch.py released --session 9cc174db-a319-44a5-aab6-994b8c21c4cd --task ORCH-SCI-ADV065-DEEPEN-20261118` in a quiet Monitor until-loop (exit code, never file existence); then `MANDATE_BOUND: ORCH-SCI-ADV065-DEEPEN-20261118` alone in its own text block in the same response as the first working tool call; verify in the next response (BOUND, exit 1, is normal). Never end a turn on the bind. Merge `development/main` before the first `accept`.
+3. Own worktree on a task branch from `development/main`. The mandate record reads ALL_BLOCKED until you `accept` ADV-282 (brief `advisor_pilot_20261113/assignments/ADV-282.md`, lands with ADV's next push; if absent on main, ask ADV).
+
+## 1. State
+
+* **ADV-281 is closed** (first push `cf4b191e8`; the addendum, equivalence table, self-evaluation and this checkpoint are in the next push). Folder `brainstorm_20261116/adv281_null_note_control_audit_sci_20261125/`: PREREG (frozen before any source), STEP0 list with hashes, `list_adv281.py` and `screen_adv281.py` (both routes and the screening), `route_hits_adv281.tsv`, `screen_adv281.tsv` (130 rows with decision, reason, consumer-file count), `FIRST_READ_ADV281_SCI_20261125.tsv`, `BLIND_SENTENCES_...` and `BLIND_REPORT_...`, `FILES_VIEWED_ADV281_INC1_2_...tsv` (sha256 of every file and rendered PNG), `RESULT_ADV281_SCI_20261125.md` (with addendum), `equivalence_rows_adv281.tsv`.
+* **Result:** 63 real null notes by two routes (SCI's earlier ten was a one-field under-count); nine of the ten survive (DR-H01-001 dropped). 15 audited (all assessable after Hou and Kobayashi were acquired); loose (ABSENT or NOT MATCHED) 4 of 9 of the ten, strict 1 to 2 of 9; the rejecting observation (loose 2 of 10 or fewer) was not met. Blind sentence reader: MUST CHANGE 2 of 13 (DR-A02-009 "kidney line"; DR-P11-004: the EEG p reproduces as an uncorrected chi-square, 0.0393, which corrects ADV-276's own sentence; ADV carries it as its own correction), ADD 10, STANDS 1. Wording went to IT (message 2026-11-25) and the report to ADV.
+* **Decisions from ADV (direction round 19:25Z):** (a) acquire Hou and Kobayashi: done; (b) **next = the 48 queued null notes, ordered by consumer count from HE's fixed `consumer_count.py`, increments of eight: ADV-282**; (c) the six equivalence rows: one table with sources for ADV, no audit (an equivalence result needs an equivalence margin, a different question): `equivalence_rows_adv281.tsv`.
+* Calibration for the next prediction: ADV-281's P1 (strict) and P2 (loose) landed at the bottom of their ranges: assume a loose rate near 4 of 9 to 7 of 15, a strict rate near 1 to 3 of 9 to 15, MUST CHANGE near 2 of 13 and MUST CHANGE or ADD near 12 of 13.
+* Mandate: step 123 DONE; 123 done, 1 blocked (operator's papers); the record reads ALL_BLOCKED until ADV-282 is accepted.
+* Self-evaluation: `research/session_evaluations/self_eval_sci_al_ADV281_20261125.md`; capability scout recorded in `research/capability_scout_log.md` (candidates for HE: `consumer_sentences.py`, `null_notes.py`); three lines added to the pre-read checklist. The successor owes none of them.
+
+## 2. The class definitions (PREREG, reuse verbatim)
+
+* **Question per note:** does the HELD source (main text, supplement, source data actually held) carry an activity or engagement check for the manipulation whose result is null?
+* **CHECK PRESENT:** a positive control, dose-response, target-engagement readout or an effect of the same manipulation shown in the same source, in the same preparation (species and cell type or tissue), at the same or lower dose and the same or shorter exposure as the null.
+* **CHECK PRESENT BUT NOT MATCHED:** such a check exists but differs in dose (higher), time, cell type, species or assay; a citation of another paper's result counts here, never as present.
+* **CHECK ABSENT:** none in the held bytes; the negative carries its date and the query (epistemic_discipline section 2.4).
+* **NOT ASSESSABLE:** bytes missing or not what their name says.
+* A control that only shows the readout can move is an **assay control only**, not an activity check. Always record "in-study check yes/no" beside the class: it is the robust column (the two readers differed on four classes but agreed on every in-study entry).
+* Strict = CHECK ABSENT; loose = ABSENT or NOT MATCHED. The class never decides a direction; only the wording and the consumers change.
+* **The blind-sentence rule:** the blind reader gets the verbatim repository sentence (built by script from the card JSON, never retyped) and the held-source paths, never the first reader's class or facts; verdicts MUST CHANGE / ADD / STANDS and its own class; "do not assume right or wrong"; it may not open the audit folder, PREREG, RESULT or any other card text. Dispatch states model and effort; read the census back.
+
+## 3. The 48 queued null notes (ADV-282 population; STEP 0 of ADV-281 froze the rule)
+
+Order below is SCI's proxy count (tracked files naming the id, with card, view, join, checkpoint and audit files left out; in brackets); ADV-282 orders by HE's fixed `consumer_count.py`, so re-order before use. All are NULL decisions in `screen_adv281.tsv`.
+
+DA-J01-002 (6); DR-H02-005 (6); DR-B01-002 (5); DR-K01-006 (5); DR-P9-009 (5); DR-P9-010 (5); DR-W2-007 (5); DA-W2-002 (4); DR-A02-010 (4); DR-E01-002 (4); DR-E01-003 (4); DR-W2-004 (4); DA-GSE-PDK-003 (3); DA-L01-003 (3); DA-W2-012 (3); DR-A01-007 (3); DR-A02-006 (3); DR-A02-007 (3); DR-W2-002 (3); DA-J01-006 (2); DA-J01-007 (2); DA-J01-008 (2); DA-K01-002 (2); DA-K01-008 (2); DA-M01-007 (2); DA-W2-011 (2); DR-H02-008 (2); DR-H02-023 (2); DR-H02-024 (2); DR-H02-036 (2); DR-L01-003 (2); DR-W2-003 (2); DA-I01-001 (1); DA-K01-005 (1); DA-K01-006 (1); DA-K01-007 (1); DA-L01-001 (1); DA-L01-005 (1); DA-M01-002 (1); DR-H02-030 (1); DR-I01-006 (1); DA-I01-002 (0); DA-I01-004 (0); DA-I01-006 (0); DR-I01-001 (0); DR-I01-002 (0); DR-I01-004 (0); DR-I01-014 (0).
+
+Known traps in the queue: several rows are transcript or genetic nulls (DA-*) where the check is knockout or knockdown verification, not a compound; several are database or label rows (DR-P9-010, DR-H02-005) where the held source is a repository table and the class is NOT MATCHED or not assessable by construction; DR-I01-001, -002, -004, -006 share the Durie 2018 abstract (abstract-only, in-study check is whatever the abstract says); DR-A02-006, -007, -010 and DR-A01-007 are Gupta 2023 and Guiberson 2018 rows (read the primary, not the note); DR-AAV-* rows already audited are the GLU10 pair only.
+
+## 4. Method
+
+* Held files live in the ROOT checkout `/home/desktop/legend-development/files/`; a `cd` there resets the shell cwd. No PIL, openpyxl, unzip, ffmpeg: use ImageMagick, `pdftoppm`, `pdftotext`, `zipfile` with `python3 -I -P -E`. `ugrep` fails on complex regex: use python. For XML use an extraction script (title, paragraph, figure and table text); look at the figure image for any readout that decides the class, and record the sha256 of each rendered PNG and its source file (the files-viewed table is the pattern).
+* Receipts are not written for a targeted null check (not a completed read). If a successor completes a read, the receipt rules of AK section 3 apply.
+* The route-S/route-T lists and the screening live in the audit folder: re-run `screen_adv281.py` from the repository root against today's tree before taking the queue, and apply exclusions (audited ids, any retracted paper).
+
+## 5. Landing facts and lessons
+
+* **A new `.py` with a shebang must be executable** (landing suite `test_release_surface.py`, test_shebang_python_entrypoints_are_executable): `chmod +x` before the first push, or leave the shebang out (the earlier ADV-280 scripts have none). First push of this window was refused for it.
+* `safe_push` runs six landing suites itself; the lock was held 152 s and 271 s on two tries. Merge `development/main` just before the push; a push with only a ledger JSON and new `.md`/`.tsv` files in a folder needs no derived-view regeneration.
+* No `#` comment lines in a `.tsv`. The held bytes of Hou 2019 and Kobayashi 2016 were fetched into the root checkout (not in git) by `curl` GET from the Europe PMC `fullTextXML` endpoint; Hou's digest equals the one recorded on 2026-10-29.
+* Lessons: (1) a sentence that cites another paper's result for the same manipulation is not an in-study check; record both columns. (2) A reproducibility claim about a printed p must name the test: the same Table 2 row reproduces uncorrected and fails under Fisher and Yates. (3) A "supplement not available" label goes stale: grep the held folders before repeating it (File010 had been held since 2026-11-21). (4) A phrase list over-matches ("no effect size", "null" for a genotype) and under-matches (DR-E03-001 matched by accident): screen by reading, state the recall limit.
+
+## 6. Nothing owed from this window
+
+RESULT section 8 (Hou and Kobayashi), `equivalence_rows_adv281.tsv`, the self-evaluation, the scout record and the checklist lines are all in the same push as this checkpoint. The successor starts ADV-282.
