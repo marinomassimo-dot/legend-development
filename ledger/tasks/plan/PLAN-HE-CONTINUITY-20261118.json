@@ -1137,10 +1137,12 @@
     },
     {
      "step": "ADV-258: extend epmc_notice_sweep.py (catalogue mode, TSV, delta, proposed flags printed only), weekly in scout_daily, tick says NEW NOTICE once; acceptance reproduces SCI ADV-256 counts from a fixture",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-258",
-     "accepted_at": "2026-11-25T04:50:51Z"
+     "accepted_at": "2026-11-25T04:50:51Z",
+     "evidence": "a869a52b6 on main, gate PASS, ls-remote; live run 2026-11-25T05:13Z: 1083 PMIDs, 6 retracted, 2 concern, 21 corrected, same 29 rows as SCI ADV-256; proposed flag only PMID 19357348 (notice 42583763)",
+     "updated_at": "2026-11-25T05:13:39Z"
     }
    ]
   }
