@@ -921,6 +921,15 @@
      "accepted_at": "2026-11-24T23:24:51Z",
      "evidence": "{\"path\": \"disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv224_isr_codon_sci_20261124/RESULT_ADV224_NQB_NQC_SCI_20261124.md\", \"contains\": \"Answer first\"}",
      "updated_at": "2026-11-24T23:25:05Z"
+    },
+    {
+     "step": "ADV-228: six PMC-open catalogued-only records read in full from the saved Europe PMC text, with receipts, per-record verdicts and new questions",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-228 (ADV message 2026-11-24, brief adv228.txt)",
+     "accepted_at": "2026-11-25T00:01:55Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv228_pmc_open_batch_sci_20261124/RESULT_ADV228_PMC_OPEN_BATCH_SCI_20261124.md; six receipts FTR-20261124-28045433-01 to 37324196-01 recorded",
+     "updated_at": "2026-11-25T00:12:30Z"
     }
    ]
   }
@@ -1630,6 +1639,13 @@
    "at": "2026-11-24T23:24:51Z",
    "source": "ADV-224 (ADV message 2026-11-24, brief adv224.txt)",
    "step_sha256": "b7a8893bcdab",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T00:01:55Z",
+   "source": "ADV-228 (ADV message 2026-11-24, brief adv228.txt)",
+   "step_sha256": "7847b888a7f2",
    "reopened_block": false,
    "authorised_by": null
   }
