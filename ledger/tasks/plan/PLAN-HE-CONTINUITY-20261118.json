@@ -1339,6 +1339,13 @@
      "owner": "plan",
      "source": "ADV a5e6f2ad, 2026-11-25; launch brief of HE 43ab579f",
      "accepted_at": "2026-11-25T13:38:47Z"
+    },
+    {
+     "step": "landing_suites.py selects check_cards for card and packet paths, with a mutation check that a card line carrying a unit value is refused before the push; minutes per risk reported",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad message to HE 43ab579f, 2026-11-25, after IT's refused landing",
+     "accepted_at": "2026-11-25T14:16:28Z"
     }
    ]
   }
@@ -2377,6 +2384,13 @@
    "at": "2026-11-25T13:38:47Z",
    "source": "ADV a5e6f2ad, 2026-11-25; launch brief of HE 43ab579f",
    "step_sha256": "21bc1b8f532d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T14:16:28Z",
+   "source": "ADV a5e6f2ad message to HE 43ab579f, 2026-11-25, after IT's refused landing",
+   "step_sha256": "3b30beda5665",
    "reopened_block": false,
    "authorised_by": null
   }

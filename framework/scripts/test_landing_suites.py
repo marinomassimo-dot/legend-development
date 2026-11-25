@@ -53,6 +53,17 @@ class Selection(unittest.TestCase):
         self.assertNotIn("framework/scripts/test_repurposing_view.py", got)
         self.assertIn("python3 -B framework/scripts/test_repurposing_view.py Titles < /dev/null", ls.command_for(got))
 
+    def test_a_card_or_packet_change_selects_the_checker_of_its_own_folder(self) -> None:
+        """A change made of .json files only selects no document suite, so a unit value in card text would reach main unchecked."""
+        base = "disease-models/wwox/research/drug_repurposing"
+        for folder, other in (("cards", "cards_early"), ("cards_early", "cards")):
+            for kind in ("packet", "card"):
+                got = ls.select([("M", f"{base}/{folder}/X-01.{kind}.json")], REPO)
+                self.assertIn(f"{base}/{folder}/check_cards.py", got, (folder, kind))
+                self.assertNotIn(f"{base}/{other}/check_cards.py", got, (folder, kind))
+        bridge = ls.select([("M", "framework/scripts/repurposing_bridge.py")], REPO)      # the checkers compare stored cards with what the bridge builds
+        self.assertLessEqual({f"{base}/cards/check_cards.py", f"{base}/cards_early/check_cards.py"}, set(bridge))
+
     def test_a_title_cache_change_selects_the_title_class_and_not_the_long_view_suite(self) -> None:
         got = ls.select([("M", "disease-models/wwox/research/drug_repurposing/view/source_titles.json")], REPO)
         self.assertIn("framework/scripts/test_repurposing_view.py Titles", got)
