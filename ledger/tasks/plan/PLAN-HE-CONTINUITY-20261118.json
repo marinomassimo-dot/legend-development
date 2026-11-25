@@ -1051,6 +1051,15 @@
      "accepted_at": "2026-11-25T01:07:48Z",
      "evidence": "commit 98ef9fac5 on development/main (HE_LANDING_SLOT_BREAKDOWN_20261125.md); disease-models/wwox/research/drug_repurposing/checkpoint_he_20261120/CHECKPOINT_HE_20261125_K.md section 1",
      "updated_at": "2026-11-25T01:07:48Z"
+    },
+    {
+     "step": "SCI handoff ac5ef625: verify, rename natively, prove",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-25 (SCI successor launched)",
+     "accepted_at": "2026-11-25T01:23:41Z",
+     "evidence": "2026-11-25 01:23Z: mandate_watch handoff RUNNING; claude agents --all --json shows 'SCI - PREVIOUS 7fc66b5b' and 'SCI - CURRENT ac5ef625'; mandate_watch labels CURRENT; retire-old not run, reported to ADV",
+     "updated_at": "2026-11-25T01:23:41Z"
     }
    ]
   }
@@ -1865,6 +1874,13 @@
    "at": "2026-11-25T01:07:48Z",
    "source": "ADV-229 (done by HE window 1d88b230; recorded late by 3b826442 on ADV's request of 2026-11-25)",
    "step_sha256": "42c483d959e4",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T01:23:41Z",
+   "source": "ADV message 2026-11-25 (SCI successor launched)",
+   "step_sha256": "e3777e52f9c6",
    "reopened_block": false,
    "authorised_by": null
   }
