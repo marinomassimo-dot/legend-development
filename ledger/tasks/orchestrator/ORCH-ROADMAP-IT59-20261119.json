@@ -366,6 +366,24 @@
      "accepted_at": "2026-11-25T02:30:20Z",
      "evidence": "placed: not_known item in packets and rebuilt cards K01, D01, D02, M01, E02, I01; INV-16 clause (investigations.tsv, investigations_it20.tsv, ranking.json) translated it/fr/es/de; views and package regenerated; guard suites exit 0; folder brainstorm_20261116/it_adv244wording_20261125 (WORDING note, apply script); 'apparently one batch' not placed (unverified in held text); CLAIM 002 and RP-008 carry no placeable clone statement (RP-008 is ADV's); landing from task/it-adv241-20261125",
      "updated_at": "2026-11-25T02:45:57Z"
+    },
+    {
+     "step": "ADV-246: per-line WWOX protein beside per-line function (Brain 2026 supplement): PREREG first, read-off values marked, no cross-membrane comparison, disposition supported / not supported / not testable (n); CLAIM 030 wording through a candidate; RP-045 untouched",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-246 (ADV message 2026-11-25; brief adv246.txt)",
+     "accepted_at": "2026-11-25T02:59:03Z",
+     "evidence": "result brainstorm_20261116/it_adv246_20261125: NOT TESTABLE (n = 0), framing correction (CLAIM 030 = function not abundance), P1-P4 met; CLAIM 030 candidate CC-20261125-ORCHESTRATOR-ADV246-LINE-PROTEIN-01 PROPOSED; RP-045 untouched; landing from task/it-adv246-20261125; delivered to ADV 2026-11-25",
+     "updated_at": "2026-11-25T02:59:12Z"
+    },
+    {
+     "step": "ADV-248: does the week-7 cell-attached assay saturate (plateau of ADV-246)? held files first, PREREG, about 60 minutes, consumer CLAIM 030 and the line-level reading",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-248 (ADV message 2026-11-25, approved IT proposal; formal record follows)",
+     "accepted_at": "2026-11-25T02:59:03Z",
+     "evidence": "result brainstorm_20261116/it_adv248_20261125: NO_HARD_CAP, soft saturation NOT_EXCLUDED, 2021 Fig 5C scale agrees (WSM S 1.67 Hz about 400 per 4 min), P1-P3 met; landing from task/it-adv246-20261125 (merged branch it-adv248)",
+     "updated_at": "2026-11-25T02:59:12Z"
     }
    ]
   }
@@ -648,6 +666,20 @@
    "at": "2026-11-25T02:30:20Z",
    "source": "SCI message 2026-11-25 relayed for ADV (ADV-244 section 6, replaces ADV-242 section 6)",
    "step_sha256": "6a587976da2c",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T02:59:03Z",
+   "source": "ADV-246 (ADV message 2026-11-25; brief adv246.txt)",
+   "step_sha256": "487c3f6894bc",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T02:59:03Z",
+   "source": "ADV-248 (ADV message 2026-11-25, approved IT proposal; formal record follows)",
+   "step_sha256": "175ed52d70da",
    "reopened_block": false,
    "authorised_by": null
   }
