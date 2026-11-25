@@ -270,10 +270,12 @@
     },
     {
      "step": "Integrate SCI X results when each lands: ADV-139 (INV-15 question wording and resume condition in investigations_it20.tsv via the established regeneration path, reader-journey suite) and ADV-140 (benchmark into the CLAIM 002 dossier consumers); then RP-041 cold read of the pup brief in the first free delegate window",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message 2026-11-21 (SCI X priority strands ADV-139 then ADV-140; RP-041 queued)",
-     "accepted_at": "2026-11-21T13:52:12Z"
+     "accepted_at": "2026-11-21T13:52:12Z",
+     "evidence": "reconciled 2026-11-25 by IT successor 45a8b15c, all on main: 1a1addbfd (ADV-139 INV-15), 9ad42aceb (ADV-140 consumers and CLAIM 002 candidate), e03836c76 and 0af7dcdcb (RP-041 cold read and blind second reader), 10754354b (ADV-142 line)",
+     "updated_at": "2026-11-25T02:04:24Z"
     },
     {
      "step": "ADV-143: one governing current text of the pup brief (which text governs, dated lines 9.1 to 9.17 folded, old text kept in a history section, OPEN-GAP markers for group (b), the 19 cannot-tell conflicts marked, plain wording for the new text only; text edit, never a number)",
@@ -346,6 +348,14 @@
      "accepted_at": "2026-11-25T00:39:42Z",
      "evidence": "disposition b; result and receipt in brainstorm_20261116/it_adv232_20261125; map line on IT-ADV222-NQA",
      "updated_at": "2026-11-25T00:46:38Z"
+    },
+    {
+     "step": "ADV-241: re-triage the ten oldest-touched OPEN open-question rows against everything held or landed since each last touch (PREREG first, two-hit read for absences); answer one answerable row or queue it as a portfolio candidate for ADV",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "source": "ADV-241 (ADV message 2026-11-25; assignments/ADV-241.md)",
+     "accepted_at": "2026-11-25T02:04:24Z",
+     "updated_at": "2026-11-25T02:04:32Z"
     }
    ]
   }
@@ -614,6 +624,13 @@
    "at": "2026-11-25T00:39:42Z",
    "source": "ADV-232 (ADV message 2026-11-25)",
    "step_sha256": "dc7ccbfe1089",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T02:04:24Z",
+   "source": "ADV-241 (ADV message 2026-11-25; assignments/ADV-241.md)",
+   "step_sha256": "ca107d2bbf4c",
    "reopened_block": false,
    "authorised_by": null
   }
