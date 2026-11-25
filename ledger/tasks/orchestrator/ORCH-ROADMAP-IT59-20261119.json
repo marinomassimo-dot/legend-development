@@ -564,6 +564,24 @@
      "accepted_at": "2026-11-25T11:44:53Z",
      "evidence": "advisor_pilot_20261113/brainstorm_20261116/it_adv277_20261125/RESULT_ADV277_IT_20261125.md; answer sent to ADV by message msg b87cb5c9",
      "updated_at": "2026-11-25T12:12:26Z"
+    },
+    {
+     "step": "ADV-277 follow-up: dated recall-limit lines on ADV-273, ADV-275 and ADV-277, and the unscored sentinel-failed list on ADV-275",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-25 consuming ADV-277",
+     "accepted_at": "2026-11-25T12:40:28Z",
+     "evidence": "commit d115aab10: dated updates on the three results, adv275_unscored_sentinel_failed.tsv",
+     "updated_at": "2026-11-25T12:40:28Z"
+    },
+    {
+     "step": "Staged BATCH_COMMIT, batch 1: selection by second-reader rule, one blind verifier (sonnet, effort high), verifier-overturned statements held back, LINT and test_batch_queue before commit (ADV)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-25 (rotation option a accepted, staged)",
+     "accepted_at": "2026-11-25T12:40:28Z",
+     "evidence": "BATCH_20261125_002, commit 359f6ef04: PAPER 050, CORPUS-STUB-129, CLAIM 011, WM section 4, CLAIM 002; blind check report it_batch1_verify_20261125",
+     "updated_at": "2026-11-25T12:40:28Z"
     }
    ]
   }
@@ -1000,6 +1018,20 @@
    "at": "2026-11-25T11:44:53Z",
    "source": "assignment ADV-277 (advisor_pilot_20261113/assignments/ADV-277.md); ADV message 2026-11-25",
    "step_sha256": "76d6750c84ef",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T12:40:28Z",
+   "source": "ADV message 2026-11-25 consuming ADV-277",
+   "step_sha256": "aff5c92231a2",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T12:40:28Z",
+   "source": "ADV message 2026-11-25 (rotation option a accepted, staged)",
+   "step_sha256": "ed3c0fcd85c6",
    "reopened_block": false,
    "authorised_by": null
   }
