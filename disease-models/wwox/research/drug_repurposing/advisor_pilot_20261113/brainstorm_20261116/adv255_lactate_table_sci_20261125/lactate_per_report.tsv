@@ -1,0 +1,17 @@
+pmid	report	subjects_with_statement	age_at_test	sample	statement_as_printed	direction	value_or_range	source_locator	second_representation
+24456803	Abdel-Salam 2014	1 tested	not printed	serum	normal results in metabolic screening including serum lactate	normal	none printed	case report, clinical findings	XML and bucket PDF
+27495153	Elsaadany 2016	2 of 2	not printed	plasma in one, unspecified in the other	investigations including ammonia, lactate ... all were normal; plasma lactate ... normal	normal	none printed	case descriptions	XML and bucket PDF
+30361190	Shaukat 2018	2 of 2	not printed	unspecified	the following investigations were normal: lactate	normal	none printed	pages 403 and 405	PDF text and page image
+30746283	Ehaideb 2018	1 of 3 probands	not printed	unspecified	investigations unremarkable including: ammonia, lactic acid	normal	none printed	results, first family	XML and publisher HTML
+35792847	AlBaradie 2022	8 of 9	not printed	serum or unspecified	metabolic screening, ammonia and lactate unremarkable	normal	none printed	case descriptions	HTML and PDF
+35792847	AlBaradie 2022	1 of 9 (one of the 8)	not printed	CSF	lactate (serum and CSF) ... unremarkable	normal	none printed	case descriptions	HTML and PDF
+35573960	Riva 2022	1 of 1	4 months	MRS, basal ganglia	MR spectroscopy showed small lactate peaks	elevated	peak, no value	text and Figure 2G legend	XML and bucket PDF
+35573960	Riva 2022	1 of 1	2 years 4 months	MRS, basal ganglia	absence of lactate peaks	normal	none	text and Figure 3M legend	XML and bucket PDF
+30362252	Davids 2019	1 of 1 (second candidate variant in another gene)	not printed	MRS	lactate levels were extremely low	low (authors' word)	none printed	neuroimaging paragraph	XML only
+36537114	Chong 2023	not verifiable	not verifiable	not verifiable	no lactate passage in the held copy (8 delivered chunks); registry says mildly elevated, 2.4-3.3 mmol/L, one of five	unverified (not scored)	not verifiable	registry PAPER 017 only	none
+29808465	Johannsen 2018	1 of 2	spectroscopy at 3, 5, 21 months	MRS; blood, urine, CSF work-up	normal MR spectroscopy; work-up revealed no abnormalities	work-up normal, lactate not named	none	case 1	PDF text and text copy
+30853297	Weisz-Hubshman 2019	5 of 6	not printed	unspecified	metabolic investigations normal or without diagnostic findings; MRS non-diagnostic	work-up normal, lactate not named	none	case descriptions	not re-checked
+35712340	Sukkar 2022	1	not printed	plasma, urine	amino and organic acid results	work-up, lactate not named	none	case description	not re-checked
+42092735	Serce Pehlevan 2026	1	neonatal	blood	comprehensive metabolic evaluation; listed analytes do not include lactate	work-up, lactate not named	none	case description	not re-checked
+29390993	Rim 2018	1 WWOX case in a cohort	not printed	serum	lactate is part of the cohort test panel; no per-case result	not stated	none	methods	not re-checked
+39850204	Zhu 2025	1 WWOX case in a cohort	not printed	unspecified	lactate is part of the cohort test panel; no per-case result	not stated	none	methods	not re-checked

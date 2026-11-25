@@ -400,6 +400,8 @@ biology. **No systematic counterexample search was performed.** Status is `stres
 search ([[discovery_ledger_current#DL-MOL-013 — VERDETTO sulla tesi ASO: **regge**, con una via RNA che non avevo considerato|DL-MOL-013]]). **No sequence has been designed. This is not
 clinical design.**
 
+*Dated note, 2026-11-25 (IT, ADV-257):* the statement above that no systematic counterexample search was performed is now out of date. A pre-registered search (two databases, six formulations) found one report at an AG-destroyed acceptor, SLC26A4 c.919-2A>G (identified in the ADV-257 result): an antisense oligonucleotide against an intronic silencer raised residual full-length splicing in patient cells (31 to 67% and 21.5 to 61.5%); it does not rebuild the AG, and residual use of the mutated site existed before treatment. No exclusion of RNA routes by a primary source was found. Whether c.1057-2A>G keeps any residual correct product is unmeasured. Result: `drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv257_20261125/RESULT_ADV257_IT_20261125.md`.
+
 **The enabling measurement both chains need before any intervention choice:** a published, validated
 RT-qPCR quantifies **exon 8→exon 9 junction** transcripts against **core (exons 4–6)** transcripts
 (ratio ~67%, intra-line r=0.68) — the very junction an acceptor-class allele destroys. It supplies
@@ -628,7 +630,7 @@ cannot be ranked at all until one measurement exists.
 | **TARGET** | the pathogenic base — restoring the invariant AG acceptor |
 | **MECHANISM** | rebuilds the acceptor destroyed by the variant; the only route that returns the wild-type transcript |
 | **EVIDENCE_LEVEL** | **T6** for WWOX; **T5/T4** for the modality in other genetic disease |
-| **WWOX_DIRECT_EVIDENCE** | none. The **mechanistic exclusion** of every alternative RNA route is the contribution ([[discovery_ledger_current#DL-MOL-013 — VERDETTO sulla tesi ASO: **regge**, con una via RNA che non avevo considerato|DL-MOL-013]]) |
+| **WWOX_DIRECT_EVIDENCE** | none. The **mechanistic exclusion** of every alternative RNA route is the contribution *[2026-11-25, IT ADV-257: no primary source excludes them; one oligonucleotide route is reported at an AG-destroyed acceptor (SLC26A4 c.919-2A>G, identified in the ADV-257 result), conditional on residual use of the mutated site; see the dated note under R-08]* ([[discovery_ledger_current#DL-MOL-013 — VERDETTO sulla tesi ASO: **regge**, con una via RNA che non avevo considerato|DL-MOL-013]]) |
 | **NEAR_DISEASE_EVIDENCE** | base/prime editing is advancing in other monogenic diseases; CNS delivery is the shared bottleneck |
 | **HUMAN_USE_STATUS** | investigational |
 | **CLINICAL_MATURITY** | low; **CNS delivery immature**; prime-editor cargo exceeds single-AAV capacity |
