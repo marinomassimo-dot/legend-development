@@ -43,7 +43,8 @@ RULES = [
     # #2289-#2297: debt_report.py imported the Advisor
     ("framework/scripts/test_strategic_advisor.py", lambda c: _any(c, "framework/scripts/*.py")),
     # #1981, #2289-#2297: a registry changed and the batch queue or the pathograph was not satisfied or not regenerated
-    ("framework/scripts/test_batch_queue.py", lambda c: _any(c, "disease-models/*/registries/*")),
+    # #2370 (ADV-274): the queue also scans every `*_current.md` (a retracted PMID cited in the discovery ledger), not only the registries
+    ("framework/scripts/test_batch_queue.py", lambda c: _any(c, "disease-models/*/registries/*", "disease-models/*_current.md")),
     ("framework/scripts/test_pathograph.py", lambda c: _any(c, "disease-models/*/registries/*", "disease-models/*/analysis/*")),
     # #1994, #2109: a receipt recorded and the two derived pages not regenerated
     ("framework/scripts/test_coverage_report.py", lambda c: _any(c, "*fulltext_read_receipts.jsonl", "*coverage_report*")),
@@ -59,6 +60,8 @@ RULES = [
     ("framework/scripts/test_candidate_tree_freshness.py", lambda c: _any(c, "disease-models/*/drug_repurposing/needs/*")),
     ("disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/test_ranking_it8.py",
      lambda c: _any(c, "disease-models/*/drug_repurposing/needs/*")),
+    # #2421 (ADV-274): a PMID added to a mechanism-map record became the first evidence row of its query. Only the class that reads it (about 10 s)
+    ("framework/scripts/test_repurposing_join.py CuratedLink", lambda c: _any(c, "disease-models/*/analysis/mechanism_intervention_map.md")),
 ]
 
 
