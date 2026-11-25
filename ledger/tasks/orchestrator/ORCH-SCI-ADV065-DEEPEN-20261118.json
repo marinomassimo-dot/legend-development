@@ -1110,6 +1110,13 @@
      "accepted_at": "2026-11-25T16:13:22Z",
      "evidence": "main 449e8c300: brainstorm_20261116/adv279_next_ten_held_partials_sci_20261125/ (RESULT inc1 and inc2, two blind reports, ten receipts); strict 5 of 10, loose 9 of 10; consumed by ADV 2026-11-25; wording sent to IT in two messages, received",
      "updated_at": "2026-11-25T17:28:26Z"
+    },
+    {
+     "step": "ADV-280: next ten readable held records under the wider rule (defective held files excluded first), two increments of five, blind second reading, wording to IT, report to ADV",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "assignment ADV-280 (advisor_pilot_20261113/assignments/ADV-280.md, c779c76bb)",
+     "accepted_at": "2026-11-25T17:42:14Z"
     }
    ]
   }
@@ -1966,6 +1973,13 @@
    "at": "2026-11-25T16:13:22Z",
    "source": "assignments/ADV-279.md (on main at 874f91438) and ADV message of 2026-11-25 on the wider rule",
    "step_sha256": "4534848d121c",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T17:42:14Z",
+   "source": "assignment ADV-280 (advisor_pilot_20261113/assignments/ADV-280.md, c779c76bb)",
+   "step_sha256": "ff20e7359253",
    "reopened_block": false,
    "authorised_by": null
   }

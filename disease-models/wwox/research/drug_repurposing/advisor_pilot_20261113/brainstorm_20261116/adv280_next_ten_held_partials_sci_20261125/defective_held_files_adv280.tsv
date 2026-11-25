@@ -1,0 +1,61 @@
+path	bytes	defect
+files/deepening_downloads/rufinamide_loop_20261123/dup15-supp.docx	21458	html_page_under_docx_name
+files/deepening_downloads/vigabatrin_loop_20261124/brain_sup.zip	286052	broken_archive
+files/drug_repurposing_it15/scout_it15_p5_20261101/raw/chembl_status.json	10135	html_page_under_json_name
+files/figures/PMID24932569/nihms618643f1.jpg	0	empty
+files/figures/PMID24932569/nihms618643f10.jpg	0	empty
+files/figures/PMID24932569/nihms618643f11.jpg	0	empty
+files/figures/PMID24932569/nihms618643f2.jpg	0	empty
+files/figures/PMID24932569/nihms618643f3.jpg	0	empty
+files/figures/PMID24932569/nihms618643f4.jpg	0	empty
+files/figures/PMID24932569/nihms618643f5.jpg	0	empty
+files/figures/PMID24932569/nihms618643f6.jpg	0	empty
+files/figures/PMID24932569/nihms618643f7.jpg	0	empty
+files/figures/PMID24932569/nihms618643f8.jpg	0	empty
+files/figures/PMID24932569/nihms618643f9.jpg	0	empty
+files/figures/PMID29675105/jcav09p1239g001.jpg	5543	html_page_under_jpg_name
+files/figures/PMID29675105/jcav09p1239g002.jpg	5543	html_page_under_jpg_name
+files/figures/PMID29675105/jcav09p1239g003.jpg	5543	html_page_under_jpg_name
+files/figures/PMID29785012/nihms956040f2.jpg	0	empty
+files/figures/PMID30362252_r2/nihms-994754-f0001.jpg	48716	html_page_under_jpg_name
+files/figures/PMID30362252_r2/nihms-994754-f0002.jpg	48716	html_page_under_jpg_name
+files/figures/PMID42420651/42255_2026_1566_Fig1_HTML.gif	6576	wrong_magic_for_gif
+files/figures/PMID42420651/42255_2026_1566_Fig2_HTML.gif	7604	wrong_magic_for_gif
+files/figures/PMID42420651/42255_2026_1566_Fig3_HTML.gif	4540	wrong_magic_for_gif
+files/figures/PMID42420651/42255_2026_1566_Fig4_HTML.gif	6896	wrong_magic_for_gif
+files/figures/PMID42420651/42255_2026_1566_Fig5_ESM.gif	2272	wrong_magic_for_gif
+files/figures/PMID42420651/42255_2026_1566_Fig6_ESM.gif	3614	wrong_magic_for_gif
+files/fulltext/PMID19366691_Hsu2009_epmc.pdf	5498	html_page_under_pdf_name
+files/fulltext/PMID27869163_epmc.pdf	46	wrong_magic_for_pdf
+files/fulltext/PMID27869163_pmc.pdf	21250	html_page_under_pdf_name
+files/fulltext/PMID29310447_Huang2018_epmc.pdf	5498	html_page_under_pdf_name
+files/fulltext/PMID33405376_supp/supp.zip	296	broken_archive
+files/fulltext/PMID33547201_supp/supp.zip	296	broken_archive
+files/fulltext/acq_PMID16941225/epmc_fullTextXML.xml	0	empty
+files/fulltext/acq_PMID16941225/epmc_pdf_render.pdf	57	wrong_magic_for_pdf
+files/fulltext/acq_PMID16941225/epmc_suppl.zip	164	broken_archive
+files/fulltext/adv253_sci_20261125/epmc_bin_f6.jpg	5561	html_page_under_jpg_name
+files/fulltext/adv262_20261125/gao_doi.html	5578	error_or_stub_html
+files/fulltext/k.pdf	5476	html_page_under_pdf_name
+files/fulltext/ketamine_kds_it_20261117/p1_memantine/PMID36256600_Schiller2023_doi.html	5446	error_or_stub_html
+files/fulltext/ketamine_kds_it_20261117/p1_memantine/PMID36256600_Schiller2023_oup.html	5489	error_or_stub_html
+files/fulltext/ketamine_kds_it_20261117/p3_collision/BLOCKED_PMID25477370_Cerebcortex_doi_cloudflare.html	5537	error_or_stub_html
+files/fulltext/ketamine_kds_it_20261117/p3_collision/BLOCKED_PMID42808560_Toxpathol_sage_cloudflare.html	5508	error_or_stub_html
+files/fulltext/ketamine_kds_it_20261117/p4_harms/_fetchlog.tsv	0	empty
+files/fulltext/pharm_it_20261116/16495758_doi.html	5468	error_or_stub_html
+files/fulltext/pharm_it_20261116/7901753_aspet.pdf	5502	html_page_under_pdf_name
+files/fulltext/pharm_it_20261116/8439412_cell.html	5500	error_or_stub_html
+files/fulltext/pharm_it_20261116/9400004_aspet.pdf	5504	html_page_under_pdf_name
+files/fulltext/pv_rp019_it_20261118/PMID33914858_Repudi2021_doi_oup_BLOCKED_challenge.html	5495	error_or_stub_html
+files/rsr6_public_data_he_20261117/ep.json	53	html_page_under_json_name
+files/rsr6_public_data_he_20261117/mm_pheno.tsv	0	empty
+files/supplement/PMID30362252_r2/nihms-994754-supplement-Supp_info.pdf	21471	html_page_under_pdf_name
+files/supplement/PMID30362252_r2/supp.zip	296	broken_archive
+files/supplement/PMID37686047/x/Supplemental Table S1.err	0	empty
+files/supplement/PMID37686047/x/Supplemental Table S2.err	0	empty
+files/supplement/PMID37686047/x/Supplemental Table S3.err	0	empty
+files/supplement/PMID37686047/x/Supplemental Table S4.err	0	empty
+files/supplement/PMID37686047/x/Supplemental Table S5.err	0	empty
+files/supplement/PMID37686047/x/Supplemental Table S6.err	0	empty
+files/supplement/PMID37686047/x/Supplemental Table S7.err	0	empty
+files/supplements/PMID24932569/NIHMS618643-supplement-01.xls	21344	html_page_under_xls_name
