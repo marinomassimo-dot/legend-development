@@ -23,7 +23,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 6310,
+    "values": 6313,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3526,
+    "forbidden-name": 3539,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -472,7 +472,7 @@
   "BIBLIO": 2465,
   "COUNT": 12405,
   "ID": 4861,
-  "OWN": 88902,
+  "OWN": 88905,
   "ROWNAME": 2408,
   "SRC_A": 186,
   "SRC_META": 261,
@@ -546,7 +546,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2161,
-   "sha256": "e37d239a9d2a00fbac16d614c6c45e44b2fba2bcc678f892c431062644167f15"
+   "sha256": "f0a24ab2b3506ea06b9dd5444304ad56d15ca96ff6a40edc2d51fc885104f536"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -561,8 +561,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5043870,
-   "sha256": "386490147c45ce9c941b3ae2efb1c222bc1c64c396f706a3b16f378206f2f364"
+   "bytes": 5048457,
+   "sha256": "234e5eba946368dad26668c8753e48480b5f235281e1f01b24a42bebd7b23b04"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 168171,
