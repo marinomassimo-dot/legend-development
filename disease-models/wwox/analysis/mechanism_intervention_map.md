@@ -749,6 +749,15 @@ Fly content is NOT WWOX-DEE evidence. Not medical advice.
 | **DECISIVE_PRECLINICAL_TEST** | an assay-level potency and mode determination of stiripentol on human LDHA and LDHB (with a selective LDHA positive control, detergent and substrate-level arms), then **lactate** (enantiomer- or isotope-resolved) in the double-RNAi fly genotype with an Ldh-alone arm; **LDH activity** and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic human neural cells at matched maturity; then stiripentol against a selective LDHA tool at matched exposure |
 | **SOURCE_IDS** | PAPER 567 (the single reading behind the fly rows; related records are listed in the card, not here, so that the join does not inherit unrelated families of papers) |
 
+**Correction (ADV-268, 2026-11-25).** *"None at the activity or lactate level in a human WWOX system"* (WWOX_DIRECT_EVIDENCE) is false as
+written. In human fibroblasts with WWOX knockout, lactate concentration and the activities of glycolytic enzymes and PDH were measured (PMID
+35328751, Baryla 2022; receipts 2026-09-21 to 2026-10-26, read before this row was written on 2026-10-26; lactate higher in the knockout
+in normoxia and normoglycaemia, PDH activity not changed). The same row says *"lactate and ECAR unmeasured in human neural cells"*, which
+stands. Read: *no activity or lactate measurement in a human WWOX-deficient neural system; non-neural human fibroblasts have both.*
+Likewise *"no WWOX rationale beyond a fly precedent"* (CLINICAL_MATURITY) is narrower than the row itself, which names the human organoid
+and progenitor-library LDHA transcript rises, and than the non-neural lactate rise in Wwox knockout MEFs (PMID 25012504) and the fibroblasts
+above; read: *no neural WWOX rationale beyond a fly precedent and two transcript-level rises (confounded).* The original lines stay as the record.
+
 **Class:** `READOUT_FIRST` — Track A, route BENEFICIO_PRECOCE. Fly content is NOT WWOX-DEE evidence. Not medical advice.
 
 🔵 **Update 2026-10-29 (`BATCH_20261019_027`, `CC-20261029-INTEGRATOR-IT6-REGISTRIES-01`; IT6 P4; COMPUTATIONAL_RESULT).** The LDHA and glycolysis rise is seen in two human neural transcript systems only and is not extended to mouse P17 brain with Wwox deletion (10-gene lactate set -0.09 and -0.19, 19-gene panel -0.07 and -0.09 in the cell-targeted hippocampal contrasts; nothing outside the null there); the statement stays set-dependent and two-system (see the discovery-ledger update of 2026-10-29 on LDH lowering).
@@ -1359,6 +1368,14 @@ Ordered by *information gained per unit cost*, not by ambition.
 | **Gramicidin perforated patch** | `E_GABA` — the missing measurement of the entire M3 axis | standard technique, never applied to a WWOX model |
 | **Seahorse OCR/ECAR** | the transcriptome→flux gap across all of M6 | a general screen for R-05, not the single falsifier (PDH-specific readouts are listed in R-05) |
 | **MEA burst frequency/amplitude + phase-amplitude coupling; LFP 0.25–1 Hz band power; GAD67/VGLUT1 ratio** | reusable network endpoints, already quantified in WWOX systems | usable as pre-specified endpoints rather than post-hoc |
+
+**Correction (ADV-268, 2026-11-25).** *"The seizure phenotype ... is explicitly absent in Wwox-null mice"* (Rat `lde/lde` row) is false: it
+repeats the title of `CLAIM 037` as it stood on 2026-09-07, and that title was corrected on 2026-09-22 (`BATCH_20260922_SEIZURE`; verdict X-1 in
+`analysis/seizure_ascertainment_census_20260922.md`) without this row following. Wwox-null mouse datasets: behavioural seizures from P12 and
+chemoconvulsant susceptibility (PMID 32000863), neocortical bursting in the Synapsin-Cre neuron-specific knockout (34634460), ECoG
+spike-wave discharges (42422765, receipts from 2026-07-26). Read: *the rat remains the model with a 95%-penetrant electrographic phenotype;
+the null mouse has documented seizure-related phenotypes, so the caution is about transfer of rates and age of onset, not about presence.*
+The original line stays as the record of what was claimed.
 
 **Comparator therapeutic programmes** (paradigms, **not** transferable evidence): migalastat/Fabry
 (variant-specific amenability assay) · tafamidis/TTR (kinetic stabilization) · Trikafta/CFTR-F508del
