@@ -4,6 +4,14 @@ Actor `orchestrator` (SCI). Hypothesis level; reference genotype class; no clini
 
 **The question.** ADV-275: WWOX **mRNA** is up after valproate in four human neural deposits from four institutions (WWOX ratios 1.28 to 1.91; mean of log2 0.615 = 1.53-fold, SD of log2 0.22 across deposits, none down). ADV-277: WWOX **protein** has no counterpart: in the one valproate organoid proteome where the exposure acted (H1-0 protein 1.8 to 2.6-fold) WWOX has no protein group among 5,104. The DL-REPO-003 annotation "decreases expression" is therefore untested at protein level, and a protein that is lost in the disease cannot be assumed to follow its transcript.
 
+## One-page head (about 200 words; the long form follows)
+
+* **Readout:** targeted MS (PRM, heavy standards) on two WWOX peptides, one N-terminal and one C-terminal to residue 230, in the same lysate as the H1-0 protein sentinel; HPA050992 immunoblot with fragment-competition control is secondary.
+* **Design:** human forebrain organoids or NGN2 neurons; vehicle, valproate (about 0.1 mM free and 1 mM), entinostat and vorinostat as the class control; exposure measured by LC-MS/MS (an arm counts only if within 30 percent of target and H1-0 >= 1.5-fold); 14 days (day 21 to 35) primary, 72 h secondary.
+* **n:** unit = independent differentiation batch within a line, paired; 8 batches in at least 3 lines (smallest detectable change 1.41-fold up or 0.71 down at s = 0.43, power 0.91 at 1.5-fold); three lines alone resolve only 2.6-fold.
+* **Gate (step 0):** no held record gives WWOX absolute abundance; the endogenous peptide must sit at 3 x LLOQ or more in vehicle, else stop (outcome 4).
+* **Outcomes:** UP (ratio >= 1.2, lower CI > 1); DOWN (<= 0.83, upper CI < 1); NONE (CI inside 0.67 to 1.5); NOT DETECTABLE (coverage only). Each states its effect on DL-REPO-003, RP-008 and the portfolio in section 4.
+
 ## 1. Readout (what can see WWOX protein) and the floor
 
 | Role | Assay | Why this, from held records |

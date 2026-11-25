@@ -124,6 +124,7 @@ class TheLoopIsWired(unittest.TestCase):
 
     def test_state_is_taken_after_every_suite_and_a_writer_fails_the_verdict(self) -> None:
         self.assertRegex(self.source, r"after = tracked_state\(GUARDED_TREES\)")
+        self.assertIn("check_writes(relative, started, finished)", self.source)     # after every suite run one at a time
         self.assertIn("TRACKED_FILES_WRITTEN_BY_SUITE", self.source)
         self.assertIn("if failures or writers:", self.source)
 

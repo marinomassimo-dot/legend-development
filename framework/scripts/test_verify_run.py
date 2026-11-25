@@ -295,7 +295,8 @@ class Interruption(Base):
     def wait_state(self, state, timeout=20):
         deadline = time.time() + timeout
         while time.time() < deadline:
-            if self.keep.is_dir() and self.runs():
+            # the run directory is made before its first manifest: on a loaded host the poll can land between the two (red once in a 4-worker battery, 2026-11-25)
+            if self.keep.is_dir() and self.runs() and (self.runs()[0] / "manifest.json").is_file():
                 m = json.loads((self.runs()[0] / "manifest.json").read_text())
                 if m.get("state") == state:
                     return m

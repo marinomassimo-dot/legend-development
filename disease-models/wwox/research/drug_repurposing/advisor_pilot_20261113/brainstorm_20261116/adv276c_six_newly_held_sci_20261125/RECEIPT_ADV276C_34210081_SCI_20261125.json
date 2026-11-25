@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T15:33Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T15:33:08Z",
+ "event_id": "FTR-20261125-34210081-01",
+ "evidence_basis": [
+  "coverage_map",
+  "reader plus one blind delegate (sonnet, high): fly and metabolism paragraphs, reference entries 34 to 38."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276c_six_newly_held_sci_20261125/RESULT_ADV276_SIX_NEWLY_HELD_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261110-34210081-83",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "be07443e7ef5db21b7c49f77a214f23a803f3a03742f6ba5fdbd86abe9828d9b",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID34210081_ADV272_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3390/cells10071637",
+  "pmid": "34210081"
+ },
+ "workflow": "SCI ADV-276 six newly held papers (not a complete read)"
+}
