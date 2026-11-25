@@ -1004,10 +1004,11 @@
     },
     {
      "step": "ADV-254: for the ledger leads with no primary PMID that consumers lean on, identify (not read) a primary: PREREG first, per lead found/not found/model inference, consumers' wording labels",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "source": "ADV-254",
-     "accepted_at": "2026-11-25T04:05:35Z"
+     "accepted_at": "2026-11-25T04:05:35Z",
+     "updated_at": "2026-11-25T04:16:42Z"
     },
     {
      "step": "ADV-255: human lactate per-report table from held sources (DL-BIO-009 test), check Chong 2023 against its source, PREREG with the prediction first",
