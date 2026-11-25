@@ -54,5 +54,5 @@ Reader: S1 ADD, S2 MUST CHANGE, S3 MUST CHANGE, S4 ADD, S5 ADD. Every number rep
 ## 7. For the consumers
 
 * **IT, cards E03 and I01:** the isoform statement stays a single-deposit observation (GSE156243, CPM, 4 v 2); sentences S1 to S3 above are the wording. Combine with the ADV-282 corrections of DA-GSE-PDK-003 and DA-I01-001 (PDK3 is up in the organoid deposit; the set mean averages it away).
-* **HE, DCA sheet:** read with PDK3 as one of three isozymes whose potency differs 5 to 11 times in one assay; no evidence here makes PDK3 the relevant target in this genotype class; S5 is the wording.
+* **HE, DCA sheet:** read with PDK3 as one of four isozymes (PDK4 0.727 mM, in the same document, four assay ids) whose potency differs up to 11 times; no evidence here makes PDK3 the relevant target in this genotype class; S5 is the wording.
 * **ADV:** next step if any: the second human neural WWOX-deficient deposit that is not an organoid, if one is held (none found among `files/geo/`), or a coverage-and-direction check of PDK3 against the organoid time course GSE150123 as maturity control (unperturbed spheroids, blind reader's direction check noted in ADV-282); not started.
