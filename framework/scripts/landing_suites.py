@@ -52,6 +52,12 @@ RULES = [
     # #2404: a card changed and the suite that keeps its reviewed copy went red (0.1 s)
     ("disease-models/wwox/research/drug_repurposing/cards_early_it13_p22_20261031/test_cards_early_it13_p22.py",
      lambda c: _any(c, "disease-models/*/drug_repurposing/cards_early/*", "framework/scripts/repurposing_bridge.py")),
+    # 2026-11-25: a unit value in a packet's card text turned test_documented_commands red at IT's landing; a change of .json files only selects no document suite. Each checker reads
+    # its own folder (under 1 s) and compares the stored cards with what the bridge builds
+    ("disease-models/wwox/research/drug_repurposing/cards/check_cards.py",
+     lambda c: _any(c, "disease-models/*/drug_repurposing/cards/*", "framework/scripts/repurposing_bridge.py")),
+    ("disease-models/wwox/research/drug_repurposing/cards_early/check_cards.py",
+     lambda c: _any(c, "disease-models/*/drug_repurposing/cards_early/*", "framework/scripts/repurposing_bridge.py")),
     # #2404: a card named a PMID the title cache does not hold. Only this class of the long view suite (about 2 s)
     ("framework/scripts/test_repurposing_view.py Titles",
      lambda c: _any(c, "disease-models/*/drug_repurposing/cards*", "disease-models/*/drug_repurposing/needs/*", "disease-models/*/drug_repurposing/ranking_it8*",
