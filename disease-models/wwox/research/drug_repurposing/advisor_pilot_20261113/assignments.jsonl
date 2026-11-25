@@ -657,3 +657,5 @@
 {"assessment": "HOST", "id": "ADV-267", "key": "held-artefact-match-by-receipt-sha256-in-the-debt-count", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-25T06:25:10Z"}
 {"evidence": "SendMessage 06:25Z with brief pointer", "id": "ADV-266", "receipt": ["821ecc1d-d745-4a1d-94fa-2daee1471822"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 13f5248b"], "utc": "2026-11-25T06:25:17Z"}
 {"evidence": "SendMessage 06:25Z with brief pointer", "id": "ADV-267", "receipt": ["7df3ced3-48a3-4fbf-8df4-7192ce6b2c37"], "state": "SENT", "to": ["HE - CURRENT 70b134a9"], "utc": "2026-11-25T06:25:35Z"}
+{"assessment": "HOST", "id": "ADV-268", "key": "next-twenty-map-negatives-and-the-other-carriers", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-25T06:40:13Z"}
+{"evidence": "SendMessage 06:40Z with brief pointer", "id": "ADV-268", "receipt": ["b1b180af-5cef-4a9f-8b9d-a0b1e4bffd19"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 13f5248b"], "utc": "2026-11-25T06:40:32Z"}
