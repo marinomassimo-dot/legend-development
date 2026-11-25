@@ -39,3 +39,7 @@ Result: **not obtained, so the disagreement is unresolved.** The vector-first ro
 
 ## Limits
 Assembled from held sheets and cards; the dichloroacetate efficacy rows are abstract level; no new paper was read for this note; the comparison table is plain-language, not a ranking; the glycaemia column states what is missing, not that the biology is absent.
+
+## Correction note (2026-11-25, SCI, after HE)
+
+The dichloroacetate row above lists three isozymes (PDK1 1.03 mM, PDK2 0.50 mM, PDK3 5.56 mM) and calls them "one assay". The held ChEMBL answer (`files/adv098_agent_sheets_raw_he_20261119/dichloroacetate.json`, document CHEMBL4007440) also carries PDK4, IC50 727,000 nM (activity 18040568, assay CHEMBL4009667), and the four values are four separate assay ids (CHEMBL4009649, 4009651, 4009662, 4009667) of the same design, all flagged "Outside typical range". PDK3 is the least inhibited of four; the range stays 11-fold. Source of the correction: HE (sheet corrected in dec485b5b); verified here in the held JSON.
