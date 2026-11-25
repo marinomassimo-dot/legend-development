@@ -9,7 +9,8 @@ Why. On 2026-11-24 `/` was 100% full (219 MB free) and a landing died midway; th
 look worse and less actionable than it was because hard-linked `files/` counts once per tree. The checks below are the ones the Advisor applied by
 hand when it freed 4.2 GB (ADV-207, 2026-11-24), written down so nobody has to reinvent them.
 
-What counts as a candidate: a direct child of the temp root (default /tmp) that owns a `.git` or is named `legend-*`, owned by you. Never listed,
+What counts as a candidate: a direct child of the temp root (default /tmp) that owns a `.git`, is named `legend-*`, or is named `tmp*` and holds a clone one level down
+(`tmp*/trial_clone/.git`; 2026-11-25, ADV: such a folder, 17 days old, was invisible here), owned by you. Never listed,
 never removable: `claude-*` (session scratchpads belong to the sessions), anything not a plain directory, anything owned by another user.
 
 A candidate is REMOVABLE only when every check passes; otherwise it is KEEP with the reasons:
@@ -21,8 +22,9 @@ A candidate is REMOVABLE only when every check passes; otherwise it is KEEP with
   * no process has its working directory inside it or names it in its command line (this tool's own process excepted);
   * its newest direct entry or git bookkeeping file is older than `--older-than` days (default 1);
   * a `.git` FILE means a linked worktree: that is `git worktree remove`'s business, never this tool's.
-A folder with no `.git` has nothing to verify against; it is KEEP, except the two scratch names this repository's own tools create and leak when
-killed (`legend-public-gate-*`, `legend-candidate-tree-*`), which need only the process and age checks.
+A candidate with no `.git` of its own that holds clones one level down is REMOVABLE only when every nested clone passes the git checks above AND the folder holds nothing else (anything beside the clones is named and keeps it).
+A folder with no `.git` and no nested clone has nothing to verify against; it is KEEP, except the scratch names this repository's own tools create and leak when
+killed (`legend-public-gate-*`, `legend-candidate-tree-*`, `legend-landing-suites-*`, `legend-landing-base-*`), which need only the process and age checks.
 
 Folders freeing under `--min-mb` (default 5) are counted but not listed, so hundreds of leaked 0 MB test fixtures do not bury the clones that matter.
 
@@ -44,7 +46,7 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-SCRATCH_NAMES = ("legend-public-gate-", "legend-candidate-tree-")
+SCRATCH_NAMES = ("legend-public-gate-", "legend-candidate-tree-", "legend-landing-suites-", "legend-landing-base-")
 # The only ignored paths that may be lost with a clone: caches a tool rebuilds by itself. Any other ignored path (an analysis output, a run folder, `files/`) can be the one unique
 # copy of something and BLOCKS removal (Codex review 23, 2026-11-24: a clean repo whose only ignored file was files/unique-analysis.txt was reported REMOVABLE).
 CACHE_DIRS = {"__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache", ".hypothesis"}
@@ -61,6 +63,14 @@ def git(repo: Path, *args: str, timeout: int = 120) -> subprocess.CompletedProce
     return subprocess.run(["git", "--no-optional-locks", "-C", str(repo), *args], capture_output=True, text=True, timeout=timeout)
 
 
+def nested_clones(d: Path) -> list[Path]:
+    """Direct subfolders of `d` (never symlinks) that own a `.git`."""
+    try:
+        return sorted(Path(e.path) for e in os.scandir(d) if not e.is_symlink() and e.is_dir(follow_symlinks=False) and os.path.lexists(os.path.join(e.path, ".git")))
+    except OSError:
+        return []
+
+
 def candidates(tmp: Path) -> list[Path]:
     """Direct children that look like clones, owned by this user; never claude-* and never a symlink."""
     out = []
@@ -74,7 +84,7 @@ def candidates(tmp: Path) -> list[Path]:
                 continue
             if e.stat(follow_symlinks=False).st_uid != os.getuid():
                 continue
-            if os.path.lexists(os.path.join(e.path, ".git")) or e.name.startswith("legend-"):
+            if os.path.lexists(os.path.join(e.path, ".git")) or e.name.startswith("legend-") or (e.name.startswith("tmp") and nested_clones(Path(e.path))):
                 out.append(Path(e.path))
         except OSError:
             continue
@@ -172,59 +182,83 @@ def resolve_main(repo: Path, main_ref: str) -> str | None:
     return r.stdout.strip() or None if r.returncode == 0 else None
 
 
+def git_checks(d: Path, repo: Path, main_sha: str) -> tuple[list[str], list[str]]:
+    """(reasons to keep, notes) from the git state of the clone at `d`, which owns a `.git`. Read-only."""
+    reasons: list[str] = []
+    notes: list[str] = []
+    gitpath = d / ".git"
+    if gitpath.is_file():
+        reasons.append("linked worktree: remove it with `git worktree remove`, not with this tool")
+    else:
+        try:
+            st = git(d, "status", "--porcelain")
+            if st.returncode != 0:
+                reasons.append("git status failed: " + (st.stderr.strip()[:120] or str(st.returncode)))
+            elif st.stdout.strip():
+                lines = st.stdout.strip().splitlines()
+                reasons.append(f"dirty tree: {len(lines)} path(s), first `{lines[0][:90]}`")
+            ig = git(d, "ls-files", "--others", "--ignored", "--exclude-standard", "--directory")
+            if ig.returncode != 0:
+                reasons.append("could not list ignored files: " + (ig.stderr.strip()[:100] or str(ig.returncode)))
+            else:
+                ignored = [l for l in ig.stdout.splitlines() if l]
+                kept = [l for l in ignored if not is_regenerable(l)]
+                if kept:
+                    reasons.append(f"ignored non-cache path(s), possibly the only copy: {len(kept)} (" + ", ".join(f"`{k}`" for k in kept[:4]) + (", ..." if len(kept) > 4 else "") + ")")
+                if len(ignored) > len(kept):
+                    notes.append(f"{len(ignored) - len(kept)} regenerable cache entr{'y' if len(ignored) - len(kept) == 1 else 'ies'} ignored")
+            if git(d, "rev-parse", "--verify", "--quiet", "refs/stash").returncode == 0:
+                reasons.append("stash present")
+            shas: dict[str, str] = {}
+            head = git(d, "rev-parse", "--verify", "--quiet", "HEAD^{commit}")
+            if head.returncode == 0:
+                shas[head.stdout.strip()] = "HEAD"
+            refs = git(d, "for-each-ref", "--format=%(objectname) %(refname)", "refs/heads", "refs/tags")
+            for line in refs.stdout.splitlines():
+                sha, _, ref = line.partition(" ")
+                shas.setdefault(sha, ref)
+            if not shas:
+                reasons.append("no readable commit to compare with main")
+            for sha, ref in shas.items():
+                if git(repo, "cat-file", "-e", f"{sha}^{{commit}}").returncode != 0:
+                    reasons.append(f"{ref} {sha[:12]} is unknown to the main repository (unpublished commit)")
+                elif git(repo, "merge-base", "--is-ancestor", sha, main_sha).returncode != 0:
+                    reasons.append(f"{ref} {sha[:12]} is not contained in main")
+        except subprocess.TimeoutExpired:
+            reasons.append("a git command timed out")
+    return reasons, notes
+
+
 def examine(d: Path, repo: Path, main_sha: str, older_days: float, now: float, size: bool = True) -> dict:
     """{'verdict': REMOVABLE|KEEP, 'reasons': [...], 'freed': int|None, 'shared': int|None, 'age_days': float, 'notes': [...]}. Read-only."""
     reasons: list[str] = []
     notes: list[str] = []
     gitpath = d / ".git"
-    age = (now - newest_mtime(d)) / 86400
+    age = (now - max([newest_mtime(d)] + ([] if os.path.lexists(gitpath) else [newest_mtime(c) for c in nested_clones(d)]))) / 86400
     if age < older_days:
         reasons.append(f"touched {age:.1f} days ago (< {older_days:g})")
     holders = process_holders(d)
     if holders:
         reasons.append("in use by process " + ", ".join(holders[:4]))
     if os.path.lexists(gitpath):
-        if gitpath.is_file():
-            reasons.append("linked worktree: remove it with `git worktree remove`, not with this tool")
-        else:
-            try:
-                st = git(d, "status", "--porcelain")
-                if st.returncode != 0:
-                    reasons.append("git status failed: " + (st.stderr.strip()[:120] or str(st.returncode)))
-                elif st.stdout.strip():
-                    lines = st.stdout.strip().splitlines()
-                    reasons.append(f"dirty tree: {len(lines)} path(s), first `{lines[0][:90]}`")
-                ig = git(d, "ls-files", "--others", "--ignored", "--exclude-standard", "--directory")
-                if ig.returncode != 0:
-                    reasons.append("could not list ignored files: " + (ig.stderr.strip()[:100] or str(ig.returncode)))
-                else:
-                    ignored = [l for l in ig.stdout.splitlines() if l]
-                    kept = [l for l in ignored if not is_regenerable(l)]
-                    if kept:
-                        reasons.append(f"ignored non-cache path(s), possibly the only copy: {len(kept)} (" + ", ".join(f"`{k}`" for k in kept[:4]) + (", ..." if len(kept) > 4 else "") + ")")
-                    if len(ignored) > len(kept):
-                        notes.append(f"{len(ignored) - len(kept)} regenerable cache entr{'y' if len(ignored) - len(kept) == 1 else 'ies'} ignored")
-                if git(d, "rev-parse", "--verify", "--quiet", "refs/stash").returncode == 0:
-                    reasons.append("stash present")
-                shas: dict[str, str] = {}
-                head = git(d, "rev-parse", "--verify", "--quiet", "HEAD^{commit}")
-                if head.returncode == 0:
-                    shas[head.stdout.strip()] = "HEAD"
-                refs = git(d, "for-each-ref", "--format=%(objectname) %(refname)", "refs/heads", "refs/tags")
-                for line in refs.stdout.splitlines():
-                    sha, _, ref = line.partition(" ")
-                    shas.setdefault(sha, ref)
-                if not shas:
-                    reasons.append("no readable commit to compare with main")
-                for sha, ref in shas.items():
-                    if git(repo, "cat-file", "-e", f"{sha}^{{commit}}").returncode != 0:
-                        reasons.append(f"{ref} {sha[:12]} is unknown to the main repository (unpublished commit)")
-                    elif git(repo, "merge-base", "--is-ancestor", sha, main_sha).returncode != 0:
-                        reasons.append(f"{ref} {sha[:12]} is not contained in main")
-            except subprocess.TimeoutExpired:
-                reasons.append("a git command timed out")
+        found, noted = git_checks(d, repo, main_sha)
+        reasons += found
+        notes += noted
     elif not d.name.startswith(SCRATCH_NAMES):
-        reasons.append("not a git clone: nothing to verify it against")
+        inner = nested_clones(d)
+        if not inner:
+            reasons.append("not a git clone: nothing to verify it against")
+        for clone in inner:
+            found, noted = git_checks(clone, repo, main_sha)
+            reasons += [f"{clone.name}: {r}" for r in found]
+            notes += [f"{clone.name}: {n}" for n in noted]
+        if inner:
+            try:
+                beside = sorted(e.name for e in os.scandir(d) if Path(e.path) not in inner)
+            except OSError as exc:
+                beside = [f"unreadable ({exc.strerror})"]
+            if beside:
+                reasons.append(f"holds {len(beside)} entr{'y' if len(beside) == 1 else 'ies'} beside the clone(s), possibly the only copy: " + ", ".join(f"`{n}`" for n in beside[:4]) + (", ..." if len(beside) > 4 else ""))
     freed = shared = None
     if size:
         freed, shared = disk_sizes(d)
@@ -309,7 +343,7 @@ def main(argv: list[str] | None = None) -> int:
         notes = ("  [" + "; ".join(r["notes"]) + "]") if r["notes"] else ""
         print(f"{r['verdict']:<10}{mb(r['freed']):>8}{mb(r['shared']):>9}{r['age_days']:>6.1f}  {d}{extra}{notes}")
     if nongit:
-        print(f"  ... {len(nongit)} folder(s) with no .git are not listed (never removable by this tool unless named legend-public-gate-* or legend-candidate-tree-*; --all-rows lists them), "
+        print(f"  ... {len(nongit)} folder(s) with no .git are not listed (never removable by this tool unless it is one of the scratch names in the help; --all-rows lists them), "
               f"holding {mb(sum(r['freed'] or 0 for _, r in nongit))} MB that only their owner can judge; the biggest:")
         for d, r in sorted(nongit, key=lambda x: -(x[1]["freed"] or 0))[:8]:
             print(f"    {mb(r['freed']):>8} MB  {r['age_days']:>5.1f} d  {d}")
