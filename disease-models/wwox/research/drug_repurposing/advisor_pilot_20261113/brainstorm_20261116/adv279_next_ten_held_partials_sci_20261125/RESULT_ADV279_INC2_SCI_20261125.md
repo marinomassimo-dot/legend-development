@@ -78,3 +78,11 @@ Wording for IT is in one message per increment. `CLAIM 043` and `CLAIM 011` chan
 
 ## 6. Limits
 One laboratory per study. Bar heights, band edges and blot densities are readings of published rasters or printed numbers, not original data, except the 36278433 survival days and workbook values. Primaries cited by these papers were not opened.
+
+## 7. Added 2026-11-25: the search behind the 34359949 finding, for the claim owner to redo
+
+Dated 2026-11-25, on `files/fulltext/PMID34359949_Hsu2021_PMC.xml` (sha256 prefix 9a5985d0ce548f3f): XML tags stripped, abstract and body searched separately for sentences containing both "Tau" and "SDR"; the two body sentences quoted in section 2 contain "directly binding Tau" and "By direct binding". The abstract's sentence does not use the word "directly". The files opened and their hashes: `FILES_VIEWED_ADV279_SCI_20261125.tsv`.
+
+## 8. Dream pass (2026-11-25): one connection the per-paper rows do not show
+
+Relation already in the repository but not drawn together: card A02 (proteasome-inhibitor class) leans on three precedents. After this batch, its precedent **for** (HIKESHI, 42875792: protein return) is weakly shown and its precedent **against** (ASPA C152W, 33914734: no activity) was not measured. Of the three, only the CBS mouse work (not re-read in this batch) still carries an activity measurement, in either direction. Consumer: card A02, owner IT, to weigh when wording items 1 and 2. Discriminating measurement for a Q230P-class question: activity or a function read-out on the stabilised fraction itself, with protein amount quantified across independent replicates. NOT WWOX EVIDENCE; no ranking or direction changes by this line.
