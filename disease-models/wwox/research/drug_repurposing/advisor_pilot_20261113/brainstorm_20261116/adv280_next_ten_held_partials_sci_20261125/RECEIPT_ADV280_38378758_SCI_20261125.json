@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-25T18:18Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T18:18:33Z",
+ "event_id": "FTR-20261125-38378758-01",
+ "evidence_basis": [
+  "coverage_map",
+  "reader: all 24 pages of the supplementary information and the four reporting-summary pages looked at, source-data workbook parsed and its two blot images opened, pathogenic-variant table recomputed; peer-review file searched, not read in full; blind delegate (sonnet, high) on the pivotal items. Classes left not_read here were not re-read in this event."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv280_next_ten_held_partials_sci_20261125/RESULT_ADV280_INC2_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261021-38378758-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "a8e2eba966a9424550f918669a4f320d66ee594b9b736831f30f1910501b6510",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml",
+ "study_id": {
+  "doi": "10.1038/s41467-024-45829-4",
+  "pmid": "38378758"
+ },
+ "workflow": "SCI ADV-280 next ten held partials, increment 2 (not a complete read)"
+}
