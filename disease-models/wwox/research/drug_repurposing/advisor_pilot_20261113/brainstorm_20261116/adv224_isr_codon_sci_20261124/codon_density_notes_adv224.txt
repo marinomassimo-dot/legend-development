@@ -1,0 +1,2 @@
+#time note (arg 6h over rich 3h; not like-for-like)	CGT=1.718,CGC=1.736,CGA=0.970,CGG=1.096,AGA=1.381,AGG=1.252
+#SLOWED arginine codons per cell line	HEK293T_rpC_3h=0,HCT116_3h=0,HeLa_3h=2

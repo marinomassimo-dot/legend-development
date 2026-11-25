@@ -903,6 +903,33 @@
      "accepted_at": "2026-11-24T22:33:16Z",
      "evidence": "RESULT_ADV219_RECEIPT_LABEL_AUDIT_SCI_20261124.md in disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv219_receipt_label_audit_sci_20261124; class A 24/575 latest-receipt, 19/575 best state; precision 14/15",
      "updated_at": "2026-11-24T22:40:50Z"
+    },
+    {
+     "step": "ADV-222: reading batch of eight owed-and-held data sections (best-state class B), product new open questions; PREREG first",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-222 (ADV message 2026-11-24, brief adv222.txt)",
+     "accepted_at": "2026-11-24T22:50:10Z",
+     "evidence": "RESULT_ADV222_HELD_DATA_SECTIONS_SCI_20261124.md in disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv222_held_data_sections_batch_sci_20261124; 8 sections, 8 receipts, 7 new questions ranked, 1 identity-line contradiction",
+     "updated_at": "2026-11-24T23:06:54Z"
+    },
+    {
+     "step": "ADV-224: NQ-B nine ISR readout genes in held Wwox tables and NQ-C per-codon pausing in public processed GSE113751; dispositions per question",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-224 (ADV message 2026-11-24, brief adv224.txt)",
+     "accepted_at": "2026-11-24T23:24:51Z",
+     "evidence": "{\"path\": \"disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv224_isr_codon_sci_20261124/RESULT_ADV224_NQB_NQC_SCI_20261124.md\", \"contains\": \"Answer first\"}",
+     "updated_at": "2026-11-24T23:25:05Z"
+    },
+    {
+     "step": "ADV-228: six PMC-open catalogued-only records read in full from the saved Europe PMC text, with receipts, per-record verdicts and new questions",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-228 (ADV message 2026-11-24, brief adv228.txt)",
+     "accepted_at": "2026-11-25T00:01:55Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv228_pmc_open_batch_sci_20261124/RESULT_ADV228_PMC_OPEN_BATCH_SCI_20261124.md; six receipts FTR-20261124-28045433-01 to 37324196-01 recorded",
+     "updated_at": "2026-11-25T00:12:30Z"
     }
    ]
   }
@@ -1598,6 +1625,27 @@
    "at": "2026-11-24T22:33:16Z",
    "source": "ADV-219 (ADV message 2026-11-24, brief adv219.txt)",
    "step_sha256": "b50b8f7229ca",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T22:50:10Z",
+   "source": "ADV-222 (ADV message 2026-11-24, brief adv222.txt)",
+   "step_sha256": "51a71a398970",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T23:24:51Z",
+   "source": "ADV-224 (ADV message 2026-11-24, brief adv224.txt)",
+   "step_sha256": "b7a8893bcdab",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T00:01:55Z",
+   "source": "ADV-228 (ADV message 2026-11-24, brief adv228.txt)",
+   "step_sha256": "7847b888a7f2",
    "reopened_block": false,
    "authorised_by": null
   }

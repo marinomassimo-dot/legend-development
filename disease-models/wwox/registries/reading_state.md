@@ -20,7 +20,7 @@ asserted by no receipt. `prior_receipt` means the reading this one builds on, an
 sharing a parent are the normal case under parallel branches.
 
 
-**1943 paper(s)** with at least one receipt · **2734 receipt(s)** · **40 paper(s) read in parallel** by two receipts sharing a parent.
+**1947 paper(s)** with at least one receipt · **2745 receipt(s)** · **40 paper(s) read in parallel** by two receipts sharing a parent.
 
 ## Papers read in parallel
 
@@ -526,7 +526,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 23559625 | `partial_fulltext_read` | not_read | not_read | not_read | read | captions_only | read | not_read | not_read | not_read | — | 1 |
 | PMID 23583307 | `partial_fulltext_read` | read | read | not_present | read | captions_only | read | not_read | not_present | not_present | not_read | 2 |
 | PMID 23589583 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | not_present | not_present | not_read | 1 |
-| PMID 23611579 | `partial_fulltext_read` | read | read | read | read | unavailable | not_read | read | not_present | not_present | — | 1 |
+| PMID 23611579 | `partial_fulltext_read` | read | read | read | read | unavailable | read | read | not_present | not_present | not_read | 2 |
 | PMID 23625347 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_present | not_present | not_read | 2 |
 | PMID 23713028 | `partial_fulltext_read` | not_read | not_read | not_read | read | captions_only | not_read | not_read | not_read | not_read | — | 1 |
 | PMID 23740534 | `abstract_only` | read | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | 1 |
@@ -663,7 +663,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 25728572 | `partial_fulltext_read` | read | not_read | read | read | captions_only | read | read | not_read | unavailable | not_read | 1 |
 | PMID 25733865 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 25738261 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | not_present | not_present | not_read | 1 |
-| PMID 25738457 | `partial_fulltext_read` | not_read | not_read | read | read | not_read | not_read | not_read | not_read | not_read | — | 2 |
+| PMID 25738457 | `partial_fulltext_read` | not_read | not_read | read | read | not_read | read | not_read | not_read | not_read | not_read | 3 |
 | PMID 25741597 | `partial_fulltext_read` | read | not_read | not_read | read | not_read | not_read | read | not_read | unavailable | not_read | 1 |
 | PMID 25760040 | `partial_fulltext_read` | not_read | not_read | read | read | not_read | read | not_read | not_read | not_read | — | 1 |
 | PMID 25765302 | `partial_fulltext_read` | not_read | not_read | read | read | not_read | read | not_read | not_read | not_read | — | 1 |
@@ -788,7 +788,6 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 2757904 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | — | 1 |
 | PMID 2757909 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 27592856 | `queried_not_full_read` | not_read | not_read | not_read | not_read | not_read | read | not_read | not_read | not_read | not_read | 1 |
-| PMID 27616483 | `partial_fulltext_read` | read | not_read | not_read | read | not_read | not_read | read | not_read | not_read | — | 1 |
 | PMID 27616982 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | not_present | not_present | — | 2 |
 | PMID 27618672 | `partial_fulltext_read` | read | read | read | read | captions_only | not_read | read | not_present | not_read | not_read | 1 |
 | PMID 27641496 | `partial_fulltext_read` | read | not_read | read | read | read | read | read | not_read | read | — | 1 |
@@ -814,6 +813,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 27903677 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | unavailable | unavailable | 1 |
 | PMID 27922641 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 27999774 | `complete_fulltext_read` | read | read | not_present | not_present | read | not_present | read | not_present | not_present | read | 1 |
+| PMID 28045433 | `partial_fulltext_read` | read | read | not_present | read | captions_only | not_present | read | not_present | not_present | not_read | 1 |
 | PMID 28079396 | `partial_fulltext_read` | not_read | not_read | read | read | read | read | not_read | not_read | not_read | — | 1 |
 | PMID 28082409 | `partial_fulltext_read` | not_read | not_read | not_read | read | not_read | read | not_read | not_read | not_read | — | 1 |
 | PMID 28100454 | `partial_fulltext_read` | read | not_read | read | read | not_read | not_read | read | read | not_read | not_read | 1 |
@@ -869,6 +869,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 29111262 | `partial_fulltext_read` | read | read | read | read | captions_only | read | not_read | not_read | unavailable | not_read | 1 |
 | PMID 29132376 | `partial_fulltext_read` | read | read | read | read | unavailable | not_present | read | not_present | unavailable | unavailable | 2 |
 | PMID 29163040 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | not_present | read | — | 1 |
+| PMID 29164763 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | not_present | not_present | not_read | 1 |
 | PMID 29207681 | `abstract_only` | read | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | 1 |
 | PMID 29216042 | `partial_fulltext_read` | not_read | not_read | not_read | read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 29218434 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | — | 1 |
@@ -921,7 +922,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 29959237 | `abstract_only` | read | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | 1 |
 | PMID 29964329 | `partial_fulltext_read` | not_read | not_read | not_read | read | not_read | not_read | not_read | not_read | not_read | — | 1 |
 | PMID 29979149 | `partial_fulltext_read` | not_read | read | not_read | read | not_read | not_read | not_read | not_read | unavailable | not_read | 1 |
-| PMID 30029003 | `partial_fulltext_read` | read | not_read | not_read | read | not_read | not_read | not_read | not_read | not_read | — | 2 |
+| PMID 30029003 | `partial_fulltext_read` | read | not_read | not_read | read | not_read | read | not_read | not_read | not_read | not_read | 3 |
 | PMID 30031689 | `partial_fulltext_read` | not_read | not_read | not_read | read | not_read | not_read | not_read | not_read | not_read | — | 1 |
 | PMID 30037851 | `partial_fulltext_read` | read | not_read | not_present | not_read | captions_only | not_read | not_read | not_present | not_read | not_read | 1 |
 | PMID 30046099 | `partial_fulltext_read` | read | not_read | read | read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
@@ -933,6 +934,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 30082886 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | not_present | read | read | 1 |
 | PMID 30089410 | `partial_fulltext_read` | not_read | not_read | read | read | not_read | read | not_read | not_read | not_read | — | 1 |
 | PMID 30136373 | `partial_fulltext_read` | read | not_read | not_read | read | not_read | not_read | read | not_read | not_read | not_read | 2 |
+| PMID 30154439 | `partial_fulltext_read` | read | read | read | read | captions_only | not_present | read | not_present | not_read | not_read | 1 |
 | PMID 30158849 | `partial_fulltext_read` | read | read | read | read | read | read | read | not_present | read | read | 3 |
 | PMID 30175250 | `partial_fulltext_read` | read | read | read | read | read | not_present | read | not_present | captions_only | — | 2 |
 | PMID 30189284 | `partial_fulltext_read` | read | read | read | read | not_read | not_read | read | not_read | not_read | not_read | 1 |
@@ -1089,7 +1091,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 32610343 | `partial_fulltext_read` | read | not_present | not_read | read | captions_only | not_present | read | read | not_read | not_read | 1 |
 | PMID 32614402 | `partial_fulltext_read` | not_read | not_read | read | read | not_read | read | not_read | not_read | not_read | — | 1 |
 | PMID 32616501 | `partial_fulltext_read` | read | read | read | read | not_read | not_read | read | not_present | not_read | not_read | 1 |
-| PMID 32652616 | `partial_fulltext_read` | read | not_read | read | not_read | not_read | read | not_read | not_read | not_read | — | 2 |
+| PMID 32652616 | `partial_fulltext_read` | read | not_read | read | read | not_read | read | not_read | not_read | not_read | not_read | 3 |
 | PMID 32665777 | `partial_fulltext_read` | read | read | read | read | unavailable | unavailable | read | not_read | unavailable | not_read | 1 |
 | PMID 32668809 | `partial_fulltext_read` | not_read | not_read | not_read | read | captions_only | not_read | not_read | not_read | not_read | — | 1 |
 | PMID 32678276 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | not_present | — | 2 |
@@ -1157,6 +1159,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 33691672 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | read | — | 1 |
 | PMID 33704440 | `partial_fulltext_read` | read | read | read | read | read | read | read | read | captions_only | — | 3 |
 | PMID 33711029 | `partial_fulltext_read` | read | not_read | read | not_read | not_read | not_read | read | not_read | not_read | not_read | 1 |
+| PMID 33726816 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | not_present | read | not_read | 1 |
 | PMID 33733036 | `partial_fulltext_read` | not_read | not_read | read | read | not_read | not_read | not_read | not_read | not_read | — | 1 |
 | PMID 33733293 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | — | 1 |
 | PMID 33752802 | `partial_fulltext_read` | read | not_read | not_read | read | not_read | not_read | read | not_read | unavailable | not_read | 1 |
@@ -1169,6 +1172,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 33916190 | `partial_fulltext_read` | not_read | not_read | not_read | read | not_read | read | not_read | not_read | not_read | — | 1 |
 | PMID 33916893 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | read | read | 2 |
 | PMID 33919646 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | read | read | 1 |
+| PMID 33946771 | `partial_fulltext_read` | read | read | not_present | not_present | captions_only | read | read | not_present | not_present | not_read | 1 |
 | PMID 33952316 | `partial_fulltext_read` | not_read | not_read | read | read | not_read | not_read | not_read | not_read | not_read | — | 1 |
 | PMID 33955541 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 33958783 | `partial_fulltext_read` | read | read | read | read | read | read | read | read | captions_only | read | 2 |
@@ -1185,7 +1189,6 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 34204789 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | not_present | captions_only | read | 2 |
 | PMID 34210081 | `complete_fulltext_read` | read | read | not_present | not_present | read | not_present | read | not_present | not_present | read | 2 |
 | PMID 34214506 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | not_present | — | 3 |
-| PMID 34227748 | `partial_fulltext_read` | read | not_read | not_read | read | not_read | not_read | read | not_read | not_read | — | 1 |
 | PMID 34253921 | `partial_fulltext_read` | read | not_read | not_read | not_read | not_read | read | read | not_present | not_read | — | 2 |
 | PMID 34258135 | `complete_fulltext_read` | read | read | not_present | read | read | read | read | not_present | read | read | 1 |
 | PMID 34261823 | `partial_fulltext_read` | not_read | not_read | read | read | read | read | not_read | not_read | not_read | — | 2 |
@@ -1399,6 +1402,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 37307933 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | — | 1 |
 | PMID 37319242 | `partial_fulltext_read` | read | read | read | read | captions_only | not_present | read | not_present | not_read | — | 1 |
 | PMID 37321992 | `partial_fulltext_read` | read | not_read | read | read | read | not_present | read | not_present | read | not_read | 4 |
+| PMID 37324196 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | read | not_read | not_read | 1 |
 | PMID 37328865 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | read | not_read | not_read | 1 |
 | PMID 37329181 | `partial_fulltext_read` | not_read | not_read | not_read | read | read | not_read | not_read | not_read | not_read | — | 1 |
 | PMID 3734794 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | — | 1 |
@@ -1427,7 +1431,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 37779224 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 37781246 | `partial_fulltext_read` | read | read | read | read | captions_only | not_present | read | read | read | read | 2 |
 | PMID 37798473 | `partial_fulltext_read` | not_read | not_read | read | read | captions_only | not_read | not_read | not_read | read | — | 1 |
-| PMID 37804316 | `partial_fulltext_read` | read | read | read | read | captions_only | captions_only | read | not_present | not_read | — | 1 |
+| PMID 37804316 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | not_present | not_read | not_read | 2 |
 | PMID 37817426 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | read | read | not_read | 1 |
 | PMID 37822150 | `partial_fulltext_read` | read | read | not_present | read | captions_only | read | read | not_present | not_read | not_read | 3 |
 | PMID 37824663 | `abstract_only` | read | not_read | unavailable | unavailable | unavailable | unavailable | unavailable | not_read | unavailable | not_read | 2 |
@@ -1765,7 +1769,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 41470225 | `partial_fulltext_read` | read | read | read | captions_only | captions_only | read | read | not_read | not_read | not_read | 1 |
 | PMID 41473577 | `partial_fulltext_read` | read | read | read | read | not_read | read | read | not_read | unavailable | read | 1 |
 | PMID 41477840 | `partial_fulltext_read` | read | read | read | read | captions_only | not_present | read | read | captions_only | read | 1 |
-| PMID 41489401 | `partial_fulltext_read` | read | not_read | not_read | read | not_read | read | read | not_read | read | not_read | 4 |
+| PMID 41489401 | `partial_fulltext_read` | read | not_read | not_read | read | not_read | read | read | not_read | not_present | not_read | 3 |
 | PMID 41489546 | `partial_fulltext_read` | read | read | read | read | not_read | not_read | read | not_read | not_read | not_read | 2 |
 | PMID 41496652 | `partial_fulltext_read` | read | not_read | read | read | read | not_present | read | not_present | captions_only | — | 1 |
 | PMID 41509287 | `partial_fulltext_read` | read | read | not_read | read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
@@ -1798,7 +1802,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 41830506 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | read | not_present | not_read | 2 |
 | PMID 41835067 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | read | captions_only | read | 1 |
 | PMID 41842973 | `partial_fulltext_read` | read | read | not_read | read | captions_only | not_read | read | not_read | not_read | not_read | 1 |
-| PMID 41858901 | `partial_fulltext_read` | not_read | not_read | read | read | not_read | not_read | not_read | read | read | — | 1 |
+| PMID 41858901 | `partial_fulltext_read` | not_read | not_read | read | read | not_read | read | not_read | read | read | not_read | 2 |
 | PMID 41885587 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | unavailable | — | 1 |
 | PMID 41891667 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | read | — | 1 |
 | PMID 41904698 | `complete_fulltext_read` | read | read | not_present | not_present | not_present | read | read | not_present | not_present | read | 1 |
@@ -1850,7 +1854,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 42170349 | `complete_fulltext_read` | not_present | not_present | not_present | read | read | not_present | read | read | not_present | read | 1 |
 | PMID 42171828 | `partial_fulltext_read` | read | captions_only | not_present | captions_only | captions_only | captions_only | read | not_present | not_present | — | 1 |
 | PMID 42181696 | `partial_fulltext_read` | read | read | read | read | captions_only | not_present | read | not_present | not_read | not_read | 1 |
-| PMID 42190665 | `partial_fulltext_read` | not_read | not_read | not_read | not_read | captions_only | not_present | read | read | not_read | — | 1 |
+| PMID 42190665 | `partial_fulltext_read` | not_read | not_read | not_read | read | captions_only | not_present | read | read | not_read | not_read | 2 |
 | PMID 42193054 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | not_present | read | 3 |
 | PMID 42198847 | `partial_fulltext_read` | read | read | read | read | captions_only | not_present | read | read | captions_only | not_read | 1 |
 | PMID 42201999 | `queried_not_full_read` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
@@ -1883,7 +1887,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 42384016 | `partial_fulltext_read` | read | read | read | read | read | not_present | read | read | not_read | not_read | 1 |
 | PMID 42389070 | `complete_fulltext_read` | read | read | not_present | read | not_present | read | read | read | not_present | — | 1 |
 | PMID 42394473 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | read | read | 1 |
-| PMID 42395553 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | read | captions_only | read | 2 |
+| PMID 42395553 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | read | captions_only | read | 3 |
 | PMID 42397075 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | read | read | read | 12 |
 | PMID 42401046 | `partial_fulltext_read` | read | read | read | read | read | read | read | not_present | captions_only | — | 1 |
 | PMID 42413489 | `abstract_only` | read | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | 1 |

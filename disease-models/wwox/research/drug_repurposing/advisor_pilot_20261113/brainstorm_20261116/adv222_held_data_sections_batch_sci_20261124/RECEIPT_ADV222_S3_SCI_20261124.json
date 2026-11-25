@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-24T22:50Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-24T22:58:40Z",
+ "event_id": "FTR-20261124-32652616-93",
+ "evidence_basis": [
+  "coverage_map",
+  "Read in this pass: Results in full (Tables 2 to 7 with footnotes, CONSORT legend), the Trial Design paragraph and the paragraph of the Discussion on the effect of cannabidiol on clobazam and N-desmethylclobazam. Earlier read sections carried forward; the Discussion as a whole was not read in this pass."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv222_held_data_sections_batch_sci_20261124/RESULT_ADV222_HELD_DATA_SECTIONS_SCI_20261124.md"
+ ],
+ "prior_receipt": "FTR-20261124-32652616-92",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "d2daf776534c7c6b74658adbdd1f2fe1e8140e489687b400fea04db745b0e6aa",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/deepening_downloads/clobazam_loop_20261124/32652616.xml (held copy, not in git)",
+ "study_id": {
+  "pmid": "32652616"
+ },
+ "workflow": "SCI window AC ADV-222 section 3 of 8 (owed-and-held data section, best-state class B of ADV-219)"
+}
