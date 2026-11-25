@@ -41,3 +41,7 @@ Hypothesis level; reference genotype class; nothing here is medical advice. Sour
 ## Use
 
 Before the first read: write the five questions on the PREREG with the paper's consumer sentence. After the read: one line per class in the result (the class of correction this batch found), and the second reader (a blind delegate, stated model and effort) judges every sentence proposed for change. Observed rate: about two reads in five need a strict correction (16 of 37) and about three in five some change (23 of 37), on consumers that were mostly narrow earlier readings; a result with none is possible and must not be forced.
+
+* **A printed p is reproduced under a named test, and the other standard tests are reported** (ADV-281, DR-P11-004: the EEG p 0.04 reproduces as an uncorrected chi-square, 0.0393, and fails under Fisher, 0.097, and Yates, 0.099; the same row had been called "not reproducible" on 2026-11-25). Say which test reproduces and which do not before saying a value fails.
+* **A "not available" label is checked against the held folders before it is repeated** (ADV-281: a card said the Brain supplement of 42397075 was unavailable; it had been held since 2026-11-21).
+* **A control class carries an "in-study check yes/no" column:** a cited effect of the same manipulation in another system is not a check made by the paper; two readers differed on four classes over that rule and agreed on every in-study entry.

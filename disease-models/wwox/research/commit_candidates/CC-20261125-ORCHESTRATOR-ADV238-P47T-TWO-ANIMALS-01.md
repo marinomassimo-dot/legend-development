@@ -43,3 +43,7 @@ One blind verifier (call E; statements P1 and P2; `drug_repurposing/advisor_pilo
 ## Dated note, 2026-11-25 (IT, card route; not a batch disposition)
 
 Rows 1, 3 and 4 of section 3, with the wording of section 7, are applied (J01 `evidence_for_and_against.for[1]`, K01 `functional_evidence_available`, dossier `PMID36828035.md` item 7), cards rebuilt and the views regenerated. **Still open:** row 2 (not checked), the pointer lines of rows 5 and 6 (optional), RP-036 (ADV's), and the further consumers of ADV-239 section 4 (L01, F02, F03, INV-06, INV-15, INV-16, T19, `CLAIM 005`, and the extra K01/J01 wording), which need their own blind check.
+
+## BATCH DISPOSITION — `BATCH_20261125_006` (2026-11-25, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** STAYS PROPOSED (stays queued). Nothing of it is propagated by this batch; rows 1, 3 and 4 were applied earlier by the card route. Remaining: row 2, the pointer lines, RP-036 (ADV) and the ADV-239 section 4 consumers, which need their own blind check.

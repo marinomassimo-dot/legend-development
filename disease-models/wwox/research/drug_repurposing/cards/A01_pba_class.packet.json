@@ -174,7 +174,7 @@
         "cell_type": "HEK293T",
         "developmental_stage": "not applicable"
       },
-      "measured_result_note": "Mutant total protein about 1.8 (sorbitol) and about 2.35 (trehalose) fold of control, significance marks printed; also raised in yeast by a second assay. Both act at high osmolyte levels, so an osmotic effect is not separated from chaperoning; the effect is on wild type as well.",
+      "measured_result_note": "Mutant total protein in Supplementary Figure 12a (HEK293T, three independent experiments): about 2.35 fold of control with trehalose and about 1.8 fold with sorbitol, both marked; Figure 12b (same cell line, same concentration) repeats the trehalose rise but shows about 1.0 fold, unmarked, for sorbitol, and the higher concentration of either gave no rise in panel a, so no sorbitol effect is established and the osmolyte arm rests on trehalose (corrected 2026-11-25, ADV-279; figure readings). Both were also raised in yeast by a second assay (panel c, fluorescence). The osmolytes act at high levels, so an osmotic effect is not separated from chaperoning; the effect is on wild type as well.",
       "receipt": "FTR-20261021-30266908-01"
     },
     {
