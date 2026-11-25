@@ -1134,6 +1134,15 @@
      "accepted_at": "2026-11-25T04:22:21Z",
      "evidence": "35e355c40 on main, gate PASS, ls-remote; test_strategic_advisor 236/236, test_mandate_watch 99/99, test_mandate_continuity 83",
      "updated_at": "2026-11-25T04:37:33Z"
+    },
+    {
+     "step": "ADV-258: extend epmc_notice_sweep.py (catalogue mode, TSV, delta, proposed flags printed only), weekly in scout_daily, tick says NEW NOTICE once; acceptance reproduces SCI ADV-256 counts from a fixture",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-258",
+     "accepted_at": "2026-11-25T04:50:51Z",
+     "evidence": "a869a52b6 on main, gate PASS, ls-remote; live run 2026-11-25T05:13Z: 1083 PMIDs, 6 retracted, 2 concern, 21 corrected, same 29 rows as SCI ADV-256; proposed flag only PMID 19357348 (notice 42583763)",
+     "updated_at": "2026-11-25T05:13:39Z"
     }
    ]
   }
@@ -2011,6 +2020,13 @@
    "at": "2026-11-25T04:22:21Z",
    "source": "ADV yes to the proposal, recorded in checkpoint HE-M section 2 item 3",
    "step_sha256": "e8f9c5a81205",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T04:50:51Z",
+   "source": "ADV-258",
+   "step_sha256": "0753b7eba3f7",
    "reopened_block": false,
    "authorised_by": null
   }
