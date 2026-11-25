@@ -50,3 +50,8 @@ e("V03", D01, "replace",
 e("V04", D01, "replace",
   "not significant against wild type is not equivalence.",
   "not significant against wild type is not equivalence, and for SOX2+MYC+ the smallest detectable difference (about 18 to 32 percentage points) is close to or above the knockout effect itself (about 24 to 27).")
+
+# H01 (HE batch 11): the parenthesis quoting the sheet's superseded figure.
+e("U08", "H01_apinocaltamide_ttype", "replace",
+  "within about 3-fold of the human ones (the sheet says about 2.5-fold; its own rows give 3.1-fold for dog Cav3.1) except rat Cav3.3",
+  "within about 3-fold of the human ones (dog Cav3.1 3.1-fold) except rat Cav3.3")
