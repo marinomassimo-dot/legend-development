@@ -2,7 +2,7 @@
 
 **Actor:** `orchestrator` (IT) · **Task:** ORCH-ROADMAP-IT59-20261119 (ADV-276 increment 1, one queued candidate at ADV's word; SCI's wording message is peer content, not operator authority) · **Date:** 2026-11-25 · **target_wm_version:** `WM_v7.29` (unchanged)
 **Origin of the finding:** `disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276_acquired_reading_sci_20261125/RESULT_ADV276_SCI_20261125.md` section 3 (SCI, one reader). **IT read the passages behind all ten lines again from the held bytes on 2026-11-25** (section 4) and changed five of SCI's lines where the source says something different or more (marked **IT** below). SCI checked the three that correct it (lines 1, 9, 10) and the mortality addition (line 6) against the held bytes and accepted them (peer message, 2026-11-25).
-**Status:** PROPOSED. Nothing is applied to any card, ranking row, coverage table or registry by this act.
+**Status:** APPLIED BY THE CARD ROUTE 2026-11-25 (cards only; no registry, ranking row or coverage table), with one line withdrawn and four reworded after a blind check; see section 6. Not a BATCH_COMMIT candidate.
 
 > Public, disease-level, de-identified. Hypothesis level; nothing here is medical advice. Reference genotype class only. None of these ten papers is WWOX evidence. None was completely read; figures are captions only and supplements are not held.
 
@@ -42,3 +42,15 @@ Artefacts are the ADV-272 files under `files/fulltext/PMID<pmid>_ADV272_*` of th
 
 ## 5 · Cost of applying
 Every line that edits a card or a packet owes the view trio before landing (titles refresh, the two view runs, package, the cards copy, then the full view suite) and `test_repurposing_join` if a map record is touched.
+
+## 6 · Blind check and application (IT, 2026-11-25)
+Ten statements (47 facts) went as (statement, source, anchor) to one verifier (`legend-delegate`, sonnet, effort high stated in the dispatch), who did not see this candidate: 42 SUPPORTED, 1 OVERSHOOT, 1 UNDERSHOOT, 2 WRONG (one error). Report as delivered: `advisor_pilot_20261113/brainstorm_20261116/it_adv276_card_route_20261125/VERIFIER_REPORT_AS_DELIVERED_ADV276_IT_20261125.md`; apply script `apply_adv276_cards.py` in the same folder.
+- **Line 2 WITHDRAWN (it was wrong).** The unlabelled "Low 4/2/3" row of Table 3 of PMID 35222658 sits in the table footer of the XML and I had assigned it to the intervention group. By the group totals (26 and 22; Table 2 margins 6/7/13 and 7/4/11) intervention Low is 4/4/0 and non-intervention Low is 4/2/3; with that assignment the printed p values reproduce (chi-square 0.0029 and 0.418; IT recomputed both assignments). An older card clause said "Table 3 margins disagree with Table 2"; the margins agree under the correct assignment (probably the same misreading, not established), and that clause is corrected on the P11 row. Only the Table 2 EEG p value (0.04 printed, Fisher 0.097) still does not reproduce.
+- **Line 1:** the 21 of 27 (77.8 percent) count is ours, not printed; the printed 1.9-fold is not reproducible from the pooled wild-type 35 nM (53/35 = 1.5), and one paragraph of the paper reverses the two values: all stated on the row.
+- **Line 3:** "73 excluded" is arithmetic (302 minus 229); "failed" includes 14 relapses; "again" dropped.
+- **Line 4:** the right-side p = 0.050 is not below 0.05 although the text says P < 0.05: added.
+- **Line 6:** "81 treated rats" corrected to 81 rats in vehicle (33) and CPP-115 groups (14, 25, 9), plus 9 no-surgery controls.
+- **Line 9:** the 187 cells and 4 hippocampi are in the text and Table 2, not the Figure 5d legend; the card wording does not cite the legend.
+- **Line 10 narrowed again:** Sephin1 at 50 uM was tested in the biolayer-interferometry assay; for dephosphorylation the text says only "escalating concentrations" (top not stated); guanabenz is the compound printed at 50 uM in the enzymatic assay; the authors' limit covers complex assembly and stability.
+- Applied rows: F04 DR-P9-006; P11 DR-P11-004 (corrected, not as proposed) and DR-P11-005; H02 DR-H02-012, 013, 019, 027, 034; H01 external-evidence list; F03 not_known[3] and evidence_against[5]; E01 not_known[6]. Cards rebuilt by `repurposing_bridge.py`; the view trio, join and view suites were run before landing (see the session record).
+- **Card text carries no units.** `cards/check_cards.py` rejects dose-, route- and concentration-looking tokens (a number with nM, uM, mg, mg/kg, vg, mL, kg) in card text, and a first landing was refused for that. On the cards the doses, the nM potencies and the 50 uM concentration are therefore replaced by a pointer to the table of the paper ("doses in the paper"); the values with units stay in section 2 above and in the verifier report. Run `python3 disease-models/wwox/research/drug_repurposing/cards/check_cards.py` after any card packet edit.
