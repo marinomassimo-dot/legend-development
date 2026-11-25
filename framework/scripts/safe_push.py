@@ -409,6 +409,9 @@ def checks(remote: str, base: str, sha: str, landing: bool, parallel: bool) -> s
         print(f"LANDING CHECKS parallel: wall {time.time() - started:.0f}s (views {views_job.seconds:.0f}s, gate {gate_job.seconds:.0f}s, suites {suites_s:.0f}s, suite clone {clone_s:.0f}s)", flush=True)
     verdict = [l for l in gate.stdout.splitlines() if l.startswith("VERDICT")]
     print(verdict[0] if verdict else "(gate printed no VERDICT line)", flush=True)
+    for line in gate.stderr.splitlines():      # how the side scans ran (serial, fallback) and why a gate failed closed reach the landing log
+        if line.startswith(("GATE_SIDE_SCANS:", "GATE_ERROR:")):
+            print(line, flush=True)
     if gate.returncode != 0:
         return (f"publication gate exit {gate.returncode} -- not PASS. Nothing was pushed.\n"
                 + "\n".join(l for l in gate.stdout.splitlines() if "[BLOCK]" in l))

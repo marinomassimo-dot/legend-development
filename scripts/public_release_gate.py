@@ -1646,6 +1646,103 @@ def changed_since(root: Path, ref: str) -> list[str]:
                   | set(git("ls-files", "--others", "--exclude-standard")))
 
 
+SERIAL_SIDE_SCANS_ENV = "LEGEND_GATE_SERIAL"
+
+
+def _die_with_parent(parent: int) -> None:
+    """Linux: the second scan process is killed if the gate is (safe_push kills the gate alone on a refusal). Elsewhere it ends by itself."""
+    try:
+        import ctypes
+        ctypes.CDLL(None).prctl(1, 9)      # PR_SET_PDEATHSIG, SIGKILL
+    except (ImportError, OSError, AttributeError):
+        pass
+    if os.getppid() != parent:
+        os._exit(1)
+
+
+class SideScans:
+    """The three cross-file scans in a forked process, beside the privacy scan.
+
+    Fail closed: every way the process can end without a complete result raises in the gate (exit 3). The scans run in
+    this process only when asked (LEGEND_GATE_SERIAL=1) or when no second process can be started at all, and the line
+    on stderr says which: that serial result is then the one reported.
+    """
+
+    def __init__(self, root: Path, scans):
+        self.root, self.scans, self.pid, self.source = root, scans, None, None
+        if os.environ.get(SERIAL_SIDE_SCANS_ENV) == "1":
+            self._say(f"serial ({SERIAL_SIDE_SCANS_ENV}=1)")
+            return
+        if not hasattr(os, "fork"):
+            self._say("serial, FALLBACK (this platform has no fork)")
+            return
+        sys.stdout.flush()
+        sys.stderr.flush()
+        read_end, write_end = os.pipe()
+        parent = os.getpid()
+        try:
+            pid = os.fork()
+        except OSError as exc:
+            os.close(read_end)
+            os.close(write_end)
+            self._say(f"serial, FALLBACK (no second process: {exc})")
+            return
+        if pid == 0:
+            status = 1
+            try:
+                os.close(read_end)
+                _die_with_parent(parent)
+                found: list[Finding] = []
+                try:
+                    for scan in scans:
+                        scan(root, found)
+                    payload, status = ["done", [asdict(finding) for finding in found]], 0
+                except BaseException as exc:
+                    payload = ["error", f"{type(exc).__name__}: {exc}"]
+                with os.fdopen(write_end, "wb") as out:
+                    out.write(json.dumps(payload).encode("ascii"))
+                sys.stdout.flush()
+                sys.stderr.flush()
+            finally:
+                os._exit(status)
+        os.close(write_end)
+        self.pid, self.source = pid, os.fdopen(read_end, "rb")
+        self._say(f"second process (links, provenance, README); {SERIAL_SIDE_SCANS_ENV}=1 runs them in one")
+
+    @staticmethod
+    def _say(words: str) -> None:
+        print(f"GATE_SIDE_SCANS: {words}", file=sys.stderr, flush=True)    # stderr: the report on stdout is unchanged
+
+    def result(self) -> list[Finding]:
+        if self.pid is None:
+            found: list[Finding] = []
+            for scan in self.scans:
+                scan(self.root, found)
+            return found
+        data = self.source.read()           # to end of file BEFORE waiting: a large result cannot deadlock
+        status = os.waitpid(self.pid, 0)[1]
+        self.pid = None
+        self.source.close()
+        if not data:
+            raise RuntimeError(f"the second scan process ended (wait status {status}) without a result")
+        kind, value = json.loads(data)
+        if kind == "error":
+            raise RuntimeError(value)
+        if kind != "done" or status != 0:
+            raise RuntimeError(f"the second scan process ended with wait status {status}")
+        return [Finding(**item) for item in value]
+
+    def close(self) -> None:
+        """Kill and reap a process whose result was never collected."""
+        if self.pid is not None:
+            try:
+                os.kill(self.pid, 9)
+                os.waitpid(self.pid, 0)
+            finally:
+                self.pid = None
+                self.source.close()
+
+
 def main() -> int:
     args = parse_args()
     root = Path(args.root).resolve()
@@ -1665,7 +1762,10 @@ def main() -> int:
                                else Path(p).resolve().relative_to(root).as_posix() for p in named)
 
     findings: list[Finding] = []
+    side = None
     try:
+        if not precheck:
+            side = SideScans(root, (scan_links, scan_provenance, scan_readme_consistency))
         use_cache = not args.no_cache and not precheck and (
             args.cache or args.cache_verify or os.environ.get(CACHE_ENV) == "1")
         if use_cache:
@@ -1678,17 +1778,19 @@ def main() -> int:
                 return 3
         else:
             scan_privacy_and_secrets(root, findings)
-        scan_links(root, findings)
-        if precheck:
-            pass    # tree-level scans and the clean clone belong to the gate, not to the pre-check
-        else:
-            scan_provenance(root, findings)
-        scan_readme_consistency(root, findings)
+        if precheck:    # tree-level scans and the clean clone belong to the gate, not to the pre-check
+            scan_links(root, findings)
+            scan_readme_consistency(root, findings)
+        else:           # same order of findings as one process: privacy, links, provenance, README
+            findings.extend(side.result())
         if args.mode in {"release", "clone"} and not args.skip_clean_clone:
             run_clean_clone(root, findings, args.report_json)
     except Exception as exc:  # fail closed
         print(f"GATE_ERROR: {type(exc).__name__}: {exc}", file=sys.stderr)
         return 3
+    finally:
+        if side is not None:
+            side.close()
 
     if precheck:
         # tree-level findings that the privacy function also emits (a missing CI workflow, for one) are the gate's business: keep the ones about the named files

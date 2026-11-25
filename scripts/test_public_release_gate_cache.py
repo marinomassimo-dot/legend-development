@@ -110,7 +110,7 @@ class DifferentialSuite(unittest.TestCase):
         finally:
             gate.scan_privacy_and_secrets = original
         self.assertTrue(result.wasSuccessful(), [str(x[0]) + x[1][-600:] for x in result.failures + result.errors])
-        self.assertEqual(result.testsRun, 76, "the base suite changed size; update the proof (and say so in the design note)")
+        self.assertEqual(result.testsRun, 87, "the base suite changed size; update the proof (and say so in the design note)")
         print("DIFFERENTIAL fixtures compared:", counts, file=sys.stderr)
         self.assertGreaterEqual(counts["calls"], 40, counts)
         self.assertGreaterEqual(counts["block"], 20, counts)                  # the BLOCK fixtures are in the comparison, not only clean trees
