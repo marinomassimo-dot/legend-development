@@ -2411,10 +2411,6 @@
   "src": "en",
   "text": "A protein measurement on material the module already reasons about; no new model and no compound needed."
  },
- "f9209902aeba": {
-  "src": "en",
-  "text": "direction of mTOR activity in a WWOX-deficient system"
- },
  "f92adb789e1f": {
   "src": "en",
   "text": "WT to KO: Rin 102.9 to 143.0 MOhm (+39 percent), rest -79.3 to -73.6 mV, tau 18.6 to 21.3 ms; HT equals KO on Rin and is intermediate on rest; bursts in 36/42 KO, 4/23 HT, 0/11 WT slices (34634460 Table 1; hcn physiology Y01-Y03)."
