@@ -1362,10 +1362,26 @@
     },
     {
      "step": "Disk survey by unique inode, report only: where space went, growth per hour per area, safe-to-remove list with the rule for each; ADV decides the cleanup",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad message to HE 43ab579f, 2026-11-25 round 15:15Z",
-     "accepted_at": "2026-11-25T15:17:59Z"
+     "accepted_at": "2026-11-25T15:17:59Z",
+     "evidence": "850cbc14c on development/main: HE_DISK_SURVEY_2_20261125.md (growth, removable list, owner/operator items); ADV decided, 793 leaked sandboxes removed under ADV bounds (+5.0 GiB); clean 4-worker run recorded (HE_CI_QUEUE section 7)",
+     "updated_at": "2026-11-25T16:39:14Z"
+    },
+    {
+     "step": "window_handoff verify prints the old worktree's removal check (eligible after, processes) and the worktrees with no reason to keep, report only",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad GO to HE 02915fa6, 2026-11-25",
+     "accepted_at": "2026-11-25T16:39:14Z"
+    },
+    {
+     "step": "Speed the publication gate privacy scan with identical findings: whole-tree and 50-commit differential, seeded positives per pattern class, landed alone, read the first three real landings",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad GO with five conditions to HE 02915fa6, 2026-11-25",
+     "accepted_at": "2026-11-25T16:39:14Z"
     }
    ]
   }
@@ -2425,6 +2441,20 @@
    "at": "2026-11-25T15:17:59Z",
    "source": "ADV a5e6f2ad message to HE 43ab579f, 2026-11-25 round 15:15Z",
    "step_sha256": "ed08bcc8f1ca",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T16:39:14Z",
+   "source": "ADV a5e6f2ad GO to HE 02915fa6, 2026-11-25",
+   "step_sha256": "61f1a9e74c2f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T16:39:14Z",
+   "source": "ADV a5e6f2ad GO with five conditions to HE 02915fa6, 2026-11-25",
+   "step_sha256": "960fa26fa7d7",
    "reopened_block": false,
    "authorised_by": null
   }

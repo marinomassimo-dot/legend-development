@@ -258,6 +258,15 @@ def worktree_state(tree: Dict[str, object]) -> str:
     return "dirty" if tree.get("dirty") else "clean"
 
 
+def name_holder(holder: str) -> str:
+    """`123 (cwd)` -> `123 chrome (cwd)`; the name is left out when the process has gone."""
+    pid, _, how = holder.partition(" ")
+    try:
+        return f"{pid} {Path('/proc', pid, 'comm').read_text().strip()} {how}"
+    except OSError:
+        return holder
+
+
 def removal_blockers(root: Path, tree: Dict[str, object], base: str, projects_dir: Path,
                      now: dt.datetime, idle_hours: float = 24.0) -> List[str]:
     """Every reason found to keep one linked worktree. An empty list is "nothing found", not an order to remove."""
@@ -281,11 +290,15 @@ def removal_blockers(root: Path, tree: Dict[str, object], base: str, projects_di
         blockers.append(f"{len(ignored)} ignored, deleted silently by remove: {', '.join(ignored[:3])}")
     holders = process_holders(path)
     if holders:
-        blockers.append(f"{len(holders)} process(es), first {holders[0]}")
+        # those working inside first: they are what a removal would pull the ground from
+        named = [name_holder(h) for h in sorted(holders, key=lambda h: not h.endswith("(cwd)"))]
+        blockers.append(f"{len(holders)} process(es): {', '.join(named[:8])}" + (f" and {len(named) - 8} more" if len(named) > 8 else ""))
     # the folder Claude Code keeps a worktree's transcripts in: the path with every other character as "-"
     stamps = [t.stat().st_mtime for t in (projects_dir / re.sub(r"[^A-Za-z0-9]", "-", str(path))).glob("*.jsonl")]
     if stamps and (now.timestamp() - max(stamps)) / 3600 < idle_hours:
-        blockers.append(f"a window launched here wrote {(now.timestamp() - max(stamps)) / 3600:.1f} h ago")
+        eligible = dt.datetime.fromtimestamp(max(stamps) + idle_hours * 3600, dt.timezone.utc)
+        blockers.append(f"a window launched here wrote {(now.timestamp() - max(stamps)) / 3600:.1f} h ago, "
+                        f"eligible after {eligible:%Y-%m-%dT%H:%MZ} if it writes no more")
     return blockers
 
 
