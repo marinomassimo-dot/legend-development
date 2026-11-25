@@ -962,3 +962,7 @@ being tested directly rather than asserted.
 `CHAPERONE PROGRAM — MECHANISTIC QUALIFICATION`, no compound screen — stands, and stands for the
 better reason: not that function cannot be measured, but that it **has never been measured on this
 allele**.
+
+## Correction note, 2026-11-25 (ADV-276 step 2: SCI reading of PMID 30202070, blind second reading; applied by IT)
+
+The statement in §1.5 and `RT-MD-04` that chloroquine was reported negative where bafilomycin was positive rests on one line and one dose: in the I1061T/I1061T NPC1 fibroblast line alone, chloroquine at 10 µM for 24 h gave about 1.3-fold, not significant (three experiments), against about 3.2-fold for bafilomycin A1 at 100 nM (Supplementary Figure 1b); bafilomycin was positive in all five lines. The 40 µM chloroquine and NH₄Cl arm was never tested there. The cut of chloroquine therefore cannot rest on that paper beyond 10 µM in one NPC1 line; bafilomycin A1 stays in the panel (at least 20 h: no significant rise at 8 h or 16 h in Figure 1c). The panel itself is unchanged.

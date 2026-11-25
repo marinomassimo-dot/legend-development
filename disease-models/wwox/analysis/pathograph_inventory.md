@@ -253,6 +253,7 @@ wikilink, so the relation is asserted in text and invisible to the graph.
 
 | Claim | Names | In field |
 |---|---|---|
+| CLAIM 005 | CLAIM 002 | Wikilinks |
 | CLAIM 006 | CLAIM 007 | Genotype/model relevance |
 | CLAIM 011 | CLAIM 002 | Impact on Working Model |
 | CLAIM 032 | CLAIM 040 | Impact on Working Model |
@@ -377,6 +378,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 601 input files; digest
-`7d9bc5b183a01104`. Sources: the claim, paper and
+`179d0b9f46db1d92`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
