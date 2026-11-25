@@ -983,6 +983,83 @@
      "accepted_at": "2026-11-24T18:42:04Z",
      "updated_at": "2026-11-24T22:04:59Z",
      "evidence": "Launched by ADV 22:00:36Z (session 7cf5e85a, my brief); old 748d7ec5 wrote MANDATE_RELEASED; handoff RUNNING, BOUND 22:02:23Z; rename proved with claude agents --all --json: IT Orchestrator - PREVIOUS 748d7ec5 / IT Orchestrator - CURRENT 7cf5e85a"
+    },
+    {
+     "step": "ADV-235: repair the debt_report red in the Advisor isolation test, land, and report to ADV every other failing suite on main in one table",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV-235 (ADV message to HE window 3b826442, 2026-11-25)",
+     "accepted_at": "2026-11-25T01:02:20Z"
+    },
+    {
+     "step": "ADV-237: measure the red-main episodes by failing suite and touched files; build a print-only diff-selected suite selector only on a clear majority; report the numbers",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV-237 (ADV message to HE window 3b826442, 2026-11-25)",
+     "accepted_at": "2026-11-25T01:02:20Z"
+    },
+    {
+     "step": "ADV-217: PubMed delta census tool, wired into the weekly scout start",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-217 (done by HE window 1d88b230; recorded late by 3b826442 on ADV's request of 2026-11-25)",
+     "accepted_at": "2026-11-25T01:07:48Z",
+     "evidence": "commits cd538aab7, 568efc7c8, fb13d1a18 on development/main; consumed by ADV (57fbc1d95); disease-models/wwox/research/drug_repurposing/checkpoint_he_20261120/CHECKPOINT_HE_20261125_K.md section 1",
+     "updated_at": "2026-11-25T01:07:48Z"
+    },
+    {
+     "step": "ADV-220: ci_runs.py queue and the runner-overhead measurement",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-220 (done by HE window 1d88b230; recorded late by 3b826442 on ADV's request of 2026-11-25)",
+     "accepted_at": "2026-11-25T01:07:48Z",
+     "evidence": "commit e4ebc8d34 on development/main; HE_MEASUREMENT_RUNNER_OVERHEAD_20261124.md; disease-models/wwox/research/drug_repurposing/checkpoint_he_20261120/CHECKPOINT_HE_20261125_K.md section 1",
+     "updated_at": "2026-11-25T01:07:48Z"
+    },
+    {
+     "step": "ADV-221: print-only debt report",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-221 (done by HE window 1d88b230; recorded late by 3b826442 on ADV's request of 2026-11-25)",
+     "accepted_at": "2026-11-25T01:07:48Z",
+     "evidence": "commit 57c2f2453 on development/main (framework/scripts/debt_report.py, 19 tests); its isolation-test red repaired under ADV-235 (742b32225); disease-models/wwox/research/drug_repurposing/checkpoint_he_20261120/CHECKPOINT_HE_20261125_K.md section 1",
+     "updated_at": "2026-11-25T01:07:48Z"
+    },
+    {
+     "step": "ADV-226: disk: unique-inode measurement and removal of closed worktrees and the profile clone",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-226 (done by HE window 1d88b230; recorded late by 3b826442 on ADV's request of 2026-11-25)",
+     "accepted_at": "2026-11-25T01:07:48Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/checkpoint_he_20261120/CHECKPOINT_HE_20261125_K.md section 2: profile clone removed, 27 closed worktrees removed with git worktree remove, free space 8.8 GB to 22 GB",
+     "updated_at": "2026-11-25T01:07:48Z"
+    },
+    {
+     "step": "ADV-227: sections read, best state: one derived line in coverage_report",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-227 (done by HE window 1d88b230; recorded late by 3b826442 on ADV's request of 2026-11-25)",
+     "accepted_at": "2026-11-25T01:07:48Z",
+     "evidence": "commits d61b848b9, db078d159, 536d5505b on development/main; disease-models/wwox/research/drug_repurposing/checkpoint_he_20261120/CHECKPOINT_HE_20261125_K.md section 1",
+     "updated_at": "2026-11-25T01:07:48Z"
+    },
+    {
+     "step": "ADV-229: measured breakdown of a landing slot",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-229 (done by HE window 1d88b230; recorded late by 3b826442 on ADV's request of 2026-11-25)",
+     "accepted_at": "2026-11-25T01:07:48Z",
+     "evidence": "commit 98ef9fac5 on development/main (HE_LANDING_SLOT_BREAKDOWN_20261125.md); disease-models/wwox/research/drug_repurposing/checkpoint_he_20261120/CHECKPOINT_HE_20261125_K.md section 1",
+     "updated_at": "2026-11-25T01:07:48Z"
+    },
+    {
+     "step": "SCI handoff ac5ef625: verify, rename natively, prove",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-25 (SCI successor launched)",
+     "accepted_at": "2026-11-25T01:23:41Z",
+     "evidence": "2026-11-25 01:23Z: mandate_watch handoff RUNNING; claude agents --all --json shows 'SCI - PREVIOUS 7fc66b5b' and 'SCI - CURRENT ac5ef625'; mandate_watch labels CURRENT; retire-old not run, reported to ADV",
+     "updated_at": "2026-11-25T01:23:41Z"
     }
    ]
   }
@@ -1741,6 +1818,69 @@
    "at": "2026-11-24T18:42:04Z",
    "source": "ADV message 2026-11-24 evening (ADV-211 delivery) under the operator instruction recorded verbatim on main, commit 4371d8963",
    "step_sha256": "abeb88948096",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T01:02:20Z",
+   "source": "ADV-235 (ADV message to HE window 3b826442, 2026-11-25)",
+   "step_sha256": "d86fa54b1a29",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T01:02:20Z",
+   "source": "ADV-237 (ADV message to HE window 3b826442, 2026-11-25)",
+   "step_sha256": "1107a33cf75d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T01:07:48Z",
+   "source": "ADV-217 (done by HE window 1d88b230; recorded late by 3b826442 on ADV's request of 2026-11-25)",
+   "step_sha256": "568373c5149b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T01:07:48Z",
+   "source": "ADV-220 (done by HE window 1d88b230; recorded late by 3b826442 on ADV's request of 2026-11-25)",
+   "step_sha256": "b8dbb71563eb",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T01:07:48Z",
+   "source": "ADV-221 (done by HE window 1d88b230; recorded late by 3b826442 on ADV's request of 2026-11-25)",
+   "step_sha256": "03ef0d110bdb",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T01:07:48Z",
+   "source": "ADV-226 (done by HE window 1d88b230; recorded late by 3b826442 on ADV's request of 2026-11-25)",
+   "step_sha256": "daaf97b7c919",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T01:07:48Z",
+   "source": "ADV-227 (done by HE window 1d88b230; recorded late by 3b826442 on ADV's request of 2026-11-25)",
+   "step_sha256": "45743c8fb63a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T01:07:48Z",
+   "source": "ADV-229 (done by HE window 1d88b230; recorded late by 3b826442 on ADV's request of 2026-11-25)",
+   "step_sha256": "42c483d959e4",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T01:23:41Z",
+   "source": "ADV message 2026-11-25 (SCI successor launched)",
+   "step_sha256": "e3777e52f9c6",
    "reopened_block": false,
    "authorised_by": null
   }
