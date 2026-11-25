@@ -1022,11 +1022,12 @@
     },
     {
      "step": "ADV-256: Europe PMC retraction and correction notice sweep over the catalogued WWOX PMIDs: PREREG first, 19357348 first, compare with the 10-21 snapshot, consumers per hit, propose flag rows (no state-file edit)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-256",
      "accepted_at": "2026-11-25T04:19:53Z",
-     "updated_at": "2026-11-25T04:19:53Z"
+     "updated_at": "2026-11-25T04:43:46Z",
+     "evidence": "landed on development/main 63739fc9fd (commit ca5c14e7), brainstorm_20261116/adv256_notice_sweep_sci_20261125/RESULT"
     }
    ]
   }

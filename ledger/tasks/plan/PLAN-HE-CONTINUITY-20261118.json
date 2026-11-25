@@ -1128,10 +1128,12 @@
     },
     {
      "step": "Micro-upgrade (checkpoint HE-M section 2 item 3): tick and mandate_watch say when the checkout they run from is behind development/main on files they read",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV yes to the proposal, recorded in checkpoint HE-M section 2 item 3",
-     "accepted_at": "2026-11-25T04:22:21Z"
+     "accepted_at": "2026-11-25T04:22:21Z",
+     "evidence": "35e355c40 on main, gate PASS, ls-remote; test_strategic_advisor 236/236, test_mandate_watch 99/99, test_mandate_continuity 83",
+     "updated_at": "2026-11-25T04:37:33Z"
     }
    ]
   }

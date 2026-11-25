@@ -2366,11 +2366,11 @@ class CampaignHome(ProactiveFixture):
         self.assertIn("already at", self.refresh()[1])
 
     def test_a_local_row_or_file_that_main_does_not_hold_stops_the_refresh_before_anything_is_touched(self) -> None:
-        self.write(self.other, self.log, '{"id": "ADV-001"}\n{"id": "ADV-002"}\n')
+        self.write(self.other, self.log, '{"id": "ADV-001"}\n{"id": "ADV-002", "state": "DRAFTED", "key": "theirs"}\n')
         self.write(self.other, "campaign/assignments/ADV-002.md", "brief two\n")
         self.write(self.other, "campaign/assignments/ADV-003.md", "published text\n")
         self.send(self.other, "ADV: landed")
-        self.write(self.repo, self.log, '{"id": "ADV-001"}\n{"id": "ADV-002"}\n{"id": "ADV-009", "unlanded": true}\n')
+        self.write(self.repo, self.log, '{"id": "ADV-001"}\n{"id": "ADV-002", "state": "DRAFTED", "key": "mine"}\n')        # one number, two drafts
         self.write(self.repo, "campaign/assignments/ADV-002.md", "brief two\n")
         self.write(self.repo, "campaign/assignments/ADV-003.md", "my own text\n")
         head, row = self.head(), (self.repo / self.log).read_bytes()
@@ -2381,6 +2381,24 @@ class CampaignHome(ProactiveFixture):
         self.assertNotIn("KEEP campaign/assignments/ADV-002.md", said)
         self.assertEqual((self.head(), (self.repo / self.log).read_bytes()), (head, row))
         self.assertTrue((self.repo / "campaign/assignments/ADV-002.md").exists())
+
+    def test_unlanded_appended_rows_are_put_back_after_the_fast_forward_and_named(self) -> None:
+        self.write(self.other, self.log, '{"id": "ADV-001"}\n{"id": "ADV-002", "state": "DRAFTED", "key": "theirs"}\n')
+        tip = self.send(self.other, "ADV: landed from a worktree")
+        mine = ['{"id": "ADV-009", "state": "DRAFTED", "key": "mine"}', '{"id": "ADV-001", "state": "SENT"}']      # a send names a published id: not a collision
+        self.write(self.repo, self.log, '{"id": "ADV-001"}\n' + "\n".join(mine) + "\n")
+        self.write(self.repo, "campaign/assignments/ADV-009.md", "brief nine\n")
+        code, said = self.refresh()
+        self.assertEqual(code, 0, said)
+        self.assertEqual(self.head(), tip)
+        self.assertEqual((self.repo / self.log).read_text().splitlines(), ['{"id": "ADV-001"}', '{"id": "ADV-002", "state": "DRAFTED", "key": "theirs"}', *mine])
+        self.assertEqual((self.repo / "campaign/assignments/ADV-009.md").read_text(), "brief nine\n")
+        self.assertIn("ADV-009 DRAFTED, ADV-001 SENT", said)
+
+    def test_rows_are_not_put_back_when_the_home_edited_an_earlier_line_or_wrote_an_unreadable_one(self) -> None:
+        for before, local, published in (('a\n', 'b\nc\n', 'a\n'), ('', 'not json\n', ''), ('', '[1]\n', '')):
+            self.assertIsNone(sa._unlanded_rows(before, local, published), local)
+        self.assertEqual(sa._unlanded_rows('', '{"id": "ADV-1", "state": "SENT"}\n', ''), ['{"id": "ADV-1", "state": "SENT"}'])
 
     def test_a_fast_forward_git_refuses_puts_the_local_files_back(self) -> None:
         self.write(self.other, "campaign/assignments/ADV-002.md", "brief two\n")
