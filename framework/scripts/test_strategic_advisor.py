@@ -610,6 +610,15 @@ class AssignmentFlow(unittest.TestCase):
         self.assertTrue(r["output_utc"].startswith("2026-11-20T08:10")); self.assertTrue(r["output_after_take_utc"].startswith("2026-11-20T09:00"))
         self.assertIn("FIRST OUTPUT AFTER TAKEN 09:00Z", sa.flow_line(r))
 
+    def test_a_done_step_in_a_recipient_record_ends_the_no_output_flag(self):
+        self.event("ADV-784", "DRAFTED", "07:00", recipient="Harness"); self.event("ADV-784", "SENT", "07:05")
+        self.record("PLAN-X", "ADV-784 disk", "07:30")
+        self.commit("unrelated", "11:00")
+        self.assertEqual(self.flow()["ADV-784"]["flag"], "TAKEN, no output after 4.5 h")
+        path = self.root / "ledger" / "tasks" / "orchestrator" / "PLAN-X.json"
+        path.write_text(path.read_text().replace("IN_PROGRESS", "DONE"))
+        self.assertEqual(self.flow()["ADV-784"]["flag"], "")
+
     def test_old_assignments_are_listed_but_not_flagged_and_nothing_sent_gives_nothing(self):
         self.assertEqual(sa.assignment_flow(self.campaign, self.NOW, ref="HEAD"), [])
         self.event("ADV-782", "DRAFTED", "10:00", recipient="Science")

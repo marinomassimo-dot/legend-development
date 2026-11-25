@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "1f7b391280674c338134f0671c2bd88626ef722f33eb90f7bbbfb28787fc4a8e",
+  "input_sha256": "3322b608be85a88dd68013e64a772b2c1024eec9ac41bf3995851bde5a1d0935",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -198,11 +198,11 @@
     "not_known": [
       "Whether a WWOX-deficient human neural cell has a measurable bioenergetic defect that a ketone substrate would bypass.",
       "Whether lactate is raised, normal or low in WWOX-deficient human brain across ages and contexts.",
-      "A ketogenic-diet response is reported in 3 of 5 WOREE individuals (lactate 2.4 to 3.3 mmol/L in one individual); the Pdk1 transcript and serum-lactate datum in the Wwox-null MEF and mouse paper is non-neural and measures no PDH.",
+      "A ketogenic-diet response is reported in 3 of 5 WOREE individuals (lactate 2.4 to 3.3 mmol/L in one individual; registry statement, no held source passage, ADV-259); the Pdk1 transcript and serum-lactate datum in the Wwox-null MEF and mouse paper is non-neural and measures no PDH.",
       "SCI 2026-11-19 (ADV-074, advisor_pilot_20261113/brainstorm_20261116/h_glucose_axis_adv074_sci_20261119/GLUCOSE_METABOLIC_AXIS_FIRST_PASS_ADV074_SCI_20261119.md; mapped by IT): the card's evidence is clinical and tiny with no metabolic readout in any WWOX-deficient neural system; on the held originals its rationale neither gains nor loses decisively: it would gain plausibility (an alternative brain fuel) only if hypoglycaemia or glucose use contributes to excitability, which nothing shows, and it would reduce to a generic anticonvulsant action if seizures occur with normal glucose (the P47T adults and the neuron-targeted line suggest they may). A diet that lowers blood glucose would act on pups that are already hypoglycaemic from about P10 and die: whether it helps or harms is unknown (a hypothesis-level caution, not advice). No change of tier."
     ],
     "evidence_against": [
-      "Four sources report normal human metabolism in WWOX deficiency (DL-BIO-009); one MRS report has lactate extremely low (DL-BIO-008).",
+      "Human lactate in WWOX deficiency: blood normal where stated (5 publications, up to 14 subjects, no values printed); spectroscopy mixed (one report with small peaks in early infancy and none later, one report 'extremely low', confounded by a second candidate variant); one raised value in the registry is without a held source passage. [IT 2026-11-25, ADV-255 via SCI] The earlier 'four sources' count was withdrawn on 2026-10-27.",
       "IT12 P1-alt caution (dated 2026-10-31; same screen, GSE298081, one unreplicated WWOX-null HAP1 clone, non-neural, proliferation endpoint, association only): loss of SLC2A1 (qGI -0.593, FDR 0.050) and HK2 (-0.464, 0.040) is worse tolerated by the null clone. A caution on direction for any glucose-restriction or 2-deoxyglucose-class idea, not evidence of harm in neurons."
     ],
     "bridge_gaps_exposed": [
