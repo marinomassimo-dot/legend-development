@@ -17,8 +17,8 @@ Written for: SCI (unit B; your request: ketamine and d-APV with Mg2+ IC50 per Gl
 - **Label:** none (a research tool); not searched.
 
 ## Ketamine (CHEMBL742, racemic; esketamine CHEMBL395091 is a separate record and not merged)
-- **Targets and potency (342 rows; 18 on NMDA receptor subunit symbols):** besides the 2024 document above: human recombinant GluN1/GluN2A IC50 1.26 microM and GluN1/GluN2B 5.0 microM (calcium flux, U2OS cells, FLIPR, 2011); GluN1/GluN2A 3.3 microM (oocytes, 2014); GluN1/GluN2A 6.1 and GluN1/GluN2B 3.2 microM in an excitotoxicity assay with dexamethasone (2010); CHO calcium-flux values in a 2025 document: GluN2A 25 microM, GluN2B 6.3 microM, GluN2C 4.0 microM, GluN2D 10 microM; MK-801 displacement IC50 0.61 to 0.86 microM in rat membranes and a 10 microM IC50 for the NMDAR-mediated EPSP in rat CA1. The values span 0.5 to 53 microM across assays: the potential, the readout (current, calcium flux, binding) and the cell system decide.
-- **Selectivity:** 135 other targets appear in the rows (DrugMatrix panels, receptors, transporters): reported, not selectivity; `NOT_ASSESSED`.
+- **Targets and potency (342 rows; 40 on NMDA receptor subunit symbols, 18 of them human (corrected 2026-11-25, HE; see the dated line at the end)):** besides the 2024 document above: human recombinant GluN1/GluN2A IC50 1.26 microM and GluN1/GluN2B 5.0 microM (calcium flux, U2OS cells, FLIPR, 2011); GluN1/GluN2A 3.3 microM (oocytes, 2014); GluN1/GluN2A 6.1 and GluN1/GluN2B 3.2 microM in an excitotoxicity assay with dexamethasone (2010); CHO calcium-flux values in a 2025 document: GluN2A 25 microM, GluN2B 6.3 microM, GluN2C 4.0 microM, GluN2D 10 microM; MK-801 displacement IC50 0.61 to 0.86 microM in rat membranes and a 10 microM IC50 for the NMDAR-mediated EPSP in rat CA1. The values span 0.5 to 53 microM across assays: the potential, the readout (current, calcium flux, binding) and the cell system decide.
+- **Selectivity:** 135 other (target, species) entries appear outside the human subunit rows (rat NMDA receptor rows, DrugMatrix panels, receptors, transporters) (corrected 2026-11-25, HE; see the dated line at the end): reported, not selectivity; `NOT_ASSESSED`.
 - **Exposure and label:** held in the ketamine lanes of the repository (`it_ketamine_lanes_20261117` and ADV-050): not re-read here; mouse brain exposure of ketamine and memantine is on SCI's next narrow round.
 
 ## Memantine
@@ -28,3 +28,8 @@ See batch 1 for the full row list. The per-document holding-potential finding ab
 1. Any potency for a pore blocker needs the **holding potential stated** before it is used; at the model's depolarised states a value read at -60 mV can be 30 to 100 times too low.
 2. The ketamine against memantine order flips with the potential: a mapping that places one above the other from a single IC50 is not supported.
 3. d-AP5 sits on a different axis (competitive, agonist-dependent): in the circuit model the identical J_N perturbation (see the normalisation note) hides that difference; the data do not hide it, and they do not give a Mg2+-matched per-subunit value for either agent.
+
+## Dated line 2026-11-25: row-by-row re-check against every held row (HE)
+A count of this sheet was recomputed against all rows of the held ChEMBL answers. A first-written value is kept here so that a copy of it elsewhere can be recognised.
+- **4a** first written: "342 rows; 18 on NMDA receptor subunit symbols"
+- **4b** first written: "135 other targets appear in the rows (DrugMatrix panels, receptors, transporters):"
