@@ -1,0 +1,64 @@
+set	pmid	n_declared	states	article_text_state
+complete_no_bytes	17575124	3	"{""ABSENT"": 3}"	ABSENT
+complete_no_bytes	17803050	8	"{""ABSENT"": 8}"	no_article_text_declared
+complete_no_bytes	21212533	12	"{""ABSENT"": 12}"	no_article_text_declared
+complete_no_bytes	21318118	4	"{""ABSENT"": 4}"	ABSENT
+complete_no_bytes	22634283	10	"{""ABSENT"": 1, ""PRESENT"": 9}"	ABSENT
+complete_no_bytes	23254685	6	"{""ABSENT"": 6}"	ABSENT
+complete_no_bytes	23370280	8	"{""ABSENT"": 8}"	ABSENT
+complete_no_bytes	24550385	9	"{""ABSENT"": 9}"	ABSENT
+complete_no_bytes	25491415	3	"{""ABSENT"": 3}"	ABSENT
+complete_no_bytes	26256646	5	"{""ABSENT"": 5}"	ABSENT
+complete_no_bytes	26675548	18	"{""ABSENT"": 18}"	ABSENT
+complete_no_bytes	27308416	2	"{""ABSENT"": 2}"	ABSENT
+complete_no_bytes	27308504	4	"{""ABSENT"": 4}"	ABSENT
+complete_no_bytes	27550453	4	"{""ABSENT"": 4}"	ABSENT
+complete_no_bytes	27655721	3	"{""ABSENT"": 1, ""PRESENT"": 2}"	ABSENT
+complete_no_bytes	30082886	4	"{""ABSENT"": 4}"	ABSENT
+complete_no_bytes	30370248	4	"{""ABSENT"": 4}"	ABSENT
+complete_no_bytes	31075076	2	"{""ABSENT"": 2}"	ABSENT
+complete_no_bytes	32300104	5	"{""ABSENT"": 5}"	ABSENT
+complete_no_bytes	32905056	3	"{""ABSENT"": 1, ""PRESENT"": 2}"	ABSENT
+complete_no_bytes	33406758	4	"{""ABSENT"": 1, ""PRESENT"": 3}"	ABSENT
+complete_no_bytes	34210081	3	"{""ABSENT"": 1, ""PRESENT"": 2}"	ABSENT
+complete_no_bytes	34258135	5	"{""ABSENT"": 1, ""PRESENT"": 4}"	ABSENT
+complete_no_bytes	36572673	4	"{""ABSENT"": 4}"	ABSENT
+complete_no_bytes	36619921	7	"{""ABSENT"": 1, ""PRESENT"": 6}"	ABSENT
+complete_no_bytes	36686527	6	"{""ABSENT"": 1, ""PRESENT"": 5}"	ABSENT
+complete_no_bytes	37519886	9	"{""ABSENT"": 9}"	ABSENT
+complete_no_bytes	38073616	2	"{""ABSENT"": 1, ""PRESENT"": 1}"	ABSENT
+complete_no_bytes	38074073	10	"{""ABSENT"": 1, ""PRESENT"": 9}"	ABSENT
+complete_no_bytes	38397994	3	"{""ABSENT"": 1, ""PRESENT"": 2}"	ABSENT
+complete_no_bytes	38542290	8	"{""ABSENT"": 1, ""PRESENT"": 7}"	ABSENT
+complete_no_bytes	39000139	11	"{""ABSENT"": 1, ""PRESENT"": 10}"	ABSENT
+complete_no_bytes	39543202	1	"{""ABSENT"": 1}"	ABSENT
+complete_no_bytes	39597089	1	"{""ABSENT"": 1}"	ABSENT
+complete_no_bytes	40831798	2	"{""ABSENT"": 1, ""PRESENT"": 1}"	ABSENT
+complete_no_bytes	41169199	5	"{""ABSENT"": 1, ""PRESENT"": 4}"	ABSENT
+complete_no_bytes	41584903	1	"{""ABSENT"": 1}"	ABSENT
+complete_no_bytes	41885587	12	"{""ABSENT"": 1, ""PRESENT"": 11}"	ABSENT
+complete_no_bytes	41984841	7	"{""ABSENT"": 7}"	ABSENT
+complete_no_bytes	42082822	2	"{""ABSENT"": 2}"	ABSENT
+complete_no_bytes	42128308	6	"{""ABSENT"": 6}"	ABSENT
+complete_no_bytes	42563882	2	"{""ABSENT"": 1, ""PRESENT"": 1}"	ABSENT
+partial_no_bytes_with_manifest	16061658	10	"{""ABSENT"": 10}"	no_article_text_declared
+partial_no_bytes_with_manifest	22479346	13	"{""ABSENT"": 1, ""PRESENT"": 12}"	ABSENT
+partial_no_bytes_with_manifest	23435430	5	"{""ABSENT"": 5}"	ABSENT
+partial_no_bytes_with_manifest	24086726	7	"{""ABSENT"": 1, ""PRESENT"": 6}"	ABSENT
+partial_no_bytes_with_manifest	25686832	7	"{""ABSENT"": 1, ""PRESENT"": 6}"	ABSENT
+partial_no_bytes_with_manifest	33363507	1	"{""ABSENT"": 1}"	ABSENT
+partial_no_bytes_with_manifest	33854788	7	"{""ABSENT"": 1, ""PRESENT"": 6}"	ABSENT
+partial_no_bytes_with_manifest	34210081	3	"{""ABSENT"": 1, ""PRESENT"": 2}"	ABSENT
+partial_no_bytes_with_manifest	35339181	2	"{""ABSENT"": 1, ""PRESENT"": 1}"	ABSENT
+partial_no_bytes_with_manifest	36530994	10	"{""ABSENT"": 1, ""PRESENT"": 9}"	ABSENT
+partial_no_bytes_with_manifest	37907746	1	"{""ABSENT"": 1}"	ABSENT
+partial_no_bytes_with_manifest	39505840	11	"{""ABSENT"": 1, ""PRESENT"": 10}"	ABSENT
+partial_no_bytes_with_manifest	39876842	1	"{""ABSENT"": 1}"	ABSENT
+partial_no_bytes_with_manifest	39997753	1	"{""ABSENT"": 1}"	ABSENT
+partial_no_bytes_with_manifest	40500435	2	"{""ABSENT"": 1, ""PRESENT"": 1}"	ABSENT
+partial_no_bytes_with_manifest	40659031	10	"{""ABSENT"": 1, ""PRESENT"": 9}"	ABSENT
+partial_no_bytes_with_manifest	40875931	0	{}	no_article_text_declared
+partial_no_bytes_with_manifest	41007296	3	"{""ABSENT"": 1, ""PRESENT"": 2}"	ABSENT
+partial_no_bytes_with_manifest	42047543	5	"{""ABSENT"": 1, ""PRESENT"": 4}"	ABSENT
+partial_no_bytes_with_manifest	42171828	1	"{""ABSENT"": 1}"	ABSENT
+partial_no_bytes_with_manifest	42260675	4	"{""ABSENT"": 1, ""PRESENT"": 3}"	ABSENT
