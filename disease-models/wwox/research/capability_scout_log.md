@@ -3379,3 +3379,43 @@ verify routing and schema behaviour; universal future model obedience is not dem
 **Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
 
 **Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-25 · scout_daily · ToolUniverse
+
+**WWOX question.** Can one live-lookup layer (MCP) answer gene-level WWOX queries?
+
+**Contribution vs existing.** optional isolated tool; see tooluniverse_capability_test_20261026.md (work saved) and tool_survey row 12
+
+**Detected.** release: 'v1.5.10' -> 'v1.5.11'
+
+**Cost / licence.** reading the change: minutes; any adoption: unestimated until triaged; Apache-2.0.
+
+**Proof.** https://github.com/mims-harvard/ToolUniverse/releases
+
+**Outcome.** TRIAGED 2026-11-25 (plan, release notes read): no reopen. v1.5.11 repairs return schemas and loaders and adds Health Canada drug-product, PubMLST and pharmacogenomic tools; no capability the adapters lack was named by an open question, licence unchanged.
+
+## 2026-11-25 · scout_daily · Discovery:diagnosis:compound-with-several-or-opposed-actions
+
+**WWOX question.** Compound with several or opposed actions: pracinostat (class I potent, class IIa uncertain) Multi-target contributions are ALREADY computed 
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [preprint/europepmc] Identification of shared blood transcriptomic features and candidate sedative targets in chronic insomnia with comorbid anxiety: an in-silic (2026-10-30, preprint (not peer reviewed)) [bridge to the question: target] https://europepmc.org/article/PPR/PPR1353779; [paper/nature] Context-aware tooth instance segmentation and missing-tooth localization in panoramic radiographs (2026-11-16, journal-article) [bridge to the question: missing] https://doi.org/10.1038/s41598-026-78690-0; [paper/nature] Missing marks made visible (2026-08-06, journal-article) [bridge to the question: missing] https://doi.org/10.1038/s41570-026-00861-4
+
+**Why asked.** diagnosis row 'Compound with several or opposed actions: pracinostat (class' (case / limit layout) [disease-models/wwox/research/drug_repurposing/diagnosis_it28_20261105/README.md @ blob dabb9bb5a8, main 9147e69e7e65]: "Compound with several or opposed actions: pracinostat (class I potent, class IIa uncertain) Multi-target contr"
+
+**If confirmed (decision).** Compound with several or opposed actions: pracinostat (class: closing 'Multi-target contributions are ALREADY computed and decomposed; the missing piece is assay-matched potency (47 v 5,113 nM) whose m' Roadmap: R5.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TRIAGED 2026-11-25 (plan, title depth): no reopen; the three hits are an insomnia transcriptomics preprint, a dental image model and a commentary on missing marks, matched on one word.
+
+## 2026-11-25 — HE successor, title-depth triage of the radar backlog
+
+**Population.** The 83 blocks still reading `TO_TRIAGE` above, dated 2026-10-29 to 2026-11-25 (the two of 25 November carry their own outcome). Definition of yield, frozen first: `drug_repurposing/checkpoint_he_20261120/HE_RADAR_YIELD_PREREG_20261125.md`. Figures and candidates: `HE_RADAR_YIELD_20261125.md` in the same folder.
+
+**Outcome.** TRIAGED 2026-11-25 (plan), title depth, covering those blocks: 0 yield at triage time by definition; 0 adoptions; the candidates listed in the result file are discovery hits, not readings. The earlier `TO_TRIAGE` lines stay as written (the log is append-only).
