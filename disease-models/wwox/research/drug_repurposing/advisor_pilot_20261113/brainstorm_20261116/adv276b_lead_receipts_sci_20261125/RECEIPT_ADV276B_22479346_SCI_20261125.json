@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-25T12:29Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-25T12:29:43Z",
+ "event_id": "FTR-20261125-22479346-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Abstract, Results with Tables 2 and 3, Discussion, Methods read; Table 1, Introduction and supplement not read (Europe PMC supplementaryFiles returned 500).",
+  "Result and per-consumer wording: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276b_lead_receipts_sci_20261125/RESULT_ADV276B_BATCH1_SCI_20261125.md"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv276b_lead_receipts_sci_20261125/RESULT_ADV276B_BATCH1_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261019-22479346-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "02ed85c90af8580c60acd98df4ac29fd8afa7de880a2ea5f087461a714a1b667",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID22479346_ADV272_PMC3315540_epmc_20261125.xml",
+ "study_id": {
+  "doi": "10.1371/journal.pone.0032907",
+  "pmid": "22479346"
+ },
+ "workflow": "SCI ADV-276 continued, batch 1 (re-open of five lead papers read earlier without a receipt; not a complete read)"
+}
