@@ -1136,6 +1136,13 @@
      "source": "ADV-282 (assignments/ADV-282.md)",
      "accepted_at": "2026-11-25T19:45:11Z",
      "updated_at": "2026-11-25T20:11:50Z"
+    },
+    {
+     "step": "ADV-283: test the PDK isoform pattern (PDK3 higher, PDK1 lower) in a second held WWOX-deficient neural dataset; PREREG frozen first; blind reader on the final sentences",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "assignments/ADV-283.md",
+     "accepted_at": "2026-11-25T20:22:29Z"
     }
    ]
   }
@@ -2013,6 +2020,13 @@
    "at": "2026-11-25T19:45:11Z",
    "source": "ADV-282 (assignments/ADV-282.md)",
    "step_sha256": "788b086bc0ff",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T20:22:29Z",
+   "source": "assignments/ADV-283.md",
+   "step_sha256": "b3aaf416b0ad",
    "reopened_block": false,
    "authorised_by": null
   }
