@@ -589,6 +589,13 @@
      "owner": "orchestrator",
      "source": "CHECKPOINT_IT_20261125_7.md section 1 (first assignment, ADV addition in the successor brief)",
      "accepted_at": "2026-11-25T15:13:19Z"
+    },
+    {
+     "step": "IT21: checkpoint 20 section 1: SCI six-paper set (CC ADV276C-SIX-HELD-01 with own blind verifier), ADV-276b registry lines, RP rows to ADV, ADV238 card rows with view trio, coverage-matrix proposal",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "CHECKPOINT_IT_20261125_8.md section 1 (first assignment, ADV addition in the successor brief, 2026-11-25)",
+     "accepted_at": "2026-11-25T17:01:57Z"
     }
    ]
   }
@@ -1046,6 +1053,13 @@
    "at": "2026-11-25T15:13:19Z",
    "source": "CHECKPOINT_IT_20261125_7.md section 1 (first assignment, ADV addition in the successor brief)",
    "step_sha256": "02908522abef",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T17:01:57Z",
+   "source": "CHECKPOINT_IT_20261125_8.md section 1 (first assignment, ADV addition in the successor brief, 2026-11-25)",
+   "step_sha256": "ea40c218cb5c",
    "reopened_block": false,
    "authorised_by": null
   }

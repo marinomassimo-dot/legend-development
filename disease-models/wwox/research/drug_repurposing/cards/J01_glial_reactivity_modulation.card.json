@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "ef469bd45c027633579c6117f2a6d9a20f2df4e4060653369d23146fcb15d4d0",
+  "input_sha256": "9a955aa695946c2c500ddb1ee67ac3594aeac5ff72f1157a9e689208a776af35",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -280,7 +280,7 @@
       "evidence_for_and_against": {
         "for": [
           "Gliosis is raised in the null mouse (P14 hippocampus, P20 tissue) and the P47T homozygote (progressive astrogliosis), and neuron-restricted rescue returns GFAP-positive cells from about 44 to about 5.",
-          "A regulator-level inflammatory signature is positive in three forebrain regions of the P47T homozygote.",
+          "A regulator-level inflammatory signature is positive in three forebrain regions of the P47T homozygote. Without mutant animals M6 and F8 (two of five; the Nptx2 and Bdnf activity-gene signature is a post hoc designation), TNFA/NF-kB meets positive-direction q < 0.05 in no forebrain region (cortex is significantly negative) and IL6/JAK/STAT3 loses the q threshold but keeps a positive score in all three (ADV-233).",
           "In a seizing genetic DEE mouse (Scn1a+/-) astroglial GFAP is raised from the aggravation phase onward (abstract), a precedent that glial change in a genetic DEE can be tracked against disease stage.",
           "A neuron-restricted deletion, whose astrocytes are expected to keep Wwox, shows astrocyte-activation-type genes among its differentially expressed genes at P17 and seizes from P9 (Repudi 2021): a glial change without an astrocyte-intrinsic lesion."
         ],
