@@ -1116,6 +1116,15 @@
      "owner": "plan",
      "source": "ADV decision 2 on ADV-243, peer message 2026-11-25; checkpoint HE-M section 2",
      "accepted_at": "2026-11-25T03:44:42Z"
+    },
+    {
+     "step": "SCI handoff ac5ef625 to e8081cc5: verified and renamed",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV peer message 2026-11-25 ~03:57Z",
+     "accepted_at": "2026-11-25T03:59:03Z",
+     "evidence": "old RELEASED, new BOUND 03:56:27Z; claude agents --all --json shows SCI - CURRENT e8081cc5 and SCI - PREVIOUS ac5ef625; labels CURRENT",
+     "updated_at": "2026-11-25T03:59:03Z"
     }
    ]
   }
@@ -1979,6 +1988,13 @@
    "at": "2026-11-25T03:44:42Z",
    "source": "ADV decision 2 on ADV-243, peer message 2026-11-25; checkpoint HE-M section 2",
    "step_sha256": "2228252fc401",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T03:59:03Z",
+   "source": "ADV peer message 2026-11-25 ~03:57Z",
+   "step_sha256": "1b6f85dce1eb",
    "reopened_block": false,
    "authorised_by": null
   }
