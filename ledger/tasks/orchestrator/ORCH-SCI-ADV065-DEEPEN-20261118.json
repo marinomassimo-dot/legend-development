@@ -1154,6 +1154,15 @@
      "accepted_at": "2026-11-25T20:44:55Z",
      "evidence": "PREREG 128d77d3 frozen 2026-11-25T20:45Z; DR-D01-001 DERIVABLE, claims more than the data bear (both readers); five rows on the Obeid article not audited (classifier stop, operator list); RESULT_ADV284_SCI_20261125.md",
      "updated_at": "2026-11-25T20:53:57Z"
+    },
+    {
+     "step": "ADV-285: functional myelination readout census (is there ANY functional readout - CAP, conduction velocity, VEP/ABR, propagation success - in a Wwox model or in adjacent hypomyelinating models with a pharmacological arm); one table, frozen search strings, PREREG; Kotler route-blocked, never bypassed; blind reader on final sentences; then ADV-287",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-285 (assignments/ADV-285.md, in root checkout until ADV's next push) and ADV direction round 21:30Z",
+     "accepted_at": "2026-11-25T21:21:18Z",
+     "evidence": "RESULT_ADV285_SCI_20261125.md: P1 rejecting observation met (2 Wwox models with functional readout), 13 adjacent papers, blind 4 of 8 sentences MUST CHANGE, corrected sentences in the result; landing pending",
+     "updated_at": "2026-11-25T21:41:45Z"
     }
    ]
   }
@@ -2045,6 +2054,13 @@
    "at": "2026-11-25T20:44:55Z",
    "source": "assignments/ADV-284.md",
    "step_sha256": "6902c49aedc3",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T21:21:18Z",
+   "source": "ADV-285 (assignments/ADV-285.md, in root checkout until ADV's next push) and ADV direction round 21:30Z",
+   "step_sha256": "1019d6331e4a",
    "reopened_block": false,
    "authorised_by": null
   }
