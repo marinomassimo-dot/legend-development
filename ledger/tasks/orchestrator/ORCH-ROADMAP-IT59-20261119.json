@@ -618,6 +618,13 @@
      "accepted_at": "2026-11-25T19:49:13Z",
      "evidence": "IT23 first landing: ADV-280/281/238 wording applied through two blind checks (40 sentences), evodiamine cell lines, positive-control decision, receipt FTR-20261125-28708106-01; result it_adv280_281_238_20261125/RESULT_IT23_20261125.md; increment 2 (ADV-282 wording, F02 bexarotene, ADV-283 E03/I01) prepared in increment2/ and queued in CHECKPOINT_IT_20261125_11.md",
      "updated_at": "2026-11-25T20:47:43Z"
+    },
+    {
+     "step": "IT24: checkpoint 23 queue in order: F02 bexarotene correction plus HE changed-value list, ADV-282 wording increment 2, ADV-283 E03/I01 wording, ADV-284 one row",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator launch message 2026-11-25 (successor window 8e1d62bc); CHECKPOINT_IT_20261125_11.md section 1 items 2-5",
+     "accepted_at": "2026-11-25T20:56:32Z"
     }
    ]
   }
@@ -1096,6 +1103,13 @@
    "at": "2026-11-25T19:49:13Z",
    "source": "CHECKPOINT_IT_20261125_10.md section 1 (first assignment, operator brief with ADV addition)",
    "step_sha256": "eb0b1cc954b3",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T20:56:32Z",
+   "source": "operator launch message 2026-11-25 (successor window 8e1d62bc); CHECKPOINT_IT_20261125_11.md section 1 items 2-5",
+   "step_sha256": "37a5aa2a06ff",
    "reopened_block": false,
    "authorised_by": null
   }
