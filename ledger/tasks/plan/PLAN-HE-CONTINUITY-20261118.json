@@ -1166,10 +1166,12 @@
     },
     {
      "step": "Regeneration of derived surfaces is the default under safe_push --serialize, opt-out flag, lock time printed, README numbers from three real pushes (ADV YES with four conditions)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV peer message, 2026-11-25",
-     "accepted_at": "2026-11-25T05:50:11Z"
+     "accepted_at": "2026-11-25T05:50:11Z",
+     "evidence": "051744c7c landed; README safe_push row holds three real pushes (N 24/25/25 s, M 254/249/275 s, all nothing stale); dated lines in the two HE measurement files; CI gate untouched",
+     "updated_at": "2026-11-25T06:23:12Z"
     }
    ]
   }

@@ -1,0 +1,101 @@
+n	surface	record	kind	support	words	sentence_sha256_key	sentence_start
+1	CARD	F04_nmdar_intervention_class	O		only	00071d81bfd3ada6c2bc14425c9151c6dae0faf42285409f926147b98345ee41	It does not show an effect in a WWOX system, and a GluN2B NAM acts on GluN2B-containing re
+2	CARD	C02_splice_aso	O		none	0035df135eb2d499081e27eb1f83cc08ef1544df212927f10ef78ca77e01d128	None.
+3	CARD	K01_hif_axis_glycolytic_shift	O		only	0061d7b55d0dd2f4368ce88d87d166a0a6b71aac7c2defd992a46cd420e9f49f	The earlier card text reported only the cytoplasmic decrease.
+4	CARD	EB-KD-01	O		none	00be62e243e57e6cbf5cb2eafef90b70e64a84e9351d7d74f80aa195699e7dd6	Internal, WWOX: CLAIM 042, CLAIM 031, CLAIM 001, known-roads note 2.7, early-benefit note 
+5	CARD	E02_ldh_inhibition	O		only	0293137c51e877dfd21172d106bc7a78ea2ee78cb06500253d338f94599c2c7f	The article is not read (paywalled; abstract only): substrate level, enzyme source and rep
+6	CARD	C04_aav9_endpoint_families	S	SUPPORTED	only	030287ab6861e3096c651a48d050cab803bac37f33147f2e6ea4b6b6c848741e	Untreated knockout about 95 against wild type about 130, one star against wild type; the o
+7	CARD	B02_readthrough_class	O		none	031a4b1ad250a726f2b959048987cf5611c7c065d1099b469d09f7a12af12bfb	None; no engine, no score.
+8	CARD	EB-ETX-01	W	BOUNDED	none	0343889a6cd44a27d70a73e8b87f1b407e5b06e121397dfa6228b645c492513f	Whether any selective T-type blocker reaches the brain of a Wwox-deficient pup at a measur
+9	CARD	F04_nmdar_intervention_class	O		only	041d25d9e36afc034fc920d25bd58be08aa7ba6a95ab774ec3e6a597f2285a60	abstract (PMC2679254, the publisher bars bulk download of the body): physiological Mg2+ de
+10	CARD	I01_pdk_inhibition_dca_premise_seizure_glycaemia	W	SUPPORTED	only	04b28e0aecf04a007383df5e2dddc33b97b20fa76ad5803cb96ece640604d5b8	Catalogue: experimental for the sodium salt (ChEMBL), status unverified in DGIdb; no marke
+11	CARD	B02_readthrough_class	O		none	04c8cf3d30cf3d711adb056be2723d87e2463767646ca987efb7c76c7deb71ff	"""{""""support_and_replication"""": """"None."""", """"formal_checks"""": """"None; no assertion is suppl"
+12	CARD	F03_bumetanide_chloride_gradient	O		first	04d726d9a65654c4f3e1e44fabaf163d712b7b3720491040c3be56cb9820b826	W2 (scientist-c, 2026-10-27): no new full-text receipt; first-hand re-reads of already-rec
+13	CARD	B02_readthrough_class	O		only	054209ad0422ddf37f4afda875154511a8de751e61aa6405769ba36d99e1575c	PubMed WWOX with those terms returned 0 on 2026-10-20 in title/abstract only; not re-runna
+14	CARD	H02_gabaat_inactivator_myelin_exposure	O		single	0590aa592ecb0be8381f714098f59285135d2446916988532750363eb9f6a658	dosing from postnatal day 4, or a single injection at postnatal day 7
+15	CARD	C03_crispra_boost	O		none	071675d4e81d9d8f4e3ef24df4c4ec1a29b785f0a4a1a0b5ea1f104fd46c31dc	"""{""""support_and_replication"""": """"None."""", """"formal_checks"""": """"None; no assertion is suppl"
+16	CARD	F01_glutamate_receptor_node	O		only	0798b706c736db935e1d03c22d5253cb723ad32a2d975fba83d260a018d7a3d3	Benefit in 3 of 15 (group of 15 includes 4 non-pathogenic variants), mild and parent-repor
+17	CARD	F04_nmdar_intervention_class	O		first	08191e9f3c8dffd68107b29f22ef089a066b5bacba90b62aa2fe4421e5c526fd	The ChEMBL record for NVP-AAM077 is a first-block key match (stereochemistry not confirmed
+18	CARD	H01_apinocaltamide_ttype	O		only	08a73d98722432acab653487a6969068462294c3dd64722ef8b2a50fe73d704c	directional_summary compares signs only where target, endpoint and every context dimension
+19	CARD	B01_amlexanox	O		only	098f9ee25b469ee2232958ed71f8fce1eaf7a91aa2a848417287dfa28941667f	In the p53 line a truncated protein was well detected and only a very low level of full-le
+20	CARD	B01_amlexanox	O		none	09aaad07f68e8affcc869296cc43aa055ea79a7ca290140db82c68d130243012	No score, rank, probability or blended index is carried, and none may be derived from this
+21	CARD	EB-GROWTH-AX-01	O		only	09fa19797419b3c1549330851603cd3b416cb5892785a89ef8f5b8ff9e9af195	Internal: early-benefit note 1.4 and 7, CLAIM 042 evidence boundary, CLAIM 011 (mouse, hig
+22	CARD	F03_bumetanide_chloride_gradient	O		first	0a1e73747f0966ac2abf15e1d6056a643b15ed5dc02de58af28afbecdb7ce936	"""{""""support_and_replication"""": """"One laboratory for every WWOX row used here; no independe"
+23	CARD	I01_pdk_inhibition_dca_premise_seizure_glycaemia	S	SUPPORTED	only	0a1f05a4d38870deac37d82d12f7be0848954ce05e239ecab6ee3b7867ba5742	Results name this condition (normoxia and normoglycaemia); the Discussion says PDK mRNA al
+24	CARD	E02_ldh_inhibition	S	SUPPORTED	single	0a7a8ccb3e4bba8c546009233f5381fbd3e742b3df60f0ca2f9dc437e11d0983	Fly: a single partial locomotor rescue by Ldh RNAi in the amyloid-plus-Wwox-reduction geno
+25	CARD	C03_crispra_boost	O		none	0a875edf5f370bca5368e0124bf515154529d46c35ddfa7d11648f6e1f2ce45f	None.
+26	CARD	C04_aav9_endpoint_families	O		only	0ab1f6acdec14bda6a963720225a7fb5b49dd3cbab693191b851e0dfa008eba7	Where the treated-arm panel has no untreated-knockout arm (glucose at day 20, gliosis area
+27	CARD	H01_apinocaltamide_ttype	O		none,only	0ad2324b639ba799fbfddcd2d12ee5f38072c3f4c96d05673bc7c0291d510fc2	Every apinocaltamide row is NOT WWOX EVIDENCE and abstract-only; none carries a receipt.
+28	CARD	K01_hif_axis_glycolytic_shift	O		first	0af738692b5e7f7c07c0c91be1fb13c953db861ea0e764e6abd1eadb39684288	compound-database retrieval, molecule-first, for the PX-478 free-base record and its salt 
+29	CARD	E02_ldh_inhibition	W	SUPPORTED	untested	0afbc7b10ac92838bb797d7005ff5066b4edaea177d332f3f67f160c59c11699	Track A, Track B untested.
+30	CARD	E02_ldh_inhibition	O		only	0b03648b0c97686d551b29ee690388cf197eb6e67ca37743886147ec76ff991b	Lactate rises only with Wwox reduction plus amyloid and falls nominally without amyloid; o
+31	CARD	F04_nmdar_intervention_class	S	SUPPORTED	only	0bba4374a15baf9a54f08f4ef8d1fcb10e41f36ff452a38ed76683eed381b5a9	The only controlled paediatric exposure to memantine in the label is a null result in a di
+32	CARD	F01_glutamate_receptor_node	O		first	0bc7bda817846624306de619c324613948ee7d34f803c664321d1fc59ac2bef2	"""{""""support_and_replication"""": """"One laboratory for every WWOX row used here; no independe"
+33	CARD	EB-DEV-AX-01	O		never	0c986ac83c21e2398a683dac4f28b215ee4a53ba87f295e6f8d4399deb987a0a	Nothing here is medical advice; it supports discussion with a treating clinical team and n
+34	CARD	J01_glial_reactivity_modulation	O		only	0d595db55b514fe96184ee9ee5a80c01a82a7ff4702fb0a96c86eebc7850aa00	Re-reads of already-receipted papers are described in the cycle README and staged for the 
+35	CARD	A02_proteasome_inhibitor_class	O		first	0d76684bcde927b33b38b2d51c6a50781d3c588e4e83dd2970a078e1a8d000b1	R1 dossier premise PB (inhibitor arm first, chase second): KEEP
+36	CARD	EB-HORM-AX-01	W	BOUNDED	none	0de3dee394f1bb451979b373a35e2e7a6aa24d532f95e3c7f6a9b040db31949c	none for the gene: six explicit responders in a per-patient supplement column of one curat
+37	CARD	E01_isr_modulators	O		none	0dea9da9b6533a9f008155da0ca4a6205c6bd984ff9b1b54a05d744663b7e3bc	Mean shift lower than 10,000 random same-size sets (P 0.0005); the gene-level direction of
+38	CARD	EB-CBD-AX-01	W	BOUNDED	none	0efb8eae52c9cd79726414b47b31adbab1ee47e1f77b98815d8eafba93b30eaa	none: continuation in 4 of 4 patients who started it in one cohort is a continuation patte
+39	CARD	H01_apinocaltamide_ttype	O		only	0f227c916251560ce5e54f24db58a6a826c383035191917b0a2dd02748528fd1	Catalogue identity: CHEMBL4217292 (ChEMBL_37 curated mechanism: 'Voltage-gated T-type calc
+40	CARD	H02_gabaat_inactivator_myelin_exposure	O		only	0f5e47c6a1acc3a4e1b920d598ed7e16bd94cbcb83c0b1c39cfd8bc0550b9b5a	"""PMC5024311 body read (partial: figure caption only, references not read); label sections "
+41	CARD	E02_ldh_inhibition	W	SUPPORTED	untested	0f61baf91b705ab5fdf0709bc13d782f7b05af8bc292527865a5378888e1fddd	Track B (Q230P class): no allele-specific rationale; the lever is allele-blind and unteste
+42	CARD	A04_er_proteostasis_regulators	W	BOUNDED	first,only	0fa76b8cd11547fa94e790d82935f6129aadb605ba84645c05fba822a96f8728	The only placement statements in the repository are an unmeasured remark in the first Q230
+43	CARD	EB-HORM-AX-01	O		never	0ff0e483a4ffa73192649933d823122fc183bc3a0519f41b7aa78110a8144dd8	Every adjacent source is labelled NOT WWOX EVIDENCE and is never promoted to WWOX evidence
+44	INV	INV-04	O		first	00e7619bcabbfad6412dcccda63f0649c47aae3bf20485cd9ba2dd8e17702dfa	ADV-051, ADV-054, ADV-059, ADV-061] The published effect size cannot be used to power it: 
+45	INV	INV-12	O		first,only	01bf024743c85d4b1761a24267a456d684494ce2423c3896afc3e1eb3d1e9360	Outside WWOX: in a mouse model of a thyroid-hormone-uptake defect, a thyromimetic normalis
+46	INV	INV-18	S	SUPPORTED	only	048c8ea446185f454c60464ff3adc56ecd1e95ea87c0192be7dab2f9fc41a768	[IT47 SCI47] Unit-of-analysis note for the Wwox slice paper: the change in inhibitory-curr
+47	INV	INV-15	O		only	06238f75eafc4e5aafa3ed5fe8e3c0e6a501f41f29a5d60d51019f7eae81310c	2026-11-21: a public conference abstract (AES 2026, 1.019; same programme as SfN NANO11.01
+48	INV	INV-15	O		only	066644e5fb241c3973157c14e62fe770c5cfdd0375d21c185ade3a97f9cadc8b	[Update 2026-11-21, ADV-139 (advisor_pilot_20261113/brainstorm_20261116/adv139_nappi_inv15
+49	INV	INV-08	S	BOUNDED	only	070c505ac7167e17550c166dc40b5fa69f2e52f1293efffb0ff34a86b470fcc9	The held RNA reads Hcar2 only in microglia, so a culture without microglia is not expected
+50	INV	INV-01	S	SUPPORTED	only	0839ee03c21ce50a179cb68c3e1a7e06d1bfda9e34cb1e04b647f3086790229d	P4 appears only as weight and glucose bars, with no P4 survival curve.
+51	INV	INV-01	W	SUPPORTED	only	0a9f5d1b15e8167f3521817ac71398e538044997b33de0cc4a4b941d1dc55ef6	Quantified myelin sheath structure (g-ratio or electron microscopy, not marker intensity) 
+52	MAP	N-12	O		only	0400ed3d992b574d58ff8ee1f4cba37a15cf4ff88dd949e334238450942f5a2a	N-12 — HSP70 co-inducers (e.g. arimoclomol) for an SDR missense → **a hypothesis of harm, 
+53	MAP	R-10	O		first	044efcb4a713bce4a3148a8ffddb7bc1427e93a547b25ab36c6ca00544429c52	**Class:** `READOUT_FIRST` — Track A, route BENEFICIO_PRECOCE; the first experiment is the
+54	MAP	DECISIVE_PRECLINICAL_EXPERIMENTS	O		untested	059021271e526c88bc64377237e4deadea526280cd4d91fed98d1a2c55a6714b	Whether Chain B is T1 or T2 — i.e. whether R-02 is a translation gap or an untested conjun
+55	MAP	N-16	W	BARE	only,untested	06e173e3576cb315f694d01d01a110e0a7509cd4284f90b12373939af815d905	"""**Failure mode:** *a negative stated as an absence of effect, when what exists is an unte"
+56	MAP	N-06	W	ALREADY_CORRECTED	single	0ce6ddc28df03014a6e2a89e4d8dbfa1749216d9390bd9f327670675c227fa71	"""The second human source is the **single MRS case** (`PAPER 044`), which reports cerebral "
+57	MAP	TOP_REPURPOSING_CANDIDATES	W	BARE	never	0dfca1b4877c43db91c77ae2e20d27d23f6e8e7053d5da203b421c53cfc72e12	targets the one downstream dependence demonstrated inside a WWOX model, is CNS-penetrant a
+58	MAP	2.2 Refused admission (biologically interesting, therapeutic	W	BARE	only	0e39232e88d0ded082c17523694559c45388dabb70f667a1fad8480136b12588	The only WWOX-specific measurement that touches mTOR is the WWOX-KO cerebral-organoid tran
+59	MAP	N-01	W	BARE	only	0e8cce37d3d572cb4705d879b02ac33d3bb812a998343de3faa25349ac691d2a	The correct verdict is therefore *no positive rationale exists, and the only directional d
+60	HYP	HYP-20261026-11	O		none	0064168e84ee7044cc64d622e9b34e3240d4a19faa50e910a0d64dee5a4db183	None of this is WWOX evidence.
+61	HYP	HYP-20260709-01	O		unico	007a3e126a04105815ae3d39c71689a9b2ea32289fb279cc5aa5e25d1cedd050	[Qualifier 2026-10-27: 'resta l'unico falsificatore' is withdrawn; see CURRENT READING for
+62	HYP	HYP-20261025-09	O		solo	02b971cfea910ddd88addf1fe02696bea23a4e461d3ea651507398423c30bc7e	Non `refuted`: la direzione è osservata in un gruppo e un dataset (vedi sopra) e il compar
+63	HYP	HYP-20261025-09	W	BARE	nessuna	04ce0df7dc1ec06221c465de6a1189e64cffd03e410eb7934c03f2ba4134c410	Nessuna valutazione pediatrica specifica è stata fatta per tankirasi o inibitori di GSK3 i
+64	HYP	HYP-20260709-02	O		nessun,nessuna,solo,unico	0603abdaa91a6b7b61766811c9eafd0cd948fef87eaa03b537b04266a484b205	- **Evidenza CONTRO / incertezze:** ⚠️ **asimmetria cruciale.** ⚠️ **Premessa A RITIRATA i
+65	HYP	HYP-20260709-08	O		primo	082958b23a17d958f1851fc15d93340d552f7f9be9b49bfa06f876defed72d84	Il primo obiettivo è distinguere i rami, non scegliere in anticipo la terapia.
+66	HYP	Piano rivisto, in ordine di costo crescente	S	SUPPORTED	unica	0938c94598fccf06f28b362ce8f9b7f343e90c2dd93f5a9027b5443805ba486b	**✅ ESEGUITO (2026-07-10) — e ha dato una risposta migliore della domanda.** Vedi [[discov
+67	HYP	HYP-20260709-08	W	SUPPORTED	nessuno	0ab9907daab1a192ab9e81bbc200e7129ae68f4b3adf718ee908c1c24d3e061c	⚠️ **L'assunzione centrale non è testata da nessuno: che Q230P, una volta ristabilizzata, 
+68	HYP	HYP-20260709-01	S	SUPPORTED	only	0b77724679b86e9d1aa8680d80a08898e4f4bfd2a0ea3febece555e57944a037	PDK is measured as mRNA only and PDH phosphorylation, flux, pyruvate and acetyl-CoA are no
+69	HYP	HYP-20261026-11	O		only	0bc9bfdcd9d044bd8b1acc77335a84abe466ceda14bf1b6f3f1b88ae84e912c8	Stiripentol stays only as a complex I and GABA-A comparator; the compound arm of the lacta
+70	HYP	HYP-20260705-05	W	BARE	nessun	0c50f38164b570c76eb056d7cb1536c691ac66b511c9e9312fd0ece6befe897e	Peptide sperimentale, nessun profilo pediatrico/CNS.
+71	PORT	RP-045	O		only	00d0de866629483f01d61d99aac6e8f04cdb988f889a5535f41de6416285c488	No candidate, rank or WWOX biological decision changes. Reason kept (EMPATHY): a successfu
+72	PORT	RP-024	O		only	015dac24715c5ed26019a6cfd74e6573c54cc44a76005861a682d4345bcbb514	Source: the dossiers' own decision paragraphs, read by ADV at decision level only (no figu
+73	PORT	RP-005	O		untested	026aec190d7d3c4696cd2b765ba399b287f6845fa8cb3e0cdddfed7d7b93b302	CONDITIONAL, sign untested, so both directions are equally plausible by construction; the 
+74	PORT	RP-045	O		only	0299578569cc6ab89396f387f3286e429526e88eef122921c5ad0827483da877	KEEP / NARROW / DROP; if viable, a reversible split (outcomes-only key for the custodian; 
+75	PORT	RP-017	S	SUPPORTED	never,only	0325b79cf1b3a39abf8dc815d8e11e13d5379ba1901fab32241a87b07fe7c8cf	Olig2-Cre had one UNQUANTIFIED myelin image at P17 and deletion validated in CC1+ cells on
+76	PORT	RP-017	O		only	035d46db6f3c9e40297467f9d1d1f6af0abd8041cb7eceaad191ca383d89bf39	Candidate-to-candidate: no further reachable question with a held source and a consumer; '
+77	PORT	RP-026	O		only	04d17f5d083547544883d9de67e3e87595dc088a67cb9fef010a6aa7696a4e28	Source: the dossiers' own decision paragraphs, read by ADV at decision level only (no figu
+78	PORT	RP-020	O		only	0581a795ce4587c980075b568456488e69860d748feb01602e55d5a15292f0ec	ADV re-verified on main, read-only: commit d066c7902 (ADV hold, 01:37:13Z; only assignment
+79	PORT	RP-038	W	BARE	untested	05f3b876c313c12efb64185820b492f5a053533edd0dafe684d7a66c31825dec	A STABILISATION arm (less ErbB4 without WWOX, less ICD, precocious astrogenesis) is POST H
+80	PORT	RP-038	O		none,only	061a076313e6b9c44d5121191a5862c0128f21d6639867e8cd871ab3c4168035	The RP-045 route (the actual path's decision against direction-only and evidence-only base
+81	CLAIM	CLAIM 046	O		none	00571e520f90d17d9e7c7ad66c7def4fc4f3b5ad47775bf55dc1fa71250ff5d1	**Clinical meaning:** None, and that is the point.
+82	CLAIM	CLAIM 037	O		nessun	017f61b91265cc085892c6ec1960072ed29fbb7e21cb9be2b3c654aef518ffbe	**Impact on Working Model:** nessun cambio BLOCCO 1.
+83	CLAIM	CLAIM 037	S	SUPPORTED	solo	01fe8233b2c42918ad599a848b4910bea3135de457f673447a55e629fc7c3c2a	⚠️ Il 95% audiogeno è **solo femminile**, dichiarato unicamente nella didascalia della Fig
+84	CLAIM	CLAIM 033	O		mai	023d783b0df236c6fb2ee06a0b459822a3ede569ef9deb98c550b3e1ffd44110	**Clinical meaning:** ⚠️ **Quattro riserve, tutte obbligatorie, senza le quali questo clai
+85	CLAIM	CLAIM 006	S	SUPPORTED	only,untested	02be5d034d839f81c9bba610c891028ae831bf5bdf5d86f68efc0cc158b2e3d8	**Impact on Working Model:** surveillance only, genotype caution mandatory; the microglial
+86	CLAIM	CLAIM 021	O		first	030f62b84606b1be5a56f49149a0a835ad2ecf900b53f4b622e381629eefa676	🔴 **The gap-junction contribution is NOT attributable from this dataset.** Carbenoxolone a
+87	CLAIM	CLAIM 038	W	BOUNDED	nessuna,solo	03f074cb02f8e19f9f64deec1fbe29df6577d856563d44efd402787ac5787868	🔴 **Confine di evidenza — la creatinina è misurata in UN SOLO modello (`CC-20260922-CLAIM0
+88	CLAIM	CLAIM 044	O		never	04c57684766fe4c7e41647e11cbe379eefeff791476f9ccc2a81040ba7c28d72	The in-neuron work is binding — FRET in primary DRG cultures and immuno-EM in tissue — nev
+89	CLAIM	CLAIM 030	O		nessun,solo	0635326f0d2807f1295fbd300fd2f2b0fea284f9f831f0eb1b977eef291a8723	⚠️ Nessun file definisce *gravità* come esattamente {disabilità intellettiva, linguaggio, 
+90	CLAIM	CLAIM 011	O		only	063ca0d61f1065b0c009bdcdef739683d990432e268ed44efef621b849254d4c	**Title:** AAV9-hSynI-hWWOX in Wwox-null murine model: durable survival rescue at the high
+91	CLAIM	CLAIM 023	W	BARE	untested	069e813f191f4a9679e00a415c181ed446571b4facc31f9f7c2147a7ac0342d1	Tyr33 phosphorylation regulates the **binding**, and its effect on rerouting is untested
+92	CLAIM	CLAIM 019	O		solo	06b163a4e4d70a9b11c130df2e08d63283a49bb9426281e9ae9e32de13848d32	Implicazione terapeutica (IPOTESI, non DATO): Q230P può essere candidata a rescue solo dop
+93	CLAIM	CLAIM 046	W	BOUNDED	none	070c1fc2af54ff3982ca92a21d962c2d10a0d8f647a9919d71c6a2a2f3d20e8a	**Summary:** The three direct read-outs of WWOX that a published protocol actually demonst
+94	CLAIM	CLAIM 032	S	SUPPORTED	nessuna	073f8ac05bb90308fc8bcac972217cf6165310891a126c968e427ede5f39bac3	Concatenarle in *«un allele missense vale quasi un allele wild-type»* **non è sostenuto da
+95	CLAIM	CLAIM 032	O		only	0828df77cf4e97916c564665eff692602bce3ac647dc52c47dcff05013086c87	Fifty-six other genes are deleted with it, so the seizure history neither fires nor refute
+96	CLAIM	CLAIM 038	S	SUPPORTED	mai	091f3369b3c2a1a4c0caeca3f235a94e33c02e653d9d4f64dca4a9dae416e546	🔴 La seconda **compete direttamente con l'ipotesi di acidosi tubulare renale** che PMID 19
+97	CLAIM	CLAIM 030	S	SUPPORTED	nessun	09669ec593fa278bd92a1b20ff35ac06070d45b9ea0c07e1f8cbcd8a90badcd6	🔴 **Confine deliberato:** singolo blot, linea tumorale, **nessun braccio di rescue wild-ty
+98	CLAIM	CLAIM 035	O		nessuna	0cfdf0d6e3836a48ace4093f187c1868436994493ef13f6362698f754e20fdcd	**Clinical meaning:** Due conseguenze operative, nessuna terapeutica. **(1) Un saggio funz
+99	CLAIM	CLAIM 030	S	SUPPORTED	unico	0d27730a5c8dfee5040b41eaa87546b2edcfd5a4018ebc857777e643e56f6785	⚠️ Non è un dato di risposta al trattamento e non va letto come tale: l'unico paziente non
+100	CLAIM	CLAIM 038	O		nessun	0ead0f55e9ac45cf546787aef3bae4ab42b5882ff9dc84777f5f69cf098c3303	**Impact on Working Model:** nessun cambio BLOCCO 1.
