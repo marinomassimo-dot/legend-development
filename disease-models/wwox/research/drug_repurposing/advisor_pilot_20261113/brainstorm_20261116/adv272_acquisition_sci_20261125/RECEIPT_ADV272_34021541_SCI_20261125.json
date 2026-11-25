@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-25T10:18Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-25T10:18:01Z",
+ "event_id": "FTR-20261125-34021541-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Europe PMC fullTextXML acquired 2026-11-25 (sha256 in source_fingerprint): Results subsections 1-5 read, Tables 1 and 2 (Racine grade counts) read and every row summed, Methods subsections on the mouse model, seizure scoring and statistics consulted (rest of Methods not read), end of Discussion with the limitations paragraph read; figures captions only; the supplementary figures are not in the held bytes (hasSuppl Y, not fetched).",
+  "Result: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv272_acquisition_sci_20261125/RESULT_ADV272_SCI_20261125.md"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv272_acquisition_sci_20261125/RESULT_ADV272_SCI_20261125.md"
+ ],
+ "prior_receipt": "FTR-20261108-34021541-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "27e14928f361225fa0b7f62bf8b9e61f56706377e16e7e4327f3afe09da05d92",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID34021541_ADV272_PMC8202868_epmc_20261125.xml",
+ "study_id": {
+  "doi": "10.18632/aging.203058",
+  "pmid": "34021541"
+ },
+ "workflow": "SCI ADV-272 step 4 (acquired by a permitted open route, plain request; read with the ADV-269 rules); not a complete read"
+}
