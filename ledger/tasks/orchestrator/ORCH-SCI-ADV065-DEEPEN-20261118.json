@@ -1128,6 +1128,13 @@
      "accepted_at": "2026-11-25T18:33:39Z",
      "updated_at": "2026-11-25T19:19:55Z",
      "evidence": "ADV-281 complete: RESULT_ADV281_SCI_20261125.md in brainstorm_20261116/adv281_null_note_control_audit_sci_20261125/; 63 null rows listed by two routes, 15 audited (13 assessable, 2 bytes not held), blind sentence reading by legend-delegate sonnet-5-5 (asked high), 2 MUST CHANGE (DR-A02-009, DR-P11-004), loose 4 of 7 assessable of the ten; wording to IT, report to ADV"
+    },
+    {
+     "step": "ADV-282: audit the activity or engagement check of the 48 queued null notes, ordered by HE consumer_count.py, increments of eight, PREREG calibrated on ADV-281 (loose 4 of 9 of the ten); part A (Hou, Kobayashi) and part C (equivalence rows) were done by the previous window",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-282 (assignments/ADV-282.md)",
+     "accepted_at": "2026-11-25T19:45:11Z"
     }
    ]
   }
@@ -1998,6 +2005,13 @@
    "at": "2026-11-25T18:33:39Z",
    "source": "operator standing rule no idle laboratory; proposal sent to ADV 2026-11-25 after ADV-280 (RESULT_ADV280_INC2_SCI_20261125.md section 4)",
    "step_sha256": "9ce04be4e86c",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T19:45:11Z",
+   "source": "ADV-282 (assignments/ADV-282.md)",
+   "step_sha256": "788b086bc0ff",
    "reopened_block": false,
    "authorised_by": null
   }
