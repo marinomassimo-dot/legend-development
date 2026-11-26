@@ -18,3 +18,21 @@ the removal included its files and none of its text was displayed.
   "subunit level"; still to check: Fig. 6 method, the F04 field's neighbours, and the drug clause against the patient
   reports (Zeng 2024, Zhu 2025, Mohammad 2026 hits unread).
 * N03, N04, N05, N07 to N10: not started.
+
+## Continued, written 2026-11-26T01:26:59Z (the PREREG's first reading; changed items not yet blind-checked)
+* N03: STANDS. The supplementary genotype table gives three arms for Fig. 5E and none with Ldh RNAi without the Wwox
+  knockdown; the supplement measures Ldh transcript in an amyloid plus Ldh RNAi line (Fig. S5C) and Wwox transcript only
+  in the single lines (Fig. S1); no lactate, lifespan or amyloid-load row names the double line.
+* N04: STANDS. Documents naming both WWOX and an LDH inhibitor: registry records already marked as not WWOX evidence,
+  and patient series that list stiripentol among drugs without linking it to WWOX deficiency.
+* N05: not completed. The query for lactate near WWOX was run (hit files listed in the session); the patient
+  measurements were not read, so no class is given.
+* N07: STANDS. Sources naming Q230P, P252A or P282A besides Johannsen 2018, Zhang 2025 and Park 2004 carry genotypes,
+  predictions or frequencies; no function-per-molecule measurement was found to complete the product the sentence names.
+* N08: STANDS. Johannsen 2018: the comparator lines are a pancreatic cancer line, a colon cancer line and HEK293; no
+  detection limit is printed; the functional work is transcript and protein only.
+* N09: STANDS. No follow-up MRI after vigabatrin in Shaukat 2018, You 2024, Serce Pehlevan 2026 or Nagarajan 2023; Chong
+  2023 (one child, serial MRI) and Riva 2022 (MRI at 2 years 4 months) do give a later image, with no vigabatrin finding
+  described (a possible addition, not a change).
+* N10: NOT ASSESSED. A safety classifier stopped the session's response during this item. It is not retried, in this
+  wording or another, and not delegated.
