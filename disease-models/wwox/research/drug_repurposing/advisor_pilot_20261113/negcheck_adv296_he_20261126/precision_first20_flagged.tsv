@@ -1,0 +1,21 @@
+n	sheet	line	linked_pmids	negative_sentence
+1	BATCH10_broad_tazemetostat_TMP195_10058F4_HE_20261120.md	22	32674144;42124576	The abstract gives no concentration figure for brain.
+2	BATCH10_broad_tazemetostat_TMP195_10058F4_HE_20261120.md	22	32674144;42124576	**Not found by these routes:** a measured brain or CSF concentration of tazemetostat given alone.
+3	BATCH10_broad_tazemetostat_TMP195_10058F4_HE_20261120.md	28	32674144;42124576	**Not found by these routes (not read):** a published brain or plasma concentration of TMP195.
+4	BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE	3	20682849	Same rules, routes and recipe as batches 1 to 10: public sources only, plain clients, no external contact or spend, research concentrations apart from any patient dosing, no dose and no recommendation, reference genotype class only, hypothesis level, not medical advice, "not found by these routes" i
+5	BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE	31	41489546	**Not found by these routes:** a selectivity or off-target panel under this id (all nine rows are the three channels); a species other than the recombinant human channels; a state-dependence row.
+6	BATCH12_ADV113_M1comparators_pirenzepine_telenzepine_VU02550	72	42332767	**For WO-32:** the class IIa row is a bounded null for oligodendrocyte-lineage myelination by Europe PMC and PubMed abstract searches, with a search record (this sheet and SCI's note) a later reader can reuse; it does not keep TMP195 out of a comparison on safety grounds, because no harm finding was
+7	BATCH1_ethosuximide_lithium_memantine_HE_20261119.md	17	6891224	**Not found by these routes:** juvenile-mouse values; the brain concentration at a dose that is stated as a free concentration.
+8	BATCH1_ethosuximide_lithium_memantine_HE_20261119.md	19	6891224	- **Not measured or not found:** every potency value for the targets of interest; the ion's effective brain concentration at the target; juvenile exposure.
+9	BATCH1_ethosuximide_lithium_memantine_HE_20261119.md	25	6891224	**Not found by these routes (not read):** juvenile-mouse values and free brain concentration.
+10	BATCH2_Kv7_ezogabine_azetukalner_ICA069673_XE991_HE_20261119	15	25319542;31568714	So **a juvenile-rat total brain exposure exists** for retigabine, contrary to "no juvenile exposure found"; free concentration and mouse not found.
+11	BATCH2_Kv7_ezogabine_azetukalner_ICA069673_XE991_HE_20261119	17	25319542;31568714	- **Not measured or not found:** a mouse juvenile exposure; free brain concentration;
+12	BATCH2_Kv7_ezogabine_azetukalner_ICA069673_XE991_HE_20261119	21	25319542;31568714	Rodent brain or plasma exposure: not found by these two routes (a second naming, XEN1101, was searched).
+13	BATCH2_Kv7_ezogabine_azetukalner_ICA069673_XE991_HE_20261119	26	31568714	- **Exposure:** PubMed "ICA-069673 mice brain" 0 and "ICA-069673 pharmacokinetics" 0 records: not found by these routes.
+14	BATCH3_ganaxolone_gaboxadol_HE_20261119.md	14	17362924;30552296	Brain concentrations: not confirmed by titles.
+15	BATCH3_ganaxolone_gaboxadol_HE_20261119.md	14	17362924;30552296	**Not found by these routes:** a juvenile exposure and a free brain concentration.
+16	BATCH3_ganaxolone_gaboxadol_HE_20261119.md	17	17362924;30552296	- **Not measured or not found:** efficacy per subunit at one GABA concentration; any measured tonic-current effect; juvenile exposure.
+17	BATCH3_ganaxolone_gaboxadol_HE_20261119.md	22	17362924;30552296	**Not found by these routes:** neonatal or juvenile exposure (the query "gaboxadol neonatal rat seizures" returned 0 records; a query shape, not an absence;
+18	BATCH3_ganaxolone_gaboxadol_HE_20261119.md	24	17362924	- **Not measured or not found:** any delta-containing receptor value; free brain exposure; juvenile exposure.
+19	BATCH3_ganaxolone_gaboxadol_HE_20261119.md	28	17362924	Neither agent has a juvenile or free brain exposure by these routes; ganaxolone has a label from 2 years of age for a defined seizure disorder.
+20	BATCH5_vigabatrin_bumetanide_HE_20261119.md	13	28192112;30631446	**Not found by these routes (not read):** a juvenile exposure; a free brain concentration.
