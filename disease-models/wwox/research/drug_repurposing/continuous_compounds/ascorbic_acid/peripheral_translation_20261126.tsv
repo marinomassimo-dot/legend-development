@@ -1,0 +1,3 @@
+table	reported_measure	placebo_reported	ascorbate_reported	difference_with_CI_when_reported	p_when_reported
+Table 1	Median nerve MNCV (m/s)a	17.9 (6.0)	17.2 (1.7)	NA	NA
+Table 2	Median nerve MNCV (m/s)a	-0.8 (0.9)	0.5 (1.5)	1.3 (-0.3-3.0)	0.11

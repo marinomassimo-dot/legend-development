@@ -15,3 +15,5 @@ Cross-model countercheck: SLC23A2 KO-minus-control bulk differences (mean log2[1
 - 2026-11-24 (SCI, window AB): while the Codex lane was out, SCI took resume steps 1 and 2 over as ADV-210; result, disposition (c, parked) and the reopening measurement are in `../../advisor_pilot_20261113/brainstorm_20261116/adv210_ascorbate_resume_sci_20261124/RESULT_ADV210_ASCORBATE_RESUME_SCI_20261124.md`. Codex reconciles on return.
 
 [Resumption checkpoint on age, compartment and formulation](exposure_bridge_20261126.md) · [Human oligodendroglial transporter coverage](human_stage_checkpoint_20261126.md).
+
+[Final disposition and functional countercheck](peripheral_translation_20261126.md).
