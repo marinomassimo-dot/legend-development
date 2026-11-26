@@ -1,0 +1,4 @@
+model	accession	gene	ctrl_n	ko_n	ctrl_positive	ko_positive	ctrl_mean	ko_mean	log2_delta	omit_min	omit_max	mapping
+mouse_cortex	GSE158682	ATP13A4	4	3	4	3	3.83605	3.66121	-0.153753	-0.528374	0.206948	mapped
+human_organoid	GSE156243	ATP13A4	2	4	2	4	0.140721	0.397415	0.280389	0.174496	0.374121	mapped
+mouse_hippocampus	GSE158681	ATP13A4	2	3	2	3	11.3679	6.22115	-0.876892	-1.27926	-0.636418	mapped
