@@ -724,3 +724,5 @@
 {"evidence": "SendMessage 00:30Z, SCI's own proposal A' registered as written", "id": "ADV-292", "receipt": ["b2cd4c79-0c65-4a4d-91e6-cc11a7fadf0b"], "state": "SENT", "to": ["SCI - CURRENT 9bb60ab5"], "utc": "2026-11-26T00:30:58Z"}
 {"assessment": "HOST", "id": "ADV-293", "key": "blind-check-of-the-eight-unchecked-adv098-sheets", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-26T00:34:04Z"}
 {"evidence": "SendMessage 00:36Z, successor bound and started the PREREG", "id": "ADV-293", "receipt": ["7cfc286b-321c-4b50-b7b9-89fc217c1b24"], "state": "SENT", "to": ["HE - CURRENT 888b4b03"], "utc": "2026-11-26T00:36:21Z"}
+{"assessment": "HOST", "id": "ADV-294", "key": "card-negative-sentences-dated-search-first-ten", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-26T01:04:26Z"}
+{"evidence": "SendMessage 01:06Z, IT's own candidate registered; successor brief names it", "id": "ADV-294", "receipt": ["c67cd134-4726-4a1a-83d7-854f5a3098ac"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 6f4e0008"], "utc": "2026-11-26T01:06:38Z"}
