@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """ADV-296 read-only scan: negative sentences beside a citation the file says it read by title only.
 Usage: scan_negative_beside_unread.py OUT.tsv   (reads git blobs at BASE for sheets, working tree for cards)
 Method frozen in PREREG_ADV296_HE_20261126.md."""
