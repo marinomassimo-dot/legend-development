@@ -38,7 +38,7 @@ Source facts used (Table 3 of the PMC XML, raw cell-wise, row P8):
 | R1-S16 | "so the phenotype neither fires nor refutes the trigger above for WWOX" | NO CHANGE | Inference. "The trigger above" is not defined in the packet. Consistent with the paper, which assigns no gene-level cause and writes "the presence of a pathogenic CNV does not imply a uniform phenotype" (5.2). |
 | R1-S17 | "the source's Table 3 states **no size** for this patient's deletion — its `CNV (G/L)` and `Size` cells both read `L`" | NO CHANGE | Verified on the raw XML: P8 CNV (G/L) = "L" and Size = "L". Fig 6 caption lists P1, P2, P3, P5, P6, P7, P9, P10, P11, P12-P13, P14, P15, P16, P17; no P8 and no P4. The text gives no P8 size. |
 | R1-S18 | "so the ~13 Mb figure is derived from the printed hg18 interval, not quoted from the paper" | NO CHANGE | Recomputed 13,172,590 bp (see S05). Note the printed interval has a line break and no hyphen; the split at the comma groups, 74,718,513 and 87,891,103, is unambiguous. |
-| R1-S19 | "**Not a dosage datum either way:** the common WWOX intronic deletion of [[...PAPER 209]] (PMID 41345172; gnomAD AF 0.339, **1447 homozygotes**) removes no exon ..." (plus the PREMISE tag) | OUT OF SCOPE | About another paper; the packet itself says to ignore it. |
+| R1-S19 | "**Not a dosage datum either way:** the common WWOX intronic deletion of (wikilink to PAPER 209 elided by the delegate; the target text is not reproduced here) (PMID 41345172; gnomAD AF 0.339, **1447 homozygotes**) removes no exon ..." (plus the PREMISE tag) | OUT OF SCOPE | About another paper; the packet itself says to ignore it. |
 
 RECORD 2: PMID 41254692 (Qin 2025), DL-REPO-003.
 
