@@ -87,7 +87,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: L-ergothioneine.** Both uptake transcripts rise at low abundance in WWOX organoids and decline in the mouse excitatory nucleus pool. Next quantify transporter selectivity and central parent against blood-cell retention. [WWOX screen, prediction and replay](l_ergothioneine/README.md)
+**Active compound: L-ergothioneine.** Both uptake transcripts rise at low abundance in WWOX organoids and decline in the mouse excitatory nucleus pool. Selected mouse cortex samples retain parent after residual-blood correction. Next compare human plasma and erythrocyte time courses and developmental fraction-specific exposure. [WWOX data and prediction](l_ergothioneine/README.md) · [Cortical accumulation and transporter control](l_ergothioneine/transport_and_cortex_20261126.md)
 
 **Latest completed compound: palmitoylethanolamide.** Deferred for pediatric WWOX trial priority. Cultured glia show a PPAR-alpha-dependent CB2 response at nominal 100 nM. An early neurobehavioral signal after asphyxia is endpoint dependent, and acute high-dose adult exposure reduces movement. Reopen on measured intact WWOX glial exposure, receptor dependence and selective evoked recovery beyond generalized suppression. [Glial, neonatal and adult comparison](palmitoylethanolamide/glial_response_and_disposition_20261126.md) · [Brain tracer and replay](palmitoylethanolamide/brain_tracer_and_controls_20261126.md)
 
