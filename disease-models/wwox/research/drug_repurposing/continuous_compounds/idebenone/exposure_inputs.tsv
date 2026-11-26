@@ -1,0 +1,34 @@
+id	value	unit	analyte_and_matrix	locator
+parent_mw	338.44	g/mol	idebenone	Haefeli 2011 Fig. 1
+qs10_mw	352.42	g/mol	QS10	Haefeli 2011 Fig. 1
+adult_parent	19.2	ng/mL	idebenone parent healthy adult plasma	TGA Raxone AusPAR p. 19 n. 19
+adult_qs10_pool	12.6	uM	QS10 plus conjugates healthy adult plasma	TGA Raxone AusPAR p. 19 n. 20
+parent_bound_dialysis	98.5	percent	idebenone human plasma equilibrium dialysis	EMA Puldysa p. 31 Distribution
+parent_bound_filter_low	93.0	percent	idebenone human plasma older ultrafiltration lower binding	EMA Puldysa p. 31 Distribution
+parent_bound_filter_high	99.7	percent	idebenone human plasma older ultrafiltration higher binding	EMA Puldysa p. 31 Distribution
+qs10_bound_dialysis	98.8	percent	QS10 human plasma protein binding	EMA Puldysa p. 31 Distribution
+frda_child_total_peak	7090	ng/mL	reported total idebenone child FRDA plasma mean Cmax	Di Prospero 2007 Table 3 child cohort 55 mg/kg
+frda_ide_reported_free_low	0.25	percent	method-ambiguous free as percentage of total idebenone FRDA plasma	Di Prospero 2007 Results Phase 1A
+frda_ide_reported_free_high	0.5	percent	method-ambiguous free as percentage of total idebenone FRDA plasma	Di Prospero 2007 Results Phase 1A
+frda_qs10_reported_free	2	percent	method-ambiguous free QS10 as percentage of total idebenone FRDA plasma	Di Prospero 2007 Results Phase 1A
+rat_iv_csf	10	ng/mL	unchanged idebenone pooled rat IV CSF 10 min	Torii 1985 Table III
+eae_csf_1	1.7	ng/mL	LC-MS/MS idebenone mouse oral CSF EAE score 0	Bros Esqueu 2015 thesis Fig. 9B
+eae_csf_2	2.7	ng/mL	LC-MS/MS idebenone mouse oral CSF EAE score 1	Bros Esqueu 2015 thesis Fig. 9B
+eae_csf_3	5.0	ng/mL	LC-MS/MS idebenone mouse oral CSF EAE score 2	Bros Esqueu 2015 thesis Fig. 9B
+rat_neural_reserve	10	uM	idebenone nominal acute bath rat cortical neurons first tested lower reserve	Jaber 2020 Fig. 2D
+rgc5_delayed	10	nM	idebenone nominal delayed bath in RGC-5 wells	Heitz 2012 Fig. 1C
+rgc5_delayed_rescue	7	percent	approximate fraction of ATP readout lost to rotenone restored at 10 nM after 2 d pretreatment	Heitz 2012 Fig. 1C black bar visually estimated
+rgc5_rotenone_loss	59	percent	ATP luminescence reduction versus vehicle RGC-5 wells	Heitz 2012 Fig. 1B caption
+qs10_embryo_bath	3	uM	QS10 nominal zebrafish embryo bath	Giorgio 2018 Fig. 4A/B
+qs10_pre_reduced_bath	50	uM	pre-reduced QS10 nominal human cell bath	Giorgio 2018 Fig. 3
+parent_km	30	uM	idebenone recombinant NQO1 with NADPH	Haefeli 2011 Table 1
+parent_vmax	53.4	umol/mg/min	idebenone recombinant NQO1 with NADPH	Haefeli 2011 Table 1
+qs10_km	13	uM	QS10 recombinant NQO1 with NADPH	Haefeli 2011 Table 1
+qs10_vmax	23.3	umol/mg/min	QS10 recombinant NQO1 with NADPH	Haefeli 2011 Table 1
+melas_arm_n	7	participants	per arm plasma-independent primary cerebral MRS endpoint MELAS predominantly adults	NCT00887562 posted primary result
+melas_control_mean	-0.49	IU	cerebral lactate MRS change placebo	NCT00887562 posted primary result
+melas_control_sd	1.18	IU	cerebral lactate MRS change placebo SD	NCT00887562 posted primary result
+melas_lower_mean	-0.09	IU	cerebral lactate MRS change lower idebenone arm	NCT00887562 posted primary result
+melas_lower_sd	0.95	IU	cerebral lactate MRS change lower idebenone arm SD	NCT00887562 posted primary result
+melas_higher_mean	0.16	IU	cerebral lactate MRS change higher idebenone arm	NCT00887562 posted primary result
+melas_higher_sd	1.49	IU	cerebral lactate MRS change higher idebenone arm SD	NCT00887562 posted primary result

@@ -1,8 +1,8 @@
 # Idebenone in WWOX loss of function
 
-26 November 2026 · SCI_CODEX · [prespecified comparison](pretest_20261126.md)
+26 November 2026 · SCI_CODEX · [prespecified comparison](pretest_20261126.md) · [completed disposition](exposure_and_disposition_20261126.md)
 
-**Decision at opening.** Idebenone is the sole active compound. Evaluate it as a cell-type-dependent electron-transfer probe. Two conditions drive the hypothesis: enough reduction of idebenone to idebenol and retained downstream respiratory capacity. Use a matched WWOX LoF/corrected comparison before assigning a mechanism or pediatric priority.
+**Decision at opening.** Idebenone entered as the sole active compound. Evaluate it as a cell-type-dependent electron-transfer probe. Two conditions drive the hypothesis: enough reduction of idebenone to idebenol and retained downstream respiratory capacity. Use a matched WWOX LoF/corrected comparison before assigning a mechanism or pediatric priority.
 
 | Prespecified marker | P17 mouse cortex TPM | P17 mouse hippocampus TPM | Week-15 human organoid CPM |
 | --- | ---: | ---: | ---: |
