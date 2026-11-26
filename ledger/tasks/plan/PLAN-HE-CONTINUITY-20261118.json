@@ -1513,6 +1513,13 @@
      "blocker": "auto mode classifier denied the removal batch 2026-11-26 about 00:09Z; waits for the operator to allow or run it; do not retry in another form",
      "no_condition": "an operator answer has no typed condition",
      "updated_at": "2026-11-26T00:10:21Z"
+    },
+    {
+     "step": "ADV-293: blind check of the eight unchecked ADV-098 sheets (batches 1-5, 10-12; 107 claims): PREREG before the first packet, one blind delegate at a time, verify every wrong, correct the sheets, comparison-changing sentences with consumers to IT, result to ADV",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV-293 (assignments/ADV-293.md); launch brief of HE 888b4b03",
+     "accepted_at": "2026-11-26T00:35:31Z"
     }
    ]
   }
@@ -2684,6 +2691,13 @@
    "at": "2026-11-26T00:10:21Z",
    "source": "ADV a5e6f2ad decision record 2026-11-25 23:46Z",
    "step_sha256": "e470e8199e9c",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-26T00:35:31Z",
+   "source": "ADV-293 (assignments/ADV-293.md); launch brief of HE 888b4b03",
+   "step_sha256": "28dc5b3a4914",
    "reopened_block": false,
    "authorised_by": null
   }
