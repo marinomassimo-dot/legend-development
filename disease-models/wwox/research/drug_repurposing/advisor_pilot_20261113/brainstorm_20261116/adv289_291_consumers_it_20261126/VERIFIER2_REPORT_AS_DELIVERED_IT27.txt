@@ -1,0 +1,122 @@
+Independent blind check of R1 to R7 (hypothesis level; nothing here is medical advice).
+
+**Scope**
+- I used only the files in `/home/desktop/.claude/jobs/6f4e0008/tmp/blind289b`, with no network and no PubMed.
+- Because of the packet's "no other file" rule, I did not open `delegation_budget.md` or any other repository file.
+- Repository and laboratory statements are not judged.
+- I wrote only crops, `.ppm` files and the scripts `px.py`, `px2.py` and `t.py` in that folder.
+
+**How figures were read**
+- ImageMagick crops enlarged to 300-600% and inspected by eye.
+- Pixel scans (`python3 -I`) for tick rows, marker centres and bar tops.
+- In S3B and S3C the drawn x-axis is not at zero (about 0.07 mV and about 0.09 normalised), so I scaled from the labelled ticks.
+
+**Summary:** R5 is MUST CHANGE. R1 and R4 are ADD. R7 is SUPPORTED with an optional addition. R2, R3 and R6 are SUPPORTED (R2 has one clause the files cannot settle).
+
+---
+
+**R1: ADD**
+
+Evidence:
+- S3C d-APV reads 0.25, 0.41, 0.41 and 0.41 at 10, 40, 50 and 100 uA.
+- Same-strength baseline reads 0.50, 0.91, 0.91 and 1.00.
+- The block is therefore 0.59 at 100 uA and 0.50 to 0.55 at 10 to 50 uA.
+- n = 6 slices from 3 animals (S3C) and 5 slices (Fig. 3, d-APV) both match. 50 uM is the only d-APV concentration stated and is not restated for S3.
+- S3B at 100 uA reads wild type about 0.114 mV and knockout about 0.457 mV, a ratio of 0.25. With that floor the block above floor is 0.79.
+- The 0.17 end corresponds to the low-strength readings (about 0.08 mV), not to the 100 uA wild-type reading. With it the block is 0.71.
+
+Helpful additions (none changes the conclusion):
+- "equals the wildtype reading" should read "equals a wildtype reading at some stimulus strength (about 0.08 to 0.115 mV in S3B)". At matched 100 uA only the upper end applies (about 0.8).
+- "(about 0.5 to 0.55 at 10 to 50 uA)" is against same-strength baseline, and the 10 uA point is not significant (p = 0.1692).
+- "that is about 0.6 of the measured amplitude" would be clearer with "blocked".
+- The floor also assumes that S3B millivolts apply to the S3C cohort, which is not shown.
+
+---
+
+**R2: SUPPORTED** (one clause UNSETTLED from the files)
+
+Evidence:
+- 0.41 of baseline and 0.59 blocked at 100 uA.
+- n = 6 slices, 3 animals. 50 uM is not restated for S3C.
+- Identity with the burst slices is not shown.
+- The non-zero wild-type reading in S3B supports speaking of a floor, as an inference.
+
+UNSETTLED: "d-APV is competitive and surmountable". This is general pharmacology that none of the supplied files states.
+
+---
+
+**R3: SUPPORTED**
+
+Evidence:
+- Washout reads 1.36, 1.23 and 1.29 at 40, 50 and 100 uA.
+- Divided by same-strength baseline this gives 1.49, 1.35 and 1.29, so "about 1.3 to 1.5" is correct.
+- n = 6 slices, 3 animals. No time-matched control is reported.
+- These are ratios of the plotted summary points, not per-slice ratios.
+
+---
+
+**R4: ADD**
+
+Evidence:
+- 87% (p = 0.008), 18% (p = 0.0274) and 36 bursts / 4 slices / 3 animals match the text and legend.
+- Table S1 matches: CBX 0.54 s (13/6/3), baseline 0.66 s (119/18/9), BB-FCF 0.53 s (25/6/3). 1 - 0.54/0.66 = 18.2%.
+- The legend gives 73/6/3 for BB-FCF.
+- Fig. 3D pixel reading: CBX duration bar about 0.56 to 0.57, CBX frequency bar about 0.12 to 0.13. CBX washout is about 0.2 for frequency and 0.63 for duration.
+- The legend does not state the bar statistic.
+
+Helpful additions:
+- After "its Table S1 median (0.53 s) is as low as carbenoxolone's", add "(its Fig. 3D duration bar reads about 0.8, not marked as different from baseline)". Without it, only the Table S1 side of BB-FCF is shown. This is the more important of the two.
+- p = 0.0274 is the Fig. 3D legend's value for the baseline-versus-CBX duration bracket, that is, for the normalised bar that reads 0.57. It is not demonstrably a test of the 18% median difference. The paper pairs them as the sentence does.
+- "a figure the paper takes from ... medians" rests on the paper citing Table S1 and the arithmetic matching. The paper does not say how it computed 18%.
+
+---
+
+**R5: MUST CHANGE** (two clauses)
+
+Checks that pass:
+- The slope quotation is exact.
+- The Abstract and Discussion do say increased firing.
+- a1 has asterisks at 80, 100, 120 and 140 pA. At 100 pA it reads about 14 (knockout), 6 (wild type) and 12.4 Hz (heterozygote).
+- n = 40/15 and 13/5.
+- The a2 caption gives p > 0.05 for all combinations.
+- a2 knockout minus wild type is 4 Hz at both 60 pA (16 against 12) and 80 pA (20 against 16).
+- "internally mixed" is fair.
+
+(a) Exact words: "the a1 tests count cells, not animals"
+- No file states the unit of the a1 tests. The caption says only "For n's see table 1", and Table 1 gives cells and animals together. The files do not settle it.
+- My recomputation from the plotted means and errors leans towards cells. Pooled t-tests give p = 0.015 and 0.024 over cells at 80 and 100 pA, against printed 0.012 and 0.024. Over animals they give 0.021 and 0.032.
+- This is not decisive: graph-reading error of about 5% could bridge the gap, and the rank-sum values do not discriminate.
+- Smallest correction: "the unit of the a1 tests is not stated (they appear to count cells, an inference)".
+
+(b) Exact words: "which summary statistic and error bar a2 plots is not stated" (borderline)
+- The S4 caption does contain "Data presented in mean +/- standard error.", placed at the end of the a1 entry, immediately before a2. Whether it covers a2 is not said.
+- If it did cover a2, the visible separation against p > 0.05 would be a different kind of problem. The reader should therefore be told that the line exists.
+- Smallest correction: "the caption's 'mean +/- standard error' stands in the a1 entry and is not restated for a2, and the figure cannot settle what a2 plots".
+- Supporting observation (my inference): all a2 points fall on even Hz values, which with 500 ms pulses means whole spike counts. That looks more like medians or single values than means.
+
+---
+
+**R6: SUPPORTED**
+
+Evidence:
+- The medians and counts match Table S1, and 18% is correct.
+- BB-FCF is 0.53 s.
+- Table S1 gives raw medians in seconds. The Fig. 3D bar is normalised and its statistic is not stated.
+- The paper does not reconcile the two.
+
+---
+
+**R7: SUPPORTED** (optional ADD)
+
+Evidence:
+- S1G pixel reading of rho for animals 1 to 9: about 0.57, 0.16, -0.93, 0.33, 0.14, 0.15, 0.50, 0.76, 0.55. That is 8 positive and 1 negative.
+- Only the p bars for animals 1 and 3 are below 0.05 (near zero). All the others are at least about 0.1.
+- The Results quotation is exact, and the criterion "negatively correlated or not correlated" is in the text.
+- 8/9 therefore counts all animals except animal 1.
+- Neither the S1G panel nor its caption names a band. The body text assigns it to delta.
+
+Optional addition: Methods 6.3 words the criterion differently ("If the line of best fit is negative or if the R value (rho) is negative, then the dataset more likely contains true PAC"). Read strictly, only 1 of 9 animals (animal 3) would meet that version. The sentence's "authors' own criterion" is the Results version.
+
+---
+
+**Not done:** nothing else was outstanding within the seven sentences. No files outside my folder were changed, and nothing was committed.

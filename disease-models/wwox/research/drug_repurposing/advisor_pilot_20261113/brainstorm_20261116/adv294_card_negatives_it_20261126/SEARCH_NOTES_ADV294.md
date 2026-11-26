@@ -25,8 +25,9 @@ the removal included its files and none of its text was displayed.
   in the single lines (Fig. S1); no lactate, lifespan or amyloid-load row names the double line.
 * N04: STANDS. Documents naming both WWOX and an LDH inhibitor: registry records already marked as not WWOX evidence,
   and patient series that list stiripentol among drugs without linking it to WWOX deficiency.
-* N05: not completed. The query for lactate near WWOX was run (hit files listed in the session); the patient
-  measurements were not read, so no class is given.
+* N05: STANDS (read later the same day). AlBaradie 2022, Shaukat 2018 and AbdelSalam 2014 report blood (one also CSF)
+  lactate as unremarkable and Riva 2022 small spectroscopy peaks at 4 months, none later; the card already records this
+  in `evidence_against[4]`, and the sentence's UNKNOWN is about the lever.
 * N07: STANDS. Sources naming Q230P, P252A or P282A besides Johannsen 2018, Zhang 2025 and Park 2004 carry genotypes,
   predictions or frequencies; no function-per-molecule measurement was found to complete the product the sentence names.
 * N08: STANDS. Johannsen 2018: the comparator lines are a pancreatic cancer line, a colon cancer line and HEK293; no
