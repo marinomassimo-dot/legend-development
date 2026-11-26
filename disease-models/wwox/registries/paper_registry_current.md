@@ -10114,7 +10114,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Transferability:** T3 — an **intron-5** acceptor allele. 🔴 `c.517-1G>A` is **not** the `c.517-2A>G` allele of [[paper_registry_current#PAPER 039]] and **not** the reference genotype's acceptor allele; a shared position class is not a shared allele
 **clinical relevance:** LOW
 **Claim links:** CLAIM 033
-**Role:** Both consequences are **predicted by rule** (`PVS1, PM2, PM3, PP3`) with **no RNA and no protein assay**. An allele coded null without a measurement is a classification. See the dossier and `CC-20261004W8-A-MEASURED-01`.
+**Role:** Both consequences are **predicted by rule** (`c.517-1G>A`: `PVS1, PM2, PM3, PP3`; exon-5 deletion: `PVS1, PM2, PM3`, PP3 is on the SNV only) with **no RNA and no protein assay** (the Supplementary Data column headed 'RNA' holds the coding-DNA change `c.517-1G>A`, not an RNA result; checked 2026-11-26). An allele coded null without a measurement is a classification. See the dossier and `CC-20261004W8-A-MEASURED-01`.
 **LIT link:** [[literature_tracking_log_current#LIT-0511]]
 **Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
 

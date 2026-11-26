@@ -28,7 +28,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 539,
+    "values": 541,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 801,
+    "values": 804,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -88,7 +88,7 @@
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(pmids\\[\\]|views\\.(broad|partial)\\.evidence\\.pmids\\[\\])$": {
     "class": "BIBLIO",
-    "values": 255,
+    "values": 256,
     "why": "PMID of a cited work (ranking)"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -203,7 +203,7 @@
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
-   "PMID": 158
+   "PMID": 159
   },
   "links": {
    "distinct_hrefs": 239,
@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3602,
+    "forbidden-name": 3618,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -469,7 +469,7 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2513,
+  "BIBLIO": 2519,
   "COUNT": 12405,
   "ID": 4861,
   "OWN": 88916,
@@ -538,7 +538,7 @@
   },
   "NOTICE.md": {
    "bytes": 13731,
-   "sha256": "eefa46f13072ae07b3d27eae986b3bbdb43139d7e853d9566c434889e2e39187"
+   "sha256": "03a0a79ae299a5f9b918a2d38820de167d96f72eb3b3f93bfc79314aea52de48"
   },
   "README.md": {
    "bytes": 4730,
@@ -546,7 +546,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2033,
-   "sha256": "ff9835ba8b7feb0d7f118ff256c7af0e53ecddc352f990f6ab2a5358f8172d0b"
+   "sha256": "b8b83a2acbefae2e6fcde603fb6468d5f1e2c72da119f94d898c943df2971e0b"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -561,8 +561,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5093357,
-   "sha256": "d4ec0c4a9d6611b6b760be31bdcca1e92bccaeb0eadf273b087cad223580cff5"
+   "bytes": 5096315,
+   "sha256": "100a70609d8fcb0cb920463bd69aec5a06366611d5ef838aec71920c6e7ec173"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 168171,

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "9eee385952a813a31bdca2e69c1e3beb8e3e82309aadc34d69ec91761239a2bd",
+  "input_sha256": "30cb7d143b16f0001ddc99cf7c779025515ad4dc9c1ea4eeee2b6b6dc3c5d72f",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -31,7 +31,7 @@
       "target_expression": "UNKNOWN",
       "cells_tissue_stage": "UNKNOWN",
       "coverage": "UNKNOWN",
-      "limits": "Client-specific rescue in the adjacent literature came from ligands that bind the client; none is known for this protein, and an active-site binder can also inhibit a variant with low baseline activity."
+      "limits": "Client-specific rescue in the adjacent literature came from ligands that bind the client (in the GABRA1 screen: ligands known to bind GABA-A receptors; the 4 of 10 that raised protein are described in the paper as benzodiazepine-site positive allosteric modulators, the paper does not classify the sites of the 6 that did not, GABA itself was among the 10, and binding to the variants is presumed from the literature, not measured); none is known for this protein, and an active-site binder can also inhibit a variant with low baseline activity."
     }
   },
   "input": {
@@ -69,7 +69,7 @@
         "target_expression": "UNKNOWN",
         "cells_tissue_stage": "UNKNOWN",
         "coverage": "UNKNOWN",
-        "limits": "Client-specific rescue in the adjacent literature came from ligands that bind the client; none is known for this protein, and an active-site binder can also inhibit a variant with low baseline activity."
+        "limits": "Client-specific rescue in the adjacent literature came from ligands that bind the client (in the GABRA1 screen: ligands known to bind GABA-A receptors; the 4 of 10 that raised protein are described in the paper as benzodiazepine-site positive allosteric modulators, the paper does not classify the sites of the 6 that did not, GABA itself was among the 10, and binding to the variants is presumed from the literature, not measured); none is known for this protein, and an active-site binder can also inhibit a variant with low baseline activity."
       }
     },
     "abstention_card": {
@@ -77,7 +77,7 @@
       "missing_datum": "A ligand known to bind the WWOX SDR domain, and a measured instability of Q230P that such a ligand could stabilise. No experimental structure of the SDR domain exists in the repository (CLAIM 019: AlphaFold and in-silico values only, IPOTESI).",
       "search_record": "NOT ESTABLISHED HERE, not a confirmed absence. Run 2026-10-21 (session clock), PubMed title/abstract: WWOX AND (cryo-EM OR crystal structure OR X-ray OR NMR structure OR AlphaFold) AND (SDR OR oxidoreductase domain OR full-length): 0 records; a broader WWOX AND (crystal OR docking OR small molecule OR inhibitor OR ligand OR NADPH OR steroid, further terms omitted) query returned 113 records that were not screened one by one. A title/abstract zero licenses only 'no paper is indexed'. One repository reading reports steroid substrates with apparent Km values for a WWOX fusion protein in a bacterial crude extract, unreplicated and with no purified-protein binding (PMID 21476439): a substrate screen, not a validated binder and not a stabilisation datum. The repository note of 2026-10-20 is the other basis.",
       "adjacent_context_not_wwox_evidence": [
-        "GABRA1 receptor-binding modulators raised variant protein and current together (measured in HEK293T, one knock-in iPSC line)",
+        "Two benzodiazepine-site GABA-A positive modulators, hispidulin and TP003 (of 10 receptor ligands screened at 10 micromolar for 24 h on total alpha1 protein of three variants in HEK293T, four raised it in at least one variant), raised variant surface protein and GABA-evoked current in HEK293T for most of eight alpha1 variants (surface protein: hispidulin 8 of 8, TP003 5 of 8; current: hispidulin 8 of 8, TP003 6 of 8; TP003 not significant for D219N and R214C in both, and for P260L at the surface; n = 3 blots, 4 to 11 cells per bar); in one heterozygous G251D knock-in iPSC line (35 to 75 neurons imaged per condition, at least 3 differentiations), surface subunit fluorescence rose, proximity-ligation puncta rose for gamma2, BiP, calnexin and LMAN1, fell for Grp94 and were unchanged for SEL1L, and no current was measured (research compounds, not approved drugs; not WWOX evidence)",
         "an approved active-site chaperone for a lysosomal enzyme: 'amenable' call differs for 12.9 percent of variants between two near-identical assays and no clinical correlation is established (Fabry GLA)"
       ],
       "an_abstention_is_a_result": "The roadmap states it; this card names what would end it."
@@ -95,14 +95,14 @@
           "CLAIM 019, CLAIM 030"
         ],
         "external_not_wwox_evidence": [
-          "GABRA1 receptor-binding modulators raised variant protein and current together (measured in HEK293T, one knock-in iPSC line)",
+          "Two benzodiazepine-site GABA-A positive modulators, hispidulin and TP003 (of 10 receptor ligands screened at 10 micromolar for 24 h on total alpha1 protein of three variants in HEK293T, four raised it in at least one variant), raised variant surface protein and GABA-evoked current in HEK293T for most of eight alpha1 variants (surface protein: hispidulin 8 of 8, TP003 5 of 8; current: hispidulin 8 of 8, TP003 6 of 8; TP003 not significant for D219N and R214C in both, and for P260L at the surface; n = 3 blots, 4 to 11 cells per bar); in one heterozygous G251D knock-in iPSC line (35 to 75 neurons imaged per condition, at least 3 differentiations), surface subunit fluorescence rose, proximity-ligation puncta rose for gamma2, BiP, calnexin and LMAN1, fell for Grp94 and were unchanged for SEL1L, and no current was measured (research compounds, not approved drugs; not WWOX evidence)",
           "an approved active-site chaperone for a lysosomal enzyme: 'amenable' call differs for 12.9 percent of variants between two near-identical assays and no clinical correlation is established (Fabry GLA)"
         ]
       },
       "evidence_for_and_against": {
         "for": [],
         "against": [],
-        "transfer_limits": "Client-specific rescue in the adjacent literature came from ligands that bind the client; none is known for this protein, and an active-site binder can also inhibit a variant with low baseline activity."
+        "transfer_limits": "Client-specific rescue in the adjacent literature came from ligands that bind the client (in the GABRA1 screen: ligands known to bind GABA-A receptors; the 4 of 10 that raised protein are described in the paper as benzodiazepine-site positive allosteric modulators, the paper does not classify the sites of the 6 that did not, GABA itself was among the 10, and binding to the variants is presumed from the literature, not measured); none is known for this protein, and an active-site binder can also inhibit a variant with low baseline activity."
       },
       "time_to_access": "UNKNOWN",
       "time_to_benefit": "UNKNOWN",
