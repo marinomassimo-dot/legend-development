@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Reproduce selected Manthey Table 5 contrasts and the exposure sensitivity."""
 import csv
 import sys
