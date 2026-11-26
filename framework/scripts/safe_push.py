@@ -82,12 +82,19 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      hand-kept investigation table still holds a card sentence that this push replaced, and refuses naming the file, the card and the exact old text (exit 3 of the tool refuses too). Only pushes that change
      a card are affected. `--no-copied-sentence-check` skips it and adds an empty commit with the trailer `Copied-Sentence-Check: skipped (--no-copied-sentence-check)`.
 
+  16. A merge that changes this tool (2026-11-25): the merge of step 11 can bring a newer safe_push.py while this process still runs the sequence it loaded before the merge (a card-changing publication
+     went out without check 15 that way, from a worktree one landing behind). When the file differs after the merge the push is refused before any check; the merge commit stays, and running again with
+     the merged SHA runs the new sequence.
+
 Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived] [--no-landing-suites] [--serial-checks] [--no-copied-sentence-check]] [--landing-suites]      (default branch: main)
 """
 from __future__ import annotations
 import atexit, contextlib, fcntl, importlib.util, os, shutil, signal, subprocess, sys, tempfile, threading, time
 from datetime import datetime, timezone
 from pathlib import Path
+
+# Read once, when the process loads its own code: step 16 compares the file with this after a merge.
+LOADED_SELF = Path(__file__).read_bytes()
 
 # The root is overridable so the refusals can be exercised against a throwaway repo with a
 # stub gate. A tool whose failure paths cannot be tested is the shape of the defect it exists
@@ -582,6 +589,9 @@ def main(argv: list[str]) -> int:
                 return fail(f"working tree is not clean after the merge of {tip[:12]}; nothing was gated or pushed.")
             print(f"MERGED {tip[:12]} into {before[:12]} -> {new_head[:12]} under the landing lock", flush=True)
             before = new_head
+            if Path(__file__).read_bytes() != LOADED_SELF:
+                return fail(f"the merge of {tip[:12]} changed safe_push.py itself, and this process still runs the sequence it loaded before the merge. "
+                            f"Run the same command again with --expect-sha {new_head[:12]}. The merge commit stays; nothing was gated or pushed.")
 
     if regenerate:
         # 2026-11-19, third recurrence in a day: a receipts landing left coverage_report.md and reading_state.md behind the ledger and CI failed on the pushed SHA. The repair is a
