@@ -2,7 +2,7 @@
 
 Non-canonical working note; hypothesis level; reference genotype class only; not medical advice. Same layout as increment 1: held files looked at, verbatim consumer sentences, what the sources show by figure/sheet and row (species and unit beside each value), preliminary reading. The blind reader sees the repository sentences and the whole sources, never this file.
 
-## 1. 39923817 (Wiseman, Cowan et al. 2025, HDAC5 cysteines, deacetylase activity, Scn4b, cued cocaine seeking; INV-16 of investigations.tsv and investigations_it20.tsv)
+## 1. 39923817 (Wood et al. 2025, HDAC5 cysteines, deacetylase activity, Scn4b, cued cocaine seeking; INV-16 of investigations.tsv and investigations_it20.tsv)
 
 Held and now looked at (class assigned: tables only): `fulltext/PMID39923817_ADV272_PMC13078857_epmc_20261125.xml` (Europe PMC JATS). The article XML contains **one** table, the Key Resources table (reagents, constructs, primers, software; 100-odd rows read in full). The Statistics Table named in Methods is in the Supplement and is not held; Supplementary Figs S1 to S8 and Tables S1 to S5 are cited but not held. The article text (Abstract, Results, Discussion, all seven figure legends) was read to check the sentence; figure images were not opened (the held record has no image files), Methods were read only for the assay and animal details. Receipt `FTR-20261021-39923817-*` history not re-read.
 
@@ -81,7 +81,7 @@ What the sources show (C. elegans, lifespan and thrashing; unit = worms, n per r
 
 Preliminary reading: STANDS on the content: a wild-type arm with no significant effect on lifespan (three concentrations, n about 52 to 54) and on thrashing; a cca-1 loss-of-function test that leaves the benefit intact, in the Tau V337M model and not in the dnj-14 model that carries the FOXO leg. Evidence-level and model ADDs: the T-type test is in the Tau V337M strain; the "benefit" retained is lifespan (+26.6 percent against +29.3) and thrashing; the wild-type lifespan arm covers 1, 2 and 4 mg/ml only.
 
-## 5. 31781019 (Kam 2019, Front Neurol, spike types in APP/PS1 mice and their response to ethosuximide and levetiracetam; DL-MECH-170)
+## 5. 31781019 (Gureviciene et al. 2019, Front Neurol; the held files are named Kam2019, spike types in APP/PS1 mice and their response to ethosuximide and levetiracetam; DL-MECH-170)
 
 Held and now looked at (classes assigned: figures, supplementary): Fig 11 image (`figures/PMID31781019_r2/fneur-10-01151-g0011.jpg`); `supplement/PMID31781019_r2/Table_1.DOCX` (Supplemental Table 1, spike counts by individual mouse and session, parsed in full: 14 mice, 55 session rows); article XML (Methods, Results, Discussion). Figs 1 to 10, 12, 13, `Image_1.JPEG` and the PDF `PMC6861424.1.pdf` (article PDF with other supplementary tables) were not opened.
 
@@ -100,3 +100,16 @@ What the sources show (mouse, male, 5 to 6 months, 8 APP/PS1 and 6 wild-type lit
   * Sign agreement in four of the five classes present in both genotypes; **opposite sign in the simple cortical class**, which the paper itself finds not significant in either genotype.
 
 Preliminary reading: the sentence is true for four of five classes and false for simple cortical spikes (on the reading that the paper's outlier exclusion also holds for the drug analysis; true again on the other reading). It also omits that per-genotype significance is not matched (WT significant for spindle and fast-spindle only, TG for CH and fast-spindle only) and that no interaction test exists. Candidate for MUST CHANGE (class-level), or ADD (unit, dose, n, no interaction test) if the outlier reading is not accepted.
+
+
+## 6. First reader's verdicts on the sentences (restated from the preliminary readings above, which were written before the blind report was read)
+
+| id | record | first-reader verdict | reason in one line |
+|---|---|---|---|
+| S6a, S6b | 39923817 | STANDS | every clause reproduces (CSCS, HEK293T activity, one transcript, one behaviour, rat NAc, no SLC2A1 or glucose in the article text, binding caveat) |
+| S7a, S7b, S7c | 37946251 | STANDS | Table 1 quotation, in-frame deletion coded PVS1, no RNA or protein in the held tables |
+| S8a | 40858643 | ADD (the PP3 point is a wording point) | PP3 sits on the SNV only; the CNV is PVS1, PM2, PM3 |
+| S8b | 40858643 | ADD | "intron-5 acceptor" is the repository's derivation (the CLAIM 033 text says so; the PAPER 219 Transferability line does not) |
+| S8c | 40858643 | STANDS | the CLAIM 033 text states the derivation and quotes the source correctly |
+| S9 | 26419537 | ADD | T-type test is in the Tau V337M model, the FOXO leg is in the dnj-14 model; wild-type arm is lifespan and thrashing at 1, 2, 4 mg/ml |
+| S10 | 31781019 | MUST CHANGE on the paper's own outlier exclusion (ADD on the other reading) | simple cortical spikes: WT up, TG down; four other classes agree |
