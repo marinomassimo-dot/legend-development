@@ -6,7 +6,7 @@
    "words": 22
   }
  ],
- "bibliographic_title_runs": 213,
+ "bibliographic_title_runs": 220,
  "corpus_by_extension": {
   "html": 146,
   "json": 545,
@@ -43,11 +43,6 @@
    "words": 8
   },
   {
-   "path": ".cur.cands[].brief.wwox",
-   "run": "no sustained positive effect of treatment was detected",
-   "words": 8
-  },
-  {
    "path": ".cur.cands[].brief.counter[].text",
    "run": "no sustained positive effect of treatment was detected",
    "words": 8
@@ -63,5 +58,5 @@
    "words": 7
   }
  ],
- "unquoted_runs_within_limit": 55
+ "unquoted_runs_within_limit": 56
 }

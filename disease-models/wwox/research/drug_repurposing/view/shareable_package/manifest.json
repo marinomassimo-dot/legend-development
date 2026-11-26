@@ -28,7 +28,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 525,
+    "values": 539,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 780,
+    "values": 801,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -88,7 +88,7 @@
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(pmids\\[\\]|views\\.(broad|partial)\\.evidence\\.pmids\\[\\])$": {
     "class": "BIBLIO",
-    "values": 248,
+    "values": 255,
     "why": "PMID of a cited work (ranking)"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -199,15 +199,15 @@
   },
   "identifiers": {
    "CAT": 2386,
-   "CHEMBL": 387,
+   "CHEMBL": 388,
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
-   "PMID": 152
+   "PMID": 158
   },
   "links": {
-   "distinct_hrefs": 235,
-   "external_public": 95,
+   "distinct_hrefs": 239,
+   "external_public": 99,
    "hosts": [
     "civicdb.org",
     "open.fda.gov",
@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3587,
+    "forbidden-name": 3602,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -469,7 +469,7 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2471,
+  "BIBLIO": 2513,
   "COUNT": 12405,
   "ID": 4861,
   "OWN": 88916,
@@ -538,15 +538,15 @@
   },
   "NOTICE.md": {
    "bytes": 13731,
-   "sha256": "5674011b4fe12350cd5dfe9abc6b7a390ab9a8a17e4902ae1e30c453911f571c"
+   "sha256": "eefa46f13072ae07b3d27eae986b3bbdb43139d7e853d9566c434889e2e39187"
   },
   "README.md": {
    "bytes": 4730,
    "sha256": "ce6624ae2a6b1c2bf18a83d6d914b6bf41813a6fe0038c7fdeae8bffc72a1a68"
   },
   "TEXT_PROVENANCE.json": {
-   "bytes": 2162,
-   "sha256": "2b23d85db7deb3156655ecc2e526649fcca983870e064b33bc1f8a66907d89a6"
+   "bytes": 2033,
+   "sha256": "ff9835ba8b7feb0d7f118ff256c7af0e53ecddc352f990f6ab2a5358f8172d0b"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -561,8 +561,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5079986,
-   "sha256": "43301e4e930f7d80a15e610719886ea5a299b7c9d5257bbab7d5df0d0e1917cc"
+   "bytes": 5093296,
+   "sha256": "644283b195e958f2d3716eaf17625d36d56838d775c434d1b3b110ddfcd965f1"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 168171,

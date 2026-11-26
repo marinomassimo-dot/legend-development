@@ -132,12 +132,12 @@
     "cell_type": "individuals, mostly children",
     "developmental_stage": "median age 9 years (as reported)"
    },
-   "measured_result_note": "Benefit in 14 of 19 individuals with gain-of-function variants, of whom 4 had an effect that faded (10 sustained; at variant level counting sustained effect only the authors report P = 0.0698, not significant) (behaviour 12 of 17, development 6 of 12, seizure frequency reduced in 7 of 18); three gain-of-function individuals worsened. Retrospective, unblinded, clinician or parent rated.",
+   "measured_result_note": "Benefit in 14 of 19 individuals with gain-of-function variants, of whom 4 had an effect that faded (10 sustained; the authors' Fisher exact test of a 9 angstrom distance classification gives P = 0.0698 when scored per individual with only sustained effects counted as positive and P = 0.0210 at variant level; neither tests the 14 of 19 against the comparator group, which is the P = 0.0049 of the next row, and that 14 counts the 4 individuals whose effect faded; 16 of the 19 are possible gain-of-function by the authors' threshold rules and three are likely) (behaviour 12 of 17, development 6 of 12, seizure frequency reduced in 7 of 18); three gain-of-function individuals worsened. Retrospective, unblinded, clinician or parent rated.",
    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
   },
   {
    "id": "DR-W2-003",
-   "target_id": "NMDAR pore blocker memantine; GRIN loss-of-function, indeterminate or no-effect variants (the comparator group also holds 4 variants the authors call non-pathogenic)",
+   "target_id": "NMDAR pore blocker memantine; GRIN loss-of-function, indeterminate or no-effect variants (the comparator group also holds five individuals whose variants the authors call non-pathogenic)",
    "endpoint": "clinical improvement",
    "direction": "NO_CHANGE",
    "source": "Karnstedt 2026, Epilepsia (PMID 41489401; NOT WWOX EVIDENCE; other disease)",
@@ -151,7 +151,7 @@
     "cell_type": "individuals, mostly children",
     "developmental_stage": "median age 9 years (as reported)"
    },
-   "measured_result_note": "Benefit in 3 of 15 (group of 15 includes 4 non-pathogenic variants), mild and parent-reported only; seizure reduction 2 of 10, not different from the gain-of-function group. The direction of the receptor lesion, not the presence of an NMDAR gene, separated responders.",
+   "measured_result_note": "Benefit in 3 of 15 (the group of 15, which keeps #19 although the Results say it was excluded from further analyses, includes five individuals with variants the authors call non-pathogenic: Table 1 lists four of unknown significance (#8, #19, #29, #31) and one likely benign (#28), the supplementary table of ACMG classes lists all five as unknown significance, and the text counts them as five in one place and as six in another), mild and parent-reported (one also reported by the kindergarten); seizure reduction 2 of 10, not different from the gain-of-function group (P = 0.417), and both reductions come from two carriers (#28 and #29) of variants not tested for function and rated no effect by the authors, so counting them would make 5 of 15; neither reduction is isolated from other changes (antiseizure drug changes in #28 and a regimen of three drugs in #29), and none comes from a carrier with a tested loss-of-function or indeterminate variant. The direction of the receptor lesion, not the presence of an NMDAR gene, separated responders.",
    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
   },
   {
@@ -228,7 +228,7 @@
     "cell_type": "individual",
     "developmental_stage": "adult, decades after onset"
    },
-   "measured_result_note": "'No sustained positive effect of treatment was detected' for the whole list taken over decades in one adult; the drug is not isolated, the exposure and timing are unknown. n = 1 supports no statement about the drug in this genotype.",
+   "measured_result_note": "'No sustained positive effect of treatment was detected' for the whole list taken over decades in one adult; the drug is not isolated; the paper lists the antiseizure drugs prescribed over the years and the current regimen (valproic acid, levetiracetam and perampanel, with doses), so the exposure is not unknown, but the timing of each drug is not given, and the statement is about sustained benefit, so a transient benefit is not excluded. n = 1 supports no statement about the drug in this genotype.",
    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
    "receipt": "FTR-20261019-39507621-01"
   }

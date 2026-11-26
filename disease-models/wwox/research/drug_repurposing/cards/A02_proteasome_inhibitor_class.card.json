@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "440f7a0f6f331487569302bc48bf97411739248e32b5e8e2dc5bc787ad4c03fd",
+  "input_sha256": "5ee3cb342ccd2df0fccd811df909f540052de5aff0a148a567e94af87d40b867",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -420,7 +420,7 @@
         ],
         "against": [
           "The gain applies to wild type too (CBS wild-type half-life up about 7.7-fold under proteasome inhibition): a boost multiplies residual function and does not repair it.",
-          "Allele dependence is large: one allele rescued to the transgenic wild-type range in some animals (S466L), three improved (I278T, R266K, R336C), one not at all in the mouse (T191M), and a stable but inactive allele (G307S) not at all; the same T191M allele gained in a cell line. The outcome depends on whether the lesion is a stability lesion or a catalytic one.",
+          "Allele dependence is large: one allele rescued to the transgenic wild-type range in some animals (S466L), three improved (I278T, R266K, R336C), one not significantly in the mouse (T191M; the Results state that neither inhibitor restored significant enzymatic activity, although bortezomib did seem to stimulate a very small amount; the activity figure is not held), and a third allele (G307S; not tested in this paper, whose Introduction says only that in earlier work of the same laboratory, not read here, bortezomib was not effective in restoring function to it; the paper does not say whether that protein is stable or active); the same T191M allele gained in a cell line. The outcome depends on whether the lesion is a stability lesion or a catalytic one.",
           "Protein-up with activity-flat in a cytosolic enzyme (CBS I278T with HSP70 or HSF1 co-expression); ASPA C152W stabilised protein exclusively insoluble, the variant could not be assayed for activity in that study and earlier studies found no residual activity in purified protein or cell extracts (mechanism work mainly in yeast, human part in U2OS).",
           "Tolerated exposure lowered homocysteine by about half without a significant activity gain and with immune-cell toxicity (CBS I278T), and gave no significant change for S466L; effective exposure was toxic; authors: probably not feasible as monotherapy. The superior drug did not track proteasome inhibition, so the mechanism is not simply route blockade.",
           "Lysosome-route first for the only WWOX missense with a measured turnover (P252A), and MG-132 did not accumulate even wild-type WWOX there: a proteasome arm may be the wrong lever for the SDR domain class (a nearby SDR enzyme, RDH5, is degraded by autophagy and not by the proteasome; abstract-level only). The P252A work used stable overexpression in thyroid-cancer lines (CAL-62, BCPAP), so it is a cancer-line overexpression datum. A second WWOX observation points the same way: MG-132 accumulated truncated WWOX proteins while the normal-size protein did not change in 49 cancer lines (PMID 14695174, abstract-level)."

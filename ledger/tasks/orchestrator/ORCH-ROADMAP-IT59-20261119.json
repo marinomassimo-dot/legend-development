@@ -630,10 +630,19 @@
     },
     {
      "step": "IT25: checkpoint 24 queue in ADV final order: ADV-287 sentences, ADV-282 increment 3 (three verified errors and additions), ADV-285 S1-S8 with ADV-288 corrections, ADV-286 prospective hold (start by 2026-12-01, freeze by 2026-12-04), two author-request drafts kept unsent, CI tick, Pages deploy #129/#130 as operator item",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "source": "operator launch message 2026-11-25 (successor window b0ccd111); CHECKPOINT_IT_20261125_12.md section 1 and ADDENDUM1",
-     "accepted_at": "2026-11-25T22:44:04Z"
+     "accepted_at": "2026-11-25T22:44:04Z",
+     "evidence": "prepared inputs only, nothing applied: reports A, B, C delivered and A, B patched into edits_it25.py (CHECKPOINT_IT_20261125_13.md sections 8-9); the unfinished remainder is carried forward as step IT26",
+     "updated_at": "2026-11-26T00:07:34Z"
+    },
+    {
+     "step": "IT26: checkpoint 25 sections 8-9 queue: rewrite Y01-Y06 with reader C wording (W01 check of the n=3 Dutch row), apply the 25 edits and rebuild join/coverage/ranking/views/package, land; then ADV-289 consumers, ADV-285 S1-S8 with ADV-288 corrections, ADV-286 prospective hold, two author-request drafts kept unsent, CI tick",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator launch message 2026-11-26 (IT successor window d26b0ae5); CHECKPOINT_IT_20261125_13.md sections 8-9",
+     "accepted_at": "2026-11-26T00:07:29Z"
     }
    ]
   }
@@ -1126,6 +1135,13 @@
    "at": "2026-11-25T22:44:04Z",
    "source": "operator launch message 2026-11-25 (successor window b0ccd111); CHECKPOINT_IT_20261125_12.md section 1 and ADDENDUM1",
    "step_sha256": "224eb69233ed",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-26T00:07:29Z",
+   "source": "operator launch message 2026-11-26 (IT successor window d26b0ae5); CHECKPOINT_IT_20261125_13.md sections 8-9",
+   "step_sha256": "564c70f886fd",
    "reopened_block": false,
    "authorised_by": null
   }

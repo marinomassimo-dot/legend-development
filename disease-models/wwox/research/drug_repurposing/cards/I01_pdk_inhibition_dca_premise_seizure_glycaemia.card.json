@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "5d58e6997266b44a69a3016943c6180c4ea45037a23455b12db9410f1abdb4c2",
+  "input_sha256": "76736ec4573b0822d1de4b69c2b70a3dfaae6b48cd483c90301826f15e3f594c",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -186,7 +186,7 @@
           "developmental_stage": "progenitor stage and day-14 neurons"
         },
         "evidence_scope": "COMPUTATIONAL_RESULT",
-        "note": "Progenitors -0.67, LOWER IN SIGN ONLY: inside the single-gene null (p about 0.49) and the interval (about 0.45, Poisson) spans zero; the day-14 neuron stage shows +0.44 (same interval), so the sign is not concordant across stages and no decrease is demonstrated. n = 1 per arm: descriptive only. The progenitor line also differs in state from its control (radial-glia markers lower), which confounds every metabolic comparison in it."
+        "note": "Recomputed from the deposit (one library per arm; PDK1 tags 263 against 51 in progenitors and 108 against 64 in day-14 neurons), the log2 ratio of the deposited TPM is -0.54 in progenitors and -1.07 in neurons. The neuron pair's gene-table column sums differ about threefold (summed TPM 89,581 against 264,496); normalising to those sums gives +0.49, while median re-centring over expressed genes gives -0.60 to -0.77 in progenitors and +0.34 to +0.50 in neurons depending on the gene filter (-0.74 and +0.41 with every gene detected in both libraries). The earlier centred values (-0.67 and +0.44) are matched to within 0.001 by median centring over genes with a pair-mean TPM of at least 10, a filter found after the fact, so they are filter-dependent rather than irreproducible; their original normalisation is not stated and their p of about 0.49 could not be reproduced. A Poisson half-width of about 0.45 around -0.67 excludes zero, and with one library per arm no decrease is demonstrated; the note is descriptive only. WWOX knockdown is shown by one Western blot in progenitors only (Supplementary Figure 1); the WWOX CAGE signal is 1.15 times control in progenitors and 0.20 in neurons (0.60 after normalising to the column sums). In the progenitor library PAX6, SOX2, HES5, FABP7 and SOX21 are lower while NES, VIM, HES1 and SLC1A3 are not, so the line differs in state from its control, which confounds every metabolic comparison in it. The progenitor line also differs in state from its control (radial-glia markers lower), which confounds every metabolic comparison in it."
       },
       {
         "id": "DA-I01-003",
@@ -225,7 +225,7 @@
           "developmental_stage": "not applicable"
         },
         "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-        "note": "A null is NO_CHANGE, not proof of normal PDH regulation: n is not stated and PDH phosphorylation is not measured. Wording flag found in this cycle: one Results sentence lists 'pyruvate dehydrogenase kinase (PDK)' among the enzymes whose activity was unchanged, while Methods describe only a PDH kit and Figure 5b is labelled PDH; the repository reads it as the PDH assay (manifest entries 7 and 8); not resolved by the paper. PDH is named as unchanged in the normoxia-hyperglycaemia and hypoxia-normoglycaemia sentences; for hypoxia-hyperglycaemia the text says no effect on enzyme activities. In the same cells hexokinase activity, LDH activity and lactate were higher.",
+        "note": "A null is NO_CHANGE, not proof of normal PDH regulation: n is not stated and PDH phosphorylation is not measured. Wording flag found in this cycle: one Results sentence lists 'pyruvate dehydrogenase kinase (PDK)' among the enzymes whose activity was unchanged, while Methods describe only a PDH kit and Figure 5b is labelled PDH; the repository reads it as the PDH assay (manifest entries 7 and 8); not resolved by the paper. PDH is named as unchanged in the normoxia-hyperglycaemia and hypoxia-normoglycaemia sentences; for hypoxia-hyperglycaemia the text says no effect on enzyme activities. In the same cells lactate was higher in all four conditions, hexokinase activity in two (normoxia and hypoxia, both with normoglycaemia) and LDH activity in two (normoxia with normoglycaemia and with hyperglycaemia); hexokinase is visibly lower in the knockout in normoxia with hyperglycaemia and citrate synthase lower in hypoxia with hyperglycaemia, both unmarked. The PDH point estimates in the knockout are higher, not lower (about 30 percent in normoxia and 47 percent in hypoxia, with large error bars), so the PDH result is a low-power null; n is not stated. The hypoxia-hyperglycaemia 'no effect' coincides with no reduction of total WWOX by immunocytochemistry and mRNA, but control WWOX there already sits at the knockout level, and the fractionated blot does show WWOX depleted in that condition (Figure 6). WWOX overexpression lowers PDH activity in hypoxia (p < 0.001). The 'knockout' is a CRISPR guide pool with protein 8.5-fold and mRNA 3-fold lower, not a complete knockout, and the unresolved 'PDK' wording stays as stated above.",
         "receipt": "FTR-20261003-35328751-02"
       },
       {
