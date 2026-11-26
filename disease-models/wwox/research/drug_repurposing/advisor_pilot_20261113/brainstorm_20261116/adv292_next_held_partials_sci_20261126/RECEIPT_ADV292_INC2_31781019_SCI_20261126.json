@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-26T01:14Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-26T01:14:32Z",
+ "event_id": "FTR-20261126-31781019-02",
+ "evidence_basis": [
+  "coverage_map",
+  "reader: Methods and Results read; of thirteen figures only Fig 11 opened; Supplemental Table 1 (per-mouse spike counts, 55 session rows) parsed in full and the ethosuximide direction recomputed; blind delegate (sonnet, high) on the pivotal items. Classes left not_read here were not re-read in this event."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv292_next_held_partials_sci_20261126/RESULT_ADV292_INC2_SCI_20261126.md"
+ ],
+ "prior_receipt": "FTR-20261124-31781019-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "7b732a85e8ae9a163638e32917c0062dc65cb2f3d96c2a37d802774d8f652e9b",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID31781019_Kam2019_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3389/fneur.2019.01151",
+  "pmid": "31781019"
+ },
+ "workflow": "SCI ADV-292 corrected ten held partials, increment 2 (not a complete read)"
+}

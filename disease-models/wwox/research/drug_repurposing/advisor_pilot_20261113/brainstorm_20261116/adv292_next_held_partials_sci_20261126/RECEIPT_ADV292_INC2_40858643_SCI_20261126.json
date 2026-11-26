@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-26T01:14Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-26T01:14:32Z",
+ "event_id": "FTR-20261126-40858643-02",
+ "evidence_basis": [
+  "coverage_map",
+  "reader: Table 2 read; Supplementary Data 1 and 2 read through the derived row extract of the case (not row by row); the 23-page supplementary PDF searched for the gene and case, no hit, pages not looked at; blind delegate (sonnet, high) on the pivotal items. Classes left not_read here were not re-read in this event."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv292_next_held_partials_sci_20261126/RESULT_ADV292_INC2_SCI_20261126.md"
+ ],
+ "prior_receipt": "FTR-20261004-40858643-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "549be71588ce8624e1dcf657e23b54b2b708223f4870e7cc0cc9368733cf28b8",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40858643_Hamanaka2025_PMC.xml",
+ "study_id": {
+  "doi": "10.1038/s41525-025-00521-4",
+  "pmid": "40858643"
+ },
+ "workflow": "SCI ADV-292 corrected ten held partials, increment 2 (not a complete read)"
+}

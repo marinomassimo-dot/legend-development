@@ -1229,10 +1229,12 @@
     },
     {
      "step": "ADV-292: read the unread class of ten held partial records (corrected ten, two increments of five, PREREG frozen), sentences to IT after its apply report; both increments by the successor",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-292",
-     "accepted_at": "2026-11-26T00:33:37Z"
+     "accepted_at": "2026-11-26T00:33:37Z",
+     "updated_at": "2026-11-26T01:17:35Z",
+     "evidence": "2026-11-26 SCI: ten held partials read in two increments, blind sentence-level reader on both; strict 3 of 10 records (39216838, 40485335, 31781019), loose 7 of 10, prediction 3 not rejected; adv292_next_held_partials_sci_20261126/RESULT_ADV292_INC1_SCI_20261126.md and RESULT_ADV292_INC2_SCI_20261126.md; ten receipts FTR-20261126-*-01/02; reported to ADV and IT"
     }
    ]
   }

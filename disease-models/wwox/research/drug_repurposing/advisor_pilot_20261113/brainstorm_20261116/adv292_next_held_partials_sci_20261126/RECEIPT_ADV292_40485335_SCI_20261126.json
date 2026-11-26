@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-26T00:58Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-26T00:58:59Z",
+ "event_id": "FTR-20261126-40485335-01",
+ "evidence_basis": [
+  "coverage_map",
+  "reader: seven main figure images and four supplementary TIFF images opened; blind delegate (sonnet, high) on the pivotal items. Classes left not_read here were not re-read in this event."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv292_next_held_partials_sci_20261126/RESULT_ADV292_INC1_SCI_20261126.md"
+ ],
+ "prior_receipt": "FTR-20261021-40485335-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "7cf47b9080ec95603ada7891b49d07d0174aa145e5f4c2833777afe85062af4c",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40485335_Shah2025_PMC12146831.xml",
+ "study_id": {
+  "doi": "10.1096/fj.202403159RR",
+  "pmid": "40485335"
+ },
+ "workflow": "SCI ADV-292 corrected ten held partials, increment 1 (not a complete read)"
+}
