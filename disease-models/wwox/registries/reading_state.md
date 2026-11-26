@@ -20,7 +20,7 @@ asserted by no receipt. `prior_receipt` means the reading this one builds on, an
 sharing a parent are the normal case under parallel branches.
 
 
-**2152 paper(s)** with at least one receipt · **3072 receipt(s)** · **40 paper(s) read in parallel** by two receipts sharing a parent.
+**2153 paper(s)** with at least one receipt · **3074 receipt(s)** · **40 paper(s) read in parallel** by two receipts sharing a parent.
 
 ## Papers read in parallel
 
@@ -199,6 +199,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 15790560 | `abstract_only` | read | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | 1 |
 | PMID 15791206 | `partial_fulltext_read` | read | read | read | read | captions_only | not_read | read | not_read | not_read | not_read | 1 |
 | PMID 15795384 | `partial_fulltext_read` | not_read | not_read | not_read | read | captions_only | not_read | not_read | not_read | not_read | — | 1 |
+| PMID 15800186 | `partial_fulltext_read` | read | not_read | not_read | read | not_read | not_read | read | not_read | not_read | not_read | 1 |
 | PMID 15813942 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 15855830 | `abstract_only` | read | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | 2 |
 | PMID 15870886 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | not_present | read | 1 |
@@ -2012,7 +2013,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 42023289 | `partial_fulltext_read` | not_read | read | not_present | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 42033488 | `partial_fulltext_read` | read | read | not_present | read | captions_only | read | read | not_present | not_present | not_read | 1 |
 | PMID 42035940 | `partial_fulltext_read` | read | read | read | read | unavailable | not_present | read | read | unavailable | not_read | 1 |
-| PMID 42044942 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
+| PMID 42044942 | `partial_fulltext_read` | read | not_read | read | read | not_read | read | read | not_read | not_read | not_read | 2 |
 | PMID 42047543 | `partial_fulltext_read` | read | read | read | read | read | not_present | read | read | captions_only | — | 1 |
 | PMID 42051565 | `partial_fulltext_read` | not_read | not_read | not_read | read | not_read | read | not_read | not_read | read | — | 1 |
 | PMID 42064976 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | read | read | 1 |
