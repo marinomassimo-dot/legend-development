@@ -77,8 +77,12 @@ def block(i):
     L.append("held sources: " + " ; ".join(SRC[i]))
     return "\n".join(L)
 
+# second round: the blocks whose wording changed after the first readers (their own minimal wording, folded by IT)
+C_IDS = ["N02", "DR-A01-007", "DR-B01-002", "DR-L01-003", "DR-A02-010", "DR-H02-008", "DA-K01-007", "DR-H02-036", "DR-H02-024", "DR-H02-030",
+         "DR-I01-014", "DR-I01-001", "DR-I01-002", "DR-I01-004", "DR-P9-009", "DR-P9-010", "DR-E01-003"]
 out = Path(sys.argv[1]); out.mkdir(parents=True, exist_ok=True)
-for name, ids in (("A", A_IDS), ("B", B_IDS)):
+rounds = (("A", A_IDS), ("B", B_IDS)) if len(sys.argv) < 3 else (("C", C_IDS),)
+for name, ids in rounds:
     t = HEAD.format(name=name) + "\n".join(block(i) for i in ids) + "\n"
     (out / f"BLIND_PACKET_{name}_IT28.txt").write_text(t, encoding="utf-8")
     print(name, len(ids), len(t))

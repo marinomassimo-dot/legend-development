@@ -1,0 +1,152 @@
+BLIND VERIFICATION REPORT, PACKET B (IT28). Hypothesis level, public, class level. Nothing here is medical advice.
+
+FILES OPENED
+- All ten PMID*_efetch.xml files in /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/. These are PubMed abstract records: 35980256, 31349008, 1940119, 2767014, 2757909, 16765624, 16651305, 29913407, 42771346, 42179084.
+- PMID19054414_x2009_europepmc_core.json (Europe PMC core record: abstract and MeSH only).
+- PMID41288262_Wang2026_europepmc-fulltextxml.xml. This is full text, and I read the whole text.
+- LABEL_memantine_openfda.json (one label record, 75 openFDA records in total).
+- No figures were needed or opened. No card, result file, report or assignment was opened. Apart from the packet, I did not open any repository file. I wrote nothing under the repository.
+- Every source except PMID 41288262 and the memantine label is abstract-level. A clause the abstract cannot settle is marked UNSETTLED or NOT ASSESSABLE (abstract).
+
+SUMMARY TABLE
+| id | verdict |
+|---|---|
+| DR-H02-036 | MUST CHANGE |
+| DR-H02-023 | STANDS |
+| DR-H02-024 | MUST CHANGE (minor) |
+| DR-H02-030 | ADD |
+| DR-I01-014 | MUST CHANGE |
+| DR-I01-006 | STANDS |
+| DR-I01-001 | MUST CHANGE |
+| DR-I01-002 | ADD |
+| DR-I01-004 | ADD |
+| DR-P9-009 | MUST CHANGE (minor) |
+| DR-P9-010 | MUST CHANGE (minor) plus ADD |
+| DR-E01-002 | STANDS |
+| DR-E01-003 | ADD |
+
+PER-BLOCK FINDINGS
+
+DR-H02-036 — MUST CHANGE
+- Wrong culture type. In PMID 31349008 the muscimol result sits in the purified rat OPC culture paragraph: "chronic treatment with GABA and baclofen... accelerates OPC differentiation... None of these effects are mediated by the GABAAR agonist muscimol."
+- The DRG-OPC coculture result in the same abstract is GABA alone: more myelin segments and MBP expression. Baclofen and muscimol are not reported there. So "did not reproduce the effect in the coculture study" is wrong.
+- "The two receptor classes therefore differ" generalises from one agonist in one culture system. In the abstract the GABA-A class is only tested against muscimol.
+- Other clauses check out:
+  - PMID 35980256: baclofen raised myelin protein in LPC-treated cerebellar slices, and in adult mice after LPC spinal-cord demyelination it gave enhanced OPC differentiation and remyelination.
+  - Baclofen reversal by the GABA-B antagonist CGP55845 is in the purified OPC culture.
+  - No opposite sign appears in either abstract. I searched both abstract texts for any decrease or inhibition statement.
+- Replacement: "...and in the purified rat precursor cultures the GABA-A agonist muscimol did not reproduce the effects (the abstract says none of them were mediated by muscimol); in the dorsal-root-ganglion coculture the abstract reports only GABA itself (more myelin segments and myelin basic protein), without separating receptor classes. In that study the two receptor classes therefore differed for the muscimol test. No opposite sign is reported in the abstracts."
+
+DR-H02-023 — STANDS (abstract level)
+- PMID 1940119 abstract:
+  - 62 patients on vigabatrin before neurosurgery or death, plus ten similar untreated age-matched cases.
+  - "In no case... any evidence of myelin microvacuolation or myelin sheath splitting that could be attributed to vigabatrin."
+  - "Demyelination has never been observed in either the animal or human material."
+- PMID 2767014 abstract: "Two postmortem and three operative specimens from humans have revealed no evidence of vacuolation of myelin."
+- Overlap with the 62 is not stated. Ages and exposure durations are not stated in the abstract text; only the title says "long-term".
+- MeSH on PMID 1940119 lists Adolescent, Adult, Aged, Child and Middle Aged. It has no Infant or Child, Preschool heading, so the indexing statement is correct. A missing heading cannot show that no infants were examined, but the sentence says "not shown to include", which is accurate.
+- The clause about "the infant lesion the label records" is OUTSIDE (the label).
+- The abstract does not say what the ten untreated cases showed. The sentence only says "compared with ten untreated cases", which is fine.
+
+DR-H02-024 — MUST CHANGE (minor)
+- The abstract says "no patent intramyelinic oedema nor primary demyelination". The sentence drops "patent" and says "no intramyelinic oedema". That is a slight strengthening.
+- Also omitted: "the changes involved axons as well as myelin sheaths", and the exposure was described as "high concentrations".
+- Other clauses are supported:
+  - Vigabatrin was 500 nmol per ml and GABA 1000 nmol per ml, so the "not equal molar" remark is correct.
+  - Cultured 14 to 19 days, exposed up to 14 days.
+  - "Mild toxicity", "no clear-cut difference although vigabatrin seemed slightly more toxic", and "some degenerating myelinated fibres and astrocytic gliosis in both".
+  - "Preliminary data" is in the title.
+- Replacement: "...no patent intramyelinic oedema and no primary demyelination were seen on electron microscopy, and the changes involved axons as well as myelin sheaths, so the row is not a vacuolation finding..." If the owner thinks the "patent" qualifier is negligible, this is ADD-level.
+
+DR-H02-030 — ADD
+- Supported by the Europe PMC abstract:
+  - 668 children (2 to 16 years) and adults with CPS: no statistically significant difference in incidence or prevalence between exposed and naive.
+  - Infants: 22 percent vs 4 percent, p below 0.001.
+- Omission that misleads: the infants were 205 infants (24 months or younger) with infantile spasms, and the older arms had complex partial seizures. So the age-band contrast is also an indication contrast.
+- The study was a retrospective MRI re-review with two blinded neuroradiologists. The outcome is a prespecified MRI abnormality, defined as T2 or FLAIR hyperintensity.
+- Add: "in infants with infantile spasms, a different indication from the complex partial seizures of the older arms (retrospective review, prespecified T2 or FLAIR hyperintensity), so age band and indication are confounded."
+
+DR-I01-014 — MUST CHANGE
+- The 40 percent is misattributed. The abstract says: "In all cells, DCA caused a major shift (40% decrease) from anaplerotic-related pathways (e.g., pyruvate carboxylase) toward flux through PDC." The 40 percent is the decrease in anaplerotic-related flux, not a 40 percent increase toward PDC.
+- Supported clauses:
+  - Glycolysis down 29 percent in patient cells, excluding the splicing-mutation line.
+  - No significant effect in controls.
+  - Lactate production rate and NTP/NDP unchanged in either cell type.
+  - Five healthy subjects and six patients.
+- Also worth adding:
+  - Glycolysis is model-derived from 13C-glutamate isotopomers.
+  - Untreated patient cells had higher glucose consumption, lactate production and label-derived acetyl-CoA than controls (the splicing line excepted).
+  - The abstract reports no genotype-by-DCA interaction test, so that clause is supported as an absence.
+- Replacement: "DCA shifted flux in all cells, controls included, away from anaplerotic-related pathways (a 40 percent decrease) toward the pyruvate dehydrogenase complex, and decreased modelled average glycolysis by 29 percent in patient cells (five lines after excluding the splicing-mutation line; baseline glycolysis was higher in patient cells than controls)..."
+
+DR-I01-006 — STANDS (abstract level)
+- Counts and age range match the abstract: 43 patients, 0.9 to 19 years, 11 pyruvate dehydrogenase deficiency, 25 respiratory chain, 7 mitochondrial DNA. Persistent or intermittent hyperlactatemia is stated.
+- There were no significant differences in the Global Assessment of Treatment Efficacy, linear growth, or illness frequency and severity. DCA significantly decreased the carbohydrate-induced lactate rise.
+- The abstract reports no PDH-only subgroup (absence checked in the abstract).
+- Not reported in the abstract: hospitalisation results, fasting lactate result, and the design detail that all patients were first preconditioned on placebo for 6 months. None of these makes the sentence set misleading.
+
+DR-I01-001 — MUST CHANGE
+- "The abstract gives neither the dose nor the tissue" is wrong on the dose. The abstract states the treatment as DCA 50 and 100 mg/kg/day. It does not say which dose went to the PDH assays, and it does not state the tissue (the title and abstract do not name brain).
+- "The phospho-site did not move significantly" is ambiguous and misleading. The abstract says Ser300 phosphorylation was increased 52 percent in SE mice and was "not significantly changed with DCA". PDH protein was decreased 37 percent in SE mice and also not significantly changed with DCA.
+- Supported: PDH activity reduced 65 percent versus No SE mice, "partially alleviated with DCA" (significance not stated), and total PDH down 23 percent in No SE mice on DCA, which the authors say "may explain the proconvulsant effects in the 6 Hz test".
+- Replacement: "PDH activity was 65 percent lower in chronic-stage pilocarpine (SE) mice than in No SE mice and the drug partly alleviated this (significance not stated). In SE mice Ser300 phosphorylation was 52 percent higher and PDH protein 37 percent lower, and neither changed significantly with the drug. The abstract gives the two daily doses tested (fifty and one hundred milligrams per kilogram of body weight per day, written in words on the card) but not which dose was used for these assays, and it does not name the tissue..."
+
+DR-I01-002 — ADD
+- Supported: "DCA treatment did not increase latencies to seizures in the acute flurothyl seizure test and was slightly proconvulsant in the 6 Hz test." No effect size is given. The strain is not stated. All affiliations are University of Queensland, so "one laboratory" is supported.
+- "Chronic treatment before the test": timing relative to the test is not stated. The abstract says "Chronic DCA... was tested in acute seizure and the chronic pilocarpine models". UNSETTLED.
+- Add the two doses in words (fifty and one hundred milligrams per kilogram per day). The abstract does not say whether the null held at both doses.
+- PDH measurement is reported for chronic-stage pilocarpine mice, not the flurothyl animals. That is correct as an abstract absence.
+
+DR-I01-004 — ADD
+- Supported by the abstract: second-hit flurothyl latencies were "decreased in SE vs. No SE mice in the chronic stage, but were not restored by DCA", and PDH activity was reduced 65 percent and partly alleviated.
+- Omissions that mislead:
+  - The test did detect the epileptic phenotype (shorter latency in SE vs No SE), and DCA did not restore it.
+  - "Only partial engagement" rests on PDH activity alone. The direct kinase-site readout (Ser300 phosphorylation) was not significantly changed by DCA. PDH protein was not significantly changed either.
+- Whether the activity assay and the second-hit test used the same animals is UNSETTLED at abstract level. The statistical significance of "partial alleviation" is also not stated, so "the null is at partial engagement" is an inference.
+- "Primary" is the repository's term and is not in the abstract (OUTSIDE).
+- Add: "second-hit latency was shorter in SE than in No SE mice and was not restored; PDH activity was partly restored, but the Ser300 phosphorylation and PDH protein changes were not significant; whether the same animals were assayed is not stated in the abstract."
+
+DR-P9-009 — MUST CHANGE (minor)
+- Numbers verified in Table 3: increased seizure frequency 7 of 101 (memantine) vs 5 of 110 (non-memantine). Table 1 has n=101 and n=110. Median age 63. Memantine was added by patient choice, and the study was prospective and observational.
+- Baseline imbalances are real. Memantine users had more subjective cognitive complaints, lower MMSE and MoCA, more depression or anxiety, a later age at onset (p=0.003) and a shorter epilepsy duration (p=0.015). Baseline seizure frequency, seizure type and prior BTCS or status epilepticus were comparable.
+- No drug level or plasma concentration is mentioned anywhere in the text (searched plasma, serum, concentration, level and monitoring). The dose was 10 mg once daily.
+- "Elderly adults" overstates. The inclusion criterion was age 18 or over and the median was 63, although the authors themselves write "elderly Chinese population".
+- ADD: of the seven memantine cases, four were attributed to incidental ASM non-adherence. The threshold was a rise of more than 25 percent. The authors report no significant between-group difference.
+- Replacement: "Adults with epilepsy and cognitive impairment (median age 63, range not stated, 18 or over)... increased seizure frequency (a rise of more than 25 percent) in 7 of 101... against 5 of 110..., no significant difference; four of the seven had incidental antiseizure-drug non-adherence; baseline imbalances were in cognition, mood, age at onset and epilepsy duration, not in baseline seizure frequency."
+- The statement about reading targeted passages on 2026-11-26 is the repository's own process and is OUTSIDE.
+
+DR-P9-010 — MUST CHANGE (minor) plus ADD
+- Verified in 8.4 Pediatric Use:
+  - Two 12-week controlled studies, 578 patients aged 6 to 12 with ASD, "failed to demonstrate efficacy".
+  - Study A, parallel placebo-controlled: memantine n=54 vs placebo n=53.
+  - Study B, responder-enriched randomised withdrawal: n=153 vs 158 in the efficacy analysis.
+  - Effective time is 20260901.
+  - "Only controlled paediatric exposure": I searched all fields of this label for "pediatric", "paediatric" and "children". The only other paediatric material is the open-label lead-in (N=903) and juvenile rat studies, neither controlled. Supported.
+- "The paediatric safety profile matched adults" overstates. The label says "generally consistent with the known safety profile in adults."
+- Add: the label opens with "Safety and effectiveness in pediatric patients have not been established" and "has not been studied in pediatric patients under 6 years of age or over 12 years". It also reports neuronal lesions in juvenile rats at postnatal days 15 and 17 at 30 mg/kg/day or more.
+- The held record is an extended-release capsule label.
+- "One label of several records": the metadata lists 75 total records, so "several" understates. The statement about the others not being read is OUTSIDE (the repository's own plan).
+- Replacement: "...failed to demonstrate efficacy; the label calls the paediatric safety profile 'generally consistent with' adults, states that safety and effectiveness in paediatric patients are not established and that the drug was not studied under 6 or over 12 years, and reports juvenile-rat neuronal lesions at high doses."
+
+DR-E01-002 — STANDS (abstract level)
+- Median DRR 1.04 (95 percent credible interval 0.83 to 1.32), probability of DRR below 1 = 0.37. This is a Bayesian shared-parameter model of ALSFRS-R and survival over a 24-week placebo-controlled period. The authors conclude "did not show evidence of slowing disease progression".
+- "Interval does not exclude a modest effect" is correct, since 0.83 corresponds to about 17 percent slowing.
+- Target engagement and proof of mechanism are credited to the prior phase 1B trial in the abstract. No engagement data for this trial's participants are reported. This is an abstract absence.
+- Adults: mean age 59.3.
+- The context field "sporadic and familial ALS" is not in the abstract (NOT ASSESSABLE (abstract)). It is a context field, not part of the sentence set.
+
+DR-E01-003 — ADD
+- Supported by the abstract:
+  - Ten-month-old 5xFAD mice, 23 days.
+  - 2BAct 10 mg per kg per day by intraperitoneal injection (one dose).
+  - Donepezil as positive control.
+  - Better object recognition, attenuated microglial activation and tau, Aβ burden not reduced, reduced phospho-eIF2α, and the authors' "therapeutic effects are limited".
+- Omissions that mislead:
+  - Donepezil results and the comparator for each "better" or "less" are not reported. The comparator is presumably vehicle but is not stated per outcome.
+  - Open field and Morris water maze were run, but the abstract reports improvement only in object recognition.
+- "A marker upstream of the compound's target, eIF2B": the abstract never mentions eIF2B. It calls 2BAct "an ISR inhibitor". The eIF2B target is NOT ASSESSABLE from this abstract. Source it from another held document or soften.
+- Add: "donepezil was the positive control and its results are not reported in the abstract; only object recognition is reported as improved; the target (eIF2B) is not named in this abstract."
+
+CAVEATS
+- Most verdicts rest on abstracts.
+- The only full-text checks were PMID 41288262 (read through) and the memantine openFDA label (searched by field for the clauses above).
