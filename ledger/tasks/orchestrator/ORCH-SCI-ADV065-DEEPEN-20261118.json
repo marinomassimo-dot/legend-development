@@ -1220,11 +1220,12 @@
     },
     {
      "step": "ADV-291: Breton 2021 S4 figure read behind the CLAIM 021 firing sentence (graph read with stated error, animals as the unit) and whether supplement images 1 and 2 change any repository sentence; PREREG first; blind reader gets sentence plus whole figure and caption",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-291 brief assignments/ADV-291.md (read from the root checkout, not yet on main) and the SCI launch message of 2026-11-26",
      "accepted_at": "2026-11-26T00:09:53Z",
-     "updated_at": "2026-11-26T00:10:04Z"
+     "updated_at": "2026-11-26T00:23:51Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv291_breton_s4_s12_sci_20261126/RESULT_ADV291_SCI_20261126.md"
     }
    ]
   }

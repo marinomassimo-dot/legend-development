@@ -1,0 +1,111 @@
+## Verdict list (hypothesis level; not medical advice)
+
+- **F-a: MUST CHANGE.** P2 fails at 60 and 80 pA. UNCHANGED if a2 bars are not SEM, "combined SEM" is a plain sum, or the caption's null is accepted.
+- **F-b: UNCHANGED.** If the caption's null is accepted: MUST CHANGE (strict) or ADD.
+- **C1:** uncorrelated, ADD; "8 of 9 significance", MUST CHANGE (2 of 9); "delta", UNSETTLED.
+- **C2: MUST CHANGE** (a2 curves do not overlap). -70 mV and b UNCHANGED; 0 mV and a1 ADD.
+- **C3:** slices, UNCHANGED; "separate", MUST CHANGE (UNSETTLED if it means only intrinsic measurements).
+- **C4:** LFP event, UNCHANGED; separate cells, UNSETTLED; several hundred pA, UNCHANGED.
+- **C5:** knockout bursting, UNCHANGED; association, altered organization, increased coupling, UNSETTLED.
+
+**REPORT.md was not written:** the Write tool refused report files from subagents, and I did not work around it. The report follows so you can save it; this exceeds your 200-word limit.
+
+---
+
+# Blind read of S4, S1, S2
+
+Inputs: BRIEF.md and the three PNGs only.
+
+## S4 values
+Format is value±error-bar half length, Hz. SEM_comb = sqrt(a²+b²).
+
+**a1, raw current** (read error ±0.15 for value and half; x steps inferred at 20 pA; * = starred)
+
+| pA | S-WT | S-HT | S-KO |
+|---|---|---|---|
+| -40 to 20 | 0 | 0 | 0 |
+| 40 | ~0.5±0.3 read error, bar hidden | 1.05, half ≤0.7 | 2.8±0.85 |
+| 60 | 1.85±1.25 | 5.65±1.45 | 6.35±1.25 |
+| 80* | 2.95±1.60 | 9.25±2.05 | 10.45±1.60 |
+| 100* | 6.00±1.95 | 12.35±2.35 | 13.95±1.90 |
+| 120* | 9.90±2.35 | 15.4±2.25 | 17.55±1.95 |
+| 140* | 13.25±2.65 | 18.5±1.75 | 21.05±1.95 |
+| 160 | 16.95±2.35 | 20.5±1.55 | 23.65±1.95 |
+
+**a2, 0 = 20 pA below rheobase** (read error ±0.1 value, ±0.15 half)
+
+| pA | S-WT | S-HT | S-KO |
+|---|---|---|---|
+| 0 | 0 | 0 | 0 |
+| 20 | 4.0, half ≤0.7 (hidden) | 8.0±0.7 | 6.0, half ≤0.7 |
+| 40 | 9.9±0.7 | 12.1±0.9 | 11.9, half ≤0.7 |
+| 60 | 12.0±1.1 | 16.0±1.05 | 16.0±0.9 |
+| 80 | 16.0±1.25 | 18.0±0.95 | 20.0±1.1 |
+| 100 | 22 (under KO) ±1.25 | 20.0±1.0 | 22.0±1.15 |
+| 120 | ~24 (under KO) ±1.4 | 22.0±1.0 | 24.0±1.25 |
+| 140 | not visible | 23.9±1.15 | 26.0±1.3 |
+
+**b1, interneurons, raw** (±1.5 read error), as pA: S-CTL / S-KO
+0 up to 20: 0/0; 40: 10±10 / 0; 60: 21±18 / 8.5±8; 80: 32±24 / 11±9.5; 100: 41±29 / 19±10; 120: 51±36 / 33±13; 140: 59±41 / 43±16; 160: 70±46 / 57±19; 180: 79±52 / 69±22; 200: 87±55 / 83±23; 220: 95±58 / 98±24; 240: 98±58 / 114±26; 260: 109±67 / 127±29; 280: 118±70 / 140±31.
+
+**b2, interneurons, aligned** (±1)
+0: 0/0; 20: 14±9.5 / 18±6.5; 40: 29±16 / 36±7; 60: 41±22 / 52±9; 80: 52±26 / 64±11; 100: 64±32 / 76±13; 120: 74±37 / 93±17; 140: 82±42 / 106±19.
+
+**Statistic plotted**
+- a1 looks like mean±SEM, as captioned.
+- a2 is not established. All visible values are within about 0.1 of whole numbers, almost all even. The "mean +/- standard error" sentence follows a1 only.
+- b1 and b2 are consistent with mean±SEM, but the caption does not clearly say so.
+
+**Does not fit the caption or panel set**
+- a2 claims p > 0.05 at every step. If its bars are SEM, t is about 2.4-2.8 at 60 and 80 pA with 13 and 40 cells, which would be p < 0.05.
+- S-WT in a2 is visible only to 100 pA, plus a top cap at 120.
+- a1 has no legend; S-HT is navy there and blue in a2. The 160 pA markers are clipped.
+- Stars are drawn up-left of the points; I assign them to 80-140 pA.
+- Tests are per cell and mix t-test with rank sum; no animal-level test is shown.
+
+**Patterns**
+- P1 holds: KO exceeds WT by 7.5-8 Hz at all starred steps.
+- P2 fails: KO minus WT is 4.0 Hz at 60 pA (2.8 SEM_comb) and at 80 pA (2.4). The 20 and 40 pA steps (2.0 Hz) are borderline. With a plain sum, 60 is borderline (3.95 vs 3.9) and 80 does not exceed (4.0 vs 4.7).
+- P3: KO is not above WT in a1 only at -40 to 20 pA (all zero).
+- P4: S-HT is within 1 SEM_comb of KO at all four starred steps (140 is marginal: 2.55 vs 2.6). Specificity to homozygous loss is not shown.
+- P5 holds: no interneuron difference exceeds 1 SEM_comb.
+
+## Reasons
+
+**F-a.** The plotted a2 does not carry the aligned null its caption states. The quoted main-text sentences and any slope test cannot be checked from S4.
+
+**F-b.** KO means exceed WT in a1 and in a2 at 20-80 pA, not at 100-120.
+- If the null is accepted instead, update (a) as quoted never mentions rheobase, so the strict result is MUST CHANGE. If it is counted as saying so, as the rule's parenthesis assumes, ADD.
+- Words for the condition: "at a given raw injected current (S4 a1); the caption reports no significant difference once referred to rheobase (a2), although plotted values differ at 60-80 pA".
+
+**C1**
+- D and F show no significant correlation in the bursts they pool. The precise wording is "no significant correlation".
+- G shows p<0.05 only in animal 1 (rho ~0.57, p ~0.01) and animal 3 (rho ~-0.93, p ~0.02). The caption's 8/9 means "no significant **or** negative correlation".
+- Eight of nine rho are positive, so non-significance is not evidence of zero association.
+- G names no phase band; "delta" needs the main text or Table S1.
+
+**C2**
+- WT is about 4 Hz below KO at 60 and 80 pA in a2. The curves meet only at 0, plus KO and WT at 100-120.
+- 0 mV events are about 400-470 pA. 380 pA is the lower example's scale bar, not an event measurement.
+- In a1, KO is already above WT at 40 pA, and stars compare KO with WT only.
+
+**C3.** S2 shows simultaneous LFP and whole-cell recordings during bursts, so unqualified "separate" misleads. The narrow reading needs the Methods.
+
+**C4**
+- S2 shows the LFP event with concurrent cell currents.
+- Peak inward current at -70 mV is about 440 pA and 250 pA (±40) in the two examples.
+- "Separate cells" needs Results 2.2 or Methods. It cannot mean "not simultaneous with the LFP".
+
+**C5.** S1 has no wildtype or control panel, so it cannot show a change or increase. This does not mean such data do not exist.
+
+## Extra S1 inconsistency
+- In F the caption gives rho = -0.1201, but the drawn fit line rises. My digitisation of 39 of 41 dots gives Pearson r of about +0.15.
+- F's printed p = 0.5674 also does not match r = 0.12 with n = 41 (about 0.45).
+- D's y axis has a "x10^-3" multiplier on labels already written as 0.001-0.004.
+
+## Limits
+- The images are low-resolution rasters, and a2 conflicts with its own caption; only source data could resolve that.
+- No main text, Methods, Table S1 or repository record was seen. That C1-C5 cite this source was assumed.
+- S2 gives no genotype, cell number or animal number.
+
+Scripts and crops are in /home/desktop/.claude/jobs/9bb60ab5/tmp/reader291/.
