@@ -1,0 +1,36 @@
+U3.1	-	NOT A CLAIM	bold conclusion/heading
+U3.2	T	OK	
+U3.3	T	OK	no GABA concentration in any of 27 assay descriptions
+U3.4	-	NOT A CLAIM	
+U3.5	T	OK	266 LTK / 103 CHO, CHEMBL3425450 2015 verified
+U3.6	T	ADD	the two rows also differ in method: Q-patch (15244127) vs manual patch (15244891)
+U3.7	T	OK	266/200=1.33; two of three systems are oocytes (wording)
+U3.8	T	OK	
+U3.9	T	OK	no delta-specific row in the 4-type table
+U3.10	T	MUST CHANGE	"only functional human value" overturned by two human functional rho1 rows (1925499, 1925516); "no row exists in ChEMBL" rests on a table limited to IC50/Ki/Kd/EC50 (UNSETTLED part)
+U3.11	T	OK	
+U3.12	T	OK	
+U3.13	T	MUST CHANGE	IC50 range is 31.5 to 130 nM; 160 nM is a Ki
+U3.14	T	OK	8 rows
+U3.15	T	OK	
+U3.16	T	MUST CHANGE	three multi-subunit complex rows carry specific symbols, not every alpha subunit
+U3.17	T	MUST CHANGE	two rat TBPS binding rows (1183517, 15244147), not one
+U3.18	T	OK	
+U3.19	S	ADD	abstract of 11232855: rat, monkey, dog, human plasma; 30552296 abstract reports PK with higher brain penetrance than ALLO
+U3.20	S	ADD	30552296 abstract: PK studies, GNX higher brain penetrance than allopregnanolone (no value)
+U3.21	R	UNSETTLED	search counts not delivered
+U3.22	S	ADD	label pediatric section has juvenile rat dosing from PND 7 with AUC comparison; pediatric patient PK
+U3.23	S	ADD	title truncated (omits "of ovariectomized rats"); abstract: adult OVX rats, lysolecithin remyelination
+U3.24	S	ADD	same pediatric section: below 2 years not established; PND 7 neuronal death in juvenile rats
+U3.25	S	ADD	juvenile exposure statement, see U3.22
+U3.26	T	ADD	19 rows ok; sixth non-GABA-target row: 927988 (target CHEMBL376 Rattus norvegicus)
+U3.27	T	ADD	335 uM row flagged Outside typical range; 801235 potential_duplicate=1; 1739814 IC50 has no value; 927988 target not GABA-A
+U3.28	T	OK	
+U3.29	S	ADD	abstract: adult not stated; peak CNS 0.7-3 uM by microdialysis, t1/2 28 min
+U3.30	S	UNSETTLED	search count not delivered
+U3.31	R	UNSETTLED	0-record search and SCI delegate report not delivered
+U3.32	S	OK	NO_MATCH_FOUND label delivered
+U3.33	S	MUST CHANGE	free brain exposure: 17362924 reports CNS concentrations by microdialysis (extracellular)
+U3.34	T	OK	
+U3.35	S	MUST CHANGE	gaboxadol "no free brain exposure" overturned by 17362924 microdialysis; juvenile part see U3.22
+U3.36	T	OK	14000/266=52.6, /260=53.8, /200=70, /103=135.9, /100=140

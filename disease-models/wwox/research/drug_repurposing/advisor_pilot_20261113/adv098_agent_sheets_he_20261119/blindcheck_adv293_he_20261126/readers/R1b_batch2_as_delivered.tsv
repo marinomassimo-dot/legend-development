@@ -1,0 +1,59 @@
+U2.1	-	NOT A CLAIM	conclusion heading
+U2.2	T	ADD	six rows and 26.05-fold verified; no temperature in any of the six descriptions; 11.2 and 2.5 uM come from one document (CHEMBL5126610), 4.5-fold apart
+U2.3	T	OK	four values and document verified; journal name not delivered
+U2.4	T	ADD	both Rb+ efflux in CHO but detection differs: 86Rb scintillation (ICA) vs atomic absorption Rb+ (ezogabine)
+U2.5	T	MUST CHANGE	ezogabine 0.43 uM row (5299044) is atomic absorption Rb+ efflux, not 86Rb+ efflux
+U2.6	T	OK	14.3 and >100 uM, same document CHEMBL2046284
+U2.7	-	NOT A CLAIM	heading
+U2.8	T	OK	row verified; "patent" not stated in table (assay text patent-style)
+U2.9	T	ADD	ezogabine also has a FluxOR row: 24783302, 11.2 uM, KCNQ2/KCNQ3, CHO, 2022
+U2.10	-	NOT A CLAIM	heading
+U2.11	T	OK	
+U2.12	T	ADD	0.35 uM twice in 2018: 18673034 potential_duplicate=1; mouse 1.3 uM appears in four rows, two flagged duplicate
+U2.13	T	OK	
+U2.14	T	OK	32 rows, 13 human KCNQ2/3, 11 other (target, target organism) pairs verified
+U2.15	T	ADD	141 uM plasma row 24863779 flagged Outside typical range; journal/HN37 not delivered
+U2.16	S	OK	abstract facts true; 3.58 uM and "not the HN37 paper" not checkable
+U2.17	S	ADD	abstract says "plasma and brain levels"; it does not say total vs free
+U2.18	S	OK	
+U2.19	S	ADD	abstract tests retigabine only (no class); 24 h schedule is the abstract wording
+U2.20	S	ADD	25319542 abstract: brain-to-plasma ratio RTG 0.16, P-RTG 2.30; 18773196 abstract: free plasma/total brain of partner drugs only
+U2.21	S	OK	NO_MATCH_FOUND delivered; "withdrawn" from memory, flagged as such
+U2.22	S	OK	
+U2.23	R	UNSETTLED	negatives without a dated search
+U2.24	T	OK	
+U2.25	T	OK	holds for the 1-row, 4-type table
+U2.26	S	UNSETTLED	search counts not delivered; PMID 31568714 fact true (human TMS study)
+U2.27	R	UNSETTLED	negative without a dated search
+U2.28	S	UNSETTLED	no azetukalner label in packet
+U2.29	T	OK	
+U2.30	T	ADD	6 rows, 3 Kv7 ok; the other 3 are IC50 >30 uM at hERG, Nav1.5, L-type Ca (same document)
+U2.31	R	UNSETTLED	search counts not delivered
+U2.32	-	NOT A CLAIM	
+U2.33	T	OK	
+U2.34	R	UNSETTLED	search counts not delivered
+U2.35	R	UNSETTLED	no label search delivered
+U2.36	T	ADD	"only" holds among these four agents; P-RTG (25319542) also has MES and brain distribution; scope not stated
+U2.37	T	OK	11200/430=26.05
+U2.38	T	ADD	ICA-069673 has 6 rows (3 Kv7), not three
+U2.39	T	OK	
+U2.40	S	UNSETTLED	PubChem not delivered
+U2.41	S	UNSETTLED	ChEMBL structure record not delivered (formula C11H6ClF2N3O fits the SMILES)
+U2.42	S	UNSETTLED	rests on U2.40 and U2.41
+U2.43	T	OK	rows verified as read; identity not checkable
+U2.44	R	UNSETTLED	SCI report not delivered; Kunming plasma 20.04 uM in table only
+U2.45	-	NOT A CLAIM	
+U2.46	S	OK	abstract: three times over 24 h, 15 mg/kg
+U2.47	S	UNSETTLED	full text not delivered
+U2.48	S	UNSETTLED	full text not delivered
+U2.49	-	NOT A CLAIM	
+U2.50	-	NOT A CLAIM	pointer
+U2.51	-	NOT A CLAIM	
+U2.52	R	UNSETTLED	repository file not delivered
+U2.53	R	UNSETTLED	repository file not delivered
+U2.54	-	NOT A CLAIM	
+U2.55	R	UNSETTLED	repository file not delivered
+U2.56	S	UNSETTLED	full text not delivered
+U2.57	S	UNSETTLED	full text not delivered; 330/303.33=1.09, 1296/303.33=4.27, 2013/303.33=6.64 uM (MW from general knowledge) agree
+U2.58	S	UNSETTLED	full text not delivered
+U2.59	-	NOT A CLAIM	
