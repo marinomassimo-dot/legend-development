@@ -33,8 +33,6 @@ In a separate Oli-neu uptake comparison (n=6 cultures per group), the mean total
 
 Run `python3 -B replay_yang.py PATH_TO_PUBLISHER_SUPPLEMENT.docx`. The DOCX was distributed alongside the CC BY-NC-ND 4.0 manuscript (SHA-256 f07f58b7db350443a4e11025da80b18e5d87971a633c872e5fa9884d5545265a). The repository carries the independently derived summaries and recipe.
 
-## Active checkpoint
+## Disposition
 
-The developing-rat experiment supports transfer of the supplied acetyl carbon into forebrain metabolites. The WWOX comparison locates a repeated CRAT RNA decrease and a nonconserved CROT alternative. A selective mitochondrial rescue remains a hypothesis. At measured intact C2 exposure, the discriminating observation would be a rapid increase in the absolute amount of mitochondrial M+2 acetyl-CoA and M+2 citrate before improved ATP and evoked function after washout, with free CoA preserved. A labeled cytosolic product with unchanged neuronal function, recreation by C0 plus labeled acetate, or loss of free CoA and glucose-derived acetyl flux shifts the decision away from that mechanism. Separate mitochondrial fractions and cell types and check recovery of uptake and inhibition after washout. [Controls and failure conditions](pretest_20261126.md)
-
-**Next check.** Compare stages in the held WWOX myelinating models to pick a recipient for the C2 versus C0 plus acetate comparison. Verify whether the OCTN2 and CRAT tests isolate a C2-specific interaction and whether a non-WWOX neural result overlaps a measured post-oral human central exposure. An independent review could change priority if that overlap is supported but isotope identity or compartment remains ambiguous. Without that bridge, finish as a mechanistic comparator and require a WWOX-selective flux–function response to reopen trial priority.
+Parked for pediatric WWOX trial priority. Retain a preclinical carbon-routing comparison. The 100 µM glial membrane result and 2 mM differentiated respiration result lack a measured pediatric central exposure bridge and a crossed, stage-matched WWOX functional test. [Final stage and exposure decision](stage_exposure_and_disposition_20261126.md)
