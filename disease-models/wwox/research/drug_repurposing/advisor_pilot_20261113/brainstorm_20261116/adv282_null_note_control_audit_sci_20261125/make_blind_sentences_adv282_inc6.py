@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Blind reader's file for ADV-282 increment 6: verbatim repository note per id plus the WHOLE held source; nothing from the first reading. Run from the repository root; argument: output path (python3 -I -P -E)."""
 import glob, json, sys
 from pathlib import Path
