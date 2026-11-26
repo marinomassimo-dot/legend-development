@@ -4,6 +4,8 @@
 
 **Decision at opening.** Retain trehalose as a test of completed autophagic turnover and glucose handling. Direct neuronal data support a late clearance limit at high nominal exposure in one system. Separate intracellular intact exposure from meal or formulation effects before treating a report of more LC3 or p62 as evidence of greater flux.
 
+**Final disposition.** Pediatric WWOX trial priority deferred. The follow-up quantifies parent exposure, compares the reporter with cargo and native function, and defines conditions for reopening. [Exposure, flux and disposition](route_and_flux_20261126.md)
+
 ## WWOX expression distinguishes uptake from the degradation step
 
 | Prospective marker | P17 mouse cortex TPM | P17 mouse hippocampus TPM | Human week-15 organoid CPM |
