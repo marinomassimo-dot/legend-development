@@ -1,0 +1,29 @@
+file	sha256	used_for
+/home/desktop/legend-development/files/fulltext/PMID37897534_Cheng2023_PMC.xml	e75eb12decfb3dddafda9b469101e416bd5130734dc8d86dfdf0d8b8cc273946	DA-L01-005 article text
+/home/desktop/legend-development/files/fulltext/PMID37897534_assets/18_2023_4950_MOESM1_ESM.pdf	89653dae975c423398eca32c001b9ba15608e10952890465a89365503a28e118	DA-L01-005 Supp Fig 8 (page 15 rendered)
+/home/desktop/legend-development/files/figures/PMID37897534/18_2023_4950_Fig6_HTML.jpg	dc6f6f67de1672decbed38cab896c91936738d0d3982f1e4374b1bbed74b66e9	DA-L01-005 Fig 6 viewed
+/home/desktop/legend-development/files/fulltext/PMID37319242_Gupta2023_PMC10270616_epmc_2026-10-29.xml	5e10695cf7f309324d0c36c6ecdf75d6d25bab7385bbc92da7315e1692e9b7f1	DR-A02-010 006 007 article and legends (figure images not held)
+/home/desktop/legend-development/files/fulltext/PMID39041895_Mijatovic2024_PMC11264351_epmc_2026-10-29.xml	ec2a0d1b25f8e85d1a9e2c228711fcd4d887ca22b22b318b7bed7f1d289bc39a	DR-A02-006 summary sentences
+/home/desktop/legend-development/files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml	ce24646e70385a7a7c962a99cb62bdb48c41a69ccfc2154166ef414c4ac72dfd	DR-A01-007 article text
+/home/desktop/legend-development/files/supplement/PMID30266908/41467_2018_6507_MOESM1_ESM.pdf	26434c3351f4c0f84b2de802244c297dec039abfc16af4dc43231264fd62631f	DR-A01-007 Supp Fig 12 (page 19 rendered)
+/home/desktop/legend-development/files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml	5c891d7f4c690a384da794b691d4bc50488adc5b7daa621d9c20040f72507374	DR-B01-002 article text and legends
+/home/desktop/legend-development/files/fulltext/ketamine_kds_it_20261117/p4_harms/PMID41288262_Wang2026_europepmc-fulltextxml.xml	b14972ddaa3f7442eda7f26f6efeb0334a60886edd38bb596acc7bf5f61fe298	DR-P9-009 full text
+/home/desktop/legend-development/files/fulltext/ketamine_kds_it_20261117/p4_harms/txt/PMID41288262_Wang2026_abstract.txt	55dcf33ebe7b99246875f6f2f5166e09749afe0ad78b241679282085302b17e7	DR-P9-009 abstract
+/home/desktop/legend-development/files/fulltext/PMID42652189_Alekseeva2026_PMC.xml	075891751a76ba1fdba5de03a7b8926cbec60d7288fa213dd6c4f101ae4b904d	DR-W2-004 article text
+/home/desktop/legend-development/files/fulltext/PMID24321005_ADV272_PMC4102583_pmcpage_20261125.html	db4a171a15306b811712b6e53d4c6c908162b4b872c191c5ee5c72a46da7179c	DR-H02-008 full text page
+/home/desktop/legend-development/files/fulltext/adv056_it_20261118/B/PMID19054414_x2009_europepmc_core.json	29706b8aaef84a96f8973385c9e2d024041fc1c4632910266ea58b78c2278b6a	DR-H02-030 abstract
+/home/desktop/legend-development/files/fulltext/ketamine_kds_it_20261117/p6_metabolic_ocular/LABEL_memantine_openfda.json	082b999f581e82ee5c12b1606f986ce625579b0557005b2c009a57ba2635bc90	DR-P9-010 label
+/home/desktop/legend-development/files/geo/GSE158681/GSE158681_Wwox_mutant_Hippo_RNA_TPM_Table.txt.gz	52ff4f078fc3d7600dceb716ddb26bbb2c6bb4134736a388a39d10915399e483	DA-K01-007 recompute
+/home/desktop/legend-development/files/geo/GSE158682/GSE158682_Wwox_neuronal_Del_Cortex_RNA_TPM_Table.txt.gz	77aecf5cdd194ad638e2e7c5886e04f2583d6c425c6dea22ed3b131be2e8060f	DA-K01-007 recompute
+/home/desktop/legend-development/files/reference_ensembl_r92/Mus_musculus.GRCm38.cdna.all.fa.gz	7d2fcb0cbe069c08eff61a77a056f76baadad5f112dcc4e9dd7888832084e3e7	DA-K01-007 transcript symbols
+/home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID16651305_efetch.xml	76f7f1440adcb5e2740c15b56c024478d37f865c4c3da21c6d8c4dfa0a60402a	abstract fetched 2026-11-26 (NCBI efetch, no e-mail)
+/home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID16765624_efetch.xml	4c0a0024903e67902c851a07b55a01ddcf2e5bbf04564392030aaaa7c8d2d898	abstract fetched 2026-11-26 (NCBI efetch, no e-mail)
+/home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID1940119_efetch.xml	7203f74660c47cda451fef524056f23917d0df2a452b43c7c8346e5f01b83fd3	abstract fetched 2026-11-26 (NCBI efetch, no e-mail)
+/home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID2757909_efetch.xml	506b43209924a079ede072adcf8da18bd1668ee566357676a8e21e9790294214	abstract fetched 2026-11-26 (NCBI efetch, no e-mail)
+/home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID2767014_efetch.xml	01e57c98672dc8b44e3c1b6b926bd4f25546977f46350dafbf197f33dd87f8c7	abstract fetched 2026-11-26 (NCBI efetch, no e-mail)
+/home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID29913407_efetch.xml	6851c56549bed22db18fe340d5669d08d3afff65007d9cb8d1fbbb0cced537cb	abstract fetched 2026-11-26 (NCBI efetch, no e-mail)
+/home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID31349008_efetch.xml	8743061b04d209f70dd17eff302d020034a7b4856e99440878c51051e20d1485	abstract fetched 2026-11-26 (NCBI efetch, no e-mail)
+/home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID35980256_efetch.xml	264a4e7e836626aef5ba8118f8d2b896020197d4022121d97be22d529a2a3063	abstract fetched 2026-11-26 (NCBI efetch, no e-mail)
+/home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID42179084_efetch.xml	1f85331cbedad20e321eeba9aa5bfabec292815cd66f647079959f31db76e59d	abstract fetched 2026-11-26 (NCBI efetch, no e-mail)
+/home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID42771346_efetch.xml	9130bcc462bb424674c4efe677e323187c2200b40f77874c7771da93d43b8695	abstract fetched 2026-11-26 (NCBI efetch, no e-mail)
+/home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID42939870_PMC13701765_epmc_20261126.HTTP503.html	b429e25e7813a9e2b90dcec11d9cb5287751246128dd6c76a7349774829c5554	Europe PMC fullTextXML for PMC13701765: HTTP 503 error page, not a source (route result); DR-L01-003 NOT ASSESSABLE
