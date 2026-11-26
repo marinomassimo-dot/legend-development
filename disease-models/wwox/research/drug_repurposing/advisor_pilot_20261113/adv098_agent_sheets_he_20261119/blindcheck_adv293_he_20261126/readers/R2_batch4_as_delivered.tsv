@@ -1,0 +1,34 @@
+U4.1	T	MUST CHANGE	"no ketamine-memantine potency order is readable" overturned for GluN2B in CHEMBL6083260: ketamine stronger at both potentials (510 vs 780 nM at -60; 15.2 vs 25.6 uM at -40); only GluN2A flips (500<840 nM; 53.3>28.1 uM); 30-100x ok (29.8-106.6x); part R unsettled
+U4.2	R	OK	design rule
+U4.3	T	OK	8 values ok; only doc with both agents on 2A+2B by patch clamp (other docs with both: CHEMBL1157915 2010 LDH, CHEMBL6115009 2025 FLIPR)
+U4.4	T	OK	29.8x-106.6x; mechanism parenthesis not in packet
+U4.5	T	ADD	true for GluN2A; add GluN2B does not reverse
+U4.6	T	MUST CHANGE	"it flips" only GluN2A; GluN2B no flip; CHEMBL3232957 oocytes -40 mV has ketamine 3.31 < memantine 4.36 uM (ketamine stronger at same -40 mV)
+U4.7	T	OK	memantine 4 rows in doc differ only -60/-40 mV; batch 1 remark not delivered
+U4.8	S	OK	judgement
+U4.9	S	UNSETTLED	competitive/Mg-voltage mechanism not in packet; ChEMBL d-AP5 text indeed has no agonist concentration
+U4.10	S	OK	judgement
+U4.11	T	OK	no Mg2+ concentration in any row of the 3 tables; other "routes" not delivered
+U4.12	T	OK	
+U4.13	T	OK	Mg2+ named only in 11 ketamine [3H]MK801/TCP Ki rows of CHEMBL4680282
+U4.14	T	ADD	one patch-clamp row names no potential: memantine 18854870 (CHEMBL4304786)
+U4.15	-	NOT A CLAIM	plan
+U4.16	-	NOT A CLAIM	heading
+U4.17	T	MUST CHANGE	22 rows true, "not 25 measurements" wrong: 22 (25 is the count of numeric Ki rows in the whole table, 3 of them different values)
+U4.18	T	OK	
+U4.19	T	ADD	third ratio-like row: 1500111 Ki 280 nM (NR2B compared to NR2C = 460/1640 = 0.28); 21 and 19 counts ok
+U4.20	T	OK	
+U4.21	T	OK	6.09x on 2B (2D 5.66x)
+U4.22	T	MUST CHANGE	Ki 3.83 uM is rat brain synaptic membranes with L-[3H]glutamate (1522869), not cortical membranes
+U4.23	T	OK	
+U4.24	R	OK	own search scope
+U4.25	R	UNSETTLED	label none/not searched not in packet
+U4.26	T	MUST CHANGE	0.86 uM is [3H]TPC displacement (213208), MK-801 rows are 0.61, 0.61, 0.70; counts 342/40/18 ok
+U4.27	T	ADD	0.5-53 uM is NMDA-subunit rows only; whole-table IC50 values reach 2,300 uM
+U4.28	T	OK	140 distinct (target, species) minus 5 human GRIN pairs = 135
+U4.29	R	UNSETTLED	repository pointer
+U4.30	-	NOT A CLAIM	pointer
+U4.31	R	UNSETTLED	batch 1 sentence not delivered; 4 memantine rows in doc ok
+U4.32	T	ADD	oocyte -40 mV in CHEMBL3232957 gives ketamine 3.31 uM, so -40 mV does not fix 30-100x
+U4.33	T	MUST CHANGE	same as U4.6 (flip only GluN2A, not GluN2B, not cross-document)
+U4.34	R	OK	no Mg-matched value true; competitive axis unsettled

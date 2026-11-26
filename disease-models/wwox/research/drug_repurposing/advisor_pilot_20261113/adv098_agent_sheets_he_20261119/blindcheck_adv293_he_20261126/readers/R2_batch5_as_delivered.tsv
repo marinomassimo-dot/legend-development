@@ -1,0 +1,35 @@
+U5.1	S	OK	judgement; targets differ (abstracts, ChEMBL)
+U5.2	S	OK	label MoA: irreversible inhibitor of GABA-T; abstracts: irreversibly inactivating; NKCC1 transporter per abstracts
+U5.3	T	OK	heading; rows differ 0.29-10000 mM Ki and 40-41 uM IC50
+U5.4	S	OK	"inactivation constant" appears in row 22898189; enzymology rule itself not in packet
+U5.5	T	ADD	0.85 mM row is assay_organism Cavia porcellus (target human); 12173263 assay organism blank; "rat brain homogenate" for 41 uM not stated (row says rat brain GABA-AT); all 7 Ki flagged Outside typical range, 12045281 and 27197495 potential_duplicate=1; values/years/docs all correct
+U5.6	T	ADD	species does not decide: rat Ki 10 mM vs rat IC50 41.2 uM (243x), pig Ki 3.2 vs 0.29 mM (11x), human 0.85 vs 3.2 mM (3.8x)
+U5.7	T	OK	
+U5.8	T	OK	one NKCC1 (SLC12A2) row in 28
+U5.9	T	OK	24996400, 1540 nM, HT-29, Rb uptake 20 min, AAS, CHEMBL5230131, 2020
+U5.10	T	OK	no SLC12A1 row; rodent rows exist only for other targets; routes other than this ChEMBL query not delivered
+U5.11	T	OK	
+U5.12	T	OK	pointer; ABAT human, pig, rat, mouse present
+U5.13	T	ADD	15 and 9 correct; the 3 "human" are by target species: assay organism of the three = guinea pig, blank, human
+U5.14	T	OK	4 rows >133 uM, 2 rows >20 / >19.95 uM
+U5.15	T	OK	judgement; W&C 5.1 of label has retinal text
+U5.16	S	MUST CHANGE	title of 30631446 quoted wrongly ("pot[ential retinal toxicity]"); real title ends "associated with potential use-limiting visual field defects"; other PMIDs/years ok
+U5.17	R	UNSETTLED	search count 85 and "first six" not in packet
+U5.18	R	UNSETTLED	negative about routes, no dated search
+U5.19	S	UNSETTLED	"usual measure" not in packet
+U5.20	S	MUST CHANGE	newest vigabatrin label in packet is 2026-06-15 (others 2024-11-18, 2020-03-17), not 2024-11-18; infantile spasms is listed in all 3 delivered indications sections, not only "other labels"; "boxed warning" section not delivered (W&C 5.1 text supports permanent vision loss, bilateral concentric field constriction, central retina)
+U5.21	T	OK	table has no in vivo row; juvenile and ABAT-at-brain-concentration negatives unsettled
+U5.22	T	OK	28 rows; NKCC1 1.54 uM
+U5.23	T	ADD	list omits MRP3 and MRP4 IC50 >133 uM (18130395, 18130995; CHEMBL4028801, 2013); all values listed correct; 18129225 BSEP >133 potential_duplicate=1; BSEP/MRP/CA III rows flagged Outside typical range
+U5.24	-	NOT A CLAIM	status tag
+U5.25	T	OK	no SLC12A1 row in this query
+U5.26	T	OK	6.98/1.54 = 4.5, different docs (2024 vs 2020)
+U5.27	S	MUST CHANGE	25463517 title is "...on newborn DGC structure and spontaneous EEG seizures following hypoxia-induced neonatal seizures" and the study is in Wistar rats (not mice); 28192112 title ends "in the mammalian brain"; other titles, PMIDs, years correct
+U5.28	S	ADD	abstracts hold numbers: 33279441 free brain bumetanide in NKCC1-inhibitory range at 10 mg/kg iv in mice (6-17% free); 25449033 brain:plasma ~0.015-0.02; 25490899 hippocampal ECF 131 +/- 55 ng/ml vs plasma ~20 mg/l; 28192112 and 25463517 say brain levels too low
+U5.29	S	ADD	33711029 is a CLP290/midazolam neonatal rat (P7) sedation paper, no bumetanide exposure measurement (bumetanide only in the authors' previous work)
+U5.30	R	UNSETTLED	negative about routes; 25463517 abstract says brain concentrations were measured after P10 dosing (free fraction not stated)
+U5.31	S	MUST CHANGE	newest bumetanide label in packet is 2026-01-27 (others 2025-01-08, 2023-06-30), not 2025-01-08; pediatric text ("below the age of 18", bilirubin displacer) is in two labels only; "in adults" not in indications text
+U5.32	S	UNSETTLED	boxed warning section not delivered; warnings text begins "Volume and Electrolyte Depletion ... profound water loss" cut at 2,000 chars
+U5.33	T	OK	NKCC2 and single-assay negatives true for the table; literature/free brain negatives unsettled
+U5.34	S	OK	judgement; "boxed" not delivered but W&C 5.1 supports permanent vision loss
+U5.35	T	ADD	one NKCC1 row true; "literature saying brain exposure is the limit" is one-sided: 33279441 abstract says free brain concentrations of bumetanide were in the NKCC1-inhibitory range at 10 mg/kg iv in mice; numbers sit in abstracts, not only behind titles
