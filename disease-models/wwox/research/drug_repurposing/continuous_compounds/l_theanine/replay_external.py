@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Replay exposure ratios and within-study mouse contrasts from published summary data."""
 
 import csv
