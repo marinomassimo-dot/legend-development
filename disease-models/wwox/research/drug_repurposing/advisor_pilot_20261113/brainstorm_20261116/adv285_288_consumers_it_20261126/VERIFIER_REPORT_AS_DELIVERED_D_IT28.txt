@@ -1,0 +1,111 @@
+BLIND VERIFICATION REPORT, PACKET D (IT28; hypothesis level; nothing here is medical advice)
+
+**Opened and read in full**
+- Cheng 2020 PMC XML, all 17 lines, including Methods, Statistical analysis, Results, legends and Discussion.
+- Cheng Fig 2 PNG, viewed.
+- Palma 2022 PMC XML, whole file.
+- Palma Fig 2 JPG (fcell-10-841548-g002.jpg), viewed.
+- Repudi 2021 operator-supplied TXT, whole file.
+- Repudi OUP PDF page 27, rendered with pdftoppm and viewed at 130 dpi and again at 400 dpi cropped on Fig 5D. Render files are in /tmp/blindD_render, outside the repository.
+- No other repository file, no network, nothing written into the repository.
+
+**Summary table**
+
+| Block | Verdict | Core finding |
+|---|---|---|
+| K1 | MUST CHANGE (minor wording) | All preceding numbers and all bracket readings verified. "Normal amplitude" says more than "n.s., n = 5". |
+| K2 | MUST CHANGE | (a) Repudi does not call N2 "unmyelinated-fibre"; that label comes from Palma. (b) "A pro-myelinating class" generalises from one drug. (c) Palma's text gives p < 0.01 while the figure legend gives *p < 0.05; this is not shown. |
+| K3 | MUST CHANGE | The order of the Repudi animal counts contradicts the order of the latencies. "Class" is a one-drug generalisation. "Only" is an inference, and "none has both" is ambiguous. |
+| K4 | MUST CHANGE (minor wording) | Same "normal amplitude" issue. The rest stands. |
+
+---
+
+**BLOCK K1**
+
+Preceding numbers, all STAND:
+- Cheng Results "Nerve degeneration…" paragraph: WT latency 1.39 ± 0.13 ms (n = 10), het 2.13 ± 0.22 ms (n = 5, p < 0.05), null 2.44 ± 0.37 ms (n = 4, p < 0.01).
+- Amplitude: 59.2 ± 9.0, 59.6 ± 17.2 and 11.8 ± 5.4 µV.
+- Age: 3 weeks (Fig 2 legend).
+- Anaesthesia: chloral hydrate (Methods).
+- Error bars: SEM (Methods and legend).
+- "One laboratory": no contradiction found.
+
+Fig 2 readings, viewed and all matching:
+- Fig 2c latency, bars at about 1.4, 2.1 and 2.4 ms. Brackets: WT–null **; WT–het *; het–null "n.s.".
+- Fig 2b amplitude, bars at about 59, 60 and 12 µV. Brackets: WT–null *; WT–het "n.s."; het–null *.
+- The packet's statement of the brackets is correct.
+
+Clause grading:
+- "the authors write 'a partial Tc-MEP deteriorative change'": STANDS. The Results sentence is "Wwox haploinsufficiency may cause a partial Tc-MEP deteriorative change". The "may" is dropped, but the quotation is a fragment.
+- "Methods name only a one-way ANOVA with no post hoc test": STANDS (Statistical analysis section). The test behind the brackets is indeed unnamed.
+- "heterozygotes are not shown to differ from nulls on latency": STANDS.
+- "Methods define latency as shock-artefact onset to the major positive peak": STANDS, near-verbatim. The Results call the same quantity "onset latency".
+- "knockout line … not stated": STANDS. The Methods and Fig 1 name two lines (WD1 exon 1, WD234 exons 2/3/4). The Tc-MEP paragraph and the Fig 2 legend name neither.
+- **"with normal amplitude": MUST CHANGE (minor).** The authors write "comparable" and "no changes in amplitude", but the bracket is n.s. with n = 5 and SEM 17.2 on a mean of 59.6. That is no detected difference, not shown normal.
+  - Replacement: "with amplitude not different from wild type (59.6 against 59.2 microvolts, n.s.; n = 5, large spread)".
+- Optional ADD: "Results label the measure 'onset latency', while the Methods define it to the major positive peak". Without this a reader may take "onset" literally.
+
+---
+
+**BLOCK K2**
+
+Added sentences, clause by clause.
+
+- "single-distance first-peak latency (no velocity)": STANDS.
+  - Repudi Fig 5D legend: "(i) recording at a vertical distance of 250 µm from the stimulator". Panel (ii) is "Latency to N1 and N2 from the onset of the stimulus". No velocity is reported.
+- "the unit is the slice": STANDS. Legend: "n = 8 slices, five subjects; S-Control; n = 8 slices, six subjects S-KO", with Wilcoxon rank sum on slices. The preceding 5 and 6 animals are correctly assigned to control and knockout.
+- N2 latency "not different (P = 0.5737)": the number STANDS, as does the Wilcoxon rank-sum test. Fig 5D(ii) shows an "n.s." bracket on N2, and the legend gives "N1 *P = 0.0104; N2 = 0.5737".
+- **"N2 (unmyelinated-fibre) latency": MUST CHANGE.**
+  - Repudi never defines N2 as unmyelinated fibres. The text only says "amplitude ratio of N1 and N2" and "latency to N1 and N2". The unmyelinated label is Palma's (Results "unmyelinated axons (N2)"). Palma's own Methods say "partially myelinated fibers N2".
+  - **Fig 5D(ii) read-offs (viewed).** N1 latency: control about 2.5 ms and knockout about 3.2 ms. N2 latency: control about 6.7 ms and knockout about 8.3 ms, with a very wide spread of about 3.5 to 16 ms. So "within-slice control" rests on a non-significant result with low sensitivity. The knockout N2 mean is higher in the same direction.
+  - Replacement: "the N2 (second-peak) latency, whose identity is not defined in Repudi 2021 (the unmyelinated or partially myelinated label is Palma's) and which is not significantly different (P = 0.5737; wide spread, n = 8 slices per group), is a candidate within-slice control that the brief does not yet carry".
+  - The clause "the brief does not yet carry" is OUTSIDE.
+- **"in healthy developing wild-type mice a pro-myelinating class (clemastine, Palma 2022) slowed callosal N1 conduction velocity (P < 0.05 as read from the figure)": MUST CHANGE.**
+  - "Class" is a generalisation: only clemastine was tested, in one laboratory, in C57BL/6 wild type.
+  - Palma Fig 2B (viewed): N1 control about 0.50 and clemastine about 0.43 on an axis printed "Velocity (mm/s)", with a single asterisk on N1. N2 is about 0.275 in both groups, unmarked. The figure legend says "*p < 0.05". The Results text says "p < 0.01, n = 10–12".
+  - Unit is the mouse (legend: n = 12 vehicle, 10–12 clemastine; each mouse averaged over at least four sections). Palma Methods say daily treatment from P5 and recording at P21.
+  - Replacement: "in healthy developing wild-type mice the pro-myelinating drug clemastine (one compound, Palma 2022; daily from P5, slices at P21; one animal as unit, n = 10 to 12) slowed callosal N1 conduction velocity (about 15 percent as read from Fig 2B; * in the figure, P < 0.05 by its legend; the text states p < 0.01; Methods name a paired t-test for the between-group comparison)".
+  - The "about 15 percent" is my own graph read (0.428/0.505). The 10 percent stop-rule threshold is therefore smaller than the Palma effect.
+- "a wild-type drug-only arm is needed before a knockout effect can be read as rescue": a design inference. Palma's slowing supports it.
+- "9 to 24 animals per arm", "ratio 1.29 or 0.78": derived arithmetic, UNSETTLED, not checkable from the sources.
+  - My rough re-derivation from Palma Fig 2B (control SD about 0.10, clemastine SD about 0.04, difference about 0.08) gives about 17 per arm with the pooled SD and about 28 with the control SD alone. The detectable ratio at n = 12 comes to about 0.77, which agrees with 0.78.
+  - So "24" is plausible but not exactly reproduced. This depends on small-image graph reads, and the derivation rule is not in the packet.
+- Candidate arm set (electrode distances, P17 to P21, pilot, 10 percent stop rule): design statements, not source claims. OUTSIDE or design-level.
+  - Palma used four distances (500 to 2000 µm); "at least three" is a design choice.
+  - Palma's own Methods call the comparison a "paired Student's t-test" for two independent groups, so a reader may want that caveat.
+- "no held source gives a conduction readout with a drug arm in a Wwox-deficient model" and "no WWOX patient report … on two routes": OUTSIDE.
+
+Optional ADD: Repudi recorded in neocortical layer V after callosal stimulation (Methods: "stimulated the corpus callosum and recorded from neocortical layer V"). It was not recorded within the callosum.
+
+---
+
+**BLOCK K3**
+
+- Cheng clause: STANDS. Germline-null mouse, 3 weeks, amplitude 11.8 against 59.2 µV, onset latency 2.44 against 1.39 ms, 4 against 10 animals. The order is null first, WT second throughout, and the numbers match. It omits SEM and P, which is acceptable.
+- **Repudi clause: MUST CHANGE (order).** "about 3.2 against 2.5 ms … 8 slices from 5 animals against 8 from 6" runs knockout first for the latencies. Applied in the same order, the animal counts read as 5 animals for knockout and 6 for control, which is the reverse of the legend (5 control, 6 knockout).
+  - Replacement: "(about 3.2 ms in knockout against 2.5 ms in control, read from the graph; 8 slices from 6 knockout animals against 8 slices from 5 control animals; Repudi 2021, Fig 5D)".
+- "neither separates a myelin cause from an axonal or excitability cause": interpretation, STANDS as a caution. Optional ADD: the Tc-MEP path includes peripheral nerve and muscle, and the same paper reports sciatic demyelination in nulls (Fig 3). The Cheng Tc-MEP therefore mixes central and peripheral conduction.
+- "In healthy developing wild-type mice a pro-myelinating class (clemastine) slowed … (P < 0.05 as read from the figure)": MUST CHANGE, same as K2. Name it as one compound and add that the text says p < 0.01.
+- **"informative only with a wild-type drug-only arm and a conduction readout, and today none has both": ADD or MUST CHANGE (minor).**
+  - "Only" is an inference of the repository, not a source finding.
+  - "None has both" is ambiguous. Palma itself has both, in wild type. The intended meaning is that no Wwox-deficient study has both.
+  - Replacement: "so a pro-myelinating comparison in a Wwox-deficient model is more informative with a wild-type drug-only arm and a conduction readout; no Wwox-deficient study held has both".
+  - The holdings clause is OUTSIDE.
+- "two Wwox-deficient mouse models … in held full text, with no drug arm": OUTSIDE (holdings).
+
+---
+
+**BLOCK K4 (ordering-page row)**
+
+- "prolongation against wild type": STANDS.
+- **"normal amplitude": MUST CHANGE (minor).** Replacement: "amplitude not different from wild type (n.s., n = 5)".
+- "heterozygote-against-null brackets printed, latency n.s. and amplitude *, the test unnamed": STANDS. Fig 2c het–null is n.s., Fig 2b het–null is *, and no post hoc test is named.
+- "Laboratory" and "Candidate, one source": OUTSIDE (repository status).
+- Optional ADD, not required: Repudi reports a different heterozygote readout (neuronal conditional S-HT slices with bursting in 4 of 23 slices, with the legend giving 17 to 20 percent; behaviourally indistinguishable from control). It reports no heterozygote conduction latency, so "one source" for latency is consistent with what I read.
+
+---
+
+**Not done or not reachable**
+- No dose or compound recommendation appears in any replacement wording. Clemastine is named only as the source's drug.
+- I could not reproduce the power numbers exactly. That is the one UNSETTLED item.
+- Fig 5D(iii) point counts were not enumerated. I relied on the legend's n for the slice and animal counts.
