@@ -1,0 +1,11 @@
+panel	analyte	unit	time_h	patient1_y_px	patient2_y_px	top_y_px	top_value	bottom_y_px	bottom_value
+S1A	plasma free Neu5Ac	µmol/L	0	207	206	10	2.90	274	0.40
+S1A	plasma free Neu5Ac	µmol/L	2	94	76	10	2.90	274	0.40
+S1A	plasma free Neu5Ac	µmol/L	4	120	106	10	2.90	274	0.40
+S1A	plasma free Neu5Ac	µmol/L	6	181	120	10	2.90	274	0.40
+S1D	urinary free Neu5Ac	µmol/mmol creatinine	0	170	110	10	60	274	0
+S1D	urinary free Neu5Ac	µmol/mmol creatinine	2	145	139	10	60	274	0
+S1D	urinary free Neu5Ac	µmol/mmol creatinine	6	55	62	10	60	274	0
+S1E	urinary total Neu5Ac	µmol/mmol creatinine	0	562	514	402	100	666	40
+S1E	urinary total Neu5Ac	µmol/mmol creatinine	2	591	532	402	100	666	40
+S1E	urinary total Neu5Ac	µmol/mmol creatinine	6	486	453	402	100	666	40

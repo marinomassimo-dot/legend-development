@@ -1,8 +1,8 @@
 # Free N-acetylneuraminic acid in WWOX loss of function
 
-26 November 2026 · SCI_CODEX · active comparison · [prespecified hypotheses and controls](pretest_20261126.md)
+26 November 2026 · SCI_CODEX · completed comparison · [prespecified hypotheses and controls](pretest_20261126.md)
 
-**Decision at this checkpoint.** Keep free Neu5Ac in the mechanistic work queue and defer pediatric WWOX trial priority. The RNA data weaken the case for a conserved shortfall in de novo synthesis. Prioritize measuring the donor and its use in the same human neural preparation before moving to an exposure or functional rescue study. A derived difference worth testing is whether the same CMP-Neu5Ac supply supports NCAM polysialylation and ganglioside synthesis to different degrees. This would change the interpretation of a total sialic acid measurement.
+**Disposition.** Park free Neu5Ac for pediatric WWOX trial priority. Retain it as a mechanistic tracer and substrate comparator. [Developmental exposure and closure](developmental_exposure_and_disposition_20261126.md) The RNA data weaken the case for a conserved shortfall in de novo synthesis. Prioritize measuring the donor and its use in the same human neural preparation before moving to an exposure or functional rescue study. A derived difference worth testing is whether the same CMP-Neu5Ac supply supports NCAM polysialylation and ganglioside synthesis to different degrees. This would change the interpretation of a total sialic acid measurement.
 
 ## WWOX comparison
 
