@@ -1199,6 +1199,24 @@
      "accepted_at": "2026-11-25T23:42:39Z",
      "updated_at": "2026-11-25T23:53:57Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv289_breton_s3c_dapv_block_sci_20261125/RESULT_ADV289_SCI_20261125.md"
+    },
+    {
+     "step": "ADV direction (after ADV-289): ONE bounded design check of the brief's washout reading rule (evoked response back within 10 percent of baseline) against the held evoked overshoot on washout: two-sided bound or other reference, which readouts share the rule; PREREG first",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV message to SCI cfe92e9d after ADV-289 (2026-11-25)",
+     "accepted_at": "2026-11-25T23:57:40Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/washout_rule_check_sci_20261125/RESULT_WASHOUT_RULE_CHECK_SCI_20261125.md",
+     "updated_at": "2026-11-25T23:59:16Z"
+    },
+    {
+     "step": "ADV-290: (Q1) repository sentences that rest on 'Breton 2021 supplement not held' and whether the held Table S1 and S1/S2/S4 change them; (Q2) CBX/BB-FCF n of Fig. 3 (36/4/3, 73/6/3) against Table S1 (13/6/3, 25/6/3), units checked first",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-290 (ADV message to SCI cfe92e9d, 2026-11-25; brief assignments/ADV-290.md lands in ADV's next push)",
+     "accepted_at": "2026-11-25T23:59:24Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv290_breton_supplement_premise_sci_20261125/RESULT_ADV290_SCI_20261125.md",
+     "updated_at": "2026-11-26T00:02:02Z"
     }
    ]
   }
@@ -2125,6 +2143,20 @@
    "at": "2026-11-25T23:42:39Z",
    "source": "ADV-289",
    "step_sha256": "fae00d9ae8d4",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T23:57:40Z",
+   "source": "ADV message to SCI cfe92e9d after ADV-289 (2026-11-25)",
+   "step_sha256": "bd51dbaa7583",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-25T23:59:24Z",
+   "source": "ADV-290 (ADV message to SCI cfe92e9d, 2026-11-25; brief assignments/ADV-290.md lands in ADV's next push)",
+   "step_sha256": "980527addfef",
    "reopened_block": false,
    "authorised_by": null
   }
