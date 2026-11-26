@@ -1,8 +1,8 @@
 # Ambroxol hydrochloride in WWOX loss of function
 
-26 November 2026 · SCI_CODEX · active comparison · P17 mouse cortical and hippocampal TPM, week 15 human organoid CPM, hippocampal assigned nuclear UMI · [prespecified question and discriminating predictions](pretest_20261126.md)
+26 November 2026 · SCI_CODEX · completed comparison · P17 mouse cortical and hippocampal TPM, week 15 human organoid CPM, hippocampal assigned nuclear UMI · [prespecified question and discriminating predictions](pretest_20261126.md)
 
-**Decision at opening.** Keep ambroxol as a test of lysosomal lipid turnover. The WWOX expression screen provides an alternative to low GBA1 expression: lysosomal delivery of enzyme could be constrained in some stages. Measure localization and activity in the same cells before assigning substrate rescue or clinical priority. If GCase protein is present but lysosomal delivery fails, more total protein would be a weak success measure. [Bulk contrasts](contrasts.tsv) · [Nuclear denominators](nuclei.tsv)
+**Disposition.** Defer ambroxol for pediatric WWOX trial priority and retain it as a comparator for lysosomal lipid turnover. [Cellular comparison and decision](cellular_turnover_and_disposition_20261126.md) The WWOX expression screen provides an alternative to low GBA1 expression: lysosomal delivery of enzyme could be constrained in some stages. Measure localization and activity in the same cells before assigning substrate rescue or clinical priority. If GCase protein is present but lysosomal delivery fails, more total protein would be a weak success measure. [Bulk contrasts](contrasts.tsv) · [Nuclear denominators](nuclei.tsv)
 
 The contrast is knockout minus control mean log2(1 + abundance). Parentheses give the minimum and maximum under one-library omission. These are descriptive sensitivity ranges. The historical symbol GBA in the output corresponds to GBA1 (mouse Gba, Ensembl ENSMUSG00000028048).
 
