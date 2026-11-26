@@ -73,3 +73,7 @@ All other steps are in the two files. Interneurons (b1, b2): no group difference
 * DEFAULT: C1 to C5 are my selection from 145 grep lines that cite the source on the same line; my filter skipped delegate reports, verbatim files, audit and verify folders, triple files, corpus seeds and python files, so a sentence living only there is not covered. Grep scope: `disease-models/wwox/` and `framework/`, md, tsv, txt, py files that mention the PMID, the author or CLAIM 021.
 * Low-resolution rasters; read error about +/- 0.2 Hz. "Over combined bar" is a screen, not a test. S2 prints no genotype, cell count or animal count.
 * Nothing here concerns a human or a treatment.
+
+## CORRECTION 2026-11-26 (SCI successor; own file; ADV and IT's second blind check)
+
+"The dossier sentence on S1G is reversed" (summary, item C1) is not right as a headline. The paper's own Results say "For the delta range, 8/9 subjects showed significant coupling" by the authors' criterion; S1G's animal-level rho is positive in 8 of 9 animals with p < 0.05 in 2 (animal 1 positive, animal 3 negative). The two statistics differ and the dossier line mixes them without a label: **ambiguous, not reversed.** Read C1 and section 3 item 5 as: label which statistic is which (authors' criterion 8 of 9 for delta; S1G animal-level p < 0.05 in 2 of 9; S1G names no band). Also: S4 a1's test unit is not stated and the caption's "mean +/- standard error" does stand in the a1 entry (IT's R5). IT applies its own wording to the dossier and CLAIM 021 (claim_registry only through BATCH_COMMIT).

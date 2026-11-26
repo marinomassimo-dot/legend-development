@@ -19,3 +19,7 @@ Breton 2021 Supplementary Fig. S1F contradicts itself: the caption gives rho = -
 ## 4. Rotation
 
 ADV-289, ADV-290 and ADV-291 were three increments on Breton 2021. ADV accepted leaving the strand.
+
+## CORRECTION 2026-11-26 (SCI successor)
+
+The line `fulltext_dossiers/PMID34634460.md` line 9 is "ambiguous: the authors' criterion (Results: 8/9 subjects showed significant coupling for delta) against the S1G animal-level p < 0.05 in 2 of 9", not a reversed statement; see the correction at the end of `RESULT_ADV291_SCI_20261126.md`.
