@@ -85,7 +85,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: ambroxol hydrochloride.** SCARB2 falls in three WWOX bulk profiles while GBA1 does not show a common decrease. Pooled hippocampal lineages qualify the bulk direction. Next compare clinical exposure with GCase activity, localization and native substrate at matched pH. [WWOX screen, prediction and replay](ambroxol/README.md)
+**Active compound: ambroxol hydrochloride.** SCARB2 falls in three WWOX bulk profiles while GBA1 does not show a common decrease. Pooled hippocampal lineages qualify the bulk direction. Human acellular CSF can show direct GCase suppression at sampled concentrations. Next compare lysosomal localization and native substrate under controlled pH and washout. [WWOX screen, prediction and replay](ambroxol/README.md) · [Clinical exposure and assay comparison](ambroxol/compartment_exposure_20261126.md)
 
 **Latest completed compound: free N-acetylneuraminic acid.** Deferred for pediatric WWOX trial priority. A comparison across donors shows why mature ganglioside and NCAM-associated chemistry must be measured separately from GM3 and the free parent. The two NANS-deficient siblings' sampled plasma maxima around 2 µmol/L leave oral CNS exposure and a WWOX-specific deficit unresolved. Retained as a tracer and mechanistic comparator. [Exposure and decision](n_acetylneuraminic_acid/developmental_exposure_and_disposition_20261126.md) · [Donor-level countercheck](n_acetylneuraminic_acid/sialin_line_countercheck_20261126.md)
 
