@@ -112,3 +112,7 @@ Preliminary reading: every number and every methods statement in the INV-06 bloc
 | S5 | 41664646 | STANDS | every number and methods statement reproduces on the held PDF |
 
 Strict (a) candidates before the blind reader: S1a and S2b (two of five records); both are borderline readings of how a sentence is attached. Strict needs (a) and (b); the blind verdicts decide.
+
+### Addendum to section 3 (first reader, after the blind report; figure re-opened)
+
+Fig 5C of 41178115 (G251D, surface alpha1 by biotinylation, HEK293T, about 4 points per bar): IXA62 about 3.0 (one star), IXA554 about 3.1 (three stars), **IXA105 about 2.3 with no significance mark** (the text gives 2.3-fold). My section 3 listed the three folds without saying that the IXA105 bar is unmarked; the blind reader caught it and the figure confirms it (file `files/figures/PMID41178115/cn5c00227_0005.jpg`). The same figure gives: total alpha1 (5B) all three marked, current (5G, n about 8) all three three stars, confocal surface fluorescence (5E) all three three stars.
