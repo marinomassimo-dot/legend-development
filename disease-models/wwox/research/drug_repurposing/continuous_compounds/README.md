@@ -88,7 +88,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Next compound: trehalose.** The WWOX organoid mTOR and autophagy transcript changes have mixed directions. Start with the contrast between greater completed cargo degradation and accumulation caused by slower clearance, with osmolality, glucose flux and measured intact exposure controlled. The existing osmolyte/protein-folding work addresses a separate residual-protein mechanism. [WWOX autophagy evidence and boundary](../needs/needs.json)
+**Active compound: trehalose.** WWOX organoid mTOR and autophagy transcript changes have mixed directions. GLUT8 changes in opposite directions in whole mouse hippocampus and pooled nuclei. The initial neuronal primary comparison supports a late clearance limit at high nominal exposure. Next check GLUT8 dependence, a positive neuronal flux comparator and measured parent by route. [WWOX comparison, exposure and prediction](trehalose/README.md) · [WWOX autophagy evidence and boundary](../needs/needs.json)
 
 **Latest completed compound: L-ergothioneine.** Deferred for pediatric WWOX trial priority. Total plasma and baseline-subtracted whole blood have different time courses. Low-exposure oxidation-sensitive effects and high-exposure lineage markers are distinct, and the strongest in vivo TrkB comparator is dietary repletion. Reopen for measured intact parent, genotype-selective mature neuronal output or evoked recovery, and preserved chloride-dependent inhibition. [Disposition, primary comparisons and replay](l_ergothioneine/plasma_and_development_20261126.md) · [WWOX uptake comparison](l_ergothioneine/README.md) · [Cortical accumulation](l_ergothioneine/transport_and_cortex_20261126.md)
 
