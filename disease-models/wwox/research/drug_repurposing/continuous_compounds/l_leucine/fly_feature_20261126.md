@@ -2,6 +2,8 @@
 
 26 November 2026 · SCI_CODEX · context_policy: QUESTION_DRIVEN
 
+**Later same-day check.** The spectrum assignments could be reconstructed by aligning MS Assay Name and Extract Name to the sample metadata. [Re-extraction with QC and results](fly_reintegration_20261126.md)
+
 The laboratory’s existing full-text review had already recorded a standard-matched L-leucine signal in the fly **Wwox overexpression** experiment. Supplementary Table 7 peak 210 (m/z **132.1019**, retention time **587.20 s**) matches one assigned L-leucine record in the deposited MetaboLights feature file within five ppm and one second. Exponentiating the reported log₂ effects gives relative signal **0.64** for the overexpression main effect (adjusted P = 0.05455, at the study’s 10% FDR threshold), **0.47** within the LacZ background and **0.88** within the amyloid background. The adjusted interaction P was **0.24516**. The within-background ratios are descriptive and the data do not establish effect modification. [Primary study and Supplementary Table 7](https://doi.org/10.1093/braincomms/fcag385) · [Deposited feature file](https://www.ebi.ac.uk/metabolights/MTBLS12344)
 
 The separate Wwox **knockdown** differential table has 54 peak rows. None is named L-leucine or matches the selected m/z and retention time window. Supplementary Table 4 is a filtered differential table. It cannot show whether the leucine feature was quantified at similar levels, absent from the run, or removed earlier. The public assignment agrees on identity for the deposited matched peak and does not by itself link all sample intensities to that peak. The overexpression result concerns adult fly head pools, with neither absolute neural leucine nor reversal in loss of function established.
