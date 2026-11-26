@@ -1,0 +1,6 @@
+key	value	units	source	locator
+parent_mass	219.28	g/mol	PubChem 51634	Molecular weight
+csf_trough_min	201	ng/mL	19067373	Results, extent of exposure; four GD3 samples
+csf_trough_max	629	ng/mL	19067373	Results, extent of exposure; four GD3 samples
+human_gba2_ki	0.326	uM	28937220	Table 1 compound 1; 4MU substrate and human overexpression cell homogenate
+gcs_ic50	50	uM	28937220	Table 1 compound 1; GCS IC50 in situ
