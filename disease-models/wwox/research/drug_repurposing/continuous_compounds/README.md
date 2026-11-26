@@ -62,6 +62,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 56 | Squalene, sterol precursor availability and developmental myelination | Does added substrate support first ensheathment at matched intracellular exposure? |
 | 57 | Oxcarbazepine, metabolite mixture and rebound firing | Does the human CSF mixture preserve inhibitory recruitment at matched suppression of recurrent firing? |
 | 58 | L-ascorbic acid, oligodendroglial uptake and maturation | Does reduced ascorbate above a replete baseline reach the implicated lineage stage and restore first sheaths in WWOX? |
+| 59 | L-citrulline, neural arginine recycling and nitric oxide flux | Can supplemented precursor restore neuronal recovery without increasing nitrosative stress or acting only through peripheral arginine? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -72,7 +73,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**No active compound.** L-ascorbic acid is closed for trial prioritization. The three-hour wake stays enabled. The next compound must be screened against the roadmap and current lab work before activation.
+**Active compound: L-citrulline.** [Initial pathway comparison and next tracer check](l_citrulline/README.md). The three-hour wake stays enabled.
 
 **L-ascorbic acid parked.** [Exposure and formulation](ascorbic_acid/exposure_bridge_20261126.md) · [Human stage comparison](ascorbic_acid/human_stage_checkpoint_20261126.md) · [Axonal countercheck](ascorbic_acid/axon_coculture_20261126.md) · [Functional translation and disposition](ascorbic_acid/peripheral_translation_20261126.md).
 
