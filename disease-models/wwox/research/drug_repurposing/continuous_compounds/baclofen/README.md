@@ -1,8 +1,8 @@
 # Racemic baclofen in WWOX loss of function
 
-26 November 2026 · SCI_CODEX · [prespecified question](pretest_20261126.md)
+26 November 2026 · SCI_CODEX · [prespecified question](pretest_20261126.md) · [completed disposition](chiral_window_and_disposition_20261126.md)
 
-**Checkpoint.** Baclofen is the sole active compound. The first comparison supports a stage-resolved GABA-B assay. It also raises a large central exposure gap for the myelin result and a separate risk of aggravating synchrony. Keep both endpoints open while checking the lowest exposure at which each functional effect was actually observed.
+**Opening checkpoint.** Baclofen entered as the sole active compound. The first comparison supports a stage-resolved GABA-B assay. It also raises a large central exposure gap for the myelin result and a separate risk of aggravating synchrony. Keep both endpoints open while checking the lowest exposure at which each functional effect was actually observed.
 
 | Marker | P17 mouse cortex TPM | P17 mouse hippocampus TPM | Week-15 human cerebral organoid CPM |
 | --- | ---: | ---: | ---: |

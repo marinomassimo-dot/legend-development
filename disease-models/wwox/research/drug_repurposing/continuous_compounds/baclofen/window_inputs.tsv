@@ -1,0 +1,19 @@
+id	value	unit	context	locator
+baclofen_mw	213.66	g/mol	baclofen free acid	Sigma B5399
+csf_r_low	1.7	ng/mL	reported CSF R-baclofen during clinical oral therapy	Bala Section 2.2.8
+csf_r_high	20.8	ng/mL	reported CSF R-baclofen during clinical oral therapy	Bala Section 2.2.8
+serrat_2022_r	100	uM	nominal R-baclofen P11 rat cerebellar LPC slice assay	Serrano-Regal 2022 Table 1 and Fig. 2
+serrat_2020_r	50	uM	nominal R-baclofen rat DRG-OPC MBP blot	Serrano-Regal 2020 AAM Substances and Fig. 5D
+pascual_total	20	uM	nominal racemic induced rat OPC-DRG coculture	Pascual-Guerra 2025 Section 2.9 and Table S1 A14-C14
+pascual_fraction_r	0.5	fraction	R component of equimolar Sigma B5399 racemate	Pascual-Guerra 2025 Table S1 row 14 and supplier
+pascual_wrap_control	5.65	segments/cell	MBP-positive segments per MBP-positive cell control	Pascual-Guerra 2025 Section 3.3 and Fig. 10A
+pascual_wrap_baclofen	13.74	segments/cell	MBP-positive segments per MBP-positive cell under baclofen	Pascual-Guerra 2025 Section 3.3 and Fig. 10A
+caillard_bath	0.3	uM	nominal baclofen stereochemistry unspecified	Caillard 1998 Fig. 2C Results
+caillard_eipsc_neonatal	83	percent	control eIPSC remaining at 0.3 uM P5-P7 rat CA3	Caillard 1998 Fig. 2C Results
+lei_epscs_ic50	8.5	uM	nominal baclofen half-maximal effect on input to P16-P18 CA3 rat interneuron	Lei and McBain 2003 Fig. 1D
+lei_ipscs_ic50	1.7	uM	nominal baclofen half-maximal effect on input to P16-P18 CA3 rat interneuron	Lei and McBain 2003 Fig. 1E
+lei_bath	20	uM	nominal baclofen CA3 interneuron assay	Lei and McBain 2003 Fig. 1C
+lei_epsc_remaining	51	percent	remaining evoked excitatory current at 20 uM	Lei and McBain 2003 Fig. 1C Results
+lei_ipsc_remaining	20.5	percent	remaining evoked inhibitory current at 20 uM	Lei and McBain 2003 Fig. 1C Results
+grigoras_drug_f	6.070	F statistic	adult crossover main drug effect across learnable blocks	Grigoras 2025 section 3.1 Fig. 2B-C
+grigoras_drug_df	13	df	denominator df of main drug effect	Grigoras 2025 section 3.1

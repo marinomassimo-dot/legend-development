@@ -13,6 +13,8 @@ PANEL = (
     "Pdgfra", "Olig2", "Sox10", "Myrf", "Mbp", "Plp1",
 )
 
+PV_TWEAK_PANEL = ("Pvalb", "Syt2", "Gad1", "Gad2", "Tnfsf12", "Tnfrsf12a")
+
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -21,16 +23,18 @@ def main():
     args = parser.parse_args()
 
     args.output.mkdir(parents=True, exist_ok=True)
-    tsv(
-        args.output / "contrasts.tsv",
-        "model accession gene ctrl_n ko_n ctrl_positive ko_positive ctrl_mean ko_mean log2_delta omit_min omit_max mapping".split(),
-        bulk_panel(args.files, PANEL),
+    comparisons = (
+        ("contrasts.tsv", "nuclei.tsv", PANEL),
+        ("pv_tweak_bulk.tsv", "pv_tweak_nuclei.tsv", PV_TWEAK_PANEL),
     )
-    tsv(
-        args.output / "nuclei.tsv",
-        "pool cell_class gene nuclei all_UMI gene_UMI CPM".split(),
-        nuclei_panel(args.files, PANEL),
-    )
+    bulk_cols = (
+        "model accession gene ctrl_n ko_n ctrl_positive ko_positive ctrl_mean "
+        "ko_mean log2_delta omit_min omit_max mapping"
+    ).split()
+    nuclei_cols = "pool cell_class gene nuclei all_UMI gene_UMI CPM".split()
+    for bulk_name, nuclei_name, panel in comparisons:
+        tsv(args.output / bulk_name, bulk_cols, bulk_panel(args.files, panel))
+        tsv(args.output / nuclei_name, nuclei_cols, nuclei_panel(args.files, panel))
 
 
 if __name__ == "__main__":
