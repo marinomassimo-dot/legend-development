@@ -18,6 +18,16 @@ def main():
             writer.writerow((f"Leniger_{bath_um}_uM_bath_to_plasma_Cmax", condition,
                              "ratio", f"{bath_um / plasma_um:.4f}"))
 
+    # Hoff et al., Results and Fig. 3: separate adult OSA cohort, total plasma trough.
+    for label, mass_concentration in (("mean_high_dose_group", 5.68), ("highest_observed", 9.37)):
+        micromolar = 1000 * mass_concentration / 290.4
+        writer.writerow(("total_plasma_trough", label, "uM", f"{micromolar:.4f}"))
+        writer.writerow(("Leniger_1000_uM_bath_to_total_plasma_trough", label,
+                         "ratio", f"{1000 / micromolar:.4f}"))
+    # Sleep Breath 2025, Experiment 6: mean enzyme activities before intervention.
+    writer.writerow(("CSF_to_whole_blood_CA_activity_ratio_of_means", "untreated_adults", "ratio",
+                     f"{2.78 / 14.38:.4f}"))
+
     # Debus and Kurlemann, intention-to-treat complete electroclinical response.
     successes, treated, controls = 6, 20, 17
     denominator = comb(treated + controls, successes)
