@@ -395,7 +395,7 @@ def classify_paths(P: dict, rep: Report) -> None:
                 rep.bad("unclassified-field", path, val)
 
 
-def scan_strings(items: list[tuple[str, str]], ref: Reference, rep: Report, label: str, excuse=None) -> None:
+def scan_strings(items: list[tuple[str, str]], ref: Reference, rep: Report, label: str, excuse=None, *, dossier_names=frozenset()) -> None:
     """Forbidden names, wording and identifiers in a list of (where, string). `excuse` (IT38): for a TRANSLATED page, a callable(word) -> bool that is true only when the word is
     verifiably a word of the repository's authorised translation of that page's language (a committed file), is not in the audited English source and not in the page's
     language-neutral data. It applies to SINGLE-word catalogue-name hits only; a name typed into the visible HTML, a row or a brief is in none of those places and is still refused."""
@@ -445,6 +445,9 @@ def scan_strings(items: list[tuple[str, str]], ref: Reference, rep: Report, labe
             if not hit or hit[1] in done:
                 continue
             done.add(hit[1])
+            if hit[0] == "forbidden-name" and hit[1] in dossier_names:
+                rep.coattested["compound dossier subject"] += 1
+                continue
             if hit[1] in ref.own_grams or all(x in ref.own_grams for x in grams(hit[1].split(), min(GRAM, len(hit[1].split())))):
                 rep.coattested[hit[0]] += 1
                 if hit[0] == "forbidden-wording":   # third-party wording that our own text also contains: a short label is reported, a long one is copying
@@ -616,6 +619,7 @@ def link_checks(text: str, rep: Report, rendered_hrefs: list[str] | None = None)
     body = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", rest, flags=re.S)
     hrefs = re.findall(r'href="([^"]*)"', body) + list(rendered_hrefs or [])
     from repurposing_research_reports import BASENAME
+    from repurposing_compound_analyses import DATA_PATH, DOSSIER, REPOSITORY
 
     pages = {"index.html"}
     is_report = lambda path: re.fullmatch(rf"reports/{BASENAME}\.pdf", path)
@@ -625,7 +629,8 @@ def link_checks(text: str, rep: Report, rendered_hrefs: list[str] | None = None)
     for h in hrefs:
         if h.startswith(("http://", "https://")):
             host = h.split("/")[2]
-            if host not in PUBLIC_HOSTS and not host.endswith((".nih.gov", ".ebi.ac.uk")):
+            own_dossier = h.startswith(REPOSITORY + DATA_PATH) and DOSSIER.fullmatch(h.removeprefix(REPOSITORY + DATA_PATH))
+            if not own_dossier and host not in PUBLIC_HOSTS and not host.endswith((".nih.gov", ".ebi.ac.uk")):
                 rep.bad("link-host-not-public-reference", "href", h)
     if re.search(r'(src|href)="\.\./', text):
         rep.bad("repository-relative-link", "html", "../")
@@ -697,8 +702,18 @@ def audit_html(text: str, dr: Path, ref: Reference | None = None, extra_surfaces
         if isinstance(val, str):
             items.append((path + ("#key" if is_key else ""), val))
     scan_strings(items, ref, rep, "data", vocab)
+    analyses = re.search(r'<section id="compound-analyses"(?:\s[^>]*)?>.*?</section>', text, flags=re.S)
+    dossier_names = frozenset()
+    if analyses:
+        from repurposing_compound_analyses import render as dossier_projection
+        # The independent source here is the public, authored dossier projection.
+        # Ordinary scientific names appearing there are facts, including comparators.
+        # Keep identifier, wording, association and URL checks on every surface.
+        dossier_names = {g for _, value in visible_surfaces(dossier_projection(dr, set()))
+                         for g in grams(tokens(value)) if g in ref.names}
+        scan_strings(visible_surfaces(analyses[0]), ref, rep, "compound analyses", dossier_names=dossier_names)
     vis = visible_surfaces(text)
-    scan_strings(vis, ref, rep, "page", vocab)
+    scan_strings(visible_surfaces(text[:analyses.start()] + text[analyses.end():]) if analyses else vis, ref, rep, "page", vocab)
     pair_scan(items, ref, rep, "data", literature)
     pair_scan(vis, ref, rep, "page", literature)
     file_token_scan(items, rep, "data")
@@ -707,7 +722,7 @@ def audit_html(text: str, dr: Path, ref: Reference | None = None, extra_surfaces
     if extra_surfaces:
         rhrefs = [h for w, v in extra_surfaces if w.startswith("rendered-href") for h in v.split("\n") if h]
         rendered = [x for x in extra_surfaces if not x[0].startswith("rendered-href")]
-        scan_strings(rendered, ref, rep, "rendered", vocab)
+        scan_strings(rendered, ref, rep, "rendered", vocab, dossier_names=dossier_names)
         pair_scan(rendered, ref, rep, "rendered", literature)
         file_token_scan(rendered, rep, "rendered")
     link_checks(text, rep, rhrefs)

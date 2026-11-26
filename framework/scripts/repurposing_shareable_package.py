@@ -301,11 +301,11 @@ def comparison_md(man: dict) -> str:
 
 
 # ---------------------------------------------------------------------------- build
-def build_files(dr: Path, corpus_dirs: list[Path] | None = None, recompute_text: bool = True) -> tuple[dict[str, bytes], dict]:
+def build_files(dr: Path, corpus_dirs: list[Path] | None = None, recompute_text: bool = True, *, pages: bool = False) -> tuple[dict[str, bytes], dict]:
     allow = rv.load_allowlist(dr)
     from repurposing_research_reports import DIRECTORY as REPORT_DIR, entries as reports
 
-    html = rv.build(dr, "shareable", "en")
+    html = rv.build(dr, "shareable", "en", compound_analyses=pages)
     PF, PS = rv.build_payload(dr, "full"), rv.build_payload(dr, "shareable")
     rep, ref = au.audit_html(html, dr)
     if not rep.ok:
@@ -466,9 +466,19 @@ def main(argv=None) -> int:
     ap.add_argument("--check", action="store_true", help="exit 1 if the folder differs from a fresh build")
     ap.add_argument("--zip", type=Path, default=None, help="also write a deterministic zip of the folder here")
     ap.add_argument("--no-write", action="store_true", help="build and audit only (the zip, if requested, is still written)")
+    ap.add_argument("--pages-out", type=Path, help="write the audited Pages publication into a separate, empty directory")
     ap.add_argument("--text-corpus", type=Path, action="append", help="third-party text directory for TEXT_PROVENANCE.json (default: the local files/fulltext)")
     a = ap.parse_args(argv)
-    files, man = build_files(a.dr, a.text_corpus, recompute_text=not a.check)
+    if a.pages_out and (a.check or a.zip or a.no_write or (a.pages_out.exists() and any(a.pages_out.iterdir()))):
+        ap.error("--pages-out needs an empty directory and is a standalone publication build")
+    files, man = build_files(a.dr, a.text_corpus, recompute_text=not (a.check or a.pages_out), pages=bool(a.pages_out))
+    if a.pages_out:
+        for rel, data in files.items():
+            path = a.pages_out / rel
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(data)
+        print(f"Audited Pages publication with {len(files)} files in {a.pages_out}")
+        return 0
     rc = 0
     if a.check:
         bad = check(a.dr, files)

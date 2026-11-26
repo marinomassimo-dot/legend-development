@@ -5830,7 +5830,7 @@ def localise_it_fields(obj):
     return obj
 
 
-def render(P: dict, dr: Path = DEFAULT_DR) -> str:
+def render(P: dict, dr: Path = DEFAULT_DR, *, compound_analyses: bool = False) -> str:
     st = render_static(P)
     P = dict(P, ui=ui_payload())
     if P["source"] == "shareable":
@@ -5838,18 +5838,29 @@ def render(P: dict, dr: Path = DEFAULT_DR) -> str:
         P["ui"] = _map_strings(P["ui"], lambda x: scrub_file_tokens(x, _allow))
     data = json.dumps(P if CUR["lang"] == "it" else localise_it_fields(P), ensure_ascii=False, sort_keys=True, separators=(",", ":")).replace("</", "<\\/").replace("<!--", "<\\!--")
     public = P["source"] == "shareable"
+    analyses = ""
     if public:
         from repurposing_research_reports import entries
         report_index = {}
+        report_slugs = set()
         for slug, report in entries(dr):
             report_index.setdefault(report["investigation"], []).append((slug, report["title"]))
+            report_slugs.add(slug)
         P["pdf_reports"] = report_index
+        if compound_analyses:
+            from repurposing_compound_analyses import render as render_compound_analyses
+            analyses = render_compound_analyses(dr, report_slugs)
     U = UI_IT
     page = TEMPLATE
     cur_html = fill_tokens(read_asset(dr, "curated.html"))
     cur_html = cur_html.replace("__OVERVIEW__", render_overview(P)).replace("__GRAPH__", render_evidence_graph(P)).replace("__WORKORDER__", render_work_order(P)).replace("__SELECTION__", render_selection(P)).replace("__HYPOTHESES__", render_hypotheses(P)).replace("__PREDICTIVE__", render_predictive(P)).replace("__CHARTS__", render_charts(P)).replace("__RANKING__", render_ranking(P)).replace("__EXPLORE__", render_explore(P)).replace("__FUNNEL20__", render_funnel18(P)).replace("__RANKPRINT__", render_ranking_onepage(P))
-    page = page.replace("__CSS__", CSS + read_asset(dr, "curated.css") + read_asset(dr, "editorial.css")).replace("__JS__", JS).replace("__CJS__", read_asset(dr, "curated.js"))
+    analysis_css = read_asset(dr, "compound_analyses.css") if analyses else ""
+    analysis_js = read_asset(dr, "compound_analyses.js") if analyses else ""
+    page = page.replace("__CSS__", CSS + read_asset(dr, "curated.css") + read_asset(dr, "editorial.css") + analysis_css).replace("__JS__", JS).replace("__CJS__", read_asset(dr, "curated.js") + analysis_js)
     page = page.replace("__CURATED__", (render_gene_therapy() if public else "") + cur_html).replace("__FOOTER__", render_footer(P))
+    if analyses:
+        page = page.replace('<a href="#navigate">__NP_CMP__</a>', '<a href="#compound-analyses">Compound Analyses</a><a href="#navigate">__NP_CMP__</a>', 1)
+        page = page.replace('<section id="ranking"', analyses + '<section id="ranking"', 1)
     for k, key in (("TITLE", "page_title"), ("SKIP", "skip"), ("H1", "h1"), ("SUB", "sub"), ("BRAND", "brand"), ("BRAND_CTX", "brand_ctx"), ("BRAND_STATE", "brand_state"), ("BRAND_STATE_T", "brand_state_title"), ("NP_PRI", "np_pri"), ("NP_BIO", "np_bio"), ("NP_CMP", "np_cmp"), ("NP_EVI", "np_evi"), ("NP_ALL", "np_all"), ("NAVLABEL", "nav_label"), ("N_OV", "nav_overview"), ("N_QK", "nav_start"), ("N_XP", "nav_explore"), ("N_FU", "nav_funnel"), ("N_RK", "nav_ranking"), ("N_TH", "nav_threads"), ("N_EG", "nav_chains"), ("N_CH", "nav_charts"), ("N_SE", "nav_selection"), ("N_HY", "nav_hyp"), ("N_PR2", "nav_pred"), ("N_NAV", "nav_navigate"),
                    ("N_CA", "nav_cards"), ("N_PR", "nav_priority"), ("N_CP", "nav_compare"), ("N_TD", "nav_tech"), ("TD_SUM", "td_sum"), ("TD_NOTE", "td_note"), ("SEC_FUNNEL", "sec_funnel"), ("SEC_ACCESS", "sec_access"), ("SEC_FILTERS", "sec_filters"), ("SEC_FILTERS_NOTE", "sec_filters_note"), ("SEC_NEEDS", "sec_needs"), ("SEC_MATRIX", "sec_matrix"), ("SEC_PRIO", "sec_prio"), ("SEC_LEADS", "sec_leads"), ("SEC_LIMITS", "sec_limits"), ("SEC_TECH", "sec_tech"), ("SEC_FOOTER", "sec_footer")):
         page = page.replace(f"__{k}__", E(U[key]))
@@ -5884,14 +5895,14 @@ def render(P: dict, dr: Path = DEFAULT_DR) -> str:
     return page
 
 
-def build(dr: Path = DEFAULT_DR, source: str = "full", lang: str | None = None) -> str:
+def build(dr: Path = DEFAULT_DR, source: str = "full", lang: str | None = None, *, compound_analyses: bool = False) -> str:
     lang = lang or ("en" if source == "shareable" else "it")          # the shareable edition opens in English; the local full view stays Italian unless asked
     if lang not in LANGS:
         raise SystemExit(f"unknown language {lang!r}: one of {', '.join(LANGS)}")
     load_translations(dr)
     CUR["lang"] = lang
     try:
-        out = render(build_payload(dr, source), dr)
+        out = render(build_payload(dr, source), dr, compound_analyses=compound_analyses)
     finally:
         CUR["lang"] = "it"
     n = len(out.encode("utf-8"))

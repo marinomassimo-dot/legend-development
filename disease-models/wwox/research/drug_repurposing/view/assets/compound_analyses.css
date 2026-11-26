@@ -1,0 +1,39 @@
+
+.compound-analyses { margin-block: 2.6rem; overflow-wrap: anywhere; }
+.ca-hero {
+  padding: clamp(1.35rem, 4vw, 2.8rem);
+  background: linear-gradient(118deg, #142f45 0%, #15455b 58%, #18656b 100%);
+  color: #fff; border-radius: 20px;
+}
+.ca-hero h2 { margin: 0 0 .3rem; color: inherit; font-size: clamp(1.65rem, 4.4vw, 2.8rem); line-height: 1.13; }
+.ca-hero p { margin: 0; color: #e8f3f4; }
+.ca-metrics { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.1rem; }
+.ca-metrics > * { padding: .3rem .7rem; border: 1px solid #adcbd3; border-radius: 7px; color: #fff; font-size: .9rem; }
+.ca-metrics a:hover, .ca-metrics a:focus-visible { background: #fff; color: #143c50; }
+.ca-method { color: #465c6b; font-size: .92rem; margin-block: .9rem 1.4rem; }
+.ca-section { margin-block: 1.4rem; }
+.ca-section h3, .ca-archive > summary { margin: 0 0 .65rem; color: #143f53; font-size: 1.16rem; font-weight: 700; }
+.ca-section h3 span, .ca-archive > summary span { margin-left: .35rem; color: #4b6573; font-size: .9rem; }
+.ca-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: .8rem; }
+.ca-card { min-width: 0; border: 1px solid #cbd9df; border-top: 3px solid #72a2ad; border-radius: 12px; padding: 1rem; background: #fff; }
+#ca-priority .ca-card { border-top-color: #107664; background: #f6fbf9; }
+#ca-active .ca-card { border-top-color: #4b6199; background: #f7f9ff; }
+.ca-tag { display: inline-block; padding: .15rem .42rem; border-radius: 5px; background: #e7f0f3; color: #234d60; font-size: .78rem; font-weight: 700; }
+.ca-card h4 { margin: .42rem 0 .2rem; color: #17394b; font-size: 1.19rem; line-height: 1.22; }
+.ca-card p { margin-block: .5rem; }
+.ca-card .ca-strand { margin-top: 0; color: #435c6a; font-size: .89rem; }
+.ca-card summary, .ca-archive > summary { cursor: pointer; }
+.ca-card summary { font-weight: 650; color: #155e73; }
+.ca-card ul { margin: .45rem 0 0; padding-left: 1.15rem; }
+.ca-archive { padding: .8rem; border: 1px solid #cbd9df; border-radius: 12px; }
+.ca-archive:not([open]) > summary { margin: 0; }
+@media print {
+  .ca-hero { color: #17394b; background: none; padding: 0; }
+  .ca-hero p, .ca-metrics > * { color: #17394b; }
+  .ca-card { break-inside: avoid; }
+}
+.ca-search { margin-block: 1rem; display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+.ca-search label { font-weight: 650; color: #17394b; }
+.ca-search input { min-width: 0; max-width: 100%; border: 1px solid #768d97; border-radius: 8px; background: #fff; color: #17394b; padding: .45rem .65rem; font: inherit; }
+.ca-search [role="status"] { color: #435c6a; }
+.compound-analyses [hidden] { display: none; }
