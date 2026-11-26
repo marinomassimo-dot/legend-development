@@ -28,7 +28,7 @@ the whole known corpus, not the part already processed.
 | Filtered / superseded | 10 | 1% | explicitly set aside, with the reason preserved |
 
 - Of the **310** catalogued-only records, **116** carry a receipt owned by another registry entry (88 complete, 28 partial: the placeholder duplicates a processed record) and **194** have no receipt (the headline count is unchanged)
-- **Sections read, best state** (union of the surviving receipts of each study): **8168** section-reads across **2037** studies; the latest receipt alone marks **6932**, so **1236** are read only in an earlier receipt (**255** of **509** studies with 2+ receipts have a latest receipt that marks fewer sections read than an earlier one). The depth table above already uses the deepest receipt; this line is about sections, not depth, and changes no number above
+- **Sections read, best state** (union of the surviving receipts of each study): **8180** section-reads across **2040** studies; the latest receipt alone marks **6940**, so **1240** are read only in an earlier receipt (**256** of **510** studies with 2+ receipts have a latest receipt that marks fewer sections read than an earlier one). The depth table above already uses the deepest receipt; this line is about sections, not depth, and changes no number above
 - **560** promoted `PAPER` records · **390** `CORPUS` placeholders
 - **825** lifecycle entries in the literature tracking log
 - **835** unique PMIDs known across the registries
@@ -36,10 +36,10 @@ the whole known corpus, not the part already processed.
 ## Receipt trace
 
 - Authoritative ledger: `disease-models/wwox/registries/fulltext_read_receipts.jsonl`
-- **2949** append-only events: **2924** contemporaneous · **22** conservative legacy reconstructions · **1** invalidation(s) · **2** identity correction(s)
+- **2953** append-only events: **2928** contemporaneous · **22** conservative legacy reconstructions · **1** invalidation(s) · **2** identity correction(s)
 - **309** registry records have a persisted `complete_fulltext_read` receipt
 - **3** records still rely on a historical registry full-text declaration without a surviving complete coverage receipt
-- **1758** receipt event(s) do not yet map to a registry record
+- **1762** receipt event(s) do not yet map to a registry record
 
 A full-text marker in the registry is preserved as historical state, but it is not
 retroactively converted into a complete receipt. Only a contemporaneous or adequately
