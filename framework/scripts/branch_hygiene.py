@@ -31,7 +31,8 @@ Usage:
 `--removal` adds, per linked worktree, every reason found to keep it: HEAD not on the base, a changed or
 untracked file, an ignored file other than a regenerable cache (`git worktree remove` deletes ignored
 files WITHOUT asking), a lock, a process working in it or naming it, a window launched there that wrote its
-transcript in the last 24 hours. It removes nothing. It cannot see a window that works in a worktree it was
+transcript in the last 24 hours, or in the last 6 when the window handed its mandate over (a transcript there
+wrote MANDATE_RELEASED and none still holds a MANDATE_BOUND; ADV decision of 2026-11-25). It removes nothing. It cannot see a window that works in a worktree it was
 not launched in, so an owner is still asked; and the act is `git worktree remove <path>`, never `--force`.
 """
 from __future__ import annotations
@@ -45,7 +46,11 @@ import sys
 from pathlib import Path
 from typing import Dict, List, Optional
 
+from mandate_continuity import marker_states
 from tmp_clone_report import is_regenerable, process_holders
+
+# keep-age, in hours since the last transcript write, of a window that released its mandate; any other window keeps 24
+RELEASED_IDLE_HOURS = 6.0
 
 MAIN = "MAIN"
 LAND_OVERDUE = "LAND_OVERDUE"
@@ -267,6 +272,12 @@ def name_holder(holder: str) -> str:
         return holder
 
 
+def released_window(transcripts: List[Path]) -> bool:
+    """At least one session launched here released a mandate and none of them still holds one."""
+    states = [state for t in transcripts for state in marker_states(t).values()]
+    return "RELEASED" in states and "BOUND" not in states
+
+
 def removal_blockers(root: Path, tree: Dict[str, object], base: str, projects_dir: Path,
                      now: dt.datetime, idle_hours: float = 24.0) -> List[str]:
     """Every reason found to keep one linked worktree. An empty list is "nothing found", not an order to remove."""
@@ -294,10 +305,13 @@ def removal_blockers(root: Path, tree: Dict[str, object], base: str, projects_di
         named = [name_holder(h) for h in sorted(holders, key=lambda h: not h.endswith("(cwd)"))]
         blockers.append(f"{len(holders)} process(es): {', '.join(named[:8])}" + (f" and {len(named) - 8} more" if len(named) > 8 else ""))
     # the folder Claude Code keeps a worktree's transcripts in: the path with every other character as "-"
-    stamps = [t.stat().st_mtime for t in (projects_dir / re.sub(r"[^A-Za-z0-9]", "-", str(path))).glob("*.jsonl")]
+    transcripts = list((projects_dir / re.sub(r"[^A-Za-z0-9]", "-", str(path))).glob("*.jsonl"))
+    stamps = [t.stat().st_mtime for t in transcripts]
+    if stamps and (now.timestamp() - max(stamps)) / 3600 < idle_hours and released_window(transcripts):
+        idle_hours = min(idle_hours, RELEASED_IDLE_HOURS)
     if stamps and (now.timestamp() - max(stamps)) / 3600 < idle_hours:
         eligible = dt.datetime.fromtimestamp(max(stamps) + idle_hours * 3600, dt.timezone.utc)
-        blockers.append(f"a window launched here wrote {(now.timestamp() - max(stamps)) / 3600:.1f} h ago, "
+        blockers.append(f"a window launched here wrote {(now.timestamp() - max(stamps)) / 3600:.1f} h ago (keep-age {idle_hours:g} h), "
                         f"eligible after {eligible:%Y-%m-%dT%H:%MZ} if it writes no more")
     return blockers
 
