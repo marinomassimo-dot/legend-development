@@ -4,6 +4,8 @@
 
 **Decision at opening.** Keep purified L-ergothioneine active as a transporter-dependent redox hypothesis. The WWOX comparison supports measuring intake into individual cell types. Human organoid and mouse pooled neuronal directions differ, so neither a conserved uptake gain nor a generic uptake deficit follows. [Bulk contrasts](contrasts.tsv) · [Nuclear counts](nuclei.tsv)
 
+**Final disposition.** Deferred for a pediatric WWOX trial and retained as an uptake, redox and development-stage comparator. The follow-up tested the plasma-to-whole-blood distinction quantitatively, separated progenitor markers from nutrition-depletion rescue, and added a matched TrkB and chloride-handling RNA panel. [Disposition and results](plasma_and_development_20261126.md)
+
 Contrast is knockout minus control mean log2(1 + abundance). Parentheses give the approximate single-library omission range. These are descriptive sensitivity limits.
 
 | Gene and prospective readout | P17 mouse cortex | P17 mouse hippocampus | Week 15 human cerebral organoid |
