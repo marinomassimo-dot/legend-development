@@ -639,10 +639,11 @@
     },
     {
      "step": "IT26: checkpoint 25 sections 8-9 queue: rewrite Y01-Y06 with reader C wording (W01 check of the n=3 Dutch row), apply the 25 edits and rebuild join/coverage/ranking/views/package, land; then ADV-289 consumers, ADV-285 S1-S8 with ADV-288 corrections, ADV-286 prospective hold, two author-request drafts kept unsent, CI tick",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "source": "operator launch message 2026-11-26 (IT successor window d26b0ae5); CHECKPOINT_IT_20261125_13.md sections 8-9",
-     "accepted_at": "2026-11-26T00:07:29Z"
+     "accepted_at": "2026-11-26T00:07:29Z",
+     "updated_at": "2026-11-26T01:01:16Z"
     }
    ]
   }
