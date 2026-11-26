@@ -146,7 +146,7 @@
       "reading_depth": "queried_not_full_read",
       "context": {
         "disease_id": "WWOX-deficient human cerebral organoid (engineered knockout; NOT a patient allele)",
-        "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
+        "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory; two of four wild-type libraries were removed, one for failed quality control and one as a post hoc outlier that clustered with neither group)",
         "species": "human",
         "cell_type": "cerebral organoid, bulk RNA",
         "developmental_stage": "organoid, culture week 15"

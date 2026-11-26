@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "30cb7d143b16f0001ddc99cf7c779025515ad4dc9c1ea4eeee2b6b6dc3c5d72f",
+  "input_sha256": "b03f35e561a9bc578f4ed38c172a816f76b466fdfc758f5f2301c571678d771e",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -78,7 +78,7 @@
       "search_record": "NOT ESTABLISHED HERE, not a confirmed absence. Run 2026-10-21 (session clock), PubMed title/abstract: WWOX AND (cryo-EM OR crystal structure OR X-ray OR NMR structure OR AlphaFold) AND (SDR OR oxidoreductase domain OR full-length): 0 records; a broader WWOX AND (crystal OR docking OR small molecule OR inhibitor OR ligand OR NADPH OR steroid, further terms omitted) query returned 113 records that were not screened one by one. A title/abstract zero licenses only 'no paper is indexed'. One repository reading reports steroid substrates with apparent Km values for a WWOX fusion protein in a bacterial crude extract, unreplicated and with no purified-protein binding (PMID 21476439): a substrate screen, not a validated binder and not a stabilisation datum. The repository note of 2026-10-20 is the other basis.",
       "adjacent_context_not_wwox_evidence": [
         "Two benzodiazepine-site GABA-A positive modulators, hispidulin and TP003 (of 10 receptor ligands screened at 10 micromolar for 24 h on total alpha1 protein of three variants in HEK293T, four raised it in at least one variant), raised variant surface protein and GABA-evoked current in HEK293T for most of eight alpha1 variants (surface protein: hispidulin 8 of 8, TP003 5 of 8; current: hispidulin 8 of 8, TP003 6 of 8; TP003 not significant for D219N and R214C in both, and for P260L at the surface; n = 3 blots, 4 to 11 cells per bar); in one heterozygous G251D knock-in iPSC line (35 to 75 neurons imaged per condition, at least 3 differentiations), surface subunit fluorescence rose, proximity-ligation puncta rose for gamma2, BiP, calnexin and LMAN1, fell for Grp94 and were unchanged for SEL1L, and no current was measured (research compounds, not approved drugs; not WWOX evidence)",
-        "an approved active-site chaperone for a lysosomal enzyme: 'amenable' call differs for 12.9 percent of variants between two near-identical assays and no clinical correlation is established (Fabry GLA)"
+        "an approved active-site chaperone for a lysosomal enzyme: 'amenable' call differs for 12.9 percent (23 of 178) of GLA variants between a validated good-laboratory-practice assay and a similar in-house HEK assay that differs in cell line, incubation time, chaperone concentration and criteria, and there is no established correlation between the in-vitro activity increase and clinical benefit (the paper cites a few clinical cases, some concordant and some not) (Fabry GLA)"
       ],
       "an_abstention_is_a_result": "The roadmap states it; this card names what would end it."
     },
@@ -96,7 +96,7 @@
         ],
         "external_not_wwox_evidence": [
           "Two benzodiazepine-site GABA-A positive modulators, hispidulin and TP003 (of 10 receptor ligands screened at 10 micromolar for 24 h on total alpha1 protein of three variants in HEK293T, four raised it in at least one variant), raised variant surface protein and GABA-evoked current in HEK293T for most of eight alpha1 variants (surface protein: hispidulin 8 of 8, TP003 5 of 8; current: hispidulin 8 of 8, TP003 6 of 8; TP003 not significant for D219N and R214C in both, and for P260L at the surface; n = 3 blots, 4 to 11 cells per bar); in one heterozygous G251D knock-in iPSC line (35 to 75 neurons imaged per condition, at least 3 differentiations), surface subunit fluorescence rose, proximity-ligation puncta rose for gamma2, BiP, calnexin and LMAN1, fell for Grp94 and were unchanged for SEL1L, and no current was measured (research compounds, not approved drugs; not WWOX evidence)",
-          "an approved active-site chaperone for a lysosomal enzyme: 'amenable' call differs for 12.9 percent of variants between two near-identical assays and no clinical correlation is established (Fabry GLA)"
+          "an approved active-site chaperone for a lysosomal enzyme: 'amenable' call differs for 12.9 percent (23 of 178) of GLA variants between a validated good-laboratory-practice assay and a similar in-house HEK assay that differs in cell line, incubation time, chaperone concentration and criteria, and there is no established correlation between the in-vitro activity increase and clinical benefit (the paper cites a few clinical cases, some concordant and some not) (Fabry GLA)"
         ]
       },
       "evidence_for_and_against": {

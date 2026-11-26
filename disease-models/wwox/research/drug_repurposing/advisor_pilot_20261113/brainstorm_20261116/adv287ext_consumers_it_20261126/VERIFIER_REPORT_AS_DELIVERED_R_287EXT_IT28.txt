@@ -1,0 +1,156 @@
+BLIND VERIFICATION REPORT, IT28 ADV-287 extension, packet R (12 blocks). Hypothesis level. Nothing here is medical advice. No dose and no compound recommendation appears in any replacement wording. I wrote nothing into the repository (scratch files only in /tmp/bv). I used no network and no PubMed calls, because no block named an abstract-only PMID.
+
+DISCLOSURE: one grep/cat on the held supplement folder for R-07/R-08 also displayed the first 60 lines of READING_NOTE_20261121.md. That is a repository-authored note inside the named OUP-Supplement folder. I did not use it for any verdict. Every R-08 verdict rests on brain-2025-03809-File010.pdf and its rendered page 12.
+
+SUMMARY TABLE
+
+| Block | Verdict | One-line reason |
+|---|---|---|
+| R-34 Lukas 2020 | ADD (minor) | All numbers and assay differences reproduce. "No clinical correlation is established" is looser than the source sentence. |
+| R-37 Steinberg 2021 | ADD | 1.7-fold, week 16, "2 WT and 4 KO from two runs", "untested" and "no reporter assay" all reproduce. The 1.7 is a nuclear/cytosolic ratio, and "raw p" omits the deposited padj. |
+| R-35 Chong 2023 | ADD (needed) | Three of five, with patients 1, 2 and 4, is supported. The "searched, not found" clause is true, but the held text is only 8 of at least 26 chunks and lacks the patient narratives. |
+| R-24 Mijatovic | ADD | Numbers reproduce. The "non-significant" label is not checkable, the "activity" is a live-cell probe signal, and the cytotoxicity caveat is missing. |
+| R-29 NRF2 counts | ADD | All five ratios reproduce. Significance and per-library overlap are missing. |
+| R-04 Hussain 2023 | STANDS (fragment); ADD on the adjoining overlap clause | By the figure, IL1b is 2.0x and TNF 3.3x. The IL1b overlap is more than "marginal". |
+| R-06 Mijatovic | STANDS, with one UNSETTLED | The fragment reproduces. The ERAD I278T "1.6-fold" repeats the bafilomycin sentence verbatim, and Fig 5f is not held. |
+| R-07 Steinberg 2026 Fig 2F | ADD, plus MUST CHANGE for one clause | Numbers are KO about +1.0, SCAR12 about -0.27, WOREE about +0.07. "Not wild-type-like" contradicts the authors' text. |
+| R-08 Supp Fig 7F | STANDS (with a count refinement) | Legend n = 4, 4, 6, 7 reproduces. I count about 6, 6, 16 and 11 dots. KO vs KO+A51 is ns. |
+| R-11 Yadav 2022 | STANDS, with ADD | The 0.04 and 0.003 are as stated and the 0.003 does not reproduce from Table 2. The 0.003 is also another comparison's value, and the EEG n differs from the rest. |
+| R-19 deposit | ADD | Four wild-type libraries were sequenced and two excluded. They were two different exclusions, one of them post hoc by clustering. |
+| R-05 Karnstedt | STANDS, with ADD | 14/19 vs 3/15 (p 0.0049) and 14/19 vs 5/15 (p 0.036) both reproduce. #28 and #29 are not GRIN-diagnostic variants, and the authors call both "no effect". |
+
+---
+
+BLOCK R-34 (Lukas 2020, PMC7037350 XML read in full)
+Opened: PMID32023956_Lukas2020_PMC7037350.xml.
+- "12.9 percent (23 of 178)": Results 2.3 "inconsistent for 12.9% (23/178)". STANDS.
+- "validated GLP assay": the GLP assay is the clinical-phase HEK assay of the cited reference [14]. STANDS.
+- Table 1 gives the assay differences:
+  - Cell line: GripTite HEK293 MSR versus HEK293H.
+  - Incubation: 120 h versus 60 h.
+  - Chaperone concentration: 10 µM versus 20 µM.
+  - Criteria: ≥3% absolute AND 1.2-fold, versus ≥5% absolute OR 1.5-fold plus a 5% minimum.
+  - Not mentioned in the fragment: plate format, transfection reagent, plasmid, lysis, and replicates (n=5 quadruplicate versus n≥3 duplicate). The list is not exhaustive, but it does not mislead.
+- "In-house HEK assay" and "similar": the authors write "very similar". STANDS.
+- "no clinical correlation is established": the source sentence is "To date, there is no established correlation between the biochemical enzyme activity increase induced by DGJ and the clinical benefit". The same Discussion also reports patient cohorts. 14 of 14 patients matched the GLP classification, and some discordant cases showed biomarker responses (G144V and G325R failed the PBMC biochemical response but responded on biomarker; S276G/S276N/L294S were non-responders despite an amenable call).
+- ADD, minimal wording: replace "no clinical correlation is established" with "no established correlation between the in-vitro activity increase and clinical benefit (the paper cites a few clinical cases, some concordant and some not)".
+- Also true and unmentioned: applying the same criteria to both datasets did not reduce discordance (18.0%, 32/178, with the GLP definition applied to the in-house data). A single 7% absolute cut-off gave 9.0%.
+
+BLOCK R-37 (Steinberg 2021, EMBO Mol Med)
+Opened: PMC_r2.xml in full, the PDF, the PMC8350905.1.pdf supplement and its text, and figure g008.jpg (Fig 4) and g005.jpg (Fig EV5).
+- Fig 4E legend: "Week 16 COs were subfractionated... The experiment was run twice with a total of 2 WT organoids and 4 KOs organoids (2 for each KO line)". Supported.
+- Fig 4E printed numbers: β-C (N/C) = WT 1±0.18, KO1 1.76±0.03, KO2 1.67±0.27. So "about 1.7 fold" is supported (1.67 to 1.76). It is a nuclear-to-cytosolic band-intensity ratio normalised to WT. It is not nuclear β-catenin alone. The legend states no test for panel E, so "untested" is supported.
+- "No reporter assay": there are no hits for luciferase, reporter, TOPflash or TOP/FOP in the paper XML, PDF or supplement files. STANDS.
+- ADD 1, wording: "nuclear/cytosolic β-catenin band ratio about 1.7 fold of WT (KO lines 1.76 and 1.67 against WT 1; Fig 4E; week 16; 2 WT and 4 KO organoids from two runs; no test shown)".
+- ADD 2 on "raw p": the deposited GSE156243 differential lists carry padj. Wnt-related genes in them are WNT8B padj 0.0031, ROR2 0.0002, NKD1 0.0005, LEF1 0.012, AXIN2 0.013, WNT5A 0.037 and WNT2B 0.043. GBX2 is 0.065. So "raw p" alone would mislead a reader into thinking nothing survives correction. Suggested: "p and padj in the deposited lists (most listed Wnt genes padj <0.05), 2 WT versus 4 KO".
+- Fig 4D qPCR validation (week 15, n=4 v 4, ANOVA) is also omitted, but it is not part of the new fragment.
+
+BLOCK R-35 (Chong 2023, SG chunks and JSON)
+Opened both held files in full. The txt header lists "delivered chunk indices: 0, 1, 2, 18, 22, 23, 24, 25". The JSON has the same 8 results, 5 unique articles, and zero hits for lactat, lactic or mmol in either file.
+- "Five paediatric WOREE patients": supported (Methods, "Five pediatric patients").
+- "Epilepsy responded to ketogenic diet in three (patients 1, 2 and 4)": supported by Table 1 (patients 1, 2 and 4 "Responded to ketogenic diet") and by the Discussion ("patients 1, 2, and 4 notably improved seizure control"). The abstract says three patients.
+- The authors' own hedge: "It may be premature to assert the potential beneficial effects of a ketogenic diet". The held text gives no quantitative seizure-reduction figures. The closing paragraph says "seizures in most patients responded", which is looser than 3 of 5.
+- The clause "lactate ... not found in that text (searched 2026-11-26 ...)" is TRUE of the held text, but misleading as written. The held text is partial. The Methods case narratives for patients 1 to 4 (chunks 3 to 17 and 19 to 21) are not held, and a lactate value would plausibly sit there.
+- ADD, minimal wording: "... not found in the held text (8 delivered chunks only: abstract, introduction, methods opening, Table 1, patient 4 and 5 fragment, discussion; the patient narratives for patients 1 to 4 are not held; searched ... )".
+- OUTSIDE: "other held WOREE reports are less favourable", and the Pdk1/serum-lactate MEF and mouse clause.
+
+BLOCK R-24 and R-06 (Mijatovic 2024, EPMC XML read in full; Figs 5 and 6 not held, so text and legends only)
+- WT half-life under bortezomib: 7.7-fold. Supported ("significantly increased half-life of CBS WT by 7.7-fold"). T191M is 6.8-fold and I278T 3.0-fold. Supported.
+- WT activity: "We observed a trend for increased H2S biogenesis in CBS WT-expressing cells after 24 h treatment with 20 nM bortezomib (174%)". T191M is 259% and I278T 574%, "compared to vehicle-treated" variant, p<0.05.
+  - The text says "trend". It never states the WT bar as non-significant, and Fig 6a is not held. So "non-significant" is an inference from the contrast with the other two variants, which the text calls significant. This is UNSETTLED strictly.
+  - R-06's wording "wild type trend only" tracks the source better.
+- ADD, minimal wording for R-24: "(wild-type probe signal about 174 percent of its vehicle, described as a trend; about 259 and 574 percent of their own vehicle in T191M and I278T)".
+- ADD for R-24: the "activity" is a live-cell AzMC H2S-probe fluorescence signal (four areas in each well, three replicates). It is not enzyme activity. The authors state that bortezomib- and eeyarestatin-treated cells "exhibited signs of cell damage and apoptosis indicating potential cytotoxic effect at the effective concentrations". A reader seeing only the R-24 text would not know either point.
+- R-24 closing clause ("a boost multiplies residual function, and whether it repairs it is not shown here") is an interpretation and is consistent with the source. The authors themselves use "rescue". Fig 1d shows T191M lysate with essentially no baseline activity, so percent-of-own-vehicle values say nothing about reaching the WT level.
+- R-06 sentence: the other clauses reproduce.
+  - Lysosome inhibition (bafilomycin) increased half-life of WT (1.4-fold) and I278T (1.6-fold), and had no effect on T191M.
+  - ERAD inhibitor (eeyarestatin I): "no effect" on T191M half-life, with T191M activity 244% (p<0.05). For I278T it gives half-life "1.6-fold" and activity 374%.
+  - So "the dissociation of activity from turnover rests on T191M alone" is consistent.
+  - UNSETTLED: the eeyarestatin sentence repeats the bafilomycin numbers exactly (WT 1.4, I278T 1.6, T191M none). This could be a copy error in the source, and Fig 5f is not held. The fragment "about 1.6-fold" for ERAD in I278T therefore cannot be checked against a table.
+  - If kept, suggest "about 1.6-fold as stated in the text (Fig 5f not held; same value as for bafilomycin)".
+- The truncated tail "the authors c..." is not gradable.
+
+BLOCK R-29 and R-19 (GSE156243)
+Opened the family.soft, the Salmon count table (35,337 genes, cols cko1-4, cwt1-2), and the up and down DE lists. I recomputed CPM = count / library total × 1e6 per library, then took the mean of the 4 KO and the mean of the 2 WT.
+
+| Gene | KO mean CPM | WT mean CPM | KO/WT | Per-library CPM (KO ×4 \| WT ×2) |
+|---|---|---|---|---|
+| NFE2L2 | 20.82 | 27.67 | 0.752 | 19.9, 22.4, 21.3, 19.7 \| 29.3, 26.1 |
+| NQO1 | 6.31 | 8.65 | 0.730 | 6.3, 4.2, 8.0, 6.8 \| 8.4, 8.9 |
+| HMOX1 | 10.16 | 6.09 | 1.667 | 10.7, 6.1, 15.1, 8.7 \| 6.3, 5.9 |
+| SRXN1 | 10.52 | 7.89 | 1.333 | 11.6, 5.7, 14.3, 10.5 \| 6.8, 9.0 |
+| GSR | 52.43 | 43.83 | 1.196 | 58.9, 53.5, 53.4, 43.9 \| 43.0, 44.6 |
+
+- R-29: 0.75, 0.73, 1.67, 1.33 and 1.20 all reproduce, and "4 knockout against 2 wild-type libraries" is correct. "NFE2L2 is the factor itself, not a target" is correct. So the fragment is numerically STANDS, but the following omissions matter.
+- ADD: only NFE2L2 appears in the deposited DE lists (down, pvalue 9.3e-4, padj 0.0143, log2FC -0.58, that is 0.67x on DESeq2, not 0.75x on CPM). NQO1, HMOX1, SRXN1 and GSR are in neither list.
+- ADD: the three "higher" genes overlap WT per library. HMOX1 KO 6.07 lies inside WT 5.9 to 6.3. SRXN1 KO values span 5.7 to 14.3 around WT 6.8 and 9.0. GSR KO 43.9 lies inside WT 43.0 to 44.6.
+- Suggested added wording: "(none of NQO1, HMOX1, SRXN1, GSR appears in the deposited differential lists; HMOX1, SRXN1 and GSR knockout libraries overlap the two wild-type libraries; NFE2L2 itself is lower, padj 0.014)".
+- "No NRF2 or ROS datum in any WWOX-deficient mammalian neural cell" is an absolute across the literature. It is OUTSIDE or UNSETTLED. In Steinberg 2021 itself there is no NRF2/NFE2L2/NQO1/HMOX string, and ROS appears only in a background sentence in the Discussion.
+- R-19: Methods says 8 samples were sequenced (4 WT, 4 KO). "One WT sample failed our preliminary quality control (low read count and low transcriptome mapping rate). Another WT sample that did not cluster with any of the other samples (neither WWOX-KO nor WT) was apparent in both PCA and dendrogram analysis. These two samples were extracted". The GEO series design says "2 WT samples failed quality control". So "survivors of an exclusion that removed two more" is correct in numbers. "An exclusion" lumps two different steps, though.
+- ADD, minimal wording: "(4 versus 2 libraries, one laboratory; two of four wild-type libraries were removed, one for failed quality control and one as a post hoc outlier that clustered with neither group)".
+- "One laboratory" is outside these sources.
+
+BLOCK R-04 (Hussain 2023, PMC XML in full, f0009.jpg Fig 9)
+- Text: "significant ≥2-fold upregulation of mRNA of both cytokines (p<0.05) in CB samples from Wwox P47T/P47T mice (n=6) compared to WT (n=6) (Fig. 9d and e)".
+- Methods 4.15: n=6 mice per group (3 male and 3 female). The legend gives unpaired Student's t-test with *p<0.05. 18S is named as the reference primer. No age is stated for the qPCR mice. The RNA-seq mice are 150 to 280 days old with n=5 per group (2M and 3F). No NRF/NFE2L2 string anywhere in the text. Fig 9a shows 4 WT and 3 P47T cerebellum libraries. All of these claims in the context reproduce.
+- Figure measurement (calibrated on the axis ticks, bar-top outline centres):
+  - Fig 9d (IL1b): WT bar about 1.87 to 1.9, P47T bar 3.75, ratio about 2.0. This is the ratio of bar means of relative expression, in relative expression units. It is not normalised to WT = 1.
+  - Fig 9e (TNF): WT bar about 0.97 (about 1.0), P47T bar 3.27, ratio about 3.3 to 3.4.
+  - So "IL1b about 2.0x and TNF about 3.3x" STANDS. The old 1.9x was within by-eye error, and 2.0 is the better reading.
+- Overlap clause: for Fig 9d, WT points are about 3.1, 2.1, 2.0, 1.7 (×3) and 1.0. P47T points are about 6.0, 4.7, 3.9, 3.1, 2.7 and 2.4. The WT maximum (about 3.1) exceeds two of the six P47T points and ties a third, so the ranges overlap by more than "marginal".
+- For Fig 9e: WT maximum about 1.65 against P47T minimum about 1.8. No overlap, narrowly (a gap of about 0.15).
+- ADD, minimal wording: "overlap with WT is clear for IL1b (one WT point about 3.1 lies above two of six P47T points, about 2.4 and 2.7) and absent for TNF (gap about 0.15)".
+- OUTSIDE: "the one NRF2 activation is predicted".
+
+BLOCK R-07 (Steinberg 2026 Brain AM, layout.txt in full, fig2F_600dpi.png)
+- Main text: "WWOX-KO and WOREE organoids showed a prominent increase in the relative number of total RGs (Fig. 2D-F), while SCAR12 organoids ... exhibited an RG population similar to WT" and "dramatic decrease in identified neurons" in KO ("this was not the case in our patient-derived organoids"). Supported.
+- Fig 2F is the log2 fold change of cell fraction relative to WT, per condition (one pooled scRNA dataset, 18,007 cells, no replicate or error bars).
+- Calibrated on the axis ticks (-3 to 1; 0 at x=1244 px, 152.7 px per unit), reading the bar outline edges:
+  - KO RG: +0.99, so about +1.0. The old +0.9 was low.
+  - WOREE RG: +0.07 (outer edge +0.08). The fragment's "about +0.05" is slightly low, and "about +0.07" is better.
+  - SCAR12 RG: -0.265, so about -0.27.
+  - For context: KO neurons about -2.4, SCAR12 neurons about +0.18, WOREE neurons about -0.06.
+- MUST CHANGE (one clause): "not wild-type-like" for SCAR12 contradicts the authors' text, which calls SCAR12 similar to WT. There is no test or variance in 2F. Replacement: "about -0.27 in SCAR12 (the text calls SCAR12 similar to wild type; no replicate or test is shown)".
+- ADD: "pooled per condition, single scRNA run".
+- "The authors abstain from finer subsets": the abstention is specifically from conclusions on NP, oRG and cRG changes in the patient-derived organoids, because of heterogeneity in unguided organoids. STANDS in context, but could be narrowed.
+
+BLOCK R-08 (Supplementary Fig 7F/7G; File010.pdf pp 12 to 13, rendered at 300 dpi)
+- The legend n = 4, 4, 6, 7 reproduces: WT NT n=4, WT DMSO n=4, WiBR3 WKO-1B n=6, WiBR3 WKO-1B n=7. Note the second 1B label is presumably the A51 arm. The legend repeats the clone label.
+- Zoomed dot counts in the SATB2 panel (Fig 7F):
+  - WT NT: 6 dots.
+  - WT DMSO: 6 dots.
+  - KO-1B: 16 dots (about 15 is a fair "about"; I counted 4 + 1 + 4 + 2 + 1 + 1 + 1 + 1 + 1).
+  - KO-1B A51: 11 dots.
+  - So the dots exceed the legend n in every arm, and plotted dots are not organoids. STANDS. If the packet wants precision, use "6, 6, 16 and 11".
+- Bracket results in SATB2: WT NT vs KO *, WT DMSO vs KO *, WT NT vs A51 ns, WT DMSO vs A51 ns, KO vs A51 ns, WT NT vs WT DMSO ns. So "knockout against knockout plus A51 is not significant" and "A51 not different from wild type" are both supported. "Neither shown nor excluded" is a fair reading.
+- Bar means by eye: SATB2 WT NT about 1.35, WT DMSO about 1.45, KO about 0.4, A51 about 0.73.
+- CTIP2 context values (measured on the zoomed 0-10 scale; 24.6 px per unit): WT NT bar about 12.6, WT DMSO about 5.6, KO about 0.1, A51 about 0.7. All reproduce, as do the other clause details in the field context.
+- The legend says the data are "from one experiment", and one knockout clone is named (WKO-1B), consistent with the field context.
+
+BLOCK R-11 (Yadav 2022 ADV272, EPMC XML in full)
+- 52 recruited (30 intervention and 22 comparator), 48 analysed (26 and 22). The abstract states "per-protocol analysis". The loss was 2 lost to follow-up and 2 excluded for side effects, all in the intervention arm. Open-label, with a computer-generated random number table. The comparator was a syrup with calcium and vitamin D, without magnesium. STANDS.
+- Seizure control p=0.69 (text 0.693) and development p=0.09. STANDS.
+- EEG p: Results and Table 2 say 0.04. The Discussion says "EEG normalization (p=0.003)". STANDS as an internal inconsistency.
+- I recomputed Table 2 EEG (11/2 vs 6/7): uncorrected chi-square 4.25, p=0.0393. Fisher p=0.0968. Yates chi-square 2.72, p=0.0992. Expected counts 8.5, 4.5, 8.5 and 4.5, so two of four are below 5. 0.003 does not reproduce from Table 2. STANDS.
+- ADD 1: the value 0.003 occurs elsewhere in the paper as a different comparison. The Abstract and Results use it for "clinical response better with normal initial serum magnesium, intervention group" (Table 3), and the Discussion uses it for both that and EEG. So the EEG 0.003 may be a carry-over, which is a hypothesis. Table 3's own counts (intervention: 4/2/3 versus 2/3/13) give chi-square p=0.099 (exact 0.123), not 0.003. The non-intervention rows (4/4/0 versus 3/2/8) give chi-square p=0.018 (exact 0.014), against the printed 0.42. The pooled Table 4 (5/5/21 versus 8/6/3) gives chi-square p=0.0038 (printed 0.004; exact 0.0030).
+- ADD 2: the Table 2 EEG rows sum to 13 + 13 (n=26, labelled "initial abnormal EEG"), whereas the "Abnormal 22 22" row suggests 22 per arm had abnormal EEG at baseline. The EEG p therefore rests on 26 of 48 children, with the denominator unexplained.
+- "No post-treatment serum magnesium is reported ... although the Discussion says supplementation raised it": the Discussion does say "magnesium supplementation increases serum magnesium levels", and only initial serum magnesium is reported (mean 2.07±0.5 mg/dl; intervention 2.10, comparator 2.04). STANDS.
+- Suggested replacement wording: "EEG improvement p 0.04 in the Results and p 0.003 in the Discussion (internal inconsistency; 0.003 does not reproduce from Table 2 and is the value the paper gives for initial serum magnesium versus response in Table 3; EEG rests on 13 + 13 children)".
+
+BLOCK R-05 (Karnstedt 2026, Epilepsia; XML plus S2 clinical xlsx, S1 docx not needed)
+- Text: "14 of 19 individuals with GoF variants, whereas only three of 15 individuals with LoF or indeterminate variants improved (14/19 GoF vs. 3/15 LoF, p = .0049)". My Fisher recomputation: 0.0049. STANDS.
+- From the S2 supplementary table, group 4 (LoF, indeterminate, null, VUS) has 15 individuals: #2, 4, 8, 9, 12, 15, 16, 17, 18, 19, 23, 28, 29, 30, 31. Improved = #9, #15, #23, each rated "mild positive" or "mild positive/no effect", so 3/15.
+- #28 and #29: S2 gives "Conclusion: no effect" for both, but row 42 "Improvement - Seizure" is "y - seizure free, except one seizure after 10 months" (#28) and "y - seizure frequency reduction" (#29; 3-4 per day to 1 per 3 months). Scoring both as improved gives 14/19 vs 5/15, Fisher p=0.0359 (so 0.036). STANDS numerically.
+- ADD, minimal wording: "(14/19 versus 5/15 if #28 and #29 are scored as improved, p 0.036; #28 is a likely-benign synonymous variant and #29 a missense VUS, neither tested functionally; the authors' conclusion for both is 'no effect'; #28 also had other antiseizure-medication changes during memantine; unadjusted Fisher; a sensitivity re-scoring, not the authors' analysis)".
+- "Same reading as DR-W2-002" is OUTSIDE.
+
+FILES OPENED (all read-only)
+- R-34: PMID32023956_Lukas2020_PMC7037350.xml.
+- R-37: PMID34268881_Steinberg2021_PMC_r2.xml, PMID34268881_Steinberg2021.pdf, supplement/PMID34268881_r2 PDFs (PMC8350905.1.pdf, s001, s007), and figures EMMM-13-e13610-g005.jpg, g007.jpg and g008.jpg.
+- R-35: PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt and the ScholarGateway JSON.
+- R-24 and R-06: PMID39041895_Mijatovic2024_PMC11264351_epmc_2026-10-29.xml.
+- R-29 and R-19: files/geo/GSE156243 (family.soft.gz, Salmon count table, up and down DE lists), plus the Steinberg 2021 XML.
+- R-04: PMID36828035_Hussain2023_PMC.xml and f0009.jpg (Fig 9).
+- R-07 and R-08: PMID42397075_Steinberg2026_OUP-AM_layout.txt, fig2F_600dpi.png, brain-2025-03809-File010.pdf/.txt (p 12 rendered at 300 dpi).
+- R-11: PMID35222658_ADV272_PMC8752995_epmc_20261125.xml.
+- R-05: PMID41489401_Karnstedt2026_Epilepsia_PMC13075606.xml and supp_S2_clinical.xlsx.

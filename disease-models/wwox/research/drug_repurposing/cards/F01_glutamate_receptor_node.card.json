@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "979e7c6b0676381e55ca7daa7a236194116bd5f482d0f0d2c71a742e424ae775",
+  "input_sha256": "41047a56a299141d075c770122dcab66a1c6610240dfb5dd93352363bef4060e",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -227,7 +227,7 @@
         "endpoint": "clinical improvement",
         "direction": "NO_CHANGE",
         "source": "Karnstedt 2026, Epilepsia (PMID 41489401; NOT WWOX EVIDENCE; other disease)",
-        "locator": "same reading as DR-W2-002; Fisher test reported 14 of 19 versus 3 of 15",
+        "locator": "same reading as DR-W2-002; Fisher test reported 14 of 19 versus 3 of 15; scoring #28 and #29 as improved gives 14 of 19 against 5 of 15, p 0.036 (a sensitivity re-scoring, not the authors' analysis: their conclusion for both is no effect; #28 is a synonymous variant and #29 a missense variant of uncertain significance, neither tested functionally)",
         "epistemic_status": "DATO",
         "reading_depth": "partial_fulltext_read",
         "context": {

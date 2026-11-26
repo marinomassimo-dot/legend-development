@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "e9585234cadb392337892deea85ef85a61e86be6ad685173409d302fbbb8c200",
+  "input_sha256": "a8e2afabbfe611bd7c88c54c9a2a6adede22394b70164eb025fce790eec734d6",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -306,7 +306,7 @@
           "cell_type": "HEK293T",
           "developmental_stage": "not applicable"
         },
-        "measured_result_note": "Total mutant protein about 1.8 fold of its own untreated control (three experiments, significance mark printed); wild type rose about 1.8 fold as well, so the gain is not mutant-specific; transgene mRNA under treatment was not measured.",
+        "measured_result_note": "Total G544D mutant protein about 1.8 fold of its own untreated control in Supplementary Figure 12a, about 1.55 fold in 12b (HEK293T, three experiments each) and about 1.64 fold in neurons (Figure 6a, five experiments), significance mark printed in each; wild type rose about 1.8 to 2.05 fold in HEK293T and about 1.3 fold in neurons as well, so the gain is not mutant-specific; transgene mRNA under treatment was not measured.",
         "receipt": "FTR-20261021-30266908-01"
       },
       {
@@ -344,7 +344,7 @@
           "cell_type": "HEK293T",
           "developmental_stage": "not applicable"
         },
-        "measured_result_note": "Mutant total protein in Supplementary Figure 12a (HEK293T, three independent experiments): about 2.35 fold of control with trehalose and about 1.8 fold with sorbitol, both marked; Figure 12b (same cell line, same concentration) repeats the trehalose rise but shows about 1.0 fold, unmarked, for sorbitol, and the higher concentration of either gave no rise in panel a, so no sorbitol effect is established and the osmolyte arm rests on trehalose (corrected 2026-11-25, ADV-279; figure readings). Both were also raised in yeast by a second assay (panel c, fluorescence). The osmolytes act at high levels, so an osmotic effect is not separated from chaperoning; the effect is on wild type as well.",
+        "measured_result_note": "Mutant total protein in Supplementary Figure 12a (HEK293T, three independent experiments): about 2.35 fold of control with trehalose and about 1.8 fold with sorbitol, both marked; Figure 12b (same cell line, same concentration) repeats the trehalose rise but shows about 1.0 fold, unmarked, for sorbitol, and the higher concentration of either gave no rise in panel a, so no sorbitol effect is established and the osmolyte arm for G544D rests on trehalose (sorbitol is marked for G544D in 12a and in yeast and for R406H and G544V in 12b, but not for G544D in 12b or in neurons) (corrected 2026-11-25, ADV-279; figure readings). Both were also raised in yeast by a second assay (panel c, fluorescence). The osmolytes act at high levels, so an osmotic effect is not separated from chaperoning; the effect is on wild type as well.",
         "receipt": "FTR-20261021-30266908-01"
       },
       {
@@ -363,7 +363,7 @@
           "cell_type": "primary cortical neurons",
           "developmental_stage": "in culture"
         },
-        "measured_result_note": "Mutant total protein sits at about 4 to 8 percent of wild type in four of five variants and rises only about 1.05 to 1.65 fold with the class; the soluble fraction roughly doubles (soluble pool about 2 to 4 fold, reader arithmetic); function reaches or exceeds the untreated wild-type range for three of the four low-protein variants (R406H about 44 against about 55 does not; the fifth variant, P335L, has about 65 percent protein and little baseline deficit). The soluble-pool figures combine panels with different loading normalisers and carry a reader error of about plus or minus 10 percent of axis, and fold values near 1.05 are not separable from 1.0. Quantity and function are not proportional (read-out saturation not excluded; the authors report near-wild-type expression in neurons, not overexpression, and a pixel-threshold read-out); a steady-state deficit of about 12 to 25 fold is only about 1.5 to 3 fold explained by the measured turnover.",
+        "measured_result_note": "Mutant total protein sits at about 4 to 8 percent of wild type in four of five variants and rises only about 1.05 to 1.65 fold with the class; the soluble fraction roughly doubles (soluble pool about 2 to 4 fold, reader arithmetic); function reaches or exceeds the untreated wild-type range for three of the four low-protein variants (R406H about 44 against about 55 does not with the class, and reaches about 58 with sorbitol; the fifth variant, P335L, has about 65 percent protein, an intermediate and not absent deficit, and its soluble fraction shows no marked change). The soluble-pool figures combine panels with different loading normalisers and carry a reader error of about plus or minus 10 percent of axis, and fold values near 1.05 are not separable from 1.0. Quantity and function are not proportional (read-out saturation not excluded; the authors report near-wild-type expression in neurons, not overexpression, and a pixel-threshold read-out); a steady-state deficit of about 12 to 25 fold is only about 1.5 to 3 fold explained by the measured turnover.",
         "receipt": "FTR-20261021-30266908-01"
       },
       {
@@ -382,7 +382,7 @@
           "cell_type": "liver",
           "developmental_stage": "adult, 12-week exposure"
         },
-        "measured_result_note": "Enzyme protein rose toward wild type with acetylated HSP90 up; plasma phenylalanine fell about 44 percent from sham yet stayed about three times wild type; two sham animals against three treated; a higher exposure level caused kidney enlargement, ascites and deaths; no turnover measurement supports the authors' degradation reading. Shows that a cytosolic mutant enzyme can respond to an HDAC6 lever, which butyrate does not engage.",
+        "measured_result_note": "Enzyme protein rose toward wild type with acetylated HSP90 up; plasma phenylalanine fell about 43 to 44 percent from sham at week 12 (44.1 from the printed group means, 749.41 against 1341.01; 42.9 from the mean of the three tabulated treated values, 765.9, against the two tabulated sham values) yet stayed about three times wild type; two sham animals against three treated; a higher dose caused abdominal oedema and deaths (that group was excluded from the analysis; kidney enlargement and ascites at necropsy); the tables list two sham animals although the Methods state three per group; no turnover measurement supports the authors' degradation reading. Suggests, in one small study (Pah enu2 F263S mice, two tabulated sham against three treated animals), that a mutant liver enzyme can respond to an HDAC6 inhibitor; this paper does not test whether butyrate engages HDAC6.",
         "receipt": "FTR-20261022-41274966-01"
       }
     ],
@@ -423,7 +423,7 @@
         "for": [
           "Allele-specific rescue of a fully ER-retained variant with protein and function read together (GAT-1 G443V, fly seizure-like episodes down).",
           "Total and surface protein rise in other missense lesions with the class.",
-          "In the soluble cytosolic client, the class and two HDAC-free osmolytes raised the mutant while a class-I HDAC inhibitor did not, and the soluble fraction roughly doubled with a vesicle-recycling read-out at or above the untreated wild-type range for three of the four low-protein variants (partial dissociation of quantity from function in the favourable direction; NOT WWOX EVIDENCE)."
+          "In the soluble cytosolic client (Guiberson 2018), phenylbutyrate raised the G544D mutant total protein about 1.8 fold (Supplementary Figure 12a) and about 1.5 fold (12b) and trehalose about 2.35 fold in both; sorbitol raised it in 12a (about 1.8 fold, marked) but carries no significance mark in 12b (about 1.0) or in neurons (Figure 6a, about 1.6); sodium butyrate, tested only on G544D and wild type in HEK293T (three experiments), did not raise G544D (about 1.0; wild type about 1.9, unmarked); with phenylbutyrate the soluble fraction rose about 1.7 to 2.4 fold in the four low-protein variants and the vesicle-recycling read-out was at or above the untreated wild-type range for three of the four (partial dissociation of quantity from function in the favourable direction; NOT WWOX EVIDENCE)."
         ],
         "against": [
           "Wild type is raised in every target: the effect is not mutant-specific.",
