@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "5ee3cb342ccd2df0fccd811df909f540052de5aff0a148a567e94af87d40b867",
+  "input_sha256": "ff54308571a3f7f4095a9fc4530db2a1c54b3c4af2e28fd92e1dee6274bf77e8",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -304,7 +304,7 @@
           "cell_type": "liver",
           "developmental_stage": "adult, short treatment"
         },
-        "measured_result_note": "Neither inhibitor restored significant activity ('a very small amount' with bortezomib). The same allele gained activity with bortezomib in a human kidney-line model (DR-A02-008), so the allele does not fix the outcome: expression context and readout differ. A measured null in this system. The HEK paper's own summary of the mouse work says bortezomib partially rescued I278T and T191M, which is more generous than the mouse paper's wording; the mouse paper's wording is used here."
+        "measured_result_note": "Neither inhibitor restored significant activity ('a very small amount' with bortezomib), although proteasome inhibition was confirmed in this allele and CBS protein rose. The same allele gained activity with bortezomib in a human kidney-line model (DR-A02-008; that gain is measured from an essentially zero baseline, with signs of cell damage), so the allele does not fix the outcome: expression context and readout differ. A measured null in this system. The HEK paper's own summary of the mouse work says bortezomib partially rescued I278T and T191M, which is more generous than the mouse paper's wording; the mouse paper's wording is used here."
       },
       {
         "id": "DR-A02-007",
@@ -322,7 +322,7 @@
           "cell_type": "liver",
           "developmental_stage": "adult, about a month"
         },
-        "measured_result_note": "With tolerated exposure the activity gain was not significant and a white-cell and lymphocyte reduction was still present; homocysteine fell by about half (mean 345 to 179 micromolar, significant linear trend) yet stayed far above normal, with no significant activity gain, and one of eight treated animals had the largest response and was also the one with the greatest weight loss and lowest white-cell counts. The authors conclude that proteasome inhibitors are probably not feasible as monotherapy at non-toxic exposure."
+        "measured_result_note": "With better-tolerated but not toxicity-free exposure the activity gain was not significant (the authors cite limited assay sensitivity at very low activity); a white-cell and lymphocyte reduction was still present and one animal was moribund. Homocysteine fell by about half (mean 345 to 179 micromolar, significant linear trend, compared with the starting value only, with no vehicle-injection arm; the authors allow handling as an explanation) yet stayed far above normal, with no significant activity gain; one of eight treated animals had the largest response and was also the one with the greatest weight loss and lowest white-cell counts. Adding the heat-shock co-inducer bimoclomol changed neither homocysteine, activity nor heat-shock induction. The authors conclude that proteasome inhibitors are probably not feasible as monotherapy at non-toxic exposure."
       },
       {
         "id": "DR-A02-008",
@@ -363,7 +363,7 @@
       {
         "id": "DR-A02-010",
         "target_id": "CBS p.S466L",
-        "endpoint": "serum total homocysteine and liver CBS activity under one week of low-exposure carfilzomib",
+        "endpoint": "serum total homocysteine and liver CBS activity under one week of low-rate carfilzomib",
         "direction": "NO_CHANGE",
         "source": "Gupta 2023, PMID 37319242 (Results 'Low dose/long-duration studies'); NOT WWOX EVIDENCE",
         "locator": "disease-models/wwox/research/drug_repurposing/broad_recovery_it6_p6_20261029/README.md section 4 row P-4 (S466L low-exposure arm)",
@@ -376,7 +376,7 @@
           "cell_type": "liver",
           "developmental_stage": "adult, one week"
         },
-        "measured_result_note": "No significant difference in homocysteine or activity; a very slight rise in protein in some animals and no Hsp70 induction. The regulatory-domain allele that was rescued at high exposure (DR-A02-004) was therefore not rescued at tolerated exposure (PMID 37319242, Results 'Low dose/long-duration studies', last paragraph)."
+        "measured_result_note": "No significant change in homocysteine or liver activity in the Results (the Discussion calls the activity change slight); a very slight rise in protein in some animals and no Hsp70 induction. The one-week pump schedule delivered about the same total amount as the 24-hour arm that rescued the regulatory-domain allele (DR-A02-004), at about one seventh of the rate; that 24-hour arm also showed no Hsp70 induction, so its absence here does not show absent engagement, and proteasome activity was not measured at this schedule. Tolerability is asserted by the authors only in general terms (low doses less toxic), not specifically for this arm; no weight, blood-count or clinical data are shown and group size is not stated. The allele rescued at the higher rate was therefore not rescued at the lower rate of delivery (PMID 37319242, Results 'Low dose/long-duration studies', last paragraph)."
       }
     ],
     "p4_fields": {

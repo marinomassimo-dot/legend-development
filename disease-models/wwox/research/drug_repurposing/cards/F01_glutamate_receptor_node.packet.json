@@ -170,7 +170,7 @@
     "cell_type": "whole animal",
     "developmental_stage": "adult"
    },
-   "measured_result_note": "Memantine accelerated every seizure stage; perampanel delayed stage 4 but did not prevent seizures. The reading carries unresolved internal inconsistencies noted in that record. A safety-direction datum for a non-genetic model, not WWOX.",
+   "measured_result_note": "Memantine at the two higher of its three doses shortened the latency to all four seizure stages (stage 4 about 26 and 25 minutes against about 37 in controls, bar readings, eight per group by the analysis-of-variance degrees of freedom); the lowest dose shortened stages 1 and 2 only, although the text says every dose shortened each stage. Perampanel delayed the onset of stages 3 and 4 but did not prevent seizures. No in-study measure of receptor engagement. The reading carries unresolved internal inconsistencies noted in that record. A safety-direction datum for a non-genetic model, not WWOX.",
    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
    "receipt": "FTR-20261019-42652189-01"
   },

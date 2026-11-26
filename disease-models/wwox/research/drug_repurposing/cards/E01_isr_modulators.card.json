@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "439527115513b5ccdaa2c58f6899156a55d7c930728d7716ba81e448350f76fa",
+  "input_sha256": "68a236448d53c400cf92f71e5bef780f1bdcfc5fc708a185d0e58baca9134e13",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -176,7 +176,7 @@
           "cell_type": "whole organism, clinical endpoint",
           "developmental_stage": "adult"
         },
-        "measured_result_note": "Ratio 1.04 (95 percent credible interval 0.83 to 1.32) over a 24-week placebo-controlled period: no benefit despite target engagement and proof of mechanism in the earlier phase. Adults with ALS; says nothing about a developmental encephalopathy.",
+        "measured_result_note": "Ratio 1.04 (95 percent credible interval 0.83 to 1.32) over a 24-week placebo-controlled period: no evidence of slowing, though the interval does not exclude a modest effect. Target engagement and proof of mechanism are cited from the earlier phase 1B trial, and the abstract reports none for this trial's participants. Adults with ALS; says nothing about a developmental encephalopathy.",
         "evidence_scope": "OTHER_DISEASE_PRECEDENT"
       },
       {
@@ -195,7 +195,7 @@
           "cell_type": "whole animal behaviour",
           "developmental_stage": "ten-month-old adult"
         },
-        "measured_result_note": "Better recognition memory and less microglial activation and tau; amyloid burden not reduced; p-eIF2 alpha lower. Mouse, adult, 23 days, one study.",
+        "measured_result_note": "In ten-month-old 5xFAD mice over 23 days, with a donepezil comparison arm: better recognition memory and less microglial activation and tau; amyloid burden not reduced; p-eIF2 alpha lower; the abstract calls the compound an integrated-stress-response inhibitor and does not name its molecular target, and only recognition memory is reported as improved among the behavioural tests run. The donepezil results are not reported in the abstract. Mouse, adult, one dose, one study; the authors call the effects limited.",
         "evidence_scope": "OTHER_DISEASE_PRECEDENT"
       },
       {

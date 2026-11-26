@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "979c354bbe517901713c9420bebc6c824542dd6e5780d845ba881268ea9dddbb",
+  "input_sha256": "5f16f3df821d5fb77138936122940082dacb4f014ab00fa2f05675da3cbd82eb",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -179,7 +179,7 @@
           "cell_type": "MEF",
           "developmental_stage": "early and late passage"
         },
-        "measured_result_note": "ROS substantially higher in late-passage nulls, no difference in early passage; early-passage redox-homeostasis transcripts (including Nfe2l2, Nqo1 per the manifest; one sample per genotype) are higher; NAC rescues senescence escape. Non-neural; an initial antioxidant response is suggested by the authors as an open question.",
+        "measured_result_note": "ROS higher in late-passage Wwox-null fibroblasts than in wild-type and heterozygous ones (one DHE histogram per genotype shown, no quantification or test), no difference at early passage; at passage one a microarray (one column per genotype, heterozygous against null, not wild type; no n or test stated) shows redox-homeostasis transcripts, Nfe2l2 and Nqo1 among them, higher in nulls. NAC given continuously from cell isolation (prevention, not reversal) prevents the senescence escape; no ROS measurement under NAC was found. Non-neural; the authors leave an initial antioxidant response as an open question.",
         "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
       }
     ],
@@ -238,7 +238,7 @@
           "cell_type": "whole brain tissue, hippocampal histology",
           "developmental_stage": "adult male"
         },
-        "measured_result_note": "Different molecule; 'acute Nrf2 target engagement was not measured'; cytokine mRNA differences not significant at 10 weeks; MIXED-to-favourable, adult acquired epilepsy. Not transferable to omaveloxolone.",
+        "measured_result_note": "Different molecule. 'acute Nrf2 target engagement was not measured'; more broadly the authors state that Keap1 modification, Nrf2 nuclear translocation, ARE activation and Nrf2 target proteins were not measured at all, so superoxide dismutase and catalase activity after PTZ is the only antioxidant-enzyme readout, and it is not shown to be Nrf2-dependent; brain drug level not measured; one dose. Favourable in part: lower PTZ maximum severity and longer latency to the late stages (incidence difference not significant), and after status epilepticus lower spontaneous seizure burden and higher neuronal density in CA1 only (no difference in CA3; three animals per group in the histology; the abstract states CA1 and CA3, which the Results do not support); twenty-four hours after PTZ whole-brain cytokine mRNA and malondialdehyde were lower and superoxide dismutase and catalase activity higher (nine per arm), whereas cytokine mRNA differences were not significant at 10 weeks. MIXED-to-favourable, adult acquired epilepsy. Not transferable to omaveloxolone.",
         "evidence_scope": "OTHER_DISEASE_PRECEDENT"
       },
       {
