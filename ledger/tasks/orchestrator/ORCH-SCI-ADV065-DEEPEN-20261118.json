@@ -1229,10 +1229,11 @@
     },
     {
      "step": "ADV-292: read the unread class of ten held partial records (corrected ten, two increments of five, PREREG frozen), sentences to IT after its apply report; both increments by the successor",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "source": "ADV-292",
-     "accepted_at": "2026-11-26T00:33:37Z"
+     "accepted_at": "2026-11-26T00:33:37Z",
+     "updated_at": "2026-11-26T00:41:23Z"
     }
    ]
   }
