@@ -2,7 +2,7 @@
 
 26 November 2026 · SCI_CODEX · context_policy: QUESTION_DRIVEN · [prespecified ER and lineage comparison](pretest_20261126.md)
 
-**Checkpoint.** TUDCA is the sole active compound. The WWOX RNA data weaken transfer of an ECHS1-specific ATF4–FASN overactivation explanation. They motivate checking ER stress branches and cell state directly. A primary Echs1 dataset gives a useful positive comparator for genotype-by-treatment differences in lineage outcomes and a counterexample to using ATF4 transcript reduction as evidence of specificity.
+**Disposition.** TUDCA is parked for pediatric WWOX trial priority. Retain it as an ER and lineage comparator. The WWOX RNA data weaken transfer of an ECHS1-specific ATF4–FASN overactivation explanation. A primary Echs1 dataset gives a comparator for genotype-by-treatment differences in lineage outcomes and a counterexample to using ATF4 transcript reduction as evidence of specificity. [Intact parent, independent comparisons and reopening conditions](exposure_and_disposition_20261126.md)
 
 | Prespecified marker | P17 mouse cortex TPM | P17 mouse hippocampus TPM | Week-15 human cerebr. organoid CPM |
 | --- | ---: | ---: | ---: |
@@ -23,3 +23,9 @@ These are descriptive control → LoF library means (4/3, 2/3 and 2/4 libraries)
 **Next deciding comparison.** Check whether a concentration of intact parent attainable at the neural site can restore ER calcium or native cargo handling before later lineage recovery. Separate bile-acid signaling, conjugate conversion and survival as rivals. Prioritise the adult placebo-controlled TUDCA monotherapy dataset and the paired human bile-acid assay. Resolve distinct analytes and direct neural exposure before assigning a pediatric priority. ECHS1 gives an assay comparator for stage-matched viable and evoked outputs, while its transcriptional mechanism stays phenotype-specific.
 
 Replay the WWOX RNA screen with `python3 -B er_screen.py /home/desktop/legend-development/files /tmp/tudca-replay`. Replay Fig. 8 with `python3 -B replay_echs1.py /path/to/echs1_source_data.xlsx` using the public source workbook (`41467_2026_75063_MOESM7_ESM.xlsx`, SHA-256 `c7dcb27b00e55efb25e0a1a0eb3fa7b0f314240f62b2d45d37d98cc4589ebfc7`). The SE column assumes independent mouse arms, uses the reported units and carries no multiplicity adjustment. Interactions on another scale can differ.
+
+## Secondary lipid comparison
+
+For the separate progenitor-maturation alternative, the post-opening panel fixed ACADL and ACAT1 from the primary stem-cell experiment, HADHA and CPT1A for oxidation and import context, ACADVL as an additional chain-length comparator, SREBF1 for lipid synthesis and PDHA1 for carbon entry. Bulk consistency required each one-library omission to preserve the same sign in all three preparations. Only SREBF1 met that rule, with mean log₂(1 + abundance) differences of −0.578 in cortex, −0.320 in hippocampus and −0.168 in the organoid. ACADL, HADHA and CPT1A had robust opposite directions between the two mouse bulk tissues and the human organoid. Mouse tissues and organoid preparations differ in more than genotype and age. The pooled nuclear summaries contextualize cell-type contributions and have one pool per genotype. [Bulk estimates and omissions](lipid_bulk.tsv) · [Nuclear totals](lipid_nuclei.tsv)
+
+Replay with `python3 -B er_screen.py /home/desktop/legend-development/files /tmp/tudca-replay --lipid-panel`. This uses the original WWOX inputs and normalization. Neither SREBF1 transcript abundance nor downstream RNA estimates measure SREBP1 maturation or lipid flux.

@@ -1,0 +1,21 @@
+key	value	units	record	locator
+adult_combo_fasted	871	ng/mL	FDA clinical pharmacology	Table 5, adult intact parent mean Cmax, fasted
+adult_combo_fed	836	ng/mL	FDA clinical pharmacology	Table 5, adult intact parent mean Cmax, fed
+rat_oral_alone_cmax	293	ng/mL	FDA nonclinical	Table under §5.1 PK, oral TUDCA single-agent arm
+rat_oral_combo_cmax	154	ng/mL	FDA nonclinical	Same TUDCA input with phenylbutyrate
+rat_oral_alone_auc	10800	ng*h/mL	FDA nonclinical	Same single-agent arm, AUClast
+rat_oral_combo_auc	5100	ng*h/mL	FDA nonclinical	Same combination arm, AUClast
+parent_mass	499.7	g/mol	PubChem CID 9848818	TUDCA free-acid analyte
+echs1_proliferation_bath	100	uM	42386732	Methods, in-vitro NSPC proliferation; distinct from Atf4 schedule
+lebeau_er_bath	500	uM	34000299	Fig. 4A, HuH7, ER calcium fluorescence after chemical stress
+mouse_genetic_plasma_ctrl	21.76	nM	39577772	Supplementary Table 3, TUDCA row
+mouse_genetic_plasma_ko	98.12	nM	39577772	Supplementary Table 3, TUDCA row
+mouse_genetic_brain_ctrl	2.39	pmol/g tissue	39577772	Supplementary Table 4, TUDCA row, perfused adult brain
+mouse_genetic_brain_ko	55.53	pmol/g tissue	39577772	Supplementary Table 4, TUDCA row, perfused adult brain
+mouse_genetic_plasma_figure	3.71	relative to control	39577772	Fig. 2D and Results, knockout, n=10 versus n=13
+mouse_genetic_brain_figure	3.37	relative to control	39577772	Fig. 2G and Results, knockout, n=9 versus n=10
+rat_iv_poststroke_udca_pool	0.15	nmol/g tissue	11919517	Results, 24 h perfused brain, hydrolysed UDCA species
+rat_iv_poststroke_tauro_fraction	0.60	fraction (approximately)	11919517	Results, taurine-conjugated fraction of brain UDCA
+glutamate_ldh	143.4	% of vehicle	39577772	Fig. 3D-E and Results, shared 30 µM glutamate control
+glutamate_tudca_ldh	116.3	% of vehicle	39577772	Fig. 3E and Results, 100 µM nominal TUDCA plus glutamate
+glutamate_cdca_ldh	76.3	% of vehicle	39577772	Fig. 3D and Results, 30 µM nominal CDCA plus glutamate
