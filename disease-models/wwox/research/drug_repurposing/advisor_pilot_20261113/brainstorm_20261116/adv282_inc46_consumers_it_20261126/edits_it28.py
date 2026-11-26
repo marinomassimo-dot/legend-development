@@ -1,0 +1,84 @@
+"""IT 2026-11-26 (IT28): new wording for N02 (ADV-294, card F04) and for SCI's ADV-282 increments 4 to 6 (cards A01, A02, B01, E01, F01, F04, H02, I01, K01, L01)
+plus the DR-L01-003 addendum. Data only. Hypothesis level; reference genotype class; nothing here is medical advice.
+Entries are (id, card, field, new_text). 'field' is 'note', 'measured_result_note' or 'endpoint' of the assertion with that id; F04 uses the p4 field path.
+Card text may not carry a dose, route or schedule token (check_cards.py), so doses are described in words or left to the cited source."""
+
+NEW = []
+def e(i, card, field, text): NEW.append(dict(id=i, card=card, field=field, new=text))
+
+e("N02", "F04_nmdar_intervention_class", "p4_fields.functional_evidence_available",
+ "d-APV abolishes bursting in the knockout slice, reversibly, and suppresses a delayed evoked response at higher stimulus strengths; excitatory current amplitude differs by about six percent at -70 mV (AMPAR-weighted); inhibitory current amplitude about halved and frequency reduced; depolarised resting potential. No pharmacologically isolated NMDAR or AMPAR current and no receptor subunit protein or surface level has been found measured in any WWOX system (search of held sources, 2026-11-26); Wwox-knockout mouse hippocampus and hippocampal neural stem cells show lower Grin2c transcript (Hussain 2019, PMID 30290271), and neuron-specific (Synapsin-Cre) knockout neocortical layer II/III pyramidal neurons show larger miniature excitatory currents at -70 mV, not pharmacologically isolated, with unchanged decay (Breton 2021, PMID 34634460). No subunit-selective, pore-blocking, glycine-site or AMPAR drug was found applied to any Wwox system.")
+
+e("DR-A01-007", "A01_pba_class", "measured_result_note",
+ "Mutant total protein about equal to untreated control, no significance mark (three experiments; bar reading), at the same applied level as the phenylbutyrate class; the text lists only the phenylbutyrate class and two osmolytes as stabilising. On wild type the same comparator gave a scattered, unmarked value near 1.95. The comparator was more potent than the phenylbutyrate class on class-I HDAC enzymes in one ChEMBL document but weaker on HDAC1 in a third that also lists the sodium salt, so that premise is document-dependent. Its HDAC6 potency is only known as above 2 millimolar, below the 5 millimolar applied, so HDAC6 inhibition at that level is neither shown nor excluded; no HDAC engagement was measured in this paper, and no pan-HDAC or HDAC6-selective arm exists in it. A measured null in a cell that is not comparable.")
+
+e("DR-B01-002", "B01_amlexanox", "measured_result_note",
+ "MEASURED NO PHENOTYPIC RESCUE with amlexanox: no improvement of mitomycin C survival, of diepoxybutane chromosome aberrations (FANCA line) or of FANCC micronuclei, whereas the comparator ataluren improved all three; FANCA mRNA was not rescued. Full-length protein was induced in one arm (FANCA, from under 5 to about 9 percent of control; ataluren about 11 percent) and not in FANCF; the authors treat that induction as read-through. Amlexanox also lowered p53 (about 40 percent) and phospho-STAT2 (about 50 percent), and it is these two falls that the authors attribute, as a hypothesis with no direct TBK1 readout, to TBK1/IKKe or NF-kB inhibition rather than read-through. The endpoint encoded here is the phenotypic rescue only, so the protein induction is stated in this note and not in the direction code. Encoded NO_CHANGE for the phenotypic endpoint.")
+
+e("DR-W2-004", "F01_glutamate_receptor_node", "measured_result_note",
+ "Memantine at the two higher of its three doses shortened the latency to all four seizure stages (stage 4 about 26 and 25 minutes against about 37 in controls, bar readings, eight per group by the analysis-of-variance degrees of freedom); the lowest dose shortened stages 1 and 2 only, although the text says every dose shortened each stage. Perampanel delayed the onset of stages 3 and 4 but did not prevent seizures. No in-study measure of receptor engagement. The reading carries unresolved internal inconsistencies noted in that record. A safety-direction datum for a non-genetic model, not WWOX.")
+
+e("DR-H02-036", "H02_gabaat_inactivator_myelin_exposure", "note",
+ "GABA-B engagement enhanced precursor differentiation, myelin protein and remyelination, and a GABA-A agonist did not reproduce the effect in the coculture study; the two receptor classes therefore differ (a positive effect through GABA-B, no mediation reported for the GABA-A agonist muscimol), and no opposite sign is reported in the abstracts. Signalling studies, not drug exposures of a developing brain.")
+
+e("DR-I01-014", "I01_pdk_inhibition_dca_premise_seizure_glycaemia", "endpoint",
+ "average glycolysis with and without DCA, patient against control cells (lactate production was also measured)")
+e("DR-I01-014", "I01_pdk_inhibition_dca_premise_seizure_glycaemia", "note",
+ "DCA shifted flux toward the pyruvate dehydrogenase complex by about 40 percent in all cells, controls included, and decreased average glycolysis by 29 percent in patient cells (one line with an unusual splicing mutation excluded) with no significant effect in control cells (six patient lines and five healthy subjects). Lactate production and NTP/NDP did not change in either cell type, so the DECREASE code is glycolysis only; no genotype-by-DCA interaction test is reported. It is a precedent for a glycolysis-lowering responder phenotype. A genotype-by-inhibitor interaction on glucose-derived acetyl-CoA flux is the repository's proposed discriminating experiment, not a result of this abstract.")
+
+# ---- ADD sentences (SCI section 4 and held-apart rows 3.2)
+e("DA-L01-005", "L01_nrf2_axis", "measured_result_note",
+ "ROS higher in late-passage Wwox-null fibroblasts than in wild-type and heterozygous ones (one representative DHE histogram per genotype, no quantification or test), no difference at early passage; at passage one a microarray (one column per genotype, heterozygous against null, not wild type; no n or test stated) shows redox-homeostasis transcripts, Nfe2l2 and Nqo1 among them, higher in nulls. NAC given continuously from cell isolation (prevention, not reversal) prevents the senescence escape; no ROS measurement under NAC was found. Non-neural; the authors leave an initial antioxidant response as an open question.")
+
+e("DR-L01-003", "L01_nrf2_axis", "measured_result_note",
+ "Different molecule. 'acute Nrf2 target engagement was not measured'; more broadly the authors state that Keap1 modification, Nrf2 nuclear translocation, ARE activation and Nrf2 target proteins were not measured at all, so superoxide dismutase and catalase activity after PTZ is the only indirect readout; brain drug level not measured; one dose. Favourable in part: lower PTZ maximum severity and longer latency to the late stages (incidence difference not significant), and after status epilepticus lower spontaneous seizure burden and higher hippocampal neuronal density; cytokine mRNA differences not significant at 10 weeks. MIXED-to-favourable, adult acquired epilepsy. Not transferable to omaveloxolone.")
+
+e("DR-A02-010", "A02_proteasome_inhibitor_class", "endpoint",
+ "serum total homocysteine and liver CBS activity under one week of low-rate carfilzomib")
+e("DR-A02-010", "A02_proteasome_inhibitor_class", "measured_result_note",
+ "No significant change in homocysteine or liver activity in the Results (the Discussion calls the activity change slight); a very slight rise in protein in some animals and no Hsp70 induction. The one-week pump schedule delivered about the same total amount as the 24-hour arm that rescued the regulatory-domain allele (DR-A02-004), at about one seventh of the rate; that 24-hour arm also showed no Hsp70 induction, so its absence here does not show absent engagement, and proteasome activity was not measured at this schedule. Tolerability of this arm is asserted by the authors, with no weight, blood-count or clinical data shown. The allele rescued at the higher rate was therefore not rescued at the lower rate of delivery (PMID 37319242, Results 'Low dose/long-duration studies', last paragraph).")
+
+e("DR-A02-006", "A02_proteasome_inhibitor_class", "measured_result_note",
+ "Neither inhibitor restored significant activity ('a very small amount' with bortezomib), although proteasome inhibition was confirmed in this allele and CBS protein rose. The same allele gained activity with bortezomib in a human kidney-line model (DR-A02-008; that gain is measured from an essentially zero baseline, with signs of cell damage), so the allele does not fix the outcome: expression context and readout differ. A measured null in this system. The HEK paper's own summary of the mouse work says bortezomib partially rescued I278T and T191M, which is more generous than the mouse paper's wording; the mouse paper's wording is used here.")
+
+e("DR-A02-007", "A02_proteasome_inhibitor_class", "measured_result_note",
+ "With better-tolerated but not toxicity-free exposure the activity gain was not significant (the authors cite limited assay sensitivity at very low activity); a white-cell and lymphocyte reduction was still present and one animal was moribund. Homocysteine fell by about half (mean 345 to 179 micromolar, significant linear trend, compared with the starting value only, with no vehicle-injection arm; the authors allow handling as an explanation) yet stayed far above normal, with no significant activity gain; one of eight treated animals had the largest response and was also the one with the greatest weight loss and lowest white-cell counts. Adding the heat-shock co-inducer bimoclomol changed neither homocysteine, activity nor heat-shock induction. The authors conclude that proteasome inhibitors are probably not feasible as monotherapy at non-toxic exposure.")
+
+e("DR-P9-009", "F04_nmdar_intervention_class", "measured_result_note",
+ "Elderly adults with epilepsy and cognitive impairment (median age 63), memantine added by patient choice for 24 weeks, not randomised: increased seizure frequency in 7 of 101 on memantine against 5 of 110 without it, with baseline imbalances and no drug level. Adult safety signal reassuring but non-randomised; it bears on the warning, not on children, not on a developmental epilepsy and not on benefit. The full text is held; targeted passages were read on 2026-11-26.")
+
+e("DR-E01-002", "E01_isr_modulators", "measured_result_note",
+ "Ratio 1.04 (95 percent credible interval 0.83 to 1.32) over a 24-week placebo-controlled period: no evidence of slowing, though the interval does not exclude a modest effect. Target engagement and proof of mechanism are cited from the earlier phase 1B trial, and the abstract reports none for this trial's participants. Adults with ALS; says nothing about a developmental encephalopathy.")
+
+e("DR-E01-003", "E01_isr_modulators", "measured_result_note",
+ "In ten-month-old 5xFAD mice over 23 days, with a donepezil comparison arm: better recognition memory and less microglial activation and tau; amyloid burden not reduced; p-eIF2 alpha lower (a marker upstream of the compound's target, eIF2B). Mouse, adult, one dose, one study; the authors call the effects limited.")
+
+e("DR-H02-008", "H02_gabaat_inactivator_myelin_exposure", "note",
+ "CPP-115 only; vigabatrin itself was not tested in this paper. The reduction of spasms was only transient and the highest dose was lethal. The abstract states that spasm cessation was not accelerated and that neurodevelopmental behaviour and visuospatial learning were not altered; brain histology is not mentioned in the abstract. The held full-text page scores hippocampal sclerosis, equal across groups, and reports no myelin or white-matter histology.")
+
+e("DR-H02-023", "H02_gabaat_inactivator_myelin_exposure", "note",
+ "No microvacuolation or sheath splitting attributable to the drug was found, and no demyelination, in the 62 examined people (compared with ten untreated cases); two post-mortem and three operative specimens showed no vacuolation, and their overlap with the 62 is not stated. Abstract level: ages and exposure windows are not stated in the abstracts; the PubMed record of PMID 1940119 carries child, adolescent, adult and older headings and no infant heading (indexing, not abstract text). A negative in people not shown to include infants does not exclude the infant lesion the label records.")
+
+e("DR-H02-024", "H02_gabaat_inactivator_myelin_exposure", "note",
+ "Mild toxicity for myelinated fibres from vigabatrin and from GABA with no clear difference between them, although vigabatrin seemed slightly more toxic (the two were not applied at equal molar levels); degenerating myelinated fibres and astrocytic gliosis in both; no intramyelinic oedema and no primary demyelination were seen, so the row is not a vacuolation finding (its target is the in-vitro fibre endpoint). Preliminary data.")
+
+e("DR-H02-030", "H02_gabaat_inactivator_myelin_exposure", "note",
+ "No statistically significant difference between exposed and naive subjects among children aged 2 to 16 and adults (668 re-reviewed subjects); in infants of the same study the prevalence was higher with vigabatrin (22 against 4 percent). The age-band contrast within one study is what the row carries. A non-significant difference is not proof of no difference.")
+
+e("DR-I01-006", "I01_pdk_inhibition_dca_premise_seizure_glycaemia", "note",
+ "A population in which lactate was persistently or intermittently raised, with a defined defect (pyruvate dehydrogenase deficiency in 11, respiratory chain in 25, mitochondrial DNA in 7 of 43), aged 0.9 to 19 years; the drug blunted the postprandial lactate rise and still did not change the clinical outcomes measured over six months. Heterogeneous and short; the abstract reports no PDH-only subgroup, so a null in this design does not exclude a benefit in a defined genotype.")
+
+e("DR-I01-001", "I01_pdk_inhibition_dca_premise_seizure_glycaemia", "note",
+ "PDH activity was 65 percent lower in chronic-stage pilocarpine mice and the drug only partly alleviated this; the phospho-site did not move significantly. The abstract gives neither the dose nor the tissue for these assays. Total PDH protein fell 23 percent in non-epileptic mice on treatment, which the authors offer as a possible reason for the slight pro-convulsant signal.")
+
+e("DR-I01-002", "I01_pdk_inhibition_dca_premise_seizure_glycaemia", "note",
+ "Chronic treatment before the test did not increase flurothyl latency (no effect size in the abstract); in the same paper the drug was slightly pro-convulsant in the 6 Hz test. PDH engagement is reported for the chronic-stage pilocarpine mice, not for these animals. One laboratory.")
+
+e("DR-I01-004", "I01_pdk_inhibition_dca_premise_seizure_glycaemia", "note",
+ "A primary seizure-endpoint test of a PDK inhibitor in a model in which PDH activity is documented to be reduced; PDH engagement was only partial, so the null is at partial engagement. Abstract level; the full text is not held.")
+
+e("DA-K01-007", "K01_hif_axis_glycolytic_shift", "measured_result_note",
+ "A COUNTER-OBSERVATION to the organoid rows: no consistent elevation of HIF-axis or glycolysis transcripts across four contrasts; Hif1a within -0.2 to +0.06 log2, Hk2 flat (-0.01 to +0.35), Epas1 lower (-0.21 to -0.58, animal-separated in 3 of 4), Slc2a1, Ldha and Pgk1 lower, Ndrg1 and P4ha1 lower in all four, Gfap higher. Two to four animals per arm; Wwox itself falls about 7- to 16-fold in the three hippocampal contrasts and only about 3-fold, with overlapping values, in cortex. Caveats: bulk tissue and TPM; the animals come from lines with severe epilepsy and death at 3 to 4 weeks; background differences between control groups; no protein; gliosis and hypomyelination change composition. It does not side with the organoid: a species or in-vivo-versus-organoid disagreement is the largest unresolved fact of this axis. Exploratory, post hoc (IT10 P2.1 disclosure).")
+
+e("DR-P9-010", "F04_nmdar_intervention_class", "measured_result_note",
+ "The only controlled paediatric exposure in this label (two studies in children aged 6 to 12 with autism spectrum disorders, one parallel placebo-controlled with 54 against 53 and one randomised withdrawal) failed to demonstrate efficacy: a null in a different disorder. The label also says the paediatric safety profile matched adults. One label held, of several openFDA records; the others were not read.")
