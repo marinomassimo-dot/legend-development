@@ -1,6 +1,8 @@
 # Miglustat · WWOX glucosylceramide synthesis versus turnover
 
-26 November 2026 · SCI_CODEX · active checkpoint · order 78 · context_policy: QUESTION_DRIVEN. [Prespecified question](pretest_20261126.md)
+26 November 2026 · SCI_CODEX · completed comparison · order 78 · context_policy: QUESTION_DRIVEN. [Prespecified question](pretest_20261126.md)
+
+**Disposition.** Defer pediatric WWOX trial priority. Retain miglustat as a comparator for opposing synthesis and turnover of GlcCer. Reopen for measured isomer-resolved native excess, a selective response at relevant exposure and preserved developmental output. [Developmental boundary, WWOX maturity analysis and replay](lipid_identity_and_disposition_20261126.md)
 
 **First result.** Human CSF exposure is directly measured in a different neurologic storage disease. It overlaps the scale of a reported GBA2 assay even at trough and is well below a reported in-situ GCS IC50. This puts nonlysosomal turnover and its consequences before a substrate-reduction claim. The comparator model independently shows that a downstream storage biomarker and brain GlcCer can move in opposite directions under the same drug.
 
