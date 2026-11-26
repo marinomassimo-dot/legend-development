@@ -1211,10 +1211,12 @@
     },
     {
      "step": "ADV-290: (Q1) repository sentences that rest on 'Breton 2021 supplement not held' and whether the held Table S1 and S1/S2/S4 change them; (Q2) CBX/BB-FCF n of Fig. 3 (36/4/3, 73/6/3) against Table S1 (13/6/3, 25/6/3), units checked first",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-290 (ADV message to SCI cfe92e9d, 2026-11-25; brief assignments/ADV-290.md lands in ADV's next push)",
-     "accepted_at": "2026-11-25T23:59:24Z"
+     "accepted_at": "2026-11-25T23:59:24Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv290_breton_supplement_premise_sci_20261125/RESULT_ADV290_SCI_20261125.md",
+     "updated_at": "2026-11-26T00:02:02Z"
     }
    ]
   }
