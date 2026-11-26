@@ -11708,7 +11708,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-I01-001",
       "locator": "PubMed and Europe PMC abstract (closed access, no open copy): PDH activity reduced by 65% against healthy mice in the epileptic stage, 'partially alleviated with DCA treatment'; PDH protein down 37%, Ser300 phosphorylation up 52%, not significantly changed by DCA",
-      "note": "Target engagement was partial and the phospho-site did not move significantly; total PDH protein fell 23% in non-epileptic mice on treatment, which the authors offer as a possible reason for the pro-convulsant signal.",
+      "note": "PDH activity was 65 percent lower in chronic-stage pilocarpine mice than in non-epileptic mice and the drug partly alleviated this (significance not stated). In epileptic mice Ser300 phosphorylation was 52 percent higher and PDH protein 37 percent lower than in non-epileptic mice, and neither changed significantly with the drug. Two daily doses were tested, but the abstract does not say which was used for these assays and does not name the tissue. Total PDH protein fell 23 percent in non-epileptic mice on treatment, which the authors offer as a possible reason for the slight pro-convulsant signal.",
       "reading_depth": "abstract_only",
       "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
       "target_id": "brain pyruvate dehydrogenase activity"
@@ -11727,7 +11727,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-I01-002",
       "locator": "abstract: 'DCA treatment did not increase latencies to seizures in the acute flurothyl seizure test'",
-      "note": "Chronic treatment before the test. One laboratory; the abstract reports no effect size.",
+      "note": "Chronic treatment (timing relative to the test not stated) did not increase flurothyl latency; two doses were tested and the abstract does not say whether the null held at both, and gives no effect size; in the same paper the drug was slightly pro-convulsant in the 6 Hz test. PDH engagement is reported for the chronic-stage pilocarpine mice, not for these animals. One laboratory.",
       "reading_depth": "abstract_only",
       "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
       "target_id": "seizure latency (acute flurothyl test)"
@@ -11765,7 +11765,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-I01-004",
       "locator": "abstract: latencies were decreased in status-epilepticus against no-status-epilepticus mice and 'were not restored by DCA'; conclusion 'DCA did not have any anti-convulsant effects in the tested models'",
-      "note": "The only primary seizure-endpoint test of a PDK inhibitor found in a model in which PDH activity is documented to be reduced. Abstract level; the full text is closed.",
+      "note": "A primary seizure-endpoint test of a PDK inhibitor in a model in which PDH activity is documented to be reduced; second-hit latency was shorter in epileptic than in non-epileptic mice and DCA did not restore it; PDH activity was reported as partially alleviated (significance not stated) while Ser300 phosphorylation and PDH protein were not significantly changed, so engagement at the second-hit test is unclear; the abstract does not say whether the same animals were assayed. Abstract level; the full text is not held.",
       "reading_depth": "abstract_only",
       "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
       "target_id": "seizure latency (second-hit flurothyl test in chronic epileptic mice)"
@@ -11804,7 +11804,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-I01-006",
       "locator": "PubMed abstract: no significant differences in the global assessment, linear growth, or frequency and severity of intercurrent illness",
-      "note": "A population in which lactate was persistently or intermittently raised, with a defined defect in most patients, and in which the lever still did not change the clinical outcomes measured over six months. Heterogeneous and short; a null in this design does not exclude a benefit in a defined genotype.",
+      "note": "A population in which lactate was persistently or intermittently raised, with a defined defect (pyruvate dehydrogenase deficiency in 11, respiratory chain in 25, mitochondrial DNA in 7 of 43), aged 0.9 to 19 years; the drug blunted the postprandial lactate rise and still did not change the clinical outcomes measured over six months. Heterogeneous and short; the abstract reports no PDH-only subgroup, so a null in this design does not exclude a benefit in a defined genotype.",
       "reading_depth": "abstract_only",
       "source": "dichloroacetate, human children, Stacpoole 2006 (PMID 16651305), randomized double-blind trial (43 patients), abstract; NOT WWOX EVIDENCE",
       "target_id": "clinical global assessment, linear growth (children with congenital lactic acidosis)"
@@ -11951,12 +11951,12 @@
        "species": "human"
       },
       "direction": "DECREASE",
-      "endpoint": "glucose consumption and lactate production with and without DCA, patient against control cells",
+      "endpoint": "average glycolysis with and without DCA, patient against control cells (lactate production was also measured)",
       "epistemic_status": "DATO",
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-I01-014",
       "locator": "abstract: in pyruvate dehydrogenase complex-deficient cells DCA decreased average glycolysis by 29%, with no significant effect on control cells, and lactate production did not change in either cell type",
-      "note": "The response to the PDK inhibitor depended on a pre-existing PDH defect: no significant effect in control cells (six patient lines and five control subjects; the 29% average excludes one patient line with an unusual splicing mutation). It supplies the design of the discriminating experiment (a genotype-by-inhibitor interaction on glucose-derived acetyl-CoA flux), with a precedent for what a responder looks like.",
+      "note": "DCA shifted flux in all cells, controls included, away from anaplerotic-related pathways (a 40 percent decrease) toward the pyruvate dehydrogenase complex, and decreased modelled average glycolysis by 29 percent in patient cells (one of six patient lines, with an unusual splicing mutation, excluded from the average) with no significant effect in the control cells of five healthy subjects; untreated patient cells (excluding the same splicing-mutation line) had higher glucose consumption and lactate production than controls. Lactate production and NTP/NDP did not change in either cell type, so the DECREASE code is glycolysis only; no genotype-by-DCA interaction test is reported. It is a precedent for a glycolysis-lowering responder phenotype. A genotype-by-inhibitor interaction on glucose-derived acetyl-CoA flux is the repository's proposed discriminating experiment, not a result of this abstract.",
       "reading_depth": "abstract_only",
       "source": "dichloroacetate, human fibroblasts, Simpson 2006 (PMID 16765624), abstract; NOT WWOX EVIDENCE",
       "target_id": "glycolytic flux and lactate production in cultured fibroblasts"
@@ -14064,7 +14064,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "26b9e26f970b78ad0849f5566c1771204f05e12e3263d71153d16dfd3ad16ae6",
+   "input_sha256": "4cd0e615395652f76082c45a343934123fcddfcf06e29072a2f930da646c5b25",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -19142,7 +19142,7 @@
       "epistemic_status": "DATO",
       "id": "DR-A01-007",
       "locator": "disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/munc18_cytosolic_precedent_panel_readings_20261029.tsv",
-      "measured_result_note": "Mutant total protein about 1.05 of untreated control, no significance mark (three experiments); the text lists only the phenylbutyrate class and two osmolytes as stabilising. On wild type the same comparator gave a scattered, unmarked value near 1.95. The comparator was more potent than the phenylbutyrate class on class-I HDAC enzymes in one ChEMBL document but weaker on HDAC1 in a third that also lists the sodium salt, so that premise is document-dependent; it does not engage HDAC6 at the applied level; no pan-HDAC or HDAC6-selective arm exists in this paper. A measured null in a cell that is not comparable.",
+      "measured_result_note": "Mutant total protein about equal to untreated control, no significance mark (three experiments; bar reading), at the same applied level as the phenylbutyrate class; the text lists only the phenylbutyrate class and two osmolytes as stabilising. On wild type the same comparator gave a scattered, unmarked value near 1.95. The comparator (butyric acid in ChEMBL) was more potent than the phenylbutyrate class on HDAC3 and HDAC8 in one ChEMBL document; on HDAC1 and HDAC2 the held table gives butyric acid two values (16 and 300 micromolar for HDAC1; 12 and 400 micromolar for HDAC2) that bracket the phenylbutyrate values (64 micromolar for the acid, 162 micromolar for the sodium salt), and which document carries which value is not resolvable from the held aggregate rows, so that premise is document-dependent. In the held ChEMBL table its HDAC6 value is only a lower bound, above 2 millimolar, a bound that lies below the 5 millimolar applied, so HDAC6 inhibition at that level is neither shown nor excluded; no HDAC engagement was measured in this paper, and no pan-HDAC or HDAC6-selective arm exists in it. A measured null in a cell that is not comparable.",
       "reading_depth": "partial_fulltext_read",
       "receipt": "FTR-20261021-30266908-01",
       "source": "Guiberson 2018 (PMID 30266908), Supplementary Figure 12a, mutant panel read in IT5 P8; NOT WWOX EVIDENCE",
@@ -20652,7 +20652,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "aaeb2e373b4a02fb542050513291663bd320d7ac6b7623e3b6323b9a111ea51c",
+   "input_sha256": "576104d9b34a2a60816ecf3dd1ac91e1f79824cffa0fe49df07d1e9149cef576",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -33961,7 +33961,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-W2-004",
       "locator": "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md section 14; receipt FTR-20261019-42652189-01",
-      "measured_result_note": "Memantine accelerated every seizure stage; perampanel delayed stage 4 but did not prevent seizures. The reading carries unresolved internal inconsistencies noted in that record. A safety-direction datum for a non-genetic model, not WWOX.",
+      "measured_result_note": "Memantine at the two higher of its three doses shortened the latency to all four seizure stages (stage 4 about 26 and 25 minutes against about 37 in controls, bar readings, eight per group by the analysis-of-variance degrees of freedom); the lowest dose shortened stages 1 and 2 only, although the text says every dose shortened each stage. Perampanel delayed the onset of stages 3 and 4 but did not prevent seizures. No in-study measure of receptor engagement. The reading carries unresolved internal inconsistencies noted in that record. A safety-direction datum for a non-genetic model, not WWOX.",
       "reading_depth": "complete_fulltext_read",
       "receipt": "FTR-20261019-42652189-01",
       "source": "Alekseeva 2026, Biomedicines (PMID 42652189; NOT WWOX EVIDENCE; adult rat, acute provoked seizures), as recorded in the repository",
@@ -34476,7 +34476,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "1d96bea08a7d55db4d963bd44645c179229c4c913a06bcfca8c92d30eefbbac6",
+   "input_sha256": "6ad6c760d092db6bdd2f3bcb56385ba5ad4b355fc73ae7f9ae8b35a18775b378",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -48538,7 +48538,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-E01-002",
       "locator": "PubMed abstract (DOI 10.1001/jamanetworkopen.2026.34809)",
-      "measured_result_note": "Ratio 1.04 (95 percent credible interval 0.83 to 1.32) over a 24-week placebo-controlled period: no benefit despite target engagement and proof of mechanism in the earlier phase. Adults with ALS; says nothing about a developmental encephalopathy.",
+      "measured_result_note": "Ratio 1.04 (95 percent credible interval 0.83 to 1.32) over a 24-week placebo-controlled period: no evidence of slowing, though the interval does not exclude a modest effect. Target engagement and proof of mechanism are cited from the earlier phase 1B trial, and the abstract reports none for this trial's participants. Adults with ALS; says nothing about a developmental encephalopathy.",
       "reading_depth": "abstract_only",
       "source": "JAMA Netw Open 2026 randomised trial abstract, PMID 42771346; NOT WWOX EVIDENCE",
       "target_id": "ALS functional rating and survival (joint model)"
@@ -48557,7 +48557,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-E01-003",
       "locator": "PubMed abstract (DOI 10.1177/13872877261450638)",
-      "measured_result_note": "Better recognition memory and less microglial activation and tau; amyloid burden not reduced; p-eIF2 alpha lower. Mouse, adult, 23 days, one study.",
+      "measured_result_note": "In ten-month-old 5xFAD mice over 23 days, with a donepezil comparison arm: better recognition memory and less microglial activation and tau; amyloid burden not reduced; p-eIF2 alpha lower; the abstract calls the compound an integrated-stress-response inhibitor and does not name its molecular target, and only recognition memory is reported as improved among the behavioural tests run. The donepezil results are not reported in the abstract. Mouse, adult, one dose, one study; the authors call the effects limited.",
       "reading_depth": "abstract_only",
       "source": "J Alzheimers Dis 2026 abstract, PMID 42179084; NOT WWOX EVIDENCE",
       "target_id": "object-recognition memory, microglial activation, tau and amyloid burden"
@@ -49737,7 +49737,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "ff5de2aae25235ac8f0f00b8c59b436bf71072c4f586d5786d777a11e0198259",
+   "input_sha256": "bcfeb56b230e6c1a521e94e3f861222647e17dd16461393a7b167eb6724671cc",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",

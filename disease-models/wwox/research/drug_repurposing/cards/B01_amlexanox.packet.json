@@ -60,7 +60,7 @@
         "cell_type": "lymphoblastoid and dermal fibroblast lines",
         "developmental_stage": "culture"
       },
-      "measured_result_note": "MEASURED NO PHENOTYPIC RESCUE (survival, aberrations, micronuclei) and NMD not relieved, while full-length protein was induced in one arm (FANCA, about 9 percent of control) and not in the other; the endpoint encoded here is the phenotypic rescue only, so the protein induction is stated in this note and not in the direction code; the effect that was seen is attributed by the authors to TBK1/IKKe inhibition, not read-through. Encoded NO_CHANGE for the phenotypic endpoint.",
+      "measured_result_note": "MEASURED NO PHENOTYPIC RESCUE with amlexanox: no improvement of mitomycin C survival (FANCA and FANCF lines), of diepoxybutane chromosome aberrations (FANCA line only) or of micronuclei (FANCC primary fibroblasts), at one amlexanox concentration, whereas the comparator ataluren improved all three; FANCA mRNA was not rescued. Full-length protein was induced in one arm (FANCA, from under 5 to about 9 percent of control; ataluren about 11 percent) and not in FANCF; the authors treat that induction as read-through. Amlexanox also lowered p53 (about 40 percent, FANCA line only, not FANCF) and phospho-STAT2 (about 50 percent, FANCA line), and it is these two falls that the authors attribute mainly, as a hypothesis with no direct TBK1 readout, to downstream TBK1/IKKe or NF-kB inhibition rather than read-through. The endpoint encoded here is the phenotypic rescue only, so the protein induction is stated in this note and not in the direction code. Encoded NO_CHANGE for the phenotypic endpoint.",
       "receipt": "FTR-20261020-40544182-01"
     }
   ],

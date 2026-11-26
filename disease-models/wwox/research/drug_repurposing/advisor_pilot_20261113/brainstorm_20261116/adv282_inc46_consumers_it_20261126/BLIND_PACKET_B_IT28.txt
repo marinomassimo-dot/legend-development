@@ -1,0 +1,144 @@
+BLIND VERIFICATION PACKET B (hypothesis level; public, class level; nothing here is medical advice)
+
+Each block holds one sentence set that a repository record is about to carry, the record's own context fields, and the held source files.
+Check the sentence set against the sources only. Do not open the repository's cards, result files, reports or other notes: read only the files listed in the block
+(and, for a figure, an image file of the same article under the same files/ tree). No network.
+For each block give one verdict:
+  MUST CHANGE: a word, number, attribution, comparator, unit, species, cell, group size, direction or generalisation is wrong, unsupported or says more than the source;
+  ADD: supported, but an omission would mislead a reader who sees only this sentence set;
+  STANDS: supported as written.
+Grade every clause, not only the main fact. Absolute words (only, no, none, every, all) need the whole table or text read; if you cannot, say UNSETTLED for that word.
+For a negative, say what you searched. For a number read from a figure, say figure, panel and bar, and view the image. A clause about another assertion id (for example DR-A02-004
+or DR-A02-008) or about the repository's own plan is outside your check: say OUTSIDE. For MUST CHANGE and ADD give the minimal replacement wording; a card may not carry
+a dose written with a mass-per-body-weight or concentration symbol, so describe doses in words (millimolar and micromolar written out are allowed).
+Report: a summary table (id, verdict), then per block the findings with locators. Say which files and figures you opened and which you could not.
+
+=== BLOCK DR-H02-036
+source: GABA-B agonists and GABA, mouse demyelination model and rat precursor cultures, PMID 35980256 and PMID 31349008; NOT WWOX EVIDENCE
+target_id: CNS_myelination
+endpoint: precursor differentiation, myelin protein and remyelination under GABA-B engagement
+direction: INCREASE
+reading_depth: abstract_only
+context: {"disease_id": "induced spinal-cord demyelination and purified precursor cultures (NOT WWOX EVIDENCE)", "genotype": "wild-type adult mouse and rat cells", "species": "mouse and rat", "cell_type": "oligodendrocyte precursors, remyelination", "developmental_stage": "adult mouse; cultured rat precursors"}
+SENTENCE SET: GABA-B engagement enhanced precursor differentiation, myelin protein and remyelination, and a GABA-A agonist did not reproduce the effect in the coculture study; the two receptor classes therefore differ (a positive effect through GABA-B, no mediation reported for the GABA-A agonist muscimol), and no opposite sign is reported in the abstracts. Signalling studies, not drug exposures of a developing brain.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID35980256_efetch.xml ; /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID31349008_efetch.xml
+
+=== BLOCK DR-H02-023
+source: vigabatrin, human neuropathology, PMID 1940119 and PMID 2767014; NOT WWOX EVIDENCE
+target_id: intramyelinic_edema_vacuolation
+endpoint: neuropathological examination of 62 people on long-term exposure and five earlier human specimens
+direction: NO_CHANGE
+reading_depth: abstract_only
+context: {"disease_id": "refractory epilepsy before neurosurgery or death (62 on long-term exposure, 10 untreated; five earlier specimens) (NOT WWOX EVIDENCE)", "genotype": "not stated", "species": "human", "cell_type": "brain tissue, neuropathology", "developmental_stage": "ages not stated in the abstracts"}
+SENTENCE SET: No microvacuolation or sheath splitting attributable to the drug was found, and no demyelination, in the 62 examined people (compared with ten untreated cases); two post-mortem and three operative specimens showed no vacuolation, and their overlap with the 62 is not stated. Abstract level: ages and exposure windows are not stated in the abstracts; the PubMed record of PMID 1940119 carries child, adolescent, adult and older headings and no infant heading (indexing, not abstract text). A negative in people not shown to include infants does not exclude the infant lesion the label records.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID1940119_efetch.xml ; /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID2767014_efetch.xml
+
+=== BLOCK DR-H02-024
+source: vigabatrin and GABA, rat cerebellar explant culture, PMID 2757909; NOT WWOX EVIDENCE
+target_id: myelinated_fibre_toxicity_in_vitro
+endpoint: myelinated-fibre toxicity of vigabatrin and of GABA in a myelinating explant culture
+direction: INCREASE
+reading_depth: abstract_only
+context: {"disease_id": "myelinating explant with no disease (NOT WWOX EVIDENCE)", "genotype": "wild-type rat", "species": "rat", "cell_type": "cerebellar explant, myelinated fibres", "developmental_stage": "cultured 14 to 19 days in vitro, exposed up to 14 days"}
+SENTENCE SET: Mild toxicity for myelinated fibres from vigabatrin and from GABA with no clear difference between them, although vigabatrin seemed slightly more toxic (the two were not applied at equal molar levels); degenerating myelinated fibres and astrocytic gliosis in both; no intramyelinic oedema and no primary demyelination were seen, so the row is not a vacuolation finding (its target is the in-vitro fibre endpoint). Preliminary data.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID2757909_efetch.xml
+
+=== BLOCK DR-H02-030
+source: vigabatrin, human children aged 2 to 16 and adults, PMID 19054414; NOT WWOX EVIDENCE
+target_id: brain_MRI_abnormality
+endpoint: prevalence of the abnormality in exposed against naive children aged 2 to 16 and adults
+direction: NO_CHANGE
+reading_depth: abstract_only
+context: {"disease_id": "refractory complex partial seizures in the older arms (NOT WWOX EVIDENCE)", "genotype": "not stated", "species": "human", "cell_type": "whole organism, brain MRI", "developmental_stage": "2 to 16 years and adult"}
+SENTENCE SET: No statistically significant difference between exposed and naive subjects among children aged 2 to 16 and adults (668 re-reviewed subjects); in infants of the same study the prevalence was higher with vigabatrin (22 against 4 percent). The age-band contrast within one study is what the row carries. A non-significant difference is not proof of no difference.
+held sources: /home/desktop/legend-development/files/fulltext/adv056_it_20261118/B/PMID19054414_x2009_europepmc_core.json
+
+=== BLOCK DR-I01-014
+source: dichloroacetate, human fibroblasts, Simpson 2006 (PMID 16765624), abstract; NOT WWOX EVIDENCE
+target_id: glycolytic flux and lactate production in cultured fibroblasts
+endpoint: average glycolysis with and without DCA, patient against control cells (lactate production was also measured)   <- NEW wording, check it too
+direction: DECREASE
+reading_depth: abstract_only
+context: {"disease_id": "primary fibroblasts from patients with PDC-E1 mutations and five healthy subjects (NOT WWOX EVIDENCE)", "genotype": "PDC-E1 mutations versus healthy", "species": "human", "cell_type": "fibroblast", "developmental_stage": "not applicable"}
+SENTENCE SET: DCA shifted flux toward the pyruvate dehydrogenase complex by about 40 percent in all cells, controls included, and decreased average glycolysis by 29 percent in patient cells (one line with an unusual splicing mutation excluded) with no significant effect in control cells (six patient lines and five healthy subjects). Lactate production and NTP/NDP did not change in either cell type, so the DECREASE code is glycolysis only; no genotype-by-DCA interaction test is reported. It is a precedent for a glycolysis-lowering responder phenotype. A genotype-by-inhibitor interaction on glucose-derived acetyl-CoA flux is the repository's proposed discriminating experiment, not a result of this abstract.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID16765624_efetch.xml
+
+=== BLOCK DR-I01-006
+source: dichloroacetate, human children, Stacpoole 2006 (PMID 16651305), randomized double-blind trial (43 patients), abstract; NOT WWOX EVIDENCE
+target_id: clinical global assessment, linear growth (children with congenital lactic acidosis)
+endpoint: Global Assessment of Treatment Efficacy and linear growth over 6 months, DCA against placebo
+direction: NO_CHANGE
+reading_depth: abstract_only
+context: {"disease_id": "congenital lactic acidosis in children, heterogeneous (pyruvate dehydrogenase deficiency, respiratory-chain defects, mitochondrial DNA mutation) (NOT WWOX EVIDENCE)", "genotype": "mixed mitochondrial genotypes", "species": "human", "cell_type": "whole organism", "developmental_stage": "age 0.9 to 19 years"}
+SENTENCE SET: A population in which lactate was persistently or intermittently raised, with a defined defect (pyruvate dehydrogenase deficiency in 11, respiratory chain in 25, mitochondrial DNA in 7 of 43), aged 0.9 to 19 years; the drug blunted the postprandial lactate rise and still did not change the clinical outcomes measured over six months. Heterogeneous and short; the abstract reports no PDH-only subgroup, so a null in this design does not exclude a benefit in a defined genotype.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID16651305_efetch.xml
+
+=== BLOCK DR-I01-001
+source: dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE
+target_id: brain pyruvate dehydrogenase activity
+endpoint: PDH activity in the chronic stage of the pilocarpine mouse model, DCA against vehicle
+direction: INCREASE
+reading_depth: abstract_only
+context: {"disease_id": "pilocarpine status epilepticus mouse epilepsy model, chronic stage (NOT WWOX EVIDENCE)", "genotype": "mice without pilocarpine status epilepticus as controls (strain not stated in the abstract)", "species": "mouse", "cell_type": "brain", "developmental_stage": "adult, chronic stage"}
+SENTENCE SET: PDH activity was 65 percent lower in chronic-stage pilocarpine mice and the drug only partly alleviated this; the phospho-site did not move significantly. The abstract gives neither the dose nor the tissue for these assays. Total PDH protein fell 23 percent in non-epileptic mice on treatment, which the authors offer as a possible reason for the slight pro-convulsant signal.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID29913407_efetch.xml
+
+=== BLOCK DR-I01-002
+source: dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE
+target_id: seizure latency (acute flurothyl test)
+endpoint: latency to seizure, DCA against vehicle, acute test
+direction: NO_CHANGE
+reading_depth: abstract_only
+context: {"disease_id": "acute chemoconvulsant seizure test (NOT WWOX EVIDENCE)", "genotype": "mice (strain not stated in the abstract)", "species": "mouse", "cell_type": "whole animal", "developmental_stage": "adult"}
+SENTENCE SET: Chronic treatment before the test did not increase flurothyl latency (no effect size in the abstract); in the same paper the drug was slightly pro-convulsant in the 6 Hz test. PDH engagement is reported for the chronic-stage pilocarpine mice, not for these animals. One laboratory.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID29913407_efetch.xml
+
+=== BLOCK DR-I01-004
+source: dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE
+target_id: seizure latency (second-hit flurothyl test in chronic epileptic mice)
+endpoint: latency to seizure, DCA against vehicle in mice with prior status epilepticus
+direction: NO_CHANGE
+reading_depth: abstract_only
+context: {"disease_id": "pilocarpine status epilepticus mouse epilepsy model, chronic stage (NOT WWOX EVIDENCE)", "genotype": "mice (strain not stated in the abstract)", "species": "mouse", "cell_type": "whole animal", "developmental_stage": "adult, chronic stage"}
+SENTENCE SET: A primary seizure-endpoint test of a PDK inhibitor in a model in which PDH activity is documented to be reduced; PDH engagement was only partial, so the null is at partial engagement. Abstract level; the full text is not held.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID29913407_efetch.xml
+
+=== BLOCK DR-P9-009
+source: Ann Clin Transl Neurol 2026 prospective cohort (PMID 41288262; abstract only; NOT WWOX EVIDENCE)
+target_id: NMDAR pore blocker memantine (add-on in epilepsy)
+endpoint: seizure worsening in people with epilepsy
+direction: NO_CHANGE
+reading_depth: abstract_only
+context: {"disease_id": "adult epilepsy with cognitive impairment (not WWOX)", "genotype": "not applicable", "species": "human", "cell_type": "adults, median age 63", "developmental_stage": "adult"}
+SENTENCE SET: Elderly adults with epilepsy and cognitive impairment (median age 63), memantine added by patient choice for 24 weeks, not randomised: increased seizure frequency in 7 of 101 on memantine against 5 of 110 without it, with baseline imbalances and no drug level. Adult safety signal reassuring but non-randomised; it bears on the warning, not on children, not on a developmental epilepsy and not on benefit. The full text is held; targeted passages were read on 2026-11-26.
+held sources: /home/desktop/legend-development/files/fulltext/ketamine_kds_it_20261117/p4_harms/PMID41288262_Wang2026_europepmc-fulltextxml.xml
+
+=== BLOCK DR-P9-010
+source: openFDA drug label JSON for memantine, effective 2026-09-01, retrieved 2026-10-29 (NOT WWOX EVIDENCE)
+target_id: NMDAR pore blocker memantine (paediatric label)
+endpoint: efficacy in two controlled paediatric autism studies
+direction: NO_CHANGE
+reading_depth: queried_not_full_read
+context: {"disease_id": "autism spectrum disorder, children (not WWOX)", "genotype": "not applicable", "species": "human", "cell_type": "children aged 6 to 12", "developmental_stage": "childhood"}
+SENTENCE SET: The only controlled paediatric exposure in this label (two studies in children aged 6 to 12 with autism spectrum disorders, one parallel placebo-controlled with 54 against 53 and one randomised withdrawal) failed to demonstrate efficacy: a null in a different disorder. The label also says the paediatric safety profile matched adults. One label held, of several openFDA records; the others were not read.
+held sources: /home/desktop/legend-development/files/fulltext/ketamine_kds_it_20261117/p6_metabolic_ocular/LABEL_memantine_openfda.json
+
+=== BLOCK DR-E01-002
+source: JAMA Netw Open 2026 randomised trial abstract, PMID 42771346; NOT WWOX EVIDENCE
+target_id: ALS functional rating and survival (joint model)
+endpoint: disease rate ratio relative to placebo
+direction: NO_CHANGE
+reading_depth: abstract_only
+context: {"disease_id": "amyotrophic lateral sclerosis (not WWOX)", "genotype": "sporadic and familial ALS, not WWOX", "species": "human", "cell_type": "whole organism, clinical endpoint", "developmental_stage": "adult"}
+SENTENCE SET: Ratio 1.04 (95 percent credible interval 0.83 to 1.32) over a 24-week placebo-controlled period: no evidence of slowing, though the interval does not exclude a modest effect. Target engagement and proof of mechanism are cited from the earlier phase 1B trial, and the abstract reports none for this trial's participants. Adults with ALS; says nothing about a developmental encephalopathy.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID42771346_efetch.xml
+
+=== BLOCK DR-E01-003
+source: J Alzheimers Dis 2026 abstract, PMID 42179084; NOT WWOX EVIDENCE
+target_id: object-recognition memory, microglial activation, tau and amyloid burden
+endpoint: recognition memory under an eIF2B activator (2BAct)
+direction: INCREASE
+reading_depth: abstract_only
+context: {"disease_id": "5xFAD mouse model of Alzheimer's disease (not WWOX)", "genotype": "5xFAD transgenic", "species": "mouse", "cell_type": "whole animal behaviour", "developmental_stage": "ten-month-old adult"}
+SENTENCE SET: In ten-month-old 5xFAD mice over 23 days, with a donepezil comparison arm: better recognition memory and less microglial activation and tau; amyloid burden not reduced; p-eIF2 alpha lower (a marker upstream of the compound's target, eIF2B). Mouse, adult, one dose, one study; the authors call the effects limited.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID42179084_efetch.xml

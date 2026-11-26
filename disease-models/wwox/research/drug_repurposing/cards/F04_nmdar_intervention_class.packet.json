@@ -261,7 +261,7 @@
     "cell_type": "adults, median age 63",
     "developmental_stage": "adult"
    },
-   "measured_result_note": "Adult safety signal reassuring but non-randomised; it bears on the warning, not on children, not on a developmental epilepsy and not on benefit.",
+   "measured_result_note": "Adults (18 or over, median age 63) with epilepsy and cognitive impairment, memantine added by patient choice for up to 24 weeks (nine of the memantine group discontinued), not randomised: increased seizure frequency (a rise of more than 25 percent in the Methods, 25 percent or more in the abstract) in 7 of 101 on memantine against 5 of 110 without it, no significant difference, four of the seven attributed to incidental antiseizure-drug non-adherence; baseline imbalances were in cognition, mood, age at onset and epilepsy duration, not in baseline seizure frequency; no drug level. Adult safety signal reassuring but non-randomised; it bears on the warning, not on children, not on a developmental epilepsy and not on benefit. The full text is held; targeted passages were read on 2026-11-26.",
    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
   },
   {
@@ -269,7 +269,7 @@
    "target_id": "NMDAR pore blocker memantine (paediatric label)",
    "endpoint": "efficacy in two controlled paediatric autism studies",
    "direction": "NO_CHANGE",
-   "source": "openFDA drug label JSON for memantine, effective 2026-09-01, retrieved 2026-10-29 (NOT WWOX EVIDENCE)",
+   "source": "openFDA drug label JSON for memantine (extended-release capsules), effective 2026-09-01; the held file is dated 2026-11-17 and 2026-11-18, and the earlier line said 'retrieved 2026-10-29' and no pull of that date was found among the held files by a file-name search on 2026-11-26 (NOT WWOX EVIDENCE)",
    "locator": "label section 8.4 Pediatric Use: safety and effectiveness not established; failed to demonstrate efficacy in two 12-week controlled studies of 578 children aged 6 to 12 with autism spectrum disorders",
    "epistemic_status": "DATO",
    "reading_depth": "queried_not_full_read",
@@ -280,7 +280,7 @@
     "cell_type": "children aged 6 to 12",
     "developmental_stage": "childhood"
    },
-   "measured_result_note": "The only controlled paediatric exposure to memantine in the label is a null result in a different disorder.",
+   "measured_result_note": "The only controlled paediatric exposure in this label (two studies in children aged 6 to 12 with autism spectrum disorders, one parallel placebo-controlled with 54 against 53 and one responder-enriched randomised withdrawal) failed to demonstrate efficacy: a null in a different disorder. The label calls the paediatric safety profile generally consistent with adults, states that safety and effectiveness in paediatric patients are not established and that the drug was not studied under 6 or over 12 years, and reports neuronal lesions in juvenile rats at the higher doses when dosing began on postnatal day 14, and neuronal degeneration at a lower dose, with behavioural toxicity at still lower doses, when dosing began on postnatal day 7. One extended-release capsule label held (one of 75 openFDA records; the others were not read).",
    "evidence_scope": "EXTERNAL_DATABASE_RECORD"
   },
   {
@@ -343,7 +343,7 @@
  ],
  "p4_fields": {
   "endpoint_pursued": "In knockout, heterozygote and wild-type slices at postnatal day 13 to 17: NMDAR-isolated current (amplitude, decay, GluN2B and GluN2A sensitivity), resting potential, then the fraction of NMDAR current that must be blocked to stop bursting, with a GluN2B NAM concentration-response, a pore blocker with Mg2+ and voltage stated, and wild-type slices made to burst by a matched trigger; then a developmental endpoint.",
-  "functional_evidence_available": "d-APV abolishes bursting in the knockout slice and suppresses a delayed evoked response at higher stimulus strengths; excitatory current amplitude differs by about six percent at -70 mV (AMPAR-weighted); inhibitory current amplitude about halved and frequency reduced; depolarised resting potential. No NMDAR or AMPAR current, subunit or surface level is measured in any WWOX system; no subunit-selective, pore-blocking, glycine-site or AMPAR drug has been applied to any Wwox system.",
+  "functional_evidence_available": "In the neuron-specific (Synapsin-Cre) knockout neocortical slice, d-APV abolishes spontaneous bursting, which recovers on washout, and suppresses a delayed evoked response at the three highest stimulus strengths (supplementary figure S3C, six slices from three animals, unpaired tests without correction); spontaneous excitatory current amplitude is about six percent larger (24.7 against 23.3 picoamperes) than in wild-type-plus-heterozygous controls at -70 mV, a shift of the pooled event distribution by Kolmogorov-Smirnov test with no per-cell test reported (inferred AMPAR-weighted, not pharmacologically isolated); spontaneous inhibitory current amplitude is about halved and its frequency reduced; the resting potential of pyramidal neurons is depolarised against wild type. No pharmacologically isolated NMDAR or AMPAR current and no receptor subunit protein or surface level has been found measured in any WWOX system (search of held sources, 2026-11-26); Wwox-knockout mouse hippocampus and hippocampal neural stem cells show lower Grin2c transcript, and the neural stem cell RNA-seq also lists lower Grin2b, not reported for hippocampus (Hussain 2019, PMID 30290271), and neuron-specific (Synapsin-Cre) knockout neocortical layer II/III pyramidal neurons show larger miniature excitatory currents at -70 mV, not pharmacologically isolated, with unchanged decay (Breton 2021, PMID 34634460). No subunit-selective, pore-blocking, glycine-site or AMPAR drug was found applied to any Wwox system.",
   "temporal_or_model_limit": "Juvenile mouse slices (postnatal day 13 to 17), one laboratory, acute pharmacology, neuron-specific knockout; the authors note the age may mimic a late stage of the mouse disease.",
   "cellular_context": {
    "target_expression": "GRIN1, GRIN2B and GRIN2D transcripts are present in the week-15 organoid (F01); GRIN2A not stated there; GRIA1 present.",

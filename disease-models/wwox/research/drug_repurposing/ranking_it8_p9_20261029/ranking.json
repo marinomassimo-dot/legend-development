@@ -1519,7 +1519,7 @@
    "decisive_uncertainty": "Whether the neuron still emits the activity-dependent signal that a pro-myelinating agent would amplify. If it does not, the whole class is not a lever here regardless of its pharmacology. IT29: even where an intrinsic route works, whether it acts when the lesion is neuronal is untested. [IT36] no evidence of early hyperactivity exists for the neuronal-deletion model before P13; activity effects on markers in the neonate (P0-P8) do not speak to the burst window. [IT36] The cue from the neuron to the precursor is not sourced; the neuregulin-ErbB version is counter-evidenced in vivo to postnatal day 11.",
    "direction_state": "unresolved",
    "direction_state_label": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding",
-   "evidence_available": "WWOX-system: the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window; the treated arms of the source are unquantified, and whether an established deficit re-myelinates is unmeasured. IT29: perturbation evidence from other systems signs several intrinsic precursor-differentiation routes (muscarinic-receptor, lipid-synthesis, thyroid- and RXR-type receptor) in wild-type or injury settings and none in a neuron-driven hypomyelination model; HDAC3 loss is adverse for maturation; an independent screen disagrees with some signs. [IT36] GSK3 sign on oligodendrocyte differentiation is divided (inhibitors raise it in one source, lower it in another after Foxg1 knockdown; genetic loss in mature cells changed survival); recorded as undetermined. [IT39] GSK3 context rows: a GSK3 inhibitor run after Foxg1 knockdown goes the opposite way to the inhibitor-raises-differentiation reports, and a 2026 review holds both directions; the slice paper's finding is neuron-specific wording, not oligodendrocyte-wide. [ADV-001] The muscarinic-receptor route rests on genetic rows (culture; abstract level) with a ceiling caveat; for two antimuscarinic drugs of the class the drug-class support carries a documented EBP-inhibition route whose attribution is unsettled, and EBP activity is unmeasured for the other antimuscarinics named. A profile of the pathway intermediates per compound before target attribution is a design position (INFERENZA); this does not say that EBP explains the muscarinic route, that unmeasured compounds act through EBP, or that M1 is irrelevant. The 216-row signed layer is not committed and no number is reproduced on it. [IT 2026-11-25, ADV-244: the organoid transcript set behind this row is four knockout organoids of one CRISPR clone (1B) against two parental organoids, apparently from one batch (authors' Methods: organoids from the same batch unless stated otherwise), so it is not shown to be independent of the clone; the other clone was not sequenced.] [IT 2026-11-25, ADV-247: hippocampal bulk arms of 2 or 3 libraries; one mouse per library is not stated.] [IT 2026-11-25, ADV-250: a hippocampal library is at most one independent unit, so the library count is an upper bound on n; if a library is one mouse, the 2 control libraries cover at most 2 of the 4 control cortices.] [IT 2026-11-25, ADV-239: in the mouse cortex deposit of the neuron-targeted deletion the CTGF change is not stable: log2 +0.19 with all libraries, from -0.37 to +0.46 when one library is removed.]",
+   "evidence_available": "WWOX-system: the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window; the treated arms of the source are unquantified, and whether an established deficit re-myelinates is unmeasured. IT29: perturbation evidence from other systems signs several intrinsic precursor-differentiation routes (muscarinic-receptor, lipid-synthesis, thyroid- and RXR-type receptor) in wild-type or injury settings and none in a neuron-driven hypomyelination model; HDAC3 loss is adverse for maturation; an independent screen disagrees with some signs. [IT36] GSK3 sign on oligodendrocyte differentiation is divided (inhibitors raise it in one source, lower it in another after Foxg1 knockdown; genetic loss in mature cells changed survival); recorded as undetermined. [IT39] GSK3 context rows: a GSK3 inhibitor run after Foxg1 knockdown goes the opposite way to the inhibitor-raises-differentiation reports, and a 2026 review holds both directions; the slice paper's finding is neuron-specific wording, not oligodendrocyte-wide. [ADV-001] The muscarinic-receptor route rests on genetic rows (culture; abstract level) with a ceiling caveat; for two antimuscarinic drugs of the class the drug-class support carries a documented EBP-inhibition route whose attribution is unsettled, and EBP activity is unmeasured for the other antimuscarinics named. A profile of the pathway intermediates per compound before target attribution is a design position (INFERENZA); this does not say that EBP explains the muscarinic route, that unmeasured compounds act through EBP, or that M1 is irrelevant. The 216-row signed layer is not committed and no number is reproduced on it. [IT 2026-11-25, ADV-244: the organoid transcript set behind this row is four knockout organoids of one CRISPR clone (1B) against two parental organoids, apparently from one batch (authors' Methods: organoids from the same batch unless stated otherwise), so it is not shown to be independent of the clone; the other clone was not sequenced.] [IT 2026-11-25, ADV-247: hippocampal bulk arms of 2 or 3 libraries; one mouse per library is not stated.] [IT 2026-11-25, ADV-250: a hippocampal library is at most one independent unit, so the library count is an upper bound on n; if a library is one mouse, the 2 control libraries cover at most 2 of the 4 control cortices.] [IT 2026-11-25, ADV-239: in the mouse cortex deposit of the neuron-targeted deletion the CTGF change is not stable: log2 +0.19 with all libraries, from -0.37 to +0.46 when one library is removed.] [IT 2026-11-26, ADV-285 and ADV-288: two Wwox-deficient mouse models have a conduction readout in held full text, with no drug arm: the global knockout in vivo transcranial motor-evoked potential (Cheng 2020, 3 weeks; amplitude 11.8 against 59.2 microvolts and onset latency 2.44 against 1.39 ms; 4 against 10 animals) and the neuron-targeted deletion callosal N1 latency in slices (about 3.2 ms in knockout against 2.5 ms in control, read from the graph; 8 slices from 6 knockout animals against 8 slices from 5 control animals; Repudi 2021, Fig 5D); neither separates a myelin cause from an axonal or excitability cause (the Tc-MEP path also includes peripheral nerve and muscle, and the same paper reports sciatic demyelination in the nulls). In healthy developing wild-type mice the pro-myelinating drug clemastine (one compound; Palma 2022, daily from P5, slices at P21, one mouse as the unit, n = 10 to 12) slowed callosal N1 conduction velocity (ratio about 0.84 read from Fig 2B; P < 0.05 by the figure legend, P < 0.01 in the text), so a pro-myelinating comparison in a Wwox-deficient model is more informative with a wild-type drug-only arm and a conduction readout; no Wwox-deficient study held has both.]",
    "evidence_depth": "E2 - card reviewed, abstention (premise named, no test designed)",
    "feasibility": "A measurement in an existing system; no compound and no new model.",
    "intervention": "Pro-myelinating agents (class)",
@@ -5353,6 +5353,7 @@
     "10541229",
     "10657404",
     "19261873",
+    "30290271",
     "32106360",
     "34268881",
     "34634460",
@@ -5758,6 +5759,7 @@
     "10541229",
     "10657404",
     "19261873",
+    "30290271",
     "32106360",
     "34268881",
     "34634460",
@@ -6091,7 +6093,7 @@
    "coverage_generated_from": {
     "assertion_pertinence.tsv": "c9a9c8fa92207fb3",
     "card_links.json": "2aac19ca3b0b7686",
-    "cards_and_packets": "fd45dc2222e436c0",
+    "cards_and_packets": "8a2d9843d68cf32b",
     "catalog.jsonl.gz": "75652786013b931d",
     "catalog_stats.json": "87ac308ce3ab9b3f",
     "measure_next.json": "68bdbdf87d9236a9",
@@ -7106,7 +7108,7 @@
    ],
    "exploratory_it7": "None. Not in the P3 universe (card-linked families were firewalled out of every method) and P3 tested a transcript module, not protein fate. P2: a class with a catalogued target row only for HDAC at enzyme level; no chaperone target row in ChEMBL, GtoPdb or DGIdb.",
    "inputs": {
-    "T1_cards": "ccc9a4b0ee812abd",
+    "T1_cards": "7d1e3c715360b1b9",
     "T2_pertinence": "91e62b924fe30a2a",
     "T3_receipts": "53683f0952beb457",
     "T4_needs": "9ae567485b16c45c",
@@ -7406,7 +7408,7 @@
    ],
    "exploratory_it7": "None; outside the P3 universe and not a transcript question.",
    "inputs": {
-    "T1_cards": "b71f6df8c6f09054",
+    "T1_cards": "df310f93d0d76485",
     "T2_pertinence": "a99cbab9e0538513",
     "T3_receipts": "3bc6767930a125a4",
     "T4_needs": "9ae567485b16c45c",
@@ -7659,7 +7661,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "5d85b661b2074a95",
+    "T1_cards": "3e066b1424d05b41",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "2985f0604e1f1074",
     "T4_needs": "9ae567485b16c45c",
@@ -7890,7 +7892,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "cc866b25f85614e2",
+    "T1_cards": "ec5822a2f3984cd7",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "f2357c73cbfbf215",
     "T4_needs": "9ae567485b16c45c",
@@ -8120,7 +8122,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "451ff595a272e583",
+    "T1_cards": "d319ac16be32586e",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "f2357c73cbfbf215",
     "T4_needs": "9ae567485b16c45c",
@@ -8386,7 +8388,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "14fa6e46f13c366e",
+    "T1_cards": "d7af91805503f602",
     "T2_pertinence": "e8ab801c472fdfe7",
     "T3_receipts": "8541c7d934378110",
     "T4_needs": "aa528d3f09f497b0",
@@ -8742,7 +8744,7 @@
    ],
    "exploratory_it7": "None. Gene addition is not a compound question; P2 counts it as direction-evaluable by target only (zero signed records on the need target) and P3 did not touch it.",
    "inputs": {
-    "T1_cards": "830c4062afc6559f",
+    "T1_cards": "a0bf66abb37fb84c",
     "T2_pertinence": "59d15d3c06233d6c",
     "T3_receipts": "6f2932095c72fb80",
     "T4_needs": "87e24b6b4eb37de3",
@@ -9137,7 +9139,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "42a0d9dd8c502f8a",
+    "T1_cards": "f026f3351c8545f3",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "4c5d7ee4b7cf4a15",
     "T4_needs": "66cebf15a40b040e",
@@ -9368,7 +9370,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "911f0d791615057d",
+    "T1_cards": "7f7933fe43ac8487",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "b86f28328b22bd29",
     "T4_needs": "10a1be2af4314710",
@@ -9612,7 +9614,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "7d89fa9636af5d9a",
+    "T1_cards": "be1977978da4bd69",
     "T2_pertinence": "8e52657c67b7cf9d",
     "T3_receipts": "bf9783aa2f62c7c9",
     "T4_needs": "a7a80e55c71b1e22",
@@ -9965,7 +9967,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "d51ccc74ddde49e6",
+    "T1_cards": "ec60f846c4b9dc7b",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "e2d1e3f9381e5903",
     "T4_needs": "55ff62f47762bab4",
@@ -10251,7 +10253,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "2b6334c3f169667e",
+    "T1_cards": "e1b8ef6cf89976e1",
     "T2_pertinence": "079230f81c69cb2e",
     "T3_receipts": "88c477c26f936380",
     "T4_needs": "ac27518af19cc333",
@@ -10543,7 +10545,7 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, minimum detectable effect about rho 0.15, independently verified): NO ADDED VALUE of a signed external network (rho 0.047) or a WWOX-enriched network (difference -0.0015) for ranking compounds by opposition of the six-gene module; the signature route is effect not detected, not excluded (rho 0.143, 0.007 under the 0.15 threshold, 90 pe…",
    "inputs": {
-    "T1_cards": "5019f013dd7395ab",
+    "T1_cards": "4a415b6770bc472c",
     "T2_pertinence": "1959a04e90dbf178",
     "T3_receipts": "d336afe11a9e9b2c",
     "T4_needs": "a3face7aa0d2e275",
@@ -10941,7 +10943,7 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, independently verified): the same result as CMP-04 - network routes NO ADDED VALUE, signature route not detected and not excluded (weak positive counter-evidence: lower bound 0.039, top-decile hit rate 15 percent); module transfer inconclusive (null 95th percentile 0.389 and p 0.060 on the producer's draw, 0.396 and 0.0595 on the verif…",
    "inputs": {
-    "T1_cards": "f23d411d25131ef2",
+    "T1_cards": "0e9e6e727f8dee24",
     "T2_pertinence": "4f588d870d868008",
     "T3_receipts": "0a5f91853ce0a465",
     "T4_needs": "364bca1d317075b9",
@@ -11357,7 +11359,7 @@
    ],
    "exploratory_it7": "None. A diet has no compound target row, so neither P2 method applies, and the P3 negative says nothing about it.",
    "inputs": {
-    "T1_cards": "0bd0b77302102794",
+    "T1_cards": "8bc11b0843e4bf14",
     "T2_pertinence": "d95f7e8dcd00a63d",
     "T3_receipts": "4a37063d1cf1cd4c",
     "T4_needs": "744c0fd8813698d6",
@@ -11680,7 +11682,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "754a48a20a19dd29",
+    "T1_cards": "11cc415108b691c6",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "5814cc40fa21030d",
     "T4_needs": "c2293d59cfe3febe",
@@ -11984,7 +11986,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "9d7726aecfaa354e",
+    "T1_cards": "5ee88aa10227f64f",
     "T2_pertinence": "8b0a047e9ce40434",
     "T3_receipts": "dcab56eca1c75397",
     "T4_needs": "503be10cec75e346",
@@ -12336,7 +12338,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "7019f74a74ca0029",
+    "T1_cards": "41a05dcaf5775c44",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "5814cc40fa21030d",
     "T4_needs": "c2293d59cfe3febe",
@@ -12584,7 +12586,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "89f52327875b3303",
+    "T1_cards": "cbad9bd52698a4ad",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "a73fe6390fdbc2a7",
     "T4_needs": "e47c99263fff82cc",
@@ -12910,7 +12912,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "c7c0e48260baf20f",
+    "T1_cards": "9600cb5501c4a3d0",
     "T2_pertinence": "40d3f822d9a26184",
     "T3_receipts": "e6f850a4b5a01004",
     "T4_needs": "614b4e0a41c6a227",
@@ -13476,9 +13478,9 @@
    ],
    "exploratory_it7": "None from P3 (a receptor-physiology question, not a transcript module; memantine and perampanel are card-linked and firewalled). P2: memantine and perampanel are usable by the network method (signed antagonist actions on GRIN and GRIA targets) and have no neural LINCS signature, so the signature method does not apply; the need has 179 linked records by targ…",
    "inputs": {
-    "T1_cards": "8b31c690e9e82b27",
+    "T1_cards": "69c7484fd2e3bf23",
     "T2_pertinence": "4744af9e5e721d31",
-    "T3_receipts": "042e1e189d99e383",
+    "T3_receipts": "f52c62b5026e292f",
     "T4_needs": "a9f2ecba72fedb1c",
     "T5_pharmacology": "83e16cf80f0d93c6",
     "T6_identity": "d72dab466f7f0934"
@@ -13721,6 +13723,7 @@
     "10541229",
     "10657404",
     "19261873",
+    "30290271",
     "32106360",
     "34268881",
     "34634460",
@@ -13735,7 +13738,7 @@
     "42837646",
     "9872743"
    ],
-   "receipts_on_cited_pmids": 69,
+   "receipts_on_cited_pmids": 76,
    "research_objective": "useful_partial_benefit",
    "tracks": [
     "A"
@@ -13930,7 +13933,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "6ec6d895384d4f65",
+    "T1_cards": "f808ccc8f6dd9b39",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "680077e476c3fea7",
     "T4_needs": "c3cb663b4a8f81ca",
@@ -14183,7 +14186,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "cb2ce1f0cddcf3f2",
+    "T1_cards": "4f35157cd13a7d10",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "a9e04c25c6fa79b4",
     "T4_needs": "6cb13a89d47f10ac",
@@ -14516,7 +14519,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "2adb537839ef3ffc",
+    "T1_cards": "85d77f37f96c1f6c",
     "T2_pertinence": "db0343ccb25dda32",
     "T3_receipts": "bf1a16e303205a2c",
     "T4_needs": "f8af163a656e7af1",
@@ -14871,7 +14874,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "bd875c0313514297",
+    "T1_cards": "29677170b4fd35ac",
     "T2_pertinence": "904f40dca9a2c7f5",
     "T3_receipts": "16fff434102ccf5f",
     "T4_needs": "503be10cec75e346",
@@ -15208,7 +15211,7 @@
    ],
    "exploratory_it7": "None from P3 (not the glycolysis module). P2: the need is exploration-only (direction uncertain) with 521 linked records by target association, 331 usable by the network method and 4 neural-signature records among them; association only, no direction toward a need, nothing evaluated.",
    "inputs": {
-    "T1_cards": "fc78ee5788884189",
+    "T1_cards": "8cb99e54ccba7c15",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "49e6cd9a3c6cf489",
     "T4_needs": "34001ad580d89a15",
@@ -15505,7 +15508,7 @@
    ],
    "exploratory_it7": "None. An ion has no signed target row for the network method and no neural LINCS perturbation; the P3 negative does not apply.",
    "inputs": {
-    "T1_cards": "86e552ab1fec2519",
+    "T1_cards": "71ce87d3b132f0f2",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c8a20af0f3c1d936",
     "T4_needs": "a9f2ecba72fedb1c",
@@ -15834,7 +15837,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "55dd1f361de56e8a",
+    "T1_cards": "d0dd96b1757e2e27",
     "T2_pertinence": "419afd58578b735f",
     "T3_receipts": "8173c93292dba46b",
     "T4_needs": "bbaa10de8747dfa1",
@@ -16164,7 +16167,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "56b3d07cd73c2fd7",
+    "T1_cards": "4db949bbc4e900cf",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "5814cc40fa21030d",
     "T4_needs": "c2293d59cfe3febe",
@@ -16326,7 +16329,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "9e4cd0bb734d575a",
+    "T1_cards": "ce7ba52f008758d6",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "63b4ad5bf04f0622",
     "T4_needs": "e8f542e80e326fc9",
@@ -16486,7 +16489,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "025805c8e60fa4a0",
+    "T1_cards": "f72887340b87cfff",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
     "T4_needs": "97e5657152aa720b",
@@ -16679,7 +16682,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "75e70c7fa069d06b",
+    "T1_cards": "05f9398c8b0a2278",
     "T2_pertinence": "1d8e37b50e10f4e0",
     "T3_receipts": "8c4d50ad536361a1",
     "T4_needs": "04b598094105956f",
@@ -17135,7 +17138,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "f179fa74dfe8b77d",
+    "T1_cards": "07a55a0d4a054a76",
     "T2_pertinence": "403956ddfaf8ef49",
     "T3_receipts": "09aefab52f8d99a3",
     "T4_needs": "492f1e05d520cfd1",

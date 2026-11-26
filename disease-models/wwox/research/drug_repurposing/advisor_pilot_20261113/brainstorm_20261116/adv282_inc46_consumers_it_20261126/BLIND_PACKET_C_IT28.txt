@@ -1,0 +1,179 @@
+BLIND VERIFICATION PACKET C (hypothesis level; public, class level; nothing here is medical advice)
+
+Each block holds one sentence set that a repository record is about to carry, the record's own context fields, and the held source files.
+Check the sentence set against the sources only. Do not open the repository's cards, result files, reports or other notes: read only the files listed in the block
+(and, for a figure, an image file of the same article under the same files/ tree). No network.
+For each block give one verdict:
+  MUST CHANGE: a word, number, attribution, comparator, unit, species, cell, group size, direction or generalisation is wrong, unsupported or says more than the source;
+  ADD: supported, but an omission would mislead a reader who sees only this sentence set;
+  STANDS: supported as written.
+Grade every clause, not only the main fact. Absolute words (only, no, none, every, all) need the whole table or text read; if you cannot, say UNSETTLED for that word.
+For a negative, say what you searched. For a number read from a figure, say figure, panel and bar, and view the image. A clause about another assertion id (for example DR-A02-004
+or DR-A02-008) or about the repository's own plan is outside your check: say OUTSIDE. For MUST CHANGE and ADD give the minimal replacement wording; a card may not carry
+a dose written with a mass-per-body-weight or concentration symbol, so describe doses in words (millimolar and micromolar written out are allowed).
+Report: a summary table (id, verdict), then per block the findings with locators. Say which files and figures you opened and which you could not.
+
+=== BLOCK N02
+record: card on the NMDA-receptor intervention class, field 'functional evidence available' (WWOX systems)
+SENTENCE SET: In the neuron-specific (Synapsin-Cre) knockout neocortical slice, d-APV abolishes spontaneous bursting, reversibly, and suppresses a delayed evoked response at the three highest stimulus strengths; spontaneous excitatory current amplitude is about six percent larger than in wild-type-plus-heterozygous controls at -70 mV (inferred AMPAR-weighted, not pharmacologically isolated); spontaneous inhibitory current amplitude is about halved and its frequency reduced; the resting potential of pyramidal neurons is depolarised against wild type. No pharmacologically isolated NMDAR or AMPAR current and no receptor subunit protein or surface level has been found measured in any WWOX system (search of held sources, 2026-11-26); Wwox-knockout mouse hippocampus and hippocampal neural stem cells show lower Grin2c transcript, and the neural stem cell RNA-seq also lists lower Grin2b, not reported for hippocampus (Hussain 2019, PMID 30290271), and neuron-specific (Synapsin-Cre) knockout neocortical layer II/III pyramidal neurons show larger miniature excitatory currents at -70 mV, not pharmacologically isolated, with unchanged decay (Breton 2021, PMID 34634460). No subunit-selective, pore-blocking, glycine-site or AMPAR drug was found applied to any Wwox system.
+held sources: /home/desktop/legend-development/files/fulltext/PMID30290271_Hussain2019_PMC_r2.xml ; /home/desktop/legend-development/files/fulltext/PMID34634460_Breton2021_PMC.xml
+
+=== BLOCK DR-A01-007
+source: Guiberson 2018 (PMID 30266908), Supplementary Figure 12a, mutant panel read in IT5 P8; NOT WWOX EVIDENCE
+target_id: STXBP1:Munc18-1 protein, variant G544D (soluble cytosolic client, aggregation-prone)
+endpoint: total variant protein, class-I HDAC-inhibitor comparator (butyrate) at the same applied level
+direction: NO_CHANGE
+reading_depth: partial_fulltext_read
+context: {"disease_id": "STXBP1/Munc18-1 variant (not WWOX); soluble cytosolic client", "genotype": "G544D", "species": "human protein expressed in HEK293T (cDNA under a CMV-promoter plasmid)", "cell_type": "HEK293T", "developmental_stage": "not applicable"}
+SENTENCE SET: Mutant total protein about equal to untreated control, no significance mark (three experiments; bar reading), at the same applied level as the phenylbutyrate class; the text lists only the phenylbutyrate class and two osmolytes as stabilising. On wild type the same comparator gave a scattered, unmarked value near 1.95. The comparator (butyric acid in ChEMBL) was more potent than the phenylbutyrate class on HDAC3 and HDAC8 in one ChEMBL document but weaker than sodium phenylbutyrate on HDAC1 in another (which document carries which HDAC1 and HDAC2 value is not resolvable from the held aggregate rows), so that premise is document-dependent. In the held ChEMBL table its HDAC6 value is only a lower bound, above 2 millimolar, a bound that lies below the 5 millimolar applied, so HDAC6 inhibition at that level is neither shown nor excluded; no HDAC engagement was measured in this paper, and no pan-HDAC or HDAC6-selective arm exists in it. A measured null in a cell that is not comparable.
+held sources: /home/desktop/legend-development/files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml ; /home/desktop/legend-development/files/supplement/PMID30266908/41467_2018_6507_MOESM1_ESM.pdf (Supplementary Fig 12, page 19) ; disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/hdac_enzyme_potency_chembl_20261029.tsv (repository ChEMBL table) ; disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/munc18_cytosolic_precedent_panel_readings_20261029.tsv (earlier bar readings)
+
+=== BLOCK DR-B01-002
+source: independent Fanconi-anaemia study (known-roads reading 2, 40544182); NOT WWOX EVIDENCE
+target_id: survival, chromosomal aberrations and micronuclei (phenotypic rescue)
+endpoint: phenotypic rescue head-to-head with a comparator read-through agent
+direction: NO_CHANGE
+reading_depth: partial_fulltext_read
+context: {"disease_id": "Fanconi anaemia (not WWOX)", "genotype": "patient nonsense alleles in FANCA and FANCF", "species": "human", "cell_type": "lymphoblastoid and dermal fibroblast lines", "developmental_stage": "culture"}
+SENTENCE SET: MEASURED NO PHENOTYPIC RESCUE with amlexanox: no improvement of mitomycin C survival (FANCA and FANCF lines), of diepoxybutane chromosome aberrations (FANCA line only) or of micronuclei (FANCC primary fibroblasts), at one amlexanox concentration, whereas the comparator ataluren improved all three; FANCA mRNA was not rescued. Full-length protein was induced in one arm (FANCA, from under 5 to about 9 percent of control; ataluren about 11 percent) and not in FANCF; the authors treat that induction as read-through. Amlexanox also lowered p53 (about 40 percent, FANCA line only, not FANCF) and phospho-STAT2 (about 50 percent, FANCA line), and it is these two falls that the authors attribute mainly, as a hypothesis with no direct TBK1 readout, to downstream TBK1/IKKe or NF-kB inhibition rather than read-through. The endpoint encoded here is the phenotypic rescue only, so the protein induction is stated in this note and not in the direction code. Encoded NO_CHANGE for the phenotypic endpoint.
+held sources: /home/desktop/legend-development/files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml
+
+=== BLOCK DR-L01-003
+source: Sheeni 2026 (PMC13701765, PMID 42939870); NOT WWOX EVIDENCE
+target_id: CDDO-EA (analogue of omaveloxolone) in acquired seizure models
+endpoint: seizure severity, latency, IL-6/IL-1b/TNF mRNA, MDA, SOD, CAT; spontaneous seizures after kainate SE
+direction: DECREASE
+reading_depth: partial_fulltext_read
+context: {"disease_id": "rat PTZ and kainic-acid post-status-epilepticus (not WWOX)", "genotype": "wild type", "species": "rat", "cell_type": "whole brain tissue, hippocampal histology", "developmental_stage": "adult male"}
+SENTENCE SET: Different molecule. 'acute Nrf2 target engagement was not measured'; more broadly the authors state that Keap1 modification, Nrf2 nuclear translocation, ARE activation and Nrf2 target proteins were not measured at all, so superoxide dismutase and catalase activity after PTZ is the only antioxidant-enzyme readout, and it is not shown to be Nrf2-dependent; brain drug level not measured; one dose. Favourable in part: lower PTZ maximum severity and longer latency to the late stages (incidence difference not significant), and after status epilepticus lower spontaneous seizure burden and higher neuronal density in CA1 only (no difference in CA3; three animals per group in the histology; the abstract states CA1 and CA3, which the Results do not support); cytokine mRNA differences not significant at 10 weeks. MIXED-to-favourable, adult acquired epilepsy. Not transferable to omaveloxolone.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_l01_003_sci_20261126/PMC13701765.xml
+
+=== BLOCK DR-A02-010
+source: Gupta 2023, PMID 37319242 (Results 'Low dose/long-duration studies'); NOT WWOX EVIDENCE
+target_id: CBS p.S466L
+endpoint: serum total homocysteine and liver CBS activity under one week of low-rate carfilzomib   <- NEW wording, check it too
+direction: NO_CHANGE
+reading_depth: partial_fulltext_read
+context: {"disease_id": "CBS deficiency, homocystinuria (not WWOX)", "genotype": "human CBS S466L transgene on a Cbs-null mouse background", "species": "mouse", "cell_type": "liver", "developmental_stage": "adult, one week"}
+SENTENCE SET: No significant change in homocysteine or liver activity in the Results (the Discussion calls the activity change slight); a very slight rise in protein in some animals and no Hsp70 induction. The one-week pump schedule delivered about the same total amount as the 24-hour arm that rescued the regulatory-domain allele (DR-A02-004), at about one seventh of the rate; that 24-hour arm also showed no Hsp70 induction, so its absence here does not show absent engagement, and proteasome activity was not measured at this schedule. Tolerability is asserted by the authors only in general terms (low doses less toxic), not specifically for this arm; no weight, blood-count or clinical data are shown and group size is not stated. The allele rescued at the higher rate was therefore not rescued at the lower rate of delivery (PMID 37319242, Results 'Low dose/long-duration studies', last paragraph).
+held sources: /home/desktop/legend-development/files/fulltext/PMID37319242_Gupta2023_PMC10270616_epmc_2026-10-29.xml
+
+=== BLOCK DR-H02-008
+source: CPP-115 (a vigabatrin analogue), rat, PMID 24321005, abstract; NOT WWOX EVIDENCE
+target_id: epileptic_spasms
+endpoint: spasm count in the multiple-hit rat model of infantile spasms
+direction: DECREASE
+reading_depth: abstract_only
+context: {"disease_id": "rat multiple-hit model of infantile spasms (NOT WWOX EVIDENCE)", "genotype": "wild-type rat pups, model induced by prenatal and postnatal insults", "species": "rat", "cell_type": "whole animal, video-EEG", "developmental_stage": "dosing from postnatal day 4"}
+SENTENCE SET: CPP-115 only; vigabatrin itself was not tested in this paper. The reduction of spasms was only transient and the highest dose was lethal. The abstract states that spasm cessation was not accelerated and that neurodevelopmental behaviour and visuospatial learning were not altered; brain histology is not mentioned in the abstract. The held full-text page scores model-induced hippocampal injury (an extent score on stained sections of 23 brains from the vehicle and the two lower-dose groups, 91 percent scoring 3 to 3.5), equally distributed across those groups, and reports no myelin or white-matter histology.
+held sources: /home/desktop/legend-development/files/fulltext/PMID24321005_ADV272_PMC4102583_pmcpage_20261125.html
+
+=== BLOCK DA-K01-007
+source: GSE158681 and GSE158682 (P17 Wwox conditional and germline deletion brain; inputs identical to the IT6 P4 analysis by sha256), computed anew in IT10 P2.1; NOT the organoid
+target_id: HIF-axis and glycolysis transcripts (Hif1a, Epas1, Hk2, Slc2a1, Ldha, Pgk1, Ndrg1, P4ha1), mouse brain at P17
+endpoint: log2 ratio of TPM, Wwox-deleted over control, four contrasts
+direction: DECREASE
+reading_depth: queried_not_full_read
+context: {"disease_id": "Wwox-deleted mouse brain (neuron-targeted, progenitor-targeted and germline deletion; hippocampus and cortex)", "genotype": "Wwox deletion versus control, 2 to 3 knockout versus 2 to 4 control animals", "species": "mouse", "cell_type": "bulk brain tissue", "developmental_stage": "P17"}
+SENTENCE SET: A COUNTER-OBSERVATION to the organoid rows: no consistent elevation of HIF-axis or glycolysis transcripts across four contrasts; Hif1a within -0.21 to +0.06 log2, Hk2 flat (-0.02 to +0.37), Epas1 lower (-0.21 to -0.59, animal-separated in 3 of 4), Slc2a1, Ldha and Pgk1 lower, Ndrg1 and P4ha1 lower in all four, Gfap higher. Log2 of group-mean summed-transcript TPM with a pseudocount of 0.01; two to four animals per arm; Wwox itself falls about 7- to 16-fold in the three hippocampal contrasts and only about 3-fold, with overlapping values, in cortex. Caveats: bulk tissue and TPM; the animals come from lines with severe epilepsy and death at 3 to 4 weeks; background differences between control groups; no protein; gliosis and hypomyelination change composition. It does not side with the organoid: a species or in-vivo-versus-organoid disagreement is the largest unresolved fact of this axis. Exploratory, post hoc (IT10 P2.1 disclosure).
+held sources: /home/desktop/legend-development/files/geo/GSE158681/ and /home/desktop/legend-development/files/geo/GSE158682/ (TPM tables) ; /home/desktop/legend-development/files/reference_ensembl_r92/Mus_musculus.GRCm38.cdna.all.fa.gz (transcript to symbol) ; disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv282_null_note_control_audit_sci_20261125/recompute_k01_007_adv282.py (a recompute script: read it before use, you may write your own)
+
+=== BLOCK DR-H02-036
+source: GABA-B agonists and GABA, mouse demyelination model and rat precursor cultures, PMID 35980256 and PMID 31349008; NOT WWOX EVIDENCE
+target_id: CNS_myelination
+endpoint: precursor differentiation, myelin protein and remyelination under GABA-B engagement
+direction: INCREASE
+reading_depth: abstract_only
+context: {"disease_id": "induced spinal-cord demyelination and purified precursor cultures (NOT WWOX EVIDENCE)", "genotype": "wild-type adult mouse and rat cells", "species": "mouse and rat", "cell_type": "oligodendrocyte precursors, remyelination", "developmental_stage": "adult mouse; cultured rat precursors"}
+SENTENCE SET: GABA-B engagement (baclofen) enhanced precursor differentiation, myelin protein and remyelination (purified rat precursor cultures, cerebellar slices after induced demyelination, adult mouse spinal cord after induced demyelination); in the purified precursor cultures the GABA-A agonist muscimol did not reproduce the effects (the abstract says none of them were mediated by it); in the dorsal-root-ganglion coculture the abstract reports only GABA itself (more myelin segments and myelin basic protein), without separating receptor classes. The muscimol test therefore differs from the GABA-B result, and no opposite sign is reported in the abstracts. Signalling studies, not drug exposures of a developing brain.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID35980256_efetch.xml ; /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID31349008_efetch.xml
+
+=== BLOCK DR-H02-024
+source: vigabatrin and GABA, rat cerebellar explant culture, PMID 2757909; NOT WWOX EVIDENCE
+target_id: myelinated_fibre_toxicity_in_vitro
+endpoint: myelinated-fibre toxicity of vigabatrin and of GABA in a myelinating explant culture
+direction: INCREASE
+reading_depth: abstract_only
+context: {"disease_id": "myelinating explant with no disease (NOT WWOX EVIDENCE)", "genotype": "wild-type rat", "species": "rat", "cell_type": "cerebellar explant, myelinated fibres", "developmental_stage": "cultured 14 to 19 days in vitro, exposed up to 14 days"}
+SENTENCE SET: Mild toxicity for myelinated fibres from vigabatrin and from GABA with no clear difference between them, although vigabatrin seemed slightly more toxic (the two were not applied at equal molar levels); degenerating myelinated fibres and astrocytic gliosis in both; no patent intramyelinic oedema and no primary demyelination were seen on electron microscopy, and the changes involved axons as well as myelin sheaths, so the row is not a vacuolation finding (its target is the in-vitro fibre endpoint). Preliminary data.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID2757909_efetch.xml
+
+=== BLOCK DR-H02-030
+source: vigabatrin, human children aged 2 to 16 and adults, PMID 19054414; NOT WWOX EVIDENCE
+target_id: brain_MRI_abnormality
+endpoint: prevalence of the abnormality in exposed against naive children aged 2 to 16 and adults
+direction: NO_CHANGE
+reading_depth: abstract_only
+context: {"disease_id": "refractory complex partial seizures in the older arms (NOT WWOX EVIDENCE)", "genotype": "not stated", "species": "human", "cell_type": "whole organism, brain MRI", "developmental_stage": "2 to 16 years and adult"}
+SENTENCE SET: No statistically significant difference between exposed and naive subjects among children aged 2 to 16 and adults (668 re-reviewed subjects); in infants of the same study the prevalence was higher with vigabatrin (22 against 4 percent; 205 infants with infantile spasms, a different indication from the complex partial seizures of the older arms), so age band and indication are confounded. Retrospective blinded MRI re-review of a prespecified T2 or FLAIR hyperintensity. The age-band contrast within one study is what the row carries. A non-significant difference is not proof of no difference.
+held sources: /home/desktop/legend-development/files/fulltext/adv056_it_20261118/B/PMID19054414_x2009_europepmc_core.json
+
+=== BLOCK DR-I01-014
+source: dichloroacetate, human fibroblasts, Simpson 2006 (PMID 16765624), abstract; NOT WWOX EVIDENCE
+target_id: glycolytic flux and lactate production in cultured fibroblasts
+endpoint: average glycolysis with and without DCA, patient against control cells (lactate production was also measured)   <- NEW wording, check it too
+direction: DECREASE
+reading_depth: abstract_only
+context: {"disease_id": "primary fibroblasts from patients with PDC-E1 mutations and five healthy subjects (NOT WWOX EVIDENCE)", "genotype": "PDC-E1 mutations versus healthy", "species": "human", "cell_type": "fibroblast", "developmental_stage": "not applicable"}
+SENTENCE SET: DCA shifted flux in all cells, controls included, away from anaplerotic-related pathways (a 40 percent decrease) toward the pyruvate dehydrogenase complex, and decreased modelled average glycolysis by 29 percent in patient cells (one of six patient lines, with an unusual splicing mutation, excluded from the average) with no significant effect in the control cells of five healthy subjects; untreated patient cells had higher glucose consumption and lactate production than controls. Lactate production and NTP/NDP did not change in either cell type, so the DECREASE code is glycolysis only; no genotype-by-DCA interaction test is reported. It is a precedent for a glycolysis-lowering responder phenotype. A genotype-by-inhibitor interaction on glucose-derived acetyl-CoA flux is the repository's proposed discriminating experiment, not a result of this abstract.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID16765624_efetch.xml
+
+=== BLOCK DR-I01-001
+source: dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE
+target_id: brain pyruvate dehydrogenase activity
+endpoint: PDH activity in the chronic stage of the pilocarpine mouse model, DCA against vehicle
+direction: INCREASE
+reading_depth: abstract_only
+context: {"disease_id": "pilocarpine status epilepticus mouse epilepsy model, chronic stage (NOT WWOX EVIDENCE)", "genotype": "mice without pilocarpine status epilepticus as controls (strain not stated in the abstract)", "species": "mouse", "cell_type": "brain", "developmental_stage": "adult, chronic stage"}
+SENTENCE SET: PDH activity was 65 percent lower in chronic-stage pilocarpine mice than in non-epileptic mice and the drug partly alleviated this (significance not stated). In epileptic mice Ser300 phosphorylation was 52 percent higher and PDH protein 37 percent lower than in non-epileptic mice, and neither changed significantly with the drug. Two daily doses were tested, but the abstract does not say which was used for these assays and does not name the tissue. Total PDH protein fell 23 percent in non-epileptic mice on treatment, which the authors offer as a possible reason for the slight pro-convulsant signal.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID29913407_efetch.xml
+
+=== BLOCK DR-I01-002
+source: dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE
+target_id: seizure latency (acute flurothyl test)
+endpoint: latency to seizure, DCA against vehicle, acute test
+direction: NO_CHANGE
+reading_depth: abstract_only
+context: {"disease_id": "acute chemoconvulsant seizure test (NOT WWOX EVIDENCE)", "genotype": "mice (strain not stated in the abstract)", "species": "mouse", "cell_type": "whole animal", "developmental_stage": "adult"}
+SENTENCE SET: Chronic treatment (timing relative to the test not stated) did not increase flurothyl latency; two doses were tested and the abstract does not say whether the null held at both, and gives no effect size; in the same paper the drug was slightly pro-convulsant in the 6 Hz test. PDH engagement is reported for the chronic-stage pilocarpine mice, not for these animals. One laboratory.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID29913407_efetch.xml
+
+=== BLOCK DR-I01-004
+source: dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE
+target_id: seizure latency (second-hit flurothyl test in chronic epileptic mice)
+endpoint: latency to seizure, DCA against vehicle in mice with prior status epilepticus
+direction: NO_CHANGE
+reading_depth: abstract_only
+context: {"disease_id": "pilocarpine status epilepticus mouse epilepsy model, chronic stage (NOT WWOX EVIDENCE)", "genotype": "mice (strain not stated in the abstract)", "species": "mouse", "cell_type": "whole animal", "developmental_stage": "adult, chronic stage"}
+SENTENCE SET: A primary seizure-endpoint test of a PDK inhibitor in a model in which PDH activity is documented to be reduced; second-hit latency was shorter in epileptic than in non-epileptic mice and DCA did not restore it; PDH activity was partly restored but the Ser300 phosphorylation and PDH protein changes were not significant, so the null is at partial engagement by one readout; the abstract does not say whether the same animals were assayed. Abstract level; the full text is not held.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID29913407_efetch.xml
+
+=== BLOCK DR-P9-009
+source: Ann Clin Transl Neurol 2026 prospective cohort (PMID 41288262; abstract only; NOT WWOX EVIDENCE)
+target_id: NMDAR pore blocker memantine (add-on in epilepsy)
+endpoint: seizure worsening in people with epilepsy
+direction: NO_CHANGE
+reading_depth: abstract_only
+context: {"disease_id": "adult epilepsy with cognitive impairment (not WWOX)", "genotype": "not applicable", "species": "human", "cell_type": "adults, median age 63", "developmental_stage": "adult"}
+SENTENCE SET: Adults (18 or over, median age 63) with epilepsy and cognitive impairment, memantine added by patient choice for 24 weeks, not randomised: increased seizure frequency (a rise of more than 25 percent) in 7 of 101 on memantine against 5 of 110 without it, no significant difference, four of the seven attributed to incidental antiseizure-drug non-adherence; baseline imbalances were in cognition, mood, age at onset and epilepsy duration, not in baseline seizure frequency; no drug level. Adult safety signal reassuring but non-randomised; it bears on the warning, not on children, not on a developmental epilepsy and not on benefit. The full text is held; targeted passages were read on 2026-11-26.
+held sources: /home/desktop/legend-development/files/fulltext/ketamine_kds_it_20261117/p4_harms/PMID41288262_Wang2026_europepmc-fulltextxml.xml
+
+=== BLOCK DR-P9-010
+source: openFDA drug label JSON for memantine, effective 2026-09-01, retrieved 2026-10-29 (NOT WWOX EVIDENCE)
+target_id: NMDAR pore blocker memantine (paediatric label)
+endpoint: efficacy in two controlled paediatric autism studies
+direction: NO_CHANGE
+reading_depth: queried_not_full_read
+context: {"disease_id": "autism spectrum disorder, children (not WWOX)", "genotype": "not applicable", "species": "human", "cell_type": "children aged 6 to 12", "developmental_stage": "childhood"}
+SENTENCE SET: The only controlled paediatric exposure in this label (two studies in children aged 6 to 12 with autism spectrum disorders, one parallel placebo-controlled with 54 against 53 and one responder-enriched randomised withdrawal) failed to demonstrate efficacy: a null in a different disorder. The label calls the paediatric safety profile generally consistent with adults, states that safety and effectiveness in paediatric patients are not established and that the drug was not studied under 6 or over 12 years, and reports neuronal lesions in juvenile rats at high doses. One extended-release capsule label held (one of 75 openFDA records; the others were not read).
+held sources: /home/desktop/legend-development/files/fulltext/ketamine_kds_it_20261117/p6_metabolic_ocular/LABEL_memantine_openfda.json
+
+=== BLOCK DR-E01-003
+source: J Alzheimers Dis 2026 abstract, PMID 42179084; NOT WWOX EVIDENCE
+target_id: object-recognition memory, microglial activation, tau and amyloid burden
+endpoint: recognition memory under an eIF2B activator (2BAct)
+direction: INCREASE
+reading_depth: abstract_only
+context: {"disease_id": "5xFAD mouse model of Alzheimer's disease (not WWOX)", "genotype": "5xFAD transgenic", "species": "mouse", "cell_type": "whole animal behaviour", "developmental_stage": "ten-month-old adult"}
+SENTENCE SET: In ten-month-old 5xFAD mice over 23 days, with a donepezil comparison arm: better recognition memory and less microglial activation and tau; amyloid burden not reduced; p-eIF2 alpha lower; the abstract does not name the compound's target, and only recognition memory is reported as improved among the behavioural tests run. The donepezil results are not reported in the abstract. Mouse, adult, one dose, one study; the authors call the effects limited.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_abstracts_sci_20261126/PMID42179084_efetch.xml
