@@ -89,7 +89,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Next compound: idebenone.** Evaluate NQO1-dependent reduction and complex III-linked mitochondrial recovery in WWOX. Compare astrocytes and neurons, reduced and oxidized parent, and ATP recovery versus peroxide suppression. The mechanism extends the CoQ10 comparison through a distinct electron-transfer route. [Existing CoQ10 comparison](ubiquinol/decision.md)
+**Active compound: idebenone.** NQO1 and the complex III subunit UQCRC1 both decline in WWOX mouse hippocampal bulk and human organoids. Rat cortical neurons and astrocytes show opposite respiratory responses at nominal bath exposure. Next quantify oxidized and reduced parent and conjugates across relevant tissues before interpreting a coupled ATP effect. [WWOX comparison and prediction](idebenone/README.md) · [Existing CoQ10 comparison](ubiquinol/decision.md)
 
 **Latest completed compound: trehalose.** Deferred for pediatric WWOX trial priority. Oral macaque CSF mean is about 1.6 µM, while the lowest identified neural preconditioning bath is 100 µM. Reporter responses depend on tissue, route and assay, and chronic wild-type oral exposure reduced male dentate firing. Reopen for measured intact neural parent, faster native cargo breakdown and genotype-selective functional recovery with preserved evoked transmission. [Disposition, exposure and replay](trehalose/route_and_flux_20261126.md) · [Prespecified WWOX RNA comparison](trehalose/README.md)
 
