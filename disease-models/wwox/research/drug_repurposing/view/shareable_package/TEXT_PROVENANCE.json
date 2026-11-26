@@ -6,17 +6,17 @@
    "words": 22
   }
  ],
- "bibliographic_title_runs": 213,
+ "bibliographic_title_runs": 234,
  "corpus_by_extension": {
-  "html": 146,
+  "html": 147,
   "json": 545,
   "md": 1,
   "pdf": 229,
   "txt": 577,
-  "xml": 1028
+  "xml": 1039
  },
- "corpus_files": 2526,
- "corpus_words": 25187121,
+ "corpus_files": 2538,
+ "corpus_words": 25210389,
  "failures": 0,
  "method": "every string of the shareable data object against the third-party texts held locally (full texts, abstracts, openFDA label JSON), longest verbatim run in words (shingle 7); limits: unquoted phrase <= 25 words, marked quotation <= 12 words, or <= 30 words with an attribution phrase",
  "not_covered": "third-party texts not held locally; label sections that were not fetched",
@@ -43,11 +43,6 @@
    "words": 8
   },
   {
-   "path": ".cur.cands[].brief.wwox",
-   "run": "no sustained positive effect of treatment was detected",
-   "words": 8
-  },
-  {
    "path": ".cur.cands[].brief.counter[].text",
    "run": "no sustained positive effect of treatment was detected",
    "words": 8
@@ -61,7 +56,17 @@
    "path": ".cur.cands[].asserts[].note_full",
    "run": "a marked reduction in both progenitor populations",
    "words": 7
+  },
+  {
+   "path": ".cur.cands[].asserts[].note",
+   "run": "acute nrf2 target engagement was not measured",
+   "words": 7
+  },
+  {
+   "path": ".cur.cands[].asserts[].note_full",
+   "run": "acute nrf2 target engagement was not measured",
+   "words": 7
   }
  ],
- "unquoted_runs_within_limit": 55
+ "unquoted_runs_within_limit": 57
 }

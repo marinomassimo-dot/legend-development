@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "5bdf78195026de0b23146d6d39c33d5334a28ca4a70228a9e2611ef07dbadc5f",
+  "input_sha256": "9c0030f2a6b1c15d5a392e4ad584ee8bb01078436bc640f9bf59d4360f8ec8e9",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -77,7 +77,7 @@
       "missing_datum": "Where Q230P is surveilled: WWOX is cytosolic, and no measurement places the variant in ER or cytosolic quality control. Without that, a UPR or ERAD modulator has no stated target in this lesion.",
       "search_record": "NOT ESTABLISHED HERE, not a confirmed absence. The records of 2026-10-20 hold no WWOX test of any such agent. Query run 2026-10-21 (session clock), PubMed title/abstract: WWOX AND (HSP70 OR HSC70 OR Hsp90 OR chaperone OR heat shock OR HSPA8 OR endoplasmic reticulum OR unfolded protein response OR ERAD): 11 records, none a test of a UPR or ERAD modulator on a WWOX variant. The only placement statements in the repository are an unmeasured remark in the first Q230P report that ER quality control is the likelier cause of protein loss (a Discussion sentence, with no ER fractionation or inhibitor in its Methods or Results as searched by string) and, for a different SDR missense (P252A), a lysosome-sensitive and proteasome-inhibitor-insensitive loss in non-neural cells (repository reading of PMID 41124647). Limits: title/abstract only; zeros not re-runnable offline.",
       "adjacent_context_not_wwox_evidence": [
-        "selective IRE1/XBP1s activators raised post-transcriptionally variant protein, surface protein and current for GABRA1 variants (research compounds, not approved drugs; HEK293T and one iPSC line)",
+        "selective IRE1/XBP1s activators raised post-transcriptionally variant protein, surface protein and current for GABRA1 variants (research compounds, not approved drugs; HEK293T and one heterozygous G251D iPSC line; current measured for D219N, 100 micromolar GABA, n = 8, and G251D, 1 millimolar GABA, n = 8, not P260L; unchanged GABRA1 mRNA shown for D219N only, 12 h; in the iPSC line only IXA62 and IXA554 were tested, read-outs surface subunit fluorescence and proximity ligation, no current; the G251D surface-biotinylation bar for IXA105 carries no significance mark (Fig 5C) although the text gives 2.3-fold; IXA554 and IXA105 were tested only to 10 micromolar 'due to the drug toxicity to cells at 25 micromolar', no viability data is reported in the paper or its supplement; apart from alpha1 and the IRE1/XBP1s read-outs, the only stress marker read for all three compounds was CHOP, in D219N cells, and IXA62 slightly raised BiP)",
         "HRD1 co-expression lowered mutant and wild-type subunit alike and lowered surface receptor: the wrong sign for a loss-of-function lesion"
       ],
       "an_abstention_is_a_result": "The roadmap states it; this card names what would end it."
@@ -95,7 +95,7 @@
           "DIS-004"
         ],
         "external_not_wwox_evidence": [
-          "selective IRE1/XBP1s activators raised post-transcriptionally variant protein, surface protein and current for GABRA1 variants (research compounds, not approved drugs; HEK293T and one iPSC line)",
+          "selective IRE1/XBP1s activators raised post-transcriptionally variant protein, surface protein and current for GABRA1 variants (research compounds, not approved drugs; HEK293T and one heterozygous G251D iPSC line; current measured for D219N, 100 micromolar GABA, n = 8, and G251D, 1 millimolar GABA, n = 8, not P260L; unchanged GABRA1 mRNA shown for D219N only, 12 h; in the iPSC line only IXA62 and IXA554 were tested, read-outs surface subunit fluorescence and proximity ligation, no current; the G251D surface-biotinylation bar for IXA105 carries no significance mark (Fig 5C) although the text gives 2.3-fold; IXA554 and IXA105 were tested only to 10 micromolar 'due to the drug toxicity to cells at 25 micromolar', no viability data is reported in the paper or its supplement; apart from alpha1 and the IRE1/XBP1s read-outs, the only stress marker read for all three compounds was CHOP, in D219N cells, and IXA62 slightly raised BiP)",
           "HRD1 co-expression lowered mutant and wild-type subunit alike and lowered surface receptor: the wrong sign for a loss-of-function lesion"
         ]
       },

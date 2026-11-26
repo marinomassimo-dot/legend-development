@@ -1131,11 +1131,12 @@
     },
     {
      "step": "ADV-282: audit the activity or engagement check of the 48 queued null notes, ordered by HE consumer_count.py, increments of eight, PREREG calibrated on ADV-281 (loose 4 of 9 of the ten); part A (Hou, Kobayashi) and part C (equivalence rows) were done by the previous window",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-282 (assignments/ADV-282.md)",
      "accepted_at": "2026-11-25T19:45:11Z",
-     "updated_at": "2026-11-25T21:17:50Z"
+     "updated_at": "2026-11-26T02:05:59Z",
+     "evidence": "RESULT_ADV282_INC4_6_SCI_20261126.md (sha256 f83403a07dab01f39e43a5fd5b84996df032b5999f3cc7837dc0af36f8c90a73, main 5b2b7b6a6) plus ADDENDUM_L01_003_ADV282_SCI_20261126.md (sha256 2a6ea2fa593156372ac60b641bb6ef64c259883d5bf943ff6340322b93fcd328); ranks 1 to 24 landed on 010f7c8fb; DR-H02-005 set aside; sentence set sent to IT 2026-11-26"
     },
     {
      "step": "ADV-283: test the PDK isoform pattern (PDK3 higher, PDK1 lower) in a second held WWOX-deficient neural dataset; PREREG frozen first; blind reader on the final sentences",
@@ -1226,6 +1227,31 @@
      "accepted_at": "2026-11-26T00:09:53Z",
      "updated_at": "2026-11-26T00:23:51Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv291_breton_s4_s12_sci_20261126/RESULT_ADV291_SCI_20261126.md"
+    },
+    {
+     "step": "ADV-292: read the unread class of ten held partial records (corrected ten, two increments of five, PREREG frozen), sentences to IT after its apply report; both increments by the successor",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-292",
+     "accepted_at": "2026-11-26T00:33:37Z",
+     "updated_at": "2026-11-26T01:17:35Z",
+     "evidence": "2026-11-26 SCI: ten held partials read in two increments, blind sentence-level reader on both; strict 3 of 10 records (39216838, 40485335, 31781019), loose 7 of 10, prediction 3 not rejected; adv292_next_held_partials_sci_20261126/RESULT_ADV292_INC1_SCI_20261126.md and RESULT_ADV292_INC2_SCI_20261126.md; ten receipts FTR-20261126-*-01/02; reported to ADV and IT"
+    },
+    {
+     "step": "ADV-287 extension: full pass of the fold, ratio, range, percent and versus statements of card families H02 and A01 on the current card text, and a second random sample of 20 from the remaining families; PREREG and counted universe first, first reader on held files, blind sentence-level reader with the sentence and the WHOLE source, negatives with a dated search or UNSETTLED; corrected sentences to IT; then a one-consumer reading batch proposal for ADV",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "SCI launcher of window c6d4dd83 (ADV addition) and checkpoint AT section 2 items 3 and 4; ADV-287 step 2 hold lifted by IT apply 49b7ac71a (CHECKPOINT_IT_20261126_1 section 6)",
+     "accepted_at": "2026-11-26T02:04:49Z",
+     "updated_at": "2026-11-26T03:14:18Z",
+     "evidence": "RESULT_ADV287EXT_SCI_20261126.md sha256 f2c18707c12ac68798d9688567fd668b33ffdbaf079e1e2237a73b12ee9b76d7: 4 of 49 assessable verified MUST CHANGE (8.2 percent), rejecting observation met on the frozen count; PREREG sha256 33de1a3b...; corrected sentences for IT in RESULT sections 2 to 4; ADV-295 next"
+    },
+    {
+     "step": "ADV-295: one-consumer reading batch, block 1 (42807679 figures 3-7, 41254692, 42401046, 39546604, 41210171) with own PREREG and the ADV-292 recipe; block 2 only if block 1 has a strict record (1 strict: three records; 2 or more: five); report the remaining debt counts after block 1; after the ADV-287 extension",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-295 (ADV message 2026-11-26; assignments/ADV-295.md lands with ADV's next push)",
+     "accepted_at": "2026-11-26T02:13:33Z"
     }
    ]
   }
@@ -2173,6 +2199,27 @@
    "at": "2026-11-26T00:09:53Z",
    "source": "ADV-291 brief assignments/ADV-291.md (read from the root checkout, not yet on main) and the SCI launch message of 2026-11-26",
    "step_sha256": "0f83a479a23f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-26T00:33:37Z",
+   "source": "ADV-292",
+   "step_sha256": "70a381b3aa0b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-26T02:04:49Z",
+   "source": "SCI launcher of window c6d4dd83 (ADV addition) and checkpoint AT section 2 items 3 and 4; ADV-287 step 2 hold lifted by IT apply 49b7ac71a (CHECKPOINT_IT_20261126_1 section 6)",
+   "step_sha256": "ac185303360e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-26T02:13:33Z",
+   "source": "ADV-295 (ADV message 2026-11-26; assignments/ADV-295.md lands with ADV's next push)",
+   "step_sha256": "4056442e5dc1",
    "reopened_block": false,
    "authorised_by": null
   }

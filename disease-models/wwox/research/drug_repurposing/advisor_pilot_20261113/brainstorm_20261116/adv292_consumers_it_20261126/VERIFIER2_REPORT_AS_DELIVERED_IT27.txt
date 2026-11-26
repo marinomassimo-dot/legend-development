@@ -1,0 +1,92 @@
+Blind verification, second round. I worked only from the files in /home/desktop/.claude/jobs/6f4e0008/tmp/b292a (article texts, supplements, figure images) and made no network calls. I opened old/PACKET_round1.md before noticing the instruction to ignore it. It did not feed any verdict below. I rendered crops under /tmp/b292v only and wrote no report file.
+
+VERDICTS
+- W1: ADD
+- W2: MUST CHANGE
+- S1: ADD
+- S2: ADD
+- F2: MUST CHANGE (one phrase)
+
+## W1 (Wang 2024): ADD
+Everything checked is true; the additions are about unit of replication and the iPSC counts.
+
+Checked and supported:
+- **Screen list:** The Results text lists exactly 10 ligands: GABA, midazolam, flurazepam ("Florazepam"), chlormezanone, hispidulin, CL218872, ZK93423, bretazenil, CGS20625, TP003. Treatment was 10 µM for 24 h on three stable lines (D219N, G251D, P260L), read as total alpha1.
+- **"Four raised it":** The text says hispidulin, TP003 and midazolam increased total protein for all three variants, and CL218872 did so for D219N and P260L. It then calls them "All four effective compounds". The per-ligand bars of Supp Fig S3 are not in this folder. Only uncropped blots are present, on pdf pages 14-16, with handwritten lane labels ("DMSO", "PC1", "PC7", "PC12") that cannot be mapped to ligand names. So "four of 10" rests on the text only.
+- **Current, Fig 4B stars:** Hispidulin is significant in 8 of 8: A322D *, D219N *, P260L **, R214C **, S76R ***, G251D ***, M263T *, T289P ***. TP003 is significant in 6 of 8; NS for D219N and R214C. Both match the sentence.
+- **iPSC surface fluorescence, Fig 7C:** Both compounds are significant for surface alpha1, gamma2 and beta2/3.
+- **iPSC PLA, Fig 7E:** gamma2, BiP and calnexin rose for both compounds (hispidulin ***, TP003 * for gamma2 and BiP; both ***, calnexin). LMAN1 rose (hispidulin *, TP003 **). Grp94 fell (both ***). SEL1L is NS for both. SEL1L appears only in the figure, not in the text.
+- **No current in neurons:** Patch clamp (IonFlux) is described only for HEK293T cells.
+- **Line:** Methods say "heterozygous knockin of the G251D", a single line, with "at least three differentiations" in the legends.
+
+Additions that would help (none misleads):
+1. **Surface-protein counts.** The parenthetical "not D219N and R214C" is scoped to current. For TP003 surface protein (Fig 4A) the NS cases are D219N, P260L and R214C, so TP003 is 5 of 8 and hispidulin is 8 of 8. Suggested insertion: "(surface protein: hispidulin 8 of 8, TP003 5 of 8, not D219N, R214C, P260L)".
+2. **Units of replication.** Surface biotinylation is n = 3 independent experiments (blots). Current is n = 4-11 recordings (cells). Screen blots and the Fig 3 dose-response are n = 3.
+3. **iPSC counts.** "35 to 75 neurons per condition" is the union of the legend ranges, 50-75 neurons for surface (Fig 7b) and 35-70 for PLA (Fig 7d). The legends say "imaged". The dots actually plotted are fewer. In Fig 7C and 7E I see roughly 15-30 points per condition. The unit is the neuron, pooled over at least 3 differentiations (pseudoreplication). Suggested wording: "35 to 75 neurons imaged per condition (legend; about 15 to 30 plotted points)".
+
+## W2 (Wang 2024): MUST CHANGE
+**Exact words:** "most described as benzodiazepine-site"
+
+**Why it fails:**
+- The paper describes only the four effective compounds as benzodiazepine-site positive allosteric modulators. The quotation is "All four effective compounds, namely Hispidulin, Midazolam, TP003, and CL218872, belong to positive allosteric modulators (PAMs), acting primarily on the benzodiazepine site".
+- That is 4 of 10, not "most".
+- The sentence itself says the paper does not classify the other six. Those two statements cannot both be true of the paper.
+- If "described" refers to outside literature, the folder cannot confirm it.
+
+**Smallest correction:** replace the phrase with "the 4 that raised protein are described in the paper as benzodiazepine-site PAMs".
+
+The rest holds:
+- The paper says the compounds are "known to bind GABA A receptors".
+- The six non-raisers (GABA, flurazepam, chlormezanone, ZK93423, bretazenil, CGS20625) get no site classification in the paper.
+- GABA is among the ten and is described as binding the beta2/alpha1 interface sites.
+- No binding assay was run; the paper says "Presumably, binding ... improves stability" and "directly bind ... [34,60,61]".
+
+## S1 (Shah 2025): ADD
+Checked and supported:
+- **Fig 3A (wild type, HEK293):** 4-PBA is about 180% of control with one star. Glycerol is about 115%, NS. So "4-PBA increased wild-type uptake" is correct.
+- **Fly wild type (Fig 6B):** The legend says "unchanged in the treated flies" and "single section of AL". Images only, no quantification.
+- **Fig 6I:** The legend says "at least 10 adult brains of each condition". Only 4-PBA carries ***.
+- **Cell-line effect:** Fig 3A shows several other compounds also raising wild-type uptake (pifithrin, 17-DMAG, lumacaftor, liothyronine). That fits "not shown to be variant-specific".
+
+Additions:
+1. **Mature band.** "Increased the wild-type mature band" is the text's claim ("drastically augmented", Fig 4B,C). The sentence cites only Fig 3A and gives no figure for it.
+   - In the representative blots (Fig 4B glycerol, 4C 4-PBA) the M band difference is small. My coarse JPEG densitometry, normalised to G-beta, gave about no change for glycerol and about +10-20% for 4-PBA. Treat that as unreliable.
+   - Suggested wording: "(per the paper's text; the representative blots, Fig 4B,C, show at most a modest change)".
+2. **"About 14-fold".** This is the paper's text figure ("an impressive 14-fold increase in AL expression"). The Fig 6I box plot shows medians of about 25 µm3 (control) and about 225 µm3 (4-PBA), roughly 9-fold. The basis for 14 (mean versus median) is not stated. Suggested wording: "about 14-fold in the text; plot medians about 9-fold".
+3. **"Not glycerol".** The text says glycerol "had only a minor effect" and Fig 6I has no mark for glycerol. The glycerol median is about 65 µm3, about 2.6 times control. Suggested wording: "glycerol minor and unmarked".
+4. **Imaging scope.** The measurement is antennal-lobe volume (Imaris) with the astrocyte driver ALRM-Gal4. The unit is the brain.
+
+## S2 (Shah 2025): ADD
+Checked and supported:
+- **Doses and timing:** 10 mM 4-PBA for 24 h in HEK293; 1 mM 4-PBA in fly food for 48 h (Methods and Results). The text also gives 10% glycerol in fly food for 48 h.
+- **G443V:** 4-PBA rescues G443V uptake in the screen. In Fig 3C, 4-PBA is about 8% of wild type with ***. Glycerol is about 5% with **.
+- **G443D:** 4-PBA does not rescue G443D (about 1.6%, no mark). Glycerol rescues it (about 6%, ***, Fig 3B). The mature band rises with glycerol (Fig 4D-E).
+- **Flies:** Glycerol and 4-PBA both give presynaptic G443V in imaging (Fig 6F). Glycerol's effect on G443V seizures is unmarked, and the legend says "not statistically significant" (Fig 6H). No uptake was measured in flies.
+- **Wild type:** Uptake is raised in HEK293, clearly by 4-PBA, and wild-type fly expression is unchanged.
+- **Bile acids:** A search of the text for bile, TUDCA, ursodeoxy and taurour gave no hits.
+
+Additions:
+1. **Extent of rescue is assay-dependent.** The "6 to 8 percent" is correctly scoped to the single-concentration screen. The kinetics (Fig 4) give Vmax 165 (G443D with glycerol) and 116 (G443V with 4-PBA) against 298 pmol per 10^6 cells per min for wild-type control. That is about 55% and 39%, with Km raised. Suggested addition: "(Vmax in the kinetics, Fig 4D,F: about 55 and 39 percent of untreated wild-type Vmax)".
+2. **Fly seizures.** The fly clause mentions glycerol's non-significant seizure effect but not that 4-PBA significantly reduced G443V seizures (Fig 6H, ***; about 43% to about 20% of flies). It also omits that 4-PBA did not change G443D seizures (Fig 6G).
+
+## F2 (Fu 2025): MUST CHANGE (one phrase)
+**Exact words:** "no cell-viability or off-target assay was run"
+
+**Why:** The paper and supplement only fail to report one. Absence from the text and supplement does not show an assay was never run. The authors state "drug toxicity to cells at 25 μM", so some toxicity observation exists. A search for "viab" and "toxic" finds no viability data.
+
+**Smallest correction:** "was run" becomes "is reported in the paper or its supplement".
+
+Checked and supported:
+- **Quotation and range:** "due to the drug toxicity to cells at 25 μM" is verbatim. IXA554 and IXA105 were tested over 0.1 to 10 µM in the D219N dose-response. In the wild-type dose-response (Fig S2B), IXA554 reaches only 10 µM. In Fig S2C, IXA105 was tested only at 0 and 10 µM. IXA62 went to 25 µM.
+- **Compound-specific read-outs:** The list is correct: XBP1s protein (Fig 1C), splicing reporter (Fig S1D), and five target mRNAs plus GABRA1 mRNA (Fig 1B; the primer table lists XBP1s, Sec24D, ERdj4, Creb3L2, HerpUD1 and GABRA1).
+- **CHOP:** CHOP protein is blotted for all three compounds in D219N cells (Fig S1E, n = 3, with thapsigargin).
+- **Other stress or UPR read-outs:** BiP, calnexin, HSP47 and LMAN1 (Fig 3E), and the ERAD factors including HerpUD1 (Fig S3), were read for IXA62 and IXA554 only. So the "all three compounds" restriction is true.
+- **Not off-target assays:** The 4μ8C co-treatment tests IRE1 dependence. The wild-type alpha1 dose-response and surface blots test variant selectivity.
+
+Additions:
+1. **IXA62 raised BiP.** The text says IXA62 "slightly increased the BiP protein level" (Fig 3E, *) and modestly increased HerpUD1 (Fig S3). A reader of "only CHOP for all three" could miss that a stress marker did move for IXA62.
+2. **CHOP read-out is weak.** In the Fig S1E image the CHOP blot is one unquantified image. No band is visible in the DMSO or compound lanes. The thapsigargin positive control shows only a faint smear at about 30 kD. A suggested qualifier is "single unquantified blot with a faint positive control".
+
+## Not done and caveats
+- I could not check the per-ligand screen bars (Wang Supp Fig S3), because only raw uncropped blots with unmappable lane labels are in the folder. "Four of 10" and "six did not raise" rest on the paper's text.
+- My densitometry of the Shah Fig 4B,C blots is coarse (JPEG, hand-picked boxes) and is evidence only that the visible change is small.

@@ -1,0 +1,21 @@
+n	card	reason	sentence
+H02-01	H02_gabaat_inactivator_myelin_exposure	label (age band)	2 to 16 years and adult
+H02-18	H02_gabaat_inactivator_myelin_exposure	design label (culture and exposure days)	cultured 14 to 19 days in vitro, exposed up to 14 days
+H02-19	H02_gabaat_inactivator_myelin_exposure	design label (ages, days of exposure)	dosing from age 12 to 16 days, five days of exposure
+H02-20	H02_gabaat_inactivator_myelin_exposure	the word ratio without a value	g-ratio with a residual difference) are the usable ones;
+H02-22	H02_gabaat_inactivator_myelin_exposure	no quantity	no receipt exists for any row except the carried Repudi 2021 receipt.", "card_inferences_owed_audit": "The synthesis in 'mechanism', both registered predictions, and the comparison of a denominator-free case report with the label's 22 versus 4 percent are INFERENZA and owed a blind audit by someone other than the producer."}
+A01-01	A01_pba_class	proposed experiment	(2) place the Q230P-class allele on that curve and read a per-molecule binding-competence ratio (WW1-dependent and SDR-region partners) beside it;
+A01-12	A01_pba_class	the word ratio without a value	mature-to-immature ratio and function
+R-18	P11_magnesium_nmdar_gate	the word ratio without a value	NMDA:AMPA ratio under voltage control;
+R-20	M01_neurogenic_output_myc_window	identical text already drawn (R-19)	WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)
+R-21	E04_ketogenic_lactate_axis	design description, no value	neuronal Wwox RNAi plus neuronal Abeta42 (Arctic) versus control RNAi plus Abeta42
+R-22	K01_hif_axis_glycolytic_shift	versus without a value	PMIDs 24889205 (DMOG versus KC7F2 in rat seizure models), 42276303 (HIF-1alpha overexpression), 34021541 (miR-485 acting on HDAC5, HIF1alpha and PFKFB3), abstracts;
+R-23	K01_hif_axis_glycolytic_shift	the word range without a value	thyroid-receptor EC50 in the low nanomolar range), EU product information (seizures common);
+R-26	F04_nmdar_intervention_class	label (age)	mouse slices at 2 to 3 months
+R-27	C02_splice_aso	the word ratio without a value	aberrant-to-normal transcript ratio of a splice allele
+R-28	P11_magnesium_nmdar_gate	proposed result	discriminating result: a rise within the reachable range that lowers bursts in knockout slices without altering wild-type activity versus one that does not.
+R-30	E01_isr_modulators	identical text already drawn (R-19)	WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)
+R-31	F03_bumetanide_chloride_gradient	the word range without a value	at the single intravenous dose reported, far above the human diuretic range, modelled free brain concentrations were in the NKCC1-inhibitory range.
+R-32	F03_bumetanide_chloride_gradient	identical text already drawn (R-19)	WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)
+R-36	A02_proteasome_inhibitor_class	the word range without a value	In a cytosolic enzyme (CBS) a proteasome inhibitor restored enzyme activity in vivo for a regulatory-domain allele (to the transgenic wild-type range in some animals) and partly for catalytic-domain alleles;
+R-38	F01_glutamate_receptor_node	identical text already drawn (R-19)	WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)

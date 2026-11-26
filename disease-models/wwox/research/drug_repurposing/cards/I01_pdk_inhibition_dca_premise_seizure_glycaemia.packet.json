@@ -51,7 +51,7 @@
         "developmental_stage": "progenitor stage and day-14 neurons"
       },
       "evidence_scope": "COMPUTATIONAL_RESULT",
-      "note": "Progenitors -0.67, LOWER IN SIGN ONLY: inside the single-gene null (p about 0.49) and the interval (about 0.45, Poisson) spans zero; the day-14 neuron stage shows +0.44 (same interval), so the sign is not concordant across stages and no decrease is demonstrated. n = 1 per arm: descriptive only. The progenitor line also differs in state from its control (radial-glia markers lower), which confounds every metabolic comparison in it."
+      "note": "Recomputed from the deposit (one library per arm; PDK1 tags 263 against 51 in progenitors and 108 against 64 in day-14 neurons), the log2 ratio of the deposited TPM is -0.54 in progenitors and -1.07 in neurons. The neuron pair's gene-table column sums differ about threefold (summed TPM 89,581 against 264,496); normalising to those sums gives +0.49, while median re-centring over expressed genes gives -0.60 to -0.77 in progenitors and +0.34 to +0.50 in neurons depending on the gene filter (-0.74 and +0.41 with every gene detected in both libraries). The earlier centred values (-0.67 and +0.44) are matched to within 0.001 by median centring over genes with a pair-mean TPM of at least 10, a filter found after the fact, so they are filter-dependent rather than irreproducible; their original normalisation is not stated and their p of about 0.49 could not be reproduced. A Poisson half-width of about 0.45 around -0.67 excludes zero, and with one library per arm no decrease is demonstrated; the note is descriptive only. WWOX knockdown is shown by one Western blot in progenitors only (Supplementary Figure 1); the WWOX CAGE signal is 1.15 times control in progenitors and 0.20 in neurons (0.60 after normalising to the column sums). In the progenitor library PAX6, SOX2, HES5, FABP7 and SOX21 are lower while NES, VIM, HES1 and SLC1A3 are not, so the line differs in state from its control, which confounds every metabolic comparison in it. The progenitor line also differs in state from its control (radial-glia markers lower), which confounds every metabolic comparison in it."
     },
     {
       "id": "DA-I01-003",
@@ -90,7 +90,7 @@
         "developmental_stage": "not applicable"
       },
       "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-      "note": "A null is NO_CHANGE, not proof of normal PDH regulation: n is not stated and PDH phosphorylation is not measured. Wording flag found in this cycle: one Results sentence lists 'pyruvate dehydrogenase kinase (PDK)' among the enzymes whose activity was unchanged, while Methods describe only a PDH kit and Figure 5b is labelled PDH; the repository reads it as the PDH assay (manifest entries 7 and 8); not resolved by the paper. PDH is named as unchanged in the normoxia-hyperglycaemia and hypoxia-normoglycaemia sentences; for hypoxia-hyperglycaemia the text says no effect on enzyme activities. In the same cells hexokinase activity, LDH activity and lactate were higher.",
+      "note": "A null is NO_CHANGE, not proof of normal PDH regulation: n is not stated and PDH phosphorylation is not measured. Wording flag found in this cycle: one Results sentence lists 'pyruvate dehydrogenase kinase (PDK)' among the enzymes whose activity was unchanged, while Methods describe only a PDH kit and Figure 5b is labelled PDH; the repository reads it as the PDH assay (manifest entries 7 and 8); not resolved by the paper. PDH is named as unchanged in the normoxia-hyperglycaemia and hypoxia-normoglycaemia sentences; for hypoxia-hyperglycaemia the text says no effect on enzyme activities. In the same cells lactate was higher in all four conditions, hexokinase activity in two (normoxia and hypoxia, both with normoglycaemia) and LDH activity in two (normoxia with normoglycaemia and with hyperglycaemia); hexokinase is visibly lower in the knockout in normoxia with hyperglycaemia and citrate synthase lower in hypoxia with hyperglycaemia, both unmarked. The PDH point estimates in the knockout are higher, not lower (about 30 percent in normoxia and 47 percent in hypoxia, with large error bars), so the PDH result is a low-power null; n is not stated. The hypoxia-hyperglycaemia 'no effect' coincides with no reduction of total WWOX by immunocytochemistry and mRNA, but control WWOX there already sits at the knockout level, and the fractionated blot does show WWOX depleted in that condition (Figure 6). WWOX overexpression lowers PDH activity in hypoxia (p < 0.001). The 'knockout' is a CRISPR guide pool with protein 8.5-fold and mRNA 3-fold lower, not a complete knockout, and the unresolved 'PDK' wording stays as stated above.",
       "receipt": "FTR-20261003-35328751-02"
     },
     {
@@ -192,7 +192,7 @@
         "developmental_stage": "adult, chronic stage"
       },
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-      "note": "Target engagement was partial and the phospho-site did not move significantly; total PDH protein fell 23% in non-epileptic mice on treatment, which the authors offer as a possible reason for the pro-convulsant signal."
+      "note": "PDH activity was 65 percent lower in chronic-stage pilocarpine mice than in non-epileptic mice and the drug partly alleviated this (significance not stated). In epileptic mice Ser300 phosphorylation was 52 percent higher and PDH protein 37 percent lower than in non-epileptic mice, and neither changed significantly with the drug. Two daily doses were tested, but the abstract does not say which was used for these assays and does not name the tissue. Total PDH protein fell 23 percent in non-epileptic mice on treatment, which the authors offer as a possible reason for the slight pro-convulsant signal."
     },
     {
       "id": "DR-I01-002",
@@ -211,7 +211,7 @@
         "developmental_stage": "adult"
       },
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-      "note": "Chronic treatment before the test. One laboratory; the abstract reports no effect size."
+      "note": "Chronic treatment (timing relative to the test not stated) did not increase flurothyl latency; two doses were tested and the abstract does not say whether the null held at both, and gives no effect size; in the same paper the drug was slightly pro-convulsant in the 6 Hz test. PDH engagement is reported for the chronic-stage pilocarpine mice, not for these animals. One laboratory."
     },
     {
       "id": "DR-I01-003",
@@ -249,7 +249,7 @@
         "developmental_stage": "adult, chronic stage"
       },
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-      "note": "The only primary seizure-endpoint test of a PDK inhibitor found in a model in which PDH activity is documented to be reduced. Abstract level; the full text is closed."
+      "note": "A primary seizure-endpoint test of a PDK inhibitor in a model in which PDH activity is documented to be reduced; second-hit latency was shorter in epileptic than in non-epileptic mice and DCA did not restore it; PDH activity was reported as partially alleviated (significance not stated) while Ser300 phosphorylation and PDH protein were not significantly changed, so engagement at the second-hit test is unclear; the abstract does not say whether the same animals were assayed. Abstract level; the full text is not held."
     },
     {
       "id": "DR-I01-005",
@@ -288,7 +288,7 @@
         "developmental_stage": "age 0.9 to 19 years"
       },
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-      "note": "A population in which lactate was persistently or intermittently raised, with a defined defect in most patients, and in which the lever still did not change the clinical outcomes measured over six months. Heterogeneous and short; a null in this design does not exclude a benefit in a defined genotype."
+      "note": "A population in which lactate was persistently or intermittently raised, with a defined defect (pyruvate dehydrogenase deficiency in 11, respiratory chain in 25, mitochondrial DNA in 7 of 43), aged 0.9 to 19 years; the drug blunted the postprandial lactate rise and still did not change the clinical outcomes measured over six months. Heterogeneous and short; the abstract reports no PDH-only subgroup, so a null in this design does not exclude a benefit in a defined genotype."
     },
     {
       "id": "DR-I01-007",
@@ -426,7 +426,7 @@
     {
       "id": "DR-I01-014",
       "target_id": "glycolytic flux and lactate production in cultured fibroblasts",
-      "endpoint": "glucose consumption and lactate production with and without DCA, patient against control cells",
+      "endpoint": "average glycolysis with and without DCA, patient against control cells (lactate production was also measured)",
       "direction": "DECREASE",
       "source": "dichloroacetate, human fibroblasts, Simpson 2006 (PMID 16765624), abstract; NOT WWOX EVIDENCE",
       "locator": "abstract: in pyruvate dehydrogenase complex-deficient cells DCA decreased average glycolysis by 29%, with no significant effect on control cells, and lactate production did not change in either cell type",
@@ -440,7 +440,7 @@
         "developmental_stage": "not applicable"
       },
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-      "note": "The response to the PDK inhibitor depended on a pre-existing PDH defect: no significant effect in control cells (six patient lines and five control subjects; the 29% average excludes one patient line with an unusual splicing mutation). It supplies the design of the discriminating experiment (a genotype-by-inhibitor interaction on glucose-derived acetyl-CoA flux), with a precedent for what a responder looks like."
+      "note": "DCA shifted flux in all cells, controls included, away from anaplerotic-related pathways (a 40 percent decrease) toward the pyruvate dehydrogenase complex, and decreased modelled average glycolysis by 29 percent in patient cells (one of six patient lines, with an unusual splicing mutation, excluded from the average) with no significant effect in the control cells of five healthy subjects; untreated patient cells (excluding the same splicing-mutation line) had higher glucose consumption and lactate production than controls. Lactate production and NTP/NDP did not change in either cell type, so the DECREASE code is glycolysis only; no genotype-by-DCA interaction test is reported. It is a precedent for a glycolysis-lowering responder phenotype. A genotype-by-inhibitor interaction on glucose-derived acetyl-CoA flux is the repository's proposed discriminating experiment, not a result of this abstract."
     }
   ],
   "p4_fields": {

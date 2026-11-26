@@ -3459,3 +3459,6 @@ Gap: a first reading that grades facts misses wording errors that follow from th
 
 ### 2026-11-25, SCI, ADV-285
 Gap: an assignment premise ("no functional readout is held") was wrong because the repository already held it; CHANGE = NONE in the harness: a grep of the repository for the readout terms, named in the PREREG, before any external search. A route-count script (PubMed esearch plus Europe PMC, both with overlap) was reusable and is in `adv285_*/search_adv285.py`; candidate for HE as a shared tool, not requested.
+
+### 2026-11-26, SCI, ADV-291 and ADV-292
+Gap: no single command lists the readable reading queue with the standing exclusions; the exclusions live in PREREG prose and three scripts of different dates, and SCI's first ADV-292 list was wrong by four records because of it. CHANGE = NONE in the harness for now: a bullet in the ADV-276 pre-read checklist. Candidate for HE if another reading batch follows ADV-292: one script that reads an exclusion table (record, reason, date) on top of `consumer_count.py`.

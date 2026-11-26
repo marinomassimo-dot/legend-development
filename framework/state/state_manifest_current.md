@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261125_006
-last_batch_commit_date: 2026-11-25
+last_batch_commit_id: BATCH_20261126_002
+last_batch_commit_date: 2026-11-26
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 3
+commit_candidates_propagated: 1
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate ORCH-ROADMAP-IT59-20261119, IT successor 22; checkpoint 21 section 1: SCI's ADV-279 wording, five strict findings re-derived by IT, one blind verifier, sonnet, effort high stated in the dispatch and read back high, 7 statements; a second blind verifier, same model and effort, on the three valproate candidates). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: ONE candidate record-scoped in the current files and two in the discovery ledger, one more closed (scope in state_history section 4).
+trigger: MANUAL (ACTOR_ID orchestrator, mandate ORCH-ROADMAP-IT59-20261119, IT successor 27; ADV-292 consumer sentences from SCI, two blind rounds by legend-delegate, sonnet, effort high stated in each dispatch). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: one candidate, record-scoped in the discovery ledger and the paper registry (scope in state_history section 4).
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,8 +126,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261125_BATCH_20261125_006
-last_lint_date: 2026-11-25
+last_lint_id: LINT_20261126_BATCH_20261126_002
+last_lint_date: 2026-11-26
 last_lint_result: WARN
 ```
 
@@ -164,8 +164,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 2852
-fulltext_ledger_head: b9506a6cc8d7b59d21b963bf5e6c4f809d38279d9eff27dee501a7e0f3e528ca
+fulltext_ledger_events: 2862
+fulltext_ledger_head: 205e3ea43412b1a44e81fd4960917c90723e8c84efbaaa37587d2e3572e8c513
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.

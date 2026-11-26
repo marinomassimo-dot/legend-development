@@ -1,0 +1,9 @@
+group	measure	value
+A01	audited_before	4
+A01	eligible	16
+H02	audited_before	10
+H02	eligible	30
+rest	audited_before	23
+rest	eligible	146
+rest	excluded_card_or_obeid	63
+rest	text_changed_since	10

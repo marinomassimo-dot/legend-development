@@ -1,0 +1,170 @@
+BLIND VERIFICATION REPORT, PACKET C (IT28), 17 blocks. Verifier: sonnet, effort high. I wrote nothing inside any repository. Scratch is only under /home/desktop/.claude/jobs/54ca757b/tmp/blindC/. I never opened a card, repository packet, result file, report, assignment or checkpoint. No network. Hypothesis level, public, class level; nothing here is medical advice.
+
+SUMMARY TABLE
+| id | verdict | one-line reason |
+|---|---|---|
+| N02 | ADD | The six percent is a distribution shift tested by pooled events. The evoked-response claim rests on supplement S3 only. The "any WWOX system" negative reaches beyond the two sources. |
+| DR-A01-007 | MUST CHANGE | The clause "weaker than sodium phenylbutyrate on HDAC1 in another document" is stated as fact while the sentence says the document pairing is unresolvable. |
+| DR-B01-002 | STANDS | One clause (FANCF mitomycin C null) rests on the Fig 4 legend only, because the figure is not held. |
+| DR-L01-003 | ADD | Omits the significant acute 24-hour cytokine mRNA and MDA falls and the SOD and CAT rises. |
+| DR-A02-010 | STANDS | All clauses checked. |
+| DR-H02-008 | STANDS | All clauses checked. |
+| DA-K01-007 | ADD | Recomputed and numerically right. Slc2a1, Ldha and Pgk1 "lower" holds for group means only. Some caveats are NOT ASSESSABLE from the held tables. |
+| DR-H02-036 | STANDS | Abstract level. One paraphrase flagged. |
+| DR-H02-024 | STANDS | Abstract level. All clauses checked. |
+| DR-H02-030 | ADD | The infant denominator and the pooled child-plus-adult analysis need a note. |
+| DR-I01-014 | ADD | The splicing-line exception also covers the baseline comparison. |
+| DR-I01-001 | STANDS | Abstract level. One implied comparator noted. |
+| DR-I01-002 | STANDS | Abstract level. |
+| DR-I01-004 | ADD | "Partly restored" is stated without noting that the abstract gives no significance. |
+| DR-P9-009 | ADD | Exposure was not 24 weeks for all (9 discontinued), and the threshold wording is inconsistent in the paper. |
+| DR-P9-010 | MUST CHANGE | "Neuronal lesions in juvenile rats at high doses" understates the label. Source-line retrieval date also conflicts with the held file. |
+| DR-E01-003 | ADD | "Does not name the target" is literally true but needs the abstract's own wording. |
+
+FILES AND FIGURES OPENED
+- Fulltext XML or HTML converted to text (my own converter, run with -I): Hussain2019 (PMID 30290271), Breton2021 (PMID 34634460), Guiberson2018 (PMID 30266908), Hristodor2025 (PMID 40544182), PMC13701765 (Sheeni), Gupta2023 (PMID 37319242), Wang2026 (PMID 41288262), and the Briggs PMC page (PMID 24321005).
+- Abstract-level records: efetch XML for PMID 2757909, 16765624, 29913407, 42179084, 31349008 and 35980256. The Europe PMC core JSON for 19054414. The memantine openFDA label JSON (full label sections, held as one record).
+- Figures viewed:
+  - Breton 2021 supplement image3.tiff = Supplementary Fig S3 (panels A to C). Read together with the mmc1_text.txt legend.
+  - Guiberson 2018 Supplementary Fig 12, PDF page 19, rendered at 300 dpi and cropped. I viewed panel a (WT and G544D bars) and read the legend.
+- Repository ChEMBL table hdac_enzyme_potency_chembl_20261029.tsv and the earlier bar-reading table (read in full for the rows named).
+- K01: GEO TPM tables for GSE158681 and GSE158682, the Ensembl r92 cDNA FASTA, and the recompute script. I read the script first (a pure gzip, regex and mean/log2 script). I ran it unchanged with -I, then ran my own copy that prints per-animal summed TPM.
+- Not opened or not held: Hristodor 2025 figures (not in files/), Gupta 2023 figures (not in files/), the Fig 4 panels of Breton, any full text for the abstract-only blocks.
+
+PER-BLOCK FINDINGS
+
+BLOCK N02: ADD
+Checked against Breton 2021 and Hussain 2019 text, plus Breton Supplementary Fig S3, which I viewed.
+- d-APV abolishes spontaneous bursts reversibly. Breton Results §2.2: "eliminated the spontaneous bursting events ... Upon washout ... returned to normal". Fig 3 legend: 51 bursts, 5 slices, 3 animals. OK.
+- Delayed evoked response suppressed at the three highest strengths.
+  - Supplementary Fig S3C and its legend. d-APV p values by strength: 0.4798, 0.6458, 0.1692, 0.0229, 0.0103, 0.0006. Only the top three are below 0.05.
+  - In the figure panel C the d-APV points fall to about 0.4 of baseline at 40, 50 and 100 µA, and the washout points overshoot baseline there.
+  - The statistics are unpaired t-tests on 6 slices from 3 animals, with no multiplicity correction. This sits in the supplement, not the main text. OK, but it should be cited as S3C.
+- sEPSC about six percent larger. Results: S-CTL 23.3 ± 12.0 pA versus S-KO 24.7 ± 13.6 pA, which is 6.0 percent. S-CTL is WT plus HT. -70 mV is correct. OK arithmetically.
+  - ADD: the claim is a Kolmogorov–Smirnov shift of pooled event distributions (Fig 4F, p about 1e-5 for the control-versus-KO comparison). The cell counts are 18 control cells from 10 animals and 17 KO cells from 10 animals. The standard deviations are about twice the mean difference, and no per-cell or per-animal test is reported.
+- sIPSC amplitude about halved: 57.3 to 27.5 pA, ratio 0.48. OK. Frequency 10.3 to 8.4 Hz, "reduced in both" per text. OK, but pooled KS again (9 KO cells from 5 animals).
+- Resting potential depolarised. Table 1: −79.25 mV (WT) versus −73.62 mV (KO), starred. OK.
+- Hussain: Grin2c lower in NSC (RNA-seq, log2FC −3.22, n=2 versus 3) and in hippocampus (Fig 6D, qRT-PCR, n=4 versus 4). Grin2b log2FC −2.14 in the NSC Table 1. For hippocampus only Grin2c, Grm3 and Kcna2 are shown. "Not reported for hippocampus" is OK. The Results sentence "analyzed expression of all genes" is vague, so I read "not reported" as "not shown".
+- Breton mEPSC: larger amplitude, decay 5.18 ± 0.78 versus 4.84 ± 1.11 ms, p = 0.2982. TTX only, no antagonists, so "not pharmacologically isolated" is OK.
+- Negative "no isolated NMDAR or AMPAR current, no subunit protein or surface level, in any WWOX system": within these two papers I found none. Hussain's Western blots are GAD only; Breton has no subunit protein. The "any WWOX system" scope beyond these two sources is NOT ASSESSABLE from the held list. The "search of held sources" hedge is needed.
+- "No subunit-selective, pore-blocking, glycine-site or AMPAR drug applied": in these two papers only d-APV, TTX, carbenoxolone and brilliant blue FCF were applied. OK within scope.
+
+Minimal replacement or addition: after "about six percent larger" add "(24.7 versus 23.3 picoamperes, a shift of the pooled event distribution by Kolmogorov-Smirnov test, standard deviations about twelve to fourteen picoamperes; no per-cell test reported)". Write "reversibly" as "bursting abolished and recovering on washout". Cite the evoked-response result as "Supplementary Fig S3C, six slices from three animals, unpaired t test without correction". The "any WWOX system" negative should keep "of the two held sources" unless a wider search is documented.
+
+BLOCK DR-A01-007: MUST CHANGE (one clause)
+Viewed Supplementary Fig 12 page 19.
+- Panel a, G544D: sodium butyrate 5 mM bar is about 100 to 105 percent of control, with no asterisk. Phenylbutyrate 5 mM is about 180 with an asterisk. Sorbitol and trehalose (200 mM) are about 175 and 235, both starred. Legend: n = 3 independent experiments. OK, as is "three experiments, bar reading, same applied level".
+- WT: butyrate bar about 195, dots about 140, 205 and 225, no asterisk. So "scattered, unmarked value near 1.95" is OK.
+- Text (results, chemical chaperone paragraph): "Three chemical chaperones stabilized ... 4-phenylbutyrate, sorbitol, and trehalose". OK.
+- No HDAC measurement appears anywhere in the paper text (search "HDAC": no hit). No pan-HDAC or HDAC6-selective arm. OK.
+- HEK293T and human Munc18-1b cDNA in pCMV5 (Methods). OK.
+- ChEMBL table, butyric acid HDAC3 (9 µM) and HDAC8 (15 µM) versus PBA (260 and 93 µM): both carry assay/document CHEMBL1671826, so "more potent in one document" is OK.
+- HDAC6 is ">" 2,000,000 nM, a lower bound below the 5 mM applied. OK, as is "neither shown nor excluded".
+- PROBLEM: the HDAC1 clause. Butyric acid has two HDAC1 values, 16 µM and 300 µM, with assay/document pairs CHEMBL1680132/CHEMBL1671826 and CHEMBL5138331/CHEMBL5136998. Held rows: PBA 64 µM in CHEMBL1671826, sodium PBA 162 µM in CHEMBL5136998. The table does not say which butyric acid value belongs to which document. The sentence itself says this is unresolvable, yet it states "weaker than sodium phenylbutyrate on HDAC1 in another". That is true only if 300 µM sits in CHEMBL5136998. If the pairing were reversed, butyric acid would be weaker than PBA in the first document instead. I could not settle it from the held rows. It is unsupported as written.
+
+Minimal replacement: "On HDAC1 and HDAC2 the held table gives butyric acid two values (16 and 300 micromolar for HDAC1; 12 and 400 micromolar for HDAC2), bracketing the phenylbutyrate values (64 micromolar for the acid, 162 micromolar for the sodium salt); which document carries which value is not resolvable from the aggregate rows, so the HDAC1 ordering is document-dependent."
+
+BLOCK DR-B01-002: STANDS
+- Results §FANCA/FANCF: baseline FANCA "just under 5 percent of healthy controls". Ataluren about 11 percent and amlexanox about 9 percent. No amlexanox effect on FANCF. Neither drug rescued FANCA mRNA (NMD activated, 3-fold lower). OK.
+- Amlexanox 25 µM only. OK.
+- DEB test: amlexanox "no effect on either MMC- or DEB-induced genotoxicity in FA-A cells". The DEB panels in the Fig 4 legend are FA-A only. OK.
+- MMC: the Fig 4 legend says "Mitomycin C test of FA-F (A) and FA-A (B) LCL ... amlexanox 25 μM (n = 3)", title "not able to improve cell survival". The Discussion also says "did not promote any improvement in cell viability upon MMC". The Results text names only FA-A. The FANCF MMC null therefore rests on the legend and discussion. Fig 4 is not held, so the panel itself was not viewed. UNSETTLED at panel level but supported by two statements.
+- Ataluren improved MMC survival (2.1-fold FANCF, 1.5-fold FANCA), DEB aberrations, and micronuclei (−27 percent, FANCC fibroblasts). So "comparator improved all three" is OK. Amlexanox had "no significant effects on micronuclei". OK.
+- p53: "reducing almost 40% ... only in FA-A cells". pSTAT2: "almost 50%" in FA-A LCL (n = 5). OK.
+- Attribution: the authors' Discussion says the p53 fall is probably via IRF3 and TBK1/IKKε (TP53 is an IRF3 target per ENCODE), and the pSTAT2 fall mainly via TBK1/IKKε. NF-κB inhibitors gave similar pSTAT2 and p53 falls. They call it "our interpretation" and "hypothesis". No pTBK1 or IRF3 readout exists (searched). OK.
+
+BLOCK DR-L01-003: ADD
+- Quote "because acute Nrf2 target engagement was not measured": present in the Discussion. OK.
+- Limitations paragraph: "direct indices of Keap1 modification, Nrf2 nuclear translocation, antioxidant-response-element activation, and downstream targets such as NQO1, HO-1, GCLC, and glutathione-associated enzymes were not measured". OK. SOD, CAT and MDA are the only oxidative-stress assays. Brain drug level not measured and single dose: both stated. OK.
+- PTZ: maximum severity p = 0.0226; latency to stage V–VI median 15 to 31 min, p = 0.018; incidence 9/9 versus 5/9, p = 0.0824 (not significant). OK.
+- Post-SE: seizure frequency significantly lower weeks 7 to 10, cumulative burden p < 0.001, n = 8 per group. Nissl: CA1 p < 0.01, "no significant difference in the CA3 region", n = 3 per group. The abstract says "CA1 and CA3", which the Results do not support. OK. Cytokine mRNA at 10 weeks not significant, n = 5. OK.
+- ADD: the acute cohort (24 hours after PTZ, whole brain, n = 9 per arm) did show significant cytokine mRNA falls (IL-6 p = 0.0278, IL-1β p = 0.0008, TNF-α p = 0.0009), lower MDA (p = 0.0019), and higher SOD (p = 0.0025) and CAT (p < 0.001). The sentence set says only "cytokine mRNA differences not significant at 10 weeks" and never gives the direction of SOD and CAT. A reader would miss the acute favourable measures and could read the cytokine endpoint as null overall.
+
+Minimal addition: "Twenty-four hours after PTZ, whole-brain cytokine mRNA and malondialdehyde were lower and superoxide dismutase and catalase activity higher in treated animals (nine per arm); this was not seen for cytokine mRNA at 10 weeks. The post-status-epilepticus allocation had no demonstrated equal baseline seizure burden (authors' limitation) and eight animals per group."
+
+BLOCK DR-A02-010: STANDS
+- Fig 7 text and legend: 2.1 mg per kg per day, one week, osmotic pump. tHcy and CBS activity "no significant differences". "very slight increase in CBS protein ... no Hsp70 induction". Discussion: "only a slight increase in liver CBS activity and no lowering of serum tHcy". OK.
+- 24-hour arm: 15 mg per kg by pump in 24 hours (subcutaneous), versus 10 mg per kg retro-orbital. 2.1 × 7 = 14.7, about the same total, at 1/7 of the rate. OK. Regulatory-domain location: Discussion says S466L is in the C-terminal regulatory domain. OK.
+- The 24-hour subcutaneous arm: "did not observe induction in S.C. mice" (Hsp70). OK. Hsp70 and Hsp27 were induced in the retro-orbital arm; the sentence refers correctly to the pump arm.
+- Proteasome activity is not reported for Fig 7 (search of Results and legend). OK.
+- No group size anywhere in the text and legend (searched "n =", "per group", "mice per"). The figure itself is not held, so dots could show animals. "Group size is not stated" is OK for text and legend.
+- Tolerability: only general statements ("toxicity and rescue are not separable", "neither drug appears effective at non-toxic doses"). No weight, count or clinical data for this arm. OK.
+
+BLOCK DR-H02-008: STANDS
+- Abstract: "transiently ... did not accelerate spasms cessation ... did not alter neurodevelopmental outcomes or visuospatial learning". The highest dose was "eventually lethal". Vigabatrin was not tested here (refers to earlier work). OK.
+- The Discussion says the reduction lasted 2 to 3 days. "Only transient" is OK.
+- Histology: Methods Table 2 describes the hippocampal injury scale from thionin-stained sections. Results: "A total of 23 rat brains ... 8 CPP-(0), 10 CPP-(0.1), 5 CPP-(1)"; "HS scores equally distributed across treatment groups (P = 0.69). 91% of the scores ranged between HS3 and HS3.5". OK. I found no myelin or white-matter histology on the page (matches only in the introduction and reference list). The abstract does not mention histology. OK.
+
+BLOCK DA-K01-007: ADD (recomputed)
+My run of the script reproduces the logged values exactly: Hif1a −0.17, +0.03, +0.06, −0.21 (sentence range −0.21 to +0.06, OK). Hk2 +0.15, −0.02, +0.37, +0.02 (OK). Epas1 −0.59, −0.53, −0.21, −0.44 (OK). Slc2a1 −0.40, −0.36, −1.05, −0.17. Ldha −0.49, −1.27, −0.50, −0.25. Pgk1 −1.02, −1.17, −0.56, −0.26. Ndrg1 −1.12, −0.91, −1.27, −1.27. P4ha1 −0.69, −1.29, −1.05, −0.99. Gfap +2.12, +1.31, +0.65, +0.85. Wwox: −2.76, −4.00, −3.52, −1.66.
+- Wwox fold changes: 2^2.76 = 6.8, 2^4.00 = 16, 2^3.52 = 11.5, 2^1.66 = 3.2. "7- to 16-fold" in hippocampus and "about 3-fold" in cortex are OK.
+- Wwox in cortex: KO sums 5.0, 3.8, 9.0; controls 8.0, 26.5, 25.7, 15.1. The ranges overlap (9.0 versus 8.0), so "overlapping values" is OK. Hippocampal contrasts are fully separated.
+- Epas1 animal separation: separated in H_S (KO 17.4–24.5 versus controls 31.5–33.8), H_N (16.1–19.7 versus 23.5–28.2) and H_germ (22.4–23.6 versus 25.8–27.4). Overlapping in cortex (22.2–27.6 versus 23.6–41.2). So "animal-separated in 3 of 4" is OK.
+- Ndrg1 and P4ha1 are animal-separated in all four contrasts (I checked every pair).
+- ADD: Slc2a1, Ldha and Pgk1 are lower in group means in all four contrasts, but animal values overlap in some. Slc2a1 H_S: KO 38.7, 33.7, 58.3 versus controls 61.8, 53.4. Slc2a1 Cx_S: KO up to 101.3 versus controls 48.9 to 98.2. Ldha Cx_S: 334–510 versus 449–551. Pgk1 Cx_S: 199–382 versus 305–401. Because Epas1 is explicitly qualified as animal-separated, an unqualified "lower" for the other three could read as equally robust.
+- Group sizes: KO 2 to 3, controls 2 to 4. OK. Pseudocount 0.01 and group-mean summed TPM match the script. OK.
+- NOT ASSESSABLE from the held tables: "animals come from lines with severe epilepsy and death at 3 to 4 weeks", "background differences between control groups", and the mapping of column labels to neuron-targeted or progenitor-targeted deletion. The tables carry only column names (S_, N_, KO/WT, CRTX_S_). The GEO metadata is not held.
+
+Minimal addition: "Slc2a1, Ldha and Pgk1 are lower in the group mean in all four contrasts, with animal values overlapping in some (Slc2a1 in the first hippocampal and the cortical contrast, Ldha and Pgk1 in cortex)."
+
+BLOCK DR-H02-036: STANDS (abstract level)
+- PMID 35980256 abstract: baclofen increases myelin protein in LPC-treated cerebellar slices and enhances OPC differentiation and remyelination after LPC spinal cord injection in adult mice. OK.
+- PMID 31349008 abstract: purified rat OPC cultures, GABA and baclofen accelerate differentiation (branching, myelin protein), reversed by CGP55845. In DRG-OPC cocultures "exogenous GABA increases myelin segments and MBP". "None of these effects are mediated by the GABA A R agonist muscimol". OK.
+- "Muscimol did not reproduce the effects" is a paraphrase. The abstract's own wording is that none of the effects are "mediated by" muscimol; whether muscimol was tested alone on each outcome is NOT ASSESSABLE (abstract). The sentence's parenthetical keeps the source wording. The cerebellar-slice species is not stated in the abstract, and the sentence does not state it. No opposite sign in either abstract (read in full). OK.
+
+BLOCK DR-H02-024: STANDS (abstract level)
+- Explants cultured 14 to 19 days, exposed up to 14 days to 500 nmol per ml vigabatrin or 1000 nmol per ml GABA. "No clear-cut differences ... vigabatrin seemed slightly more toxic than GABA at these doses". EM: "no patent intramyelinic oedema nor primary demyelination ... some degenerating myelinated fibres and astrocytic gliosis ... in both ... axons as well as myelin sheaths". Title says "preliminary data". The "not equal molar levels" clause is correct (vigabatrin at half the GABA level). OK.
+
+BLOCK DR-H02-030: ADD (abstract level)
+- The abstract matches: 668 children (2 to 16) and adults with CPS, re-reviewed, blinded to treatment, no significant difference in incidence or prevalence. Infants with IS: 22 versus 4 percent, p < 0.001. Prespecified abnormality is a T2 or FLAIR hyperintensity. OK.
+- ADD: "205 infants" is the number of infants whose records and 332 MRIs were collected. The 22 versus 4 percent compares a "prevalence population" whose size the abstract does not give. The null for CPS is reported for children and adults together; the abstract gives no separate children-only analysis. So "no difference in children aged 2 to 16 and adults" is a pooled result.
+
+Minimal addition: "(the abstract reports the CPS result for children and adults together; the infant 22 versus 4 percent comes from a prevalence population whose size is not stated, drawn from 205 infants with records collected)".
+
+BLOCK DR-I01-014: ADD (abstract level)
+- Abstract: DCA gave a 40 percent decrease in flux through anaplerotic-related pathways toward PDC in all cells. After excluding the splicing line, DCA decreased average glycolysis 29 percent in patient cells, with no significant effect in control cells, and did not change LPR or NTP/NDP in either cell type. All OK.
+- ADD: the abstract also excepts the splicing-mutation line from the baseline finding. "With the exception of one patient cell line ..., PDC-deficient cells had significantly higher GCR, LPR and acetyl-CoA than controls." The sentence applies the exception only to the DCA average, so the untreated comparison reads as covering all six patient lines.
+- "No genotype-by-DCA interaction test is reported" is NOT ASSESSABLE beyond the abstract. The abstract reports none.
+
+Minimal addition: after "than controls" add "(excluding the same splicing-mutation line)".
+
+BLOCK DR-I01-001: STANDS (abstract level)
+- PDH activity down 65 percent in SE versus No SE; "partially alleviated with DCA" (no significance stated). PDH protein −37 percent and Ser300 phosphorylation +52 percent in SE mice, "not significantly changed with DCA". Total PDH −23 percent in No SE mice on DCA, offered as a possible reason for the 6 Hz proconvulsant effect. Two doses were tested overall. The abstract does not say which dose was used for the PDH assays, and does not name the tissue (only the keywords "mitochondria"). All OK.
+- Note: the comparator for the 37 and 52 percent is implied as No SE (the abstract only says "in SE mice"). The sentence states it as non-epileptic mice, which is a reasonable reading, not a stated one.
+
+BLOCK DR-I01-002: STANDS (abstract level)
+- Abstract: "DCA treatment did not increase latencies to seizures in the acute flurothyl seizure test and was slightly proconvulsant in the 6 Hz test". Both doses were tested in "acute seizure and the chronic pilocarpine models". No effect size. OK.
+- The abstract reports PDH measures only for chronic-stage pilocarpine mice and No SE mice. Whether the acute-test animals were assayed is not stated. "Not reported for these animals" is the safe reading. "One laboratory": all authors are from one institution. OK.
+
+BLOCK DR-I01-004: ADD (abstract level)
+- Abstract: second-hit flurothyl latency decreased in SE versus No SE mice "but were not restored by DCA". PDH activity "partially alleviated". The abstract gives no significance for that partial rise. PDH protein and Ser300 phosphorylation were not significantly changed. It does not say whether the same animals were assayed. OK.
+- ADD: "PDH activity was partly restored ... so the null is at partial engagement by one readout" asserts partial engagement, but the abstract does not state that the PDH activity change was significant. The unchanged Ser300 phosphorylation (a direct readout of PDK inhibition) points the other way.
+
+Minimal replacement: "PDH activity was reported as partially alleviated (significance not stated) while Ser300 phosphorylation and PDH protein were not significantly changed, so engagement at the second-hit test is unclear."
+
+BLOCK DR-P9-009: ADD
+- Methods and Table 3: 211 enrolled, 101 on memantine, 110 not. Increased frequency 7 versus 5, "No significant difference". Participants A to D had breakthrough seizures due to incidental ASM nonadherence. Age at onset later in memantine (p = 0.003), epilepsy duration longer in non-memantine (p = 0.015), MMSE and MoCA lower and depression/anxiety higher in memantine. Baseline seizure frequency, type and history comparable. Age ≥ 18, median 63. No drug level or concentration is mentioned (searched "plasma", "serum", "concentration"). OK.
+- ADD 1: "for 24 weeks" overstates exposure. Nine participants had discontinued memantine by week 24 (retention 91 percent; four stopped for intolerable headache, dizziness or anorexia; five had dose reductions).
+- ADD 2: the threshold. The Methods say "surpassed the baseline seizure frequency by more than 25%". The abstract says "≥ 25%". Participant G's rise (0.167 to 0.208) is about 25 percent and was counted. The sentence's "more than 25 percent" follows the Methods only.
+
+Minimal addition: "(memantine group retention 91 percent at 24 weeks, nine discontinued; threshold 'more than 25 percent' in the Methods, '25 percent or more' in the abstract, with one counted case at about 25 percent)".
+
+BLOCK DR-P9-010: MUST CHANGE
+- Label 8.4: "Safety and effectiveness in pediatric patients have not been established. Memantine failed to demonstrate efficacy in two 12-week controlled clinical studies of 578 pediatric patients aged 6 to 12 years with ASD". Study A: n = 54 versus 53, no significant SRS difference. Study B: responder-enriched randomised withdrawal in 471 patients (153 versus 158). "Generally consistent with adults". "Not studied under 6 or over 12". "Only controlled paediatric exposure" is supported within the label (no other paediatric clinical studies in other sections; I searched all sections for "pediatric", "children"). "One extended-release capsule label ... one of 75" is supported (meta total 75; extended-release capsule label; effective_time 20260901). OK.
+- MUST CHANGE: "neuronal lesions in juvenile rats at high doses". The label's juvenile-animal section reports (a) dosing from postnatal day 14: neuronal lesions on days 15 and 17 at doses of 30 and above, with 15 the no-effect dose; (b) dosing from postnatal day 7: apoptosis or neuronal degeneration at 15 (no-effect 8), early mortality at 30 and 45, behavioural toxicity from 3 with no-effect dose 1. So effects occurred at 15 and behavioural toxicity from 3 when dosing began earlier. "High doses" is wrong or misleading for the second study.
+- Source-line check: the held JSON's meta.last_updated is 2026-11-17. The record states "retrieved 2026-10-29". Those do not fit one pull of this file (the folder is dated 2026-11-17). Either the date or the file reference is wrong, or there was an earlier pull; the held file shows none. Please reconcile.
+
+Minimal replacement: "reports neuronal lesions in juvenile rats at the higher doses when dosing began on postnatal day 14, and apoptosis or neuronal degeneration at a lower dose, with behavioural toxicity at still lower doses, when dosing began on postnatal day 7". Doses are described in words per the rule.
+
+BLOCK DR-E01-003: ADD (abstract level)
+- Abstract: ten-month-old 5xFAD, 23 consecutive days, 2BAct, donepezil as positive control, vehicle. 2BAct "significantly improved object recognition performance and attenuated microglial activation and tau accumulation, without reducing Aβ burden", p-eIF2α reduced, "therapeutic effects are limited". Open field, NORT and MWM were run; only NORT improvement is reported. Donepezil results are not reported. One dose of 2BAct. OK.
+- ADD: "the abstract does not name the compound's target" is literally true for eIF2B, but the abstract calls 2BAct "an ISR inhibitor" and frames it as "targeting the integrated stress response". A reader would think the abstract gives no mechanism class. The eIF2B activator label in the endpoint field comes from outside the abstract and cannot be checked from it.
+
+Minimal replacement: "the abstract calls 2BAct an integrated-stress-response inhibitor and does not name its molecular target".
+
+WHAT I DID NOT DO OR COULD NOT SETTLE
+- I did not search beyond the listed held sources for the N02 "any WWOX system" negative.
+- Hristodor and Gupta figures are not held. Fig 4 panels and Fig 7 dots were therefore not viewed.
+- No full text for the abstract-only blocks (H02-036, H02-024, I01-014, I01-001, I01-002, I01-004, E01-003). I marked an abstract-unsettleable clause NOT ASSESSABLE or UNSETTLED wherever I saw one. The "STANDS" verdicts for those blocks mean only that no clause conflicts with the abstract and no clause needed more than the abstract gives.
+- K01 contextual caveats (epilepsy lines, death at 3 to 4 weeks, control background differences, deletion-line mapping) are not checkable from the held tables.
+- The "OUTSIDE" items: the DR-A02-004 comparison inside A02-010 is outside my check except where this paper's own text settles it (it does, for the pump-arm arithmetic and Hsp70). The repository's proposed discriminating experiment in I01-014, and the "not transferable" or "MIXED-to-favourable" judgments in L01-003 and P9-009, are OUTSIDE.

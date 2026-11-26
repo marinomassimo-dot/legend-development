@@ -165,10 +165,10 @@
     "genotype": "not stated",
     "species": "human",
     "cell_type": "whole organism, brain MRI",
-    "developmental_stage": "infancy (infantile spasms; the labelled indication age is 1 month to 2 years, the age range of the N=205 study is not stated)"
+    "developmental_stage": "infancy (infantile spasms; the labelled indication age is 1 month to 2 years; the label does not state the age range of the N=205 study and cites no source; the study its figures match (205 infants, 22 percent against 4 percent), PMID 19054414, gives infants aged 24 months or less, an identification inferred from the three matching numbers and not stated by the label; the label's separate older-patient figure, N=656 from placebo-controlled trials, does not match that paper's older arms)"
    },
    "evidence_scope": "EXTERNAL_DATABASE_RECORD",
-   "note": "Label sections 5.3, 5.4 and 8.4 and the boxed warning were read in full from the JSON; the cited study itself was not read, so the 22 and 4 percent figures are the label's statement of it. The label states that the specific pattern was not observed in older children and adults. Vigabatrin only. Section 5.3 also records postmarketing MRI changes in children 6 years and younger treated for refractory complex partial seizures. 22 percent is the prevalence in the vigabatrin-treated infants of that study (non-WWOX, infantile spasms) and 4 percent the comparator on other therapies; arm sizes are not in the label. Batch ORCH-SCIBATCH-DR-20261105 (B1): three independent centres put the rate among imaged children between 22.1 and 44.7 percent (one at partial full-text depth, the others at abstract level); the one cohort reporting its exposed denominator gives about 26 percent per exposed child; and unexposed comparators exist (7 of 52 in one cohort; 4 percent of naive infants in the controlled study). These are frequencies in selected cohorts, not attributable risk in WWOX."
+   "note": "Label sections 5.3, 5.4 and 8.4 and the boxed warning were read in full from the JSON; the cited study itself was not read, so the 22 and 4 percent figures are the label's statement of it. The label states that the specific pattern was not observed in older children and adults. Vigabatrin only. Section 5.3 also records postmarketing MRI changes in children 6 years and younger treated for refractory complex partial seizures. 22 percent is the prevalence in the vigabatrin-treated infants of that study (non-WWOX, infantile spasms) and 4 percent the comparator on other therapies; arm sizes are not in the label. Batch ORCH-SCIBATCH-DR-20261105 (B1), corrected 2026-11-25 (ADV-287, then a blind check): eight rates with counts, among children imaged during exposure, lie between 22.1 and 44.7 percent (PMID 36601084: 38 of 172, 22.1 percent, the children left of 390 imaged after excluding 193 exposed more than a year, 18 exposed under 30 days and 7 others; PMID 34786694: 25 of 77, 32.5; PMID 42735667: 18 of 64, 28.1; PMID 40527948: 34 of 76, 44.7; PMID 20384718: 25 of 81, 30.9; PMID 18783433: 7 of 22, 32; PMID 39570186: 17 of 56, 30.4; PMID 39641935: 27 of 76, 35.5, a tuberous sclerosis cohort); a ninth report, PMID 19054414 (205 infants, ten sites), gives 22 percent in exposed against 4 percent in naive infants with no counts in its abstract. Three smaller or selected sets give about 15 percent (PMID 28230253: 6 of 40 asymptomatic imaged children, a subset: the same abstract counts 4 further symptomatic cases, so among all children imaged during exposure the rate is probably nearer 10 of 45, about 22 percent, derived and not stated; PMID 35183975: 2 of 13 imaged, of 15 treated; PMID 35180571: 44 of 288 children in a West syndrome database, the abstract not stating how many were exposed or imaged). The reports are not independent: PMID 36601084 states that it extended the cohort of the earlier report from the same hospital (PMID 34786694), and PMID 28230253 and 39570186 come from one group (the later reports no patient overlap), so the eight rates are at most seven independent cohorts; only PMID 36601084, 39570186 and 39641935 were read beyond the abstract. Where an exposed denominator is stated or can be derived the rate per exposed child runs from about 7 percent (38 of 533 screened, an undercount) through 13 percent (2 of 15 treated, PMID 35183975) and 16 percent (17 of 108, PMID 39570186) to about 26 percent (34 of about 132, derived from 57.6 percent imaged, PMID 40527948), about 30.5 percent (29 of 95 exposed, PMID 20384718: 25 of the 81 imaged during but not before treatment plus 4 of the 14 imaged before, during and after; 81 plus 14 is 95, so every exposed child had a scan during treatment) and about 39 percent (31 of 80 treated infants imaged during treatment, PMID 39641935, crude; 27 of 76 after excluding four with the abnormality before treatment); and unexposed comparators exist and differ: none in 12 (PMID 20384718) and none in 56 (PMID 18783433), and the two given next (7 of 52 in one cohort; 4 percent of naive infants in the controlled study). These are frequencies in selected cohorts, not attributable risk in WWOX."
   },
   {
    "id": "DR-H02-006",
@@ -225,7 +225,7 @@
     "developmental_stage": "dosing from postnatal day 4"
    },
    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-   "note": "CPP-115 only, not vigabatrin. The abstract states that spasm cessation was not accelerated and that neurodevelopmental behaviour and visuospatial learning were not altered; brain histology is not mentioned in the abstract."
+   "note": "CPP-115 only; vigabatrin itself was not tested in this paper. The reduction of spasms was only transient and the highest dose was lethal. The abstract states that spasm cessation was not accelerated and that neurodevelopmental behaviour and visuospatial learning were not altered; brain histology is not mentioned in the abstract. The held full-text page scores model-induced hippocampal injury (an extent score on stained sections of 23 brains from the vehicle and the two lower-dose groups, 91 percent scoring 3 to 3.5), equally distributed across those groups, and reports no myelin or white-matter histology."
   },
   {
    "id": "DR-H02-009",
@@ -522,7 +522,7 @@
     "developmental_stage": "ages not stated in the abstracts"
    },
    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-   "note": "No microvacuolation or sheath splitting attributable to the drug was found, and no demyelination, in the 62 examined people; two post-mortem and three operative specimens showed no vacuolation. Abstract level, ages and exposure windows not stated; a negative in people who were not infants does not exclude the infant lesion the label records."
+   "note": "No microvacuolation or sheath splitting attributable to the drug was found, and no demyelination, in the 62 examined people (compared with ten untreated cases); two post-mortem and three operative specimens showed no vacuolation, and their overlap with the 62 is not stated. Abstract level: ages and exposure windows are not stated in the abstracts; the PubMed record of PMID 1940119 carries child, adolescent, adult and older headings and no infant heading (indexing, not abstract text). A negative in people not shown to include infants does not exclude the infant lesion the label records."
   },
   {
    "id": "DR-H02-024",
@@ -542,7 +542,7 @@
     "developmental_stage": "cultured 14 to 19 days in vitro, exposed up to 14 days"
    },
    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-   "note": "Mild toxicity for myelinated fibres from vigabatrin and from GABA with no clear difference between them; no intramyelinic oedema and no primary demyelination were seen, so the row is not a vacuolation finding (its target is the in-vitro fibre endpoint). GABA alone reproduced the mild toxicity."
+   "note": "Mild toxicity for myelinated fibres from vigabatrin and from GABA with no clear difference between them, although vigabatrin seemed slightly more toxic (the two were not applied at equal molar levels); degenerating myelinated fibres and astrocytic gliosis in both; no patent intramyelinic oedema and no primary demyelination were seen on electron microscopy, and the changes involved axons as well as myelin sheaths, so the row is not a vacuolation finding (its target is the in-vitro fibre endpoint). Preliminary data."
   },
   {
    "id": "DR-H02-025",
@@ -662,7 +662,7 @@
     "developmental_stage": "2 to 16 years and adult"
    },
    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-   "note": "No statistically significant difference between exposed and naive subjects in the older bands (668 subjects); the age-band contrast within one study is what the row carries. A non-significant difference is not proof of no difference."
+   "note": "No statistically significant difference between exposed and naive subjects among children aged 2 to 16 and adults (668 re-reviewed subjects); in infants of the same study the prevalence was higher with vigabatrin (22 against 4 percent; 205 infants with infantile spasms, a different indication from the complex partial seizures of the older arms), so age band and indication are confounded; the result for the older group is pooled over children and adults, and the infant prevalence comes from a population whose size the abstract does not give. Retrospective blinded MRI re-review of a prespecified T2 or FLAIR hyperintensity. The age-band contrast within one study is what the row carries. A non-significant difference is not proof of no difference."
   },
   {
    "id": "DR-H02-031",
@@ -782,7 +782,7 @@
     "developmental_stage": "adult mouse; cultured rat precursors"
    },
    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-   "note": "GABA-B engagement enhanced precursor differentiation, myelin protein and remyelination, and a GABA-A agonist did not reproduce the effect in the coculture study; the axis therefore has opposite signs by receptor class. Signalling studies, not drug exposures of a developing brain."
+   "note": "GABA-B engagement (baclofen) enhanced precursor differentiation, myelin protein and remyelination (purified rat precursor cultures, cerebellar slices after induced demyelination, adult mouse spinal cord after induced demyelination); in the purified precursor cultures the GABA-A agonist muscimol did not reproduce the effects (the abstract says none of them were mediated by it); in the dorsal-root-ganglion coculture the abstract reports only GABA itself (more myelin segments and myelin basic protein), without separating receptor classes. The muscimol test therefore differs from the GABA-B result, and no opposite sign is reported in the abstracts. Signalling studies, not drug exposures of a developing brain."
   },
   {
    "id": "DR-H02-037",

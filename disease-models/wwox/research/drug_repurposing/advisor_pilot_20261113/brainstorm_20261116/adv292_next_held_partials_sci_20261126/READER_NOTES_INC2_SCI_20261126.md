@@ -1,0 +1,115 @@
+# ADV-292 increment 2: first-reader notes (SCI, 2026-11-26)
+
+Non-canonical working note; hypothesis level; reference genotype class only; not medical advice. Same layout as increment 1: held files looked at, verbatim consumer sentences, what the sources show by figure/sheet and row (species and unit beside each value), preliminary reading. The blind reader sees the repository sentences and the whole sources, never this file.
+
+## 1. 39923817 (Wood et al. 2025, HDAC5 cysteines, deacetylase activity, Scn4b, cued cocaine seeking; INV-16 of investigations.tsv and investigations_it20.tsv)
+
+Held and now looked at (class assigned: tables only): `fulltext/PMID39923817_ADV272_PMC13078857_epmc_20261125.xml` (Europe PMC JATS). The article XML contains **one** table, the Key Resources table (reagents, constructs, primers, software; 100-odd rows read in full). The Statistics Table named in Methods is in the Supplement and is not held; Supplementary Figs S1 to S8 and Tables S1 to S5 are cited but not held. The article text (Abstract, Results, Discussion, all seven figure legends) was read to check the sentence; figure images were not opened (the held record has no image files), Methods were read only for the assay and animal details. Receipt `FTR-20261021-39923817-*` history not re-read.
+
+Consumer sentence (both TSVs, INV-16, column `evidence_available`, an IT32 reading; shorter echoes in `evidence_depth` / `evidence_solidity`):
+
+> IT32 reading of neural precedents: a catalytic-domain mutant of HDAC5 (two cysteines) lost deacetylase activity in vitro and abolished the effect of nuclear HDAC5 on one transcript and on a behaviour in rat nucleus accumbens (PMID 39923817, full text; no SLC2A1 or glucose readout, and loss of binding to another factor is not excluded), so the earlier statement that no neural catalytic arm exists is out of date
+
+Echo: "a catalytic-domain mutant of HDAC5 exists in rat neurons for other outputs (PMID 39923817) but none reads SLC2A1 in a human neural cell".
+
+What the sources show (rat and HEK293T; unit stated per panel):
+
+* **Mutants (Fig 1B, Key Resources).** CSCS = C696S/C698S; 3SA = S259A/S279A/S498A (nuclear-enriched); 3SA-CSCS; the single mutants 3SA-C696S and 3SA-C698S; and 3SA-D870N, the authors' "catalytic site mutant". The in vivo arms use CSCS, 3SA and 3SA-CSCS; **D870N is tested in vitro only** (Fig 2C, n = 3). The two cysteines "reside ... in the deacetylase domain", "near HDAC5's catalytic domain" (Abstract), and "help coordinate a structural zinc ion" (Results): "catalytic-domain mutant (two cysteines)" matches the paper.
+* **Activity in vitro (Fig 2A).** Immunoprecipitated 3XFLAG-HDAC5 from HEK293T, class IIa kit; WT and 3SA active; CSCS and 3SA-CSCS "almost no deacetylase activity" (all groups n = 4, ****P < .0001 vs WT or 3SA). Single mutants partial (Fig 2B, n = 3).
+* **Behaviour (Fig 3E, rat NAc, AAV2, male and female Long Evans).** Cue-reinstated cocaine seeking: 3SA lower than GFP, CSCS and 3SA-CSCS (*P < .05, one-way ANOVA with **Fisher's LSD**); n = 12 (GFP), 12 (3SA), 8 (CSCS), 12 (3SA-CSCS) rats; sex not powered. Cocaine-primed seeking (Fig 3F) no difference. Acquisition: 3SA-CSCS higher active-lever presses in FR1 only (Fig 3B).
+* **Transcript (Fig 6C, rat NAc qPCR, n = 5 rats per group).** Scn4b mRNA: 3SA lower than GFP (*) and than 3SA-CSCS (**); 3SA-CSCS not marked against GFP. CSCS alone: Fig S6A (not held). "One transcript" is correct for endogenous mRNA by qPCR; the other transcript-type readout is the MEF2 reporter in cultured rat striatal neurons (Fig 4E, mCherry fluorescence, not mRNA), unchanged by CSCS.
+* **Excitability (Fig 5, 17 to 22 cells from 4 rats per group).** 3SA lowers MSN firing; CSCS and 3SA-CSCS do not. Not named in the sentence ("a behaviour" and "one transcript" only).
+* **Binding.** CSCS does not change HDAC5:HDAC3 co-IP (Fig 1C) or HDAC5:MEF2C (Fig 4A-B). The Discussion: "we cannot rule out the possibility that the CSCS mutation disrupts HDAC5 binding to some other factor that exhibits deacetylase activity or that it confers a gain-of-function recruitment of an inhibitory protein".
+* **Search (2026-11-26, the article XML only).** `SLC2A1`, `Slc2a1`, `GLUT`, `glucose`, `metabol`: no match in 55,692 characters of text. The negative covers the article text and legends; Supplementary Tables S1 to S5 and Figs S1 to S8 are not held, so for them it is UNSETTLED.
+
+Preliminary reading: STANDS. Every checkable clause of the sentence matches (cysteines, in-vitro loss of activity in HEK293T, one transcript, one behaviour, rat NAc, no glucose or SLC2A1, other-factor caveat quoted from the Discussion). Optional evidence-level additions, none required: the in-vitro activity is of immunoprecipitated overexpressed protein (n = 4), the behaviour contrast uses Fisher's LSD without protection and n = 8 in the CSCS arm, and "nuclear" HDAC5 means the 3SA phosphorylation-site mutant overexpressed by virus.
+
+## 2. 37946251 (Pagnamenta 2023, Genome Med, clinical WGS cohort; PAPER 218, CLAIM 033 reserve (c))
+
+Held and now looked at (class assigned: supplementary): `supplements/PMID37946251/13073_2023_1240_MOESM3_ESM.xlsx` (Additional file 3, Supplementary Tables S6 and S7 among others). **How it was read:** through the held derived row extract `MOESM3_009Sev001_rows.txt` (header rows of each sheet plus the rows that name the WWOX case, cell by cell), checked against the workbook's sharedStrings for the strings `705`, `exon 6` and `His236`; the rest of the workbook (91 SV rows and the other sheets) was not read row by row, the article's Table 1 image (`..._Tab1_HTML.jpg`, extracted from `s.zip`), and the article XML. The Additional file 1 docx (16 MB) was not opened. Case identifiers are third-party cohort labels and are not copied here; the record is described at the level of the variant class.
+
+Consumer sentences (paper_registry_current.md PAPER 218 and CLAIM 033):
+
+> Role: **Not an independent patient (DATO):** the paper's own Table 1 records its WWOX case as *«Reported as Patient 11 (Table S1) in case series in Piard et al»*, i.e. Patient 11 of PAPER 117, and the genotype matches that paper's Supplementary Table 1. **Count once.** The in-frame exons 6-8 deletion is coded with a null criterion (`PVS1, PM2, PM3`) and **no RNA or protein was measured** — a rule, not a measurement.
+
+> Genotype/model: in-frame deletion of exons 6-8 + `c.705dup p.(His236fs)`; DNA only
+
+> CLAIM 033 (c): ... an in-frame exons 6-8 deletion and an exon-5 deletion are coded `PVS1` (null) with **no RNA and no protein measured** ... an in-frame deletion coded null is a **rule, not a measurement**.
+
+What the sources show (one compound-heterozygous child with severe epileptic encephalopathy; DNA only):
+
+* **Table 1 (article body, image).** Row for the WWOX case: variant type SV_DEL; inheritance model "CH"; 219 kb deletion; validation "PCR and Sanger sequencing"; consequence "Inframe deletion"; novel/known "Known gene"; case solved status "Pathogenic (ACMG)"; result of prior testing "Gene not incorporated into validated panel test at the time of referral. Deletion should be detectable by array"; reference column "Reported as Patient 11 (Table S1) in case series in Piard et al [97]". The quote in the repository is exact.
+* **Main text.** "A fifth SV led to an in-frame 219 kb deletion of exons 6-8 of WWOX, leading to loss of 180 amino acids including the mitochondrial targeting sequence. This was in trans with a c.705dup p.(His236fs) variant ... These compound heterozygous variants were previously reported as part of a case series ... [97]." The registry's "exons 6-8" and "c.705dup p.(His236fs)" are in the main text; neither is printed in Supplementary Table S7, which gives genomic coordinates and `p.His236fs`.
+* **Supplementary Table S7 (xlsx, two WWOX rows).** Insertion row: consequence frameshift_variant, `p.His236fs`, inheritance model CH, **zygosity printed "hom"**, ACMG criteria PVS1, PM2, PM3, classification Pathogenic, reference PMID 30356099. Deletion row: SV_DEL, consequence **inframe_deletion**, inheritance CH, zygosity "het", **ACMG criteria PVS1, PM2, PM3**, Pathogenic, same reference. So the deletion that the paper's own consequence column calls in-frame carries the null criterion PVS1; the zygosity of the insertion row ("hom") disagrees with the stated compound-heterozygous model (the second allele being a large deletion explains a hom call; the paper does not say so).
+* **RNA or protein.** Searched on 2026-11-26 in the article text, Table 1 and Table S7 (columns: variant type, gene, genomic location, HGVS, consequence, inheritance, zygosity, CADD, gnomAD, reference PMID, ACMG criteria and classification, solved status, plus the "reason missed" and notes columns): no RNA, transcript or protein measurement for this case; the validation named for the deletion is PCR and Sanger sequencing of the breakpoint. The Discussion says splice variants were validated "where possible" by RNA-Seq, RT-PCR or minigene; the splice and minigene examples named (SLC34A1, ABCB4, VHL) are other genes. Additional file 1 (docx, Figs S1 to S23 among them the minigene figures) was not opened, so for it the negative is UNSETTLED.
+
+Preliminary reading: STANDS. Every clause of PAPER 218 and CLAIM 033 (c) about this paper reproduces: the Table 1 quotation, the in-frame deletion, the null criterion on an in-frame deletion, the absence of an RNA or protein measurement in the held tables. Optional: S7 prints "hom" for the frameshift row in a compound-heterozygous case.
+
+## 3. 40858643 (Hamanaka 2025, NPJ Genom Med, genome sequencing in ID/DD; PAPER 219, CLAIM 033 reserve (c))
+
+Held and now looked at (class assigned: supplementary): `supplements/PMID40858643/41525_2025_521_MOESM2_ESM.xlsx` (Supplementary Data 1 and 2: SNV/indel and SV tables of the 260 ID/DD families). **How it was read:** through the held derived row extract `MOESM2_Pt2317_rows.txt` (the three header rows of each sheet and the rows that name the case, cell by cell); the other rows of the two sheets were not read, `s.zip` member `41525_2025_521_MOESM1_ESM.pdf` (23 pages; searched for the gene and the case: no hit), and `fulltext/PMID40858643_Hamanaka2025_PMC.xml` (Table 2 and text).
+
+Consumer sentences (PAPER 219 and CLAIM 033 (c)):
+
+> Role: Both consequences are **predicted by rule** (`PVS1, PM2, PM3, PP3`) with **no RNA and no protein assay**. An allele coded null without a measurement is a classification.
+
+> Genotype/model: `c.517-1G>A` + single-exon deletion spanning exon 5; trio-phased. Transferability: T3 — an **intron-5** acceptor allele. ... CLAIM 033 (c): an exon-5 deletion is coded `PVS1` (null) with no RNA and no protein measured; "`c.517-1G>A` is labelled an intron-5 acceptor allele nowhere in its source — the supplementary row types it *«Exonic or near-exon variant»* and prints no intron number".
+
+What the sources show (human, DNA only, one compound-heterozygous child with epilepsy, ID/DD cohort, ES-negative families):
+
+* **Table 2 (article body).** WWOX rows: `c.517-1G>A`, zygosity compound heterozygous, pathogenicity P, ES-detectable Yes; `Ex5 DEL`, P, ES-detectable **No**; clinical category "Unclassified (Epilepsy)". The WWOX case is **not mentioned anywhere else in the article text** (no sentence names the gene or the case); the whole content of the record is Table 2 and the two supplementary data sheets.
+* **Supplementary Data 1 (SNV/indel).** Variant type "Exonic or near-exon variant" (the repository's quotation is exact); the column headed **RNA holds the coding-DNA change `c.517-1G>A`** and the Protein column holds "."; inheritance Maternal; novel; CADD 25.1; ACMG evidence **PVS1, PM2, PM3, PP3**; "WES resolvable YES".
+* **Supplementary Data 2 (SV).** "1 exon CNV", affected gene "WWOX exon 5", inheritance Paternal, novel; ACMG evidence **PVS1, PM2, PM3 (no PP3)**; called by five of six callers, "WES resolvable NO"; genomic span about 173 kb. The SNV (position 78,386,859 as printed; build not stated in the sheet) lies outside the deleted interval 78,140,467 to 78,313,935, which is consistent with two alleles and with phasing by parental origin ("trio-phased" is supported: one allele maternal, one paternal; the cohort is 246 trios, 9 quads, 3 duos and 2 singletons, so this is stated per case only through the Maternal and Paternal cells).
+* **RNA or protein.** The paper does run RNA-seq on lymphoblastoid lines for other cases (CHD2 and a copy-number case); searched on 2026-11-26 for the WWOX case in the article text, Tables 1 and 2 and Supplementary Data 1 and 2: none. The Supplementary Data sheets' column headed "RNA" is a coding-DNA change, a labelling that a reader could take for an RNA result.
+* **Criteria sets differ.** PAPER 219's "both consequences ... (PVS1, PM2, PM3, PP3)" attaches PP3 to both alleles; PP3 is on the SNV only, the CNV carries PVS1, PM2, PM3.
+
+Preliminary reading: STANDS on the substance (rule-coded null, no RNA or protein, T3 acceptor-class allele derived by the repository, "Exonic or near-exon variant" quoted correctly, single exon deletion). One wording point for an ADD: the criteria set belongs to the SNV (PP3 included) and to the CNV (without PP3) separately; and the column headed RNA holds a DNA-level name.
+
+## 4. 26419537 (Chen 2015, Mol Neurodegener, ethosuximide ameliorates neurodegeneration in C. elegans through DAF-16/FOXO; DL-MECH-170)
+
+Held and now looked at (classes assigned: figures, supplementary): Fig 2 image (`figures/PMID26419537_r2/13024_2015_46_Fig2_HTML.jpg`), Additional file 1 (Table S1, lifespan statistics, 3 pages, read in full) and Additional file 2 (Fig S1, one page, opened as image) of `supplement/PMID26419537_r2/`; the article XML (Results, Discussion). Figs 1, 3, 4 and Additional files 3 to 18 (Dataset S1, Figs S2 to S13, Tables S2 and S3, Supplementary Methods) were not opened in this event.
+
+Consumer sentence (discovery_ledger_current.md, DL-MECH-170, "Counter-evidence and qualifiers", an *unaudited* item): "non-T-type routes of ethosuximide are reported in non-WWOX systems (GIRK inhibition, PMID 37275776; broad-band cortical suppression, PMID 42536722; FOXO-pathway rescue in worms, PMID 36282524 and its primary PMID 26419537, which carries a wild-type arm with no effect and a direct test that loss of the worm T-type channel does not remove the benefit)".
+
+What the sources show (C. elegans, lifespan and thrashing; unit = worms, n per row in Table S1):
+
+* **Wild-type arm, lifespan (Table S1, log-rank test).** Bristol N2, ethosuximide 1 mg/ml: mean 20.39 days against 19.69 (+3.56 percent, P = 0.3966, n = 54 against 53); 2 mg/ml 18.79 against 18.55 (+1.29 percent, P = 0.5061, n = 52); 4 mg/ml 17.12 against 18.55 (-7.71 percent, P = 0.5000, n = 52); N2 on control RNAi (L4440) 1 mg/ml -2.05 percent (P = 0.9164, n = 130 against 131). A wild-type-background GFP strain (lin-25; juIs76) 0.1 to 2 mg/ml: -4.9 to +4.8 percent, none significant. The cca-1(ad1650) single mutant 1 mg/ml: +1.83 percent, P = 0.5423.
+* **Wild-type arm, thrashing (Fig S1).** Wild-type CZ1200 thrashing across 0 to 4 mg/ml: about 85.7 at 0, 87.4 at 1 and at 2, 80.6 at 4 mg/ml (no statistics printed on the figure); N2 and dnj-14(tm3223) at 1 mg/ml: wild type unchanged (about 84), dnj-14(tm3223) lower (about 76 to 69). The legend letters (B, C) do not match the panel letters on the page (the dose response sits in panel c, the bars in panel b).
+* **The T-type test (Fig 2a-b, Table S1).** Strains: Tau V337M transgenic (bkIs10) and Tau V337M; cca-1(ad1650) (CK10; cca-1). Thrashing, day 1: Tau about 2.2 to 5.3 with ethosuximide (**), Tau;cca-1 about 2.8 to 5.3 (*); day 3: Tau about 1.5 to 4.4 (**), Tau;cca-1 about 0.9 to 2.7 (*). Lifespan (Table S1): Tau V337M +29.26 percent (11.45 to 14.80 days, P = 6.5e-9, n = 116 against 116); Tau V337M;cca-1 +26.62 percent (11.27 to 14.27, P = 2.2e-9, n = 114 against 112). The text says "significantly extending the mean lifespan by 25 % and 16 %, respectively", which matches neither the table values nor the thrashing numbers, and Fig 2b shows no values. The test is in the **Tau V337M** model; the dnj-14 model was not crossed with cca-1 because both genes sit on the X chromosome (Results).
+* **The FOXO leg.** daf-16 RNAi on the dnj-14(ok237) background abolishes the ethosuximide lifespan gain (+26.29 percent on control RNAi, P = 1.2e-6; +5.60 percent on daf-16 RNAi, P = 0.1518); daf-16 RNAi on N2 gives +1.08 percent (P = 0.8868). The authors could not build the dnj-14;daf-16 double mutant (synthetic lethality) and could not see nuclear DAF-16-GFP translocation.
+* **A text and table disagreement (not in the sentence).** Results: at 4 mg/ml ethosuximide "produced no significant increase in lifespan" in dnj-14(ok237); Table S1: +18.85 percent, P = 0.0038 (**), n = 55 against 52.
+
+Preliminary reading: STANDS on the content: a wild-type arm with no significant effect on lifespan (three concentrations, n about 52 to 54) and on thrashing; a cca-1 loss-of-function test that leaves the benefit intact, in the Tau V337M model and not in the dnj-14 model that carries the FOXO leg. Evidence-level and model ADDs: the T-type test is in the Tau V337M strain; the "benefit" retained is lifespan (+26.6 percent against +29.3) and thrashing; the wild-type lifespan arm covers 1, 2 and 4 mg/ml only.
+
+## 5. 31781019 (Gureviciene et al. 2019, Front Neurol; the held files are named Kam2019, spike types in APP/PS1 mice and their response to ethosuximide and levetiracetam; DL-MECH-170)
+
+Held and now looked at (classes assigned: figures, supplementary): Fig 11 image (`figures/PMID31781019_r2/fneur-10-01151-g0011.jpg`); `supplement/PMID31781019_r2/Table_1.DOCX` (Supplemental Table 1, spike counts by individual mouse and session, parsed in full: 14 mice, 55 session rows); article XML (Methods, Results, Discussion). Figs 1 to 10, 12, 13, `Image_1.JPEG` and the PDF `PMC6861424.1.pdf` (article PDF with other supplementary tables) were not opened.
+
+Consumer sentence (discovery_ledger_current.md, DL-MECH-170, "Designs with a wild-type arm", *unaudited*): "an APP/PS1 line (PMID 31781019) shows same-direction effects in both genotypes for the spike classes present in both".
+
+What the sources show (mouse, male, 5 to 6 months, 8 APP/PS1 and 6 wild-type littermates; ethosuximide 200 mg/kg intraperitoneal, 30 min before recording, counterbalanced within animal, saline in two sessions; unit = animal; rates per hour of immobility):
+
+* **Paper statistics.** Within-subject repeated-measures ANOVA, genotypes also analysed separately because "a two-way mixed ANOVA model could not be used"; no genotype-by-drug interaction term. Per genotype, drug effect: simple cortical spikes WT P = 0.29, TG P = 0.53 (resistant); cortico-hippocampal (CH) spikes WT P = 0.12, TG P = 0.04; muscle-twitch spikes WT P = 0.09, TG P = 0.08; spindle-associated spikes WT P = 0.04, TG P = 0.30; fast-spindle spikes WT P < 0.05, TG P = 0.003. The text adds "In as much as spikes were present in wild-type mice, their response to AEDs seemed to follow the pattern of APP/PS1 mice (Figure 11)".
+* **Fig 11 (per-animal points, saline, ethosuximide, levetiracetam).** Ethosuximide lowers CH spikes (panel B) and fast-spindle spikes (F) and raises spindle-associated spikes (C) in both genotypes by eye; panels A (cortical) and E (twitch) show no common ethosuximide pattern.
+* **My recomputation from Supplemental Table 1** (spikes per hour of immobility, mean of the two saline sessions against the ethosuximide session; mice with zero saline spikes of the class dropped, as the paper states; WT n = 6 unless stated, TG n = 8):
+  * simple cortical spikes, **WT without the mouse the paper removes as an outlier** (n = 5): 14.3 to 24.6 per hour (+72 percent), 4 of 5 mice higher; **TG** 48.7 to 35.4 (-27 percent), 6 of 8 mice lower. Opposite signs. Keeping the outlier mouse (saline about 218 per hour in both sessions, ethosuximide 52) turns the WT mean to a fall (48.3 to 29.3); the paper removes that mouse "from the analysis of cortical spikes" (genotype comparison); whether it is removed again in the drug analysis is not stated (the WT drug-effect df, F(2,3), suggest a small n).
+  * twitch spikes: WT 2.4 to 1.6 (-35 percent, 4 of 6 lower), TG 6.4 to 3.8 (-40 percent, 7 of 8 lower);
+  * CH spikes: WT 19.3 to 2.4 (-87 percent, 5 of 6 lower), TG 23.8 to 7.1 (-70 percent, 6 of 8 lower);
+  * spindle-associated: WT 26.0 to 64.4 (+148 percent, 5 of 6 higher), TG 30.2 to 56.3 (+86 percent, 6 of 8 higher);
+  * fast-spindle: WT 3.5 to 0.0 (5 of 5 lower), TG 5.0 to 0.1 (7 of 8 lower).
+  * Sign agreement in four of the five classes present in both genotypes; **opposite sign in the simple cortical class**, which the paper itself finds not significant in either genotype.
+
+Preliminary reading: the sentence is true for four of five classes and false for simple cortical spikes (on the reading that the paper's outlier exclusion also holds for the drug analysis; true again on the other reading). It also omits that per-genotype significance is not matched (WT significant for spindle and fast-spindle only, TG for CH and fast-spindle only) and that no interaction test exists. Candidate for MUST CHANGE (class-level), or ADD (unit, dose, n, no interaction test) if the outlier reading is not accepted.
+
+
+## 6. First reader's verdicts on the sentences (restated from the preliminary readings above, which were written before the blind report was read)
+
+| id | record | first-reader verdict | reason in one line |
+|---|---|---|---|
+| S6a, S6b | 39923817 | STANDS | every clause reproduces (CSCS, HEK293T activity, one transcript, one behaviour, rat NAc, no SLC2A1 or glucose in the article text, binding caveat) |
+| S7a, S7b, S7c | 37946251 | STANDS | Table 1 quotation, in-frame deletion coded PVS1, no RNA or protein in the held tables |
+| S8a | 40858643 | ADD (the PP3 point is a wording point) | PP3 sits on the SNV only; the CNV is PVS1, PM2, PM3 |
+| S8b | 40858643 | ADD | "intron-5 acceptor" is the repository's derivation (the CLAIM 033 text says so; the PAPER 219 Transferability line does not) |
+| S8c | 40858643 | STANDS | the CLAIM 033 text states the derivation and quotes the source correctly |
+| S9 | 26419537 | ADD | T-type test is in the Tau V337M model, the FOXO leg is in the dnj-14 model; wild-type arm is lifespan and thrashing at 1, 2, 4 mg/ml |
+| S10 | 31781019 | MUST CHANGE on the paper's own outlier exclusion (ADD on the other reading) | simple cortical spikes: WT up, TG down; four other classes agree |

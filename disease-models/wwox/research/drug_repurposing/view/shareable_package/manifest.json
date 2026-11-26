@@ -28,7 +28,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 525,
+    "values": 543,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 780,
+    "values": 807,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -88,7 +88,7 @@
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(pmids\\[\\]|views\\.(broad|partial)\\.evidence\\.pmids\\[\\])$": {
     "class": "BIBLIO",
-    "values": 248,
+    "values": 257,
     "why": "PMID of a cited work (ranking)"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -199,15 +199,15 @@
   },
   "identifiers": {
    "CAT": 2386,
-   "CHEMBL": 387,
+   "CHEMBL": 388,
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
-   "PMID": 152
+   "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 235,
-   "external_public": 95,
+   "distinct_hrefs": 239,
+   "external_public": 99,
    "hosts": [
     "civicdb.org",
     "open.fda.gov",
@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3587,
+    "forbidden-name": 3650,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -250,9 +250,10 @@
    "forbidden_names": 126040,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 158,
+    "count": 159,
     "names": [
      "act 709478",
+     "amlexanox",
      "apinocaltamide",
      "cpp 115",
      "dimethyl fumarate",
@@ -265,7 +266,7 @@
      "px 478",
      "sulfopin"
     ],
-    "unchecked_without_corpus": 158
+    "unchecked_without_corpus": 159
    },
    "suppressed_by_exemption": {
     "category labels of catalogue-wide counts": 1,
@@ -464,12 +465,12 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-31T07:28:37Z",
-  "data_date": "2026-11-25",
+  "data_date": "2026-11-26",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2471,
+  "BIBLIO": 2525,
   "COUNT": 12405,
   "ID": 4861,
   "OWN": 88916,
@@ -538,15 +539,15 @@
   },
   "NOTICE.md": {
    "bytes": 13731,
-   "sha256": "5674011b4fe12350cd5dfe9abc6b7a390ab9a8a17e4902ae1e30c453911f571c"
+   "sha256": "03a0a79ae299a5f9b918a2d38820de167d96f72eb3b3f93bfc79314aea52de48"
   },
   "README.md": {
    "bytes": 4730,
-   "sha256": "ce6624ae2a6b1c2bf18a83d6d914b6bf41813a6fe0038c7fdeae8bffc72a1a68"
+   "sha256": "cbdd0a8648271721cb474136a4b877db6e0c0e6772513a92d35ab78f0afcdd58"
   },
   "TEXT_PROVENANCE.json": {
-   "bytes": 2162,
-   "sha256": "2b23d85db7deb3156655ecc2e526649fcca983870e064b33bc1f8a66907d89a6"
+   "bytes": 2286,
+   "sha256": "b5ea9a016208a3b698f2f75526bd6870429d87fc2b5b59d9eb6b92e992d0c983"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -561,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5079986,
-   "sha256": "43301e4e930f7d80a15e610719886ea5a299b7c9d5257bbab7d5df0d0e1917cc"
+   "bytes": 5108369,
+   "sha256": "1faefd6615288e0ffcf9e40ed7a44e54bacfc53aa699bfef7648778a7bafc314"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 168171,

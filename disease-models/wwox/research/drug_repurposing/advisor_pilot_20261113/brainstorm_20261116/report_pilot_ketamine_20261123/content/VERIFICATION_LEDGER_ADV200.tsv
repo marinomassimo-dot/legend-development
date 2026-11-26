@@ -1,7 +1,7 @@
 value_id	value	ref	locator	depth	status	note
 V1	Breton slice counts by genotype: 0/11 (7 animals) WT, 4/23 (14) HT, 36/42 (24) KO	[1]	Results 2.1; Fig 1A	FT	VERIFIED	same counts in [2] Fig 2 legend (36 KO slices from 20 animals)
 V2	d-APV 50 uM eliminated bursts; 51 bursts, 5 slices, 3 animals	[1]	Results 2.2; Fig 3C,D legend	FT+fig	VERIFIED	no test printed for the d-APV frequency change; printed p values belong to carbenoxolone
-V3	carbenoxolone -87% frequency (p 0.008), -18% duration (p 0.0274), no washout; BB-FCF no effect	[1]	Results 2.2; Fig 3D legend	FT	VERIFIED	36 bursts/4 slices/3 animals and 73 bursts/6 slices/3 animals
+V3	carbenoxolone -87% frequency (p 0.008), -18% duration (p 0.0274; Table S1 medians 0.54 s CBX vs pooled baseline 0.66 s), no washout; BB-FCF no frequency fall, duration median 0.53 s	[1]	Results 2.2; Fig 3D legend; Suppl Table S1	FT	VERIFIED	legend 36/4/3 and 73/6/3; Table S1 13/6/3, 25/6/3, baseline 119/18/9; corrected 2026-11-26 (IT27)
 V4	d-APV washout frequency bar about 1.8, error bar about 0.8 to 2.8; text says returned to normal	[1]	Results 2.2; Fig 3D d1 (gr3)	FT+fig	VERIFIED	image reading, about +/-0.1; unit analysed is the burst
 V5	sIPSC amplitude 57.3+/-31.0 vs 27.5+/-19.4 pA; sag larger in KO	[1]	Results 2.5 Fig 4G,H; Fig 6B legend	FT	VERIFIED	spread statistic not named in text; sag magnitude not extracted
 V6	ketamine 20 uM lowers Ih about 30% WT, about 5% HCN1-KO (n=5 each); 14 to 22 d old; sag 3.5+/-1.2 to 2.2+/-1.0 mV; EC50 8.2 and 15.6 uM recombinant	[4]	Results (Fig 2 legend, Fig 1C legend, text); Methods	FT	VERIFIED	authors call these EC50 values clinically relevant citing free plasma 5 to 10 uM for anaesthesia

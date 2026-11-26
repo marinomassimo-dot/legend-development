@@ -33,6 +33,11 @@
    "title": "Development of vigabatrin-induced lesions in the rat brain studied by magnetic resonance imaging, histology, and immunocytochemistry.",
    "year": "2004"
   },
+  "15266310": {
+   "journal": "Br J Cancer",
+   "title": "Frequent downregulation and loss of WWOX gene expression in human hepatocellular carcinoma.",
+   "year": "2004"
+  },
   "15843612": {
    "journal": "J Neurosci",
    "title": "Brain-specific knock-out of hypoxia-inducible factor-1alpha reduces rather than increases hypoxic-ischemic damage.",
@@ -408,6 +413,11 @@
    "title": "A combination of phenobarbital and the bumetanide derivative bumepamine prevents neonatal seizures and subsequent hippocampal neurodegeneration in a rat model of birth asphyxia.",
    "year": "2021"
   },
+  "34021541": {
+   "journal": "Aging (Albany NY)",
+   "title": "miR-485 inhibits histone deacetylase HDAC5, HIF1α and PFKFB3 expression to alleviate epilepsy in cellular and rodent models.",
+   "year": "2021"
+  },
   "34253921": {
    "journal": "Nat Neurosci",
    "title": "Reduced sociability and social agency encoding in adult Shank3-mutant mice are restored through gene re-expression in real time.",
@@ -438,9 +448,19 @@
    "title": "Neonatal neuronal WWOX gene therapy rescues Wwox null phenotypes.",
    "year": "2021"
   },
+  "34786694": {
+   "journal": "Epilepsia",
+   "title": "Risk of vigabatrin-associated brain abnormalities on MRI: A retrospective and controlled study.",
+   "year": "2022"
+  },
   "35065785": {
    "journal": "Lancet",
    "title": "Lentiviral haematopoietic stem-cell gene therapy for early-onset metachromatic leukodystrophy: long-term results from a non-randomised, open-label, phase 1/2 trial and expanded access.",
+   "year": "2022"
+  },
+  "35180571": {
+   "journal": "Epilepsy Behav",
+   "title": "Vigabatrin-associated brain abnormalities on MRI and other neurological symptoms in patients with West syndrome.",
    "year": "2022"
   },
   "35183975": {
@@ -516,6 +536,11 @@
   "36655171": {
    "journal": "Brain Commun",
    "title": "Chronic neuronal activation leads to elevated lactate dehydrogenase A through the AMP-activated protein kinase/hypoxia-inducible factor-1α hypoxia pathway.",
+   "year": "2023"
+  },
+  "36779245": {
+   "journal": "Epilepsia",
+   "title": "WWOX developmental and epileptic encephalopathy: Understanding the epileptology and the mortality risk.",
    "year": "2023"
   },
   "36828035": {
@@ -603,6 +628,16 @@
    "title": "Case report: Adult patient with WWOX developmental and epileptic encephalopathy: 40 years of observation.",
    "year": "2024"
   },
+  "39570186": {
+   "journal": "Epilepsia Open",
+   "title": "Symptomatic vigabatrin-associated MRI toxicity is associated with simultaneous hormonal therapy among patients with infantile spasms.",
+   "year": "2025"
+  },
+  "39641935": {
+   "journal": "Epilepsia",
+   "title": "Vigabatrin-associated brain magnetic resonance imaging abnormalities and clinical symptoms in infants with tuberous sclerosis complex.",
+   "year": "2025"
+  },
   "39684792": {
    "journal": "Int J Mol Sci",
    "title": "Neuroprotective and Anti-Inflammatory Effects of Dimethyl Fumarate, Monomethyl Fumarate, and Cannabidiol in Neurons and Microglia.",
@@ -641,6 +676,11 @@
   "40481521": {
    "journal": "Acta Epileptol",
    "title": "Minocycline in chronic management of febrile infection-related epilepsy syndrome (FIRES): a case series and literature review of treatment strategies.",
+   "year": "2025"
+  },
+  "40485335": {
+   "journal": "FASEB J",
+   "title": "Rescue of Epilepsy-Associated Mutations of the Highly Conserved Glycine Residue 443 in the Human GABA Transporter 1.",
    "year": "2025"
   },
   "40527948": {

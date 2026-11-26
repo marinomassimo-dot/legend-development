@@ -11529,7 +11529,7 @@
       "evidence_scope": "COMPUTATIONAL_RESULT",
       "id": "DA-I01-002",
       "locator": "disease-models/wwox/research/drug_repurposing/wwox_systems_comparison_it5_20261029.md, programme table, row PDK1",
-      "note": "Progenitors -0.67, LOWER IN SIGN ONLY: inside the single-gene null (p about 0.49) and the interval (about 0.45, Poisson) spans zero; the day-14 neuron stage shows +0.44 (same interval), so the sign is not concordant across stages and no decrease is demonstrated. n = 1 per arm: descriptive only. The progenitor line also differs in state from its control (radial-glia markers lower), which confounds every metabolic comparison in it.",
+      "note": "Recomputed from the deposit (one library per arm; PDK1 tags 263 against 51 in progenitors and 108 against 64 in day-14 neurons), the log2 ratio of the deposited TPM is -0.54 in progenitors and -1.07 in neurons. The neuron pair's gene-table column sums differ about threefold (summed TPM 89,581 against 264,496); normalising to those sums gives +0.49, while median re-centring over expressed genes gives -0.60 to -0.77 in progenitors and +0.34 to +0.50 in neurons depending on the gene filter (-0.74 and +0.41 with every gene detected in both libraries). The earlier centred values (-0.67 and +0.44) are matched to within 0.001 by median centring over genes with a pair-mean TPM of at least 10, a filter found after the fact, so they are filter-dependent rather than irreproducible; their original normalisation is not stated and their p of about 0.49 could not be reproduced. A Poisson half-width of about 0.45 around -0.67 excludes zero, and with one library per arm no decrease is demonstrated; the note is descriptive only. WWOX knockdown is shown by one Western blot in progenitors only (Supplementary Figure 1); the WWOX CAGE signal is 1.15 times control in progenitors and 0.20 in neurons (0.60 after normalising to the column sums). In the progenitor library PAX6, SOX2, HES5, FABP7 and SOX21 are lower while NES, VIM, HES1 and SLC1A3 are not, so the line differs in state from its control, which confounds every metabolic comparison in it. The progenitor line also differs in state from its control (radial-glia markers lower), which confounds every metabolic comparison in it.",
       "reading_depth": "queried_not_full_read",
       "source": "GSE126075 (deposit of PMID 31543760), descriptive P6 run, one library per arm; wwox_systems_comparison_it5_20261029.md section 2",
       "target_id": "human PDK1 transcript (shRNA WWOX-knockdown neural progenitors and neurons)"
@@ -11568,7 +11568,7 @@
       "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
       "id": "DA-I01-004",
       "locator": "files/fulltext/PMID35328751_Baryla2022_PMC.xml, Results (normoxia and normoglycaemia): 'the activities of pyruvate dehydrogenase kinase (PDK) and citrate synthase (CS) were not changed' (the sentence that carries the wording flag); Results (hypoxia and normoglycaemia): 'We didn't observed any significantly important differences in the activity of pyruvate [dehydrogenase]' (a different condition, quotation truncated in the source text read); Methods 4.10 names a PDH activity kit; Figure 5 caption: Pyruvate Dehydrogenase",
-      "note": "A null is NO_CHANGE, not proof of normal PDH regulation: n is not stated and PDH phosphorylation is not measured. Wording flag found in this cycle: one Results sentence lists 'pyruvate dehydrogenase kinase (PDK)' among the enzymes whose activity was unchanged, while Methods describe only a PDH kit and Figure 5b is labelled PDH; the repository reads it as the PDH assay (manifest entries 7 and 8); not resolved by the paper. PDH is named as unchanged in the normoxia-hyperglycaemia and hypoxia-normoglycaemia sentences; for hypoxia-hyperglycaemia the text says no effect on enzyme activities. In the same cells hexokinase activity, LDH activity and lactate were higher.",
+      "note": "A null is NO_CHANGE, not proof of normal PDH regulation: n is not stated and PDH phosphorylation is not measured. Wording flag found in this cycle: one Results sentence lists 'pyruvate dehydrogenase kinase (PDK)' among the enzymes whose activity was unchanged, while Methods describe only a PDH kit and Figure 5b is labelled PDH; the repository reads it as the PDH assay (manifest entries 7 and 8); not resolved by the paper. PDH is named as unchanged in the normoxia-hyperglycaemia and hypoxia-normoglycaemia sentences; for hypoxia-hyperglycaemia the text says no effect on enzyme activities. In the same cells lactate was higher in all four conditions, hexokinase activity in two (normoxia and hypoxia, both with normoglycaemia) and LDH activity in two (normoxia with normoglycaemia and with hyperglycaemia); hexokinase is visibly lower in the knockout in normoxia with hyperglycaemia and citrate synthase lower in hypoxia with hyperglycaemia, both unmarked. The PDH point estimates in the knockout are higher, not lower (about 30 percent in normoxia and 47 percent in hypoxia, with large error bars), so the PDH result is a low-power null; n is not stated. The hypoxia-hyperglycaemia 'no effect' coincides with no reduction of total WWOX by immunocytochemistry and mRNA, but control WWOX there already sits at the knockout level, and the fractionated blot does show WWOX depleted in that condition (Figure 6). WWOX overexpression lowers PDH activity in hypoxia (p < 0.001). The 'knockout' is a CRISPR guide pool with protein 8.5-fold and mRNA 3-fold lower, not a complete knockout, and the unresolved 'PDK' wording stays as stated above.",
       "reading_depth": "partial_fulltext_read",
       "receipt": "FTR-20261003-35328751-02",
       "source": "Baryla 2022 (PMID 35328751), Figure 5b and Results; carried through needs NEED-PDH-PYRUVATE-AXIS observation O2; Results sentence re-read in this cycle",
@@ -11708,7 +11708,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-I01-001",
       "locator": "PubMed and Europe PMC abstract (closed access, no open copy): PDH activity reduced by 65% against healthy mice in the epileptic stage, 'partially alleviated with DCA treatment'; PDH protein down 37%, Ser300 phosphorylation up 52%, not significantly changed by DCA",
-      "note": "Target engagement was partial and the phospho-site did not move significantly; total PDH protein fell 23% in non-epileptic mice on treatment, which the authors offer as a possible reason for the pro-convulsant signal.",
+      "note": "PDH activity was 65 percent lower in chronic-stage pilocarpine mice than in non-epileptic mice and the drug partly alleviated this (significance not stated). In epileptic mice Ser300 phosphorylation was 52 percent higher and PDH protein 37 percent lower than in non-epileptic mice, and neither changed significantly with the drug. Two daily doses were tested, but the abstract does not say which was used for these assays and does not name the tissue. Total PDH protein fell 23 percent in non-epileptic mice on treatment, which the authors offer as a possible reason for the slight pro-convulsant signal.",
       "reading_depth": "abstract_only",
       "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
       "target_id": "brain pyruvate dehydrogenase activity"
@@ -11727,7 +11727,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-I01-002",
       "locator": "abstract: 'DCA treatment did not increase latencies to seizures in the acute flurothyl seizure test'",
-      "note": "Chronic treatment before the test. One laboratory; the abstract reports no effect size.",
+      "note": "Chronic treatment (timing relative to the test not stated) did not increase flurothyl latency; two doses were tested and the abstract does not say whether the null held at both, and gives no effect size; in the same paper the drug was slightly pro-convulsant in the 6 Hz test. PDH engagement is reported for the chronic-stage pilocarpine mice, not for these animals. One laboratory.",
       "reading_depth": "abstract_only",
       "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
       "target_id": "seizure latency (acute flurothyl test)"
@@ -11765,7 +11765,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-I01-004",
       "locator": "abstract: latencies were decreased in status-epilepticus against no-status-epilepticus mice and 'were not restored by DCA'; conclusion 'DCA did not have any anti-convulsant effects in the tested models'",
-      "note": "The only primary seizure-endpoint test of a PDK inhibitor found in a model in which PDH activity is documented to be reduced. Abstract level; the full text is closed.",
+      "note": "A primary seizure-endpoint test of a PDK inhibitor in a model in which PDH activity is documented to be reduced; second-hit latency was shorter in epileptic than in non-epileptic mice and DCA did not restore it; PDH activity was reported as partially alleviated (significance not stated) while Ser300 phosphorylation and PDH protein were not significantly changed, so engagement at the second-hit test is unclear; the abstract does not say whether the same animals were assayed. Abstract level; the full text is not held.",
       "reading_depth": "abstract_only",
       "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
       "target_id": "seizure latency (second-hit flurothyl test in chronic epileptic mice)"
@@ -11804,7 +11804,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-I01-006",
       "locator": "PubMed abstract: no significant differences in the global assessment, linear growth, or frequency and severity of intercurrent illness",
-      "note": "A population in which lactate was persistently or intermittently raised, with a defined defect in most patients, and in which the lever still did not change the clinical outcomes measured over six months. Heterogeneous and short; a null in this design does not exclude a benefit in a defined genotype.",
+      "note": "A population in which lactate was persistently or intermittently raised, with a defined defect (pyruvate dehydrogenase deficiency in 11, respiratory chain in 25, mitochondrial DNA in 7 of 43), aged 0.9 to 19 years; the drug blunted the postprandial lactate rise and still did not change the clinical outcomes measured over six months. Heterogeneous and short; the abstract reports no PDH-only subgroup, so a null in this design does not exclude a benefit in a defined genotype.",
       "reading_depth": "abstract_only",
       "source": "dichloroacetate, human children, Stacpoole 2006 (PMID 16651305), randomized double-blind trial (43 patients), abstract; NOT WWOX EVIDENCE",
       "target_id": "clinical global assessment, linear growth (children with congenital lactic acidosis)"
@@ -11951,12 +11951,12 @@
        "species": "human"
       },
       "direction": "DECREASE",
-      "endpoint": "glucose consumption and lactate production with and without DCA, patient against control cells",
+      "endpoint": "average glycolysis with and without DCA, patient against control cells (lactate production was also measured)",
       "epistemic_status": "DATO",
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-I01-014",
       "locator": "abstract: in pyruvate dehydrogenase complex-deficient cells DCA decreased average glycolysis by 29%, with no significant effect on control cells, and lactate production did not change in either cell type",
-      "note": "The response to the PDK inhibitor depended on a pre-existing PDH defect: no significant effect in control cells (six patient lines and five control subjects; the 29% average excludes one patient line with an unusual splicing mutation). It supplies the design of the discriminating experiment (a genotype-by-inhibitor interaction on glucose-derived acetyl-CoA flux), with a precedent for what a responder looks like.",
+      "note": "DCA shifted flux in all cells, controls included, away from anaplerotic-related pathways (a 40 percent decrease) toward the pyruvate dehydrogenase complex, and decreased modelled average glycolysis by 29 percent in patient cells (one of six patient lines, with an unusual splicing mutation, excluded from the average) with no significant effect in the control cells of five healthy subjects; untreated patient cells (excluding the same splicing-mutation line) had higher glucose consumption and lactate production than controls. Lactate production and NTP/NDP did not change in either cell type, so the DECREASE code is glycolysis only; no genotype-by-DCA interaction test is reported. It is a precedent for a glycolysis-lowering responder phenotype. A genotype-by-inhibitor interaction on glucose-derived acetyl-CoA flux is the repository's proposed discriminating experiment, not a result of this abstract.",
       "reading_depth": "abstract_only",
       "source": "dichloroacetate, human fibroblasts, Simpson 2006 (PMID 16765624), abstract; NOT WWOX EVIDENCE",
       "target_id": "glycolytic flux and lactate production in cultured fibroblasts"
@@ -14064,7 +14064,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "3762febe0b11a3a684e88c30041dc2bc8798c110bf16ec5db049b044b6b92d7b",
+   "input_sha256": "4cd0e615395652f76082c45a343934123fcddfcf06e29072a2f930da646c5b25",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -19028,7 +19028,7 @@
       "epistemic_status": "DATO",
       "id": "DR-A01-001",
       "locator": "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md § 1, 40485335",
-      "measured_result_note": "The class rescued the fully retained variant and NOT the partly trafficked G443D; the rescued variants recover part of wild-type capacity with altered affinity; wild-type capacity is raised too.",
+      "measured_result_note": "4-phenylbutyrate (10 millimolar in HEK293 for 24 h; 1 millimolar in fly food for 48 h) rescued the fully ER-retained G443V and NOT the partly trafficked G443D; the rescued variants recover part of wild-type capacity with altered affinity (about 6 to 8 percent of untreated wild-type uptake in the single-concentration screen; Vmax about 39 percent for G443V with 4-phenylbutyrate and about 55 percent for G443D with glycerol, Km raised, Fig 4D,F); wild-type uptake was raised in HEK293 (clearly by 4-phenylbutyrate), wild-type fly expression was not. Glycerol 10 percent rescued G443D uptake and mature band in HEK293 (Fig 3B, 4D-E) and G443V uptake in HEK293 only (Fig 3C); uptake was not measured in flies, where glycerol and 4-phenylbutyrate both gave presynaptic G443V in imaging, glycerol's effect on G443V seizures was not significant, 4-phenylbutyrate reduced G443V seizures (Fig 6H) and did not change G443D seizures (Fig 6G). Bile-acid chaperones are not tested in this paper.",
       "reading_depth": "partial_fulltext_read",
       "receipt": "FTR-20261021-40485335-01",
       "source": "Shah 2025 (R1 reading 40485335); NOT WWOX EVIDENCE",
@@ -19047,7 +19047,7 @@
       "epistemic_status": "DATO",
       "id": "DR-A01-002",
       "locator": "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md § 5, question 3",
-      "measured_result_note": "The class raises wild-type protein in every target of the lot: the effect is not variant-specific.",
+      "measured_result_note": "The earlier statement that the class raises wild-type protein in every target of the lot rests on four readings and is withdrawn pending a re-read of three of them (30266908, 42157447, 42587736). For the GAT-1 reading (Shah 2025, PMID 40485335): in HEK293 cells 4-phenylbutyrate and glycerol increased the wild-type hGAT-1 mature band per the paper's text (the representative blots show at most a modest change; not quantified) and 4-phenylbutyrate increased wild-type uptake (Fig 3A); in Drosophila astrocytes neither compound visibly changed wild-type hGAT-1 expression (single-section images, not quantified, Fig 6B), while 4-phenylbutyrate, with glycerol minor and unmarked, raised the retained variant G443V (about 14-fold in the text, about 9-fold by plot medians, Fig 6I, at least 10 brains per condition). The cell-line effect on wild-type protein is not shown to be variant-specific; the in vivo wild-type reading is qualitative.",
       "reading_depth": "partial_fulltext_read",
       "receipt": "FTR-20261021-30266908-01; FTR-20261021-42157447-01; FTR-20261021-42587736-02; FTR-20261021-40485335-01",
       "source": "four R1 readings (30266908, 42157447, 42587736, 40485335); NOT WWOX EVIDENCE",
@@ -19077,7 +19077,7 @@
        "cell_type": "whole larva",
        "developmental_stage": "larva",
        "disease_id": "STXBP1 loss of function (not WWOX)",
-       "genotype": "frameshift nulls",
+       "genotype": "stxbp1a 4-bp frameshift deletion; stxbp1b 12-bp loss-of-function deletion (in frame by arithmetic, protein not measured; the Discussion calls both lines frameshift loss-of-function deletions)",
        "species": "zebrafish"
       },
       "direction": "NO_CHANGE",
@@ -19085,7 +19085,7 @@
       "epistemic_status": "DATO",
       "id": "DR-A01-004",
       "locator": "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md § 1, 42268630",
-      "measured_result_note": "MEASURED NO RESCUE in null alleles, protein not measured, bath concentration bounded by larval toxicity, assay separation of controls unestablished; INCONCLUSIVE for a protein-expressing missense allele. Encoded NO_CHANGE.",
+      "measured_result_note": "MEASURED NO RESCUE in null alleles, protein not measured (the authors could not assess stxbp1a or stxbp1b protein: no validated antibodies), bath concentration bounded by larval toxicity (text 25 and 50 micromolar, the Fig 1D legend says 10 and 25, the supplementary workbook writes 'mM'; wild-type survival about 70 percent at 50 micromolar, Fig 1C), assay separation of controls unestablished; movement was the endpoint on stxbp1a (stxbp1b movement also showed no effect), ictal-like events by local field potential on stxbp1b (nine larvae, 4-phenylbutyrate against baseline, unpaired t test on the same nine larvae, P = 0.8593, 95 percent CI -7.18 to 8.51 events per 15 min, so a large fall is not excluded); INCONCLUSIVE for a protein-expressing missense allele. Encoded NO_CHANGE.",
       "reading_depth": "partial_fulltext_read",
       "receipt": "FTR-20261021-42268630-01",
       "source": "Frick 2026 (R1 reading 42268630); NOT WWOX EVIDENCE",
@@ -19142,7 +19142,7 @@
       "epistemic_status": "DATO",
       "id": "DR-A01-007",
       "locator": "disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/munc18_cytosolic_precedent_panel_readings_20261029.tsv",
-      "measured_result_note": "Mutant total protein about 1.05 of untreated control, no significance mark (three experiments); the text lists only the phenylbutyrate class and two osmolytes as stabilising. On wild type the same comparator gave a scattered, unmarked value near 1.95. The comparator was more potent than the phenylbutyrate class on class-I HDAC enzymes in one ChEMBL document but weaker on HDAC1 in a third that also lists the sodium salt, so that premise is document-dependent; it does not engage HDAC6 at the applied level; no pan-HDAC or HDAC6-selective arm exists in this paper. A measured null in a cell that is not comparable.",
+      "measured_result_note": "Mutant total protein about equal to untreated control, no significance mark (three experiments; bar reading), at the same applied level as the phenylbutyrate class; the text lists only the phenylbutyrate class and two osmolytes as stabilising. On wild type the same comparator gave a scattered, unmarked value near 1.95. The comparator (butyric acid in ChEMBL) was more potent than the phenylbutyrate class on HDAC3 and HDAC8 in one ChEMBL document; on HDAC1 and HDAC2 the held table gives butyric acid two values (16 and 300 micromolar for HDAC1; 12 and 400 micromolar for HDAC2) that bracket the phenylbutyrate values (64 micromolar for the acid, 162 micromolar for the sodium salt), and which document carries which value is not resolvable from the held aggregate rows, so that premise is document-dependent. In the held ChEMBL table its HDAC6 value is only a lower bound, above 2 millimolar, a bound that lies below the 5 millimolar applied, so HDAC6 inhibition at that level is neither shown nor excluded; no HDAC engagement was measured in this paper, and no pan-HDAC or HDAC6-selective arm exists in it. A measured null in a cell that is not comparable.",
       "reading_depth": "partial_fulltext_read",
       "receipt": "FTR-20261021-30266908-01",
       "source": "Guiberson 2018 (PMID 30266908), Supplementary Figure 12a, mutant panel read in IT5 P8; NOT WWOX EVIDENCE",
@@ -20561,7 +20561,7 @@
      "Whether a cytosolic enzyme lesion behaves like the ER-retained branch at all.",
      "Whether the class, if it acts, acts through chaperoning or through raising expression of the allele.",
      "Whether the class acts on a soluble cytosolic mutant through HDAC6/HSP90 acetylation: butyrate does not engage HDAC6 and no pan-HDAC or HDAC6-selective arm exists in the soluble precedent.",
-     "The residual function of the Q230P-class protein per molecule and its amount relative to wild type: the reciprocal of their product is the fold gain any boost would need, and neither factor is measured for any WWOX allele.",
+     "The residual function of the Q230P-class protein per molecule and its amount relative to wild type: the reciprocal of their product is the fold gain any boost would need, and for Q230P neither factor has a calibrated value (protein not detected in one patient's fibroblasts with no detection limit stated, Johannsen 2018, PMID 29808465; function not measured), and the held P252A and P282A readings (over-expressed protein, Zhang 2025, PMID 41124647; for P252A also one cancer line, PMID 15266310) give no residual fraction.",
      "Whether any function read-out of WWOX saturates below wild-type protein, as the soluble precedent's read-out appears to."
     ],
     "p4_card": {
@@ -20573,7 +20573,7 @@
        "Mouse exposures were short (days); no brain exposure measured beside mutant protein; the human arm of one paper is one uncontrolled child.",
        "No enzyme-class precedent for the class; the enzyme precedents use degradation blockade or an active-site binder.",
        "The soluble precedent raises wild type as well, adds no enzyme, no route-inhibitor arm and no mRNA under treatment, uses a dominant-negative mechanism WWOX does not have, and its total-protein gain on four of five mutants is only about 1.05 to 1.65 fold.",
-       "A required-fold limit: a boost multiplies the mutant's residual function and does not change it; parity needs the reciprocal of (amount times function per molecule), which is unmeasured for every WWOX allele, and observed gains (about 1.05 to 9 fold) also apply to wild type.",
+       "A required-fold limit: a boost can at best multiply the mutant's residual function (amount relative to wild type times function per molecule), so parity with wild type needs a fold gain equal to the reciprocal of that product. No held measurement read for this card gives a calibrated value of it for Q230P, P252A or P282A. Q230P: WWOX protein was not detected by Western blot in one patient's fibroblasts, whose WWOX transcript level was almost identical to that of three other cell lines (Johannsen 2018, PMID 29808465; no healthy fibroblast control, no detection limit stated, function not measured). P252A and P282A (Zhang 2025, PMID 41124647; over-expressed Flag-tagged protein in thyroid-cancer lines): P252A protein is about 0.16 to 0.36 of wild type at steady state (Fig 4C-F), with about 0.3 of the starting level left at 6 to 10 hours against about 0.7 to 0.9 for wild type (Fig 4B), and chloroquine or ammonium chloride raise it about 1.8 to 2 fold (Fig 4D, 4E; function not read); P282A is about 0.6 to 0.95 of wild type (Fig 4C-F) and is a common population variant (gnomAD allele frequency about 0.07, Supplementary Table 4). Neither mutant differs significantly from empty vector in the function assays that include one (for example colony number relative to empty vector in CAL-62: wild type about 0.57, P252A about 1.3, P282A about 1.05, Fig 2B); growth, colony and invasion read-outs sit at about the vector level, while in some other read-outs the mutant mean lies between vector and wild type (gamma-H2AX, Fig 5B; NHEJ for P282A, Fig 5C; BCPAP migration, Fig 2F), so non-significance is not equivalence and none of this gives a residual fraction (no dose-response, over-expression). A patient homozygous for both had no WWOX nervous-system disease, and the authors suggest the proteins may keep some function (a conjecture, not a measurement). Separately, a liver-cancer line carrying a P252A change of unknown zygosity (SNU387) has low WWOX transcript and low protein, which cannot be attributed to the variant (Park 2004, PMID 15266310). The observed gains in the non-WWOX precedents read run from about 1.05 (a non-significant butyrate bar, DeLeeuw Fig 5F) to about 19 to 21 fold on the GAT-1 Fig 4G bars (by pixel about 6, 7, 14 and 21 for D52Y, V125M, A357V and G566H, the last two with 15 to 25 percent error because the untreated bars are 7 to 8 pixels high; by eye about 5, 7, 10 and 15), and to tens-fold or 14-fold where the untreated baseline is at the assay floor (Shah Fig 3B, glycerol on G443D; fly G443V with 4-phenylbutyrate). Wild type is raised in some precedents (about 1.2 to 2.7 fold) and not significantly changed in others (flies, Shah Fig 6B, image only; GAT-1 wild-type uptake with phenylbutyrate or TUDCA, DeLeeuw Fig 4A, bars about 1.2).",
        "The measured turnover difference (about 1.5 to 3 fold) explains only a small part of a 12 to 25 fold steady-state deficit in the soluble precedent, so the 'made then cleared' branch is not the only candidate even where turnover is measured."
       ],
       "for": [
@@ -20591,7 +20591,7 @@
      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test in any WWOX system (registry-based, known-roads note section 2.8, 2026-10-20); no dedicated PubMed query for these molecules was run for this card. 4-PBA/TUDCA were carried as TX-003 and withdrawn on rationale (DIS-004), not on a result. NOT MAI_TENTATO-proof: unpublished individual experience is unreachable by any literature query.",
      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
      "pathway_and_objective": "RECUPERO_PROFONDO.",
-     "pharmacology": "Potency, relevant exposure and selectivity in a WWOX system: UNKNOWN. Re-examined in IT5 (pharmacology_it5_20261029/proteostasis_pba_a01.tsv): the only measured potency for the class is HDAC inhibition, at micromolar to sub-millimolar values (one HeLa extract study: low micromolar; recombinant enzymes: tens to hundreds of micromolar, with butyrate more potent than phenylbutyrate in the same assay and the order reversed in the HeLa study), while the cell experiments in the cited papers applied roughly half a millimolar to ten millimolar for a day (a toxicity ceiling at four millimolar in one paper) and the bile acid one hundred micromolar; so HDAC inhibition is quantitatively available at the concentrations used and cannot be excluded as the operating mechanism, and there is no numeric value for the chaperone mechanism of either compound, although qualitative active records exist for phenylbutyric acid alone (model-protein aggregation suppression and ER-stress cell protection, each at a single concentration and neither on a disease client); the bile acid has no folding or aggregation record In the sources: class not selective for the mutant; brain exposure not measured in any R1 paper. Keyless sources, IT5 P8 re-pull: no folding, binding or thermal-shift datum for the class or TUDCA in ChEMBL, GtoPdb or DGIdb (ChEMBL mechanism of record: ammonia scavenging for the sodium salt, Unknown for TUDCA; GtoPdb no curated interaction for either); the levels applied in cells were about 8 to 78 times the class's HDAC enzyme IC50 (arithmetic, not occupancy); butyrate is 4 to 29 times more potent than the acid on class I in one document (its low values recur in another that lists no phenylbutyrate) but weaker on HDAC1 than the sodium salt in a third, so the relative class-I strength is document-dependent; butyrate does not engage HDAC6 in the one document that tests it.",
+     "pharmacology": "Potency, relevant exposure and selectivity in a WWOX system: UNKNOWN. Re-examined in IT5 (pharmacology_it5_20261029/proteostasis_pba_a01.tsv): the only measured potency for the class is HDAC inhibition, at micromolar to sub-millimolar values (one HeLa extract study: low micromolar; recombinant enzymes: tens to hundreds of micromolar, with butyrate more potent than phenylbutyrate in the same assay and the order reversed in the HeLa study), while the cell experiments in the cited papers applied roughly half a millimolar to ten millimolar for a day (a toxicity ceiling at four millimolar in one paper) and the bile acid one hundred micromolar; so HDAC inhibition is quantitatively available at the concentrations used and cannot be excluded as the operating mechanism, and there is no numeric value for the chaperone mechanism of either compound, although qualitative active records exist for phenylbutyric acid alone (model-protein aggregation suppression and ER-stress cell protection, each at a single concentration and neither on a disease client); the bile acid has no folding or aggregation record In the sources: class not selective for the mutant; brain exposure not measured in any R1 paper. Keyless sources, IT5 P8 re-pull: no folding, binding or thermal-shift datum for the class or TUDCA in ChEMBL, GtoPdb or DGIdb (ChEMBL mechanism of record: ammonia scavenging for the sodium salt, Unknown for TUDCA; GtoPdb no curated interaction for either); in the two precedents analysed (applied at 2 and 5 millimolar) the levels were about 8 to 78 times the phenylbutyrate recombinant HDAC1 and HDAC6 IC50 (64, 162 and 240 micromolar; arithmetic, not occupancy); over the five applied-concentration rows of the table (0.5 to 10 millimolar; cells and, for 5 millimolar, a worm-plate level the table records as C. elegans) and all six held recombinant phenylbutyrate IC50 rows (HDAC1 twice, 2, 3, 6 and 8, 64 to 260 micromolar) the ratio is about 2 to 156, against the HeLa-extract Ki rows (2.8 and 6.3 micromolar) about 80 to 3,600, and a qualitative cell record at 0.1 millimolar in the same table would put the low end below 1 against the recombinant IC50 (about 0.4 against 260 micromolar); for butyrate on HDAC1 in the same two precedents the ratio is 6.7 to 312 (on HDAC6 only a bound); butyrate is 4 to 29 times more potent than the acid on class I in one document (its low values recur in another that lists no phenylbutyrate) but weaker on HDAC1 than the sodium salt in a third, so the relative class-I strength is document-dependent; butyrate does not engage HDAC6 in the one document that tests it.",
      "predictions": "No engine, no score. The in-silico values recorded in CLAIM 019 are IPOTESI about a folding perturbation of Q230P, not predictions about any drug; they stay IPOTESI.",
      "question_history": [
       "TX-003 (proposed), DIS-004 (withdrawn rationale, live revival trigger: HDAC-inhibitor or HSP co-inducer role)",
@@ -20652,7 +20652,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "7d5464dfb02d9cbee5c39a8635d22d619f474c9751a156fa6bcf66fcbfdefed7",
+   "input_sha256": "576104d9b34a2a60816ecf3dd1ac91e1f79824cffa0fe49df07d1e9149cef576",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -25290,7 +25290,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "5da877b2fce436ea",
+     "digest": "77e92e3e6b759b3a",
      "locators": 1137,
      "origin_id": "N-15",
      "papers": 56,
@@ -26376,7 +26376,7 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37946251.json",
        "pmid": "37946251",
        "reading_depth": "partial_fulltext_read",
-       "receipt_events": 1,
+       "receipt_events": 2,
        "receipt_id": "FTR-20261004-37946251-01",
        "repair_unverified": 0,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
@@ -26490,7 +26490,7 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40858643.json",
        "pmid": "40858643",
        "reading_depth": "partial_fulltext_read",
-       "receipt_events": 1,
+       "receipt_events": 2,
        "receipt_id": "FTR-20261004-40858643-01",
        "repair_unverified": 0,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
@@ -26707,12 +26707,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*corrects a biomarker (seizures) but not the mechanism (development)*. **Quoted",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1150; evidence table digest 5da877b2fce436ea"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1150; evidence table digest 77e92e3e6b759b3a"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "865a09516aba2fbc7c79c344a4358ccfa8a2ee11702b84fb94e407e3a31a1277",
+   "input_sha256": "a99c6bb6f173902a88dcf8207ba152a8e674184c7d84f0b476c5c0ad6d64f8f5",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -26737,7 +26737,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "5da877b2fce436ea",
+    "digest": "77e92e3e6b759b3a",
     "locators": 1137,
     "origin_id": "N-15",
     "papers": 56,
@@ -27823,7 +27823,7 @@
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37946251.json",
       "pmid": "37946251",
       "reading_depth": "partial_fulltext_read",
-      "receipt_events": 1,
+      "receipt_events": 2,
       "receipt_id": "FTR-20261004-37946251-01",
       "repair_unverified": 0,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
@@ -27937,7 +27937,7 @@
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40858643.json",
       "pmid": "40858643",
       "reading_depth": "partial_fulltext_read",
-      "receipt_events": 1,
+      "receipt_events": 2,
       "receipt_id": "FTR-20261004-40858643-01",
       "repair_unverified": 0,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
@@ -33923,7 +33923,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-W2-002",
       "locator": "PMC full text retrieved through the PMC API on 2026-10-27, results and Table 1 read; supplements not; no receipt",
-      "measured_result_note": "Benefit in 14 of 19 individuals with gain-of-function variants, of whom 4 had an effect that faded (10 sustained; at variant level counting sustained effect only the authors report P = 0.0698, not significant) (behaviour 12 of 17, development 6 of 12, seizure frequency reduced in 7 of 18); three gain-of-function individuals worsened. Retrospective, unblinded, clinician or parent rated.",
+      "measured_result_note": "Benefit in 14 of 19 individuals with gain-of-function variants, of whom 4 had an effect that faded (10 sustained; the authors' Fisher exact test of a 9 angstrom distance classification gives P = 0.0698 when scored per individual with only sustained effects counted as positive and P = 0.0210 at variant level; neither tests the 14 of 19 against the comparator group, which is the P = 0.0049 of the next row, and that 14 counts the 4 individuals whose effect faded; 16 of the 19 are possible gain-of-function by the authors' threshold rules and three are likely) (behaviour 12 of 17, development 6 of 12, seizure frequency reduced in 7 of 18); three gain-of-function individuals worsened. Retrospective, unblinded, clinician or parent rated.",
       "reading_depth": "partial_fulltext_read",
       "source": "Karnstedt 2026, Epilepsia (PMID 41489401, PMC13075606; NOT WWOX EVIDENCE; other disease)",
       "target_id": "NMDAR pore blocker memantine; GRIN gain-of-function variants"
@@ -33942,10 +33942,10 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-W2-003",
       "locator": "same reading as DR-W2-002; Fisher test reported 14 of 19 versus 3 of 15",
-      "measured_result_note": "Benefit in 3 of 15 (group of 15 includes 4 non-pathogenic variants), mild and parent-reported only; seizure reduction 2 of 10, not different from the gain-of-function group. The direction of the receptor lesion, not the presence of an NMDAR gene, separated responders.",
+      "measured_result_note": "Benefit in 3 of 15 (the group of 15, which keeps #19 although the Results say it was excluded from further analyses, includes five individuals with variants the authors call non-pathogenic: Table 1 lists four of unknown significance (#8, #19, #29, #31) and one likely benign (#28), the supplementary table of ACMG classes lists all five as unknown significance, and the text counts them as five in one place and as six in another), mild and parent-reported (one also reported by the kindergarten); seizure reduction 2 of 10, not different from the gain-of-function group (P = 0.417), and both reductions come from two carriers (#28 and #29) of variants not tested for function and rated no effect by the authors, so counting them would make 5 of 15; neither reduction is isolated from other changes (antiseizure drug changes in #28 and a regimen of three drugs in #29), and none comes from a carrier with a tested loss-of-function or indeterminate variant. The direction of the receptor lesion, not the presence of an NMDAR gene, separated responders.",
       "reading_depth": "partial_fulltext_read",
       "source": "Karnstedt 2026, Epilepsia (PMID 41489401; NOT WWOX EVIDENCE; other disease)",
-      "target_id": "NMDAR pore blocker memantine; GRIN loss-of-function, indeterminate or no-effect variants (the comparator group also holds 4 variants the authors call non-pathogenic)"
+      "target_id": "NMDAR pore blocker memantine; GRIN loss-of-function, indeterminate or no-effect variants (the comparator group also holds five individuals whose variants the authors call non-pathogenic)"
      },
      {
       "context": {
@@ -33961,7 +33961,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-W2-004",
       "locator": "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md section 14; receipt FTR-20261019-42652189-01",
-      "measured_result_note": "Memantine accelerated every seizure stage; perampanel delayed stage 4 but did not prevent seizures. The reading carries unresolved internal inconsistencies noted in that record. A safety-direction datum for a non-genetic model, not WWOX.",
+      "measured_result_note": "Memantine at the two higher of its three doses shortened the latency to all four seizure stages (stage 4 about 26 and 25 minutes against about 37 in controls, bar readings, eight per group by the analysis-of-variance degrees of freedom); the lowest dose shortened stages 1 and 2 only, although the text says every dose shortened each stage. Perampanel delayed the onset of stages 3 and 4 but did not prevent seizures. No in-study measure of receptor engagement. The reading carries unresolved internal inconsistencies noted in that record. A safety-direction datum for a non-genetic model, not WWOX.",
       "reading_depth": "complete_fulltext_read",
       "receipt": "FTR-20261019-42652189-01",
       "source": "Alekseeva 2026, Biomedicines (PMID 42652189; NOT WWOX EVIDENCE; adult rat, acute provoked seizures), as recorded in the repository",
@@ -34019,7 +34019,7 @@
       "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
       "id": "DR-W2-007",
       "locator": "that file section W2.5; receipt FTR-20261019-39507621-01",
-      "measured_result_note": "'No sustained positive effect of treatment was detected' for the whole list taken over decades in one adult; the drug is not isolated, the exposure and timing are unknown. n = 1 supports no statement about the drug in this genotype.",
+      "measured_result_note": "'No sustained positive effect of treatment was detected' for the whole list taken over decades in one adult; the drug is not isolated; the paper lists the antiseizure drugs prescribed over the years and the current regimen (valproic acid, levetiracetam and perampanel, with doses), so the exposure is not unknown, but the timing of each drug is not given, and the statement is about sustained benefit, so a transient benefit is not excluded. n = 1 supports no statement about the drug in this genotype.",
       "reading_depth": "complete_fulltext_read",
       "receipt": "FTR-20261019-39507621-01",
       "source": "Teplyshova 2024, Front Genet (PMID 39507621), as recorded in analysis/downstream_wwox_independent_rescue_census_20260921.md W2.5; the drug effect is NOT WWOX EVIDENCE (n = 1, polytherapy)",
@@ -34476,7 +34476,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "7b16d9792342aadb0ef0f3777ae35d7d1879319c56aa7acad333e56849a26fb3",
+   "input_sha256": "6ad6c760d092db6bdd2f3bcb56385ba5ad4b355fc73ae7f9ae8b35a18775b378",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -42284,7 +42284,7 @@
      "indication_and_transfer": "Only IF GABA is depolarising in Wwox-deficient neurons at the relevant age; unmeasured. The CNS penetration of bumetanide is a known limitation (map R-07).",
      "mechanism": "Target NKCC1 (SLC12A2); wanted direction: lower intracellular chloride so GABA hyperpolarises; sign depends on an unmeasured quantity.",
      "next_measurement": "Gramicidin perforated-patch E_GABA in Wwox-deficient versus parental neurons or slices at three ages (including the earliest culturable), NKCC1 and KCC2 protein by immunoblot or immunostaining, GABA puff response; controls: wild type and heterozygote, bicuculline or gabazine sensitivity, an NKCC1 knockdown arm in place of the drug; the compound is applied in the bath ex vivo, and a systemic response requires verification of relevant exposure (IT8 P3, restated IT9 P4a); discriminating result: a depolarised E_GABA specific to the knockout that an NKCC1 manipulation shifts.",
-     "novelty_for_woree": "Map R-07 stands as INSUFFICIENT_EVIDENCE. New: (1) the transcript-level ratio in the one human knockout deposit does not point to a depolarising gradient (descriptive, confounded); (2) the target-identity note above; (3) the single experiment is written out with controls. Neonatal-seizure and autism trials exist (titles retrieved: NEMO open-label dose-finding in newborn hypoxic-ischaemic seizures, PMID 25765333; a phase 3 autism programme, PMID 35292925; a phase 2 autism trial, PMID 32730977); their outcomes were NOT read here.",
+     "novelty_for_woree": "Map R-07 stands as INSUFFICIENT_EVIDENCE. New: (1) the transcript-level ratio in the public human knockout deposit does not point to a depolarising gradient (descriptive, confounded: the SLC12A2 to SLC12A5 transcript ratio is 0.13 to 0.29 in knockout against 0.29 to 0.30 in wild type, not higher, and clearly lower only in the two knockout libraries that also carry more of the inhibitory-neuron markers GAD1 and SLC32A1, both of which the authors' own list gives as higher in knockout. The deposit is GSE156243, four knockout and two wild-type organoid libraries at 15 weeks from one embryonic stem cell line, two further wild-type libraries having been excluded by the authors for quality. A second human knockout record, E-MTAB-14792, exists but returned 403 Study not accessible on 2026-10-25); (2) the target-identity note above; (3) the single experiment is written out with controls. Neonatal-seizure and autism trials exist (titles retrieved: NEMO open-label dose-finding in newborn hypoxic-ischaemic seizures, PMID 25765333; a phase 3 autism programme, PMID 35292925; a phase 2 autism trial, PMID 32730977); their abstracts (PubMed, read 2026-11-26) report that NEMO was stopped early for serious adverse reactions and limited evidence of seizure reduction (hearing impairment in 3 of 11 surviving infants), that the phase 2 autism trial was negative on its primary outcome (one secondary outcome positive; adverse effects mainly diuretic), and that the phase 3 record gives baseline characteristics only.",
      "paediatrics_and_interactions": "Not assessed.",
      "pathway_and_objective": "BENEFICIO_PRECOCE; Track A.",
      "pharmacology": "NKCC1 activity: one fitted value and two single-concentration readings in ChEMBL (values in the README). IT8 P3 2026-10-29: GtoPdb (human, one document) gives pIC50 5.60 for NKCC1 and 6.48 for the kidney transporter, so the drug is about 7.6 fold more potent on the renal target; mouse brain to plasma ratio about 0.015 to 0.02 and efflux at the blood-brain barrier (abstract level); at the single intravenous dose reported, far above the diuretic range, modelled free brain concentrations were in the NKCC1-inhibitory range, and diuretic-range doses do not reach neuronal inhibitory concentrations; a close derivative that does not inhibit NKCC1 reproduces some CNS effects (PMID 30248303), so a CNS effect of the drug is not evidence of NKCC1 action. A systemic bumetanide response therefore requires verification of relevant exposure, that is a free brain concentration in the NKCC1 range of about 1.5 to 2.5 micromolar; arithmetic from the mouse figures (brain unbound fraction 6 to 17 percent for three diuretics, brain to plasma ratio about 0.015 to 0.02) puts the corresponding total brain concentration at about 9 to 42 micromolar, an assumption-bound figure and not a prediction (the neonatal maturation of the barrier and efflux in the Wwox-null model is not addressed by these sources; the human plasma concentration is not stated in the US label excerpt read, so it is UNKNOWN here). The premise test is ex vivo with the drug in the bath, where the NKCC1 range of about 1.5 to 2.5 micromolar is the exposure target.",
@@ -42352,7 +42352,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "617de8f9e2cfff4df04fb13dcbbbca32c06e4c474dd94d5aef77423256bfeb43",
+   "input_sha256": "4b1678e211a8e7c496e4c49fc6e431c44b4594092321fff6648ef5d9030725e1",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -48538,7 +48538,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-E01-002",
       "locator": "PubMed abstract (DOI 10.1001/jamanetworkopen.2026.34809)",
-      "measured_result_note": "Ratio 1.04 (95 percent credible interval 0.83 to 1.32) over a 24-week placebo-controlled period: no benefit despite target engagement and proof of mechanism in the earlier phase. Adults with ALS; says nothing about a developmental encephalopathy.",
+      "measured_result_note": "Ratio 1.04 (95 percent credible interval 0.83 to 1.32) over a 24-week placebo-controlled period: no evidence of slowing, though the interval does not exclude a modest effect. Target engagement and proof of mechanism are cited from the earlier phase 1B trial, and the abstract reports none for this trial's participants. Adults with ALS; says nothing about a developmental encephalopathy.",
       "reading_depth": "abstract_only",
       "source": "JAMA Netw Open 2026 randomised trial abstract, PMID 42771346; NOT WWOX EVIDENCE",
       "target_id": "ALS functional rating and survival (joint model)"
@@ -48557,7 +48557,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-E01-003",
       "locator": "PubMed abstract (DOI 10.1177/13872877261450638)",
-      "measured_result_note": "Better recognition memory and less microglial activation and tau; amyloid burden not reduced; p-eIF2 alpha lower. Mouse, adult, 23 days, one study.",
+      "measured_result_note": "In ten-month-old 5xFAD mice over 23 days, with a donepezil comparison arm: better recognition memory and less microglial activation and tau; amyloid burden not reduced; p-eIF2 alpha lower; the abstract calls the compound an integrated-stress-response inhibitor and does not name its molecular target, and only recognition memory is reported as improved among the behavioural tests run. The donepezil results are not reported in the abstract. Mouse, adult, one dose, one study; the authors call the effects limited.",
       "reading_depth": "abstract_only",
       "source": "J Alzheimers Dis 2026 abstract, PMID 42179084; NOT WWOX EVIDENCE",
       "target_id": "object-recognition memory, microglial activation, tau and amyloid burden"
@@ -49737,7 +49737,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "ff5de2aae25235ac8f0f00b8c59b436bf71072c4f586d5786d777a11e0198259",
+   "input_sha256": "bcfeb56b230e6c1a521e94e3f861222647e17dd16461393a7b167eb6724671cc",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -50784,7 +50784,7 @@
        "LDHA in the organoid is as consistent with immaturity as with WWOX loss.",
        "Human lactate in WWOX deficiency is reported normal or extremely low.",
        "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the network labelled WWOX-enriched in IT7 (four duplicated HIF1A edges, already in the external network; the comparison therefore tests nothing about WWOX knowledge in general, and no added value was measurable) showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data.",
-       "IT8 P3 (2026-10-29): there is no enzyme-level support for stiripentol as a way to test the LDH node - 7 percent inhibition at 2 millimolar (ChEMBL) and about 10 percent at 0.5 millimolar (independent report), no fitted LDH potency among the curated database entries read for it, a label that does not name LDH; one cell-level signal (mouse hepatocyte oxalate output at 10 micromolar, shared with glycolate oxidase) is not LDH engagement; the third report (Sada 2015) remains abstract-only and secondary."
+       "IT8 P3 (2026-10-29), corrected 2026-11-26: for stiripentol as a way to test the LDH node, the enzyme-level data are weak and no potency has been fitted - 7 percent inhibition of both human LDH5 and LDH1 at 2 millimolar (ChEMBL document CHEMBL4311969; the same document lists two 0.5 millimolar LDH rows with no value), 9.9 percent for the racemate at 0.5 millimolar in an independent report (Rico-Molina 2024) whose two enantiomers give 34 and 38 percent at the same concentration (the racemate lies below both, so the three figures are not mutually consistent; all three IC50 are printed as above 500 micromolar), about 40 percent at 0.5 millimolar attributed to Sada 2015 (second-hand), and an LDH assay on lysate of U87 glioblastoma cells that had been exposed to stiripentol, with LDH added per well (so not a direct enzyme-inhibition test), whose inhibition the authors call moderate, significant only at 250 and 500 micromolar, with no percentage given in the text (PMID 42035940); no fitted LDH potency among the 88 database rows read for it; a label that does not name LDH; the database cell-level signal (mouse hepatocyte oxalate output at 10 micromolar: four rows, two cell models at 24 and 48 hours, relative output 0.27 to 0.70, in an assay labelled GO/LDHA, so shared with glycolate oxidase) is not LDH engagement; the third report (Sada 2015) remains abstract-only and secondary."
       ],
       "for": [
        "Ldh RNAi improved climbing in the amyloid-plus-Wwox-reduction fly genotype (once).",
@@ -50797,7 +50797,7 @@
      "identity": "LDH-directed levers: stiripentol (approved for a paediatric developmental epilepsy; weak LDH inhibition in vitro), GSK2837808A and other research LDHA inhibitors, and the LDHA-directed oligonucleotide nedosiran (approved for primary hyperoxaluria, liver-directed). Per-compound table: compounds_and_sources.md section 2.2.",
      "indication_and_transfer": "WWOX-DEE only IF lactate or LDH activity is shown to be a driver in a WWOX-deficient human neural system. The one fly precedent is amyloid-conditional; human lactate readouts in WWOX deficiency are normal or low in the cited sources (DL-BIO-008, DL-BIO-009).",
      "mechanism": "Target: LDHA (HGNC:6535, P00338) and LDHB (HGNC:6541, P07195); direction: lower LDH activity or lactate production; context: amyloid-stressed fly head in the paper; UNKNOWN in WWOX-DEE. For stiripentol the LDH link is not the established basis of its antiseizure use.",
-     "next_measurement": "IT7 P6 2026-10-29: read LDHA and LDHB activity separately (LDHB was the discordant gene in the P47T transfer test); no computational ranking selects the compound arm. In the fly: lactate (enantiomer- or isotope-resolved) in the Ldh-RNAi double genotype, an Ldh-alone arm, and Wwox mRNA in the double line. In human neural cells: LDH activity and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic cells at matched maturity. Only then a compound arm. IT8 P3 2026-10-29, restated IT9 P4a 2026-10-30: stiripentol is not sufficiently supported as an LDH-engagement probe, because the readable enzyme data give 7 percent inhibition at 2 millimolar and about 10 percent at 0.5 millimolar (no fitted value: no enzyme-level support), the US label names no LDH mechanism, and the one cell-level signal found (four rows of a 2022 glycolate-oxidase and LDHA double-inhibitor series: relative oxalate output 0.27 to 0.70 at 10 micromolar in mouse hepatocytes) does not establish LDH engagement; all 88 curated rows for the racemate were read, 8 concern LDH (4 enzyme-level, 4 cell-level) and none is a fitted LDH potency; the 42 to 500 micromolar range quoted for it is a secondary figure. The arm is a nanomolar human-LDHA inhibitor taken from the curated database target entries: 205 qualify, 116 have no LDHB datum at all (unknown, not non-selective) and, of the 89 with a same-document LDHA and LDHB pair, 74 have a pair under 10 fold and only 2 are 30 fold or more on every pair, so selectivity over LDHB must be established per compound (list by id in qualification_it9_p4a_20261030/ldha_nanomolar_selectivity.tsv); stiripentol is kept as a complex I and GABA-A comparator so that its other pharmacology is separable from LDH. Readout design (added 2026-10-27 from the fly PARS2 reading): in every arm that perturbs complex I, read the integrated stress response (phospho-eIF2 alpha, ATF4 protein) and Ldh abundance next to Ldh ACTIVITY and lactate, because abundance, activity, metabolite level and flux are separate quantities and a complex I perturbation may raise Ldh abundance through the stress response. The designed comparison (question, model, controls, endpoint, result that would change interpretation) is in sada_ldh_precedent_p2a_20261026.md section 6; it is a proposal, nothing is authorised to run.",
+     "next_measurement": "IT7 P6 2026-10-29: read LDHA and LDHB activity separately (LDHB was the discordant gene in the P47T transfer test); no computational ranking selects the compound arm. In the fly: lactate (enantiomer- or isotope-resolved) in the Ldh-RNAi double genotype, an Ldh-alone arm, and Wwox mRNA in the double line. In human neural cells: LDH activity and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic cells at matched maturity. Only then a compound arm. IT8 P3 2026-10-29, restated IT9 P4a 2026-10-30, corrected 2026-11-26: stiripentol is not sufficiently supported as an LDH-engagement probe, because the enzyme-level data are weak and no potency has been fitted (7 percent inhibition at 2 millimolar; 9.9 percent for the racemate at 0.5 millimolar; the fuller list is in the evidence against), the US label names no LDH mechanism, and the cell-level readings found (four rows of a 2022 glycolate-oxidase and LDHA double-inhibitor series: relative oxalate output 0.27 to 0.70 at 10 micromolar in mouse hepatocytes; in the papers read, lactate production about halved at 500 micromolar and extracellular acidification and oxygen consumption lower at 25 and 50 micromolar in glioblastoma cells, and lower oxalate output in HepG2 cells at 5 to 100 micrograms per millilitre) do not separate LDH from other actions (complex I inhibition for the glioblastoma readings, Bouchez 2026; glycolate oxidase for the hepatocyte series), so they do not establish LDH engagement; the HepG2 report also gives lower urine oxalate in rats and patients, which is not direct LDH engagement either; all 88 curated rows for the racemate were read, 8 concern LDH (4 enzyme-level, 4 cell-level) and none is a fitted LDH potency; the 42 to 500 micromolar range quoted for it is a secondary figure. The arm is a nanomolar human-LDHA inhibitor taken from the curated database target entries: 205 qualify, 116 have no LDHB datum at all (unknown, not non-selective) and, of the 89 with a same-document, same-activity-type LDHA and LDHB pair, 74 have a pair under 10 fold and only 2 are 30 fold or more on every pair, so selectivity over LDHB must be established per compound (list by id in qualification_it9_p4a_20261030/ldha_nanomolar_selectivity.tsv); stiripentol is kept as a complex I and GABA-A comparator so that its other pharmacology is separable from LDH. Readout design (added 2026-10-27 from the fly PARS2 reading): in every arm that perturbs complex I, read the integrated stress response (phospho-eIF2 alpha, ATF4 protein) and Ldh abundance next to Ldh ACTIVITY and lactate, because abundance, activity, metabolite level and flux are separate quantities and a complex I perturbation may raise Ldh abundance through the stress response. The designed comparison (question, model, controls, endpoint, result that would change interpretation) is in sada_ldh_precedent_p2a_20261026.md section 6; it is a proposal, nothing is authorised to run.",
      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test: no source retrieved links an LDH inhibitor to WWOX deficiency; coverage is the six sources of compounds_and_sources.md and ten PubMed abstracts on 2026-10-26. Update 2026-10-26 (scientist-b, P2a): the 2015 report usually cited for stiripentol and LDH in epilepsy (PMID 25792327) is now identified, is paywalled with no lawful full text found, and is known here only through its abstract and three open-access secondary descriptions; it is a stiripentol-LDH precedent in epilepsy models, not a WWOX datum.",
      "paediatrics_and_interactions": "Stiripentol label: indicated for Dravet syndrome seizures in patients taking clobazam, from six months of age (openFDA label 2026-04-27); the same label means any use here would sit on top of clobazam co-therapy, an interaction this card does not assess. No paediatric suitability for WWOX-DEE is presumed.",
      "pathway_and_objective": "BENEFICIO_PRECOCE; Track A, Track B untested.",
@@ -51053,7 +51053,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "6057cccc1f15a51a4cf9e0ca75078f789a935d059b61bc0be7066f14f6869111",
+   "input_sha256": "13c43b92bebe89fd554407bfd641286683fe991d853548d7504e623ae464f95b",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",

@@ -1,0 +1,94 @@
+BLIND VERIFICATION REPORT: IT28, ADV-287 extension consumers (hypothesis level, class level, nothing here is medical advice)
+
+SUMMARY TABLE
+
+| Block | Verdict | Note |
+|---|---|---|
+| H02-26 | STANDS for the clause about PMID 19054414. The label clauses are UNSETTLED/OUTSIDE. One optional ADD on wording. | The label text was not available to me. |
+| H02-05 | STANDS | "Retrospective ten-site" is correct. "Controlled" was the wrong word. |
+| H02-03 | STANDS | All counts and the derived 29 of 95 (30.5 percent) check. |
+| H02-17 | STANDS for the fragment. One optional ADD on the surrounding sentence about the 143 exclusions. | The sentence about the 143 omits 218 further exclusions. |
+| H02-29 | STANDS | 3.3 fold from the paper's averages and Figure 5B. Text says 3.5 to 4 fold. 3 mice per genotype. |
+
+WHAT I OPENED
+- PubMed tool abstracts for PMID 19054414 (Wheless 2009, doi 10.1111/j.1528-1167.2008.01896.x) and PMID 20384718 (Dracopoulos 2010, doi 10.1111/j.1528-1167.2010.02564.x). Source: PubMed.
+- Full PMC XML of PMID 36601084 (Wan 2022), read through the Discussion. The Results, Tables 1 to 3, the Discussion and the limitations were all read in full. I did not view the figure images (Figure 1 flow chart, Figure 2, Figure 3). I did not need them.
+- The Repudi 2021 operator-supplied text file, the Results section and the Figure 4 and 5 legends. I also rendered PDF page 27 of the OUP browserprint and viewed it (Figure 5 plus the text above it).
+- Label search. The first searches, which covered all of `files`, were refused by the permission classifier. A narrower name search then ran (`find` at depth 4, name patterns vigabatrin, sabril and vigafyde, excluding the fulltext folder). It found no label JSON or extract.
+  - `label_extracts_it9_p4c_e` contains only one file, `EMA_Evrenzo_EPAR_product_information_2026-10-30.pdf`, which is not a vigabatrin label.
+  - The only name hits were `adv098_agent_sheets_raw_he_20261119/vigabatrin.json` (an agent sheet, not a label), the folder `deepening_downloads/vigabatrin_loop_20261124`, and a coordination note. A grep inside the agent sheet was refused, so I did not read it.
+  - Consequence: I had no held label text. Everything the packet says about label sections 5.3, 5.4 and 8.4 and the boxed warning is UNSETTLED for me.
+
+BLOCK H02-26
+New fragment: "the label names no study for the 22 and 4 percent figures (the cited 2026-06-15 version is not held; held sibling labels were searched on 2026-11-26), and the study they match (PMID 19054414, an identification inferred from the numbers) was read at abstract level only (22 against 4 percent, vigabatrin-naive comparator), not in full text."
+
+- "Held sibling labels were searched on 2026-11-26" and "the cited version is not held": OUTSIDE (repository clauses). My own search on that date also found no label here.
+- "The label names no study for the 22 and 4 percent figures": UNSETTLED. It is an absolute ("no") about a label text I could not read.
+  - From memory, the US label gives these figures inside a description of a retrospective epidemiologic study in infants with infantile spasms, without a literature citation. I cannot confirm that from a held source.
+  - "Names no study" could therefore be read as "describes no study", which may be wrong.
+  - Safer wording, if the label wording cannot be checked: "the label gives the 22 and 4 percent figures without a citation to a named publication". The checker holding the label should settle this.
+- "PMID 19054414 ... 22 against 4 percent, vigabatrin-naive comparator": STANDS. Abstract (Results): "Among infants with IS, the prevalence of prespecified MRI abnormalities was significantly higher among vigabatrin-treated versus vigabatrin-naive subjects (22% vs. 4%; p < 0.001)."
+  - Population: infants aged 24 months or younger with infantile spasms, from 332 MRIs in 205 infants at 10 US and Canadian sites.
+  - Design: retrospective review.
+  - The abstract gives no denominators for the 22 and 4 percent.
+  - "Inferred from the numbers" is an honest label for a match made on figures alone.
+- Sentence continuation, as far as it is given:
+  - "22 percent is the prevalence in the vigabatrin-treated infants of that study (non-WWOX, infantile spasms)": consistent with the abstract.
+  - Whether the label says "the specific pattern was not observed in older children and adults" is a label clause I could not check.
+  - The study abstract only says there was no statistically significant difference in incidence or prevalence of prespecified MRI abnormalities between exposed and naive children and adults with complex partial seizures. That is weaker than "not observed". It matters only if the card attributes the label sentence to the study.
+- Old fragment ("the cited study itself was not read, so the 22 and 4 percent figures are the label's statement of it"): the replacement is more precise and consistent with the abstract.
+
+BLOCK H02-05
+New fragment: "4 percent of vigabatrin-naive infants in a retrospective ten-site comparison".
+
+- "Retrospective": STANDS. Abstract Methods: "We carried out a retrospective review"; records and MRIs "from 205 infants ... treated at 10 sites in the United States and Canada".
+- "Ten-site": STANDS.
+- "4 percent of vigabatrin-naive infants": STANDS. Results: "22% vs. 4%" for vigabatrin-treated versus vigabatrin-naive infants with infantile spasms. The abstract gives no denominators.
+- The old wording "controlled study" was unsupported. The abstract describes a retrospective record and MRI review. The "Randomized Controlled Trials as Topic" tag is only a MeSH heading. The replacement is correct.
+- Not a MUST CHANGE or ADD: the abnormality definition differs from the other cohorts in the same sentence. It is a prespecified T2 or FLAIR hyperintensity, with or without diffusion restriction, not readily explained by another pathology, read by two blinded neuroradiologists. The sentence already says "unexposed comparators exist and differ".
+
+BLOCK H02-03
+New fragment: "had the finding and all 12 unexposed children were normal; 14 further children were imaged before, during and after exposure and 4 of them were abnormal (29 of 95 exposed, 30.5 percent, derived);"
+
+- Group sizes, from the abstract:
+  - 107 pediatric patients with infantile spasms.
+  - 95 treated and 12 not treated.
+  - 81 scanned during but not before treatment, of whom 25 (30.9%) were abnormal.
+  - 14 scanned before, during and after treatment, of whom four were abnormal during treatment.
+  - "Patients who had not received VGB treatment (n = 12) displayed normal imaging."
+- Arithmetic: 81 + 14 = 95, matching the treated total. 25 + 4 = 29. 29/95 = 30.53 percent, so 30.5 is right and "derived" is the right label.
+- "Children": the cohort is pediatric infantile-spasms patients. Younger infants (12 months or younger) and cryptogenic infantile spasms were more likely to develop abnormal signal, matching the sentence's tail.
+- Optional note, not required: the pooled 29 of 95 merges two imaging schedules (81 imaged during but not before treatment, 14 imaged before, during and after). Calling it "derived" is enough.
+
+BLOCK H02-17
+New fragment: "by aetiology 8 of 80 with tuberous sclerosis against 30 of 92 with other causes; within tuberous sclerosis 3 of 60 with rapamycin against 5 of 20 without, and no child with other causes received it."
+
+- 8 of 80 against 30 of 92: STANDS. Table 1 (VABAM row 8 vs 30; IST n = 80, ISO n = 92) and abstract (10% vs 32.6%, p < 0.001).
+- 3 of 60 with rapamycin against 5 of 20 without: STANDS. Results text ("3 in 60 ... (5%) ... compared with 5 in 20 ... (25%; p = 0.021)") and Table 2 (VABAM 3 vs 5, Fisher's exact p = 0.021).
+- "No child with other causes received it": STANDS. Table 1 concomitant rapamycin 60 in IST and 0 in ISO. Results: "There were no children in the ISO group who received concomitant rapamycin therapy." The Discussion confirms "all the children with concomitant rapamycin therapy were IST".
+- Unit: per child, in one single-centre retrospective cohort.
+- Already in the context, STANDS: 38 of 172 (22.1%).
+- Optional ADD on the surrounding clause "143 exposed children without an eligible examination were excluded".
+  - Results: 533 screened, 390 with MRI before VGB and during follow-up. 533 − 390 = 143, which are the children with no such MRI (the limitations paragraph says the same).
+  - A further 218 children who did have MRI were excluded: 18 with exposure under 30 days, 193 with exposure over 1 year at MRI review, and 7 without MRI before rapamycin initiation. 390 − 218 = 172.
+  - A reader seeing only the card could think the only exclusions were the 143.
+  - Minimal replacement: "143 exposed children without a qualifying MRI, and a further 218 imaged children (exposure under 30 days n = 18, over 1 year n = 193, no pre-rapamycin MRI n = 7), were excluded."
+  - I did not view Figure 1 (the flow chart); the numbers come from the Results text.
+- The rest of the sentence ("not attributable risk in WWOX and not a WWOX denominator") is appropriate. The paper itself flags the rapamycin finding as retrospective, confounded and unconfirmed: the rapamycin group had longer VGB exposure (279 vs 205 days, p = 0.004), and TSC patients may have baseline MRI abnormalities that obscure VABAM. The multivariate result for rapamycin is OR 0.152, 95% CI 0.028 to 0.715, p = 0.019. The card defers the rapamycin association to DR-H02-013, which is OUTSIDE my check.
+
+BLOCK H02-29
+New fragment: "at P17 (per electron-microscopy field, 3 mice per genotype; the paper's text says 3.5 to 4 fold)." in the sentence "the neuron-specific Wwox deletion has about 3.3 times fewer myelinated callosal axons".
+
+- Neuron-specific: STANDS. S-KO is Wwox flox/flox with Synapsin I-Cre. Controls are S-Control (Wwox +/+; Synapsin-Cre+).
+- Age: P17 is stated in the Figure 5 legend and the EM paragraph.
+- Figure 5B top panel (corpus callosum, myelinated axons per field of view, S-Ctrl vs S-KO), viewed on PDF page 27:
+  - The control group is clustered around about 180 and the S-KO group around about 50 to 55, with about 14 dots per group.
+  - The text confirms: myelinated axons per field, S-Control average 180 ± 40, S-KO 55 ± 35.
+  - 180/55 = 3.27, so "about 3.3 times fewer" is a correct ratio of the two group averages.
+  - Significance is marked *** in the panel; the legend gives P < 0.001, Student's t-test, error bars SEM.
+- "The paper's text says 3.5 to 4 fold": STANDS. The paper says "substantial reduction (3.5–4-fold) in the number of myelinated axons in the corpus callosum". The text figure and the averaged-fields figure do not agree exactly, and the fragment correctly exposes both.
+- "3 mice per genotype": STANDS. The Figure 5 legend gives S-KO (n = 3) and S-Control (n = 3). The dots in panel B are fields (about 14 per group), not mice. The legend's n = 2500 vs 1200 refers to axons counted, not animals.
+- "Per electron-microscopy field": STANDS. The unit is the electron-microscope field of view.
+- Optional note, not required: the 3.3 is a ratio of group means of per-field counts, so it is derived rather than read directly from the paper. "About" already covers this. There is no per-mouse breakdown in the figure, so statistical independence is by field, with 3 mice behind each genotype.
+
+Clauses OUTSIDE my check: repository search statements in H02-26 and the DR-H02-013 pointer in H02-17. UNSETTLED: all label content (sections 5.3, 5.4, 8.4, boxed warning), because no label text was available to me. Nothing was written into the repository.

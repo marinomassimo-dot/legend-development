@@ -1,0 +1,119 @@
+BLIND VERIFICATION PACKET A (hypothesis level; public, class level; nothing here is medical advice)
+
+Each block holds one sentence set that a repository record is about to carry, the record's own context fields, and the held source files.
+Check the sentence set against the sources only. Do not open the repository's cards, result files, reports or other notes: read only the files listed in the block
+(and, for a figure, an image file of the same article under the same files/ tree). No network.
+For each block give one verdict:
+  MUST CHANGE: a word, number, attribution, comparator, unit, species, cell, group size, direction or generalisation is wrong, unsupported or says more than the source;
+  ADD: supported, but an omission would mislead a reader who sees only this sentence set;
+  STANDS: supported as written.
+Grade every clause, not only the main fact. Absolute words (only, no, none, every, all) need the whole table or text read; if you cannot, say UNSETTLED for that word.
+For a negative, say what you searched. For a number read from a figure, say figure, panel and bar, and view the image. A clause about another assertion id (for example DR-A02-004
+or DR-A02-008) or about the repository's own plan is outside your check: say OUTSIDE. For MUST CHANGE and ADD give the minimal replacement wording; a card may not carry
+a dose written with a mass-per-body-weight or concentration symbol, so describe doses in words (millimolar and micromolar written out are allowed).
+Report: a summary table (id, verdict), then per block the findings with locators. Say which files and figures you opened and which you could not.
+
+=== BLOCK N02
+record: card on the NMDA-receptor intervention class, field 'functional evidence available' (WWOX systems)
+SENTENCE SET: d-APV abolishes bursting in the knockout slice, reversibly, and suppresses a delayed evoked response at higher stimulus strengths; excitatory current amplitude differs by about six percent at -70 mV (AMPAR-weighted); inhibitory current amplitude about halved and frequency reduced; depolarised resting potential. No pharmacologically isolated NMDAR or AMPAR current and no receptor subunit protein or surface level has been found measured in any WWOX system (search of held sources, 2026-11-26); Wwox-knockout mouse hippocampus and hippocampal neural stem cells show lower Grin2c transcript (Hussain 2019, PMID 30290271), and neuron-specific (Synapsin-Cre) knockout neocortical layer II/III pyramidal neurons show larger miniature excitatory currents at -70 mV, not pharmacologically isolated, with unchanged decay (Breton 2021, PMID 34634460). No subunit-selective, pore-blocking, glycine-site or AMPAR drug was found applied to any Wwox system.
+held sources: /home/desktop/legend-development/files/fulltext/PMID30290271_Hussain2019_PMC_r2.xml ; /home/desktop/legend-development/files/fulltext/PMID34634460_Breton2021_PMC.xml
+
+=== BLOCK DR-A01-007
+source: Guiberson 2018 (PMID 30266908), Supplementary Figure 12a, mutant panel read in IT5 P8; NOT WWOX EVIDENCE
+target_id: STXBP1:Munc18-1 protein, variant G544D (soluble cytosolic client, aggregation-prone)
+endpoint: total variant protein, class-I HDAC-inhibitor comparator (butyrate) at the same applied level
+direction: NO_CHANGE
+reading_depth: partial_fulltext_read
+context: {"disease_id": "STXBP1/Munc18-1 variant (not WWOX); soluble cytosolic client", "genotype": "G544D", "species": "human protein expressed in HEK293T (cDNA under a CMV-promoter plasmid)", "cell_type": "HEK293T", "developmental_stage": "not applicable"}
+SENTENCE SET: Mutant total protein about equal to untreated control, no significance mark (three experiments; bar reading), at the same applied level as the phenylbutyrate class; the text lists only the phenylbutyrate class and two osmolytes as stabilising. On wild type the same comparator gave a scattered, unmarked value near 1.95. The comparator was more potent than the phenylbutyrate class on class-I HDAC enzymes in one ChEMBL document but weaker on HDAC1 in a third that also lists the sodium salt, so that premise is document-dependent. Its HDAC6 potency is only known as above 2 millimolar, below the 5 millimolar applied, so HDAC6 inhibition at that level is neither shown nor excluded; no HDAC engagement was measured in this paper, and no pan-HDAC or HDAC6-selective arm exists in it. A measured null in a cell that is not comparable.
+held sources: /home/desktop/legend-development/files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml ; /home/desktop/legend-development/files/supplement/PMID30266908/41467_2018_6507_MOESM1_ESM.pdf (Supplementary Fig 12, page 19) ; disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/hdac_enzyme_potency_chembl_20261029.tsv (repository ChEMBL table) ; disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/munc18_cytosolic_precedent_panel_readings_20261029.tsv (earlier bar readings)
+
+=== BLOCK DR-B01-002
+source: independent Fanconi-anaemia study (known-roads reading 2, 40544182); NOT WWOX EVIDENCE
+target_id: survival, chromosomal aberrations and micronuclei (phenotypic rescue)
+endpoint: phenotypic rescue head-to-head with a comparator read-through agent
+direction: NO_CHANGE
+reading_depth: partial_fulltext_read
+context: {"disease_id": "Fanconi anaemia (not WWOX)", "genotype": "patient nonsense alleles in FANCA and FANCF", "species": "human", "cell_type": "lymphoblastoid and dermal fibroblast lines", "developmental_stage": "culture"}
+SENTENCE SET: MEASURED NO PHENOTYPIC RESCUE with amlexanox: no improvement of mitomycin C survival, of diepoxybutane chromosome aberrations (FANCA line) or of FANCC micronuclei, whereas the comparator ataluren improved all three; FANCA mRNA was not rescued. Full-length protein was induced in one arm (FANCA, from under 5 to about 9 percent of control; ataluren about 11 percent) and not in FANCF; the authors treat that induction as read-through. Amlexanox also lowered p53 (about 40 percent) and phospho-STAT2 (about 50 percent), and it is these two falls that the authors attribute, as a hypothesis with no direct TBK1 readout, to TBK1/IKKe or NF-kB inhibition rather than read-through. The endpoint encoded here is the phenotypic rescue only, so the protein induction is stated in this note and not in the direction code. Encoded NO_CHANGE for the phenotypic endpoint.
+held sources: /home/desktop/legend-development/files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml
+
+=== BLOCK DR-W2-004
+source: Alekseeva 2026, Biomedicines (PMID 42652189; NOT WWOX EVIDENCE; adult rat, acute provoked seizures), as recorded in the repository
+target_id: NMDAR pore blocker memantine
+endpoint: progression of oxygen-induced seizure stages
+direction: INCREASE
+reading_depth: complete_fulltext_read
+context: {"disease_id": "hyperbaric-oxygen seizure model in adult rats (not WWOX, not a genetic epilepsy)", "genotype": "wild-type adult male rats", "species": "rat", "cell_type": "whole animal", "developmental_stage": "adult"}
+SENTENCE SET: Memantine at the two higher of its three doses shortened the latency to all four seizure stages (stage 4 about 26 and 25 minutes against about 37 in controls, bar readings, eight per group by the analysis-of-variance degrees of freedom); the lowest dose shortened stages 1 and 2 only, although the text says every dose shortened each stage. Perampanel delayed the onset of stages 3 and 4 but did not prevent seizures. No in-study measure of receptor engagement. The reading carries unresolved internal inconsistencies noted in that record. A safety-direction datum for a non-genetic model, not WWOX.
+held sources: /home/desktop/legend-development/files/fulltext/PMID42652189_Alekseeva2026_PMC.xml (figures: look under /home/desktop/legend-development/files/figures and /home/desktop/legend-development/files/fulltext for this PMID)
+
+=== BLOCK DA-L01-005
+source: Cheng 2023 (PMID 37897534), PMC10613160
+target_id: ROS and redox-gene transcripts in Wwox-null MEFs
+endpoint: DHE flow cytometry; microarray heatmap (Supp Fig 8)
+direction: INCREASE
+reading_depth: partial_fulltext_read
+context: {"disease_id": "Wwox-null mouse embryonic fibroblasts (non-neural)", "genotype": "Wwox -/- versus +/-", "species": "mouse", "cell_type": "MEF", "developmental_stage": "early and late passage"}
+SENTENCE SET: ROS higher in late-passage Wwox-null fibroblasts than in wild-type and heterozygous ones (one representative DHE histogram per genotype, no quantification or test), no difference at early passage; at passage one a microarray (one column per genotype, heterozygous against null, not wild type; no n or test stated) shows redox-homeostasis transcripts, Nfe2l2 and Nqo1 among them, higher in nulls. NAC given continuously from cell isolation (prevention, not reversal) prevents the senescence escape; no ROS measurement under NAC was found. Non-neural; the authors leave an initial antioxidant response as an open question.
+held sources: /home/desktop/legend-development/files/fulltext/PMID37897534_Cheng2023_PMC.xml ; /home/desktop/legend-development/files/fulltext/PMID37897534_assets/18_2023_4950_MOESM1_ESM.pdf (Supp Fig 8, page 15) ; /home/desktop/legend-development/files/figures/PMID37897534/18_2023_4950_Fig6_HTML.jpg
+
+=== BLOCK DR-L01-003
+source: Sheeni 2026 (PMC13701765, PMID 42939870); NOT WWOX EVIDENCE
+target_id: CDDO-EA (analogue of omaveloxolone) in acquired seizure models
+endpoint: seizure severity, latency, IL-6/IL-1b/TNF mRNA, MDA, SOD, CAT; spontaneous seizures after kainate SE
+direction: DECREASE
+reading_depth: partial_fulltext_read
+context: {"disease_id": "rat PTZ and kainic-acid post-status-epilepticus (not WWOX)", "genotype": "wild type", "species": "rat", "cell_type": "whole brain tissue, hippocampal histology", "developmental_stage": "adult male"}
+SENTENCE SET: Different molecule. 'acute Nrf2 target engagement was not measured'; more broadly the authors state that Keap1 modification, Nrf2 nuclear translocation, ARE activation and Nrf2 target proteins were not measured at all, so superoxide dismutase and catalase activity after PTZ is the only indirect readout; brain drug level not measured; one dose. Favourable in part: lower PTZ maximum severity and longer latency to the late stages (incidence difference not significant), and after status epilepticus lower spontaneous seizure burden and higher hippocampal neuronal density; cytokine mRNA differences not significant at 10 weeks. MIXED-to-favourable, adult acquired epilepsy. Not transferable to omaveloxolone.
+held sources: /home/desktop/legend-development/files/fulltext/adv282_l01_003_sci_20261126/PMC13701765.xml
+
+=== BLOCK DR-A02-010
+source: Gupta 2023, PMID 37319242 (Results 'Low dose/long-duration studies'); NOT WWOX EVIDENCE
+target_id: CBS p.S466L
+endpoint: serum total homocysteine and liver CBS activity under one week of low-rate carfilzomib   <- NEW wording, check it too
+direction: NO_CHANGE
+reading_depth: partial_fulltext_read
+context: {"disease_id": "CBS deficiency, homocystinuria (not WWOX)", "genotype": "human CBS S466L transgene on a Cbs-null mouse background", "species": "mouse", "cell_type": "liver", "developmental_stage": "adult, one week"}
+SENTENCE SET: No significant change in homocysteine or liver activity in the Results (the Discussion calls the activity change slight); a very slight rise in protein in some animals and no Hsp70 induction. The one-week pump schedule delivered about the same total amount as the 24-hour arm that rescued the regulatory-domain allele (DR-A02-004), at about one seventh of the rate; that 24-hour arm also showed no Hsp70 induction, so its absence here does not show absent engagement, and proteasome activity was not measured at this schedule. Tolerability of this arm is asserted by the authors, with no weight, blood-count or clinical data shown. The allele rescued at the higher rate was therefore not rescued at the lower rate of delivery (PMID 37319242, Results 'Low dose/long-duration studies', last paragraph).
+held sources: /home/desktop/legend-development/files/fulltext/PMID37319242_Gupta2023_PMC10270616_epmc_2026-10-29.xml
+
+=== BLOCK DR-A02-006
+source: Gupta 2023, PMID 37319242 (Results, sentence on Tg-T191M); NOT WWOX EVIDENCE
+target_id: CBS p.T191M (catalytic-domain missense)
+endpoint: liver CBS activity after bortezomib or carfilzomib
+direction: NO_CHANGE
+reading_depth: partial_fulltext_read
+context: {"disease_id": "CBS deficiency, homocystinuria (not WWOX)", "genotype": "human CBS T191M transgene on a Cbs-null mouse background", "species": "mouse", "cell_type": "liver", "developmental_stage": "adult, short treatment"}
+SENTENCE SET: Neither inhibitor restored significant activity ('a very small amount' with bortezomib), although proteasome inhibition was confirmed in this allele and CBS protein rose. The same allele gained activity with bortezomib in a human kidney-line model (DR-A02-008; that gain is measured from an essentially zero baseline, with signs of cell damage), so the allele does not fix the outcome: expression context and readout differ. A measured null in this system. The HEK paper's own summary of the mouse work says bortezomib partially rescued I278T and T191M, which is more generous than the mouse paper's wording; the mouse paper's wording is used here.
+held sources: /home/desktop/legend-development/files/fulltext/PMID37319242_Gupta2023_PMC10270616_epmc_2026-10-29.xml ; /home/desktop/legend-development/files/fulltext/PMID39041895_Mijatovic2024_PMC11264351_epmc_2026-10-29.xml
+
+=== BLOCK DR-A02-007
+source: Gupta 2023, PMID 37319242 (Results 'Low dose/long-duration studies'); NOT WWOX EVIDENCE
+target_id: CBS p.I278T
+endpoint: liver CBS activity under long, low-exposure bortezomib, alone or with a heat-shock co-inducer
+direction: NO_CHANGE
+reading_depth: partial_fulltext_read
+context: {"disease_id": "CBS deficiency, homocystinuria (not WWOX)", "genotype": "human CBS I278T transgene on a Cbs-null mouse background", "species": "mouse", "cell_type": "liver", "developmental_stage": "adult, about a month"}
+SENTENCE SET: With better-tolerated but not toxicity-free exposure the activity gain was not significant (the authors cite limited assay sensitivity at very low activity); a white-cell and lymphocyte reduction was still present and one animal was moribund. Homocysteine fell by about half (mean 345 to 179 micromolar, significant linear trend, compared with the starting value only, with no vehicle-injection arm; the authors allow handling as an explanation) yet stayed far above normal, with no significant activity gain; one of eight treated animals had the largest response and was also the one with the greatest weight loss and lowest white-cell counts. Adding the heat-shock co-inducer bimoclomol changed neither homocysteine, activity nor heat-shock induction. The authors conclude that proteasome inhibitors are probably not feasible as monotherapy at non-toxic exposure.
+held sources: /home/desktop/legend-development/files/fulltext/PMID37319242_Gupta2023_PMC10270616_epmc_2026-10-29.xml
+
+=== BLOCK DR-H02-008
+source: CPP-115 (a vigabatrin analogue), rat, PMID 24321005, abstract; NOT WWOX EVIDENCE
+target_id: epileptic_spasms
+endpoint: spasm count in the multiple-hit rat model of infantile spasms
+direction: DECREASE
+reading_depth: abstract_only
+context: {"disease_id": "rat multiple-hit model of infantile spasms (NOT WWOX EVIDENCE)", "genotype": "wild-type rat pups, model induced by prenatal and postnatal insults", "species": "rat", "cell_type": "whole animal, video-EEG", "developmental_stage": "dosing from postnatal day 4"}
+SENTENCE SET: CPP-115 only; vigabatrin itself was not tested in this paper. The reduction of spasms was only transient and the highest dose was lethal. The abstract states that spasm cessation was not accelerated and that neurodevelopmental behaviour and visuospatial learning were not altered; brain histology is not mentioned in the abstract. The held full-text page scores hippocampal sclerosis, equal across groups, and reports no myelin or white-matter histology.
+held sources: /home/desktop/legend-development/files/fulltext/PMID24321005_ADV272_PMC4102583_pmcpage_20261125.html
+
+=== BLOCK DA-K01-007
+source: GSE158681 and GSE158682 (P17 Wwox conditional and germline deletion brain; inputs identical to the IT6 P4 analysis by sha256), computed anew in IT10 P2.1; NOT the organoid
+target_id: HIF-axis and glycolysis transcripts (Hif1a, Epas1, Hk2, Slc2a1, Ldha, Pgk1, Ndrg1, P4ha1), mouse brain at P17
+endpoint: log2 ratio of TPM, Wwox-deleted over control, four contrasts
+direction: DECREASE
+reading_depth: queried_not_full_read
+context: {"disease_id": "Wwox-deleted mouse brain (neuron-targeted, progenitor-targeted and germline deletion; hippocampus and cortex)", "genotype": "Wwox deletion versus control, 2 to 3 knockout versus 2 to 4 control animals", "species": "mouse", "cell_type": "bulk brain tissue", "developmental_stage": "P17"}
+SENTENCE SET: A COUNTER-OBSERVATION to the organoid rows: no consistent elevation of HIF-axis or glycolysis transcripts across four contrasts; Hif1a within -0.2 to +0.06 log2, Hk2 flat (-0.01 to +0.35), Epas1 lower (-0.21 to -0.58, animal-separated in 3 of 4), Slc2a1, Ldha and Pgk1 lower, Ndrg1 and P4ha1 lower in all four, Gfap higher. Two to four animals per arm; Wwox itself falls about 7- to 16-fold in the three hippocampal contrasts and only about 3-fold, with overlapping values, in cortex. Caveats: bulk tissue and TPM; the animals come from lines with severe epilepsy and death at 3 to 4 weeks; background differences between control groups; no protein; gliosis and hypomyelination change composition. It does not side with the organoid: a species or in-vivo-versus-organoid disagreement is the largest unresolved fact of this axis. Exploratory, post hoc (IT10 P2.1 disclosure).
+held sources: /home/desktop/legend-development/files/geo/GSE158681/ and /home/desktop/legend-development/files/geo/GSE158682/ (TPM tables) ; /home/desktop/legend-development/files/reference_ensembl_r92/Mus_musculus.GRCm38.cdna.all.fa.gz (transcript to symbol) ; disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv282_null_note_control_audit_sci_20261125/recompute_k01_007_adv282.py (a recompute script: read it before use, you may write your own)

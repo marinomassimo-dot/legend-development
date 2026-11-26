@@ -1,0 +1,117 @@
+Blind check of V1 to V9 (hypothesis level; not medical advice)
+
+**Totals**
+- MUST CHANGE: V1, V4, V6.
+- ADD: V2, V3, V5, V8.
+- SUPPORTED: V7, V9.
+- Statements about what the laboratory or repository holds, did, measures or dated ("held", "noted/read/recomputed 2026-11-26", "the laboratory measures first", "the record already says") were skipped.
+
+**How the figures were read**
+I used ImageMagick crops and enlargements, plus pixel scans with `python3 -I`, all inside `/home/desktop/.claude/jobs/6f4e0008/tmp/blind289`.
+
+- **S3C (pixel scan, original image).**
+  - Y ticks: 2 at row 410, 1.5 at 470.5, 1 at 530.5, 0.5 at 591, giving 120.45 px per unit. The drawn x-axis (row 640) is about 0.09, not 0.
+  - Read error is about ±0.02.
+  - Baseline / d-APV / washout at 10 uA: 0.49 / 0.24 / 0.84.
+  - At 40 uA: 0.91 / 0.41 / 1.36.
+  - At 50 uA: 0.91 / 0.41 / 1.22.
+  - At 100 uA: 1.00 / 0.405 / 1.30.
+  - d-APV as a ratio to same-strength baseline (10, 40, 50, 100 uA): 0.49, 0.46, 0.45, 0.41.
+  - Washout as a ratio to same-strength baseline: 1.72, 1.50, 1.35, 1.30.
+- **Fig. 3D (3x crop).**
+  - d2: ticks 1.5 and 0 at zoomed y 298 and 582, error about ±0.02. CBX 0.57, CBX washout 0.64, BB-FCF 0.80 (whiskers about 0.65 to 1.33).
+  - d1: CBX about 0.1 of baseline; BB-FCF about 2.5.
+- **S4 (3x crop).** a1 is 28.5 px/Hz and a2 is 27.1 px/Hz, error about ±0.3 Hz.
+- **Replication.** The unit is the animal. The S3C, Fig. 3D and S4 statistics are on slices, bursts or cells (S3C is 3 animals).
+
+## V1: MUST CHANGE
+**Words:** "'At least one half' is therefore at the ceiling d-APV reached in that figure, not below it."
+
+**Evidence:** at 100 uA, d-APV leaves 0.405, so about 0.60 of the measured amplitude is blocked. One half is below that, and further below the 0.7 to 0.8 floor-corrected figure the sentence itself gives. At other strengths the block is 0.51 (10 uA), 0.54 (40) and 0.55 (50): near one half, but still above it.
+
+**Smallest correction:** "'At least one half' is therefore close to, but below, the block d-APV reached in that figure at 100 uA (about 0.6 of the measured amplitude; about 0.7 to 0.8 above an additive floor)."
+
+**Rest of the sentence:**
+- Correct: about 0.4 at 100 uA, 6 slices from 3 animals, 50 uM as the only stated d-APV concentration, and 5 burst slices (Fig. 3 legend).
+- The 0.7 to 0.8 holds only for a floor of about 0.15 to 0.25 of the 100 uA baseline (0.15 gives 0.70, 0.25 gives 0.79; a floor of 0.13 gives 0.68). The floor value should be stated.
+- "In the d-APV used for the burst experiment" is qualified by the parenthesis. Methods 5.4 gives 50 uM as the general dilution.
+- The S3C caption does not name the genotype. Knockout is inferred from panel A, the main text and the matching n.
+
+## V2: ADD
+- About 0.4 of baseline and about 0.6 blocked are correct at 100 uA only. Add "at 100 uA"; the ratio is 0.45 to 0.49 at 10 to 50 uA.
+- "At the paper's d-APV concentration": S3C does not restate it. Add "(50 uM; not restated for S3C)".
+- Slice identity with the burst slices is indeed not shown.
+- UNSETTLED from these files: the definition of F*, and "d-APV is competitive and surmountable" (the paper does not say it).
+
+## V3: ADD
+**Evidence:** the plotted washout values at 40, 50 and 100 uA are 1.36, 1.22 and 1.30, all normalised to the 100 uA baseline. Against same-strength baseline they are 1.50, 1.35 and 1.30. At 10 uA the ratio is about 1.7 (not significant, p = 0.2524). The lower bound "1.2" is the 50 uA value against the 100 uA baseline, not a same-strength ratio. The direction of the claim is unaffected.
+
+**Suggested wording:** "the delayed response after washout read about 1.3 to 1.5 times same-strength baseline at 40 to 100 uA (S3C, 6 slices, 3 animals, no time-matched control)."
+
+"No time-matched control" is correct: none is shown or described. "The one held case" was not judged.
+
+## V4: MUST CHANGE (two points)
+**(a) Words:** "by the paper's median figure in Supplementary Table S1 (0.66 to 0.54 s; 13 bursts, 6 slices, 3 animals)".
+- Only 0.54 s comes from those 13 bursts.
+- 0.66 s is the pooled baseline column: 119 bursts, 18 slices, 9 animals.
+- So the 18% is not a before/after change in the CBX slices.
+- **Correction:** "(0.54 s under CBX; 13 bursts, 6 slices, 3 animals, against a pooled baseline of 0.66 s; 119 bursts, 18 slices, 9 animals)".
+
+**(b) Words:** "Brilliant blue FCF did not reproduce it".
+- In Table S1 the BB-FCF duration median is 0.53 s, as low as or lower than CBX's 0.54 s, against the same 0.66 s. On the statistic the sentence uses for duration, BB-FCF does show the drop (about 20%).
+- It does not reproduce the frequency fall: S1 gives 0.78 against 0.84 per min, and the Fig. 3D bar is about 2.5.
+- The Fig. 3D BB-FCF duration bar is about 0.80, with a wide whisker.
+- The main text's "not recapitulated" is the authors' claim.
+- **Correction:** "Brilliant blue FCF did not reproduce the frequency fall; for duration the paper reports no recapitulation, but its Table S1 median (0.53 s) is as low as CBX's."
+
+**Checked and correct:**
+- 87% and p = 0.008 (the bar agrees).
+- 36 bursts, 4 slices, 3 animals.
+- (0.66 - 0.54)/0.66 = 18%.
+- Bar about 0.57, so about 43%.
+- No return after washout (main text; washout bars about 0.2 for frequency and 0.64 for duration). "It" would be clearer as "frequency and duration".
+- BB-FCF counts of 73/6/3 and 25/6/3.
+- The paper does not reconcile the two sources.
+
+**UNSETTLED:** "differ in ... statistic". Neither the Fig. 3 legend nor Methods says what the bars are (the whiskers are asymmetric). "Differ in count and in how the value is computed (the bar statistic is not stated)" is safe.
+
+## V5: ADD
+**Correct:**
+- a1 asterisks belong to 80, 100, 120 and 140 pA (each drawn slightly left of its point). The caption gives four p values.
+- At 100 pA: knockout 13.97, wild type 5.97, heterozygote 12.4 Hz.
+- Table 1: 40 cells/15 animals against 13/5.
+- a2 caption: p > 0.05 for all combinations.
+- a2 knockout minus wild type: 16.0 - 12.0 at 60 pA and 20.1 - 16.0 at 80 pA, so about 4 Hz. It is about 2 Hz at 20 and 40 pA and 0 at 100 pA; wild type stops at 100 pA.
+- The quoted slope, "Since these data suggest..." and Abstract/Discussion wording all match the text. "Internally mixed" is fair; Discussion 3.6 also says action potentials are "reduced".
+
+**Suggested changes:**
+- "What a2 plots is not stated" is too broad, since the caption states the quantity (frequency, with zero = 20 pA below rheobase). Write "which summary statistic and error bar a2 plots is not stated". The "mean +/- standard error" line sits after a1 only, and the a2 points all fall on even integers.
+- Optionally add that the a1 tests treat cells, not animals, as n.
+
+## V6: MUST CHANGE
+**Words:** "gives CBX duration medians 0.66 to 0.54 s (18 percent), a different statistic from the Fig. 3D bar."
+
+**Evidence:** 0.66 s is not a CBX median; it is the pooled baseline of 119 bursts, 18 slices and 9 animals. BB-FCF reads 0.53 s in the same row. The Fig. 3D statistic is not stated.
+
+**Smallest correction:** "gives a duration median of 0.54 s under CBX (13 bursts, 6 slices, 3 animals) against a pooled baseline of 0.66 s (119 bursts, 18 slices, 9 animals), 18 percent lower (BB-FCF 0.53 s); this is a raw median, while the Fig. 3D bar is normalised and its statistic is not stated."
+
+## V7: SUPPORTED
+S3C d-APV at 100 uA reads 0.405 of baseline. The figure has 6 slices from 3 animals.
+
+## V8: ADD (the missing item matters if the note is about which band S1G is)
+**Correct:**
+- S1G rho for animals 1 to 9, read from 3x-crop bar heights (about ±0.03): 0.58, 0.18, -0.93, 0.35, 0.15, 0.16, 0.51, 0.79, 0.55. That is 8 positive and 1 negative.
+- p values: about 0.01, 0.26, 0.02, 0.36, 0.59, 0.68, 0.66, 0.12, 0.15. Only animals 1 and 3 are below 0.05.
+- The quoted caption words are exact, and the 8/9 count works (7 non-significant plus the negative animal 3).
+
+**Missing:** "S1G names no frequency band" is true of the panel and its caption only. The body text assigns it to the delta range: "delta range (Supplementary Fig. S1F, G)" and "For the delta range, 8/9 subjects showed significant coupling (Supplementary Fig. S1G)". Add "the panel and caption name no band; the body text assigns it to the delta range". Used to say the band is unknown, the sentence would be MUST CHANGE.
+
+## V9: SUPPORTED
+- The S1F caption gives rho = -0.1201, while the drawn line rises (pixel rows 688.5 at x 1080 to 642.5 at x 1360; rows decrease upward).
+- Two-sided Pearson t test, r = -0.1201, n = 41: p = 0.45449. p = 0.5674 would need |r| of about 0.092.
+- r = 0.1283, n = 102: p = 0.19875, which matches the printed 0.1988.
+- Extra check: hand-read coordinates for 37 visible markers (some of the 41 overlap) give r of about +0.16. This is approximate, but it agrees in sign with the line.
+
+**Scope note**
+I judged only against the packet files and used no network or PubMed. One exception on file access: the harness saved an oversized printout of `main_text.txt` into its own tool-results directory, and I read it from there; it held only that text and my image-size listing. The session's preloaded project instructions and memory index were not used for any verdict. I changed nothing outside my folder, where I left crop images and small scripts.
+

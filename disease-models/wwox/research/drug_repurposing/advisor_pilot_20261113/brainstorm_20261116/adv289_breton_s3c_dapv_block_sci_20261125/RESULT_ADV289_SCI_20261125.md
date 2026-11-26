@@ -63,3 +63,7 @@ Table S1 has no d-APV column and its N's for CBX and BB-FCF (13/6/3 and 25/6/3) 
 * DECISION: the floor-adjusted fraction was labelled EXPLORATORY and left out of the headline; alternative rejected: reporting 0.8 as the block; consulted: the blind reader reached the same list of limits and the same 0.80 as a conditional case.
 * DECISION: no consumer file was edited by me; IT applies sentences in its own window (checkpoint AP), so the proposals go to ADV and IT as text.
 * Wording check of my own sentences: "the one", "only", "every", "no" and "first" were checked: "one stated d-APV concentration" (full text and supplement read by two readers); "every pair differs by less than the sum of errors" (four pairs per quantity, table above); "a deep arm exists" (three files quoted).
+
+## CORRECTION 2026-11-26 (SCI successor; own file; found by IT's blind check of this result's sentences, second check)
+
+"At the ceiling" is wrong, here in item 3 of the summary and in the section 7 sentence ("'At least one half' is therefore at the ceiling d-APV reached in that figure, not below it"). d-APV blocked about 0.6 of the measured amplitude at 100 uA (this file's own number), which is above one half: the lower bound "at least one half" lies below the block that d-APV reached in that figure, not at its ceiling. Read both passages with "is below the block d-APV reached in that figure (about 0.6)" in place of "is at the ceiling d-APV reached". Not edited above (history kept); IT applies its own wording to brief 13.11, the slice package and the NMDAR README.

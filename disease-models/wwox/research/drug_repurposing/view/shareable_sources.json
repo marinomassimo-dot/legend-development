@@ -327,8 +327,8 @@
         "replace": "the catalogue status statement is withheld (dato di una fonte non inclusa in questa versione);"
       },
       {
-        "find": "on class-I HDAC enzymes in one ChEMBL document but weaker on HDAC1 in a third that also lists the sodium salt",
-        "replace": "on class-I HDAC enzymes in one source document but weaker in another (dato di una fonte non inclusa in questa versione)"
+        "find": "The comparator (butyric acid in ChEMBL) was more potent than the phenylbutyrate class on HDAC3 and HDAC8 in one ChEMBL document; on HDAC1 and HDAC2 the held table gives butyric acid two values (16 and 300 micromolar for HDAC1; 12 and 400 micromolar for HDAC2) that bracket the phenylbutyrate values (64 micromolar for the acid, 162 micromolar for the sodium salt), and which document carries which value is not resolvable from the held aggregate rows, so that premise is document-dependent. In the held ChEMBL table its HDAC6 value is only a lower bound, above 2 millimolar, a bound that lies below the 5 millimolar applied, so HDAC6 inhibition at that level is neither shown nor excluded",
+        "replace": "The comparator was more potent than the phenylbutyrate class on class-I HDAC enzymes in one source document but weaker in another (dato di una fonte non inclusa in questa versione), so that premise is document-dependent. HDAC6 inhibition at the applied level is neither shown nor excluded"
       }
     ],
     "lead_fields": [

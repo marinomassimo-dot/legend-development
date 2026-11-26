@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "5c102322b3a101a5aa23be4bfdb4ca342d78b80d8e23aba2a960811424250b7c",
+  "input_sha256": "81ba8c4683a26c2c425280a7eb8d032d7a44e88334f87fe463a7a4196de23178",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -122,7 +122,7 @@
           "cell_type": "lymphoblastoid and dermal fibroblast lines",
           "developmental_stage": "culture"
         },
-        "measured_result_note": "MEASURED NO PHENOTYPIC RESCUE (survival, aberrations, micronuclei) and NMD not relieved, while full-length protein was induced in one arm (FANCA, about 9 percent of control) and not in the other; the endpoint encoded here is the phenotypic rescue only, so the protein induction is stated in this note and not in the direction code; the effect that was seen is attributed by the authors to TBK1/IKKe inhibition, not read-through. Encoded NO_CHANGE for the phenotypic endpoint.",
+        "measured_result_note": "MEASURED NO PHENOTYPIC RESCUE with amlexanox: no improvement of mitomycin C survival (FANCA and FANCF lines), of diepoxybutane chromosome aberrations (FANCA line only) or of micronuclei (FANCC primary fibroblasts), at one amlexanox concentration, whereas the comparator ataluren improved all three; FANCA mRNA was not rescued. Full-length protein was induced in one arm (FANCA, from under 5 to about 9 percent of control; ataluren about 11 percent) and not in FANCF; the authors treat that induction as read-through. Amlexanox also lowered p53 (about 40 percent, FANCA line only, not FANCF) and phospho-STAT2 (about 50 percent, FANCA line), and it is these two falls that the authors attribute mainly, as a hypothesis with no direct TBK1 readout, to downstream TBK1/IKKe or NF-kB inhibition rather than read-through. The endpoint encoded here is the phenotypic rescue only, so the protein induction is stated in this note and not in the direction code. Encoded NO_CHANGE for the phenotypic endpoint.",
         "receipt": "FTR-20261020-40544182-01"
       }
     ],
@@ -189,7 +189,7 @@
     "not_known": [
       "Whether any WWOX PTC allele would be read through, and at what efficiency: the PTC alleles are enumerated only as a sequence prediction (32 alleles, 23 predicted NMD-sensitive), with no NMD or read-through measurement.",
       "Whether full-length protein produced by read-through of a WWOX PTC would function.",
-      "About 57 percent of classifiable individuals in the largest genotype-classified cohort are null/null (56.8 percent in the abstract of the 2025 Neurology cohort of 50 individuals from 45 families, PMID 40875931, confirmed by PubMed abstract on 2026-10-21; the null class pools nonsense, frameshift, splice and deletion alleles, so it is not a nonsense count): for them no recoverable endogenous substrate for any allele-specific lever is established."
+      "About 57 percent of classifiable individuals in the 2025 Neurology cohort of 50 individuals from 45 families (PMID 40875931; 44 of the 50 genotype-classified, 25 of them null/null; the article is not held, the manifest locators carry the 25 and the 44 and the abstract the class percentages 56.8, 29.5 and 13.6) are null/null (56.8 percent in its abstract, confirmed by PubMed abstract on 2026-10-21); Oliver 2023 (PMID 36779245) genotype-classified 75 cases, 13 new and 62 from the literature, of which 45 (60.0 percent) are null/null, so the 2025 cohort is not the largest classified set and the two sets are not to be summed; the null class pools nonsense, frameshift, splice and deletion alleles, so it is not a nonsense count): for them no recoverable endogenous substrate for any allele-specific lever is established."
     ],
     "evidence_against": [
       "No phenotypic rescue in the one comparator-controlled study.",

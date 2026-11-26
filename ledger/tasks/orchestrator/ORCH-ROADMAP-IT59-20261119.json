@@ -630,10 +630,37 @@
     },
     {
      "step": "IT25: checkpoint 24 queue in ADV final order: ADV-287 sentences, ADV-282 increment 3 (three verified errors and additions), ADV-285 S1-S8 with ADV-288 corrections, ADV-286 prospective hold (start by 2026-12-01, freeze by 2026-12-04), two author-request drafts kept unsent, CI tick, Pages deploy #129/#130 as operator item",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator launch message 2026-11-25 (successor window b0ccd111); CHECKPOINT_IT_20261125_12.md section 1 and ADDENDUM1",
-     "accepted_at": "2026-11-25T22:44:04Z"
+     "accepted_at": "2026-11-25T22:44:04Z",
+     "evidence": "ADV-287 sentences and ADV-282 increment 3 applied by IT26 commit 1cf9f6514, landed 49b7ac71a; remainder (ADV-285 S1-S8, ADV-286, drafts kept unsent) moved to the IT28 row",
+     "updated_at": "2026-11-26T02:24:34Z"
+    },
+    {
+     "step": "IT26: checkpoint 25 sections 8-9 queue: rewrite Y01-Y06 with reader C wording (W01 check of the n=3 Dutch row), apply the 25 edits and rebuild join/coverage/ranking/views/package, land; then ADV-289 consumers, ADV-285 S1-S8 with ADV-288 corrections, ADV-286 prospective hold, two author-request drafts kept unsent, CI tick",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "operator launch message 2026-11-26 (IT successor window d26b0ae5); CHECKPOINT_IT_20261125_13.md sections 8-9",
+     "accepted_at": "2026-11-26T00:07:29Z",
+     "updated_at": "2026-11-26T02:24:34Z",
+     "evidence": "apply landed 49b7ac71a (report 4afa6611a); ADV-289 consumers done by IT27 414ec7434; remainder (ADV-285, ADV-286) moved to the IT28 row"
+    },
+    {
+     "step": "IT27: checkpoint 26 section 3 in ADV order with the launch ADDITION: ADV-289/290/291 owed sentences, washout NOTE, ADV-294 card-negative first ten, ADV-285 S1-S8 with ADV-288 corrections, ADV-286 (start by 2026-12-01, freeze by 2026-12-04), two author-request drafts kept unsent, CI tick, Pages deploy failures as operator item",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "operator launch message 2026-11-26 (IT successor window 6f4e0008); generation_it59_20261119/CHECKPOINT_IT_20261126_1.md section 3",
+     "accepted_at": "2026-11-26T01:06:29Z",
+     "evidence": "ADV-289/290/291 consumers 414ec7434 and cbc4f32b4; ADV-292 consumers 42248ee7d; ADV-294 result d9ebeacef (1 of 9, N10 not assessed, closed by ADV); remainder (ADV-285, ADV-286) moved to the IT28 row",
+     "updated_at": "2026-11-26T02:24:35Z"
+    },
+    {
+     "step": "IT28: checkpoint 27 queue in ADV order: N02 wording on card F04 with the next card batch after a blind check; ADV-282 INC4-6 sentence set (section 3.1 five MUST CHANGE, section 4 ADD) plus DR-L01-003 addendum, each by blind packet with the whole source; ADV-285 S1-S8 with ADV-288 corrections; ADV-286 design note in parallel (start by 2026-12-01, freeze by 2026-12-04); DR-A01-002 stays withdrawn pending re-read; CI #2586 report to ADV; later SCI sentence sets (ADV-287 extension, ADV-295)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator launch message 2026-11-26 (IT successor window 54ca757b); generation_it59_20261119/CHECKPOINT_IT_20261126_2.md section 2",
+     "accepted_at": "2026-11-26T02:24:14Z"
     }
    ]
   }
@@ -1126,6 +1153,27 @@
    "at": "2026-11-25T22:44:04Z",
    "source": "operator launch message 2026-11-25 (successor window b0ccd111); CHECKPOINT_IT_20261125_12.md section 1 and ADDENDUM1",
    "step_sha256": "224eb69233ed",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-26T00:07:29Z",
+   "source": "operator launch message 2026-11-26 (IT successor window d26b0ae5); CHECKPOINT_IT_20261125_13.md sections 8-9",
+   "step_sha256": "564c70f886fd",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-26T01:06:29Z",
+   "source": "operator launch message 2026-11-26 (IT successor window 6f4e0008); generation_it59_20261119/CHECKPOINT_IT_20261126_1.md section 3",
+   "step_sha256": "2cebe963ca60",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-26T02:24:14Z",
+   "source": "operator launch message 2026-11-26 (IT successor window 54ca757b); generation_it59_20261119/CHECKPOINT_IT_20261126_2.md section 2",
+   "step_sha256": "32bbfa29b818",
    "reopened_block": false,
    "authorised_by": null
   }
