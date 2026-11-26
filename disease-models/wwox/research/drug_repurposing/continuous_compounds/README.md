@@ -73,7 +73,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: L-citrulline.** [Initial pathway comparison and next tracer check](l_citrulline/README.md). The three-hour wake stays enabled.
+**Latest completed compound: L-citrulline.** Parked for an unselected pediatric WWOX trial. Systemic synthesis rises in pediatric MELAS. The WWOX RNA screen gives discordant compartment effects, and the available in vivo measurements leave neuronal parent exposure unresolved. Reopen for exposure-linked WWOX functional recovery with labelled conversion and matched arginine. [Checkpoint and next evidence threshold](l_citrulline/systemic_vs_neural_20261126.md). The three-hour wake stays enabled.
+
+**Next compound: sodium dichloroacetate.** Reuse the cell-resolved WWOX PDH/PDK work, where dichloroacetate is a reference comparator. The new question is whether the pediatric PDCD phase III study changes the distinction between a fall in circulating lactate and functional benefit. Compare its prespecified endpoint with the WWOX flux prediction before assigning priority. Ezogabine already serves as a Kv7 comparison and remains conditional on measuring the missing conductance in WWOX. [PDH/PDK dossier](../pdh_pdk_sci44_20261110/README.md) · [Phase III study](https://doi.org/10.1172/JCI200149) · [Kv7 comparison](../potassium_conductances_sci43_20261110/README.md)
 
 **L-ascorbic acid parked.** [Exposure and formulation](ascorbic_acid/exposure_bridge_20261126.md) · [Human stage comparison](ascorbic_acid/human_stage_checkpoint_20261126.md) · [Axonal countercheck](ascorbic_acid/axon_coculture_20261126.md) · [Functional translation and disposition](ascorbic_acid/peripheral_translation_20261126.md).
 
