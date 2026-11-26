@@ -1,0 +1,126 @@
+# Blind verification report, IT28 ADV-287 extension consumers (packet A)
+
+Hypothesis level. Nothing here is medical advice. No dose or compound recommendation appears in any replacement wording. No repository file was opened except the packet and the named held sources, and nothing was written into the repository. Scratch crops are in /tmp/bv_work. I did not use the PubMed tool or the network, because the two named sources were held in full.
+
+## Summary table
+
+| Block | Verdict | One-line reason |
+|---|---|---|
+| A01-04 | STANDS | Every number and mark checked against the figure images. Two optional precision notes: "not in neurons" needs a significance word, and the top soluble fold reads 2.3 to 2.4. |
+| A01-03 | STANDS | Marks verified in 12a, 12b, 12c and Fig 6a. Optional completeness note on sorbitol in 12a. |
+| A01-08 / A01-16 | ADD | Wild type in neurons rose only about 1.3, outside the "1.8 to 2.05" range. The compound and variant behind each fold are not named. Neuron n is 5, not 3. |
+| A01-11 / 14 / 15 | STANDS | All values verified. One caution on the phrase "wild-type range" for R406H. |
+| A01-13 | ADD, plus MUST CHANGE for the closing sentence | The "two comparisons" are not named. Sham n conflicts between Table 1 and Methods. "Shows ... which butyrate does not engage" says more than the source. |
+
+## Files and figures opened
+
+**Guiberson 2018 (PMID 30266908)**
+- Full XML text, read in full (the reference list was stripped).
+- Both supplement PDFs, as extracted text. The MOESM1 text covers the legends of Supp Figs 1 to 18. MOESM2 is the peer-review file.
+- Figures viewed as images:
+  - Supp Fig 12 (SuppFig12_p19.png), with panel a and the panel b bars at 3 to 4x.
+  - Fig 6 (a to d), with panel a bars, panel b bars and panel d at 3 to 8x.
+  - Fig 3 (panel a at 4x) and Fig 4 (panel a, immunoblot area only).
+
+**Tubastatin A / PKU paper (PMID 41274966)**
+- Full XML text, read in full.
+- Figs 1 and 3 as images.
+- Supp MOESM1 text and the _r3 PNG (uncropped blots).
+- The PMC PDF, as text only, searched for sham, n, turnover, cycloheximide and ubiquitin.
+
+## Block A01-04
+
+Every clause checked, with group, species and unit. Numbers are G544D total Munc18-1 protein as % of its own untreated control, in HEK293T unless stated. Readings are from images, with reader error of about ±10 on the axis.
+
+| Clause | Reading | Mark | Result |
+|---|---|---|---|
+| Phenylbutyrate (PB), 12a, G544D | about 183 | * | 1.8 fold: supported |
+| PB, 12b, G544D | about 152 to 155 | ** | 1.5 fold: supported |
+| Trehalose 200 mM, 12a, G544D | about 238 | * | supported |
+| Trehalose, 12b, G544D | about 235 | * | "2.35 in both": supported |
+| Sorbitol 200 mM, 12a, G544D | about 178 | * | supported |
+| Sorbitol, 12b, G544D | about 103 to 105 | none | supported |
+| Sorbitol, Fig 6a, G544D, neurons | about 160 | none | supported (see below) |
+| Sodium butyrate 5 mM, G544D, 12a | about 103 | none | supported |
+| Sodium butyrate, wild type, 12a | about 195 (dots about 142, 205, 228) | none | "about 1.9, unmarked": supported |
+
+- **Sodium butyrate scope.** n = 3 per the Supp Fig 12 legend. Sodium butyrate appears in no other panel: 12b, Fig 6, Fig 7 and Supp Figs 13 to 17 contain only PB, sorbitol and trehalose. Supp Fig 12c (yeast) has sorbitol and trehalose only. The main text and supplement legends mention it only for the 12a screen. "Tested only on G544D and wild type in HEK293T" is therefore supported across all held text and figures.
+- **Soluble fraction with PB (Fig 6b, TX-soluble % of total, control to PB, neurons).**
+
+  | Variant | Control to PB | Fold | Mark |
+  |---|---|---|---|
+  | R406H | about 32 to 56 | 1.75 | * |
+  | P480L | about 14.6 to 34.5 | 2.4 | * |
+  | G544D | about 31 to 69 | 2.2 | ** |
+  | G544V | about 20 to 38 | 1.9 | * |
+
+  The range reads about 1.7 to 2.4. The packet's "1.7 to 2.3" is within reader error, but the top end is closer to 2.4. "Four low-protein variants" is correct: Fig 3a shows R406H, P480L, G544D and G544V at about 4 to 8% of wild type, and the text says "four out of the five ... below 10%".
+- **Vesicle-recycling read-out (Fig 6d, pixels above intensity 15, PB).**
+  - Untreated wild type is about 55 to 57.
+  - PB gives P480L about 82, G544D about 75 and G544V about 74.
+  - R406H is about 44. Three of four at or above wild type: supported.
+- **Optional wording, "not in neurons".** The mean is about 1.6 fold with a scattered dot cloud, and the text claims a significant rise "with all three chaperones". "Not in neurons" can be read as "no rise". Suggested wording: "sorbitol raised it in 12a (about 1.8 fold) but carries no significance mark in 12b (about 1.0) or in neurons (Figure 6a, about 1.6)".
+- **Optional.** Say "n = 5 neurons" and "n = 3 HEK293T".
+
+## Block A01-03
+
+- **Trehalose and G544D.** Marked in 12a (*), 12b (*), neurons Fig 6a (about 162, *) and yeast 12c (***). Sorbitol G544D is marked in 12a and yeast 12c (**). It is unmarked in 12b and neurons. "The osmolyte arm for G544D rests on trehalose" is a fair synthesis.
+- **Sorbitol marks in 12b.** R406H (about 200, **) and G544V (about 158, **) are marked. P335L, P480L, G544D and wild type are not. Supported.
+- **Yeast 12c.** G544D sorbitol is marked **. Supported.
+- **Optional completeness note.** The parenthesis reads as a list of where sorbitol is marked, but it omits 12a G544D. The preceding sentence already says so. In neurons sorbitol is also marked for P335L (**), P480L (*) and G544V (*). If wanted: "...and for G544D in 12a and yeast but not in 12b or neurons".
+
+## Block A01-08 / A01-16 (verdict: ADD)
+
+- **Mutant values.**
+  - 1.8 fold in 12a: PB G544D, about 183. Supported.
+  - 1.55 fold in 12b: PB G544D, about 152 to 155. Supported.
+  - About 1.64 fold in neurons: G544D about 165 with PB (**). Supported, but sorbitol (about 160, unmarked) and trehalose (about 162, *) read nearly the same. The fragment does not name compound or variant, and a reader cannot tell which bar is meant.
+- **Marks.** Significance marks are printed: 12a *, 12b **, Fig 6a **.
+- **Neuron n.** The "(three experiments in HEK293T, significance mark printed)" parenthesis does not say that the neuron panel has n = 5 independent experiments (Fig 6 legend). The reader may think neurons also have n = 3.
+- **Wild-type range is wrong for neurons.** Wild-type PB values are about 178 (12a, *), about 205 (12b, ***) and about 128 in neurons (Fig 6a, *). The "about 1.8 to 2.05 fold" holds for HEK293T only. In neurons wild type rose about 1.3. Placed straight after the neuron value, the clause reads as if it covered neurons.
+- **"Transgene mRNA under treatment was not measured."** Supported. The only mRNA data are Supp Fig 4a to c (untreated, WT versus mutant, n = 3). The peer-review file confirms this was the only qPCR.
+
+Minimal replacement:
+> Total G544D protein with phenylbutyrate was about 1.8 fold of its own untreated control in Supplementary Figure 12a, about 1.55 fold in 12b (HEK293T, three experiments each) and about 1.64 fold in neurons (Figure 6a, five experiments), significance mark printed in each; wild type rose about 1.8 to 2.05 fold in HEK293T and about 1.3 fold in neurons (marked) as well,
+
+## Block A01-11 / 14 / 15 (verdict: STANDS)
+
+- **R406H with PB.** About 44 against untreated wild type about 55 to 57 (Fig 6d, R406H panel). Unmarked against wild type, and marked ### for the untreated control being below wild type.
+- **R406H with sorbitol.** About 58 (**, Fig 6d). Supported.
+- **R406H with trehalose.** About 43 (*, versus its own control), so it also does not reach wild type. Omitting this is not misleading.
+- **P335L protein.** About 65% (Fig 3a: about 66, marked *). "Intermediate and not absent deficit" matches the authors' own wording, "intermediate-level deficits".
+- **P335L soluble fraction.** Control about 76, PB about 78, sorbitol about 80, trehalose about 78 (Fig 6b), no marks. "Unchanged" should be read as "no significance mark". Its baseline soluble fraction is already about 76% against wild type about 89%.
+- **Caution on "wild-type range".** If "range" means the spread of the wild-type points in the Fig 6d panels, which is roughly 40 to 62, then the R406H PB bar (about 44) lies inside that spread. The packet's statement is true only for bar means. UNSETTLED what "range" means. I suggest "mean" in place of "range", or keep "range" and say bars (means).
+
+## Block A01-13 (verdict: ADD, plus MUST CHANGE on the closing sentence)
+
+- **Arithmetic.** The two figures reproduce:
+  - 44.1%: Table 1 group means at week 12, TSA 749.41 against sham 1341.01.
+  - 42.9%: recomputed from the individual animal values in Table 1. TSA rows 672.1, 758.8 and 866.9 give a mean of 765.9. Sham rows 1335.8 and 1346.2 give 1341.0.
+  - So the paper's printed TSA mean (749.41) does not equal the mean of its own three rows (765.9). Other TSA means are also off: week 8 printed 1039.39 against rows 1026.7, and week 4 printed 1198.11 against rows 1201.5. The wild-type week-12 printed 250.27 against rows 257.1.
+  - The fragment does not say what the two comparisons are, so a reader cannot interpret "42.9 and 44.1".
+- **Three times wild type.** 749.41 / 250.27 = 2.99, and 765.9 / 257.1 = 2.98. Supported.
+- **Sham n.** Table 1 and the Fig 3 blots list two sham animals and three treated. Methods ("three mice per group") and Limitations ("only three mice per group") say three per group. "Two sham animals against three treated" is true of the tabulated data, but the source contradicts itself.
+- **Stats.** The week-12 comparison is p < 0.01 (Dunnett).
+- **Text inconsistency.** The text gives the sham week-12 mean as 1341.59, the table says 1341.01, and the text gives week 8 as 1338.59. These are minor.
+- **Enzyme protein.** Fig 3C, PAH/GAPDH: sham about 0.56, treated about 0.83, wild type about 0.90. Supported ("toward wild type"). Fig 3B, acetyl-HSP90/HSP90: sham about 0.55, treated about 0.88, wild type about 0.68, so treated is above wild type. Both comparisons carry ****. The uncropped Supp Fig S1 shows three blots, each with the same lane layout (2 sham, 3 treated, 3 wild type). The unit of the test behind ****P<0.0001 on 2 versus 3 animals is not stated (reader inference, UNSETTLED).
+- **Higher dose.** The source says 100 mg/kg (twice the 50 mg/kg dose) caused abdominal oedema and death within eight weeks, with kidney enlargement and ascites at necropsy. The group was excluded from analysis, and its size is not given. "Exposure level" should read "dose": no exposure was measured.
+- **No turnover measurement.** Supported. The whole text, supplement and PDF contain only steady-state westerns (PAH, HSP90, acetyl-HSP90), with no cycloheximide, pulse-chase or ubiquitination data. The degradation reading is the authors' inference.
+- **Closing sentence: MUST CHANGE.** "Shows that a cytosolic mutant enzyme can respond to an HDAC6 lever, which butyrate does not engage."
+  - "Shows" over-reaches for one small study of two sham and three treated animals, with male mice aged 18 to 28 weeks, one dose and no HDAC6-independence control.
+  - "Cytosolic" is not stated in the source.
+  - The paper never mentions butyrate, so "which butyrate does not engage" is not supported by this source. UNSETTLED here, and OUTSIDE this packet.
+  - The mutant is Pahenu2 F263S.
+
+Minimal replacement for the fragment (ADD):
+> plasma phenylalanine fell about 43 to 44 percent from sham at week 12 (44.1 from the printed group means, 749.41 against 1341.01; 42.9 when the mean of the three tabulated treated values, 765.9, is used against the two tabulated sham values)
+
+Further words to add: "Table 1 lists two sham animals though Methods state three per group", and "dose" for "exposure level".
+
+Replacement for the closing sentence:
+> Suggests, in one small study (Pahenu2 F263S mice, two tabulated sham against three treated animals), that a mutant liver enzyme can respond to an HDAC6 inhibitor; this paper does not test whether butyrate engages HDAC6.
+
+## Clauses marked OUTSIDE
+
+- "Shows that ... which butyrate does not engage": the butyrate half cannot be settled from the held sources. The Tubastatin paper is silent on butyrate.
+- Any statement about what the repository holds or has searched: no such clause appears in the fragments.

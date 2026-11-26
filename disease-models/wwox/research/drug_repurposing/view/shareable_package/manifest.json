@@ -28,7 +28,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 543,
+    "values": 547,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 807,
+    "values": 813,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -88,7 +88,7 @@
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(pmids\\[\\]|views\\.(broad|partial)\\.evidence\\.pmids\\[\\])$": {
     "class": "BIBLIO",
-    "values": 257,
+    "values": 258,
     "why": "PMID of a cited work (ranking)"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3650,
+    "forbidden-name": 3657,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -470,7 +470,7 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2525,
+  "BIBLIO": 2536,
   "COUNT": 12405,
   "ID": 4861,
   "OWN": 88916,
@@ -547,7 +547,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2286,
-   "sha256": "b5ea9a016208a3b698f2f75526bd6870429d87fc2b5b59d9eb6b92e992d0c983"
+   "sha256": "930d813afa9fa01a3981d3e139c797b0947946f243adaba292361b8dff740236"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5108369,
-   "sha256": "1faefd6615288e0ffcf9e40ed7a44e54bacfc53aa699bfef7648778a7bafc314"
+   "bytes": 5112633,
+   "sha256": "e8a2d7959dc7b432c2641855fe86b66731970395ad62cd4bf7c5ddc2cdf100fe"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 168171,

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "5f16f3df821d5fb77138936122940082dacb4f014ab00fa2f05675da3cbd82eb",
+  "input_sha256": "f1dd1575e5daf2610a696b87ec6acffa3aacb0ca9beaf37f1ee1c5822767fc5a",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -122,7 +122,7 @@
           "cell_type": "cerebellar tissue",
           "developmental_stage": "adult"
         },
-        "measured_result_note": "'a significant >= 2-fold upregulation of mRNA of both cytokines (p-value < 0.05)' (transcript). Forebrain pathway enrichments (inflammatory response, TNFA signalling via NFkB, IL6-JAK-STAT3) are RNA-seq regulator inferences, not cytokine measurements. No NRF2/NFE2L2 string in the text. Verification (IT11 P2.3): the significant 2-fold claim is qPCR only, n 6 versus 6 (3 M + 3 F), unpaired Student's t, 18S, exact p not stated, age of the qPCR mice not stated; by the figure (read by eye, not digitised) IL1b is about 1.9x and TNF about 3.3x of the plotted means, overlap with WT is marginal for IL1b and absent for TNF; the cerebellar RNA-seq in the figure is 4 v 3 (Methods say 5 per group), so n 6 is not an RNA-seq n; the cerebellum is atrophic with Purkinje loss, so composition is not excluded. The best-supported cerebellar cytokine signal is TNF, the one NRF2 activation is predicted not to change.",
+        "measured_result_note": "'a significant >= 2-fold upregulation of mRNA of both cytokines (p-value < 0.05)' (transcript). Forebrain pathway enrichments (inflammatory response, TNFA signalling via NFkB, IL6-JAK-STAT3) are RNA-seq regulator inferences, not cytokine measurements. No NRF2/NFE2L2 string in the text. Verification (IT11 P2.3): the significant 2-fold claim is qPCR only, n 6 versus 6 (3 M + 3 F), unpaired Student's t, 18S, exact p not stated, age of the qPCR mice not stated; by the figure (read by eye, not digitised) IL1b is about 2.0x and TNF about 3.3x of the plotted means, overlap with WT is clear for IL1b (one WT point about 3.1 lies above two of six P47T points) and absent for TNF (gap about 0.15); the cerebellar RNA-seq in the figure is 4 v 3 (Methods say 5 per group), so n 6 is not an RNA-seq n; the cerebellum is atrophic with Purkinje loss, so composition is not excluded. The best-supported cerebellar cytokine signal is TNF, the one NRF2 activation is predicted not to change.",
         "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
       },
       {
@@ -322,7 +322,7 @@
         ],
         "against": [
           "Tnf-a is not significant in the null hippocampus; the rat shows LOWER glia; the human organoid has no cytokine-expressing cells.",
-          "No NRF2 or ROS datum in any WWOX-deficient mammalian neural cell; human organoid NRF2 targets do not form a coherent signature (NFE2L2 0.75x, NQO1 0.73x).",
+          "No NRF2 or ROS datum in any WWOX-deficient mammalian neural cell; human organoid NRF2 targets do not form a coherent signature (NFE2L2 0.75x, NQO1 0.73x, but HMOX1 1.67x, SRXN1 1.33x and GSR 1.20x higher on mean counts per million, 4 knockout against 2 wild-type libraries; NFE2L2 is the factor itself, not a target; none of NQO1, HMOX1, SRXN1 and GSR appears in the deposited differential lists, the HMOX1, SRXN1 and GSR knockout libraries overlap the two wild-type libraries, and NFE2L2 itself is lower, adjusted p 0.014).",
           "The NRF2-cytokine edge is from bone-marrow macrophages under LPS, not microglia at baseline.",
           "Early-passage redox-gene induction in Wwox-null MEFs suggests NRF2 tone may already be raised (ceiling).",
           "Omaveloxolone: indication 16 y and older, perinatal rat neurobehavioural impairment, CYP3A4-inducer avoidance, transaminase rise, brain NRF2 induction modest in monkey."

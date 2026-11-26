@@ -1,0 +1,45 @@
+# Blind verification report: IT28, ADV-287 extension consumers, block M01-HE
+
+Source: PubMed record for PMID 32674144, fetched with the PubMed tool (get_article_metadata). It is the abstract only, and the full text was not read. DOI: https://doi.org/10.1093/neuros/nyaa301 (Sasaki et al., Neurosurgery 2020; 87(6):E680-E688). According to PubMed. I opened only the packet and this PubMed record. I searched nothing in the repository, contacted no one and wrote nothing into the repository.
+
+## Summary table
+
+| Block | Verdict | Reason |
+|---|---|---|
+| M01-HE | ADD, with the word "exists" softened and "one" UNSETTLED | Every number and the species check against the abstract. The fragment omits what the abstract does not report (dose, time point, n, what the serum figure measures). "One measured ratio exists" is an absolute word over a source whose full text was not read. |
+
+## Block M01-HE: clause by clause
+
+What the abstract says, quoted:
+- Methods: "The concentration of EZH2 inhibitor (EPZ-6438) in the brainstem tumor was evaluated by liquid chromatography-mass spectrometry (LC/MS). We treated mice-bearing human DIPG xenografts with EPZ-6438 using systemic (intraperitoneal) or CED administration."
+- Results: "LC/MS analysis showed that the concentration of EPZ-6438 in the brainstem tumor was 3.74% of serum concentration after systemic administration."
+
+| Clause in fragment | Finding |
+|---|---|
+| "no absolute brain or CSF concentration found by these routes" | OUTSIDE (a clause about what the repository's searches found). It is consistent with the abstract, which gives only a ratio and no absolute value. |
+| "one measured ratio exists" | UNSETTLED. The abstract reports one ratio, 3.74%. The full text may contain more measurements, for example other time points, doses or CED tissue levels. "Exists" reads as a statement about the whole paper or the whole literature. Wording below. |
+| "in brainstem tumour" | Supported. The abstract says "in the brainstem tumor". |
+| "(a human diffuse intrinsic pontine glioma xenograft in mice)" | Supported. The abstract says "mice-bearing human DIPG xenografts", and its MeSH terms are Animals, Humans, Mice. The abstract does not say outright that the LC/MS animals were the xenograft-bearing mice. This is the natural reading of the Methods sentence order. |
+| "not brain parenchyma and not CSF" | Supported as a statement about what was measured: the tissue named is tumour, and no CSF measurement is mentioned. The abstract gives no value for non-tumour brain. |
+| "3.74 percent of the serum concentration" | Number and unit match: 3.74% of serum concentration. The group is the mice with xenografts. The unit of analysis (per animal, per tumour or pooled) is not stated. |
+| "after systemic (intraperitoneal) EPZ-6438" | Supported. The abstract defines systemic as "systemic (intraperitoneal)" in the Methods and gives the ratio "after systemic administration". |
+| "the abstract names the compound EPZ-6438 and the identity with tazemetostat is the sheet's" | Correct as a statement. The abstract names only EPZ-6438, and the fragment already says the identity is the sheet's. |
+| "(abstract of PMID 32674144, read)" | Correct. This is the abstract only. |
+| Context: "the abstract of a mouse study says P-glycoprotein limits its brain accumulation" | This is not from 32674144. The abstract of 32674144 does not mention P-glycoprotein. It says only that the BBB "reduces the distribution of systemically administered agents". The clause must stay attributed to the other mouse study. |
+
+Omissions that would mislead a reader who sees only this text. The abstract does not give:
+- the dose, the sampling time or the number of animals;
+- whether the serum comparator is total or free drug;
+- whether the 3.74% is a mean, a median or a single value.
+
+The ratio is therefore a single reported summary figure from a xenograft model. A xenograft tumour may have a leaky BBB, so the ratio is not an exposure value for intact brain or CSF. It is also not a human value.
+
+## Minimal replacement wording
+
+Current: "one measured ratio exists, in brainstem tumour (...), not brain parenchyma and not CSF: 3.74 percent of the serum concentration after systemic (intraperitoneal) EPZ-6438 (abstract of PMID 32674144, read);"
+
+Proposed: "the abstract of PMID 32674144 reports one ratio, in brainstem tumour (a human diffuse intrinsic pontine glioma xenograft in mice), not brain parenchyma and not CSF: 3.74 percent of the serum concentration after systemic (intraperitoneal) EPZ-6438 (dose, time point and number of animals not given in the abstract; full text not read);"
+
+The P-glycoprotein clause in the surrounding sentence is not supported by this abstract. It is not part of the fragment under test, but its attribution should stay with the other study.
+
+This is hypothesis-level, class-level text. The replacement wording contains no dose and no compound recommendation.

@@ -143,6 +143,10 @@
   "src": "en",
   "text": "No result of these compounds in a WWOX system; the class is carded as an NMDAR intervention class."
  },
+ "10e9fb87068d": {
+  "src": "en",
+  "text": "WWOX-system: a glycolytic signature; the kinase transcript lower in the organoid; no difference in the one human PDH activity measurement, which is a non-neural fibroblast pool with partial WWOX depletion (n not stated) and says nothing about neurons. The kinase-to-PDH link has no WWOX observation. [IT39] In a held report of five paediatric WOREE patients (Chong 2023, PMID 36537114) epilepsy responded to a ketogenic diet in three (patients 1, 2 and 4); the lactate range of 2.4 to 3.3 mmol/L in one individual is a registry statement (ADV-259) not found in the held text (8 delivered chunks only; the case narratives of patients 1 to 4 are not held; searched 2026-11-26 for lactate, lactic and mmol); other held WOREE reports are less favourable; the Pdk1 transcript and serum-lactate datum in the Wwox-null MEF and mouse paper is non-neural and measures no PDH. [IT 2026-11-25, ADV-244: the organoid transcript set behind this row is four knockout organoids of one CRISPR clone (1B) against two parental organoids, apparently from one batch (authors' Methods: organoids from the same batch unless stated otherwise), so it is not shown to be independent of the clone; the other clone was not sequenced.]"
+ },
  "111b069299f5": {
   "src": "en",
   "text": "E_GABA, NKCC1 and KCC2 protein in any Wwox system; never measured."
@@ -602,10 +606,6 @@
  "4237b5b32e4c": {
   "src": "en",
   "text": "Block of the GABA transporter GAT-1 raises GABA availability without touching glutamate-receptor currents; the catalogue records maximum phase 4 for one reference compound and lists several selective tools."
- },
- "42c4b94e6e5d": {
-  "src": "en",
-  "text": "WWOX-system: a glycolytic signature; the kinase transcript lower in the organoid; no difference in the one human PDH activity measurement, which is a non-neural fibroblast pool with partial WWOX depletion (n not stated) and says nothing about neurons. The kinase-to-PDH link has no WWOX observation. [IT39] A ketogenic-diet response is reported in 3 of 5 WOREE individuals (lactate 2.4 to 3.3 mmol/L in one individual; registry statement, no held source passage, ADV-259); the Pdk1 transcript and serum-lactate datum in the Wwox-null MEF and mouse paper is non-neural and measures no PDH. [IT 2026-11-25, ADV-244: the organoid transcript set behind this row is four knockout organoids of one CRISPR clone (1B) against two parental organoids, apparently from one batch (authors' Methods: organoids from the same batch unless stated otherwise), so it is not shown to be independent of the clone; the other clone was not sequenced.]"
  },
  "42cadd702298": {
   "src": "en",
