@@ -1,0 +1,37 @@
+BLIND VERIFICATION PACKET (IT28, ADV-287 extension consumers; hypothesis level; public, class level; nothing here is medical advice)
+
+Each block holds a NEW text fragment (marked >>> ... <<<) inside the field it will sit in. Check the fragment, and the sentence it sits in where it depends on it, against the held sources only. Do not open any other repository file; no search of the repository for cards or result files; no network except the PubMed tool for the two PMIDs named as abstract-only (a public read). Nothing is written into the repository.
+Verdicts per block: MUST CHANGE (a word, number, unit, species, age, group size, comparator, direction, test or generalisation is wrong, unsupported or says more than the source), ADD (supported, but an omission would mislead a reader who sees only this text), STANDS.
+Grade every clause. Absolute words (only, no, none, every, not found) need the whole source read; say UNSETTLED where you cannot settle. Numbers read from a figure: name figure, panel and bar, and view the image. Say for each number which group, unit (animal, slice, organoid, library, field), species and age it belongs to.
+Clauses about what this repository holds or has searched are OUTSIDE your check: say OUTSIDE. For MUST CHANGE and ADD give minimal replacement wording; no dose and no compound recommendation may appear.
+Report: a summary table, then per block the findings with locators and which files and figures you opened. Return the whole report as your final handback.
+
+=== BLOCK H02-26
+SOURCES: Vigabatrin prescribing-information label sections 5.3 and 5.4 (the card's source line: openFDA label JSON effective 2026-06-15; that version is NOT held). Held sibling labels: search /home/desktop/legend-development/files for vigabatrin label JSON/extract files by name (find files -iname '*vigabatrin*'; look in label_extracts_it9_p4c_e too). PMID 19054414 (abstract only, via the PubMed tool: public read).
+FIELD CONTEXT WITH NEW FRAGMENT:
+Label sections 5.3, 5.4 and 8.4 and the boxed warning were read in full from the JSON; >>>the label names no study for the 22 and 4 percent figures (the cited 2026-06-15 version is not held; held sibling labels were searched on 2026-11-26), and the study they match (PMID 19054414, an identification inferred from the numbers) was read at abstract level only (22 against 4 percent, vigabatrin-naive comparator), not in full text.<<< The label states that the specific pattern was not observed in older children and adults. Vigabatrin only. Section 5.3 also records postmarketing MRI changes in children 6 years and younger treated for refractory complex partial seizures. 22 percent is the prevalence in the vigabatrin-treated infants of that study (non-WWOX, infantile spasms) and 
+REPLACES (old fragment): the cited study itself was not read, so the 22 and 4 percent figures are the label's statement of it.
+
+=== BLOCK H02-05
+SOURCES: PMID 19054414 abstract (PubMed tool); the label sections as above.
+FIELD CONTEXT WITH NEW FRAGMENT:
+ child had a scan during treatment) and about 39 percent (31 of 80 treated infants imaged during treatment, PMID 39641935, crude; 27 of 76 after excluding four with the abnormality before treatment); and unexposed comparators exist and differ: none in 12 (PMID 20384718) and none in 56 (PMID 18783433), and the two given next (7 of 52 in one cohort; >>>4 percent of vigabatrin-naive infants in a retrospective ten-site comparison)<<<. These are frequencies in selected cohorts, not attributable risk in WWOX.
+REPLACES (old fragment): 4 percent of naive infants in the controlled study)
+
+=== BLOCK H02-03
+SOURCES: PMID 20384718 abstract (PubMed tool).
+FIELD CONTEXT WITH NEW FRAGMENT:
+25 of 81 children imaged during but not before exposure (30.9 percent) >>>had the finding and all 12 unexposed children were normal; 14 further children were imaged before, during and after exposure and 4 of them were abnormal (29 of 95 exposed, 30.5 percent, derived);<<< younger infants and cryptogenic infantile spasms were more likely to develop it. Abstract level.
+REPLACES (old fragment): had the finding and all 12 unexposed children were normal;
+
+=== BLOCK H02-17
+SOURCES: /home/desktop/legend-development/files/fulltext/PMID36601084_ADV272_PMC9806385_epmc_20261125.xml (PMID 36601084)
+FIELD CONTEXT WITH NEW FRAGMENT:
+38 of 172 imaged children (22.1 percent) had the finding; the rate is per imaged child and 143 exposed children without an eligible examination were excluded; >>>by aetiology 8 of 80 with tuberous sclerosis against 30 of 92 with other causes; within tuberous sclerosis 3 of 60 with rapamycin against 5 of 20 without, and no child with other causes received it.<<< A frequency in a selected cohort, not attributable risk in WWOX and not a WWOX denominator. Rapamycin association and the exposure figures of this cohort: see DR-H02-013 (ADV-276, 2026-11-25).
+REPLACES (old fragment): by aetiology 8 of 80 with tuberous sclerosis against 30 of 92 with other causes.
+
+=== BLOCK H02-29
+SOURCES: /home/desktop/legend-development/files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.txt ; /home/desktop/legend-development/files/fulltext/PMID33914858_Repudi2021_OUP_browserprint.pdf (Figure 5 on PDF page 27; render and view it)
+FIELD CONTEXT WITH NEW FRAGMENT:
+Myelinating tracts of the developing brain; the neuron-specific Wwox deletion has about 3.3 times fewer myelinated callosal axons >>>at P17 (per electron-microscopy field, 3 mice per genotype; the paper's text says 3.5 to 4 fold).<<<
+REPLACES (old fragment): at P17.

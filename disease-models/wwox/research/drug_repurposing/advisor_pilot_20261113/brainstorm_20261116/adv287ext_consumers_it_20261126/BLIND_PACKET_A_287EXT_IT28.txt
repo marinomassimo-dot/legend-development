@@ -1,0 +1,37 @@
+BLIND VERIFICATION PACKET (IT28, ADV-287 extension consumers; hypothesis level; public, class level; nothing here is medical advice)
+
+Each block holds a NEW text fragment (marked >>> ... <<<) inside the field it will sit in. Check the fragment, and the sentence it sits in where it depends on it, against the held sources only. Do not open any other repository file; no search of the repository for cards or result files; no network except the PubMed tool for the two PMIDs named as abstract-only (a public read). Nothing is written into the repository.
+Verdicts per block: MUST CHANGE (a word, number, unit, species, age, group size, comparator, direction, test or generalisation is wrong, unsupported or says more than the source), ADD (supported, but an omission would mislead a reader who sees only this text), STANDS.
+Grade every clause. Absolute words (only, no, none, every, not found) need the whole source read; say UNSETTLED where you cannot settle. Numbers read from a figure: name figure, panel and bar, and view the image. Say for each number which group, unit (animal, slice, organoid, library, field), species and age it belongs to.
+Clauses about what this repository holds or has searched are OUTSIDE your check: say OUTSIDE. For MUST CHANGE and ADD give minimal replacement wording; no dose and no compound recommendation may appear.
+Report: a summary table, then per block the findings with locators and which files and figures you opened. Return the whole report as your final handback.
+
+=== BLOCK A01-04
+SOURCES: /home/desktop/legend-development/files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml ; /home/desktop/legend-development/files/figures/PMID30266908/ (all images, view Supplementary Figure 12 and Figure 6) ; /home/desktop/legend-development/files/supplement/PMID30266908/
+FIELD CONTEXT WITH NEW FRAGMENT:
+>>>In the soluble cytosolic client (Guiberson 2018), phenylbutyrate raised the G544D mutant total protein about 1.8 fold (Supplementary Figure 12a) and about 1.5 fold (12b) and trehalose about 2.35 fold in both; sorbitol raised it in 12a (about 1.8 fold) but not in 12b (about 1.0, unmarked) and not in neurons (Figure 6a, about 1.6, unmarked); sodium butyrate, tested only on G544D and wild type in HEK293T (three experiments), did not raise G544D (about 1.0; wild type about 1.9, unmarked); with phenylbutyrate the soluble fraction rose about 1.7 to 2.3 fold in the four low-protein variants and the vesicle-recycling read-out was at or above the untreated wild-type range for three of the four<<< (partial dissociation of quantity from function in the favourable direction; NOT WWOX EVIDENCE).
+REPLACES (old fragment): In the soluble cytosolic client, the class and two HDAC-free osmolytes raised the mutant while a class-I HDAC inhibitor did not, and the soluble fraction roughly doubled with a vesicle-recycling read-out at or above the untreated wild-type range for three of the four low-protein variants
+
+=== BLOCK A01-03
+SOURCES: same as A01-04
+FIELD CONTEXT WITH NEW FRAGMENT:
+hree independent experiments): about 2.35 fold of control with trehalose and about 1.8 fold with sorbitol, both marked; Figure 12b (same cell line, same concentration) repeats the trehalose rise but shows about 1.0 fold, unmarked, for sorbitol, and the higher concentration of either gave no rise in panel a, so no sorbitol effect is established and >>>the osmolyte arm for G544D rests on trehalose (sorbitol is marked for R406H and G544V in 12b and for G544D in yeast)<<< (corrected 2026-11-25, ADV-279; figure readings). Both were also raised in yeast by a second assay (panel c, fluorescence). The osmolytes act at high levels, so an osmotic effect is not separated from chaperoning; the effect is on wild type as well.
+REPLACES (old fragment): the osmolyte arm rests on trehalose
+
+=== BLOCK A01-08, A01-16
+SOURCES: same as A01-04
+FIELD CONTEXT WITH NEW FRAGMENT:
+>>>Total mutant protein about 1.8 fold of its own untreated control in Supplementary Figure 12a, about 1.55 fold in 12b and about 1.64 fold in neurons (Figure 6a) (three experiments in HEK293T, significance mark printed); wild type rose about 1.8 to 2.05 fold as well,<<< so the gain is not mutant-specific; transgene mRNA under treatment was not measured.
+REPLACES (old fragment): Total mutant protein about 1.8 fold of its own untreated control (three experiments, significance mark printed); wild type rose about 1.8 fold as well,
+
+=== BLOCK A01-11, A01-14, A01-15
+SOURCES: same as A01-04 (Figures 3, 4 and 6)
+FIELD CONTEXT WITH NEW FRAGMENT:
+Mutant total protein sits at about 4 to 8 percent of wild type in four of five variants and rises only about 1.05 to 1.65 fold with the class; the soluble fraction roughly doubles (soluble pool about 2 to 4 fold, reader arithmetic); function reaches or exceeds the untreated wild-type range for three of the four low-protein variants >>>(R406H about 44 against about 55 does not with the class, and reaches about 58 with sorbitol; the fifth variant, P335L, has about 65 percent protein, an intermediate and not absent deficit, and its soluble fraction is unchanged)<<<. The soluble-pool figures combine panels with different loading normalisers and carry a reader error of about plus or minus 10 percent of axis, and fold values near 1.05 are not separable from 1.0. Quantity and function are not proportional (read-out saturation not excluded; the authors report near-wild-type expression in neurons, not overexpressi
+REPLACES (old fragment): (R406H about 44 against about 55 does not; the fifth variant, P335L, has about 65 percent protein and little baseline deficit)
+
+=== BLOCK A01-13
+SOURCES: /home/desktop/legend-development/files/fulltext/PMID41274966_Tubastatin2025_PMC_r2.xml ; /home/desktop/legend-development/files/figures/PMID41274966_r2/ ; /home/desktop/legend-development/files/supplement/PMID41274966_r2/ and _r3/
+FIELD CONTEXT WITH NEW FRAGMENT:
+Enzyme protein rose toward wild type with acetylated HSP90 up; >>>plasma phenylalanine fell about 43 to 44 percent from sham at week 12 (42.9 and 44.1 in the two comparisons)<<< yet stayed about three times wild type; two sham animals against three treated; a higher exposure level caused kidney enlargement, ascites and deaths; no turnover measurement supports the authors' degradation reading. Shows that a cytosolic mutant enzyme can respond to an HDAC6 lever, which butyrate does not engage.
+REPLACES (old fragment): plasma phenylalanine fell about 44 percent from sham

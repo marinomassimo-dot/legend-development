@@ -1,0 +1,79 @@
+BLIND VERIFICATION PACKET (IT28, ADV-287 extension consumers; hypothesis level; public, class level; nothing here is medical advice)
+
+Each block holds a NEW text fragment (marked >>> ... <<<) inside the field it will sit in. Check the fragment, and the sentence it sits in where it depends on it, against the held sources only. Do not open any other repository file; no search of the repository for cards or result files; no network except the PubMed tool for the two PMIDs named as abstract-only (a public read). Nothing is written into the repository.
+Verdicts per block: MUST CHANGE (a word, number, unit, species, age, group size, comparator, direction, test or generalisation is wrong, unsupported or says more than the source), ADD (supported, but an omission would mislead a reader who sees only this text), STANDS.
+Grade every clause. Absolute words (only, no, none, every, not found) need the whole source read; say UNSETTLED where you cannot settle. Numbers read from a figure: name figure, panel and bar, and view the image. Say for each number which group, unit (animal, slice, organoid, library, field), species and age it belongs to.
+Clauses about what this repository holds or has searched are OUTSIDE your check: say OUTSIDE. For MUST CHANGE and ADD give minimal replacement wording; no dose and no compound recommendation may appear.
+Report: a summary table, then per block the findings with locators and which files and figures you opened. Return the whole report as your final handback.
+
+=== BLOCK R-34
+SOURCES: /home/desktop/legend-development/files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml
+FIELD CONTEXT WITH NEW FRAGMENT:
+an approved active-site chaperone for a lysosomal enzyme: >>>'amenable' call differs for 12.9 percent (23 of 178) of GLA variants between a validated good-laboratory-practice assay and a similar in-house HEK assay that differs in cell line, incubation time, chaperone concentration and criteria, and no clinical correlation is established (Fabry GLA)<<<
+REPLACES (old fragment): 'amenable' call differs for 12.9 percent of variants between two near-identical assays and no clinical correlation is established (Fabry GLA)
+
+=== BLOCK R-37
+SOURCES: /home/desktop/legend-development/files/fulltext/PMID34268881_Steinberg2021_PMC_r2.xml ; /home/desktop/legend-development/files/fulltext/PMID34268881_Steinberg2021.pdf ; /home/desktop/legend-development/files/figures/PMID34268881_r2/ ; /home/desktop/legend-development/files/supplement/PMID34268881_r2/
+FIELD CONTEXT WITH NEW FRAGMENT:
+Wnt/beta-catenin target transcripts are on the up side in the knockout organoid tables; >>>RNA-seq, raw p, 2 WT versus 4 KO organoids, with nuclear beta-catenin about 1.7 fold higher by immunoblot after fractionation (week 16, 2 WT and 4 KO organoids from two runs, untested); no reporter assay.<<<
+REPLACES (old fragment): transcript only, raw p, 2 WT versus 4 KO organoids; the activation step (reporter, nuclear beta-catenin) is unmeasured.
+
+=== BLOCK R-35
+SOURCES: /home/desktop/legend-development/files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt ; /home/desktop/legend-development/files/fulltext/PMID36537114_Chong2023_ScholarGateway_20260929.json
+FIELD CONTEXT WITH NEW FRAGMENT:
+>>>In a held report of five paediatric WOREE patients (Chong 2023, PMID 36537114) epilepsy responded to a ketogenic diet in three (patients 1, 2 and 4); the lactate range of 2.4 to 3.3 mmol/L in one individual is a registry statement (ADV-259) not found in that text (searched 2026-11-26 for lactate, lactic and mmol); other held WOREE reports are less favourable<<<; the Pdk1 transcript and serum-lactate datum in the Wwox-null MEF and mouse paper is non-neural and measures no PDH.
+REPLACES (old fragment): A ketogenic-diet response is reported in 3 of 5 WOREE individuals (lactate 2.4 to 3.3 mmol/L in one individual; registry statement, no held source passage, ADV-259)
+
+=== BLOCK R-24
+SOURCES: /home/desktop/legend-development/files/fulltext/PMID39041895_Mijatovic2024_PMC11264351_epmc_2026-10-29.xml (Figures 5 and 6 are not held as images: text and legends only)
+FIELD CONTEXT WITH NEW FRAGMENT:
+The gain applies to wild type too >>>(CBS wild-type half-life up about 7.7-fold under proteasome inhibition; wild-type activity rose only as a non-significant trend, about 174 percent, against about 259 and 574 percent in T191M and I278T): a boost multiplies residual function, and whether it repairs it is not shown here.<<<
+REPLACES (old fragment): (CBS wild-type half-life up about 7.7-fold under proteasome inhibition): a boost multiplies residual function and does not repair it.
+
+=== BLOCK R-29
+SOURCES: /home/desktop/legend-development/files/geo/ (GSE156243 deposit files; find them) ; /home/desktop/legend-development/files/fulltext/PMID34268881_Steinberg2021_PMC_r2.xml
+FIELD CONTEXT WITH NEW FRAGMENT:
+No NRF2 or ROS datum in any WWOX-deficient mammalian neural cell; human organoid NRF2 targets do not form a coherent signature >>>(NFE2L2 0.75x, NQO1 0.73x, but HMOX1 1.67x, SRXN1 1.33x and GSR 1.20x higher on mean counts per million, 4 knockout against 2 wild-type libraries; NFE2L2 is the factor itself, not a target)<<<.
+REPLACES (old fragment): (NFE2L2 0.75x, NQO1 0.73x)
+
+=== BLOCK R-04
+SOURCES: /home/desktop/legend-development/files/fulltext/PMID36828035_Hussain2023_PMC.xml ; /home/desktop/legend-development/files/fulltext/PMID36828035_Hussain2023.pdf ; /home/desktop/legend-development/files/figures/PMID36828035/ (Fig 9d,e) ; /home/desktop/legend-development/files/supplement/PMID36828035/
+FIELD CONTEXT WITH NEW FRAGMENT:
+signalling via NFkB, IL6-JAK-STAT3) are RNA-seq regulator inferences, not cytokine measurements. No NRF2/NFE2L2 string in the text. Verification (IT11 P2.3): the significant 2-fold claim is qPCR only, n 6 versus 6 (3 M + 3 F), unpaired Student's t, 18S, exact p not stated, age of the qPCR mice not stated; by the figure (read by eye, not digitised) >>>IL1b is about 2.0x and TNF about 3.3x<<< of the plotted means, overlap with WT is marginal for IL1b and absent for TNF; the cerebellar RNA-seq in the figure is 4 v 3 (Methods say 5 per group), so n 6 is not an RNA-seq n; the cerebellum is atrophic with Purkinje loss, so composition is not excluded. The best-supported cerebellar cytokine signal is TNF, the one NRF2 activation is predicted
+REPLACES (old fragment): IL1b is about 1.9x and TNF about 3.3x
+
+=== BLOCK R-06
+SOURCES: same as R-24
+FIELD CONTEXT WITH NEW FRAGMENT:
+Proteasome inhibition raised the half-life of wild-type CBS about 7.7-fold, T191M about 6.8-fold and I278T about 3.0-fold, and raised a live-cell activity probe signal in all three >>>(wild type trend only, about 174 percent against about 259 and 574 percent in T191M and I278T)<<<; lysosome inhibition acted on wild type and I278T but not T191M; ERAD inhibition raised the activity of T191M without any change in its half-life, whereas for I278T the ERAD inhibitor raised both half-life (about 1.6-fold) and activity (about 374 percent of vehicle), so the dissociation of activity from turnover rests on T191M alone; the authors c
+REPLACES (old fragment): (wild type trend only)
+
+=== BLOCK R-07
+SOURCES: /home/desktop/legend-development/files/fulltext/PMID42397075_Steinberg2026_OUP-AM_layout.txt ; /home/desktop/legend-development/files/fulltext/PMID42397075_Steinberg2026_OUP-AM.pdf ; /home/desktop/legend-development/files/fulltext/PMID42397075_Steinberg2026_assets/ ; /home/desktop/legend-development/files/fulltext/PMID42397075_Steinberg2026_OUP-Supplement/
+FIELD CONTEXT WITH NEW FRAGMENT:
+Radial glia are increased and neurons decreased in the engineered knockout; radial glia increased in WOREE-derived organoids according to the text, but Fig 2F shows WOREE radial-glia log2 fold change of >>>about +0.05 against about +1.0 in the knockout (a text/figure mismatch, flagged, not resolved), and about -0.27 in SCAR12, not wild-type-like;<<< neuron decrease is a knockout feature in this dataset. Direction INCREASE refers to radial glia in the knockout. Clusters from unguided organoids; the authors abstain from finer subsets.
+REPLACES (old fragment): about +0.05 against about +0.9 in the knockout (a text/figure mismatch, flagged, not resolved), wild-type-like in SCAR12;
+
+=== BLOCK R-08
+SOURCES: same as R-07 (Supplementary Fig 7F/7G in the supplement PDF)
+FIELD CONTEXT WITH NEW FRAGMENT:
+V-281: the two markers are CTIP2 (Supplementary Fig 7G) and SATB2 (Supplementary Fig 7F); NEUN does rise; CTIP2 is near zero in both knockout arms (about 0.1 and 0.7 % of cells by eye), so a floor limits the test; for SATB2 the knockout plus A51 arm is also not significantly different from wild type (about 0.7 against about 1.4 % of cells by eye), >>>so SATB2 recovery is neither shown nor excluded (the plotted dots are not organoids: the legend gives n = 4, 4, 6 and 7 against about 6, 6, 15 and 11 dots, and knockout against knockout plus A51 is not significant);<<< in wild type DMSO lowers CTIP2 (about 12.6 to about 5.6 % of cells by eye) and the knockout comparator is not labelled as vehicle; one knockout clone, one experiment, week-15 harvest.]
+REPLACES (old fragment): so SATB2 recovery is neither shown nor excluded;
+
+=== BLOCK R-11
+SOURCES: /home/desktop/legend-development/files/fulltext/PMID35222658_ADV272_PMC8752995_epmc_20261125.xml
+FIELD CONTEXT WITH NEW FRAGMENT:
+Open-label randomised, 52 recruited and 48 analysed per protocol, comparator syrup held calcium and vitamin D without magnesium, no blinding. Seizure control p 0.69 and development p 0.09 (no difference); >>>EEG improvement p 0.04 in the Results and p 0.003 in the Discussion (internal inconsistency; the 0.003 does not reproduce from Table 2).<<< No post-treatment serum magnesium is reported in the text read although the Discussion says supplementation raised it. The EEG p of 0.04 reproduces from Table 2 as an uncorrected chi-square (11/2 against 6/7: chi-square 4.25, p 0.039), while a Fisher exact test gives 0.097 and a Yates-corrected chi-square 0.099, with two of four expected counts at
+REPLACES (old fragment): EEG improvement p 0.04 in the Results and p 0.003 in the Discussion (internal inconsistency).
+
+=== BLOCK R-19
+SOURCES: same as R-29
+FIELD CONTEXT WITH NEW FRAGMENT:
+>>>WWOX knockout versus wild type (4 versus 2 libraries, one laboratory; the 2 wild-type libraries are survivors of an exclusion that removed two more)<<<
+REPLACES (old fragment): WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)
+
+=== BLOCK R-05
+SOURCES: /home/desktop/legend-development/files/fulltext/PMID41489401_Karnstedt2026_Epilepsia_PMC13075606.xml ; /home/desktop/legend-development/files/fulltext/PMID41489401_Karnstedt2026_Epilepsia_PMC13075606_supp_S1_functional.docx ; ..._supp_S2_clinical.xlsx
+FIELD CONTEXT WITH NEW FRAGMENT:
+same reading as DR-W2-002; >>>Fisher test reported 14 of 19 versus 3 of 15; scoring #28 and #29 as improved gives 14 of 19 against 5 of 15, p 0.036<<<
+REPLACES (old fragment): Fisher test reported 14 of 19 versus 3 of 15
