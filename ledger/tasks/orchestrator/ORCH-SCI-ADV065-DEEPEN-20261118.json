@@ -1217,6 +1217,22 @@
      "accepted_at": "2026-11-25T23:59:24Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv290_breton_supplement_premise_sci_20261125/RESULT_ADV290_SCI_20261125.md",
      "updated_at": "2026-11-26T00:02:02Z"
+    },
+    {
+     "step": "ADV-291: Breton 2021 S4 figure read behind the CLAIM 021 firing sentence (graph read with stated error, animals as the unit) and whether supplement images 1 and 2 change any repository sentence; PREREG first; blind reader gets sentence plus whole figure and caption",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-291 brief assignments/ADV-291.md (read from the root checkout, not yet on main) and the SCI launch message of 2026-11-26",
+     "accepted_at": "2026-11-26T00:09:53Z",
+     "updated_at": "2026-11-26T00:23:51Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv291_breton_s4_s12_sci_20261126/RESULT_ADV291_SCI_20261126.md"
+    },
+    {
+     "step": "ADV-292: read the unread class of ten held partial records (corrected ten, two increments of five, PREREG frozen), sentences to IT after its apply report; both increments by the successor",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-292",
+     "accepted_at": "2026-11-26T00:33:37Z"
     }
    ]
   }
@@ -2157,6 +2173,20 @@
    "at": "2026-11-25T23:59:24Z",
    "source": "ADV-290 (ADV message to SCI cfe92e9d, 2026-11-25; brief assignments/ADV-290.md lands in ADV's next push)",
    "step_sha256": "980527addfef",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-26T00:09:53Z",
+   "source": "ADV-291 brief assignments/ADV-291.md (read from the root checkout, not yet on main) and the SCI launch message of 2026-11-26",
+   "step_sha256": "0f83a479a23f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-26T00:33:37Z",
+   "source": "ADV-292",
+   "step_sha256": "70a381b3aa0b",
    "reopened_block": false,
    "authorised_by": null
   }

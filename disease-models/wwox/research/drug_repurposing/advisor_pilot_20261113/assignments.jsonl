@@ -720,3 +720,7 @@
 {"evidence": "SendMessage 23:57Z, SCI's own direction-pass proposal registered as written", "id": "ADV-290", "receipt": ["7318e4b4-6a2a-4108-81ae-3a5382134077"], "state": "SENT", "to": ["SCI - CURRENT cfe92e9d"], "utc": "2026-11-25T23:57:53Z"}
 {"assessment": "HOST", "id": "ADV-291", "key": "breton-supplement-s4-figure-read-and-images-1-2", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-26T00:08:24Z"}
 {"evidence": "SendMessage 00:10Z, successor accepted ADV-291 and started", "id": "ADV-291", "receipt": ["4ff338b4-02dc-46c9-956f-c5af901239fd"], "state": "SENT", "to": ["SCI - CURRENT 9bb60ab5"], "utc": "2026-11-26T00:10:52Z"}
+{"assessment": "HOST", "id": "ADV-292", "key": "reading-debt-ten-held-partials-with-two-plus-consumers-ledger-2026-11-26", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-26T00:30:47Z"}
+{"evidence": "SendMessage 00:30Z, SCI's own proposal A' registered as written", "id": "ADV-292", "receipt": ["b2cd4c79-0c65-4a4d-91e6-cc11a7fadf0b"], "state": "SENT", "to": ["SCI - CURRENT 9bb60ab5"], "utc": "2026-11-26T00:30:58Z"}
+{"assessment": "HOST", "id": "ADV-293", "key": "blind-check-of-the-eight-unchecked-adv098-sheets", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-26T00:34:04Z"}
+{"evidence": "SendMessage 00:36Z, successor bound and started the PREREG", "id": "ADV-293", "receipt": ["7cfc286b-321c-4b50-b7b9-89fc217c1b24"], "state": "SENT", "to": ["HE - CURRENT 888b4b03"], "utc": "2026-11-26T00:36:21Z"}
