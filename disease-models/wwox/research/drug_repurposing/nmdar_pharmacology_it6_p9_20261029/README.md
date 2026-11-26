@@ -37,6 +37,11 @@ Wwox neuron-specific knockout cortex, and may any drug be carried forward on the
    * d-APV cannot supply F* unaided: its block is competitive and surmountable, so the glutamate transient inside a burst lowers the
      effective occupancy below the upper bound computed at agonist well below EC50 (section 4). Evoked currents at matched agonist level
      are the safer route to F*;
+   * **Dated note, 2026-11-26** (records: `../advisor_pilot_20261113/brainstorm_20261116/adv289_291_consumers_it_20261126/`). A held, field-level
+     analogue exists for d-APV: at 100 uA the delayed evoked response of the knockout slice fell to about 0.4 of baseline at the paper's
+     d-APV concentration (50 uM, not restated for S3C; graph read of Breton 2021 Supplementary Fig. S3C, 6 slices, 3 animals), about 0.6
+     blocked. It is not F*: F* is a fraction of the isolated NMDAR current, this is a field amplitude with a floor, d-APV is competitive and
+     surmountable, and identity with the burst slices is not shown. It applies to row E2 of section 7 as well;
    * a GluN2B NAM has a clinical-stage member (radiprodil) with human exposure (adults including healthy volunteers, three infants,
      registered paediatric studies), a seizure-protection peak in rat pups at postnatal day 12 (no species age mapping to the mouse
      window of postnatal day 13 to 17 is available in the sources read: the rat and mouse ages are *not* shown to be equivalent), and in-vitro
@@ -190,7 +195,7 @@ Preparation and controls: section 2.
 | | | | (b) not raised, with resting potential and inhibition altered as reported | the d-APV dependence is permissive: no NMDAR change is needed to explain it |
 | | | | (c) AMPAR current or input resistance raised | an AMPAR component |
 | | | | (a) to (c) are not exclusive | report each component with its interval |
-| E2 (exploratory) | concentration-response of a GluN2B-selective NAM tool (Ro 25-6981) on the isolated current and on the delayed evoked response (stimulated every 30 s in the source), then on bursts; d-APV as the reference, with evoked currents at matched agonist level because competitive block is surmountable by the glutamate transient in a burst | vehicle time-matched; washout; blinded | bursts abolished at the plateau: F* (fraction of isolated NMDAR current blocked at that point) is defined | F* small: a partial, subunit-restricted block is physiologically possible, test radiprodil itself next (the drug, not the tool); F* near complete: no tolerable window, the NMDAR route is a symptom tool, prefer upstream levers (the cut-offs written beforehand) |
+| E2 (exploratory) | concentration-response of a GluN2B-selective NAM tool (Ro 25-6981) on the isolated current and on the delayed evoked response (stimulated every 30 s in the source), then on bursts; d-APV as the reference, with evoked currents at matched agonist level because competitive block is surmountable by the glutamate transient in a burst (a held field-level analogue: dated note of 2026-11-26 in section 1) | vehicle time-matched; washout; blinded | bursts abolished at the plateau: F* (fraction of isolated NMDAR current blocked at that point) is defined | F* small: a partial, subunit-restricted block is physiologically possible, test radiprodil itself next (the drug, not the tool); F* near complete: no tolerable window, the NMDAR route is a symptom tool, prefer upstream levers (the cut-offs written beforehand) |
 | | | | bursts persist at the plateau | F* is undefined; report the plateau fraction and the persistence, and read the GluN2B share of the burst current from E1 |
 | E3 | wild-type slices made to burst by a matched trigger (chosen so that burst rate and duration match the knockout), same pharmacology | wild-type, littermates | same concentration-response as knockout | the dependence is generic to NMDAR-driven networks, not a Wwox finding |
 | | | | different (knockout more sensitive) | a Wwox-specific NMDAR contribution |

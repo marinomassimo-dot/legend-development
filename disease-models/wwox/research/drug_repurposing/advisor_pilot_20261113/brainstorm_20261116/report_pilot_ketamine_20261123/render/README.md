@@ -53,3 +53,7 @@ Status: pilot, hypothesis level, not medical advice. The brief is a LAYOUT pilot
 * A spacer after a table that ends exactly at the page foot can spill onto an empty last page of a Story; empty trailing pages are dropped.
 * Figure 1: each node's text is set at the largest size from 10 down to 7.2 pt that fits its box without shrinking (probed on a scratch page, so nothing is drawn twice). The dashed INFERRED pattern is the same in the figure and in the key; `CONTEXT ONLY` is accepted as an edge status in the pack and drawn lightly; the two bus lanes (G17, G18) are moved right and the horizontal edges carry their tag beside the hub.
 * The provenance heading reads "Build provenance (for the project team)".
+
+## Content changed after the build (2026-11-26)
+
+* `../content/A_decision_evidence.md` row W3 and ledger row V3 were corrected on 2026-11-26 (IT27; the Table S1 baseline is pooled over all slices, and brilliant blue FCF's duration median is as low as carbenoxolone's). The PDFs in `out/` predate this and were not rebuilt.

@@ -644,6 +644,13 @@
      "source": "operator launch message 2026-11-26 (IT successor window d26b0ae5); CHECKPOINT_IT_20261125_13.md sections 8-9",
      "accepted_at": "2026-11-26T00:07:29Z",
      "updated_at": "2026-11-26T01:01:16Z"
+    },
+    {
+     "step": "IT27: checkpoint 26 section 3 in ADV order with the launch ADDITION: ADV-289/290/291 owed sentences, washout NOTE, ADV-294 card-negative first ten, ADV-285 S1-S8 with ADV-288 corrections, ADV-286 (start by 2026-12-01, freeze by 2026-12-04), two author-request drafts kept unsent, CI tick, Pages deploy failures as operator item",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator launch message 2026-11-26 (IT successor window 6f4e0008); generation_it59_20261119/CHECKPOINT_IT_20261126_1.md section 3",
+     "accepted_at": "2026-11-26T01:06:29Z"
     }
    ]
   }
@@ -1143,6 +1150,13 @@
    "at": "2026-11-26T00:07:29Z",
    "source": "operator launch message 2026-11-26 (IT successor window d26b0ae5); CHECKPOINT_IT_20261125_13.md sections 8-9",
    "step_sha256": "564c70f886fd",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-26T01:06:29Z",
+   "source": "operator launch message 2026-11-26 (IT successor window 6f4e0008); generation_it59_20261119/CHECKPOINT_IT_20261126_1.md section 3",
+   "step_sha256": "2cebe963ca60",
    "reopened_block": false,
    "authorised_by": null
   }
