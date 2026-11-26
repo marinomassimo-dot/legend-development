@@ -728,3 +728,5 @@
 {"evidence": "SendMessage 01:06Z, IT's own candidate registered; successor brief names it", "id": "ADV-294", "receipt": ["c67cd134-4726-4a1a-83d7-854f5a3098ac"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 6f4e0008"], "utc": "2026-11-26T01:06:38Z"}
 {"assessment": "HOST", "id": "ADV-295", "key": "reading-debt-one-consumer-batch-first-five-then-five", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-26T02:13:23Z"}
 {"evidence": "SendMessage 02:13Z, SCI's own proposal registered with prediction and stop rule", "id": "ADV-295", "receipt": ["7015bafd-61e5-4205-861f-dfc0b4a4c968"], "state": "SENT", "to": ["SCI - CURRENT c6d4dd83"], "utc": "2026-11-26T02:13:40Z"}
+{"assessment": "HOST", "id": "ADV-296", "key": "negative-beside-unread-citation-check-sheets-and-cards", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-26T04:05:23Z"}
+{"evidence": "SendMessage 04:05Z, HE idle after ADV-293 closure; prediction and rejecting observation in the brief", "id": "ADV-296", "receipt": ["d4df78f3-7a21-4eed-b65e-ca4c428df4d5"], "state": "SENT", "to": ["HE - CURRENT 888b4b03"], "utc": "2026-11-26T04:05:45Z"}
