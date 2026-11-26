@@ -582,6 +582,26 @@ def marker_state(path: Path | str, task: str) -> str:
     return state
 
 
+def marker_states(path: Path | str) -> dict[str, str]:
+    """Every task this session's own text marked, with the state of its last marker line (BOUND or RELEASED). Empty when there is no marker or no file."""
+    states: dict[str, str] = {}
+    try:
+        with Path(path).open(encoding="utf-8", errors="replace") as fh:
+            for line in fh:
+                try:
+                    entry = json.loads(line)
+                except ValueError:
+                    continue
+                if not isinstance(entry, dict):
+                    continue
+                for text in _text_blocks(entry):
+                    for kind, task in MARKER_RE.findall(_outside_fences(text)):
+                        states[task] = "BOUND" if kind == "BOUND" else "RELEASED"
+    except OSError:
+        return {}
+    return states
+
+
 def launcher_binding() -> str | None:
     """The task a launcher bound this process to, or None. A malformed id binds nothing."""
     value = os.environ.get(BIND_ENV, "").strip()
