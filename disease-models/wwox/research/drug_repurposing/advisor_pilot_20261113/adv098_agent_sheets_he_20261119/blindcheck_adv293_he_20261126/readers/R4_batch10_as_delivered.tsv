@@ -1,0 +1,57 @@
+U10.1	-	NOT A CLAIM	table header
+U10.2	R	UNSETTLED	CHEMBL3414621 matches the meta file; max phase 4, PubChem CID, InChIKey and the NAME_EXACT route are not in the packet
+U10.3	R	UNSETTLED	CHEMBL4751615 matches the meta file; resolution route, CID and InChIKey are not delivered
+U10.4	R	UNSETTLED	CHEMBL1568415 matches the meta file; the "[Z,E]" in the 2009 title is true; CID, InChIKey and the E isomer are not delivered
+U10.5	T	OK	
+U10.6	T	MUST CHANGE	range top: row 27957785 gives 219 nM (EZH2 Y641F enzyme, CHEMBL5727694, 2020); 0.34 to 219 is about 640-fold, not 500
+U10.7	T	OK	five documents with Ki 2.5 nM, four of them 2020 to 2023; two of the four are flagged potential_duplicate=1
+U10.8	T	OK	all six values and the 3.58-fold spread are right; the Y641S row (26192547) carries potential_duplicate=1, and removing it does not change the spread
+U10.9	T	OK	
+U10.10	T	ADD	the four ratios are right; the label's own EZH1/EZH2 ratio is left out
+U10.11	T	OK	98.2 / 6.9 = 14-fold
+U10.12	T	OK	
+U10.13	T	ADD	G401 200 nM also appears as a 2022 H3K27me3 row; a 40 nM G401 H3K27me3 row (EED document) exists
+U10.14	T	ADD	true as written; the above-3-µM mutant-labelled lines, the 2023 duplicate set and the EED-document row are not stated
+U10.15	T	OK	durations are 4 h, 48 h, 72 h, 5, 6, 7 and 14 days, and some rows give none
+U10.16	T	OK	1.46 to 6.67-fold
+U10.17	T	OK	the HDAC6 row has an empty value
+U10.18	T	OK	"different laboratory" is not settled by the packet
+U10.19	T	ADD	the order of HDAC4 and HDAC5 differs between the two documents
+U10.20	T	OK	cell/enzyme ratios run from 6.0 to 418
+U10.21	T	OK	
+U10.22	T	OK	
+U10.23	T	OK	
+U10.24	T	OK	"MYC repressed" is an interpretation; the row text says "expressing MYC" in both assays
+U10.25	T	OK	59.5/35.1 = 1.70
+U10.26	T	ADD	the held answer covers only IC50, Ki, Kd and EC50 rows
+U10.27	T	MUST CHANGE	61 rows carry EZH1 or EZH2 by gene symbol (case-insensitive), not 60
+U10.28	T	OK	the rows quoted are right
+U10.29	T	MUST CHANGE	two SARS-CoV-2 antiviral rows (CHEMBL4651402) are not antiproliferative
+U10.30	S	OK	
+U10.31	S	OK	
+U10.32	S	OK	
+U10.33	S	ADD	the abstract of PMID 32674144 is delivered and gives a measured exposure
+U10.34	R	UNSETTLED	search count, no search delivered
+U10.35	S	MUST CHANGE	PMID 32674144 abstract: brainstem tumour concentration was 3.74% of serum after systemic EPZ-6438
+U10.36	S	OK	
+U10.37	S	ADD	the label's pediatric T-LBL case is left out
+U10.38	S	OK	the label sections are cut at 2,000 characters
+U10.39	R	UNSETTLED	trial count, no search delivered
+U10.40	T	OK	35 rows; the cell lines are THP-1, PANC-1, L3.6pl and HT-29
+U10.41	R	UNSETTLED	0 trials and "no label" are not in the packet
+U10.42	R	UNSETTLED	PubMed record counts and titles are not in the packet
+U10.43	R	UNSETTLED	negative from a search not delivered
+U10.44	R	UNSETTLED	no TMP195 label in the packet
+U10.45	T	OK	rows are right; "not found by these routes" is unsettled
+U10.46	S	OK	every number matches the abstract
+U10.47	S	OK	"brain" does not occur in the abstract
+U10.48	R	UNSETTLED	search count and titles not delivered
+U10.49	R	UNSETTLED	0 studies, no label: not delivered
+U10.50	T	OK	163 vs 35 vs 5 rows, plus the label and the P-gp mouse study
+U10.51	S	ADD	the DIPG exposure measurement is left out
+U10.52	T	OK	"no exposure, no label" cannot be checked in the packet; the rest is right
+U10.53	T	OK	
+U10.54	T	ADD	35 to 60 µM is right; "no on-target measurement in ChEMBL" is limited to the four types retrieved
+U10.55	-	NOT A CLAIM	statement of what was not read
+U10.56	R	UNSETTLED	ChEMBL ids confirmed by the meta files; structure keys and "no conflict" are not delivered
+U10.57	R	UNSETTLED	the identity tool output is not in the packet
