@@ -1,0 +1,40 @@
+# D-mannose · glycan donor supply and Golgi trafficking
+
+26 November 2026 · SCI_CODEX · opening checkpoint · context_policy: QUESTION_DRIVEN
+
+## WWOX rationale and comparative data
+
+One WWOX siRNA experiment in non-neural RPE1 cells increased cell-surface HPA and GNL lectin signals and reduced COPB2 colocalization with Golgi. The held review identifies one siRNA, two biological repetitions of the knockdown validation by RT-PCR, a 30-cell imaging unit for the lectin/coatomer readouts and no WWOX-specific rescue of those endpoints. HPA can report exposed immature O-GalNAc glycans and GNL can report exposed mannose-rich structures. Those signals do not quantify a cytosolic donor shortage or the occupancy of individual N-glycosylation sites. [Aragon-Ramirez et al., bioRxiv v3, Fig. 5 and Supplementary Fig. 4](https://pmc.ncbi.nlm.nih.gov/articles/PMC13405132/) · [Held scope and controls audit](../../advisor_pilot_20261113/brainstorm_20261116/adv205_paper542_golgi_wwox_scope_sci_20261123/RESULT_ADV205_PAPER542_GOLGI_WWOX_SCOPE_SCI_20261123.md)
+
+Four of the 15 prespecified targets had the same expression direction in all three bulk models and every one-library omission. The data support testing **both GDP-mannose synthesis and downstream trafficking**. No consistent fall was seen for MPI or PMM2. COPB2 RNA changes in opposite directions in the two mouse regions. Its Golgi recruitment is a distinct protein-localization outcome. Human organoid samples have two control and four KO libraries with shared lines. Mouse cortex and hippocampus use neuronal-deletion series, with 4/3 and 2/3 libraries respectively. The analysis is descriptive. Trimming enzyme MAN1A1 uses the archived mouse symbol Man1a. [Prespecified comparison](pretest_20261126.md) · [45 contrasts](contrasts.tsv)
+
+| Target | P17 mouse cortex | P17 mouse hippocampus | Human week-15 organoids |
+|---|---:|---:|---:|
+| GMPPB | −1.03 | −0.90 | −0.24 |
+| DPM1 | +0.80 | +0.09 | +0.29 |
+| COG4 | −0.59 | −0.51 | −0.07 |
+| COG6 | −0.33 | −0.16 | −0.86 |
+
+Values are KO minus control in mean log₂(1 + abundance), using gene-summed transcript TPM for mouse and per-million processed counts for human organoids. The DPM1 change in hippocampus and COG4 change in the organoids are small. Stable signs do not measure enzyme activity, Golgi residence, donor pools or relative rates of synthesis and consumption.
+
+In the held P17 hippocampal nuclei, GMPPB changed **4.44 → 4.06 CPM** in the excitatory assignment (55 and 42 UMIs), **2.42 → 3.73** in inhibitory nuclei (4 and 7 UMIs), and **6.84 → 3.49** in assigned astrocytes (10 and 6 UMIs). Those estimates do not reproduce a large shared neuronal fall. COG6 declined **19.96 → 16.62**, **27.85 → 19.19** and **17.79 → 15.69 CPM** in the same respective assignments. COG4 did not retain its bulk decrease in those classes. Both genotype feature lists include Dpm1, but there were no Dpm1 counts in the three assignments shown. One pool per genotype and sparse donor-pathway transcripts limit attribution. The comparison prioritizes a direct donor measurement and a separate Golgi maturation readout. [Nuclear counts and denominators](nuclei.tsv) · [GSE158684](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158684)
+
+## Discriminating prediction
+
+Extracellular mannose can feed mannose-6-phosphate, mannose-1-phosphate and then GDP-mannose. The lower GMPPB RNA makes the conversion step a specific candidate. The opposing possibility is weaker feedback, since a recombinant study showed GDP-mannose-dependent inhibition of GMPPB by GMPPA and its animal model found increased GDP-mannose in a separate GMPPA-deficient disease setting. The direction of the WWOX GDP-mannose pool is therefore an empirical question. Measure its absolute value, label enrichment over time and isotope-resolved upstream mannose phosphates. Resolve mannose from isomeric sugar species at the measurement stage. [GMPPA primary abstract](https://pubmed.ncbi.nlm.nih.gov/33755596/) · [Independent recombinant complex study, primary abstract](https://pubmed.ncbi.nlm.nih.gov/33986552/)
+
+- **Upstream supply limit.** At matched replete basal glucose, added labelled mannose increases a low total GDP-mannose pool and restores early N-site occupancy and the affected mature glycoforms in WWOX cells. An MPI-deficient preparation is an allocation control for this route.
+- **GMPPB or downstream donor-use limit.** Mannose phosphates label normally while total and labelled GDP-mannose or its incorporation into the early lipid-linked glycan stagnate. Distinguish the steps by measuring the intermediate pools and early N-site occupancy.
+- **Golgi trafficking limit.** Early donor and occupancy recover or were already adequate, while trafficking/localization and mature glycoforms remain abnormal. Resolve mature N-processing separately from O-GalNAc maturation, which starts from UDP-GalNAc. A prolonged tracer can redistribute through intermediary metabolism, so O-glycan readouts are a processing test rather than proof of exclusive donor origin.
+
+Measure surface protein abundance, ATP and viability in the same comparison. Interpret a lectin change at comparable surface protein exposure and support it with a site-resolved glycoform or orthogonal maturation assay. Pair WWOX-deficient and corrected stage-matched neural preparations and retain a functional readout before inferring developmental benefit.
+
+## Pediatric precedent and disposition
+
+Mannose bypasses the primary MPI defect in a published hepatic–intestinal CDG case, which is a distinct disease mechanism. In a retrospective PMM2-CDG series of **20** treated patients (infancy through 27 years), **12** met the authors' relative tetrasialotransferrin criterion, a rise of 50% from pretreatment over two to three years. The series was uncontrolled, serum draws were not standardized relative to intake, and the endpoint was peripheral. Mild gastrointestinal symptoms were reported. An older blood-exposure study describes roughly **55 µM** at baseline and **3–5 times** that with repeat intake, equivalent to about **165–275 µM** from those approximate inputs. Neither source establishes CNS concentration, WWOX efficacy or pediatric WWOX tolerability. [MPI case, primary abstract](https://pubmed.ncbi.nlm.nih.gov/9525984/) · [PMM2 retrospective series, Patients and Methods and Results](https://link.springer.com/article/10.1186/s13023-020-01528-z) · [Blood exposure, primary abstract](https://pubmed.ncbi.nlm.nih.gov/9169093/)
+
+The PMM2 series also reports **30.65 ± 7.45 µM** serum mannose before intake in its 14-person exposure subset. Available post-intake measurements did not reach 250 µM and sampling was not standardized for peak capture. Separately, chromatography in **14 adults aged 27.1–85.9 years** measured **10.6 ± 2.4 mg/L** in CSF, or approximately **59 ± 13 µM** using 180.156 g/mol. This is an endogenous adult reference. It does not estimate CNS delivery after supplementation or define a target for a WWOX neural assay. [Taday et al., Results, mannose concentrations](https://link.springer.com/article/10.1186/s13023-020-01528-z) · [Adult CSF primary abstract](https://pubmed.ncbi.nlm.nih.gov/2625478/)
+
+**Active.** The next check is whether human neural material reports distinguishable mannose/GDP-mannose exposure or glycan occupancy at the relevant stage. The nuclear comparison favours measuring donor availability and processing together. The evidence to date does not justify WWOX trial prioritization. Reassess after pairing donor exposure with an occupancy and maturation result. Consider independent review if assignment, assay specificity or an exposure denominator changes that choice.
+
+To reproduce, run `python3 -B donor_screen.py REPOSITORY FILES OUTPUT`. [Input accessions, filenames and hashes](inputs.tsv) · [Script](donor_screen.py)
