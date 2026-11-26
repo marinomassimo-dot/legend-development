@@ -86,7 +86,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: palmitoylethanolamide.** The WWOX mouse astrocyte pool shows lower PPARA and both PEA production and hydrolysis transcripts. Human bulk receptor and oxidation patterns differ. Next compare isotope-specific brain exposure by formulation with a receptor-specific response. [WWOX contrasts, prediction and replay](palmitoylethanolamide/README.md)
+**Active compound: palmitoylethanolamide.** The WWOX mouse astrocyte pool shows lower PPARA and both PEA production and hydrolysis transcripts. Human bulk receptor and oxidation patterns differ. Rat brain isotope data apply to the ultramicronized arm. Next quantify glial or slice responses in the low exposure range and verify chemical and receptor specificity. [WWOX contrasts and prediction](palmitoylethanolamide/README.md) · [Brain tracer, limits and replay](palmitoylethanolamide/brain_tracer_and_controls_20261126.md)
 
 **Latest completed compound: ambroxol hydrochloride.** Parked for pediatric WWOX trial priority. Wild-type and GBA1-variant cells separate synthetic-substrate activity, lysosomal protein maturation and autophagic turnover. Reopen for native WWOX substrate and mature lysosomal enzyme correction after washout at attainable exposure. [Cellular comparisons and disposition](ambroxol/cellular_turnover_and_disposition_20261126.md) · [CSF and assay controls](ambroxol/compartment_exposure_20261126.md)
 
