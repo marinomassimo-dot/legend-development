@@ -1,0 +1,97 @@
+U11.1	-	NOT A CLAIM	heading
+U11.2	S	ADD	abstract 29912275 (TTA-P2 in tiab) is a central in vivo mouse seizure study; counts 32/38 and titles-read UNSETTLED
+U11.3	S	UNSETTLED	negative search result, no re-runnable search delivered
+U11.4	R	UNSETTLED	choice rests on unsettled search negatives (TTA-A2 central in vivo true per abstracts)
+U11.5	-	NOT A CLAIM	plan
+U11.6	-	NOT A CLAIM	table header
+U11.7	S	UNSETTLED	CHEMBL4217292 matches meta; max phase, NAME_EXACT, CID, InChIKey not in packet
+U11.8	S	UNSETTLED	CHEMBL3934636 matches meta; phase, CID, InChIKey, PubChem resolution not in packet
+U11.9	S	UNSETTLED	CHEMBL1684954 matches meta; request timeout, CID, InChIKey not in packet
+U11.10	S	UNSETTLED	CHEMBL488817 matches meta; CID, InChIKey not in packet
+U11.11	T	MUST CHANGE	"each agent one origin" overturned: TTA-A2 has 2010 plate (9.4, 384) and 2011 patch clamp (89, 92, 98, 3.7) documents with different values; TTA-P2 two documents
+U11.12	T	OK	24 rows, one document CHEMBL4177680, 2017
+U11.13	T	OK	37/73/86 nM x3 documents (3853331 2016 FLIPR, 3864167 2016 patch clamp, 5380849 2023), potential_duplicate=1 on the later six
+U11.14	T	OK	row 25580223, CHEMBL5352414, 2022, 92 nM, potential_duplicate=1
+U11.15	T	OK	conclusion consistent with rows
+U11.16	T	ADD	ulixacaltamide Cav3.1-3.3 rows are also Fluo-4-AM FLIPR (Cav3.2 with 3 min preincubation), same format as apinocaltamide; TTA-A2 also has FLIPR rows (2010); documents span 2008-2023
+U11.17	T	OK	Cav3.3 7.5, 86, 82 nM; no document shared among the three agents
+U11.18	T	OK	only shared document is CHEMBL1140166 (TTA-P2 and ethosuximide)
+U11.19	T	OK	82 nM vs >5,000,000 nM, same assay CHEMBL1033088, flag "Outside typical range"; 5e6/82=60,976
+U11.20	T	OK	interpretation within bounds
+U11.21	T	OK	conclusion, supported by U11.22
+U11.22	T	OK	9.4 vs 384 nM = 40.9-fold (2010); 98 vs 3.7 nM Cav3.3 (2011)
+U11.23	T	OK	interpretation
+U11.24	T	ADD	all numbers and ratios verified (rat Cav3.3 4.17-fold lower, dog Cav3.1 3.13); but the three "human" rows are "(unknown origin)" in the assay text, species assigned by ChEMBL target mapping
+U11.25	T	OK	Ki 20 nM, row 18466457
+U11.26	T	OK	2410 nM = 134-fold over Cav3.2 18 nM; hERG 5500; CYP3A4 46000/51000; other CYP 14000 to >100000
+U11.27	T	OK	no panel in 24 rows; abstract quote "no relevant activity on other targets" verified
+U11.28	S	OK	all figures match abstract 31004346 ("adult" not stated in abstract)
+U11.29	S	OK	matches abstract 31994022 (accumulation index stated for cohorts 1 and 2)
+U11.30	S	OK	plasma stated; "total concentration" not in abstract; SAD also sampled saliva
+U11.31	S	OK	"brain-penetrating", "albeit at higher concentration" verified
+U11.32	S	UNSETTLED	access status of full texts not in packet (PubMed shows no PMCID for the two)
+U11.33	S	UNSETTLED	negative search
+U11.34	S	OK	matches abstract 40165594; sponsor affiliation (Idorsia) verified
+U11.35	S	OK	matches abstracts 31994022 and 31004346
+U11.36	S	OK	no child data in abstracts (2025 abstract names childhood absence epilepsy only as indication)
+U11.37	S	UNSETTLED	registry output not in packet
+U11.38	S	UNSETTLED	registry negative
+U11.39	S	UNSETTLED	no label delivered (labels folder empty); investigational per abstracts
+U11.40	T	OK	9 rows, 3 documents, 37/73/86 nM
+U11.41	T	OK	all 9 rows are the three human channels; no state-dependence or other-species row
+U11.42	S	OK	abstract 22344687 verified (85-90 %, no concentration); 7-record search count UNSETTLED
+U11.43	S	UNSETTLED	negative search
+U11.44	S	ADD	"none found" is contradicted at abstract level by 30251162 (impairment at 10 mg/kg); sheet corrects at U11.74; essential-tremor review claim UNSETTLED
+U11.45	S	ADD	abstract 41489546 gives Z944 Cav1.4 IC50 ~30 uM (about 350-810-fold above 86/37 nM) and says use with caution
+U11.46	S	UNSETTLED	registry output not in packet
+U11.47	S	UNSETTLED	registry negative
+U11.48	-	NOT A CLAIM	own reading status
+U11.49	S	UNSETTLED	no label delivered
+U11.50	T	OK	17 rows, 3 documents; 89/92/98 nM; four >30000 nM rows; Ki 1.2 nM in 2010 and 2011 docs; ~300-fold in 2010 abstract
+U11.51	S	OK	abstract 20682849
+U11.52	-	NOT A CLAIM	pointer
+U11.53	S	MUST CHANGE	"protection ... absent in Cav3.2 knockouts" is false against abstract 26456350 (knockouts' own phenotype); sheet admits at U11.90-93
+U11.54	S	OK	abstracts say "mice"; full-text negatives UNSETTLED
+U11.55	S	UNSETTLED	negative search
+U11.56	S	ADD	"none found" contradicted by abstract 19451696 (lower body core temperature, weight effects); sheet corrects at U11.80
+U11.57	S	UNSETTLED	trials/label negative not in packet
+U11.58	T	OK	8 rows, 2 documents 2008; 82; Ki<100; 1900; 2900, 3790; 6330 (x2); 84000
+U11.59	T	OK	no sigma row in other three tables; ceiling stated
+U11.60	S	UNSETTLED	title searches not in packet
+U11.61	T	OK	only shared document is 1140166
+U11.62	S	UNSETTLED	"none of either by these routes" for ulixacaltamide is a negative; rest consistent with abstracts
+U11.63	R	UNSETTLED	batch 1 ethosuximide brain value not in packet
+U11.64	S	UNSETTLED	negatives and registry age data not in packet
+U11.65	T	OK	apino 1 document; ulixa same three values in 3 documents; TTA-A2 Ki 1.2 and Cav3.2 92 repeated
+U11.66	R	UNSETTLED	statement about own process and repository
+U11.67	R	UNSETTLED	repository content; the three PMIDs match the abstracts
+U11.68	S	OK	abstract 26274319 quote verified; "adult" and repository lane content UNSETTLED
+U11.69	-	NOT A CLAIM	process
+U11.70	-	NOT A CLAIM	statement of intent
+U11.71	R	UNSETTLED	description of own earlier search
+U11.72	R	UNSETTLED	search not in packet; "three lines" vs U11.84 (apino unchanged) looks inconsistent
+U11.73	-	NOT A CLAIM	process
+U11.74	S	OK	supported by abstract 30251162; full text part see U11.75
+U11.75	S	UNSETTLED	quotes from full text PMC4537250 not in packet; PLoS One, PMCID verified
+U11.76	S	OK	abstract 26274319
+U11.77	S	OK	abstract 30251162: 10.0 mg/kg highest of three; 5.0 mg/kg blocked MK-801 locomotion
+U11.78	S	OK	abstracts 26274319 and 42274296 verified; "-64 per cent" UNSETTLED
+U11.79	-	NOT A CLAIM	caution
+U11.80	S	OK	supported by abstract 19451696
+U11.81	S	OK	matches abstract 19451696
+U11.82	S	OK	matches abstract 20682849
+U11.83	S	ADD	abstract: weight effects are prevention of HFD gain and loss in obese animals; no weight effect on normal diet stated; "class-level" rests on Cav3.1 knockout plus one compound
+U11.84	-	NOT A CLAIM	heading
+U11.85	S	UNSETTLED	search count and patent review not in packet; the two phase 1 abstracts verified
+U11.86	S	OK	abstract 29116786
+U11.87	S	UNSETTLED	negative search
+U11.88	R	UNSETTLED	cards not in packet
+U11.89	-	NOT A CLAIM	plan
+U11.90	S	OK	misreading correctly identified
+U11.91	S	OK	quote of U11.53 matches
+U11.92	S	OK	abstract 26456350 quote verbatim
+U11.93	-	NOT A CLAIM	instruction
+U11.94	S	OK	abstract 20682849
+U11.95	S	UNSETTLED	figure and sedation passages from held full texts not in packet (PMCID matches)
+U11.96	S	OK	abstract 29912275 verified
+U11.97	S	OK	true
