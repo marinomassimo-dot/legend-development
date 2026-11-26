@@ -1,0 +1,78 @@
+U1.1	R	UNSETTLED	route and process statements; the repository files are not in the packet
+U1.2	T	OK	ChEMBL-text part true (conditions often absent); the assay_conditions.py claim is R and unsettled
+U1.3	T	OK	CACNA1I >5000000 nM CHEMBL1140166 2008 FLIPR; 600000 nM CHEMBL4229462, target Unchecked, no gene; both Outside typical range
+U1.4	T	OK	no CACNA1G/H row (T); 
+U1.5	T	OK	different assay, single subtype: true
+U1.6	T	OK	24745387 EC50 140.4 mg/kg scPTZ; 24745378 >200 mg/kg (6 Hz electrical test); both CHEMBL5113514 (a third electrical row, MES, has no value)
+U1.7	-	NOT A CLAIM	status label
+U1.8	T	MUST CHANGE	
+U1.9	S	UNSETTLED	
+U1.10	S	UNSETTLED	El Sayed 1978 abstract not in the packet
+U1.11	S	OK	17085857, 18566800, 16140589 total brain; 22789660 free plasma and total brain; all stated in the abstracts
+U1.12	S	UNSETTLED	record counts
+U1.13	S	UNSETTLED	negative without a re-runnable search
+U1.14	S	MUST CHANGE	openFDA labels in the packet: 20260525, 20260724, 20241009; newest is 2026-07-24, not 2026-05-25
+U1.15	T	OK	no CACNA1G/H row, no thalamic-neuron row (T); the other negatives are unsettled
+U1.16	T	ADD	0 rows is true, but only for types IC50, Ki, Kd and EC50 (see section 2); 
+U1.17	R	OK	literature not read: stated as such
+U1.18	-	OK	
+U1.19	-	NOT A CLAIM	status label
+U1.20	S	UNSETTLED	
+U1.21	S	MUST CHANGE	Heurteaux 1991: the abstract says 
+U1.22	S	UNSETTLED	record count
+U1.23	S	UNSETTLED	negative without a re-runnable search
+U1.24	S	ADD	text true; 2 of the 3 labels are homeopathic with empty sections (see section 2)
+U1.25	T	OK	empty table (T); the other negatives are unsettled
+U1.26	T	OK	84 rows; 38 Grin/GRIN gene rows; 22 human (16 rat)
+U1.27	T	ADD	every number true; the human 2023 oocyte rows for GluN2C and GluN2D (0.22 to 0.59 uM, target 
+U1.28	T	OK	6083260: 840/780 nM at -60 mV, 28070/25630 nM at -40 mV
+U1.29	T	ADD	numbers true (55400 is 55.4); the same values recur in 3 more documents and are flagged potential_duplicate
+U1.30	T	ADD	true for the three all-subunit symbol rows (540, 1200, 540); the other Ki rows span 0.429 to 9.74 uM
+U1.31	T	OK	0.95 nM vs 911 nM is about 960-fold, 3 orders
+U1.32	T	MUST CHANGE	holding potential is stated in 17 rows, not only 
+U1.33	-	NOT A CLAIM	instruction
+U1.34	T	OK	62 rows outside the 22 human subunit rows give 24 distinct (target, species) pairs; rat NMDA, AChE, BChE and T. brucei are present
+U1.35	S	OK	3 titles, PMIDs and years verified; counts 133 and 30 unsettled; title 28557265 is quoted truncated
+U1.36	R	UNSETTLED	process statement
+U1.37	R	UNSETTLED	search result not delivered
+U1.38	S	ADD	Victorino 2017 abstract (offspring exposure) left out; the negative itself is unsettled
+U1.39	S	OK	3 labels, newest 20260901; quotes true; 578 children aged 6 to 12 in 2 controlled 12-week studies
+U1.40	R	UNSETTLED	SCI request and ADV-050: repository statements; 
+U1.41	S	UNSETTLED	synthesis negative
+U1.42	-	NOT A CLAIM	plan
+U1.43	T	OK	CACNA1I >5 mM (1 gene row); 0.6 mM (1 unmapped row)
+U1.44	R	OK	conditional inference
+U1.45	T	MUST CHANGE	
+U1.46	T	OK	0 rows in the answer
+U1.47	T	OK	13348817: IC50 0.95 nM, pChEMBL 9.02, CHEMBL2396530; abstract and title match PMID 23692871; the document-to-PMID mapping is not in the packet
+U1.48	T	OK	assay text matches
+U1.49	S	OK	quote exact; no memantine IC50 in the abstract; no PMCID in the PubMed record
+U1.50	T	MUST CHANGE	the 911 nM assay text (CHEMBL889736) says 
+U1.51	-	OK	status line
+U1.52	R\tOK\tinference\nU1.53\tR	OK	0.84 to 6.7 uM band equals symbol rows 840 to 6700 nM
+U1.53	R	OK	0.84 to 6.7 uM band equals symbol rows 840 to 6700 nM
+U1.54	T	ADD	six of eight and the two above are true for the symbol rows; the unmapped 2023 GluN2A rows are left out (see section 2)
+U1.55	T	UNSETTLED	the other 6 rows of assay CHEMBL2399396 are not in the packet; memantine 0.95 nM in that assay is true
+U1.56	S	OK	abstract: 
+U1.57	T	UNSETTLED	rests on 315 nM, not delivered
+U1.58	T	UNSETTLED	rests on the rows of the other compounds
+U1.59	T	UNSETTLED	rests on the rows of the other compounds; 911 nM is true
+U1.60	R	OK	inference, labelled as such
+U1.61	R	OK	says the table was not read
+U1.62	-	NOT A CLAIM	instruction
+U1.63	R	UNSETTLED	134.9 ug/g and Cheng 2020 are not in the abstract or the packet
+U1.64	S	OK	four abstracts: brain concentrations measured, no absolute value; 22315091 abstract also has none
+U1.65	S\tUNSETTLED\tnegative\nU1.66\tR	UNSETTLED	SCI claim, not in the packet
+U1.66	R	UNSETTLED	SCI claim, not in the packet
+U1.67	R	UNSETTLED	repository and SCI pointers
+U1.68	-	NOT A CLAIM	pointer
+U1.69	-	NOT A CLAIM	disclaimer
+U1.70	R	UNSETTLED	Methods text of 22315091, full text not delivered
+U1.71	R	UNSETTLED	ED50 72.3 and the sildenafil arm are not in the abstract
+U1.72	-	NOT A CLAIM	reading note
+U1.73	R	UNSETTLED	SCI negative
+U1.74	R	UNSETTLED	SCI inference
+U1.75	R	UNSETTLED	SCI inference
+U1.76	R	OK	
+U1.77	R	UNSETTLED	list of routes
+U1.78	-	NOT A CLAIM	pointer
