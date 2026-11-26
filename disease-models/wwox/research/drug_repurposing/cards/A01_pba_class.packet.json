@@ -41,7 +41,7 @@
         "cell_type": "HEK293 and fly astrocytes",
         "developmental_stage": "adult flies and cell line"
       },
-      "measured_result_note": "The class rescued the fully retained variant and NOT the partly trafficked G443D; the rescued variants recover part of wild-type capacity with altered affinity; wild-type capacity is raised too.",
+      "measured_result_note": "4-phenylbutyrate (10 millimolar in HEK293 for 24 h; 1 millimolar in fly food for 48 h) rescued the fully ER-retained G443V and NOT the partly trafficked G443D; the rescued variants recover part of wild-type capacity with altered affinity (about 6 to 8 percent of untreated wild-type uptake in the single-concentration screen; Vmax about 39 percent for G443V with 4-phenylbutyrate and about 55 percent for G443D with glycerol, Km raised, Fig 4D,F); wild-type uptake was raised in HEK293 (clearly by 4-phenylbutyrate), wild-type fly expression was not. Glycerol 10 percent rescued G443D uptake and mature band in HEK293 (Fig 3B, 4D-E) and G443V uptake in HEK293 only (Fig 3C); uptake was not measured in flies, where glycerol and 4-phenylbutyrate both gave presynaptic G443V in imaging, glycerol's effect on G443V seizures was not significant, 4-phenylbutyrate reduced G443V seizures (Fig 6H) and did not change G443D seizures (Fig 6G). Bile-acid chaperones are not tested in this paper.",
       "receipt": "FTR-20261021-40485335-01"
     },
     {
@@ -60,7 +60,7 @@
         "cell_type": "HEK293T, Neuro2a, neurons",
         "developmental_stage": "mixed"
       },
-      "measured_result_note": "The class raises wild-type protein in every target of the lot: the effect is not variant-specific.",
+      "measured_result_note": "The earlier statement that the class raises wild-type protein in every target of the lot rests on four readings and is withdrawn pending a re-read of three of them (30266908, 42157447, 42587736). For the GAT-1 reading (Shah 2025, PMID 40485335): in HEK293 cells 4-phenylbutyrate and glycerol increased the wild-type hGAT-1 mature band per the paper's text (the representative blots show at most a modest change; not quantified) and 4-phenylbutyrate increased wild-type uptake (Fig 3A); in Drosophila astrocytes neither compound visibly changed wild-type hGAT-1 expression (single-section images, not quantified, Fig 6B), while 4-phenylbutyrate, with glycerol minor and unmarked, raised the retained variant G443V (about 14-fold in the text, about 9-fold by plot medians, Fig 6I, at least 10 brains per condition). The cell-line effect on wild-type protein is not shown to be variant-specific; the in vivo wild-type reading is qualitative.",
       "receipt": "FTR-20261021-30266908-01; FTR-20261021-42157447-01; FTR-20261021-42587736-02; FTR-20261021-40485335-01"
     },
     {
@@ -93,12 +93,12 @@
       "reading_depth": "partial_fulltext_read",
       "context": {
         "disease_id": "STXBP1 loss of function (not WWOX)",
-        "genotype": "frameshift nulls",
+        "genotype": "stxbp1a 4-bp frameshift deletion; stxbp1b 12-bp loss-of-function deletion (in frame by arithmetic, protein not measured; the Discussion calls both lines frameshift loss-of-function deletions)",
         "species": "zebrafish",
         "cell_type": "whole larva",
         "developmental_stage": "larva"
       },
-      "measured_result_note": "MEASURED NO RESCUE in null alleles, protein not measured, bath concentration bounded by larval toxicity, assay separation of controls unestablished; INCONCLUSIVE for a protein-expressing missense allele. Encoded NO_CHANGE.",
+      "measured_result_note": "MEASURED NO RESCUE in null alleles, protein not measured (the authors could not assess stxbp1a or stxbp1b protein: no validated antibodies), bath concentration bounded by larval toxicity (text 25 and 50 micromolar, the Fig 1D legend says 10 and 25, the supplementary workbook writes 'mM'; wild-type survival about 70 percent at 50 micromolar, Fig 1C), assay separation of controls unestablished; movement was the endpoint on stxbp1a (stxbp1b movement also showed no effect), ictal-like events by local field potential on stxbp1b (nine larvae, 4-phenylbutyrate against baseline, unpaired t test on the same nine larvae, P = 0.8593, 95 percent CI -7.18 to 8.51 events per 15 min, so a large fall is not excluded); INCONCLUSIVE for a protein-expressing missense allele. Encoded NO_CHANGE.",
       "receipt": "FTR-20261021-42268630-01"
     },
     {

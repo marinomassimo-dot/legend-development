@@ -1,0 +1,124 @@
+BLIND VERIFICATION, effort high (hypothesis level; not medical advice). I used only the files in /home/desktop/.claude/jobs/6f4e0008/tmp/b292b: no network, no other repository file. My scratch scripts are in /tmp/k292.
+
+SUMMARY
+- K1: ADD
+- FR1: ADD
+- HA1: SUPPORTED
+- CH1: ADD
+- No sentence needs MUST CHANGE. Every number, count, direction, species, assay and quotation I could check came out as written. For K1, FR1 and CH1 I give suggested wording that closes the gaps.
+
+K1 (Kam 2019, PMID 31781019): ADD
+
+Verified:
+- Animals and design. Methods: "8 male APPswe/PS1dE9 transgenic (APP/PS1) and 6 wild-type (WT) littermate mice… age 5–6 months."
+  - Ethosuximide 200 mg/kg, "0.10 ml/10 g intraperitoneally 30 min before the recording started."
+  - Crossover with at least 6 days of washout, order counterbalanced. Three-hour recordings (T_tot is about 10,800 s).
+  - Supplemental Table 1 has 8 tg (30, 31, 76, 82, 96, 97, 103, 124) and 6 wt (32, 77, 78, 83, 87, 108). Counts match.
+  - Mouse 96 has only one saline session (C1). Drug sessions are labelled D1 or D2.
+- Group means. I parsed all 55 rows. For each animal I took spikes per hour of immobility, with saline as the mean of C1 and C2 and ethosuximide as the D session. Means are saline to ethosuximide, group means of per-animal values:
+
+| Spike type | Wild type | APP/PS1 |
+|---|---|---|
+| Cortico-hippocampal (CH) | 19.3 to 2.4 (down; 5 of 6 animals down) | 23.8 to 7.1 (down; 6 of 8) |
+| Fast-spindle (FSPL) | 2.95 to 0.0 (down; 5 of 6) | 5.0 to 0.1 (down; 7 of 8) |
+| Spindle-associated (SPL) | 26.0 to 64.4 (up; 5 of 6) | 30.2 to 56.3 (up; 6 of 8) |
+| Simple cortical (C), outlier removed | 14.3 to 24.6 (up; 4 of 5 animals) | 48.7 to 35.5 (down; 6 of 8) |
+| Cortical (C), outlier included | 48.3 to 29.3 (down) | unchanged |
+
+  - The same directions hold with raw counts, with spikes per recorded hour, and with C1 alone or C2 alone as the saline baseline.
+  - The cortical outlier is mouse 78 (wt). Its C counts are 548 and 526 over 10,800 s, which is about one spike per 20 s. This matches "once every 20 s… removed from the analysis of cortical spikes as an outlier."
+  - Excluding mouse 78 gives 5 wild-type animals. This matches the printed WT df, F(2,3). So the sentence's stated condition is correct and necessary: with the outlier kept, the wild-type sign flips to down.
+- Significance. The printed statistics are omnibus F tests over saline, ethosuximide and levetiracetam, per genotype:
+
+| Spike type | Wild type | APP/PS1 |
+|---|---|---|
+| Simple cortical | F(2,3)=1.9, p=0.29 | F(2,6)=0.7, p=0.53 |
+| Cortico-hippocampal | p=0.12 | F(2,6)=5.9, p=0.04 |
+| Spindle-associated | F(2,4)=7.5, p=0.04 | p=0.30 |
+| Fast-spindle | F(1,5)=6.9, p<0.05 | F(2,6)=7.2, p=0.003 |
+| Muscle-twitch | p=0.09 | p=0.08 |
+| Spike-wave discharge | p=0.70 | p=0.22 |
+
+  - The sentence's per-genotype significance list is therefore correct.
+  - The quotation is exact: "their response to AEDs seemed to follow the pattern of APP/PS1 mice." The authors also write "we could not apply a two-way ANOVA model," so no genotype-by-drug test exists. This is confirmed.
+- Figure 11. The # and ## brackets are pooled-genotype post hoc tests (Sal vs Esm, Sal vs Lev). Fig 11 shows wild-type cortical spikes rising and APP/PS1 falling, matching my means.
+
+Gaps (the reason for ADD):
+1. The per-genotype p-values are omnibus tests that include the levetiracetam arm. They are not ethosuximide-specific.
+   - The only ethosuximide-versus-saline post hoc brackets are for both genotypes pooled (Fig 11B, C, F).
+   - Suggested insertion after "significance differs by genotype": "(omnibus tests across saline, ethosuximide and levetiracetam; ethosuximide-specific post hoc tests are shown only for both genotypes pooled)".
+2. Sex. The authors write "8 male APPswe/PS1dE9 transgenic… and 6 wild-type… littermate mice." Sex is stated explicitly only for the APP/PS1 group.
+   - The sentence says "6 wild-type male mice." I cannot confirm that from the files.
+   - Smallest correction: "8 male APP/PS1 and 6 wild-type littermate mice."
+3. Statistics caveat, not a sentence error.
+   - Several printed p-values do not match their F values. I recomputed them: F(2,6)=7.2 gives p=0.025, not 0.003. F(2,12)=8.9 gives p=0.004, not 0.035. All other printed p-values reproduce.
+   - Significance holds either way.
+   - The df for the 6 wild-type and 8 APP/PS1 repeated-measures designs are not explained (for example F(2,4) and F(1,5)).
+   - The unit of replication is the mouse: 8 and 6, or 5 for wild-type cortical.
+
+FR1 (Frick 2026, PMID 42268630): ADD
+
+Verified:
+- Dose.
+  - Text: "failed to rescue… at 25 or 50 μM."
+  - Fig 1 legend D: "10 and 25 μM." The axis of the panel in the figure image reads 0, 25 and 50 μM.
+  - Supplementary workbook: "25 mM" and "50 mM" for 4-PBA (sheet row 1E) and in other rows.
+  - Fig 1C, measured by crop: the 50 μM bar is about 70% survival, with two replicate points at roughly 55 and 85. The 75 μM bar is about 62%. The 10 and 25 μM bars are 100%. This is consistent with the text "toxic… above 50 μM."
+- Allele-to-endpoint mapping.
+  - Movement was measured on stxbp1a (total distance).
+  - Ictal-like events by local field potential were measured on stxbp1b. The legend says "Type II ictal events/15 min." Methods: "stxbp1b mutant (n = 9) larvae were used for electrophysiology."
+  - Workbook row 1H gives n = 9 and 9, baseline 7.56 ± 2.29 SEM and 4-PBA 8.22 ± 2.91, unpaired t test, t = 0.1802, df = 16, P = 0.8593.
+  - Fig 1G shows 9 points per group.
+- Confidence interval. I recomputed from the means and SEMs. Difference (4-PBA minus baseline) = +0.66. SE = sqrt(2.29² + 2.91²) = 3.703. t = 0.178. With t(16, 0.975) = 2.120, the interval is −7.19 to +8.51, matching the printed −7.18 to 8.51. P recomputes to 0.861. A fall of up to about 7.2 of 7.56 events (about 95%) is not excluded, so "a large fall is not excluded" is correct under the authors' analysis.
+- Alleles.
+  - "a 12-base-pair loss-of-function deletion in stxbp1b" is an exact quotation, and "a 4-base-pair frameshift deletion in stxbp1a" matches.
+  - The authors state: "We were unable to directly assess stxbp1a or stxbp1b protein levels… lack of suitable validated antibodies." So "protein not measured" is correct.
+  - 12 is a multiple of 3, so the deletion is in frame by arithmetic.
+
+Gaps:
+1. The Discussion calls both lines frameshift: "stxbp1a −/− and stxbp1b −/− zebrafish lines used here carry homozygous frameshift loss-of-function deletions, which are predicted to result in the absence or severe truncation of the encoded protein."
+   - This contradicts "in frame by arithmetic" and the sentence does not say so.
+   - Suggested insertion: "(the Discussion nonetheless calls both lines 'frameshift loss-of-function deletions' predicted to give absence or severe truncation)".
+2. The LFP test is unpaired (df 16), but the same 9 larvae are the source of both baseline (0–15 min) and 4-PBA (45–60 min). The interval is therefore from the authors' unpaired analysis of repeated measures. A paired analysis could be narrower, and I cannot compute it from the files.
+   - Suggested insertion: "on the authors' unpaired analysis of the same nine larvae".
+3. stxbp1b movement was also tested with 4-PBA and showed no effect (Dunnett's, P = 0.3432 and 0.7716, n = 40, 78). Wild type was tested too. So "movement on stxbp1a" is the rescue endpoint, not the only one measured.
+4. Minor: Methods mention Welch's correction, while the workbook gives df = 16.
+
+HA1 (Hamanaka 2025, PMID 40858643): SUPPORTED
+- Supplementary Data 1 (SNVs), row Pt2317: WWOX, NM_016373, chr16:78386859G>A, compound heterozygous, maternal, novel. CADD 25.1. Pathogenic. Column W "Evidence" = "PVS1, PM2, PM3, PP3."
+- Supplementary Data 2 (SVs), row Pt2317: "1 exon CNV," WWOX exon 5, paternal, Pathogenic. Evidence = "PVS1, PM2, PM3." There is no PP3 on the SV row.
+- The column headed "RNA" (G in sheet 1) holds "c.517-1G>A." The Protein column holds ".". This pattern is the same in all rows, for example c.617A>G and c.3131_3132del.
+- The main text has no RNA-level assay for Pt2317. Its RNA-seq on lymphoblastoid lines is described only for other cases. Pt2317 appears in the main-text table as "WWOX | c.517-1G>A | Comp het | P | Yes … Ex5 DEL | P | No."
+- Only these two Pt2317 rows exist in the workbook. A grep over all three sheets finds nothing else for WWOX. The sentence holds as written.
+
+CH1 (Chen 2015, PMID 26419537): ADD
+
+All numbers verified against Table S1 (chen2015_MOESM1_ESM.txt), with percentages recomputed from the means:
+- dnj-14(ok237) on L4440 control RNAi: PBS 16.81 to ethosuximide 1 mg/ml 21.23, +26.29%, p = 1.2e-06 (n 118 and 125).
+- dnj-14 on daf-16a RNAi: 15.37 to 16.23, +5.60%, p = 0.1518, not significant (n 114 and 126). The main text agrees: "daf-16 RNAi abolished this effect" and "p > 0.15."
+- N2 wild type on ordinary plates:
+  - 1 mg/ml: 19.69 to 20.39, +3.56%, p = 0.3966, n = 54.
+  - 2 mg/ml: 18.55 to 18.79, +1.29%, p = 0.5061, n = 52.
+  - 4 mg/ml: 18.55 to 17.12, −7.71%, p = 0.5000, n = 52.
+  - The controls have n = 53 and 52. So "n 52 to 54" is right, and the unit is individual worms in a single lifespan cohort each.
+  - The text agrees: "none of the concentrations… any significant effect on the lifespan of wild-type N2."
+- Tau V337M (bkIs10) versus the cca-1 double: Tau 11.45 to 14.80, +29.26%, p = 6.5e-09. Double mutant 11.27 to 14.27, +26.62%, p = 2.2e-09. Both arms are matched PBS controls with n 112 to 116. The main text prints "25 % and 16 %." This matches the sentence.
+- Thrashing, Fig 2a (Tau and Tau;cca-1):
+  - Day 1: 2.2 to 5.3 (**) for Tau, and 2.8 to 5.3 (*) for the double mutant.
+  - Day 3: 1.5 to 4.4 (**) for Tau, and 0.9 to 2.7 (*) for the double mutant.
+  - So the benefit persists, as the authors say.
+- dnj-14 at 4 mg/ml: Table S1 gives 18.73 ± 0.75**, +18.85%, p = 0.0038, n = 55. Recomputed from the means: 18.73 / 15.76 = +18.85%.
+  - The text says: "At the highest concentration used (4 mg/ml), ethosuximide produced no significant increase in lifespan."
+  - The conflict is real. Fig 1f has no 4 mg/ml point for dnj-14.
+
+Gaps (all ADD, none misleading as worded):
+1. "daf-16-RNAi-dependent" rests on two separate log-rank comparisons, each against its own PBS control. There is no drug-by-RNAi interaction test. daf-16 RNAi also shortened baseline lifespan (dnj-14 PBS 16.81 to 15.37; N2 19.48 to 15.73).
+   - Suggested insertion: "(separate log-rank comparisons; no interaction test)".
+2. The wild-type lifespan statement applies to ordinary bacteria, with no RNAi.
+   - On hsp-1 RNAi, N2 did respond: 12.19 to 14.35, +17.72%, p = 2.2e-08 (n 116 and 118).
+   - On daf-16 RNAi, N2 did not respond: +1.08%.
+   - Suggested insertion after "unchanged at 1, 2 and 4 mg/ml": "(no RNAi; N2 on hsp-1 RNAi did extend, +17.72 percent)".
+3. Wild-type thrashing is not in Table S1.
+   - It is in Fig S1B and S1C, which I read in chen2015_MOESM2_ESM.txt. Fig S1B covers strain CZ1200 across concentrations. Fig S1C covers N2 and dnj-14(tm3223) at 1 mg/ml only, n = 20–30.
+   - So N2 thrashing was tested at 1 mg/ml only.
+4. The text's mean lifespans for the Tau double mutant and Tau, "12.1 and 12.6 days," differ from the Table S1 PBS controls, 11.27 and 11.45. Table S1 and the main text therefore do not describe the same cohort numerically. This explains 25 and 16 against 29.26 and 26.62 and should be kept in mind.

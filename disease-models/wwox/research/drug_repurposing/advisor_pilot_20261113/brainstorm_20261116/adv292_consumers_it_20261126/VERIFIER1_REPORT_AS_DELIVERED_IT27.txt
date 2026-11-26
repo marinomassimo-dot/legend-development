@@ -1,0 +1,84 @@
+BLIND CHECK b292a, effort high. I worked only from the files in /home/desktop/.claude/jobs/6f4e0008/tmp/b292a (texts, figure jpgs, supplement PDFs) and used no network.
+
+SUMMARY
+- W1: MUST CHANGE. The "proximity-ligation puncta rose" clause is incomplete. The "one lowered it in one variant" clause is UNSETTLED.
+- W2: MUST CHANGE (wording). The numbers are right, but "ligands known to bind the benzodiazepine site" does not fit all 10 screened ligands.
+- S1: MUST CHANGE. The 14-fold rise belongs to 4-phenylbutyrate only, and wild-type fly expression was judged from images only.
+- S2: ADD. Every claim checks out, but the size of the rescue and one glycerol finding in flies are missing.
+- F1: SUPPORTED.
+- F2: MUST CHANGE. "Only alpha1 and CHOP were read" is false as written.
+
+W1 (Wang 2024) — MUST CHANGE, with one clause UNSETTLED
+
+Checked and correct:
+- The 10 ligands are listed in the text, section 3.3: GABA, midazolam, flurazepam ("Florazepam" in the paper), chlormezanone, hispidulin, CL218872, ZK93423, bretazenil, CGS20625, TP003. The screen used three stable HEK293T lines (D219N, G251D, P260L) at 10 µM for 24 h on total alpha1 protein.
+- Text: "Hispidulin, TP003, and Midazolam increased total protein levels for all three α1 DAVs, and CL218872 increased total α1 protein levels for α1(D219N) and α1(P260L) significantly." That makes four ligands raising protein in at least one variant.
+- Fig 4B, GABA-evoked peak current (100 µM GABA, n = 4–11 cells per bar).
+  - Hispidulin has a significance mark for all 8 variants: A322D *, D219N *, P260L **, R214C **, S76R ***, G251D ***, M263T *, T289P ***.
+  - TP003 is significant for 6 of 8: A322D *, P260L *, S76R *, G251D **, M263T *, T289P **. It is NS for D219N and R214C.
+- Fig 4A, surface alpha1 (n = 3 blots): hispidulin 8 of 8 significant. TP003 is significant for 5 of 8 and NS for D219N, P260L and R214C. "Most of eight" holds.
+- iPSC (Fig 7): there is one heterozygous G251D knock-in line, and no current was measured. Surface fluorescence for alpha1, gamma2 and beta2/3 rose with both compounds (** to ***, Fig 7C; 50–75 neurons from at least 3 differentiations).
+
+Needs change:
+1. "proximity-ligation puncta rose" is not true for all pairs. In Fig 7E, 4 of 6 PLA pairs rose for both compounds: alpha1+gamma2, +BiP, +calnexin, +LMAN1. alpha1+Grp94 fell (hispidulin ***, TP003 ***). alpha1+SEL1L was NS for both. The text says the same: "reduced the interactions between α1(G251D) and an ERAD factor Grp94".
+   - Smallest correction: "proximity-ligation puncta rose for gamma2, BiP, calnexin and LMAN1, fell for Grp94 and were unchanged for SEL1L".
+2. The unit of replication for iPSC is neurons (35–75 per condition, at least 3 differentiations, one line), not independent lines. Say so if an n is stated.
+3. UNSETTLED: "one lowered it in one variant". The text never mentions any lowering. The quantified Supplementary Fig S3 bar chart is not in the folder. The folder holds only uncropped blots (wang2024_supp_figures.pdf, pages 14–16) with no lane-to-ligand labels. A faint lane is visible (S3A right box, third lane; S3C right box), but I cannot assign it to a ligand or a variant or quantify it.
+   - Delete the clause, or keep it only after re-checking the S3 bar chart.
+
+W2 (Wang 2024) — MUST CHANGE (wording only)
+
+- The count is right. 10 screened and 4 raised protein, so 6 did not. The text says "All four effective compounds... belong to positive allosteric modulators (PAMs), acting primarily on the benzodiazepine site".
+- "Binding presumed from the literature, not measured" is correct. The text uses "presumably", and refs 34, 60 and 61 are cited. There is no binding assay.
+- The problem is "ligands known to bind the benzodiazepine site". The paper describes all 10 only as "agonists, antagonists, and allosteric modulators... known to bind GABA A receptors". GABA, the orthosteric agonist, is one of the 10, and the paper gives no site for the other non-effective ligands. Without GABA the rate would be 5 of 9 not raising, so "6 of 10" misstates the benzodiazepine-site rate.
+- Smallest correction: "ligands known to bind GABA-A receptors (most described as benzodiazepine-site; the paper does not classify the sites of the 6 that did not raise protein, and GABA itself, the orthosteric agonist, was among the 10 screened; binding to the variants is presumed from the literature, not measured here)".
+
+S1 (Shah 2025) — MUST CHANGE (minor)
+
+Checked and correct:
+- Fig 3A (HEK293, WT uptake as % of control): 4-PBA * (about 180%). Glycerol is NS (about 115%), so "4-PBA increased wild-type uptake" is right.
+- Text: "chaperone treatment drastically augmented the mature glycosylated bands of WT hGAT-1 (Figure 4B,C)". No quantification is given, so "blots not quantified" is right.
+- Fig 6B (fly antennal-lobe astrocytes, ALRM-Gal4): WT is unchanged by treatment, and the text says "did not markedly alter the expression of WT GAT-1".
+- Fig 6I: G443V with 4-PBA is *** (text: "an impressive 14-fold increase in AL expression").
+- Caveat on the blots: in the Fig 4B,C image, the WT mature (M) band is modestly darker with glycerol. With 4-PBA I cannot see a clear difference. The "increased" claim rests on the paper's text, not on visible bands.
+
+Needs change:
+1. "neither changed wild-type... while the retained variant G443V rose about 14-fold" reads as if both compounds raised it. Only 4-PBA did. Glycerol "had only a minor effect" and has no significance mark in Fig 6I.
+2. The "variant-selective in vivo" wording rests on WT being judged from single-section images, not quantified. Only G443V was quantified (Fig 6I, at least 10 brains per condition).
+   - Smallest correction: "...in Drosophila astrocytes neither compound visibly changed wild-type hGAT-1 expression (single-section images, not quantified, Fig 6B), while 4-phenylbutyrate, but not glycerol, raised the retained variant G443V about 14-fold (Fig 6I, at least 10 brains per condition)."
+
+S2 (Shah 2025) — ADD (all claims true)
+
+Checked and correct:
+- Doses and durations: 4-PBA 10 mM in HEK for 24 h (Fig 3 legend), and 1 mM 4-PBA or 10% glycerol in fly food for 48 h (text).
+- Fig 3B (G443D): 4-PBA has no significance mark (about 1.6% of WT control vs about 0.1% untreated). Glycerol is *** (about 6%). Kinetics in Fig 4D–E: higher uptake and mature bands with glycerol.
+- Fig 3C (G443V): 4-PBA *** (about 8%). Glycerol ** (about 5%), so G443V uptake with glycerol in HEK is right.
+- Fly: G443D expression is unaltered (Fig 6C) and its seizures are unchanged by 4-PBA (Fig 6G).
+- WT HEK uptake was raised, clearly by 4-PBA (Fig 3A). WT fly expression was not.
+- "Bile-acid chaperones are not in this paper." Correct for the body text and experiments. The only trace is "taurursodiol" in the titles of references 68–69 (the phenylbutyrate–taurursodiol ALS trial).
+
+Missing conditions that would help:
+- The rescue is partial. In the single-concentration screen (50 nM [3H]GABA) the treated variants reach only about 6–8% of untreated WT uptake (Fig 3B,C).
+- "G443V uptake in HEK293 only" refers to uptake, which was not measured in flies. In fly GABAergic EB neurons, glycerol did restore presynaptic G443V in the images (Fig 6F; "Treatment with both 4-PBA and glycerol resulted in the presynaptic enrichment of G443V"). Glycerol's effect on G443V seizures was NS (Fig 6H).
+- Replication unit: HEK uptake is at least 3 independent experiments in triplicate (bars about 3–6 dots in Fig 3).
+
+F1 (Fu 2025) — SUPPORTED
+
+- D219N current: 100 µM GABA, n = 8 "independent experiments" (Fig 2K,L legend). G251D current: 1 mM GABA, n = 8 (Fig 5F,G legend). There is no P260L current; P260L appears only in Fig S4 as total and surface blots. The n = 8 is automated patch-clamp recordings, labelled "independent experiments".
+- GABRA1 mRNA: Fig 1B shows it unchanged (no significance marks) for all three compounds, in D219N cells at 12 h, n = 3. No G251D mRNA is shown.
+- The iPSC line is heterozygous G251D (methods). Only IXA62 and IXA554 were tested (Fig 6). The read-outs are surface alpha1, beta2/3 and gamma2 fluorescence (Fig 6A) and PLA puncta (Fig 6B), with no current.
+- Fig 5C: surface alpha1 bars are IXA62 *, IXA554 ***, and IXA105 with no mark. The text says "2.3-fold" for IXA105. The Fig 5B total-protein bar for IXA105 is *. The sentence is correct as written.
+
+F2 (Fu 2025) — MUST CHANGE (second half)
+
+Correct:
+- Text, Fig 2: "The concentrations of IXA554 and IXA105 were similarly tested in the range of 0.1 μM to 10 μM due to the drug toxicity to cells at 25 μM". IXA62 went to 25 µM. The quotation is exact.
+- No viability, cytotoxicity or LDH data appear anywhere in the text or supplement.
+
+False as written: "only alpha1 (wild type and variants) and CHOP were read". The paper also reads:
+- XBP1s protein (Fig 1C) and XBP1-Rluc splicing reporter (Fig S1D) for all three compounds.
+- Five IRE1 target mRNAs (XBP1s, Sec24D, ERdj4, Creb3L2, HerpUD1; Fig 1B).
+- For IXA62 and IXA554: BiP, calnexin, HSP47, LMAN1 (Fig 3E), Grp94, Sel1L, Hrd1 and VCP (Fig 4C,D), further ERAD factors (Fig S3), and the PLA partners.
+- CHOP (Fig S1E) is the only PERK or off-pathway stress marker read for all three compounds, in D219N cells only.
+
+Smallest correction: "...(no viability data shown), and apart from alpha1 and the IRE1/XBP1s read-outs (XBP1s protein, five target mRNAs, splicing reporter), the only stress marker read for all three compounds was CHOP (D219N cells, Fig S1E); no cell-viability or off-target assay was run."

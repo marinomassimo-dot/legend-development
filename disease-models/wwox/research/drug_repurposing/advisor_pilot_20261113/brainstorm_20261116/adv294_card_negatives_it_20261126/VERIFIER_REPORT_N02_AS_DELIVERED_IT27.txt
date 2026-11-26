@@ -1,0 +1,54 @@
+Blind check of S1 and S2, using only hussain2019.txt and breton2021.txt in the blindN02 folder. I read nothing else.
+
+**Verdicts**
+- S1: MUST CHANGE.
+- S2: ADD. It is supported as written, but it leaves out a d-APV result in Breton 2021 that a reader needs to see.
+
+---
+
+**S1: MUST CHANGE**
+
+S1 says: "No NMDAR or AMPAR current, subunit or surface level is measured in any WWOX system; no subunit-selective, pore-blocking, glycine-site or AMPAR drug has been applied to any Wwox system."
+
+Two parts of the first clause are contradicted by the two papers.
+- **Subunit measured.** Hussain 2019 measured NMDAR subunit transcript. Results 3.1 says "the very significant downregulation in expression of the NMDA receptor Grin2c ... in Wwox KO mice". Table 1 lists Grin2c log2FC −3.22 (FDR 7.73E-04) and Grin2b −2.14 (FDR 3.6E-04) in KO hippocampal neurospheres. Fig 6D is qRT-PCR on KO n=4 vs WT n=4 hippocampi. If "subunit level" means protein, it is not contradicted. As written it is ambiguous, and the transcript result contradicts the plain reading.
+- **NMDAR-dependent activity measured.** Breton 2021 applied 50 µM d-APV to Wwox S-KO neocortical slices.
+  - "Blocking glutamatergic neurotransmission with d-APV (50 μM) eliminated the spontaneous bursting events", which reversed on washout (Fig 3C,D; n = 51 bursts, 5 slices, 3 animals).
+  - On layer V stimulation with layer II/III recording, the delayed LFP response was larger in S-KO than S-WT. "This delayed response was NMDA receptor mediated, as addition of d-APV reversibly suppressed the response (Supplementary Fig. S3C)." This is an extracellular field response, not an isolated current.
+  - Whole-cell voltage clamp of the bursts gave a reversal potential of 6 ± 11.6 mV at burst onset (−70 to +20 mV holding). The authors call this "excitation, likely glutamatergic". This is not pharmacologically isolated.
+  - mEPSC decay was used as a proxy for NMDAR:AMPA proportion (see S2 below).
+  - The authors conclude "NMDAR-mediated glutamatergic neurotransmission is a requirement for the generation of these neocortical bursts".
+
+The second clause of S1 is not contradicted. d-APV is a competitive glutamate-site NMDAR antagonist, not subunit-selective, pore-blocking, glycine-site or AMPAR. Neither paper uses memantine, ketamine, MK-801, ifenprodil, NBQX or CNQX. The only drugs in Breton's pharmacology section are TTX, d-APV, CBX and BB-FCF.
+
+Smallest correction to S1: replace "No NMDAR or AMPAR current, subunit or surface level is measured" with "No pharmacologically isolated NMDAR or AMPAR current and no receptor subunit protein or surface level is measured". Also add that d-APV was applied (Breton 2021).
+
+---
+
+**S2: ADD (supported, with two additions)**
+
+**Addition 1 (needed).** S2 never mentions that d-APV was applied to a Wwox system. Its last sentence is literally true because d-APV is outside the listed classes. But "no pharmacologically isolated NMDAR current" read alone could suggest NMDAR pharmacology was never done in Wwox tissue. Suggested insert after the Breton clause: "; d-APV (50 µM) abolished the spontaneous neocortical bursts and reversibly suppressed the delayed evoked field response in the knockout slices (Breton 2021)".
+
+**Addition 2 (precision).** "Neuron-specific knockout slices" does not say where the recordings were made. The mEPSCs were from layer II/III neocortical pyramidal neurons in Synapsin-Cre knockout (S-KO) mice aged 13–17 days. Hippocampal slices showed no spontaneous bursts. Suggested wording: "neuron-specific (Synapsin-Cre) knockout neocortical layer II/III pyramidal neurons".
+
+**Optional addition.** Hussain also reports lower Grin2b (−2.14) in the knockout neurospheres. Only Grin2c, Grm3 and Kcna2 are stated as concordant in vivo. Fig 6D is described as covering "Grin2C, Grm3, and Kcna2".
+
+---
+
+**Do the two results say what S2 says?**
+
+**Hussain 2019 (PMID 30290271), transcript: yes, with caveats.**
+- Neurospheres (neural stem cells from newborn hippocampus): RNA-seq on KO n=2 vs WT n=3 (Fig 6C legend). Grin2c log2FC −3.22, p 6.55E-06, FDR 7.73E-04.
+- Hippocampal tissue: qRT-PCR on KO n=4 vs WT n=4, a "separate set" of mice. Fig 6D legend: "*** p < .0001, two tailed unpaired Student's t-test".
+- Only transcript was measured. There is no protein or surface measurement.
+- The text does not print the fold change for the tissue qRT-PCR. The qRT-PCR validation of the neurosphere RNA-seq is "data not shown".
+- The unit of replication is the animal, or neurosphere preparation, at small n.
+
+**Breton 2021 (PMID 34634460), EPSC: yes, with caveats.**
+- mEPSCs were recorded at −70 mV with 1 µM TTX added. No AMPAR antagonist or GABA-A blocker is listed in the Methods (5.4 lists only TTX, d-APV, CBX and BB-FCF). So they are not pharmacologically isolated.
+- Amplitude was increased in S-KO vs S-WT (Fig 4B, KS test p = 4.99e-7) and vs S-HT (p = 1.33e-6). Cells: N = 10 per genotype, from 4–5 animals.
+- The KS test was on pooled event distributions, not on per-cell or per-animal means. No mean mEPSC amplitude is given. S-WT vs S-HT also differed (p = 1.98e-4), with the direction not stated. The sEPSC means were 23.3 ± 12.0 pA (S-CTL) and 24.7 ± 13.6 pA (S-KO), which is a small shift.
+- mEPSC decay was unchanged: S-WT 5.18 ± 0.78 ms vs S-KO 4.84 ± 1.11 ms, p = 0.2982. The authors read this as "no overt change in the proportion of the NMDAR:AMPA response".
+- In the text, mEPSC frequency is "no change ... as compared to S-HTs". The Fig 4C legend gives S-WT vs S-KO p = 2.4e-4. S2 does not claim anything about frequency.
+
+No contradiction was found for the final sentence of S2 or the first clause on isolated currents and subunit protein or surface level, within these two papers. Whether that holds across all held sources cannot be settled from two papers, so it is UNSETTLED beyond them.

@@ -726,3 +726,5 @@
 {"evidence": "SendMessage 00:36Z, successor bound and started the PREREG", "id": "ADV-293", "receipt": ["7cfc286b-321c-4b50-b7b9-89fc217c1b24"], "state": "SENT", "to": ["HE - CURRENT 888b4b03"], "utc": "2026-11-26T00:36:21Z"}
 {"assessment": "HOST", "id": "ADV-294", "key": "card-negative-sentences-dated-search-first-ten", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-26T01:04:26Z"}
 {"evidence": "SendMessage 01:06Z, IT's own candidate registered; successor brief names it", "id": "ADV-294", "receipt": ["c67cd134-4726-4a1a-83d7-854f5a3098ac"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 6f4e0008"], "utc": "2026-11-26T01:06:38Z"}
+{"assessment": "HOST", "id": "ADV-295", "key": "reading-debt-one-consumer-batch-first-five-then-five", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-26T02:13:23Z"}
+{"evidence": "SendMessage 02:13Z, SCI's own proposal registered with prediction and stop rule", "id": "ADV-295", "receipt": ["7015bafd-61e5-4205-861f-dfc0b4a4c968"], "state": "SENT", "to": ["SCI - CURRENT c6d4dd83"], "utc": "2026-11-26T02:13:40Z"}
