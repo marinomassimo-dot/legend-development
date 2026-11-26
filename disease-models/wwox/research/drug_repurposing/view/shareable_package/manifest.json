@@ -566,12 +566,12 @@
    "sha256": "c6ba6686d30f2cd5795f60afb9862e02999023a4acaff5c72b837bafbd442d1b"
   },
   "reports/ethosuximide.pdf": {
-   "bytes": 168171,
-   "sha256": "e28654ba85541bbed26560cb2fa667d622d55f928e76cf6bfd13de8abf4762d1"
+   "bytes": 167732,
+   "sha256": "9f7abd9e99d0888f196d7dd82eb3b26b33c57111c8e5ebb19d186f570e43d174"
   },
   "reports/ketamine.pdf": {
-   "bytes": 516416,
-   "sha256": "09f502e79e0123c363bcd3d487f34dc2e46afb88ccf5947b5b8cb6df8b133d72"
+   "bytes": 515015,
+   "sha256": "145877ff665e3736b1e0dd957875c76238dd69d55ca9eb890617bb9f2924529a"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

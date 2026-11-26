@@ -2,7 +2,7 @@
   "investigation": "INV-05",
   "title": "Ketamine in WWOX-related epilepsy",
   "date": "26 November 2026",
-  "summary": "Ketamine remains a research hypothesis for WWOX-related epilepsy. The reviewed sources do not establish benefit in WWOX-DEE, either for an acute episode or for ongoing seizure control. The reviewed pediatric evidence also leaves functional improvement at 6–8 weeks after brief peri-intubation ketamine undetermined.",
+  "summary": "Benefits of ketamine in WOREE and functional improvement 6–8 weeks after brief peri-intubation exposure remain undetermined.",
   "evidence": [
     "Breton et al. reported that the competitive NMDA receptor antagonist d-APV stopped spontaneous bursts in cortical slices from mice with neuron-specific Wwox loss. Ketamine was not tested in those slices.",
     "Paediatric studies of ketamine in status epilepticus cover other or mixed causes."
@@ -243,7 +243,7 @@
         "rows": [
           [
             "Mazandi and Loi, neurologic intubations",
-            "Ketamine induction in 70/143 children and 495/2,073 registry procedures. Registry adjusted OR for the acute adverse-event composite was 1.34 (95% CI, 0.99–1.81).",
+            "Ketamine induction in 70/143 children and 495/2,073 registry procedures. Acute neurologic or cardiorespiratory events.",
             "Peri-intubation. Clinical selection and other sedatives. No later function estimate."
           ],
           [
@@ -269,12 +269,12 @@
           [
             "Chamberlain, 310 randomized in emergency care",
             "Lorazepam vs diazepam: clinical seizure cessation 97/133 vs 101/140. Sedation 66.9% vs 50%.",
-            "Clinical seizure assessment at 10–30 min. Respiratory safety and sedation were assessed over 4 h. Follow-up function was unmeasured."
+            "Seizure endpoint at 10–30 min. Safety assessed over 4 h."
           ],
           [
             "Bhalala, 35 selected PICU patients",
             "Propofol bridge lasted a median 7 h 54 min. 34/35 remained extubated at 24 h. 34/35 received dexmedetomidine and 32/35 lorazepam during admission.",
-            "Peri-extubation physiology. Patients were selected for planned extubation, without a control group and with substantial coexposure."
+            "Post-extubation physiology. No control and substantial coexposure."
           ],
           [
             "Maddux, 144 ventilated survivors",
@@ -288,6 +288,17 @@
           ]
         ]
       },
+      "sections": [],
+      "sources": [
+        {
+          "label": "Full comparison and regulatory sources (Italian).",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/view/peri_intubation_public_evidence_20261126.md"
+        }
+      ]
+    },
+    {
+      "title": "Testing a sustained effect",
+      "takeaway": "A comparison after brief exposure needs pre-illness function and the same follow-up times in both groups.",
       "sections": [
         {
           "label": "Data and inference",
