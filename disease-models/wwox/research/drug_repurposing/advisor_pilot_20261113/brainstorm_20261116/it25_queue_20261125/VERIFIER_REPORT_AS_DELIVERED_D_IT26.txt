@@ -1,0 +1,125 @@
+BLIND CHECK, PACKET D (IT26), 2026-11-26. Hypothesis level; nothing here is medical advice.
+Verifier read only the sources named in the packet (plus delegation_budget.md sections 2 and 7). No repository file edited.
+Verdicts: D1 MUST CHANGE. D2 SUPPORTED-ADD. D3 SUPPORTED-ADD. D4 MUST CHANGE.
+
+Paths: F = /home/desktop/legend-development/files/fulltext
+Scripts and rendered crops: /home/desktop/.claude/jobs/d26b0ae5/tmp/scratch_D/
+
+=====================================================================
+D1 (card A01: 'against' line, 'not known' line, needs record) -- MUST CHANGE
+=====================================================================
+
+DEPTH
+- Johannsen 2018 (.txt): whole. PDF page 5 (Fig 3 a-c) rendered and viewed by eye. Figures 1 and 2 not viewed.
+- Zhang 2025 XML: converted to text; read all paragraphs naming P252A or P282A (abstract, results, legends, discussion) plus the methods. Not read line by line: introduction and the TCGA / WWOX-knockdown sections.
+- Zhang main figures: 1-6 viewed by eye. Fig 4C-F measured by pixel (bar tops, about +/-0.04 units) and by zoom. Fig 2A and Supplementary Fig 2A: crude densitometry (saturated bands; indicative only). Fig 2B, 2F, 3E, 5B, 5C by eye.
+- Supplement .docx: whole text; Supplementary Fig 2 viewed. Other supplementary images not viewed. The two .xlsx are interactome / enrichment lists (scanned, not relevant).
+
+SUPPORTED
+- Q230P: not detected by Western blot (two harvests), one patient's fibroblasts; transcript level "almost identical" to three other cell lines (PaTu-8988t, SW620, HEK293); no healthy fibroblast control; no detection limit stated; function not measured. (Johannsen .txt lines 207-226; Fig 3b, 3c.)
+- P252A steady state, Fig 4C-F: my P252A/WT = 0.36 (C), 0.16-0.18 (D), 0.22 (E), 0.23 (F). "0.16 to 0.36" holds.
+- Fig 4B, by eye: P252A about 0.32, 0.34, 0.30 at 6, 8, 10 h; WT about 0.85, 0.84, 0.70. Holds.
+- P282A "about 0.6 to 1.2": Fig 4C-F alone give 0.62, 0.87, 0.75, 0.92 (so 0.6 to 0.95). The upper end is reached only with Fig 2A CAL-62 (about 1.3 by densitometry; BCPAP about 0.6). Acceptable only if the parenthesis "(Fig 4C-F)" is not read as covering P282A.
+- Fig 2B CAL-62: WT about 0.57, P252A about 1.30, P282A about 1.06. Holds.
+- Over-expressed Flag-tagged protein, thyroid cancer lines (WWOX mRNA about 70 to 110 fold over vector, Fig 4A). Holds.
+- 'not known' line: SUPPORTED as written.
+
+MUST CHANGE 1 ('against' line and needs record): "both sit at the empty-vector level in the function assays read" / "sits at the empty-vector level in function assays".
+This is true for colony, growth, invasion and the Supplementary Fig 2 repeat, but not for every assay. The paper only reports "ns" against empty vector (mostly n = 3), and several mutant means lie between empty vector and wild type (by eye, +/- about 5 percent of axis):
+  - Fig 5B, induced gamma-H2AX: vector about 8.8, WT 4.0, P252A 6.6, P282A 7.0 (about 40 to 45 percent of the WT effect).
+  - Fig 5C, NHEJ: vector 1.0, WT 2.1, P252A 1.07, P282A 1.4.
+  - Fig 2F, BCPAP migration: vector 1.45, WT 0.52, P252A 1.08, P282A 0.96 (not seen in the repeat, Supplementary Fig 2E).
+  - Fig 3E, xenograft vimentin score: vector 11.7, WT 3.5, P282A 8.8.
+Replacement ('against' line):
+  "neither differs significantly from empty vector in the function assays that include one (for example colony number relative to empty vector in CAL-62: wild type about 0.57, P252A about 1.3, P282A about 1.05, Fig 2B), and growth, colony and invasion read-outs sit at about the vector level; in some other read-outs the mutant mean lies between empty vector and wild type (gamma-H2AX, Fig 5B; NHEJ for P282A, Fig 5C; BCPAP migration, Fig 2F, not repeated in Supplementary Fig 2E). Non-significance is not equivalence, and none of this gives a residual fraction (no dose-response, over-expression)."
+Replacement (needs record parenthesis):
+  "(P252A and P282A over-expressed protein does not differ significantly from empty vector in function assays, with some intermediate means, which gives no residual fraction, PMID 41124647)"
+
+MUST CHANGE 2 (broken sense, 'against' line and needs record): "a boost multiplies the mutant's residual function and does not change it" reads as a self-contradiction (multiplying it changes it).
+Replacement: "a boost can at best multiply the mutant's residual function R (amount relative to wild type times function per molecule), so parity with wild type needs a fold gain of 1/R."
+If the intended point is that a boost leaves function per molecule unchanged, write: "a boost raises the amount of mutant protein, not its function per molecule".
+
+SUPPORTED-ADD (changes how a reader takes the block)
+a. P282A is a common variant: gnomAD allele frequency 0.0733 (P252A 0.0063), and MutationTaster calls P282A "Polymorphism automatic" (Supplementary Table 4; the main text calls it SNP rs3764340).
+b. The patient, homozygous for both, had no WWOX nervous-system disease; the authors say the mutants "may have some residual protein function" (Discussion, XML-text line 226).
+c. Chloroquine and NH4Cl raise P252A protein about 1.8 to 2 fold (Fig 4D, 4E, about 0.2 to 0.4-0.45; function not read). This is a measured amount gain on a WWOX missense allele.
+d. Supplementary Fig 2A shows P252A at only about 0.1 of WT in both lines (crude densitometry); Fig 2A about 0.35. "0.16 to 0.36" is correct for Fig 4C-F only; over the whole paper it is about 0.1 to 0.4.
+e. Supplementary Fig 2 also tests the double mutant P252A/P282A (the patient's genotype): vector level in colony, growth, invasion, migration.
+
+NOT CHECKED (D1): non-WWOX precedent numbers (out of scope); "no held measurement read for this card" beyond these two sources; IT5 P8 / missense_recovery_it5_p8_20261029 and "the only bound is the detection floor"; Supplementary Figs 3-11 images.
+
+=====================================================================
+D2 (card E02: 'against' line; next-measurement field, in-scope part) -- SUPPORTED-ADD
+=====================================================================
+
+DEPTH
+- collected.json.gz: all 88 rows of collected.stiripentol.rows searched by script (one molecule id, CHEMBL1983350); the 8 LDH rows read in full.
+- Rico-Molina 2024: stiripentol results section and Table 2 (section). GBM 2026: all LDH / metabolism paragraphs, methods, results, discussion (section; Fig 1E not held). Guyon 2022: all paragraphs naming stiripentol (section). Le Dudal 2019: results, discussion, methods by search (section; figures not viewed). Bouchez 2026: all paragraphs naming stiripentol (near-whole text; figures not viewed). These are not line-by-line whole reads.
+
+CHECKED AND CORRECT
+- Rows 25-28: 7 percent at 2 mM (CHEMBL4311969); two 0.5 mM rows with no value. 8 LDH rows = 4 enzyme + 4 cell. No fitted LDH potency among 88.
+- Cell rows 46-49: 0.27, 0.33 (PH2 model, 24/48 h), 0.70, 0.49 (PH3 model, 24/48 h), 10 uM, "GO/LDHA", 2022. Holds.
+- Rico-Molina Table 2: 9.9 +/- 2.3 (racemate), 34.0 and 38.4 (enantiomers), all IC50 >500 uM, 500 uM; about 40 percent attributed to Sada.
+- GBM 2026: "moderate"; significant only at 250 and 500 uM; no percentage in the text. ECAR and OCR lower at 25 and 50 uM (U87).
+- Guyon: lactate production inhibited by 50 percent, 500 uM, 24 h (P3 glioblastoma cells).
+- Le Dudal: HepG2 oxalate lower, dose-dependent, 5-100 ug/mL.
+
+SUPPORTED-ADD
+a. U87 LDH assay is not a direct enzyme-inhibition test. Methods: intact cells were treated with stiripentol, then lysed, and "LDH was then added per well" (GBM2026 XML-text line 38). Suggested wording: "an LDH assay on lysate of U87 cells that had been exposed to stiripentol (with LDH added per well, per the Methods)". The same paper's section heading says "comparable to an established inhibitor", against its own "moderate".
+b. The 7 percent at 2 mM is the value for BOTH human LDH5 and LDH1 rows; saying so tells the reader the B isoform was no better.
+c. Le Dudal also reports whole-animal and patient data (lower urine oxalate in rats, Dravet patients and one hyperoxaluria patient; higher rat urine glycolate, which the authors read as a block of glyoxylate to oxalate, LDH5). The next-measurement field lists only "cell-level readings"; a reader may think nothing else was found. These are not direct LDH engagement either.
+d. "do not separate LDH from complex I inhibition (Bouchez 2026)": Bouchez does not test the oxalate assay or 10 uM (none stated in its text); for the 10 uM rows the named confound is glycolate oxidase, as the 'against' line says. No false statement, but the two confounds differ.
+
+Optional wording (not blocking): "the enzyme-level data are weak and unfitted for stiripentol as a way to test the LDH node" reads as "unsuitable". Clearer: "for stiripentol as a way to test the LDH node, the enzyme-level data are weak and no potency has been fitted". "the third report (Sada 2015)" repeats the earlier Sada clause.
+
+NOT CHECKED (D2): US label (not held) -- both "a label that does not name LDH" and "the US label names no LDH mechanism"; Sada 2015 itself and its "abstract-only" status; text after "none is a fitted LDH potency" (out of scope), including the nanomolar-arm counts.
+
+=====================================================================
+D3 (card F03: novelty field) -- SUPPORTED-ADD
+=====================================================================
+
+DEPTH
+- GSE156243: series soft whole; count table loaded whole; both DE lists searched for the four genes.
+- Abstracts PMID 25765333, 32730977, 35292925 read whole via PubMed. Full texts not read.
+
+CHECKED AND CORRECT
+- 4 KO + 2 WT libraries, 15 weeks, one hESC line (WiBR3); 2 WT excluded for quality.
+- SLC12A2/SLC12A5 count ratio: KO 0.240, 0.289, 0.133, 0.142; WT 0.292, 0.297.
+- SLC12A5 CPM: KO 21.0, 19.2, 41.3, 39.0; WT 20.0, 15.6. GAD1 CPM: 8.9, 10.9, 37.9, 27.0; 3.5, 0.2. SLC32A1: 5.6, 4.8, 36.0, 20.1; 2.8, 0.4. "Two knockout libraries" claim holds.
+- Abstract summaries: NEMO stopped early for serious adverse reactions and limited evidence of seizure reduction; BAMBI negative on primary, one secondary positive; SIGN 1 baseline characteristics only.
+
+SUPPORTED-ADD
+a. "lower rather than higher" is marginal for two of four KO libraries: 0.289 against a WT minimum of 0.292 (same at two decimals) and 0.24. Clearly lower only in the two inhibitory-marker-rich libraries (0.13, 0.14). Suggested: "...is 0.13 to 0.29 in knockout against 0.29 to 0.30 in wild type, not higher; it is clearly lower only in the two marker-rich libraries".
+b. The authors' own DE list has GAD1 (log2FC 3.57, padj 0.012) and SLC32A1 (3.28, padj 0.043) up in knockout overall, so the composition difference follows genotype.
+c. NEMO abstract also reports hearing impairment in 3 of 11 surviving infants, and concludes bumetanide add-on did not improve seizure control and might increase hearing-loss risk. A reader of "serious adverse reactions" does not learn this safety signal. BAMBI also reports predominantly diuretic adverse effects (hypokalaemia 51 percent against 0).
+
+Source attribution (PubMed): NEMO https://doi.org/10.1016/S1474-4422(14)70303-5 ; BAMBI https://doi.org/10.1016/j.jaac.2020.07.888 ; SIGN 1 https://doi.org/10.1007/s10578-022-01328-5
+
+NOT CHECKED (D3): E-MTAB-14792 and its 403 (not opened, as instructed); "Map R-07 stands as INSUFFICIENT_EVIDENCE"; "the target-identity note above"; "the single experiment is written out with controls".
+
+=====================================================================
+D4 (card K01: mouse knock-in deposit sentences) -- MUST CHANGE
+=====================================================================
+
+DEPTH
+- GSE215425 counts: whole table loaded; series matrix read for design and processing fields.
+- My normalisation: per region, total-count CPM over genes with CPM > 1 in at least 3 libraries (PFC 15008, HPC 15114, CTX 15408, CB 14789 genes); second, TMM (own numpy implementation of the edgeR method, per region); log2 with no pseudocount; difference = mean log2 of mutants minus mean log2 of WT. For Adm also unfiltered total count, median-of-ratios, upper quartile, global TMM.
+
+CHECKED AND CORRECT
+- Aldoa, Pgk1, Pfkp, Pkm, Tpi1, Hk2, Ldha in HPC/CTX/PFC: +0.12 to +0.76 log2. "+0.1 to +0.8" holds.
+- Ankrd37 PFC -0.34 (total count) / -0.30 (TMM).
+- Adm mean difference HPC, CTX, PFC: all five 0.97, 1.20, 0.78 (TC); 0.97, 1.22, 0.82 (TMM). Without M6: 0.51, 0.72, 0.43; 0.50, 0.73, 0.46. Without M6 and F8: 0.27, 0.43, 0.02; 0.23, 0.43, 0.04. Card values hold within about 0.03.
+- Adm CPM (TC) F10, F9, M7 with WT range: HPC 2.60, 1.36, 2.27 (WT 1.39-2.10); CTX M7 3.37 (WT 1.20-3.14); PFC F10 3.09, F9 2.07, M7 2.14 (WT 1.97-3.44). All the position statements hold, including "M7 above or inside" (inside under median-of-ratios: 2.17 against WT max 2.18).
+- M6 and F8 Adm: HPC 11.7, 3.9; CTX 18.8, 6.4; PFC 10.5, 7.6.
+
+MUST CHANGE 1: "Bhlhe40 and Ndrg1 fall, Ddit4 and Ankrd37 are flat or slightly lower" is unscoped, directly after a four-region list, and is false for cerebellum, where all four are higher.
+  Values (TC), HPC / CTX / PFC / CB: Bhlhe40 -0.23 / -0.44 / -0.82 / +0.06; Ndrg1 -0.44 / -0.44 / -0.51 / +0.18; Ddit4 -0.12 / -0.16 / -0.25 / +0.21; Ankrd37 -0.01 / -0.13 / -0.34 / +0.31 (TMM within 0.05).
+Replacement: "in the three forebrain regions Bhlhe40 and Ndrg1 fall and Ddit4 and Ankrd37 are flat or slightly lower (Ankrd37 about -0.3 in PFC), whereas in cerebellum all four are higher (about +0.06, +0.18, +0.21 and +0.31 log2)".
+
+MUST CHANGE 2: "the six-gene selective set" is never defined in the text in scope. The following words name only five candidate genes (Bhlhe40, Ndrg1, Ddit4, Ankrd37, Adm), and the field elsewhere also has a different "six-gene control set". The reader cannot know or recompute what +0.22 / +0.11 / -0.07 / +0.19 refer to. I tried to infer the composition from candidate hypoxia genes and found no credible match.
+Replacement: "the six-gene selective set ([list the six gene symbols]) changes by ..." and name the primary and the "second" normalisation. (If the list is already printed elsewhere in the same published field, this item reduces to repeating it here; the packet text does not show it.)
+Related: the primary normalisation of the Adm and CPM figures is not named. Total-count and TMM are called reproductions, so the primary is something else; my median-of-ratios values are closest (within about 0.05).
+
+Optional add: cerebellum Adm is also up (+0.40; +0.30 without M6 and F8; two of three mutants above the WT maximum), so the "carried by two animals" statement is forebrain-only, as written.
+
+NOT CHECKED (D4): the set values +0.22 (+0.17), +0.11, -0.07, +0.19 and the permutation p values 0.32, 0.70, 0.67, 0.057 (set undefined; the p values are only consistent in form with 5 v 5 and 4 v 3 exact permutation); "a broad modest shift of many hallmark members" and "led by" (hallmark gene-set file not named in the packet, not opened); "set means recomputed independently"; the human organoid pattern; everything after the PFC range sentence.
