@@ -1,0 +1,247 @@
+BLIND VERIFIER REPORT, PACKET A (IT28). Role: verifier, hypothesis level, class level. Nothing here is medical advice.
+
+SUMMARY TABLE
+| id | verdict |
+|---|---|
+| N02 | ADD |
+| DR-A01-007 | MUST CHANGE |
+| DR-B01-002 | ADD |
+| DR-W2-004 | STANDS (two optional notes) |
+| DA-L01-005 | STANDS |
+| DR-L01-003 | MUST CHANGE |
+| DR-A02-010 | ADD |
+| DR-A02-006 | STANDS |
+| DR-A02-007 | STANDS |
+| DR-H02-008 | MUST CHANGE |
+| DA-K01-007 | MUST CHANGE (minor, rounding-level numbers; everything else reproduces) |
+
+FILES AND FIGURES
+- Opened (text): every XML in the packet, converted to text. Also the Hussain table 1, the Breton Table 1 and supplement text mmc1_text.txt, and the Cheng supplement PDF (text search). Also the Guiberson main XML and both supplement PDFs (text search for HDAC terms), the held PMC page for PMID 24321005, and the held ChEMBL and bar-reading TSVs.
+- Figures viewed as images:
+  - Breton: figure 3 (gr3.jpg), figure 4 (gr4.jpg), and supplement images image2.tiff (Supp Fig S2) and image3.tiff (Supp Fig S3, converted to PNG).
+  - Guiberson: Supplementary Figure 12, PDF page 19, rendered at 130 and 300 dpi.
+  - Alekseeva: figures 3, 4 and 5 (the webp files).
+  - Cheng: figure 6 (jpg) and Supp Fig 8, PDF page 15.
+- Not available, so not viewed: figures for Hussain (the folder files/figures/PMID30290271_r2 is empty), Hristodor, Gupta (Figs 1 to 7), Sheeni and the Briggs page. For those I used legends and text only.
+- Not opened: any card, packet file under the repository, result file, report, assignment or checkpoint. I wrote nothing inside any repository. Scratch is in /home/desktop/.claude/jobs/54ca757b/tmp/blindA/.
+
+---
+BLOCK N02: ADD
+Checked against Hussain (PMC XML) and Breton (PMC XML, figures, supplement).
+
+Supported clauses:
+- d-APV (50 micromolar) eliminated spontaneous bursting in the slice, and frequency, duration and amplitude returned to normal on washout (Breton Results; fig 3C and 3D, d-APV bar at zero, washout bar present; n = 51 bursts, 5 slices, 3 animals).
+- Delayed evoked response suppressed "at higher stimulus strengths":
+  - The main text only says the knockout response was larger "at multiple stimulus strengths" and that d-APV "reversibly suppressed" it.
+  - Supp Fig S3C (supplement legend and image viewed): d-APV p values left to right were 0.48, 0.65, 0.17, 0.023, 0.010, 0.0006. So it is significant only at the three highest strengths (40, 50 and 100 microamp, about 0.4 of baseline).
+  - Washout rose above baseline. This clause STANDS.
+- Spontaneous excitatory current: mean amplitude 23.3 picoamp (control) against 24.7 picoamp (knockout), a 6.0 percent difference. This is "S-CTL", wild type plus heterozygote, at -70 mV.
+- Inhibitory current: amplitude 57.3 against 27.5 picoamp (about halved). Frequency 10.3 against 8.4 Hz (reduced).
+- Resting potential of pyramidal neurons: -79.25 (wild type) against -73.62 (knockout) mV, marked significant against wild type (Table 1).
+- Miniature excitatory currents: larger amplitude in knockout against wild type and heterozygote (KS test). Only TTX was added, so they are not pharmacologically isolated. Decay 5.18 against 4.84 ms, p = 0.2982.
+- Grin2c: lower in hippocampal neurospheres (RNA-seq, log2 fold change -3.22; 2 knockout against 3 wild type) and in whole hippocampus (qRT-PCR, n = 4 against 4).
+- In these two sources I found no isolated NMDAR or AMPAR current, no receptor protein, and no NMDAR-drug arm other than d-APV. Searched: NMDA, AMPA, APV, CNQX, NBQX, memantine, ketamine, MK-801, ifenprodil, perampanel, glycine, d-serine, Grin, Gria.
+- The absolute clauses "in any WWOX system" and "to any Wwox system" are UNSETTLED. I can only verify the two held sources.
+
+Omissions that would mislead (ADD):
+1. The first clause says "the knockout slice" without the model. It is a neuron-specific Synapsin-Cre knockout, in neocortical slices. The hippocampal slices did not burst.
+2. "Excitatory current amplitude differs by about six percent" gives no direction and does not say spontaneous. The next sentence uses "miniature", so a reader could confuse the two. It is larger, in sEPSC.
+3. Hussain Table 1 (neurosphere RNA-seq) also lists Grin2b, an NMDAR subunit, as lower (log2 fold change -2.14, p = 2.75E-06, FDR 3.6E-04). The text promotes only Grin2c, Grm3 and Kcna2 as lower in vivo. Grin2b is not reported in the in vivo qPCR. Omitting it understates the subunit signal on an NMDAR class card.
+4. "AMPAR-weighted" is the record's inference, not a statement in the source. The source only says unchanged decay implies "no overt change" in the NMDAR:AMPA proportion. Mark it as an inference.
+
+Minimal replacement wording:
+"In the neuron-specific (Synapsin-Cre) knockout neocortical slice, d-APV (50 micromolar) abolishes bursting, reversibly, and suppresses a delayed evoked response at the three highest stimulus strengths; spontaneous excitatory current mean amplitude is about six percent larger than in wild-type-plus-heterozygous controls at -70 mV (inferred AMPAR-weighted, not isolated); spontaneous inhibitory current amplitude is about halved and frequency reduced; pyramidal resting potential is depolarised against wild type. ... Wwox-knockout hippocampus and hippocampal neural stem cells show lower Grin2c transcript; the neural stem cell RNA-seq also lists lower Grin2b, not reported for hippocampus (Hussain 2019). ..."
+
+---
+BLOCK DR-A01-007: MUST CHANGE
+Two wording faults in the ChEMBL premise and the HDAC6 clause. The rest is supported.
+
+Supported:
+- Supp Fig 12a, G544D panel, sodium butyrate 5 mM. The page image (PDF p.19) shows about 100 to 105 percent of control, with three dots near 88 to 128 and no asterisk. The phenylbutyrate bar is about 180 with *. Legend: n = 3.
+- The WT sodium butyrate bar is about 195, dots scattered about 140 to 230, no asterisk. The "1.95" is in times control.
+- Text: "Three chemical chaperones stabilized ... 4-phenylbutyrate, sorbitol, and trehalose".
+- Cells are HEK293T, and the plasmid is pCMV5 (human Munc18-1b, methods).
+- No-HDAC claims: a text search of the main XML and both supplement PDFs for HDAC, deacetylase, histone, vorinostat, SAHA, trichostatin, tubastatin, valproate and entinostat gave zero hits. So "no HDAC engagement measured" and "no pan-HDAC or HDAC6-selective arm" are verified.
+
+Faults:
+1. The TSV (hdac_enzyme_potency_chembl_20261029.tsv) holds three documents: CHEMBL1671826 (PBA and butyric acid), CHEMBL5136998 (butyric acid and sodium PBA), and CHEMBL5096206 (sodium butyrate only).
+   - "More potent ... in one document" is unambiguous for HDAC3 (9 against 260 micromolar) and HDAC8 (15 against 93 micromolar).
+   - "Weaker on HDAC1 in a third that also lists the sodium salt" is wrong or dangling. There is no "second" document in the sentence. "The sodium salt" reads as sodium butyrate, the compound applied. The salt listed in that document is sodium phenylbutyrate (162 micromolar, HDAC1). That document lists butyric acid, not sodium butyrate. Sodium butyrate sits in a third document, CHEMBL5096206, with no PBA comparator.
+   - Which butyric-acid HDAC1 and HDAC2 values (16 or 300 micromolar; 12 or 400 micromolar) belong to which document is not resolvable from the held aggregate rows (min, median and max only). UNSETTLED. It needs the raw ChEMBL rows.
+2. "Only known as above 2 millimolar, below the 5 millimolar applied" reads as an IC50 between 2 and 5 millimolar. The table row is a lower bound only (relation ">", 2,000,000 nM, one row, butyric acid, document CHEMBL1671826).
+
+Minimal replacement:
+"The comparator (butyric acid in ChEMBL) was more potent than phenylbutyrate on HDAC3 and HDAC8 in one ChEMBL document, but weaker than sodium phenylbutyrate on HDAC1 in another (assignment of the HDAC1 and HDAC2 values to documents to be confirmed against the raw rows), so that premise is document-dependent. In the held ChEMBL table its HDAC6 IC50 is given only as a lower bound, above 2 millimolar (a bound lying under the 5 millimolar applied), so HDAC6 inhibition at that level is neither shown nor excluded."
+
+---
+BLOCK DR-B01-002: ADD
+Source: Hristodor 2025, PMC XML. No figures are held, so legends and text only.
+
+Supported:
+- Amlexanox 25 micromolar (n = 3, Fig 4 legend), no effect on MMC survival (FA-A and FA-F LCL) or DEB aberrations (FA-A only, Fig 4C to E). Text: "showed no effect on either MMC- or DEB-induced genotoxicity in FA-A cells".
+- In primary FA-C fibroblasts, "amlexanox treatment showed no significant effects on micronuclei formation".
+- Ataluren improved all three: MMC (2.1-fold FA-F, 1.5-fold FA-A), DEB, and micronuclei (-27 percent, FA-C).
+- FANCA mRNA: "neither amlexanox nor ataluren was able to rescue FANCA transcription".
+- Protein: FANCA from "just under 5 percent" to about 9 percent (amlexanox) and about 11 percent (ataluren). No effect on FANCF with amlexanox. The authors speak of partial read-through.
+- No direct TBK1 readout. pSTAT2 and p53 only. Searched: TBK1, IRF3, pTBK1, cGAS.
+- The authors call it a hypothesis ("we hypothesized", "suggest").
+
+Omission (ADD):
+- "Amlexanox also lowered p53 (about 40 percent)" reads as general. Text: "reducing almost 40% of p53 protein accumulation only in FA-A cells". Fig 2 title: "amlexanox reduced p53 solely in FA-A LCL". In FANCF cells it did not lower p53.
+- The authors' attribution is "mainly" downstream (their Fig 8 text and Discussion: "mainly acts downstream"). They also say both drugs "should induce translational read-through". "Rather than read-through" is slightly stronger than the source.
+- The three phenotypic tests were in different lines: FA-A and FA-F for MMC, FA-A for DEB, FA-C for micronuclei. Amlexanox was tested at one concentration.
+
+Minimal replacement:
+"Amlexanox also lowered p53 (about 40 percent) in the FANCA line only (not in FANCF) and phospho-STAT2 (about 50 percent) in the FANCA line; the authors attribute these two falls mainly, as a hypothesis with no direct TBK1 readout, to TBK1/IKKe or NF-kB inhibition downstream rather than to read-through."
+
+---
+BLOCK DR-W2-004: STANDS
+Source: Alekseeva, PMC XML. Fig 3 viewed (webp, converted).
+
+Supported:
+- Fig 3A, mean latency in minutes (control; 1 mg/kg; 5 mg/kg; 25 mg/kg):
+  - Stage 1: 11.8; 4.5*; 5.2*; 2.2*.
+  - Stage 2: 25; 9.8*; 8.8*; 3.6*.
+  - Stage 3: 32; 27 (no mark); 21*; 11.5*.
+  - Stage 4: 37; 32 (no mark); 26*; 25.5*.
+  So the two higher doses shortened all four stages (stage 4 about 26 and 25.5 against about 37). The lowest dose shortened stages 1 and 2 only.
+- Text: "memantine (1-25 mg/kg) shortened the latency to the onset of each successive seizure stage".
+- Fig 3B and text: stage 4, F(3,28) = 8.123, Tukey p < 0.01 for 5 and 25 mg/kg, so 8 per group.
+- Perampanel (Fig 4): the text says 1 and 5 mg/kg prolonged stages 3 and 4. 7 of 8 animals in the perampanel 1 mg/kg arm developed seizures (87.5 percent).
+- No receptor-engagement measure. The only readouts are latency, NeuN and Iba-1.
+
+Optional notes, not needed to change the verdict:
+- Methods give n = 14 for the control group, while the ANOVA degrees of freedom imply 8 (the record's "inconsistencies" clause covers this).
+- Fig 4A shows the middle perampanel dose delayed all four stages, and marks stages 3 and 4 significant at 0.2 mg/kg. The text and Fig 4B say 0.2 mg/kg had no effect.
+
+---
+BLOCK DA-L01-005: STANDS
+Source: Cheng 2023 XML, Fig 6 (viewed), Supp Fig 8 (page 15, viewed).
+
+Supported:
+- Fig 6a: one overlay histogram per genotype at early and late passage. The late-passage null curve is shifted right. At early passage the three curves overlap. The text agrees: "no apparent differences in intracellular ROS ... early-passage". There is no quantification or test and no n in the legend.
+- Supp Fig 8: two columns, Wwox+/- and Wwox-/-, passage 1 (methods: "MEFs of passage one"), scale log2 fold change. Nfe2l2 and Nqo1 are in the redox panel. The null column is red (higher) for all rows. The legend gives no n or test. It is heterozygous against null, not wild type.
+- NAC 1 millimolar was given "continually ... after isolation". No ROS arm under NAC appears in Fig 6a. Searched the main text and the supplement legends (S1 to S9): none.
+- Discussion: whether an initial antioxidative response occurs is "unclear".
+- Minor: the paper does not call the histogram "representative". "One histogram per genotype shown" would be more literal, but this does not change the sentence's content.
+
+---
+BLOCK DR-L01-003: MUST CHANGE
+Source: Sheeni PMC13701765 XML. No figures held, so text and legends only.
+
+Supported:
+- "Acute Nrf2 target engagement was not measured" (Discussion, verbatim). Direct indices of Keap1 modification, Nrf2 translocation, ARE activation and NQO1, HO-1, GCLC and glutathione enzymes "were not measured" (Limitations).
+- Brain drug level was not measured. One dose only (30 mg/kg).
+- PTZ model, n = 9 per group:
+  - Maximum severity: p = 0.0226.
+  - Latency to stage V-VI: median 15 to 31 min, p = 0.018.
+  - Incidence 9/9 against 5/9, Fisher p = 0.0824 (not significant).
+- Post-status epilepticus (n = 8 per group): lower cumulative seizure burden (p < 0.001, week 10) and delayed first seizure.
+- Cytokine mRNA at 10 weeks not significant (n = 5).
+
+Faults:
+1. "Higher hippocampal neuronal density" is over-generalised. Results 3.6: "significantly higher neuronal density in the CA1 region (p < 0.01) ... no significant difference ... in the CA3 region". The legend gives n = 3 animals per group. The abstract claims CA1 and CA3, which contradicts the Results.
+2. "So superoxide dismutase and catalase activity after PTZ is the only indirect readout" is the record's inference. The authors do not present SOD or CAT as an Nrf2 readout. MDA and cytokine mRNA were also measured, and the authors only say "endogenous antioxidant capacity". Safer: "the only antioxidant-enzyme readout".
+
+Minimal replacement:
+"... and after status epilepticus lower spontaneous seizure burden and higher neuronal density in CA1 only (no difference in CA3; three animals per group in histology; the abstract's CA1-and-CA3 statement contradicts the Results) ... superoxide dismutase and catalase activity after PTZ is the only antioxidant-enzyme readout, not shown to be Nrf2-dependent."
+
+---
+BLOCK DR-A02-010: ADD
+Source: Gupta 2023, PMC XML. No figures held; legends only.
+
+Supported:
+- Low-dose carfilzomib: 2.1 mg/kg/day for one week by osmotic pump (Fig 7 legend). Results: "No significant differences were observed in either the tHcy or CBS activity levels". Slight rise in protein in some samples, and no Hsp70 induction. The Discussion says "only a slight increase in liver CBS activity and no lowering of serum tHcy".
+- 7 x 2.1 = 14.7 mg/kg, against the 24-hour subcutaneous arm at 15 mg/kg (same S466L allele, which lowered tHcy and raised activity and protein). That is about one seventh of the rate. The 24-hour arm "did not observe induction" of Hsp.
+- The authors measured proteasome activity only for R266K, R336C, I278T and T191M (Fig 4), not for S466L.
+- S466L is in the regulatory (C-terminal) domain.
+
+Omissions or loose clauses (ADD):
+1. "Tolerability of this arm is asserted by the authors": the only tolerability statements are generic. The abstract says "low-doses are less toxic", and the bortezomib arm was "generally well tolerated". Nothing is stated specifically for the carfilzomib pump arm. The Fig 7 legend shows tHcy, activity and western only, with no weight or blood data, so the second half is correct.
+2. n per group is not given in the Results text or in the Fig 7 legend. The null therefore has unknown power.
+
+Minimal replacement:
+"Tolerability is asserted only generally (abstract: low doses less toxic, for both drugs), not specifically for this arm, and no weight, blood-count or clinical data are shown; group size is not stated."
+
+---
+BLOCK DR-A02-006: STANDS
+Sources: Gupta 2023 and Mijatovic 2024, text only (no Gupta figures held).
+
+Supported:
+- "Neither proteasome inhibitor was able to restore significant enzymatic activity to the Tg-T191M strain, although treatment with bortezomib did seem to stimulate a very small amount".
+- Proteasome inhibition by both agents: "with the exception of the Tg-R266K strain, both ... equally effective in reducing proteasome activity" (Fig 4D is T191M). CBS protein rose with both (highest with bortezomib).
+- Mijatovic (HEK293A CBS-knockout cells, stable lentiviral expression):
+  - T191M lysates showed "essentially no activity".
+  - Bortezomib 20 nM raised live-cell activity to 259 percent of vehicle (p < 0.05), with "signs of cell damage and apoptosis".
+  - Its Discussion: "partially rescued protein expression and activity of several pathogenic CBS variants modeled in transgenic mice including I278T and T191M (Gupta 2013, 2023)". This is more generous than Gupta, as the sentence says.
+
+---
+BLOCK DR-A02-007: STANDS
+Source: Gupta 2023 XML, text and legends.
+
+Supported:
+- Bortezomib 0.5 then 0.8 mg/kg, 12 injections over 32 days.
+- tHcy mean 345 to 179 micromolar, linear trend P < 0.001, against d0 only (Fig 5B legend: "different from d0"). Discussion: "it is possible that the tHcy lowering ... was due to the injection and handling".
+- Not significant for activity ("limited sensitivity of the assay at very low activity").
+- WBC and lymphocytes were significantly lower.
+- One of eight treated animals had CBS activity outside the control range. It was also the lowest-tHcy, most weight-loss, lowest-WBC animal. The Fig 5D legend marks one animal "moribund at time of sacrifice" (it is the circled point).
+- Bimoclomol (Fig 6, 14 days): tHcy lowered similarly, activity not significantly different, no noticeable Hsp increase beyond bortezomib alone.
+- Conclusion: "neither drug appears to be effective when used at non-toxic doses ... probably not feasible" as monotherapy.
+- "Still far above normal": about 170 micromolar or more, against a normal of 3 to 7.
+- "No vehicle-injection arm" is consistent with the methods and the handling caveat. The strict absence is not stated verbatim: UNSETTLED but not contradicted.
+- Note: the bimoclomol arm lasted 14 days, not a month.
+
+---
+BLOCK DR-H02-008: MUST CHANGE
+Source: PMC page PMC4102583 (PMID 24321005).
+
+Supported:
+- CPP-115 and vehicle arms only; vigabatrin appears only in Table 1 and the Discussion, citing the authors' earlier study.
+- Reduction was transient: reduced behavioral spasms only on PN5 to PN7, and none after PN7. 5 mg/kg/day was "eventually lethal" (100 percent by PN8, 8/9 dead by PN7).
+- The abstract says "did not accelerate spasms cessation" and "did not alter neurodevelopmental outcomes or visuospatial learning". It does not mention brain histology.
+- The page reports no myelin or white-matter histology (only vigabatrin background in the Introduction and references).
+
+Fault:
+- "The held full-text page scores hippocampal sclerosis" is wrong. The paper scores hippocampal injury (HS1 to HS3, with 0.5 added for left anterior-dorsal involvement), defined as the extent of injury from the model's right-sided infusion (Table 2, thionin-stained PN20 sections). The word "sclerosis" occurs only in "tuberous sclerosis".
+- "Equal across groups": "HS scores were equally distributed across treatment groups (Fisher's exact test, P = 0.69)". Basis: 23 brains from the Barnes-maze animals in the 0, 0.1 and 1 mg/kg groups only (8, 10 and 5). The 5 mg/kg group is absent, and 91 percent of scores were HS3 to HS3.5, i.e. near ceiling. Cortical injury was graded by autopsy inspection, not histology.
+
+Minimal replacement:
+"The held full-text page scores model-induced hippocampal injury (extent score on thionin-stained sections, 23 brains from the 0, 0.1 and 1 mg/kg groups; 91 percent scored 3 to 3.5), equally distributed across those groups, and reports no myelin or white-matter histology."
+
+---
+BLOCK DA-K01-007: MUST CHANGE (minor, rounding-level)
+I read recompute_k01_007_adv282.py before running it. It reads only the two TPM tables and the Ensembl cDNA FASTA, writes nothing, and uses no network. It sums transcript TPM to gene symbol, takes group means, then log2((KO mean + 0.01)/(control mean + 0.01)).
+- I ran it with python -I.
+- I wrote a second script that prints every animal's summed TPM per gene, and I tried alternative formulas (no pseudocount; mean of log2(TPM+1)).
+- All 61 transcripts for the 10 genes map.
+
+Recomputed log2 ratios (script, rounded):
+
+| contrast | Wwox | Hif1a | Epas1 | Hk2 | Slc2a1 | Ldha | Pgk1 | Ndrg1 | P4ha1 | Gfap |
+|---|---|---|---|---|---|---|---|---|---|---|
+| H_S (3 KO / 2 ctrl) | -2.76 | -0.17 | -0.59 | +0.15 | -0.40 | -0.49 | -1.02 | -1.12 | -0.69 | +2.12 |
+| H_N (2 / 2) | -4.00 | +0.03 | -0.53 | -0.02 | -0.36 | -1.27 | -1.17 | -0.91 | -1.29 | +1.31 |
+| H_germ (2 KO / 3 WT) | -3.52 | +0.06 | -0.21 | +0.37 | -1.05 | -0.50 | -0.56 | -1.27 | -1.05 | +0.65 |
+| Cx_S (3 / 4) | -1.66 | -0.21 | -0.44 | +0.02 | -0.17 | -0.25 | -0.26 | -1.27 | -0.99 | +0.85 |
+
+Reproduced as stated:
+- Hif1a -0.21 to +0.06 ("-0.2 to +0.06" is fine).
+- Wwox falls 6.8-, 16- and 11.5-fold in the hippocampal contrasts (2^2.76, 2^4.00, 2^3.52), and 3.2-fold in cortex. Cortex values overlap (KO 3.8, 5.0 and 9.0 against control 8.0, 15.1, 25.7 and 26.5).
+- Epas1 lower in all four, and animal-separated in 3 of 4. Cortex overlaps: KO maximum 27.6 against control minimum 23.6.
+- Slc2a1, Ldha and Pgk1 lower in all four.
+- Ndrg1 and P4ha1 lower in all four.
+- Gfap higher in all four.
+- Animal counts 2 to 3 knockout against 2 to 4 control.
+
+Numbers that do not match the recompute, by 0.01 to 0.02:
+- Hk2 range: recompute -0.02 to +0.37 (H_N -0.015, H_germ +0.366), against the stated "-0.01 to +0.35".
+- Epas1 lower bound: -0.586, which rounds to -0.59, against the stated "-0.58".
+- The alternative formulas give Hk2 up to +0.21 and Epas1 down to -0.58, so the stated values may come from a different quantification. Say which.
+
+Minimal replacement:
+"Hk2 flat (-0.02 to +0.37), Epas1 lower (-0.21 to -0.59, animal-separated in 3 of 4), ... log2 ratio of group-mean summed-transcript TPM."
+
+UNSETTLED, not verifiable from the held files:
+- P17, the lines' epilepsy and death at 3 to 4 weeks, and the hypomyelination or gliosis composition remarks.
+- That S means Synapsin and N means Nestin. The column names are S_, N_, KO/WT and CRTX_S_, and the file names say "mutant_Hippo" and "neuronal_Del_Cortex".
+- "Background differences between control groups" and "no protein". These are caveats, not measurable here.
