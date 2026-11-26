@@ -1244,6 +1244,13 @@
      "source": "SCI launcher of window c6d4dd83 (ADV addition) and checkpoint AT section 2 items 3 and 4; ADV-287 step 2 hold lifted by IT apply 49b7ac71a (CHECKPOINT_IT_20261126_1 section 6)",
      "accepted_at": "2026-11-26T02:04:49Z",
      "updated_at": "2026-11-26T02:05:59Z"
+    },
+    {
+     "step": "ADV-295: one-consumer reading batch, block 1 (42807679 figures 3-7, 41254692, 42401046, 39546604, 41210171) with own PREREG and the ADV-292 recipe; block 2 only if block 1 has a strict record (1 strict: three records; 2 or more: five); report the remaining debt counts after block 1; after the ADV-287 extension",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-295 (ADV message 2026-11-26; assignments/ADV-295.md lands with ADV's next push)",
+     "accepted_at": "2026-11-26T02:13:33Z"
     }
    ]
   }
@@ -2205,6 +2212,13 @@
    "at": "2026-11-26T02:04:49Z",
    "source": "SCI launcher of window c6d4dd83 (ADV addition) and checkpoint AT section 2 items 3 and 4; ADV-287 step 2 hold lifted by IT apply 49b7ac71a (CHECKPOINT_IT_20261126_1 section 6)",
    "step_sha256": "ac185303360e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-26T02:13:33Z",
+   "source": "ADV-295 (ADV message 2026-11-26; assignments/ADV-295.md lands with ADV's next push)",
+   "step_sha256": "4056442e5dc1",
    "reopened_block": false,
    "authorised_by": null
   }
