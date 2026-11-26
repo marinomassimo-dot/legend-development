@@ -84,7 +84,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: free N-acetylneuraminic acid.** Human organoid and mouse hippocampal bulk signals nominate a comparison of donor with two product branches. The pooled nuclei qualify the bulk transporter signal. Next resolve chemical specificity of developmental exposure and determine whether a WWOX donor or mature product deficit has been measured. [WWOX comparison, prediction and replay](n_acetylneuraminic_acid/README.md)
+**Active compound: free N-acetylneuraminic acid.** Human organoid and mouse hippocampal bulk signals nominate a comparison of donor with two product branches. The pooled nuclei qualify the bulk transporter signal. Next resolve chemical specificity of developmental exposure and determine whether a WWOX donor or mature product deficit has been measured. [WWOX comparison, prediction and replay](n_acetylneuraminic_acid/README.md) · [Donor-level chemical countercheck](n_acetylneuraminic_acid/sialin_line_countercheck_20261126.md)
 
 **Latest completed compound: caffeine citrate.** Deferred for pediatric WWOX trial priority. Human cortical event amplitude and frequency dissociate during adenosine challenge. Mouse A1/A2A controls separate basal transmission from plasticity. Reopen for stage-matched WWOX functional recovery with a preserved post-burst brake at measured free exposure. [Neonatal and cortical comparisons](caffeine_citrate/neonatal_countercheck_20261126.md)
 
