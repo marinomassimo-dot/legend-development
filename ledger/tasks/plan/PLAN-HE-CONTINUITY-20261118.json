@@ -1461,38 +1461,58 @@
     },
     {
      "step": "Gate side scans (9be73bce4): when ten later publications exist, run files/coordination/he_gate_proto_20261125/read_ten_landings.sh b07ec007b <ten SHAs> outside the lock; any stdout difference reverts 9be73bce4's commit; report gate seconds and lock seconds to ADV",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV GO with five conditions, 2026-11-25, condition (d)",
-     "accepted_at": "2026-11-25T21:34:53Z"
+     "accepted_at": "2026-11-25T21:34:53Z",
+     "evidence": "10 of 10 stdout IDENTICAL (old b07ec007b); standalone median 104.5 s to 78.5 s; reported to ADV, ADV KEEP; disease-models/wwox/research/drug_repurposing/checkpoint_he_20261120/CHECKPOINT_HE_20261126_Z.md section 1",
+     "updated_at": "2026-11-26T00:10:21Z"
     },
     {
      "step": "Wire repurposing_coverage.py check into candidate_tree_freshness.py, then regenerate coverage once as a separate landing (Y section 2 item 3)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "CHECKPOINT_HE_20261125_Y.md (sha256 a734e82c); HE launch brief of session 6e20e53e; ADV queue item 2",
-     "accepted_at": "2026-11-25T22:10:22Z"
+     "accepted_at": "2026-11-25T22:10:22Z",
+     "evidence": "fb48f8fd4 published in d746bc3aa; coverage regeneration published by IT a6d534d47 and again after join in e26debb56",
+     "updated_at": "2026-11-26T00:10:21Z"
     },
     {
      "step": "Add a check subcommand to repurposing_join.py, last; regenerate join/ once by the writer if IT agrees nobody reads it that day; then add join/ to the copied-sentence check surfaces (Y section 2 item 4)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "CHECKPOINT_HE_20261125_Y.md (sha256 a734e82c); HE launch brief of session 6e20e53e; ADV queue item 3",
-     "accepted_at": "2026-11-25T22:10:22Z"
+     "accepted_at": "2026-11-25T22:10:22Z",
+     "evidence": "e26debb564f8327b2c09d9c9187079617f9ae536 (check, regeneration after IT GO, join/cards.json a copied-sentence surface)",
+     "updated_at": "2026-11-26T00:10:21Z"
     },
     {
      "step": "Copied-card-sentence check (d37743c77): watch its refusals for the first ten landings, count true lags against false refusals, and inspect the other 8 of the 12 replayed refusals",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "CHECKPOINT_HE_20261125_Y.md (sha256 a734e82c); HE launch brief of session 6e20e53e; ADV queue item 1",
-     "accepted_at": "2026-11-25T22:10:22Z"
+     "accepted_at": "2026-11-25T22:10:22Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/checkpoint_he_20261120/CHECKPOINT_HE_20261126_Z.md section 1: 12 replays all with a truly stale copy; 17 publications, 1 card-changing, check not run on it, fixed in 82df54cbad",
+     "updated_at": "2026-11-26T00:10:21Z"
     },
     {
      "step": "Write in the next HE checkpoint the list of the eight ADV-098 sheets with no blind check (sheet, batch, claim count, consumers) so ADV can route a blind pass; do not run the pass",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad message to HE 6e20e53e, 2026-11-25",
-     "accepted_at": "2026-11-25T22:10:48Z"
+     "accepted_at": "2026-11-25T22:10:48Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/checkpoint_he_20261120/CHECKPOINT_HE_20261126_Z.md section 4",
+     "updated_at": "2026-11-26T00:10:38Z"
+    },
+    {
+     "step": "Remove the released worktrees that meet the 6 h keep-age rule (branch_hygiene --removal), one at a time, no --force",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad decision record 2026-11-25 23:46Z",
+     "accepted_at": "2026-11-26T00:10:21Z",
+     "blocker": "auto mode classifier denied the removal batch 2026-11-26 about 00:09Z; waits for the operator to allow or run it; do not retry in another form",
+     "no_condition": "an operator answer has no typed condition",
+     "updated_at": "2026-11-26T00:10:21Z"
     }
    ]
   }
@@ -2657,6 +2677,13 @@
    "at": "2026-11-25T22:10:48Z",
    "source": "ADV a5e6f2ad message to HE 6e20e53e, 2026-11-25",
    "step_sha256": "ab99e139743f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-26T00:10:21Z",
+   "source": "ADV a5e6f2ad decision record 2026-11-25 23:46Z",
+   "step_sha256": "e470e8199e9c",
    "reopened_block": false,
    "authorised_by": null
   }

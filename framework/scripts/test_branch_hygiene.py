@@ -351,6 +351,28 @@ class TheRemovalCheckNamesEveryReasonToKeep(unittest.TestCase):
         return {Path(str(r["path"])).name: "; ".join(r["keep"])
                 for r in bh.removal_rows(self.repo, report["worktrees"], "main", self.projects)}
 
+    def window(self, path, hours_ago, *sessions):
+        """One transcript per argument; each argument is the marker lines that session wrote."""
+        folder = self.projects / re.sub(r"[^A-Za-z0-9]", "-", str(path))
+        folder.mkdir()
+        when = dt.datetime.now().timestamp() - hours_ago * 3600
+        for i, lines in enumerate(sessions):
+            entries = [{"type": "assistant", "message": {"content": [{"type": "text", "text": line}]}} for line in lines]
+            (folder / f"s{i}.jsonl").write_text("".join(json.dumps(e) + "\n" for e in entries or [{}]), encoding="utf-8")
+            os.utime(folder / f"s{i}.jsonl", (when, when))
+
+    def test_a_released_window_is_kept_6_hours_and_any_other_24(self) -> None:
+        bound, released = ["MANDATE_BOUND: T-1"], ["MANDATE_BOUND: T-1", "MANDATE_RELEASED: T-1"]
+        for name, hours, sessions in (("released7", 7, [released, []]), ("released5", 5, [released]), ("bound7", 7, [bound]),
+                                      ("shared7", 7, [released, bound]), ("silent7", 7, [[]]), ("quoted7", 7, [["write `MANDATE_RELEASED: T-1` later"]])):
+            self.tree(name)
+            self.window(self.box / name, hours, *sessions)
+        kept = self.keep()
+        self.assertEqual(kept["released7"], "")
+        self.assertIn("keep-age 6 h", kept["released5"])
+        for name in ("bound7", "shared7", "silent7", "quoted7"):
+            self.assertIn("keep-age 24 h", kept[name], name)
+
     def test_each_reason_is_named_and_a_clean_idle_tree_has_none(self) -> None:
         self.tree("idle")
         self.transcript(self.box / "idle", 30)
