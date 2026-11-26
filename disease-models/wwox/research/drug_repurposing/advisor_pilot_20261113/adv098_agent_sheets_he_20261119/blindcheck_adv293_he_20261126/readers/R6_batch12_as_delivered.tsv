@@ -1,0 +1,95 @@
+U12.1	S	ADD	headline: "does not name its compounds in the text layer" is too broad; text names clemastine, benztropine and Methods name 5 candidate antagonists incl. p-fluorohexahydro-sila-difenidol; "no measured EBP datum by routes searched" unsettled
+U12.2	T	UNSETTLED	EBP target pull (334 rows, 264 molecules) and Europe PMC zero-hit searches not in packet; the three held tables show no EBP-target row
+U12.3	S	MUST CHANGE	"the six are named only in an Extended Data figure": clemastine and benztropine are named in the main text as panel members
+U12.4	S	ADD	p-fluorohexahydro-sila-difenidol (Sigma H127) is named in Methods and in Fig 3 and ED Fig 6 legends: 5 candidates for 4 slots, and H127 also appears in the Fig 3 (EBP) legend
+U12.5	-	NOT A CLAIM	design conclusion
+U12.6	-	NOT A CLAIM	heading/characterisation
+U12.7	S	UNSETTLED	search counts and dates not re-runnable; abstracts in packet show no such record
+U12.8	S	MUST CHANGE	27103167 (MC1568, rat cortex, MBP lowered, functional outcome) is a CNS class IIa inhibitor result with myelin marker and function readout
+U12.9	-	NOT A CLAIM	limitation statement
+U12.10	-	NOT A CLAIM	table header
+U12.11	T	UNSETTLED	173 rows confirmed; preferred name, parent field, InChIKey not in packet
+U12.12	T	UNSETTLED	7 rows confirmed; name and InChIKey not in packet
+U12.13	T	UNSETTLED	3 rows confirmed; PubChem CID, formula, InChIKey match not in packet
+U12.14	T	UNSETTLED	CHEMBL4751615 matches table request; CID and InChIKey not in packet
+U12.15	T	MUST CHANGE	range 1.7-180 holds for radioligand-binding documents only; CHEMBL3351363 (2014, human HEK293T BRET) M4/M1 = 21 and 51 (Gq) and 0.78 (beta-arrestin 1.148 vs 1.479)
+U12.16	T	ADD	arithmetic correct; omits human CHEMBL1129005 (1996, Ki M1 4.6, M2 251, 55-fold) and CHEMBL3351363
+U12.17	T	ADD	arithmetic correct; CHEMBL1127012 rows 250723/250724 potential_duplicate=1; CHEMBL1126912 values repeated in 3 other documents
+U12.18	T	ADD	table flags: values of CHEMBL1126912 repeated in CHEMBL1127358, 1151491, 1159156 (potential_duplicate=1); 5.21/267 in 1125764, 1127012, 1150993
+U12.19	T	OK	
+U12.20	T	ADD	two documents named are true but 65 no-subtype rows exist: also CHEMBL1124477 (60 rows 170-2500 nM), CHEMBL1123907 60 nM, CHEMBL1125462 (duplicate of 1125425), CHEMBL1128229 530 nM
+U12.21	T	ADD	true for subtype data; CHEMBL4017441 (BSEP) and CHEMBL4651402 (SARS-CoV-2) also hold both compounds
+U12.22	T	OK	
+U12.23	T	OK	16.1-fold and 3.8 vs 8.3 correct; note M2 ratio reverses (telenzepine 27.9 vs pirenzepine 21.0)
+U12.24	T	OK	
+U12.25	T	OK	
+U12.26	T	OK	
+U12.27	T	OK	
+U12.28	-	NOT A CLAIM	inference heading
+U12.29	T	OK	219.8, 15.9, 12.7, 3.8 correct
+U12.30	S	OK	
+U12.31	T	MUST CHANGE	"off-target rows are two" but 4 non-muscarinic rows: BSEP 1, SARS-CoV-2 2, imipramine-receptor Ki >100 nM (activity 934837, CHEMBL1123907)
+U12.32	T	OK	no row on the four EBP targets in the pirenzepine table
+U12.33	R	UNSETTLED	repository files not in packet; PMIDs 39432800 and 40512803 confirmed as Correction and EoC for Poon et al. PNAS
+U12.34	S	OK	quote matches full text
+U12.35	S	MUST CHANGE	text layer does name p-Fluorohexahydro-sila-difenidol (Methods list, Selleck 10 mM; ED6 and Fig 3 legends "Sigma H127")
+U12.36	S	MUST CHANGE	"The six are not named in the text layer": clemastine and benztropine are named as panel members
+U12.37	S	ADD	Fig 3c is a direct biochemical EBP assay at 10 uM (benztropine, clemastine, several HTS hits); ED6 r uses clemastine 1 uM
+U12.38	-	NOT A CLAIM	pointer
+U12.39	T	OK	
+U12.40	S	OK	
+U12.41	T	OK	
+U12.42	S	OK	no VU0255035 in full text
+U12.43	S	UNSETTLED	"best-known" is judgment; EBP not found by these routes unsettled
+U12.44	T	UNSETTLED	EBP-target table not in packet
+U12.45	R	UNSETTLED	
+U12.46	S	UNSETTLED	search count
+U12.47	S	UNSETTLED	negative by routes
+U12.48	S	ADD	unscoped; 24657831 is an expression experiment in OPCs/OLs after stroke
+U12.49	R	UNSETTLED	
+U12.50	S	UNSETTLED	counts from notes; 29472387 detail confirmed
+U12.51	S	UNSETTLED	
+U12.52	S	OK	titles/years confirmed; 2026 preprint unverifiable
+U12.53	S	UNSETTLED	counts not re-runnable; record descriptions confirmed
+U12.54	S	UNSETTLED	count; 37104592 description confirmed
+U12.55	S	UNSETTLED	count; 41591814 description confirmed
+U12.56	S	UNSETTLED	count
+U12.57	S	UNSETTLED	count
+U12.58	S	MUST CHANGE	"none is an oligodendrocyte-lineage experiment" but 24657831 studies HDACs in NG2+ OPCs and APC+ OLGs after stroke (expression)
+U12.59	S	UNSETTLED	process statement
+U12.60	S	OK	"only" part unsettled
+U12.61	S	OK	
+U12.62	S	MUST CHANGE	"it is peripheral": 27103167 CNS inhibitor, MBP lowered, functional outcome (the sheet itself cites it in U12.60)
+U12.63	S	OK	
+U12.64	R	UNSETTLED	IT tables not in packet
+U12.65	S	OK	immunostaining and reCAPTCHA unsettled; abstract dated 2011 (print 2012)
+U12.66	S	OK	
+U12.67	T	OK	IC50 2.4-354 nM class IIa and 0.887-3.0 uM cell rows confirmed; no label/ClinicalTrials unsettled
+U12.68	R	UNSETTLED	
+U12.69	-	NOT A CLAIM	
+U12.70	S	UNSETTLED	search count; five records listed
+U12.71	S	OK	quote matches abstract
+U12.72	S	OK	
+U12.73	S	UNSETTLED	negative by routes
+U12.74	-	NOT A CLAIM	
+U12.75	S	ADD	24657831 is an OL-lineage expression experiment; scope to perturbation experiments
+U12.76	-	NOT A CLAIM	
+U12.77	R	UNSETTLED	
+U12.78	S	UNSETTLED	abstract of 42332767 has no exposure figure (confirmed); negative rest unsettled
+U12.79	R	UNSETTLED	
+U12.80	S	OK	lineage-RNA part unsettled
+U12.81	S	ADD	"names of the six" not found: two (clemastine, benztropine) named; rest searches unsettled
+U12.82	S	UNSETTLED	
+U12.83	S	OK	
+U12.84	S	OK	
+U12.85	S	OK	
+U12.86	R	UNSETTLED	
+U12.87	R	UNSETTLED	
+U12.88	T	OK	
+U12.89	T	MUST CHANGE	"three human-receptor documents": at least five human multi-subtype documents (CHEMBL1129005, 1132561, 1137537, 1155803, 2311283) plus functional CHEMBL3351363
+U12.90	S	UNSETTLED	
+U12.91	S	ADD	same-paper direct biochemical EBP assay (Fig 3c) exists; compounds partly named
+U12.92	T	MUST CHANGE	"4- to 180-fold": lowest binding ratio is 1.66 (M5/M1) or 4.9 (M4/M1 in 1155803), and 0.78 in 3351363
+U12.93	-	NOT A CLAIM	
+U12.94	S	UNSETTLED	
+U12.95	-	NOT A CLAIM	
