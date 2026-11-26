@@ -1,0 +1,8 @@
+source	contrast	higher_bicarbonate	lower_bicarbonate	lower_over_higher	lower_minus_higher	unit
+Fig_4	nominal_pipette_26_to_13_AIS_median	13	4	0.3077	-9.0000	spikes_per_ramp
+Fig_4	nominal_pipette_26_to_13_somatic_median	22	19	0.8636	-3.0000	spikes_per_ramp
+Fig_1C_Table_2	nominal_pipette_26_to_0_mAHP_area_magnitude	0.68	1.12	1.6471	0.4400	mV_s
+Fig_7A	bath_26_vs_0_no_blocker_mean	53	17	0.3208	-36.0000	spikes_per_ramp
+Fig_7A	bath_26_vs_0_with_XE991_mean	40	49	1.2250	9.0000	spikes_per_ramp
+equilibrium_scenario	half_HCO3_with_CO2_held_pH_shift				-0.3010	pH_units
+equilibrium_scenario	half_HCO3_with_pH_held_CO2_ratio			0.5000		ratio
