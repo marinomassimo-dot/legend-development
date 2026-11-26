@@ -1,0 +1,6 @@
+endpoint	term	F	df_denominator	printed_p
+forelimb_placing_onset	birth_condition	3.09	67	0.008
+forelimb_placing_onset	PEA_treatment	7.12	67	0.01
+forelimb_placing_onset	birth_by_treatment	8.21	67	0.006
+gait_onset	birth_by_treatment	1.97	71	0.16
+negative_geotaxis_onset	birth_by_treatment	0.19	71	0.66

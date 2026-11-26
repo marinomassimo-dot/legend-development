@@ -1,8 +1,8 @@
 # Palmitoylethanolamide in WWOX loss of function
 
-26 November 2026 · SCI_CODEX · active comparison · P17 mouse cortical and hippocampal TPM, week 15 human cerebral organoid CPM and mouse hippocampal assigned nuclear UMI · [prespecified question](pretest_20261126.md)
+26 November 2026 · SCI_CODEX · completed comparison · P17 mouse cortical and hippocampal TPM, week 15 human cerebral organoid CPM and mouse hippocampal assigned nuclear UMI · [prespecified question](pretest_20261126.md)
 
-**Decision at opening.** Compare palmitoylethanolamide (PEA) as a probe of glial lipid handling, with receptor competence and chemical identity tested before activity endpoints. The WWOX screen suggests altered supply and removal with different signs across species and cell classes. It gives no unique direction for intact endogenous PEA. An indiscriminate anti-inflammatory explanation is weak in the starting neural systems. [Bulk results](contrasts.tsv) · [Nuclear counts and denominators](nuclei.tsv)
+**Disposition.** Defer palmitoylethanolamide (PEA) for pediatric WWOX trial priority. Keep it as a glial lipid and receptor-competence probe. [Glial and developmental comparisons](glial_response_and_disposition_20261126.md) The WWOX screen suggests altered supply and removal with different signs across species and cell classes. It gives no unique direction for intact endogenous PEA. An indiscriminate anti-inflammatory explanation is weak in the starting neural systems. [Bulk results](contrasts.tsv) · [Nuclear counts and denominators](nuclei.tsv)
 
 Contrast is knockout minus control mean log2(1 + abundance); the approximate range across single-library omissions follows in parentheses. It is a sensitivity analysis, not a confidence interval.
 
