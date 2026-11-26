@@ -1,8 +1,8 @@
 {
   "investigation": "INV-05",
   "title": "Ketamine in WWOX-related epilepsy",
-  "date": "22 November 2026",
-  "summary": "Ketamine remains a research hypothesis for WWOX-related epilepsy. The reviewed sources do not establish benefit in WWOX-DEE, either for an acute episode or for ongoing seizure control.",
+  "date": "26 November 2026",
+  "summary": "Ketamine remains a research hypothesis for WWOX-related epilepsy. The reviewed sources do not establish benefit in WWOX-DEE, either for an acute episode or for ongoing seizure control. The reviewed pediatric evidence also leaves functional improvement at 6–8 weeks after brief peri-intubation ketamine undetermined.",
   "evidence": [
     "Breton et al. reported that the competitive NMDA receptor antagonist d-APV stopped spontaneous bursts in cortical slices from mice with neuron-specific Wwox loss. Ketamine was not tested in those slices.",
     "Paediatric studies of ketamine in status epilepticus cover other or mixed causes."
@@ -175,7 +175,7 @@
           [
             "Initial convulsive status epilepticus",
             "Ket-Mid randomised 144 children. Clinical cessation at five minutes: 76% with ketamine plus midazolam, 21% with placebo plus midazolam.",
-            "A first-line add-on result in mixed causes. The laboratory used the abstract."
+            "A first-line add-on result in mixed etiologies. Cessation was assessed clinically without EEG confirmation."
           ],
           [
             "Refractory convulsive status epilepticus",
@@ -210,8 +210,8 @@
       ],
       "sources": [
         {
-          "label": "Ket-Mid randomized trial · published abstract",
-          "url": "https://www.sciencedirect.com/science/article/pii/S088789942500075X"
+          "label": "Ket-Mid randomized trial · Methods and Table 2",
+          "url": "https://doi.org/10.1016/j.pediatrneurol.2025.03.011"
         },
         {
           "label": "KETASER01 · early termination · PMID 35833327",
@@ -228,6 +228,138 @@
         {
           "label": "LEGEND access and interpretation audit",
           "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ketamine_deep_adv_20261117/ADV040_FULLTEXT_ROUTES_SCI_20261118.md"
+        }
+      ]
+    },
+    {
+      "title": "Ketamine and recovery after intubation",
+      "takeaway": "Functional benefit 6–8 weeks after brief ketamine induction remains undetermined. The closest cohort measured recovery after extubation without an induction comparison.",
+      "table": {
+        "columns": [
+          "Study and population",
+          "Exposure and measured outcome",
+          "Timing and attribution"
+        ],
+        "rows": [
+          [
+            "Mazandi and Loi, neurologic intubations",
+            "Ketamine induction in 70/143 children and 495/2,073 registry procedures. Registry adjusted OR for the acute adverse-event composite was 1.34 (95% CI, 0.99–1.81).",
+            "Peri-intubation. Clinical selection and other sedatives. No later function estimate."
+          ],
+          [
+            "Bhutta, 24 cardiac surgery infants",
+            "Single pre-bypass administration, 13 vs 11 randomized. No statistically detected pre/post Bayley-II difference in the abstract.",
+            "At 2–3 weeks. Small surgical pilot."
+          ],
+          [
+            "Jacobwitz, 69 children and neonates with status epilepticus",
+            "cEEG seizure cessation 32/69 and reduction 19/69. Median infusion 85.7 hours. 66/69 intubated before exposure.",
+            "Acute response with prior therapy, no control. Variable discharge timing."
+          ],
+          [
+            "Othman, 144 children with convulsive status",
+            "Ketamine added to midazolam. Clinical cessation 55/72 vs 15/72 at 5 min and seizure control 57/72 vs 48/72 at 24 h.",
+            "No EEG confirmation. Rescue treatment allowed. Follow-up ended at 24 h."
+          ],
+          [
+            "Mason and Curley, dexmedetomidine",
+            "Paired EEG in 16 children found more interictal spikes during sedation. A multi-drug strategy including dexmedetomidine was associated with a 4.1-point higher estimated IQ than opioid and benzodiazepine only.",
+            "During sedation vs cognition years later after multiday exposure. No class randomization in the IQ analysis."
+          ],
+          [
+            "Chamberlain, 310 randomized in emergency care",
+            "Lorazepam vs diazepam: clinical seizure cessation 97/133 vs 101/140. Sedation 66.9% vs 50%.",
+            "Clinical seizure assessment at 10–30 min. Respiratory safety and sedation were assessed over 4 h. Follow-up function was unmeasured."
+          ],
+          [
+            "Bhalala, 35 selected PICU patients",
+            "Propofol bridge lasted a median 7 h 54 min. 34/35 remained extubated at 24 h. 34/35 received dexmedetomidine and 32/35 lorazepam during admission.",
+            "Peri-extubation physiology. Patients were selected for planned extubation, without a control group and with substantial coexposure."
+          ],
+          [
+            "Maddux, 144 ventilated survivors",
+            "102 regained pre-illness quality-of-life threshold, at a median 52 days after extubation (IQR 9.4–113.4). 39/102 had a later decline.",
+            "Conditional on recovery. No induction comparison. Quality-of-life threshold and gain above baseline are distinct outcomes."
+          ],
+          [
+            "MacDonald, 150 PICU survivors",
+            "At two months after PICU discharge, physical PedsQL was at least one standard deviation below the study reference in 30/82 assessed after invasive ventilation.",
+            "The group reference does not account for premorbid function, and the comparison did not identify induction medication. Baseline case mix differed substantially across types of respiratory support."
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "label": "Data and inference",
+          "paragraphs": [
+            "The acute ketamine signal and post-PICU recovery are supported by different cohorts. The official labels describe ketamine redistribution and active norketamine, age-dependent dexmedetomidine exposure, longer lorazepam sedation and propofol recovery dependent on infusion duration. Persistent change at seven weeks would require evidence of an intermediate mechanism. Acute salivation and later secretion management require separate measurements."
+          ]
+        },
+        {
+          "label": "Hypothesis and discriminating comparison",
+          "paragraphs": [
+            "An induction effect could alter the early seizure or cardiorespiratory burden and thereby influence recovery. Compare existing induction strategies at the same pre-intubation severity and premorbid function. Separate subsequent sedatives and antiseizure medication changes. Measure acute EEG seizure burden, arousal, interaction, motor function and airway secretion management separately. Assess infection resolution, ventilatory support and rehabilitation by their timing. Compare domain change at 42–56 days from intubation, with death and follow-up losses reported."
+          ]
+        },
+        {
+          "label": "Decision and WWOX transfer",
+          "paragraphs": [
+            "Public RESTORE metadata identify intubation timing, baseline function, ketamine-use fields and a published six-month functional endpoint. The inspected fields do not establish an induction-only contrast with a week-seven measurement. Find a source with that joint coverage before estimating a drug effect. The WWOX slice observation supports an acute NMDA-dependent circuit comparison and cannot establish human developmental or recovery outcomes."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Mazandi et al. Pediatric ketamine induction.",
+          "url": "https://doi.org/10.1007/s12028-022-01611-2"
+        },
+        {
+          "label": "Loi et al. NEAR4KIDS neurologic indications.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37160847/"
+        },
+        {
+          "label": "Bhutta et al. Randomized cardiac surgery pilot.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21926656/"
+        },
+        {
+          "label": "Jacobwitz et al. Status epilepticus infusion and cEEG.",
+          "url": "https://doi.org/10.1212/WNL.0000000000200889"
+        },
+        {
+          "label": "Othman et al. Ket-Mid randomized trial.",
+          "url": "https://doi.org/10.1016/j.pediatrneurol.2025.03.011"
+        },
+        {
+          "label": "Mason et al. Dexmedetomidine EEG.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20017865/"
+        },
+        {
+          "label": "Curley et al. Sedation strategies and later cognition.",
+          "url": "https://doi.org/10.1001/jamanetworkopen.2026.13599"
+        },
+        {
+          "label": "Chamberlain et al. Lorazepam versus diazepam.",
+          "url": "https://doi.org/10.1001/jama.2014.2625"
+        },
+        {
+          "label": "Bhalala et al. Propofol and extubation.",
+          "url": "https://doi.org/10.3389/fped.2020.00255"
+        },
+        {
+          "label": "Maddux et al. Recovery trajectories after invasive ventilation.",
+          "url": "https://doi.org/10.1097/CCM.0000000000006187"
+        },
+        {
+          "label": "MacDonald et al. Two-month post-PICU assessment.",
+          "url": "https://doi.org/10.3389/fped.2024.1333634"
+        },
+        {
+          "label": "RESTORE public data dictionary and study documents.",
+          "url": "https://biolincc.nhlbi.nih.gov/studies/restore/"
+        },
+        {
+          "label": "Full comparison and regulatory sources (Italian).",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/view/peri_intubation_public_evidence_20261126.md"
         }
       ]
     },

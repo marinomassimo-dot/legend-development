@@ -94,7 +94,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Next authorized comparison: ketamine, pediatric peri-intubation exposure and recovery after critical illness.** Reopen the existing INV-05 dossier for one bounded public-evidence batch. Distinguish brief exposure from prolonged continuous infusions, acute EEG and sedation outcomes from post-discontinuation function, and alternate sedatives from the natural history of recovery. WWOX transfer is a separate question. [Existing dossier](../view/research_reports/ketamine.pdf)
+**Completed targeted follow-up: ketamine.** Updated INV-05 with a public pediatric peri-intubation versus recovery comparison. A median 52 days after extubation describes the children in a recovery cohort who returned to their pre-illness quality-of-life threshold. The induction registries do not provide the corresponding 6–8-week functional contrast. Reopen for verified joint coverage of induction-only exposure, premorbid domain function and timed follow-up with a suitable active comparator. Next resume from the compound roadmap. [Updated dossier](../view/research_reports/ketamine.pdf) · [Public evidence table and decision](../view/peri_intubation_public_evidence_20261126.md)
 
 **Latest completed compound: spermidine.** Parked for an unselected pediatric WWOX trial. The published source-data replay found 50.01→87.37 excitatory marker pairs per image at nominal 10 nM, with a positive contrast in each of three preparation omissions. Reopen for a preferential durable WWOX response with measured local exposure and simultaneous inhibitory and excitatory readouts. [Disposition and reproducible comparisons](spermidine/extracellular_and_disposition_20261126.md)
 
