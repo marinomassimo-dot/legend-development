@@ -131,9 +131,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 **Completed targeted follow-up: perampanel.** Clinical denominators, behavior and vigilance now have named source boundaries. The matched-state founder comparison tests how contact predictions and receptor geometry account for the reciprocal functional controls and can select the next occupancy-plus-current comparison. Juvenile cortical AMPA/NMDA and hippocampal release remain separate experiments. [Updated dossier](../perampanel_20261122/clinical_mechanistic_update_20261126.md)
 
-**Active compound: L-asparagine.** Test a measurable supply bottleneck against amino-acid exchange at fixed developmental stage and verified native exposure. [Registered prediction](l_asparagine/pretest_20261127.md) · [First comparison](l_asparagine/first_comparison_20261127.md)
+**Latest completed compound: L-asparagine.** Parked for pediatric WWOX trial prioritization. RNA contrasts support a regional precursor-supply test and do not establish an asparagine deficit. Reopen for a measured neural deficit with exposure-linked recovery of tRNA charging and physiological function. [Reproduced comparison and disposition](l_asparagine/asparagine_supply_and_disposition_20261127.md)
 
-**Latest completed compound: ibudilast.** Parked for pediatric WWOX trial prioritization. Timing, human exposure and target-specificity checks favor measuring a native microglia-dependent late response after matched early recruitment. [Reproduced comparison and disposition](ibudilast/glial_feedback_and_disposition_20261127.md)
+**Ibudilast.** Parked for pediatric WWOX trial prioritization. Timing, human exposure and target-specificity checks favor measuring a native microglia-dependent late response after matched early recruitment. [Reproduced comparison and disposition](ibudilast/glial_feedback_and_disposition_20261127.md)
 
 **Deferiprone.** Parked for pediatric WWOX trial prioritization. Iron-handling RNA is tissue dependent. PKAN, Parkinson and early Alzheimer trials separate MRI engagement from functional benefit. Reopen for a measured WWOX labile iron excess with selective functional rescue and preserved respiration or myelination. [Reproduced comparison and disposition](deferiprone/iron_handling_and_disposition_20261127.md)
 

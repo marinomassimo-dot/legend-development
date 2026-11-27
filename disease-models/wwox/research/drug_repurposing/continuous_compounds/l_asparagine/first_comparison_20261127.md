@@ -1,5 +1,7 @@
 # L-asparagine opening comparison
 
+**Subsequent checkpoint.** The completed analysis separates regional RNA, cell type, asparagine flux and clinical exposure. [Completed comparison and disposition](asparagine_supply_and_disposition_20261127.md)
+
 | Preparation | Opening observation | Boundary |
 |---|---|---|
 | Human WWOX cortical organoid and neural precursor publications | The held GSE156243 comparison found a lower stress-response target set with no clear ASNS RNA change on its own. The separate GSE126075 knockdown comparison had a modest post hoc ASNS shift (+0.4 centered in both reported stages) with one library per arm per stage and uncertain knockdown in the precursor library. | The comparisons have different backgrounds and evidence strength. Neither measures endogenous asparagine flux, absolute concentration, or tRNA charging. [Held organoid contrast](../../gse156243/prediction_isr_ldh_chain_20261026.md) · [Held precursor contrast](../../hnpc_gse126075_it5_20261029/RESULTS.md) |
