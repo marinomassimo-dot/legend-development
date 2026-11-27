@@ -1,0 +1,9 @@
+posted_row	matrix	outcome	time_window	analyzed_n	mean_ng_mL	SD_ng_mL	mean_uM	SD_uM
+2	plasma	JBPOS0101 Plasma Concentration 0.5 - 1.5 Hours Post Morning Dose, Day 1	0.5 to1.5 hours post morning (AM) dose on Day 1	12	6150.00	1845.45	26.7787	8.0356
+3	plasma	JBPOS0101 Plasma Concentration 4-6 Hours Post Morning Dose, Day 1	4 to 6 hours post morning (AM) dose on Day 1	12	5854.20	904.85	25.4907	3.9400
+4	plasma	JBPOS0101 Plasma Concentration 8 Hours Post Morning Dose and Pre-PM Dose, Day 1	8 hours post morning (AM) dose and pre-PM dose on Day 1	11	4172.70	765.13	18.1690	3.3316
+5	plasma	JBPOS0101 Plasma Concentration 0.5 -1.5 Hours Post Morning Dose, Day 21	0.5 to1.5 hours post morning (AM) dose on Day 21	11	22945.50	3599.27	99.9107	15.6722
+6	plasma	JBPOS0101 Plasma Concentration 4 - 6 Hours Post Morning Dose, Day 21	4 to 6 hours post morning (AM) dose on Day 21	10	18070.00	4184.11	78.6815	18.2187
+7	plasma	JBPOS0101 Plasma Concentration 8 Hours Post Morning Dose and Pre-PM Dose, Day 21	8 hours post morning (AM) dose and pre-PM dose on Day 21	9	12921.10	3220.22	56.2619	14.0217
+8	urine	JBPOS0101 Urine Concentration at Day 1	Day 1	10	3410.00	1152.50	14.8480	5.0183
+9	urine	JBPOS0101 Urine Concentrations at Day 21	Day 21	9	14360.00	6986.77	62.5272	30.4222
