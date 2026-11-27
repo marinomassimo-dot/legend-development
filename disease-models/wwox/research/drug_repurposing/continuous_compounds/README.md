@@ -144,6 +144,8 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 **Completed targeted follow-up: perampanel.** Clinical denominators, behavior and vigilance now have named source boundaries. The matched-state founder comparison tests how contact predictions and receptor geometry account for the reciprocal functional controls and can select the next occupancy-plus-current comparison. Juvenile cortical AMPA/NMDA and hippocampal release remain separate experiments. [Updated dossier](../perampanel_20261122/clinical_mechanistic_update_20261126.md)
 
+**Active compound: clemizole hydrochloride (EPX-100).** Separate native serotonergic recruitment from H1 effects or generalized suppression, and verify the pediatric trial and exposure evidence. [Registered prediction and first comparison](clemizole/pretest_20261127.md)
+
 **Latest completed compound: guanosine.** Acute and chronic source results and the fixed-input counterexample support a conditional clearance probe. Park pediatric trial priority. Reopen for quantified local parent and WWOX-selective improvement in matched-input clearance with preserved recruitment. [Dossier and replay](guanosine/exposure_clearance_and_disposition_20261127.md).
 
 **Azetukalner.** Verified separate adult focal-seizure efficacy and adverse-effect denominators. Retain as a measured-exposure Kv7 comparator and hold pediatric WWOX trial priority. Reopen for age-relevant free exposure and a selective late-recruitment benefit after matching the first response and preserving inhibition. [Reproduced comparison and disposition](azetukalner/engagement_and_disposition_20261127.md)
