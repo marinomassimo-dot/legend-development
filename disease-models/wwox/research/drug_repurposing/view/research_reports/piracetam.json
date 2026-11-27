@@ -1,0 +1,49 @@
+{
+  "investigation": "INV-05",
+  "title": "Piracetam in WOREE",
+  "date": "27 November 2026",
+  "summary": "A circuit comparator for testing early inhibitory recruitment and late cortical recurrence.",
+  "graph": {
+    "evidence": "Fewer CA1 events in rats.",
+    "inference": "Two candidate routes.",
+    "hypothesis": "Preserved inhibitory output.",
+    "experiment": "Pair AMPA and release tests."
+  },
+  "evidence": [
+    "At 10 µM, rat CA1 events fell from 80 to 18 excitatory potentials per 20 seconds. Evoked pyramidal spikes rose in a different experiment at higher concentrations."
+  ],
+  "inference": [
+    "Peripheral CaV2.2-enriched currents gave an IC50 of 3.4 µM. Isolated AMPA receptor domains also bind piracetam. Both routes require testing in juvenile cortex."
+  ],
+  "hypothesis": [
+    "An increase in interneuron excitation could strengthen early inhibition. Block of calcium-dependent GABA release could cancel this gain."
+  ],
+  "experiment": [
+    "At verified local exposure in juvenile Wwox cortex, compare direct AMPA charge, paired excitatory and inhibitory release, first recruitment and late recurrence."
+  ],
+  "limits": [
+    "Five children in an opsoclonus–myoclonus crossover showed no significant video-rated improvement. Neural exposure and seizure outcomes in WOREE remain unresolved."
+  ],
+  "sources": [
+    {
+      "label": "Bravo-Martínez et al. CaV2.2 and hippocampal comparison, Figs. 2, 5 and 6.",
+      "url": "https://doi.org/10.1258/ebm.2012.012128"
+    },
+    {
+      "label": "Ahmed and Oswald. Piracetam in AMPA receptor binding domains.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2872987/"
+    },
+    {
+      "label": "Breton et al. Juvenile Wwox cortical currents, Figs. 3 and 4.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8609180/"
+    },
+    {
+      "label": "Pranzatelli et al. Pediatric opsoclonus–myoclonus pilot.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11801811/"
+    },
+    {
+      "label": "Olpe and Lynch. Evoked hippocampal field comparison (abstract).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7106192/"
+    }
+  ]
+}
