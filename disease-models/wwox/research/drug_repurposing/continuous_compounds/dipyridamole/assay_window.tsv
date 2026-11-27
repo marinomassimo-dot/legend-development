@@ -1,0 +1,10 @@
+locator_and_assay	ENT1_nM	ENT2_nM	ENT2_to_ENT1	assumed_hill	80pct_ENT1_min_nM	10pct_ENT2_max_nM	overlap
+Ward_Fig6B_human_PK15_uridine_IC50	5.0	356	71.200	0.75	31.748	19.016	False
+Ward_Fig6B_human_PK15_uridine_IC50	5.0	356	71.200	1.0	20.000	39.556	True
+Ward_Fig6B_human_PK15_uridine_IC50	5.0	356	71.200	1.25	15.157	61.384	True
+Kiss_Table1_mouse_oocyte_uridine_IC50	75	2204	29.387	0.75	476.220	117.730	False
+Kiss_Table1_mouse_oocyte_uridine_IC50	75	2204	29.387	1.0	300.000	244.889	False
+Kiss_Table1_mouse_oocyte_uridine_IC50	75	2204	29.387	1.25	227.357	380.030	True
+Kiss_Table1_mouse_Ehrlich_uridine_Ki	66	371	5.621	0.75	419.074	19.818	False
+Kiss_Table1_mouse_Ehrlich_uridine_Ki	66	371	5.621	1.0	264.000	41.222	False
+Kiss_Table1_mouse_Ehrlich_uridine_Ki	66	371	5.621	1.25	200.075	63.971	False
