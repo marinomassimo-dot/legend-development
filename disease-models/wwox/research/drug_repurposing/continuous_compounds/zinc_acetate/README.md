@@ -28,3 +28,5 @@ Higher SLC30A1 bulk RNA in both mouse regions does not establish local exporter 
 **Next checkpoint.** Check which endogenous zinc studies calibrated free zinc while separately recording NMDA and inhibitory responses, and whether any existing WWOX or developing human dataset has both the compartment and functional readouts. Compare the closest juvenile synapse and the strongest null or opposite finding before deciding if zinc acetate should remain a circuit probe. An independent review can change the design if it identifies a source or control that resolves the opposing signs in the native preparation. Current priority is a mechanism screen.
 
 [Receptor-proximal zinc and same-formulation clinical checkpoint](receptor_exposure_checkpoint_20261127.md).
+
+[Final timing, pediatric sensitivity and circuit disposition](timing_and_disposition_20261127.md). Zinc acetate is closed for this increment and retained as a conditional circuit probe.
