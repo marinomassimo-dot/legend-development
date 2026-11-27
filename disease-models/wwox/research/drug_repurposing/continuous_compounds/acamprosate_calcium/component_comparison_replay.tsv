@@ -1,0 +1,25 @@
+comparison	history	group	estimate	reading_low	reading_high	cells	mice
+figure_mean	fixed_ratio	water_saline	1.2982			14	11
+figure_mean	fixed_ratio	ethanol_saline	2.1053			13	9
+figure_mean	fixed_ratio	water_calcium_acamprosate	1.3158			9	5
+figure_mean	fixed_ratio	ethanol_calcium_acamprosate	1.2982			17	7
+difference_vs_ethanol_saline	fixed_ratio	ethanol_calcium_acamprosate	-0.8070	-0.8421	-0.7719	NA	NA
+figure_mean	fixed_ratio	ethanol_sodium_acamprosate	2.0877			9	6
+difference_vs_ethanol_saline	fixed_ratio	ethanol_sodium_acamprosate	-0.0175	-0.0526	0.0175	NA	NA
+figure_mean	fixed_ratio	ethanol_calcium_chloride	1.0585			12	5
+difference_vs_ethanol_saline	fixed_ratio	ethanol_calcium_chloride	-1.0468	-1.0819	-1.0117	NA	NA
+figure_mean	chronic_intermittent_and_fixed_ratio	ethanol_saline	1.8152			9	4
+figure_mean	chronic_intermittent_and_fixed_ratio	ethanol_calcium_acamprosate	1.6490			5	3
+difference_vs_ethanol_saline	chronic_intermittent_and_fixed_ratio	ethanol_calcium_acamprosate	-0.1663	-0.1940	-0.1386	NA	NA
+figure_mean	chronic_intermittent_and_fixed_ratio	ethanol_sodium_acamprosate	1.7367			6	3
+difference_vs_ethanol_saline	chronic_intermittent_and_fixed_ratio	ethanol_sodium_acamprosate	-0.0785	-0.1062	-0.0508	NA	NA
+figure_mean	chronic_intermittent_and_fixed_ratio	ethanol_calcium_chloride	1.3903			8	4
+difference_vs_ethanol_saline	chronic_intermittent_and_fixed_ratio	ethanol_calcium_chloride	-0.4249	-0.4527	-0.3972	NA	NA
+figure_mean	variable_interval	water_saline	1.1330			9	6
+figure_mean	variable_interval	ethanol_saline	1.7143			10	6
+figure_mean	variable_interval	water_calcium_acamprosate	0.9064			7	6
+figure_mean	variable_interval	ethanol_calcium_acamprosate	1.6847			9	6
+difference_vs_ethanol_saline	variable_interval	ethanol_calcium_acamprosate	-0.0296	-0.0591	0.0000	NA	NA
+upper_semiquantitative_csf_uM		free_acid_basis	0.182109	NA	NA	NA	NA
+assay_to_csf_concentration_ratio		1_anion_per_reported_unit	549.1	NA	NA	NA	NA
+assay_to_csf_concentration_ratio		2_anion_per_reported_unit	1098.2	NA	NA	NA	NA
