@@ -1,0 +1,27 @@
+comparison	value	unit_or_scope	source
+NCT04925960 status	TERMINATED	registry label	NCT04925960
+NCT04925960 reason	Due to futility	registry text	NCT04925960
+NCT04925960 randomized	RANDOMIZED	registry label	NCT04925960
+NCT04925960 actual enrollment	42	participants	NCT04925960
+NCT04925960 age eligibility	2 Years to 17 Years	registry bounds	NCT04925960
+NCT04925960 resultsSection present	false	boolean	NCT04925960
+NCT04925960 hasResults	false	boolean	NCT04925960
+NCT04925960 primary measure	Change in sorbitol (mmol/mol creatinine)	9 months	NCT04925960
+NCT04925960 primary measure	Change in ICARS	9 months	NCT04925960
+NCT04925960 primary measure	Change in Antithrombin III (ATIII)	9 months	NCT04925960
+Molecular mass	319.4	g/mol	Sawai PMDA section 19
+Protein binding	90.1	% in vitro in human serum	Sawai PMDA sections 16.1.1 and 16.3
+Adult single administration peak	3896	ng/mL plasma, measured total	Sawai PMDA sections 16.1.1 and 16.3
+Adult single administration peak	12.19787	µM plasma, converted total	Sawai PMDA sections 16.1.1 and 16.3
+Adult single administration peak	1.20759	µM plasma, binding-fraction scenario	Sawai PMDA sections 16.1.1 and 16.3
+Adult single administration 4 h	370	ng/mL plasma, measured total	Sawai PMDA sections 16.1.1 and 16.3
+Adult single administration 4 h	1.15842	µM plasma, converted total	Sawai PMDA sections 16.1.1 and 16.3
+Adult single administration 4 h	0.11468	µM plasma, binding-fraction scenario	Sawai PMDA sections 16.1.1 and 16.3
+Pediatric case observed peak	1125	ng/mL plasma, measured total	Ligezka 2021, pharmacokinetics Results and Fig. 7B
+Pediatric case observed peak	3.52223	µM plasma, converted total	Ligezka 2021, pharmacokinetics Results and Fig. 7B
+Pediatric case observed peak	0.34870	µM plasma, binding-fraction scenario	Ligezka 2021, pharmacokinetics Results and Fig. 7B
+Pediatric case late time point	23.4	ng/mL plasma, measured total	Ligezka 2021, pharmacokinetics Results and Fig. 7B
+Pediatric case late time point	0.07326	µM plasma, converted total	Ligezka 2021, pharmacokinetics Results and Fig. 7B
+Pediatric case late time point	0.00725	µM plasma, binding-fraction scenario	Ligezka 2021, pharmacokinetics Results and Fig. 7B
+PMM2 fibroblast nominal / adult free peak scenario	8.28	ratio, different matrices	Radenkovic 2023 Fig. 2A–C; PMDA 16.1.1/16.3
+PMM2 fibroblast nominal / pediatric total observed peak	2.84	ratio, different matrices	Radenkovic 2023 Fig. 2A–C; Ligezka 2021 Fig. 7B
