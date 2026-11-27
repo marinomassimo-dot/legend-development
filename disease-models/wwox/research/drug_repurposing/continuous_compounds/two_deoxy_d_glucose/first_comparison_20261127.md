@@ -1,5 +1,7 @@
 # 2-Deoxy-D-glucose opening comparison
 
+The completed comparison parses the posted adult exposure and the original slice denominators. [Completed comparison and disposition](glycolytic_reserve_and_disposition_20261127.md)
+
 | Preparation | Opening observation | Boundary for WWOX |
 |---|---|---|
 | Acute seizure-threshold studies in mice, with a separate fully kindled rat arm | The authors report higher threshold in the mouse 6-Hz test and lower threshold in the electroshock, PTZ and kainate tests. The nominal dose ranges overlap. The rat kindling response was a separate endpoint. | Protection depends on the seizure model. A single direction cannot be imported into WWOX. [Primary abstract](https://pubmed.ncbi.nlm.nih.gov/20491877/) |
@@ -9,4 +11,4 @@
 
 **Replay the opening contrast.** The fractional charges remaining relative to the separate initial charge readouts in the high-potassium assay are 0.29 excitatory and 0.60 inhibitory. Their ratio is about 0.48. This normalized response ratio does not give the absolute excitatory-to-inhibitory charge in slices. It also shows why a favorable relative change can coexist with a substantial inhibitory loss. [Primary abstract](https://pubmed.ncbi.nlm.nih.gov/30673364/)
 
-**Checkpoint.** Compare model direction and blood exposure before attributing selective circuit benefit. In WWOX, the decision-changing result is an early, selective release or recruitment effect at preserved energy recovery and inhibition. [Registered prediction](pretest_20261127.md)
+**Opening checkpoint.** The original comparison registered the energy-recovery and inhibitory-preservation questions. [Registered prediction](pretest_20261127.md) · [Completed decision and replay](glycolytic_reserve_and_disposition_20261127.md)

@@ -1,0 +1,22 @@
+comparison	arm	endpoint_n	value	unit	detail
+adult_epilepsy_Cmax	2DG 40 mg Single Dose	3	1.260000	ug/mL	0.31
+adult_epilepsy_Cmax	2DG 40 mg Single Dose	3	7.675439	umol/L	mean converted
+nominal_bath_over_epilepsy_Cmax	2DG 40 mg Single Dose	3	1042.285714	ratio	8 mM bath; separate compartments
+nominal_bath_over_epilepsy_Cmax	2DG 40 mg Single Dose	3	1302.857143	ratio	10 mM bath; separate compartments
+adult_epilepsy_Cmax	2DG 60 mg Single Dose	3	1.680000	ug/mL	0.54
+adult_epilepsy_Cmax	2DG 60 mg Single Dose	3	10.233918	umol/L	mean converted
+nominal_bath_over_epilepsy_Cmax	2DG 60 mg Single Dose	3	781.714286	ratio	8 mM bath; separate compartments
+nominal_bath_over_epilepsy_Cmax	2DG 60 mg Single Dose	3	977.142857	ratio	10 mM bath; separate compartments
+adult_epilepsy_Cmax	2DG 60 mg Twice Daily	3	1.540000	ug/mL	0.45
+adult_epilepsy_Cmax	2DG 60 mg Twice Daily	3	9.381092	umol/L	mean converted
+nominal_bath_over_epilepsy_Cmax	2DG 60 mg Twice Daily	3	852.779221	ratio	8 mM bath; separate compartments
+nominal_bath_over_epilepsy_Cmax	2DG 60 mg Twice Daily	3	1065.974026	ratio	10 mM bath; separate compartments
+adult_epilepsy_elimination_half_life	2DG 40 mg Single Dose	1	1.580000	h	NA
+adult_epilepsy_elimination_half_life	2DG 60 mg Single Dose	2	0.968000	h	0.25
+adult_epilepsy_elimination_half_life	2DG 60 mg Twice Daily	2	1.470000	h	0.17
+nominal_bath_over_oncology_Cmax	reported_oncology_277uM_peak	NA	28.880866	ratio	8 mM bath; separate compartments
+nominal_bath_over_oncology_Cmax	reported_oncology_277uM_peak	NA	36.101083	ratio	10 mM bath; separate compartments
+nominal_bath_over_oncology_Cmax	reported_oncology_449uM_peak	NA	17.817372	ratio	8 mM bath; separate compartments
+nominal_bath_over_oncology_Cmax	reported_oncology_449uM_peak	NA	22.271715	ratio	10 mM bath; separate compartments
+nominal_bath_over_oncology_Cmax	reported_oncology_744uM_peak	NA	10.752688	ratio	8 mM bath; separate compartments
+nominal_bath_over_oncology_Cmax	reported_oncology_744uM_peak	NA	13.440860	ratio	10 mM bath; separate compartments
