@@ -1,0 +1,11 @@
+source_29522513	route	tissue	time	mice_in_pool	unlabeled_pct	recycled_or_exchanged_pct	phosphate_retained_pct	total_labeled_pct	retained_per_labeled_pct
+Table 7	oral	liver	6 h	3	58.6	1.4	40.0	41.4	96.62
+Table 7	oral	liver	24 h	3	58.0	8.4	34.0	42.4	80.19
+Table 7	intrastriatal	brain	6 h	8	61.0	2.8	36.2	39.0	92.82
+Table 7	intrastriatal	brain	12 h	8	50.0	3.6	46.4	50.0	92.80
+Table 7	intrastriatal	brain	24 h	8	45.0	4.3	50.7	55.0	92.18
+Table 8	ICV lower arm	brain	day 7	6	91.0	5.0	4.0	9.0	44.44
+Table 8	ICV lower arm	brain	day 10	6	86.0	8.0	6.0	14.0	42.86
+Table 8	ICV higher arm	brain	day 3	6	77.0	8.0	15.0	23.0	65.22
+Table 8	ICV higher arm	brain	day 7	6	59.0	14.0	27.0	41.0	65.85
+Table 8	ICV higher arm	brain	day 10	6	56.0	16.0	28.0	44.0	63.64
