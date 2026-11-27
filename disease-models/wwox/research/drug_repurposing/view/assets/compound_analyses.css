@@ -12,6 +12,14 @@
 .ca-metrics a:hover, .ca-metrics a:focus-visible { background: #fff; color: #143c50; }
 .ca-method { color: #465c6b; font-size: .92rem; margin-block: .9rem 1.4rem; }
 .ca-section { margin-block: 1.4rem; }
+.ca-pathways { margin-block: 1.5rem; }
+.ca-pathways h3 { color: #143f53; margin: 0 0 .65rem; }
+.ca-pathway-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: .7rem; }
+.ca-pathway-grid > div { min-width: 0; padding: .85rem; border: 1px solid #cbd9df; border-radius: 12px; background: #f4f8f8; }
+.ca-pathway-grid h4 { color: #17394b; margin: 0 0 .45rem; font-size: 1rem; }
+.ca-pathway-grid ul { list-style: none; padding: 0; margin: 0; }
+.ca-pathway-grid li + li { margin-top: .45rem; }
+.ca-pathway-grid li span { display: block; color: #435c6a; font-size: .85rem; }
 .ca-section h3, .ca-archive > summary { margin: 0 0 .65rem; color: #143f53; font-size: 1.16rem; font-weight: 700; }
 .ca-section h3 span, .ca-archive > summary span { margin-left: .35rem; color: #4b6573; font-size: .9rem; }
 .ca-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: .8rem; }
@@ -22,6 +30,15 @@
 .ca-card h4 { margin: .42rem 0 .2rem; color: #17394b; font-size: 1.19rem; line-height: 1.22; }
 .ca-card p { margin-block: .5rem; }
 .ca-card .ca-strand { margin-top: 0; color: #435c6a; font-size: .89rem; }
+.ca-card .ca-role { color: #17394b; font-weight: 650; }
+.ca-card:target { outline: 3px solid #155e73; outline-offset: 2px; }
+.ca-facts { margin: .8rem 0; }
+.ca-facts > div + div { margin-top: .65rem; }
+.ca-facts dt { color: #234d60; font-size: .85rem; font-weight: 750; }
+.ca-facts dd { margin: .15rem 0 0; }
+.ca-links, .ca-investigation-links { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: .8rem; row-gap: .25rem; font-size: .88rem; }
+.ca-links { margin: .75rem 0 .5rem; border-top: 1px solid #cbd9df; padding-top: .55rem; }
+.ca-investigation-links { overflow-wrap: anywhere; }
 .ca-card summary, .ca-archive > summary { cursor: pointer; }
 .ca-card summary { font-weight: 650; color: #155e73; }
 .ca-card ul { margin: .45rem 0 0; padding-left: 1.15rem; }

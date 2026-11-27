@@ -5103,6 +5103,13 @@ def render_investigations(P: dict) -> str:
 
     ph = rk.get("investigation_physiological") or {}
 
+    def compound_analysis_links(iid):
+        links = P.get("compound_analysis_links", {}).get(iid, ())
+        if not links:
+            return ""
+        anchors = "".join(f'<a href="#analysis-{E(slug)}">{E(name)}</a>' for slug, name in links)
+        return f'<p class="ca-investigation-links"><strong>Compound analyses</strong> {anchors}</p>'
+
     def phys_dt(iid):
         """IT40 P9: the conditional physiological hypotheses of one investigation as a progressive detail. Each is a condition-stated question with its observation, the hypothesis, the rivals that stay,
         and what would strengthen or weaken it; it is not an acquired datum, names no compound and draws no gene-to-gene link."""
@@ -5158,7 +5165,8 @@ def render_investigations(P: dict) -> str:
         items.append(f'<li class="inv-row' + (' inv-compact' if n_row > FIRST_OPEN else '') + f'" id="inv-{n_row}" data-rank="{E(str(r["position"]))}" data-origin="{E(r["origin_class"])}" data-cmp="{cmp_state(r.get("inv_id"))}"' + (f' data-status="{E(st)}"' if st else "") +
                      f'><div class="inv-h">' + (f'<a id="{E(r["inv_id"])}" class="inv-anchor" aria-hidden="true"></a>' if r.get("inv_id") else "") + f'<span class="inv-pos" aria-label="{E(U["iv_pos"])} {E(str(r["position"]))}">{E(str(r["position"]))}</span>{tie} '
                      f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{badge}<a class="plink" href="#inv-{n_row}" aria-label="{E(U["iv_link"])}" title="{E(U["iv_link"])}">#</a></div>'
-                     f'{report_links(P, r.get("inv_id"))}<dl class="qk-dl inv-glance">{gl}</dl><details class="inv-more"><summary>{E(U["iv_more"])}</summary><dl class="qk-dl">{dl}</dl></details></li>')
+                     f'{report_links(P, r.get("inv_id"))}{compound_analysis_links(r.get("inv_id"))}'
+                     f'<dl class="qk-dl inv-glance">{gl}</dl><details class="inv-more"><summary>{E(U["iv_more"])}</summary><dl class="qk-dl">{dl}</dl></details></li>')
     out = head + f'<p class="lead inv-purpose">{E(U["iv_purpose"])} <span class="mini mut">{E(U["iv_lead"])}</span></p>'
     every = list(rows) + list(rk.get("further_investigations") or []) + list(rk.get("conditional_hypotheses") or [])      # IT35: the filters cover the whole queue
     present = [o for o in ("known_in_wwox", "generated_by_legend", "external_transferred") if any(r["origin_class"] == o for r in every)]
@@ -5848,8 +5856,21 @@ def render(P: dict, dr: Path = DEFAULT_DR, *, compound_analyses: bool = False) -
             report_slugs.add(slug)
         P["pdf_reports"] = report_index
         if compound_analyses:
-            from repurposing_compound_analyses import render as render_compound_analyses
-            analyses = render_compound_analyses(dr, report_slugs)
+            from repurposing_compound_analyses import load_cards, public_slug, render as render_compound_analyses
+            public_compounds = (P["cur"].get("ranking") or {}).get("compound_view") or []
+            cards = load_cards(dr, public_compounds)
+            by_investigation = {}
+            for slug, card in cards.items():
+                if iid := card.get("investigation"):
+                    by_investigation.setdefault(iid, {})[slug] = card["name"]
+            for item in public_compounds:
+                if iid := item.get("inv_id"):
+                    for entry in item.get("names_public") or ():
+                        slug = public_slug(entry["label"])
+                        if slug in cards:
+                            by_investigation.setdefault(iid, {})[slug] = cards[slug]["name"]
+            P["compound_analysis_links"] = {iid: tuple(links.items()) for iid, links in by_investigation.items()}
+            analyses = render_compound_analyses(dr, report_slugs, cards)
     U = UI_IT
     page = TEMPLATE
     cur_html = fill_tokens(read_asset(dr, "curated.html"))
