@@ -1,0 +1,8 @@
+metric	value	unit	basis
+randomized	53	participants	28 immediate plus 25 delayed
+analyzed_both_exposures_implied	23	participants	union 53 reported by sponsor; 51 active plus 25 placebo minus 53
+placebo_adjusted_motor_seizure_reduction	53.011	percent	arithmetic from published NB1 fitted margins; not a refit
+reduction_CI_lower_reported_transform	30	percent	1 minus upper reported IRR 0.70
+reduction_CI_upper_reported_transform	68	percent	1 minus lower reported IRR 0.32
+additional_motor_seizure_free_days	6.91	days per 28 days	difference in fitted means, not 28-day remission
+motor_seizure_free_day_ratio	1.6625	ratio	17.34 / 10.43; arithmetic, not a refit
