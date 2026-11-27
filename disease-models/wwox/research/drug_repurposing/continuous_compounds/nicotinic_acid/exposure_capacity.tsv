@@ -1,0 +1,22 @@
+comparison	observation	value	unit
+Neuvonen I rapid release	reported parent mean Cmax	60.1088	umol/L
+Neuvonen I rapid release	100 umol/L culture input divided by serum or plasma peak	1.66365	fold
+Neuvonen II sustained release	reported parent mean Cmax	17.0579	umol/L
+Neuvonen II sustained release	100 umol/L culture input divided by serum or plasma peak	5.86238	fold
+Neuvonen III sustained release	reported parent mean Cmax	0.649825	umol/L
+Neuvonen III sustained release	100 umol/L culture input divided by serum or plasma peak	153.888	fold
+Menon distinct extended release	reported parent mean Cmax	75.5422	umol/L
+Menon distinct extended release	100 umol/L culture input divided by serum or plasma peak	1.32376	fold
+Neuvonen within-study comparison	mean peak I divided by III	92.5	fold
+Neuvonen within-study comparison	mean peak I divided by II	3.52381	fold
+Ndufs4 at 17% oxygen	brainstem trough NAD increase	63.4921	percent
+Ndufs4 at 17% oxygen	cerebellum trough NAD increase	27.0208	percent
+Ndufs4 at 17% oxygen	cerebrum trough NAD increase	45.7071	percent
+reference flux 0.2 of control Vmax	control substrate at reference flux	0.25	S/K
+reference flux 0.2 of control Vmax	finite substrate rescue exists	1	boolean
+reference flux 0.2 of control Vmax	substrate required with half capacity	0.666667	S/K
+reference flux 0.2 of control Vmax	required over baseline	2.66667	fold
+reference flux 0.5 of control Vmax	control substrate at reference flux	1	S/K
+reference flux 0.5 of control Vmax	finite substrate rescue exists	0	boolean
+reference flux 0.6 of control Vmax	control substrate at reference flux	1.5	S/K
+reference flux 0.6 of control Vmax	finite substrate rescue exists	0	boolean
