@@ -2,6 +2,8 @@
 
 context_policy: QUESTION_DRIVEN
 
+The [subsequent functional comparison and disposition](functional_exposure_and_disposition_20261127.md) resolves this checkpoint's compound status and records its reopening criterion.
+
 Units and preparations here are ng/mL and µM for adult human SPMS plasma and CSF MMF, qualitative LC–MS/MS adducts in mouse brain homogenate and human MS peripheral blood mononuclear cells, nominal µM parent in N1E-115 neuroblastoma-derived cells, and events per randomized participant in pediatric-onset MS. WWOX LoF remains the research context. This checkpoint narrows the next test of the late NRF2 response against early metabolic cost. It uses the prior SCI46 NRF2/HCAR2 and resident-cell expression analyses as context.
 
 | Source and locator | Observation | Boundary for WWOX |

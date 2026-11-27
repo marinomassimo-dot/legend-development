@@ -1,0 +1,40 @@
+measure	scope	value	unit
+file type	.jpg	14	files
+file type	.nd	4	files
+file type	.tif	1962	files
+catalog total size	all entries	907079141281	bytes
+catalog concentration 1	Cerebellum / DMSO / OGD No	24	files
+catalog concentration 1	Cerebellum / DMSO / OGD Yes	24	files
+catalog concentration 10	Cerebellum / MMF / OGD No	8	files
+catalog concentration 12	Cerebellum / MMF / OGD No	24	files
+catalog concentration 25	Cerebellum / MMF / OGD No	16	files
+catalog concentration 1	Cerebellum / MMF / OGD Yes	139	files
+catalog concentration 10	Cerebellum / MMF / OGD Yes	32	files
+catalog concentration 12	Cerebellum / MMF / OGD Yes	59	files
+catalog concentration 15	Cerebellum / MMF / OGD Yes	64	files
+catalog concentration 17	Cerebellum / MMF / OGD Yes	48	files
+catalog concentration 25	Cerebellum / MMF / OGD Yes	97	files
+catalog concentration 3	Cerebellum / MMF / OGD Yes	56	files
+catalog concentration 30	Cerebellum / MMF / OGD Yes	48	files
+catalog concentration 4	Cerebellum / MMF / OGD Yes	76	files
+catalog concentration 5	Cerebellum / MMF / OGD Yes	47	files
+catalog concentration 8	Cerebellum / MMF / OGD Yes	16	files
+catalog concentration N/A	Cerebellum / None / OGD No	80	files
+catalog concentration N/A	Cerebellum / None / OGD Yes	201	files
+catalog concentration 1	Hippocampus / DMSO / OGD No	9	files
+catalog concentration 1	Hippocampus / DMSO / OGD Yes	32	files
+catalog concentration 10	Hippocampus / MMF / OGD No	8	files
+catalog concentration 12	Hippocampus / MMF / OGD No	16	files
+catalog concentration 25	Hippocampus / MMF / OGD No	12	files
+catalog concentration 10	Hippocampus / MMF / OGD Yes	48	files
+catalog concentration 12	Hippocampus / MMF / OGD Yes	43	files
+catalog concentration 15	Hippocampus / MMF / OGD Yes	56	files
+catalog concentration 17	Hippocampus / MMF / OGD Yes	56	files
+catalog concentration 25	Hippocampus / MMF / OGD Yes	72	files
+catalog concentration 30	Hippocampus / MMF / OGD Yes	44	files
+catalog concentration 5	Hippocampus / MMF / OGD Yes	56	files
+catalog concentration 6	Hippocampus / MMF / OGD Yes	65	files
+catalog concentration 8	Hippocampus / MMF / OGD Yes	80	files
+catalog concentration 9	Hippocampus / MMF / OGD Yes	51	files
+catalog concentration N/A	Hippocampus / None / OGD No	40	files
+catalog concentration N/A	Hippocampus / None / OGD Yes	233	files
