@@ -10,7 +10,7 @@ from replay_receptors_and_exposure import bulk_panel, formatted, verified_expres
 from coagonist_screen import nuclei_panel
 
 PANEL = (
-    "S1pr1", "S1pr3", "S1pr5", "Sphk1", "Sphk2", "Pdgfra",
+    "S1pr1", "S1pr3", "S1pr5", "Sphk1", "Sphk2", "Spns2", "Pdgfra",
     "Mbp", "Plp1", "Mog", "Sox10", "Gfap", "Aif1",
 )
 
@@ -27,7 +27,7 @@ def main(files):
 
 def print_nuclei(files):
     print("pool\tclass\tgene\tnuclei\tall_UMI\tgene_UMI\tCPM")
-    for row in formatted(nuclei_panel(files, PANEL[:5])):
+    for row in formatted(nuclei_panel(files, PANEL[:6])):
         print("\t".join(map(str, row)))
 
 
