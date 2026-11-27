@@ -1,0 +1,36 @@
+locator	endpoint	value	unit
+Wu 2006 Table 3	plasma NACA/NAC ratio of means	0.1782	ratio
+Wu 2006 Table 3	brain NACA/NAC ratio of means	0.7143	ratio
+Wu 2006 Table 3	brain/plasma within-matrix ratios	4.0075	fold
+Wu 2006 Table 3	brain GSH treated/vehicle means	1.0776	fold
+Wu 2006 Table 3	liver GSH treated/vehicle means	2.3299	fold
+Wu 2006 Table 3	plasma GSH treated/vehicle means	3.2457	fold
+Penugonda 2011 Table 1	Control, brain lead	226.0000	ppb
+Penugonda 2011 Table 1	Lead only, brain lead	1509.0000	ppb
+Penugonda 2011 Table 1	Lead + NAC, brain lead	448.0000	ppb
+Penugonda 2011 Table 1	Lead + NACA, brain lead	417.0000	ppb
+Penugonda 2011 Table 1	NACA minus NAC after lead, brain lead	-31.0000	ppb
+Penugonda 2011 Table 2	Control, brain GSH	14.5500	nmol/mg protein
+Penugonda 2011 Table 2	Lead only, brain GSH	11.1300	nmol/mg protein
+Penugonda 2011 Table 2	Lead + NAC, brain GSH	13.6200	nmol/mg protein
+Penugonda 2011 Table 2	Lead + NACA, brain GSH	15.5000	nmol/mg protein
+Penugonda 2011 Table 2	NACA minus NAC after lead, brain GSH	1.8800	nmol/mg protein
+Penugonda 2011 Table 2	Control, brain GSH/GSSG	33.6000	ratio
+Penugonda 2011 Table 2	Lead only, brain GSH/GSSG	8.7000	ratio
+Penugonda 2011 Table 2	Lead + NAC, brain GSH/GSSG	194.0000	ratio
+Penugonda 2011 Table 2	Lead + NACA, brain GSH/GSSG	227.0000	ratio
+Penugonda 2011 Table 2	NACA minus NAC after lead, brain GSH/GSSG	33.0000	ratio
+Penugonda 2011 Table 2	Control, brain Glu/Gln	0.8800	ratio
+Penugonda 2011 Table 2	Lead only, brain Glu/Gln	1.6600	ratio
+Penugonda 2011 Table 2	Lead + NAC, brain Glu/Gln	0.7600	ratio
+Penugonda 2011 Table 2	Lead + NACA, brain Glu/Gln	0.6300	ratio
+Penugonda 2011 Table 2	NACA minus NAC after lead, brain Glu/Gln	-0.1300	ratio
+Penugonda 2011 Table 2	Control, brain glutamine synthetase	237.0000	U/mg protein
+Penugonda 2011 Table 2	Lead only, brain glutamine synthetase	181.0000	U/mg protein
+Penugonda 2011 Table 2	Lead + NAC, brain glutamine synthetase	235.0000	U/mg protein
+Penugonda 2011 Table 2	Lead + NACA, brain glutamine synthetase	248.0000	U/mg protein
+Penugonda 2011 Table 2	NACA minus NAC after lead, brain glutamine synthetase	13.0000	U/mg protein
+US20260240778A1 [0160]	solution Cmax day 14	5.5484	µM
+US20260240778A1 [0160]	tablet range low	3.6989	µM
+US20260240778A1 [0160]	tablet range high	4.9319	µM
+Penugonda 2005 Table 1	triple-arm GSH/untreated mean	0.5556	fold
