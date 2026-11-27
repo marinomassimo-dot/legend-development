@@ -1,0 +1,193 @@
+assigned_class	pool	detection_set	depth_comparison	nuclei	positive_nuclei	positive_pct
+exc	ctrl	Cacna2d1	all	1596	1474	92.35589
+exc	ctrl	Cacna2d1	shared-depth standardized	1596	1474	92.18120
+exc	ctrl	Cacna2d1	500–<2000	76	23	30.26316
+exc	ctrl	Cacna2d1	2000–<5000	360	311	86.38889
+exc	ctrl	Cacna2d1	5000–<10000	759	743	97.89196
+exc	ctrl	Cacna2d1	10000+	401	397	99.00249
+exc	ctrl	Cacna2d2	all	1596	70	4.38596
+exc	ctrl	Cacna2d2	shared-depth standardized	1596	70	4.45452
+exc	ctrl	Cacna2d2	500–<2000	76	5	6.57895
+exc	ctrl	Cacna2d2	2000–<5000	360	14	3.88889
+exc	ctrl	Cacna2d2	5000–<10000	759	20	2.63505
+exc	ctrl	Cacna2d2	10000+	401	31	7.73067
+exc	ctrl	Cacna1a	all	1596	1433	89.78697
+exc	ctrl	Cacna1a	shared-depth standardized	1596	1433	89.65583
+exc	ctrl	Cacna1a	500–<2000	76	18	23.68421
+exc	ctrl	Cacna1a	2000–<5000	360	297	82.50000
+exc	ctrl	Cacna1a	5000–<10000	759	718	94.59816
+exc	ctrl	Cacna1a	10000+	401	400	99.75062
+exc	ctrl	Cacna1b	all	1596	1080	67.66917
+exc	ctrl	Cacna1b	shared-depth standardized	1596	1080	68.06057
+exc	ctrl	Cacna1b	500–<2000	76	12	15.78947
+exc	ctrl	Cacna1b	2000–<5000	360	148	41.11111
+exc	ctrl	Cacna1b	5000–<10000	759	554	72.99078
+exc	ctrl	Cacna1b	10000+	401	366	91.27182
+exc	ctrl	Cacna2d1+Cacna1a	all	1596	1373	86.02757
+exc	ctrl	Cacna2d1+Cacna1a	shared-depth standardized	1596	1373	85.95597
+exc	ctrl	Cacna2d1+Cacna1a	500–<2000	76	9	11.84211
+exc	ctrl	Cacna2d1+Cacna1a	2000–<5000	360	265	73.61111
+exc	ctrl	Cacna2d1+Cacna1a	5000–<10000	759	703	92.62187
+exc	ctrl	Cacna2d1+Cacna1a	10000+	401	396	98.75312
+exc	ctrl	Cacna2d1+Cacna1b	all	1596	1045	65.47619
+exc	ctrl	Cacna2d1+Cacna1b	shared-depth standardized	1596	1045	65.89271
+exc	ctrl	Cacna2d1+Cacna1b	500–<2000	76	8	10.52632
+exc	ctrl	Cacna2d1+Cacna1b	2000–<5000	360	133	36.94444
+exc	ctrl	Cacna2d1+Cacna1b	5000–<10000	759	542	71.40975
+exc	ctrl	Cacna2d1+Cacna1b	10000+	401	362	90.27431
+exc	ctrl	Cacna2d2+Cacna1a	all	1596	67	4.19799
+exc	ctrl	Cacna2d2+Cacna1a	shared-depth standardized	1596	67	4.25678
+exc	ctrl	Cacna2d2+Cacna1a	500–<2000	76	3	3.94737
+exc	ctrl	Cacna2d2+Cacna1a	2000–<5000	360	13	3.61111
+exc	ctrl	Cacna2d2+Cacna1a	5000–<10000	759	20	2.63505
+exc	ctrl	Cacna2d2+Cacna1a	10000+	401	31	7.73067
+exc	ctrl	Cacna2d2+Cacna1b	all	1596	52	3.25815
+exc	ctrl	Cacna2d2+Cacna1b	shared-depth standardized	1596	52	3.33730
+exc	ctrl	Cacna2d2+Cacna1b	500–<2000	76	2	2.63158
+exc	ctrl	Cacna2d2+Cacna1b	2000–<5000	360	5	1.38889
+exc	ctrl	Cacna2d2+Cacna1b	5000–<10000	759	16	2.10804
+exc	ctrl	Cacna2d2+Cacna1b	10000+	401	29	7.23192
+exc	ko	Cacna2d1	all	1262	1149	91.04596
+exc	ko	Cacna2d1	shared-depth standardized	1262	1149	91.13582
+exc	ko	Cacna2d1	500–<2000	75	27	36.00000
+exc	ko	Cacna2d1	2000–<5000	244	199	81.55738
+exc	ko	Cacna2d1	5000–<10000	589	572	97.11375
+exc	ko	Cacna2d1	10000+	354	351	99.15254
+exc	ko	Cacna2d2	all	1262	221	17.51189
+exc	ko	Cacna2d2	shared-depth standardized	1262	221	17.43557
+exc	ko	Cacna2d2	500–<2000	75	2	2.66667
+exc	ko	Cacna2d2	2000–<5000	244	28	11.47541
+exc	ko	Cacna2d2	5000–<10000	589	113	19.18506
+exc	ko	Cacna2d2	10000+	354	78	22.03390
+exc	ko	Cacna1a	all	1262	1123	88.98574
+exc	ko	Cacna1a	shared-depth standardized	1262	1123	89.14083
+exc	ko	Cacna1a	500–<2000	75	20	26.66667
+exc	ko	Cacna1a	2000–<5000	244	202	82.78689
+exc	ko	Cacna1a	5000–<10000	589	550	93.37861
+exc	ko	Cacna1a	10000+	354	351	99.15254
+exc	ko	Cacna1b	all	1262	868	68.77971
+exc	ko	Cacna1b	shared-depth standardized	1262	868	68.27738
+exc	ko	Cacna1b	500–<2000	75	11	14.66667
+exc	ko	Cacna1b	2000–<5000	244	100	40.98361
+exc	ko	Cacna1b	5000–<10000	589	431	73.17487
+exc	ko	Cacna1b	10000+	354	326	92.09040
+exc	ko	Cacna2d1+Cacna1a	all	1262	1054	83.51823
+exc	ko	Cacna2d1+Cacna1a	shared-depth standardized	1262	1054	83.49905
+exc	ko	Cacna2d1+Cacna1a	500–<2000	75	8	10.66667
+exc	ko	Cacna2d1+Cacna1a	2000–<5000	244	164	67.21311
+exc	ko	Cacna2d1+Cacna1a	5000–<10000	589	534	90.66214
+exc	ko	Cacna2d1+Cacna1a	10000+	354	348	98.30508
+exc	ko	Cacna2d1+Cacna1b	all	1262	827	65.53090
+exc	ko	Cacna2d1+Cacna1b	shared-depth standardized	1262	827	64.90220
+exc	ko	Cacna2d1+Cacna1b	500–<2000	75	8	10.66667
+exc	ko	Cacna2d1+Cacna1b	2000–<5000	244	79	32.37705
+exc	ko	Cacna2d1+Cacna1b	5000–<10000	589	417	70.79796
+exc	ko	Cacna2d1+Cacna1b	10000+	354	323	91.24294
+exc	ko	Cacna2d2+Cacna1a	all	1262	208	16.48177
+exc	ko	Cacna2d2+Cacna1a	shared-depth standardized	1262	208	16.40856
+exc	ko	Cacna2d2+Cacna1a	500–<2000	75	1	1.33333
+exc	ko	Cacna2d2+Cacna1a	2000–<5000	244	27	11.06557
+exc	ko	Cacna2d2+Cacna1a	5000–<10000	589	104	17.65705
+exc	ko	Cacna2d2+Cacna1a	10000+	354	76	21.46893
+exc	ko	Cacna2d2+Cacna1b	all	1262	160	12.67829
+exc	ko	Cacna2d2+Cacna1b	shared-depth standardized	1262	160	12.44301
+exc	ko	Cacna2d2+Cacna1b	500–<2000	75	2	2.66667
+exc	ko	Cacna2d2+Cacna1b	2000–<5000	244	9	3.68852
+exc	ko	Cacna2d2+Cacna1b	5000–<10000	589	74	12.56367
+exc	ko	Cacna2d2+Cacna1b	10000+	354	75	21.18644
+inh	ctrl	Cacna2d1	all	246	135	54.87805
+inh	ctrl	Cacna2d1	shared-depth standardized	246	135	54.60941
+inh	ctrl	Cacna2d1	500–<2000	27	10	37.03704
+inh	ctrl	Cacna2d1	2000–<5000	66	43	65.15152
+inh	ctrl	Cacna2d1	5000–<10000	111	62	55.85586
+inh	ctrl	Cacna2d1	10000+	42	20	47.61905
+inh	ctrl	Cacna2d2	all	246	84	34.14634
+inh	ctrl	Cacna2d2	shared-depth standardized	246	84	33.50488
+inh	ctrl	Cacna2d2	500–<2000	27	0	0.00000
+inh	ctrl	Cacna2d2	2000–<5000	66	9	13.63636
+inh	ctrl	Cacna2d2	5000–<10000	111	49	44.14414
+inh	ctrl	Cacna2d2	10000+	42	26	61.90476
+inh	ctrl	Cacna1a	all	246	205	83.33333
+inh	ctrl	Cacna1a	shared-depth standardized	246	205	82.63229
+inh	ctrl	Cacna1a	500–<2000	27	11	40.74074
+inh	ctrl	Cacna1a	2000–<5000	66	56	84.84848
+inh	ctrl	Cacna1a	5000–<10000	111	98	88.28829
+inh	ctrl	Cacna1a	10000+	42	40	95.23810
+inh	ctrl	Cacna1b	all	246	176	71.54472
+inh	ctrl	Cacna1b	shared-depth standardized	246	176	70.68831
+inh	ctrl	Cacna1b	500–<2000	27	7	25.92593
+inh	ctrl	Cacna1b	2000–<5000	66	33	50.00000
+inh	ctrl	Cacna1b	5000–<10000	111	96	86.48649
+inh	ctrl	Cacna1b	10000+	42	40	95.23810
+inh	ctrl	Cacna2d1+Cacna1a	all	246	112	45.52846
+inh	ctrl	Cacna2d1+Cacna1a	shared-depth standardized	246	112	45.11349
+inh	ctrl	Cacna2d1+Cacna1a	500–<2000	27	5	18.51852
+inh	ctrl	Cacna2d1+Cacna1a	2000–<5000	66	37	56.06061
+inh	ctrl	Cacna2d1+Cacna1a	5000–<10000	111	52	46.84685
+inh	ctrl	Cacna2d1+Cacna1a	10000+	42	18	42.85714
+inh	ctrl	Cacna2d1+Cacna1b	all	246	99	40.24390
+inh	ctrl	Cacna2d1+Cacna1b	shared-depth standardized	246	99	39.73440
+inh	ctrl	Cacna2d1+Cacna1b	500–<2000	27	3	11.11111
+inh	ctrl	Cacna2d1+Cacna1b	2000–<5000	66	24	36.36364
+inh	ctrl	Cacna2d1+Cacna1b	5000–<10000	111	52	46.84685
+inh	ctrl	Cacna2d1+Cacna1b	10000+	42	20	47.61905
+inh	ctrl	Cacna2d2+Cacna1a	all	246	79	32.11382
+inh	ctrl	Cacna2d2+Cacna1a	shared-depth standardized	246	79	31.52424
+inh	ctrl	Cacna2d2+Cacna1a	500–<2000	27	0	0.00000
+inh	ctrl	Cacna2d2+Cacna1a	2000–<5000	66	9	13.63636
+inh	ctrl	Cacna2d2+Cacna1a	5000–<10000	111	44	39.63964
+inh	ctrl	Cacna2d2+Cacna1a	10000+	42	26	61.90476
+inh	ctrl	Cacna2d2+Cacna1b	all	246	72	29.26829
+inh	ctrl	Cacna2d2+Cacna1b	shared-depth standardized	246	72	28.71950
+inh	ctrl	Cacna2d2+Cacna1b	500–<2000	27	0	0.00000
+inh	ctrl	Cacna2d2+Cacna1b	2000–<5000	66	6	9.09091
+inh	ctrl	Cacna2d2+Cacna1b	5000–<10000	111	41	36.93694
+inh	ctrl	Cacna2d2+Cacna1b	10000+	42	25	59.52381
+inh	ko	Cacna2d1	all	293	156	53.24232
+inh	ko	Cacna2d1	shared-depth standardized	293	156	53.68319
+inh	ko	Cacna2d1	500–<2000	40	8	20.00000
+inh	ko	Cacna2d1	2000–<5000	78	52	66.66667
+inh	ko	Cacna2d1	5000–<10000	126	70	55.55556
+inh	ko	Cacna2d1	10000+	49	26	53.06122
+inh	ko	Cacna2d2	all	293	97	33.10580
+inh	ko	Cacna2d2	shared-depth standardized	293	97	33.60128
+inh	ko	Cacna2d2	500–<2000	40	1	2.50000
+inh	ko	Cacna2d2	2000–<5000	78	8	10.25641
+inh	ko	Cacna2d2	5000–<10000	126	52	41.26984
+inh	ko	Cacna2d2	10000+	49	36	73.46939
+inh	ko	Cacna1a	all	293	244	83.27645
+inh	ko	Cacna1a	shared-depth standardized	293	244	84.00807
+inh	ko	Cacna1a	500–<2000	40	14	35.00000
+inh	ko	Cacna1a	2000–<5000	78	61	78.20513
+inh	ko	Cacna1a	5000–<10000	126	121	96.03175
+inh	ko	Cacna1a	10000+	49	48	97.95918
+inh	ko	Cacna1b	all	293	193	65.87031
+inh	ko	Cacna1b	shared-depth standardized	293	193	66.82403
+inh	ko	Cacna1b	500–<2000	40	2	5.00000
+inh	ko	Cacna1b	2000–<5000	78	37	47.43590
+inh	ko	Cacna1b	5000–<10000	126	106	84.12698
+inh	ko	Cacna1b	10000+	49	48	97.95918
+inh	ko	Cacna2d1+Cacna1a	all	293	136	46.41638
+inh	ko	Cacna2d1+Cacna1a	shared-depth standardized	293	136	46.97671
+inh	ko	Cacna2d1+Cacna1a	500–<2000	40	3	7.50000
+inh	ko	Cacna2d1+Cacna1a	2000–<5000	78	40	51.28205
+inh	ko	Cacna2d1+Cacna1a	5000–<10000	126	68	53.96825
+inh	ko	Cacna2d1+Cacna1a	10000+	49	25	51.02041
+inh	ko	Cacna2d1+Cacna1b	all	293	105	35.83618
+inh	ko	Cacna2d1+Cacna1b	shared-depth standardized	293	105	36.33392
+inh	ko	Cacna2d1+Cacna1b	500–<2000	40	1	2.50000
+inh	ko	Cacna2d1+Cacna1b	2000–<5000	78	24	30.76923
+inh	ko	Cacna2d1+Cacna1b	5000–<10000	126	54	42.85714
+inh	ko	Cacna2d1+Cacna1b	10000+	49	26	53.06122
+inh	ko	Cacna2d2+Cacna1a	all	293	92	31.39932
+inh	ko	Cacna2d2+Cacna1a	shared-depth standardized	293	92	31.86730
+inh	ko	Cacna2d2+Cacna1a	500–<2000	40	1	2.50000
+inh	ko	Cacna2d2+Cacna1a	2000–<5000	78	7	8.97436
+inh	ko	Cacna2d2+Cacna1a	5000–<10000	126	49	38.88889
+inh	ko	Cacna2d2+Cacna1a	10000+	49	35	71.42857
+inh	ko	Cacna2d2+Cacna1b	all	293	88	30.03413
+inh	ko	Cacna2d2+Cacna1b	shared-depth standardized	293	88	30.51608
+inh	ko	Cacna2d2+Cacna1b	500–<2000	40	0	0.00000
+inh	ko	Cacna2d2+Cacna1b	2000–<5000	78	6	7.69231
+inh	ko	Cacna2d2+Cacna1b	5000–<10000	126	47	37.30159
+inh	ko	Cacna2d2+Cacna1b	10000+	49	35	71.42857
