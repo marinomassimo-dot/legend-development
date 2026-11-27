@@ -26,3 +26,5 @@ Bulk control/KO library counts are 4/3 mouse cortex, 2/3 mouse hippocampus and 2
 **Next checkpoint.** Reuse the independently audited Tcf4 figures. Compare only parent sobetirome exposure against early target induction and myelin structure or function in the best available developmental and repair comparators. Separate nominal culture treatment from measured total and free CNS exposure. Check whether the strongest positive comparison counted the first sheath per eligible axon, or measured remodeling of a previously myelinated tract. Examine whether endocrine feedback could alter the untreated baseline or account for the observed response.
 
 [Parent-compound repair and exposure checkpoint](parent_repair_checkpoint_20261127.md).
+
+[Final developmental and exposure comparison, with disposition](development_and_exposure_disposition_20261127.md). Sobetirome remains a conditional glial maturation probe.
