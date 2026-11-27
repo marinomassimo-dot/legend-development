@@ -1,7 +1,7 @@
 {
   "investigation": "INV-05",
   "title": "Ketamine in WWOX-related epilepsy",
-  "date": "26 November 2026",
+  "date": "27 November 2026",
   "summary": "Benefits of ketamine in WOREE and functional improvement 6–8 weeks after brief peri-intubation exposure remain undetermined.",
   "evidence": [
     "Breton et al. reported that the competitive NMDA receptor antagonist d-APV stopped spontaneous bursts in cortical slices from mice with neuron-specific Wwox loss. Ketamine was not tested in those slices.",
@@ -33,7 +33,7 @@
     "A pore blocker may suppress Wwox-related bursts when its effect on NMDA receptor activity is comparable to that of d-APV."
   ],
   "experiment": [
-    "Compare Ketamine, memantine and d-APV in the same slice model with a time-matched control. Measure receptor inhibition, burst frequency, sag and activity after washout."
+    "Compare ketamine, memantine and d-APV in the native slice at matched partial late NMDA charge. Measure direct and disynaptic inhibitory output, first AMPA response, sag and spontaneous bursts through verified washout."
   ],
   "chapters": [
     {
@@ -609,6 +609,57 @@
         {
           "label": "LEGEND integrated experiment and verification record",
           "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ketamine_deep_adv_20261117/KDS_SYNTHESIS_FOR_OPERATOR_ADV_20261117.md"
+        }
+      ]
+    },
+    {
+      "title": "Inhibitory output at matched NMDA block",
+      "takeaway": "Matching late pyramidal NMDA charge leaves presynaptic inhibition and early AMPA excitation unconstrained.",
+      "table": {
+        "columns": [
+          "Native preparation",
+          "Observation",
+          "Limit"
+        ],
+        "rows": [
+          [
+            "Adult mouse CA1, 1 µM ketamine",
+            "mIPSC frequency ratio 0.60 in WT (10 cells) and 0.94 in PV-GluN2D deletion (9)",
+            "Cell-level means and nominal bath exposure. No animal-level interaction estimate."
+          ],
+          [
+            "Older mouse layer IV, 5 µM S-ketamine",
+            "NMDA EPSP area ratio of medians 0.467; isolated AMPA EPSP area ratio 1.605",
+            "Separate n=6 assays, female mice, different stereochemistry and age."
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "label": "Inference",
+          "paragraphs": [
+            "A lower NMDA response can coexist with reduced inhibitory release or a larger early excitatory response. Neither transfer establishes a direct Wwox ketamine effect."
+          ]
+        },
+        {
+          "label": "Discriminating experiment",
+          "paragraphs": [
+            "Measure the first direct inhibitory response and absolute inhibitory charge across the train. Loss of direct inhibition at matched late NMDA charge favors a release branch if postsynaptic GABA responsiveness is preserved. Loss limited to disynaptic inhibition instead favors impaired recruitment."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Oláh et al. · Figure 6 and supplementary Tables S1–S2",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13581442/"
+        },
+        {
+          "label": "Bieber et al. · Figures 6–8",
+          "url": "https://doi.org/10.3389/fnsys.2022.1044536"
+        },
+        {
+          "label": "Circuit dossier and replay",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/continuous_compounds/ketamine/README.md"
         }
       ]
     }
