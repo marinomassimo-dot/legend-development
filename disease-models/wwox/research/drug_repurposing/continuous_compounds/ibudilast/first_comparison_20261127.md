@@ -1,5 +1,7 @@
 # Ibudilast opening comparison
 
+**Subsequent checkpoint.** The full comparison adds human parent exposure, separately measured target and functional assays, WWOX nucleus data, and limits for clinical transfer. [Completed comparison and disposition](glial_feedback_and_disposition_20261127.md)
+
 | Setting | Opening observation | Transfer limit |
 |---|---|---|
 | WWOX mouse, rat and human organoid evidence already assessed in LEGEND | The card documents higher glial measures in some mouse settings and discordant measures in rat or organoid settings. The selected WWOX organoid series carries little canonical microglial RNA. | A matched early phenotype with and without microglia would provide a more informative comparison than pooling different genotypes, stages or species. [Held glial card](../../cards/J01_glial_reactivity_modulation.card.json) |
