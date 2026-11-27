@@ -1,0 +1,4 @@
+phenotype	antagonist	no_tideglusib	with_tideglusib	tideglusib_increment
+CA3_normalized_labeling_percent	absent	15	95	80
+CA3_normalized_labeling_percent	present	20	25	5
+CA3_normalized_labeling_percent	difference_of_increments	NA	NA	-75

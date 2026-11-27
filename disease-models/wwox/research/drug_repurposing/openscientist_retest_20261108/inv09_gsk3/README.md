@@ -1,5 +1,7 @@
 # INV-09 GSK3: full-input repeat of the OpenScientist assessment (os-09, 2026-11-08)
 
+**Tideglusib follow-up, 27 November 2026.** Use the compound as a nonselective, exposure-conditional perturbation. The new replay compares GSK3 isoform and incubation effects and separates acute activity from delayed injury. Check basal, isoform-resolved substrate activity before interpreting the compound comparison in WWOX. [Disposition and matched-engagement test](../../continuous_compounds/tideglusib/engagement_and_disposition_20261127.md)
+
 Not medical advice. No dose, schedule or route appears. Source cap for Phase 2: at most 5 newly read sources; 5 read, all `abstract_only` (no overrun). Staged receipts (suffix 37, not recorded) are in `receipts/`, validated with `staged_receipt_check.py`.
 
 ## Answer first
