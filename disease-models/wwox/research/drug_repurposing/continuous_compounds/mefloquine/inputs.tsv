@@ -1,0 +1,14 @@
+source	shared_input_or_url	sha256_or_external	use
+Breton article	files/fulltext/PMID34634460_Breton2021_EPMC_2026-09-27.xml	934b4e1a42ac19f5cd8912994fb171beabdeb94a6631b23d9a383dab1db906aa	Methods, results and caption
+Breton original Figure 3	files/deepening_downloads/mefloquine_20261127/Breton_Fig3_lrg.jpg	96564f24e75f786879a68b74a6d274b23a4e12c2a14fd84139a2a92b41422381	Visual inspection and pixel replay
+Breton original Figure 3 source	https://ars.els-cdn.com/content/image/1-s2.0-S0969996121002783-gr3_lrg.jpg	external	1894 x 1900 original JPEG
+Cruikshank article	https://www.pnas.org/doi/full/10.1073/pnas.0402044101	external	Methods, results and figure captions
+Iglesias article	files/deepening_downloads/mefloquine_20261127/Iglesias2010.xml	031be22fbdae1f6760c7dd77962944b3d721976f055bd2b91b47ea34e6315fb5	PANX1 recombinant inhibition
+Li article	files/deepening_downloads/mefloquine_20261127/Zhang2025.xml	43abe4b3adc1241ef1d26dcde28622dd21c70b704295d3a970fb02ca42a6b67a	PANX1 recombinant potentiation
+Li original Figure 3	files/deepening_downloads/mefloquine_20261127/PANX1_Fig3.jpg	c94015d483130ff06046aae8569075aa1f1814ab33a87b1b7b11d6d31dd0646a	Visual inspection
+Cho article	files/deepening_downloads/mefloquine_20261127/Cx36_NatComm2024.xml	bf6624cde2c620b4dff32e93de9900ad2df55b3c6c6392dca5a806109f26df0d	Human Cx36 in brain-lipid nanodiscs
+Cx36 correspondence	files/deepening_downloads/mefloquine_20261127/Cx36_CellDiscovery2024.pdf	95a064cd5feda8a0cd4beeb989d80edbb134885f8c8445dda77a505e1e9a920f	Shared quinoline pocket and modeled stereoisomer
+Ramharter article	https://citeseerx.ist.psu.edu/document?doi=622d5fa000350d4110ad9d451965d6a301eba4fc&repid=rep1&type=pdf	external	Table 1, Methods, selected Results and Discussion
+Drug label	https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=9cbe26c7-7313-4cd6-9514-9190af1de763&type=display	external	Protein binding, elimination, precautions and interaction
+Mefloquine formula mass	https://pubchem.ncbi.nlm.nih.gov/compound/4046	external	Convert ng/mL of parent to micromolar
+Lagos original Figure 7	files/deepening_downloads/mefloquine_20261127/Lagos_Fig7.webp	4e08d317ab9c0a56a9ac1213c230d3e90c2ee2ae143d45ffda0d93ee43e08b56	Cx26 axis and Cx36 prose discrepancy
