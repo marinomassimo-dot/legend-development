@@ -1,5 +1,7 @@
 # Dextromethorphan opening comparison
 
+The closure comparison reached subtype-specific IC₅₀s and both Rett trial result records. [Completed comparison and disposition](parent_metabolite_and_disposition_20261127.md)
+
 | Preparation | Opening observation | Boundary |
 |---|---|---|
 | Healthy adult oral pharmacokinetics and CYP2D6 phenotyping | Schadel et al. report a large separation between unconjugated and conjugated dextrorphan, approximately 100-fold in the cited condition. CYP2D6 inhibition shifted exposure toward parent and away from metabolite. | The primary matrix and analytical method distinguish chemical forms. Total concentrations reported after hydrolysis and protein-unbound concentrations require separate handling. This is a metabolic counterexample, with no pediatric exposure inference. [Primary pharmacokinetics abstract](https://pubmed.ncbi.nlm.nih.gov/7593709/) |
@@ -9,4 +11,4 @@
 
 **Reproduce the scale check.** The reported order-of-magnitude ratio 1:100 would put unconjugated dextrorphan at approximately 1/101 = 0.99% of the sum of the two reported chemical forms. This is an interpretation of one condition, with no protein-binding correction or estimate of active brain dextrorphan. Check whether the primary quantities are concentration ratios or AUCs before comparing any further human summaries. [Primary pharmacokinetics](https://pubmed.ncbi.nlm.nih.gov/7593709/)
 
-**Checkpoint.** Audit source denominators, dextromethorphan versus unconjugated dextrorphan exposure, channel state and the specific Rett EEG outcome. The new decision turns on a reproducible difference between exposure mixtures at matched NMDA block with preserved physiological inhibition. [Discriminating prediction](pretest_20261127.md)
+**Opening checkpoint.** The initial comparison registered the analyte and exposure-mixture questions. [Discriminating prediction](pretest_20261127.md) · [Completed decision and replay](parent_metabolite_and_disposition_20261127.md)
