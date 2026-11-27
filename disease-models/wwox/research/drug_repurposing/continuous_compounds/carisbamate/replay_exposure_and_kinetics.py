@@ -52,10 +52,8 @@ def registry_rows(files):
 
 
 def exposure_rows():
-    # Adult means. The refractory-focal 0–2 h strata are cross-sectional counts, not individual Cmax.
+    # Absolute means from the explicit mg/L header of Chien et al., Table 4.
     references = (
-        ("Sperling_Table2B_study1_0to2h_400mg_no_inducer", "0–2 h sample-bin mean", 6.74),
-        ("Sperling_Table2B_study1_0to2h_400mg_inducer", "0–2 h sample-bin mean", 4.53),
         ("Chien_Table4_250mg_q12h_healthy_adults_monotherapy", "steady-state Cmax mean", 8.13),
         ("Chien_Table4_500mg_q12h_healthy_adults_monotherapy_LTG_study", "steady-state Cmax mean", 15.8),
         ("Chien_Table4_500mg_q12h_healthy_adults_monotherapy_VPA_study", "steady-state Cmax mean", 17.1),
@@ -74,6 +72,17 @@ def required_plasma_rows():
         for ratio in (0.3, 1.0, 3.0):
             total_mg_l = bath * MOLAR_MASS / (1000 * 0.56 * ratio)
             yield endpoint, bath, 0.56, ratio, f"{total_mg_l:.3f}"
+
+
+def induction_rows():
+    # Sperling et al., Table 2B. Only unit-invariant ratios are used.
+    for study, window, uninduced_n, uninduced, induced_n, induced in (
+        (1, "0–2 h", 83, 6.74, 100, 4.53),
+        (1, "10.01–12 h", 54, 3.95, 84, 2.40),
+        (2, "0–2 h", 66, 5.81, 77, 4.86),
+        (2, "10.01–12 h", 63, 3.52, 81, 2.59),
+    ):
+        yield study, window, uninduced_n, uninduced, induced_n, induced, f"{induced / uninduced:.4f}"
 
 
 def train_rows():
@@ -126,6 +135,8 @@ def main(files, out):
         "estimated_free_plasma_uM", "assay_endpoint", "nominal_assay_uM", "required_Kpuu_to_equal_nominal"), exposure_rows())
     tsv(out / "required_plasma.tsv", ("assay_endpoint", "nominal_assay_uM", "assumed_fu_plasma", "assumed_Kpuu",
         "required_total_plasma_mg_L"), required_plasma_rows())
+    tsv(out / "background_induction.tsv", ("Sperling_Table2B_study", "400mg_day_sample_bin", "no_inducer_bin_n",
+        "no_inducer_printed_mean", "inducer_bin_n", "inducer_printed_mean", "inducer_to_no_inducer_mean_ratio"), induction_rows())
     tsv(out / "pulse_train.tsv", ("frequency_Hz", "pulse", "time_ms", "carisbamate_tau_ms", "lidocaine_tau_ms",
         "carisbamate_published_plateau", "lidocaine_published_plateau", "carisbamate_fraction_of_own_pulse15_block",
         "lidocaine_fraction_of_own_pulse15_block", "carisbamate_amplitude_at_matched_40pct_final_block",
