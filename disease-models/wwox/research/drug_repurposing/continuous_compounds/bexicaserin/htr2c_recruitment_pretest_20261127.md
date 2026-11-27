@@ -1,0 +1,13 @@
+# Bexicaserin | Can native 5-HT₂C recruitment restore inhibitory reserve?
+
+`context_policy: QUESTION_DRIVEN` · SCI_CODEX · 27 November 2026.
+
+**Why now.** The prior [clemizole comparison](../clemizole/receptors_exposure_and_disposition_20261127.md) left serotonergic receptor function unresolved and found that bulk HTR2C moves in opposite directions in WWOX organoids and juvenile mouse hippocampus. Bexicaserin supplies an independent functional agonist with an early randomized DEE study, which makes a bounded receptor-specific comparison possible. Existing serotonergic comparisons remain the baseline. [Functional assay source](https://pubmed.ncbi.nlm.nih.gov/40368335/) · [PACIFIC study](https://pubmed.ncbi.nlm.nih.gov/41133912/) · [Editing and signaling primary](https://pubmed.ncbi.nlm.nih.gov/35977511/)
+
+**Registered hypothesis.** A mature-enough WWOX-LoF inhibitory lineage retains signaling-competent 5-HT₂C and can recruit additional inhibition despite low or variable total RNA. The competing outcomes are weak or absent receptor recruitment, increased interneuron excitation with ineffective postsynaptic inhibition, or general loss of excitability. Edited isoform, cell identity and starting chloride-dependent efficacy can change the result.
+
+**Predicted discriminator.** At verified free exposure and comparable starting recruitment, compare WWOX-LoF and isogenic control tissue. Read receptor-proximal signaling, identified inhibitory-cell recruitment, native chloride-dependent postsynaptic effects and late network recurrence within the same preparation. Use a selective receptor interruption as the attribution control and match initial output across conditions. Receptor-dependent reduction in late recurrence with preserved first recruitment and improved inhibitory efficacy favors recruitable reserve. Suppressed recurrence with impaired first recruitment, preserved drug effect after receptor interruption, or excitation of inhibitory cells without inhibitory downstream effect lowers that interpretation. A similar response in controls informs symptomatic pharmacology.
+
+**First comparison.** Extract side-by-side receptor activity, measured free central exposure where available, and formulation, age and actual endpoint denominators in PACIFIC and the registries. Check whether existing receptor work covers multiple edited forms in the same assay. Audit the held mouse and human read coverage for edit phasing and full-length transcript assignment before calculating compositions. Record explicit stop conditions for insufficient coverage or absent functional overlap.
+
+**Status.** Registered after closure of tideglusib and the DisMech audit. Source extraction and any outcome analysis remain open.
