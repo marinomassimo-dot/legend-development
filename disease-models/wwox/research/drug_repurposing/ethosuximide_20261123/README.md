@@ -48,3 +48,7 @@ python3 raw_promoters.py "$FILES/geo/GSE126075" "$BEDS" "$HG19" "$HG38" results
 ```
 
 [Panel results](results/panels.tsv) · [Library values](results/libraries.tsv) · [Gene coverage](results/genes.tsv) · [Raw calibration](results/raw_calibration.tsv) · [Sensitivity analysis](results/raw_panels.tsv) · [Matched quartets](results/organoid_matched.tsv)
+
+## Cross-syndrome comparison and burst experiment
+
+The [27 November follow-up](dismech_comparison_20261127.md) reconciles direct Wwox and published clinical exposure, tests the waveform alternative to scalp phase–amplitude coupling, and defines the next acute comparison with verified native CaV3 engagement. This follow-up keeps the developmental response and direct seizure effect separate.

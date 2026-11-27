@@ -1,0 +1,4 @@
+outcome	n	seizure_free	other	min	max
+seizure_free_and_EEG_improved	39	28	29	18	28
+seizure_free_and_EEG_normalized	39	28	8	0	8
+seizure_free_without_EEG_normalization	39	28	31	20	28
