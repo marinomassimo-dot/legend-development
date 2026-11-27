@@ -26,3 +26,5 @@ Higher SLC30A1 bulk RNA in both mouse regions does not establish local exporter 
 **Replay.** Run `python3 -B replay_wwox_zinc_rna.py <shared-files-directory> --out <output-directory>`. This uses the held GEO inputs and their existing digest checks. [Replay](replay_wwox_zinc_rna.py) · [Input manifest](../../memantine_magnesium_20261123/inputs.tsv)
 
 **Next checkpoint.** Check which endogenous zinc studies calibrated free zinc while separately recording NMDA and inhibitory responses, and whether any existing WWOX or developing human dataset has both the compartment and functional readouts. Compare the closest juvenile synapse and the strongest null or opposite finding before deciding if zinc acetate should remain a circuit probe. An independent review can change the design if it identifies a source or control that resolves the opposing signs in the native preparation. Current priority is a mechanism screen.
+
+[Receptor-proximal zinc and same-formulation clinical checkpoint](receptor_exposure_checkpoint_20261127.md).
