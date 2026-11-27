@@ -1,0 +1,13 @@
+endpoint	period	arm	registered_n	estimate	units	descriptive_ratio_to_placebo	registered_global_or_trend_p
+TEAE	6 months following first dose in double-blind phase	CoA-Z dose 1	15	1.15	Events per person	1.3372	0.50
+TEAE	6 months following first dose in double-blind phase	CoA-Z dose 2	17	1.38	Events per person	1.6047	0.50
+TEAE	6 months following first dose in double-blind phase	CoA-Z dose 3	17	1.14	Events per person	1.3256	0.50
+TEAE	6 months following first dose in double-blind phase	Placebo	16	0.86	Events per person	1.0000	0.50
+CoASY_mRNA	1 month +3 days after first dose	CoA-Z dose 1	15	1.31	Ratio to baseline	1.2243	0.105
+CoASY_mRNA	1 month +3 days after first dose	CoA-Z dose 2	17	1.13	Ratio to baseline	1.0561	0.105
+CoASY_mRNA	1 month +3 days after first dose	CoA-Z dose 3	17	1.04	Ratio to baseline	0.9720	0.105
+CoASY_mRNA	1 month +3 days after first dose	Placebo	16	1.07	Ratio to baseline	1.0000	0.105
+CoASY_mRNA	6 months after first dose	CoA-Z dose 1	15	1.07	Ratio to baseline	1.1146	0.55
+CoASY_mRNA	6 months after first dose	CoA-Z dose 2	17	0.97	Ratio to baseline	1.0104	0.55
+CoASY_mRNA	6 months after first dose	CoA-Z dose 3	17	1.02	Ratio to baseline	1.0625	0.55
+CoASY_mRNA	6 months after first dose	Placebo	16	0.96	Ratio to baseline	1.0000	0.55

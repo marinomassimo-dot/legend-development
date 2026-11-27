@@ -1,0 +1,27 @@
+# 4′-Phosphopantetheine (CoA-Z) | Entry downstream of PPCS and PPCDC
+
+context_policy: QUESTION_DRIVEN
+
+**Opening checkpoint.** CoA-Z is the formulation of active 4′-phosphopantetheine in the OHSU PKAN trial. This compound enters the pathway after PPCS and PPCDC and still requires COASY to produce CoA. The held pantethine dossier already assessed the matched PKAN preclinical contrast in Jeong et al. Reuse that analysis and receipt FTR-20261127-31660701-01. The completed fosmetpantotenate evaluation brackets the upstream entry point. Use those compounds only as held mechanistic comparators. [Official CoA-Z protocol synopsis](https://cdn.clinicaltrials.gov/large-docs/63/NCT04182763/Prot_SAP_000.pdf) · [Held pantethine comparison](../pantethine/species_compartment_and_disposition_20261127.md) · [Fosmetpantotenate comparison](../fosmetpantotenate/README.md)
+
+**Prespecified prediction.** With verified intracellular delivery, a WWOX deficit between phosphopantothenate and phosphopantetheine should show restoration of absolute mitochondrial free CoA and workload-matched oxidation with the downstream precursor when a verified upstream bypass fails. Increased labeled dephospho-CoA with persistently low mitochondrial free CoA would instead shift attention toward the final COASY reaction or compartmental availability. A rise only in peripheral COASY transcript or enrichment of a shrinking pool is insufficient evidence of recovery. Include stage-matched corrected cells and assay-validated perturbations of the upstream steps versus COASY.
+
+**First comparison.** Extract the primary CoA-Z registry outcomes with actual analysis denominators by randomized arm and period. Distinguish peripheral COASY RNA from absolute CoA, brain target engagement and patient function. Test feasibility against exact formulation, ages and attrition, with no direct transfer of PKAN findings to WWOX. [Public trial record](https://clinicaltrials.gov/study/NCT04182763)
+
+## Registry checkpoint | Human biomarker and tolerability
+
+**Data.** NCT04182763 reports 77 enrollees. The first six months randomized 65 to three active arms and placebo, with denominators 15/17/17/16 and 63 completers (15/16/17/15). Another 12 entered the open-label period directly. Across randomized and direct entrants, 51/75 completed the open-label period. Baseline age categories include 34/65 aged 18 or younger in the randomized phase and 44/77 overall. The eligibility floor is three months. The categorical result does not indicate actual minimum enrollment age or infant-specific outcomes. The 18-month extension used an active formulation across groups and had appreciable attrition. [Official results, Participant Flow and Baseline Characteristics](https://clinicaltrials.gov/study/NCT04182763?tab=results)
+
+| Double-blind outcome | CoA-Z arm 1 / 2 / 3 | Placebo | Registered comparison |
+| --- | --- | --- | --- |
+| Treatment-emergent adverse events over six months, geometric least-squares means in events/person | 1.15 / 1.38 / 1.14 | 0.86 | Wald test after negative binomial regression, p=0.50 |
+| Peripheral COASY mRNA, ratio to baseline in first registered time window | 1.31 / 1.13 / 1.04 | 1.07 | Linear trend, p=0.105 |
+| Peripheral COASY mRNA, ratio to baseline at six months | 1.07 / 0.97 / 1.02 | 0.96 | Linear trend, p=0.55 |
+
+The first mRNA row uses the registry label “1 month +3 days after first dose”. Its analysis note refers to a mixed model over one month and day 3. Avoid treating it as an ordinary single-time-point comparison. The first-window arm-1 estimate divided by placebo is 1.2243. It is a descriptive ratio of model means. The ordered trend misses the registry's two-sided p<0.10 threshold. These results do not demonstrate a dose-response in the registered analysis. The safety test does not establish equivalence or infant safety, and the registered AE means are counts per person rather than patient risks. [Official results, Outcome Measures 1 and 6](https://clinicaltrials.gov/study/NCT04182763?tab=results)
+
+**Inference.** The currently posted human result measures a relative RNA response in peripheral blood at most. It supplies no absolute CoA concentration, tracer evidence of central delivery or controlled WWOX functional response. The held mouse comparison supports responsiveness of a globus pallidus PDH and Coasy readout to the phosphorylated substrate. These assays do not evaluate the same biological quantity.
+
+**Reproduce.** Export the public [registry API record](https://clinicaltrials.gov/api/v2/studies/NCT04182763) posted 2025-10-29 and run `python3 replay_registry.py NCT04182763.json`. The script checks the reviewed snapshot and reproduces [the arm-specific table](registry_comparison.tsv). Each p-value is the registered outcome-level comparison repeated only to support filtering. Separate pairwise tests were not inferred from group means.
+
+**Next action.** The first article search located the protocol, mouse study and early symposium summary alongside the posted results. Verify the later trial record for separate primary PK, absolute CoA or independently assessed clinical outcomes, including the Dutch and UK programs, before claiming transfer. Then compare the held mouse endpoints with measured intracellular active species and the WWOX-specific direct metabolite gap. Keep the native discrimination between PPCS/PPCDC and COASY/mitochondrial compartmentation as the reopening criterion if the human bridge remains missing.
