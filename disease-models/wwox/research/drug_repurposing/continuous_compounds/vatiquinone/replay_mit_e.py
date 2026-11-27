@@ -8,6 +8,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 NCT = "https://clinicaltrials.gov/api/v2/studies/NCT04378075"
+EUDRACT = "https://www.clinicaltrialsregister.eu/ctr-search/trial/2020-002100-39/results"
 
 
 def two_sided_fisher(events_a, size_a, events_b, size_b):
@@ -18,7 +19,7 @@ def two_sided_fisher(events_a, size_a, events_b, size_b):
     return sum(weight for weight in weights if weight <= observed) / comb(size_a + size_b, total)
 
 
-def comparison(primary, safety):
+def comparison(primary, safety, eu_safety):
     outcome, = primary["primary_outcome"]
     assert outcome["timeFrame"] == "Baseline to Week 24"
     active, placebo = outcome["groups"]
@@ -33,19 +34,35 @@ def comparison(primary, safety):
     yield ("primary_week24_change", "percent", counts["OG000"], counts["OG001"],
            medians["OG000"], medians["OG001"], f"{medians['OG000'] - medians['OG001']:.2f}",
            analysis["paramValue"], analysis["ciLowerLimit"], analysis["ciUpperLimit"],
-           analysis["pValue"], "reported ANCOVA comparison")
+           analysis["pValue"], "reported Hodges–Lehmann estimate and rank ANCOVA p-value")
     active, placebo = safety["ae_groups"][:2]
     assert active["id"] == "EG000" and placebo["id"] == "EG001"
-    for endpoint, key in (("serious_adverse_event", "serious"), ("all_cause_death", "deaths")):
-        events_active = active[f"{key}NumAffected"]
-        events_placebo = placebo[f"{key}NumAffected"]
-        n_active = active[f"{key}NumAtRisk"]
-        n_placebo = placebo[f"{key}NumAtRisk"]
-        p_value = two_sided_fisher(events_active, n_active, events_placebo, n_placebo)
-        difference = 100 * (events_active / n_active - events_placebo / n_placebo)
-        yield (endpoint, "participants", n_active, n_placebo, events_active, events_placebo,
-               f"{difference:.2f}", "", "", "", f"{p_value:.6f}",
-               "exploratory Fisher exact, unadjusted, difference in percentage points")
+    n_active, n_placebo = active["seriousNumAtRisk"], placebo["seriousNumAtRisk"]
+    serious = [active["seriousNumAffected"], placebo["seriousNumAffected"]]
+    assert eu_safety["column_order"] == ["double_blind_vatiquinone", "double_blind_placebo"]
+    assert eu_safety["participants_exposed"] == [n_active, n_placebo]
+    assert eu_safety["participants_with_serious_adverse_event"] == serious
+    delta = 100 * (serious[0] / n_active - serious[1] / n_placebo)
+    p_value = two_sided_fisher(serious[0], n_active, serious[1], n_placebo)
+    yield ("serious_adverse_event", "participants", n_active, n_placebo, *serious,
+           f"{delta:.2f}", "", "", "", f"{p_value:.6f}",
+           "both registries agree, exploratory Fisher exact and risk difference")
+
+    double_blind = primary["participant_flow"]["periods"][0]
+    assert double_blind["title"] == "Double-blind (24 Weeks)"
+    death, = (entry for entry in double_blind["dropWithdraws"] if entry["type"] == "Death")
+    reasons = {entry["groupId"]: int(entry["numSubjects"]) for entry in death["reasons"]}
+    disposition = [reasons["FG000"], reasons["FG001"]]
+    assert disposition == eu_safety["fatal_serious_adverse_event_as_reason_for_noncompletion"]
+    assert [active["deathsNumAtRisk"], placebo["deathsNumAtRisk"]] == [n_active, n_placebo]
+    for endpoint, counts, source in (
+        ("death_as_noncompletion_reason", disposition, "both registry disposition tables"),
+        ("all_cause_death_us_ae_summary", [active["deathsNumAffected"], placebo["deathsNumAffected"]],
+         "ClinicalTrials.gov adverse event table, timing unresolved across registries"),
+        ("all_cause_death_eu_ae_summary", eu_safety["all_cause_deaths_in_adverse_event_summary"],
+         "EudraCT adverse event table, timing unresolved across registries"),
+    ):
+        yield (endpoint, "participants", n_active, n_placebo, *counts, "", "", "", "", "", source)
 
 
 def main():
@@ -54,16 +71,18 @@ def main():
     args = parser.parse_args()
     primary = json.loads((args.snapshot_dir / "MIT_E_primary_registry_projection.json").read_text())
     safety = json.loads((args.snapshot_dir / "MIT_E_status_age_safety_projection.json").read_text())
+    eu_safety = json.loads((args.snapshot_dir / "MIT_E_eudract_safety_projection.json").read_text())
     assert primary["source"] == safety["source"] == NCT
-    assert primary["retrieved_date"] == safety["retrieved"]
+    assert eu_safety["source"] == EUDRACT
+    assert primary["retrieved_date"] == safety["retrieved"] == eu_safety["retrieved_date"]
     with (HERE / "mit_e_comparison.tsv").open("w", encoding="utf-8", newline="") as stream:
         writer = csv.writer(stream, delimiter="\t", lineterminator="\n")
         writer.writerow((
             "endpoint", "unit", "n_vatiquinone", "n_placebo", "vatiquinone", "placebo",
-            "unadjusted_difference_pp", "reported_ancova_difference_pp", "ci95_low_pp",
+            "unadjusted_difference_pp", "reported_hodges_lehmann_difference_pp", "ci95_low_pp",
             "ci95_high_pp", "p_value", "contrast",
         ))
-        writer.writerows(comparison(primary, safety))
+        writer.writerows(comparison(primary, safety, eu_safety))
 
 
 if __name__ == "__main__":
