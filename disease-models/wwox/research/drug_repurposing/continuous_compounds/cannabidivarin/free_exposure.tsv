@@ -1,0 +1,29 @@
+source	readout	nominal_uM	nominal_quantity	assumed_fup	scenario_free_plasma_nM	required_kpuu_over_fu_assay
+Husni Table 1	recombinant human CB2 GTPgammaS	0.003	reported estimate	0.01	0.257500	11.650485
+Husni Table 1	recombinant human CB2 GTPgammaS	0.003	reported estimate	0.1	2.575000	1.165049
+Husni Table 1	recombinant human CB2 GTPgammaS	0.003	reported estimate	0.232	5.974000	0.502176
+Husni Table 1	recombinant human CB2 GTPgammaS	0.003	reported estimate	1.0	25.750000	0.116505
+Zagzoog Table 2	recombinant human CB2 cAMP inhibition	0.005	reported estimate	0.01	0.257500	19.417476
+Zagzoog Table 2	recombinant human CB2 cAMP inhibition	0.005	reported estimate	0.1	2.575000	1.941748
+Zagzoog Table 2	recombinant human CB2 cAMP inhibition	0.005	reported estimate	0.232	5.974000	0.836960
+Zagzoog Table 2	recombinant human CB2 cAMP inhibition	0.005	reported estimate	1.0	25.750000	0.194175
+Zagzoog Table 3	recombinant human CB2 beta-arrestin2 recruitment	10.0	strict lower bound	0.01	0.257500	38834.951456
+Zagzoog Table 3	recombinant human CB2 beta-arrestin2 recruitment	10.0	strict lower bound	0.1	2.575000	3883.495146
+Zagzoog Table 3	recombinant human CB2 beta-arrestin2 recruitment	10.0	strict lower bound	0.232	5.974000	1673.920321
+Zagzoog Table 3	recombinant human CB2 beta-arrestin2 recruitment	10.0	strict lower bound	1.0	25.750000	388.349515
+De Petrocellis Table 1	recombinant rat TRPA1 activation	0.42	reported estimate	0.01	0.257500	1631.067961
+De Petrocellis Table 1	recombinant rat TRPA1 activation	0.42	reported estimate	0.1	2.575000	163.106796
+De Petrocellis Table 1	recombinant rat TRPA1 activation	0.42	reported estimate	0.232	5.974000	70.304653
+De Petrocellis Table 1	recombinant rat TRPA1 activation	0.42	reported estimate	1.0	25.750000	16.310680
+De Petrocellis Table 3	recombinant human TRPV1 activation	3.6	reported estimate	0.01	0.257500	13980.582524
+De Petrocellis Table 3	recombinant human TRPV1 activation	3.6	reported estimate	0.1	2.575000	1398.058252
+De Petrocellis Table 3	recombinant human TRPV1 activation	3.6	reported estimate	0.232	5.974000	602.611316
+De Petrocellis Table 3	recombinant human TRPV1 activation	3.6	reported estimate	1.0	25.750000	139.805825
+De Petrocellis Table 3	recombinant human TRPV1 desensitization	10.0	reported estimate	0.01	0.257500	38834.951456
+De Petrocellis Table 3	recombinant human TRPV1 desensitization	10.0	reported estimate	0.1	2.575000	3883.495146
+De Petrocellis Table 3	recombinant human TRPV1 desensitization	10.0	reported estimate	0.232	5.974000	1673.920321
+De Petrocellis Table 3	recombinant human TRPV1 desensitization	10.0	reported estimate	1.0	25.750000	388.349515
+Iannotti Fig 7	rat CA1 native-slice duration comparison	10.0	tested concentration	0.01	0.257500	38834.951456
+Iannotti Fig 7	rat CA1 native-slice duration comparison	10.0	tested concentration	0.1	2.575000	3883.495146
+Iannotti Fig 7	rat CA1 native-slice duration comparison	10.0	tested concentration	0.232	5.974000	1673.920321
+Iannotti Fig 7	rat CA1 native-slice duration comparison	10.0	tested concentration	1.0	25.750000	388.349515

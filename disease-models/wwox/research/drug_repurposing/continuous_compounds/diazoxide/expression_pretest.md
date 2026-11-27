@@ -1,0 +1,3 @@
+# Diazoxide native-target expression check
+
+Before opening the matrices, choose both canonical neuronal plasma-membrane KATP subunits, ABCC8 and KCNJ11. Compare existing juvenile mouse cortex, hippocampus and human organoids separately. Treat bulk within-tissue direction as stable only when all single-library omissions retain the sign and both means are at or above 1 TPM or CPM. No equivalence or hypothesis test follows from these rules. Report assigned excitatory and inhibitory nuclei separately. Require at least ten UMIs per arm for descriptive contrasts and distinguish a single pooled library per arm from replication. These data do not identify PV-specific current, colocalization of functional subunits, or free tissue exposure.
