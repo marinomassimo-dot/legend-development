@@ -1,0 +1,4 @@
+model	accession	control_n	ko_n	delta_log2_balance	omit_min	omit_max
+mouse_cortex	GSE158682	4	3	-0.27918	-0.39395	-0.13649
+human_organoid	GSE156243	2	4	0.61401	0.44680	0.80663
+mouse_hippocampus	GSE158681	2	3	0.46851	0.16596	0.74236
