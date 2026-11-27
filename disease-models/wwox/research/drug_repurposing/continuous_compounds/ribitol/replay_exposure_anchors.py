@@ -18,8 +18,12 @@ def comparisons():
     day_average_mg_per_l = 788 / 24
     for measure, mg_per_l in (("mean plasma peak", peak_mg_per_l), ("AUC0–24/24", day_average_mg_per_l)):
         mm = mg_per_l / MOLAR_MASS
-        yield ("US label §12.3 and Gerin Fig. 7D–E", measure, f"{mm:.4f}", "3.0000",
-               f"{3 / mm:.3f}", "mM; nominal fibroblast medium/total plasma; not a site-exposure match")
+        for source, nominal_mm, model in (
+            ("Gerin Fig. 7D–E", 3, "fibroblast"),
+            ("Ortiz-Cordero Fig. 2", 50, "FP4 myotube"),
+        ):
+            yield (f"US label §12.3 and {source}", measure, f"{mm:.4f}", f"{nominal_mm:.4f}",
+                   f"{nominal_mm / mm:.3f}", f"mM; nominal {model} medium/total plasma; not a site-exposure match")
     for month, control, treated in ((3, -0.04, 17.12), (12, 0.82, 23.60)):
         yield ("US label §12.2", f"muscle αDG at month {month}", control, treated,
                f"{treated-control:.2f}", "points of glycosylated αDG relative to assay control")

@@ -12,3 +12,7 @@ The substrate test requires a ribitol-to-CDP-ribitol route, phosphoribitol trans
 **Exposure and stage.** First compare tissue-resolved parent and CDP-ribitol in the positive-control studies with their muscle outcomes, and locate juvenile neural exposure if available. Keep embryonic migration and any later synaptic or myelin effects in distinct developmental windows. Record formulation and actual age/weight support from the approved label and posted trial data.
 
 **First checkpoint.** SLC35A4 and FKTN declined across bulk models, with opposite delivery directions in the single human progenitor comparison. Exposure and endpoint differ between the mouse brain peak, the human fibroblast assay and FORTIFY muscle. [Quantitative results, replay and next step](first_comparison_20261127.md)
+
+**Control-system checkpoint.** A total donor rise can coexist with low functional product after transporter perturbation. A human organoid comparator reproduces a distinct FKTN-linked adhesion phenotype even with basal laminin present. Establish the untreated WWOX glycan baseline before interpreting migration. [Golgi, stage and endfoot controls](golgi_and_radial_glia_controls_20261127.md)
+
+**Disposition.** Retain as a substrate and adhesion probe, with WWOX testing conditional on a replicated endogenous deficit in ligand-binding matriglycan at the relevant stage. The additional direct ribitol comparisons cover FKRP muscle. [Completed comparison and reopening condition](golgi_and_radial_glia_controls_20261127.md)

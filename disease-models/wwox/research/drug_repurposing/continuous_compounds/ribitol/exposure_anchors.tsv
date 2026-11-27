@@ -2,7 +2,9 @@ source	endpoint	reference	comparison	reported_or_replayed_contrast	unit_and_deno
 Gerin 2016 Fig. 7B	brain	0.2925	0.4912	1.679	HPLC peak a.u.; treated/control; control n=4, treated n=3
 Gerin 2016 Fig. 7B	muscle	0.1125	0.3563	3.167	HPLC peak a.u.; treated/control; control n=4, treated n=3
 US label §12.3 and Gerin Fig. 7D–E	mean plasma peak	0.9267	3.0000	3.237	mM; nominal fibroblast medium/total plasma; not a site-exposure match
+US label §12.3 and Ortiz-Cordero Fig. 2	mean plasma peak	0.9267	50.0000	53.954	mM; nominal FP4 myotube medium/total plasma; not a site-exposure match
 US label §12.3 and Gerin Fig. 7D–E	AUC0–24/24	0.2158	3.0000	13.902	mM; nominal fibroblast medium/total plasma; not a site-exposure match
+US label §12.3 and Ortiz-Cordero Fig. 2	AUC0–24/24	0.2158	50.0000	231.701	mM; nominal FP4 myotube medium/total plasma; not a site-exposure match
 US label §12.2	muscle αDG at month 3	-0.04	17.12	17.16	points of glycosylated αDG relative to assay control
 US label §12.2	muscle αDG at month 12	0.82	23.6	22.78	points of glycosylated αDG relative to assay control
 US label Table 2	100MTT velocity	-0.12	0.14	0.27	m/s; n=21 placebo, n=40 ribitol

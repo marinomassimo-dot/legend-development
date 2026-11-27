@@ -1,7 +1,7 @@
 # Ribitol | First donor-to-matriglycan comparison
 context_policy: QUESTION_DRIVEN
 
-**Status.** Continue the ribitol analysis. The opening WWOX expression screen gives more support to testing Golgi delivery and transfer capacity than to assuming a common deficit of the cytosolic donor. A juvenile healthy-mouse brain peak provides a weak compartment anchor. A controlled muscle trial supplies a useful benchmark with a distinct site of action. [Prior question and prediction](README.md)
+**Opening result.** This first comparison preceded the [follow-up and disposition](golgi_and_radial_glia_controls_20261127.md). The opening WWOX expression screen gives more support to testing Golgi delivery and transfer capacity than to assuming a common deficit of the cytosolic donor. A juvenile healthy-mouse brain peak provides a weak compartment anchor. A controlled muscle trial supplies a useful benchmark with a distinct site of action. [Prior question and prediction](README.md)
 
 ## WWOX and stage comparison
 
