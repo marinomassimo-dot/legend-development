@@ -1,0 +1,40 @@
+source	contrast	value	unit	boundary
+Sato Table I	primidone Cmax	41.2	µM	without phenytoin
+Sato Table I	primidone Cmax	40.6	µM	with phenytoin
+Sato Table I	phenobarbital Cmax	1.3	µM	without phenytoin
+Sato Table I	phenobarbital Cmax	8.2	µM	with phenytoin
+Sato Table I	PEMA Cmax	1.7	µM	without phenytoin
+Sato Table I	PEMA Cmax	11.0	µM	with phenytoin
+Sato Table I	primidone AUC	1916	µM·h	without phenytoin
+Sato Table I	primidone AUC	1042	µM·h	with phenytoin
+Sato Table I	phenobarbital AUC	288	µM·h	without phenytoin
+Sato Table I	phenobarbital AUC	1554	µM·h	with phenytoin
+Sato Table I	PEMA AUC	143	µM·h	without phenytoin
+Sato Table I	PEMA AUC	724	µM·h	with phenytoin
+Sato Table I	primidone Tmax	12	h	without phenytoin
+Sato Table I	primidone Tmax	8	h	with phenytoin
+Sato Table I	phenobarbital Tmax	52	h	without phenytoin
+Sato Table I	phenobarbital Tmax	44	h	with phenytoin
+Sato Table I	PEMA Tmax	36	h	without phenytoin
+Sato Table I	PEMA Tmax	28	h	with phenytoin
+Sato Table I	phenobarbital/primidone AUC	0.1503	ratio of means	without phenytoin
+Sato Table I	phenobarbital/primidone AUC	1.4914	ratio of means	with phenytoin
+Sato Table I	AUC ratio shift	9.92	fold	same 3 adults, separate windows
+Becker Fig. 2	equal normalized exposure PB/PRM	3.667	unbound molar ratio	rat calcium assay
+Becker and Houghton tissue assumption	illustrative total plasma PB/PRM	6.907	molar ratio	81% and 43% projected fractions
+Becker and Houghton tissue assumption	illustrative total plasma PB/PRM	7.349	mass ratio	scenario using a CSF ultrafiltration assumption
+Bazeli Fig. 4d workbook	Y921A primidone	42.33	fold IC50 vs WT	row 4, E, back-transform log10
+Bazeli Fig. 4d workbook	Y921A isosakuranetin	1.88	fold IC50 vs WT	row 4, C, back-transform log10
+Bazeli Fig. 6d workbook	I999S/WT at 10 µM primidone	-1.31	% stimulated inhibition	row 7, H
+Bazeli Fig. 6d workbook	F1150S/WT at 10 µM primidone	2.72	% stimulated inhibition	row 7, J
+Bazeli Fig. 6d workbook	I999S/WT at 30 µM primidone	6.82	% stimulated inhibition	row 6, H
+Bazeli Fig. 6d workbook	F1150S/WT at 30 µM primidone	19.52	% stimulated inhibition	row 6, J
+Bazeli Fig. 6d workbook	I999S only at 300 µM primidone	18.08	% stimulated inhibition	row 4, E
+Bazeli Fig. 6d workbook	F1150S only at 300 µM primidone	56.16	% stimulated inhibition	row 4, C
+Bazeli Results Fig. 6d/e	I999S/WT	15.78	ratio of reported IC50	steroid-challenged fluorescence divided by basal fluorescence sensitivity
+Bazeli Results Fig. 6d/e	F1150S/WT	63.43	ratio of reported IC50	steroid-challenged fluorescence divided by basal fluorescence sensitivity
+Gyéresi Fig. 4i	three WT vs zero Trpm3-null with seizure	0.2105	Fisher two-sided p	10 mice per group, one 24 h recording
+Gyéresi Fig. 4i	zero of ten upper limit	30.85	% two-sided exact 95% upper bound	binomial within sampled interval
+Gyéresi Fig. 4h	Trpm3-null mean spike count / WT	0.1216	ratio of means	ictal and interictal spikes
+Gyéresi Fig. 2d	Trpm3-null minus WT	-100.1	percentage points of EPSP baseline	exploratory LTP, neurons nested in mice
+Gyéresi Fig. 2d	acute isosakuranetin minus WT	-100.9	percentage points of EPSP baseline	exploratory LTP, neurons nested in mice
