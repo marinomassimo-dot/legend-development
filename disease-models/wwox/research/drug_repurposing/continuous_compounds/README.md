@@ -132,9 +132,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 **Completed targeted follow-up: perampanel.** Clinical denominators, behavior and vigilance now have named source boundaries. The matched-state founder comparison tests how contact predictions and receptor geometry account for the reciprocal functional controls and can select the next occupancy-plus-current comparison. Juvenile cortical AMPA/NMDA and hippocampal release remain separate experiments. [Updated dossier](../perampanel_20261122/clinical_mechanistic_update_20261126.md)
 
-**Active compound: probenecid.** Compare the direction of pannexin-linked purine feedback with organic-anion transport at verified exposure. [Registered prediction](probenecid/pretest_20261127.md) · [First comparison](probenecid/first_comparison_20261127.md)
+**Latest completed compound: probenecid.** Parked for pediatric WWOX trial priority. BB-FCF does not show clear WWOX burst suppression. Measured pediatric CSF was below the nominal PANX1 half-maximal current reference. Reopen for exposure-supported, selective functional benefit linked to measured purine feedback. [Reproduced comparison and disposition](probenecid/purine_feedback_and_disposition_20261127.md)
 
-**Latest completed compound: L-asparagine.** Parked for pediatric WWOX trial prioritization. RNA contrasts support a regional precursor-supply test and do not establish an asparagine deficit. Reopen for a measured neural deficit with exposure-linked recovery of tRNA charging and physiological function. [Reproduced comparison and disposition](l_asparagine/asparagine_supply_and_disposition_20261127.md)
+**L-asparagine.** Parked for pediatric WWOX trial prioritization. RNA contrasts support a regional precursor-supply test and do not establish an asparagine deficit. Reopen for a measured neural deficit with exposure-linked recovery of tRNA charging and physiological function. [Reproduced comparison and disposition](l_asparagine/asparagine_supply_and_disposition_20261127.md)
 
 **Ibudilast.** Parked for pediatric WWOX trial prioritization. Timing, human exposure and target-specificity checks favor measuring a native microglia-dependent late response after matched early recruitment. [Reproduced comparison and disposition](ibudilast/glial_feedback_and_disposition_20261127.md)
 
