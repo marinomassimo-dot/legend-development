@@ -2,6 +2,8 @@
 
 context_policy: QUESTION_DRIVEN
 
+**Disposition, 27 November 2026.** Retain as a conditional preclinical probe and defer pediatric WWOX trial priority. At the lower regional planning anchor the published electrochemical approach lacks enough BH4 in the entire sample. The paired mass-spectrometry alternative needs juvenile matrix recovery and an oxidation control, especially for BH2. Reopen for paired low-level recovery and a directly measured local BH4 response or reversible cofactor deficit. [Juvenile assay margin and replay](juvenile_assay_and_disposition_20261127.md)
+
 **Exposure and coupling checkpoint, 27 November 2026.** Total perfused mouse brain biopterin rises in the exact-drug comparison. The reduced BH4 fraction remains unresolved. The adult P47T replay weakens transfer of the early SPR signal and increases the importance of NOS1 abundance as an alternative. Check paired BH4 and BH2 assay recovery at the P17 tissue input before escalating. [Evidence, discriminating comparison and replay](exposure_and_nos_coupling_20261127.md)
 
 **Opening checkpoint, 27 November 2026.** Sapropterin supplies (6R)-tetrahydrobiopterin (BH4). It asks whether a cofactor or recycling defect could limit coupled nitric oxide synthase (NOS) at adequate local arginine, a different bottleneck from the L-citrulline substrate hypothesis. The regulatory pediatric PKU experience is a feasibility anchor. It does not establish local brain BH4 exposure, neurodevelopmental efficacy or WWOX tolerability. [L-citrulline comparison](../l_citrulline/README.md) · [Pediatric SPARK trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC5343543/)

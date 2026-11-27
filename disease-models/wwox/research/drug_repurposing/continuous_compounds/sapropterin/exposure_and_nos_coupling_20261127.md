@@ -1,5 +1,7 @@
 # Sapropterin | Reduced biopterin, nitric oxide synthase and WWOX transfer
 
+[Follow-up assay comparison and disposition](juvenile_assay_and_disposition_20261127.md)
+
 **Outcome.** Keep sapropterin as a conditional preclinical probe. Defer pediatric WWOX trial priority. Published oral exposure supports brain biopterin changes in some rodents and blood phenylalanine handling in responsive PKU. The relevant WWOX margin is the increase in locally reduced BH4 and the available NOS1 enzyme capacity. Both remain unresolved. The next check is whether a paired-species assay can quantify BH4 and BH2 at the age and tissue input used for the WWOX comparison. [Opening prediction](README.md)
 
 ## Exposure and clinical comparisons
