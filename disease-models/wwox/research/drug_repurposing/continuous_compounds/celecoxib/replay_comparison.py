@@ -65,7 +65,7 @@ def verify(path, expected):
         raise ValueError(f"Unexpected source digest for {path.name}")
 
 
-def juvenile_and_organoid(files, expected):
+def juvenile_and_organoid(files, expected, panel=GENES):
     verify(next((files / "reference_ensembl_r92").glob("*.fa.gz")), expected)
     gene_map, _ = reference(files)
     for model, accession, control, case in DATASETS:
@@ -73,7 +73,7 @@ def juvenile_and_organoid(files, expected):
         pattern = "*count_table.txt.gz" if human else "*TPM_Table.txt.gz"
         source = next((files / "geo" / accession).glob(pattern))
         verify(source, expected)
-        genes = [gene.upper() if human else gene for gene in GENES]
+        genes = [gene.upper() if human else gene for gene in panel]
         labels, counts = load_target(source, genes, None if human else gene_map)
         wt = [i for i, name in enumerate(labels) if name.startswith(control)]
         mutant = [i for i, name in enumerate(labels) if name.startswith(case)]
@@ -89,14 +89,14 @@ def juvenile_and_organoid(files, expected):
                    change(None), min(sensitivity), max(sensitivity), "NA")
 
 
-def adult_p47t(files, expected):
+def adult_p47t(files, expected, panel=GENES):
     source = files / "deepening_downloads/gse215425/GSE215425_processed_data.csv.gz"
     verify(source, expected)
     with gzip.open(source, "rt") as stream:
         rows = csv.reader(stream, delimiter="\t")
         labels = next(rows)[2:]
         totals = np.zeros(len(labels))
-        counts = {gene: np.zeros(len(labels)) for gene in GENES}
+        counts = {gene: np.zeros(len(labels)) for gene in panel}
         for _, name, *values in rows:
             v = np.array(values, int)
             totals += v
@@ -112,7 +112,7 @@ def adult_p47t(files, expected):
         retained = [j for j, i in enumerate(indices)
                     if labels[i].split("_")[2] not in ADULT_ACTIVITY_HIGH]
         assert len(retained) == 8
-        for gene in GENES:
+        for gene in panel:
             y = np.log2(1 + 1e6 * counts[gene][indices] / totals[indices])
             estimate, _, _, omit_min, omit_max = contrast(y, groups)
             without_activity_high = mean(
