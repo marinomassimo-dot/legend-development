@@ -1,0 +1,32 @@
+{
+  "title": "L-fucose in WWOX research",
+  "date": "27 November 2026",
+  "summary": "Retain as a conditional salvage-pathway probe. Defer pediatric WWOX trial priority until a native glycan deficit and its circuit response are measured.",
+  "graph": {
+    "evidence": "Free fucose, GDP-fucose and protein fucosylation can diverge.",
+    "inference": "CSF exposure alone cannot verify correction of a neural glycosite.",
+    "hypothesis": "Salvage may correct a selected GluA2 site and independently change release.",
+    "experiment": "Measure labeled donor, GluA2 core fucose and early release at matched exposure."
+  },
+  "evidence": [
+    "In one GLUT1 deficiency report, free CSF fucose rose to about 31 µM. Overall CSF lectin staining moved toward reference. A predominantly CNS-derived protein remained hypofucosylated.",
+    "In Fut8 heterozygous mice, brain GDP-fucose reached about 1.34 times the WT signal, while the selected hippocampal mono-core-fucosylation index recovered about 20% of its deficit."
+  ],
+  "inference": [
+    "Measure local free fucose, the labeled donor and absolute site occupancy separately. A rapid rise in mouse hippocampal excitatory release makes a functional control necessary."
+  ],
+  "hypothesis": [
+    "If deficient WWOX GluA2 core fucosylation is substrate responsive, correction should follow recovery of the donor and alter the delayed postsynaptic response."
+  ],
+  "experiment": [
+    "Verify a baseline site deficit, then compare matched WWOX and control preparations on exposure, early release, the corrected glycopeptide and late network activity. A rise in early release or recurrence lowers priority."
+  ],
+  "limits": [
+    "The human CSF report describes one case with another disease. Brain interstitial exposure, target response and pediatric safety remain undetermined in WWOX."
+  ],
+  "sources": [
+    {"label": "Moomann et al., human CSF and beta-trace assays", "url": "https://doi.org/10.1007/s00415-026-14211-3"},
+    {"label": "Xu et al., brain donor and linkage-class comparisons", "url": "https://doi.org/10.1016/j.jbc.2023.105513"},
+    {"label": "Di Lucente et al., rapid hippocampal physiology", "url": "https://doi.org/10.1126/sciadv.adt4123"}
+  ]
+}
