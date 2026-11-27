@@ -1,0 +1,5 @@
+measure	group	y_bottom	y_top	value_bottom	value_top	y_point_1	y_point_2	y_point_3
+total_axons	control	280	176	80	140	239.5	253.5	269.5
+total_axons	GlcNAc	280	176	80	140	197	213.5	248.5
+myelinated_axons	control	280	176	60	100	243	249	245.5
+myelinated_axons	GlcNAc	280	176	60	100	191	214.5	217

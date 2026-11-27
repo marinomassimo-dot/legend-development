@@ -11,3 +11,8 @@ myelinated_share_maximum_two_pixel_sensitivity	6.518	percentage_points
 mouse_drinking_water_1_mg_mL	4.521	mmol/L
 cell_bath_40mM_over_human_group_mean_plot_axis_max_2500nM	16000.000	ratio
 cell_bath_40mM_over_human_participant_average_plot_axis_max_8000nM	5000.000	ratio
+S3A_control_ratio_of_means	77.069	percent
+S3A_GlcNAc_ratio_of_means	76.549	percent
+S3A_ratio_of_means_difference	-0.519	percentage_points
+S3A_minimum_difference_across_pairings	-0.425	percentage_points
+S3A_maximum_difference_across_pairings	0.514	percentage_points
