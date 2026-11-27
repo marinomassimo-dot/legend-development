@@ -1,0 +1,9 @@
+source	measure	value	unit	context
+Edwards ACTRIMS P006	7 h CSF reported lower	0.2998	µM	39 ng/mL
+Edwards ACTRIMS P006	7 h CSF reported upper	0.6072	µM	79 ng/mL
+Edwards ACTRIMS P006	plasma mean Cmax	13.4512	µM	1750 ng/mL
+Edwards ACTRIMS P006	7 h CSF reported lower / plasma mean Cmax	2.23	%	different times and statistics
+Gola publisher preview and Edwards P006	nominal proteomics bath / 7 h CSF reported lower	166.8	fold	50 µM MMF nominal bath for 48 h
+Edwards ACTRIMS P006	7 h CSF reported upper / plasma mean Cmax	4.51	%	different times and statistics
+Gola publisher preview and Edwards P006	nominal proteomics bath / 7 h CSF reported upper	82.3	fold	50 µM MMF nominal bath for 48 h
+CONNECT Table 3	GI event risk difference	+43.80	pp	58/78 DMF vs 22/72 interferon beta-1a
