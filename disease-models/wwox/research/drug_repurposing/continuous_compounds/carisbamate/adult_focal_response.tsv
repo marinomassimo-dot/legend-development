@@ -1,0 +1,4 @@
+group	n_analysed	n_with_50pct_or_greater_reduction	response_pct	Wilson_lower_pct	Wilson_upper_pct	median_frequency_reduction_pct
+placebo	183	48	26.230	20.392	33.045	20.59
+800_mg_day	176	49	27.841	21.746	34.882	29.93
+1200_mg_day	181	66	36.464	29.801	43.690	36.3
