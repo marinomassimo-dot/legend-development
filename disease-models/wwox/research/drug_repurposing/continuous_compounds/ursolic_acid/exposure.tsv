@@ -1,0 +1,11 @@
+comparison	ng_per_mL	µmol_per_L	locator
+Lowest direct OPC concentration tested	1000	2.18962	Zhang Fig. 8A
+Slice treatment and upper direct OPC concentration	10000	21.8962	Zhang Figs. 5 and 8
+Conditional carryover from 1000 ng/mL source	500	1.09481	Zhang Fig. 6E half-volume transfer; conditional on 100% residual parent
+Conditional carryover from 5000 ng/mL source	2500	5.47405	Zhang Fig. 6E half-volume transfer; conditional on 100% residual parent
+Conditional carryover from 10000 ng/mL source	5000	10.9481	Zhang Fig. 6E half-volume transfer; conditional on 100% residual parent
+Human apple-peel plasma mean peak	3.3	0.00722575	Stebounova Fig. 3A
+Adult purified oral assay quantification floor	10.5	0.022991	Hirsh conference abstract
+Adult IV nanoliposome lowest dose-group mean plasma peak	1835	4.01795	Zhu Table 2
+Adult IV nanoliposome highest dose-group mean plasma peak	3457	7.56952	Zhu Table 2
+Rat oral mean plasma peak	2025	4.43398	Chen Table 1
