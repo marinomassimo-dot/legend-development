@@ -1,0 +1,15 @@
+condition	analyte	compartment	statistic	value	unit
+adult_fasted_peak	parent	plasma	converted total	17.36	nmol/L
+adult_fasted_peak	parent	plasma	conditional free at fu=0.022	0.38	nmol/L
+adult_liquid_peak	parent	plasma	converted total	70.80	nmol/L
+adult_liquid_peak	parent	plasma	conditional free at fu=0.022	1.56	nmol/L
+adult_solid_meal_peak	parent	plasma	converted total	621.79	nmol/L
+adult_solid_meal_peak	parent	plasma	conditional free at fu=0.022	13.68	nmol/L
+under7_fa_week4_pre	parent	plasma	converted total	393.34	nmol/L
+under7_fa_week4_pre	parent	plasma	conditional free at fu=0.022	8.65	nmol/L
+under7_fa_week12_3to6h	parent	plasma	converted total	2429.54	nmol/L
+under7_fa_week12_3to6h	parent	plasma	conditional free at fu=0.022	53.45	nmol/L
+solid_to_liquid	parent	plasma	Cmax ratio	8.78	fold
+solid_to_liquid	parent	plasma	AUC0–t ratio	7.19	fold
+parent_in_total_radioactivity	parent	plasma	AUC0–t share	3.74	%
+rat_general_tissue_bql	total radiolabel	whole-tissue calibration	reference quantification limit	406.21	nmol equivalents/kg
