@@ -154,6 +154,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 148 | L-arginine, guanidinoacetate production versus creatine synthesis | Does added local arginine increase labeled creatine and phosphocreatine recovery in WWOX, or does only guanidinoacetate increase? |
 | 149 | L-ornithine, suppression of excess guanidinoacetate versus precursor competition | At matched local arginine and initial activity, can excess GAA fall while creatine reserve and physiological recovery are preserved? |
 | 150 | Ademetionine (SAMe), intracellular methyl-donor availability versus GAMT capacity | Does verified active SAM availability increase labeled creatine and phosphocreatine recovery at matched local GAA? |
+| 151 | Methylene blue chloride, coupled mitochondrial electron transfer versus redox cycling | At verified parent exposure, does a WWOX respiratory bottleneck show improved ATP recovery while peroxide and first recruitment remain controlled? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -168,7 +169,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 **Completed targeted follow-up: perampanel.** Clinical denominators, behavior and vigilance now have named source boundaries. The matched-state founder comparison tests how contact predictions and receptor geometry account for the reciprocal functional controls and can select the next occupancy-plus-current comparison. Juvenile cortical AMPA/NMDA and hippocampal release remain separate experiments. [Updated dossier](../perampanel_20261122/clinical_mechanistic_update_20261126.md)
 
-**Active compound: Ademetionine (SAMe).** Audit oral and local exposure, then separate methyl-donor limitation from a downstream GAMT or transfer limit. [Opening checkpoint](ademetionine/README.md)
+**Active compound: Methylene blue chloride.** Compare coupled ATP recovery and peroxide production under a verified mitochondrial bottleneck. [Opening checkpoint](methylene_blue/README.md)
+
+**Ademetionine (SAMe).** Retain as a conditional methyl-donor probe and defer pediatric WWOX trial priority. Adult CSF total SAM and mouse hypothalamic SAM/SAH have distinct exposure and compartment boundaries. Reopen for measured intracellular active SAM, selective labeled creatine synthesis and preserved phosphocreatine recovery. [Disposition and replay](ademetionine/parent_and_methyl_transfer_20261127.md)
 
 **L-ornithine.** Park for pediatric WWOX trial priority. The fly mass screen found three unassigned peaks, and the mammalian pathway has no demonstrated native GAA excess in WWOX. Reopen for excess that can be reduced at matched precursor entry while preserving phosphocreatine. [Disposition and replay](l_ornithine/guanidinoacetate_and_disposition_20261127.md)
 
