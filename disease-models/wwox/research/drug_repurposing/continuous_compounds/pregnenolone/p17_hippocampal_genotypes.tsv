@@ -1,0 +1,43 @@
+model	accession	category	gene	mapped_symbol	ctrl_n	ko_n	ctrl_positive	ko_positive	ctrl_mean	ko_mean	log2_delta	omit_min	omit_max	mapping
+hippocampus_neuronal_deletion	GSE158681	upstream_context	STAR	STAR	2	3	2	3	0.262122	0.210989	-0.0544799	-0.207604	0.0986445	mapped
+hippocampus_neuronal_deletion	GSE158681	upstream_context	CYP11A1	CYP11A1	2	3	2	3	2.87923	1.49823	-0.553808	-1.07553	-0.0320839	mapped
+hippocampus_neuronal_deletion	GSE158681	upstream_context	HSD3B1	HSD3B1	2	3	0	0	0	0	0	0	0	mapped
+hippocampus_neuronal_deletion	GSE158681	upstream_context	HSD3B2	HSD3B2	2	3	2	3	2.59363	2.50937	-0.0395119	-0.128286	0.0142743	mapped
+hippocampus_neuronal_deletion	GSE158681	five_alpha_reduction	SRD5A1	SRD5A1	2	3	2	3	6.35277	2.73293	-0.979209	-1.16984	-0.788575	mapped
+hippocampus_neuronal_deletion	GSE158681	five_alpha_reduction	SRD5A2	SRD5A2	2	3	1	1	0.0184435	0.017771	-0.00115127	-0.0272806	0.0249781	mapped
+hippocampus_neuronal_deletion	GSE158681	mouse_product_routing	AKR1C14	AKR1C14	2	3	2	3	0.543173	0.0715763	-0.484896	-0.833716	-0.136076	mapped
+hippocampus_neuronal_deletion	GSE158681	human_product_routing	AKR1C1		2	3								unmapped
+hippocampus_neuronal_deletion	GSE158681	human_product_routing	AKR1C2		2	3								unmapped
+hippocampus_neuronal_deletion	GSE158681	human_product_routing	AKR1C3		2	3								unmapped
+hippocampus_neuronal_deletion	GSE158681	sulfate_handling	SULT2B1	SULT2B1	2	3	2	3	16.3736	23.5525	0.432769	0.229275	0.753746	mapped
+hippocampus_neuronal_deletion	GSE158681	sulfate_handling	STS		2	3								unmapped
+hippocampus_neuronal_deletion	GSE158681	sulfate_handling	PAPSS1	PAPSS1	2	3	2	3	38.241	24.9853	-0.604395	-0.744766	-0.491447	mapped
+hippocampus_neuronal_deletion	GSE158681	sulfate_handling	PAPSS2	PAPSS2	2	3	2	3	2.68105	2.19984	-0.207991	-0.473295	0.0573137	mapped
+hippocampus_progenitor_deletion	GSE158681	upstream_context	STAR	STAR	2	2	2	2	0.253264	0.130499	-0.139398	-0.303786	0.0249903	mapped
+hippocampus_progenitor_deletion	GSE158681	upstream_context	CYP11A1	CYP11A1	2	2	2	2	2.62122	1.38137	-0.646792	-1.09105	-0.202534	mapped
+hippocampus_progenitor_deletion	GSE158681	upstream_context	HSD3B1	HSD3B1	2	2	0	0	0	0	0	0	0	mapped
+hippocampus_progenitor_deletion	GSE158681	upstream_context	HSD3B2	HSD3B2	2	2	2	2	2.63249	2.78247	0.0582862	0.014883	0.101689	mapped
+hippocampus_progenitor_deletion	GSE158681	five_alpha_reduction	SRD5A1	SRD5A1	2	2	2	2	5.75192	4.35273	-0.401139	-0.976383	0.174104	mapped
+hippocampus_progenitor_deletion	GSE158681	five_alpha_reduction	SRD5A2	SRD5A2	2	2	0	0	0	0	0	0	0	mapped
+hippocampus_progenitor_deletion	GSE158681	mouse_product_routing	AKR1C14	AKR1C14	2	2	2	2	0.354838	0.209236	-0.171157	-0.318143	-0.0241717	mapped
+hippocampus_progenitor_deletion	GSE158681	human_product_routing	AKR1C1		2	2								unmapped
+hippocampus_progenitor_deletion	GSE158681	human_product_routing	AKR1C2		2	2								unmapped
+hippocampus_progenitor_deletion	GSE158681	human_product_routing	AKR1C3		2	2								unmapped
+hippocampus_progenitor_deletion	GSE158681	sulfate_handling	SULT2B1	SULT2B1	2	2	2	2	14.7068	19.4253	0.36155	0.133283	0.589818	mapped
+hippocampus_progenitor_deletion	GSE158681	sulfate_handling	STS		2	2								unmapped
+hippocampus_progenitor_deletion	GSE158681	sulfate_handling	PAPSS1	PAPSS1	2	2	2	2	38.3732	25.3966	-0.584247	-0.737934	-0.43056	mapped
+hippocampus_progenitor_deletion	GSE158681	sulfate_handling	PAPSS2	PAPSS2	2	2	2	2	2.76795	1.19571	-0.770955	-0.941038	-0.600872	mapped
+hippocampus_constitutive_null	GSE158681	upstream_context	STAR	STAR	3	2	3	2	0.192098	0.142383	-0.0609614	-0.0908486	-0.0310742	mapped
+hippocampus_constitutive_null	GSE158681	upstream_context	CYP11A1	CYP11A1	3	2	3	2	1.60666	0.940001	-0.408424	-0.532993	-0.26068	mapped
+hippocampus_constitutive_null	GSE158681	upstream_context	HSD3B1	HSD3B1	3	2	1	0	0.00610833	0	-0.00873269	-0.013099	0	mapped
+hippocampus_constitutive_null	GSE158681	upstream_context	HSD3B2	HSD3B2	3	2	3	2	4.57185	4.21513	-0.102195	-0.254353	0.0499633	mapped
+hippocampus_constitutive_null	GSE158681	five_alpha_reduction	SRD5A1	SRD5A1	3	2	3	2	4.53422	3.88939	-0.174833	-0.253323	-0.130761	mapped
+hippocampus_constitutive_null	GSE158681	five_alpha_reduction	SRD5A2	SRD5A2	3	2	1	1	0.0150647	0.018315	0.00469361	-0.0212569	0.0306441	mapped
+hippocampus_constitutive_null	GSE158681	mouse_product_routing	AKR1C14	AKR1C14	3	2	3	2	0.597225	0.634884	0.00781347	-0.27288	0.288507	mapped
+hippocampus_constitutive_null	GSE158681	human_product_routing	AKR1C1		3	2								unmapped
+hippocampus_constitutive_null	GSE158681	human_product_routing	AKR1C2		3	2								unmapped
+hippocampus_constitutive_null	GSE158681	human_product_routing	AKR1C3		3	2								unmapped
+hippocampus_constitutive_null	GSE158681	sulfate_handling	SULT2B1	SULT2B1	3	2	3	2	9.88847	6.65638	-0.510303	-0.63421	-0.386396	mapped
+hippocampus_constitutive_null	GSE158681	sulfate_handling	STS		3	2								unmapped
+hippocampus_constitutive_null	GSE158681	sulfate_handling	PAPSS1	PAPSS1	3	2	3	2	22.9403	19.8082	-0.216574	-0.496637	0.0634901	mapped
+hippocampus_constitutive_null	GSE158681	sulfate_handling	PAPSS2	PAPSS2	3	2	3	2	2.68258	2.03061	-0.279618	-0.358741	-0.200494	mapped
