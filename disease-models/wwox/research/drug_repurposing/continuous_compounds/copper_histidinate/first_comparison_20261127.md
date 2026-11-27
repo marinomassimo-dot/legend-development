@@ -1,5 +1,7 @@
 # Copper histidinate, opening comparison
 
+The final comparison checked the fibroblast methods and the overlap of Menkes external control cohorts. [Completed comparison and disposition](complex_iv_delivery_and_disposition_20261127.md)
+
 | Preparation | Opening observation | Boundary for WWOX |
 |---|---|---|
 | Human dermal fibroblasts with a defined CTR1 defect | The primary paper's public Fig. 3B caption reports complex IV activity normalized to total protein across three independent experiments with affected lines pooled and increased activity after nominal 50 µM copper histidinate. Fig. 3C–D describes oxygen-consumption measurements in the same preparation. | This is a positive control in defined copper transport impairment. Three experiments on the same cell lines do not replicate the result across unrelated genotypes. Nominal fibroblast exposure does not give free human neural copper or complex IV occupancy. [Batzios et al., PubMed record and Fig. 3 caption](https://pubmed.ncbi.nlm.nih.gov/35913762/?dopt=Abstract) |
@@ -9,4 +11,4 @@
 
 To check the denominators, compare the two reported FDA rows with the primary and secondary population flags and the survival time origins. Simple follow-up alive fractions are 16/31 and 2/17 in the early comparison and 12/35 and 2/16 in the later comparison. They describe status at the data cutoff and cannot reproduce the survival hazard ratios without event and censoring times. The label flags copper accumulation involving renal, hepatic and blood systems. [FDA Table 2 and Table 3](https://www.fda.gov/drugs/drug-trials-snapshots/drug-trials-snapshots-zycubo) · [Official label §5.1](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e3aeefc2-f44d-4337-9c2e-3dba44a89e48)
 
-**Checkpoint.** The appropriate entry test is whether the untreated WWOX preparation shows a compartment-specific copper or copper-dependent complex IV deficit under a copper-replete condition. Next, audit the CTR1 Fig. 3 source and its denominator, the origin and overlap of Menkes cohorts, and held WWOX tissue and complex-specific data. The earlier respiratory-complex study is available as a named source, with only abstract-level LEGEND receipts at this checkpoint. Consider independence review if a selective WWOX complex IV deficit and a feasible target-engagement comparison survive. [WWOX respiratory-complex source](https://pubmed.ncbi.nlm.nih.gov/26390919/) · [Discriminating prediction](pretest_20261127.md)
+**Opening checkpoint.** The initial comparison defined the complex IV and copper-delivery premise. [Discriminating prediction](pretest_20261127.md) · [Completed comparison](complex_iv_delivery_and_disposition_20261127.md)
