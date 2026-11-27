@@ -685,6 +685,31 @@ def translation_excuse(dr: Path, P: dict, lang: str, extra_text: str | None = No
     return lambda w: w.isalpha() and w in trans and w not in english and w not in neutral
 
 
+def split_dossier_backlinks(page: str, dr: Path) -> tuple[str, list[str]]:
+    """Separate exact authored navigation links for the existing dossier-name audit."""
+    from repurposing_compound_analyses import load_cards
+
+    authored = {
+        f'<a href="#analysis-{htmlmod.escape(slug)}">{htmlmod.escape(card["name"])}</a>'
+        for slug, card in load_cards(dr).items()
+        if card.get("investigation") and card["links"]
+    }
+    navigation = []
+
+    def separate_link(match):
+        link = match.group()
+        if link not in authored:
+            return link
+        navigation.append(link)
+        return " "
+
+    def separate_paragraph(match):
+        return re.sub(r'<a href="#analysis-[^"]+">[^<]*</a>', separate_link, match.group())
+
+    remainder = re.sub(r'<p class="ca-investigation-links">[^\n]*?</p>', separate_paragraph, page)
+    return remainder, navigation
+
+
 def audit_html(text: str, dr: Path, ref: Reference | None = None, extra_surfaces: list[tuple[str, str]] | None = None, literature=None, source_text: str | None = None) -> tuple[Report, Reference]:
     """`source_text` (optional): another audited page whose data also counts as neutral. A page that declares a language other than English is judged with `translation_excuse` (IT38)."""
     rep = Report()
@@ -713,7 +738,13 @@ def audit_html(text: str, dr: Path, ref: Reference | None = None, extra_surfaces
                          for g in grams(tokens(value)) if g in ref.names}
         scan_strings(visible_surfaces(analyses[0]), ref, rep, "compound analyses", dossier_names=dossier_names)
     vis = visible_surfaces(text)
-    scan_strings(visible_surfaces(text[:analyses.start()] + text[analyses.end():]) if analyses else vis, ref, rep, "page", vocab)
+    if analyses:
+        perimeter = text[:analyses.start()] + text[analyses.end():]
+        perimeter, backlinks = split_dossier_backlinks(perimeter, dr)
+        scan_strings(visible_surfaces(perimeter), ref, rep, "page", vocab)
+        scan_strings(visible_surfaces(" ".join(backlinks)), ref, rep, "dossier backlinks", dossier_names=dossier_names)
+    else:
+        scan_strings(vis, ref, rep, "page", vocab)
     pair_scan(items, ref, rep, "data", literature)
     pair_scan(vis, ref, rep, "page", literature)
     file_token_scan(items, rep, "data")

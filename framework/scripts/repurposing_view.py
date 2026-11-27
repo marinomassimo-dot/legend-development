@@ -5198,7 +5198,7 @@ def render_investigations(P: dict) -> str:
             tail_c = cdl + cmp_dt(r["inv_id"]) + phys_dt(r["inv_id"])
             ci.append(f'<li class="inv-row inv-cond" id="{E(r["inv_id"])}" data-inv="{E(r["inv_id"])}" data-origin="{E(r["origin_class"])}" data-cmp="{cmp_state(r["inv_id"])}" data-status="conditional_hypothesis"><div class="inv-h">'
                       f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span> '
-                      f'<span class="stt stt-conditional_hypothesis">{E(U["iv_st_conditional_hypothesis"])}</span></div>{report_links(P, r["inv_id"])}{card_dl(r, cspec, tail_c)}</li>')
+                      f'<span class="stt stt-conditional_hypothesis">{E(U["iv_st_conditional_hypothesis"])}</span></div>{report_links(P, r["inv_id"])}{compound_analysis_links(r["inv_id"])}{card_dl(r, cspec, tail_c)}</li>')
         out += (f'<section id="inv-conditional" class="inl" aria-labelledby="h-inv-cond"><h3 id="h-inv-cond">{E(U["iv_cond_h"])} ({len(conds)})</h3>'
                 f'<p class="note">{E(U["iv_cond_lead"])}</p><ul class="inv-list inv-cond-list">{"".join(ci)}</ul></section>')
     furs = rk.get("further_investigations") or []
@@ -5216,7 +5216,7 @@ def render_investigations(P: dict) -> str:
             fb = f' <span class="stt stt-{E(st)}">{E(U["iv_st_" + st])}</span>' if st in ("carded_thread", "premise_measurement") else ""
             fi.append(f'<li class="inv-row inv-further" id="{E(r["inv_id"])}" data-inv="{E(r["inv_id"])}" data-origin="{E(r["origin_class"])}" data-cmp="{cmp_state(r["inv_id"])}" data-status="{E(str(st))}"><div class="inv-h">'
                       f'<span class="inv-pos" aria-label="{E(U["iv_pos"])} {E(str(r["position"]))}">{E(str(r["position"]))}</span> <span class="mini">({E(U["iv_fur_pos"])})</span> '
-                      f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{fb}</div>{report_links(P, r["inv_id"])}{card_dl(r, fspec, tail_f)}</li>')
+                      f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{fb}</div>{report_links(P, r["inv_id"])}{compound_analysis_links(r["inv_id"])}{card_dl(r, fspec, tail_f)}</li>')
         out += (f'<section id="inv-further" class="inl" aria-labelledby="h-inv-fur"><h3 id="h-inv-fur">{E(U["iv_fur_h"])} ({len(furs)})</h3>'
                 f'<p class="note">{E(U["iv_fur_lead"])}</p><ul class="inv-list inv-fur-list">{"".join(fi)}</ul></section>')
     if rows is not None:

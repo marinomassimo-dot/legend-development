@@ -3,6 +3,7 @@ import unittest
 from pathlib import Path
 
 import repurposing_compound_analyses as analyses
+from repurposing_shareable_audit import split_dossier_backlinks
 
 
 class CompoundAnalyses(unittest.TestCase):
@@ -60,6 +61,33 @@ class CompoundAnalyses(unittest.TestCase):
         self.assertNotIn("private/README", html)
         self.assertIn("An independent review.", html)
         self.assertNotIn("Codex", html)
+
+
+    def test_dossier_backlink_exception_is_limited_to_authored_navigation(self):
+        normal = '<a href="#analysis-example">Example</a>'
+        new_label = '<a href="#analysis-example">Example with extra text</a>'
+        unlisted = '<a href="#analysis-other">Other</a>'
+        unsupported = '<a href="#analysis-undocumented">Undocumented</a>'
+        paragraph = f'<p class="ca-investigation-links">{normal}{new_label}{unlisted}{unsupported}</p>'
+        with tempfile.TemporaryDirectory() as directory:
+            dr = Path(directory)
+            register = dr / "continuous_compounds/README.md"
+            register.parent.mkdir()
+            dossier = dr / "example/README.md"
+            dossier.parent.mkdir()
+            dossier.write_text("# Example\n", encoding="utf-8")
+            register.write_text(
+                "## Current checkpoint\n\n## Comparisons by research question\n"
+                "| example | Example | Circuit | INV-05 | Probe | Observation | Limit | Test | [Dossier](../example/README.md) |\n"
+                "| undocumented | Undocumented | Circuit | INV-05 | Probe | Observation | Limit | Test | |\n",
+                encoding="utf-8",
+            )
+            remaining, links = split_dossier_backlinks(f"<div>{normal}</div>{paragraph}", dr)
+        self.assertEqual(links, [normal])
+        self.assertIn(f"<div>{normal}</div>", remaining)
+        self.assertIn(new_label, remaining)
+        self.assertIn(unlisted, remaining)
+        self.assertIn(unsupported, remaining)
 
 
 if __name__ == "__main__":
