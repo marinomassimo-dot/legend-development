@@ -1,0 +1,11 @@
+arm	item	affected_n	at_risk_n	fraction
+placebo	other_AE	44	49	0.89796
+placebo	serious_AE	1	49	0.020408
+placebo	Insomnia	12	49	0.2449
+placebo	irritability	7	49	0.14286
+placebo	Psychomotor Hyperactivity	10	49	0.20408
+mavoglurant	other_AE	45	50	0.9
+mavoglurant	serious_AE	0	50	0
+mavoglurant	Insomnia	17	50	0.34
+mavoglurant	irritability	13	50	0.26
+mavoglurant	Psychomotor Hyperactivity	5	50	0.1
