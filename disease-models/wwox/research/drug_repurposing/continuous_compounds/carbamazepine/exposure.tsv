@@ -1,0 +1,15 @@
+benchmark	evidence_type	lower_or_mean	upper_or_mean	unit
+Tegretol_label_total_parent_plasma_reference	label_range	16.9298	50.7894	uM
+Tegretol_label_parent_plasma_reference_x_0.24	scenario	4.0631	12.1894	uM
+Pynnonen_aggregate_CSF_fraction_0.33_x_label_plasma_reference	cross_study_scenario	5.5868	16.7605	uM
+Riva_Table1_free_parent_plasma_CBZ_only_n22	measured_pediatric_mean	5.1700	5.1700	uM
+Riva_Table1_free_parent_plasma_plus_phenobarbital_n17	measured_pediatric_mean	4.4100	4.4100	uM
+Riva_Table1_free_epoxide_plasma_CBZ_only_n22	measured_pediatric_mean	1.8400	1.8400	uM
+Riva_Table1_free_epoxide_plasma_plus_phenobarbital_n17	measured_pediatric_mean	2.0800	2.0800	uM
+Liu_abstract_free_parent_serum_n55	measured_pediatric_mean	10.9620	10.9620	uM
+Liu_abstract_free_epoxide_serum_n55	measured_pediatric_mean	4.1622	4.1622	uM
+Johannessen_Table4_parent_CSF_range	measured_17plus	4.2324	13.1206	uM
+Johannessen_Table4_parent_CSF_mean	measured_17plus	8.8881	8.8881	uM
+Johannessen_Table4_epoxide_CSF_mean	measured_17plus	2.7748	2.7748	uM
+Schiebler_nominal_parent_over_max_Johannessen_parent_CSF	scale_ratio	3.8108	3.8108	fold
+Schiebler_nominal_parent_over_upper_0.33_CSF_scenario	scale_ratio	2.9832	2.9832	fold
