@@ -1,0 +1,7 @@
+table	analyte	n_active_label	n_placebo_label	active_baseline_nM	active_month12_nM	placebo_baseline_nM	placebo_month12_nM	active_ratio	placebo_ratio	ratio_of_ratios	paired_delta_over_baseline_active	paired_delta_over_baseline_placebo
+Gibson_3C	thiamine	34	36	6.2	999.51	5.48	13.64	161.211	2.48905	64.7682	NA	NA
+Gibson_3C	ThMP	34	36	2.97	20.73	3.38	4.05	6.9798	1.19822	5.82512	NA	NA
+Gibson_3C	ThDP	34	36	64.82	197.39	74.46	91.7	3.0452	1.23153	2.47269	NA	NA
+BOND_5	thiamine	24	27	9.208	336.273	5.519	22.208	36.5197	4.02392	9.07565	35.4829	3.05762
+BOND_5	ThMP	24	27	3.792	12.091	3.63	4	3.18855	1.10193	2.89361	2.1577	0.0804408
+BOND_5	ThDP	24	27	182	374.636	173.148	211.208	2.05844	1.21981	1.68751	1.04995	0.231016
