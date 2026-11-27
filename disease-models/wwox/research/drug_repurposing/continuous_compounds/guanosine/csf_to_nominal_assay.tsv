@@ -1,0 +1,4 @@
+study_arm	control_CSF_uM	control_error_uM	treated_CSF_uM	treated_error_uM	error_type	n_per_arm_reported	treated_over_control	treated_over_1uM	treated_over_2p47uM	treated_over_10uM	treated_over_100uM	source
+Vinade_Wistar_two_weeks	0.46	0.4	1.05	0.6	SD	20_reported	2.283	1.050	0.425	0.105	0.0105	15558762 Results and Fig. 4
+Ganzella_sham_six_weeks	0.1	0.01	0.1	0.02	SEM	10	1.000	0.100	0.040	0.010	0.0010	22167652 Table 1a
+Ganzella_2VO_six_weeks	0.1	0.1	0.12	0.03	SEM	10	1.200	0.120	0.049	0.012	0.0012	22167652 Table 1a

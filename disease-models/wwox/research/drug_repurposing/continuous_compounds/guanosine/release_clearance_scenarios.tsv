@@ -1,0 +1,10 @@
+illustrative_Km_uM	control_peak_uM	reduced_release_peak_ratio	reduced_release_AUC_ratio	reduced_release_evoked_half_time_ratio	reduced_release_fixed_input_half_time_ratio	higher_capacity_AUC_ratio	higher_capacity_fixed_input_half_time_ratio
+5	1	0.8261	0.8130	0.9781	1.0000	0.8130	0.8130
+5	10	0.8697	0.8130	0.9230	1.0000	0.8130	0.8130
+5	100	0.8970	0.8130	0.9037	1.0000	0.8130	0.8130
+20	1	0.8167	0.8130	0.9936	1.0000	0.8130	0.8130
+20	10	0.8399	0.8130	0.9576	1.0000	0.8130	0.8130
+20	100	0.8855	0.8130	0.9103	1.0000	0.8130	0.8130
+50	1	0.8145	0.8130	0.9974	1.0000	0.8130	0.8130
+50	10	0.8261	0.8130	0.9781	1.0000	0.8130	0.8130
+50	100	0.8697	0.8130	0.9230	1.0000	0.8130	0.8130
