@@ -1,0 +1,21 @@
+source	comparison	value	unit	limitation
+Reisman Fig. 3	low arm total brain/plasma	2.99	mL/g	Digitized means. Pixel sensitivity 2.70–3.31; not an uncertainty interval.
+Reisman Fig. 3	middle arm total brain/plasma	4.39	mL/g	Digitized means. Pixel sensitivity 3.96–4.86; not an uncertainty interval.
+Reisman Fig. 3	high arm total brain/plasma	3.67	mL/g	Digitized means. Pixel sensitivity 3.31–4.06; not an uncertainty interval.
+Shekh-Ahmad Fig. 5C	vehicle in weeks 1–2	3.65	seizures/week	Mean of plotted weekly means.
+Shekh-Ahmad Fig. 5C	RTA 408 in weeks 1–2	1.83	seizures/week	Mean of plotted weekly means.
+Shekh-Ahmad Fig. 5C	relative change in weeks 1–2	-50.00	percent	Descriptive and event-aligned; no animal-level values.
+Shekh-Ahmad Fig. 5C	vehicle in weeks 9–12	20.78	seizures/week	Mean of plotted weekly means.
+Shekh-Ahmad Fig. 5C	RTA 408 in weeks 9–12	1.55	seizures/week	Mean of plotted weekly means.
+Shekh-Ahmad Fig. 5C	relative change in weeks 9–12	-92.53	percent	Descriptive and event-aligned; no animal-level values.
+Shekh-Ahmad 2018	two-sided p implied by Fig. 2C t(11)	0.1284	p	Printed p = 0.129; no correction inferred.
+Shekh-Ahmad 2018	two-sided p implied by Fig. 2D t(11)	0.0463	p	Printed p = 0.811; no correction inferred.
+Shekh-Ahmad 2018	seizure-free Fisher exact reconstruction	0.5765	p	Assumes the implied counts 3/9 vs 1/9; not a published test.
+FDA QT review	modeled free plasma peak	3.8939	nM	Plasma estimate, with 3% unbound fraction and rounded total Cmax.
+Shekh-Ahmad Fig. 2 vs FDA QT review	50 nM nominal culture divided by plasma estimate	12.84	ratio	Different compartments and binding conditions.
+Shekh-Ahmad Fig. 2 vs FDA QT review	200 nM nominal culture divided by plasma estimate	51.36	ratio	Different compartments and binding conditions.
+FDA nonclinical review and EMA EPAR	mouse brain unbound fraction needed for unbound ratio of one	5.21–8.32	percent	Illustrative whole-tissue relation using time-specific total ratios, not a measured free ratio.
+FDA nonclinical review and EMA EPAR	rat brain unbound fraction needed for unbound ratio of one	3.51–3.79	percent	Illustrative whole-tissue relation using time-specific total ratios, not a measured free ratio.
+FDA nonclinical review and EMA EPAR	cynomolgus monkey brain unbound fraction needed for unbound ratio of one	0.99–1.32	percent	Illustrative whole-tissue relation using time-specific total ratios, not a measured free ratio.
+Shekh-Ahmad Results/Fig. 5	relative change using printed rounded medians	-95.65	percent	Printed endpoints are 23 and 1 seizures/week. Authors report a 94% reduction.
+Shekh-Ahmad Fig. 5C-D	fraction of initial EEG group contributing to extended follow-up	44.44	percent	Four of nine per arm beyond week 12.
