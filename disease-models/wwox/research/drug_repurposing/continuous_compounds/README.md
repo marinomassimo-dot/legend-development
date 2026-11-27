@@ -169,7 +169,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 **Completed targeted follow-up: perampanel.** Clinical denominators, behavior and vigilance now have named source boundaries. The matched-state founder comparison tests how contact predictions and receptor geometry account for the reciprocal functional controls and can select the next occupancy-plus-current comparison. Juvenile cortical AMPA/NMDA and hippocampal release remain separate experiments. [Updated dossier](../perampanel_20261122/clinical_mechanistic_update_20261126.md)
 
-**Active compound: Methylene blue chloride.** Compare coupled ATP recovery and peroxide production under a verified mitochondrial bottleneck. [Opening checkpoint](methylene_blue/README.md)
+**Methylene blue chloride.** Retain as a conditional preclinical electron-routing comparator and defer pediatric WWOX trial priority. None of the three prespecified WWOX RNA preparations supported a stable selective complex I deficit, and isolated mitochondrial ATP can rise with the dye while ATP synthase is inhibited. Reopen for a localized native bottleneck and coupled ATP recovery with controlled peroxide at verified neural exposure. [Disposition and reproducible comparisons](methylene_blue/coupling_and_disposition_20261127.md)
 
 **Ademetionine (SAMe).** Retain as a conditional methyl-donor probe and defer pediatric WWOX trial priority. Adult CSF total SAM and mouse hypothalamic SAM/SAH have distinct exposure and compartment boundaries. Reopen for measured intracellular active SAM, selective labeled creatine synthesis and preserved phosphocreatine recovery. [Disposition and replay](ademetionine/parent_and_methyl_transfer_20261127.md)
 
