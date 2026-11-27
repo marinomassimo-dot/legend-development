@@ -159,7 +159,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 **Completed targeted follow-up: perampanel.** Clinical denominators, behavior and vigilance now have named source boundaries. The matched-state founder comparison tests how contact predictions and receptor geometry account for the reciprocal functional controls and can select the next occupancy-plus-current comparison. Juvenile cortical AMPA/NMDA and hippocampal release remain separate experiments. [Updated dossier](../perampanel_20261122/clinical_mechanistic_update_20261126.md)
 
-**Active compound: anakinra.** Start from the IL-1 class evidence and the stage- and region-specific P47T result. The next comparison tests juvenile cortical IL-1 bioactivity, measured local antagonist and delayed recurrence. [Opening, prior evidence and discriminating prediction](anakinra/README.md)
+**Active compound: anakinra.** Lower SIGIRR RNA prompted a test of juvenile WWOX sensitivity to equal IL-1 input. A reference IL-1R8 loss model separates rescued mutant from impaired control potentiation, so the next comparison checks native bioactivity, spontaneous activity and preserved physiological plasticity. [Exposure and WWOX replay](anakinra/csf_exposure_and_reporter_20261127.md)
 
 **Olesoxime.** Retain as a conditional preclinical stress probe and defer pediatric WWOX trial priority. Higher calcium retention in cyclophilin D-null brain accompanies opposite injury outcomes in P9 and P60 hypoxia–ischemia comparisons. Reopen for a reproducible native WWOX permeability phenotype at matched early load, measured local free drug and preserved early recruitment with better recovery. [Developmental transfer and replay](olesoxime/developmental_transfer_and_disposition_20261127.md)
 
