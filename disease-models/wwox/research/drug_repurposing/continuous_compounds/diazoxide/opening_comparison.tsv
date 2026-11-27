@@ -1,0 +1,15 @@
+source_locator	quantity	value	units
+Kishore Fig S1	rat CSF at 1 h	1.127146	micromolar
+Kishore Fig S1	rat CSF at 4 h	3.381439	micromolar
+Burkart Fig 1 / Kishore Fig S1	nominal bath / 4 h CSF	88.7196	cross-matrix ratio
+Burkart Fig 1D	change in median physiological sharp-wave rate	-55.8442	percent
+Burkart Fig 1G	change in reported peak frequency	-12.2	Hz
+Burkart Fig 4C	PV-V59M minus littermate seizure incidence	77.7778	percentage points
+Yamada et al. abstract	interneuron / CA1 absolute mean hyperpolarization	4.65	descriptive ratio
+Matsumoto Fig 7Ac	mIPSC frequency half-inhibition	0.935	micromolar
+Matsumoto Fig 6Ba caption / Fig 7Ac	somatic EC50 / mIPSC IC50	5.4652	cross-protocol ratio
+Matsumoto Results prose / Fig 7Ac	somatic EC50 / mIPSC IC50	54.6524	cross-protocol ratio
+Kishore Fig S1 / Matsumoto Fig 7Ac	4 h CSF / mIPSC IC50	3.6165	cross-matrix ratio
+Lemak Fig 1E	change in reported mean burst duration	-40.2597	percent
+Lemak Fig 2B	change in reported mean burst duration	-60.2564	percent
+Shao Fig 6C2	change in reported mean epileptiform rate	0.3	bursts/min
