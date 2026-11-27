@@ -15,13 +15,15 @@ COAGONIST_PANEL = ("Dao", "Srr", "Slc1a4", "Slc1a5", "Slc7a10", "Slc6a9", "Gldc"
 TROPHIC_PANEL = ("Cntf", "Cntfr", "Lifr", "Il6st", "Stat3", "Socs3", "Creb1")
 
 
-def bulk_panel(files, panel):
+def bulk_panel(files, panel, *, human_panel=None):
     mouse_reference, _ = reference(files)
     for model, accession, control_tag, knockout_tag in MODELS:
         human = model == "human_organoid"
         pattern = "*count_table.txt.gz" if human else "*TPM_Table.txt.gz"
         src, = (files / "geo" / accession).glob(pattern)
-        genes = [gene.upper() for gene in panel] if human else panel
+        genes = panel
+        if human:
+            genes = human_panel if human_panel is not None else [gene.upper() for gene in panel]
         libraries, abundance = load_target(src, genes, None if human else mouse_reference)
         ctrl = np.array([i for i, name in enumerate(libraries) if name.startswith(control_tag)])
         ko = np.array([i for i, name in enumerate(libraries) if name.startswith(knockout_tag)])
