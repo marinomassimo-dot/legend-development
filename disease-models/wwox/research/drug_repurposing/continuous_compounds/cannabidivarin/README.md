@@ -13,3 +13,5 @@ context_policy: QUESTION_DRIVEN
 **Descriptive replay.** Use incidence of tonic extension, with each mouse the experimental unit. Treated minus vehicle risk was `3/8 − 8/8 = −0.625` in WT and `10/10 − 9/9 = 0` in TRPV1-null mice. The observed risk-difference contrast was −62.5 percentage points. With a ceiling response in both controls, this comparison cannot rule out differences in baseline seizure threshold. The main text's uncertain vehicle KO denominator does not change the descriptive difference and would matter for an inferential model.
 
 **Exposure comparison advanced.** The [initial clinical and TRPV1 checkpoint](clinical_exposure_checkpoint_20261127.md) includes a replay of pediatric total plasma measurements, adult randomized safety contrasts, and the separate adult slice duration and amplitude effects.
+
+**Disposition recorded.** Retain CBDV as a conditional pharmacology comparator and defer pediatric trial priority. The [completed dossier](free_exposure_and_disposition_20261127.md) compares modeled free exposure against TRPV1, TRPA1 and CB2 readouts, with the remaining native-response requirement and replay.

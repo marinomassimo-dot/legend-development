@@ -5,7 +5,7 @@ from pathlib import Path
 import sys
 
 
-TARGETS = tuple("Trpv1 Trpv2 Trpa1 Trpv3 Gpr55".split())
+TARGETS = tuple("Trpv1 Trpv2 Trpa1 Trpv3 Gpr55 Cnr2 Cnr1".split())
 
 
 def main():
