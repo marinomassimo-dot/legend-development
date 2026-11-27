@@ -1,0 +1,9 @@
+comparison	value	locator
+post_start_visits_n	13	Marten Table 1, tCr
+post_start_tcr_median_mmol_L	2.70	Marten Table 1, tCr
+post_start_tcr_range_mmol_L	2.30 to 3.70	Marten Table 1, tCr
+paired_post_start_brain_MRS_visits	8	Marten Table 1, tCr and GAA
+paired_visit_descriptive_pearson_r	0.103	Marten Table 1, tCr and GAA
+leave_one_visit_out_r_range	-0.381 to 0.394	Marten Table 1, tCr and GAA
+L_ornithine_add_on_GAA_percent_change	-36.13	Stockler-Ipsiroglu section 2.11.1.1, plasma
+OAT_fasting_ornithine_patient_control_ratio	19.19	Sipila Table I, plasma
