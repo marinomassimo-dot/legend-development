@@ -1,0 +1,10 @@
+comparison	value	units	denominator
+first-exposure parent Cmax	7.375000	ng/mL	4
+first-exposure parent Cmax	0.025750	micromolar total plasma	4
+end-of-treatment parent trough, all values	6.440000	ng/mL	5
+end-of-treatment parent trough, all values	0.022485	micromolar total plasma	5
+end-of-treatment parent trough, first-exposure PK columns	5.275000	ng/mL	4
+end-of-treatment parent trough, first-exposure PK columns	0.018418	micromolar total plasma	4
+10 micromolar nominal / mean pediatric first Cmax	388.3525	cross-matrix ratio	4 first-exposure measured
+any adverse event, active minus placebo	24.6914	percentage points	81/81 randomized
+adverse-event discontinuation, active minus placebo	11.1111	percentage points	81/81 randomized

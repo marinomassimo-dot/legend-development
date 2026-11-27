@@ -172,7 +172,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 **Completed targeted follow-up: perampanel.** Clinical denominators, behavior and vigilance now have named source boundaries. The matched-state founder comparison tests how contact predictions and receptor geometry account for the reciprocal functional controls and can select the next occupancy-plus-current comparison. Juvenile cortical AMPA/NMDA and hippocampal release remain separate experiments. [Updated dossier](../perampanel_20261122/clinical_mechanistic_update_20261126.md)
 
-**Active compound: Cannabidivarin.** Reconcile age, native TRPV1 dependence and clinically observed parent/metabolite exposure. [Opening checkpoint](cannabidivarin/README.md)
+**Active compound: Cannabidivarin.** The pediatric parent total plasma signal is below the scale of the nominal native-slice experiment, and human organoid TRPV1 RNA is more readily detected than juvenile mouse bulk RNA. Next test free exposure and metabolites against native target engagement. [Active checkpoint and replays](cannabidivarin/clinical_exposure_checkpoint_20261127.md)
 
 **4′-Phosphopantetheine (CoA-Z).** Retain as a conditional substrate-partition probe. A PPCS-deficient human fibroblast control showed partial whole-cell CoA recovery. The WWOX RNA screen found no shared PANK4 induction, and the randomized PKAN report leaves neural exposure unresolved. Reopen for pathway-resolved measurements of native precursor and matrix free CoA. [Disposition and replays](phosphopantetheine/substrate_partition_and_disposition_20261127.md)
 
