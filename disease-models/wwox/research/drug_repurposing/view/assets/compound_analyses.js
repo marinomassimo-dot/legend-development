@@ -12,7 +12,7 @@
     for (const group of groups) {
       let matches = 0;
       for (const card of group.querySelectorAll(".ca-card")) {
-        const label = card.querySelector("h4").textContent + " " + (card.querySelector(".ca-strand")?.textContent || "");
+        const label = [...card.querySelectorAll("h4, .ca-strand, .ca-role")].map(node => node.textContent).join(" ");
         card.hidden = !label.toLowerCase().includes(query);
         if (!card.hidden) matches++;
       }
@@ -25,7 +25,12 @@
   function revealCard() {
     const id = location.hash.slice(1);
     const target = id.startsWith("analysis-") && document.getElementById(id);
-    if (target && archive?.contains(target)) archive.open = true;
+    if (!target) return;
+    if (target.hidden) {
+      input.value = "";
+      input.dispatchEvent(new Event("input"));
+    }
+    if (archive?.contains(target)) archive.open = true;
   }
   window.addEventListener("hashchange", revealCard);
   revealCard();

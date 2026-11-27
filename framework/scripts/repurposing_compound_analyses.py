@@ -1,4 +1,4 @@
-"""Render the public compound analysis index from the two published decision registers."""
+"""Render the public compound analysis index from the published decision registers."""
 
 from html import escape
 from pathlib import Path
@@ -15,8 +15,9 @@ GROUPS = (
     ("Targeted comparison", "comparison"),
     ("Lower-priority follow-up", "lower"),
     ("In progress", "active"),
-    ("Not yet ranked", "unranked"),
-    ("Deferred", "deferred"),
+    ("Assessment available", "unranked"),
+    ("Follow-up deferred", "deferred"),
+    ("Analysis pending", "pending"),
 )
 
 
@@ -25,10 +26,10 @@ def text(markdown: str) -> str:
     return " ".join(RUNTIME_LABEL.sub("", plain).split())
 
 
-def table(source: str):
+def table(source: str, columns: int = 3):
     for line in source.splitlines():
         cells = [c.strip() for c in line.strip("|").split("|")]
-        if line.startswith("|") and len(cells) == 3:
+        if line.startswith("|") and len(cells) == columns:
             yield cells
 
 
@@ -132,27 +133,74 @@ def cycle_cards(dr: Path):
 def render_card(slug: str, card: dict, label: str, pdf_reports: set[str]) -> str:
     title = escape(card["name"])
     links = "".join(f'<li><a href="{REPOSITORY}{DATA_PATH}{p}">{escape(t)}</a></li>' for p, t in card["links"].items())
-    if slug in pdf_reports:
-        links = f'<li><a href="reports/{slug}.pdf">Research report (PDF)</a></li>' + links
+    pdf = f'<a href="reports/{slug}.pdf">Research report (PDF)</a>' if slug in pdf_reports else ""
     strand = f'<p class="ca-strand">{escape(card["strand"])}</p>' if card["strand"] else ""
-    result = f'<p>{escape(card["result"])}</p>' if card["result"] else ""
-    question = f'<p class="ca-question"><strong>Research question</strong> {escape(card["question"])}</p>' if card["question"] else ""
+    role = card.get("role")
+    rationale, *reopen = re.split(r"(?<=[.!?])\s+(?=Reopen\s+(?:for|when|if)\s+)", card["result"], maxsplit=1, flags=re.I)
+    next_step = card.get("next_step")
+    if not next_step and reopen:
+        next_step = re.split(r"(?<=[.!?])\s+(?=[A-Z])", reopen[0], maxsplit=1)[0]
+    fields = [("Why it matters" if card.get("why") else "What the analysis found", card.get("why") or rationale),
+              ("What is still uncertain", card.get("limit")),
+              ("What would move it forward", next_step or card["question"])]
+    facts = "".join(f'<div><dt>{heading}</dt><dd>{escape(value)}</dd></div>' for heading, value in fields if value)
+    pinned = f'<a class="ca-permalink" href="#analysis-{slug}" aria-label="Link to {title} analysis">Link to this analysis</a>'
+    investigation = card.get("investigation")
+    thread = f'<a href="#{investigation}">Related investigation</a>' if investigation else ""
+    summary = card["result"] if card.get("why") or reopen else ""
+    details = f'<p>{escape(summary)}</p>' if summary else ""
+    if next_step and card["question"] and card["question"] != next_step:
+        details += f'<p><strong>Research question</strong> {escape(card["question"])}</p>'
+    if links:
+        details += f'<ul>{links}</ul>'
+    more = f'<details><summary>Evidence and scientific detail</summary>{details}</details>' if details else ""
     return (f'<article class="ca-card" id="analysis-{slug}"><span class="ca-tag">{label}</span>'
-            f'<h4>{title}</h4>{strand}{result}<details><summary>Evidence and follow-up</summary>{question}'
-            f'<ul>{links}</ul></details></article>')
+            f'<h4>{title}</h4>{strand}' + (f'<p class="ca-role">{escape(role)}</p>' if role else "")
+            + (f'<dl class="ca-facts">{facts}</dl>' if facts else "")
+            + f'<div class="ca-links">{pinned}{pdf}{thread}</div>{more}</article>')
 
 
-def load_cards(dr: Path) -> dict:
+def comparison_cards(dr: Path):
+    """Summarise specific research uses from the existing public compound register."""
+    _, _, source = read_register(dr, "continuous_compounds/README.md").partition("\n## Comparisons by research question\n")
+    for slug, name, strand, investigation, role, why, limit, next_step, reference in table(source, 9):
+        if not re.fullmatch(r"[a-z][a-z0-9_]*", slug) or (investigation and not re.fullmatch(r"INV-\d+", investigation)):
+            continue
+        if not name or not next_step:
+            continue
+        yield slug, dict(name=text(name), strand=text(strand), investigation=investigation, role=text(role),
+                         why=text(why), limit=text(limit), next_step=text(next_step),
+                         links=dossier_links(dr, reference))
+
+
+def public_slug(label: str) -> str:
+    key = name_key(label)
+    return {"dichloroacetate": "sodium_dichloroacetate"}.get(key, key.replace(" ", "_"))
+
+
+def load_cards(dr: Path, public_compounds=()) -> dict:
     cards = cycle_cards(dr)
     for slug, card in programme_cards(dr).items():
         if slug in cards:
             card["links"] = {**cards[slug]["links"], **card["links"]}
         cards[slug] = card
+    for slug, comparison in comparison_cards(dr):
+        card = cards.setdefault(slug, dict(result="", question="", group="comparison", links={}))
+        cards[slug] = {**card, **comparison, "links": {**card["links"], **comparison["links"]}}
+    for item in public_compounds:
+        for name in item.get("names_public") or ():
+            label = name["label"]
+            slug = public_slug(label)
+            if not slug or slug in cards:
+                continue
+            question = text(str(item.get("next_test") or "")) or "Establish what this compound can distinguish in the published comparison."
+            cards[slug] = dict(name=label, strand="", role="Named in an investigation", result="",
+                               question=question, group="pending", links={})
     return cards
 
 
-def render(dr: Path, pdf_reports: set[str]) -> str:
-    cards = load_cards(dr)
+def render(dr: Path, pdf_reports: set[str], cards: dict | None = None) -> str:
+    cards = load_cards(dr) if cards is None else cards
     if not cards:
         return ""
 
@@ -168,14 +216,22 @@ def render(dr: Path, pdf_reports: set[str]) -> str:
             sections.append(f'<details class="ca-section ca-archive" id="ca-{group}"><summary>{label} <span>{len(rows)}</span></summary>{grid}</details>')
         else:
             sections.append(f'<div class="ca-section" id="ca-{group}">{heading}{grid}</div>')
-    active = sum(c["group"] == "active" for c in cards.values())
-    priority = sum(c["group"] == "priority" for c in cards.values())
-    active_link = f'<a href="#ca-active">{active} in progress</a>' if active else ""
+    strands = {}
+    for slug, card in cards.items():
+        if card.get("why"):
+            strands.setdefault(card["strand"], []).append((slug, card))
+    choices = []
+    for strand, entries in strands.items():
+        items = "".join(f'<li><a href="#analysis-{slug}">{escape(card["name"])}</a>'
+                        f'<span>{escape(card["role"])}</span></li>' for slug, card in entries)
+        choices.append(f'<div><h4>{escape(strand)}</h4><ul>{items}</ul></div>')
+    research = (f'<div class="ca-pathways" role="region" aria-labelledby="ca-pathways-title"><h3 id="ca-pathways-title">'
+                f'Where to look next</h3><div class="ca-pathway-grid">{"".join(choices)}</div></div>') if choices else ""
     return (f'<section id="compound-analyses" class="compound-analyses" aria-labelledby="ca-title"><header class="ca-hero">'
-            f'<h2 id="ca-title">Compound Analyses</h2><p>Follow the evidence behind WWOX drug repurposing.</p>'
-            f'<div class="ca-metrics"><span>{len(cards)} compounds</span><span>{priority} priority follow-ups</span>{active_link}</div></header>'
-            '<p class="ca-method">Ordered by documented research priority. Compounds within a tier are listed alphabetically. '
-            'These priorities describe what to study.</p>'
+            f'<h2 id="ca-title">Compound Analyses</h2><p>Find the evidence, the biggest uncertainty and the next useful comparison for each WWOX research lead.</p>'
+            f'<div class="ca-metrics"><span>{len(cards)} compounds</span><a href="#ca-browse">Browse all analyses</a></div></header>'
+            + research +
+            '<p class="ca-method" id="ca-browse">The order reflects documented research priorities. Names within each group are alphabetical. Research use only. Not medical advice.</p>'
             '<div class="ca-search" hidden><label for="ca-query">Find a compound</label>'
-            '<input id="ca-query" type="search" placeholder="Search by name or pathway"><span role="status"></span></div>'
+            '<input id="ca-query" type="search" placeholder="Search by name or mechanism"><span role="status"></span></div>'
             + "".join(sections) + "</section>")
