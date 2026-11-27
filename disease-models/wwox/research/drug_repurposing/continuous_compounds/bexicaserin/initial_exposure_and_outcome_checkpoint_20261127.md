@@ -1,6 +1,6 @@
 # Bexicaserin | Exposure and controlled evidence checkpoint
 
-`context_policy: QUESTION_DRIVEN` · SCI_CODEX · 27 November 2026 · analysis in progress.
+`context_policy: QUESTION_DRIVEN` · SCI_CODEX · 27 November 2026 · intermediate checkpoint. The [completed disposition](htr2c_editing_and_disposition_20261127.md) records the verified control stream and the circuit comparison.
 
 **Controlled DEE evidence.** PACIFIC enrolled ages 12–55 in the active arm and 19–41 in the placebo arm. The safety set was 43 versus 9. The full analysis set was 35 versus 9 and required entry into maintenance with at least one maintenance observation. The prespecified rank comparison of countable motor seizure frequency gave median changes of −59.8% and −17.4%, nominal p=.0538. The p=.0206 result applies to a separate post hoc comparison of means. For ≥50% response the counts were 21/35 and 3/9, nominal Fisher p=.2607, which reproduces. Treating each of eight excluded active-arm participants first as a nonresponder and then as a responder changes the active-minus-placebo difference from the reported-set +26.67 points to a descriptive range of +15.50 to +34.11 points. This sensitivity neither reconstructs missing seizure frequency nor addresses the lack of an adolescent placebo comparator. Treatment-emergent adverse events led to discontinuation in 9/43 versus 0/9. Resolve the discrepancy between Results prose and Table 2 for drug-related serious events before assigning a count. [PACIFIC, §§2.1, 2.5, 3.1–3.3 and Tables 1–3](https://doi.org/10.1111/epi.18689)
 
