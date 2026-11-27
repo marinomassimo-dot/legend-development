@@ -1,5 +1,7 @@
 # Fasudil, opening comparison for the WWOX programme
 
+The closure sources confirm that the coculture and explant endpoints used Y0503. They also separate CSF analyte, kinase potency and developmental engagement. [Completed comparison and disposition](rock_engagement_and_disposition_20261127.md)
+
 | Preparation | Opening observation | Transfer limit |
 |---|---|---|
 | Rodent oligodendrocyte precursor model, ROCK substrate | The public caption reports a fasudil effect on MYPT1 phosphorylation at nominal 100 µM in the model. The paper also uses another ROCK inhibitor in the myelination experiments. | Assign MYPT1, lineage markers and actual sheath endpoints to their own compounds, concentrations and experimental units before transferring an effect to fasudil. [Primary study record and Figure 1 caption](https://pubmed.ncbi.nlm.nih.gov/25289646/) |
@@ -14,4 +16,4 @@ python3 -c 'print(*(round(x * 1000 / 307.37, 2) for x in (5.8, 9.4)))'
 # 18.87 30.58
 ```
 
-**Checkpoint.** The decision-changing evidence would be a matched fasudil or hydroxyfasudil exposure that engages ROCK substrate phosphorylation and increases the first-sheath fraction with improved patterned conduction. The opening record combines an abstract-and-caption pathway screen with reported clinical exposure values. Next audit full assay and exposure sections and record their coverage. [Registered prediction](pretest_20261127.md)
+**Opening checkpoint.** The initial comparison registered the parent–metabolite and developmental first-sheath questions. [Registered prediction](pretest_20261127.md) · [Completed decision and replay](rock_engagement_and_disposition_20261127.md)
