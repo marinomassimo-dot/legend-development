@@ -11,10 +11,19 @@ sys.path[:0] = [str(COMPOUNDS / "creatine"), str(COMPOUNDS / "jbpos0101")]
 from assess import assigned_nuclei, tsv
 from replay_exposure_and_receptors import verified_expression
 
-GENES = ("Cacna2d1", "Cacna2d2", "Cacna1a", "Cacna1b")
-SETS = tuple((gene,) for gene in GENES) + tuple(
-    (auxiliary, pore) for auxiliary in GENES[:2] for pore in GENES[2:]
+AUXILIARY = ("Cacna2d1", "Cacna2d2")
+PORES = ("Cacna1a", "Cacna1b")
+KAINATE = ("Grik1", "Grik2")
+GENES = AUXILIARY + PORES + KAINATE
+PAIRS = tuple((auxiliary, pore) for auxiliary in AUXILIARY for pore in PORES)
+KAINATE_CONTEXT = (
+    ("Cacna2d2", "Grik1"),
+    ("Cacna2d1", "Grik1"),
+    ("Cacna2d2", "Grik2"),
+    ("Cacna2d2", "Grik1", "Cacna1a"),
+    ("Cacna2d2", "Grik1", "Cacna1b"),
 )
+SETS = tuple((gene,) for gene in GENES) + PAIRS + KAINATE_CONTEXT
 DEPTH_BOUNDS = (500, 2000, 5000, 10000, np.inf)
 ARM_NAMES = ("ctrl", "ko")
 

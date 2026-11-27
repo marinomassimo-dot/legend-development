@@ -1,7 +1,7 @@
 # Pregabalin | Timing, exposure and the infant focal-seizure comparator
 context_policy: QUESTION_DRIVEN
 
-**Checkpoint, 27 November 2026.** Existing LEGEND gabapentin work and the pregabalin P17 co-detection screen were held before opening these sources. The new comparison lowers confidence in a direct, immediately effective CaV2.1 mechanism at attainable central exposure. It raises the value of independently measuring terminal channel abundance, calcium and transmitter output across time. Clinical observations support measuring exposure and vigilance jointly, with limited transfer to WWOX.
+**Checkpoint, 27 November 2026.** Existing LEGEND gabapentin work and the pregabalin P17 co-detection screen were held before opening these sources. The new comparison lowers confidence in a direct, immediately effective CaV2.1 mechanism at attainable central exposure. It raises the value of independently measuring terminal channel abundance, calcium and transmitter output across time. A follow-up measures a lower-micromolar high-K⁺ glutamate-release comparator and adds a rapid GluK1 surface effect. [Updated mechanistic comparison](kainate_and_release.md) Clinical observations support measuring exposure and vigilance jointly, with limited transfer to WWOX.
 
 ## Three timing and specificity controls
 
