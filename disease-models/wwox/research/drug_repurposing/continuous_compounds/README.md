@@ -144,6 +144,8 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 **Completed targeted follow-up: perampanel.** Clinical denominators, behavior and vigilance now have named source boundaries. The matched-state founder comparison tests how contact predictions and receptor geometry account for the reciprocal functional controls and can select the next occupancy-plus-current comparison. Juvenile cortical AMPA/NMDA and hippocampal release remain separate experiments. [Updated dossier](../perampanel_20261122/clinical_mechanistic_update_20261126.md)
 
+**Active compound: tideglusib.** Separate time-dependent GSK3 engagement from the nonselective lithium phenotype and compare the two substrate arms at matched exposure. [Registered prediction and next checkpoint](tideglusib/gsk3_engagement_pretest_20261127.md)
+
 **Latest completed compound: ganaxolone, targeted follow-up.** Retain as a symptomatic antiseizure research comparator. Plasma and hippocampal changes can oppose each other, and separate-ligand responses do not give a fixed sign for C19 substrate-to-product substitution. Reopen for a measured WWOX neural mixture that impairs inhibition and is corrected by physiological add-back. [Disposition and replay](ganaxolone/neurosteroid_replacement_and_disposition_20261127.md)
 
 **Relutrigine (PRAX-562).** Retain as a conditional persistent-current comparator and defer pediatric WWOX trial priority. The recombinant margin over peak block falls from 60-fold to about two-fold as channel state changes. Reopen for selective late-current reduction with early and inhibitory recruitment preserved at measured free WWOX exposure, or interpretable WWOX clinical evidence. [Dossier and replay](relutrigine/state_selectivity_and_disposition_20261127.md)
