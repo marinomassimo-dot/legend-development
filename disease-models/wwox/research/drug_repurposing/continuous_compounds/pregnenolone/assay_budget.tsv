@@ -1,0 +1,17 @@
+baseline_reference	anatomical_scenario	wet_mass_proxy_mg	reference_label_fraction	product_ratio_to_reference	labeled_product_ng_g	labeled_product_in_input_pg	jin_best_case_on_column_fg	net_fraction_needed_for_jin_on_column_lloq	mass_mg_for_jin_threshold_in_ideal_transfer	mass_mg_for_higashi_equivalent_input_threshold
+Kudova_P12	histology_P14_equal_split	6.650	0.25	1.0	0.063500	0.4223	21.11	0.1184	15.75	78.74
+Kudova_P12	histology_P14_equal_split	6.650	0.25	0.5	0.031750	0.2111	10.56	0.2368	31.50	157.48
+Kudova_P12	P17_MRI_equal_split	10.437	0.25	1.0	0.063500	0.6627	33.14	0.0754	15.75	78.74
+Kudova_P12	P17_MRI_equal_split	10.437	0.25	0.5	0.031750	0.3314	16.57	0.1509	31.50	157.48
+Kudova_P12	histology_P14_full_region	13.300	0.25	1.0	0.063500	0.8446	42.23	0.0592	15.75	78.74
+Kudova_P12	histology_P14_full_region	13.300	0.25	0.5	0.031750	0.4223	21.11	0.1184	31.50	157.48
+Kudova_P12	P17_MRI_full_region	20.873	0.25	1.0	0.063500	1.3254	66.27	0.0377	15.75	78.74
+Kudova_P12	P17_MRI_full_region	20.873	0.25	0.5	0.031750	0.6627	33.14	0.0754	31.50	157.48
+Kudova_P25	histology_P14_equal_split	6.650	0.25	1.0	0.029750	0.1978	9.89	0.2527	33.61	168.07
+Kudova_P25	histology_P14_equal_split	6.650	0.25	0.5	0.014875	0.0989	4.95	0.5055	67.23	336.13
+Kudova_P25	P17_MRI_equal_split	10.437	0.25	1.0	0.029750	0.3105	15.52	0.1610	33.61	168.07
+Kudova_P25	P17_MRI_equal_split	10.437	0.25	0.5	0.014875	0.1552	7.76	0.3221	67.23	336.13
+Kudova_P25	histology_P14_full_region	13.300	0.25	1.0	0.029750	0.3957	19.78	0.1264	33.61	168.07
+Kudova_P25	histology_P14_full_region	13.300	0.25	0.5	0.014875	0.1978	9.89	0.2527	67.23	336.13
+Kudova_P25	P17_MRI_full_region	20.873	0.25	1.0	0.029750	0.6210	31.05	0.0805	33.61	168.07
+Kudova_P25	P17_MRI_full_region	20.873	0.25	0.5	0.014875	0.3105	15.52	0.1610	67.23	336.13

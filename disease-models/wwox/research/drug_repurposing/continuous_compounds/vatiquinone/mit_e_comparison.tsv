@@ -1,0 +1,4 @@
+endpoint	unit	n_vatiquinone	n_placebo	vatiquinone	placebo	unadjusted_difference_pp	reported_ancova_difference_pp	ci95_low_pp	ci95_high_pp	p_value	contrast
+primary_week24_change	percent	34	34	-12.74	-0.33	-12.41	-8.31	-31.3	16.4	= 0.173	reported ANCOVA comparison
+serious_adverse_event	participants	34	34	18	9	26.47				0.046472	exploratory Fisher exact, unadjusted, difference in percentage points
+all_cause_death	participants	34	34	3	0	8.82				0.238806	exploratory Fisher exact, unadjusted, difference in percentage points
