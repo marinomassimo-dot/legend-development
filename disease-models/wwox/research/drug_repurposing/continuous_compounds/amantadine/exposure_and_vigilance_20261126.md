@@ -25,7 +25,7 @@ Soto-Insuga et al. measured EEG before treatment and at three months in a retros
 
 ## Discriminating prediction and disposition
 
-**Dato.** Juvenile Wwox neuronal-deletion neocortex showed d-APV-sensitive spontaneous bursts. Existing human organoid analysis holds no stable bulk change in combined CHRNA7 plus CHRFAM7A RNA. The latter is bounded by paralog assignment and developmental cell composition. [WWOX cortical design](../../ampa_nmda_discrim_20261108/README.md) · [Held human organoid controls](../../memantine_nicotinic_fate_20261123/README.md)
+**Dato.** Juvenile Wwox neuronal-deletion neocortex showed d-APV-sensitive spontaneous bursts. Existing human organoid analysis holds no stable bulk change in combined CHRNA7 plus CHRFAM7A RNA. The latter is bounded by paralog assignment and developmental cell composition. [WWOX cortical design](../../ampa_nmda_discrim_20261108/output/README.md) · [Held human organoid controls](../../memantine_nicotinic_fate_20261123/README.md)
 
 **Inferenza.** An EEG change can survive a broad NREM denominator without identifying the target. Current data make a low-exposure nicotinic contribution an assayable rival to direct deep GluN1/GluN2A block. The direction of the nicotinic effect on inhibitory recruitment, and whether dopamine-sensitive changes in vigilance contribute independently, remain open.
 
