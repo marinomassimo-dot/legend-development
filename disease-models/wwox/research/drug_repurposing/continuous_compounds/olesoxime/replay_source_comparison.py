@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Recompute contrasts from the aggregate data cited in the companion report."""
 
 control_threshold = 34.5
