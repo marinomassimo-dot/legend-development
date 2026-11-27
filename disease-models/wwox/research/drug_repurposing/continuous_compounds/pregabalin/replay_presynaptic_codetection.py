@@ -13,8 +13,9 @@ from replay_exposure_and_receptors import verified_expression
 
 AUXILIARY = ("Cacna2d1", "Cacna2d2")
 PORES = ("Cacna1a", "Cacna1b")
-KAINATE = ("Grik1", "Grik2")
-GENES = AUXILIARY + PORES + KAINATE
+KAINATE = ("Grik1", "Grik2", "Grik4")
+MODULATORS = ("Neto1", "Neto2", "Slc12a5")
+GENES = AUXILIARY + PORES + KAINATE + MODULATORS
 PAIRS = tuple((auxiliary, pore) for auxiliary in AUXILIARY for pore in PORES)
 KAINATE_CONTEXT = (
     ("Cacna2d2", "Grik1"),
@@ -22,6 +23,12 @@ KAINATE_CONTEXT = (
     ("Cacna2d2", "Grik2"),
     ("Cacna2d2", "Grik1", "Cacna1a"),
     ("Cacna2d2", "Grik1", "Cacna1b"),
+    ("Grik1", "Neto1"),
+    ("Grik1", "Neto2"),
+    ("Grik1", "Grik4"),
+    ("Cacna2d2", "Grik1", "Neto1"),
+    ("Cacna2d2", "Grik1", "Grik4", "Neto1"),
+    ("Grik1", "Slc12a5"),
 )
 SETS = tuple((gene,) for gene in GENES) + PAIRS + KAINATE_CONTEXT
 DEPTH_BOUNDS = (500, 2000, 5000, 10000, np.inf)
