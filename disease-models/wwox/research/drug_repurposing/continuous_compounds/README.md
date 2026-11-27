@@ -144,6 +144,8 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 **Completed targeted follow-up: perampanel.** Clinical denominators, behavior and vigilance now have named source boundaries. The matched-state founder comparison tests how contact predictions and receptor geometry account for the reciprocal functional controls and can select the next occupancy-plus-current comparison. Juvenile cortical AMPA/NMDA and hippocampal release remain separate experiments. [Updated dossier](../perampanel_20261122/clinical_mechanistic_update_20261126.md)
 
+**Active compound: relutrigine (PRAX-562).** Test for a persistent sodium-current component at matched early recruitment and separate genetic trial eligibility from WWOX transfer. [Registered prediction and registry checkpoint](relutrigine/pretest_20261127.md)
+
 **Latest completed compound: ES-481 (LY3130481).** Keep as a γ8-dependent AMPA comparator and defer pediatric WWOX trial priority. Sustained current and early kinetics separate in recombinant assays. Reopen for a measured-exposure native late effect at comparable first recruitment, or clinical evidence that changes transferability. [Dossier and replay](es_481/ampa_timing_and_disposition_20261127.md)
 
 **Clemizole hydrochloride (EPX-100).** Retain as an exposure-conditional mechanism comparator and defer pediatric WWOX trial priority. Published 5-HT2 displacement leaves functional potency unresolved. Test parent and human metabolite function first, with TRPC5 and hERG measurements as separate constraints. [Dose-scale replay, registered trials and disposition](clemizole/receptors_exposure_and_disposition_20261127.md)
