@@ -23,3 +23,5 @@ python3 disease-models/wwox/research/drug_repurposing/continuous_compounds/sotic
   /home/desktop/legend-development/files \
   --regional-alleles /tmp/soticlestat-regional-replay.tsv
 ```
+
+[Follow-up on soticlestat endpoints and cell-class evidence](nishi_endpoint_comparison.md).
