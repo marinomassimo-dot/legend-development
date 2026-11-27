@@ -1,5 +1,7 @@
 # Celecoxib first comparison and checkpoint
 
+This opening record used the rounded abstract value. The later full-text evidence and disposition use the body estimate of 2.4 ± 2.2 ng/mL in nine adults with CSF data. [Final comparison](evidence_and_disposition_20261127.md)
+
 The available starting observations justify a COX-2 pathway comparison in a Wwox model. They leave celecoxib exposure sufficient for that purpose and downstream functional benefit unresolved. The earlier LEGEND catalogue work resolved a PDPK1 naming issue. There is no source in that check for celecoxib inhibition of the metabolic pyruvate dehydrogenase kinase PDK1. [Prior identifier check](../../pdh_pdk_sci44_20261110/output/a3/answers.md)
 
 | Comparison | Observation | Transfer limit |
@@ -19,4 +21,4 @@ python3 -c 'mw = 381.372; print(*(round(x * 1000 / mw, 2) for x in (1.4, 2.0)), 
 # 3.67 5.24 17.35
 ```
 
-**Checkpoint.** Celecoxib is active for the sequential programme. Start the next increment with full-text and coverage receipts for age-specific Wwox gliosis, the time-dependent causal comparison and the adult experiment plus the pediatric CSF model. Separate measurements, fitted parameters and pediatric predictions before interpreting human CNS engagement. Check whether the model's CSF evidence reuses the adult cohort and whether the reported analgesic estimate supplies an independent observation of neural COX-2 inhibition. A confirmed Wwox prostanoid response at a supported local exposure would be the trigger for independent review. At this stage the public abstracts, official label and chemical identity record support the table and arithmetic. [Registered prediction](pretest_20261127.md) · [PK model to verify](https://doi.org/10.1111/pan.14590)
+**Opening checkpoint.** This comparison registered the exposure and time-dependent WWOX predictions. [Registered prediction](pretest_20261127.md) · [Completed decision and replay](evidence_and_disposition_20261127.md)
