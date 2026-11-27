@@ -6101,7 +6101,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 3399
+   "receipt_ledger_lines": 3404
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -16684,7 +16684,7 @@
    "inputs": {
     "T1_cards": "e821d8a36c5fda20",
     "T2_pertinence": "1d8e37b50e10f4e0",
-    "T3_receipts": "8c4d50ad536361a1",
+    "T3_receipts": "fb39868acc3a5a98",
     "T4_needs": "04b598094105956f",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "af32521d73bf653e"
@@ -16887,7 +16887,7 @@
     "39684792",
     "42939870"
    ],
-   "receipts_on_cited_pmids": 41,
+   "receipts_on_cited_pmids": 42,
    "research_objective": "",
    "tracks": [
     "A"
