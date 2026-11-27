@@ -1,0 +1,6 @@
+registry_actual_n	n_active	n_standard	observed_active_events	observed_standard_events	imputed_events_per_missing_active	mean_active_visits	mean_standard_visits	crude_mean_ratio	published_RR	published_CI95_lo	published_CI95_hi
+33	16	17	101	217	NA	6.3125	12.7647	0.494528	0.4945	0.2904	0.8422
+33	21	17	101	217	0	4.80952	12.7647	0.376783	0.4945	0.2904	0.8422
+33	21	17	101	217	16	8.61905	12.7647	0.675225	0.4945	0.2904	0.8422
+33	21	17	101	217	33.4118	12.7647	12.7647	1	0.4945	0.2904	0.8422
+33	21	17	101	217	41	14.5714	12.7647	1.14154	0.4945	0.2904	0.8422
