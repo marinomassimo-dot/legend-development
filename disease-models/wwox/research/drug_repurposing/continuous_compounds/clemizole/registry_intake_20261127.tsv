@@ -1,0 +1,16 @@
+trial_id	last_update_posted	status	results_posted	minimum_age	enrollment	enrollment_type	primary_measure	measurement_window	source_sha256
+NCT04462770	2026-10-29	RECRUITING	false	2 Years	150	ESTIMATED	Percent Change in Countable Motor Seizures Per 28 Days (CMS-28) in the Titration Plus Maintenance Periods Relative to Baseline	From Baseline up to Week 16	7fbfedf3f09ccd3748d845d6484e6a4d3d892f3b3eea0b396182accf6f3a8d95
+NCT04462770	2026-10-29	RECRUITING	false	2 Years	150	ESTIMATED	European Union: Percent Change in CMS-28 in the Maintenance Period Relative to Baseline	From Baseline up to Week 16	7fbfedf3f09ccd3748d845d6484e6a4d3d892f3b3eea0b396182accf6f3a8d95
+NCT05066217	2026-10-09	RECRUITING	false	2 Years	260	ESTIMATED	Percent Change in CMMS-28	From Baseline Period up to 16 weeks	3adca5a3f0d082de73acb2abe553f3f989b81598b75f9b765bfa42a248940fd0
+NCT07824193	2026-09-17	COMPLETED	false	18 Years	54	ACTUAL	Area Under The Concentration-time Curve (AUC), from Time 0 to the Last Observed Non-zero Concentration (AUC0-t) Of EPX-100	Up to Day 15	0c770103f5cd1f880045530ff1e504f6b31b96099ee61a1ab324ddd9133b1094
+NCT07824193	2026-09-17	COMPLETED	false	18 Years	54	ACTUAL	AUC From Time 0 extrapolated to infinity (AUC0-inf) of EPX-100	Up to Day 15	0c770103f5cd1f880045530ff1e504f6b31b96099ee61a1ab324ddd9133b1094
+NCT07824193	2026-09-17	COMPLETED	false	18 Years	54	ACTUAL	Maximum Observed Concentration (Cmax) of EPX-100	Up to Day 15	0c770103f5cd1f880045530ff1e504f6b31b96099ee61a1ab324ddd9133b1094
+NCT07824193	2026-09-17	COMPLETED	false	18 Years	54	ACTUAL	AUC0-t of Omeprazole	Up to Day 15	0c770103f5cd1f880045530ff1e504f6b31b96099ee61a1ab324ddd9133b1094
+NCT07824193	2026-09-17	COMPLETED	false	18 Years	54	ACTUAL	AUC0-inf of Omeprazole	Up to Day 15	0c770103f5cd1f880045530ff1e504f6b31b96099ee61a1ab324ddd9133b1094
+NCT07824193	2026-09-17	COMPLETED	false	18 Years	54	ACTUAL	Cmax of Omeprazole	Up to Day 15	0c770103f5cd1f880045530ff1e504f6b31b96099ee61a1ab324ddd9133b1094
+NCT07824193	2026-09-17	COMPLETED	false	18 Years	54	ACTUAL	AUC0-t of Midazolam	Up to Day 15	0c770103f5cd1f880045530ff1e504f6b31b96099ee61a1ab324ddd9133b1094
+NCT07824193	2026-09-17	COMPLETED	false	18 Years	54	ACTUAL	AUC0-inf of Midazolam	Up to Day 15	0c770103f5cd1f880045530ff1e504f6b31b96099ee61a1ab324ddd9133b1094
+NCT07824193	2026-09-17	COMPLETED	false	18 Years	54	ACTUAL	Cmax of Midazolam	Up to Day 15	0c770103f5cd1f880045530ff1e504f6b31b96099ee61a1ab324ddd9133b1094
+NCT07824193	2026-09-17	COMPLETED	false	18 Years	54	ACTUAL	AUC0-t of Bupropion	Up to Day 19	0c770103f5cd1f880045530ff1e504f6b31b96099ee61a1ab324ddd9133b1094
+NCT07824193	2026-09-17	COMPLETED	false	18 Years	54	ACTUAL	AUC0-inf of Bupropion	Up to Day 19	0c770103f5cd1f880045530ff1e504f6b31b96099ee61a1ab324ddd9133b1094
+NCT07824193	2026-09-17	COMPLETED	false	18 Years	54	ACTUAL	Cmax of Bupropion	Up to Day 19	0c770103f5cd1f880045530ff1e504f6b31b96099ee61a1ab324ddd9133b1094
