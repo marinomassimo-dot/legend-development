@@ -2,7 +2,7 @@
 
 context_policy: QUESTION_DRIVEN
 
-**Disposition.** Retain calcitriol as a conditional VDR comparator and defer pediatric WWOX study priority. Positive assays use oligodendrocyte differentiation markers or axon–myelin colocalization at high nominal concentrations, with a clear medium-history dependence in one study. The next feasible decision is to qualify active-hormone measurement near endogenous concentrations in the juvenile preparation and then test a selective glial response. [Prespecified comparison](pretest_20261127.md)
+**Disposition.** Retain calcitriol as a conditional VDR comparator and defer pediatric WWOX study priority. Positive assays use oligodendrocyte differentiation markers or axon–myelin colocalization at high nominal concentrations, with a clear medium-history dependence in one study. The next feasible decision is to qualify active-hormone measurement near endogenous concentrations in the juvenile preparation and then test a selective glial response. [Prespecified comparison](pretest_20261127.md) · [Printable research brief](calcitriol-research-brief.pdf)
 
 ## Data and evidence
 
