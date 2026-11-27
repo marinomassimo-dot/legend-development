@@ -1,0 +1,13 @@
+comparison	value	unit
+total_axons_control	92.982	axons/105_um2_field
+total_axons_GlcNAc	113.158	axons/105_um2_field
+myelinated_axons_control	69.591	axons/105_um2_field
+myelinated_axons_GlcNAc	86.550	axons/105_um2_field
+control_myelinated_share_ratio_of_means	74.843	percent
+GlcNAc_myelinated_share_ratio_of_means	76.486	percent
+myelinated_share_difference	1.643	percentage_points
+myelinated_share_minimum_two_pixel_sensitivity	-3.264	percentage_points
+myelinated_share_maximum_two_pixel_sensitivity	6.518	percentage_points
+mouse_drinking_water_1_mg_mL	4.521	mmol/L
+cell_bath_40mM_over_human_group_mean_plot_axis_max_2500nM	16000.000	ratio
+cell_bath_40mM_over_human_participant_average_plot_axis_max_8000nM	5000.000	ratio
