@@ -2,6 +2,8 @@
 
 context_policy: QUESTION_DRIVEN
 
+**Disposition, 27 November 2026.** Retain as a conditional preclinical AMPK and lipid-synthesis comparator. Pediatric WWOX trial priority remains deferred. The pooled nuclear data limit the generalized glial PEN2 premise, and the developmental reference supports isoform-specific ACC1 Ser79 measurement. Reopen for age- and lineage-matched metformin exposure, a replicated native substrate or flux phenotype, and selective improvement of energy recovery and first compact sheaths. [Native target audit and disposition](native_targets_and_disposition_20261127.md)
+
 **Exposure and substrate checkpoint, 27 November 2026.** Adult human CSF averaged 0.740 µM parent equivalents, while perfused adult mouse brain and CSF can diverge with time. Human oligodendroglial wrapping changes sign by developmental stage despite increased pAMPK. Across the three held WWOX bulk contrasts, PSENEN RNA is lower. This gives an upstream sensitivity hypothesis with a competing ACC/lipogenesis and respiratory hypothesis. Metformin is still active for the native-exposure and substrate countercheck. [Exposure, donor replay, and WWOX comparison](exposure_and_ampk_20261127.md)
 
 **Opening checkpoint, 27 November 2026.** Metformin is the sole active compound after anakinra. The [IT14 glial maturation audit](../../glia_maturation_it14_p4_20261101/README.md) deferred advancement from aged precursor evidence and flagged glycaemic concerns. Preserve that disposition for clinical prioritization. The question here is whether shared evidence from stage-specific primary preparations can rule out a proposed neural AMPK bypass before WWOX experimentation.
