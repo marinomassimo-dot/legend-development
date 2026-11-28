@@ -734,6 +734,13 @@
      "owner": "orchestrator",
      "source": "ADV message 2026-11-28 (ADV-337)",
      "accepted_at": "2026-11-28T16:35:30Z"
+    },
+    {
+     "step": "IT41: checkpoint 40 section 2 in order (CI of the fe1c40bd2 and bd5365d2 gate runs; CLAIM 003 myelin-endpoint wording by BATCH_COMMIT after a second reader and test_batch_queue; ADV-286 date re-check 2026-12-05)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "launch brief of IT 41 and ADV message 2026-11-28 'Your order stands'",
+     "accepted_at": "2026-11-28T17:39:19Z"
     }
    ]
   }
@@ -1303,6 +1310,13 @@
    "at": "2026-11-28T16:35:30Z",
    "source": "ADV message 2026-11-28 (ADV-337)",
    "step_sha256": "ef605f99fe1b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T17:39:19Z",
+   "source": "launch brief of IT 41 and ADV message 2026-11-28 'Your order stands'",
+   "step_sha256": "e3449f6cd719",
    "reopened_block": false,
    "authorised_by": null
   }

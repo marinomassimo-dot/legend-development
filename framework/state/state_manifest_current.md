@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261128_010
+last_batch_commit_id: BATCH_20261128_011
 last_batch_commit_date: 2026-11-28
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 1
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate ORCH-ROADMAP-IT59-20261119, IT successor 40; ADV-337 accepted by ADV: PMID 33914858 complete read FTR-20261128-33914858-41 registered on PAPER 004). MINOR, WM_v7.29 preserved
+trigger: MANUAL (ACTOR_ID orchestrator, mandate ORCH-ROADMAP-IT59-20261119, IT successor 41; ADV-337 follow-up confirmed by ADV: CLAIM 003 myelin-endpoint attribution corrected after a second reader). MINOR, no version bump.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -164,8 +164,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 3977
-fulltext_ledger_head: e86a6565284a121b9f5e5601e890c1ad03b16c06f8eae4aa0181356dc6ec59aa
+fulltext_ledger_events: 3978
+fulltext_ledger_head: 1e86a6f85b60bd5ba7a432506aa8e779ca14c78e9cd275573d29c0980231eab3
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
