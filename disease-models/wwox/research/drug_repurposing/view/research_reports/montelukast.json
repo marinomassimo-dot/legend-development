@@ -1,0 +1,33 @@
+{
+  "investigation": "INV-06",
+  "title": "Montelukast in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "A comparison of precursor timing and activity during first myelination.",
+  "graph": {
+    "evidence": "Gpr17 rises in early WWOX precursor nuclei and falls in committed precursors.",
+    "inference": "A developmental bottleneck could be specific to one stage.",
+    "hypothesis": "A response may depend on GPR17 or on CysLT1 in a leukotriene-responsive compartment.",
+    "experiment": "Measure first compact sheaths and conduction with selective target controls."
+  },
+  "evidence": [
+    "After mouse optic-nerve injury, about 15% of regenerated axons were myelinated with montelukast alone, 21% with PLX3397, and 60% with both (four mice per group). Conduction was unmeasured."
+  ],
+  "inference": [
+    "Adult film CSF measurements average about 7 nM at seven hours. GPR17 pharmacology varies by assay. ADCY1 fell at both nominal exposures in the public treated-organoid count replay."
+  ],
+  "hypothesis": [
+    "An early developmental lag could respond to GPR17 engagement. A separate neuronal effect on activity could cancel a benefit from accelerated differentiation."
+  ],
+  "experiment": [
+    "Compare oligodendroglial GPR17 and compartment-specific CysLT1 interruption with matched local free drug. Track the first compact sheaths, physiological recruitment and conduction."
+  ],
+  "limits": [
+    "Retain as a conditional comparator. Juvenile local exposure is unknown and the official label carries a boxed warning for serious neuropsychiatric events."
+  ],
+  "sources": [
+    {"label": "Wang et al. Regenerated axons, Fig. 4H.", "url": "https://doi.org/10.1016/j.neuron.2020.09.016"},
+    {"label": "Hennen et al. Agonist-dependent comparison, Fig. 4.", "url": "https://doi.org/10.1126/scisignal.2004350"},
+    {"label": "Michael et al. Adult total CSF, Table 5.", "url": "https://doi.org/10.3390/pharmaceutics13010012"},
+    {"label": "Xu et al. Healthy organoids, Figs. 4–5.", "url": "https://doi.org/10.1007/s00018-025-05764-z"}
+  ]
+}

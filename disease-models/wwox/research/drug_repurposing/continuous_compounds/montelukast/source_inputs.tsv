@@ -1,0 +1,18 @@
+key	value	unit	locator
+parent_mass	586.2	g/mol	PubChem CID 5281040; neutral parent
+film_total_csf_min	3.2	ng/mL	Michael et al. 2021 Table 5; minimum across the two times
+film_total_csf_max	4.7	ng/mL	Michael et al. 2021 Table 5; maximum across the two times
+film_total_csf_mean_3h	3.6	ng/mL	Michael et al. 2021 Table 5; n=8
+film_total_csf_mean_7h	4.2	ng/mL	Michael et al. 2021 Table 5; n=8
+pd_total_csf_mean	3.66	ng/mL	Wallin et al. 2025 Results; 13 participants at week 4
+pd_total_plasma_mean	1621.26	ng/mL	Wallin et al. 2025 Results; 14 participants at week 4
+gpr17_ltd4_ic50	60	nM	Ciana et al. 2006 Fig. 3C; LTD4-driven GTPgammaS endpoint
+cyslt1_ltd4_ic50	2.3	nM	Sarau et al. 1999 as restated in FDA clinical review Table 2; calcium response
+organoid_nominal_low	20	ng/mL	Xu et al. 2025 Figs. 4–5
+organoid_nominal_high	400	ng/mL	Xu et al. 2025 Figs. 4–5
+opcs_nominal	1000	nM	Bonfanti et al. 2020 Methods and Fig. 6
+plasma_fraction_illustrative_ceiling	0.01	fraction	DailyMed section 12.3 reports >99% bound
+pediatric_granules_12_23m_mean_total_cmax	562	ng/mL	DailyMed section 12.3; population estimate, systemic
+optic_regrowth_montelukast	15	percent	Wang et al. 2020 Fig. 4H Results; approximate; n=4 mice/group
+optic_regrowth_plx3397	21	percent	Wang et al. 2020 Fig. 4H Results; approximate; n=4 mice/group
+optic_regrowth_combination	60	percent	Wang et al. 2020 Fig. 4H Results; approximate; n=4 mice/group
