@@ -277,6 +277,22 @@ class SafePushDiskCountsLiveRuns(unittest.TestCase):
         return (mock.patch.object(sp.shutil, "disk_usage", usage), mock.patch.object(sp, "live_heavy_runs", side_effect=runs),
                 mock.patch.object(sp, "MIN_FREE_GB", 2.0), mock.patch.object(sp, "DISK_POLL_S", 0.01))
 
+    def test_the_declared_floor_and_publisher_peak_of_step_18(self) -> None:
+        from unittest import mock
+        with mock.patch.dict(os.environ):
+            os.environ.pop("LEGEND_SAFE_PUSH_MIN_FREE_GB", None)      # this module sets 0 for the other tests
+            sp = _load_tool()
+        self.assertEqual((sp.MIN_FREE_GB, sp.PEAK_GB["safe_push.py"], sp.PEAK_GB["run_release_regressions.py"]), (1.5, 1.0, 1.4))
+        free = lambda gb: mock.patch.object(sp.shutil, "disk_usage", return_value=mock.Mock(free=gb * 1e9))
+        with free(1.6):
+            self.assertEqual(sp.free_space_refusal(), "")
+        with free(1.4):
+            self.assertIn("below 1.5 GB", sp.free_space_refusal())
+        other = [(777, "safe_push.py", sp.PEAK_GB["safe_push.py"])]
+        for gb, refused in ((2.6, False), (2.4, True)):
+            with free(gb), mock.patch.object(sp, "live_heavy_runs", return_value=other), mock.patch.object(sp, "DISK_POLL_S", 0.01), mock_wait(sp, 0.05):
+                self.assertEqual("below 2.5 GB" in sp.wait_for_space(), refused, gb)
+
     def test_space_that_covers_one_clone_but_not_a_second_run_is_waited_for_then_refused(self) -> None:
         sp = _load_tool()
         one = [(777, "safe_push.py", 1.4)]
