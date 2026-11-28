@@ -1,0 +1,12 @@
+rank-sum U implied by the printed P values (8 against 8, exact, two-sided)
+  U=5: P=0.0030
+  U=7: P=0.0070
+  U=8: P=0.0104
+  U=26: P=0.5737
+N2 latency: KO>control pairs 37.5/64, U=26.5; mean 6.68 -> 8.30 (ln +0.217); median 6.12 -> 6.67 (ln +0.086)
+N1/N2 ratio: KO>control pairs 5.0/64, U=5.0; mean 2.75 -> 0.85 (ln -1.175); median 2.96 -> 0.83 (ln -1.273)
+apparent speed if the printed 250 um vertical distance were the whole path (not a velocity the paper states)
+  N1 control: 0.103 m/s
+  N1 S-KO: 0.079 m/s
+  N2 control: 0.038 m/s
+  N2 S-KO: 0.030 m/s
