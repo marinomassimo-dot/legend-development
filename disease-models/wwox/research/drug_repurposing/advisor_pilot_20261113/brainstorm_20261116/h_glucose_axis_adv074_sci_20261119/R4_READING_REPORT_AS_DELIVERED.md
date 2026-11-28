@@ -206,3 +206,5 @@ Net for the question, hypothesis level:
 - Appendix and Supplementary Tables for 34747138 and 36828035 are not held.
 - The rat original is not held.
 - Ludes-Meyers 2009, Aqeilan 2008 and Suzuki 2007 are outside the requested set. Only 19936220 was read, as text.
+## Correction (ADV-330, 2026-11-28, IT36): two items called "not held" are held
+The Appendix of PMID 34747138 (glucose panels S1C and S1D) has been held since 2026-10-19 (`files/supplement/PMID34747138_r2/EMMM-13-e14599-s001.pdf`; read for ADV-328, values in line 23 of [[meta_gaba_paradox_current]]), and Supplementary Tables 2 and 3 of PMID 36828035 (blood chemistry and haematology, `files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_tables.docx`) are held and read in `research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv330_p47t_blood_chemistry_it_20261128/RESULT_ADV330_IT_20261128.md` under the ADV-330 folder. The delivered text above stays as the record of what the reader had at the time; the sentences "Appendix ... not held" and "supplementary tables ... not held" do not apply to the current repository.
