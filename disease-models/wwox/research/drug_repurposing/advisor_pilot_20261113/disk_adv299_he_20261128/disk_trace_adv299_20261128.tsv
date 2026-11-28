@@ -1,0 +1,295 @@
+kind	time	free_mb	measure	detail
+sample	05:20:29	1668		
+sample	05:20:39	1668		
+sample	05:20:49	1668		
+sample	05:20:59	3066		
+sample	05:21:09	2601		
+DROP	05:21:09	2601	465 MB	
+dir			612 MB modified since previous sample	/home/desktop/.codex
+dir			1 MB modified since previous sample	/home/desktop/legend_browser_tmp
+dir			-0 MB modified since previous sample	/tmp
+dir			15 MB modified since previous sample	/home/desktop/.claude
+dir			-0 MB modified since previous sample	/home/desktop/.cache
+proc			1887 MB written since previous sample	pid 3726915 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/af35152e.claim.sock | biggest open file 0 MB 
+proc			6 MB written since previous sample	pid 1155586 python3 framework/scripts/safe_push.py development main --expect-sha d6a02c94c28f9aeb455cf | biggest open file 0 MB /home/desktop/.claude/jobs/a5e6f2ad/tmp/push310.log
+proc			1 MB written since previous sample	pid 500783 /home/desktop/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/v | biggest open file 587 MB /home/desktop/.codex/sessions/2026/11/21/rollout-2026-11-21T10-39-07-01a1fdb0-3b98-7ae1-bd11-eff1efc7040b.jsonl
+proc			0 MB written since previous sample	pid 3811698 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/1b7caf01.claim.sock | biggest open file 0 MB 
+sample	05:21:46	1667		
+DROP	05:21:46	1667	933 MB	
+dir			634 MB modified since previous sample	/home/desktop/.codex
+dir			1 MB modified since previous sample	/home/desktop/legend_browser_tmp
+dir			-0 MB modified since previous sample	/tmp
+dir			15 MB modified since previous sample	/home/desktop/.claude
+dir			0 MB modified since previous sample	/home/desktop/.cache
+proc			1845 MB written since previous sample	pid 1155586 python3 framework/scripts/safe_push.py development main --expect-sha d6a02c94c28f9aeb455cf | biggest open file 0 MB /home/desktop/.claude/jobs/a5e6f2ad/tmp/push310.log
+proc			9 MB written since previous sample	pid 3811698 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/1b7caf01.claim.sock | biggest open file 0 MB 
+proc			2 MB written since previous sample	pid 500783 /home/desktop/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/v | biggest open file 587 MB /home/desktop/.codex/sessions/2026/11/21/rollout-2026-11-21T10-39-07-01a1fdb0-3b98-7ae1-bd11-eff1efc7040b.jsonl
+proc			0 MB written since previous sample	pid 3544307 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/aeb5c811.claim.sock | biggest open file 0 MB 
+proc			0 MB written since previous sample	pid 3726915 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/af35152e.claim.sock | biggest open file 0 MB 
+sample	05:22:09	1667		
+sample	05:22:19	1667		
+sample	05:22:29	1667		
+sample	05:22:39	1667		
+sample	05:22:49	1667		
+sample	05:22:59	1667		
+sample	05:23:09	1667		
+sample	05:23:19	1652		
+sample	05:23:29	1663		
+sample	05:23:39	3055		
+sample	05:23:49	2598		
+DROP	05:23:49	2598	457 MB	
+dir			616 MB modified since previous sample	/home/desktop/.codex
+dir			1 MB modified since previous sample	/home/desktop/legend_browser_tmp
+dir			419 MB modified since previous sample	/tmp
+dir			124 MB modified since previous sample	/home/desktop/.claude
+proc			44 MB written since previous sample	pid 3544307 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/aeb5c811.claim.sock | biggest open file 0 MB 
+proc			1 MB written since previous sample	pid 500783 /home/desktop/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/v | biggest open file 587 MB /home/desktop/.codex/sessions/2026/11/21/rollout-2026-11-21T10-39-07-01a1fdb0-3b98-7ae1-bd11-eff1efc7040b.jsonl
+proc			0 MB written since previous sample	pid 3726915 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/af35152e.claim.sock | biggest open file 0 MB 
+proc			0 MB written since previous sample	pid 3811698 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/1b7caf01.claim.sock | biggest open file 0 MB 
+proc			0 MB written since previous sample	pid 1544421 /snap/chromium/3593/usr/lib/chromium-browser/chrome --password-store=basic --gtk-version=3 | biggest open file 21 MB /snap/chromium/3593/usr/lib/chromium-browser/resources.pak
+sample	05:23:59	2598		
+sample	05:24:09	2598		
+sample	05:24:19	1745		
+DROP	05:24:19	1745	853 MB	
+dir			619 MB modified since previous sample	/home/desktop/.codex
+dir			427 MB modified since previous sample	/tmp
+dir			127 MB modified since previous sample	/home/desktop/.claude
+proc			1391 MB written since previous sample	pid 1161491 python3 framework/scripts/safe_push.py development main --expect-sha ccaecf385ce771dc46649 | biggest open file 0 MB /home/desktop/.claude/jobs/fc428159/tmp/push.out
+proc			2 MB written since previous sample	pid 500783 /home/desktop/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/v | biggest open file 587 MB /home/desktop/.codex/sessions/2026/11/21/rollout-2026-11-21T10-39-07-01a1fdb0-3b98-7ae1-bd11-eff1efc7040b.jsonl
+proc			0 MB written since previous sample	pid 3726915 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/af35152e.claim.sock | biggest open file 0 MB 
+proc			0 MB written since previous sample	pid 1161962 /bin/bash -c source /home/desktop/.claude/shell-snapshots/snapshot-bash-1795653273179-xv6k | biggest open file 0 MB /tmp/claude-1000/-home-desktop-legend-development--claude-worktrees-he-z-20261126/888b4b03-f8d1-42d1-b0d0-22fb994aeaa0/tasks/b20cb4j0v.output
+proc			0 MB written since previous sample	pid 3811698 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/1b7caf01.claim.sock | biggest open file 0 MB 
+sample	05:24:31	1661		
+sample	05:24:41	1661		
+sample	05:24:51	1660		
+sample	05:25:01	1660		
+sample	05:25:11	1660		
+sample	05:25:21	1660		
+sample	05:25:31	1660		
+sample	05:25:41	1655		
+sample	05:25:51	1660		
+sample	05:26:01	1659		
+sample	05:26:11	1659		
+sample	05:26:21	1659		
+sample	05:26:31	1659		
+sample	05:26:41	1659		
+sample	05:26:51	1659		
+sample	05:27:01	1659		
+sample	05:27:11	1659		
+sample	05:27:21	3058		
+sample	05:27:31	3058		
+sample	05:27:41	3058		
+sample	05:27:51	3058		
+sample	05:28:01	3058		
+sample	05:28:11	2964		
+sample	05:28:21	2586		
+DROP	05:28:21	2586	378 MB	
+dir			632 MB modified since previous sample	/home/desktop/.codex
+dir			1 MB modified since previous sample	/home/desktop/legend_browser_tmp
+dir			-0 MB modified since previous sample	/tmp
+dir			3 MB modified since previous sample	/home/desktop/.claude
+proc			454 MB written since previous sample	pid 1165336 /usr/bin/python3 /home/desktop/legend-development/.claude/worktrees/sci_av_20261128/framew | biggest open file 0 MB 
+proc			8 MB written since previous sample	pid 500783 /home/desktop/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/v | biggest open file 587 MB /home/desktop/.codex/sessions/2026/11/21/rollout-2026-11-21T10-39-07-01a1fdb0-3b98-7ae1-bd11-eff1efc7040b.jsonl
+proc			0 MB written since previous sample	pid 3811698 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/1b7caf01.claim.sock | biggest open file 0 MB 
+proc			0 MB written since previous sample	pid 2394315 /snap/chromium/3593/usr/lib/chromium-browser/chrome --password-store=basic --gtk-version=3 | biggest open file 21 MB /snap/chromium/3593/usr/lib/chromium-browser/resources.pak
+sample	05:28:50	1645		
+DROP	05:28:50	1645	941 MB	
+dir			616 MB modified since previous sample	/home/desktop/.codex
+dir			1 MB modified since previous sample	/home/desktop/legend_browser_tmp
+dir			-0 MB modified since previous sample	/tmp
+dir			0 MB modified since previous sample	/home/desktop/.claude
+proc			1849 MB written since previous sample	pid 1165228 python3 framework/scripts/safe_push.py development main --expect-sha 5d9750c199c39bdaa0b20 | biggest open file 0 MB /home/desktop/.claude/jobs/fc428159/tmp/push.out
+proc			4 MB written since previous sample	pid 1165513 python3 -B -u framework/scripts/repurposing_view.py audit-shareable --html /home/desktop/l | biggest open file 0 MB 
+proc			1 MB written since previous sample	pid 500783 /home/desktop/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/v | biggest open file 587 MB /home/desktop/.codex/sessions/2026/11/21/rollout-2026-11-21T10-39-07-01a1fdb0-3b98-7ae1-bd11-eff1efc7040b.jsonl
+proc			0 MB written since previous sample	pid 1554606 /snap/chromium/3593/usr/lib/chromium-browser/chrome --password-store=basic --gtk-version=3 | biggest open file 21 MB /snap/chromium/3593/usr/lib/chromium-browser/resources.pak
+proc			0 MB written since previous sample	pid 1553594 /snap/chromium/3593/usr/lib/chromium-browser/chrome --password-store=basic --gtk-version=3 | biggest open file 21 MB /snap/chromium/3593/usr/lib/chromium-browser/resources.pak
+sample	05:29:11	1649		
+sample	05:29:21	1649		
+sample	05:29:31	1653		
+sample	05:29:41	1653		
+sample	05:29:51	1653		
+sample	05:30:01	1652		
+sample	05:30:11	1651		
+sample	05:30:21	1646		
+sample	05:30:31	1646		
+sample	05:30:41	1646		
+sample	05:30:51	1646		
+sample	05:31:01	1645		
+sample	05:31:11	1645		
+sample	05:31:21	3045		
+sample	05:31:31	3045		
+sample	05:31:41	3045		
+sample	05:31:51	3044		
+sample	05:32:01	3044		
+sample	05:32:11	3044		
+sample	05:32:21	3041		
+sample	05:32:31	3041		
+sample	05:32:41	3041		
+sample	05:32:51	3041		
+sample	05:33:01	3022		
+sample	05:33:11	2999		
+sample	05:33:21	2976		
+sample	05:33:31	2969		
+sample	05:33:41	2968		
+sample	05:33:51	2968		
+sample	05:34:01	2968		
+sample	05:34:11	2962		
+sample	05:34:21	2962		
+sample	05:34:31	2962		
+sample	05:34:41	2962		
+sample	05:34:51	2961		
+sample	05:35:01	2961		
+sample	05:35:11	2961		
+sample	05:35:21	2961		
+sample	05:35:31	2961		
+sample	05:35:41	2960		
+sample	05:35:51	2959		
+sample	05:36:01	2959		
+sample	05:36:11	2959		
+sample	05:36:21	2959		
+sample	05:36:31	2953		
+sample	05:36:41	2953		
+sample	05:36:51	2953		
+sample	05:37:01	2953		
+sample	05:37:11	2952		
+sample	05:37:21	2952		
+sample	05:37:31	2952		
+sample	05:37:41	2952		
+sample	05:37:51	2951		
+sample	05:38:01	2951		
+sample	05:38:11	2951		
+sample	05:38:21	2951		
+sample	05:38:31	2951		
+sample	05:38:41	2951		
+sample	05:38:51	2950		
+sample	05:39:01	2950		
+sample	05:39:11	2950		
+sample	05:39:21	2950		
+sample	05:39:31	2950		
+sample	05:39:41	2950		
+sample	05:39:51	2950		
+sample	05:40:01	2946		
+sample	05:40:11	2941		
+sample	05:40:21	2940		
+sample	05:40:31	2940		
+sample	05:40:41	2940		
+sample	05:40:51	2940		
+sample	05:41:01	2940		
+sample	05:41:11	2940		
+sample	05:41:21	2939		
+sample	05:41:31	2939		
+sample	05:41:41	2939		
+sample	05:41:51	2939		
+sample	05:42:01	2939		
+sample	05:42:11	2939		
+sample	05:42:21	2938		
+sample	05:42:31	2938		
+sample	05:42:41	2938		
+sample	05:42:51	2937		
+sample	05:43:01	2937		
+sample	05:43:11	2937		
+sample	05:43:21	2937		
+sample	05:43:31	2936		
+sample	05:43:41	2936		
+sample	05:43:51	2936		
+sample	05:44:01	2936		
+sample	05:44:11	2936		
+sample	05:44:21	2935		
+sample	05:44:31	2935		
+sample	05:44:41	2935		
+sample	05:44:51	2935		
+sample	05:45:01	2935		
+sample	05:45:11	2935		
+sample	05:45:21	2935		
+sample	05:45:31	2935		
+sample	05:45:41	2935		
+sample	05:45:51	2935		
+sample	05:46:01	2935		
+sample	05:46:11	2935		
+sample	05:46:21	2934		
+sample	05:46:31	2934		
+sample	05:46:41	2934		
+sample	05:46:51	2934		
+sample	05:47:01	2933		
+sample	05:47:11	2933		
+sample	05:47:21	2631		
+DROP	05:47:21	2631	302 MB	
+dir			601 MB modified since previous sample	/home/desktop/.codex
+dir			18 MB modified since previous sample	/home/desktop/legend_browser_tmp
+dir			-0 MB modified since previous sample	/tmp
+dir			13 MB modified since previous sample	/home/desktop/.claude
+dir			0 MB modified since previous sample	/home/desktop/.cache
+proc			18 MB written since previous sample	pid 2314090 /snap/chromium/3593/usr/lib/chromium-browser/chrome --password-store=basic --gtk-version=3 | biggest open file 21 MB /snap/chromium/3593/usr/lib/chromium-browser/resources.pak
+proc			1 MB written since previous sample	pid 500783 /home/desktop/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/v | biggest open file 589 MB /home/desktop/.codex/sessions/2026/11/21/rollout-2026-11-21T10-39-07-01a1fdb0-3b98-7ae1-bd11-eff1efc7040b.jsonl
+proc			0 MB written since previous sample	pid 3726915 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/af35152e.claim.sock | biggest open file 0 MB 
+proc			0 MB written since previous sample	pid 1518782 /snap/chromium/3593/usr/lib/chromium-browser/chrome --password-store=basic --gtk-version=3 | biggest open file 21 MB /snap/chromium/3593/usr/lib/chromium-browser/resources.pak
+proc			0 MB written since previous sample	pid 3811698 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/1b7caf01.claim.sock | biggest open file 0 MB 
+sample	05:47:44	2933		
+sample	05:47:54	2933		
+sample	05:48:04	2465		
+DROP	05:48:04	2465	468 MB	
+dir			619 MB modified since previous sample	/home/desktop/.codex
+dir			-0 MB modified since previous sample	/tmp
+dir			9 MB modified since previous sample	/home/desktop/.claude
+proc			8 MB written since previous sample	pid 1180041 /bin/bash -c source /home/desktop/.claude/shell-snapshots/snapshot-bash-1795841930496-aw8n | biggest open file 0 MB /tmp/claude-1000/-home-desktop-legend-development--claude-worktrees-sci-av-20261128/fc428159-b22b-41a9-8e5f-3aa6ff67b24f/tasks/b43rjon50.output
+proc			1 MB written since previous sample	pid 500783 /home/desktop/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/v | biggest open file 589 MB /home/desktop/.codex/sessions/2026/11/21/rollout-2026-11-21T10-39-07-01a1fdb0-3b98-7ae1-bd11-eff1efc7040b.jsonl
+proc			0 MB written since previous sample	pid 3726915 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/af35152e.claim.sock | biggest open file 0 MB 
+sample	05:48:21	2465		
+sample	05:48:31	2931		
+sample	05:48:41	2930		
+sample	05:48:51	2461		
+DROP	05:48:51	2461	469 MB	
+dir			614 MB modified since previous sample	/home/desktop/.codex
+dir			1 MB modified since previous sample	/home/desktop/legend_browser_tmp
+dir			-0 MB modified since previous sample	/tmp
+dir			14 MB modified since previous sample	/home/desktop/.claude
+proc			481 MB written since previous sample	pid 1180203 python3 framework/scripts/candidate_tree_freshness.py --regenerate --repo . | biggest open file 0 MB 
+proc			1 MB written since previous sample	pid 500783 /home/desktop/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/v | biggest open file 589 MB /home/desktop/.codex/sessions/2026/11/21/rollout-2026-11-21T10-39-07-01a1fdb0-3b98-7ae1-bd11-eff1efc7040b.jsonl
+proc			0 MB written since previous sample	pid 3726915 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/af35152e.claim.sock | biggest open file 0 MB 
+proc			0 MB written since previous sample	pid 1544421 /snap/chromium/3593/usr/lib/chromium-browser/chrome --password-store=basic --gtk-version=3 | biggest open file 21 MB /snap/chromium/3593/usr/lib/chromium-browser/resources.pak
+proc			0 MB written since previous sample	pid 1396709 /snap/chromium/3593/usr/lib/chromium-browser/chrome --password-store=basic --gtk-version=3 | biggest open file 21 MB /snap/chromium/3593/usr/lib/chromium-browser/resources.pak
+sample	05:49:07	2930		
+sample	05:49:17	2930		
+sample	05:49:27	2930		
+sample	05:49:37	2464		
+DROP	05:49:37	2464	466 MB	
+dir			684 MB modified since previous sample	/home/desktop/.codex
+dir			419 MB modified since previous sample	/tmp
+dir			14 MB modified since previous sample	/home/desktop/.claude
+proc			2 MB written since previous sample	pid 500783 /home/desktop/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/v | biggest open file 589 MB /home/desktop/.codex/sessions/2026/11/21/rollout-2026-11-21T10-39-07-01a1fdb0-3b98-7ae1-bd11-eff1efc7040b.jsonl
+proc			0 MB written since previous sample	pid 3726915 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/af35152e.claim.sock | biggest open file 0 MB 
+proc			0 MB written since previous sample	pid 3811698 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/1b7caf01.claim.sock | biggest open file 0 MB 
+proc			0 MB written since previous sample	pid 4055285 /snap/chromium/3593/usr/lib/chromium-browser/chrome --password-store=basic --gtk-version=3 | biggest open file 21 MB /snap/chromium/3593/usr/lib/chromium-browser/resources.pak
+proc			0 MB written since previous sample	pid 3803246 /snap/chromium/3593/usr/lib/chromium-browser/chrome --password-store=basic --gtk-version=3 | biggest open file 21 MB /snap/chromium/3593/usr/lib/chromium-browser/resources.pak
+sample	05:49:47	2464		
+sample	05:49:57	2583		
+sample	05:50:07	2183		
+DROP	05:50:07	2183	400 MB	
+dir			618 MB modified since previous sample	/home/desktop/.codex
+dir			0 MB modified since previous sample	/tmp
+dir			9 MB modified since previous sample	/home/desktop/.claude
+proc			398 MB written since previous sample	pid 1184025 git clone -q --no-hardlinks --no-checkout /home/desktop/legend-development/.claude/worktre | biggest open file 2 MB /home/desktop/legend-development/.git/objects/de/c68f2b0da3384d57e202fbbcd0cbe298a59e93
+proc			1 MB written since previous sample	pid 500783 /home/desktop/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/v | biggest open file 589 MB /home/desktop/.codex/sessions/2026/11/21/rollout-2026-11-21T10-39-07-01a1fdb0-3b98-7ae1-bd11-eff1efc7040b.jsonl
+proc			0 MB written since previous sample	pid 3726915 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/af35152e.claim.sock | biggest open file 0 MB 
+sample	05:50:17	1520		
+DROP	05:50:17	1520	663 MB	
+dir			597 MB modified since previous sample	/home/desktop/.codex
+dir			420 MB modified since previous sample	/tmp
+dir			9 MB modified since previous sample	/home/desktop/.claude
+proc			1399 MB written since previous sample	pid 1183566 python3 framework/scripts/safe_push.py development main --expect-sha 79a736edda8833a35bb99 | biggest open file 0 MB /home/desktop/.claude/jobs/fc428159/tmp/push.out
+proc			0 MB written since previous sample	pid 3726915 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/af35152e.claim.sock | biggest open file 0 MB 
+proc			0 MB written since previous sample	pid 500783 /home/desktop/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/v | biggest open file 589 MB /home/desktop/.codex/sessions/2026/11/21/rollout-2026-11-21T10-39-07-01a1fdb0-3b98-7ae1-bd11-eff1efc7040b.jsonl
+proc			0 MB written since previous sample	pid 1548238 /snap/chromium/3593/usr/lib/chromium-browser/chrome --password-store=basic --gtk-version=3 | biggest open file 21 MB /snap/chromium/3593/usr/lib/chromium-browser/resources.pak
+sample	05:50:27	1520		
+sample	05:50:37	1520		
+total			1903 MB written over the run	pid 3726915 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/af35152e.claim.sock
+total			1857 MB written over the run	pid 1183566 python3 framework/scripts/safe_push.py development main --expect-sha 79a736edda8833a35bb99
+total			1853 MB written over the run	pid 1155586 python3 framework/scripts/safe_push.py development main --expect-sha d6a02c94c28f9aeb455cf
+total			1851 MB written over the run	pid 1165228 python3 framework/scripts/safe_push.py development main --expect-sha 5d9750c199c39bdaa0b20
+total			1850 MB written over the run	pid 1161491 python3 framework/scripts/safe_push.py development main --expect-sha ccaecf385ce771dc46649
+total			1482 MB written over the run	pid 3811698 claude bg-spare --bg-spare /tmp/cc-daemon-1000/a7836b11/spare/1b7caf01.claim.sock
+total			482 MB written over the run	pid 1180203 python3 framework/scripts/candidate_tree_freshness.py --regenerate --repo .
+total			454 MB written over the run	pid 1165336 /usr/bin/python3 /home/desktop/legend-development/.claude/worktrees/sci_av_20261128/framew
+total			398 MB written over the run	pid 1184025 git clone -q --no-hardlinks --no-checkout /home/desktop/legend-development/.claude/worktre
+total			390 MB written over the run	pid 500783 /home/desktop/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/v
+summary		1520	free start 1668 MB, end 1520 MB, min 1520 MB, drops of 100 MB or more: 12	
