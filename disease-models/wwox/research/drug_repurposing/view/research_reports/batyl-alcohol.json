@@ -1,0 +1,35 @@
+{
+  "investigation": "INV-06",
+  "title": "Batyl alcohol in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "A precursor comparison for lipids in first myelin sheaths.",
+  "graph": {
+    "evidence": "Red cells restore far more lipid than brain in Pex7-null mice.",
+    "inference": "The blood response leaves neural delivery and local conversion unresolved.",
+    "hypothesis": "A local vinyl ether lipid shortage may limit wrapping in some WWOX settings.",
+    "experiment": "Trace intact precursor into first sheaths and measure conduction."
+  },
+  "evidence": [
+    "After two months, the red-cell C18:0 lipid ratio reached 71% of same-diet WT in Pex7-null mice. Cerebrum reached 0.72%."
+  ],
+  "inference": [
+    "The published injury study reported late recovery. Its public treatment workbook uses a transformed scale and cannot reproduce absolute lipid restoration."
+  ],
+  "hypothesis": [
+    "If neural vinyl ether lipid supply is limiting, correcting it may improve first sheaths when downstream conversion and axon eligibility are preserved."
+  ],
+  "experiment": [
+    "Compare barrier and direct recipient access in matched WWOX preparations. Track labeled absolute alkyl and vinyl ether products in persistent first sheaths and read conduction."
+  ],
+  "limits": [
+    "Age-specific delivery, tolerability and native WWOX lipid deficiency are unresolved. Retain a local research comparator and defer systemic pediatric priority."
+  ],
+  "sources": [
+    {"label": "Brites et al. Tissue plasmalogen ratios and peripheral conduction.", "url": "https://doi.org/10.1371/journal.pone.0028539"},
+    {"label": "Malheiro et al. Direct co-culture and C14 comparator.", "url": "https://doi.org/10.1111/bpa.12710"},
+    {"label": "Mehrabani-Tabari et al. Injured cortex and motor recovery.", "url": "https://doi.org/10.1016/j.jlr.2025.100821"},
+    {"label": "Jones and Sarkar. Deposited murine lipid data.", "url": "https://doi.org/10.17632/ysymtcyj4s.1"},
+    {"label": "Dorninger et al. Blood-brain barrier comparison.", "url": "https://pubmed.ncbi.nlm.nih.gov/35981629/"},
+    {"label": "Registered human RCDP observational study.", "url": "https://www.isrctn.com/ISRCTN44820021"}
+  ]
+}
