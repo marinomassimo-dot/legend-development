@@ -1,0 +1,10 @@
+file	sha256	source_url	depth_and_locator
+37770201 remote HTML	remote	https://pmc.ncbi.nlm.nih.gov/articles/PMC10658908/	Partial full text. Tables 5–6 and Results sections for oral plasma and IV tissue.
+39969272 remote HTML	remote	https://pmc.ncbi.nlm.nih.gov/articles/PMC11969267/	Partial full text. Results §§3.2–3.3 and Fig. 3D and Fig. 4B captions.
+human-agmat.pdf	62d43321b194e9991b48db533d33b0a30b0fd06093156e9bc1aed80342d26ce3	https://www.nature.com/articles/s41598-022-26655-4.pdf	Partial full text. Results pp. 2–4, Figs. 1B and 2C context.
+mouse-oral.pdf	190f763300d22db61245ceb0079d73dc09e7e4b878c1b43e0fc3ba452a84b27b	https://www.nature.com/articles/s41598-019-49078-0.pdf	Partial full text. Figs. 3–4 captions and Experiment 1 Results; terminal 30-min hippocampal and plasma comparison, opposite putrescine signs.
+absence.pdf	35ebd107422a262773b70bdf7fb49abe31f34f445a14d1327808a62f1a7df5bc	https://dergipark.org.tr/en/download/article-file/1665605	Partial full text. Printed p. 18, Figs. 2–5 visually inspected.
+Yang and Reis primary abstract	remote	https://pubmed.ncbi.nlm.nih.gov/9918557/	Original native Kd and electrical distance, abstract.
+Askalany primary abstract	remote	https://doi.org/10.1016/j.neures.2005.05.002	Four recombinant channel assemblies and functional potency.
+Spinal synaptic current primary abstract	remote	https://pubmed.ncbi.nlm.nih.gov/30427758/	Earlier late decay result under GluN2B knockdown.
+Keynan primary abstract	remote	https://pubmed.ncbi.nlm.nih.gov/20447305/	Adult intervention timelines and aggregate denominators.

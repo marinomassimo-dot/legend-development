@@ -1,0 +1,9 @@
+# Agmatine sulfate comparison pretest
+
+28 November 2026 UTC. SCI_CODEX, compound #195. context_policy: QUESTION_DRIVEN. Frozen after bibliographic scouting and before focused numerical extraction. Identity is the agmatine ion supplied as the sulfate salt. The direct circuit question belongs with the NMDA investigation.
+
+Compare rapid voltage-dependent NMDA current block with slower NO or polyamine-metabolism effects. Direct block predicts a fast current and calcium change at fixed extracellular parent, voltage and magnesium. Greater fractional block at more negative potentials could be offset by less baseline current there because of magnesium. Favor the route only if it reduces excess late WWOX recruitment while preserving first excitatory and inhibitory recruitment. Compare a fixed agonist waveform or stimulus across voltages and assay the joint effect of physiological magnesium and agmatine rather than adding single-blocker results.
+
+If target-current reduction is insufficient at measured-free parent, if first recruitment is preferentially reduced, or if the network effect remains after the relevant NMDA component is matched, prefer a competing mechanism or defer the probe. A delayed effect that tracks NOS activity or polyamine conversion at equal direct block motivates the counter-test. Measure an endogenous baseline and keep total rat CNS, unbound extracellular parent, repeated oral human exposure and salt mass separate.
+
+Prespecified public checks include a voltage/exposure sensitivity with an explicit model and no silent cross-assay extrapolation, regional WWOX transcripts for AGMAT, NOS1/2/3 and key NMDA subunits with single-library omissions, and pediatric translational feasibility. If raw released traces cannot establish the voltage interaction, keep the numerical exercise an illustrative calculation.
