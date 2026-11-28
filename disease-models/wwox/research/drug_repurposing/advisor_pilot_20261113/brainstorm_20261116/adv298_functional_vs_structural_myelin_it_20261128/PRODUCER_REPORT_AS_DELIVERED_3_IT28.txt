@@ -1,0 +1,113 @@
+ADV-298 PRODUCER REPORT, BATCH 3 (IT28, 2026-11-28). Hypothesis level, reference genotype class, nothing here is medical advice. I wrote no files and used no network. I rendered no images and viewed no figures, so every figure statement below comes from legends and text. I did not meet or open the Obeid 2026 article (PMID 42422765, PMC13343157, obeid.txt) or any adv174/adv175 folder; none was in my list. All 19 files were read, to the depths described in the last section before the counts. I stripped the XML to text and dropped the reference list for every XML file.
+
+CLASS TAGS
+- STRUCTURAL rows carry MYELIN-STATED or ANATOMY-ONLY. MYELIN-STATED means the source itself uses a myelination or demyelination word for that finding.
+- FUNCTIONAL rows carry CONDUCTION (latency or conduction along a pathway) or OTHER-EVOKED (retinal, hearing or absent-response measure, no latency given).
+
+## A. TABLE OF ROWS
+Columns: id | source (first author, year, PMID/DOI, file) | model and species | age | genotype or patient group | readout | CLASS | n | direction and size as stated | locator | access.
+
+**E1** | Elsaadany 2016, PMID 27495153, DOI 10.1186/s12881-016-0317-z, PMID27495153_Elsaadany2016_PMC.xml | human patient, MRI | MRI at 9 weeks and at 23 weeks (patient aged 7 y when reported) | homozygous WWOX W44X, Patient 1 (girl, one of two affected sisters) | brain MRI: white-matter myelination | STRUCTURAL, MYELIN-STATED | 1 patient, 2 scans | "Brain MRI showed progressive demyelination and atrophy of both frontal and temporal areas". Fig 2 legend: 9 weeks "poor myelination with absent dark T2 and bright T1 signal in white mater tracts … marked symmetrical thinning of the corpus callosum"; 23 weeks "significant progress in myelin loss with absent white mater myelination on T2"; "focal restricted diffusion along the cortico-spinal tract in the brain stem". No numeric measure. | Case presentation, Patient 1; Fig 2a,b | FULL TEXT
+Note on E1: the text cites Fig 2 a, b and c, but the legend in this file gives only a and b. Table 1 "Brain MRI" for "Our study" says only "Brain atrophy." and does not mention myelination.
+
+**E2** | Elsaadany 2016 (same file) | human, MRI | not stated (patient aged 20 months at report) | homozygous WWOX W44X, Patient 2 (sister) | brain MRI | STRUCTURAL, MYELIN-STATED | 1 patient | "Brain MRI showed progressive demyelination and atrophy of both frontal and temporal areas. (Fig. 2a, b)". The Fig 2 legend is written for Patient 1 only. | Case presentation, Patient 2 | FULL TEXT
+
+**E3** | Elsaadany 2016 (same file) | human, visual evoked potential (VEP) | age not stated | Patient 1 | VEP | FUNCTIONAL, CONDUCTION (latency along the visual pathway) | 1 patient | "visual evoked potential was delayed". No latency value, no normal range given. | Case presentation, Patient 1, paragraph 2 | FULL TEXT
+
+**E4** | Elsaadany 2016 (same file) | human, electroretinogram (ERG) | age not stated | Patient 1 | ERG | FUNCTIONAL, OTHER-EVOKED (retinal) | 1 patient | "Electroretinogram was normal" | same place | FULL TEXT
+
+**D1** | Davids 2019, PMID 30362252, DOI 10.1002/humu.23675, PMID30362252_Davids2019_PMC_2026-09-27.xml | human, MRI | about 5 weeks | proband, homozygous exon-6 microdeletion of WWOX in a region of maternal UPD | brain MRI | STRUCTURAL, MYELIN-STATED | 1 patient | "MRI showed moderate bilateral, periventricular T2-hyperintensity, delayed myelination with gliosis, and reduced volume of the splenium and corpus callosum, considered consistent with a periventricular leukomalacia". The first MRI, at the first NICU readmission, was "normal". | Introduction/case text, paragraph 4 | FULL TEXT
+
+**D2** | Davids 2019 (same file) | human, EMG and nerve conduction study | during NIH admission; text says the proband was 6 years old at enrolment | same proband | sensory and motor nerve conduction studies | FUNCTIONAL, CONDUCTION (peripheral nerve) | 1 patient | "Electromyography (EMG)-NCV revealed normal sensory and motor nerve conduction studies." No velocities or amplitudes given. Needle EMG showed small polyphasic motor units "suggesting a primary muscle disorder". | Case text, paragraph 7 | FULL TEXT
+
+**D3** | Davids 2019 (same file) | human, MRI | most recent study (age not stated) | same proband | neuroimaging | STRUCTURAL, ANATOMY-ONLY | 1 patient | "moderate cortical atrophy, thin corpus callosum, minor posterior thinning of the cerebellar vermis, enlargement of ventricles, and prominent cisterns … Basal ganglia and thalami showed normal signal … There were few imaging changes between infancy and her most recent study." Myelination is not mentioned in this passage. | Case text, paragraph 8 | FULL TEXT
+Note on D1-D3: the abstract says "A 6-year old girl" but the case text says "10-year old female". This is a source inconsistency, not mine.
+
+**G1** | Dong 2023, PMID 37974179, DOI 10.1186/s12920-023-01731-4, PMID37974179_Dong2023_PMC.xml | human, MRI | age at MRI not stated (child died at 2.5 y) | proband with compound heterozygous WWOX deletions (WOREE) | brain MRI | STRUCTURAL, MYELIN-STATED | 1 patient | "MRI showed white matter hyperintensity and delayed myelination in the brain" | Results, Clinical features | FULL TEXT
+
+**O1** | Oliver 2023, PMID 36779245, DOI 10.1111/epi.17542, PMID36779245_Oliver2023_PMC_2026-09-27.xml | human patients, MRI (serial in 7) | from 15 days to 8 y; median age at study 6 y 9 m | 13 patients in 12 families with biallelic WWOX variants (WWOX-DEE) | MRI "delayed myelination / poor myelination / abn myelination" (Table 2 entries) | STRUCTURAL, MYELIN-STATED | 6 of 13 patients. My count from Table 2: P2 (2 m "delayed myelination"; 3 y "poor myelination"), P3 (2 m), P6 (6 m), P7 (19 d), P8 (3 y "abn myelination"), P10 (14 m). | Text, Section 3.4: "Even as early as 15 and 19 days of age … specifically, delayed myelination, a thin corpus callosum, and frontotemporal atrophy were evident for Patient 7 (Figure S3)". "Seven patients had serial MRI that showed progression of the abnormalities with age." Table 2, "MRI findings" row | FULL TEXT
+Note on O1: the count of 6 is mine, read from Table 2. It matches the "Myelination delay 6:13" entry for Oliver in the Battaglia 2023 review table, which I read separately.
+
+**O2** | Oliver 2023 (same file) | human, MRI | as O1 | as O1 | white-matter signal or volume abnormality (T2 increase, WM volume loss, "abn WM signal") | STRUCTURAL, ANATOMY-ONLY (signal and volume; myelin is not named for these entries) | Table 2 entries: P1, P2, P4, P5, P6, P7, P8, P9, P13 (9 patients). P10 reads "WM inc T2 brainstem dentate nuclei" and is ambiguous, so 9 or 10 of 13. P3, P11 and P12 list no WM change. | Text: "Brain MRIs revealed severe frontotemporal, hippocampal, and optic atrophy, thin corpus callosum, and white matter signal abnormalities". Section 3.4: "Other features included hippocampal atrophy, white matter signal abnormality, and volume loss with a very thin corpus callosum". The text implies WM signal abnormality across the cohort, which is not what Table 2 shows. | Abstract; Section 3.4; Table 2; Fig 2A,C ("white stars" = WM signal abnormality; "white matter atrophy with abnormal T2 signal intensity") | FULL TEXT
+
+**O3** | Oliver 2023 (same file) | human, diffusion MRI | as O1 | as O1 | restricted diffusion (res diff) in dorsal pons, central tegmental tracts (CTT) or posterior midbrain | STRUCTURAL, ANATOMY-ONLY (diffusion imaging; myelin not named) | 4 of 13 (P1 dorsal pons at 15 d; P3 CTT; P6 CTT; P8 posterior midbrain at 3 y), my count from Table 2 | listed only as "res diff"; no values | Table 2 "MRI findings" | FULL TEXT
+
+**O4** | Oliver 2023 (same file) | human, MRI | as O1 | as O1 | corpus callosum | STRUCTURAL, ANATOMY-ONLY | Table 2 entries: "thin CC" in 11 (P1, P2, P3, P4, P5, P7, P8, P9, P10, P11 "very thin", P13); P12 "borderline thin CC"; P6 "dysmorphic CC". | Abstract and Key Points: "thin corpus callosum". Section 3.4 shows it in Fig 2A, C and D. | Table 2; Fig 2D | FULL TEXT
+Note on O4: I did not make separate rows for frontotemporal, hippocampal or optic atrophy, because they are grey-matter or optic findings, not white-matter readouts. This is my scoping call.
+
+**C1** | Chong 2023, PMID 36537114, DOI 10.1002/ajmg.a.63074, PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt | human patients, MRI | ages not given in the chunks (Patient 4 "Normal at age of 6months") | 5 patients with biallelic predicted-null WWOX variants (WOREE); P1 to P5 | brain MRI | STRUCTURAL; MYELIN-STATED only for Patient 2, ANATOMY-ONLY for the other four | 5 patients, 1 with myelin wording | Table 1 "Brain MRI findings". P1 "Atrophy with white and gray matter abnormalities"; P2 "Decreased cerebral white matter volume and severe hypoplastic corpus callosum. Delayed myelination pattern for age"; P3 "Periventricular cysts, thin corpus callosum"; P4 "Normal at age of 6months"; P5 "Stable cerebral volume loss with compensatory ventricular dilation". Discussion: "Brain MRI showed abnormalities in four patients in this cohort, including cerebral atrophy, hypoplastic corpus callosum, and delayed myelination for age". | Table 1 (delivered in chunks 2 and 18); Discussion (chunk 22) | PARTIAL-TEXT (see section C)
+
+**C2** | Chong 2023 (same file) | human, VEP | age not stated | Patient 4 | visual evoked potential | FUNCTIONAL, OTHER-EVOKED (response absent; no latency given) | 1 patient | Table 1: "VEP: cannot be detected bilaterally". Discussion: "Patient 4 demonstrated undetected visual evoked potentials suggesting central involvement." | Table 1 "Ophthalmological features"; Discussion (chunk 23) | PARTIAL-TEXT
+
+**R1** | Riva 2022, PMID 35573960, DOI 10.3389/fped.2022.847549, PMID35573960_Riva2022_PMC.xml | human, MRI | 4 months | boy with WWOX p.Arg264* and an 84,828-bp exon-6 deletion (compound heterozygous) | brain MRI | STRUCTURAL, MYELIN-STATED | 1 patient | "Brain MRI at 4 months of age revealed delayed myelination, reduction of the white matter volume, and reabsorption of the periventricular cysts". The Fig 2 legend repeats "delayed myelination" for the axial and coronal T2 images and adds "hypoplasia of the corpus callosum". | Clinical Features; Fig 2A-F; Discussion ("white matter hyperintensity representing delayed myelination") | FULL TEXT
+
+**R2** | Riva 2022 (same file) | human, MRI | 2 years 4 months | same patient | brain MRI, later phase | STRUCTURAL, ANATOMY-ONLY (white-matter signal and volume; the authors describe a "leukoencephalopathy pattern … like in the prematurity-related periventricular leukomalacia", not hypomyelination) | 1 patient | "marked reduction with signal alterations of the periventricular white matter, especially in the parietal-occipital regions, thinned corpus callosum, and squared lateral ventricles. Mild signal alterations were also noted at the level of the pons and dentate nuclei" | Clinical Features; Fig 3; Discussion | FULL TEXT
+
+**R3** | Riva 2022 (same file) | human, auditory brainstem response (ABR) | age not stated | same patient | ABR | FUNCTIONAL, OTHER-EVOKED (hearing; no latency given) | 1 patient | "Ophthalmological examination and auditory brain stem response did not show any pathological findings." | Clinical Features, last paragraph | FULL TEXT
+
+**S1** | Serce Pehlevan 2026, PMID 42092735, DOI 10.1111/jpc.70401, PMID42092735_SercePehlevan2026_PMC.xml | human, MRI (FLAIR) | neonatal, after day 14 and before discharge on day 23 | male neonate, homozygous WWOX c.716T>G p.(Leu239Arg) | brain MRI | STRUCTURAL, ANATOMY-ONLY | 1 patient | "nonspecific structural abnormalities, including bilateral frontotemporal atrophy, corpus callosum hypoplasia, and enlargement of the lateral ventricles (Figure 1c)". Myelination is not mentioned. | Case Presentation paragraph 5; Fig 1c | FULL TEXT
+
+**S2** | Serce Pehlevan 2026 (same file) | human, diffusion-weighted MRI | first days, before discharge on postnatal day 12 | same patient | DWI and ADC | STRUCTURAL, ANATOMY-ONLY | 1 patient | "small diffusion-restricted area in the left lateral thalamus with corresponding low apparent diffusion coefficient and mild ventricular dilatation". The authors attribute this to his birth history. | Case Presentation paragraph 2; Fig 1a,b | FULL TEXT
+
+**S3** | Serce Pehlevan 2026 (same file) | human, ABR | neonatal, exact day not stated | same patient | auditory brainstem response | FUNCTIONAL, OTHER-EVOKED (hearing; no latency given) | 1 patient | "Auditory brainstem response testing and thyroid function tests were within normal limits." | Case Presentation paragraph 5 | FULL TEXT
+
+**K1** | Kosla 2019, PMID 31543760, DOI 10.3389/fncel.2019.00391, PMID31543760_Kosla2019_EPMC.xml | human neural progenitor cells (hNPC, H9-derived), lentiviral shRNA WWOX knockdown, cell culture | 14 days of spontaneous differentiation | shWWOX versus scrambled shRNA control | immunocytochemistry for the oligodendrocyte marker GalC | STRUCTURAL, BORDERLINE. It is a culture-characterisation stain with no shWWOX-versus-control contrast. | n not stated | "All differentiated cells were found to be positive for neuronal markers MAP2 and TUJ1 and negative for astrocytes – GFAP or oligodendrocytes – GalC markers (Supplementary Figure S2)". The text does not say which arm was stained. Supplementary Figure S2 is not in the file. | Materials and Methods, Cell Line and Culture Conditions | FULL TEXT (supplement absent)
+Note on K1: in my reading no myelin readout in this paper contrasts shWWOX with control. Two other sentences are not rows: "highest levels [of WWOX] are observed in the corpus callosum and medulla oblongata" is FANTOM5 expression in normal human brain, not a deficient preparation. The CAGE enrichment tables (Table 1, Figure 8) list adhesion, neural crest and axon-extension gene sets, and no myelin gene set is named in the text. Supplementary Tables S2 and S3, which hold the full GSEA lists, are not in the file.
+
+**SU1** | Sukkar 2022, PMID 35712340, DOI 10.7759/cureus.25003, PMID35712340_Sukkar2022_PMC.xml | human patient, MRI | age at MRI not stated (child 21 months at report) | boy with homozygous WWOX c.406A>G (p.Ile136Val) | brain MRI | STRUCTURAL, ANATOMY-ONLY | 1 patient | "Brain MRI results were normal." Discussion: "the MRI was normal, with no progressive microcephaly or bilateral optic atrophy". Table 3: "Brain MRI: Normal". | Case presentation paragraph 3; Discussion; Table 3 | FULL TEXT
+Note on SU1: Table 3 also quotes other published patients, for example "increased white matter signal in cerebellar area" for the Ehaideb patient. Those are secondary entries from other studies and are not rowed.
+
+## B. NO ROW LINES (one per file, with sections read)
+- **Battaglia 2023 (PMID 38161429, PMID38161429_Battaglia2023_PMC_2026-09-27.xml):** NO ROW: secondary mini-review of published WOREE MRI, no primary measurement. I read the whole text, including Table 1 and Section 4. Table 1 repeats other authors' counts, for example Oliver "Myelination delay 6:13". Those are not counted here, and the table's column alignment was lossy in the XML.
+- **Lin 2023 (PMID 37324196, PMID37324196_Lin2023_PMC.xml):** NO ROW: prostate-cancer SNP cohort, no neural or myelin readout. I read the whole text.
+- **Lange 2026 (PMID 42558002, PMID42558002_Lange2026_PMC.xml):** NO ROW: astrocyte review, WWOX tables list astrocyte phenotypes only, no myelin or conduction data. I read the abstract, the introduction, Tables 1 and 2 in full and the whole WWOX paragraph. For the remaining text I only ran keyword scans for WWOX, myelin, oligodend, conduction and white matter. It lists Repudi 2021 O-KO (Olig2-cre) but reports no myelin result for it.
+- **Yang 2022 (PMID 35715422, PMID35715422_Yang2022_PMC.xml):** NO ROW: 36-patient EIMFS cohort, the one WWOX patient has "MRI … Abnormal" with no white-matter or myelin descriptor. I read the whole text. In Table 3 the WWOX row has MRI "Normal; Abnormal" = "0; 1". Table 2 shows this patient has two variants, a WWOX variant and ATP7A, and the text says "one patient has two genetic mutations".
+- **Qin 2025 (PMID 41254692, PMID41254692_Qin2025_PMC.xml):** NO ROW: Mendelian randomisation in T/NK-cell lymphoma, not a neural preparation. I read the abstract, the introduction and the methods start, then keyword-scanned the rest. There was no myelin term.
+- **Robertson 2025 (PMID 40191585, PMID40191585_Robertson2025_PMC.xml):** NO ROW: SNP-haplotype algorithm, WWOX p.E17K only as a test locus. I read the abstract and keyword-scanned the body. Every WWOX hit is a haplotype-sharing statement.
+- **Hammouz 2025 (PMID 40327201, PMID40327201_Hammouz2025_PMC_r2.xml):** NO ROW: cancer review, one secondhand sentence on myelination. I read the abstract, the relevance section, the start of Table 1 and the neurodevelopment paragraph. I scanned the whole body for neural terms. The one myelin sentence reports Repudi et al.: "the restoration of WWOX improved myelination across brain regions". It gives no data and is secondary.
+- **Tanna 2018 (PMID 30370248, PMID30370248_Tanna2018_PMC.xml):** NO ROW: review of in vivo models, no myelin or conduction readout reported. I read the abstract and the first ~6,000 characters, then scanned every sentence containing myelin, oligodend, conduction, nerve, axon, glia, MRI, latency, evoked or Schwann. The abstract's "neuropathy" rests only on a WT-rat sciatic-transection WWOX-level statement.
+- **Li 2014 (PMID 24520212, PMID24520212_Li2014_PMC.xml):** NO ROW: metabolic and tumour review, no neural readout. I read the abstract and the start, then keyword-scanned. No hit for myelin, oligodend, conduction, brain, nerve, axon, seizure or epilepsy.
+- **Salah 2010 (PMID 20146584, PMID20146584_Salah2010_PMC.xml):** NO ROW: tumour-suppression review, no neural readout. I read the abstract and the start, then keyword-scanned. There was one hit, a sentence on mouse Wwox (Wox1) protein–protein interactions.
+
+## C. CHONG 2023 ACCESS DETAIL
+The file is Scholar Gateway chunks 0, 1, 2, 18, 22, 23, 24 and 25, so access is PARTIAL-TEXT (not abstract-only). What each chunk covers:
+- Chunk 0: abstract.
+- Chunk 1: Introduction.
+- Chunk 2: start of Materials and Methods, plus all of Table 1. Table 1 holds the five patients' MRI, ophthalmological, hearing, EEG and status rows.
+- Chunk 18: Fig 1 caption, the end of the Methods, the Patient 5 narrative, and a repeat of Table 1.
+- Chunks 22 to 25: Discussion, including the MRI summary, the VEP sentence, hearing loss, the knockout-mouse "hypomyelination" sentence (a citation of Cheng 2020 and Mallaret 2014, not data), and the conclusion.
+- The Patient 1 to 4 narratives (in the Methods and Case Report sections) and the remaining chunks (3 to 17, 19 to 21) were not delivered.
+- Hearing is not a conduction row. Patient 2 has "Bilateral severe to moderate sensorineural hearing loss" in Table 1, with no test method in the delivered chunks, so I did not class it FUNCTIONAL.
+
+## D. OTHER rows (listed, not counted)
+- EEG findings in Elsaadany, Davids, Dong, Oliver (Table 2 and Fig 1, interictal slowing and hypsarrhythmia), Chong (Table 1), Riva, Serce Pehlevan.
+- Oliver Section 3.7: Kaplan-Meier survival analysis (null/null versus others, p = .0085) and time to seizure onset (p = .65).
+- Oliver: FDG-PET in Patient 6.
+- Chong: ketogenic-diet response, hearing loss in Patient 2.
+- Davids: MR spectroscopy and iron deposits in the globus pallidus.
+- Riva: MR spectroscopy.
+
+## E. COUNTS PER SOURCE (STRUCTURAL / FUNCTIONAL / OTHER, rows I listed)
+| Source | STRUCTURAL | FUNCTIONAL | OTHER |
+|---|---|---|---|
+| Elsaadany 2016 | 2 (E1, E2) | 2 (E3 CONDUCTION, E4 OTHER-EVOKED) | EEG |
+| Davids 2019 | 2 (D1, D3) | 1 (D2 CONDUCTION) | EEG, MRS |
+| Dong 2023 | 1 (G1) | 0 | EEG |
+| Oliver 2023 | 4 (O1 to O4) | 0 | EEG, survival, PET |
+| Chong 2023 | 1 (C1) | 1 (C2 OTHER-EVOKED) | EEG, hearing, diet |
+| Riva 2022 | 2 (R1, R2) | 1 (R3 OTHER-EVOKED) | EEG, MRS |
+| Serce Pehlevan 2026 | 2 (S1, S2) | 1 (S3 OTHER-EVOKED) | EEG |
+| Kosla 2019 | 1 (K1, borderline) | 0 | none |
+| Sukkar 2022 | 1 (SU1) | 0 | none |
+| Battaglia, Lin, Lange, Yang, Qin, Robertson, Hammouz, Tanna, Li, Salah | 0 | 0 | 0 |
+
+Totals: STRUCTURAL 16 rows (K1 borderline). 8 are MYELIN-STATED: E1, E2, D1, G1, O1, C1 (Patient 2 only), R1, and none of the others. (That is 7 rows by id; C1 mixes one myelin-stated patient with four anatomy-only patients.) FUNCTIONAL 6 rows: 2 CONDUCTION (E3, D2) and 4 OTHER-EVOKED (E4, C2, R3, S3). I count S3 as a fourth OTHER-EVOKED row, so the 6 is E3, D2, E4, C2, R3, S3.
+
+## F. SOURCES WITH AT LEAST ONE FUNCTIONAL ROW IN A WWOX-DEFICIENT PREPARATION, WITH STATED DIRECTION
+1. **Elsaadany 2016:** VEP "delayed" in Patient 1 (CONDUCTION, no value). ERG "normal" in Patient 1 (OTHER-EVOKED, retinal).
+2. **Davids 2019:** sensory and motor nerve conduction studies "normal" in the proband (CONDUCTION, peripheral, no values).
+3. **Chong 2023:** VEP "cannot be detected bilaterally" in Patient 4 (OTHER-EVOKED, absent response). PARTIAL-TEXT.
+4. **Riva 2022:** ABR with "no pathological findings" in one patient (OTHER-EVOKED, hearing).
+5. **Serce Pehlevan 2026:** ABR "within normal limits" in one patient (OTHER-EVOKED, hearing).
+
+In my rows the only stated latency abnormality is Elsaadany's delayed VEP, a single patient with no number. The one peripheral conduction row (Davids) is normal. Every FUNCTIONAL row here comes from a single case or case-series patient, none from a mouse, rat or organoid.
