@@ -797,3 +797,9 @@
 {"evidence": "SendMessage 2026-11-28 after IT35's frozen PREREG", "id": "ADV-328", "receipt": ["572143a6-273e-4c0a-a6f0-170e5c9673a7"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 1c914d1b"], "utc": "2026-11-28T13:46:19Z"}
 {"assessment": "HOST", "id": "ADV-329", "key": "repudi2021-conditional-histology-blind-read-he", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-28T14:01:17Z"}
 {"evidence": "SendMessage 2026-11-28 with task text", "id": "ADV-329", "receipt": ["0abc893b-33dc-4cd3-86aa-8a4754493931"], "state": "SENT", "to": ["HE - CURRENT 4441b7bf"], "utc": "2026-11-28T14:01:26Z"}
+{"assessment": "HOST", "id": "ADV-330", "key": "p47t-knockin-blood-chemistry-which-analytes-it", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-28T14:27:24Z"}
+{"assessment": "HOST", "id": "ADV-331", "key": "p47t-knockin-blood-chemistry-blind-read-he", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-28T14:27:27Z"}
+{"evidence": "SendMessage 2026-11-28 with task text", "id": "ADV-330", "receipt": ["069d9488-4d72-4e71-8682-a4f372fec591"], "state": "SENT", "to": ["IT Orchestrator - CURRENT b095e80e"], "utc": "2026-11-28T14:27:57Z"}
+{"evidence": "SendMessage 2026-11-28 with task text", "id": "ADV-331", "receipt": ["a5ac14ab-5c86-4b37-8234-1a58a09d45c9"], "state": "SENT", "to": ["HE - CURRENT c72e94ee"], "utc": "2026-11-28T14:27:59Z"}
+{"assessment": "HOST", "id": "ADV-332", "key": "regimen-audit-methods-sentence-vs-recorded-dose-sci", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-28T14:31:27Z"}
+{"evidence": "SendMessage 2026-11-28 with task text", "id": "ADV-332", "receipt": ["3ae57453-5be4-449f-b84a-661f67d73a48"], "state": "SENT", "to": ["SCI - CURRENT f59eabd0"], "utc": "2026-11-28T14:31:39Z"}
