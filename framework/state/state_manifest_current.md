@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261128_009
+last_batch_commit_id: BATCH_20261128_010
 last_batch_commit_date: 2026-11-28
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 1
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate ORCH-ROADMAP-IT59-20261119, IT successor 38; ADV-assigned completion of ADV-333: PMID 31829254 read complete, CORPUS-STUB-197 converted to PAPER 571). MINOR, WM_v7.29 preserved
+trigger: MANUAL (ACTOR_ID orchestrator, mandate ORCH-ROADMAP-IT59-20261119, IT successor 40; ADV-337 accepted by ADV: PMID 33914858 complete read FTR-20261128-33914858-41 registered on PAPER 004). MINOR, WM_v7.29 preserved
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261128_BATCH_20261128_009
+last_lint_id: LINT_20261128_BATCH_20261128_010
 last_lint_date: 2026-11-28
 last_lint_result: WARN
 ```
@@ -164,8 +164,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 3966
-fulltext_ledger_head: 790f8fc050d2fa0088fcf5b6ad3aff261aeb400ea26967f102720db10fce1129
+fulltext_ledger_events: 3967
+fulltext_ledger_head: ba6633a5532f1f04b98c45ddf5a73962e3f6efd38094f664a47f93e8b81a89b0
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -213,8 +213,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 69
-growth_anchor_head: 792200c9b5081a368838319eb1ad46575cab72e5bd936c0a4ddca4f90e0703f0
+growth_anchor_events: 70
+growth_anchor_head: e7225f155ac7c0ea74a2e91988d7eda6dd202927734b2c2ae3182bd9d878208a
 ```
 
 ```bash

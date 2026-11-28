@@ -1,0 +1,46 @@
+{
+ "event_id": "FTR-20261128-33914858-41",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "33914858",
+  "doi": "10.1093/brain/awab174"
+ },
+ "event_at": "2026-11-28T17:22:27Z",
+ "analysis_at": "2026-11-28T16:45:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "ADV-337 producer step, sonnet at high effort, delegate of the IT-39 task 2026-11-28, context_policy QUESTION_DRIVEN. Route: the operator-supplied typeset article PDF and its supplementary archive already on disk under files/fulltext were rendered to page images and read page by page; supplementary tables were parsed with a stdlib OOXML reader; the two mp4 files were not decoded.  A second reader (sonnet 5.5, effort high, reading figures as rendered images) then re-checked the composition and verified the facts below at source; the integrator (IT40) appended this receipt.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+ "source_fingerprint": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv337_repudi_it_20261128/RESULT_ADV337_IT_20261128.md",
+  "disease-models/wwox/research/deepdive_manifests/PMID33914858.json"
+ ],
+ "evidence_basis": [
+  "CONTEXT POLICY: QUESTION_DRIVEN, not SOURCE_FIRST. While locating the prior_receipt the producer printed the ledger status for this PMID, which exposed the coverage maps of every event and part of the evidence_basis of FTR-20260923-33914858-01 and FTR-20261003-33914858-02 before the first page was opened; the dispatch also named a question. The advisor_pilot_20261113 folder, generation_it59_20261119, the claim registry and the working model were not opened.",
+  "SCOPE: all 17 printed pages of the typeset article (Brain 144(10):3061-3077) were rendered with poppler pdftoppm at 110 dpi and opened as images (title page, introduction, methods, results, seven main figures with legends, discussion, acknowledgements, 64 references); Figure 3C, 3D and 3F were reopened at 260-300 dpi. The 21-page supplement PDF (File009) was rendered at 100 dpi and all pages opened: supplementary methods, Supplementary Figs 1-9 as images and all legends; Supplementary Fig 1C and 1E reopened at 220 dpi.",
+  "TABLES: the article has no table. Supplementary Table 1 (File012, one sheet, 16,054 gene rows), Supplementary Table 2 (File013, one sheet, 17,042 gene rows) and Supplementary Table 3 (File014, two sheets) were parsed in full with a stdlib OOXML reader. File014 was read row by row in full. File012 and File013 were counted over every row (730 up and 579 down at raw p < 0.01 and |FC| > 1.5 in File012, matching the text) and the Wwox, myelin, interneuron, astrocyte and channel rows were read per sample; the other rows were not read by eye.",
+  "VIDEOS NOT VIEWED: File010.mp4 and File011.mp4 could not be decoded (no ffmpeg, PyAV, OpenCV or imageio in this deployment). Only container headers were parsed with a stdlib reader: File010 7.38 s, 1080x1920, h264 + aac, 221 video frames; File011 14.95 s, 352x640, h264 + aac, 448 video frames. One attempt to play File011 in headless chromium returned net::ERR_ACCESS_DENIED and was not retried or worked around. No Supplementary Video caption is printed in the article PDF or File009, so the mapping of files to Video 1 and Video 2 is unverified. On 2026-11-28 the integrator tried to fetch a temporary decoder (imageio-ffmpeg in a job cache); the auto-mode classifier refused the command, it was not retried and no other decoder or route was tried (ADV confirmed). The two movies remain unviewed; any statement resting on them (for example N-KO seizures by video with no n) rests on the legend and text only.",
+  "TEXT SURFACE: the PDF text layer is column-interleaved and defective for symbols, so locators were taken from the rendered pages and the text file is declared for provenance only. File009 text layer is cleaner and was used for legend wording.",
+  "CAPTIONS VERSUS PANELS: where a legend states a number the panel was compared with it. Mismatches found: Supplementary Fig 6B legend gives S-KO 12 +/- 4 and S-Control 7 +/- 3 while the bar chart shows the control higher; text 'about 6-fold' unmyelinated axons against the printed averages 270 and 55 (ratio 4.9); Fig 7H legend n = 3 against Fig 7I legend n = 2 for OS-WT; Fig 2B text and legend count slices and animals differently.",
+  "KNOCKOUT COMPLETENESS FROM THE AUTHORS' OWN RNA-SEQ (hypothesis level, small n): File013 hippocampus P17, mean Wwox normalised counts knockout over control: Wwox-null 30/302 = 0.10 (n 2 vs 3), N-KO 15/226 = 0.07 (n 2 vs 2), S-KO 38/204 = 0.19 (n 3 vs 2). File012 S-KO over S-Control: cortex 230/641 = 0.36 (n 3 vs 4), hippocampus 22/119 = 0.18 (n 3 vs 2). Counts of the whole gene include exons not removed by exon 1 deletion.",
+  "NEGATIVES dated 2026-11-28 (searched article text layer, File009 text layer, and every rendered main and supplementary figure): no tdTomato or reporter image anywhere although the Methods state the Rosa26-loxP-STOP-tdTomato allele in all conditional models; the words interneuron, GABA (outside the label GABAergic in the Fig 3F UMAP), parvalbumin, Purkinje, western, immunoblot, rotarod, limitation, random, microglia each return zero in the text; no Wwox qPCR primer and no housekeeping primer in Supplementary Table 3; no quantification of the fraction of neurons lacking WWOX in any genotype; no animal sex per group.",
+  "NOT DONE: the cited references were not opened; no external source was consulted; the article text and supplement were not compared with LEGEND records after the first pass in this producer step; no statistics were recomputed from plotted points.",
+  "SECOND READER 2026-11-28 (dated): rendered Suppl Figs 1, 3, 5, 6, 7, 8 and main Figs 1, 2, 3, 4, 5, 7; read Suppl Figs 2, 4, 9 and the Fig 6 panels as legend text. Confirmed at source: N-KO EM axon counts (Suppl Fig 5G, P18, n = 3 mice, per-field points), null CC1/PDGFRa counts (Suppl Fig 7F, P17, n = 3 mice, 3 sections each), S-KO residual Wwox (File012 sheet SKO_vs_S_Crtl_6_6_Crtx,hippo row 50: hippocampus 0.184 n 3 v 2, cortex 0.360 n 3 v 4), no rescue experiment, interneurons by bulk transcripts only (File012). Corrected: Fig 3F labels a Microglia cluster (snRNA-seq n 1 v 1); Suppl Fig 6B legend numbers are swapped, the word reduced matches the bars. Eleven locators (entries 40 to 50) added to the work manifest. One lookup of a consuming sentence unit was stopped by a safeguard and not retried; that unit was not opened by the second reader."
+ ],
+ "prior_receipt": "FTR-20261128-33914858-03",
+ "reread_reason": "inadequate_prior_coverage"
+}
