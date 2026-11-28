@@ -1,0 +1,55 @@
+{
+  "investigation": "INV-06",
+  "title": "Alpha-tocotrienol, Src and lipid protection in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "An early cellular signal, more potent oxidation products and membrane protection motivate a comparison at measured local exposure.",
+  "graph": {
+    "evidence": "Cellular Src activity falls at 250 nM parent.",
+    "inference": "Products and membrane effects can account for rescue.",
+    "hypothesis": "A neuron-specific signal could spare glial Fyn.",
+    "experiment": "Measure analytes, two kinases and first sheaths."
+  },
+  "evidence": [
+    "At 250 nM, alpha-tocotrienol reduced a cellular Src signal. Recombinant active Src remained active at the same concentration. Rescue also occurred with kinase-active Src overexpressed.",
+    "Nominal Q7 rescue EC50 was 0.167 micromolar for parent and 0.043 for each product. Alpha-tocotrienol also protected cell-free liposomes from a model oxidation challenge."
+  ],
+  "inference": [
+    "At equal effective recovery, a one-product explanation of the Q7 result requires about 26% conversion. This is a conditional exposure balance. Measured chemical recovery can change that bound.",
+    "Bulk SRC fell in both mouse tissues and rose in the organoids. SLC7A11 fell across all three. RNA leaves both activation and lipid chemistry unresolved."
+  ],
+  "hypothesis": [
+    "An early Src change that persists with too little product to explain rescue would support a parent-dependent signal. Restoring Src activity tests whether it mediates the benefit."
+  ],
+  "experiment": [
+    "Match measured parent and products with a membrane-protection reference. Follow neuronal Src and glial Fyn separately during the first 5 to 30 minutes. Read oxidized lipid products, first sheaths per surviving cell and conduction at matched initial recruitment. A lower neuronal Src signal is interpretable only with glial Fyn function and physiological inhibition measured separately."
+  ],
+  "limits": [
+    "Retain as a conditional probe and defer pediatric priority. The adult resection comparison used four exposed specimens and four autopsy controls. The pediatric liver trial analyzed 15 versus 14 under a mixture comparison. Free juvenile parent and metabolites and WWOX function remain open."
+  ],
+  "sources": [
+    {
+      "label": "Sen et al. Cellular and recombinant Src, Fig. 7.",
+      "url": "https://doi.org/10.1074/jbc.275.17.13049"
+    },
+    {
+      "label": "Khanna et al. Cytosolic microinjection and lipoxygenase phosphorylation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16166580/"
+    },
+    {
+      "label": "Hinman et al. Parent and metabolite comparison, Fig. 1.",
+      "url": "https://doi.org/10.1371/journal.pone.0201369"
+    },
+    {
+      "label": "Yang et al. GPX4 deletion and liposome protection.",
+      "url": "https://doi.org/10.1038/s41598-025-34673-1"
+    },
+    {
+      "label": "Patel et al. Adult tissue and supplement identity.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22298568/"
+    },
+    {
+      "label": "Al-Baiaty et al. Pediatric tocotrienol mixture trial.",
+      "url": "https://doi.org/10.1186/s12887-024-04993-8"
+    }
+  ]
+}
