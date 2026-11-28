@@ -1356,18 +1356,21 @@
     },
     {
      "step": "ADV-316 (key partial-reads-with-consumers-read-depth-debt-second-tier): step 1 rank partial full-text records by consumer units, freeze E-A vs E-B first; step 2 depth read of top three only if at least 3 have a lawful route, else ACCESS-LIMITED",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-316 (ADV message after ADV-314 consumed; jobs/a5e6f2ad/tmp/adv316.txt)",
      "accepted_at": "2026-11-28T10:23:55Z",
-     "updated_at": "2026-11-28T10:27:03Z"
+     "updated_at": "2026-11-28T11:31:30Z",
+     "evidence": "RESULT_STEP2_ADV316_SCI_20261128.md FINAL, sentences to IT, receipts FTR-20261128-41744777-01 and FTR-20261128-42395553-01; landed bc8a41bde (folder brainstorm_20261116/adv316_partial_read_depth_sci_20261128)"
     },
     {
      "step": "ADV-313 table dated addendum: IT31 7 MUST-CHANGE cells and HE ADV-315 6 provenance cells, original rows unedited; path to IT (waits for HE's report)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message after ADV-314 consumed (2026-11-28)",
-     "accepted_at": "2026-11-28T10:23:55Z"
+     "accepted_at": "2026-11-28T10:23:55Z",
+     "evidence": "addendum landed on main at 8857a232d, path sent to IT32 (checkpoint BB section 1)",
+     "updated_at": "2026-11-28T11:31:30Z"
     }
    ]
   }
