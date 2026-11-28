@@ -46,4 +46,4 @@ Reopen for measured exposure that separates parent and products, a repeatable WW
 
 ## Replay
 
-Run `python3 -B disease-models/wwox/research/drug_repurposing/continuous_compounds/alpha_tocotrienol/replay.py` from the repository root. Run [replay_native.py](replay_native.py) with the shared evidence directory `files` and this dossier directory as arguments. [Source locations and scope](sources.tsv) · [Printable brief](../../view/research_reports/alpha-tocotrienol.pdf)
+Run `python3 -B disease-models/wwox/research/drug_repurposing/continuous_compounds/alpha_tocotrienol/replay.py` from the repository root. Run [replay_native.py](replay_native.py) with the shared evidence directory `files` and this dossier directory as arguments. [Source locations and scope](sources.tsv) · [Printable brief](alpha-tocotrienol.pdf)
