@@ -1,0 +1,21 @@
+source	preparation	structural_rows	functional_rows	functional_subtype	direction_as_stated	access	note
+Repudi 2021 Brain 33914858	mouse neuron-targeted (Syn-Cre) cKO; slices P13-17; EM P17	19	4 (A1-A3, A23)	CONDUCTION (A1) and evoked-potential amplitudes (A2, A3, A23)	callosal-stimulated N1/N2 evoked response: longer latency in S-KO (text); amplitude/ratio P values in legend (see note); sizes read from graph only	FULL TEXT	legend places P 0.0104/0.5737 in panel (i); producer read them as amplitudes, the held clemastine note as latencies; A23 = Fig 2E-F evoked field peaks larger in S-KO (P 0.0127; 0.008 and 0.0202; slices 6/8/8), excitability, added after the blind check
+Repudi 2021 EMBO Mol Med 34747138	germline Wwox-null +/- AAV9 rescue	6	0		no conduction measure	FULL TEXT	rescue arm has structural readouts only
+Abudiab 2025 bioRxiv PPR1124524	Wwox-null OPC cultures; Olig2-cKO mouse; cuprizone	13	0			FULL TEXT (preprint)	
+Tochigi 2019 31340538	lde/lde rat PND5-21	4	0			FULL TEXT	
+Cheng 2020 32000863	Wwox-/- mice 3 wk (Tc-MEP), P20 sciatic	2	2 (E1,E2)	CONDUCTION	Tc-MEP latency 1.39+-0.13 vs 2.44+-0.37 ms (p<0.01); amplitude 59.2+-9.0 vs 11.8+-5.4 uV (p<0.05); Wwox+/- latency 2.13+-0.22 ms (p<0.05), amplitude normal; n 10/4/5 mice	FULL TEXT	whole corticospinal-peripheral-muscle path; sciatic nerve demyelination in nulls (PNS)
+Hussain 2023 36828035	P47T knock-in mouse	3	0			FULL TEXT	
+Breton 2021 34634460	neuron-targeted (Syn-Cre) cKO slices P13-17	0	3 (4,4b,4c)	OTHER-EVOKED (network/synaptic)	interlaminar burst lag 18 ms / 33 ms medians; delayed NMDAR-dependent evoked response 97+-31 ms; CA1->CA3 PS amplitude higher	FULL TEXT	by the letter of the rule FUNCTIONAL; not axonal conduction; no myelin readout in the paper
+Steinberg 2025/2026 PPR960425, 42397075	patient iPSC organoids +/- AAV9-WWOX	1 (pathway term)	0			FULL TEXT	sign/size of the one term not read from figure
+Frontiers Neurosci 2020 (PMC7300205)	WOREE patients MRI	2	0			FULL TEXT	
+You 2024 39101447	1 patient WWOX-DEE	1	1 (8b BAEP)	CONDUCTION (BAEP delayed right); 8c EMG reclassified OTHER (no NCS stated)	BAEP: delayed right auditory conduction pathway; no values	FULL TEXT	
+Weisz-Hubshman 2019 30853297	6 patients (3 families)	4 rows	2 (11e,11f BERA)	OTHER-EVOKED (hearing)	abnormal in F3 VI-3 (bilateral hearing loss), normal in VI-4; no latencies	FULL TEXT	
+Abdel-Salam 2014 24456803	1 patient	1	2 (VEP, ERG); audiology row reclassified OTHER (method unnamed)	VEP CONDUCTION; ERG OTHER-EVOKED	VEP reduced amplitudes and great implicit time delays	FULL TEXT	optic atrophy and retinal dystrophy confound attribution to myelin
+Piard 2019 30356099	20 patients	5	0 (electrodiagnostic tests 5/11 abnormal: type unnamed, reclassified OTHER)			FULL TEXT	supplementary tables not held
+Al-Baradie 2022 35792847	6 patients	8	0 (hearing: method unnamed, reclassified OTHER)			FULL TEXT	
+Feng 2024 39416860	1 patient	1	0 (hearing: method unnamed, reclassified OTHER)			FULL TEXT	
+Elsaadany 2016 27495153	2 sisters	2	2 (VEP CONDUCTION delayed; ERG normal)	CONDUCTION; OTHER-EVOKED	VEP delayed, no value	FULL TEXT	
+Davids 2019 30362252	1 patient	2	1 (NCS normal)	CONDUCTION (normal)	sensory and motor NCS normal; no values	FULL TEXT	
+Chong 2023 36537114	5 patients	1	1 (VEP not detectable)	OTHER-EVOKED (absent)	VEP cannot be detected bilaterally (Patient 4)	PARTIAL-TEXT (8 chunks)	
+Riva 2022 35573960	1 patient	2	1 (ABR normal)	OTHER-EVOKED		FULL TEXT	
+Serce Pehlevan 2026 42092735	1 patient	2	1 (ABR normal)	OTHER-EVOKED		FULL TEXT	

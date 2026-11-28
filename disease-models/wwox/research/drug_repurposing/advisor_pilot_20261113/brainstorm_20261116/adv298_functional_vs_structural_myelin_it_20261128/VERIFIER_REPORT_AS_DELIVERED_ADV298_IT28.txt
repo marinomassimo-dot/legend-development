@@ -1,0 +1,268 @@
+ADV-298 BLIND CHECK, independent verifier report (hypothesis level; reference genotype class; not medical advice).
+
+SCOPE AND METHOD. I read the packet and checked every row in sections A and B against the source files. For Task 2, I ran keyword searches over the full text of all section C files. I read the surrounding passages for every hit. I did not read every line of every file. Absolute statements below ("none found") mean no hit for latenc|conduct|evoked|VEP|ERG|ABR|BAEP|BERA|EMG|NCV|audiolog|hearing|electrodiagnostic|velocity|propagat. They are not a line-by-line read. No network, no images, nothing from Obeid, adv174 or adv175 was opened. I wrote no deliverable files. I did create five scratch text extracts and a helper script in /tmp (for converting XML to text) and deleted them afterwards. Figures and supplements were not read. Where a value rests on a figure I say "figure not read". Section C files were opened as named. For B rows the sources were: Iacomino 2020 (IA3), Ehaideb 2018 (EH3), Shaukat 2018 (SH2), Tarta-Arsene 2017 (TA1), Tabarki 2015 html (TB1) and Oliver 2023 xml (O2). The row codes IA, EH, SH, TA and TB are inferred, because the packet names no files for them.
+
+=== TASK 1: ROW CHECK ===
+Format: (i) NUMBERS / (ii) CLASS / (iii) PREPARATION.
+
+SECTION A (functional rows)
+
+A1 Repudi 2021 Brain, latency to N1/N2 (Fig 5D)
+- (i) MATCH, with two caveats.
+  - Slice and age details match the Methods: "neocortex was sectioned coronally 400–500-µm thick"; mice "aged P13 to P17".
+  - The legend matches the row: "n = 8 slices, five subjects; S-Control; n = 8 slices, six subjects S-KO". The legend's "recording at a vertical distance of 250 mm from the stimulator" is "250 µm" in the row.
+  - Text quotes match: "stimulated the corpus callosum and recorded from neocortical layer V … We found a significant latency of neural conductivity in S-KO compared with that of control [Fig. 5D(i)], consistent with impaired myelination" and "a longer response latency of axonal propagation [Fig. 5D(ii and iii)]".
+  - Caveat 1: the text cites Fig 5D(i), not (ii), for the significant latency.
+  - Caveat 2, the row's "no P value for latency in the text or legend" is NOT SAFE. The only P values in the legend sit inside panel (i): "(N1 *P = 0.0104; N2 = 0.5737 Wilcoxon rank sum test)". The legend does not say whether they test amplitude or latency. The row (A2) assigns them to amplitude. That is the earlier reader's interpretation. Both readings are possible.
+  - Latency values: figure not read.
+- (ii) RIGHT.
+- (iii) YES (neuron-specific Synapsin-Cre conditional KO).
+
+A2 peak amplitudes N1/N2
+- (i) The text quote matches: "significantly lower peak amplitudes of the evoked potentials". The legend P values (N1 *P = 0.0104; N2 = 0.5737, Wilcoxon) are as quoted. The assignment of those P values to amplitude is not stated in the legend (see A1). Directly, the legend gives no per-N P value for amplitude. Values: figure not read.
+- (ii) RIGHT under "evoked potentials of any modality".
+- (iii) YES.
+
+A3 N1/N2 ratio
+- (i) MATCH. Legend: "(iii) Ratio of the amplitude of N1 and the amplitude of N2 (N1/N2). **P = 0.0030; Wilcoxon rank sum". No direction is given in text or legend. Figure not read.
+- (ii) RIGHT. (iii) YES.
+
+E1 Cheng 2020 Tc-MEP amplitude
+- (i) MATCH. Quote: "59.2 ± 9.0 μV; n = 10 … 11.8 ± 5.4 μV … Wwox−/− mice (Fig. 2a, b; n = 4, p < 0.05) … Wwox+/− (59.6 ± 17.2 μV; n = 5) was comparable". The legend gives the error as SEM; the row does not state the ± type. Age is 3 weeks (not in the row).
+- (ii) RIGHT. (iii) YES.
+
+E2 Cheng 2020 Tc-MEP latency
+- (i) MATCH. Quote: "onset latency … Wwox−/− (2.44 ± 0.37 msec) than Wwox+/+ mice (1.39 ± 0.13 msec) (Fig. 2c; p < 0.01) … Wwox+/− mice (2.13 ± 0.22 msec; p < 0.05)". n for latency is not given separately, as the row says. A Methods wrinkle: latency is "measured from the onset of electrical shock artifact to the major positive peak", although the text calls it "onset latency".
+- (ii) RIGHT. (iii) YES.
+
+1B:4 Breton 2021, interlaminar lag
+- (i) MATCH. Quote: "layer V lagged behind layer II/III for 32/48 bursts at 0.5-4 Hz and 35/48 burst at 4-6 Hz (median lag at 0.5-4 Hz: 18 [0–62]ms; at 4-6 Hz: 33 [−15–55] ms)".
+  - The Fig 2D legend gives "48 bursts from 17 slices of 6 S-KO animals".
+  - The Fig 2E legend gives "100-400 Hz shows layer V precedes layer II/III by a median of 9.5 ms".
+  - "0 of n = 11 slices from 7 S-WT mice" is confirmed.
+  - Not in the row: the Discussion says the bursts propagate "from layer II/III to layer V at a velocity of ~11 mm/s".
+- (ii) ARGUABLE. The rule lists "latency in slice" and "propagation", so the row fits the letter. But this is the lag of spontaneous seizure-like network bursts, not conduction. The row already flags this. It has no WT comparator.
+- (iii) YES.
+
+1B:4b Breton 2021, evoked LFP peak latency
+- (i) MATCH. Quote: "This peaked at 97 ± 31 ms (mean ± standard deviation, n = 6 animals) after the stimulus onset"; "larger than that of the S-WTs at multiple stimulus strengths"; "reversibly suppressed" by d-APV. The data are in Supplementary Fig S3, not read.
+- (ii) ARGUABLE. This is an evoked potential (literal rule), but it is a late NMDAR-mediated response of about 97 ms, not conduction.
+- (iii) YES.
+
+1B:4c Breton 2021, hippocampal evoked fEPSP/PS
+- (i) MATCH. Fig 5D legend: "S-WT n = 6 slices, 5 animals; S-KO n = 8 slices, 4 animals". Fig 5C legend: "*p < 0.05, Wilcoxon rank sum test for PS amplitude CA1 to CA3 S-KO compared to S-WT stimulus strengths 40-100 μA". The text says CA3→CA1 showed no significant difference in PS or fEPSP.
+- (ii) ARGUABLE, as the row itself admits. It is a synaptic or excitability amplitude, with no latency.
+- (iii) YES.
+
+1B:8b You 2024, brainstem auditory evoked potentials
+- (i) MATCH. Quote: "Brainstem auditory evoked potentials revealed a delayed right auditory conduction pathway (Figure 6)". Fig 6 legend: "delayed right auditory conduction pathway". No numbers. Figure not read.
+- (ii) RIGHT. (iii) YES (homozygous c.172+1G>C; the paper also notes maternal uniparental disomy).
+
+1B:8c You 2024, EMG
+- (i) MATCH. Quote: "EMG of the upper and lower limbs suggested peripheral nerve damage (Figure 7)". Methods: "electromyography (EMG‐induced potentiometer, MEB‐2306C, Japan)". Fig 7 legend: "Indicates neurogenic impairment of the extremities. (a) Common peroneal nerve motor branch injury. (b) Injury of the sensory branch of the common peroneal nerve." No velocity or latency.
+- (ii) ARGUABLE. The test is not named as a nerve conduction study. The "sensory branch" finding implies a sensory conduction test, but that is an inference.
+- (iii) YES.
+
+1B:11e Weisz-Hubshman 2019, BERA, F3 VI-3
+- (i) MATCH. Quote: "Brainstem Evoked Response Audiometry demonstrated bilateral hearing loss." The text says "At the age of nine months she passed away".
+- (ii) RIGHT (evoked potential). (iii) YES (homozygous c.517-2A>G).
+
+1B:11f Weisz-Hubshman 2019, VI-4
+- (i) MATCH. Quote: "BERA was normal."
+- (ii) RIGHT. (iii) YES.
+
+2:AS2 Abdel-Salam 2014, VEP
+- (i) MATCH. Quote: "Visual evoked potential (VEP) showed reduced wave amplitudes and great implicit time delays … the ophthalmological examination indicated major impairment of retinocortical transmission indicative for delayed visual maturation, and bilateral severe macular and optic nerve dysfunction". Patient II:4 only (II:1 died untested).
+- (ii) RIGHT. (iii) YES.
+
+2:AS3 Abdel-Salam 2014, ERG
+- (i) MATCH. Quote: "Scotopic and photopic flash electroretinogram (ERG) showed moderately reduced response … Photopic flicker ERG revealed markedly reduced responses".
+- (ii) ARGUABLE. The ERG is a retinal generator response, not signal conduction. It counts only under the literal "evoked potentials of any modality".
+- (iii) YES.
+
+2:AS4 Abdel-Salam 2014, audiology
+- (i) MATCH. Quote: "Echocardiography and audiological evaluation were normal." No method is named.
+- (ii) WRONG as FUNCTIONAL. An unnamed audiological evaluation is not shown to be a conduction or evoked-potential readout (see Task 3).
+- (iii) YES.
+
+2:PI7 Piard 2019, electrodiagnostic tests
+- (i) MATCH. Quote: "electrodiagnostic tests were abnormal in 5/11 (45%) patients". Discussion: "altered fundus oculi (47%) and/or electrodiagnostic tests (45%) suggestive of optic atrophy and/or retinal dystrophy". Test types are not named.
+- (ii) ARGUABLE to WRONG as FUNCTIONAL. It pools unnamed tests (possibly ERG and VEP).
+- (iii) YES.
+
+2:AB9 AlBaradie 2022, Patient 1.1
+- (i) MATCH. Quote: "His hearing and ophthalmological assessment were normal." The patient is a 10-year-old boy.
+- (ii) WRONG as FUNCTIONAL. No method is named.
+- (iii) YES.
+
+2:FE2 Feng 2024
+- (i) MATCH. Quote: "Audiological testing indicated bilateral hearing loss and an absence of response to sound stimulation." The patient is 5 months old. The paper's keywords say "compound heterozygous", but the text says "novel homozygous mutation", so the paper is inconsistent.
+- (ii) WRONG as FUNCTIONAL (method unnamed; could be behavioural). (iii) YES.
+
+3:E3 Elsaadany 2016, VEP
+- (i) MATCH. Quote: "Electroretinogram was normal, but visual evoked potential was delayed." The proband is described as 7 years old in the paper. The age at testing is not stated.
+- (ii) RIGHT. (iii) YES (homozygous W44X).
+
+3:E4 Elsaadany 2016, ERG
+- (i) MATCH. Quote: "Electroretinogram was normal".
+- (ii) ARGUABLE (retinal, as for AS3). (iii) YES.
+
+3:D2 Davids 2019, EMG/NCV
+- (i) MATCH. Quote: "Electromyography (EMG)-NCV revealed normal sensory and motor nerve conduction studies. Limited needle EMG … small, polyphasic motor units, suggesting a primary muscle disorder." The proband was enrolled at age 6 and is 10 years old in the paper.
+- (ii) RIGHT. (iii) YES. Note: it is a homozygous WWOX microdeletion within a region of uniparental disomy, and the authors suggest a "blended phenotype … an additional pathogenic variant".
+
+3:C2 Chong 2023, VEP, Patient 4
+- (i) MATCH. Table 1: "VEP: cannot be detected bilaterally". Discussion: "Patient 4 demonstrated undetected visual evoked potentials suggesting central involvement". Table 1 columns are in patient order, so column 4 is Patient 4. The file is partial text (8 chunks delivered).
+- (ii) RIGHT (an absent evoked potential). (iii) YES.
+
+3:R3 Riva 2022, ABR
+- (i) MATCH. Quote: "Ophthalmological examination and auditory brain stem response did not show any pathological findings."
+- (ii) RIGHT. (iii) YES.
+
+3:S3 Serce Pehlevan 2026, ABR
+- (i) MATCH. Quote: "Auditory brainstem response testing and thyroid function tests were within normal limits."
+- (ii) RIGHT. (iii) YES.
+
+SECTION B (structural sample)
+
+1A:A21 Repudi Brain, organoid Week 30
+- (i) MATCH. Fig 7G legend: "OS-WT, n = 5; OS-WWOX-KO, n = 5". Text: "significantly reduced staining of both MBP and CNP … supported by transcript levels (Supplementary Fig. 9D) … SOX10 and PDGFRA … slightly increased". Supplement not in file.
+- (ii) RIGHT. (iii) YES (CRISPR WWOX-KO hESC organoid).
+
+1A:A5 Repudi Brain, bulk RNA-seq
+- (i) MATCH. Text: "significant downregulation of myelin-associated genes … while grouping the samples according to their WWOX status". The gene list in the row matches the text. No age is given for the Wwox-null and N-KO samples.
+- (ii) RIGHT. (iii) YES.
+
+1A:A6 Repudi Brain, snRNA-seq
+- (i) MATCH. Fig 3F legend: "S-Control (n = 1) and S-KO (n = 1) at P17". Text: "a reduced number of matured myelinating oligodendrocyte cells (15%), COPs … (68%) and a greater number of OPCs (150%)". What the percentages refer to is not stated.
+- (ii) ARGUABLE. This is cell-type cluster composition from one pooled library per genotype. It is not a myelin structure or marker staining. The nearest rule entry is the transcript-level one.
+- (iii) YES.
+
+1A:B4 Repudi EMBO, P17 g-ratio
+- (i) MATCH. Legend: "total no of axons n = 350 per each group"; WT, KO and KO+AAV each n = 3 mice. Text: "some minor differences in the g‐ratio". Values: figure not read.
+- (ii) RIGHT. (iii) YES (Wwox-null versus KO+AAV-mWwox).
+
+1A:B5 Repudi EMBO, 6 months
+- (i) MATCH. Legend: "n = 300 per each group … (P value 0.011334)"; "similar number of myelinated axons in rescued mice (n = 3) compared to wild type (n = 3)". Figure not read.
+- (ii) RIGHT.
+- (iii) ARGUABLE. The mice are Wwox-null with neuronal AAV rescue, so this is a residual-deficit comparison, not a plain deficient state.
+
+1A:C11 Abudiab 2025
+- (i) MATCH. Text: "CC1⁺ cells (O-CTR: 220/FOV; O-KO: 140/FOV) … OPCs (O-CTR: 78.25/FOV; O-KO: 111/FOV) (Fig. 3e–f)". The figure text shows "N=3" and "*** pvalue < 0.001".
+- (ii) RIGHT.
+- (iii) YES (Olig2-Cre conditional KO). Note: these data come after cuprizone demyelination and recovery, not baseline.
+
+1A:C2 Abudiab 2025, cultures
+- (i) MATCH. Text: "significantly lower fraction of cells was immunoreactive for MBP in KO … larger fraction was immunoreactive for PDGFRα (Fig. 2e) … significantly fewer MBP-positive cells (Supplementary Fig. 2g)". Supp 2g is "after 7 days in vitro". The figure text shows "n=3" and "***" beside the PDGFRα% panel. The row's "* p<0.05" legend claim: not verified, figure not read.
+- (ii) RIGHT. (iii) YES (Wwox-null OPC cultures).
+
+1A:D2 and D3 Tochigi 2019 (lde/lde rat)
+- (i) MATCH. Text: "lde/lde rats showed significantly lower myelination on PNDs 5–21 (Figure 4A–D)". Legend: MBP (B) and CNP (D) areas quantified. Western blot: "age-associated increases in MBP and CNP in cerebral cortices of +/+ rats, along with significantly lower levels of expression in lde/lde rats (Figure 4E–G)". No per-age significance is given for the western blot, as the row says.
+- (ii) RIGHT. (iii) YES.
+
+2:AB2 AlBaradie, P1.2
+- (i) MATCH. Patient 1.2 is 15 years 5 months. Quote: "Brain MRI showed indications of focal abnormality in the left subcortical parahippocampal gyrus." Table: "T2/FLAIR hyperintensity in left subcortical parahippocampal gyrus". The variant is "apparent homozygosity".
+- (ii) STRUCTURAL is RIGHT (MRI). The sub-label MYELIN-STATED is WRONG. The row itself says the authors do not say white matter, and nothing about myelin is stated.
+- (iii) YES.
+
+2:AB3 AlBaradie, P2.1
+- (i) MATCH. Quote: "Brain MRI showed moderate thinning of the corpus callosum; his MRS was normal." Age 3 years 9 months. Variant c.160C>T p.(Arg54).
+- (ii) RIGHT. (iii) YES.
+
+2:AB8 AlBaradie, P6
+- (i) MATCH. Patient 6 is 5 years 2 months. Quote: "supratentorial tissue volume loss with subcortical band heterotopia. His MRS was unremarkable." Variant Gln230Pro, homozygous.
+- (ii) RIGHT. (iii) YES.
+
+2:EH3 Ehaideb 2018
+- (i) MATCH. Quote: "MRI brain revealed generalized asymmetrical brain tissue volume loss and asymmetrical ventricular dilatation, thinning of corpus callosum and periventricular white matter more left side". The Fig 1 legend for Patient 3 at 18 months says "paucity white matter". Variant p.Arg54*.
+- (ii) RIGHT. (iii) YES.
+
+2:IA3 Iacomino 2020
+- (i) MATCH. Fig 1 legend: "performed at 21 gestational weeks demonstrate mild hypoplasia of the cerebellar vermis". The laminar organization wording is "(not shown)" in the row; I did not see the clause itself in the extracted text I read.
+- (ii) RIGHT. (iii) YES.
+
+2:PI2 Piard 2019
+- (i) MATCH. "delayed myelination (1/20)".
+- (ii) RIGHT. (iii) YES.
+
+2:PI3 Piard 2019
+- (i) MATCH. Fig 3 legend: "w P19 sagittal T1 circular lesions (hyposignal) of the medial part of the corpus callosum". P19 carries three missense variants.
+- (ii) STRUCTURAL is RIGHT. The sub-label MYELIN-STATED (b) is WRONG, because myelin is not stated.
+- (iii) YES.
+
+2:PI4 Piard 2019
+- (i) MATCH. "Brain MRI … abnormal in 80% (16/20) … corpus callosum hypoplasia (15/20; 75%)".
+- (ii) RIGHT. (iii) YES.
+
+2:SH2 Shaukat 2018, Case 2
+- (i) MATCH. Quote: "Cranial MRI at two months of age revealed bilateral parietal polymicrogyria, dysplastic thin corpus callosum, wide CSF spaces and reduced white matter volume, particularly in the temporal lobe (figure 3B)". Variant c.606-1G>A.
+- (ii) RIGHT. (iii) YES.
+
+2:TA1 Tarta-Arsene 2017
+- (i) MATCH. Fig 1 legend: "MR images at the age of 5 weeks, showing completely formed, but thin, corpus callosum and normal myelination for age". Text: "His cerebral MRI at 5 weeks of age revealed a thin corpus callosum".
+- (ii) RIGHT. Note: the same patient at 2.6 years has "delayed myelination" (Fig 2 legend). The sampled row is the normal time point only.
+- (iii) YES.
+
+2:TB1 Tabarki 2015
+- (i) MATCH. Quote: "three siblings from a consanguineous Saudi family (unpublished data) … MRI brain showed hypomyelination and global brain atrophy … homozygous mutation (Chr16_78458766G > A)". The number imaged is not stated.
+- (ii) RIGHT. (iii) YES.
+
+3:O2 Oliver 2023
+- (i) PARTLY MISMATCH. The count of white-matter signal or volume entries matches. In Table 2, row order P1 to P13, the entries are: P1 "WM volume loss and T2 change PVWM"; P2 "inc T2 WM"; P4 "inc T2 WM"; P5 "abn T2 Fr‐Te WM"; P6 "abn WM signal"; P7 "abn T2 WM"; P8 "inc T2 WM"; P9 "WM volume loss with inc T2 PVWM"; P13 "abn WM signal". That is 9, plus P10 "WM inc T2 brainstem dentate nuclei" (ambiguous).
+  - MISMATCH: the row says "myelin is not named for these entries". Table 2 does name myelin: P2 "delayed myelination … poor myelination"; P3 "delayed myelination"; P6 "delayed myelination"; P7 "delayed myelination"; P8 "abn myelination"; P10 "delayed myelination". Six patients (P2, P3, P6, P7, P8, P10) have a myelin statement. P3, with no WM signal or volume entry, is among them. The text also says "delayed myelination" for Patient 7.
+  - The text quotes in the row match: "white matter signal abnormalities"; "Other features included hippocampal atrophy, white matter signal abnormality, and volume loss with a very thin corpus callosum".
+- (ii) STRUCTURAL is RIGHT. ANATOMY-ONLY is WRONG for the P2, P6, P7 and P8 entries in the O2 list, because they name myelin. The myelin-stated entries need their own row.
+- (iii) YES.
+
+3:R1 Riva 2022
+- (i) MATCH. Quote: "Brain MRI at 4 months of age revealed delayed myelination, reduction of the white matter volume, and reabsorption of the periventricular cysts". The Fig 2 legend repeats "delayed myelination" and the sagittal T1 shows "hypoplasia of the corpus callosum". Discussion: "white matter hyperintensity representing delayed myelination". Variants p.Arg264* plus an 84,828-bp deletion.
+- (ii) RIGHT. (iii) YES.
+
+=== TASK 2: COMPLETENESS (conduction or propagation readouts in Wwox-deficient preparations) ===
+
+NOT IN THE SECTION A/B ROWS
+1. Repudi 2021 Brain, Fig 2E–F, evoked field response in S-KO neocortical slices.
+   - Text: "recorded the layer II/III field response of the neocortex to electrically evoked stimuli in layer V (Fig. 2E and F)"; "the electrophysiological evoked field responses, in vitro, were larger in the S-KOs as compared with the S-Controls and S-HTs (Fig. 2E and F)".
+   - Legend: "(F) Amplitude of the first and second peak responses (first peak: *P = 0.0127; second peak: **P = 0.008, *P = 0.0202; Wilcoxon rank sum test S-Control, n = 6 slices, three subjects; S-HT, n = 8 slices, five subjects; S-KO, n = 8 slices, six subjects)."
+   - This is an evoked potential in a conditional-KO preparation, by the same rule that admitted Breton 4c. No row covers it, so it is absent from section A. The direction (larger in KO) contrasts with the lower N1/N2 amplitudes of Fig 5D.
+2. Breton 2021, Discussion: propagation "from layer II/III to layer V at a velocity of ~11 mm/s". It is the same dataset as row 4 but is a velocity figure the row does not carry. Derivation not read.
+3. Hearing-loss entries with an unnamed method, not in A:
+   - Chong 2023 Table 1, row "Hearing impairment": "Bilateral severe to moderate sensorineural hearing loss" (column 2), "Normal" (columns 3 and 4), "Not tested …" (columns 1 and 5). Only 8 of the 26 chunks were delivered, so the method may be named in chunks I did not see.
+   - Piard 2019: "Hearing loss … reported in a single patient"; no method.
+   - AlBaradie 2022, Patient 2.2: "does not respond to sounds" (clinical).
+   These are the same class as AS4, AB9 and FE2.
+4. Weisz-Hubshman 2019 Table 1 contains "abnormal ERG" cells under literature columns ("2-abnormal ERG", "3+, 2-2-abnormal ERG", "+ abnormal ERG"). They appear to come from other published cohorts, not this paper's six patients. Column alignment in the extracted table is uncertain. They are not primary.
+
+CONFIRMED PRESENT IN THE ROWS (compared by source and readout): Repudi Fig 5D (A1–A3); Cheng Tc-MEP amplitude and latency (E1, E2); Breton lag, evoked latency and hippocampal evoked fields (4, 4b, 4c); Abdel-Salam VEP, ERG and audiology; Elsaadany VEP and ERG; You BAEP and EMG; Davids NCV; Weisz-Hubshman BERA (two patients); Chong VEP; Riva ABR; Serce Pehlevan ABR; Piard electrodiagnostic tests; AlBaradie hearing; Feng audiology.
+
+NO CONDUCTION READOUT FOUND by the keyword search in: Repudi 2021 EMBO (only cell-attached recordings of spontaneous firing and open-field, rotarod latency to fall, which is behaviour); Abudiab 2025; Tochigi 2019 (sound-evoked seizures are behaviour); Hussain 2023; Oliver 2023. Elsaadany Patient 2, Riva and Serce Pehlevan have no tests beyond those listed.
+
+STRUCTURAL READOUTS ABSENT FROM THE SECTION B SAMPLE (different preparation or readout type; not exhaustive)
+- Repudi 2021 Brain, S-KO mouse (the sample has only organoid and transcript rows):
+  - MBP/CNP immunostaining at P18, cortex and cerebellum (Fig 4A–E).
+  - CC1/PDGFRα counts in corpus callosum, "a 2-fold reduction in CC1-positive cells" (Fig 4F,G).
+  - EM myelinated axons "3.5–4-fold" fewer in corpus callosum and "6-fold" more unmyelinated axons in optic nerve (Fig 5A,B).
+  - G-ratio (Fig 5C).
+  - LFB (Supp 5B) and qRT-PCR (Supp 5C).
+  - Organoid CC1 (Fig 7E), CNP (7F) and EM at 37 weeks (7H,I).
+- Cheng 2020: sciatic nerve EM, "abnormal-shaped and demyelinated axons … onion bulb degeneration", and LFB myelin-staining reduction in corpus callosum, anterior and hippocampal commissures, cingulum (Fig 3, Fig 4).
+- Abudiab 2025, baseline conditional KO: TEM myelinated axons (117.6 versus 125.1 per FOV, P = 0.22; 130.1 versus 102.3, P = 0.0044 at 18 months), MBP intensity, and OPC culture RNA-seq and Sholl analysis (not in section B).
+- Tochigi 2019: APC (CC-1) positive cell counts, PNDs 15–21 (Fig 4H,I).
+- Hussain 2023 (P47T knock-in): Olig2 reduced in corpus callosum (p < 0.01, Fig 4d,e), but "no significant differences in Mbp staining … (Supplementary Figs. 6a–d)". This is a negative structural result.
+- Human MRI myelin statements, not sampled:
+  - Elsaadany Patient 1: "absent white mater myelination on T2" at 23 weeks (Fig 2 legend); Patient 2 "progressive demyelination".
+  - Davids: "delayed myelination with gliosis".
+  - Weisz-Hubshman Family 1: "delayed myelination" (18 and 33 months).
+  - Chong Patient 2: "Delayed myelination pattern for age".
+  - Tarta-Arsene at 2.6 years: "delayed myelination".
+
+=== TASK 3: SYSTEMATIC PROBLEMS ===
+- Rows with an unnamed test are classed FUNCTIONAL (b): AS4, PI7, AB9, FE2. The rule requires "a readout of signal conduction or propagation", and an unnamed "audiological evaluation" or "hearing assessment" does not meet it. PI7 pools unnamed tests; FE2 may be behavioural. They should be UNCLASSIFIED or OTHER. Retinal ERG (AS3, E4) is arguable as well. If hearing loss with an unnamed method is counted FUNCTIONAL, the Chong, Piard and AlBaradie 2.2 hearing entries must be added.
+- The "evoked potentials of any modality" clause is applied unevenly. Breton hippocampal fEPSP/PS amplitudes (4c, synaptic excitability) and the late NMDAR response (4b) are included. The comparable Repudi Fig 2E–F evoked field amplitudes are missing from section A. This is an omission, not an error in the rows given.
+- The row 4 family (Breton) carries the caveat "network propagation, not axonal conduction". The A-rows include 4, 4b and 4c at the same level as Cheng's Tc-MEP and Repudi's callosal latency. The functional set mixes conduction, synaptic excitability and unnamed clinical tests under one label.
+- The STRUCTURAL sub-labels are inconsistent. MYELIN-STATED is applied to AB2 and PI3, with no myelin statement. ANATOMY-ONLY is applied to O2, whose entries do name myelin for P2, P6, P7 and P8 (and the Oliver table names it for P3 and P10 as well).
+- The A1/A2 P-value assignment is the earlier reader's interpretation. The legend places N1/N2 P values in panel (i) without saying what they test, and the text says the significant latency is in 5D(i).
+- Two preparation caveats. B5 is a rescued Wwox-null mouse. C11 is post-cuprizone remyelination. The human single-patient rows D2 and 8b involve uniparental disomy.
+- Under "OTHER = list, do not count", normal single-patient results (R3, S3, 11f, E4, AS4, AB9) sit in the same FUNCTIONAL list as the positive findings.
+
+NOT DONE / NOT REACHED: figures and supplements (Repudi Fig 5D values, Fig 2F values, Breton Supp S3, You Fig 6/7, Abudiab Fig 2e/3e values), and the undelivered Chong chunks. The "Results para 1", "paragraph 7" and similar locator labels in the rows were not individually verified.

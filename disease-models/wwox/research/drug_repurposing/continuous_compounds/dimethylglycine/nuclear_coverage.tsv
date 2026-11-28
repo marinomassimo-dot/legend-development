@@ -1,0 +1,11 @@
+pool	gene	nuclei	gene_UMI	positive_nuclei
+ctrl	Dmgdh	3182	8	7
+ctrl	Etfa	3182	771	624
+ctrl	Etfb	3182	0	0
+ctrl	Etfdh	3182	435	386
+ctrl	Sardh	3182	33	33
+ko	Dmgdh	2920	14	13
+ko	Etfa	2920	708	566
+ko	Etfb	2920	0	0
+ko	Etfdh	2920	280	258
+ko	Sardh	2920	42	40
