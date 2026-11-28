@@ -1,0 +1,61 @@
+{
+  "investigation": "INV-05",
+  "title": "Agmatine sulfate in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "NMDA channel block, coupled nitric oxide signaling and spontaneous EEG can give different answers.",
+  "graph": {
+    "evidence": "Adult WAG/Rij rats had more spike-and-wave discharges.",
+    "inference": "Magnesium interaction changes which voltage loses more current.",
+    "hypothesis": "Preserved first recruitment may coexist with fewer recurrent events.",
+    "experiment": "Match NMDA current and test NO signaling and recurrence."
+  },
+  "evidence": [
+    "The direct current literature describes voltage-dependent NMDA inhibition. A separate spinal calcium response survived GluN2B knockdown and depended on intact PSD95-nNOS signaling in the tested conditions.",
+    "Rat IV exposure gave 24.10 micromoles per kilogram in total brain. Repeated oral dosing in mice increased total hippocampal parent without perfusion. Local free exposure remains unknown.",
+    "Recombinant human AGMAT hydrolyzed acidic guanidino compounds but did not show detectable agmatine hydrolysis. The transcript cannot establish conversion into putrescine."
+  ],
+  "inference": [
+    "Under two different magnesium interaction assumptions, the earlier or later voltage shows more absolute current loss. The sign is conditional and can be tested by a matched-waveform experiment.",
+    "The adult absence-model finding makes spontaneous recurrence essential alongside any evoked or calcium readout."
+  ],
+  "hypothesis": [
+    "A circuit benefit requires a native late abnormality and preserved first excitatory and inhibitory recruitment. A residual calcium or circuit effect at matched current could reflect scaffold-linked signaling."
+  ],
+  "experiment": [
+    "Compare matched WWOX-LoF and corrected preparations at measured local parent and physiological magnesium. Pair first recruitment and late NMDA charge with NO or cGMP and spontaneous recurrence. Use scaffold disruption to test the residual signaling contribution."
+  ],
+  "limits": [
+    "Retain as an ex vivo comparator. Defer pediatric priority pending juvenile free brain exposure and a selective spontaneous-network benefit.",
+    "The adult oral pain study supplies limited tolerability context. In the circuit comparison, an acute provoked endpoint and spontaneous recurrence need independent measurement."
+  ],
+  "sources": [
+    {
+      "label": "Yang and Reis. Primary whole-cell abstract.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9918557/"
+    },
+    {
+      "label": "Xie et al. Spinal calcium and scaffold dependence, Figs. 3 and 4.",
+      "url": "https://doi.org/10.1016/j.jpet.2024.100061"
+    },
+    {
+      "label": "Akman et al. Spontaneous rat EEG, Figs. 2 to 5.",
+      "url": "https://doi.org/10.26650/IUITFD.904146"
+    },
+    {
+      "label": "Clements et al. Rat tissue and plasma PK, Tables 5 and 6.",
+      "url": "https://doi.org/10.1124/jpet.123.001828"
+    },
+    {
+      "label": "Bergin et al. Repeated oral mouse exposure, Figs. 3, 4 and 7.",
+      "url": "https://doi.org/10.1038/s41598-019-49078-0"
+    },
+    {
+      "label": "Sinn et al. Human AGMAT enzyme substrate test, Figs. 1 and 2.",
+      "url": "https://doi.org/10.1038/s41598-022-26655-4"
+    },
+    {
+      "label": "Keynan et al. Adult oral clinical context, primary abstract.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20447305/"
+    }
+  ]
+}
