@@ -1,0 +1,3 @@
+weights	central_RR	corner_low	corner_high	interpretation
+two_12h_phases	1.0251	0.9447	1.1771	scenario_range_not_CI
+pooled_24h	1.0336	0.9595	1.1749	scenario_range_not_CI

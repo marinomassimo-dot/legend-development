@@ -1,0 +1,4 @@
+fu_percent	free_Cmax_nM	Cmax_total_CI_low_converted	Cmax_total_CI_high_converted	ratio_to_rat_derived_3_30nM	assumption
+0.50	3.40	3.10	3.70	1.030	FDA_PK002_bound_at_least_99_5pct_boundary
+1.00	6.80	6.20	7.40	2.061	Gotter_Fig7_assumption
+1.50	10.20	9.30	11.10	3.091	FDA_healthy_control_upper_observation
