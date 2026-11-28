@@ -1290,6 +1290,15 @@
      "accepted_at": "2026-11-28T07:40:16Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv305_divergent_etifoxine_sci_20261128/RESULT_ADV305_SCI_20261128.md",
      "updated_at": "2026-11-28T07:40:16Z"
+    },
+    {
+     "step": "ADV-308: etifoxine burst-versus-spike split in a second dataset (held sources only)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-308",
+     "accepted_at": "2026-11-28T07:45:48Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv308_burst_split_sci_20261128/RESULT_ADV308_SCI_20261128.md",
+     "updated_at": "2026-11-28T07:45:48Z"
     }
    ]
   }
@@ -2286,6 +2295,13 @@
    "at": "2026-11-28T07:40:16Z",
    "source": "ADV-305",
    "step_sha256": "e679c6ed6341",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T07:45:48Z",
+   "source": "ADV-308",
+   "step_sha256": "9672baec0a2e",
    "reopened_block": false,
    "authorised_by": null
   }
