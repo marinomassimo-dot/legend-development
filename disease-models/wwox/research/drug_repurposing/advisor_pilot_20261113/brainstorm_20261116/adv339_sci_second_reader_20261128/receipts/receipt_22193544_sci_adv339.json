@@ -1,0 +1,35 @@
+{
+ "event_id": "FTR-20261128-22193544-07",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "22193544"
+ },
+ "event_at": "2026-11-28T19:32:00Z",
+ "analysis_at": "2026-11-28T19:32:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "ADV-339 continuation: SCI as independent second reader of six claim-registry sentences (packet adv339_it43), blind to the first reading",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID22193544_Wang2012_PMC.xml",
+ "source_fingerprint": "eb6f568d046f8df831d15e7f8795fcb1d6ac713ec6305f7ded3ad2a330388268",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv339_sci_second_reader_20261128/sci_table.tsv"
+ ],
+ "evidence_basis": [
+  "Whole XML text, main Figs 1-6 and Supplementary Figs A-C viewed with their legends; Supplementary Table 1 (siRNA) not read. CLAIM 035 sentences S1 and S2."
+ ],
+ "prior_receipt": "FTR-20260804-22193544-05",
+ "reread_reason": "adversarial_reanalysis"
+}
