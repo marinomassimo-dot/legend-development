@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 246,
+   "distinct_hrefs": 247,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3657,
+    "forbidden-name": 3658,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5113294,
-   "sha256": "650942d6fe51bc8e1dd3c9f7207ad59b4b039e3b83e5c794755b7d7ed54355ee"
+   "bytes": 5113410,
+   "sha256": "49a648c4849744152e4391523282edcb318f4b26eb29199964e3065ec93b4f0b"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
@@ -596,6 +596,10 @@
   "reports/nervonic-acid.pdf": {
    "bytes": 125360,
    "sha256": "4fa495a360d1e783b77e596854d97f6060dbbad54f7d56c3e553d7be96f2ebcb"
+  },
+  "reports/octadecylglycerol.pdf": {
+   "bytes": 122936,
+   "sha256": "924ee74b8d3a556db63d00d1d64d1f86393438064c94173215ea49b845cd5250"
   },
   "reports/piracetam.pdf": {
    "bytes": 123732,
