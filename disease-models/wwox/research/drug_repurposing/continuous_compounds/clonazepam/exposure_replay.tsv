@@ -1,0 +1,3 @@
+range_endpoint	total_serum_ng_ml	total_serum_nM	illustrative_serum_unbound_fraction	illustrative_serum_unbound_nM	fraction_of_nominal_slice_bath
+low	13	41.18	0.15	6.18	0.062
+high	72	228.06	0.15	34.21	0.342

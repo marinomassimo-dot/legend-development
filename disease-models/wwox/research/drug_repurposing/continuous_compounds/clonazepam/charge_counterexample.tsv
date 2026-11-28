@@ -1,0 +1,5 @@
+scenario	local_engagement_relative	conductance_per_engagement_relative	effective_driving_force_relative	added_charge_relative
+acute calibration	1.0	1.0	1.0	1.00
+lower local engagement	0.5	1.0	1.0	0.50
+lower conductance per engagement	1.0	0.5	1.0	0.50
+lower driving force during a train	1.0	1.0	0.5	0.50
