@@ -1,0 +1,32 @@
+[
+ {
+  "op": "replace-within",
+  "id": "CLAIM 036",
+  "old": "so any brain phenotype measured in that window carries",
+  "new": "so any brain phenotype measured at P18 in this EIIA-Cre line carries"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 036",
+  "old": "qualunque fenotipo ippocampale o cerebrale misurato in un null **sistemico** nella finestra P14–P18 è misurato in un animale simultaneamente ipoglicemico, acidotico, uremico e anemico.",
+  "new": "qualunque fenotipo ippocampale o cerebrale misurato a P18 in un null **sistemico** della linea EIIA-Cre è misurato in un animale con glucosio ridotto (143.5 vs 250.6 mg/dL), BUN raddoppiato (37.25 vs 17.67 mg/dL) e CO₂ totale ridotta (14.50 vs 21.67 mEq/L) — valori che gli autori leggono come compatibili con insufficienza renale e acidosi metabolica, ma senza pH né creatinina misurati — e con leucopenia e segni di anemia (WBC 4.2 vs 9.45 ×10³/µL, `n=2/gruppo`, età della conta non dichiarata; eritrociti nucleati al 3% in uno solo dei due topi KO esaminati; nessun emocromo). La chimica ematica (`n=3/3/4`) esiste solo a P18: a P14 l'unica misura è il peso corporeo (4.2 g contro 6.82 e 7.07 g), e per i topi KO BK5-Cre di due settimane di PMID 30290271 non esiste alcuna chimica ematica, quindi lo stesso confondente è lì una possibilità, non una misura."
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 036",
+  "old": "i null sistemici nella finestra P14–P18 non separano cell-autonomo da sistemico.",
+  "new": "il null sistemico EIIA-Cre a P18, l'unica età con chimica ematica, non separa cell-autonomo da sistemico."
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 014",
+  "old": "defective cortical maturation with downstream hypomyelination/glial-development abnormalities.",
+  "new": "defective cortical maturation with downstream hypomyelination/glial-development abnormalities. (Ages and tissues sampled: Iacomino 2020 — one WWOX-deficient human fetus at 21 gestational weeks, lde/lde rat brain at P1 with BrdU given at E16.5 and traced to P1, and human neural progenitor cells in vitro (a re-analysis of the Kośla 2019 deposit); Tochigi 2019 — hypomyelination and reduced cortical GFAP and Iba1 in lde/lde rat cortex at PND 5 to 21 only; Kośla 2019 — human neural progenitor cells in vitro, no animal or fetal age.)"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 005",
+  "old": "segnale GABAergico e gliale plausibilmente trasferibile come meccanismo generale di vulnerabilità",
+  "new": "segnale GABAergico e gliale misurato nell'ippocampo del topo KO sistemico (linea BK5-Cre) a due settimane di età, in un solo studio (PMID 30290271); la trasferibilità come meccanismo generale di vulnerabilità resta un'ipotesi plausibile ma non dimostrata — stadio e regione non generalizzati, e nella corteccia del ratto *lde* a PND 5-21 (PMID 31340538) GFAP e Iba1 sono ridotti, non aumentati"
+ }
+]
