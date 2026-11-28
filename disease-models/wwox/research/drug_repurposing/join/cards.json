@@ -3472,7 +3472,7 @@
       "complete_fulltext_read",
       "queried_not_full_read"
      ],
-     "digest": "273bc7d12c4e6600",
+     "digest": "4b11323bb7d73c14",
      "locators": 55,
      "origin_id": "N-02",
      "papers": 4,
@@ -3527,7 +3527,7 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
        "pmid": "32000863",
        "reading_depth": "complete_fulltext_read",
-       "receipt_events": 13,
+       "receipt_events": 14,
        "receipt_id": "FTR-20260804-32000863-01",
        "repair_unverified": 0,
        "scope_basis": [
@@ -3680,7 +3680,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "6265df031be040749995684e16101be691d31b411497b24fada035647425a3b5",
+   "input_sha256": "ad3fd123aac6e416ebec89593c18930e196921764ed7f1442f2d259b3f9ff38a",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -3706,7 +3706,7 @@
      "complete_fulltext_read",
      "queried_not_full_read"
     ],
-    "digest": "273bc7d12c4e6600",
+    "digest": "4b11323bb7d73c14",
     "locators": 55,
     "origin_id": "N-02",
     "papers": 4,
@@ -3761,7 +3761,7 @@
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
       "pmid": "32000863",
       "reading_depth": "complete_fulltext_read",
-      "receipt_events": 13,
+      "receipt_events": 14,
       "receipt_id": "FTR-20260804-32000863-01",
       "repair_unverified": 0,
       "scope_basis": [
@@ -29418,7 +29418,7 @@
       "partial_fulltext_read",
       "queried_not_full_read"
      ],
-     "digest": "4d8c70bb97651444",
+     "digest": "46a63050df10b402",
      "locators": 1292,
      "origin_id": "N-17",
      "papers": 64,
@@ -30213,7 +30213,7 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
        "pmid": "32000863",
        "reading_depth": "complete_fulltext_read",
-       "receipt_events": 13,
+       "receipt_events": 14,
        "receipt_id": "FTR-20260804-32000863-01",
        "repair_unverified": 0,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
@@ -31011,12 +31011,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*importing a disease's dominant modality because the pathway diagram looks like that disease, without checking which way the arrow points.* CHAIN C reads like a tauopathy — WWOX loss → GSK3β de-repressed → pTau S396/S404 up (`CLAIM 035`, `DL-MECH-019`) — and tauopathy's dominant modality is **tau-lowering**. In the only system where the question was asked, tau-lowering **removes the benefit of bot",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1203; evidence table digest 4d8c70bb97651444"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1203; evidence table digest 46a63050df10b402"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "de40f16f8531c66ee7e69257bcad0123557ef9c425df45d5ba235e8a73bde650",
+   "input_sha256": "8954c72be787d7d8467ffec257b48c8297d7c22ebfbd30dbf4c6e7e4d586fbbc",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -31045,7 +31045,7 @@
      "partial_fulltext_read",
      "queried_not_full_read"
     ],
-    "digest": "4d8c70bb97651444",
+    "digest": "46a63050df10b402",
     "locators": 1292,
     "origin_id": "N-17",
     "papers": 64,
@@ -31840,7 +31840,7 @@
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
       "pmid": "32000863",
       "reading_depth": "complete_fulltext_read",
-      "receipt_events": 13,
+      "receipt_events": 14,
       "receipt_id": "FTR-20260804-32000863-01",
       "repair_unverified": 0,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
@@ -36501,7 +36501,7 @@
       "complete_fulltext_read",
       "queried_not_full_read"
      ],
-     "digest": "513bf8611765a4b3",
+     "digest": "db30294d290d0db9",
      "locators": 55,
      "origin_id": "R-04",
      "papers": 4,
@@ -36556,7 +36556,7 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
        "pmid": "32000863",
        "reading_depth": "complete_fulltext_read",
-       "receipt_events": 13,
+       "receipt_events": 14,
        "receipt_id": "FTR-20260804-32000863-01",
        "repair_unverified": 0,
        "scope_basis": [
@@ -36709,7 +36709,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "82f8b5ea1aa735895329ac81bc151b43613ec6b32543f6e3d0c62f67866f9f4d",
+   "input_sha256": "0fbe3d61887392728407dc9a6e38ee96ef289cc4fe1209081f3e1f7bd00f10bb",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -36735,7 +36735,7 @@
      "complete_fulltext_read",
      "queried_not_full_read"
     ],
-    "digest": "513bf8611765a4b3",
+    "digest": "db30294d290d0db9",
     "locators": 55,
     "origin_id": "R-04",
     "papers": 4,
@@ -36790,7 +36790,7 @@
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
       "pmid": "32000863",
       "reading_depth": "complete_fulltext_read",
-      "receipt_events": 13,
+      "receipt_events": 14,
       "receipt_id": "FTR-20260804-32000863-01",
       "repair_unverified": 0,
       "scope_basis": [
