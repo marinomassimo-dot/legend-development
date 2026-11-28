@@ -1,0 +1,61 @@
+BLIND VERIFICATION PACKET (IT28, ADV-295 block 2 and ADV-297 consumers; hypothesis level; nothing here is medical advice)
+
+Each block holds a NEW text fragment (marked >>> ... <<<) inside the record line it will sit in. Check the fragment, and the sentence it sits in where it depends on it, against the held source named, in full. Do not open any other repository file or search the repository; no network; nothing is written into the repository.
+Verdicts per block: MUST CHANGE (a word, number, unit, species, age, group size, comparator, direction, test or generalisation is wrong, unsupported or says more than the source), ADD (supported, but an omission would mislead a reader who sees only this text), STANDS.
+Grade every clause. Absolute words (only, no, none, every, not stated, not given) need the whole source read; say UNSETTLED where you cannot settle. Numbers read from a figure: name figure and panel. Say for each number which group, unit (animal, culture, patient, cell), species and age it belongs to.
+Clauses about what this repository holds or has searched are OUTSIDE your check. For MUST CHANGE and ADD give minimal replacement wording; no dose and no compound recommendation.
+Report: a summary table, then per block the findings with locators and which files you opened. Return the whole report as your final handback.
+
+=== BLOCK S1
+SOURCE(S):
+ /home/desktop/legend-development/files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml (El Ghaleb 2021; its Supplementary Table S1 is NOT among the files: clauses resting on it are OUTSIDE your check)
+ /home/desktop/legend-development/files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml (El Ghaleb 2025)
+CONTEXT WITH NEW FRAGMENT:
+  - >>>**Carrier phenotype does not settle direction.** Whether a T-type block opposes the defect depends on the measured direction of the individual variant, not on whether the carrier has seizures (our inference; no cited paper tests a blocker on a variant channel). In CACNA1I (Cav3.3), four variants classed gain-of-function in transfected HEK293T cells were found in six individuals with neurodevelopmental phenotypes, two of whom had no seizures at about 29 and 31 years (PMID 33704440, Supplementary Table S1); a second series reports a partial loss-of-function variant in two individuals without seizures and a gain-of-function carrier without seizures, and its authors write that both directions can cause neurodevelopmental disease (PMID 40825030). Neither supports a rule for T-type channels as a class.<<< No Wwox T-type measurement of function exists; the lead's «acts on something the loss of WWOX creates» remains a hypothesis.
+REPLACES: **Symptomatic in every paper that looks.** Genotype decides whether a T-type block is mechanism-matched: gain-of-function T-type variants cause seizures and loss-of-function variants cause neurodevelo
+
+=== BLOCK S2
+SOURCE(S):
+ /home/desktop/legend-development/files/fulltext/PMID40834072_Jang2025_PMC_r2.xml (Jang 2025)
+ /home/desktop/legend-development/files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml (Cabungcal 2022)
+CONTEXT WITH NEW FRAGMENT:
+-specific post hoc tests are shown only for both genotypes pooled); and no genotype-by-drug test exists (the authors write that the wild-type response 'seemed to follow' the APP/PS1 pattern and that they could not apply a two-way ANOVA); a Neuroligin 2 line (PMID 32719346) shows a restriction that follows the SWD phenotype (no effect in wild type or in two non-SWD mutants); Gnb1 (PMID 37275776) and Gabrb3 (PMID 42274296) show the wild-type-floor hazard and, in the second, no wild-type drug arm. >>>Across separate studies (not a matched comparison), the thalamic reticular T-type Ca2+ current density differs in sign between mouse models: higher in Cntnap2 knockout (PMID 40834072, targeted search only), lower in redox or neurodevelopmental models (PMID 35079122: germline Gclm knockout at postnatal day 60 to 75 but not day 20 to 30; at day 20 to 30 only after an added early-life challenge or prenatal MAM; ex vivo, neuron-level statistics).<<<
+REPLACES: The T-type change is lesion-specific in sign and age (an increase in Cntnap2, PMID 40834072; a decrease under developmental oxidative stress, PMID 35079122).
+
+=== BLOCK S3
+SOURCE(S):
+ /home/desktop/legend-development/files/fulltext/PMID32719346_Liu2020_PMC_r2.xml (Liu 2020)
+CONTEXT WITH NEW FRAGMENT:
+wed no significant effect in either genotype; significance differs by genotype (wild type: spindle-associated and fast-spindle; APP/PS1: cortico-hippocampal and fast-spindle; these are omnibus tests across saline, ethosuximide and levetiracetam, and ethosuximide-specific post hoc tests are shown only for both genotypes pooled); and no genotype-by-drug test exists (the authors write that the wild-type response 'seemed to follow' the APP/PS1 pattern and that they could not apply a two-way ANOVA); >>>in a Neuroligin 2 knockout with spike-wave discharges, ethosuximide (200 mg/kg intraperitoneal, before/after, no vehicle arm) improved behaviour; no such effect is reported in wild-type mice, and the social-memory deficit was not rescued in PAK3-transgenic or FMR1-knockout mice, taken as lacking absence-type discharges by citation (not recorded in them); the pattern is consistent with, and does not prove, an action that depends on the discharges (the authors' own caution); in wild-type thalamic slices ethosuximide 500 uM still reduced rebound burst firing (PMID 32719346);<<< Gnb1 (PMID 37275776) and Gabrb3 (PMID 42274296) show the wild-type-floor hazard and, in the second, no wild-type drug arm. The T-type change is lesion-specific in sign and age (an increase in Cntnap2, PMID 40834072; a decrease under developmental oxidative stress, PMID 35079122).
+REPLACES: a Neuroligin 2 line (PMID 32719346) shows a restriction that follows the SWD phenotype (no effect in wild type or in two non-SWD mutants);
+
+=== BLOCK I1
+SOURCE(S):
+ /home/desktop/legend-development/files/fulltext/PMID25662954_Farooq2015_PMCbucket.txt (Farooq 2015, a review; PMC4374002)
+ /home/desktop/legend-development/files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.txt (Saluda-Gorgul 2011)
+CONTEXT WITH NEW FRAGMENT:
+- **Catena di ragionamento**: Q230 cade nel **dominio SDR**, ma **NON è un residuo catalitico** — >>>the SDR active-site map of WWOX is a sequence-and-model assignment, not an experimental structure: S260 (substrate), the Y293/K297 dyad of the YxxxK motif, and GxxxGxG for the NADP(H) cofactor (review, PMID 25662954 / [PMC4374002](https://pmc.ncbi.nlm.nih.gov/articles/PMC4374002/)); S281 and a «NAD(H) or NADP(H)» site are reported from sequence analysis in PMID 21476439 [correction dated 2026-11-28: the earlier text attributed S281 and NAD to PMC4374002 and called the map a «structure»]<<<. Q230 è quindi **strutturale**, non catalitico → Gln→Pro (prolina = rigidità backbone, killer dei foglietti/eliche) destabilizza il *folding* della piega di Rossmann → **proteina instabile/degradata**, non enzima cataliticamente morto-ma-presente. **Conferma chiave**: il working model riporta che v
+REPLACES: la mappa del sito attivo SDR di WWOX è S260 (substrato), **S281 + motivo YxxxK Y293–K297** (catalisi), motivo Rossmann GxxxGxG N-terminale per NAD ([struttura, PMC4374002](https://pmc.ncbi.nlm.nih.gov
+
+=== BLOCK I2
+SOURCE(S):
+ /home/desktop/legend-development/files/fulltext/PMID25662954_Farooq2015_PMCbucket.txt
+CONTEXT WITH NEW FRAGMENT:
+>>>- WW1 **nel modulo tandem** lega **2-3× più forte** che da solo, con **guadagno entropico**.
+- Review PMID 25662954 (same laboratory; Table 1; ITC, 25 °C, pH 7, at least three measurements) gives, for eight 12-residue PPPY peptides, a WW1-WW2 gain over WW1 alone of 1.8- to 5.1-fold (p73 1.8; ErbB4 2.4; TMG2 2.4; WBP1 2.6; WBP2 3.2; PTCH1 3.5; PTPN14 3.6; SMAD7 5.1); the same review's text says «two- to threefold». The rows for p73, PTCH1, PTPN14, SMAD7 and TMG2 are stated there as unpublished.<<<
+REPLACES: - WW1 **nel modulo tandem** lega **2-3× più forte** che da solo, con **guadagno entropico**.
+
+=== BLOCK I4
+SOURCE(S):
+ /home/desktop/legend-development/files/fulltext/PMID25662954_Farooq2015_PMCbucket.txt
+CONTEXT WITH NEW FRAGMENT:
+- **La rotta candidata che il paper stesso indica e non prova.** Smad4 è degradato via poliubiquitinazione da **Smurf1/Smurf2**, E3 ligasi **a dominio WW**; gli autori notano che i Smurf non legano Smad4 direttamente ma via motivi **PPXY** in Smad2/Smad7. WWOX è una proteina a dominio WW che lega PPXY. **Ipotesi competitiva mai testata qui: WWOX stabilizza Smad4 competendo con Smurf per gli stessi motivi PPXY.** >>>`IPOTESI`, non misurata in questo paper in alcuna forma.
+- In vitro, a SMAD7 PPPY peptide (LESPPPPYSRYP) binds WW1 with Kd 272 ± 29 µM and the WW1-WW2 tandem with 53 ± 8 µM (PMID 25662954, Table 1; the row is stated as unpublished in the 2015 review). Competition with Smurf and the effect on Smad4 remain unmeasured.<<<
+REPLACES: `IPOTESI`, non misurata in questo paper in alcuna forma.
+
+=== BLOCK I5
+SOURCE(S):
+ /home/desktop/legend-development/files/fulltext/PMID25662954_Farooq2015_PMCbucket.txt
+CONTEXT WITH NEW FRAGMENT:
+- **Why it matters:** >>>the corpus's SDR reading has rested on one laboratory's crude-extract enzymology (a 2015 review, PMID 25662954, states without data, rate, constant or construct that a bacterially purified recombinant SDR domain interconverts retinol and retinal; that statement is not used here as a substrate or binder).<<< This is an independent measurement **on the same region** that is nevertheless **not** enzymology, so it raises the SDR's standing as a *binding* surface and adds nothing to its standing as a *catalytic* one.
+REPLACES: the corpus's SDR reading has rested on one laboratory's crude-extract enzymology.
