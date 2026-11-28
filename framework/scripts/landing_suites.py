@@ -46,6 +46,12 @@ RULES = [
     # #2370 (ADV-274): the queue also scans every `*_current.md` (a retracted PMID cited in the discovery ledger), not only the registries
     ("framework/scripts/test_batch_queue.py", lambda c: _any(c, "disease-models/*/registries/*", "disease-models/*_current.md")),
     ("framework/scripts/test_pathograph.py", lambda c: _any(c, "disease-models/*/registries/*", "disease-models/*/analysis/*")),
+    # 2026-11-28: BATCH_20261128_005 added a rat clause to a CLAIM 005 field; test_trace_claim_foundation stayed red on main for every later push (#2835 on), because no landing ran it.
+    # The suites below open the live claim or paper registry and assert on it, each under 4 s (timed 2026-11-28 on a loaded host, about 15 s together)
+    *[(suite, lambda c: _any(c, "disease-models/*/registries/claim_registry_current.md", "disease-models/*/registries/paper_registry_current.md"))
+      for suite in ("framework/scripts/test_trace_claim_foundation.py", "framework/scripts/test_growth_anchors.py", "framework/scripts/test_generate_semantic_graph.py",
+                    "framework/scripts/test_build_evidence_index.py", "framework/scripts/test_dependency_integrity.py", "framework/scripts/test_locator_count_crosscheck.py",
+                    "scripts/test_canonical_structure.py", "disease-models/wwox/analysis/scripts/test_dismech_independent_protocol.py")],
     # #1994, #2109: a receipt recorded and the two derived pages not regenerated
     ("framework/scripts/test_coverage_report.py", lambda c: _any(c, "*fulltext_read_receipts.jsonl", "*coverage_report*")),
     ("framework/scripts/test_reading_state.py", lambda c: _any(c, "*fulltext_read_receipts.jsonl", "*reading_state*")),
