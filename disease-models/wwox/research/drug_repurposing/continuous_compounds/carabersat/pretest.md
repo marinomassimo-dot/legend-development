@@ -8,4 +8,4 @@
 
 **Stopping rule.** Keep the comparison conditional if molecular identity, human pharmacokinetics or free juvenile brain levels are unavailable. A phase label or adult endpoint does not establish a pediatric window. Do not infer potassium-channel activation or connexin action from class, structure, or vendor labels. Next step is to extract original binding and afterdischarge denominators, concentrations, limits and analogue dispositions side by side.
 
-**Primary starting points.** [Herdon et al., membrane binding](https://doi.org/10.1038/sj.bjp.0701331) · [Upton et al., evoked afterdischarge and seizure models](https://doi.org/10.1038/sj.bjp.0701330) · [Independent voltage-current study](https://pubmed.ncbi.nlm.nih.gov/10471213/).
+**Primary starting points.** [Herdon et al., membrane binding](https://doi.org/10.1038/sj.bjp.0701331) · [Upton et al., evoked afterdischarge and seizure models](https://doi.org/10.1038/sj.bjp.0701330) · [Separate voltage-current study](https://pubmed.ncbi.nlm.nih.gov/10471213/).
