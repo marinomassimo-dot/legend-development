@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Regressions for safe_push.py — every one is a refusal path, because the refusals are the tool."""
 from __future__ import annotations
-import os, subprocess, sys, time, unittest
+import fcntl, os, subprocess, sys, time, unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -844,6 +844,58 @@ class SafePushLandingSuites(unittest.TestCase):
             self.assertEqual(r.returncode, 1, r.stdout)
             self.assertIn("left the working tree unclean", r.stderr)
             self.assertEqual(self._remote_main(bare), before)
+
+
+class SafePushEarlyCheck(unittest.TestCase):
+    """A publisher that has to wait runs the short suites meanwhile (2026-11-28): a red one is said while the lock is still held by someone else."""
+    _repo = SafePushRefusals._repo
+    _with_bare_remote = SafePushRefusals._with_bare_remote
+    _remote_main = SafePushRefusals._remote_main
+    publish = SafePushLandingSuites.publish
+    commit_all = SafePushLandingSuites.commit_all
+    SELECT = ("def changes(root, base):\n    return [('M', 'x')]\n"
+              "def select(changed, root):\n    return ['scripts/test_release_surface.py']\n")
+
+    def start_behind_a_held_lock(self, td: str, suite: str):
+        root, bare = self._with_bare_remote(td)
+        for rel, text in (("framework/scripts/landing_suites.py", self.SELECT), ("scripts/test_release_surface.py", "print('ok')\n")):
+            (root / rel).parent.mkdir(parents=True, exist_ok=True)
+            (root / rel).write_text(text, encoding="utf-8")
+        self.commit_all(root, "green on the remote tip")
+        subprocess.run(["git", "-C", str(root), "push", "-q", "origin", "HEAD:refs/heads/main"], check=True)
+        (root / "scripts" / "test_release_surface.py").write_text(suite, encoding="utf-8")
+        self.commit_all(root, "mine")
+        lock = open(root / ".git" / "legend_land.lock", "a+")
+        self.addCleanup(lock.close)
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        env = dict(os.environ, LEGEND_SAFE_PUSH_ROOT=str(root), LEGEND_SAFE_PUSH_GATE=str(root / "scripts" / "gate.py"), LEGEND_SAFE_PUSH_REGEN=str(root.parent / "no_regen.py"))
+        child = subprocess.Popen([sys.executable, str(TOOL), "origin", "main", "--serialize", "--lock-timeout", "60"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, env=env)
+        self.addCleanup(lambda: child.poll() is None and child.kill())
+        return root, bare, lock, child
+
+    def test_a_red_short_suite_refuses_while_the_lock_is_still_held(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare, lock, child = self.start_behind_a_held_lock(td, SafePushLandingSuites.RED)
+            before = self._remote_main(bare)
+            out, err = child.communicate(timeout=50)
+            self.assertEqual(child.returncode, 1, out)
+            self.assertIn("EARLY CHECK RED", out)
+            self.assertNotIn("landing lock acquired", out)
+            self.assertIn("before the lock", err)
+            self.assertEqual(self._remote_main(bare), before)
+
+    def test_a_green_short_suite_goes_on_to_the_lock(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare, lock, child = self.start_behind_a_held_lock(td, "print('still ok')\n")
+            seen = ""
+            while "EARLY CHECK passed" not in seen:
+                line = child.stdout.readline()
+                self.assertTrue(line, seen)
+                seen += line
+            fcntl.flock(lock, fcntl.LOCK_UN)
+            out, err = child.communicate(timeout=50)
+            self.assertEqual(child.returncode, 0, err)
+            self.assertIn("PUBLISHED", out)
 
 
 class SafePushParallelChecks(unittest.TestCase):
