@@ -1374,10 +1374,12 @@
     },
     {
      "step": "ADV-317 closure (Crawford 2010 recruitment test, PMID 20858739): SCI image check of Fig 9B/table and Fig 5C, receipt, derived surfaces, RESULT final, deliver to ADV; compare with HE ADV-318 blind table when it lands",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-317 (SENT 2026-11-28T11:42:37Z); checkpoint BC section 2",
-     "accepted_at": "2026-11-28T11:53:35Z"
+     "accepted_at": "2026-11-28T11:53:35Z",
+     "evidence": "RESULT_CRAWFORD2010_ADV317 final; COMPARISON_ADV317_ADV318; receipt FTR-20261128-20858739-02; main ee1035669",
+     "updated_at": "2026-11-28T12:18:43Z"
     },
     {
      "step": "ADV-319 RP-018 eIF2B S540E full-text read-depth question (bioRxiv 10.1101/2025.11.03.686297)",
@@ -1387,6 +1389,15 @@
      "accepted_at": "2026-11-28T12:06:42Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv319_eif2b_s540e_sci_20261128/RESULT_ADV319_EIF2B_S540E_SCI_20261128.md (route result; exact missing observation registered)",
      "updated_at": "2026-11-28T12:06:48Z"
+    },
+    {
+     "step": "ADV-320 Chornyy 2025 figures (PMID 41036104) read for CLAIM 047",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-320 (registered by ADV 2026-11-28)",
+     "accepted_at": "2026-11-28T12:18:43Z",
+     "evidence": "adv320_chornyy2025_figures_sci_20261128/RESULT_ADV320_CHORNYY2025_SCI_20261128.md; receipt FTR-20261128-41036104-02",
+     "updated_at": "2026-11-28T12:18:43Z"
     }
    ]
   }
@@ -2460,6 +2471,13 @@
    "at": "2026-11-28T12:06:42Z",
    "source": "ADV-319 (ADV message 2026-11-28, registered)",
    "step_sha256": "8767fdb75a32",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T12:18:43Z",
+   "source": "ADV-320 (registered by ADV 2026-11-28)",
+   "step_sha256": "b3002b3dac6b",
    "reopened_block": false,
    "authorised_by": null
   }
