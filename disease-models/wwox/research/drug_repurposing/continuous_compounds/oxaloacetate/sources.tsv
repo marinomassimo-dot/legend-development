@@ -1,0 +1,11 @@
+source	id	primary_locator	scope
+Gottlieb 2003	10.1046/j.1471-4159.2003.01972.x	https://onlinelibrary.wiley.com/doi/10.1046/j.1471-4159.2003.01972.x	Author abstract only for ventricular and CSF tracer evidence.
+Campos 2011	21266983	https://doi.org/10.1038/jcbfm.2011.3	Targeted Results and proton MRS Methods, Figs. 3–6 text and captions from public institutional PDF.
+Zhang 2017	27390019	https://doi.org/10.1093/cercor/bhw193	Targeted Results and captions for Fig. 1D, 3 and 4E.
+Pérez-Mato 2024	39524351	https://doi.org/10.1016/j.isci.2024.111108	Targeted mechanism Results, Discussion and figure caption text from public institutional PDF.
+Wiese 2021	34226744	https://pmc.ncbi.nlm.nih.gov/articles/PMC8316326/	Indexed original Fig. 2 and Results extracts for purified enzyme.
+Vidoni 2021	32715609	https://pmc.ncbi.nlm.nih.gov/articles/PMC8084114/	Targeted Table 4, Results and Discussion paragraphs from public author manuscript.
+Mouse cortex	GSE158682	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158682	Public processed GEO values, fingerprints verified by replay_native.py.
+Mouse hippocampus	GSE158681	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158681	Public processed GEO values, fingerprints verified by replay_native.py.
+Human cortical organoids	GSE156243	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE156243	Public processed GEO values, fingerprints verified by replay_native.py.
+Pooled mouse hippocampal nuclei	GSE158684	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158684	Public processed GEO values, fingerprints verified by replay_native.py.

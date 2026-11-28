@@ -1745,10 +1745,12 @@
     },
     {
      "step": "ADV tick cost: measure where strategic_advisor.py tick spends its time, one smallest verdict-preserving change only if under 30 s is reachable, report benefit and cost, after the view suites",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV direction round 2026-11-28T13:17Z tick-cost peer message",
-     "accepted_at": "2026-11-28T13:17:45Z"
+     "accepted_at": "2026-11-28T13:17:45Z",
+     "evidence": "framework/scripts/strategic_advisor.py: bare tick 49-53 s to 9.1 s, assignment_states output identical on 327 assignments, 240 tests OK",
+     "updated_at": "2026-11-28T13:58:29Z"
     },
     {
      "step": "Fix the i18n notice test that read a nested section's note as overview's own (IT35 report)",
@@ -1758,6 +1760,15 @@
      "accepted_at": "2026-11-28T13:23:35Z",
      "evidence": "framework/scripts/test_repurposing_view_i18n.py",
      "updated_at": "2026-11-28T13:23:35Z"
+    },
+    {
+     "step": "ADV-329: independent blind reading of Repudi 2021 Brain (interneuron and glial readouts, blood chemistry/weight/survival, driver and ages) for IT ADV-328",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-329 assignment text adv329.txt, ADV - CURRENT a5e6f2ad 2026-11-28",
+     "accepted_at": "2026-11-28T14:01:40Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv329_blind_repudi_he_20261128/TABLE_ADV329_HE.md",
+     "updated_at": "2026-11-28T14:04:29Z"
     }
    ]
   }
@@ -3118,6 +3129,13 @@
    "at": "2026-11-28T13:23:35Z",
    "source": "IT35 peer report to HE 2026-11-28 i18n notice test",
    "step_sha256": "eb93cc91b930",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T14:01:40Z",
+   "source": "ADV-329 assignment text adv329.txt, ADV - CURRENT a5e6f2ad 2026-11-28",
+   "step_sha256": "a5160973edc0",
    "reopened_block": false,
    "authorised_by": null
   }

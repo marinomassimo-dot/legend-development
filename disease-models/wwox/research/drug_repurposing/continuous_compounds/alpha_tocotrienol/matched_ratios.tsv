@@ -1,0 +1,5 @@
+assay	numerator	denominator	ec50_ratio
+Q7_RSL3	alpha_tocopherol	alpha_tocotrienol	30.9042
+Q7_RSL3	alpha_tocotrienol	alpha_tocotrienol_quinone	3.8837
+Q7_RSL3	alpha_tocotrienol	alpha_tocotrienol_hydroquinone	3.8837
+Pfa1_Gpx4_deletion	alpha_tocopherol	alpha_tocotrienol	16.6667
