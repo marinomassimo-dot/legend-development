@@ -718,7 +718,7 @@
  },
  {
   "axis": "all",
-  "digest": "6b56cb0d78dd4cb1",
+  "digest": "20359cab89e7bcc3",
   "kind": "claim",
   "linkage": {
    "ids_in_registry_without_pmid": [],
@@ -743,7 +743,8 @@
   "pmids": [
    "22193544",
    "32000863",
-   "34831305"
+   "34831305",
+   "35563688"
   ],
   "pmids_via_records": {
    "22193544": [
@@ -3505,7 +3506,7 @@
   "claims_named": [
    "CLAIM 030"
   ],
-  "digest": "e88c995ce8ece1b1",
+  "digest": "d61720d3711b117b",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
@@ -3573,6 +3574,7 @@
    "34268881",
    "34831305",
    "35328751",
+   "35563688",
    "35573960",
    "35716775",
    "35792847",
@@ -3752,6 +3754,9 @@
     "DL-MECH-019",
     "DL-MECH-064"
    ],
+   "35563688": [
+    "DL-MECH-064"
+   ],
    "35573960": [
     "DL-MECH-019",
     "DL-MECH-064"
@@ -3846,7 +3851,7 @@
    "CLAIM 017",
    "CLAIM 030"
   ],
-  "digest": "d66d0527f69286b8",
+  "digest": "0b529d1d0190a227",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-066",
@@ -3913,6 +3918,7 @@
    "34268881",
    "34831305",
    "35328751",
+   "35563688",
    "35573960",
    "35716775",
    "35792847",
@@ -4092,6 +4098,10 @@
     "DL-MECH-067"
    ],
    "35328751": [
+    "DL-MECH-066",
+    "DL-MECH-067"
+   ],
+   "35563688": [
     "DL-MECH-066",
     "DL-MECH-067"
    ],
@@ -13813,7 +13823,7 @@
    "CLAIM 028",
    "CLAIM 030"
   ],
-  "digest": "ed8e0d83a1b1f3f7",
+  "digest": "63eda14b190070c7",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-012",
@@ -13888,6 +13898,7 @@
    "34268881",
    "34831305",
    "35328751",
+   "35563688",
    "35573960",
    "35716775",
    "35792847",
@@ -14030,6 +14041,9 @@
    ],
    "35328751": [
     "DL-MECH-019"
+   ],
+   "35563688": [
+    "CLAIM 016"
    ],
    "35573960": [
     "DL-MECH-019"
@@ -14100,7 +14114,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "f8011679c076f1d8",
+  "digest": "4a45576d77fe09ba",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-019",
@@ -14163,6 +14177,7 @@
    "34268881",
    "34831305",
    "35328751",
+   "35563688",
    "35573960",
    "35716775",
    "35792847",
@@ -14329,6 +14344,9 @@
    ],
    "35328751": [
     "DL-MECH-019",
+    "DL-MECH-064"
+   ],
+   "35563688": [
     "DL-MECH-064"
    ],
    "35573960": [
@@ -14416,7 +14434,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "ae58343dda3d0525",
+  "digest": "b88ca45513d351eb",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-064"
@@ -14476,6 +14494,7 @@
    "34268881",
    "34831305",
    "35328751",
+   "35563688",
    "35573960",
    "35716775",
    "35792847",
@@ -14602,6 +14621,9 @@
    "35328751": [
     "DL-MECH-064"
    ],
+   "35563688": [
+    "DL-MECH-064"
+   ],
    "35573960": [
     "DL-MECH-064"
    ],
@@ -14668,7 +14690,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "177b32cf64bd07e5",
+  "digest": "b30a9afd87f89f3c",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-064",
@@ -14731,6 +14753,7 @@
    "34268881",
    "34831305",
    "35328751",
+   "35563688",
    "35573960",
    "35716775",
    "35792847",
@@ -14897,6 +14920,10 @@
     "DL-MECH-066"
    ],
    "35328751": [
+    "DL-MECH-064",
+    "DL-MECH-066"
+   ],
+   "35563688": [
     "DL-MECH-064",
     "DL-MECH-066"
    ],
@@ -14988,7 +15015,7 @@
   "claims_named": [
    "CLAIM 016"
   ],
-  "digest": "4342e0b8a9c59550",
+  "digest": "4174983e4ccdf145",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-013",
@@ -15059,6 +15086,7 @@
    "34268881",
    "34831305",
    "35328751",
+   "35563688",
    "35573960",
    "35716775",
    "35792847",
@@ -15272,6 +15300,12 @@
     "DL-MECH-067"
    ],
    "35328751": [
+    "DL-MECH-064",
+    "DL-MECH-066",
+    "DL-MECH-067"
+   ],
+   "35563688": [
+    "CLAIM 016",
     "DL-MECH-064",
     "DL-MECH-066",
     "DL-MECH-067"
@@ -23225,7 +23259,7 @@
   "claims_named": [
    "CLAIM 016"
   ],
-  "digest": "43d61f876105837c",
+  "digest": "83ad2f64089c85bc",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-171",
@@ -23264,6 +23298,7 @@
    "34831305",
    "35079122",
    "35243344",
+   "35563688",
    "36282524",
    "36828035",
    "37275776",
@@ -23282,6 +23317,9 @@
    ],
    "34831305": [
     "CLAIM 016"
+   ],
+   "35563688": [
+    "CLAIM 016"
    ]
   },
   "query_id": "Q-DL-MECH-170",
@@ -23296,7 +23334,7 @@
   "claims_named": [
    "CLAIM 016"
   ],
-  "digest": "eea3be3a7cbb0d0f",
+  "digest": "3b908cadcfea8e2a",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-170"
@@ -23332,6 +23370,7 @@
    "34831305",
    "35079122",
    "35243344",
+   "35563688",
    "36282524",
    "36828035",
    "37275776",
@@ -23382,6 +23421,10 @@
     "DL-MECH-170"
    ],
    "35243344": [
+    "DL-MECH-170"
+   ],
+   "35563688": [
+    "CLAIM 016",
     "DL-MECH-170"
    ],
    "36282524": [
@@ -23422,7 +23465,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "0e4a1393ecdba969",
+  "digest": "59a67bba5a499ca5",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-170"
@@ -23456,6 +23499,7 @@
    "34831305",
    "35079122",
    "35243344",
+   "35563688",
    "36282524",
    "36828035",
    "37275776",
@@ -23500,6 +23544,9 @@
     "DL-MECH-170"
    ],
    "35243344": [
+    "DL-MECH-170"
+   ],
+   "35563688": [
     "DL-MECH-170"
    ],
    "36282524": [
@@ -34206,7 +34253,7 @@
    "G01_lithium_gsk3"
   ],
   "decisive_test": "a PTZ arm with an explicit tested `−/−` vs `+/+` contrast, or a different",
-  "digest": "a4fb3e147df4753d",
+  "digest": "c468c34ac9e52057",
   "intervention": "*evidence transfer that was never genotype-controlled*, compounded by *wrong",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -34232,7 +34279,8 @@
   "pmids": [
    "22193544",
    "32000863",
-   "34831305"
+   "34831305",
+   "35563688"
   ],
   "pmids_via_records": {
    "22193544": [
@@ -34242,6 +34290,9 @@
     "PAPER 019"
    ],
    "34831305": [
+    "CLAIM 016"
+   ],
+   "35563688": [
     "CLAIM 016"
    ]
   },
@@ -37071,7 +37122,7 @@
    "CLAIM 016"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json|entries[28]",
-  "digest": "84ea4a01f6de46f3",
+  "digest": "30d71da2bd1377a8",
   "kind": "mechanism_line",
   "linkage": {
    "ids_in_registry_without_pmid": [],
@@ -37095,7 +37146,8 @@
    "32000863",
    "32581702",
    "33914858",
-   "34831305"
+   "34831305",
+   "35563688"
   ],
   "pmids_via_records": {
    "22193544": [
@@ -37111,6 +37163,9 @@
     "CLAIM 015"
    ],
    "34831305": [
+    "CLAIM 016"
+   ],
+   "35563688": [
     "CLAIM 016"
    ]
   },
@@ -37549,7 +37604,7 @@
    "CLAIM 035"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID22193544.json|entries[6]",
-  "digest": "b38ce14272a8207b",
+  "digest": "d4e407ba265e907f",
   "kind": "mechanism_line",
   "linkage": {
    "ids_in_registry_without_pmid": [],
@@ -37583,6 +37638,7 @@
    "33916893",
    "34268881",
    "34831305",
+   "35563688",
    "36779245",
    "38203337"
   ],
@@ -37615,6 +37671,9 @@
     "CLAIM 030"
    ],
    "34831305": [
+    "CLAIM 016"
+   ],
+   "35563688": [
     "CLAIM 016"
    ],
    "36779245": [
@@ -37731,7 +37790,7 @@
    "CLAIM 016"
   ],
   "bound_from": "working_model_current.md#BLOCK 2|CLAIM 016",
-  "digest": "9b51519e6802cbd9",
+  "digest": "8f72cffe7d286b34",
   "kind": "mechanism_line",
   "linkage": {
    "ids_in_registry_without_pmid": [],
@@ -37750,7 +37809,8 @@
   "pmids": [
    "22193544",
    "32000863",
-   "34831305"
+   "34831305",
+   "35563688"
   ],
   "pmids_via_records": {
    "22193544": [
@@ -37760,6 +37820,9 @@
     "CLAIM 016"
    ],
    "34831305": [
+    "CLAIM 016"
+   ],
+   "35563688": [
     "CLAIM 016"
    ]
   },
@@ -38410,7 +38473,7 @@
    "CLAIM 016"
   ],
   "bound_from": "claim_registry_current.md#CLAIM 016|Title",
-  "digest": "5bd7948f192de06b",
+  "digest": "6eda32b711b1f81c",
   "kind": "mechanism_line",
   "linkage": {
    "ids_in_registry_without_pmid": [],
@@ -38429,7 +38492,8 @@
   "pmids": [
    "22193544",
    "32000863",
-   "34831305"
+   "34831305",
+   "35563688"
   ],
   "pmids_via_records": {
    "22193544": [
@@ -38439,6 +38503,9 @@
     "CLAIM 016"
    ],
    "34831305": [
+    "CLAIM 016"
+   ],
+   "35563688": [
     "CLAIM 016"
    ]
   },
@@ -39029,7 +39096,7 @@
    "CLAIM 035"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID22193544.json|entries[9]",
-  "digest": "09c94cf6aed85bd9",
+  "digest": "38b8a634c3f41013",
   "kind": "mechanism_line",
   "linkage": {
    "ids_in_registry_without_pmid": [],
@@ -39063,6 +39130,7 @@
    "33916893",
    "34268881",
    "34831305",
+   "35563688",
    "36779245",
    "38203337"
   ],
@@ -39095,6 +39163,9 @@
     "CLAIM 030"
    ],
    "34831305": [
+    "CLAIM 016"
+   ],
+   "35563688": [
     "CLAIM 016"
    ],
    "36779245": [
@@ -39278,7 +39349,7 @@
    "CLAIM 035"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID22193544.json|entries[3]",
-  "digest": "05926ff86c1fafde",
+  "digest": "e953bfb9202a22b4",
   "kind": "mechanism_line",
   "linkage": {
    "ids_in_registry_without_pmid": [],
@@ -39312,6 +39383,7 @@
    "33916893",
    "34268881",
    "34831305",
+   "35563688",
    "36779245",
    "38203337"
   ],
@@ -39344,6 +39416,9 @@
     "CLAIM 030"
    ],
    "34831305": [
+    "CLAIM 016"
+   ],
+   "35563688": [
     "CLAIM 016"
    ],
    "36779245": [
@@ -39523,7 +39598,7 @@
    "G01_lithium_gsk3"
   ],
   "decisive_test": "a PTZ + lithium arm with an **explicit, tested** `−/−` vs `+/+` comparison — or a different GSK3β inhibitor under the same design. Until then, no genotype-specific claim is available",
-  "digest": "3857b16fe4164b28",
+  "digest": "2bda8c80a50cf248",
   "intervention": "lithium carbonate",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -39554,7 +39629,8 @@
   "pmids": [
    "22193544",
    "32000863",
-   "34831305"
+   "34831305",
+   "35563688"
   ],
   "pmids_via_records": {
    "22193544": [
@@ -39564,6 +39640,9 @@
     "PAPER 019"
    ],
    "34831305": [
+    "CLAIM 016"
+   ],
+   "35563688": [
     "CLAIM 016"
    ]
   },

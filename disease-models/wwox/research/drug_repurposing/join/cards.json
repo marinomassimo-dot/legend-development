@@ -3469,12 +3469,13 @@
      "abstention": null,
      "complete_reads": 3,
      "depths": [
-      "complete_fulltext_read"
+      "complete_fulltext_read",
+      "queried_not_full_read"
      ],
-     "digest": "a8b033b0b9cded80",
+     "digest": "4b11323bb7d73c14",
      "locators": 55,
      "origin_id": "N-02",
-     "papers": 3,
+     "papers": 4,
      "query_id": "Q-N-02",
      "rows": [
       {
@@ -3526,7 +3527,7 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
        "pmid": "32000863",
        "reading_depth": "complete_fulltext_read",
-       "receipt_events": 13,
+       "receipt_events": 14,
        "receipt_id": "FTR-20260804-32000863-01",
        "repair_unverified": 0,
        "scope_basis": [
@@ -3553,6 +3554,25 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 4,
        "receipt_id": "FTR-20260810-34831305-01",
+       "repair_unverified": 0,
+       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+       "evidence_scope": [
+        "UNQUALIFIED"
+       ],
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "35563688",
+       "reading_depth": "queried_not_full_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261128-35563688-01",
        "repair_unverified": 0,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
        "unaudited_contradictions": 0
@@ -3638,7 +3658,7 @@
       "cells_tissue_stage": "Whole-animal behaviour; Ser9 blot from cerebellum, hippocampus and cortex at postnatal day 20.",
       "coverage": "UNKNOWN.",
       "limits": "A seizure score integrates many targets of lithium; the blot reads one phosphorylation site.",
-      "target_expression": "GSK3beta is broadly expressed; total protein unchanged between genotypes in the printed densitometry."
+      "target_expression": "Total GSK3beta in the printed densitometry (Figure 7c; legend: postnatal day 20, ratio to beta-actin) is 9, 13 and 18 per cent higher in Wwox-null than in wild-type cerebellum, hippocampus and cortex (one lane per genotype per region, no error bars, no test reported; the legend calls the blot representative of four independent experiments), so neither a change nor the absence of one is established."
      },
      "endpoint_pursued": "Seizure suppression with a genotype-specific effect: a tested drug-by-genotype interaction on a provoked-seizure score; then Ser9 phosphorylation or substrate phosphorylation after lithium in a Wwox-null system.",
      "functional_evidence_available": "Null-genotype suppression of a provoked-seizure score, equally present in wild type and heterozygote: non-specific.",
@@ -3660,7 +3680,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "0512c614f61dde143bb21a0535f9308db7e44752ebebf01c4acf0eefbc85d905",
+   "input_sha256": "ad3fd123aac6e416ebec89593c18930e196921764ed7f1442f2d259b3f9ff38a",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -3683,12 +3703,13 @@
     "abstention": null,
     "complete_reads": 3,
     "depths": [
-     "complete_fulltext_read"
+     "complete_fulltext_read",
+     "queried_not_full_read"
     ],
-    "digest": "a8b033b0b9cded80",
+    "digest": "4b11323bb7d73c14",
     "locators": 55,
     "origin_id": "N-02",
-    "papers": 3,
+    "papers": 4,
     "query_id": "Q-N-02",
     "rows": [
      {
@@ -3740,7 +3761,7 @@
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
       "pmid": "32000863",
       "reading_depth": "complete_fulltext_read",
-      "receipt_events": 13,
+      "receipt_events": 14,
       "receipt_id": "FTR-20260804-32000863-01",
       "repair_unverified": 0,
       "scope_basis": [
@@ -3770,6 +3791,25 @@
       "repair_unverified": 0,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
       "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+      "evidence_scope": [
+       "UNQUALIFIED"
+      ],
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "35563688",
+      "reading_depth": "queried_not_full_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261128-35563688-01",
+      "repair_unverified": 0,
+      "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+      "unaudited_contradictions": 0
      }
     ],
     "unaudited_contradictions": 0
@@ -3781,7 +3821,7 @@
     "NO_MATCH_FOUND is information not available for those queries and that coverage: it is not proof the label is absent, not DRUG_HAS_NO_LABEL, not biological counterevidence and not a reason to drop the candidate."
    ],
    "measure_next": {
-    "dependence": "3_PAPERS_3_COMPLETE",
+    "dependence": "4_PAPERS_3_COMPLETE",
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
@@ -3793,7 +3833,7 @@
      "cells_tissue_stage": "Whole-animal behaviour; Ser9 blot from cerebellum, hippocampus and cortex at postnatal day 20.",
      "coverage": "UNKNOWN.",
      "limits": "A seizure score integrates many targets of lithium; the blot reads one phosphorylation site.",
-     "target_expression": "GSK3beta is broadly expressed; total protein unchanged between genotypes in the printed densitometry."
+     "target_expression": "Total GSK3beta in the printed densitometry (Figure 7c; legend: postnatal day 20, ratio to beta-actin) is 9, 13 and 18 per cent higher in Wwox-null than in wild-type cerebellum, hippocampus and cortex (one lane per genotype per region, no error bars, no test reported; the legend calls the blot representative of four independent experiments), so neither a change nor the absence of one is established."
     },
     "endpoint_pursued": "Seizure suppression with a genotype-specific effect: a tested drug-by-genotype interaction on a provoked-seizure score; then Ser9 phosphorylation or substrate phosphorylation after lithium in a Wwox-null system.",
     "functional_evidence_available": "Null-genotype suppression of a provoked-seizure score, equally present in wild type and heterozygote: non-specific.",
@@ -29378,7 +29418,7 @@
       "partial_fulltext_read",
       "queried_not_full_read"
      ],
-     "digest": "4d8c70bb97651444",
+     "digest": "46a63050df10b402",
      "locators": 1292,
      "origin_id": "N-17",
      "papers": 64,
@@ -30173,7 +30213,7 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
        "pmid": "32000863",
        "reading_depth": "complete_fulltext_read",
-       "receipt_events": 13,
+       "receipt_events": 14,
        "receipt_id": "FTR-20260804-32000863-01",
        "repair_unverified": 0,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
@@ -30971,12 +31011,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*importing a disease's dominant modality because the pathway diagram looks like that disease, without checking which way the arrow points.* CHAIN C reads like a tauopathy — WWOX loss → GSK3β de-repressed → pTau S396/S404 up (`CLAIM 035`, `DL-MECH-019`) — and tauopathy's dominant modality is **tau-lowering**. In the only system where the question was asked, tau-lowering **removes the benefit of bot",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1203; evidence table digest 4d8c70bb97651444"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1203; evidence table digest 46a63050df10b402"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "de40f16f8531c66ee7e69257bcad0123557ef9c425df45d5ba235e8a73bde650",
+   "input_sha256": "8954c72be787d7d8467ffec257b48c8297d7c22ebfbd30dbf4c6e7e4d586fbbc",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -31005,7 +31045,7 @@
      "partial_fulltext_read",
      "queried_not_full_read"
     ],
-    "digest": "4d8c70bb97651444",
+    "digest": "46a63050df10b402",
     "locators": 1292,
     "origin_id": "N-17",
     "papers": 64,
@@ -31800,7 +31840,7 @@
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
       "pmid": "32000863",
       "reading_depth": "complete_fulltext_read",
-      "receipt_events": 13,
+      "receipt_events": 14,
       "receipt_id": "FTR-20260804-32000863-01",
       "repair_unverified": 0,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
@@ -36458,12 +36498,13 @@
      "abstention": null,
      "complete_reads": 3,
      "depths": [
-      "complete_fulltext_read"
+      "complete_fulltext_read",
+      "queried_not_full_read"
      ],
-     "digest": "e1ec89b67d4324bd",
+     "digest": "db30294d290d0db9",
      "locators": 55,
      "origin_id": "R-04",
-     "papers": 3,
+     "papers": 4,
      "query_id": "Q-R-04",
      "rows": [
       {
@@ -36515,7 +36556,7 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
        "pmid": "32000863",
        "reading_depth": "complete_fulltext_read",
-       "receipt_events": 13,
+       "receipt_events": 14,
        "receipt_id": "FTR-20260804-32000863-01",
        "repair_unverified": 0,
        "scope_basis": [
@@ -36542,6 +36583,25 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 4,
        "receipt_id": "FTR-20260810-34831305-01",
+       "repair_unverified": 0,
+       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+       "evidence_scope": [
+        "UNQUALIFIED"
+       ],
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "35563688",
+       "reading_depth": "queried_not_full_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261128-35563688-01",
        "repair_unverified": 0,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
        "unaudited_contradictions": 0
@@ -36627,7 +36687,7 @@
       "cells_tissue_stage": "Whole-animal behaviour; Ser9 blot from cerebellum, hippocampus and cortex at postnatal day 20.",
       "coverage": "UNKNOWN.",
       "limits": "A seizure score integrates many targets of lithium; the blot reads one phosphorylation site.",
-      "target_expression": "GSK3beta is broadly expressed; total protein unchanged between genotypes in the printed densitometry."
+      "target_expression": "Total GSK3beta in the printed densitometry (Figure 7c; legend: postnatal day 20, ratio to beta-actin) is 9, 13 and 18 per cent higher in Wwox-null than in wild-type cerebellum, hippocampus and cortex (one lane per genotype per region, no error bars, no test reported; the legend calls the blot representative of four independent experiments), so neither a change nor the absence of one is established."
      },
      "endpoint_pursued": "Seizure suppression with a genotype-specific effect: a tested drug-by-genotype interaction on a provoked-seizure score; then Ser9 phosphorylation or substrate phosphorylation after lithium in a Wwox-null system.",
      "functional_evidence_available": "Null-genotype suppression of a provoked-seizure score, equally present in wild type and heterozygote: non-specific.",
@@ -36649,7 +36709,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "76f3024677422fec7893502d15ce6975c4ee22d1711d807d495cdf45db6f4dfd",
+   "input_sha256": "0fbe3d61887392728407dc9a6e38ee96ef289cc4fe1209081f3e1f7bd00f10bb",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -36672,12 +36732,13 @@
     "abstention": null,
     "complete_reads": 3,
     "depths": [
-     "complete_fulltext_read"
+     "complete_fulltext_read",
+     "queried_not_full_read"
     ],
-    "digest": "e1ec89b67d4324bd",
+    "digest": "db30294d290d0db9",
     "locators": 55,
     "origin_id": "R-04",
-    "papers": 3,
+    "papers": 4,
     "query_id": "Q-R-04",
     "rows": [
      {
@@ -36729,7 +36790,7 @@
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
       "pmid": "32000863",
       "reading_depth": "complete_fulltext_read",
-      "receipt_events": 13,
+      "receipt_events": 14,
       "receipt_id": "FTR-20260804-32000863-01",
       "repair_unverified": 0,
       "scope_basis": [
@@ -36759,6 +36820,25 @@
       "repair_unverified": 0,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
       "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+      "evidence_scope": [
+       "UNQUALIFIED"
+      ],
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "35563688",
+      "reading_depth": "queried_not_full_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261128-35563688-01",
+      "repair_unverified": 0,
+      "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+      "unaudited_contradictions": 0
      }
     ],
     "unaudited_contradictions": 0
@@ -36770,7 +36850,7 @@
     "A label exists for the product identified; presence certifies neither approval, currency, paediatric suitability nor WOREE relevance."
    ],
    "measure_next": {
-    "dependence": "3_PAPERS_3_COMPLETE",
+    "dependence": "4_PAPERS_3_COMPLETE",
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 3,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
@@ -36782,7 +36862,7 @@
      "cells_tissue_stage": "Whole-animal behaviour; Ser9 blot from cerebellum, hippocampus and cortex at postnatal day 20.",
      "coverage": "UNKNOWN.",
      "limits": "A seizure score integrates many targets of lithium; the blot reads one phosphorylation site.",
-     "target_expression": "GSK3beta is broadly expressed; total protein unchanged between genotypes in the printed densitometry."
+     "target_expression": "Total GSK3beta in the printed densitometry (Figure 7c; legend: postnatal day 20, ratio to beta-actin) is 9, 13 and 18 per cent higher in Wwox-null than in wild-type cerebellum, hippocampus and cortex (one lane per genotype per region, no error bars, no test reported; the legend calls the blot representative of four independent experiments), so neither a change nor the absence of one is established."
     },
     "endpoint_pursued": "Seizure suppression with a genotype-specific effect: a tested drug-by-genotype interaction on a provoked-seizure score; then Ser9 phosphorylation or substrate phosphorylation after lithium in a Wwox-null system.",
     "functional_evidence_available": "Null-genotype suppression of a provoked-seizure score, equally present in wild type and heterozygote: non-specific.",

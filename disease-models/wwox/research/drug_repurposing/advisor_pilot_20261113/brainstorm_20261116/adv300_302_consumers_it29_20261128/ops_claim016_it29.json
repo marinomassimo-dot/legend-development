@@ -1,0 +1,8 @@
+[
+ {
+  "op": "replace-within",
+  "id": "CLAIM 016",
+  "old": "(perdita di un freno fisico). L'inibizione è **S9-indipendente**",
+  "new": "(perdita di un freno fisico). [IT 2026-11-28, ADV-300 J1] La de-repressione (perdita di un freno fisico) non esclude però un effetto sull'abbondanza: in tre linee umane di carcinoma vescicale (RT-112, HT-1376, CAL-29) la sovraespressione stabile di WWOX riduce anche la GSK3β totale dopo normalizzazione sul controllo di carico GAPDH (Western, triplicati; WK/KK 0,32, 0,52 e 0,87; in CAL-29 l'effetto è modesto e nasce dalla normalizzazione, perché il segnale grezzo della banda GSK3β non è più basso nei lisati WK); pSer9 e attività chinasica non sono state misurate (PMID 35563688). È un guadagno di funzione in cellule tumorali: nel topo Wwox-null la densitometria stampata della GSK3β totale (+9, +13 e +18 % in cervelletto, ippocampo e corteccia, rapporto su β-actina, una corsia per genotipo e regione, da un blot indicato come rappresentativo di quattro esperimenti indipendenti, senza barre d'errore né test riportato) non stabilisce né un cambiamento né l'assenza di cambiamento dell'abbondanza (PMID 32000863). L'inibizione è **S9-indipendente**"
+ }
+]

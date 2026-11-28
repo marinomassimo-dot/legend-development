@@ -1,0 +1,9 @@
+preparation	ki_nM	qpatch_ec50_nM	qpatch_max_pct	manual_max_pct	manual_pct_diazepam	locator
+human_alpha1_beta3_gamma2	0.18	40.5	21.3	20.2	10.9	Nickolls Table 1
+human_alpha2_beta2_gamma2	2.92	20.8	134.1	123.7	35.3	Nickolls Table 1
+human_alpha3_beta3_gamma2	1.06	20.7	91.6	144.6	48.9	Nickolls Table 1
+human_alpha4_beta3_gamma2	>19000					Nickolls Table 1
+human_alpha5_beta2_gamma2	18.04	30.9	90.9	95.0	69.8	Nickolls Table 1
+human_alpha6_beta2_gamma2	>19000					Nickolls Table 1
+rat_alpha1_beta3_gamma2	0.34		0.6	6.0	8.9	Nickolls Table 1
+rat_alpha2_beta3_gamma2	4.58		54.3	49.6	39.3	Nickolls Table 1

@@ -1,0 +1,84 @@
+"""ADV-302 step 1 scratch tools, kept for reproduction (SCI 2026-11-28). Run from the repository root with CLAUDE_JOB_DIR set to a scratch folder holding cov.json (coverage_report.py --json), tail.json and pmc.json (NCBI idconv). Part 1: build the no-receipt list; part 2: count A (consumer_count.py) against count B (own fixed-string search)."""
+# --- part 1 (tail.py) ---
+import json, re, sys, collections
+from pathlib import Path
+sys.path.insert(0, 'framework/scripts')
+import coverage_report as cr
+import consumer_count as cc
+root = Path('.').resolve()
+rep = json.load(open(sys.argv[1]))
+debt_ids = [d['id'] for d in rep['reading_debt']]
+reg = root/'disease-models/wwox/registries'
+# registry blocks, own parser (independent of coverage_report's)
+blocks = collections.defaultdict(list)
+for name in ('paper_registry_current.md','literature_tracking_log_current.md'):
+    for part in re.split(r'(?m)^(?=#{2,3} )', (reg/name).read_text()):
+        head = part.split('\n')[0]
+        m = re.search(r'(CORPUS[- ](?:STUB-)?P?\d+|PAPER \d+|CORPUS-STUB-\d+)', head)
+        if m: blocks[m.group(1)].append(part)
+ledger = (reg/'fulltext_read_receipts.jsonl').read_text().splitlines()
+rp, rd = set(), set()
+for l in ledger:
+    if l.strip():
+        e = json.loads(l); s = e.get('study_id') or {}
+        if s.get('pmid'): rp.add(str(s['pmid']))
+        if s.get('doi'): rd.add(str(s['doi']).lower())
+out = []; missing = []
+for i in debt_ids:
+    b = blocks.get(i)
+    if not b: missing.append(i); continue
+    ids = [ln for p in b for ln in p.split('\n') if re.match(r'[\s>*-]*Identifier\b', ln, re.I)]
+    t = '\n'.join(ids)
+    pm = sorted(set(cc.PMID.findall(t))); doi = sorted(set(x.rstrip('.,;') for x in cc.DOI.findall(t))); pmc = sorted(set(cc.PMCID.findall(t)))
+    if any(p in rp for p in pm) or any(d.lower() in rd for d in doi): continue
+    out.append(dict(id=i, pmid=pm, doi=doi, pmc=pmc, title=[d for d in rep['reading_debt'] if d['id']==i][0]['title']))
+print(len(debt_ids), 'debt;', len(out), 'no receipt;', len(missing), 'no block', missing[:5], file=sys.stderr)
+print('no identifier:', [o['id'] for o in out if not (o['pmid'] or o['doi'])], file=sys.stderr)
+json.dump(out, sys.stdout)
+
+# --- part 2 (count.py) ---
+import json, re, subprocess, sys, collections, os
+from pathlib import Path
+sys.path.insert(0, 'framework/scripts')
+import consumer_count as cc
+T=os.environ['CLAUDE_JOB_DIR']+'/tmp'
+tail=json.load(open(T+'/tail.json')); pmc=json.load(open(T+'/pmc.json'))
+root=Path('.').resolve()
+# count A: the script
+ids=cc.terms_of(root); units=cc.units(root)
+keys=sorted({k for o in tail for k in o['pmid']+o['doi']})
+A=cc.consumers(keys, ids, units)
+# count B: own fixed-string search
+SKIP=re.compile(r'(paper_registry_current|literature_tracking_log|fulltext_read_receipts|coverage_report|/dashboard|/site/|/views?/|share_?able)')
+files=[f for f in subprocess.check_output(['git','ls-files','disease-models/wwox']).decode().split('\n') if f and not SKIP.search(f) and re.search(r'\.(md|tsv|json|jsonl|csv|txt|yaml|yml|html|py)$',f)]
+term2rec={}; stub2rec={}
+for o in tail:
+    for p in o['pmid']:
+        term2rec[p]=o['id']
+        if p in pmc: term2rec[pmc[p].lower()]=o['id']
+    for d in o['doi']: term2rec[d.lower()]=o['id']
+    for x in o['pmc']: term2rec[x.lower()]=o['id']
+    stub2rec[o['id'].lower()]=o['id']
+rx=re.compile(r'(?<![A-Za-z0-9.])(?:\d{7,8})(?![0-9])|PMC\d{5,9}|10\.\d{4,9}/[^\s)\]>*`|"\',}<]+|PAPER \d+|CORPUS-STUB-\d+|CORPUS P\d+',re.I)
+B=collections.defaultdict(list); S=collections.defaultdict(list)
+for f in files:
+    for n,line in enumerate(open(f,errors='replace'),1):
+        for m in rx.finditer(line):
+            v=m.group(0).lower().rstrip('.,;:')
+            if v in term2rec: B[term2rec[v]].append((f,n,v))
+            elif v.startswith('paper '):
+                for o in tail:
+                    if o['id'].lower()==v: B[o['id']].append((f,n,v))
+            elif v in stub2rec: S[stub2rec[v]].append((f,n,v))
+res={}
+for o in tail:
+    a=sorted({u for k in o['pmid']+o['doi'] for u in A.get(k,[])})
+    res[o['id']]=dict(pmid=o['pmid'],doi=o['doi'],pmc=[pmc[p] for p in o['pmid'] if p in pmc]+o['pmc'],title=o['title'],A=a,B=B.get(o['id'],[]),S=S.get(o['id'],[]))
+json.dump(res,open(T+'/counts.json','w'))
+na=[i for i in res if res[i]['A']]; nb=[i for i in res if res[i]['B']]
+print('files',len(files),'A records',len(na),'B records',len(nb),'both',len(set(na)&set(nb)),'A only',len(set(na)-set(nb)))
+c=collections.Counter(); 
+for i in nb:
+    for f,n,v in res[i]['B']: c[re.sub(r'\d{8}','D',f.split('disease-models/wwox/')[1].rsplit('/',1)[0])+'/…' ]+=1
+for k,v in c.most_common(30): print(v,k)
+for i in sorted(na,key=lambda i:-len(res[i]['A'])): print(i,res[i]['pmid'],len(res[i]['A']),'; '.join(res[i]['A'])[:400])

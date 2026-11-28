@@ -1,0 +1,5 @@
+study_arm	randomized	primary_n	primary_mean_RRatio_points	primary_SD_points	responder_n	responders_derived	responder_pct
+Placebo	51	50	-24.06	33.441	50	15	30.0
+CVL-865 7.5 mg BID	51	46	-22.45	26.393	46	16	34.8
+CVL-865 25 mg BID	52	47	-25.90	33.428	47	18	38.3
+CVL-865 7.5 mg BID / 25 mg BID	103	93	-24.19	30.041	93	34	36.6
