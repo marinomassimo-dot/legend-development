@@ -1,0 +1,22 @@
+path	sha256	parts_read
+job-scratch:producer/fetched/21364661_PMC3032556.xml	1f511bda581c18ce36104e0406389ece52391fa11babe5fe1f60638224550256	abstract, GSK result, Fig 2 legend, methods (HI, lithium, western, statistics)
+job-scratch:producer/fetched/fig_21364661/f2.jpg	d837a0906ca86197b1aa181e675bbeae4064e85a2b5b96d41f28e14fe0a2db43	viewed
+job-scratch:producer/fetched/27057548_PMC4753322.xml	9c8eb4d2c34c47b82a02347d1e90ec7d9392613904cd71e6f2de42134e870e2a	abstract, methods 2.1-2.6, results 3.2-3.4, Fig 2 and 4 legends
+job-scratch:producer/fetched/fig_27057548/f4.jpg	198657c215e281d100afbaef53a566afe791f27926b53e8e867b92ee7b3d31f7	viewed
+job-scratch:producer/fetched/24787352_PMC4165789.xml	091f2c42961b7c373c6561c7e2862ef5557d7eccd311c3f5a3a92b232eff09d6	abstract, methods, statistics, lithium results sentences, Fig 6 legend
+job-scratch:producer/fetched/fig_24787352/f6.jpg	d1e09cc249f40db6a68ac766a43d53c9db9d7cf23fc288a005d025e9be4c18e4	viewed
+job-scratch:producer/fetched/try_18190791_PMC2279304_pmc.ncbi.nlm.nih.gov	8752b1ee8e540bdb270e9314d77b9877ea86f1405de10e592576d2a231acac30	methods, results, statistics, Fig 1 and 2 legends
+job-scratch:producer/fetched/fig_18190791/f1.jpg	c0f9e68273be6f5676afb1badd27653af5257b42e0de123616f5b84d04c48dcf	viewed (Fig 1)
+job-scratch:producer/fetched/23167932_PMC3505070.xml	3a6c022b1bed4c606fadc27602998182e5b0d7cb9b52d8a425e027d148b97cb0	abstract, introduction, methods, lithium results, Fig 6 legend, saline/sex searches
+job-scratch:second/dl/23167932/c_pmc_page.html	b2b4503cbf459a68de8a553c404c5a95c84100c4d178b376dfaa7f84c3f1ee7d	figure link only
+job-scratch:second/dl/23167932/f0006.jpg	7b829ecd4e993b3c84489c55892afad886b0d64882cc3490f37c884a30d7bb20	viewed (Fig 6)
+job-scratch:producer/fetched/32394966_PMC7716030.xml	f0157fa93e694c6a8366b19695bb507f0fec2028e586f4a48b3f28ec0a86ec84	abstract, methods, results on Wnt/LiCl, Fig 4-5 legends, site search
+job-scratch:producer/fetched/fig_32394966/f5.jpg	bf1316530eec064603e9d8502a86f1635754b63d78d7599e364b04b700e150d0	viewed (Fig 4)
+job-scratch:producer/fetched/fig_32394966/f6file.jpg	3e589a2fda4d4b7398e94d6d5f61153373538c116de8acda7283b03679a06d14	viewed (Fig 5)
+job-scratch:producer/fetched/22625652_PMC3392751.xml	e4268f9b5e58dade21380c1e5f58a9a580c16554ddcbe8deb7827ac5a8e8e290	abstract, methods (mice, LiCl, western, statistics), LiCl results, Fig 7 legend
+job-scratch:producer/fetched/fig_22625652/f7.jpg	d675d5d45b88d4c8ae4c4c718b97d98fc027a97e4c36856be2241c2e255519d7	viewed
+job-scratch:producer/fetched/18595723_PMC2592843.xml	2df90f05c2e0008a650d418c520a656e219f259a943b7cda8f8d353b9326b33d	passages citing Zhong; p-GSK term search
+job-scratch:producer/fetched/try_17906685_nature.html	1bbd295186ee75749aee0bacb85ffe1b30461e9a7e5aac3ade5747410d77c7b7	title check: Page Not Found
+job-scratch:second/dl/recall/pubmed.xml	9534c71ff3b4729a2dfa42dcbc677f7cb345dd028ca5c682de745c156cca998b	titles, abstracts, MeSH of 69 sampled records (keyword screen, selected reading)
+job-scratch:second/dl/recall/pubmed_all366.xml	f0a581c04c539abe91edefec2a59d09569c031e5b789f1dc6203dc3b4c3e5285	regex screen over 366; selected abstracts read
+job-scratch:second/dl/recall/pmc_all.xml	cd50f98e9d3d65493eba38dd0c36f38c03938c02d726adb7628331f30886a532	keyword screen of paragraphs

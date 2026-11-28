@@ -797,6 +797,32 @@ def find_near_marker(task: str, projects_dir: Path | None = None, max_age_days: 
     return None
 
 
+def find_near_release(path: Path | str, task: str) -> dict | None:
+    """The last line of the session's own assistant text, after its last binding of the task, that opens with `MANDATE_RELEASED` but is no marker (no task id, words after
+    the id, bold or backticks around it). 2026-11-28: a predecessor wrote the bare word, `released` answered only BOUND, and the cause was found by grepping its transcript.
+    A hint for the checker; nothing is released by it."""
+    found = None
+    try:
+        with Path(path).open(encoding="utf-8", errors="replace") as fh:
+            for line in fh:
+                try:
+                    entry = json.loads(line)
+                except ValueError:
+                    continue
+                if not isinstance(entry, dict) or entry.get("type") != "assistant":
+                    continue
+                for text in mc._text_blocks(entry):
+                    for l in mc._outside_fences(text).splitlines():
+                        marker = mc.MARKER_RE.match(l)
+                        if marker and marker.groups() == ("BOUND", task):
+                            found = None
+                        elif l.strip().lstrip("*`> ").startswith("MANDATE_RELEASED") and (not marker or marker.group(2).rstrip("._-") == task != marker.group(2)):
+                            found = {"at": entry.get("timestamp", ""), "line": l.strip()[:100]}
+    except OSError:
+        return None
+    return found
+
+
 def transcript_cwd(transcript: Path) -> str | None:
     """The working directory the session ran in (a revival must start there: the runtime
     resolves workspace trust and the project's permissions from it)."""
@@ -1522,6 +1548,9 @@ def main(argv: list[str] | None = None) -> int:
         path = transcript_for_session(a.session)
         state = mc.marker_state(path, a.task) if path else "MISSING"
         print(f"{state} (session {a.session[:8]}, task {a.task}" + (f", {path}" if path else ", no transcript found for that id (a short id works only as a unique prefix of at least 8 characters)") + ")")
+        near = find_near_release(path, a.task) if state == "BOUND" else None
+        if near:
+            print(f"NEAR_MISS: it wrote `{near['line']}` at {near['at'][:19]}, which releases nothing; that session must write, alone on its line: MANDATE_RELEASED: {a.task}")
         return 0 if state == "RELEASED" else (2 if state == "MISSING" else 1)
     if a.cmd == "labels":
         print(json.dumps(session_name_state(a.task, list_sessions()), indent=1, ensure_ascii=False))

@@ -21,7 +21,7 @@ not by the window it grades and not from its transcript: friction that IT35 did 
 | First composition | Round 2 on the composed clauses: 3 of 15 MUST CHANGE (20 percent; Brain 1 of 7, EMBO 2 of 8). Round 3 on the repaired clauses: 3 of 11 (27 percent; Brain 2 of 6, EMBO 1 of 5): the repairs carried new errors. The last repair (E7, the delegate's own wording) was not re-read. | partial |
 | Claim separation | "Acidotic" narrowed to reduced total CO2 at P18; "leukopenic" rests on two animals per group; glucose record from day 10 (plot reading, one pooled line); a bulk transcript was not counted as a marker read and both readings were reported because the frozen rule did not say. | strong |
 | First reading of a table | File013 was first taken for a systemic-null table; the blind read showed three pooled knockout lines (7 against 7). The comparison with HE's ADV-329 table (identical RNA-seq cells) kept File013 as "not stated". | partial |
-| Where results landed | Line 23 of the GABA-paradox meta page; the INV-06 sentence in both tables and the view. Dated pointers from the live copies of the old line-23 sentence are **not yet written** (checkpoint item 2, open at IT36). | partial |
+| Where results landed | Line 23 of the GABA-paradox meta page; the INV-06 sentence in both tables and the view. Dated pointers from six live copies of the old line-23 sentence were written by IT36 (see the line below the table). | partial |
 | Friction | Context was stated as 215k to a peer without measuring; the measured peak was 330k (`session_model_census.py`). One claim, "the suite is not in the gate", was wrong: the workflow calls `run_release_regressions.py`. | partial |
 
 ## Dream pass
@@ -40,7 +40,7 @@ null), and a repair of a flagged clause is itself a first composition (3 of 11 a
 |---|---|---|
 | Blood chemistry of the systemic Wwox-null mouse is held at P18 only; glucose from day 10; the conditional-allele marker response is transcript-level only | A cell-restricted deletion does not separate a cell-autonomous marker change from one secondary to seizures and growth failure; nobody has measured glucose in the same animals before P9 | RP-019 design requirement is ADV's row |
 | INV-06 Crawford sentence applied | The N2 intervals correspond to about 40 percent of the single-pulse response | none owed |
-| Dated pointers from copies of the old line-23 sentence | Four analysis files and two dossiers carry it | IT36, narrow edit with a second reader |
+| Dated pointers from copies of the old line-23 sentence | Three analysis files (four places) and two dossiers; written 2026-11-28 by IT36 | landed with the IT36 pointer commit; `PV_REPORTS_TABLE.tsv` and the 2026-08-06 session evaluation left unchanged (no stale statement) |
 
 ## Attribution census
 ```
