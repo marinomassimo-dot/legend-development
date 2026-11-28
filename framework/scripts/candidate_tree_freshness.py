@@ -545,6 +545,15 @@ def regenerate_and_commit(repo: Path, stale: list[SurfaceResult] | None = None, 
         return []
     table = GENERATORS if generators is None else generators
     written: list[str] = []
+    changed: list[str] = []
+    # Sealed surfaces are set aside and said at the end: until 2026-11-28 one stale seal stopped the whole pass, so every receipt landing left the other surfaces behind.
+    sealed: dict[str, SurfaceResult] = {}
+
+    def set_aside(results: list[SurfaceResult]) -> list[SurfaceResult]:
+        unsealable = {key.format(disease=disease_of(r.surface) or "")
+                      for r in results for key, g in table.items() if not g.auto_regenerate}
+        sealed.update({r.surface: r for r in results if r.generator in unsealable})
+        return [r for r in results if r.generator not in unsealable]
 
     def dirty() -> set[str]:
         out = _git(repo, "status", "--porcelain", "--no-renames", "-z", "--untracked-files=all").stdout
@@ -552,15 +561,10 @@ def regenerate_and_commit(repo: Path, stale: list[SurfaceResult] | None = None, 
 
     # A surface can read another generated surface (ranking.json reads coverage/): regenerating one makes the next one stale, and only the
     # verification sees it. Each pass regenerates what the last verification found stale; a surface still stale after REGENERATION_PASSES is refused.
+    stale = set_aside(stale)
     for attempt in range(1, REGENERATION_PASSES + 1):
-        unsealable = {key.format(disease=disease_of(r.surface) or "")
-                      for r in stale for key, g in table.items() if not g.auto_regenerate}
-        sealed = [r for r in stale if r.generator in unsealable]
-        if sealed:
-            raise RegenerationError(
-                "these surfaces break a seal when regenerated and are left to the person who "
-                "re-seals them (prompt_batch_commit.md Phase 4.7): "
-                + "; ".join(f"{r.surface}: {r.regenerate}" for r in sealed))
+        if not stale:
+            break
         for result in stale:
             before = dirty()
             done = subprocess.run(shlex.split(result.regenerate), cwd=repo, capture_output=True,
@@ -577,22 +581,31 @@ def regenerate_and_commit(repo: Path, stale: list[SurfaceResult] | None = None, 
         changed = [p for p in written
                    if _git(repo, "status", "--porcelain", "--", p).stdout.strip()]
         if not changed:
-            return []
+            break
         verify = evaluate(repo, mode="paths", paths=changed, timeout=timeout,
                           generators=generators)
         if verify.exit_code == 0:
             break
-        stale = verify.stale()
+        stale = set_aside(verify.stale())
+        if verify.exit_code != 2 and not stale:
+            break
         if verify.exit_code == 2 or attempt == REGENERATION_PASSES:
             raise RegenerationError("regenerated, but the result is still not fresh; nothing "
                                     "committed:\n" + render(verify))
-    common = Path(_git(repo, "rev-parse", "--path-format=absolute",
-                       "--git-common-dir").stdout.strip())
-    with open(os.environ.get("LEGEND_COMMIT_LOCK", str(common / "legend_commit.lock")),
-              "w") as lock:
-        fcntl.flock(lock.fileno(), fcntl.LOCK_EX)
-        _git(repo, "add", "--", *changed)
-        _git(repo, "commit", "-q", "-m", message, "--", *changed)
+    if changed:
+        common = Path(_git(repo, "rev-parse", "--path-format=absolute",
+                           "--git-common-dir").stdout.strip())
+        with open(os.environ.get("LEGEND_COMMIT_LOCK", str(common / "legend_commit.lock")),
+                  "w") as lock:
+            fcntl.flock(lock.fileno(), fcntl.LOCK_EX)
+            _git(repo, "add", "--", *changed)
+            _git(repo, "commit", "-q", "-m", message, "--", *changed)
+    if sealed:      # the end of the message is what a caller that keeps only the tail shows
+        raise RegenerationError(
+            "these surfaces break a seal when regenerated and are left to the person who "
+            "re-seals them (prompt_batch_commit.md Phase 4.7): "
+            + "; ".join(f"{r.surface}: {r.regenerate}" for r in sealed.values())
+            + (". The other stale surfaces were regenerated and committed: " + ", ".join(changed) if changed else ". Only these: nothing else was stale."))
     return changed
 
 

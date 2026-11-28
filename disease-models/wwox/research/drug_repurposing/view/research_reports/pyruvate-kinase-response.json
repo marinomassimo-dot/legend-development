@@ -1,0 +1,33 @@
+{
+  "investigation": "INV-07",
+  "title": "Pyruvate kinase and neural energy",
+  "date": "28 November 2026",
+  "summary": "Mitapivat as a conditional ex vivo comparator in WWOX loss of function.",
+  "graph": {
+    "evidence": "Purified PKM2 responds. Rat brain exposure is low.",
+    "inference": "Blood response cannot identify neural isoform engagement.",
+    "hypothesis": "An activatable neural PKM2 pool could aid recovery.",
+    "experiment": "Measure local parent, PK flux and ATP at matched activity."
+  },
+  "evidence": [
+    "Half-maximal activation was 13 nM for WT erythrocyte PKR and 38 nM for PKM2 in one assay panel. PKM1 was unmeasured. Total rat brain/plasma AUC ratios were 0.057 and 0.091."
+  ],
+  "inference": [
+    "A cross-species sensitivity requires 20% free brain parent at the modeled peak and 63% at the mean to reach 38 nM. These are conditional values. H3 activity is a competing explanation."
+  ],
+  "hypothesis": [
+    "An activatable PKM2 pool could restore neural ATP while preserving first recruitment. Lactate alone cannot locate the bottleneck."
+  ],
+  "experiment": [
+    "Measure paired glucose-derived PEP and products, absolute ATP recovery and local exposure in null and corrected preparations. Resolve isoform dependence at equal activity."
+  ],
+  "limits": [
+    "Conditional ex vivo study. Pediatric evidence comes from PK deficiency. Central exposure, tolerability in WWOX and the useful neural isoform remain uncertain."
+  ],
+  "sources": [
+    {"label": "FDA. Tables 6, 59 and 65 and H3 pharmacology.", "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2022/216196Orig1s000IntegratedR.pdf"},
+    {"label": "EMA. Parent brain and plasma distribution in rats.", "url": "https://www.ema.europa.eu/en/documents/assessment-report/pyrukynd-epar-public-assessment-report_en.pdf"},
+    {"label": "Zheng et al. Developmental PKM isoform contrast.", "url": "https://doi.org/10.7554/eLife.13374"},
+    {"label": "Li et al. Neuronal glycolysis and lactate counterexample.", "url": "https://doi.org/10.1016/j.celrep.2023.112335"}
+  ]
+}
