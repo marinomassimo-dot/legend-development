@@ -289,8 +289,10 @@ class EnglishAuthoredSectionsSayTheyAreEnglish(unittest.TestCase):
             for lg in ("fr", "de", "es"):
                 page = self.files[(src, lg)]
                 for sid in rv.EN_SCOPE_SECTIONS:
-                    m = re.search(r'<section id="%s"[^>]*>.*?</h[1-6]>(<p class="mini mut sec-en-note">.*?</p>)?' % sid, page, flags=re.S)
-                    note = (m.group(1) or "") if m else ""
+                    m = re.search(r'<section id="%s"[^>]*>' % sid, page)
+                    self.assertIsNotNone(m, (src, lg, sid))
+                    own = re.split(r'<section\b|</section>', page[m.end():], maxsplit=1)[0]   # the section's own text: a nested section (`investigations` inside `overview`) carries its own notice
+                    note = "".join(re.findall(r'<p class="mini mut sec-en-note">.*?</p>', own, flags=re.S))
                     if note:   # a scoped section whose English-authored remainder is below the detector's floor carries no notice (overview): nothing to say; when there is one it is the partial one
                         self.assertIn(html.escape(part[lg], quote=True), note, (src, lg, sid))
                         self.assertNotIn(html.escape(whole[lg], quote=True), note, (src, lg, sid))
