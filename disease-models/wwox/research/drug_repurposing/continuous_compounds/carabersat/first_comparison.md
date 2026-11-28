@@ -1,0 +1,15 @@
+# Carabersat opening comparison
+
+context_policy: QUESTION_DRIVEN
+
+**Checkpoint #202.** Start after the closed terazosin dossier. The prior context admitted is the WWOX native-burst test and the separate remacemide example of how different assays can yield apparently divergent potencies. Prior scope and prediction are in [pretest](pretest.md).
+
+**Binding.** Herdon et al. report rat forebrain membrane radioligand saturation `Kd` 32 ± 1 nM and homologous competition `Ki` 48 ± 4 nM. The nonradioactive opposite enantiomer is about 1,000 times weaker in the displacement assay. Hippocampal membranes showed measurable binding. The Results report binding equilibrium within 60 minutes under the membrane assay conditions. The paper does not establish the molecular identity of the site. Its analogue comparison in Figure 6 relates binding in rat membranes to mouse seizure-threshold change at a common oral dose, which does not equalize free exposure. [Herdon et al., pp. 1688–1690, Figs. 2–6](https://onlinelibrary.wiley.com/doi/pdfdirect/10.1038/sj.bjp.0701331)
+
+**Function.** Upton et al. report a nominal **0.2 µM** half-maximum concentration for reduction of evoked afterdischarge count in rat CA1 at **8.5 mM KCl**, with a reported `n=3–6` experiments. Initial trigger reportedly persisted. The opposite enantiomer was tested without a significant effect through **3 µM**, with concentration steps every ten minutes. Routine evoked excitability in standard ACSF is a separate comparison and direct inhibitory recruitment was not quantified. No opposite-enantiomer functional midpoint or equivalence range is supplied. [Upton et al., Methods and Fig. 4](https://onlinelibrary.wiley.com/doi/pdfdirect/10.1038/sj.bjp.0701330)
+
+**Reproduction and boundary.** Convert the bath midpoint to 200 nM and divide by the mean saturation `Kd` (200/32 = **6.25**) or by the competition `Ki` (200/48 = **4.17**). The top opposite-enantiomer bath concentration is 15 times that active-enantiomer midpoint. That does not quantify a 15-fold functional potency shift or rule out a weaker functional response at higher concentrations. These ratios compare nominal bath concentration with membrane-binding estimates. Unknown free concentration and equilibration prevent a receptor-occupancy inference. The two original reports share a laboratory and authors. The same-sponsor [voltage-current primary abstract](https://pubmed.ncbi.nlm.nih.gov/10471213/) is a locator for the next increment and no complete reading is claimed.
+
+**Next step.** Compare dose–response slopes and the range actually tested in both arms, assess whether its design preserves first inhibitory output, then check independent current measurements and look for molecular identification or an adult free-exposure report. Repeated stereoselectivity in native juvenile wild-type and Wwox-loss preparations would be useful only after matching free exposure and recruitment. The developmental and pediatric decision remains open.
+
+**Handling.** Aggregate facts and short locators only. The articles were accessible for analysis and no original figure or manuscript is redistributed.
