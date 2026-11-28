@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 257,
+   "distinct_hrefs": 258,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -547,7 +547,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2286,
-   "sha256": "fce7480a5ad7a94a196f3d3ba2d169390ff28ad34906c1e7b2cd7317d8afd9e0"
+   "sha256": "94381c36fd9a2c943a2e596c89101c8db9c33ac80c62351a7dfc78d99c31cb52"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5116154,
-   "sha256": "9e0a36c854a25214a1daa250da189295fa82b05bcf12b57415f983a6894c5eba"
+   "bytes": 5116254,
+   "sha256": "38d2bbd85ee4618c846b56ff2f5af7da9b52cf2ab5c7468e4ca8cb6f5789094d"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
@@ -636,6 +636,10 @@
   "reports/piracetam.pdf": {
    "bytes": 123732,
    "sha256": "740d52ac15e74cac221e60e3c4a76729607489d236260d846468f9ffc6c0e070"
+  },
+  "reports/suvorexant.pdf": {
+   "bytes": 118890,
+   "sha256": "1c2a3df4efea86a4f1413abfe3ffff3a6dda9f05ac719969a3e2b805c2c889e8"
   },
   "reports/sv2a-inhibitory-recruitment.pdf": {
    "bytes": 118424,
