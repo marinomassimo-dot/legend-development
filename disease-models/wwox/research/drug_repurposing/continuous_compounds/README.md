@@ -223,7 +223,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Next: L-4-chlorokynurenine (AV-101).** The prior catalogue established the candidate identity. Now compare measured free parent and formed 7-chlorokynurenate with glycine-site responses. Put the alternate chlorinated branch, adult CSF limits, and provoked seizure results on separate scales after the L-threonine checkpoint lands.
+**Active: L-4-chlorokynurenine (AV-101).** Compare parent and formed 7-chlorokynurenate in the adult central PK study with a native glycine-site response. Distinguish assay censoring, auditory EEG and the alternate chlorinated branch. [Prespecified comparison](l_4_chlorokynurenine/pretest.md) · [Opening comparison](l_4_chlorokynurenine/first_comparison.md)
 
 **L-Threonine.** Retain as a conditional precursor and transport comparator. Defer pediatric WWOX priority. Adult lumbar threonine rose without a detected glycine rise, and the clinician spasticity signal did not generalize to global function or reflex physiology. Rat tissue and dialysate glycine separated. Reopen for verified local retained-carbon glycine and a GlyR-dependent spinal effect at preserved first force. [Dossier and replay](l_threonine/README.md)
 
