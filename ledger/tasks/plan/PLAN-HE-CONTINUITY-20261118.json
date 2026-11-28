@@ -1615,6 +1615,15 @@
      "accepted_at": "2026-11-28T08:56:58Z",
      "evidence": "655ba20d8 / af3e65848 on main; real race (RUNNING saved before the SIGTERM handler); new test red before, 21/21 after; 1 red seen",
      "updated_at": "2026-11-28T08:56:58Z"
+    },
+    {
+     "step": "Freshness tool exit 2 on a stale sealed sidecar leaving coverage_report and reading_state behind; PMID ledger lookup before writing not held",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad second message to HE 6fe75e26, 2026-11-28 (SCI sidecar trap)",
+     "accepted_at": "2026-11-28T09:01:37Z",
+     "evidence": "f6de3399c on main; sealed surfaces set aside, others committed; scripts README held-studies row; sidecar re-seal reported to ADV",
+     "updated_at": "2026-11-28T09:01:37Z"
     }
    ]
   }
@@ -2863,6 +2872,13 @@
    "at": "2026-11-28T08:56:58Z",
    "source": "ADV a5e6f2ad message to HE 6fe75e26, 2026-11-28",
    "step_sha256": "3466e826547a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T09:01:37Z",
+   "source": "ADV a5e6f2ad second message to HE 6fe75e26, 2026-11-28 (SCI sidecar trap)",
+   "step_sha256": "84083f57ad86",
    "reopened_block": false,
    "authorised_by": null
   }
