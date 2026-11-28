@@ -1,0 +1,33 @@
+{
+  "investigation": "INV-15",
+  "title": "Padsevonil in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "Separate synaptic target binding from recruitment of inhibition.",
+  "graph": {
+    "evidence": "Adult PET showed high SV2A occupancy. Phase 3 did not confirm the efficacy endpoints.",
+    "inference": "Occupancy alone cannot establish balanced inhibitory and excitatory release.",
+    "hypothesis": "A brief GABA-A effect could restore inhibitory recruitment at matched SV2A engagement.",
+    "experiment": "Measure native inhibitory output with benzodiazepine-site blockade and matched SV2A engagement."
+  },
+  "evidence": [
+    "The highest phase 3 arm had 8/56 responders on the 75% endpoint versus 7/54 on placebo. Somnolence was 20/59 versus 2/55 in the corresponding safety sets."
+  ],
+  "inference": [
+    "Trial whole-blood troughs and a published blood/plasma comparison support near-saturation scenarios for SV2A in the highest phase 2b arm. Direct trial occupancy and functional GABA-A coverage remain uncertain."
+  ],
+  "hypothesis": [
+    "A useful brief GABA-A contribution could preserve recruitment when presynaptic release is modified. A later response could instead reflect SV2 residence or other SV2 isoforms."
+  ],
+  "experiment": [
+    "Compare padsevonil with brivaracetam at measured, matched SV2A engagement. Test whether benzodiazepine-site blockade removes any gain in inhibitory recruitment and preserve the first excitatory response as a control."
+  ],
+  "limits": [
+    "Retain as a conditional ex vivo comparator and defer pediatric WWOX priority. Adult results leave juvenile exposure, recruitment and developmental outcomes unresolved."
+  ],
+  "sources": [
+    {"label": "Muglia et al. Adult PET and exploratory trial.", "url": "https://doi.org/10.1093/braincomms/fcaa183"},
+    {"label": "Rademacher et al. Controlled trials and Fig. S4A.", "url": "https://doi.org/10.1002/epi4.12656"},
+    {"label": "Kramer et al. Blood-to-plasma sampling, Fig. 3.", "url": "https://doi.org/10.1208/s12248-023-00866-7"},
+    {"label": "Niespodziany et al. GABA-A subunit responses, Table 1.", "url": "https://doi.org/10.1111/epi.16497"}
+  ]
+}
