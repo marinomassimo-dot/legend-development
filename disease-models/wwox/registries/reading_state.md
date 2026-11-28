@@ -20,7 +20,7 @@ asserted by no receipt. `prior_receipt` means the reading this one builds on, an
 sharing a parent are the normal case under parallel branches.
 
 
-**2821 paper(s)** with at least one receipt · **3821 receipt(s)** · **40 paper(s) read in parallel** by two receipts sharing a parent.
+**2821 paper(s)** with at least one receipt · **3822 receipt(s)** · **41 paper(s) read in parallel** by two receipts sharing a parent.
 
 ## Papers read in parallel
 
@@ -30,6 +30,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 |---|---|---|
 | DOI 10.64898/2026.02.03.703439 | `FTR-20261110-PPR1225217-94` | `FTR-20261110-PPR1225217-95`, `FTR-20261121-IHRIN-02` |
 | PMID 17241159 | `FTR-20261110-17241159-96` | `FTR-20261110-17241159-97`, `FTR-20261110-17241159-98` |
+| PMID 18487609 | `FTR-20260811-18487609-01` | `FTR-20261124-18487609-86`, `FTR-20261128-18487609-01` |
 | PMID 22728824 | `FTR-20261111-22728824-88` | `FTR-20261111-22728824-85`, `FTR-20261111-22728824-87` |
 | PMID 23741617 | `FTR-20261105-23741617-04` | `FTR-20261108-23741617-97`, `FTR-20261108-23741617-81` |
 | PMID 24002024 | `FTR-20261021-24002024-01` | `FTR-20261105-24002024-06`, `FTR-20261124-24002024-01` |
@@ -356,7 +357,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 18452537 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | not_present | read | 1 |
 | PMID 18460020 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | unavailable | read | 1 |
 | PMID 1847879 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
-| PMID 18487609 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | read | read | 2 |
+| PMID 18487609 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | read | read | 3 |
 | PMID 18495876 | `partial_fulltext_read` | read | not_read | read | read | not_read | not_read | read | read | not_read | not_read | 2 |
 | PMID 18503560 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 18534748 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_present | not_read | not_read | 1 |
