@@ -72,7 +72,7 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      suite red"). A selection that cannot be built is said and does not refuse. `--no-landing-suites` (with `--serialize`) skips them and adds an empty commit carrying the trailer `Landing-Suites: skipped
      (--no-landing-suites)`, so the skip is in the published history. This holds the landing lock for as long as the suites take (95 s for an 8-suite selection on 2026-11-25). A selection is not the release battery.
      A publisher that has to WAIT for the lock first runs the selected short suites (release surface, structured data, documented commands) on its own HEAD against the merge base with the tracking ref, and a red one
-     refuses it before it takes the lock (2026-11-28: five suite-red refusals in four days, each after a wait). The full selection still runs under the lock.
+     refuses it before it takes the lock; the early run stops as soon as the lock is its to take (2026-11-28: five suite-red refusals in four days, each after a wait). The full selection still runs under the lock.
 
   14. Concurrent checks (THE DEFAULT under `--serialize`, 2026-11-25, ADV): the view checks, the gate and the landing suites start together instead of one after another. The gate reads the live worktree, so the
      suites do not run in it: they run in a throwaway clone of the commit being gated (`git clone --no-hardlinks`, only `files/` hard-linked when the checkout has one), removed by this tool on success, refusal,
@@ -406,11 +406,34 @@ def suite_clone(sha: str, remote: str):
                 print(f"WARNING: the suite clone {holder} could not be removed completely; remove it by hand", flush=True)
 
 
-def _run_suite(entry: str, cwd: Path) -> tuple[str, set[str], str, float]:
-    """(PASS|RED|TIMEOUT, the failing test lines, one line saying why, seconds) of one selector entry (`path` or `path Class`) run in `cwd`."""
+def _run_or_yield(argv: list[str], yield_now, **kw):
+    """`subprocess.run` that gives up (None) as soon as `yield_now()` is true; the child is killed on that and on any exception (a SIGTERM raises here)."""
+    child = subprocess.Popen(argv, stdout=subprocess.PIPE, stderr=subprocess.PIPE, **kw)
+    deadline = time.time() + SUITE_TIMEOUT_S
+    try:
+        while True:
+            try:
+                out, err = child.communicate(timeout=1)
+                return subprocess.CompletedProcess(argv, child.returncode, out, err)
+            except subprocess.TimeoutExpired:
+                if time.time() > deadline:
+                    raise
+                if yield_now():
+                    return None
+    finally:
+        if child.poll() is None:
+            child.kill()
+            child.communicate()
+
+
+def _run_suite(entry: str, cwd: Path, yield_now=None) -> tuple[str, set[str], str, float]:
+    """(PASS|RED|TIMEOUT|YIELDED, the failing test lines, one line saying why, seconds) of one selector entry (`path` or `path Class`) run in `cwd`."""
     started, env = time.time(), dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
     try:
-        done = subprocess.run([sys.executable, "-B", *entry.split()], cwd=cwd, env=env, stdin=subprocess.DEVNULL, capture_output=True, text=True, errors="replace", timeout=SUITE_TIMEOUT_S)
+        argv, kw = [sys.executable, "-B", *entry.split()], dict(cwd=cwd, env=env, stdin=subprocess.DEVNULL, text=True, errors="replace")
+        done = _run_or_yield(argv, yield_now, **kw) if yield_now else subprocess.run(argv, capture_output=True, timeout=SUITE_TIMEOUT_S, **kw)
+        if done is None:
+            return "YIELDED", set(), "", time.time() - started
     except (subprocess.TimeoutExpired, OSError) as exc:
         return ("TIMEOUT" if isinstance(exc, subprocess.TimeoutExpired) else "RED"), {type(exc).__name__}, type(exc).__name__, time.time() - started
     if done.returncode == 0:
@@ -462,11 +485,14 @@ def landing_selection(base: str) -> list[str] | None:
         sys.dont_write_bytecode = wrote_bytecode
 
 
-def landing_check(base: str, picked: list[str], where: Path) -> str:
-    """Run `picked` in `where`. Returns '' when nothing this push turns red, else the refusal text."""
+def landing_check(base: str, picked: list[str], where: Path, yield_now=None) -> str:
+    """Run `picked` in `where`. Returns '' when nothing this push turns red, else the refusal text. With `yield_now`, give up ('', said) once it is true."""
     reds: dict[str, set[str]] = {}
     for entry in picked:
-        word, failing, why, seconds = _run_suite(entry, where)
+        word, failing, why, seconds = ("YIELDED", set(), "", 0.0) if yield_now and yield_now() else _run_suite(entry, where, yield_now)
+        if word == "YIELDED":
+            print(f"EARLY CHECK stopped at {entry}: the lock came free; the full selection runs under it", flush=True)
+            return ""
         if word != "PASS":
             reds[entry] = failing
         print(f"LANDING-SUITE {word} {entry} ({seconds:.0f}s)" + (f": {why[:200]}" if why else ""), flush=True)
@@ -555,7 +581,7 @@ def checks(remote: str, base: str, sha: str, landing: bool, parallel: bool) -> s
 EARLY_SUITES = ("scripts/test_release_surface.py", "scripts/test_structured_data_integrity.py", "scripts/test_documented_commands.py")
 
 
-def early_check(remote: str, branch: str) -> str:
+def early_check(remote: str, branch: str, lock_is_mine) -> str:
     """The selected EARLY_SUITES on HEAD while another publisher has the lock: '' when nothing is turned red or nothing can be judged, else the refusal. No fetch: a waiter that fetched could
     collide with the holder's fetch on the shared refs, so the base is the merge base with the tracking ref as it stands."""
     known = run("git", "rev-parse", "--verify", "--quiet", f"refs/remotes/{remote}/{branch}").stdout.strip()
@@ -565,8 +591,8 @@ def early_check(remote: str, branch: str) -> str:
         return ""
     started = time.time()
     print(f"EARLY CHECK while waiting: {len(picked)} of the landing suites on HEAD", flush=True)
-    refusal = landing_check(base, picked, ROOT)
-    print(f"EARLY CHECK {'RED' if refusal else 'passed'} after {time.time() - started:.0f}s", flush=True)
+    refusal = landing_check(base, picked, ROOT, lock_is_mine)
+    print(f"EARLY CHECK {'RED' if refusal else 'ended'} after {time.time() - started:.0f}s", flush=True)
     return refusal and (refusal + "\nSaid by the early check, before the lock. If the failure needs commits of the remote tip that you have not merged, merge it and run safe_push again.")
 
 
@@ -686,7 +712,15 @@ def main(argv: list[str]) -> int:
             if not waited:
                 print(f"waiting for the landing lock {lock_path}: queue position {pos} of {n}" + (" (another publisher is gating)" if pos <= 1 else ""), flush=True)
                 waited = True
-                red = early_check(remote, branch) if landing else ""
+                def lock_is_mine() -> bool:      # takes the lock when this ticket's turn has come: an idle lock must not wait for the early check
+                    if queue.position()[0] > 1:
+                        return False
+                    try:
+                        fcntl.flock(lock_fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                        return True
+                    except OSError:
+                        return False
+                red = early_check(remote, branch, lock_is_mine) if landing else ""
                 if red:
                     return fail(red)
                 continue      # the lock may have come free while the early check ran
