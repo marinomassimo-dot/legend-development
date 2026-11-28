@@ -4,5 +4,11 @@
   "id": "PAPER 004",
   "old": "**Evidence depth:** `partial_fulltext_read` (**partial full text**) on the surface",
   "new": "**Evidence depth:** `complete_fulltext_read` (**full text**) — receipt `FTR-20261128-33914858-41` (2026-11-28; ADV-337, `BATCH_20261128_010`, `CC-20261128-ORCHESTRATOR-IT40-PMID33914858-01`): the operator-supplied typeset article (17 pages), all main figures and the supplementary figures rendered and read as images, supplementary tables 1 to 3 parsed, checked by a second reader; manifest `deepdive_manifests/PMID33914858.json` (locators 40 to 50 added). **Not viewed:** the two supplementary movies (`File010.mp4`, `File011.mp4`; no decoder; a temporary decoder fetch was refused and not retried). Result and denominator: `advisor_pilot_20261113/brainstorm_20261116/adv337_repudi_it_20261128/RESULT_ADV337_IT_20261128.md`. **Reading update (2026-11-28, `BATCH_20261128_010`):** S-KO Wwox is reduced, not absent (bulk RNA-seq, File012: hippocampus 0.184 of control, n 3 v 2; cortex 0.360, n 3 v 4); the N-KO also carries quantified axon counts per field (Suppl Fig 5G, legend n = 3 per genotype, plotted points are fields, not animals) and the Wwox-null carries CC1+/PDGFRa+ counts (Suppl Fig 7F, legend n = 3 per genotype, unit ambiguous), so the evidence-boundary line of `CLAIM 003` is too narrow on its list of genotypes (direction unchanged; correction proposed in the RESULT, not applied here); no rescue or re-expression experiment; interneurons by bulk transcripts only. No claim, working-model or literature-log statement is changed by this record edit.  Evidence depth before 2026-11-28: `partial_fulltext_read` (**partial full text**) on the surface"
+ },
+ {
+  "op": "replace-within",
+  "id": "PAPER 004",
+  "old": "`deepdive_manifests/PMID33914858.json` (40 locator [corrected",
+  "new": "`deepdive_manifests/PMID33914858.json` (51 locator [updated from 40 on 2026-11-28 by `BATCH_20261128_010`; earlier corrected"
  }
 ]
