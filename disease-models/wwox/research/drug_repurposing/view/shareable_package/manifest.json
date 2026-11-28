@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 242,
+   "distinct_hrefs": 243,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5112920,
-   "sha256": "866be9980961be78c1ace5d8e971d298b5d542c0630cf5613cbe77a557dfba9d"
+   "bytes": 5113015,
+   "sha256": "77cd2b4d0f78ef6d358754be349fc456c3180bc26a9f2a417fe43fa2e5ae517a"
   },
   "reports/chlorzoxazone.pdf": {
    "bytes": 128607,
@@ -572,6 +572,10 @@
   "reports/ethosuximide.pdf": {
    "bytes": 186816,
    "sha256": "0abbf2afae4d7572e65036afe4ea773919d27ac90aaf33e5531ac2575bccd19a"
+  },
+  "reports/fenofibrate.pdf": {
+   "bytes": 129223,
+   "sha256": "faf79fbe2e748dd377e36cf5d0c2f05b680706c8fc8c5ab7fea02fd72207e83f"
   },
   "reports/ketamine.pdf": {
    "bytes": 528795,
