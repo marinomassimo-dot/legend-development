@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 258,
+   "distinct_hrefs": 259,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -547,7 +547,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2286,
-   "sha256": "94381c36fd9a2c943a2e596c89101c8db9c33ac80c62351a7dfc78d99c31cb52"
+   "sha256": "09bdefe34ef5c9b1405bd1e2338914e8c9e351c60d863ebbee6d975352e29055"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -562,12 +562,16 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5116254,
-   "sha256": "38d2bbd85ee4618c846b56ff2f5af7da9b52cf2ab5c7468e4ca8cb6f5789094d"
+   "bytes": 5116355,
+   "sha256": "3b55bf88e54ec6317ec4bcb1efe78f778dce55eb47c56f80d7b2c40a563e5663"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
    "sha256": "bc4fcfe23c834c9651b12a5451f0e7e3ca3b354e6bbe6278970df0a89d27d3f2"
+  },
+  "reports/aminolevulinic-acid.pdf": {
+   "bytes": 118130,
+   "sha256": "8fc4d5cfbe3af89cb0dbcf84cbd46cfb0f335fb948a823ee9354bb5d392ac645"
   },
   "reports/baricitinib.pdf": {
    "bytes": 129454,
