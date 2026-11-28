@@ -32,7 +32,7 @@ Hypothesis level; reference genotype class only; nothing here is medical advice.
 ### ADV's question: which error classes carried the 4 MUST CHANGE of 7 (batch 002), and who made them
 | Set | Error class | Origin |
 |---|---|---|
-| S1 | number typed from the hand-back without matching the source (ages "about 29 and 31", main text 28 and 31; status of those two rests on an unheld supplement); contrary datum left out (one ethosuximide case) | hand-back carried the number; my composition did not check it |
+| S1 | (also: the held supplement folder was not offered to the blind reader, so SCI's wording was right where the reader said MUST CHANGE; the first-check habit «open the supplement bucket» applied to my packet, not only to my own reading; fixed in BATCH_20261128_003) number typed from the hand-back without matching the source (ages "about 29 and 31", main text 28 and 31; status of those two rests on an unheld supplement); contrary datum left out (one ethosuximide case) | hand-back carried the number; my composition did not check it |
 | S3 | negative beside the source: "no such effect is reported in wild-type mice" where the source reports a null | hand-back wording, copied by me |
 | I1 | derived arithmetic stated as reported ("S281 ... reported"; the source says a serine 12 residues upstream) | hand-back flagged it as inference; I wrote "reported" |
 | I2 | the reader judged an older bullet that sits in the packet context (another paper's statement); on my new bullet the issue was computed folds and a range the table exceeds | packet design (mine) plus hand-back juxtaposition |
@@ -46,8 +46,8 @@ Rates for ADV-286 (first composition, MUST CHANGE): INC4-6 10/24 (42%); ADV-285/
 ## Attribution census
 ```
 ATTRIBUTION_CENSUS
-incidents: 12
-machine: 4   blind_auditor: 7   peer: 0   self: 1
+incidents: 13
+machine: 4   blind_auditor: 7   peer: 1   self: 1
 severity_high: 4   of which self: 0
 undetected_known: 0
 ```
