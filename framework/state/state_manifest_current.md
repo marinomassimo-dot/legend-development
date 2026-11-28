@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261128_003
+last_batch_commit_id: BATCH_20261128_004
 last_batch_commit_date: 2026-11-28
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 1
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate ORCH-ROADMAP-IT59-20261119, IT successor 28; one dated wording refinement of DL-MECH-170 after SCI found the held supplement). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: discovery ledger by fragment replacement; scope in state_history section 4
+trigger: MANUAL (ACTOR_ID orchestrator, mandate ORCH-ROADMAP-IT59-20261119, IT successor 29; SCI's ADV-300 sentences J1 to J3 and HE's ADV-301 etifoxine sentence, one blind round by legend-delegate, sonnet, effort high stated in the dispatch). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: one candidate, record-scoped in the claim registry (CLAIM 016, one dated clause) and by exact-once fragment replacement in the therapeutic-hypotheses ledger, the open-questions map, card G01 and the etifoxine brief.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261128_BATCH_20261128_003
+last_lint_id: LINT_20261128_BATCH_20261128_004
 last_lint_date: 2026-11-28
 last_lint_result: WARN
 ```

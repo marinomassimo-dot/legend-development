@@ -8,7 +8,7 @@
   "would_move": "N-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:783)"
  },
  {
-  "dependence": "3_PAPERS_3_COMPLETE",
+  "dependence": "4_PAPERS_3_COMPLETE",
   "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 1,
   "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
@@ -160,7 +160,7 @@
   "would_move": "R-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:512)"
  },
  {
-  "dependence": "3_PAPERS_3_COMPLETE",
+  "dependence": "4_PAPERS_3_COMPLETE",
   "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 3,
   "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",

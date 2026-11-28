@@ -123,7 +123,7 @@
     "functional_evidence_available": "Null-genotype suppression of a provoked-seizure score, equally present in wild type and heterozygote: non-specific.",
     "temporal_or_model_limit": "Preweaning pups, engineered null, one provoking dose, one laboratory; the two controls of the figure are not shown to be separate cohorts.",
     "cellular_context": {
-      "target_expression": "GSK3beta is broadly expressed; total protein unchanged between genotypes in the printed densitometry.",
+      "target_expression": "Total GSK3beta in the printed densitometry (Figure 7c; legend: postnatal day 20, ratio to beta-actin) is 9, 13 and 18 per cent higher in Wwox-null than in wild-type cerebellum, hippocampus and cortex (one lane per genotype per region, no error bars, no test reported; the legend calls the blot representative of four independent experiments), so neither a change nor the absence of one is established.",
       "cells_tissue_stage": "Whole-animal behaviour; Ser9 blot from cerebellum, hippocampus and cortex at postnatal day 20.",
       "coverage": "UNKNOWN.",
       "limits": "A seizure score integrates many targets of lithium; the blot reads one phosphorylation site."
