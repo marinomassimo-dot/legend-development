@@ -1,0 +1,20 @@
+"""IT34: propagate ops for CLAIM 047 bound (2), PAPER 225 and the working-model row after the Chornyy blind rounds. Run from the repository root."""
+import json
+from pathlib import Path
+D = Path(__file__).resolve().parent
+claim_old = ("**(2) Restriction costs intensity, not reach.** In the same comparison the neuron-restricted `p546` covered **41 %** of total brain area against CAG *«covering up to 42 %»* — a ratio of **0.98** recomputed from those two printed values — at about **one third** of the mean intensity (**154.0** against **474.8** relative fluorescence units, i.e. **0.324**), with **72 %** of its signal colocalising with neurons and **1.9 %** with astrocytes.")
+claim_new = ("**(2) Lower intensity and a smaller median area; only the maxima coincide.** In the same comparison (Fig. 4C, boxplots, n = 8 to 10 per promoter, four weeks after neonatal (P0 to P1) intracerebroventricular AAV9; the legend does not define the box or the whiskers, and the whiskers end on the extreme plotted points) the neuron-targeted `p546` gave lower EGFP intensity than CAG and a smaller EGFP-positive brain area at the median plotted point; the plotted ranges overlap (about 7.9 to 41.9 against 19.4 to 42.4 percent) and the maxima coincide. "
+ "The text gives `p546` as *«comparable to CAG (41% of the total brain area)»* and CAG as *«covering up to 42%»*; these two values match the upper whisker ends, the largest plotted points (about 41.9 and 42.4 by eye; whether a plotted point is one animal is not stated), so the **0.98** ratio recomputed from the two printed values compares largest points, not median points. "
+ "The plotted medians of percent area are about **23 %** for `p546` and about **39 %** for CAG (ratio about **0.60**, by eye; Table S1 prints Tukey-adjusted P = 0.0097 for CAG against `p546`), and the plotted median intensity is about 124 against 577 relative fluorescence units (ratio about **0.22**, by eye; Table S1 adjusted P below 0.0001). "
+ "The text's *«Mean EGFP intensity»* of **154.0** against **474.8** RFU (ratio **0.32**; Table S1 also calls it mean intensity) agrees with group means read from the plotted dots (about 170 and 500, by eye) and differs from the plotted medians. "
+ "For `p546`, **72 %** of its signal colocalised with neurons and **1.9 %** with astrocytes.")
+paper_old = ("The neuron-restricted `p546` matched CAG for brain-area coverage (**41 %** against CAG *«covering up to 42 %»*, a ratio of **0.98** recomputed from those two printed values) at about **one third** of the mean intensity (**154.0** against **474.8** relative fluorescence units — **0.324**), with **72 %** neuronal and **1.9 %** astrocytic colocalisation.")
+paper_new = ("The text calls the area of the neuron-targeted `p546` *«comparable to CAG»* (**41 %** against CAG *«covering up to 42 %»*), but these two values are the largest plotted points of Fig. 4C; the plotted medians are about **23 %** against **39 %** of area (ratio about **0.60**) and about 124 against 577 relative fluorescence units of intensity (ratio about **0.22**, by eye; the text's mean intensities, **154.0** against **474.8**, give **0.32**). The `p546` signal was **72 %** neuronal and **1.9 %** astrocytic by colocalisation.")
+wm_old = "restriction costs intensity, not reach (41 % against 42 % of brain area at 154.0 against 474.8 RFU)"
+wm_new = ("the neuron-targeted p546 gave lower intensity than CAG (plotted median about 0.22 of CAG) and a smaller median area (about 0.60); the area ranges overlap and only the top plotted points match (about 41 % against 42 % of brain area; text mean intensities 154.0 against 474.8 RFU)")
+claims = [{"op": "replace-within", "id": "CLAIM 047", "old": claim_old, "new": claim_new}]
+paper = [{"op": "replace-within", "id": "PAPER 225", "old": paper_old, "new": paper_new}]
+wm = [{"op": "replace-within", "heading": "BLOCK 2 — claim registry mirror (baseline)", "old": wm_old, "new": wm_new}]
+for n, o in (("ops_claims_it34.json", claims), ("ops_paper_it34.json", paper), ("ops_working_model_it34.json", wm)):
+    (D / n).write_text(json.dumps(o, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+print("ok")
