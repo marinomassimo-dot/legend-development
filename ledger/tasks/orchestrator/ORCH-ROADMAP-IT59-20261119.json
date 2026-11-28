@@ -741,6 +741,13 @@
      "owner": "orchestrator",
      "source": "launch brief of IT 41 and ADV message 2026-11-28 'Your order stands'",
      "accepted_at": "2026-11-28T17:39:19Z"
+    },
+    {
+     "step": "ADV-339: enumerate-first audit of line/arm/genotype exclusivity sentences in the claim registry (PREREG before any source, second reader, rate with denominators, stop if the first six complete-read sentences hold)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-28 'ADV-339 = your proposal, yes'",
+     "accepted_at": "2026-11-28T17:56:28Z"
     }
    ]
   }
@@ -1317,6 +1324,13 @@
    "at": "2026-11-28T17:39:19Z",
    "source": "launch brief of IT 41 and ADV message 2026-11-28 'Your order stands'",
    "step_sha256": "e3449f6cd719",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T17:56:28Z",
+   "source": "ADV message 2026-11-28 'ADV-339 = your proposal, yes'",
+   "step_sha256": "176732fb7a47",
    "reopened_block": false,
    "authorised_by": null
   }
