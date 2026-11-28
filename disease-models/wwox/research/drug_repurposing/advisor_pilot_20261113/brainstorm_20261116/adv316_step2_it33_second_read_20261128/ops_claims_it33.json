@@ -1,0 +1,32 @@
+[
+ {
+  "op": "replace-within",
+  "id": "CLAIM 009",
+  "old": "(MOLT-4 cells, a fractionation blot without a mitochondrial marker row and confocal co-localisation percentages, n = 3)",
+  "new": "(MOLT-4 cells, fractionation blots with a cytosolic marker on one blot and a mitochondrial marker that is not constant across lanes on another, and percent-localisation-to-mitochondria values, n = 3, replicate unit undefined)"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 009",
+  "old": "with overexpression or dominant-negative constructs and no Wwox-null cell",
+  "new": "with, in the MOLT-4 paper, endogenous protein in the mitochondrial data (its constructs belong to binding, imaging and rescue work; the Jurkat paper as recorded in PAPER 361), and no Wwox-null cell in a mitochondrial readout (MDA-MB-231, which does not express WWOX, appears in Fig 5B for IκBα degradation only)"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 009",
+  "old": "the leg 'WWOX localises to mitochondria under stress' is carried by",
+  "new": "the leg 'WWOX localises to mitochondria under stress' (the MOLT-4 paper's manipulation is a PMA plus ionophore differentiation stimulus after which WWOX falls in the mitochondrial fraction at 1 h and partly returns at 2 to 3 h in Fig 4D, with printed reductions still 25 and 12 percent; the Discussion cites earlier work, not tested there, on WWOX relocation to mitochondria after high-concentration PMA; and the word stress occurs once on its page, in a reference title) is carried by"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 011",
+  "old": "so the toxicity **is quantified and is not disease-specific on these data**",
+  "new": "so the toxicity **is quantified and shows no significant treatment x genotype interaction on these data** (power unknown, so equal toxicity is not shown; the genotype main effect, F(1,28) = 6.181, p = 0.0192, is reported with an uncorrected p and the 65Q vehicle bar is already about 7 percent below the 27Q vehicle bar by eye; the replicate unit is not defined, Fig 4A states n = 4 biological replicates and Fig 4B only F(1,28), which implies 8 per cell if balanced; the 100 ng/mL dose is in the Fig 4B legend, the 24 h duration only in the Results text)"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 047",
+  "old": "dropped peak whole-animal transgene signal from **7.3 × 10⁷** to **5.8 × 10⁵** (a factor of **126**, about two orders of magnitude), and put **significantly fewer** vector genomes into the brain than its parent capsid.",
+  "new": "dropped peak whole-animal transgene signal from **7.3 × 10⁷** to **5.8 × 10⁵** (a factor of **126**, about two orders of magnitude; text-stated in Results 3.3 from the ventral-side image, printed in no panel, while Fig 3 liver means at week 3 are about 1.7 × 10⁷ and 1 × 10⁵ by eye), and put **significantly fewer** vector genomes into the brain than wild-type AAV9 (about 60-fold lower per µg DNA, Fig 4D by eye; the ~8-fold is packaging only; brain Fluc RNA is not different, Fig 5D)."
+ }
+]

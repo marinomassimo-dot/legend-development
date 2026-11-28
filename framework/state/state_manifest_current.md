@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261128_006
+last_batch_commit_id: BATCH_20261128_007
 last_batch_commit_date: 2026-11-28
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 1
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate ORCH-ROADMAP-IT59-20261119, IT successor 32; repair of a red CI: CLAIM 005 model field, whitespace only). MINOR, WM_v7.29
+trigger: MANUAL (ACTOR_ID orchestrator, mandate ORCH-ROADMAP-IT59-20261119, IT successor 33; SCI ADV-316 step 2 sentences for PMIDs 41744777, 42395553, 27339895 after three blind rounds). MINOR, WM_v7.29
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261128_BATCH_20261128_006
+last_lint_id: LINT_20261128_BATCH_20261128_007
 last_lint_date: 2026-11-28
 last_lint_result: WARN
 ```
@@ -164,8 +164,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 3879
-fulltext_ledger_head: f4c26b867be4f44aaa6780a6b8a138f27b9e67d53305bed0e1be72f6250ba779
+fulltext_ledger_events: 3882
+fulltext_ledger_head: f49d023de5518c6f8cc243d863b0261fa2d58036025a5c33ff1d1e605b2d342b
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.

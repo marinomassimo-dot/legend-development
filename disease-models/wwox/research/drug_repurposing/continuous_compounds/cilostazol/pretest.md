@@ -1,0 +1,9 @@
+# Cilostazol comparison pretest
+
+28 November 2026 UTC. SCI_CODEX, compound 194. context_policy: QUESTION_DRIVEN for the two bibliographically identified ischemic white-matter papers and the native WWOX bridge.
+
+The portfolio mentions the inhibitor class and catalogs the parent. This increment asks whether cilostazol adds a disease-stage-relevant PDE3/cAMP test to developmental myelination. Separate a direct OPC transition from preserved precursor survival and rescued neurovascular supply. A faster early change in stage markers can give a false positive if fewer cells survive, axons are lost, or sheaths are premature. Adult protection from white-matter ischemia is a separate setting.
+
+At measured free parent and matched axon density, activity and initial lineage numbers, compare equally staged WWOX-LoF and corrected neuron–oligodendrocyte cultures without perfusion. Track per-OPC cAMP and transition, survival, first new stable sheaths per original tracked precursor and post-washout conduction. A PDE3-dependent persistent improvement in first sheaths and conduction supports a direct developmental route. A marker-only change, a population shift without increased lineage transitions, a gain confined to perfused injury, or an effect retained when OPC PDE3 engagement is removed lowers that hypothesis. A matched lineage-specific perturbation tests whether PDE3 is involved. Verify local exposure separately from plasma, protein binding and active metabolites.
+
+Prespecified native screen. Compare PDE3A, PDE3B and representative cAMP/PKA and myelin-lineage genes across held WWOX bulk and hippocampal nuclear samples. Use one pooled unit per genotype for the nuclei and assess sensitivity to cell mixture. Treat transcript counts as localization and coverage clues, not enzyme activity.
