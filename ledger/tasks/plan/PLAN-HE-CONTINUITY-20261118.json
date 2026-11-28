@@ -1337,10 +1337,12 @@
     },
     {
      "step": "Pre-registered read of the safe_push landing-suite rule after 2026-11-26T11:21Z: count CI reds on suites the default selection did run",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad, 2026-11-25; launch brief of HE 43ab579f",
-     "accepted_at": "2026-11-25T13:38:47Z"
+     "accepted_at": "2026-11-25T13:38:47Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/checkpoint_he_20261120/HE_CI_RED_READ_20261128.md: 0 gate failures in 152 concluded runs since 2026-11-26T11:21Z (baseline 52 percent); prediction held; 18 Pages publication failures reported, operator-reserved",
+     "updated_at": "2026-11-28T04:37:43Z"
     },
     {
      "step": "landing_suites.py selects check_cards for card and packet paths, with a mutation check that a card line carrying a unit value is refused before the push; minutes per risk reported",
@@ -1516,10 +1518,20 @@
     },
     {
      "step": "ADV-293: blind check of the eight unchecked ADV-098 sheets (batches 1-5, 10-12; 107 claims): PREREG before the first packet, one blind delegate at a time, verify every wrong, correct the sheets, comparison-changing sentences with consumers to IT, result to ADV",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-293 (assignments/ADV-293.md); launch brief of HE 888b4b03",
-     "accepted_at": "2026-11-26T00:35:31Z"
+     "accepted_at": "2026-11-26T00:35:31Z",
+     "evidence": "blindcheck_adv293_he_20261126/RESULT_ADV293_HE_20261126.md: 34 of 305 strict (11.1 percent, CI 7.8 to 15.2), landed ab1ad408a",
+     "updated_at": "2026-11-28T04:37:48Z"
+    },
+    {
+     "step": "At the first normal resumption after the weekly quota reset, read the HE token-yield brief at /home/desktop/legend-development/files/coordination/adv-codex-loop/HE_TOKEN_YIELD_PILOT_20261128.md and apply it to the first suitable routine CI or landing verification in the existing queue. Measure through accepted delivery at identical verification coverage. Preserve SCI throughput and keep demonstrated savings in the existing guidance.",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "files/coordination/adv-codex-loop/HE_TOKEN_YIELD_PILOT_20261128.md",
+     "accepted_at": "2026-11-26T18:39:33Z",
+     "authorised_by": "Operator instruction 2026-11-26: take the HE pilot at the Claude Code quota reset using the existing recovery path"
     }
    ]
   }
@@ -2700,6 +2712,13 @@
    "step_sha256": "28dc5b3a4914",
    "reopened_block": false,
    "authorised_by": null
+  },
+  {
+   "at": "2026-11-26T18:39:33Z",
+   "source": "files/coordination/adv-codex-loop/HE_TOKEN_YIELD_PILOT_20261128.md",
+   "step_sha256": "f0651909ae5a",
+   "reopened_block": false,
+   "authorised_by": "Operator instruction 2026-11-26: take the HE pilot at the Claude Code quota reset using the existing recovery path"
   }
  ],
  "VERIFICATION_EVIDENCE": [
