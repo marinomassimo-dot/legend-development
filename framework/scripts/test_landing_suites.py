@@ -44,6 +44,12 @@ class Selection(unittest.TestCase):
             self.assertLessEqual({"test_trace_claim_foundation.py", "test_growth_anchors.py", "test_generate_semantic_graph.py", "test_build_evidence_index.py",
                                   "test_dependency_integrity.py", "test_locator_count_crosscheck.py", "test_canonical_structure.py", "test_dismech_independent_protocol.py"}, got, registry)
 
+    def test_each_input_of_the_dismech_sidecar_selects_its_reproduction_test(self) -> None:
+        wanted = "test_derive_dismech_sidecar.py SerialisationTests.test_committed_sidecar_reproduces_byte_for_byte"
+        for path in ("registries/claim_registry_current.md", "registries/paper_registry_current.md", "registries/fulltext_read_receipts.jsonl",
+                     "analysis/data/dismech_authored_assertions.json"):
+            self.assertIn(wanted, names([("M", f"disease-models/wwox/{path}")]), path)
+
     def test_a_receipt_selects_the_two_derived_pages(self) -> None:
         got = names([("M", "disease-models/wwox/registries/fulltext_read_receipts.jsonl")])
         self.assertLessEqual({"test_coverage_report.py", "test_reading_state.py", "test_structured_data_integrity.py"}, got)
