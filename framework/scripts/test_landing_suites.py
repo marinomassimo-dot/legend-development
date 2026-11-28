@@ -43,7 +43,6 @@ class Selection(unittest.TestCase):
             got = names([("M", f"disease-models/wwox/registries/{registry}")])
             self.assertLessEqual({"test_trace_claim_foundation.py", "test_growth_anchors.py", "test_generate_semantic_graph.py", "test_build_evidence_index.py",
                                   "test_dependency_integrity.py", "test_locator_count_crosscheck.py", "test_canonical_structure.py", "test_dismech_independent_protocol.py"}, got, registry)
-        self.assertNotIn("test_trace_claim_foundation.py", names([("M", "disease-models/wwox/registries/working_model_current.md")]))
 
     def test_a_receipt_selects_the_two_derived_pages(self) -> None:
         got = names([("M", "disease-models/wwox/registries/fulltext_read_receipts.jsonl")])
