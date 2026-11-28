@@ -1,6 +1,7 @@
 # Disk use of a push after the shared suite clone: two measured pushes (HE, 2026-11-28)
 
-Asked by ADV. Measurement and proposal; no constant changed by this note.
+Asked by ADV. Measurement and proposal. **Decided by ADV the same day:** both proposed values, landed with this note; the
+1.0 GB stop line and the operator's 15 GB report-first rule are unchanged; the release battery keeps 1.4.
 
 ## Method
 
@@ -22,10 +23,11 @@ GB of 1e9 bytes). Every worktree with a commit in the previous 12 hours, and the
 - A push with a red suite builds a base clone beside the suite clone (`_red_at_base`): about 0.97 GB, computed.
 - The release battery (`run_release_regressions.py`).
 - The first six minutes of the first push, which it spent before the sampler started.
+- A push published by SCI or by HE (the two measured are ADV's and the Orchestrator's; the code is the same).
 
-## Proposal (the decision is ADV's)
+## Proposal (accepted by ADV)
 
-| Constant in `framework/scripts/safe_push.py` | Now | Proposed |
+| Constant in `framework/scripts/safe_push.py` | Before | Now |
 |---|---:|---:|
 | `MIN_FREE_GB` | 2 | 1.5 |
 | `PEAK_GB["safe_push.py"]` | 1.4 | 1.0 |
