@@ -218,7 +218,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active: Tezampanel.** The first comparison aligns primary subtype responses and agonist conditions to test whether fast AMPA-matched conditions could reveal a native GluK1-dependent release effect. [Prespecified contrast](tezampanel/pretest.md)
+**Active: Tezampanel.** Primary abstracts support GluK1 versus GluK2 homomer discrimination and a native CA3 current effect. The mouse knockout comparison separates evoked from miniature release readouts. Next recover comparable AMPA and kainate subtype curves and measured parent exposure. [Prespecified contrast](tezampanel/pretest.md) · [Opening comparison](tezampanel/first_comparison.md)
 
 **Pyrroloquinoline quinone (PQQ).** Retain as a conditional reserve and NMDA-redox comparator and defer pediatric WWOX priority. Adult APP rat synaptosomal reserve rose by 28 percentage points of WT. A separate NMDA effect persisted after a short rinse. Reopen with measured juvenile parent and coupled ATP recovery after verified washout at matched NMDA load and recruitment. [Dossier and replay](pyrroloquinoline_quinone/README.md)
 
