@@ -1,0 +1,17 @@
+endpoint	compound	exposure_uM	pdf_page	figure	y_zero_px	y_top_px	top_units	y_mean_px	y_sem_top_px	y_sem_bottom_px	reported_significant
+slice_bursts	parent	10	142	22	443	105	150	206	191	221	no
+slice_bursts	parent	100	142	22	443	105	150	204	197	211	no
+slice_bursts	DGR	10	143	23	444	80	150	326	313	340	yes
+slice_bursts	DGR	100	143	23	444	80	150	341	330	351	yes
+slice_bursts	carbamazepine	10	144	24	457	76	150	321	302	340	yes
+slice_bursts	carbamazepine	100	144	24	457	76	150	408	392	424	yes
+slice_bursts	ARR-15896	10	145	25	458	116	150	289	276	302	yes
+slice_bursts	ARR-15896	100	145	25	458	116	150	376	360	393	yes
+veratridine_sodium	parent	10	162	28A	390	118	120	215	192	237	no
+veratridine_sodium	parent	100	162	28A	390	118	120	260	250	270	yes
+veratridine_sodium	DGR	10	163	29A	407	142	120	219	208	231	no
+veratridine_sodium	DGR	100	163	29A	407	142	120	284	274	294	yes
+veratridine_sodium	carbamazepine	10	165	30A	424	128	120	155	140	171	no
+veratridine_sodium	carbamazepine	100	165	30A	424	128	120	203	186	220	no
+veratridine_sodium	ARR-15896	10	166	31A	406	100	120	160	143	177	no
+veratridine_sodium	ARR-15896	100	166	31A	406	100	120	162	157	166	no

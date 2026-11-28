@@ -1,0 +1,19 @@
+key	molecular_species	value	unit	source	locator
+parent_base_mw	remacemide	268.35	g/mol	https://pubchem.ncbi.nlm.nih.gov/compound/60511	Computed molecular weight
+parent_hcl_mw	remacemide	304.82	g/mol	https://pubchem.ncbi.nlm.nih.gov/compound/60510	Computed molecular weight, rounded to 304.8 by PubChem
+dgr_base_mw	DGR	211.30	g/mol	https://pubchem.ncbi.nlm.nih.gov/compound/164087	Computed molecular weight
+dgr_hcl_mw	DGR	247.76	g/mol	https://pubchem.ncbi.nlm.nih.gov/compound/164087	Free base plus 36.46 g/mol for HCl
+cbz_parent_cmax	remacemide	1006	ng/mL	https://theses.gla.ac.uk/75299/	Table 5, p. 134, 10 adults, multiple exposure
+cbz_dgr_cmax	DGR	64.8	ng/mL	https://theses.gla.ac.uk/75299/	Table 5, p. 134, 10 adults, multiple exposure
+pht_parent_cmax	remacemide	666	ng/mL	https://theses.gla.ac.uk/75299/	Table 8, p. 146, 10 adults, multiple exposure
+pht_dgr_cmax	DGR	52.7	ng/mL	https://theses.gla.ac.uk/75299/	Table 8, p. 146, 10 adults, multiple exposure
+vpa_parent_cmax	remacemide	706	ng/mL	https://theses.gla.ac.uk/75299/	Table 11, p. 155, valproate n=10, multiple exposure
+vpa_dgr_cmax	DGR	104	ng/mL	https://theses.gla.ac.uk/75299/	Table 11, p. 155, valproate n=10, multiple exposure
+vpa_completer_dgr_cmax	DGR	159	ng/mL	https://theses.gla.ac.uk/75299/	Table 12, p. 155, selected three completers
+dgr_s_nmda_ic50	DGR (S)	0.7	uM	https://pubmed.ncbi.nlm.nih.gov/8558426/	Primary abstract, voltage clamp cultured rat hippocampal neurons
+dgr_r_nmda_ic50	DGR (R)	4	uM	https://pubmed.ncbi.nlm.nih.gov/8558426/	Primary abstract, voltage clamp cultured rat hippocampal neurons
+dgr_s_firing_ic50	DGR (S)	55	uM	https://pubmed.ncbi.nlm.nih.gov/9190853/	Primary abstract, adult rat CA1 sustained repetitive firing
+dgr_r_firing_ic50	DGR (R)	39	uM	https://pubmed.ncbi.nlm.nih.gov/9190853/	Primary abstract, adult rat CA1 sustained repetitive firing
+dgr_slice_nominal	DGR	10	uM	https://theses.gla.ac.uk/75793/	Fig. 23, p. 141, first plotted significant nominal concentration
+dgr_auc_without_inducer	DGR	1532	ng h/mL	https://pubmed.ncbi.nlm.nih.gov/11298071/	Primary abstract, single exposure before phenobarbital
+dgr_auc_with_inducer	DGR	533	ng h/mL	https://pubmed.ncbi.nlm.nih.gov/11298071/	Primary abstract, single exposure after phenobarbital

@@ -1,0 +1,35 @@
+measure	condition	value	unit
+total_DGR_plasma_Cmax	cbz base mass basis	0.306673	uM
+slice_nominal_to_total_plasma	cbz base mass basis	32.608	ratio
+S_NMDA_nominal_IC50_to_total_plasma	cbz base mass basis	2.28256	ratio
+total_parent_plasma_Cmax	cbz base mass basis	3.74884	uM
+total_DGR_plasma_Cmax	cbz hcl mass basis	0.261543	uM
+slice_nominal_to_total_plasma	cbz hcl mass basis	38.2346	ratio
+S_NMDA_nominal_IC50_to_total_plasma	cbz hcl mass basis	2.67642	ratio
+total_parent_plasma_Cmax	cbz hcl mass basis	3.30031	uM
+total_DGR_plasma_Cmax	pht base mass basis	0.249408	uM
+slice_nominal_to_total_plasma	pht base mass basis	40.0949	ratio
+S_NMDA_nominal_IC50_to_total_plasma	pht base mass basis	2.80664	ratio
+total_parent_plasma_Cmax	pht base mass basis	2.48183	uM
+total_DGR_plasma_Cmax	pht hcl mass basis	0.212706	uM
+slice_nominal_to_total_plasma	pht hcl mass basis	47.0133	ratio
+S_NMDA_nominal_IC50_to_total_plasma	pht hcl mass basis	3.29093	ratio
+total_parent_plasma_Cmax	pht hcl mass basis	2.1849	uM
+total_DGR_plasma_Cmax	vpa base mass basis	0.492191	uM
+slice_nominal_to_total_plasma	vpa base mass basis	20.3173	ratio
+S_NMDA_nominal_IC50_to_total_plasma	vpa base mass basis	1.42221	ratio
+total_parent_plasma_Cmax	vpa base mass basis	2.63089	uM
+total_DGR_plasma_Cmax	vpa hcl mass basis	0.419761	uM
+slice_nominal_to_total_plasma	vpa hcl mass basis	23.8231	ratio
+S_NMDA_nominal_IC50_to_total_plasma	vpa hcl mass basis	1.66762	ratio
+total_parent_plasma_Cmax	vpa hcl mass basis	2.31612	uM
+total_DGR_plasma_Cmax	vpa_completer base mass basis	0.752485	uM
+slice_nominal_to_total_plasma	vpa_completer base mass basis	13.2893	ratio
+S_NMDA_nominal_IC50_to_total_plasma	vpa_completer base mass basis	0.930252	ratio
+total_DGR_plasma_Cmax	vpa_completer hcl mass basis	0.64175	uM
+slice_nominal_to_total_plasma	vpa_completer hcl mass basis	15.5824	ratio
+S_NMDA_nominal_IC50_to_total_plasma	vpa_completer hcl mass basis	1.09077	ratio
+nominal_NMDA_IC50_R_over_S	cultured rat hippocampal voltage clamp	5.71429	ratio
+nominal_firing_IC50_S_over_R	adult rat CA1 sustained repetitive firing	1.41026	ratio
+nominal_NMDA_exposure_index_S_over_R	illustrative matched firing index	8.05861	ratio
+DGR_AUC_with_over_without_phenobarbital	healthy adult comparison	0.347911	ratio
