@@ -1429,10 +1429,11 @@
     },
     {
      "step": "ADV-327: does lithium change GSK3-pathway phosphorylation in wild-type developing rodent brain (prereg frozen 2026-11-28T13:34:30Z, sha256 417fd957; run the fixed search, second reader, deliver to ADV and IT)",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "source": "ADV - CURRENT direction round 2026-11-28T13:17Z, message to SCI bf",
-     "accepted_at": "2026-11-28T13:39:33Z"
+     "accepted_at": "2026-11-28T13:39:33Z",
+     "updated_at": "2026-11-28T13:46:58Z"
     }
    ]
   }
