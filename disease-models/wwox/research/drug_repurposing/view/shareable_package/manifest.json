@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 250,
+   "distinct_hrefs": 251,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -247,7 +247,7 @@
     ]
    ],
    "forbidden_identifiers": 100768,
-   "forbidden_names": 126040,
+   "forbidden_names": 126039,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
     "count": 159,
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5113686,
-   "sha256": "9e40d15477609e02a8af26cfd55d516d41aaa0db7f38eb28390718a4fa4e0625"
+   "bytes": 5113781,
+   "sha256": "a3712f659545a01f33455b1c8e0ef6a69a632f569382ff65e002921219f3e802"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
@@ -592,6 +592,10 @@
   "reports/fenofibrate.pdf": {
    "bytes": 129223,
    "sha256": "faf79fbe2e748dd377e36cf5d0c2f05b680706c8fc8c5ab7fea02fd72207e83f"
+  },
+  "reports/huperzine-a.pdf": {
+   "bytes": 118260,
+   "sha256": "215d592e9a19d252a210a51038d6f58dfafe9a5b049e962e4df3593e5624e03e"
   },
   "reports/istradefylline.pdf": {
    "bytes": 122531,
