@@ -68,10 +68,10 @@ B_every8th	34608236	10.1038/s41598-021-99231-x	EXCL_NOT_BRAIN	rule on title/abst
 B_every8th	37367700	10.1096/fj.202300568R	EXCL_NOT_BRAIN	rule on title/abstract/MeSH		no PMCID; abstract/MeSH only	no	Verteporfin attenuates trauma-induced heterotopic ossification of Achilles tendon by inhibiting osteogenesis and angioge
 B_every8th	38684886	10.1038/s41390-024-03192-6	EXCL_NOT_BRAIN	rule on title/abstract/MeSH	PMC11502490	keyword screen of PMC XML paragraphs	no	Lithium rescues cultured rat metatarsals from dexamethasone-induced growth failure.
 B_every8th	42105042	10.1007/s12035-026-05916-7	EXCL_NO_RODENT_IN_ABSTRACT	rule on title/abstract/MeSH		no PMCID; abstract/MeSH only	no	Glycogen Synthase Kinase-3β Mediates Suppression of Neurite Outgrowth Through Sonic Hedgehog Signalling in Palmitic Acid
-C_held_every8th	PMC6990504 (held)		EXCL_NO_NAMED_READOUT	snippet		held copy, lithium snippets	no
-C_held_every8th	34268881		EXCL_MENTION_ONLY	snippet		held copy, lithium snippets	no
-C_held_every8th	41135097		EXCL_MENTION_ONLY	snippet		held copy, lithium snippets	no
-C_held_every8th	38162029		EXCL_MENTION_ONLY	snippet		held copy, lithium snippets	no
-C_held_every8th	42092735		EXCL_MENTION_ONLY	snippet		held copy, lithium snippets	no
-C_held_every8th	38162029 (efetch copy)		EXCL_MENTION_ONLY	snippet		held copy, lithium snippets	no
+C_held_every8th	PMC6990504 (held)		EXCL_NO_NAMED_READOUT	snippet		held copy, lithium snippets	no	
+C_held_every8th	34268881		EXCL_MENTION_ONLY	snippet		held copy, lithium snippets	no	
+C_held_every8th	41135097		EXCL_MENTION_ONLY	snippet		held copy, lithium snippets	no	
+C_held_every8th	38162029		EXCL_MENTION_ONLY	snippet		held copy, lithium snippets	no	
+C_held_every8th	42092735		EXCL_MENTION_ONLY	snippet		held copy, lithium snippets	no	
+C_held_every8th	38162029 (efetch copy)		EXCL_MENTION_ONLY	snippet		held copy, lithium snippets	no	
 D_extra_regex_over_366	11907184	10.1124/jpet.301.1.277	EXCL_NO_INVIVO_LI	manual		abstract only	OPEN: in-vivo gestational lithium was miscoded; named-site readout unknown	prenatal ethanol, cerebellar transcription factors

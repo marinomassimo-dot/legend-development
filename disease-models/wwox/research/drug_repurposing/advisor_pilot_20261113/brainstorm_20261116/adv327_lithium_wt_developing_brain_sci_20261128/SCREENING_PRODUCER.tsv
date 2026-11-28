@@ -415,8 +415,8 @@ held	33914858	EXCL_MENTION_ONLY	lithium mention without in-vivo developing-brain
 held	fulltext/it48q01_it_20261117/PMC12038215.xml	EXCL_NOT_PRIMARY_DEV	conference abstract books or unrelated; lithium context adult/other (snippet screen)	lithium_mentions=1; near_dev_term=0	held	fulltext/it48q01_it_20261117/PMC12038215.xml
 held	fulltext/it48q01_it_20261117/PMC12038215.txt	EXCL_NOT_PRIMARY_DEV	conference abstract books or unrelated; lithium context adult/other (snippet screen)	lithium_mentions=1; near_dev_term=0	held	fulltext/it48q01_it_20261117/PMC12038215.txt
 held	38162029	EXCL_MENTION_ONLY	lithium mention without in-vivo developing-brain named-site data (count and snippet screen)	lithium_mentions=1; near_dev_term=0	held	fulltext/kds_pk_20261117/PMID38162029_pubmed_efetch.xml
-outside_query	34876168	OUTSIDE_ADJACENT	Li entry into developing rat brain: pharmacokinetics only (full text grep: no named site)	reference followed
-outside_query	24361977	OUTSIDE_ADJACENT	neonatal mouse lithium vs dexamethasone apoptosis; no named-site readout (full text grep)	reference followed
-outside_query	21587270	OUTSIDE_ABSTRACT_ONLY	neonatal rat HI long-term lithium; no named site in abstract	reference followed
-outside_query	22800605	OUTSIDE_ABSTRACT_ONLY	immature mouse irradiation + lithium; no named site in abstract	reference followed
-outside_query	no-PMID	OUTSIDE_NOT_OPENED	"""Chloral hydrate induces and lithium prevents neuroapoptosis in the infant mouse brain"" (reference title in 19293695)"	reference followed
+outside_query	34876168	OUTSIDE_ADJACENT	Li entry into developing rat brain: pharmacokinetics only (full text grep: no named site)	reference followed		
+outside_query	24361977	OUTSIDE_ADJACENT	neonatal mouse lithium vs dexamethasone apoptosis; no named-site readout (full text grep)	reference followed		
+outside_query	21587270	OUTSIDE_ABSTRACT_ONLY	neonatal rat HI long-term lithium; no named site in abstract	reference followed		
+outside_query	22800605	OUTSIDE_ABSTRACT_ONLY	immature mouse irradiation + lithium; no named site in abstract	reference followed		
+outside_query	no-PMID	OUTSIDE_NOT_OPENED	"""Chloral hydrate induces and lithium prevents neuroapoptosis in the infant mouse brain"" (reference title in 19293695)"	reference followed		
