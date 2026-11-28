@@ -96,12 +96,18 @@ def add_contrast(label, samples, expr, case, ctrl, up, down, rows, per_sample):
     per_sample.extend([label, samples[i], "case" if i in a else "control", values[i]] for i in a+b)
 
 
-def assigned_nuclei(files, up, down, extra=()):
+def assigned_nuclei(files, up, down, extra=(), *, exclude_markers=()):
     # The same marker assignment and 500-UMI filter as the LEGEND A2 classifier.
     markers = ["Slc17a7 Camk2a Satb2","Gad1 Gad2 Slc32a1","Aqp4 Aldh1l1 Slc1a2","Cx3cr1 P2ry12 Csf1r",
                "Pdgfra Cspg4 Cspg5 Pcdh15","Gpr17 Neu4 Bmp4 Vcan","Tcf7l2 Itpr2 Enpp6 Bcas1 Tmem2 Fyn Casr",
                "Mal Mog Opalin Serinc5 Mag","Klk6 Apod Pmp22 Slc5a11 Ermn Hapln2"]
-    wanted = set(up + down + " ".join(markers).split()) | set(extra)
+    marker_sets = [
+        [gene for gene in group.split() if gene not in exclude_markers]
+        for group in markers
+    ]
+    if not all(marker_sets):
+        raise ValueError("Each cell class must retain at least one marker")
+    wanted = set(up + down + [gene for group in marker_sets for gene in group]) | set(extra)
     arms = []
     for arm in ["ctrl", "ko"]:
         prefix = str(files/f"geo/GSE158684/GSE158684_{arm}_filtered_")
@@ -120,7 +126,7 @@ def assigned_nuclei(files, up, down, extra=()):
             counts = np.bincount(items[:,1]-1,weights=items[:,2],minlength=n)[keep]
             genes[g] = genes.get(g,0) + counts
         log_expr = {g:np.log2(1+v*1e6/library[keep]) for g,v in genes.items()}
-        classes = np.column_stack([np.mean([log_expr[g] for g in group.split()],axis=0) for group in markers])
+        classes = np.column_stack([np.mean([log_expr[g] for g in group],axis=0) for group in marker_sets])
         arms.append((arm, classes, genes, library[keep]))
     scale = np.percentile(np.concatenate([classes for _,classes,_,_ in arms]),99,axis=0)
     for arm, classes, genes, library in arms:
