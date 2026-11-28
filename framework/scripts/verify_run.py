@@ -403,19 +403,27 @@ def cmd_run(a) -> int:
         save(run_dir, m)
         return finish(run_dir, m, 125)
     with open(run_dir / "run.log", "wb") as log:
-        child = subprocess.Popen(command, cwd=clone, stdout=log, stderr=subprocess.STDOUT, start_new_session=True,
-                                 env={**os.environ, "LEGEND_VERIFY_RUN_ID": run_id})
-        m.update(state="RUNNING", child=identity(child.pid), started=now())
-        save(run_dir, m)
-        interrupted = []
+        interrupted, child = [], None
 
         def forward(signum, _frame):
             interrupted.append(signum)
+            if child is None:
+                return                             # forwarded right after the command exists
             try:
                 os.killpg(child.pid, signum)       # the operator's own interrupt reaches the run; nothing is killed to make a removal possible
             except OSError:
                 pass
+        # installed before anything says RUNNING: whoever reads that state may interrupt at once (CI run #2770, 2026-11-28)
         old = {s: signal.signal(s, forward) for s in (signal.SIGTERM, signal.SIGINT)}
+        child = subprocess.Popen(command, cwd=clone, stdout=log, stderr=subprocess.STDOUT, start_new_session=True,
+                                 env={**os.environ, "LEGEND_VERIFY_RUN_ID": run_id})
+        if interrupted:                            # it came before the command existed
+            try:
+                os.killpg(child.pid, interrupted[0])
+            except OSError:
+                pass
+        m.update(state="RUNNING", child=identity(child.pid), started=now())
+        save(run_dir, m)
         code = child.wait()
         for s, h in old.items():
             signal.signal(s, h)

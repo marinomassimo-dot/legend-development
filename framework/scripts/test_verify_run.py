@@ -313,6 +313,24 @@ class Interruption(Base):
         self.assertIn("INTERRUPTED", out)
         self.assertEqual(self.boxes(), [])
 
+    def test_an_interrupt_the_moment_running_is_recorded_is_handled(self):
+        # CI run #2770 (2026-11-28): the manifest said RUNNING before the handlers were installed, so a SIGTERM in between killed the supervisor and left no `cleanup`.
+        argv = ["run", "--sha", self.sha, "--repo", str(self.src), "--label", "t", "--", "sleep", "60"]
+        code = ("import os, signal, sys\n"
+                f"sys.path.insert(0, {str(HERE)!r})\n"
+                "import verify_run as vr\n"
+                "real = vr.save\n"
+                "def save(run_dir, m):\n"
+                "    real(run_dir, m)\n"
+                "    if m.get('state') == 'RUNNING':\n"
+                "        os.kill(os.getpid(), signal.SIGTERM)\n"
+                "vr.save = save\n"
+                f"sys.exit(vr.main({argv!r}))\n")
+        p = subprocess.run([PY, "-B", "-c", code], capture_output=True, text=True, timeout=30)
+        _, m = self.manifest()
+        self.assertEqual((m["state"], m.get("cleanup", {}).get("state")), ("INTERRUPTED", "REMOVED"), p.stdout + p.stderr)
+        self.assertEqual(self.boxes(), [])
+
     def test_a_killed_supervisor_leaves_a_run_the_next_call_concludes_without_killing_anything(self):
         p = self.supervisor("sleep", "60")
         m = self.wait_state("RUNNING")
