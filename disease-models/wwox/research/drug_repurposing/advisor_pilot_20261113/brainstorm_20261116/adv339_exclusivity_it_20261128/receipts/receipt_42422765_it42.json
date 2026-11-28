@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-42422765-02",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42422765",
+  "doi": "10.1016/j.omta.2026.201791"
+ },
+ "event_at": "2026-11-28T18:25:00Z",
+ "analysis_at": "2026-11-28T18:25:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "ADV-339 final-text second reader: delegate of IT-42, sonnet at effort high, blind (numbered atoms only, no earlier sentence or grade), context policy QUESTION_DRIVEN: dose-study atoms B1-B17; PMC XML, gr3-gr7 and native renders of Figs 3, 6 and S7, mmc1 pages for S4-S7, mmc2 p26",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID42422765_Obeid2026_PMC_r2.xml",
+ "source_fingerprint": "7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT42-ADV339-01.md"
+ ],
+ "evidence_basis": [
+  "Opened by the delegate (transcript): dose-study atoms B1-B17; PMC XML, gr3-gr7 and native renders of Figs 3, 6 and S7, mmc1 pages for S4-S7, mmc2 p26. Methods consulted only for single values, marked not_read. No video or spreadsheet was viewed."
+ ],
+ "prior_receipt": "FTR-20261128-42422765-01",
+ "reread_reason": "adversarial_reanalysis"
+}

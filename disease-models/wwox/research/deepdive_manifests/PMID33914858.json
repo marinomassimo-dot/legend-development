@@ -3,7 +3,7 @@
  "pmid": "33914858",
  "doi": "10.1093/brain/awab174",
  "pmcid": null,
- "receipt": "FTR-20261128-33914858-41",
+ "receipt": "FTR-20261003-33914858-02",
  "receipt_note": "2026-11-28 (IT40): this manifest now describes the complete read FTR-20261128-33914858-41 (ADV-337; operator-supplied typeset PDF, supplement text, figures rendered, xlsx tables parsed; the two mp4 files not viewed). Earlier receipt named here: FTR-20261003-33914858-02 (partial passes of 2026-10-03). Entries 40 to 50 were added by that read; entries 0 to 39 are earlier passes and are kept. Earlier note follows. Prepared as a JSON file for the integrator and not appended at preparation time. It is a re-read: the standing receipt FTR-20260923-33914858-01 covers this paper with figures `captions_only`, and its declared authoritative artefact — the saved publisher HTML — is NOT present in this checkout (see source_artifacts).",
  "landing": [
   "FTR-20261003-33914858-02",
