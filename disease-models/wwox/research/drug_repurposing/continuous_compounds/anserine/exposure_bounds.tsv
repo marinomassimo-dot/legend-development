@@ -1,0 +1,10 @@
+measure	condition	value	unit
+no_competitor_capture	adult plasma mean AUC low arm	0.09513272	percent
+no_competitor_capture	adult plasma mean AUC middle arm	0.2319857	percent
+no_competitor_capture	adult plasma mean AUC high arm	0.77500483	percent
+required_intact_auc	10 percent capture of pre-existing trace acrolein	50.460017	uM h
+break_even_auc_ratio	anserine versus carnosine in same compartment	0.87931034	ratio
+matched_serum_rate_ratio	anserine versus carnosine at 50 uM	0.37274096	ratio
+no_competitor_capture	one hour at baseline CSF paired-detection mean	0.011614869	percent
+two_sink_first_capture_share	CSF parent mean and 1 uM GSH, GSH rate x1	0.026658511	percent
+two_sink_first_capture_share	CSF parent mean and 1 uM GSH, GSH rate x0.1	0.26594703	percent

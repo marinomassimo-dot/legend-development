@@ -1,0 +1,10 @@
+key	value	unit	source	locator
+anserine_acrolein_rate	0.58	M^-1 s^-1	https://pmc.ncbi.nlm.nih.gov/articles/PMC3869200/	Table 1, acrolein
+carnosine_acrolein_rate	0.51	M^-1 s^-1	https://pmc.ncbi.nlm.nih.gov/articles/PMC3869200/	Table 1, acrolein
+gsh_acrolein_rate	121	M^-1 s^-1	https://doi.org/10.1515/znc-1975-7-808	Table II, row 1
+pure_auc_low	27.35	uM min	https://air.unimi.it/handle/2434/599742	Everaert author manuscript p. 13 Table 1, low arm mean
+pure_auc_middle	66.74	uM min	https://air.unimi.it/handle/2434/599742	Everaert author manuscript p. 13 Table 1, middle arm mean
+pure_auc_high	223.57	uM min	https://air.unimi.it/handle/2434/599742	Everaert author manuscript p. 13 Table 1, high arm mean
+csf_dual_detection_mean	55.63	nM	https://pmc.ncbi.nlm.nih.gov/articles/PMC11645304/	Table 2, 11 paired detectable specimens
+anserine_serum_hydrolysis_rate	0.495	nmol h^-1 uL^-1	https://doi.org/10.1016/j.jpba.2020.113440	Table 3, 50 uM substrate
+carnosine_serum_hydrolysis_rate	1.328	nmol h^-1 uL^-1	https://doi.org/10.1016/j.jpba.2020.113440	Table 3, 50 uM substrate
