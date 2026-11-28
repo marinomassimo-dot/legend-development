@@ -1527,11 +1527,12 @@
     },
     {
      "step": "At the first normal resumption after the weekly quota reset, read the HE token-yield brief at /home/desktop/legend-development/files/coordination/adv-codex-loop/HE_TOKEN_YIELD_PILOT_20261128.md and apply it to the first suitable routine CI or landing verification in the existing queue. Measure through accepted delivery at identical verification coverage. Preserve SCI throughput and keep demonstrated savings in the existing guidance.",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
      "source": "files/coordination/adv-codex-loop/HE_TOKEN_YIELD_PILOT_20261128.md",
      "accepted_at": "2026-11-26T18:39:33Z",
-     "authorised_by": "Operator instruction 2026-11-26: take the HE pilot at the Claude Code quota reset using the existing recovery path"
+     "authorised_by": "Operator instruction 2026-11-26: take the HE pilot at the Claude Code quota reset using the existing recovery path",
+     "updated_at": "2026-11-28T06:36:35Z"
     },
     {
      "step": "safe_push disk rule counts overlapping gate clones (live gates' declared peaks), with a test, no gate bypass, no workflow edit",
@@ -1568,6 +1569,13 @@
      "accepted_at": "2026-11-28T06:28:43Z",
      "evidence": "test_safe_push.py 63 tests OK with 1.5 GB free at start",
      "updated_at": "2026-11-28T06:28:43Z"
+    },
+    {
+     "step": "ADV-301: mechanical source check of the latest compound briefs (read-only; PREREG first; five briefs; hand-check two)",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV-301 message from ADV a5e6f2ad 2026-11-28",
+     "accepted_at": "2026-11-28T06:32:49Z"
     }
    ]
   }
@@ -2781,6 +2789,13 @@
    "at": "2026-11-28T06:28:43Z",
    "source": "operator standing rule: need-driven micro-upgrade",
    "step_sha256": "e9a20aa12cf4",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T06:32:49Z",
+   "source": "ADV-301 message from ADV a5e6f2ad 2026-11-28",
+   "step_sha256": "8db464fa5a4a",
    "reopened_block": false,
    "authorised_by": null
   }
