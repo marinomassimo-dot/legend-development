@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3658,
+    "forbidden-name": 3659,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -547,7 +547,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2286,
-   "sha256": "930d813afa9fa01a3981d3e139c797b0947946f243adaba292361b8dff740236"
+   "sha256": "21377b0fad844fbea26fa985b26faf5f2951738548da45dc7599c230c64b1514"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5114060,
-   "sha256": "a47d083fe5cf35ef2efdec1951270c633d6939bdc90c44a56783caf9b3f3bd0f"
+   "bytes": 5115845,
+   "sha256": "4aefa7254d126d6a65f933cf0caac3731cf17c02044f715e8fb2e1038507bc9b"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
