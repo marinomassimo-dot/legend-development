@@ -22,7 +22,7 @@
     "Loading inhibition predicts a fall in content and glutamate per fusion at matched local parent, ATP, pH and voltage. A change in cytosolic chloride should attenuate that effect. Delayed ketolysis-dependent ATP recovery with intact content favors fuel delivery."
   ],
   "experiment": [
-    "At measured juvenile bouton acetoacetate, compare Wwox and corrected preparations with matched pH, anion, counterion and first drive. Record fusion counts, cleft glutamate, content and ATP. Verify the separate chloride and ketolysis controls, then measure inhibitory recruitment and spontaneous recurrence."
+    "At measured juvenile bouton acetoacetate, match pH, chloride and first drive in Wwox and corrected preparations. Measure fusion counts, glutamate per fusion, content and ATP under chloride and ketolysis controls. Check inhibition and spontaneous recurrence."
   ],
   "limits": [
     "Retain as an ex vivo probe. Defer pediatric WWOX priority pending free terminal exposure, a native single-event effect and preserved inhibitory recruitment.",
