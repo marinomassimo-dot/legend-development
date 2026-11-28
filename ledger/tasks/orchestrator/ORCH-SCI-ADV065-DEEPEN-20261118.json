@@ -1371,6 +1371,13 @@
      "accepted_at": "2026-11-28T10:23:55Z",
      "evidence": "addendum landed on main at 8857a232d, path sent to IT32 (checkpoint BB section 1)",
      "updated_at": "2026-11-28T11:31:30Z"
+    },
+    {
+     "step": "ADV-317 closure (Crawford 2010 recruitment test, PMID 20858739): SCI image check of Fig 9B/table and Fig 5C, receipt, derived surfaces, RESULT final, deliver to ADV; compare with HE ADV-318 blind table when it lands",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-317 (SENT 2026-11-28T11:42:37Z); checkpoint BC section 2",
+     "accepted_at": "2026-11-28T11:53:35Z"
     }
    ]
   }
@@ -2430,6 +2437,13 @@
    "at": "2026-11-28T10:23:55Z",
    "source": "ADV message after ADV-314 consumed (2026-11-28)",
    "step_sha256": "e6d287df7f3c",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T11:53:35Z",
+   "source": "ADV-317 (SENT 2026-11-28T11:42:37Z); checkpoint BC section 2",
+   "step_sha256": "5603358c611a",
    "reopened_block": false,
    "authorised_by": null
   }
