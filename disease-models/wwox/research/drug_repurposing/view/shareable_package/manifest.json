@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 254,
+   "distinct_hrefs": 255,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -547,7 +547,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2286,
-   "sha256": "930d813afa9fa01a3981d3e139c797b0947946f243adaba292361b8dff740236"
+   "sha256": "21377b0fad844fbea26fa985b26faf5f2951738548da45dc7599c230c64b1514"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5114060,
-   "sha256": "a47d083fe5cf35ef2efdec1951270c633d6939bdc90c44a56783caf9b3f3bd0f"
+   "bytes": 5114163,
+   "sha256": "8de33f5d9ee4ab70b04d54348a90d62f9d150c16f93f453ade87f5569553b7ba"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
@@ -580,6 +580,10 @@
   "reports/chlorzoxazone.pdf": {
    "bytes": 128607,
    "sha256": "97a6a869efe50ee1f781f45057693a97f6495887d809d73058b3a89fa8df68da"
+  },
+  "reports/dimethylglycine.pdf": {
+   "bytes": 118512,
+   "sha256": "2c86d6714b414a089d25bb492377021cfe77ca1b20aa18e4d9f67545bfc6b4d5"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 186816,
