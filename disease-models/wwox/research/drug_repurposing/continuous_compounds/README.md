@@ -210,6 +210,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 204 | Tezampanel, AMPA-matched kainate and release comparison | At matched fast postsynaptic AMPA inhibition and first recruitment, does tezampanel change native release through an independently verified GluK1-sensitive component? |
 | 205 | L-histidine, central histamine synthesis and vigilance | At measured free neural parent, does histidine-derived histamine shift native recruitment at equivalent vigilance and first response? |
 | 206 | β-Alanine, carnosine synthesis versus direct circuit and transport effects | At measured local parent, does labelled carnosine formation lower new aldehyde adducts and preserve evoked recovery beyond acute receptor or taurine effects? |
+| 207 | Trimetazidine, substrate use versus altered activity or acute pharmacology | At matched work and measured free parent, does trimetazidine change substrate-resolved ATP production and recovery without requiring reduced recruitment? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -220,7 +221,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active: β-alanine.** Oral rodent hippocampal carnosine and adult combined brain MRS signals measure different quantities. Next recover the exact effects and assay sensitivity before aligning developmental and acute receptor windows. [Prespecified contrast](beta_alanine/pretest.md) · [Opening comparison](beta_alanine/first_comparison.md)
+**Next: trimetazidine.** Compare the opposing primary thiolase findings before assigning a mechanism. Keep cardiac substrate-use assays, evoked rodent seizure phenotypes and native juvenile WWOX work separate. Open this compound after the β-alanine checkpoint lands.
+
+**β-Alanine.** Retain as a conditional precursor and direct-receptor comparator. Defer pediatric WWOX priority. Rat hippocampal carnosine increased by about 90%. The adult paired MRS interval permits that relative carnosine change under plausible mixed-band scenarios and does not measure it. Reopen with measured free juvenile parent, CARNS1-linked adduct formation and matched-work recovery after parent clearance. [Dossier and replay](beta_alanine/README.md)
 
 **L-histidine.** Retain as a conditional precursor comparator and defer pediatric WWOX priority. One rat study measured higher striatal extracellular histamine after injection. The neuronal source remains unresolved. The feeding data show reduced trial engagement without concurrent photometry, and repeated dosing accelerated rat kindling. Reopen for isotope-verified neuronal product and a matched-vigilance WWOX EEG effect with repeat-exposure countercheck. [Dossier and replay](l_histidine/README.md)
 
