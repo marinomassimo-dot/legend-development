@@ -1772,10 +1772,12 @@
     },
     {
      "step": "ADV-331: independent blind read of P47T knock-in PMID 36828035 and held Supplementary Tables 2 and 3 (serum chemistry, glucose/CO2/BUN/Ca stage, sample/fasting/n, body weight and survival); labelled table, hand to ADV and IT; do not open ADV-330 folder/PREREG or dossier item 9",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-331 (cross-session message from ADV - CURRENT a5e6f2ad, 2026-11-28)",
-     "accepted_at": "2026-11-28T14:27:58Z"
+     "accepted_at": "2026-11-28T14:27:58Z",
+     "evidence": "commit 42f371257 on development/main; advisor_pilot_20261113/brainstorm_20261116/adv331_blind_p47t_he_20261128/TABLE_ADV331_HE.md; receipt FTR-20261128-36828035-07",
+     "updated_at": "2026-11-28T14:44:38Z"
     }
    ]
   }
