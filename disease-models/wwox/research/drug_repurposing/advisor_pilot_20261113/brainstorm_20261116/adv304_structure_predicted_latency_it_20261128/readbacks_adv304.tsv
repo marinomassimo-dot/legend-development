@@ -1,0 +1,17 @@
+quantity	value	unit	source_panel	reader	note
+palma_N1_velocity_vehicle	0.504	mm/s	Palma 2022 Fig 2B	producer	axis range 0.2-0.6 printed unit mm/s
+palma_N1_velocity_clemastine	0.425	mm/s	Palma 2022 Fig 2B	producer	asterisk
+palma_g_bin0_0.5_vehicle	0.768	g-ratio	Palma 2022 Fig 4B	producer	3 dots per group
+palma_g_bin0_0.5_clemastine	0.787	g-ratio	Palma 2022 Fig 4B	producer	***
+palma_g_bin0.5_1_vehicle	0.663	g-ratio	Palma 2022 Fig 4B	producer	
+palma_g_bin0.5_1_clemastine	0.672	g-ratio	Palma 2022 Fig 4B	producer	no mark
+palma_myelinated_vehicle	287	per 1e3 um2	Palma 2022 Fig 4A	producer	
+palma_myelinated_clemastine	249	per 1e3 um2	Palma 2022 Fig 4A	producer	*
+repudi_g_control_0.5um	0.648	g-ratio	Repudi 2021 Fig 5C line	producer	fitted line, +-0.015
+repudi_g_control_1.0um	0.706	g-ratio	Repudi 2021 Fig 5C line	producer	
+repudi_g_control_1.5um	0.764	g-ratio	Repudi 2021 Fig 5C line	producer	
+repudi_g_ko_0.5um	0.685	g-ratio	Repudi 2021 Fig 5C line	producer	
+repudi_g_ko_1.0um	0.789	g-ratio	Repudi 2021 Fig 5C line	producer	
+repudi_g_ko_1.5um	0.894	g-ratio	Repudi 2021 Fig 5C line	producer	
+repudi_N1_latency_control	2.48	ms	Repudi 2021 Fig 5D(ii)	producer	+-0.07
+repudi_N1_latency_ko	3.19	ms	Repudi 2021 Fig 5D(ii)	producer	+-0.07
