@@ -1581,11 +1581,12 @@
     },
     {
      "step": "ADV-306: search public repositories for callosal or optic-nerve conduction recordings that give a slope (read-only; PREREG a6f05b8c; deliver ADV and IT)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-306 message from ADV a5e6f2ad 2026-11-28",
      "accepted_at": "2026-11-28T06:53:54Z",
-     "updated_at": "2026-11-28T06:53:54Z"
+     "updated_at": "2026-11-28T07:01:47Z",
+     "evidence": "disk: disease-models/wwox/research/drug_repurposing/callosal_recordings_adv306_he_20261128/RESULT_ADV306_HE_20261128.md: two LATENCY-ONLY callosal deposits (dryad.gk117 Rictor; figshare.4040070 shiverer), no Wwox deposit; delivered ADV and IT"
     }
    ]
   }
