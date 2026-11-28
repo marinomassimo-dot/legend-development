@@ -1,0 +1,14 @@
+contrast                                             structural variable                                  ln str | conduction variable                                           ln cond | |str|/|cond|
+Palma 2022 (35372341), clemastine vs vehicle, callos myelinated axons /1e3 um2 (text, ADV-304)            -0.142 | N1 velocity (ADV-304 figure readback, units as printed)        -0.170 | 0.83
+Palma 2022                                           g-ratio small-axon bin 0-0.5 um (ADV-304 figure re   +0.024 | N1 velocity (same)                                             -0.170 | 0.14
+Palma 2022                                           g-ratio bin 0.5-1 um (ADV-304 figure readback)       +0.013 | N1 velocity (same)                                             -0.170 | 0.08
+Crawford 2010 (20858739), EAE vs normal, callosum    myelin sheath thickness um (text)                    -0.799 | N1 conduction velocity m/s (text)                              -0.074 | 10.77
+Crawford 2010, EAE vs normal                         g-ratio (text)                                       +0.077 | N1 conduction velocity m/s (text)                              -0.074 | 1.04
+Crawford 2010, ERbeta ligand EAE vs vehicle EAE      myelin sheath thickness um (text)                    +0.879 | N1 conduction velocity m/s (text)                              +0.128 | 6.89
+Crawford 2010, ERbeta ligand EAE vs vehicle EAE      g-ratio (text)                                       -0.101 | N1 conduction velocity m/s (text)                              +0.128 | 0.79
+Nr2f1 HET vs WT (31318166), optic nerve to dLGN, adu g-ratio P28 (text)                                   -0.161 | latency of first evoked field-potential component ms, speed    -0.243 | 0.66
+
+Nr2f1 g-ratio direction: lower g-ratio is relatively THICKER myelin; the paper calls the P28 HET sheaths poorly compacted and the optic nerve hypomyelinated (myelinated-fibre number lower, plotted, value not read).
+Crawford thickness vs g-ratio, same contrast: thickness ln -0.799, g ln 0.077: the size ratio to velocity moves from 10.77 to 1.04 depending on the variable.
+g-ratio class: struct ranks {'Nr2f1': 1, 'Crawford': 2, 'Palma': 3} cond ranks {'Nr2f1': 1, 'Palma': 2, 'Crawford': 3} Spearman rho (n=3, NOT stated: below the frozen 6) = 0.50
+Latency note, Nr2f1: latency ratio 1.275 (+27.5%); t=-6.385 with 22 df is printed against legend N 13 (WT) and 18 (HET): 13+18-2 = 29, not 22 (as printed).
