@@ -1,0 +1,50 @@
+[
+ {
+  "op": "replace-within",
+  "id": "PAPER 228",
+  "old": "The double-mutant `AAV9-DM` cut hepatic vector genome copies **~127-fold** (the authors' own figure)",
+  "new": "`AAV9-DM` (five point mutations; the paper never says \"double mutant\") cut hepatic vector genome copies **~127-fold** (the authors' own figure; vg per µg liver DNA at week 9, mouse, one dose of 1 × 10¹¹ vg)"
+ },
+ {
+  "op": "replace-within",
+  "id": "PAPER 228",
+  "old": "dropped peak whole-animal signal from **7.3 × 10⁷** to **5.8 × 10⁵** (a factor of **126**, i.e. about two orders of magnitude)",
+  "new": "dropped peak whole-animal signal from **7.3 × 10⁷** to **5.8 × 10⁵** (a factor of **126**, i.e. about two orders of magnitude; text-stated in Results 3.3 as average radiance from the ventral side of the animal, citing Figure 2 but printed in no panel, statistic not stated, while Fig 3 liver means at week 3 are about 1.7 × 10⁷ and 1 × 10⁵ by eye, so Fig 3 does not reproduce the text peaks)"
+ },
+ {
+  "op": "replace-within",
+  "id": "PAPER 228",
+  "old": "put **significantly fewer** vector genomes into the brain than the parent capsid",
+  "new": "put **significantly fewer** vector genomes into the brain than wild-type AAV9 (about 60-fold lower per µg DNA, Fig 4D by eye, one star; the ~8-fold is packaging only; brain Fluc RNA is not different from AAV9, Fig 5D, and the authors call the capsid \"minimally affecting CNS tropism\")"
+ },
+ {
+  "op": "replace-within",
+  "id": "PAPER 362",
+  "old": "overexpression; a fractionation blot without a mitochondrial marker row",
+  "new": "endogenous protein in the mitochondrial data, a marker row on separate fractionation blots only"
+ },
+ {
+  "op": "replace-within",
+  "id": "PAPER 362",
+  "old": "A nanomolar PMA with ionophore induces",
+  "new": "PMA at 0.55 nM with the ionophore A23187 at 0.30 µM (the ionophore is micromolar) induces"
+ },
+ {
+  "op": "replace-within",
+  "id": "PAPER 362",
+  "old": "with confocal co-localisation percentages falling after the stimulus (WWOX about 84 to 60 percent, n = 3)",
+  "new": "with percent-localisation-to-mitochondria values falling after the stimulus (Fig 4E; MitoTracker Red is named only in Methods; WWOX about 84 to 60 percent by eye, n = 3 in the legend, replicate unit undefined; TNF-alpha leaves WWOX at about 86)"
+ },
+ {
+  "op": "replace-within",
+  "id": "PAPER 362",
+  "old": "(every manipulation is overexpression; the rescue shown is one blot pair)",
+  "new": "(the WWOX constructs, EGFP-WWOX and the dominant-negative dn-WWOX, belong to the binding, FRET, immunoprecipitation and rescue work, while the mitochondrial data, Fig 4C to 4E, are endogenous protein in MOLT-4; the rescue shown, Fig 5B, is one blot pair with no n)"
+ },
+ {
+  "op": "replace-within",
+  "id": "PAPER 362",
+  "old": "(the fractionation blot has no mitochondrial or cytosolic purity marker row)",
+  "new": "(no fractionation blot carries both markers: Fig 4C has an alpha-tubulin row under the cytosol lanes only, Fig 4D a cytochrome C row under the mitochondria lanes that is faint in Control, 0 and 1 h and strong at 2 and 3 h, by eye; Fig 4D prints % reduction rows, WWOX 91, 25 and 12 at 1, 2 and 3 h, with no method stated, and the 1 h WWOX band is almost absent by eye while the 2 and 3 h bands cannot be checked)"
+ }
+]

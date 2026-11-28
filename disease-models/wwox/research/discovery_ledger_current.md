@@ -4341,7 +4341,7 @@ Leads staged in the candidates of `BATCH_20261019_003` (groups H3, H4 and H5). A
 - **Tag:** IPOTESI
 - **Status:** open
 - **Created:** 2026-10-20 · `BATCH_20261019_004`, from `CC-20261019-SCIENTISTD-DEBT-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
-- **Causal statement:** [[paper_registry_current#PAPER 362]] (no marker row in the fractionation blot) and [[paper_registry_current#PAPER 361]] (confocal overlap only).
+- **Causal statement:** [[paper_registry_current#PAPER 362]] (Fig 4C an alpha-tubulin row under the cytosol lanes only and Fig 4D a cytochrome C row under the mitochondria lanes that is faint in Control, 0 and 1 h and strong at 2 and 3 h by eye; no blot carries both, and no n is stated for either) and [[paper_registry_current#PAPER 361]] (confocal overlap only).
 - **Falsifying experiment / counter:** Falsifier: WWOX is a cytosolic contaminant of the mitochondrial pellet.
 - **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
 - **Not medical advice.**
