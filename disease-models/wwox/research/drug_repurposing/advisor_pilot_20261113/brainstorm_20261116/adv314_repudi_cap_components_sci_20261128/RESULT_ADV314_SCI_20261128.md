@@ -33,6 +33,8 @@ Myelinated-axon proportion down about 72 and 89 percent, N1 velocity unchanged, 
 
 **What Repudi's N2 adds:** less than "N2 is unchanged". Means rise 24 percent (ln +0.217), medians 9 percent (ln +0.086); two knockout slices sit near 14.6 and 16.2 ms. P = 0.57 at n = 8 establishes neither a shift nor equality, so N2 cannot serve as the internal control that would confine the effect to myelinated fibres. N1 means move ln +0.27, of the same order as the N2 mean shift.
 
+**Dated line, 2026-11-28 (SCI, after IT31 and HE ADV-315; text above unedited):** for the cuprizone source read "N1 velocity not significantly different at one 0.75 mm distance" in place of "unchanged"; the same paper reports a lower N1 half-width (P < 0.001, calculated at 1 mA); its cuprizone CAP n is 8 to 10 per group (Figure 4 legend), not 6 to 10; the sham series of its cuprizone and stroke figures look partly shared (by eye, not pixel-verified), so they are not to be written as independent controls. Detail: `../adv313_myelin_calibration_sci_20261128/ADDENDUM_ADV313_SCI_20261128.md`.
+
 ## 5. Derived arithmetic (not a number the paper states)
 If 250 µm were the whole path, N1 would travel at about 0.10 m/s (control) and 0.08 m/s (S-KO), N2 at 0.04 and 0.03 m/s. Adult callosal N1 velocities in the ADV-313 table are about 0.5 and 1.8 m/s in two other preparations; ages differ (here P13 to P17), so this is no test. It does show that the path is longer than the printed vertical distance, or that much of the latency is not travel time, or both. A velocity cannot be derived.
 
