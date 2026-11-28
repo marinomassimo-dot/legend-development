@@ -75,7 +75,7 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      refuses it before it takes the lock; the early run stops as soon as the lock is its to take (2026-11-28: five suite-red refusals in four days, each after a wait). The full selection still runs under the lock.
 
   14. Concurrent checks (THE DEFAULT under `--serialize`, 2026-11-25, ADV): the view checks, the gate and the landing suites start together instead of one after another. The gate reads the live worktree, so the
-     suites do not run in it: they run in a throwaway clone of the commit being gated (`git clone --no-hardlinks`, only `files/` hard-linked when the checkout has one), removed by this tool on success, refusal,
+     suites do not run in it: they run in a throwaway clone of the commit being gated (`git clone --shared`, the objects borrowed, only `files/` hard-linked when the checkout has one), removed by this tool on success, refusal,
      error, SIGTERM and Ctrl-C (a SIGKILL leaves `<tmp>/legend-landing-suites-*`). Refusals and their order are unchanged: suites, unclean tree, views, gate; a refusal stops what is still running. When no clone
      can be built the suites run in the worktree after the gate and the views have finished. `--serial-checks` runs everything one after another and adds an empty commit with the trailer
      `Landing-Checks: serial (--serial-checks)`. `LANDING CHECKS parallel: ...` gives the wall time and each part. Kept after the first ten such landings (median lock held 138.5 s against 250 s).
@@ -376,14 +376,14 @@ class Background:
 
 @contextlib.contextmanager
 def suite_clone(sha: str, remote: str):
-    """(clone, '') of `sha` in a throwaway folder, or (None, why). The recipe of the release battery: `git clone --no-hardlinks`, only `files/` hard-linked (a hard-linked whole copy lets a suite
-    rewrite tracked files of the real checkout). The remote-tracking refs of `remote` are copied so a suite sees them as in the worktree. The folder is removed on the way out, whatever happened."""
+    """(clone, '') of `sha` in a throwaway folder, or (None, why). `git clone --shared` (the object database is borrowed, not copied: 816 of 1283 MB per push, 2026-11-28), a checkout of its own, only `files/` hard-linked
+    (a hard-linked whole copy lets a suite rewrite tracked files of the real checkout). The remote-tracking refs of `remote` are copied so a suite sees them as in the worktree. The folder is removed on the way out, whatever happened."""
     holder, clone, why = None, None, ""
     try:
         try:
             holder = Path(tempfile.mkdtemp(prefix=SUITE_CLONE_PREFIX))
             target = holder / "repo"
-            steps = [("git", "clone", "-q", "--no-hardlinks", "--no-checkout", str(ROOT), str(target))]
+            steps = [("git", "clone", "-q", "--shared", "--no-checkout", str(ROOT), str(target))]
             if (ROOT / "files").exists():
                 steps.append(("cp", "-al", str(ROOT / "files"), str(target / "files")))
             if remote in run("git", "remote").stdout.split():      # a URL or a path has no remote-tracking refs to copy
