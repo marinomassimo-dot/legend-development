@@ -1,0 +1,24 @@
+key	claim	sources_pmid	verdict	failing_letters	shared_authors_noted	note
+K01	005	30290271;34747138	BLOCKED-SKIP			Repudi 2021 is a gene-delivery study; nothing checked
+K02	005	34268881;30290271	DECLARED			the sentence itself says the two texts do not demonstrate independence
+K03	011		BLOCKED-SKIP			gene-delivery line
+K04	014	32581702;31340538;31543760	HOLDS		Iacomino 2020 author list contains Tochigi, Suzuki (Tochigi 2019) and Kosla, Bednarek (Kosla 2019) as middle authors	passes the frozen first/last rule, but the three papers are one collaboration; the same paragraph already declares a shared CAGE series for the transcriptomic leg
+K05	015		BLOCKED-SKIP			named papers include a drug study and a gene-delivery toxicity study
+K06	015		BLOCKED-SKIP			claim source line includes drug and gene-delivery studies
+K07	016		BLOCKED-SKIP			source is a drug study
+K08	016		BLOCKED-SKIP			drug proposition
+K09	016		BLOCKED-SKIP			drug proposition
+K10	023	15070730;21115974	HOLDS		R. I. Aqeilan: first author 2004, middle author 2011	different partner in each (p73; Tax): same mode of action, not the same measurement
+K11	024	35716775;25331887	HOLDS		none first/last	
+K12	025	29724996;CORPUS P191	UNSETTLED			the statement said to be confirmed rests on a placeholder with Identifier PENDING
+K13	026	30619736;30285739	HOLDS		none	
+K14	028	15070730;CORPUS P207;P214;P218	UNSETTLED			one of four named papers is identified; three are placeholders with Identifier PENDING; the multi-paper convergence cannot be checked
+K15	030	34268881;24369382;29808465;24456803	HOLDS		not checked beyond first/last	Steinberg 2021 words the point as a question raised by its own blots, not as an observation
+K16	030	26499798;33916893	FAILS	a,c	R. I. Aqeilan on both	known before the prereg (ADV-339 S6): both restate Mignot 2015 patients
+K17	031		BLOCKED-SKIP			drug proposition
+K18	031		BLOCKED-SKIP			treatment source
+K19	031		BLOCKED-SKIP			drug proposition
+K20	034	34214506;21075834	HOLDS		none	
+K21	036	19936220;23254685;18974271;17360458	HOLDS		Aqeilan is first on 18974271 and 17360458 and last on 23254685; Croce last on two	the three papers the sentence names are one laboratory line; independence comes only from the pair with 19936220
+K22	036	19936220;19500159	HOLDS		none	rat observation read from the held manifest and text copy of 19500159
+K23	038	17803050;19936220	HOLDS		none	17803050 file not found on disk; its values taken from its held manifest and the claim record
