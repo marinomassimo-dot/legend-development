@@ -22,13 +22,13 @@ the whole known corpus, not the part already processed.
 | Depth | Records | Share | What it means |
 |---|---:|---:|---|
 | **Full text depth** | 312 | 33% | complete receipt or legacy registry declaration; trace split below |
-| Partial full text | 305 | 32% | some sections read; explicitly declared incomplete |
+| Partial full text | 306 | 32% | some sections read; explicitly declared incomplete |
 | Abstract / screened | 13 | 1% | classified from metadata and abstract; no full text read |
-| Catalogued only | 310 | 33% | known, deduplicated, never analytically processed — **the debt** |
+| Catalogued only | 309 | 33% | known, deduplicated, never analytically processed — **the debt** |
 | Filtered / superseded | 10 | 1% | explicitly set aside, with the reason preserved |
 
-- Of the **310** catalogued-only records, **127** carry a receipt owned by another registry entry (88 complete, 39 partial: the placeholder duplicates a processed record) and **183** have no receipt (the headline count is unchanged)
-- **Sections read, best state** (union of the surviving receipts of each study): **10696** section-reads across **2913** studies; the latest receipt alone marks **9398**, so **1298** are read only in an earlier receipt (**273** of **561** studies with 2+ receipts have a latest receipt that marks fewer sections read than an earlier one). The depth table above already uses the deepest receipt; this line is about sections, not depth, and changes no number above
+- Of the **309** catalogued-only records, **127** carry a receipt owned by another registry entry (88 complete, 39 partial: the placeholder duplicates a processed record) and **182** have no receipt (the headline count is unchanged)
+- **Sections read, best state** (union of the surviving receipts of each study): **10685** section-reads across **2906** studies; the latest receipt alone marks **9387**, so **1298** are read only in an earlier receipt (**273** of **560** studies with 2+ receipts have a latest receipt that marks fewer sections read than an earlier one). The depth table above already uses the deepest receipt; this line is about sections, not depth, and changes no number above
 - **560** promoted `PAPER` records · **390** `CORPUS` placeholders
 - **825** lifecycle entries in the literature tracking log
 - **835** unique PMIDs known across the registries
@@ -36,10 +36,10 @@ the whole known corpus, not the part already processed.
 ## Receipt trace
 
 - Authoritative ledger: `disease-models/wwox/registries/fulltext_read_receipts.jsonl`
-- **3940** append-only events: **3913** contemporaneous · **22** conservative legacy reconstructions · **1** invalidation(s) · **4** identity correction(s)
+- **3932** append-only events: **3905** contemporaneous · **22** conservative legacy reconstructions · **1** invalidation(s) · **4** identity correction(s)
 - **309** registry records have a persisted `complete_fulltext_read` receipt
 - **3** records still rely on a historical registry full-text declaration without a surviving complete coverage receipt
-- **2678** receipt event(s) do not yet map to a registry record
+- **2669** receipt event(s) do not yet map to a registry record
 
 A full-text marker in the registry is preserved as historical state, but it is not
 retroactively converted into a complete receipt. Only a contemporaneous or adequately

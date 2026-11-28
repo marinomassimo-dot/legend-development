@@ -677,6 +677,13 @@
      "owner": "orchestrator",
      "source": "ADV cross-session messages 2026-11-28 (ADV-321 text /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv321.txt, ASSIGNMENT 1; ADV-317 note)",
      "accepted_at": "2026-11-28T12:12:27Z"
+    },
+    {
+     "step": "ADV-333: cross the 183 catalogued-only records without receipt with the decision cells of RP-016, RP-018, RP-042, RP-043; PREREG, whole read as PAPER record with receipt, second reader, deliver to ADV and row owner",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-28 (ADV-333, assignment accepted from IT37 proposal)",
+     "accepted_at": "2026-11-28T15:08:44Z"
     }
    ]
   }
@@ -1204,6 +1211,13 @@
    "at": "2026-11-28T12:12:27Z",
    "source": "ADV cross-session messages 2026-11-28 (ADV-321 text /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv321.txt, ASSIGNMENT 1; ADV-317 note)",
    "step_sha256": "d0dfde4a5398",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T15:08:44Z",
+   "source": "ADV message 2026-11-28 (ADV-333, assignment accepted from IT37 proposal)",
+   "step_sha256": "d6153c403a49",
    "reopened_block": false,
    "authorised_by": null
   }
