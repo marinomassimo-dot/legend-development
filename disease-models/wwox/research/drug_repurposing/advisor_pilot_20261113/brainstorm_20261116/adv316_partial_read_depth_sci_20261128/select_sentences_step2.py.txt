@@ -1,0 +1,17 @@
+import re,sys
+# mechanical sentence selection: sentences of named entries that carry a key term of the record
+cfg={
+ '41744777':dict(entries=['## CLAIM 047','## PAPER 228'],terms=r'41744777|PAPER 228|Nabakowski|AAV9-DM|\bDM\b|de-target|liver|hepatic|127|packag|toxicity'),
+ '42395553':dict(entries=['## CLAIM 011','## 4) Note on missense','## PAPER 532'],terms=r'42395553|PAPER 532|Petrozziello|preprint|SH-SY5Y|rWWOX|Supplementary Figure|Figure [1-4]\b|ng/mL'),
+ '27339895':dict(entries=['## CLAIM 009','### DL-MECH-156','### DL-MECH-159','## PAPER 362'],terms=r'27339895|PAPER 362|Huang|MOLT-4|Ser14|pS14|phospho-site|antibod|marker row|mitochond'),
+}
+for p,c in cfg.items():
+    L=open(f'rec_{p}.txt',encoding='utf-8').read().splitlines()
+    cur='';out=[]
+    for l in L:
+        if re.match(r'^#{1,4} ',l): cur=next((e for e in c['entries'] if l.startswith(e)),'') if l.startswith('#') else cur
+        if cur and not l.startswith('-----'):
+            for s in re.split(r'(?<=[.;»)\]])\s+(?=[A-Z⚠*(«\[])',l):
+                if re.search(c['terms'],s): out.append((cur,s.strip()))
+    open(f'sent_{p}.txt','w').write('\n'.join(f'S{i+1:02d} <{e}> {s}' for i,(e,s) in enumerate(out)))
+    print(p,len(out),'sentences',sum(len(s) for _,s in out),'chars')

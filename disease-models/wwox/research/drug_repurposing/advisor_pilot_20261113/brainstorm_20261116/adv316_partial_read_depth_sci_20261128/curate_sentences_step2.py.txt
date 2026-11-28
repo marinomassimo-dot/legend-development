@@ -1,0 +1,20 @@
+import re,json
+def sents(p):
+    d={}
+    for l in open(f'sent_{p}.txt',encoding='utf-8').read().splitlines():
+        m=re.match(r'^(S\d+) <[^>]*> (.*)$',l); d[m.group(1)]=m.group(2).replace('**','')
+    return d
+out={}
+a=sents('41744777')
+mirror=re.search(r'and the route reaches primate brain at 1-4 vg/DG[^|]*?brain exposure',open('rec_41744777.txt',encoding='utf-8').read().replace('**',''))
+out['41744777']=[a['S02'],a['S08'],a['S11'],a['S12'],mirror.group(0)]
+b=sents('42395553')
+s12=b['S12']; i=s12.index('applied recombinant WWOX protein'); s12c=s12[i:]
+s12c=re.sub(r' \[narrowed 2026-10-04.*?marker added by `CC-20261004-MIRROR-35` under § 7.2 item 2\]','',s12c); s12c=s12c.replace(', read as an image in wave 9,',',')
+s15=re.sub(r'^Dated note 2026-11-25 \([^)]*\): ','',b['S15'])
+out['42395553']=[s12c,re.sub(r', wave-9 panel reading\)',', hand reading)',b['S16']).rstrip(';'),s15]
+c=sents('27339895')
+out['27339895']=[c['S09']+' '+c['S10'],c['S11'],c['S12'],c['S21'],c['S22'],c['S24'].lstrip('- '),'Mitochondrial purity (DL-MECH-159): '+c['S26'].lstrip('- ')+' '+c['S27']]
+for p,L in out.items():
+    open(f'curated_{p}.txt','w',encoding='utf-8').write('\n'.join(f'C{i+1:02d} {s.strip()}' for i,s in enumerate(L)))
+    print(p,len(L),[len(s) for s in L])
