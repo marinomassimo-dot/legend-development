@@ -1,0 +1,33 @@
+{
+  "investigation": "INV-07",
+  "title": "Heme supply and respiration",
+  "date": "28 November 2026",
+  "summary": "A single precursor may expose a bottleneck in heme production.",
+  "graph": {
+    "evidence": "5-ALA altered electron transfer and ATP in FLVCR1 fibroblasts.",
+    "inference": "The tested concentration was far above the measured pediatric plasma peak.",
+    "hypothesis": "Local 5-ALA could restore function if precursor supply limits heme production.",
+    "experiment": "Measure labelled heme and ATP-linked oxygen use at matched iron and exposure."
+  },
+  "evidence": [
+    "The FLVCR1 experiment used 5,000 µM in culture. The highest measured parent plasma peak in the exploratory Leigh study was 12.3 µM."
+  ],
+  "inference": [
+    "The Leigh withdrawal trial tested the iron combination. It recorded loss of efficacy in 2/13 versus 7/14 and did not confirm its primary result."
+  ],
+  "hypothesis": [
+    "Precursor supply, downstream conversion and iron can each affect respiration. Accumulating porphyrin would favor a conversion limit."
+  ],
+  "experiment": [
+    "Compare labelled heme in respiratory complexes and ATP-linked oxygen use in matched WWOX preparations. Include an iron-only control."
+  ],
+  "limits": [
+    "Conditional metabolic comparator. Pediatric WWOX neural exposure and benefit remain unverified."
+  ],
+  "sources": [
+    {"label": "Bertino et al. Fig. 7 and Supplementary Data 1.", "url": "https://doi.org/10.1038/s42003-026-09691-y"},
+    {"label": "Shimura et al. Fibroblast comparisons, Figs. 3–6.", "url": "https://doi.org/10.1038/s41598-019-46772-x"},
+    {"label": "Abe et al. Pediatric plasma pharmacokinetics, Table 3.", "url": "https://doi.org/10.3390/life15081168"},
+    {"label": "Ohtake et al. Randomized withdrawal comparison, Table 3.", "url": "https://doi.org/10.1371/journal.pone.0332283"}
+  ]
+}

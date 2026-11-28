@@ -1,0 +1,8 @@
+measure	population_or_method	events_active	n_active	events_control	n_control	risk_difference_pp	newcombe_low_pp	newcombe_high_pp
+efficacy	All	2	13	7	14	-34.615	-60.317	0.870
+efficacy	Age of onset <1yr	0	8	1	4	-25.000	-69.936	13.344
+efficacy	Age of onset ≥1yr	2	5	6	10	-20.000	-56.535	26.789
+missing treated endpoint	no failure	2	14	7	14	-35.714	-61.089	-1.124
+missing treated endpoint	failure	3	14	7	14	-28.571	-55.595	6.395
+safety	at least one serious event	9	14	1	14	57.143	21.885	77.383
+efficacy	MH age-weighted treatment minus placebo	2	13	7	14	-22.222	NA	NA
