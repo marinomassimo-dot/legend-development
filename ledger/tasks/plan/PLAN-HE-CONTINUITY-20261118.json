@@ -1624,6 +1624,14 @@
      "accepted_at": "2026-11-28T09:01:37Z",
      "evidence": "f6de3399c on main; sealed surfaces set aside, others committed; scripts README held-studies row; sidecar re-seal reported to ADV",
      "updated_at": "2026-11-28T09:01:37Z"
+    },
+    {
+     "step": "Measure the disk transient of one push by component and shrink it if a third or more can go without changing what the gate verifies",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad direction round to HE 6fe75e26, 2026-11-28 about 09:20Z (disk)",
+     "accepted_at": "2026-11-28T09:27:06Z",
+     "updated_at": "2026-11-28T09:27:06Z"
     }
    ]
   }
@@ -2879,6 +2887,13 @@
    "at": "2026-11-28T09:01:37Z",
    "source": "ADV a5e6f2ad second message to HE 6fe75e26, 2026-11-28 (SCI sidecar trap)",
    "step_sha256": "84083f57ad86",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T09:27:06Z",
+   "source": "ADV a5e6f2ad direction round to HE 6fe75e26, 2026-11-28 about 09:20Z (disk)",
+   "step_sha256": "854774ad9927",
    "reopened_block": false,
    "authorised_by": null
   }
