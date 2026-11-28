@@ -670,6 +670,13 @@
      "accepted_at": "2026-11-28T10:19:18Z",
      "evidence": "bf55f66e75 (K1'-K3' and ADV-314 consumers, ranking, views); BATCH_20261128_006 CI repair; session_evaluations for IT30, IT31, IT32; checkpoint IT_20261128_6",
      "updated_at": "2026-11-28T11:23:36Z"
+    },
+    {
+     "step": "ADV-321 (DisMech three prompts in the ROOT checkout file DISMECH-COMPOUND-QUESTIONS-20261128.md; trace of the priority display for non-top dossiers) and the ADV-317 Crawford 2010 consumers for INV-06/RP-049 where a decision changes",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV cross-session messages 2026-11-28 (ADV-321 text /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv321.txt, ASSIGNMENT 1; ADV-317 note)",
+     "accepted_at": "2026-11-28T12:12:27Z"
     }
    ]
   }
@@ -1190,6 +1197,13 @@
    "at": "2026-11-28T10:19:18Z",
    "source": "ADV decision 2026-11-28 in the IT32 dispatch; CHECKPOINT_IT_20261128_5.md section 2",
    "step_sha256": "57198b7b4c2a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T12:12:27Z",
+   "source": "ADV cross-session messages 2026-11-28 (ADV-321 text /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv321.txt, ASSIGNMENT 1; ADV-317 note)",
+   "step_sha256": "d0dfde4a5398",
    "reopened_block": false,
    "authorised_by": null
   }

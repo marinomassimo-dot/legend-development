@@ -777,3 +777,11 @@
 {"evidence": "SendMessage with task summary, 2026-11-28; HE bound and idle with CI watch only", "id": "ADV-318", "receipt": ["b25f5ba5-77c1-4869-9a82-250e80617eb5"], "state": "SENT", "to": ["HE - CURRENT 0a29d266"], "utc": "2026-11-28T11:51:44Z"}
 {"assessment": "HOST", "id": "ADV-319", "key": "rp018-eif2b-s540e-full-text-read-sci", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-28T12:03:11Z"}
 {"evidence": "SendMessage 2026-11-28 after SCI's confirmation and frozen note", "id": "ADV-319", "receipt": ["79a9fe25-9b36-45f1-922a-193b3da685d5"], "state": "SENT", "to": ["SCI - CURRENT b0e37f80"], "utc": "2026-11-28T12:03:19Z"}
+{"assessment": "HOST", "id": "ADV-320", "key": "chornyy2025-promoter-figures-read-depth-sci", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-28T12:09:57Z"}
+{"assessment": "HOST", "id": "ADV-321", "key": "dismech-three-prompts-and-priority-trace-it", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-28T12:10:38Z"}
+{"assessment": "HOST", "id": "ADV-322", "key": "compound-priority-comparison-note-sci", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-28T12:10:38Z"}
+{"evidence": "SendMessage 2026-11-28 accepting SCI's pick and frozen note", "id": "ADV-320", "receipt": ["7fcc08f1-efa8-484c-a1a6-bb1b02255a5a"], "state": "SENT", "to": ["SCI - CURRENT b0e37f80"], "utc": "2026-11-28T12:11:02Z"}
+{"evidence": "SendMessage 2026-11-28 with text path and brief", "id": "ADV-321", "receipt": ["93486c92-b061-4894-af06-c9bec2b350ac"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 5b32f251"], "utc": "2026-11-28T12:11:06Z"}
+{"evidence": "same SendMessage as ADV-320, ASSIGNMENT 2 of adv321.txt", "id": "ADV-322", "receipt": ["7fcc08f1-efa8-484c-a1a6-bb1b02255a5a"], "state": "SENT", "to": ["SCI - CURRENT b0e37f80"], "utc": "2026-11-28T12:11:07Z"}
+{"assessment": "HOST", "id": "ADV-323", "key": "chornyy2025-blind-second-read-he", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-28T12:16:59Z"}
+{"evidence": "SendMessage 2026-11-28 with text path", "id": "ADV-323", "receipt": ["c851b824-fb59-486a-a961-39e640feb0b6"], "state": "SENT", "to": ["HE - CURRENT 0a29d266"], "utc": "2026-11-28T12:17:15Z"}
