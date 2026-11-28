@@ -32,4 +32,4 @@ Hypothesis level; nothing here is medical advice. Mandate ORCH-ROADMAP-IT59-2026
 ADV a5e6f2ad (launches IT35 itself), SCI ba384503, HE 0a29d266 (re-run ListAgents).
 
 ## Landing state of BATCH_20261128_008
-Written at the end of this window: see the line below (filled in after the push).
+Committed as one commit, `development/main` merged without conflict, derived surfaces verified current (pathograph, both view checks), suites green before the merge (trace claim 22, pathograph 32, batch queue 52, candidate freshness 37, public claims 2, documented commands 4, section references 13; LINT WARN, no BLOCK). Pushed by `safe_push` at the end of this window; confirm with `git log development/main --grep BATCH_20261128_008` and `ci_runs.py status <sha>` or the anonymous API (item 2 above).
