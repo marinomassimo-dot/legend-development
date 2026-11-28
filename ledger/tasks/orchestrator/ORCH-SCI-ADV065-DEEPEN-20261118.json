@@ -1272,6 +1272,13 @@
      "accepted_at": "2026-11-28T05:54:55Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv300_catalogued_triage_open_sci_20261128/RESULT_ADV300_SCI_20261128.md (not decidable under both readings; six receipts FTR-20261128-*; ADV accepted)",
      "updated_at": "2026-11-28T06:44:13Z"
+    },
+    {
+     "step": "ADV-302: consumer-first depth reading of the catalogued-only tail (step 1 list records without receipt that already have a consumer; step 2 read three at depth if at least 3)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-302",
+     "accepted_at": "2026-11-28T07:04:20Z"
     }
    ]
   }
@@ -2254,6 +2261,13 @@
    "at": "2026-11-28T05:54:55Z",
    "source": "ADV-300",
    "step_sha256": "025d7acd0370",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T07:04:20Z",
+   "source": "ADV-302",
+   "step_sha256": "740bae28c45d",
    "reopened_block": false,
    "authorised_by": null
   }
