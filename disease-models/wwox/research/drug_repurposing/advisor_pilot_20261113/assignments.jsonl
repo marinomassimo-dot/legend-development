@@ -838,3 +838,5 @@
 {"basis": "result landed on main and consumed; see the 2026-11-28 dated entries of MEETING-20261121T113510Z-83lyojx8.md", "counts_with": "ADV-325", "id": "ADV-326", "state": "STRAND", "strand": "gsk3-panel-design-and-nmdar-conditions", "utc": "2026-11-28T14:38:36Z"}
 {"basis": "result landed on main and consumed; see the 2026-11-28 dated entries of MEETING-20261121T113510Z-83lyojx8.md", "id": "ADV-330", "state": "STRAND", "strand": "assay-and-premise-check", "utc": "2026-11-28T14:58:53Z"}
 {"basis": "result landed on main and consumed; see the 2026-11-28 dated entries of MEETING-20261121T113510Z-83lyojx8.md", "counts_with": "ADV-330", "id": "ADV-331", "state": "STRAND", "strand": "assay-and-premise-check", "utc": "2026-11-28T14:58:53Z"}
+{"assessment": "HOST", "id": "ADV-333", "key": "catalogued-only-cross-with-waiting-rows-one-whole-read-it", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-28T15:08:32Z"}
+{"evidence": "SendMessage 2026-11-28 with task text", "id": "ADV-333", "receipt": ["8b7894d0-c931-4d74-b9d1-6df7ae83a162"], "state": "SENT", "to": ["IT Orchestrator - CURRENT c1c43605"], "utc": "2026-11-28T15:08:42Z"}
