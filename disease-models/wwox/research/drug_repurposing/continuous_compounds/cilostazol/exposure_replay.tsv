@@ -1,0 +1,7 @@
+adult_crossover_arm	parent_ng_mL	total_uM	illustrative_free_low_uM	illustrative_free_high_uM	nominal_OPC_bath_uM	nominal_over_adult_free_low_ratio	nominal_over_adult_free_high_ratio
+test	635.6	1.7203	0.0344	0.0860	1	11.6	29.1
+test	635.6	1.7203	0.0344	0.0860	3	34.9	87.2
+test	635.6	1.7203	0.0344	0.0860	10	116.3	290.6
+reference	623.3	1.6871	0.0337	0.0844	1	11.9	29.6
+reference	623.3	1.6871	0.0337	0.0844	3	35.6	88.9
+reference	623.3	1.6871	0.0337	0.0844	10	118.5	296.4
