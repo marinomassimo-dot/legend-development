@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 254,
+   "distinct_hrefs": 255,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3659,
+    "forbidden-name": 3658,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5115845,
-   "sha256": "4aefa7254d126d6a65f933cf0caac3731cf17c02044f715e8fb2e1038507bc9b"
+   "bytes": 5114163,
+   "sha256": "8de33f5d9ee4ab70b04d54348a90d62f9d150c16f93f453ade87f5569553b7ba"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
@@ -580,6 +580,10 @@
   "reports/chlorzoxazone.pdf": {
    "bytes": 128607,
    "sha256": "97a6a869efe50ee1f781f45057693a97f6495887d809d73058b3a89fa8df68da"
+  },
+  "reports/dimethylglycine.pdf": {
+   "bytes": 118512,
+   "sha256": "2c86d6714b414a089d25bb492377021cfe77ca1b20aa18e4d9f67545bfc6b4d5"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 186816,
