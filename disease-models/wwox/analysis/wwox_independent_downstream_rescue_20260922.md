@@ -419,6 +419,8 @@ does not classify nodes as upstream/downstream of the seizures and does not scor
 cognitive impairment precedes the epilepsy and does not improve with seizure control. `O-5` `CLAIM 036`: the
 systemic null at P14–P18 is metabolically decompensated.
 
+**Pointer (ADV-328, 2026-11-28, IT36).** Narrowed in line 23 of [[meta_gaba_paradox_current]]: blood chemistry of the systemic null is held for P18 only (glucose, total CO2 reported as total bicarbonate, BUN, calcium; n = 3/3/4; white cells n = 2 per group; pH and creatinine not measured), so the metabolic-state statement above is wider than the held data; glucose has a longer record, plotted from day 10 in PMID 34747138 (read from the plot): untreated or GFP-injected null pups, one pooled line, below wild type at every plotted age, about 85 against 122 mg/dL at day 10 and about 45 at day 20 to 24, n = 5 per group, no test printed. The text above stays as the record of what was claimed.
+
 ### DIVERGE — six mechanistically distinct routes
 `D-1` restore the brake's **output**, not the brake (occupy the Axin docking site with a non-WWOX ligand).
 `D-2` clamp the **network state** at the receptor. `D-3` **bypass a metabolic block** by delivering carbon

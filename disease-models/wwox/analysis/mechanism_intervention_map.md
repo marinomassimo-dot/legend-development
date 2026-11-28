@@ -157,6 +157,7 @@ developmental literature — and **not** `DATO` of any WWOX study
   is not reported in 34634460, and neuron-restricted re-expression is the arm that normalised glucose
   (PMID 34747138). Read: *the neuron-specific knockout exists; its metabolic state is not reported in the
   sources held.* The original text stays above as the record of what was claimed.
+  **Pointer (ADV-328, 2026-11-28, IT36).** Narrowed in line 23 of [[meta_gaba_paradox_current]]: "normalised glucose" is a plotted overlap with wild type read from the plot (PMID 34747138), in pups where the plotted percentage of NeuN-and-WWOX double-positive cells is about 52 to 71 (denominator undefined) and one pancreas panel is visibly stained but weaker than wild type and not quantified; the same pups are described in the text as growing normally (plotted weights below wild type at most ages, indistinguishable by 6 weeks per the text) and as having no spontaneous seizures (a text statement, unquantified, no EEG or seizure scoring), so a plotted glucose overlap is not separated from a seizure or growth rescue. The text above stays as the record of what was claimed.
 - **The mechanism does not predict the outcome.** The depolarizing-GABA rationale predicts that
   GABAergic drugs underperform. In a published WWOX-null child, **vigabatrin resolved the spasms**
   (CLAIM 001, CLAIM 031). The mechanism survives as a mechanism; as a clinical predictor it was
@@ -1322,6 +1323,7 @@ Ordered by *information gained per unit cost*, not by ambition.
 3. **No conditional/cell-type-specific separation of the systemic-null confounder.** The allele that
    would separate cell-autonomous neuronal loss from secondary metabolic injury has existed since
    2009 and has not been used in this direction.
+   **Pointer (ADV-328, 2026-11-28, IT36).** Narrowed in line 23 of [[meta_gaba_paradox_current]]: the conditional allele has been used since 2021 (PMID 33914858), so the statement above that it has not been used in this direction is too wide; the neuron-restricted lines (Synapsin-Cre with seizures from P9 per the text, Nestin-Cre with tremors or seizures) have growth retardation, and no blood chemistry is reported for any conditional or null animal in PMID 33914858, so they do not by themselves separate the confounder. The text above stays as the record of what was claimed.
 4. **No functional readout on a stabilized SDR-missense protein.** Abundance has been measured;
    function has not — and the allelic series proves abundance does not predict severity.
 5. **No post-neonatal, post-onset gene-therapy efficacy datum.** The single most important
