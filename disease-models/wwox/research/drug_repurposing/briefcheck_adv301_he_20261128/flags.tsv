@@ -1,0 +1,21 @@
+brief	sentence	class	item	text
+huperzine-a	evidence.0.0	number	53.5	Across ten mice, observed events fell from 119.0 to 53.5 per recorded eight hours and reached 98.8 after withdrawal.
+huperzine-a	evidence.0.0	number	98.8	Across ten mice, observed events fell from 119.0 to 53.5 per recorded eight hours and reached 98.8 after withdrawal.
+huperzine-a	evidence.0.0	number	119.0	Across ten mice, observed events fell from 119.0 to 53.5 per recorded eight hours and reached 98.8 after withdrawal.
+huperzine-a	evidence.0.1	absolute	every	The count fell during exposure in every mouse.
+huperzine-a	inference.0.2	absolute	no/not	These data do not measure cholinergic input or native inhibition.
+huperzine-a	hypothesis.0.0	absolute	only	Slower acetylcholine clearance could restrain recurrence only when a sufficient local input survives and its receptors recruit effective inhibition.
+huperzine-a	limits.0.1	absolute	no/not	The published spontaneous EEG comparison has no parallel control.
+huperzine-a	-	scanned	18	-
+bexarotene	evidence.0.1	absolute	every	Both directions survive two gate thresholds and every single-animal omission.
+bexarotene	limits.0.2	absolute	all	All 26 bexarotene recipients developed hypothyroidism.
+bexarotene	-	scanned	17	-
+etifoxine	evidence.0.2	absolute	no/not	In the small adult focal epilepsy trial the reproduced crude IRR is 0.863 and the published interval includes no effect.
+etifoxine	hypothesis.0.0	absolute	only	Restored steroid production could improve inhibition only where basal capacity and native chloride support that response.
+etifoxine	-	scanned	17	-
+montelukast	-	scanned	16	-
+verapamil	evidence.0.0	number	15 %	Reconstructed cortical extracellular exposure increased about 25% for phenytoin and 15% for carbamazepine in a local rat comparison.
+verapamil	evidence.0.0	number	25 %	Reconstructed cortical extracellular exposure increased about 25% for phenytoin and 15% for carbamazepine in a local rat comparison.
+verapamil	evidence.0.1	absolute	no/not	The pediatric placebo-controlled study detected no significant between-arm difference.
+verapamil	hypothesis.0.1	absolute	no/not	Baseline WWOX bulk RNA and marker-scaled contrasts do not measure luminal transport.
+verapamil	-	scanned	15	-

@@ -1,0 +1,394 @@
+{
+ "CB": {
+  "OPC": {
+   "n_present": 5,
+   "n_declared": 5,
+   "median": -0.246,
+   "perm_p": 0.0286,
+   "loo_min": -0.291,
+   "loo_max": -0.144,
+   "frac_up": 0.4,
+   "per_gene": {
+    "Pdgfra": 0.047,
+    "Cspg4": -0.256,
+    "Ptprz1": -0.246,
+    "Cspg5": 0.19,
+    "Vcan": -0.328
+   },
+   "missing": [],
+   "status": "OK"
+  },
+  "COMMITTED_NEWLY_FORMED": {
+   "n_present": 6,
+   "n_declared": 7,
+   "median": 0.183,
+   "perm_p": 0.2286,
+   "loo_min": 0.028,
+   "loo_max": 0.282,
+   "frac_up": 0.67,
+   "per_gene": {
+    "Gpr17": -0.146,
+    "Neu4": 0.084,
+    "Bcas1": 0.819,
+    "Enpp6": 0.282,
+    "Itpr2": -0.249,
+    "Tcf7l2": 0.738
+   },
+   "missing": [
+    "Tmem2"
+   ],
+   "status": "OK"
+  },
+  "MATURE": {
+   "n_present": 11,
+   "n_declared": 11,
+   "median": 0.5,
+   "perm_p": 0.0286,
+   "loo_min": 0.304,
+   "loo_max": 0.633,
+   "frac_up": 1.0,
+   "per_gene": {
+    "Mbp": 0.808,
+    "Plp1": 0.389,
+    "Mobp": 0.908,
+    "Mog": 0.585,
+    "Mag": 0.448,
+    "Mal": 0.534,
+    "Opalin": 0.668,
+    "Aspa": 0.382,
+    "Ermn": 0.347,
+    "Klk6": 0.5,
+    "Cnp": 0.294
+   },
+   "missing": [],
+   "status": "OK"
+  },
+  "LIPOGENIC_S1": {
+   "n_present": 20,
+   "n_declared": 20,
+   "median": 0.274,
+   "perm_p": 0.0286,
+   "loo_min": 0.227,
+   "loo_max": 0.299,
+   "frac_up": 0.9,
+   "per_gene": {
+    "Hmgcs1": 0.217,
+    "Hmgcr": 0.194,
+    "Mvk": 0.312,
+    "Pmvk": 0.191,
+    "Mvd": 0.273,
+    "Idi1": 0.485,
+    "Fdps": 0.09,
+    "Fdft1": 0.374,
+    "Sqle": 0.335,
+    "Lss": -0.197,
+    "Cyp51": 0.282,
+    "Msmo1": 0.496,
+    "Nsdhl": 0.275,
+    "Hsd17b7": -0.002,
+    "Sc5d": 0.103,
+    "Dhcr7": 0.201,
+    "Dhcr24": 0.317,
+    "Ldlr": 0.303,
+    "Insig1": 0.301,
+    "Srebf2": 0.139
+   },
+   "missing": [],
+   "status": "OK"
+  }
+ },
+ "HPC": {
+  "OPC": {
+   "n_present": 5,
+   "n_declared": 5,
+   "median": -0.072,
+   "perm_p": 0.5794,
+   "loo_min": -0.125,
+   "loo_max": 0.031,
+   "frac_up": 0.4,
+   "per_gene": {
+    "Pdgfra": -0.072,
+    "Cspg4": 0.128,
+    "Ptprz1": -0.074,
+    "Cspg5": -0.09,
+    "Vcan": 0.188
+   },
+   "missing": [],
+   "status": "OK"
+  },
+  "COMMITTED_NEWLY_FORMED": {
+   "n_present": 6,
+   "n_declared": 7,
+   "median": -0.13,
+   "perm_p": 0.5238,
+   "loo_min": -0.214,
+   "loo_max": 0.041,
+   "frac_up": 0.17,
+   "per_gene": {
+    "Gpr17": -0.239,
+    "Neu4": -0.067,
+    "Bcas1": -0.195,
+    "Enpp6": 0.002,
+    "Itpr2": -0.075,
+    "Tcf7l2": -0.185
+   },
+   "missing": [
+    "Tmem2"
+   ],
+   "status": "OK"
+  },
+  "MATURE": {
+   "n_present": 11,
+   "n_declared": 11,
+   "median": -0.194,
+   "perm_p": 0.4762,
+   "loo_min": -0.349,
+   "loo_max": -0.068,
+   "frac_up": 0.18,
+   "per_gene": {
+    "Mbp": -0.334,
+    "Plp1": -0.267,
+    "Mobp": -0.191,
+    "Mog": -0.237,
+    "Mag": -0.142,
+    "Mal": -0.194,
+    "Opalin": -0.143,
+    "Aspa": -0.245,
+    "Ermn": 0.196,
+    "Klk6": 1.247,
+    "Cnp": -0.261
+   },
+   "missing": [],
+   "status": "OK"
+  },
+  "LIPOGENIC_S1": {
+   "n_present": 20,
+   "n_declared": 20,
+   "median": 0.106,
+   "perm_p": 0.6825,
+   "loo_min": -0.008,
+   "loo_max": 0.296,
+   "frac_up": 0.9,
+   "per_gene": {
+    "Hmgcs1": 0.244,
+    "Hmgcr": 0.337,
+    "Mvk": 0.037,
+    "Pmvk": 0.1,
+    "Mvd": 0.112,
+    "Idi1": 0.062,
+    "Fdps": 0.184,
+    "Fdft1": 0.264,
+    "Sqle": 0.245,
+    "Lss": -0.129,
+    "Cyp51": 0.089,
+    "Msmo1": 0.109,
+    "Nsdhl": 0.191,
+    "Hsd17b7": 0.104,
+    "Sc5d": 0.025,
+    "Dhcr7": 0.042,
+    "Dhcr24": -0.004,
+    "Ldlr": 0.238,
+    "Insig1": 0.189,
+    "Srebf2": 0.075
+   },
+   "missing": [],
+   "status": "OK"
+  }
+ },
+ "CTX": {
+  "OPC": {
+   "n_present": 5,
+   "n_declared": 5,
+   "median": -0.087,
+   "perm_p": 0.3333,
+   "loo_min": -0.151,
+   "loo_max": -0.023,
+   "frac_up": 0.2,
+   "per_gene": {
+    "Pdgfra": -0.283,
+    "Cspg4": -0.004,
+    "Ptprz1": -0.19,
+    "Cspg5": -0.087,
+    "Vcan": 0.011
+   },
+   "missing": [],
+   "status": "OK"
+  },
+  "COMMITTED_NEWLY_FORMED": {
+   "n_present": 6,
+   "n_declared": 7,
+   "median": -0.233,
+   "perm_p": 0.1032,
+   "loo_min": -0.342,
+   "loo_max": -0.077,
+   "frac_up": 0.33,
+   "per_gene": {
+    "Gpr17": 0.031,
+    "Neu4": 0.224,
+    "Bcas1": -0.667,
+    "Enpp6": -0.464,
+    "Itpr2": -0.099,
+    "Tcf7l2": -0.367
+   },
+   "missing": [
+    "Tmem2"
+   ],
+   "status": "OK"
+  },
+  "MATURE": {
+   "n_present": 11,
+   "n_declared": 11,
+   "median": -0.46,
+   "perm_p": 0.0317,
+   "loo_min": -0.526,
+   "loo_max": -0.368,
+   "frac_up": 0.09,
+   "per_gene": {
+    "Mbp": -0.746,
+    "Plp1": -0.512,
+    "Mobp": -0.656,
+    "Mog": -0.417,
+    "Mag": -0.233,
+    "Mal": -0.46,
+    "Opalin": -0.36,
+    "Aspa": -0.477,
+    "Ermn": -0.575,
+    "Klk6": 0.112,
+    "Cnp": -0.458
+   },
+   "missing": [],
+   "status": "OK"
+  },
+  "LIPOGENIC_S1": {
+   "n_present": 20,
+   "n_declared": 20,
+   "median": 0.185,
+   "perm_p": 0.1429,
+   "loo_min": 0.085,
+   "loo_max": 0.237,
+   "frac_up": 0.9,
+   "per_gene": {
+    "Hmgcs1": 0.385,
+    "Hmgcr": 0.54,
+    "Mvk": -0.004,
+    "Pmvk": 0.121,
+    "Mvd": 0.47,
+    "Idi1": 0.055,
+    "Fdps": 0.028,
+    "Fdft1": 0.305,
+    "Sqle": 0.307,
+    "Lss": -0.207,
+    "Cyp51": 0.069,
+    "Msmo1": 0.261,
+    "Nsdhl": 0.263,
+    "Hsd17b7": 0.318,
+    "Sc5d": 0.084,
+    "Dhcr7": 0.076,
+    "Dhcr24": 0.203,
+    "Ldlr": 0.352,
+    "Insig1": 0.168,
+    "Srebf2": 0.158
+   },
+   "missing": [],
+   "status": "OK"
+  }
+ },
+ "PFC": {
+  "OPC": {
+   "n_present": 5,
+   "n_declared": 5,
+   "median": 0.119,
+   "perm_p": 0.1587,
+   "loo_min": 0.053,
+   "loo_max": 0.194,
+   "frac_up": 0.8,
+   "per_gene": {
+    "Pdgfra": 0.019,
+    "Cspg4": 0.251,
+    "Ptprz1": 0.119,
+    "Cspg5": -0.085,
+    "Vcan": 0.273
+   },
+   "missing": [],
+   "status": "OK"
+  },
+  "COMMITTED_NEWLY_FORMED": {
+   "n_present": 6,
+   "n_declared": 7,
+   "median": 0.087,
+   "perm_p": 0.2778,
+   "loo_min": 0.047,
+   "loo_max": 0.108,
+   "frac_up": 0.5,
+   "per_gene": {
+    "Gpr17": 0.369,
+    "Neu4": 0.352,
+    "Bcas1": -0.511,
+    "Enpp6": -0.223,
+    "Itpr2": 0.231,
+    "Tcf7l2": -0.056
+   },
+   "missing": [
+    "Tmem2"
+   ],
+   "status": "OK"
+  },
+  "MATURE": {
+   "n_present": 11,
+   "n_declared": 11,
+   "median": -0.621,
+   "perm_p": 0.0317,
+   "loo_min": -0.74,
+   "loo_max": -0.462,
+   "frac_up": 0.0,
+   "per_gene": {
+    "Mbp": -0.604,
+    "Plp1": -0.564,
+    "Mobp": -0.628,
+    "Mog": -0.621,
+    "Mag": -0.368,
+    "Mal": -0.65,
+    "Opalin": -0.754,
+    "Aspa": -0.656,
+    "Ermn": -0.727,
+    "Klk6": -0.338,
+    "Cnp": -0.495
+   },
+   "missing": [],
+   "status": "OK"
+  },
+  "LIPOGENIC_S1": {
+   "n_present": 20,
+   "n_declared": 20,
+   "median": 0.133,
+   "perm_p": 0.2619,
+   "loo_min": 0.079,
+   "loo_max": 0.187,
+   "frac_up": 0.85,
+   "per_gene": {
+    "Hmgcs1": 0.296,
+    "Hmgcr": 0.6,
+    "Mvk": -0.093,
+    "Pmvk": 0.018,
+    "Mvd": 0.498,
+    "Idi1": 0.049,
+    "Fdps": -0.14,
+    "Fdft1": 0.108,
+    "Sqle": 0.219,
+    "Lss": -0.184,
+    "Cyp51": 0.069,
+    "Msmo1": 0.151,
+    "Nsdhl": 0.175,
+    "Hsd17b7": 0.248,
+    "Sc5d": 0.186,
+    "Dhcr7": 0.113,
+    "Dhcr24": 0.114,
+    "Ldlr": 0.369,
+    "Insig1": 0.104,
+    "Srebf2": 0.181
+   },
+   "missing": [],
+   "status": "OK"
+  }
+ }
+}

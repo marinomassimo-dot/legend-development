@@ -1,0 +1,20 @@
+CB: libraries ['CB_WT/WT_M3', 'CB_WT/WT_M2', 'CB_WT/WT_F5', 'CB_WT/WT_F4', 'CB_P47T/P47T_M6', 'CB_P47T/P47T_F8', 'CB_P47T/P47T_F10']; genes kept 14791; global median log2FC 0.008
+CB OPC: 5/5 genes, median -0.246, perm p 0.029, LOO [-0.291,-0.144], missing []
+CB COMMITTED_NEWLY_FORMED: 6/7 genes, median +0.183, perm p 0.229, LOO [+0.028,+0.282], missing ['Tmem2']
+CB MATURE: 11/11 genes, median +0.500, perm p 0.029, LOO [+0.304,+0.633], missing []
+CB LIPOGENIC_S1: 20/20 genes, median +0.274, perm p 0.029, LOO [+0.227,+0.299], missing []
+HPC: libraries ['HPC_WT/WT_M3', 'HPC_WT/WT_M2', 'HPC_WT/WT_M1', 'HPC_WT/WT_F5', 'HPC_WT/WT_F4', 'HPC_P47T/P47T_M7', 'HPC_P47T/P47T_M6', 'HPC_P47T/P47T_F9', 'HPC_P47T/P47T_F8', 'HPC_P47T/P47T_F10']; genes kept 15104; global median log2FC 0.001
+HPC OPC: 5/5 genes, median -0.072, perm p 0.579, LOO [-0.125,+0.031], missing []
+HPC COMMITTED_NEWLY_FORMED: 6/7 genes, median -0.130, perm p 0.524, LOO [-0.214,+0.041], missing ['Tmem2']
+HPC MATURE: 11/11 genes, median -0.194, perm p 0.476, LOO [-0.349,-0.068], missing []
+HPC LIPOGENIC_S1: 20/20 genes, median +0.106, perm p 0.683, LOO [-0.008,+0.296], missing []
+CTX: libraries ['CTX_WT/WT_M3', 'CTX_WT/WT_M2', 'CTX_WT/WT_M1', 'CTX_WT/WT_F5', 'CTX_WT/WT_F4', 'CTX_P47T/P47T_M7', 'CTX_P47T/P47T_M6', 'CTX_P47T/P47T_F9', 'CTX_P47T/P47T_F8', 'CTX_P47T/P47T_F10']; genes kept 15388; global median log2FC -0.016
+CTX OPC: 5/5 genes, median -0.087, perm p 0.333, LOO [-0.151,-0.023], missing []
+CTX COMMITTED_NEWLY_FORMED: 6/7 genes, median -0.233, perm p 0.103, LOO [-0.342,-0.077], missing ['Tmem2']
+CTX MATURE: 11/11 genes, median -0.460, perm p 0.032, LOO [-0.526,-0.368], missing []
+CTX LIPOGENIC_S1: 20/20 genes, median +0.185, perm p 0.143, LOO [+0.085,+0.237], missing []
+PFC: libraries ['PFC_WT/WT_M3', 'PFC_WT/WT_M2', 'PFC_WT/WT_M1', 'PFC_WT/WT_F5', 'PFC_WT/WT_F4', 'PFC_P47T/P47T_M7', 'PFC_P47T/P47T_M6', 'PFC_P47T/P47T_F9', 'PFC_P47T/P47T_F8', 'PFC_P47T/P47T_F10']; genes kept 15002; global median log2FC -0.014
+PFC OPC: 5/5 genes, median +0.119, perm p 0.159, LOO [+0.053,+0.194], missing []
+PFC COMMITTED_NEWLY_FORMED: 6/7 genes, median +0.087, perm p 0.278, LOO [+0.047,+0.108], missing ['Tmem2']
+PFC MATURE: 11/11 genes, median -0.621, perm p 0.032, LOO [-0.740,-0.462], missing []
+PFC LIPOGENIC_S1: 20/20 genes, median +0.133, perm p 0.262, LOO [+0.079,+0.187], missing []
