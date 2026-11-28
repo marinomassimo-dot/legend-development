@@ -71,6 +71,8 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      in a throwaway shared clone of the remote tip, and only a failing test line that is not there refuses (a suite already red on the tip prints `PRE-EXISTING RED` with the failing tests and the push goes on, the §21d wording "turns no green
      suite red"). A selection that cannot be built is said and does not refuse. `--no-landing-suites` (with `--serialize`) skips them and adds an empty commit carrying the trailer `Landing-Suites: skipped
      (--no-landing-suites)`, so the skip is in the published history. This holds the landing lock for as long as the suites take (95 s for an 8-suite selection on 2026-11-25). A selection is not the release battery.
+     A publisher that has to WAIT for the lock first runs the selected short suites (release surface, structured data, documented commands) on its own HEAD against the merge base with the tracking ref, and a red one
+     refuses it before it takes the lock (2026-11-28: five suite-red refusals in four days, each after a wait). The full selection still runs under the lock.
 
   14. Concurrent checks (THE DEFAULT under `--serialize`, 2026-11-25, ADV): the view checks, the gate and the landing suites start together instead of one after another. The gate reads the live worktree, so the
      suites do not run in it: they run in a throwaway clone of the commit being gated (`git clone --no-hardlinks`, only `files/` hard-linked when the checkout has one), removed by this tool on success, refusal,
@@ -548,6 +550,26 @@ def checks(remote: str, base: str, sha: str, landing: bool, parallel: bool) -> s
     return ""
 
 
+# 2026-11-28 (HE): the suites behind the five suite-red refusals of 2026-11-25..28, each of which had first waited in the queue (154-336 s) and held the lock (up to 156 s).
+# Together about 50 s. Run only by a publisher that has to wait anyway; the full selection still runs under the lock on the merged tip.
+EARLY_SUITES = ("scripts/test_release_surface.py", "scripts/test_structured_data_integrity.py", "scripts/test_documented_commands.py")
+
+
+def early_check(remote: str, branch: str) -> str:
+    """The selected EARLY_SUITES on HEAD while another publisher has the lock: '' when nothing is turned red or nothing can be judged, else the refusal. No fetch: a waiter that fetched could
+    collide with the holder's fetch on the shared refs, so the base is the merge base with the tracking ref as it stands."""
+    known = run("git", "rev-parse", "--verify", "--quiet", f"refs/remotes/{remote}/{branch}").stdout.strip()
+    base = run("git", "merge-base", known, "HEAD").stdout.strip() if known else ""
+    picked = [e for e in (landing_selection(base) or []) if e.split()[0] in EARLY_SUITES] if base else []
+    if not picked:
+        return ""
+    started = time.time()
+    print(f"EARLY CHECK while waiting: {len(picked)} of the landing suites on HEAD", flush=True)
+    refusal = landing_check(base, picked, ROOT)
+    print(f"EARLY CHECK {'RED' if refusal else 'passed'} after {time.time() - started:.0f}s", flush=True)
+    return refusal and (refusal + "\nSaid by the early check, before the lock. If the failure needs commits of the remote tip that you have not merged, merge it and run safe_push again.")
+
+
 def fail(msg: str) -> int:
     print(f"REFUSED: {msg}", file=sys.stderr)
     return 1
@@ -664,6 +686,10 @@ def main(argv: list[str]) -> int:
             if not waited:
                 print(f"waiting for the landing lock {lock_path}: queue position {pos} of {n}" + (" (another publisher is gating)" if pos <= 1 else ""), flush=True)
                 waited = True
+                red = early_check(remote, branch) if landing else ""
+                if red:
+                    return fail(red)
+                continue      # the lock may have come free while the early check ran
             if lock_timeout is not None and time.time() - t0 > lock_timeout:
                 return fail(f"the landing lock was not free within {lock_timeout}s. Nothing was gated or pushed.")
             time.sleep(2)

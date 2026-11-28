@@ -1,0 +1,11 @@
+figure	phase_or_age	state_or_endpoint	value_at_tick	y_zero	y_tick	vehicle_y	suvorexant_y
+5A	dark	wake	80	256	31	84	74
+5B	dark	nrem	80	256	31	156	168
+5C	dark	rem	25	544	319	519	510
+5A	light	wake	80	256	31	182	190
+5B	light	nrem	80	256	31	73	78
+5C	light	rem	25	544	319	471	429
+5A	24h	wake	80	256	31	133	132
+5B	24h	nrem	80	256	31	115	123
+5C	24h	rem	25	544	319	495	470
+6A	6weeks	seizures_per_week	50	252	30	199	211
