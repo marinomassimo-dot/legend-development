@@ -375,6 +375,33 @@ class ADeclaredSurfaceWithNoHeader(ToyRepo):
         self.assertEqual(0, report.exit_code)
 
 
+class ASealedStaleSurfaceDoesNotHoldTheOthersBack(ADeclaredSurfaceWithNoHeader):
+    """2026-11-28: the DisMech sidecar was stale on main, and the whole regeneration stopped at it, so every receipt landing left coverage and reading state behind (CI red)."""
+
+    def test_the_other_surfaces_are_committed_and_the_sealed_one_is_still_reported(self):
+        sealed = {k: ctf.Generator(inputs=g.inputs, check=g.check, regenerate=g.regenerate, surfaces=g.surfaces, auto_regenerate=False) for k, g in SEALED_DECLARATION.items()}
+        with mock.patch.dict(ctf.GENERATORS, sealed):
+            before = (self.repo / SEALED).read_bytes()
+            self.write(INPUT, "beta\n")
+            self.commit("input only", INPUT)
+            head = git(self.repo, "rev-parse", "HEAD")
+            with self.assertRaises(ctf.RegenerationError) as caught:
+                ctf.regenerate_and_commit(self.repo)
+            self.assertIn("break a seal", str(caught.exception))
+            self.assertIn(SEALED, str(caught.exception))
+            self.assertIn("regenerated and committed: " + SURFACE, str(caught.exception))
+            self.assertNotEqual(git(self.repo, "rev-parse", "HEAD"), head)
+            self.assertEqual(git(self.repo, "show", "--name-only", "--format=", "HEAD").split(), [SURFACE])
+            self.assertEqual(git(self.repo, "status", "--porcelain"), "")
+            self.assertEqual((self.repo / SEALED).read_bytes(), before)
+            # with only the sealed surface left, nothing is committed and it is still said
+            head = git(self.repo, "rev-parse", "HEAD")
+            with self.assertRaises(ctf.RegenerationError) as caught:
+                ctf.regenerate_and_commit(self.repo)
+            self.assertIn("nothing else was stale", str(caught.exception))
+            self.assertEqual(git(self.repo, "rev-parse", "HEAD"), head)
+
+
 class RegenerationCommitsItsCompanions(ToyRepo):
     """CI #2353 (2026-11-25): a generator that also rewrites a file nobody declared must have it committed with its surface; a file somebody else left modified elsewhere is not taken."""
 
