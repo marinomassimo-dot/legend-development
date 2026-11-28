@@ -12,3 +12,5 @@
 **Replay.** The crossover's reported mean NEFA difference is 376 µmol/L, or +49.54% relative to placebo. `python3 -c 'print(1135-759, round(100*(1135/759-1), 2))'`. This is arithmetic on reported means, with no paired error estimate or adjustment.
 
 **Checkpoint.** Quantify parent-derived labeling and NAD redox state separately from absolute pool size. At fixed extracellular fatty-acid delivery, a prompt rise in parent-derived NAD followed by respiratory and evoked recovery would strengthen a precursor mechanism. Improvement that depends on the NEFA trajectory or persists without labeled NAD after demonstrated local parent exposure would favor altered substrate supply or another mechanism. Recover clinical and cell assay timing, exact assay denominators, the presence or absence of labelled NAD, and direct free neural exposure in the next primary-source pass.
+
+**Full-text correction.** The McDonald primary endpoint uses eight paired usable muscle NAD measurements. Table 2 and the Results give the IQR as −0.06 to +0.02 µmol/g. The larger upper value above was printed in the abstract. [Audited findings](README.md)
