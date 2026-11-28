@@ -1,0 +1,61 @@
+# ADV-312 dated searches (Europe PMC REST search, plain request, 2026-11-28; no identifier sent). Queries 1 to 12 are the frozen maximum; the Tyro3 lookup below is one extra check for an open copy of a named candidate (Blades 2022), not a search of the literature.
+
+Q1 [2026-11-28] hits=1 | (TITLE_ABS:"compound action potential" AND TITLE_ABS:"g-ratio") AND (TITLE_ABS:mice OR TITLE_ABS:mouse OR TITLE_ABS:rat)
+Q2 [2026-11-28] hits=20 | (TITLE_ABS:"optic nerve" AND TITLE_ABS:"compound action potential" AND (TITLE_ABS:"electron microscopy" OR TITLE_ABS:"myelinated axons" OR TITLE_ABS:"myelin thickness"))
+Q3 [2026-11-28] hits=3 | (TITLE_ABS:"corpus callosum" AND TITLE_ABS:"compound action potential" AND (TITLE_ABS:"electron microscopy" OR TITLE_ABS:"g-ratio" OR TITLE_ABS:"myelinated axons"))
+Q4 [2026-11-28] hits=3 | (TITLE_ABS:"conduction velocity" AND TITLE_ABS:hypomyelination AND (TITLE_ABS:"optic nerve" OR TITLE_ABS:callosum OR TITLE_ABS:"white matter") AND (TITLE_ABS:mice OR TITLE_ABS:rat))
+Q5 [2026-11-28] hits=2 | (TITLE_ABS:cuprizone AND TITLE_ABS:"compound action potential" AND (TITLE_ABS:"electron microscopy" OR TITLE_ABS:g-ratio OR TITLE_ABS:"myelinated"))
+Q6 [2026-11-28] hits=4 | (TITLE_ABS:remyelination AND TITLE_ABS:"conduction velocity" AND (TITLE_ABS:"electron microscopy" OR TITLE_ABS:"g-ratio") AND (TITLE_ABS:mice OR TITLE_ABS:rat))
+Q7 [2026-11-28] hits=0 | (TITLE_ABS:"callosal" AND TITLE_ABS:"conduction velocity" AND TITLE_ABS:myelin AND (TITLE_ABS:knockout OR TITLE_ABS:mutant OR TITLE_ABS:conditional))
+Q8 [2026-11-28] hits=4 | (TITLE_ABS:"optic nerve" AND TITLE_ABS:"conduction velocity" AND TITLE_ABS:myelin AND (TITLE_ABS:knockout OR TITLE_ABS:mutant OR TITLE_ABS:conditional OR TITLE_ABS:deletion))
+Q9 [2026-11-28] hits=0 | (TITLE_ABS:oligodendrocyte AND TITLE_ABS:"compound action potential" AND (TITLE_ABS:"myelin thickness" OR TITLE_ABS:"g-ratio" OR TITLE_ABS:"myelinated axons") AND TITLE_ABS:conditional)
+Q10 [2026-11-28] hits=4 | (TITLE_ABS:"white matter" AND TITLE_ABS:"compound action potential" AND TITLE_ABS:"myelinated axons" AND (TITLE_ABS:mice OR TITLE_ABS:rats))
+Q11 [2026-11-28] hits=8 | (TITLE_ABS:shiverer OR TITLE_ABS:"Mbp" OR TITLE_ABS:"myelin-deficient" OR TITLE_ABS:dysmyelinating) AND TITLE_ABS:"compound action potential" AND (TITLE_ABS:"optic nerve" OR TITLE_ABS:callosum OR TITLE_ABS:"spinal cord")
+Q12 [2026-11-28] hits=3 | (TITLE_ABS:myelin AND TITLE_ABS:"compound action potential" AND (TITLE_ABS:"g-ratio" OR TITLE_ABS:"myelinated axon density" OR TITLE_ABS:"percentage of myelinated" OR TITLE_ABS:"myelin sheath thickness") AND (TITLE_ABS:mice OR TITLE_ABS:rats) AND PUB_YEAR:[2005 TO 2026])
+
+# Hits listed for screening (pmid | year | title | authors), as returned
+   - | 2021 | Clemastine induces an impairment in developmental myelination | Palma A, Chara JC, Otxoa-Ameza | 
+   10341229 | 1999 | Mice deficient for tenascin-R display alterations of the extracellular matrix and decreased axonal conduction  | Weber P, Bartsch U, Rasband MN | 
+   10460258 | 1999 | Dependence of nodal sodium channel clustering on paranodal axoglial contact in the developing CNS. | Rasband MN, Peles E, Trimmer J | 
+   11746409 | 2001 | Metabolic substrates other than glucose support axon function in central white matter. | Brown AM, Wender R, Ransom BR. | 
+   12151541 | 2002 | Remyelination of the rat spinal cord by transplantation of identified bone marrow stromal cells. | Akiyama Y, Radtke C, Kocsis JD | 
+   12805291 | 2003 | Kv3.1b is a novel component of CNS nodes. | Devaux J, Alcaraz G, Grinspan  | 
+   1313081 | 1992 | Tertiary and quaternary local anesthetics protect CNS white matter from anoxic injury at concentrations that d | Stys PK, Ransom BR, Waxman SG. | 
+   15869936 | 2005 | Structural and functional alterations of spinal cord axons in adult Long Evans Shaker (LES) dysmyelinated rats | Eftekharpour E, Karimi-Abdolre | 
+   16148269 | 2006 | Fructose supports energy metabolism of some, but not all, axons in adult mouse optic nerve. | Allen L, Anderson S, Wender R, | 
+   16360123 | 2006 | Developmental impairment of compound action potential in the optic nerve of myelin mutant taiep rats. | Roncagliolo M, Schlageter C, L | 
+   17551984 | 2007 | Coherent anti-Stokes Raman scattering imaging of myelin degradation reveals a calcium-dependent pathway in lys | Fu Y, Wang H, Huff TB, Shi R,  | 
+   19938170 | 2009 | Glutamate receptor-mediated ischemic injury of premyelinated central axons. | Alix JJ, Fern R. | 
+   20034518 | 2010 | Modular double sucrose gap apparatus for improved recording of compound action potentials from rat and mouse s | Velumian AA, Wan Y, Samoilova  | 
+   20422334 | 2010 | Morphological and electrophysiological characterization of the adult Siberian hamster optic nerve. | James EL, Peacock VA, Ebling F | 
+   20858739 | 2010 | Oestrogen receptor beta ligand: a novel treatment to enhance endogenous functional remyelination. | Crawford DK, Mangiardi M, Song | 
+   21179073 | 2011 | Anaerobic function of CNS white matter declines with age. | Hamner MA, Möller T, Ransom BR | 
+   2174135 | 1990 | Electrogenic pump (Na+/K(+)-ATPase) activity in rat optic nerve. | Gordon TR, Kocsis JD, Waxman S | 
+   22246880 | 2012 | Chronic nerve compression alters Schwann cell myelin architecture in a murine model. | Gupta R, Nassiri N, Hazel A, B | 
+   2241117 | 1990 | Anoxic injury of mammalian central white matter: decreased susceptibility in myelin-deficient optic nerve. | Waxman SG, Davis PK, Black JA, | 
+   2314474 | 1990 | Retinofugal fibres change conduction velocity and diameter between the optic nerve and tract in ferrets. | Baker GE, Stryker MP. | 
+   23311751 | 2013 | Attenuation of corpus callosum axon myelination and remyelination in the absence of circulating sex hormones. | Patel R, Moore S, Crawford DK, | 
+   23633387 | 2013 | Glycogen function in adult central and peripheral nerves. | Evans RD, Brown AM, Ransom BR. | 
+   24065807 | 2013 | Optic nerve inflammation and demyelination in a rodent model of nonarteritic anterior ischemic optic neuropath | Slater BJ, Vilson FL, Guo Y, W | 
+   2428038 | 1986 | Ca2+- and K+-dependent communication between central nervous system myelinated axons and oligodendrocytes reve | Lev-Ram V, Grinvald A. | 
+   24997240 | 2014 | Functional correlates of central white matter maturation in perinatal period in rabbits. | Drobyshevsky A, Jiang R, Derri | 
+   27614087 | 2017 | Preferential conduction block of myelinated axons by nitric oxide. | Shrager P, Youngman M. | 
+   29859880 | 2018 | A stable and easily reproducible model of focal white matter demyelination. | Luo Q, Ding L, Zhang N, Jiang  | 
+   30143572 | 2018 | Experimental Traumatic Brain Injury Identifies Distinct Early and Late Phase Axonal Conduction Deficits of Whi | Marion CM, Radomski KL, Cramer | 
+   30703503 | 2019 | Functional Effects of Cuprizone-Induced Demyelination in the Presence of the mTOR-Inhibitor Rapamycin. | Yamate-Morgan H, Lauderdale K, | 
+   31318166 | 2019 | Mouse Nr2f1 haploinsufficiency unveils new pathological mechanisms of a human optic atrophy syndrome. | Bertacchi M, Gruart A, Kaimaki | 
+   32894170 | 2020 | Alterations of peripheral nerve excitability in an experimental autoimmune encephalomyelitis mouse model for m | Teixeira NB, Picolo G, Giardin | 
+   35372341 | 2022 | Clemastine Induces an Impairment in Developmental Myelination. | Palma A, Chara JC, Montilla A, | 
+   35441271 | 2022 | White matter tract conductivity is resistant to wide variations in paranodal structure and myelin thickness ac | Blades F, Chambers JD, Aumann  | 
+   37364629 | 2023 | Loss of optic nerve oligodendrocytes during maturation alters retinal organization. | Balraj A, Clarkson-Paredes C,  | 
+   37821228 | 2023 | Motor Activity-Induced White Matter Repair in White Matter Stroke. | Marin MA, Gleichman AJ, Wei X, | 
+   40433608 | 2025 | The ROX@PDA@PCL vascularized bionic nerve conduit facilitates the restoration of nerve defects. | Lin D, Peng J, Zhang Y, Wang X | 
+   42206668 | 2026 | Early Myelination Supports the Establishment of Consistent Handedness. | Moore S, Subramanian S, Meschk | 
+   4817349 | 1974 | Axon numbers and distribution, myelin thickness, and the reconstruction of the compound action potential in th | Tapp RL. | 
+   641234 | 1978 | The optic nerve of the brush-tailed possum, Trichosurus vulpecula: fibre diameter spectrum and conduction late | Freeman B, Watson CR. | 
+   681556 | 1978 | Myelin sheath thickness and conduction latency groups in the cat optic nerve. | Freeman B. | 
+   8050031 | 1994 | Anoxic injury of rat optic nerve: ultrastructural evidence for coupling between Na+ influx and Ca(2+)-mediated | Waxman SG, Black JA, Ransom BR | 
+   8108457 | 1993 | Action potential conduction and sodium channel content in the optic nerve of the myelin-deficient rat. | Utzschneider DA, Thio C, Sonth | 
+   8834390 | 1996 | Correlation between electrophysiological effects of mexiletine and ischemic protection in central nervous syst | Stys PK, Lesiuk H. | 
+
+# Extra check 2026-11-28: Europe PMC 'Tyro3 AND (myelin OR conductivity OR paranod*)': 464 hits; no open copy of Blades 2022 (PMID 35441271, isOpenAccess N, no PMCID)
