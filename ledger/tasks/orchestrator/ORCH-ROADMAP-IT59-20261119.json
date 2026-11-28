@@ -664,10 +664,12 @@
     },
     {
      "step": "IT32: apply ADV-accepted K1'-K3' (after HE ADV-315 re-read) to INV-06 next_test, clemastine callosal_propagation and sobetirome note, regenerate ranking and views, land; consume SCI ADV-314; write IT30+IT31 self-evaluation, capability scout, takeaways; one CI look per SHA",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV decision 2026-11-28 in the IT32 dispatch; CHECKPOINT_IT_20261128_5.md section 2",
-     "accepted_at": "2026-11-28T10:19:18Z"
+     "accepted_at": "2026-11-28T10:19:18Z",
+     "evidence": "bf55f66e75 (K1'-K3' and ADV-314 consumers, ranking, views); BATCH_20261128_006 CI repair; session_evaluations for IT30, IT31, IT32; checkpoint IT_20261128_6",
+     "updated_at": "2026-11-28T11:23:36Z"
     }
    ]
   }
