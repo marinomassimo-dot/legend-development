@@ -853,3 +853,5 @@
 {"evidence": "SendMessage 2026-11-28 with task text; line reconstructed by ADV 2026-11-28T16:20Z after an overwrite of the unpublished log (receipt from the send result; utc approximate)", "id": "ADV-335", "receipt": ["efedfc2e-7d4e-4a1e-b1c2-2a6f078c6d3d"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 1eb17530"], "utc": "2026-11-28T16:05:30Z"}
 {"assessment": "HOST", "id": "ADV-336", "key": "wwox-antibody-control-panels-blind-image-read-he", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-28T16:17:24Z"}
 {"evidence": "SendMessage 2026-11-28 with task text", "id": "ADV-336", "receipt": ["f3269d67-315a-47f1-b00e-b2f55ddbc3f2"], "state": "SENT", "to": ["HE - CURRENT c72e94ee"], "utc": "2026-11-28T16:18:09Z"}
+{"assessment": "HOST", "id": "ADV-337", "key": "repudi2021-complete-read-consuming-sentences-it", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-28T16:32:51Z"}
+{"evidence": "SendMessage 2026-11-28 with task text", "id": "ADV-337", "receipt": ["5650b67d-6523-4b02-98e0-37bcbcb3c02e"], "state": "SENT", "to": ["IT Orchestrator - CURRENT c817e528"], "utc": "2026-11-28T16:33:41Z"}
