@@ -36,7 +36,7 @@ class TheTwoFalseJoins(unittest.TestCase):
         self.root = fixture(tmp.name)
 
     def found(self, key, old_rule=False):
-        names = cc.consumers([key], cc.registry_ids(self.root), cc.units(self.root, old_rule), old_rule)[key]
+        names = cc.consumers([key], cc.terms_of(self.root, old_rule), cc.units(self.root, old_rule), old_rule)[key]
         return [name.split(":", 2)[2].split(" —")[0] for name in names]
 
     def test_a_placeholder_number_does_not_join_the_registry_paper(self):
@@ -55,6 +55,32 @@ class TheTwoFalseJoins(unittest.TestCase):
         claim = self.root / cc.MODEL / "registries" / "claim_registry_current.md"
         claim.write_text("## CLAIM 001\ndoi 10.1000/ABC.5\n", encoding="utf-8")
         self.assertEqual(self.found("10.1000/abc.5"), ["CLAIM 001"])
+
+
+class TheTwoAdv297Joins(unittest.TestCase):
+    """SCI, 2026-11-28: PAPER 055's note mentions the PMID of a corpus record to say it is NOT the lineage, and a ledger line cites that record by PMCID only."""
+    setUp = TheTwoFalseJoins.setUp
+    found = TheTwoFalseJoins.found
+
+    def test_a_prose_note_that_says_identifier_gives_the_record_no_pmid(self):
+        registry = self.root / cc.MODEL / "registries" / "paper_registry_current.md"
+        registry.write_text("## PAPER 055 — source\n**Identifier:** PMID 35716775\n**Note:** `CORPUS P376` (PMID 25662954) is not the lineage; its Identifier differs.\n",
+                            encoding="utf-8")
+        claim = self.root / cc.MODEL / "registries" / "claim_registry_current.md"
+        claim.write_text("## CLAIM 024 — x\nSource: PAPER 055.\n", encoding="utf-8")
+        self.assertEqual(self.found("25662954"), [])
+        self.assertEqual(self.found("35716775"), ["CLAIM 024"])
+
+    def test_a_citation_by_pmcid_joins_the_study_of_the_record_that_pairs_them(self):
+        registry = self.root / cc.MODEL / "registries" / "paper_registry_current.md"
+        registry.write_text("## CORPUS P376\n**Identifier:** PMID 25662954 / PMC4374002 / DOI 10.1177/1535370214561586\n"
+                            "## CORPUS P377\n**Identifier:** PMID 11111111 / PMID 22222222 / PMC9999999\n", encoding="utf-8")
+        ledger = self.root / cc.MODEL / "research" / "discovery_ledger_current.md"
+        ledger.write_text("### DL-MECH-001 — map\n- the map (PMC4374002).\n\n### DL-MECH-002 — other\n- PMC43740020 and PMC9999999.\n", encoding="utf-8")
+        self.assertEqual(self.found("25662954"), ["DL-MECH-001"])
+        self.assertEqual(self.found("10.1177/1535370214561586"), ["DL-MECH-001"])
+        self.assertEqual(self.found("25662954", old_rule=True), [])
+        self.assertEqual(self.found("11111111"), [])      # two PMIDs on one line: which one the PMCID names is not known
 
 
 if __name__ == "__main__":

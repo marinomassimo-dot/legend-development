@@ -1532,6 +1532,15 @@
      "source": "files/coordination/adv-codex-loop/HE_TOKEN_YIELD_PILOT_20261128.md",
      "accepted_at": "2026-11-26T18:39:33Z",
      "authorised_by": "Operator instruction 2026-11-26: take the HE pilot at the Claude Code quota reset using the existing recovery path"
+    },
+    {
+     "step": "safe_push disk rule counts overlapping gate clones (live gates' declared peaks), with a test, no gate bypass, no workflow edit",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "checkpoint_he_20261120/CHECKPOINT_HE_20261128_AA_ADDENDUM.md (sha256 6a8450c1)",
+     "accepted_at": "2026-11-28T05:57:39Z",
+     "evidence": "506b740dd, published as c27737046407 (gate PASS, 8 landing suites, ls-remote); test_safe_push.py class SafePushDiskCountsLiveRuns",
+     "updated_at": "2026-11-28T06:13:35Z"
     }
    ]
   }
@@ -2719,6 +2728,13 @@
    "step_sha256": "f0651909ae5a",
    "reopened_block": false,
    "authorised_by": "Operator instruction 2026-11-26: take the HE pilot at the Claude Code quota reset using the existing recovery path"
+  },
+  {
+   "at": "2026-11-28T05:57:39Z",
+   "source": "checkpoint_he_20261120/CHECKPOINT_HE_20261128_AA_ADDENDUM.md (sha256 6a8450c1)",
+   "step_sha256": "f72f9a0ac0a2",
+   "reopened_block": false,
+   "authorised_by": null
   }
  ],
  "VERIFICATION_EVIDENCE": [
