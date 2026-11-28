@@ -1,0 +1,4 @@
+active_minus_placebo	RRatio_point_difference	ci90_low	ci90_high	p
+CVL-865 25 mg BID vs Placebo	0.11	-10.38	10.61	0.986
+CVL-865 7.5 mg BID vs Placebo	1.42	-9.04	11.87	0.823
+CVL-865 7.5 mg BID / 25 mg BID vs Placebo	0.76	-8.23	9.76	0.888

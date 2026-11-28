@@ -1,0 +1,11 @@
+file	sha256	source	use_and_terms	locator
+NCT02564029.json	a5f2d2615dd48e6b6ce2caf69059aa195817998f59d199c84ba7b5596b0d2d8a	https://clinicaltrials.gov/api/v2/studies/NCT02564029	ClinicalTrials.gov public aggregate facts	outcomeMeasuresModule SPR and complete suppression
+NCT04244175.json	fd5de761001858dc0bccf3002904c99537b1a67e1a75956302866e5a19d1464e	https://clinicaltrials.gov/api/v2/studies/NCT04244175	ClinicalTrials.gov public aggregate facts	participantFlowModule and outcomes RRatio and 50 percent response and adverseEventsModule
+NCT04686786.json	e4c2d56a7d1e6c63a7f4dcc8c74d654449ebeae9a2765f7cb909fb918636e0e8	https://clinicaltrials.gov/api/v2/studies/NCT04686786	ClinicalTrials.gov public aggregate facts	open-label extension TEAE endpoint
+REALIZE-sap.pdf	a87460a50407824662ca4f8dbf120810761ddb784e49d580e3e5ef98696906a2	https://cdn.clinicaltrials.gov/large-docs/75/NCT04244175/SAP_001.pdf	Public sponsor document used for methods and designation only	SAP §§1.1, 4, 5.8.1–5.8.3 and 5.10
+PMC9532903.xml	326439d350c1841e02a73dd86631f5a8ceebc6fc1e7b41651e4f1919d49536e5	https://pmc-oa-opendata.s3.amazonaws.com/PMC9532903.1/PMC9532903.1.xml	CC BY 4.0	Tables 1–2 and Methods §2.6 and Results §3.2
+receptor_inputs.tsv		https://pmc.ncbi.nlm.nih.gov/articles/PMC5786456/	Public article read through PMC; numeric facts only	Table 1 and Clinical data PET and Fig. 9 caption
+registry-search-darigabat.json	0ec2a2d8fc786dba4b128449c6cc6708c18225a6efd16f030dd78a8855f53f7c	https://clinicaltrials.gov/api/v2/studies?query.intr=darigabat&pageSize=50	ClinicalTrials.gov public aggregate facts	identity and age eligibility
+registry-search-CVL-865.json	4e5e32042e8c83348a116b84ca89aae3060579001a392433815eb85e06a38131	https://clinicaltrials.gov/api/v2/studies?query.intr=CVL-865&pageSize=50	ClinicalTrials.gov public aggregate facts	identity and age eligibility
+registry-search-PF-06372865.json	5bfdee8ccf83a2c7675a61af0442819aaef5ddeb036adf74e1ad070eb7a50796	https://clinicaltrials.gov/api/v2/studies?query.intr=PF-06372865&pageSize=50	ClinicalTrials.gov public aggregate facts	identity and age eligibility
+Duveau_Fig1		https://doi.org/10.1111/cns.13046	Public article read at publisher; derived factual summary only	Methods §§2.4–2.6 Results §§3.1–3.4 and Fig. 1 caption

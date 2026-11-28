@@ -1,0 +1,45 @@
+{
+  "investigation": "INV-15",
+  "title": "GABA-A function and binding",
+  "date": "28 November 2026",
+  "summary": "Darigabat as a WWOX ex vivo comparator.",
+  "graph": {
+    "evidence": "Acute EEG response. Focal trial unconfirmed.",
+    "inference": "Binding and potentiation favor different subtypes.",
+    "hypothesis": "Native inhibition can rise with preserved recruitment.",
+    "experiment": "Match engagement. Measure reversal and inhibitory charge."
+  },
+  "evidence": [
+    "Photosensitivity suppression was 6/7 in each active period and 2/7 on placebo. The REALIZE primary differences were +1.42 and +0.11 response-ratio points. Both 90% intervals included zero."
+  ],
+  "inference": [
+    "Human alpha2 construct binding was 16.2-fold weaker and maximum potentiation 6.3-fold higher than alpha1. Global PET occupancy cannot identify native subtype engagement."
+  ],
+  "hypothesis": [
+    "A useful response increases absolute inhibitory charge, reduces later bursts and preserves first recruitment."
+  ],
+  "experiment": [
+    "Compare darigabat with diazepam at matched site engagement and verified exposure. Measure native GABA reversal and test sensitivity to site blockade."
+  ],
+  "limits": [
+    "Conditional ex vivo comparator. Juvenile exposure remains unknown. Dizziness occurred in 10/52 in the higher REALIZE arm and in 4/51 on placebo."
+  ],
+  "sources": [
+    {
+      "label": "Nickolls et al. Receptor Table 1 and PET Fig. 9.",
+      "url": "https://doi.org/10.1111/bph.14119"
+    },
+    {
+      "label": "ClinicalTrials.gov. Photosensitivity crossover results.",
+      "url": "https://clinicaltrials.gov/study/NCT02564029?tab=results"
+    },
+    {
+      "label": "Gurrell et al. Hippocampal discharge Tables 1 and 2.",
+      "url": "https://doi.org/10.1111/cns.13927"
+    },
+    {
+      "label": "ClinicalTrials.gov. REALIZE results and statistical analysis plan.",
+      "url": "https://clinicaltrials.gov/study/NCT04244175?tab=results"
+    }
+  ]
+}

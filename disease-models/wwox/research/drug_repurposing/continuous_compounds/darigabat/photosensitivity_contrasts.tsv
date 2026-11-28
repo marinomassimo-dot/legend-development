@@ -1,0 +1,7 @@
+registry_group_ids	difference_SPR_points	ci90_low	ci90_high
+OG000/OG003	-6.23	-8.60	-3.86
+OG001/OG003	-5.42	-7.78	-3.06
+OG002/OG003	-5.22	-7.60	-2.84
+OG000/OG001	0.81	-1.58	3.20
+OG000/OG002	-1.01	-3.43	1.41
+OG001/OG002	-0.2	-2.56	2.16
