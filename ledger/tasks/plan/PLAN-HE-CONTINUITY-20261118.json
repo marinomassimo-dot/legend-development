@@ -1691,10 +1691,19 @@
     },
     {
      "step": "Put test_trace_claim_foundation.py and other registry-shaped suites into the safe_push landing set with measured run time and a test; add the worktree-removal rule line to the README row; confirm CI run for 66e92e2f (#2855)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad messages 2026-11-28 (landing-set; direction round items 2 and 4)",
-     "accepted_at": "2026-11-28T11:24:31Z"
+     "accepted_at": "2026-11-28T11:24:31Z",
+     "evidence": "615d0775 on main: 8 suites in landing_suites.py on claim/paper registry change, test, README removal rule; CI watch is its own step",
+     "updated_at": "2026-11-28T11:47:09Z"
+    },
+    {
+     "step": "Confirm CI gate runs #2855 (66e92e2f) and #2856 (c977798d) concluded and tell ADV in one line",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad direction 2026-11-28 (CI watch)",
+     "accepted_at": "2026-11-28T11:47:09Z"
     }
    ]
   }
@@ -3006,6 +3015,13 @@
    "at": "2026-11-28T11:24:31Z",
    "source": "ADV a5e6f2ad messages 2026-11-28 (landing-set; direction round items 2 and 4)",
    "step_sha256": "31d53dd4ab7e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T11:47:09Z",
+   "source": "ADV a5e6f2ad direction 2026-11-28 (CI watch)",
+   "step_sha256": "7ce343e2d450",
    "reopened_block": false,
    "authorised_by": null
   }
