@@ -1,0 +1,5 @@
+scenario	normalized_input	near_uptake_per_s	dispersion_per_s	far_loss_per_s	near_tau_ms	near_AUC_normalized_s	far_AUC_normalized_s	normalized_mass_cleared_near
+baseline	1.0	8.0	4.0	4.0	83.33	0.08333	0.08333	0.66667
+greater_near_uptake	1.0	12.0	4.0	4.0	62.50	0.06250	0.06250	0.75000
+greater_dispersion	1.0	8.0	8.0	4.0	62.50	0.06250	0.12500	0.50000
+less_input	0.75	8.0	4.0	4.0	83.33	0.06250	0.06250	0.50000
