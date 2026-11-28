@@ -1,0 +1,28 @@
+S01 <## PAPER 362> ## PAPER 362
+S02 <## PAPER 362> **Short title:** Huang 2016 — IkappaB-alpha, ERK and WWOX in MOLT-4 maturation: overexpression; a fractionation blot without a mitochondrial marker row
+S03 <## PAPER 362> **Authors:** Huang SS, Su WP, Lin HP, Kuo HL, Wei HL, Chang NS
+S04 <## PAPER 362> **Identifier:** PMID 27339895 / PMC5016130 / DOI 10.1074/jbc.M116.716167
+S05 <## PAPER 362> **Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-27339895-01`; manifest `deepdive_manifests/PMID27339895.json`; artefact `files/fulltext/PMID27339895_Huang2016_PMC5016130_wayback20250308.html` (sha256 `56a3abe79449b2e57d06cc19278f4f555ed19ce971e716ff1be78ab910bfb0f7`); coverage limits from the receipt's `coverage` map (not read: supplementary; absent from the source: limitations, tables); the depth is never upgraded from the receipt
+S06 <## PAPER 362> **Primary pathway:** P5 — metabolism / mitochondria / redox
+S07 <## PAPER 362> **Model/species:** human MOLT-4 T-ALL cells;
+S08 <## PAPER 362> **Claim links:** CLAIM 009 (annotation only: the wave note of this batch on the mitochondrial-localisation leg; status and type unchanged)
+S09 <## PAPER 362> **Role:** A nanomolar PMA with ionophore induces CD3 and CD8 in MOLT-4 cells;
+S10 <## PAPER 362> WWOX phospho-site blots show Ser14 up and Tyr33 and Tyr287 down, and WWOX, IkappaB-alpha and ERK are detectable in a mitochondrial fraction, with confocal co-localisation percentages falling after the stimulus (WWOX about 84 to 60 percent, n = 3).
+S11 <## PAPER 362> NOT supported: a WWOX loss-of-function phenotype (every manipulation is overexpression; the rescue shown is one blot pair), a purified mitochondrial compartment (the fractionation blot has no mitochondrial or cytosolic purity marker row), a strong complex (a faint WWOX band in the IkappaB-alpha precipitate), or the function of Ser14 phosphorylation, which the authors call largely unknown (the in vivo peptide experiment is "preliminary" with no data).
+S12 <## PAPER 362> This is the paper behind the pS14 model of the review in PAPER 359, which therefore rests on a blot series in one leukaemia line.
+S13 <## CLAIM 009> **Title:** WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficiency
+S14 <## CLAIM 009> **Pathway:** P5 — metabolism / mitochondria / redox / mitophagy
+S15 <## CLAIM 009> **Summary:** WWOX deficiency appears coherent with ROS increase, energetic inefficiency and mitochondrial quality-control stress.
+S16 <## CLAIM 009> **Source scope (wave 13, 2026-10-04, `CC-20261004W13-C-HIF1A-PANELS-01`):** Baryła 2022 (PMID 35328751), read with its twelve figures and six supplementary figures, measures in one immortalised human skin fibroblast line a glycolytic shift under WWOX depletion (lactate higher in all four oxygen × glucose conditions) and finds the oxidative arm NOT changed by WWOX loss (pyruvate dehydrogenase and citrate synthase activity, Figure 5b and 5e); it measures no ROS, no ATP, no respiration, no membrane potential and no mitochondrial quality-control endpoint on any surface.
+S17 <## CLAIM 009> It supports the glycolysis component of this claim only, not its ROS, energetic-inefficiency or mitochondrial-quality-control components. 🔵 Blind locator audit, 2026-10-04 (`BATCH_20261004_007`): every panel of that paper is **one fibroblast line in engineered WWOX dosage** — CRISPR knockout against scrambled control, lentiviral overexpression against empty vector — with no patient genotype and no WWOX point variant anywhere;
+S18 <## CLAIM 009> **Evidence boundary:** **Wave note (2026-10-20, `CC-20261019-SCIENTISTD-DEBT-01`, `BATCH_20261019_004`, reading debts of the WWOX-direct primaries):** the mitochondrial-localisation leg of the secondary literature this claim can lean on was traced to its primaries.
+S19 <## CLAIM 009> (Zfra, TNF and WOX1) has no mitochondrial measurement and points to a then-submitted paper;
+S20 <## CLAIM 009> (Jurkat cells, 10 micromolar PMA, one confocal field per time point, one siRNA experiment with borderline protection statistics) and [[paper_registry_current#PAPER 362]]
+S21 <## CLAIM 009> (MOLT-4 cells, a fractionation blot without a mitochondrial marker row and confocal co-localisation percentages, n = 3) each report WWOX in or leaving a mitochondrial compartment in one T-leukaemia line under a pharmacological stimulus, with overexpression or dominant-negative constructs and no Wwox-null cell.
+S22 <## CLAIM 009> Nothing read here measures respiration, ROS, ATP or mitophagy after WWOX loss, so the status and the INFERENZA type stand and the leg 'WWOX localises to mitochondria under stress' is carried by single-laboratory leukaemia-line observations.
+S23 <### DL-MECH-156> ### DL-MECH-156 — Antibody specificity for the pS14 model: blot the laboratory-made phospho-site antibodies on a WWOX-null lysate
+S24 <### DL-MECH-156> - **Causal statement:** [[paper_registry_current#PAPER 362]] and [[paper_registry_current#PAPER 359]] rest the Ser14 phosphorylation work on laboratory-made phospho-site antibodies.
+S25 <### DL-MECH-159> ### DL-MECH-159 — Mitochondrial purity controls for WWOX fractions: re-run the MOLT-4 and Jurkat fractionations with a mitochondrial matrix and a cytosolic marker row and a protease-protection step
+S26 <### DL-MECH-159> - **Causal statement:** [[paper_registry_current#PAPER 362]]
+S27 <### DL-MECH-159> (no marker row in the fractionation blot) and [[paper_registry_current#PAPER 361]]
+S28 <### DL-MECH-159> - **Falsifying experiment / counter:** Falsifier: WWOX is a cytosolic contaminant of the mitochondrial pellet.

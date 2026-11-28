@@ -1,0 +1,9 @@
+# Meclizine comparison pretest
+
+Frozen 28 November 2026 UTC after bibliographic triage and before targeted results extraction. Ask whether reducing respiration primes a productive stress response in WWOX-LoF or consumes respiratory and membrane-lipid reserve. Treat receptor-associated changes in cellular workload as a rival. Compare only meclizine. Stereoisomers and lipid manipulations are mechanistic controls.
+
+Require matched local unbound parent, fixed workload and per-preparation baselines. In an age-matched WWOX-LoF versus corrected preparation, separately measure early phosphoethanolamine and CDP-ethanolamine, route-specific new phosphatidylethanolamine, and absolute ATP recovery under matched demand after a defined stress. Lower oxygen use with maintained demand and greater ATP recovery supports productive adaptation. Lower oxygen use plus unchanged or worse ATP recovery, especially with a loss of new membrane phosphatidylethanolamine, supports a reserve cost. A lower oxygen signal whose benefit disappears when demand is held fixed favors a workload effect.
+
+Test whether an intervention that replenishes mitochondrial or membrane phosphatidylethanolamine while leaving phosphoethanolamine elevated rescues late ATP recovery. That response would separate a downstream lipid deficit from the upstream substrate-accumulation phenotype. Resolve both routes and actual lipid pools before using an unchanged total pool to infer preserved synthesis.
+
+Retain only as a conditional ex vivo probe if the source establishes metabolic engagement but juvenile CNS exposure, direction or lipid reserve is open. A measurable WWOX-specific benefit at supported exposure and fixed demand would be required to reconsider priority. Keep acute ischemic prophylaxis distinct from recurrent stress during development.

@@ -1,0 +1,7 @@
+model	pcyt2_RNA_ratio_scenario	etnppl_RNA_ratio_scenario	baseline_disposal_crossover	WT_disposal_fraction_assumed	KO_PEtn_pool_relative	KO_Kennedy_flux_relative	KO_PEtn_with_half_remaining_PCYT2	KO_Kennedy_flux_with_half_remaining_PCYT2
+mouse_cortex	0.659	3.189	0.135	0.05	1.272	0.839	2.115	0.698
+mouse_cortex	0.659	3.189	0.135	0.15	0.963	0.635	1.318	0.435
+mouse_cortex	0.659	3.189	0.135	0.40	0.598	0.395	0.679	0.224
+mouse_hippocampus	0.487	0.617	no crossover in [0,1]	0.05	2.027	0.987	3.816	0.929
+mouse_hippocampus	0.487	0.617	no crossover in [0,1]	0.15	1.975	0.961	3.340	0.813
+mouse_hippocampus	0.487	0.617	no crossover in [0,1]	0.40	1.856	0.904	2.546	0.620

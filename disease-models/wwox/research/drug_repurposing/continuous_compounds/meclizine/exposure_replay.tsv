@@ -1,0 +1,4 @@
+comparison	total_plasma_mean_uM	total_plasma_lower_ci_uM	total_plasma_upper_ci_uM	HEK_nominal_25uM_over_total_plasma_mean	embryonic_neuron_nominal_5uM_over_total_plasma_mean	locator
+phase Ib cohort 1 unadjusted	0.427	0.212	0.639	58.5	11.7	Matsushita Table 5
+phase Ib cohort 2 unadjusted	0.680	0.302	1.056	36.7	7.3	Matsushita Table 5
+phase Ib cohort 2 weight adjusted	0.586	0.338	0.836	42.7	8.5	Matsushita Results PK profile and Fig. 3B
