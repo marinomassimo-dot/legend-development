@@ -1,0 +1,201 @@
+slug	class	quote	note
+cilostazol	RETAINED	Retain as a conditional ex vivo PDE3/cAMP comparator for first myelination and defer systemic pediatric	mixed: RETAINED and deferred/parked priority
+pridopidine	RETAINED	Retain as a conditional ex vivo SIGMAR1 perturbation and defer systemic pediatric WWOX priority	mixed: RETAINED and deferred/parked priority
+meclizine	RETAINED	Retain as a conditional ex vivo metabolic perturbation and defer systemic pediatric WWOX priority	mixed: RETAINED and deferred/parked priority
+clonazepam	RETAINED	Retain as a conditional ex vivo comparator for persistence of reticular gating	mixed: RETAINED and deferred/parked priority
+ceftriaxone	RETAINED	Retain as a conditional ex vivo comparison and defer systemic pediatric WWOX priority	mixed: RETAINED and deferred/parked priority
+mitapivat	RETAINED	Retain as a conditional ex vivo PKM2 comparator and defer systemic pediatric WWOX priority	mixed: RETAINED and deferred/parked priority
+darigabat	RETAINED	Retain as a conditional ex vivo comparator and defer pediatric WWOX priority	mixed: RETAINED and deferred/parked priority
+aminolevulinic_acid	RETAINED	Retain as a conditional metabolic comparator and defer systemic pediatric priority	mixed: RETAINED and deferred/parked priority
+suvorexant	RETAINED	Retain as a conditional sleep-state comparator and defer pediatric WWOX antiseizure priority	mixed: RETAINED and deferred/parked priority
+padsevonil	RETAINED	Retain as a conditional ex vivo comparator and defer systemic pediatric WWOX priority	mixed: RETAINED and deferred/parked priority
+dalfampridine	RETAINED	Retain as a conditional ex vivo propagation probe and defer systemic pediatric WWOX priority	mixed: RETAINED and deferred/parked priority
+dimethylglycine	RETAINED	Retain as a conditional parent-versus-product tracer and defer systemic pediatric WWOX priority	mixed: RETAINED and deferred/parked priority
+montelukast	RETAINED	Retain as a conditional developmental comparator and defer systemic pediatric WWOX priority	mixed: RETAINED and deferred/parked priority
+etifoxine	RETAINED	Retain as a secondary laboratory probe and defer systemic pediatric WWOX priority	mixed: RETAINED and deferred/parked priority
+ketamine	RETAINED	Retain as a targeted comparison of inhibitory output at matched NMDA block	
+clemastine	RETAINED	stays a preclinical comparator	
+alpha_gpc	RETAINED	Retain as a membrane turnover comparator and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+chlorzoxazone	RETAINED	Retain as a conditional SK/BK circuit comparator and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+nervonic_acid	RETAINED	Retain as a conditional C24:1 tracer and precursor comparator, with pediatric WWOX study priority deferred	mixed: RETAINED and deferred/parked priority
+fenofibrate	RETAINED	Retain as a conditional metabolism and circuit probe, with pediatric WWOX study priority deferred	mixed: RETAINED and deferred/parked priority
+amiloride	RETAINED	Keep as a secondary laboratory control for proton-gated current	mixed: RETAINED and deferred/parked priority
+baricitinib	RETAINED	Retain as a conditional laboratory probe and defer pediatric WWOX development	mixed: RETAINED and deferred/parked priority
+felodipine	RETAINED	Retain as a conditional cargo comparator and defer pediatric WWOX development	mixed: RETAINED and deferred/parked priority
+batyl_alcohol	RETAINED	Retain as a local supply comparator and defer systemic pediatric WWOX development	mixed: RETAINED and deferred/parked priority
+fructose_bisphosphate	RETAINED	Retain as a conditional local calcium and metabolic probe	mixed: RETAINED and deferred/parked priority
+istradefylline	RETAINED	Retain as a conditional A2A probe and defer systemic pediatric WWOX priority	mixed: RETAINED and deferred/parked priority
+verapamil	RETAINED	Retain as a conditional exposure and calcium-current comparator	mixed: RETAINED and deferred/parked priority
+huperzine_a	RETAINED	Retain as a conditional cholinergic circuit probe	mixed: RETAINED and deferred/parked priority
+bexarotene	RETAINED	Retain as a conditional donor-versus-recipient lipid probe	mixed: RETAINED and deferred/parked priority
+mefloquine	RETAINED	Retain as a conditional secondary Cx36 probe and defer pediatric repurposing	mixed: RETAINED and deferred/parked priority
+oxytocin	RETAINED	Retain as a stage-specific preclinical probe and defer pediatric WWOX priority	mixed: RETAINED and deferred/parked priority
+geranylgeraniol	RETAINED	Retain as a conditional donor-salvage probe and defer pediatric WWOX priority	mixed: RETAINED and deferred/parked priority
+epalrestat	RETAINED	Retain as a conditional aldose reductase probe and defer pediatric WWOX intervention priority	mixed: RETAINED and deferred/parked priority
+ursolic_acid	RETAINED	Retain as a conditional astrocyte–OPC trophic comparator and defer pediatric WWOX intervention priority	mixed: RETAINED and deferred/parked priority
+methsuximide	RETAINED	Retain the active metabolite MPS as a conditional comparison for state-dependent current suppression	mixed: RETAINED and deferred/parked priority
+l_valine	RETAINED	Retain as a conditional substrate and tracer, with pediatric WWOX intervention priority deferred	mixed: RETAINED and deferred/parked priority
+calcitriol	RETAINED	Retain as a conditional glial VDR comparator and defer pediatric WWOX study priority	mixed: RETAINED and deferred/parked priority
+piracetam	RETAINED	Retain as a conditional circuit comparator and defer pediatric WWOX study priority	mixed: RETAINED and deferred/parked priority
+doxecitine	RETAINED	Retain as a conditional mitochondrial substrate tracer and defer pediatric WWOX study priority	mixed: RETAINED and deferred/parked priority
+carbamazepine	RETAINED	Retain as a conditional comparator and defer pediatric WWOX study priority	mixed: RETAINED and deferred/parked priority
+phenytoin	RETAINED	Retain as a conditional comparator for sodium availability and defer pediatric WWOX study priority	mixed: RETAINED and deferred/parked priority
+diazoxide	RETAINED	Retain as a conditional KATP probe and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+cannabidivarin	RETAINED	Retain as a conditional pharmacology comparator	
+phosphopantetheine	RETAINED	Retain as a conditional substrate-partition probe	
+fosmetpantotenate	RETAINED	Retain as a conditional pantothenate-kinase bypass probe	
+methylene_blue	RETAINED	Retain as a conditional preclinical electron-routing comparator and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+ademetionine	RETAINED	Retain as a conditional methyl-donor probe and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+l_ornithine	PARKED	Park for pediatric WWOX trial priority	
+l_arginine	RETAINED	Retain as a conditional substrate-flux comparator and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+minocycline	RETAINED	Retain as a conditional broad-response comparator and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+n_acetylcysteine_amide	RETAINED	Retain as a conditional preclinical comparator and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+nicotinamide	RETAINED	Retain as a conditional axonal NAD turnover comparator and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+primidone	RETAINED	Retain as a conditional TRPM3 comparator and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+dimethyl_fumarate	RETAINED	Retain as a conditional preclinical comparator and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+metformin	RETAINED	Retain as a conditional AMPK/lipid-synthesis comparator and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+anakinra	RETAINED	Retain as a conditional preclinical IL-1R1 probe and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+olesoxime	RETAINED	Retain as a conditional preclinical stress probe and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+sapropterin	RETAINED	Retain as a conditional preclinical cofactor probe and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+rt001	RETAINED	Retain as a conditional preclinical membrane probe and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+vatiquinone	RETAINED	Retain as a conditional preclinical redox probe and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+pregnenolone	RETAINED	Retain as a conditional C21 precursor probe and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+omaveloxolone	RETAINED	Retain as a conditional NRF2 probe and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+ribitol	RETAINED	Retain as a conditional developmental adhesion probe and defer WWOX clinical priority	mixed: RETAINED and deferred/parked priority
+pregabalin	RETAINED	Retain as a conditional circuit probe and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+sobetirome	RETAINED	Retain as a conditional glial maturation probe and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+zinc_acetate	RETAINED	Retain as a conditional circuit probe and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+l_fucose	RETAINED	Retain as a conditional salvage-pathway probe and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+soticlestat	RETAINED	Keep as an exposure-conditional CYP46A1 comparator and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+fingolimod	RETAINED	Retain as a conditional S1P and injury-response comparator	
+bexicaserin	RETAINED	Keep as an exposure-conditional 5-HT₂C comparator and defer pediatric WWOX trial priority	mixed: RETAINED and PARKED
+tideglusib	RETAINED	Retain as an exposure-conditional, nonselective GSK3 research tool and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+ganaxolone	RETAINED	Retain as a symptomatic antiseizure research comparator	
+relutrigine	RETAINED	Retain as a conditional persistent-current comparator and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+es_481	RETAINED	Keep as a γ8-dependent AMPA comparator and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+clemizole	RETAINED	Retain as an exposure-conditional mechanism comparator and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+guanosine	PARKED	Park pediatric trial priority.	mixed: parked and conditional clearance probe (no retain wording)
+azetukalner	RETAINED	Retain as a measured-exposure Kv7 comparator and hold pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+benfotiamine	RETAINED	Retain an exposure-conditional preclinical comparator and park pediatric trial priority	mixed: RETAINED and deferred/parked priority
+sarcosine	RETAINED	Retain as a measured-exposure preclinical comparator and park pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+carglumic_acid	RETAINED	Retain a conditional secondary-hyperammonemia question	mixed: RETAINED and PARKED
+mitoquinone	RETAINED	Retain as an exposure-conditional preclinical comparator and park pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+mavoglurant	RETAINED	Retain a native exposure-verified mGlu5 comparison with adaptive signaling and inhibitory recruitment as counterchecks	mixed: RETAINED and PARKED
+sodium_selenate	RETAINED	Retain a PP2A-versus-redox comparison with measured species, WWOX phosphosites and functional endpoints	mixed: RETAINED and PARKED
+ov329	RETAINED	Retain as a preclinical ABAT comparator and park pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+jbpos0101	PARKED	Parked for pediatric WWOX trial prioritization	
+carisbamate	RETAINED	Retain as an exposure-conditional comparator for late recruitment and park pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+dipyridamole	RETAINED	Retain as an exposure-conditional preclinical transport probe and park pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+probenecid	PARKED	Parked for pediatric WWOX trial priority	
+l_asparagine	PARKED	Parked for pediatric WWOX trial prioritization	
+ibudilast	PARKED	Parked for pediatric WWOX trial prioritization	
+deferiprone	PARKED	Parked for pediatric WWOX trial prioritization	
+two_deoxy_d_glucose	RETAINED	Retain as a preclinical glycolytic-demand probe and park pediatric trial priority	mixed: RETAINED and deferred/parked priority
+dextromethorphan	RETAINED	Retain an exposure-conditional pair comparison and park pediatric trial priority	mixed: RETAINED and deferred/parked priority
+fasudil	RETAINED	Retain a stage-specific ROCK probe and park pediatric trial priority	mixed: RETAINED and deferred/parked priority
+copper_histidinate	PARKED	Park pediatric WWOX trial priority	
+celecoxib	RETAINED	Retain a preclinical post-activity COX-2 probe and park pediatric trial priority	mixed: RETAINED and deferred/parked priority
+d_cycloserine	RETAINED	Retain as a preclinical co-agonist control	mixed: RETAINED and deferred/parked priority
+pitolisant	RETAINED	Retain as an H3 and vigilance comparator and defer pediatric WWOX antiseizure trial priority	mixed: RETAINED and deferred/parked priority
+n_acetyl_d_mannosamine	RETAINED	Retain as a precursor comparator and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+acamprosate_calcium	RETAINED	retain the calcium/counterion control	mixed: RETAINED and PARKED
+sodium_lactate	RETAINED	Retain as an energy and circuit probe and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+nicotinic_acid	RETAINED	Retain a mechanistic comparison and defer pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+ebselen	RETAINED	Retain a mechanistic perturbation and defer pediatric trial priority	mixed: RETAINED and deferred/parked priority
+l_tryptophan	PARKED	Defer direct WWOX pediatric trial priority.	
+riluzole	RETAINED	Retain a conditional mechanistic probe and defer a direct WWOX trial	mixed: RETAINED and deferred/parked priority
+menaquinone_4	RETAINED	Retain a conditional redox probe and a separate GAS6/TYRO3 control	mixed: RETAINED and deferred/parked priority
+cysteamine_bitartrate	RETAINED	Retain as a CTNS positive control and defer a direct WWOX trial	mixed: RETAINED and deferred/parked priority
+potassium_citrate	RETAINED	retain the ketogenic acid-base comparison	mixed: RETAINED and PARKED
+palmitoyl_oleoyl_phosphatidylserine	PARKED	Park for pediatric WWOX trial priority	
+pantethine	PARKED	Park oral pantethine for pediatric WWOX trial priority	
+felbamate	RETAINED	Retain as a conditional circuit comparator and park for pediatric WWOX trial priority	mixed: RETAINED and deferred/parked priority
+edaravone	RETAINED	Retain as a preclinical probe of lipid oxidation and park for pediatric trial priority	mixed: RETAINED and deferred/parked priority
+sodium_phenylbutyrate	PARKED	Park for pediatric WWOX trial priority	
+n_acetylglucosamine	PARKED	Park for an unselected pediatric WWOX trial	
+amantadine	PARKED	Parked for an unselected pediatric WWOX trial and as a primary NMDA probe	
+l_theanine	PARKED	Park for unselected pediatric WWOX trial priority	
+gamma_glutamylcysteine	PARKED	Park for pediatric WWOX trial priority	
+guanfacine	RETAINED	Retain α2A as a regional preclinical probe and park for unselected pediatric WWOX trial priority	mixed: RETAINED and PARKED
+melatonin	RETAINED	Retain a formulation-specific sleep hypothesis for documented sleep impairment	mixed: RETAINED and PARKED
+allopurinol	PARKED	Parked for pediatric WWOX trial priority	
+urolithin_a	PARKED	Parked for an unselected pediatric WWOX trial	
+spermidine	PARKED	Parked for an unselected pediatric WWOX trial	
+acetyl_l_carnitine	PARKED	Parked for pediatric WWOX trial priority	
+miglustat	PARKED	Parked for pediatric WWOX trial priority	
+tudca	PARKED	Tauroursodeoxycholic acid (TUDCA) parked for pediatric WWOX trial priority	
+baclofen	PARKED	Racemic baclofen parked for pediatric WWOX trial priority	
+idebenone	PARKED	Idebenone parked for pediatric WWOX trial priority	
+trehalose	PARKED	Trehalose parked for pediatric WWOX trial priority	
+l_ergothioneine	PARKED	L-ergothioneine parked for pediatric WWOX trial priority	
+palmitoylethanolamide	PARKED	Palmitoylethanolamide parked for pediatric WWOX trial priority	
+ambroxol	PARKED	Ambroxol hydrochloride parked for pediatric WWOX trial priority	
+n_acetylneuraminic_acid	RETAINED	Retained as a tracer and mechanistic comparator	mixed: RETAINED and PARKED
+caffeine_citrate	PARKED	Caffeine citrate parked for pediatric WWOX trial priority	
+cenobamate	RETAINED	Retained for symptomatic circuit comparison	mixed: RETAINED and PARKED
+levacetylleucine	PARKED	Levacetylleucine parked for pediatric WWOX trial priority	
+sodium_benzoate	PARKED	Sodium benzoate parked for pediatric WWOX trial priority	
+dantrolene	RETAINED	Retained as a calcium probe	mixed: RETAINED and PARKED
+d_galactose	PARKED	D-galactose parked for WWOX trial priority	
+d_mannose	PARKED	D-mannose parked for WWOX trial priority	
+l_leucine	PARKED	L-leucine parked for an unselected pediatric WWOX trial	
+sultiame	RETAINED	retained as a mechanistic comparator	mixed: RETAINED and PARKED
+sodium_dichloroacetate	RETAINED	retained as a PDK comparator	mixed: RETAINED and PARKED
+l_citrulline	PARKED	L-citrulline parked for an unselected pediatric WWOX trial	
+ascorbic_acid	PARKED	L-ascorbic acid parked	
+oxcarbazepine	PARKED	Oxcarbazepine parked for an unselected trial	
+squalene	PARKED	Squalene parked for pediatric developmental trial prioritization	
+valproate	PARKED	Valproate parked for developmental trial prioritization	
+glycine	PARKED	Glycine parked	
+stiripentol	PARKED	Stiripentol parked for pediatric trial priority	
+l_lysine	PARKED	L-lysine hydrochloride parked for pediatric trial priority	
+l_glutamine	PARKED	L-glutamine parked for pediatric trial priority	
+potassium_bromide	PARKED	Potassium bromide parked for WWOX trial priority	
+betaine	PARKED	Anhydrous betaine parked for WWOX trial priority	
+d_ribose	PARKED	D-ribose parked for WWOX trial priority	
+inosine	PARKED	Inosine parked for WWOX trial priority	
+cannabidiol	PARKED	Purified cannabidiol parked for a WWOX adenosine-directed trial	
+clobazam	PARKED	Clobazam parked for WWOX-selective pediatric trial prioritization	
+calcium_alpha_ketoglutarate	PARKED	Calcium alpha-ketoglutarate parked for WWOX pediatric trial prioritization	
+triacetin	PARKED	Triacetin parked for WWOX pediatric trial prioritization	
+lamotrigine	PARKED	Lamotrigine parked for WWOX pediatric trial prioritization	
+magnesium_chloride	PARKED	Magnesium chloride parked for unselected pediatric trial priority	
+sulforaphane	PARKED	Sulforaphane parked for trial prioritization	
+gabapentin	PARKED	Gabapentin parked for trial prioritization	
+l_carnosine	PARKED	L-carnosine parked	
+tiagabine	PARKED	Tiagabine hydrochloride parked for an unselected WWOX trial	
+sodium_pyruvate	PARKED	Sodium pyruvate parked for an unselected WWOX trial	
+tocopheryl_acetate	PARKED	RRR-alpha-tocopheryl acetate parked for an unselected WWOX trial	
+sodium_selenite	PARKED	Sodium selenite parked for an unselected trial	
+levetiracetam	PARKED	Levetiracetam parked for an unselected WWOX trial	
+topiramate	PARKED	Topiramate parked for an unselected trial	
+hydroxocobalamin	PARKED	Hydroxocobalamin parked for an unselected trial	
+nicotinamide_riboside	PARKED	Nicotinamide riboside chloride parked for an unselected WWOX trial	
+zonisamide	PARKED	Zonisamide parked for unselected pediatric disease modification	
+docosahexaenoic_acid	PARKED	Nonesterified DHA parked for unselected pediatric WWOX trial priority	
+uridine_triacetate	PARKED	Uridine triacetate parked for an unselected WWOX trial	
+d_pantothenate	PARKED	D-pantothenate parked for an unselected WWOX trial	
+d_biotin	PARKED	D-biotin parked for an unselected WWOX trial	
+vigabatrin	PARKED	Vigabatrin parked for disease modification	
+r_lipoic_acid	PARKED	R-alpha-lipoic acid parked for WWOX trial priority	
+fenfluramine	PARKED	Fenfluramine parked for WWOX disease-modification trial priority	
+myo_inositol	PARKED	Myo-inositol parked for WWOX trial priority	
+folinic_acid	PARKED	Folinic acid parked for WWOX trial priority	
+ubiquinol	PARKED	Ubiquinol-10 parked for WWOX trial priority	
+decanoic_acid	PARKED	Decanoic acid parked for WWOX trial priority	
+l_serine	PARKED	L-serine parked for pediatric WWOX trial priority	
+d_bhb	PARKED	D-β-hydroxybutyrate parked for pediatric trial priority	
+ivabradine	RETAINED	Retain Ih as a mechanistic probe	mixed: RETAINED and PARKED
+rufinamide	PARKED	Rufinamide parked for WWOX trial priority	
+pyridoxine	PARKED	Pyridoxine parked for WWOX trial priority	
+citicoline	PARKED	Citicoline parked for WWOX trial prioritization	
+riboflavin	PARKED	Riboflavin parked for WWOX trial prioritization	
+lacosamide	PARKED	Lacosamide parked for WWOX trial prioritization	
+triheptanoin	PARKED	Triheptanoin parked for trial prioritization	
+levocarnitine	PARKED	Levocarnitine parked for trial prioritization	
+acetazolamide	PARKED	Acetazolamide parked for trial prioritization	
+thiamine	PARKED	Thiamine parked for trial prioritization	
+acetylcysteine	RETAINED	retained as a mechanistic probe	mixed: RETAINED and PARKED
+taurine	PARKED	Taurine parked	
+brivaracetam	PARKED	Brivaracetam parked	
+creatine	PARKED	Creatine monohydrate parked	

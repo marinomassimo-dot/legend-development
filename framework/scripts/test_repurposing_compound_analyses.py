@@ -64,6 +64,28 @@ class CompoundAnalyses(unittest.TestCase):
         self.assertNotIn("Codex", html)
 
 
+    def test_programme_group_follows_the_standing_the_line_states_not_the_verb_form(self):
+        # 2026-11-28 (ADV-324): the checkpoint also writes "Park ..." and "Retain a ... probe"; 40 of 199 cards sat in the wrong display group
+        lines = {
+            "basepark": "**Base park.** Park for pediatric WWOX trial priority. A result sentence. [Read](basepark/README.md)",
+            "keepdefer": "**Keep defer.** Keep as an exposure-conditional comparator and defer pediatric trial priority. [Read](keepdefer/README.md)",
+            "retainpark": "**Retain park.** Retain a preclinical COX-2 probe and park pediatric trial priority. [Read](retainpark/README.md)",
+            "retainlate": "**Retain late.** The metabolite was weaker. Retain Ih as a mechanistic probe. [Read](retainlate/README.md)",
+            "stays": "**Stays.** Completed follow-up: it stays a preclinical comparator. [Read](stays/README.md)",
+            "resultword": "**Result word.** Park pediatric trial priority. Here 8/10 slices retained an abnormal response. [Read](resultword/README.md)",
+            "none": "**None.** An assessment only. [Read](none/README.md)",
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            dr = Path(directory)
+            (dr / "continuous_compounds").mkdir()
+            (dr / "continuous_compounds/README.md").write_text("## Current checkpoint\n" + "\n".join(lines.values()) + "\n", encoding="utf-8")
+            for slug in lines:
+                (dr / "continuous_compounds" / slug).mkdir()
+                (dr / "continuous_compounds" / slug / "README.md").write_text("", encoding="utf-8")
+            groups = {slug: card["group"] for slug, card in analyses.programme_cards(dr).items()}
+        self.assertEqual(groups, {"basepark": "deferred", "keepdefer": "comparison", "retainpark": "comparison", "retainlate": "comparison",
+                                  "stays": "comparison", "resultword": "deferred", "none": "unranked"})
+
     def test_dossier_backlink_exception_is_limited_to_authored_navigation(self):
         normal = '<a href="#analysis-example">Example</a>'
         new_label = '<a href="#analysis-example">Example with extra text</a>'
