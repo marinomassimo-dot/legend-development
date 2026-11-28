@@ -1572,11 +1572,12 @@
     },
     {
      "step": "ADV-301: mechanical source check of the latest compound briefs (read-only; PREREG first; five briefs; hand-check two)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-301 message from ADV a5e6f2ad 2026-11-28",
      "accepted_at": "2026-11-28T06:32:49Z",
-     "updated_at": "2026-11-28T06:43:44Z"
+     "updated_at": "2026-11-28T06:48:57Z",
+     "evidence": "disk: disease-models/wwox/research/drug_repurposing/briefcheck_adv301_he_20261128/RESULT_ADV301_HE_20261128.md (1a1ddb235): 0 true of 15 flags in five briefs; ADV told"
     }
    ]
   }
