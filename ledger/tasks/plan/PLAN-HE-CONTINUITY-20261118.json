@@ -1633,6 +1633,32 @@
      "accepted_at": "2026-11-28T09:27:06Z",
      "updated_at": "2026-11-28T09:33:43Z",
      "evidence": "1792bd8f3760; sampled suite clone 1294 MB -> 471 MB; CHECKPOINT_HE_20261128_AD_ADDENDUM.md"
+    },
+    {
+     "step": "Disk floor after the shared suite clone: sample real pushes, ADV decides, land MIN_FREE_GB 1.5 and publisher peak 1.0",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message to HE a2763bd3, 2026-11-28 (measure two pushes; DECISION yes)",
+     "accepted_at": "2026-11-28T09:52:52Z",
+     "evidence": "388324288 published (gate PASS); HE_DISK_PEAK_20261128.md",
+     "updated_at": "2026-11-28T09:52:52Z"
+    },
+    {
+     "step": "Sample one SCI push after the floor change and report its peak to ADV (every-publisher condition)",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "operator HE brief 2026-11-28 (two measured pushes on every publisher)",
+     "accepted_at": "2026-11-28T09:52:52Z"
+    },
+    {
+     "step": "2026-11-29: recheck and delete files/adv174_negraes_custodian_he/ in the root checkout (sealed, outside git)",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "source": "checkpoint HE-AD section 3 item 2",
+     "accepted_at": "2026-11-28T09:52:52Z",
+     "blocker": "dated item: not before 2026-11-29",
+     "no_condition": "the condition is a calendar date",
+     "updated_at": "2026-11-28T09:53:03Z"
     }
    ]
   }
@@ -2895,6 +2921,27 @@
    "at": "2026-11-28T09:27:06Z",
    "source": "ADV a5e6f2ad direction round to HE 6fe75e26, 2026-11-28 about 09:20Z (disk)",
    "step_sha256": "854774ad9927",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T09:52:52Z",
+   "source": "ADV message to HE a2763bd3, 2026-11-28 (measure two pushes; DECISION yes)",
+   "step_sha256": "7f8b1bc36c3f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T09:52:52Z",
+   "source": "operator HE brief 2026-11-28 (two measured pushes on every publisher)",
+   "step_sha256": "f76fc4d3765a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T09:52:52Z",
+   "source": "checkpoint HE-AD section 3 item 2",
+   "step_sha256": "075d0ee45cc6",
    "reopened_block": false,
    "authorised_by": null
   }
