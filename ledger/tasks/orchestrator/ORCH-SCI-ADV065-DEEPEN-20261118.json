@@ -1344,6 +1344,15 @@
      "accepted_at": "2026-11-28T09:32:47Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv313_myelin_calibration_sci_20261128/RESULT_ADV313_SCI_20261128.md; published 336110982 on development/main (gate PASS); receipts FTR-20261128-34576288-01, -31140740-01, -30373833-01, -27008179-01, -23603111-01, -35441271-01, -29755326-01, -32676012-01, -30225359-01, -39576623-01",
      "updated_at": "2026-11-28T09:59:14Z"
+    },
+    {
+     "step": "ADV-314 (key repudi-2021-n1-n2-component-question-for-the-latency-difference): third and last increment of the myelin calibration strand: what Repudi 2021 (PMID 33914858) prints for N1/N2 amplitude or area, latency, stimulus intensity and recording distance; E-A vs E-B allowed / not allowed / not printed with locators; frozen before reading figures",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-314 (ADV assignment text jobs/a5e6f2ad/tmp/adv314.txt; successor mandate prompt 2026-11-28)",
+     "accepted_at": "2026-11-28T10:07:23Z",
+     "evidence": "brainstorm_20261116/adv314_repudi_cap_components_sci_20261128/RESULT_ADV314_SCI_20261128.md; PREREG sha256 4dd86f6f; receipt FTR-20261128-33914858-02",
+     "updated_at": "2026-11-28T10:17:04Z"
     }
    ]
   }
@@ -2382,6 +2391,13 @@
    "at": "2026-11-28T09:32:47Z",
    "source": "ADV-313; ADV delivery message 2026-11-28; text /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv313.txt",
    "step_sha256": "b98f3decc61e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T10:07:23Z",
+   "source": "ADV-314 (ADV assignment text jobs/a5e6f2ad/tmp/adv314.txt; successor mandate prompt 2026-11-28)",
+   "step_sha256": "596752212470",
    "reopened_block": false,
    "authorised_by": null
   }
