@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 252,
+   "distinct_hrefs": 254,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -247,7 +247,7 @@
     ]
    ],
    "forbidden_identifiers": 100768,
-   "forbidden_names": 126039,
+   "forbidden_names": 126038,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
     "count": 159,
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5113874,
-   "sha256": "a440b40d3746a84be600d3591c32d102b22d24d1d11d13c5dd68d97d8345f7b2"
+   "bytes": 5114060,
+   "sha256": "a47d083fe5cf35ef2efdec1951270c633d6939bdc90c44a56783caf9b3f3bd0f"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
@@ -584,6 +584,10 @@
   "reports/ethosuximide.pdf": {
    "bytes": 186816,
    "sha256": "0abbf2afae4d7572e65036afe4ea773919d27ac90aaf33e5531ac2575bccd19a"
+  },
+  "reports/etifoxine.pdf": {
+   "bytes": 120242,
+   "sha256": "a2900f088c34f68b60c40ba86594e9db0bdc3428a958cd06168514c2c8d50f70"
   },
   "reports/f16bp.pdf": {
    "bytes": 123360,
@@ -608,6 +612,10 @@
   "reports/ketamine.pdf": {
    "bytes": 528795,
    "sha256": "322240f85da414f2dfb463340cc7ea9d751fa1cde1d6be068c70f872c4123d87"
+  },
+  "reports/montelukast.pdf": {
+   "bytes": 117674,
+   "sha256": "13af821b5f5a683b58a2ef1472d3aee24b7c3a95dea91c402172946fcd2d6546"
   },
   "reports/nervonic-acid.pdf": {
    "bytes": 125360,

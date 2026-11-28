@@ -1,0 +1,17 @@
+comparison	value	unit
+film_total_csf_min_converted	5.4588878	nM
+film_total_csf_max_converted	8.0177414	nM
+film_total_csf_mean_3h_converted	6.1412487	nM
+film_total_csf_mean_7h_converted	7.1647902	nM
+pd_total_csf_mean_converted	6.2436029	nM
+organoid_nominal_low_converted	34.118048	nM
+organoid_nominal_high_converted	682.36097	nM
+cyslt1_ltd4_ic50_over_film_csf_mean_7h	0.32101429	fold
+gpr17_ltd4_ic50_over_film_csf_mean_7h	8.3742857	fold
+opcs_nominal_over_film_csf_mean_7h	139.57143	fold
+organoid_nominal_low_over_film_csf_mean_7h	4.7619048	fold
+organoid_nominal_high_over_film_csf_mean_7h	95.238095	fold
+pd_unpaired_group_means_total_csf_over_total_plasma	0.22575034	percent
+pediatric_12_23m_free_plasma_scenario_ceiling	9.5871716	nM
+optic_combination_minus_montelukast	45	percentage points
+optic_combination_minus_larger_single_arm	39	percentage points
