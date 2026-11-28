@@ -1,0 +1,57 @@
+preparation	condition	statistic	value	unit	locator
+rat brain extract	control	group size	4	rats	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	control	GSH mean	1.22	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	control	cysteine mean	0.176	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	control	taurine mean	3.76	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	control	hypotaurine mean	0.249	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	4 h after bolus	group size	3	rats	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	4 h after bolus	GSH mean	1.04	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	4 h after bolus	GSH change versus control	-0.18	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	4 h after bolus	GSH ratio versus control	0.85245902	ratio of means	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	4 h after bolus	cysteine mean	0.392	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	4 h after bolus	cysteine change versus control	0.216	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	4 h after bolus	cysteine ratio versus control	2.2272727	ratio of means	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	4 h after bolus	taurine mean	4.35	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	4 h after bolus	taurine change versus control	0.59	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	4 h after bolus	taurine ratio versus control	1.1569149	ratio of means	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	4 h after bolus	hypotaurine mean	0.275	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	4 h after bolus	hypotaurine change versus control	0.026	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	4 h after bolus	hypotaurine ratio versus control	1.1044177	ratio of means	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	6 h after bolus	group size	3	rats	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	6 h after bolus	GSH mean	1.05	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	6 h after bolus	GSH change versus control	-0.17	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	6 h after bolus	GSH ratio versus control	0.86065574	ratio of means	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	6 h after bolus	cysteine mean	0.246	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	6 h after bolus	cysteine change versus control	0.07	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	6 h after bolus	cysteine ratio versus control	1.3977273	ratio of means	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	6 h after bolus	taurine mean	4.16	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	6 h after bolus	taurine change versus control	0.4	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	6 h after bolus	taurine ratio versus control	1.106383	ratio of means	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	6 h after bolus	hypotaurine mean	0.179	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	6 h after bolus	hypotaurine change versus control	-0.07	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	6 h after bolus	hypotaurine ratio versus control	0.7188755	ratio of means	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	20 h infusion	group size	5	rats	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	20 h infusion	GSH mean	1.51	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	20 h infusion	GSH change versus control	0.29	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	20 h infusion	GSH ratio versus control	1.2377049	ratio of means	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	20 h infusion	cysteine mean	0.113	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	20 h infusion	cysteine change versus control	-0.063	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	20 h infusion	cysteine ratio versus control	0.64204545	ratio of means	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	20 h infusion	taurine mean	3.93	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	20 h infusion	taurine change versus control	0.17	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	20 h infusion	taurine ratio versus control	1.0452128	ratio of means	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	20 h infusion	hypotaurine mean	0.404	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	20 h infusion	hypotaurine change versus control	0.155	µmol/g tissue	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain extract	20 h infusion	hypotaurine ratio versus control	1.62249	ratio of means	Gamcsik 2011 Table 1, rat brain extracts, group means
+rat brain LC-MS enrichment	bolus, 4.5 h	GSH enrichment, one extract	8.33	%	Gamcsik 2011 Results and Discussion, Fig. 2 and Fig. 3
+rat brain LC-MS enrichment	infusion, 20 h	GSH enrichment, group mean	34.8	%	Gamcsik 2011 Results and Discussion, Fig. 2 and Fig. 3
+rat brain LC-MS enrichment	infusion, 20 h	cysteine enrichment, group mean	43.4	%	Gamcsik 2011 Results and Discussion, Fig. 2 and Fig. 3
+MRS detection sensitivity	published approximate scale	detectable labeled metabolite	0.2	µmol/g tissue	Gamcsik 2011 Results and Discussion, Fig. 2 and Fig. 3
+MRS detection sensitivity	bolus at 4.5 h, assumed GSH 1.0 µmol/g	conditional labeled GSH	0.0833	µmol/g tissue	Gamcsik 2011 Results and Discussion, Fig. 2 and Fig. 3
+MRS detection sensitivity	bolus at 4.5 h, assumed GSH 1.0 µmol/g	conditional fraction of MRS detection scale	0.4165	ratio	Gamcsik 2011 Results and Discussion, Fig. 2 and Fig. 3
+MRS detection sensitivity	bolus at 4.5 h, assumed GSH 1.2 µmol/g	conditional labeled GSH	0.09996	µmol/g tissue	Gamcsik 2011 Results and Discussion, Fig. 2 and Fig. 3
+MRS detection sensitivity	bolus at 4.5 h, assumed GSH 1.2 µmol/g	conditional fraction of MRS detection scale	0.4998	ratio	Gamcsik 2011 Results and Discussion, Fig. 2 and Fig. 3
+MRS detection sensitivity	infusion at 20 h	illustrative labeled GSH, product of group means	0.52548	µmol/g tissue	Gamcsik 2011 Results and Discussion, Fig. 2 and Fig. 3
+MRS detection sensitivity	infusion at 20 h	illustrative fraction of MRS detection scale	2.6274	ratio	Gamcsik 2011 Results and Discussion, Fig. 2 and Fig. 3
+adult human lymphocytes	2–3 h after oral parent	cysteine ratio versus baseline	2.6756757	ratio of means	Porta 1991 primary abstract, nmol/mg protein
+adult human lymphocytes	2–3 h after oral parent	GSH ratio versus baseline	1.7931034	ratio of means	Porta 1991 primary abstract, nmol/mg protein
