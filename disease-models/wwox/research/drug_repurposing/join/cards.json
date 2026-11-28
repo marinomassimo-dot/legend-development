@@ -3469,12 +3469,13 @@
      "abstention": null,
      "complete_reads": 3,
      "depths": [
-      "complete_fulltext_read"
+      "complete_fulltext_read",
+      "queried_not_full_read"
      ],
-     "digest": "a8b033b0b9cded80",
+     "digest": "273bc7d12c4e6600",
      "locators": 55,
      "origin_id": "N-02",
-     "papers": 3,
+     "papers": 4,
      "query_id": "Q-N-02",
      "rows": [
       {
@@ -3553,6 +3554,25 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 4,
        "receipt_id": "FTR-20260810-34831305-01",
+       "repair_unverified": 0,
+       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+       "evidence_scope": [
+        "UNQUALIFIED"
+       ],
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "35563688",
+       "reading_depth": "queried_not_full_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261128-35563688-01",
        "repair_unverified": 0,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
        "unaudited_contradictions": 0
@@ -3638,7 +3658,7 @@
       "cells_tissue_stage": "Whole-animal behaviour; Ser9 blot from cerebellum, hippocampus and cortex at postnatal day 20.",
       "coverage": "UNKNOWN.",
       "limits": "A seizure score integrates many targets of lithium; the blot reads one phosphorylation site.",
-      "target_expression": "GSK3beta is broadly expressed; total protein unchanged between genotypes in the printed densitometry."
+      "target_expression": "Total GSK3beta in the printed densitometry (Figure 7c; legend: postnatal day 20, ratio to beta-actin) is 9, 13 and 18 per cent higher in Wwox-null than in wild-type cerebellum, hippocampus and cortex (one lane per genotype per region, no error bars, no test reported; the legend calls the blot representative of four independent experiments), so neither a change nor the absence of one is established."
      },
      "endpoint_pursued": "Seizure suppression with a genotype-specific effect: a tested drug-by-genotype interaction on a provoked-seizure score; then Ser9 phosphorylation or substrate phosphorylation after lithium in a Wwox-null system.",
      "functional_evidence_available": "Null-genotype suppression of a provoked-seizure score, equally present in wild type and heterozygote: non-specific.",
@@ -3660,7 +3680,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "0512c614f61dde143bb21a0535f9308db7e44752ebebf01c4acf0eefbc85d905",
+   "input_sha256": "6265df031be040749995684e16101be691d31b411497b24fada035647425a3b5",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -3683,12 +3703,13 @@
     "abstention": null,
     "complete_reads": 3,
     "depths": [
-     "complete_fulltext_read"
+     "complete_fulltext_read",
+     "queried_not_full_read"
     ],
-    "digest": "a8b033b0b9cded80",
+    "digest": "273bc7d12c4e6600",
     "locators": 55,
     "origin_id": "N-02",
-    "papers": 3,
+    "papers": 4,
     "query_id": "Q-N-02",
     "rows": [
      {
@@ -3770,6 +3791,25 @@
       "repair_unverified": 0,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
       "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+      "evidence_scope": [
+       "UNQUALIFIED"
+      ],
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "35563688",
+      "reading_depth": "queried_not_full_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261128-35563688-01",
+      "repair_unverified": 0,
+      "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+      "unaudited_contradictions": 0
      }
     ],
     "unaudited_contradictions": 0
@@ -3781,7 +3821,7 @@
     "NO_MATCH_FOUND is information not available for those queries and that coverage: it is not proof the label is absent, not DRUG_HAS_NO_LABEL, not biological counterevidence and not a reason to drop the candidate."
    ],
    "measure_next": {
-    "dependence": "3_PAPERS_3_COMPLETE",
+    "dependence": "4_PAPERS_3_COMPLETE",
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
@@ -3793,7 +3833,7 @@
      "cells_tissue_stage": "Whole-animal behaviour; Ser9 blot from cerebellum, hippocampus and cortex at postnatal day 20.",
      "coverage": "UNKNOWN.",
      "limits": "A seizure score integrates many targets of lithium; the blot reads one phosphorylation site.",
-     "target_expression": "GSK3beta is broadly expressed; total protein unchanged between genotypes in the printed densitometry."
+     "target_expression": "Total GSK3beta in the printed densitometry (Figure 7c; legend: postnatal day 20, ratio to beta-actin) is 9, 13 and 18 per cent higher in Wwox-null than in wild-type cerebellum, hippocampus and cortex (one lane per genotype per region, no error bars, no test reported; the legend calls the blot representative of four independent experiments), so neither a change nor the absence of one is established."
     },
     "endpoint_pursued": "Seizure suppression with a genotype-specific effect: a tested drug-by-genotype interaction on a provoked-seizure score; then Ser9 phosphorylation or substrate phosphorylation after lithium in a Wwox-null system.",
     "functional_evidence_available": "Null-genotype suppression of a provoked-seizure score, equally present in wild type and heterozygote: non-specific.",
@@ -36458,12 +36498,13 @@
      "abstention": null,
      "complete_reads": 3,
      "depths": [
-      "complete_fulltext_read"
+      "complete_fulltext_read",
+      "queried_not_full_read"
      ],
-     "digest": "e1ec89b67d4324bd",
+     "digest": "513bf8611765a4b3",
      "locators": 55,
      "origin_id": "R-04",
-     "papers": 3,
+     "papers": 4,
      "query_id": "Q-R-04",
      "rows": [
       {
@@ -36542,6 +36583,25 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 4,
        "receipt_id": "FTR-20260810-34831305-01",
+       "repair_unverified": 0,
+       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+       "evidence_scope": [
+        "UNQUALIFIED"
+       ],
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "35563688",
+       "reading_depth": "queried_not_full_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261128-35563688-01",
        "repair_unverified": 0,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
        "unaudited_contradictions": 0
@@ -36627,7 +36687,7 @@
       "cells_tissue_stage": "Whole-animal behaviour; Ser9 blot from cerebellum, hippocampus and cortex at postnatal day 20.",
       "coverage": "UNKNOWN.",
       "limits": "A seizure score integrates many targets of lithium; the blot reads one phosphorylation site.",
-      "target_expression": "GSK3beta is broadly expressed; total protein unchanged between genotypes in the printed densitometry."
+      "target_expression": "Total GSK3beta in the printed densitometry (Figure 7c; legend: postnatal day 20, ratio to beta-actin) is 9, 13 and 18 per cent higher in Wwox-null than in wild-type cerebellum, hippocampus and cortex (one lane per genotype per region, no error bars, no test reported; the legend calls the blot representative of four independent experiments), so neither a change nor the absence of one is established."
      },
      "endpoint_pursued": "Seizure suppression with a genotype-specific effect: a tested drug-by-genotype interaction on a provoked-seizure score; then Ser9 phosphorylation or substrate phosphorylation after lithium in a Wwox-null system.",
      "functional_evidence_available": "Null-genotype suppression of a provoked-seizure score, equally present in wild type and heterozygote: non-specific.",
@@ -36649,7 +36709,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "76f3024677422fec7893502d15ce6975c4ee22d1711d807d495cdf45db6f4dfd",
+   "input_sha256": "82f8b5ea1aa735895329ac81bc151b43613ec6b32543f6e3d0c62f67866f9f4d",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -36672,12 +36732,13 @@
     "abstention": null,
     "complete_reads": 3,
     "depths": [
-     "complete_fulltext_read"
+     "complete_fulltext_read",
+     "queried_not_full_read"
     ],
-    "digest": "e1ec89b67d4324bd",
+    "digest": "513bf8611765a4b3",
     "locators": 55,
     "origin_id": "R-04",
-    "papers": 3,
+    "papers": 4,
     "query_id": "Q-R-04",
     "rows": [
      {
@@ -36759,6 +36820,25 @@
       "repair_unverified": 0,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
       "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+      "evidence_scope": [
+       "UNQUALIFIED"
+      ],
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "35563688",
+      "reading_depth": "queried_not_full_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261128-35563688-01",
+      "repair_unverified": 0,
+      "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+      "unaudited_contradictions": 0
      }
     ],
     "unaudited_contradictions": 0
@@ -36770,7 +36850,7 @@
     "A label exists for the product identified; presence certifies neither approval, currency, paediatric suitability nor WOREE relevance."
    ],
    "measure_next": {
-    "dependence": "3_PAPERS_3_COMPLETE",
+    "dependence": "4_PAPERS_3_COMPLETE",
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 3,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
@@ -36782,7 +36862,7 @@
      "cells_tissue_stage": "Whole-animal behaviour; Ser9 blot from cerebellum, hippocampus and cortex at postnatal day 20.",
      "coverage": "UNKNOWN.",
      "limits": "A seizure score integrates many targets of lithium; the blot reads one phosphorylation site.",
-     "target_expression": "GSK3beta is broadly expressed; total protein unchanged between genotypes in the printed densitometry."
+     "target_expression": "Total GSK3beta in the printed densitometry (Figure 7c; legend: postnatal day 20, ratio to beta-actin) is 9, 13 and 18 per cent higher in Wwox-null than in wild-type cerebellum, hippocampus and cortex (one lane per genotype per region, no error bars, no test reported; the legend calls the blot representative of four independent experiments), so neither a change nor the absence of one is established."
     },
     "endpoint_pursued": "Seizure suppression with a genotype-specific effect: a tested drug-by-genotype interaction on a provoked-seizure score; then Ser9 phosphorylation or substrate phosphorylation after lithium in a Wwox-null system.",
     "functional_evidence_available": "Null-genotype suppression of a provoked-seizure score, equally present in wild type and heterozygote: non-specific.",
