@@ -613,6 +613,23 @@ class ReleasedCheck(unittest.TestCase):
             rc, out = self.run_cli(f)
             self.assertEqual((rc, out.split()[0]), (0, "RELEASED"))
 
+    def test_a_malformed_release_line_is_named_and_releases_nothing(self):
+        with tempfile.TemporaryDirectory() as td:
+            f = Path(td) / "t.jsonl"
+            entry = lambda t, kind="assistant": json.dumps({"type": kind, "message": {"content": [{"type": "text", "text": t}]}}) + "\n"
+            bound = entry("MANDATE_BOUND: T-1")
+            for bad in ("Done.\n\nMANDATE_RELEASED", "MANDATE_RELEASED: T-1.", "**MANDATE_RELEASED: T-1**"):
+                f.write_text(bound + entry(bad), encoding="utf-8")
+                rc, out = self.run_cli(f)
+                self.assertEqual((rc, out.split()[0]), (1, "BOUND"), bad)
+                self.assertIn("NEAR_MISS", out, bad)
+                self.assertTrue(out.rstrip().endswith("MANDATE_RELEASED: T-1"), out)
+            # a request quoted by the peer, a prose mention, a fenced quote and a line written before a new binding are not attempts
+            for quiet in (bound + entry("MANDATE_RELEASED", "user"), bound + entry("I will write MANDATE_RELEASED later"),
+                          bound + entry("```\nMANDATE_RELEASED\n```"), entry("MANDATE_RELEASED") + bound):
+                f.write_text(quiet, encoding="utf-8")
+                self.assertNotIn("NEAR_MISS", self.run_cli(f)[1], quiet)
+
 
 class HandoffCheck(unittest.TestCase):
     """2026-11-20: the successor of SCI checkpoint L bound with a text-only message and sat 41 minutes; the check reads the transcripts: RUNNING only after a tool call that follows the bind line."""
