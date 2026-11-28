@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-31340538-02",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "31340538",
+  "doi": "10.3390/ijms20143596"
+ },
+ "event_at": "2026-11-28T20:21:00Z",
+ "analysis_at": "2026-11-28T20:21:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "Corroboration-independence claim batch (IT44), blind final-text check by a delegate of IT44, context policy QUESTION_DRIVEN: Methods 4.3-4.4, ages studied (atom A6)",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID31340538_Tochigi2019_PMC_r2.xml",
+ "source_fingerprint": "02d5615819012880f6054935cf8a7b700a78690e9e8835b3e5364be7b60cf00c",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT44-CORROBORATION-01.md"
+ ],
+ "evidence_basis": [
+  "Opened by the delegate (transcript): Methods 4.3-4.4, ages studied (atom A6). Sections marked not_read were consulted only for single values or not at all."
+ ],
+ "prior_receipt": "FTR-20260806-31340538-01",
+ "reread_reason": "adversarial_reanalysis"
+}

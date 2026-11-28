@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-31543760-22",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "31543760",
+  "doi": "10.3389/fncel.2019.00391"
+ },
+ "event_at": "2026-11-28T20:21:00Z",
+ "analysis_at": "2026-11-28T20:21:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "Corroboration-independence claim batch (IT44), blind final-text check by a delegate of IT44, context policy QUESTION_DRIVEN: CAGE methods and deposit accession, Results paragraph 1 and Fig 1 (atoms A2, A3, A7)",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID31543760_Kosla2019_PMC.xml",
+ "source_fingerprint": "9deafe306e891ec7eae9e4e6d46a8238f0e4233a85ae6e5af9091d7c22301647",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT44-CORROBORATION-01.md"
+ ],
+ "evidence_basis": [
+  "Opened by the delegate (transcript): CAGE methods and deposit accession, Results paragraph 1 and Fig 1 (atoms A2, A3, A7). Sections marked not_read were consulted only for single values or not at all."
+ ],
+ "prior_receipt": "FTR-20261127-31543760-21",
+ "reread_reason": "adversarial_reanalysis"
+}

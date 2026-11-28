@@ -1,0 +1,44 @@
+[
+ {
+  "op": "replace-within",
+  "id": "CLAIM 014",
+  "old": "the multi-paper convergence is retained, but",
+  "new": "the multi-paper convergence is retained *(2026-11-28, `BATCH_20261128_014`: it is the convergence of one collaboration, not of three independent groups — the author list of PMID 32581702 (Iacomino) includes, at middle positions, the first and last authors of PMID 31340538 (Tochigi, H. Suzuki) and of PMID 31543760 (Kośla, Bednarek), and its transcriptomic leg re-uses the Kośla CAGE series, as stated further below; of the three, only PMID 32581702 observes brain development before birth in its own material (a human fetus at 21 gestational weeks; lde/lde rats BrdU-labelled at E16.5 and examined after birth), PMID 31340538 starting at PND5 and PMID 31543760 studying cultured neural progenitors, with an atlas expression comparison)*, but"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 025",
+  "old": "and digoxin is not promoted.",
+  "new": "and digoxin is not promoted. *(2026-11-28, `BATCH_20261128_014`, pointer only, the sentence «confirmed in vivo» is unchanged: it names no first source. This claim’s original statement came from `CORPUS P191` (`Identifier: PENDING`), so whether PMID 29724996 is a second, independent observation of the same proposition is unsettled until that source is identified.)*"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 028",
+  "old": "principio architetturale generale",
+  "new": "principio architetturale generale *(2026-11-28, `BATCH_20261128_014`, pointer only: of the four papers named, one is identified (`CORPUS P206` = PMID 15070730); `P207`, `P214` and `P218` are placeholders with `Identifier: PENDING`, so the multi-paper convergence cannot be checked from the registry as it stands.)*"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 030",
+  "old": "la severità potrebbe correlare con i *\"functional levels\"* di WWOX, non con quelli totali.",
+  "new": "la severità potrebbe correlare con i *\"functional levels\"* di WWOX, non con quelli totali. *(2026-11-28, `BATCH_20261128_014`: Steinberg poses this as a question («raise the question whether»), not as a demonstrated result; it cites the G372R mutation to PMID 24369382, and whether its donors are that same family is not stated in the main text read, so they are not counted here as a new family (the patient protein blot of PMID 24369382 was on P47T fibroblasts); «(null)» for p.Arg54\\* is read from the genotype — no measurement of WWOX protein in that patient was found in PMID 24456803.)*"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 036",
+  "old": "developmental delay or terminal metabolic illness.",
+  "new": "developmental delay or terminal metabolic illness. *(2026-11-28, `BATCH_20261128_014`: these three records are one laboratory line, not three independent reproductions — R. I. Aqeilan is first author of PMID 18974271 and PMID 17360458 and last author of PMID 23254685, and the abstract of PMID 18974271 presents lethality and bone-growth defects as the group’s earlier finding. The independent pair for early collapse with a bone phenotype is with [[paper_registry_current#PAPER 057]] (PMID 19936220), which shares no author with them.)*"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 036",
+  "old": "d as 100%, and the two contrary results are explained away untested.**",
+  "new": "d as 100%, and the two contrary results are explained away untested.** *(2026-11-28, `BATCH_20261128_014`, pointer only: the two rat reports (PMID 19500159, PMID 17803050) are not held as full text today (search by name and by receipted digest, 2026-11-28), so the rat half of the two independent negatives could not be re-checked; the earlier reading receipts stay as history.)*"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 038",
+  "old": "topo `Wwox`-null sistemico (misura convergente). Nessun dato umano.",
+  "new": "topo `Wwox`-null sistemico (misura convergente). Nessun dato umano. *(2026-11-28, `BATCH_20261128_014`, pointer only: the source of the rat measurement, PMID 17803050, is not held as full text today (search by name and by receipted digest, 2026-11-28), so the independence of the rat and mouse measurements could not be re-checked from text; the earlier reading receipt stays as history.)*"
+ }
+]

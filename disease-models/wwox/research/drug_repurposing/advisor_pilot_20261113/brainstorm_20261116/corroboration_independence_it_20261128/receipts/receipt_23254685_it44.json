@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-23254685-02",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "23254685",
+  "doi": "10.1002/jcp.24308"
+ },
+ "event_at": "2026-11-28T20:21:00Z",
+ "analysis_at": "2026-11-28T20:21:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "Corroboration-independence claim batch (IT44), blind final-text check by a delegate of IT44, context policy QUESTION_DRIVEN: abstract, introduction, methods, results, discussion, legends 1-5, references; figure images not viewed (atom D5); artefact is the PMC XML found by HE, the receipted HTML a83d0390 is absent",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID23254685_Abdeen2013_PMC3943428_nihms445139.xml",
+ "source_fingerprint": "09901452ce8502433405fe5196db131ecf2f941a50b8efbb9cf01a1fc39c735e",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT44-CORROBORATION-01.md"
+ ],
+ "evidence_basis": [
+  "Opened by the delegate (transcript): abstract, introduction, methods, results, discussion, legends 1-5, references; figure images not viewed (atom D5); artefact is the PMC XML found by HE, the receipted HTML a83d0390 is absent. Sections marked not_read were consulted only for single values or not at all."
+ ],
+ "prior_receipt": "FTR-20260811-23254685-01",
+ "reread_reason": "adversarial_reanalysis"
+}

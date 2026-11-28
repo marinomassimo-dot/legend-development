@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-32581702-02",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "32581702",
+  "doi": "10.3389/fnins.2020.00644"
+ },
+ "event_at": "2026-11-28T20:21:00Z",
+ "analysis_at": "2026-11-28T20:21:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "Corroboration-independence claim batch (IT44), blind final-text check by a delegate of IT44, context policy QUESTION_DRIVEN: author list; Methods (transcriptomic analyses, lde/lde rat experiments, neuropathology), Results and Fig 3I,J (atoms A1-A5)",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID32581702_Iacomino2020_PMC_r2.xml",
+ "source_fingerprint": "369100251faee767e1002188cb63f78622df88c1b2b8dde09f71c5dc89855e1f",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT44-CORROBORATION-01.md"
+ ],
+ "evidence_basis": [
+  "Opened by the delegate (transcript): author list; Methods (transcriptomic analyses, lde/lde rat experiments, neuropathology), Results and Fig 3I,J (atoms A1-A5). Sections marked not_read were consulted only for single values or not at all."
+ ],
+ "prior_receipt": "FTR-20260810-32581702-01",
+ "reread_reason": "adversarial_reanalysis"
+}

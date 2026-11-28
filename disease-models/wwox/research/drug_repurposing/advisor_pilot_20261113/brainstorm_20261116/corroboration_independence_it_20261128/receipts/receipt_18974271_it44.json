@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-18974271-02",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "18974271",
+  "doi": "10.1210/en.2008-1087"
+ },
+ "event_at": "2026-11-28T20:21:00Z",
+ "analysis_at": "2026-11-28T20:21:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "Corroboration-independence claim batch (IT44), blind final-text check by a delegate of IT44, context policy QUESTION_DRIVEN: held XML holds front matter and abstract only (atom D2 partial: abstract wording on lethality and bone)",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID18974271_Aqeilan2009_PMC_r2.xml",
+ "source_fingerprint": "4fa25ce01787a6f43068021f262803d77f8118439a8758b956e78d607cda6726",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT44-CORROBORATION-01.md"
+ ],
+ "evidence_basis": [
+  "Opened by the delegate (transcript): held XML holds front matter and abstract only (atom D2 partial: abstract wording on lethality and bone). Sections marked not_read were consulted only for single values or not at all."
+ ],
+ "prior_receipt": "FTR-20260811-18974271-01",
+ "reread_reason": "adversarial_reanalysis"
+}

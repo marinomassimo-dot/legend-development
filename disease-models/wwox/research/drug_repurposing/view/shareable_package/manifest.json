@@ -547,7 +547,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2286,
-   "sha256": "13e0943e1334228c8b33a070bf5f79eb8476815563d7946cba9b3ec6bd292e20"
+   "sha256": "80e80c55ca536f6ba6eaa60ff3c7a80b72bd6576443b0af25b401215797d8b11"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5126129,
-   "sha256": "0dec35c1992959020a7460ffccd4ff7c66e33621d0c312910c88307342056c92"
+   "bytes": 5126131,
+   "sha256": "89c0c94109bbf3c0abbf75bc2c1ba6aa62c87b8f66ce6caea57ae6ebda5f712b"
   },
   "reports/acetoacetate.pdf": {
    "bytes": 123029,

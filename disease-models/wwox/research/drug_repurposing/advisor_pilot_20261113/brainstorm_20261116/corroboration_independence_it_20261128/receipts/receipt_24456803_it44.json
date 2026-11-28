@@ -1,0 +1,35 @@
+{
+ "event_id": "FTR-20261128-24456803-88",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "24456803"
+ },
+ "event_at": "2026-11-28T20:21:00Z",
+ "analysis_at": "2026-11-28T20:21:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "Corroboration-independence claim batch (IT44), blind final-text check by a delegate of IT44, context policy QUESTION_DRIVEN: Methods, Results, Table 1, Fig 1-2 legends, supplement pptx; search for patient protein data (atom C4)",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID24456803_AbdelSalam2014_PMC.xml",
+ "source_fingerprint": "2adc28364cef73585dbeee8679781fd93fb3441bce95a4c0bcca7acc154a3a55",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT44-CORROBORATION-01.md"
+ ],
+ "evidence_basis": [
+  "Opened by the delegate (transcript): Methods, Results, Table 1, Fig 1-2 legends, supplement pptx; search for patient protein data (atom C4). Sections marked not_read were consulted only for single values or not at all."
+ ],
+ "prior_receipt": "FTR-20261124-24456803-87",
+ "reread_reason": "adversarial_reanalysis"
+}

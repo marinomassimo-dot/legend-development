@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-24369382-05",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "24369382",
+  "doi": "10.1093/brain/awt338"
+ },
+ "event_at": "2026-11-28T20:21:00Z",
+ "analysis_at": "2026-11-28T20:21:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "Corroboration-independence claim batch (IT44), blind final-text check by a delegate of IT44, context policy QUESTION_DRIVEN: Methods and Fig 2B legend, Family 2 in Fig 1A (atoms C2, C3)",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID24369382_Mallaret2014.pdf",
+ "source_fingerprint": "e92aa7d28917e63a25dbdaf17e46b554cc9b048b588584c816cf059678097991",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "not_read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT44-CORROBORATION-01.md"
+ ],
+ "evidence_basis": [
+  "Opened by the delegate (transcript): Methods and Fig 2B legend, Family 2 in Fig 1A (atoms C2, C3). Sections marked not_read were consulted only for single values or not at all."
+ ],
+ "prior_receipt": "FTR-20260927-24369382-04",
+ "reread_reason": "adversarial_reanalysis"
+}

@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-19936220-87",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "19936220",
+  "doi": "10.1371/journal.pone.0007775"
+ },
+ "event_at": "2026-11-28T20:21:00Z",
+ "analysis_at": "2026-11-28T20:21:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "Corroboration-independence claim batch (IT44), blind final-text check by a delegate of IT44, context policy QUESTION_DRIVEN: Results, growth and survival, bone mineralization (atom D4)",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID19936220_LudesMeyers2009_PMC2777388_epmc.xml",
+ "source_fingerprint": "a233abd7c656922171458d42261831bd397be079fe217ff0b7f2f88b16fd32a8",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT44-CORROBORATION-01.md"
+ ],
+ "evidence_basis": [
+  "Opened by the delegate (transcript): Results, growth and survival, bone mineralization (atom D4). Sections marked not_read were consulted only for single values or not at all."
+ ],
+ "prior_receipt": "FTR-20261124-19936220-86",
+ "reread_reason": "adversarial_reanalysis"
+}

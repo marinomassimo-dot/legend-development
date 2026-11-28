@@ -626,7 +626,7 @@
  },
  {
   "axis": "all",
-  "digest": "dee6a349866dfa71",
+  "digest": "ea48d50398365a67",
   "kind": "claim",
   "linkage": {
    "ids_in_registry_without_pmid": [],
@@ -656,11 +656,6 @@
    "31543760",
    "32581702"
   ],
-  "pmids_via_records": {
-   "32581702": [
-    "PAPER 020"
-   ]
-  },
   "query_id": "Q-CLAIM014",
   "terms": [
    "WWOX"
@@ -1169,7 +1164,7 @@
  },
  {
   "axis": "all",
-  "digest": "c09bd41cebfe926a",
+  "digest": "0c32c7f0a4cbd8bc",
   "kind": "claim",
   "linkage": {
    "ids_in_registry_without_pmid": [],
@@ -1189,6 +1184,7 @@
    "PAPER 383"
   ],
   "pmids": [
+   "15070730",
    "38203337"
   ],
   "pmids_via_records": {
@@ -1248,7 +1244,7 @@
  },
  {
   "axis": "all",
-  "digest": "fa678a0cf05b97f1",
+  "digest": "8131507988b0efef",
   "kind": "claim",
   "linkage": {
    "ids_in_registry_without_pmid": [],
@@ -1297,9 +1293,6 @@
    "36779245"
   ],
   "pmids_via_records": {
-   "24456803": [
-    "PAPER 043"
-   ],
    "29808465": [
     "PAPER 041"
    ],
@@ -1653,7 +1646,7 @@
  },
  {
   "axis": "all",
-  "digest": "8cc4f5deaf13de4c",
+  "digest": "6028313288bd7a47",
   "kind": "claim",
   "linkage": {
    "ids_in_registry_without_pmid": [],
@@ -1698,20 +1691,6 @@
    "23254685",
    "30290271"
   ],
-  "pmids_via_records": {
-   "17360458": [
-    "PAPER 078"
-   ],
-   "17803050": [
-    "PAPER 059"
-   ],
-   "18974271": [
-    "PAPER 076"
-   ],
-   "19500159": [
-    "PAPER 058"
-   ]
-  },
   "query_id": "Q-CLAIM036",
   "terms": [
    "P18",
@@ -3203,7 +3182,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "41490719ae259eb0",
+  "digest": "e3814e44028788cd",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-061"
@@ -3224,6 +3203,7 @@
   "origin_title": "DL-BIO-010 — ERG scotopico (ampiezza onda-b + implicit time) come endpoint funzionale traslabile — con un caveat che ne cambia l'interpretazione",
   "papers_named": [],
   "pmids": [
+   "15070730",
    "17567906",
    "21075834",
    "21901168",
@@ -3235,6 +3215,9 @@
    "38203337"
   ],
   "pmids_via_records": {
+   "15070730": [
+    "DL-MECH-061"
+   ],
    "17567906": [
     "DL-MECH-061"
    ],
@@ -3509,7 +3492,7 @@
   "claims_named": [
    "CLAIM 030"
   ],
-  "digest": "103cf91d336a1eb0",
+  "digest": "29193764bfc45add",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
@@ -3540,6 +3523,7 @@
   "pmids": [
    "12065620",
    "15064722",
+   "15070730",
    "17803050",
    "17823927",
    "19500159",
@@ -3604,6 +3588,9 @@
    ],
    "15064722": [
     "DL-MECH-019",
+    "DL-MECH-064"
+   ],
+   "15070730": [
     "DL-MECH-064"
    ],
    "17803050": [
@@ -3854,7 +3841,7 @@
    "CLAIM 017",
    "CLAIM 030"
   ],
-  "digest": "64fd8d17da73c90d",
+  "digest": "74ee91448ea979ff",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-066",
@@ -3884,6 +3871,7 @@
   "pmids": [
    "12065620",
    "15064722",
+   "15070730",
    "17803050",
    "17823927",
    "19500159",
@@ -3949,6 +3937,10 @@
     "DL-MECH-067"
    ],
    "15064722": [
+    "DL-MECH-066",
+    "DL-MECH-067"
+   ],
+   "15070730": [
     "DL-MECH-066",
     "DL-MECH-067"
    ],
@@ -14282,7 +14274,7 @@
    "CLAIM 009",
    "CLAIM 028"
   ],
-  "digest": "7c56b89dfc0d4214",
+  "digest": "f798ed13d1533996",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -14303,6 +14295,7 @@
   "origin_title": "DL-MECH-061 — Ca²⁺→calpaina come regolatore dell'ABBONDANZA di WWOX in un neurone eccitabile (NON come via di degradazione)",
   "papers_named": [],
   "pmids": [
+   "15070730",
    "17567906",
    "21075834",
    "21901168",
@@ -14314,6 +14307,9 @@
    "38203337"
   ],
   "pmids_via_records": {
+   "15070730": [
+    "CLAIM 028"
+   ],
    "17567906": [
     "CLAIM 009"
    ],
@@ -14349,7 +14345,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "dab429e5a4b51cb4",
+  "digest": "350433af86884db8",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-061"
@@ -14370,6 +14366,7 @@
   "origin_title": "DL-MECH-062 — Neuroligina-3 nello stesso set proteomico calpaina-sensibile",
   "papers_named": [],
   "pmids": [
+   "15070730",
    "17567906",
    "21075834",
    "21901168",
@@ -14381,6 +14378,9 @@
    "38203337"
   ],
   "pmids_via_records": {
+   "15070730": [
+    "DL-MECH-061"
+   ],
    "17567906": [
     "DL-MECH-061"
    ],
@@ -14417,7 +14417,7 @@
    "CLAIM 024",
    "CLAIM 028"
   ],
-  "digest": "9f60fee395174982",
+  "digest": "e5d0bd73f1997010",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-011"
@@ -14443,6 +14443,7 @@
   "papers_named": [],
   "pmids": [
    "15064722",
+   "15070730",
    "17803050",
    "17823927",
    "19500159",
@@ -14499,6 +14500,9 @@
   "pmids_via_records": {
    "15064722": [
     "DL-BIO-011"
+   ],
+   "15070730": [
+    "CLAIM 028"
    ],
    "17803050": [
     "DL-BIO-011"
@@ -14664,7 +14668,7 @@
    "CLAIM 028",
    "CLAIM 030"
   ],
-  "digest": "bf68038d193ce408",
+  "digest": "532d509c68b250d1",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-012",
@@ -14702,6 +14706,7 @@
   "pmids": [
    "12065620",
    "15064722",
+   "15070730",
    "17803050",
    "17823927",
    "19500159",
@@ -14766,6 +14771,9 @@
    ],
    "15064722": [
     "DL-MECH-019"
+   ],
+   "15070730": [
+    "CLAIM 028"
    ],
    "17803050": [
     "DL-MECH-019"
@@ -14955,7 +14963,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "486ff20c771fe3bc",
+  "digest": "a8015d9876c0e29d",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-019",
@@ -14981,6 +14989,7 @@
   "pmids": [
    "12065620",
    "15064722",
+   "15070730",
    "17803050",
    "17823927",
    "19500159",
@@ -15045,6 +15054,9 @@
    ],
    "15064722": [
     "DL-MECH-019",
+    "DL-MECH-064"
+   ],
+   "15070730": [
     "DL-MECH-064"
    ],
    "17803050": [
@@ -15275,7 +15287,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "8cb22c8454eeea30",
+  "digest": "630336e61216e68b",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-064"
@@ -15298,6 +15310,7 @@
   "pmids": [
    "12065620",
    "15064722",
+   "15070730",
    "17803050",
    "17823927",
    "19500159",
@@ -15358,6 +15371,9 @@
   ],
   "pmids_via_records": {
    "15064722": [
+    "DL-MECH-064"
+   ],
+   "15070730": [
     "DL-MECH-064"
    ],
    "17803050": [
@@ -15531,7 +15547,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "6995fa83c17c5bb0",
+  "digest": "62880c041bb48ba8",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-064",
@@ -15557,6 +15573,7 @@
   "pmids": [
    "12065620",
    "15064722",
+   "15070730",
    "17803050",
    "17823927",
    "19500159",
@@ -15621,6 +15638,10 @@
     "DL-MECH-066"
    ],
    "15064722": [
+    "DL-MECH-064",
+    "DL-MECH-066"
+   ],
+   "15070730": [
     "DL-MECH-064",
     "DL-MECH-066"
    ],
@@ -15856,7 +15877,7 @@
   "claims_named": [
    "CLAIM 016"
   ],
-  "digest": "2e280bc778a769d8",
+  "digest": "39f5a7061e8a06b9",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-013",
@@ -15890,6 +15911,7 @@
   "pmids": [
    "12065620",
    "15064722",
+   "15070730",
    "17803050",
    "17823927",
    "19500159",
@@ -15956,6 +15978,11 @@
     "DL-MECH-067"
    ],
    "15064722": [
+    "DL-MECH-064",
+    "DL-MECH-066",
+    "DL-MECH-067"
+   ],
+   "15070730": [
     "DL-MECH-064",
     "DL-MECH-066",
     "DL-MECH-067"
@@ -39732,7 +39759,7 @@
    "CLAIM 035"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID22193544.json|entries[6]",
-  "digest": "d4e407ba265e907f",
+  "digest": "79efc1a850c9b4b9",
   "kind": "mechanism_line",
   "linkage": {
    "ids_in_registry_without_pmid": [],
@@ -39755,6 +39782,7 @@
   "origin_line": 0,
   "origin_title": "Tau knockdown abolishes the WWOX effect, and WWOX with siRNA-GSK3beta is non-additive",
   "pmids": [
+   "15070730",
    "22193544",
    "24369382",
    "24456803",
@@ -39771,6 +39799,9 @@
    "38203337"
   ],
   "pmids_via_records": {
+   "15070730": [
+    "CLAIM 028"
+   ],
    "24369382": [
     "CLAIM 030"
    ],
@@ -41224,7 +41255,7 @@
    "CLAIM 035"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID22193544.json|entries[9]",
-  "digest": "38b8a634c3f41013",
+  "digest": "8ed36195d00c6f72",
   "kind": "mechanism_line",
   "linkage": {
    "ids_in_registry_without_pmid": [],
@@ -41247,6 +41278,7 @@
   "origin_line": 0,
   "origin_title": "The microtubule-assembly limb of the WWOX/GSK3B/Tau chain IS locatored, and it is cell-free: GSK3B lowers assembly, WT WWOX raises the new equilibrium above GSK3B alone, and the GSK3B-binding-deficient WWOX L404A does not restore it.",
   "pmids": [
+   "15070730",
    "22193544",
    "24369382",
    "24456803",
@@ -41263,6 +41295,9 @@
    "38203337"
   ],
   "pmids_via_records": {
+   "15070730": [
+    "CLAIM 028"
+   ],
    "24369382": [
     "CLAIM 030"
    ],
@@ -41477,7 +41512,7 @@
    "CLAIM 035"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID22193544.json|entries[3]",
-  "digest": "e953bfb9202a22b4",
+  "digest": "b4b6f59c7493f28f",
   "kind": "mechanism_line",
   "linkage": {
    "ids_in_registry_without_pmid": [],
@@ -41500,6 +41535,7 @@
   "origin_line": 0,
   "origin_title": "WWOX inhibits Tau phosphorylation at S396 and S404 but not at the MKK4 site S422",
   "pmids": [
+   "15070730",
    "22193544",
    "24369382",
    "24456803",
@@ -41516,6 +41552,9 @@
    "38203337"
   ],
   "pmids_via_records": {
+   "15070730": [
+    "CLAIM 028"
+   ],
    "24369382": [
     "CLAIM 030"
    ],
@@ -41679,7 +41718,7 @@
    "D02_wnt_tankyrase"
   ],
   "decisive_test": "in WOREE organoids, **first measure nuclear β-catenin state**, then XAV939 **vs** CHIR99021 on cortical-layering rescue — the two-armed design is what fixes the sign in the right context",
-  "digest": "8a1dbfdc1b3b01c5",
+  "digest": "4badf68c3633ce20",
   "intervention": "tankyrase inhibitor (e.g. XAV939 as tool); no paediatric-profiled candidate identified",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -41699,10 +41738,14 @@
   "origin_title": "Wnt / tankyrase inhibition",
   "papers_named": [],
   "pmids": [
+   "15070730",
    "34268881",
    "38203337"
   ],
   "pmids_via_records": {
+   "15070730": [
+    "CLAIM 028"
+   ],
    "38203337": [
     "CLAIM 028"
    ]
