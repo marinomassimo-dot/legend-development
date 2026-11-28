@@ -1,0 +1,8 @@
+file	sha256	source_url	depth_and_locator
+Miyamoto2013.pdf	1165b5946ed70f92e4477fe84f2ebe2ab49a9e005475a9696f2e7907a739740b	https://www.nmr.mgh.harvard.edu/~cmagnain/pdf/Miyamoto2013.pdf	Targeted primary Figs. 5 and 6 and Supplementary Fig. 5. Figure images inspected.
+Miyamoto 2010 remote HTML	remote	https://journals.sagepub.com/doi/10.1038/jcbfm.2009.210	Targeted full-text excerpts on total rat PK, flow, tissue cAMP, fate and survival.
+adultpk.pdf	57a692cbc91d7e50a6088c1fff8fa14c7a0b6cf58655bd34c7842b4ec9b3347b	https://rcastoragev2.blob.core.windows.net/ba880bb9944517d3e39c8ed367b7b81d/PMC5761466.pdf	Primary Table 3 and corresponding PK results.
+Horai primary abstract and indexed Fig. 1a caption	remote	https://pubmed.ncbi.nlm.nih.gov/23224787/	Rat endothelial transcript and cAMP direction. No complete reading claimed.
+Pediatric primary aggregate abstract	remote	https://pubmed.ncbi.nlm.nih.gov/40974885/	Cohort size, age range, co-interventions and reported events.
+Current US prescribing information	remote	https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=77e77eaf-5556-43ac-844e-c0e29f02fe07&type=display	Sections 4, 5, 7, 8.4 and 12.3 on binding, contraindication, interaction and pediatric availability.
+Held WWOX primary conditional comparison	remote	https://doi.org/10.1093/brain/awab174	Prior WWOX myelin analysis, reused with the native GEO data replay.
