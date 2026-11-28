@@ -224,7 +224,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Next: procysteine (L-2-oxothiazolidine-4-carboxylate).** Compare verified precursor conversion and productive glutathione synthesis at matched neural demand. Open after AV-101 closes.
+**Active: procysteine (L-2-oxothiazolidine-4-carboxylate).** Compare OPLAH-dependent cysteine formation and new glutathione at matched neural demand. First reconcile published adult central and peripheral exposure with rat regional thiol measurements. [Prespecified comparison](procysteine/pretest.md)
 
 **L-4-chlorokynurenine (AV-101).** Retain as a conditional preclinical comparator and defer pediatric WWOX priority. Adult lumbar metabolite series were mostly censored. Adult auditory EEG responded in a separate crossover, while rat kindling and cortical readouts diverged. Reopen for measured free local product and a native coagonist-reversal comparison at preserved first recruitment. [Dossier and replay](l_4_chlorokynurenine/README.md)
 
