@@ -222,7 +222,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Next: L-threonine.** Quantify whether increased human CSF threonine accompanies glycine and motor changes under the same contrast. Compare rodent precursor conversion with human pathway and transporter alternatives after the trimetazidine checkpoint lands.
+**Active: L-threonine.** Compare adult CSF threonine and glycine in the controlled spasticity study with the tissue–extracellular split in rat. Verify the adult denominators and motor endpoint alongside the competing formation and transport routes. [Prespecified comparison](l_threonine/pretest.md) · [Opening comparison](l_threonine/first_comparison.md)
 
 **Trimetazidine.** Retain as a conditional comparator of mitochondrial stress and substrate use. Defer pediatric WWOX priority. The rat thiolase figure lacks a matched high-substrate untreated arm. Adult human cardiac assays had no detected flux shift, and rabbit myocyte pore protection dissociated from similar fatty-acid-supported respiratory changes. Reopen for measured free neural exposure and recovery linked to a validated thiolase flux effect at matched work. [Dossier and replay](trimetazidine/README.md)
 
