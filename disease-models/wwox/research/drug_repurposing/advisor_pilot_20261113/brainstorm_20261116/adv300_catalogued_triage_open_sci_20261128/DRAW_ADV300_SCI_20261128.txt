@@ -1,0 +1,19 @@
+pool_no_receipt 191
+pool_after_exclusions 184
+unresolved_identifier 5 testable 179
+europepmc_search 0 200
+europepmc_search 50 200
+europepmc_search 100 200
+europepmc_search 150 200
+with_pmcid 65 open_route 39 held 0 efetch 39 europepmc 0
+open_pool_sha256 c76b743f512235a6058d661bc4a1fbd6ee4f9a53c6190013b7a68a0dafa4f8c8
+draw	1	CORPUS-STUB-195	43036373
+draw	2	CORPUS P232	20535528
+draw	3	CORPUS P276	29662317
+draw	4	CORPUS P273	28769061
+draw	5	CORPUS P369	25710931
+draw	6	CORPUS-STUB-116	35563688
+draw	7	CORPUS P351	25295115
+draw	8	CORPUS-STUB-159	29845204
+draw	9	CORPUS-STUB-014	30211123
+draw	10	CORPUS P310	32606933
