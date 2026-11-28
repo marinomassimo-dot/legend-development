@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Recompute descriptive contrasts and explicit, non-fitted counterexamples."""
 
 import argparse
