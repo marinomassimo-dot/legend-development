@@ -785,3 +785,5 @@
 {"evidence": "same SendMessage as ADV-320, ASSIGNMENT 2 of adv321.txt", "id": "ADV-322", "receipt": ["7fcc08f1-efa8-484c-a1a6-bb1b02255a5a"], "state": "SENT", "to": ["SCI - CURRENT b0e37f80"], "utc": "2026-11-28T12:11:07Z"}
 {"assessment": "HOST", "id": "ADV-323", "key": "chornyy2025-blind-second-read-he", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-28T12:16:59Z"}
 {"evidence": "SendMessage 2026-11-28 with text path", "id": "ADV-323", "receipt": ["c851b824-fb59-486a-a961-39e640feb0b6"], "state": "SENT", "to": ["HE - CURRENT 0a29d266"], "utc": "2026-11-28T12:17:15Z"}
+{"assessment": "HOST", "id": "ADV-324", "key": "programme-cards-display-misrouting-fix-he", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-28T12:28:28Z"}
+{"evidence": "SendMessage 2026-11-28 with text path and IT trace", "id": "ADV-324", "receipt": ["d7a390aa-6cfd-454c-831c-3df20887d5c7"], "state": "SENT", "to": ["HE - CURRENT 0a29d266"], "utc": "2026-11-28T12:28:43Z"}
