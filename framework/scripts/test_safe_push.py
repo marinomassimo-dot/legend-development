@@ -888,7 +888,7 @@ class SafePushEarlyCheck(unittest.TestCase):
         with TemporaryDirectory() as td:
             root, bare, lock, child = self.start_behind_a_held_lock(td, "print('still ok')\n")
             seen = ""
-            while "EARLY CHECK passed" not in seen:
+            while "EARLY CHECK ended" not in seen:
                 line = child.stdout.readline()
                 self.assertTrue(line, seen)
                 seen += line
@@ -896,6 +896,23 @@ class SafePushEarlyCheck(unittest.TestCase):
             out, err = child.communicate(timeout=50)
             self.assertEqual(child.returncode, 0, err)
             self.assertIn("PUBLISHED", out)
+
+    def test_the_early_run_stops_when_the_lock_comes_free(self) -> None:
+        with TemporaryDirectory() as td:
+            mark = str(Path(td) / "ran_once")
+            slow_first = f"import os, time\nif not os.path.exists({mark!r}):\n    open({mark!r}, 'w').close()\n    time.sleep(40)\n"
+            root, bare, lock, child = self.start_behind_a_held_lock(td, slow_first)
+            deadline = time.time() + 20
+            while not Path(mark).exists():
+                self.assertLess(time.time(), deadline)
+                time.sleep(0.1)
+            freed = time.time()
+            fcntl.flock(lock, fcntl.LOCK_UN)
+            out, err = child.communicate(timeout=50)
+            self.assertEqual(child.returncode, 0, err)
+            self.assertIn("EARLY CHECK stopped at", out)
+            self.assertIn("PUBLISHED", out)
+            self.assertLess(time.time() - freed, 30)
 
 
 class SafePushParallelChecks(unittest.TestCase):
