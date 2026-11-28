@@ -1,0 +1,11 @@
+key	value	unit	locator
+csf_mean	1.81	ng/mL	Schultz published Fig. 2B and Results: TZ concentration in CSF (PMID 40785306)
+parent_mass	387.43	g/mol	FDA SRS, UNII 8L5014XET7
+mouse_pgk1_low_nominal	2.5	nM	Chen Fig. 2d and Results (PMID 25383758)
+human_pgk1_apo_kd	13	µM	Bütikofer Results, Fig. 1C and Fig. S3 pointer (PMID 42953203)
+neuronal_bath	10	µM	Kokotos Figs. 1D–E and 2A–D and perfusion method (PMID 39167658)
+lowest_described_plasma_calibrator	15.6	pg/µL	Schultz published Methods: LC-MS (PMID 40785306)
+published_plasma_mean	0.08	µg/mL	Schultz published Results: TZ concentration in plasma, Fig. 2A (n=18)
+preprint_plasma_as_printed	0.08	ng/mL	Schultz preprint Results: TZ concentration in plasma and cerebral spinal fluid
+assumed_free_fraction	0.08	fraction	Schultz published Results: about 92% plasma bound in calculation
+csf_over_estimated_free_plasma	0.23	fraction	Schultz published Results: subgroup mean from Fig. 2B (n=3)
