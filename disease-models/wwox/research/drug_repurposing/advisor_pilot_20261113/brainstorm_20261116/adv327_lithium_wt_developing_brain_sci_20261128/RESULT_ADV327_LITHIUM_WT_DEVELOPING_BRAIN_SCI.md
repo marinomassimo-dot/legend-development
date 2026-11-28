@@ -67,3 +67,7 @@ The pre-registration and the assignment read "LiCl 60 mg/kg is about 1.4 mmol pe
 ## What would decide it
 
 A single-dose, vehicle-controlled series in wild-type P7 to P28 brain at or below 2.5 mmol Li per kg, with per-animal phospho-over-total values at two or more times, a tested lithium-versus-vehicle contrast and a lithium level.
+
+## Addendum (2026-11-28T15:19:57Z): the held sentence has two readings
+
+The Methods sentence of PMID 32000863 is "LiCl (i.p., 60 mg/kg) were pretreated three times within 1 h before PTZ injection"; the Fig 7d legend gives only "LiCl (60 mg/kg)". The text does not say whether 60 mg/kg is the dose of each injection (reading A: about 4.25 mmol Li per kg cumulative) or the total divided over three injections (reading B: about 1.4 cumulative). The "Premise error" section and change 3 above are stated on reading A only. On reading B the pre-registered anchor of 1.4 would be the cumulative exposure, and the verdict would speak to it. The verdict itself (not decidable at the acute range) does not depend on the reading. Neither reading is adopted here; a design that needs the held regimen must state both.
