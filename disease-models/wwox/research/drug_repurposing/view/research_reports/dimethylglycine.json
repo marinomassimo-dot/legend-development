@@ -1,0 +1,33 @@
+{
+  "investigation": "INV-07",
+  "title": "Dimethylglycine in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "A comparison of local mitochondrial substrate use and peripheral conversion.",
+  "graph": {
+    "evidence": "DMGDH transcript is scarce in three WWOX bulk models and two pooled nuclear matrices.",
+    "inference": "Local conversion and productive electron transfer remain separate questions.",
+    "hypothesis": "A substrate deficit could matter only in cells with retained DMGDH and ETF activity.",
+    "experiment": "Pair labeled product with ATP recovery under matched neural workload."
+  },
+  "evidence": [
+    "DMGDH stayed below 1 on the deposited scale in both arms of all three WWOX bulk comparisons. The CSF meal result reproduced at 2.16-fold from three paired observations, with 1.03-fold in plasma."
+  ],
+  "inference": [
+    "A blood increase in a five-child mitochondrial crossover accompanied no demonstrated gain in whole-body oxygen consumption. The printed blood concentration unit remains unresolved."
+  ],
+  "hypothesis": [
+    "Peripheral production of downstream metabolites could mimic a response to the parent. Local product could also form without an ATP gain."
+  ],
+  "experiment": [
+    "Track methyl label into sarcosine and a one-carbon product together with ATP recovery and evoked recruitment. Compare local DMGDH interruption and matched sarcosine or glycine."
+  ],
+  "limits": [
+    "Retain as a conditional tracer and defer pediatric WWOX priority. Free neural exposure, local enzyme activity and functional benefit remain unmeasured."
+  ],
+  "sources": [
+    {"label": "Augustin et al. Purified human DMGDH kinetics, Table 1.", "url": "https://doi.org/10.1111/febs.13828"},
+    {"label": "Saito et al. Paired meal study, Table 1 and S1–S2.", "url": "https://doi.org/10.3390/metabo10050185"},
+    {"label": "Liet et al. Pediatric oxygen consumption, abstract.", "url": "https://pubmed.ncbi.nlm.nih.gov/12520257/"},
+    {"label": "Gascon et al. Randomized seizure comparison, abstract.", "url": "https://pubmed.ncbi.nlm.nih.gov/2463912/"}
+  ]
+}

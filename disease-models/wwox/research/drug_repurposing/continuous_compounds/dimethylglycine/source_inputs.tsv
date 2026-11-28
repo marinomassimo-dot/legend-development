@@ -1,0 +1,21 @@
+key	value	unit	locator
+wt_dcpip_km	0.3	mM	Augustin et al. 2016 Table 1; lower apparent component
+wt_dcpip_kcat	44	min^-1	Augustin et al. 2016 Table 1
+wt_dcpip_efficiency_printed	146	mM^-1 min^-1	Augustin et al. 2016 Table 1
+h109r_dcpip_km	4.7	mM	Augustin et al. 2016 Table 1; lower apparent component
+h109r_dcpip_kcat	91	min^-1	Augustin et al. 2016 Table 1
+h109r_dcpip_efficiency_printed	20	mM^-1 min^-1	Augustin et al. 2016 Table 1
+wt_ferrocene_km	1.4	mM	Augustin et al. 2016 Table 1
+wt_ferrocene_kcat	213	min^-1	Augustin et al. 2016 Table 1
+wt_ferrocene_efficiency_printed	137	mM^-1 min^-1	Augustin et al. 2016 Table 1
+h109r_ferrocene_km	32.2	mM	Augustin et al. 2016 Table 1
+h109r_ferrocene_kcat	544	min^-1	Augustin et al. 2016 Table 1
+h109r_ferrocene_efficiency_printed	11	mM^-1 min^-1	Augustin et al. 2016 Table 1
+child_vo2_change_parent	-1	mL min^-1 m^-2	Liet et al. 2003 primary abstract; before and after
+child_vo2_change_placebo	-6	mL min^-1 m^-2	Liet et al. 2003 primary abstract; before and after
+child_intake_before_parent	1336	kcal m^-2 day^-1	Liet et al. 2003 primary abstract
+child_intake_during_parent	1380	kcal m^-2 day^-1	Liet et al. 2003 primary abstract
+child_intake_before_placebo	1562	kcal m^-2 day^-1	Liet et al. 2003 primary abstract
+child_intake_during_placebo	1342	kcal m^-2 day^-1	Liet et al. 2003 primary abstract
+child_blood_parent_reported_number	617	mmol/L printed; unresolved	Liet et al. 2003 primary abstract; excluded from exposure modeling
+parent_molar_mass	103.12	g/mol	RCSB chemical component DMG and PubChem CID 673

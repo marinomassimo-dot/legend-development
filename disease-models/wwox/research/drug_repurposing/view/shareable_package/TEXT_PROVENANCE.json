@@ -11,12 +11,12 @@
   "html": 147,
   "json": 545,
   "md": 1,
-  "pdf": 229,
-  "txt": 577,
-  "xml": 1039
+  "pdf": 230,
+  "txt": 578,
+  "xml": 1040
  },
- "corpus_files": 2538,
- "corpus_words": 25210389,
+ "corpus_files": 2541,
+ "corpus_words": 25230495,
  "failures": 0,
  "method": "every string of the shareable data object against the third-party texts held locally (full texts, abstracts, openFDA label JSON), longest verbatim run in words (shingle 7); limits: unquoted phrase <= 25 words, marked quotation <= 12 words, or <= 30 words with an attribution phrase",
  "not_covered": "third-party texts not held locally; label sections that were not fetched",
