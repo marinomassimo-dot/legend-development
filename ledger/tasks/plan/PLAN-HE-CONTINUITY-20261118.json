@@ -1572,10 +1572,11 @@
     },
     {
      "step": "ADV-301: mechanical source check of the latest compound briefs (read-only; PREREG first; five briefs; hand-check two)",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
      "source": "ADV-301 message from ADV a5e6f2ad 2026-11-28",
-     "accepted_at": "2026-11-28T06:32:49Z"
+     "accepted_at": "2026-11-28T06:32:49Z",
+     "updated_at": "2026-11-28T06:43:44Z"
     }
    ]
   }
