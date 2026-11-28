@@ -1,0 +1,8 @@
+[
+ {
+  "op": "replace-within",
+  "id": "PAPER 225",
+  "old": "The neuron-restricted `p546` matched CAG for brain-area coverage (**41 %** against CAG *«covering up to 42 %»*, a ratio of **0.98** recomputed from those two printed values) at about **one third** of the mean intensity (**154.0** against **474.8** relative fluorescence units — **0.324**), with **72 %** neuronal and **1.9 %** astrocytic colocalisation.",
+  "new": "The text calls the area of the neuron-targeted `p546` *«comparable to CAG»* (**41 %** against CAG *«covering up to 42 %»*), but these two values are the largest plotted points of Fig. 4C; the plotted medians are about **23 %** against **39 %** of area (ratio about **0.60**) and about 124 against 577 relative fluorescence units of intensity (ratio about **0.22**, by eye; the text's mean intensities, **154.0** against **474.8**, give **0.32**). The `p546` signal was **72 %** neuronal and **1.9 %** astrocytic by colocalisation."
+ }
+]
