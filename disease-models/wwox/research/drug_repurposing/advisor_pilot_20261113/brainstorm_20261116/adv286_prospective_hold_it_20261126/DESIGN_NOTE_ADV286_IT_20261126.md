@@ -80,3 +80,39 @@ Applies to the engine's written reasoning, independently of the release, so it c
 * Accept that C1 may close as UNRESOLVED, or ask for a further candidate search (conference or preprint records with a
   printed release date) before 2026-12-01.
 * Whether the metric of section 5 is worth running alone if no candidate resolves: it needs one blind reader.
+
+## 7. Addendum (IT31, 2026-11-28): first-composition rates, frozen
+
+Hypothesis level; nothing here is medical advice. This addendum records observed rates. It changes no rule of
+sections 2 to 6: the pass line of section 5 item 2 (MUST CHANGE share below 25 percent on at least 30 statements)
+stands, and no arm has answered any question.
+
+**Inclusion rule.** Blind first readings of consumer text composed by IT, IT28 (2026-11-26) to IT30 (2026-11-28),
+reported in the `adv*_consumers_it*` folders beside this one. A rate counts MUST CHANGE over the items the reader
+graded. Earlier rounds (IT27 and before) are outside the window and were not counted.
+
+| Round | MUST CHANGE / graded | Unit | Where the count comes from |
+|---|---|---|---|
+| ADV-282 increments 4 to 6 | 10 / 24 | sentence set | record in `adv282_inc46_consumers_it_20261126` |
+| ADV-285 and ADV-288 | 4 / 4 | block | record in `adv285_288_consumers_it_20261126` |
+| ADV-287 extension | 2 / 23 (any required change 11 / 23) | block | record in `adv287ext_consumers_it_20261126` |
+| ADV-295 block 1 | 4 / 10 | row of the report | counted on 2026-11-28 from the verdict table in `adv295_consumers_it_20261126` |
+| ADV-298 | 1 / 8 | row of the report | counted on 2026-11-28 from the verdict table in `adv298_consumers_it_20261128` |
+| ADV-295 block 2 and ADV-297 | 4 / 7 | changed set | CC-20261128-ORCHESTRATOR-ADV295B2-297-01 |
+| ADV-300 J and ADV-301 etifoxine | 3 / 5 | sentence | CC-20261128-ORCHESTRATOR-ADV300-J-01 |
+| ADV-310 and ADV-311 pup brief | 7 / 24 (KEEP 10, OPTIONAL 7) | fragment | report in `adv310_311_consumers_it29_20261128` |
+| ADV-309 | 2 / 8 | sentence | CC-20261128-ORCHESTRATOR-ADV302-309-01 |
+| ADV-302 | 6 / 11 (5 substantive) | item | CC-20261128-ORCHESTRATOR-ADV302-309-01 |
+| **Sum of the ten rows** | **43 / 124 (35 percent)** | mixed units | arithmetic on the rows above |
+
+Kept apart (not a first composition): the pup-brief sentences already repaired once and read again, plus one added
+clause: 3 / 8 MUST CHANGE (2 substantive), `adv310_311_consumers_it30_20261128`.
+
+**How to read it.** The rows run from 2 / 23 to 4 / 4. Units differ (sentence, block, fragment, item), the sources
+and readers differ between rounds, and several rounds are small, so the sum is a description of this window and not a
+new reference bar or a matched control. It sits inside band (a) of section 5 (25 to 45 percent). A comparison with an
+engine arm still needs the matched control of section 5 item 3.
+
+**State of the hold on 2026-11-28.** C3 repeated: no candidate. C1 is looked at again on 2026-12-05 and C2 not before
+2026-12-06. The retrospective-hold design of section 1 is the fallback; its question list, input packet and arm
+answers are not written.

@@ -1,0 +1,56 @@
+# ADV-313 dated searches and routes (SCI, 2026-11-28). Plain requests; no e-mail or identifier sent.
+
+## PubMed E-utilities esearch, title and abstract (P1 to P8; at most 10 allowed by the preregistration)
+P1 [2026-11-28T09:36Z] hits=1 | "compound action potential"[tiab] AND ("g-ratio"[tiab] OR "g ratio"[tiab]) AND (mice[tiab] OR mouse[tiab] OR rat[tiab] OR rats[tiab])
+   ids 17551984
+P2 [2026-11-28T09:36Z] hits=6 | ("conduction velocity"[tiab]) AND ("g-ratio"[tiab] OR "g ratios"[tiab]) AND ("corpus callosum"[tiab] OR "optic nerve"[tiab] OR "spinal cord"[tiab]) AND (mice[tiab] OR rats[tiab])
+   ids 34576288,32676012,30225359,29755326,26909749,18815260
+P3 [2026-11-28T09:36Z] hits=6 | ("optic nerve"[tiab]) AND ("compound action potential"[tiab] OR "compound action potentials"[tiab]) AND (hypomyelination[tiab] OR hypomyelinated[tiab] OR dysmyelination[tiab] OR "thinner myelin"[tiab])
+   ids 35441271,29688489,27008179,20149822,16360123,12805291
+P4 [2026-11-28T09:36Z] hits=1 | ("corpus callosum"[tiab]) AND ("compound action potential"[tiab] OR "compound action potentials"[tiab]) AND ("electron microscopy"[tiab] OR ultrastructural[tiab]) AND (knockout[tiab] OR "conditional"[tiab] OR mutant[tiab])
+   ids 37479154
+P5 [2026-11-28T09:36Z] hits=5 | ("conduction velocity"[tiab]) AND ("myelin thickness"[tiab] OR "thinner myelin"[tiab]) AND ("optic nerve"[tiab] OR "corpus callosum"[tiab]) AND (mice[tiab] OR mouse[tiab])
+   ids 37479154,36205478,35372341,30373833,17728461
+P6 [2026-11-28T09:36Z] hits=3 | ("visual evoked potential"[tiab] OR "visual evoked potentials"[tiab]) AND ("g-ratio"[tiab]) AND (mice[tiab] OR rats[tiab])
+   ids 39576623,37703949,33653184
+P7 [2026-11-28T09:36Z] hits=0 | ("somatosensory evoked"[tiab] OR "motor evoked potential"[tiab] OR "motor evoked potentials"[tiab]) AND ("g-ratio"[tiab]) AND ("corpus callosum"[tiab] OR "spinal cord"[tiab] OR "optic nerve"[tiab]) AND (mice[tiab] OR rats[tiab])
+   ids 
+P8 [2026-11-28T09:36Z] hits=1 | (cuprizone[tiab] OR lysolecithin[tiab] OR lysophosphatidylcholine[tiab]) AND ("conduction velocity"[tiab]) AND ("electron microscopy"[tiab] OR "g-ratio"[tiab])
+   ids 31140740
+
+## PubMed connector search (Crawford lead)
+Crawford DK[Author] AND corpus callosum: 6 hits (23311751, 20858739, 21029240, 19800949, 19481113, 23603111)
+
+## Routes for Blades 2022 (PMID 35441271; no receipt in the ledger before this increment)
+Europe PMC core record: not open access, subscription link only. Europe PMC preprint search "Tyro3 AND myelin AND conductivity": 0 hits.
+OpenAlex: closed; one repository location, https://hdl.handle.net/11343/301987 (University of Melbourne, submitted version).
+Semantic Scholar: no open PDF. Publisher page: article body not served; three supplementary files served openly (read).
+Repository landing page: Incapsula challenge page (route result, not bypassed). One metadata request to the same repository API had been sent in the same command before the challenge text was read; no file was requested and nothing further was sent.
+
+## Closed-paper and repository routes
+29859880 openalex is_oa False closed None | repo copy False
+16360123 openalex is_oa False closed None | repo copy False
+8108457 openalex is_oa False closed None | repo copy False
+15869936 openalex is_oa False closed None | repo copy False
+37364629 openalex is_oa True bronze https://www.sciencedirect.com/science/article/am/pii/S0014483523001616 | repo copy False
+19800949 openalex is_oa False closed None | repo copy False
+19481113 openalex is_oa False closed None | repo copy False
+37479154 openalex is_oa True hybrid https://www.sciencedirect.com/science/article/pii/S1044743123000763 | repo copy True
+loc 37479154 https://doi.org/10.1016/j.mcn.2023.103882 https://www.sciencedirect.com/science/article/pii/S1044743123000763 Molecular and Cellular Neuroscience
+loc 37479154 https://researchprofiles.ku.dk/da/publications/9cbfc613-e033-408a-9d5c-64809878fce9 None Research at the University of Copenhagen (University of Copenhagen)
+loc 37479154 https://pure.au.dk/portal/files/384332922/1-s2.0-S1044743123000763-main.pdf None None
+route 37479154 https://www.sciencedirect.com/science/article/pii/S1044743123000763 status 403 bytes 0 challenge-or-captcha False
+route 37364629 https://www.sciencedirect.com/science/article/am/pii/S0014483523001616 status 403 bytes 0 challenge-or-captcha False
+route 37479154 https://pure.au.dk/portal/files/384332922/1-s2.0-S1044743123000763-main.pdf status 403 bytes 0 pdf False 
+
+## Correction notices (Europe PMC commentCorrectionList)
+39576623 10.1167/iovs.65.13.50 | notices: none
+35441271 10.1007/s00429-022-02489-8 | notices: none
+34576288 10.3390/ijms221810123 | notices: none
+32676012 10.3389/fnana.2020.00033 | notices: none
+31140740 10.1111/cns.13155 | notices: none
+30373833 10.1073/pnas.1811013115 | notices: [('Erratum in', '31182569')]
+30225359 10.1523/eneuro.0203-18.2018 | notices: none
+29755326 10.3389/fnana.2018.00031 | notices: none
+27008179 10.7554/elife.13023 | notices: none
+23603111 10.1016/j.nbd.2013.04.005 | notices: none
