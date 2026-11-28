@@ -1,0 +1,33 @@
+{
+  "investigation": "INV-15",
+  "title": "Suvorexant and seizure timing",
+  "date": "28 November 2026",
+  "summary": "Measure seizure risk within a defined vigilance state.",
+  "graph": {
+    "evidence": "REM sleep increased in Tsc1 mutant mice. The controlled seizure outcome was inconclusive.",
+    "inference": "Changing time in REM can change the overall event count.",
+    "hypothesis": "Orexin blockade might lower recurrence within matched vigilance states.",
+    "experiment": "Count EEG seizures per at-risk hour in each state at measured local exposure."
+  },
+  "evidence": [
+    "Estimated time in REM went from 5.4% to 8.2% at six weeks. The spontaneous seizure comparison gave p = .21 with 12–13 animals per treatment group."
+  ],
+  "inference": [
+    "Reweighting published state-specific risks by sleep duration gave a central ratio of 1.03. The sensitivity interval crossed 1."
+  ],
+  "hypothesis": [
+    "More time in a higher-risk state could mask a within-state benefit. The direction of the state effect in WWOX is unresolved."
+  ],
+  "experiment": [
+    "Compare vehicle and suvorexant at common pre-onset state and time weights. Verify local exposure and preserved recruitment."
+  ],
+  "limits": [
+    "Conditional research comparator. Pediatric neural exposure and WWOX seizure benefit remain unverified."
+  ],
+  "sources": [
+    {"label": "Rensing et al. Figs. 5–6 and Supplemental Table S1.", "url": "https://doi.org/10.1002/epi.70151"},
+    {"label": "Gotter et al. Plasma-to-occupancy calibration, Fig. 7.", "url": "https://doi.org/10.1186/1471-2202-14-90"},
+    {"label": "FDA. Suvorexant approval review and exposure.", "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2014/204569Orig1s000ClinPharmR.pdf"},
+    {"label": "FDA. Prescribing information, sections 5, 7 and 8.", "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/204569s010lbl.pdf"}
+  ]
+}

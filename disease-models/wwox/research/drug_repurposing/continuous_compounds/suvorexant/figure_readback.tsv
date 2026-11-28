@@ -1,0 +1,11 @@
+figure	phase_or_age	endpoint	unit	vehicle	suvorexant
+5A	dark	wake	percent_classified_time	61.156	64.711
+5B	dark	nrem	percent_classified_time	35.556	31.289
+5C	dark	rem	percent_classified_time	2.778	3.778
+5A	light	wake	percent_classified_time	26.311	23.467
+5B	light	nrem	percent_classified_time	65.067	63.289
+5C	light	rem	percent_classified_time	8.111	12.778
+5A	24h	wake	percent_classified_time	43.733	44.089
+5B	24h	nrem	percent_classified_time	50.133	47.289
+5C	24h	rem	percent_classified_time	5.444	8.222
+6A	6weeks	seizures_per_week	seizures_per_week	11.937	9.234
