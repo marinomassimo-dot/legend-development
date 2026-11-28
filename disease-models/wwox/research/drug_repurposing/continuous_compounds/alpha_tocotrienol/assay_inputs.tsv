@@ -1,0 +1,7 @@
+assay	molecule	ec50_uM	ec50_sd_uM	reported_n	enzyme_ic50_bound	enzyme_ic50_uM	enzyme_activity_at_100uM_percent	locator
+Q7_RSL3	alpha_tocopherol	5.161	2.844	9	gt	100	78	Hinman et al. Fig 1
+Q7_RSL3	alpha_tocotrienol	0.167	0.040	13	gt	100	64	Hinman et al. Fig 1
+Q7_RSL3	alpha_tocotrienol_quinone	0.043	0.015	53	gt	100	62	Hinman et al. Fig 1
+Q7_RSL3	alpha_tocotrienol_hydroquinone	0.043	0.009	9	point	1.99	9	Hinman et al. Fig 1
+Pfa1_Gpx4_deletion	alpha_tocopherol	2.0		3				Yang et al. Fig 3B and Results
+Pfa1_Gpx4_deletion	alpha_tocotrienol	0.12		3				Yang et al. Fig 3B and Results

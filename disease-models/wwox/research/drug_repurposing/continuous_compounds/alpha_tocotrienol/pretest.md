@@ -1,0 +1,13 @@
+# Alpha-tocotrienol comparison pretest
+
+28 November 2026 UTC. SCI_CODEX continuous compound #198. context_policy: QUESTION_DRIVEN. Frozen after bibliographic triage, ahead of focused Results extraction. Rotate from three glutamate-handling increments to lipid redox and axon–glia function. The compound is parent alpha-tocotrienol, with the source stereochemistry and formulation to be verified. Mixed tocotrienols, alpha-tocopherol, alpha-tocotrienol quinone and its hydroquinone have separate exposure histories. The last two are already held as metabolite and product context in the vatiquinone dossier.
+
+## Competing explanations
+
+- **Parent-dependent early signaling.** A change in measured Src activity or downstream signaling precedes the matched lipid-product change and appears at documented parent exposure. It persists after conversion is selectively attenuated and the redox background is matched. The cell state must separate cystine depletion or oxidative glutamate toxicity from receptor-mediated currents.
+- **Conversion-dependent effect.** Metabolite appearance precedes rescue. Matching quinone or hydroquinone exposure reproduces the lipid effect, and selective loss of conversion weakens the parent result. Do not use a nonspecific reductase manipulation as proof without verifying parent, metabolites and baseline redox activity.
+- **Chain-breaking membrane protection.** Benefit follows matched membrane localization and nonenzymatic radical trapping, without a separable early Src dependence. Compare relevant oxidized phospholipids to their parent lipids, distinguish enzyme-generated and autoxidation products, and keep first-sheath formation separate from salvage after injury.
+
+Extract actual early timing, antagonism and rescue or occlusion conditions, and the identity of the glutamate challenge. Separate purified or cell-type-specific activity, direct tissue abundance and free neural exposure. Reconstruct the human surgical tissue denominator and supplement mixture, and the quantitative parent-metabolite activity gap using the existing held vatiquinone controls. A WWOX-appropriate comparison requires a baseline phospholipid or signaling abnormality with a functional first-sheath or conduction consequence. Compare that response at preserved first recruitment and verified analytes in a stage-matched neuron–oligodendroglial system.
+
+Bibliography for extraction. [Sen et al., early Src study](https://doi.org/10.1074/jbc.275.17.13049) · [Patel et al., human tissue report](https://pubmed.ncbi.nlm.nih.gov/22298568/) · [Hinman et al., vitamer and hydroquinone comparison](https://doi.org/10.1371/journal.pone.0201369) · [Held vatiquinone comparison](../vatiquinone/exposure_and_disposition_20261127.md)
