@@ -133,7 +133,8 @@ def cycle_cards(dr: Path):
 def render_card(slug: str, card: dict, label: str, pdf_reports: set[str]) -> str:
     title = escape(card["name"])
     links = "".join(f'<li><a href="{REPOSITORY}{DATA_PATH}{p}">{escape(t)}</a></li>' for p, t in card["links"].items())
-    pdf = f'<a href="reports/{slug}.pdf">Research report (PDF)</a>' if slug in pdf_reports else ""
+    report_slug = slug if slug in pdf_reports else slug.replace("_", "-")
+    pdf = f'<a href="reports/{report_slug}.pdf">Research report (PDF)</a>' if report_slug in pdf_reports else ""
     strand = f'<p class="ca-strand">{escape(card["strand"])}</p>' if card["strand"] else ""
     role = card.get("role")
     rationale, *reopen = re.split(r"(?<=[.!?])\s+(?=Reopen\s+(?:for|when|if)\s+)", card["result"], maxsplit=1, flags=re.I)

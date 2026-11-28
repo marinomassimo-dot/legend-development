@@ -42,7 +42,7 @@ class CompoundAnalyses(unittest.TestCase):
                                  "next_test": "Check target engagement."},
                                 {"name_full": "An unpublished compound", "names_public": []}]
             cards = analyses.load_cards(dr, public_compounds)
-            html = analyses.render(dr, {"lead"}, cards)
+            html = analyses.render(dr, {"lead", "a-new-public-compound"}, cards)
         self.assertEqual(set(cards), {"lead", "low", "new", "older", "comparator", "unreviewed", "a_new_public_compound"})
         self.assertEqual([cards[k]["group"] for k in ("lead", "low", "new", "older", "unreviewed")],
                          ["priority", "lower", "active", "deferred", "unranked"])
@@ -50,6 +50,7 @@ class CompoundAnalyses(unittest.TestCase):
         self.assertEqual(cards["comparator"]["group"], "comparison")
         self.assertIn("older/followup.md", html)
         self.assertIn('href="reports/lead.pdf"', html)
+        self.assertIn('href="reports/a-new-public-compound.pdf"', html)
         self.assertIn('href="#INV-05">Related investigation', html)
         self.assertIn("Where to look next", html)
         self.assertIn("Unknown transfer.", html)

@@ -1,0 +1,5 @@
+input	sha256	locator	url
+SUN_TABLE	0b293bfb43ceedf6b0c4c477adfb1d8722663fe0b96b41c56ac6d0ec72ba5533	Supplementary Table S1, sheet 20210526 mouse brain NP	https://static-content.springer.com/esm/art%3A10.1186%2Fs12967-026-07881-0/MediaObjects/12967_2026_7881_MOESM6_ESM.xlsx
+WU_DATASET	c075e9b09e53fe6a03d63f3a36dc218ab4370f0bcb6f1d79522fa562fe30bcd6	Supplementary Dataset 1, samples and mole %	https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-53511-y/MediaObjects/41467_2024_53511_MOESM7_ESM.xlsx
+WU_SOURCE	19b82c155785d64088f347213aff905a2dc26451cc5eacd7050cfb367fcc0095	Source Data, Fig6h	https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-53511-y/MediaObjects/41467_2024_53511_MOESM12_ESM.xlsx
+LEWKOWICZ_JATS	f4299f88e5af7cb76c02eb28219e9524fad8f53bc4b6d3f6d3e25f3a576818d6	PMC6721595 Table 2, C24:1n9 row	https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6721595/fullTextXML

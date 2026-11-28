@@ -17,7 +17,7 @@ def main():
     compare_expression(args.drug_repurposing, args.files, args.output, TARGETS, "trp_bulk.tsv")
 
 
-def compare_expression(drug_repurposing, files, output, targets, bulk_filename):
+def compare_expression(drug_repurposing, files, output, targets, bulk_filename, *, human_symbols=None):
     compounds = drug_repurposing / "continuous_compounds"
     sys.path.insert(0, str(compounds / "copper_histidinate"))
     from replay_copper_comparison import verify
@@ -41,7 +41,7 @@ def compare_expression(drug_repurposing, files, output, targets, bulk_filename):
             verify(geo / "GSE158684" / f"GSE158684_{arm}_filtered_{suffix}", hashes)
     output.mkdir(parents=True, exist_ok=True)
     summarize_bulk(files, target_genes=targets, output=output / bulk_filename,
-                   missing_value="NA")
+                   human_symbols=human_symbols, missing_value="NA")
     summarize_nuclei(files, genes=targets, output_dir=output)
 
 

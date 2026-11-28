@@ -1,0 +1,20 @@
+comparison	endpoint	unit	control_n	case_n	control_mean	case_mean	case_over_control	omit_min	omit_max
+Sun_Cers2_nestin_cKO	GalCer d18:1/16:0	umol/g	7	5	0.00048429948	0.00073230535	1.512092	1.4711157	1.6418069
+Sun_Cers2_nestin_cKO	GalCer d18:1/18:0	umol/g	7	5	0.013906203	0.024720161	1.7776356	1.6482671	1.9903
+Sun_Cers2_nestin_cKO	GalCer d18:1/24:0	umol/g	7	5	0.0071676918	0.00020442662	0.028520565	0.022503832	0.032816195
+Sun_Cers2_nestin_cKO	GalCer d18:1/24:1	umol/g	7	5	0.26207955	0.008354681	0.031878416	0.024828916	0.03711777
+Sun_Cers2_nestin_cKO	GalCer 24:1/24:0	ratio	7	5	36.469484	40.214508	1.1026892	1.0736735	1.136933
+Wu_Gltp_cKO_P14	HexCer 36:1;2	mol_percent_total_lipids	4	4	0.17344443	0.110272	0.63577714	0.6062845	0.65876059
+Wu_Gltp_cKO_P14	HexCer 42:1;2	mol_percent_total_lipids	4	4	0.58887475	0.35852543	0.60883138	0.57459153	0.65362873
+Wu_Gltp_cKO_P14	HexCer 42:2;2	mol_percent_total_lipids	4	4	0.7685567	0.44382965	0.57748459	0.54227747	0.62857632
+Wu_Gltp_cKO_P14	HexCer 42:2;3	mol_percent_total_lipids	4	4	0.22367112	0.19631995	0.87771701	0.82563126	0.92759808
+Wu_Gltp_cKO_P14	Total HexCer	mol_percent_total_lipids	4	4	4.75977	3.6542498	0.76773665	0.72964327	0.81819502
+Wu_Gltp_cKO_P28	HexCer 36:1;2	mol_percent_total_lipids	4	4	0.14778103	0.1337102	0.90478598	0.88176093	0.92048941
+Wu_Gltp_cKO_P28	HexCer 42:1;2	mol_percent_total_lipids	4	4	0.602494	0.45221963	0.75057947	0.71885612	0.78348821
+Wu_Gltp_cKO_P28	HexCer 42:2;2	mol_percent_total_lipids	4	4	1.2541632	0.90706548	0.72324355	0.68771135	0.74827332
+Wu_Gltp_cKO_P28	HexCer 42:2;3	mol_percent_total_lipids	4	4	0.71299947	0.71155782	0.99797805	0.97993504	1.0357126
+Wu_Gltp_cKO_P28	Total HexCer	mol_percent_total_lipids	4	4	7.0367779	6.3832369	0.90712496	0.88214114	0.9298504
+Wu_Gltp_cKO_cells	external/intracellular GalCer	ratio	286	265	4.3224259	2.5031909	0.57911714	NA	NA
+Lewkowicz_FOM_24h	C24:1n9	percent_of_lipids	4	4	1.32	6.78	5.1363636	NA	NA
+Lewkowicz_FOM_48h	C24:1n9	percent_of_lipids	4	4	1.31	1.63	1.2442748	NA	NA
+Lewkowicz_FOM_72h	C24:1n9	percent_of_lipids	4	4	1.44	n.d.	NA	NA	NA

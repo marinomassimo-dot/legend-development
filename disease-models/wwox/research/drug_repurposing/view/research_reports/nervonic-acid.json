@@ -1,0 +1,35 @@
+{
+  "investigation": "INV-06",
+  "title": "Nervonic acid in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "A conditional tracer for very-long-chain myelin lipid production and delivery.",
+  "graph": {
+    "evidence": "WWOX mouse lipid-pathway and myelin RNA fall together.",
+    "inference": "Precursor, synthesis and delivery are separable.",
+    "hypothesis": "An upstream deficit may respond if downstream steps are intact.",
+    "experiment": "Trace intact C24:1 to absolute sheath lipid and conduction."
+  },
+  "evidence": [
+    "In CerS2-deficient brain, C24:1 and C24:0 GalCer both fell to about 3% of control, while their mean within-mouse ratio rose. In GLTP-deficient myelin, a HexCer 42:2 signal fell to 58% at P14."
+  ],
+  "inference": [
+    "The ratio can hide loss of both C24 species. A separate lipid delivery defect can reduce sheath lipid too. WWOX mouse and human organoid CERS2 RNA have opposite directions."
+  ],
+  "hypothesis": [
+    "Nervonic acid could bypass poor elongation when acyl incorporation and delivery still work. Product formation could remain limited by oligodendrocyte state, or lipid may fail to reach eligible axons."
+  ],
+  "experiment": [
+    "At matched local labeled precursor, quantify intact C24:1 acyl-CoA, absolute GalCer and sulfatide in cells and myelin, persistent first sheaths and conduction."
+  ],
+  "limits": [
+    "Oral acid lowered brain C26:0-LPC in Abcd1 mice by about 56% without a detected C24:1 increase. Pediatric local exposure and safety remain open. Retain for tracing and defer WWOX trial priority."
+  ],
+  "sources": [
+    {"label":"Repudi et al. WWOX neuronal origin and hypomyelination.", "url":"https://doi.org/10.1093/brain/awab174"},
+    {"label":"Sun et al. CerS2 lipidomics, Supplementary Table S1.", "url":"https://doi.org/10.1186/s12967-026-07881-0"},
+    {"label":"Wu et al. Myelin lipid delivery, Fig. 6 and source data.", "url":"https://doi.org/10.1038/s41467-024-53511-y"},
+    {"label":"Lewkowicz et al. Human cell-line lipid signal, Table 2.", "url":"https://doi.org/10.3390/cells8080786"},
+    {"label":"Li et al. Oral Abcd1 comparison, Figs. 3–4.", "url":"https://doi.org/10.1016/j.neurot.2026.e00890"},
+    {"label":"Yu et al. Human milk composition.", "url":"https://doi.org/10.3390/nu11081892"}
+  ]
+}
