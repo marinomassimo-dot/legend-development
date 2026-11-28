@@ -85,8 +85,8 @@ time; it does not redistribute or license the article text.
 | **Catalogued, never processed** — the reading debt | 114 | 16% |
 | Known to the tracking log only | 71 | 10% |
 | Processed from the abstract | 12 | 2% |
-| Partial full text read | 87 | 12% |
-| Full text read | 167 | 24% |
+| Partial full text read | 86 | 12% |
+| Full text read | 168 | 24% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
 `fulltext_read_receipts.jsonl`. Historical registry-only full-text declarations remain
@@ -651,7 +651,6 @@ for an entirely unprocessed record.
 | [34268881](https://pubmed.ncbi.nlm.nih.gov/34268881/) | 2021 | ✅ | partial full text | PAPER 039 | Modeling genetic epileptic encephalopathies using brain organoids. |
 | [34204789](https://pubmed.ncbi.nlm.nih.gov/34204789/) | 2021 | ✅ | partial full text | PAPER 127 | PLEK2, RRM2, GCSH: A Novel WWOX-Dependent Biomarker Triad of Glioblastoma at the Crossroads of Cytoskeleton Reorganization and Metabolism Alterations. |
 | [33958783](https://pubmed.ncbi.nlm.nih.gov/33958783/) | 2021 | ✅ | partial full text | PAPER 204 | Genome-wide survival study identifies a novel synaptic locus and polygenic score for cognitive progression in Parkinson's disease. |
-| [33914858](https://pubmed.ncbi.nlm.nih.gov/33914858/) | 2021 | ✅ | partial full text | PAPER 004 | Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects. |
 | [33854788](https://pubmed.ncbi.nlm.nih.gov/33854788/) | 2021 | ✅ | partial full text | PAPER 265 | Metabolome-Genome-Wide Association Study (mGWAS) Reveals Novel Metabolites Associated with Future Type 2 Diabetes Risk and Susceptibility Loci in a Case-Control Study in a Chinese Prospective Cohort. |
 | [33520443](https://pubmed.ncbi.nlm.nih.gov/33520443/) | 2021 | ✅ | partial full text | PAPER 262 | Identification of a novel association for the WWOX/HIF1A axis with gestational diabetes mellitus (GDM). |
 | [32389029](https://pubmed.ncbi.nlm.nih.gov/32389029/) | 2020 | ✅ | partial full text | PAPER 153 | The WWOX gene in brain development and pathology. |
@@ -729,6 +728,7 @@ for an entirely unprocessed record.
 | [34210081](https://pubmed.ncbi.nlm.nih.gov/34210081/) | 2021 | ✅ | full text | PAPER 363 | Molecular Biology of the WWOX Gene That Spans Chromosomal Fragile Site FRA16D. |
 | [33919646](https://pubmed.ncbi.nlm.nih.gov/33919646/) | 2021 | ✅ | full text | PAPER 174 | Genetic Neonatal-Onset Epilepsies and Developmental/Epileptic Encephalopathies with Movement Disorders: A Systematic Review. |
 | [33916893](https://pubmed.ncbi.nlm.nih.gov/33916893/) | 2021 | ✅ | full text | PAPER 040 | Neurological Disorders Associated with WWOX Germline Mutations-A Comprehensive Overview. |
+| [33914858](https://pubmed.ncbi.nlm.nih.gov/33914858/) | 2021 | ✅ | full text | receipt FTR-20261128-33914858-41 | Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects. |
 | [33058734](https://pubmed.ncbi.nlm.nih.gov/33058734/) | 2021 | ✅ | full text | PAPER 100 | ✎ corrected — Cigarette Smoke and Nicotine-Containing Electronic-Cigarette Vapor Downregulate Lung WWOX Expression, Which Is Associated with Increased Severity of Murine Acute Respiratory Distress Syndrome. |
 | [33129329](https://pubmed.ncbi.nlm.nih.gov/33129329/) | 2020 | ✅ | full text | receipt FTR-20261004-33129329-02 | Characterization of WWOX expression and function in canine mast cell tumors and malignant mast cell lines. |
 | [32581702](https://pubmed.ncbi.nlm.nih.gov/32581702/) | 2020 | ✅ | full text | PAPER 020 | Loss of Wwox Perturbs Neuronal Migration and Impairs Early Cortical Development. |

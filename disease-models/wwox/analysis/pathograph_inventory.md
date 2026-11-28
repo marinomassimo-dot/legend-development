@@ -34,10 +34,10 @@ annotations is reported below whatever it happens to be.
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 599 |
 | …of which bound to at least one claim | 96 |
-| Propositions scanned | 9626 |
-| …carrying a relational connective | 2028 |
-| …locator-backed candidates | 1988 |
-| …locator-backed and bound to a claim | 435 |
+| Propositions scanned | 9637 |
+| …carrying a relational connective | 2029 |
+| …locator-backed candidates | 1989 |
+| …locator-backed and bound to a claim | 436 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -322,12 +322,12 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 1988 |
+| locator_proposition | 1989 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 1457 |
+| AMBIGUOUS_LEXICAL_FORM | 1458 |
 | ARROW | 18 |
 | ASSOCIATIVE | 90 |
 | CAUSAL | 359 |
@@ -361,7 +361,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 475 bound candidates; the
+Showing 12 of 476 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -378,6 +378,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 602 input files; digest
-`3d3dcb01ea671071`. Sources: the claim, paper and
+`239c59432d9cd40b`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
