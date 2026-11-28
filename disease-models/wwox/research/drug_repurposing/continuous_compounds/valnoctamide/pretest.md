@@ -1,0 +1,11 @@
+# Valnoctamide, native phasic inhibition versus slower arachidonate handling
+
+28 November 2026 UTC · Continuous compound #211 · INV-15 · context_policy: QUESTION_DRIVEN. Specify racemic valnoctamide or defined stereoisomer composition for every comparison. Rat CA1 miniature inhibitory postsynaptic currents, recombinant ACSL4-dependent arachidonoyl-CoA formation, and human stereoisomer plasma PK are separate systems. [Previous compound](../procysteine/README.md)
+
+**Question.** At measured free tissue exposure and preserved initial recruitment, does valnoctamide reduce late recurrence by acutely strengthening phasic inhibition, or does it change recovery on a separate timescale through arachidonate handling? A joint result needs a temporal and mechanistic control for each response. The latter mechanism is a new hypothesis for WWOX and a recombinant enzyme effect is insufficient.
+
+**Prespecified contrast.** First reconcile the direction of mIPSC decay, peak and charge with direct extrasynaptic or postsynaptic controls in the primary rat slice study. Recover stereoisomer identity, protein binding or free exposure where measured, and the substrate dependence of the ACSL4 assay. Keep conventional provoked-seizure efficacy, the adult epilepsy PK under carbamazepine and developmental feasibility separate. Compare late network outcome at measured free exposure, native chloride reversal, matched first excitation and inhibition, and matched workload.
+
+**Prediction.** An early effect that tracks native phasic charge before measurable change in arachidonoyl-CoA or arachidonate-lipid flux supports the acute inhibitory mechanism. A delayed effect that follows independently confirmed lipid engagement at matched inhibitory charge and persists after parent washout would support the second comparison. An isolated change in a single mIPSC metric, lipid abundance, or peak plasma concentration cannot separate the pathways.
+
+[Phasic inhibition primary](https://pmc.ncbi.nlm.nih.gov/articles/PMC4167227/) · [Stereoisomer rat PK](https://pmc.ncbi.nlm.nih.gov/articles/PMC4963464/) · [Adult chiral PK](https://pubmed.ncbi.nlm.nih.gov/9129561/) · [Recombinant ACSL4](https://pubmed.ncbi.nlm.nih.gov/25041123/)
