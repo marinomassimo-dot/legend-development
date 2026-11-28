@@ -1,0 +1,8 @@
+observable	condition	value	unit
+forward_rate_ratio	4-HNE anserine/carnosine	1.8125	ratio
+forward_rate_ratio	Acrolein anserine/carnosine	1.1373	ratio
+dissociation_constant	4-HNE anserine	0.7126	mM
+equilibrium_fraction	4-HNE fixed anserine 1 uM	0.001401	fraction
+equilibrium_fraction	4-HNE fixed anserine 10 uM	0.013838	fraction
+equilibrium_fraction	4-HNE fixed anserine 100 uM	0.123055	fraction
+equilibrium_fraction	4-HNE fixed anserine 1000 uM	0.583893	fraction
