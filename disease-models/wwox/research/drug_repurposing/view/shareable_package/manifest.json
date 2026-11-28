@@ -547,7 +547,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2286,
-   "sha256": "853646243c6ed7c885916e4f7c4157eb14d9950b36dd8590c75e616b75a996e1"
+   "sha256": "b562b42cf066afdb875c94ad874ab0e7d1490f21a22afbf14335432f26f3741e"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -563,7 +563,7 @@
   },
   "index.html": {
    "bytes": 5116711,
-   "sha256": "024afa9cb5beae96ae5cb75e45143a54813bd2b08189f57ca883baae3b263828"
+   "sha256": "29ff3d33ee964cbb35ea7cb3bc75e8e82e42cb48bae7209e0ea975d4ac7f2222"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
