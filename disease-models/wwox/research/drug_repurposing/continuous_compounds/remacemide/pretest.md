@@ -15,3 +15,7 @@ If the free windows support a comparison, use WWOX and corrected preparations at
 - [Metabolite panel, PMID 1388119](https://pubmed.ncbi.nlm.nih.gov/1388119/) and [enzyme-induction study, PMID 12076846](https://pubmed.ncbi.nlm.nih.gov/12076846/). Retrieve exact free sources first and verify which experiments measure current, which measure radioligand displacement, and which only monitor plasma or outcome.
 
 Coverage at this checkpoint is bibliographic or abstract-level. Acquire auditable primary figures or tables before assigning mechanism or priority.
+
+## Public original identified
+
+The [University of Glasgow repository copy of Santangeli’s thesis](https://theses.gla.ac.uk/75793/) points to printed pp. 85, 100, 127 and 151 for the starts of the PK, enzyme-induction, hippocampal slice and sodium synaptosome chapters, respectively. The downloaded PDF was verified and only the contents indexed at this checkpoint. The thesis, sodium publication and slice publication share the same lead investigator and preparations. Check cohort, preparation, figures and dates before counting independent replications. Keep the copyrighted PDF in shared evidence storage. In the next increment, start with the zero-added-magnesium slice experiment, check whether physiological magnesium was tested in any matched preparation, and compare with the original exposure time course.
