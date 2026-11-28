@@ -1317,6 +1317,15 @@
      "accepted_at": "2026-11-28T07:58:11Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv310_cheng_first_hand_sci_20261128/RESULT_ADV310_SCI_20261128.md; receipt FTR-20261128-32000863-01",
      "updated_at": "2026-11-28T07:58:11Z"
+    },
+    {
+     "step": "ADV-311: pup-brief feasibility arithmetic from held genotype frequencies (E-A vs E-B frozen first)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-311",
+     "accepted_at": "2026-11-28T08:14:48Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv311_pup_feasibility_sci_20261128/RESULT_ADV311_SCI_20261128.md; receipts FTR-20261128-19936220-01, FTR-20261128-33914858-01",
+     "updated_at": "2026-11-28T08:14:48Z"
     }
    ]
   }
@@ -2334,6 +2343,13 @@
    "at": "2026-11-28T07:58:11Z",
    "source": "ADV-310",
    "step_sha256": "39d72a6ea4aa",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T08:14:48Z",
+   "source": "ADV-311",
+   "step_sha256": "78c91ee0cd54",
    "reopened_block": false,
    "authorised_by": null
   }

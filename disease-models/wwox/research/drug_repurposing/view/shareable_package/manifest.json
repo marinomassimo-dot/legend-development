@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 260,
+   "distinct_hrefs": 259,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5116464,
-   "sha256": "4abfa47fdd8cfc8cc074780a8afd793dabcc184037951f57744f5e445450da41"
+   "bytes": 5116355,
+   "sha256": "018fc4102571c2294349e93b603d249ae2ed304c439561950b2fdab2b5d1407d"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
@@ -598,8 +598,8 @@
    "sha256": "0abbf2afae4d7572e65036afe4ea773919d27ac90aaf33e5531ac2575bccd19a"
   },
   "reports/etifoxine.pdf": {
-   "bytes": 121150,
-   "sha256": "e5382898f673ba4d9d68055f8c9af697a5ee0b47ca5b3972e113a13c4ba9e1d8"
+   "bytes": 120242,
+   "sha256": "a2900f088c34f68b60c40ba86594e9db0bdc3428a958cd06168514c2c8d50f70"
   },
   "reports/f16bp.pdf": {
    "bytes": 123360,
@@ -612,10 +612,6 @@
   "reports/fenofibrate.pdf": {
    "bytes": 129223,
    "sha256": "faf79fbe2e748dd377e36cf5d0c2f05b680706c8fc8c5ab7fea02fd72207e83f"
-  },
-  "reports/gaba-subtype-response.pdf": {
-   "bytes": 116678,
-   "sha256": "02291aa3049e6c57e1a8dffa64acd35b59bd0f4a18cf501333007b187be745d2"
   },
   "reports/huperzine-a.pdf": {
    "bytes": 118260,
