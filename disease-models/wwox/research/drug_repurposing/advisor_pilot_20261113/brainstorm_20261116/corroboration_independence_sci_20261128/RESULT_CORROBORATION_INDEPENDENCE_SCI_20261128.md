@@ -39,6 +39,8 @@ prenatal time point and that PMID 31543760 (cultured neural progenitors) measure
 phenotype. For a prenatal proposition the in vivo observation is then in PMID 32581702 alone. SCI's recorded HOLDS counted
 the cell model as an observation. The verdict depends on that choice and is not averaged.
 
+**Calibration (kept on ADV's request).** Predicted failing share about 35 percent; observed 10 to 20 percent.
+
 ## What the first/last-author rule does not see (post hoc, not part of the prereg)
 In 5 of the 10 graded sentences the sources still share people or a patient family:
 * K04: the author list of PMID 32581702 contains, as middle authors, the first and senior authors of both other papers
@@ -80,6 +82,8 @@ Receipts record complete reads from `files/fulltext/PMID17803050_Suzuki2007.html
 files and other types not hashed). PMID 17360458 has a PDF copy; the other three have no text copy found.
 
 ## Limits and disclosures
+* **Receipts not recorded.** The targeted searches and section reads of SCI and the second reader have no
+  `FULLTEXT_READ_RECEIPT` yet; they are listed in `receipts_owed.tsv` as `queried_not_full_read`. None counts as a reading.
 * Recall: only sentences with one of the listed terms were found; the screen from 138 to 23 was SCI's, read once.
 * K11, K13, K20, K02, K12, K14 had one reader.
 * Independence was graded, not whether each proposition is true or well scoped.
