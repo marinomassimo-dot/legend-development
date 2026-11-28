@@ -1,0 +1,6 @@
+preparation	site	spikes_pct_control	spikes_sem_pp	duration_delta_ms	duration_delta_sem_ms	period_control_ms	period_clonazepam_ms	locator
+rat	TRN	68	6	-359	109	170	177	Sohal 2003 Table 1 p.3652
+rat	VB	64	4	-417	137	165	169	Sohal 2003 Table 1 p.3652
+WT mouse	VB	87	6	-279	95	139	141	Sohal 2003 Table 1 p.3652
+alpha1(H101R) mouse	VB	82	6	-275	102	152	146	Sohal 2003 Table 1 p.3652
+alpha3(H126R) mouse	VB	103	5	117	99	141	141	Sohal 2003 Table 1 p.3652

@@ -1,0 +1,13 @@
+file	sha256	url	coverage_and_locator
+sohal_2003_jneurosci.pdf	eacce2a391efe54161f098bf5ad838bb6c63ccb2cc986071946b030eda2b6be8	https://huguenardlab.stanford.edu/reprints/85_vss-a1.pdf	Author-hosted article. Targeted Methods and Results, Figs. 1–4 and Table 1, pp. 3650–3653. Factual summary and published aggregate values.
+huguenard_prince_1994.pdf	7f4c6ee7b59c994b73e99d574ba9c4ee563480f8bf3b3800e761a7182bcfcd1a	https://huguenardlab.stanford.edu/reprints/26_czp.pdf	Author-hosted article. Targeted Fig. 1, Methods and Results, pp. 2577–2579.
+jstage_14_116.pdf	27b177a65d035e0698cd04ecfe1c8e24b03742a3f155758204f91c1fb653024a	https://www.jstage.jst.go.jp/article/jjes1983/14/2/14_116/_pdf	Japanese original Methods and Results and visually checked Tables 3–5, pp. 117–119. English abstract compared with Japanese aggregate prose.
+PMC13343157.oa.xml	f11e8eaab62f0c0e80acf623ea8e44e43cc7d3700564308dae1a302648ae746e	https://pmc-oa-opendata.s3.amazonaws.com/PMC13343157.1/PMC13343157.1.xml	Results and ECoG Methods for Fig. 7. Partial reread of a previously held primary article.
+PMC13343157.figure7.jpg	3a01e962c0cb5d6986f4c0cd5d57aeaaf1107d36679cc6828bcf67e11425ce7c	https://pmc-oa-opendata.s3.amazonaws.com/PMC13343157.1/gr7.jpg	Original Fig. 7 inspected. Panels C and E measure distinct endpoints. Image retained locally.
+		https://pubmed.ncbi.nlm.nih.gov/7969807/	Suzuki abstract only. Contingent exposure, sampled plasma and binding data.
+		https://pubmed.ncbi.nlm.nih.gov/2880972/	Haigh abstract only. PTZ thresholds and sampled plasma concentrations.
+		https://pubmed.ncbi.nlm.nih.gov/1652144/	Galpern abstract only. Motor behavior, cortical concentrations, binding and chloride uptake.
+		https://doi.org/10.1212/WNL.25.3.255	Dreifuss abstract only. Ten children, eight weeks, total serum parent.
+		https://doi.org/10.1111/j.1528-1157.1989.tb05326.x	Specht abstract only. Forty children and discontinuation symptoms.
+		https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cfa0d79a-843c-4b88-95a1-e9511d649ca1	Current US oral label, Pharmacokinetics, Warnings, Precautions and Dependence.
+		https://pubchem.ncbi.nlm.nih.gov/compound/2802	Parent molecular mass, 315.71 g/mol.

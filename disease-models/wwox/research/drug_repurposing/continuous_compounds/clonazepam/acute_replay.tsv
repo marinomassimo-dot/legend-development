@@ -1,0 +1,6 @@
+preparation	site	spikes_suppressed_pct	duration_delta_ms	period_delta_ms	locator
+rat	TRN	32	-359	7	Sohal 2003 Table 1 p.3652
+rat	VB	36	-417	4	Sohal 2003 Table 1 p.3652
+WT mouse	VB	13	-279	2	Sohal 2003 Table 1 p.3652
+alpha1(H101R) mouse	VB	18	-275	-6	Sohal 2003 Table 1 p.3652
+alpha3(H126R) mouse	VB	-3	117	0	Sohal 2003 Table 1 p.3652

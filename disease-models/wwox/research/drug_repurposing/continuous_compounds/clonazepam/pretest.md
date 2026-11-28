@@ -1,0 +1,9 @@
+# Clonazepam comparison pretest
+
+Frozen on 28 November 2026 UTC after bibliographic triage and before the targeted results extraction. Compare acute reticular and relay effects with adaptation during repeated exposure. The scope is one compound, with the prior darigabat analysis as a reference for acute site engagement.
+
+The potentially useful signal is lower late repetitive firing in WWOX-LoF with the first relay response and physiological recruitment preserved. The primary contrast is the repeated-minus-acute change in clonazepam effect in WWOX-LoF preparations minus the same change in corrected controls, at matched local unbound exposure and inter-event recovery. Record target-site occupancy where feasible and report it separately from function. Use independent preparations as biological units.
+
+Reduced late firing with an intact first response at both time points supports durability. Loss of late suppression at stable exposure and occupancy with smaller clonazepam-induced inhibitory charge and stable native chloride favors altered coupling. Preserved drug-associated conductance with degraded chloride driving force after a train and loss of late suppression favors ionic reserve. Loss of first recruitment along with late firing is compatible with broad network suppression. Falling local exposure leaves adaptation unresolved. Keep washout rebound and on-exposure adaptation as separate observations.
+
+Retain as a conditional circuit comparator if the acute causal localization is supported but chronic transfer or a WWOX-relevant oscillatory phenotype is unresolved. Consider changing research priority only with durable separation of late repetitive activity from physiological recruitment, a documented WWOX phenotype in the tested region and age, and a feasible exposure and safety bridge. Compare both baseline and treated trajectories. Develop no dosing or treatment proposal.
