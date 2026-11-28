@@ -1,0 +1,13 @@
+hour	mouse_arm	occupancy_percent	occupancy_sd	depletion_percent	depletion_sd	occupancy_delta_vs_single_middle_pp	depletion_delta_vs_single_middle_pp
+1	single_low	94.800	3.400	-33.000	2.100	-4.300	-25.600
+1	single_middle	99.100	2.000	-7.400	16.900	0.000	0.000
+1	single_high	100.500	0.100	-14.300	2.500	1.400	-6.900
+1	fifth_middle	100.200	0.000	32.400	3.400	1.100	39.800
+8	single_low	68.300	20.100	0.600	13.100	-18.300	-25.300
+8	single_middle	86.600	4.700	25.900	18.800	0.000	0.000
+8	single_high	91.200	5.300	10.300	5.100	4.600	-15.600
+8	fifth_middle	72.200	2.400	37.000	5.400	-14.400	11.100
+24	single_low	32.300	13.000	21.500	6.300	-2.900	-11.100
+24	single_middle	35.200	11.000	32.600	8.700	0.000	0.000
+24	single_high	47.200	6.200	20.100	5.700	12.000	-12.500
+24	fifth_middle	29.600	6.300	25.700	2.400	-5.600	-6.900

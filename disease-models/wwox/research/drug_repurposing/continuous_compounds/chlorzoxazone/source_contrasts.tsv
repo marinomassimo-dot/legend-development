@@ -1,0 +1,13 @@
+contrast	reference	comparison	unit	locator
+wwox_pyramidal_first_AHP	15.14	14.42	mV	Breton Table 1 S-WT versus S-KO
+wwox_pyramidal_AP_half_width	1.20	1.35	ms	Breton Table 1 S-WT versus S-KO
+wwox_pyramidal_rebound	0.96	1.86	mV	Breton Table 1 S-WT versus S-KO
+postseizure_AP_half_width	2.93	2.44	ms	Shruti Table 1 control versus post-seizure
+postseizure_evoked_spike_count	9.75	14.20	spikes	Shruti Figure 3F and Results control versus post-seizure
+postseizure_paxilline_spike_count	14.20	8.20	spikes	Shruti Figure 3F and Results post-seizure without versus with BK antagonism
+ataxia_pacemaker_ISI_CV_30uM	0.21	0.11	ratio	Alvina Figure 1 Results
+ataxia_pacemaker_ISI_CV_60uM	0.21	0.08	ratio	Alvina Figure 1 Results
+ataxia_mean_firing_30uM	70.1	64.8	spikes/s	Alvina Figure 1 Results
+ataxia_mean_firing_60uM	70.1	59.6	spikes/s	Alvina Figure 1 Results
+pediatric_parent_AUC	1.130	0.609	mg*min/mL	Gade Table 2 nonobese versus obese
+mouse_total_parent_brain_over_plasma	4.41	4.80	uM	Bushart Figure 4C plasma versus whole brain

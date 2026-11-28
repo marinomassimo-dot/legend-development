@@ -1,0 +1,7 @@
+study	panel	condition	marker	unit	anchor_upper_y_px	anchor_upper_value	anchor_lower_y_px	anchor_lower_value	vehicle_y_px	challenged_y_px
+mouse_cortical	Fig2A_upper	no_ambroxol	LC3B-II	percent of no-drug unchallenged control	21	350	107	0	83	53
+mouse_cortical	Fig2A_upper	ambroxol_10_uM	LC3B-II	percent of no-drug unchallenged control	21	350	107	0	59	42
+mouse_cortical	Fig2A_upper	ambroxol_30_uM	LC3B-II	percent of no-drug unchallenged control	21	350	107	0	57	58
+human_dopaminergic	Fig7I	CTRL_ambroxol_60_uM	LC3B-II	actin-normalized signal	778	5	873	0	865	844
+human_dopaminergic	Fig7I	N370S_WT_ambroxol_60_uM	LC3B-II	actin-normalized signal	778	5	873	0	848	806
+human_dopaminergic	Fig7I	iPD_ambroxol_60_uM	LC3B-II	actin-normalized signal	778	5	873	0	862	840

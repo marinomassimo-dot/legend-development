@@ -1,0 +1,11 @@
+assay	accession	gene	forward_exact	reverse_complement_exact	forward_start_1based	best_reverse_mismatches	candidate_end_1based	candidate_span_nt	reverse_3prime_base_match
+mTPPTr	NM_001007674.1	Slc25a19	1	0	427	3	721	295	False
+THTR1	NM_001007674.1	Slc25a19	0	0	NA	NA	NA	NA	NA
+mTPPTr	NM_001432577.1	Slc19a3	0	0	NA	NA	NA	NA	NA
+THTR1	NM_001432577.1	Slc19a3	0	0	NA	NA	NA	NA	NA
+mTPPTr	NM_001432579.1	Slc19a3	0	0	NA	NA	NA	NA	NA
+THTR1	NM_001432579.1	Slc19a3	0	0	NA	NA	NA	NA	NA
+mTPPTr	NM_001030024.2	Slc19a2	0	0	NA	NA	NA	NA	NA
+THTR1	NM_001030024.2	Slc19a2	1	0	208	2	368	161	True
+mTPPTr	BC079002.1	Slc25a19	1	0	427	3	721	295	False
+THTR1	BC079002.1	Slc25a19	0	0	NA	NA	NA	NA	NA

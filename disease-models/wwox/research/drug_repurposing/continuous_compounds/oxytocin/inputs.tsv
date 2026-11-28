@@ -1,0 +1,15 @@
+source	sha256	used_for
+deepening_downloads/oxytocin_20261127/Leonzino2016.xml	ec1f803ed3c1c4e8fb653e6cfdb3c4f9e6cba42ec29bb20d03c0d16688c2da21	Leonzino et al. 2016 JATS text
+deepening_downloads/oxytocin_20261127/Leonzino_Fig3.jpg	babf5df55ae5fc5d23af14e612213ffdb2e7ff17f2721f6663c56afee37577f2	Original Fig. 3A–H
+deepening_downloads/oxytocin_20261127/Leonzino_Supp.pdf	1e0180e3931acf9a6ecd918f267556d6bbe501773d0316d25c54c684a25b8c17	Original Fig. S2, Tables S3–S4 and supplemental Methods
+deepening_downloads/oxytocin_20261127/Chavez2026.xml	16e4b084b24b1ae99144ffbdc79e6431c900fe8ae6a915b1930ca67ae6711e71	Chavez et al. 2026 v1 preprint text on PMC
+deepening_downloads/oxytocin_20261127/Chavez_Fig2.jpg	28e4e434ba93462a965a8df72a69b1903a106d0620dd35bcdf81f6e655170a26	Original Fig. 2, neonatal-pre-exposure cohorts
+deepening_downloads/oxytocin_20261127/Chavez_Fig3.jpg	8e7b86d81be8908264198a481f23e5999e949e78cf9bd58d9ee046efea444d1f	Original Fig. 3, adolescent-pre-exposure cohorts
+deepening_downloads/oxytocin_20261127/Owen2013.xml	25ea8368cdfcda33872556ca2c990f12cb25a3a3e1c6c88a691205fced62536f	Owen et al. 2013 author-manuscript text
+deepening_downloads/oxytocin_20261127/Owen_Fig1.jpg	ac160281c6c130395f7b1ad3b3dc7827c1ee28f998375ebe0ea8d4936b32ec9b	Original Fig. 1 CA1 cell-attached recordings
+deepening_downloads/oxytocin_20261127/Lee2020.xml	ce097aaff80b74da2352c69c712c124c759859e71edc633fa4c5dcd4183de14e	Lee et al. 2020 original text, analytical methods and Table 1
+deepening_downloads/oxytocin_20261127/Sikich2021.xml	9ce94896e8c822dc42b35f595e0ebaefec8c2934445bafb40e579cae332b9b2a	Sikich et al. 2021 author-manuscript text and Tables 2–3
+deepening_downloads/oxytocin_20261127/Tauber2026.xml	dcba856e50f5fb37351c9e6c1fbb4814a7031405d2389a76e929181a97101ff8	Tauber et al. 2026 OTBB3 main text, methods and table
+deepening_downloads/oxytocin_20261127/Tauber_Fig2.jpg	0cbd0e450f694c9e0782075cfc86172d6da4b1d4d8e075d3b34051655139d64c	Original Fig. 2, total and responder VFSS panels
+https://jpet.aspetjournals.org/content/jpet/346/2/318.full.pdf		Busnelli 2013 primary PDF Table 1 and Results, remote excerpt
+geo/ and reference_ensembl_r92/	see ../../memantine_magnesium_20261123/inputs.tsv	WWOX transcript counts, TPM and Ensembl input

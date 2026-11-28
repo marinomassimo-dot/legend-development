@@ -1,0 +1,15 @@
+# Acamprosate calcium, exposure and component comparison
+
+27 November 2026 · SCI_CODEX · context_policy: QUESTION_DRIVEN
+
+**Active checkpoint.** Healthy-adult lumbar CSF values were below the assay quantification limit. The pediatric study measured global and social withdrawal outcomes under a placebo lead-in, while the preclinical reports concern adult alcohol-related behaviors and circuitry. Those designs select a component comparison and leave WWOX target engagement open. [Registered prediction](pretest_20261127.md)
+
+| Primary record | Observation | Limit |
+| --- | --- | --- |
+| Hammarberg et al., healthy adult PK, 13 recruited | After repeated oral exposure, lumbar CSF on day 22 was estimated at **9–33 ng/mL** below the limit of quantification. Plasma was more than 25 times higher according to the abstract. | The CSF interval is semiquantitative and represents lumbar CSF. The abstract does not establish the denominator of usable CSF samples or local cortical free levels. [Primary abstract](https://pubmed.ncbi.nlm.nih.gov/20592646/) |
+| Phensy et al., controlled adult mouse prefrontal physiology and behavior | The abstract reports that calcium chloride reproduced improvement in cognitive flexibility and measures of glutamatergic signaling after a specified operant alcohol history. | A preparation and history effect is plausible. The abstract does not establish equivalent central free calcium exposure or a direct NMDA receptor interaction. [Primary abstract](https://pubmed.ncbi.nlm.nih.gov/35430241/) |
+| Erickson et al., 12 youth aged 5–17 with autistic disorder in a single-blind placebo lead-in | **6/9** who received active treatment met the authors' composite global improvement and social withdrawal definition. | The denominator is active-exposed and the lead-in is not a concurrent randomized comparator. The endpoint does not provide a seizure, vigilance or WWOX circuit estimate. [Primary abstract](https://pubmed.ncbi.nlm.nih.gov/24052275/) |
+
+**Exposure crosscheck to verify in full text.** On a free-acid reporting basis, the FDA chemistry review's molecular mass of 181.21 g/mol gives about **0.050–0.182 µmol/L** for the semiquantitative adult lumbar CSF range. This provisional conversion assumes that the reported mass was the free-acid-equivalent assay analyte. The calcium salt has a molecular mass of 400.48 g/mol and carries two anions per calcium ion. Use the original reporting basis for both PK and preparation molarity before calculating a fold gap. [FDA chemistry review](https://www.accessdata.fda.gov/drugsatfda_docs/nda/2004/21-431_Campral_Chemr.pdf)
+
+**Next step.** Read the controlled cortical component study and the independent rat component comparison for actual exposure, histories, replication units and directions. Relate their assays to the human PK record, separately test the pediatric evidence denominator, and retain only an interpretable WWOX circuit comparison. This opening uses primary abstracts and the stated regulatory chemical identity. It makes no claim to full journal-text coverage.

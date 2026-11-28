@@ -1,0 +1,7 @@
+source_locator	matrix_or_readout	phenytoin_uM	ratio_to_upper_free_serum_reference
+Oral label section 2.4	free serum lower reference	3.9640	NA
+Oral label section 2.4	free serum upper reference	7.9281	NA
+Thompson Fig 6B	nominal recombinant NaV1.1 protocol	10	1.2613
+Tidball Fig 7D	nominal induced-neuron network protocol	8	1.0091
+Tidball Fig 7D	nominal induced-neuron network protocol	24	3.0272
+Tidball Fig 7D	nominal induced-neuron network protocol	80	10.0907

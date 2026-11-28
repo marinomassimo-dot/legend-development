@@ -1,0 +1,6 @@
+source	endpoint	parameter	assay_uM	Clark_48h_total_CSF_uM	assay_to_Clark_CSF_ratio	assay_to_Nagata_rat_CSF_ratio
+Silverman_Fig2	pannexin-1 oocyte current	IC50	150	21.727	6.904	2.618
+Ma_Fig5_Table1	pannexin-1 recombinant whole-cell current	IC50	350	21.727	16.109	6.108
+Bhaskaracharya_Fig2	human P2X7 dye uptake stimulated with 200 uM ATP	IC50	203	21.727	9.343	3.543
+Bhaskaracharya_Fig2	human P2X7 dye uptake stimulated with 1000 uM ATP	IC50	1300	21.727	59.834	22.688
+Lopatar_Fig4	rat hippocampal ATP and burst suppression	nominal bath	1000	21.727	46.026	17.452

@@ -1,0 +1,30 @@
+comparison	metric	value	unit	locator
+human_lymphocyte_delta_AUC	available_case_2g_mean	0.718	nmol*h/1e6 lymphocytes	Zarka and Bridge Table 2
+human_lymphocyte_delta_AUC	available_case_4g_mean	1.805	nmol*h/1e6 lymphocytes	Zarka and Bridge Table 2
+human_lymphocyte_delta_AUC	available_case_ratio_4g_to_2g	2.51393	ratio	Zarka and Bridge Table 2
+human_lymphocyte_delta_AUC	paired_2g_mean	0.8075	nmol*h/1e6 lymphocytes	Zarka and Bridge Table 2
+human_lymphocyte_delta_AUC	paired_4g_mean	1.805	nmol*h/1e6 lymphocytes	Zarka and Bridge Table 2
+human_lymphocyte_delta_AUC	paired_difference_4g_minus_2g	0.9975	nmol*h/1e6 lymphocytes	Zarka and Bridge Table 2
+human_lymphocyte_delta_AUC	paired_ratio_4g_to_2g	2.23529	ratio	Zarka and Bridge Table 2
+human_lymphocyte_delta_AUC	paired_n	4	participants	Zarka and Bridge Table 2
+human_lymphocyte_delta_AUC	paired_positive_n	3	participants	Zarka and Bridge Table 2
+human_lymphocyte_delta_AUC	one_omission_min_difference	0.593333	nmol*h/1e6 lymphocytes	Zarka and Bridge Table 2
+human_lymphocyte_delta_AUC	one_omission_max_difference	1.39667	nmol*h/1e6 lymphocytes	Zarka and Bridge Table 2
+brain_ATP	WT	2.03957	nM/mg protein as printed	Liu accepted PDF p. 28 Fig. 3, approximate plot read
+brain_ATP	WT_GGC	1.46487	nM/mg protein as printed	Liu accepted PDF p. 28 Fig. 3, approximate plot read
+brain_ATP	APP_PS1	0.63438	nM/mg protein as printed	Liu accepted PDF p. 28 Fig. 3, approximate plot read
+brain_ATP	APP_PS1_GGC	1.33186	nM/mg protein as printed	Liu accepted PDF p. 28 Fig. 3, approximate plot read
+brain_ATP	APP_PS1_treated_minus_untreated	0.697477	nM/mg protein as printed	Liu accepted PDF p. 28 Fig. 3, approximate plot read
+brain_ATP	APP_PS1_gap_to_untreated_WT_closed	0.496359	fraction	Liu accepted PDF p. 28 Fig. 3, approximate plot read
+brain_GSH	WT	48.5811	ug/mg protein	Liu accepted PDF p. 30 Fig. 4C, approximate plot read
+brain_GSH	WT_GGC	43.9154	ug/mg protein	Liu accepted PDF p. 30 Fig. 4C, approximate plot read
+brain_GSH	APP_PS1	14.5703	ug/mg protein	Liu accepted PDF p. 30 Fig. 4C, approximate plot read
+brain_GSH	APP_PS1_GGC	25.5389	ug/mg protein	Liu accepted PDF p. 30 Fig. 4C, approximate plot read
+brain_GSH	APP_PS1_treated_minus_untreated	10.9686	ug/mg protein	Liu accepted PDF p. 30 Fig. 4C, approximate plot read
+brain_GSH	APP_PS1_gap_to_untreated_WT_closed	0.322503	fraction	Liu accepted PDF p. 30 Fig. 4C, approximate plot read
+brain_oxidized_to_reduced_ratio	WT	11.9617	percent	Liu accepted PDF p. 30 Fig. 4D, approximate plot read
+brain_oxidized_to_reduced_ratio	WT_GGC	7.51885	percent	Liu accepted PDF p. 30 Fig. 4D, approximate plot read
+brain_oxidized_to_reduced_ratio	APP_PS1	81.8183	percent	Liu accepted PDF p. 30 Fig. 4D, approximate plot read
+brain_oxidized_to_reduced_ratio	APP_PS1_GGC	38.6193	percent	Liu accepted PDF p. 30 Fig. 4D, approximate plot read
+brain_oxidized_to_reduced_ratio	APP_PS1_treated_minus_untreated	-43.1989	percent	Liu accepted PDF p. 30 Fig. 4D, approximate plot read
+brain_oxidized_to_reduced_ratio	APP_PS1_gap_to_untreated_WT_closed	0.618395	fraction	Liu accepted PDF p. 30 Fig. 4D, approximate plot read

@@ -1,0 +1,18 @@
+quantity	low	high	unit	locator
+MPS total plasma benchmark	133.714	236.245	µM	Sigler abstract; PubChem 92154
+MPS free plasma scenario	53.486	129.935	µM	Sigler and Wad abstracts; crossed extrema
+Coulter Fig. 4a nearby observed x range	53.838	133.675	µM	about 54 and 134 µM; local horizontal calibration
+Native Fig. 4a readout at 53.5 µM	5.948	8.948	% peak reduction	Coulter Fig. 4a; reading tolerance only
+Native Fig. 4a readout at 129.9 µM	18.721	21.721	% peak reduction	Coulter Fig. 4a; reading tolerance only
+Native published by-eye fit	4.637	10.564	% peak reduction	Coulter Fig. 4a legend
+CaV3.1 -110 mV peak IC50 / free scenario	20.010	48.611	fold	Gomora Table 2
+CaV3.1 -75 mV peak IC50 / free scenario	7.696	18.697	fold	Gomora Table 2
+CaV3.2 -110 mV peak IC50 / free scenario	23.858	57.960	fold	Gomora Table 2
+CaV3.2 -75 mV peak IC50 / free scenario	10.775	26.175	fold	Gomora Table 2
+CaV3.3 -110 mV peak IC50 / free scenario	13.083	31.784	fold	Gomora Table 2
+CaV3.3 -75 mV peak IC50 / free scenario	6.157	14.957	fold	Gomora Table 2
+Within-cell command sensitivity at 250 µM	7.400	22.200	% peak reduction	Coulter p. 802, -30 vs -60 mV, same 5 cells
+Pediatric short-term reduction ≥ 50%	35.714	35.714	%	Sigler abstract; uncontrolled cohort
+Pediatric adverse event arithmetic	36.607	36.607	%	Sigler abstract; printed 28.9% disagrees
+Younger cohort valproate mean change	-31.990	-31.990	%	Besag et al. 2001; n=17
+Younger cohort lamotrigine mean change	-52.985	-52.985	%	Besag et al. 2000; n=16

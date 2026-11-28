@@ -1,0 +1,6 @@
+period	active_improvement_pct	placebo_improvement_pct	ratio_of_ratios	CI90_low	CI90_high	p_one_sided	p_two_sided_if_symmetric
+overall	74.07597	57.68379	0.6126264	0.32	1.15	0.097	0.194
+week_1	68.33632	38.12166	0.506617	0.21	1.24	0.104	0.208
+week_2	72.47292	66.71289	0.8269591	0.23	3	0.402	0.804
+week_3	73.81543	69.27213	0.8521438	0.36	2.01	0.376	0.752
+week_4	80.21013	49.3383	0.3906278	0.16	0.98	0.047	0.094

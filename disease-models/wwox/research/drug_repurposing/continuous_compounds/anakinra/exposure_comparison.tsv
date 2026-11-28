@@ -1,0 +1,29 @@
+source	condition	measure	value	unit
+NOMID article	Baseline	CSF measured immunoreactivity	211	pg/mL
+NOMID article	Baseline	Recombinant mass equivalent	12.20	pM equivalent
+NOMID article	Month 3	CSF measured immunoreactivity	1136	pg/mL
+NOMID article	Month 3	Recombinant mass equivalent	65.66	pM equivalent
+NOMID EMA	Baseline	CSF measured immunoreactivity	15.7	pg/mL
+NOMID EMA	Baseline	Recombinant mass equivalent	0.91	pM equivalent
+NOMID EMA	Month 3	CSF measured immunoreactivity	797	pg/mL
+NOMID EMA	Month 3	Recombinant mass equivalent	46.07	pM equivalent
+NOMID article	Month 3	CSF/serum quotient of marginal medians	2.627	%
+Fox Table 1	0–24 h	Mean CSF/serum AUC	0.276	%
+Fox Table 1	0–24 h	SD, five periods in three animals	0.093	%
+Fox Table 1	0–∞	Mean CSF/serum AUC	0.285	%
+Fox Table 1	0–∞	SD, five periods in three animals	0.093	%
+Fox Table 1	Column as printed	Mean printed AUC ratios	0.278	%
+Owyang Fig. 5	MRC5, 20 h IL-6	Nominal IL-1β challenge	5.8	pM
+Owyang Fig. 5	MRC5, 20 h IL-6	Anakinra IC50	45	pM
+Owyang Fig. 5	MRC5, 20 h IL-6	Anakinra IC50 mass	778.5	pg/mL
+Owyang Fig. 5	Whole blood, 6 h IL-8	Nominal IL-1β challenge	100	pM
+Owyang Fig. 5	Whole blood, 6 h IL-8	Anakinra IC50	603	pM
+Owyang Fig. 5	Whole blood, 6 h IL-8	Anakinra IC50 mass	10431.9	pg/mL
+Owyang Fig. 5	Blood / MRC5	Apparent IC50 ratio	13.40	fold
+Tomasoni Fig. 4	20 ng/mL culture vs NOMID article	Culture / CSF immunoreactivity	17.61	fold
+Tomasoni Fig. 4	20 ng/mL culture vs NOMID EMA	Culture / CSF immunoreactivity	25.09	fold
+Tomasoni Fig. 4	100 ng/mL culture vs NOMID article	Culture / CSF immunoreactivity	88.03	fold
+Tomasoni Fig. 4	100 ng/mL culture vs NOMID EMA	Culture / CSF immunoreactivity	125.47	fold
+Helmy Table 3	6 h column	Descriptive change contrast	41.5	pg/mL
+Helmy Table 3	12 h column	Descriptive change contrast	60.4	pg/mL
+Helmy Table 3	18 h column	Descriptive change contrast	47.4	pg/mL

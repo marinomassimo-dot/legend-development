@@ -1,0 +1,59 @@
+comparison	metric	value	unit	locator
+ied_10	recordings	5	recordings	Arkusz1!I21:J25
+ied_10	recordings_reduced	5	recordings	Arkusz1!I21:J25
+ied_10	median_drug	0.6969697	normalized	Arkusz1!I21:J25
+ied_10	mean_paired_change	-31.12554	percent	Arkusz1!I21:J25
+ied_10	animal_mean_min_if_n_2	-38.20346	percent	Arkusz1!I21:J25
+ied_10	animal_mean_max_if_n_2	-26.27165	percent	Arkusz1!I21:J25
+ied_10	animal_mean_min_if_n_3	-35.54594	percent	Arkusz1!I21:J25
+ied_10	animal_mean_max_if_n_3	-26.88793	percent	Arkusz1!I21:J25
+ied_100	recordings	6	recordings	Arkusz1!B21:C26
+ied_100	recordings_reduced	6	recordings	Arkusz1!B21:C26
+ied_100	median_drug	0.03561254	normalized	Arkusz1!B21:C26
+ied_100	mean_paired_change	-91.8892	percent	Arkusz1!B21:C26
+ied_100	animal_mean_min_if_n_3	-95.9446	percent	Arkusz1!B21:C26
+ied_100	animal_mean_max_if_n_3	-85.55903	percent	Arkusz1!B21:C26
+ied_100_idazoxan	recordings	4	recordings	Arkusz1!B43:C46
+ied_100_idazoxan	recordings_reduced	4	recordings	Arkusz1!B43:C46
+ied_100_idazoxan	median_drug	0.05555556	normalized	Arkusz1!B43:C46
+ied_100_idazoxan	mean_paired_change	-94.09722	percent	Arkusz1!B43:C46
+ied_100_idazoxan	animal_mean_min_if_n_2	-96.06481	percent	Arkusz1!B43:C46
+ied_100_idazoxan	animal_mean_max_if_n_2	-91.89815	percent	Arkusz1!B43:C46
+persistent_sodium_10	recordings	4	recordings	Arkusz1!J61:K64
+persistent_sodium_10	recordings_reduced	4	recordings	Arkusz1!J61:K64
+persistent_sodium_10	median_drug	0.6208616	normalized	Arkusz1!J61:K64
+persistent_sodium_10	mean_paired_change	-45.83662	percent	Arkusz1!J61:K64
+persistent_sodium_10	animal_mean_min_if_n_2	-56.87354	percent	Arkusz1!J61:K64
+persistent_sodium_10	animal_mean_max_if_n_2	-40.08156	percent	Arkusz1!J61:K64
+persistent_sodium_100	recordings	7	recordings	Arkusz1!B61:C67
+persistent_sodium_100	recordings_reduced	7	recordings	Arkusz1!B61:C67
+persistent_sodium_100	median_drug	0.2244898	normalized	Arkusz1!B61:C67
+persistent_sodium_100	mean_paired_change	-82.6856	percent	Arkusz1!B61:C67
+persistent_sodium_100	animal_mean_min_if_n_3	-90.02096	percent	Arkusz1!B61:C67
+persistent_sodium_100	animal_mean_max_if_n_3	-77.58613	percent	Arkusz1!B61:C67
+transient_sodium_10	recordings	4	recordings	Arkusz1!I83:J86
+transient_sodium_10	recordings_reduced	4	recordings	Arkusz1!I83:J86
+transient_sodium_10	median_drug	0.5318182	normalized	Arkusz1!I83:J86
+transient_sodium_10	mean_paired_change	-42.23281	percent	Arkusz1!I83:J86
+transient_sodium_10	animal_mean_min_if_n_2	-44.59965	percent	Arkusz1!I83:J86
+transient_sodium_10	animal_mean_max_if_n_2	-36.80905	percent	Arkusz1!I83:J86
+transient_sodium_100	recordings	5	recordings	Arkusz1!C83:D87
+transient_sodium_100	recordings_reduced	5	recordings	Arkusz1!C83:D87
+transient_sodium_100	median_drug	0.4185185	normalized	Arkusz1!C83:D87
+transient_sodium_100	mean_paired_change	-61.75764	percent	Arkusz1!C83:D87
+transient_sodium_100	animal_mean_min_if_n_2	-69.84852	percent	Arkusz1!C83:D87
+transient_sodium_100	animal_mean_max_if_n_2	-54.698	percent	Arkusz1!C83:D87
+children_6_12	total_plasma_peak	41.0419	nM	Boellner 4 mg repeated, mean
+children_6_12	estimated_free_plasma_peak	12.31257	nM	Boellner plus EMA binding
+children_6_12	low_sodium_assay_over_total_peak	243.6535	fold	Pasierski Fig. 4, 10 uM
+children_6_12	low_sodium_assay_over_free_peak	812.1782	fold	Pasierski Fig. 4, 10 uM
+children_6_12	CA3_EC50_over_free_peak	3.979673	fold	Biggane Fig. 4 and Results
+adolescents_13_17	total_plasma_peak	28.48551	nM	Boellner 4 mg repeated, mean
+adolescents_13_17	estimated_free_plasma_peak	8.545654	nM	Boellner plus EMA binding
+adolescents_13_17	low_sodium_assay_over_total_peak	351.0556	fold	Pasierski Fig. 4, 10 uM
+adolescents_13_17	low_sodium_assay_over_free_peak	1170.185	fold	Pasierski Fig. 4, 10 uM
+adolescents_13_17	CA3_EC50_over_free_peak	5.733909	fold	Biggane Fig. 4 and Results
+antagonism_scenario	CA3_functional_Kb	12.02264	nM	Biggane Results, pKb 7.92
+antagonism_scenario	competitive_dose_ratio	1664.528	fold	Schild equation at 20 uM
+antagonism_scenario	shifted_CA3_EC50	81.56185	uM	CA3 transfer scenario
+antagonism_scenario	relative_to_own_max_at_100_uM	0.5507765	fraction	Hill coefficient one

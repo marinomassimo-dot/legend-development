@@ -1,0 +1,47 @@
+stage	category	gene	mapped_symbol	ctrl_n	ko_n	ctrl_TPM	depletion_TPM	log2_delta	mapping
+progenitor	donor	CRPPA		1	1				unmapped
+progenitor	donor	FGGY	FGGY	1	1	23.9375	36.0729	0.572046	mapped
+progenitor	golgi_delivery	SLC35A1	SLC35A1	1	1	6.21473	8.72168	0.430259	mapped
+progenitor	golgi_delivery	SLC35A4	SLC35A4	1	1	6.29315	23.6532	1.75716	mapped
+progenitor	phosphoribitol_transfer	FKTN	FKTN	1	1	4.84239	2.16298	-0.885277	mapped
+progenitor	phosphoribitol_transfer	FKRP	FKRP	1	1	16.272	22.2577	0.429273	mapped
+progenitor	upstream_acceptor	POMT1	POMT1	1	1	3.05835	9.55896	1.3795	mapped
+progenitor	upstream_acceptor	POMT2	POMT2	1	1	8.17522	17.1643	0.985288	mapped
+progenitor	upstream_acceptor	POMGNT2		1	1				unmapped
+progenitor	upstream_acceptor	B3GALNT2	B3GALNT2	1	1	20.291	36.9799	0.834992	mapped
+progenitor	upstream_acceptor	POMK		1	1				unmapped
+progenitor	extension	RXYLT1	TMEM5	1	1	4.84239	7.74485	0.581874	mapped
+progenitor	extension	B4GAT1	B3GNT1	1	1	53.7369	37.9567	-0.49064	mapped
+progenitor	extension	LARGE1		1	1				unmapped
+progenitor	receptor_and_matrix	DAG1	DAG1	1	1	75.4394	96.4966	0.351036	mapped
+progenitor	receptor_and_matrix	LAMA1	LAMA1	1	1	77.792	69.2152	-0.166265	mapped
+progenitor	receptor_and_matrix	LAMA2		1	1				unmapped
+progenitor	receptor_and_matrix	COL4A1	COL4A1	1	1	541.995	597.679	0.140843	mapped
+progenitor	receptor_and_matrix	HSPG2	HSPG2	1	1	151.722	83.7979	-0.848806	mapped
+progenitor	lineage_context	PAX6	PAX6	1	1	7.76351	0.767507	-2.30979	mapped
+progenitor	lineage_context	SOX2	SOX2	1	1	40.4056	13.7454	-1.48956	mapped
+progenitor	lineage_context	EOMES		1	1				unmapped
+progenitor	lineage_context	MYC	MYC	1	1	1.99969	18.4202	2.69467	mapped
+differentiated	donor	CRPPA		1	1				unmapped
+differentiated	donor	FGGY	FGGY	1	1	0	0.319175	0.399636	mapped
+differentiated	golgi_delivery	SLC35A1	SLC35A1	1	1	5.23146	0.392831	-2.16155	mapped
+differentiated	golgi_delivery	SLC35A4	SLC35A4	1	1	5.35383	2.47974	-0.868646	mapped
+differentiated	phosphoribitol_transfer	FKTN	FKTN	1	1	1.71323	0.564694	-0.794129	mapped
+differentiated	phosphoribitol_transfer	FKRP	FKRP	1	1	7.98486	2.67616	-1.2893	mapped
+differentiated	upstream_acceptor	POMT1	POMT1	1	1	4.89493	0.908421	-1.6271	mapped
+differentiated	upstream_acceptor	POMT2	POMT2	1	1	10.7994	1.59588	-2.18443	mapped
+differentiated	upstream_acceptor	POMGNT2		1	1				unmapped
+differentiated	upstream_acceptor	B3GALNT2	B3GALNT2	1	1	11.5643	4.41935	-1.21314	mapped
+differentiated	upstream_acceptor	POMK		1	1				unmapped
+differentiated	extension	RXYLT1	TMEM5	1	1	1.80501	1.2767	-0.30106	mapped
+differentiated	extension	B4GAT1	B3GNT1	1	1	46.4407	10.7046	-2.01904	mapped
+differentiated	extension	LARGE1		1	1				unmapped
+differentiated	receptor_and_matrix	DAG1	DAG1	1	1	56.4141	19.3715	-1.49485	mapped
+differentiated	receptor_and_matrix	LAMA1	LAMA1	1	1	32.9184	10.4346	-1.56867	mapped
+differentiated	receptor_and_matrix	LAMA2		1	1				unmapped
+differentiated	receptor_and_matrix	COL4A1	COL4A1	1	1	65.4697	39.3076	-0.721644	mapped
+differentiated	receptor_and_matrix	HSPG2	HSPG2	1	1	31.5723	17.1372	-0.844691	mapped
+differentiated	lineage_context	PAX6	PAX6	1	1	4.98671	0.859317	-1.68699	mapped
+differentiated	lineage_context	SOX2	SOX2	1	1	7.70952	0.982077	-2.13558	mapped
+differentiated	lineage_context	EOMES		1	1				unmapped
+differentiated	lineage_context	MYC	MYC	1	1	1.34611	2.97078	0.759155	mapped

@@ -1,0 +1,24 @@
+comparison	value	units
+slice_burst_responder_fraction	0.6842105	fraction
+2DG_to_FBP_time_different_studies	3.380952	ratio
+juvenile_status_stopped	0.6	fraction
+juvenile_status_stopped_wilson_lower	0.3126738	fraction
+juvenile_status_stopped_wilson_upper	0.8318197	fraction
+HVA_reduction_from_means	39.75904	percent
+GABA_reduction_from_means	48.23151	percent
+oral_adult_rat_total_whole_blood_acid_equivalent	65.27108	µM
+bath_low_vs_adult_total_whole_blood	38.3018	ratio
+bath_high_vs_adult_total_whole_blood	76.6036	ratio
+oral_adult_rat_brain_difference	0.08	mg/g
+oral_adult_rat_brain_difference_acid_equivalent	0.2352111	µmol/g
+fibroblast_wt_median_approx	0.6939655	plotted fold units
+fibroblast_ko_median_approx	2.262931	plotted fold units
+fibroblast_ko_wt_median_ratio	3.26087	ratio
+fibroblast_ko_wt_median_ratio_with_2px_lower	2.92	ratio
+fibroblast_ko_wt_median_ratio_with_2px_upper	3.666667	ratio
+free_calcium_if_current_exponent_0.5	0.4717666	mM scenario
+apparent_Kd_if_current_exponent_0.5	2.376263	mM scenario
+free_calcium_if_current_exponent_1	0.7831325	mM scenario
+apparent_Kd_if_current_exponent_1	6.792625	mM scenario
+free_calcium_if_current_exponent_2	1.008996	mM scenario
+apparent_Kd_if_current_exponent_2	16.32744	mM scenario

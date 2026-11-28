@@ -1,0 +1,20 @@
+comparison	source_input_1	source_input_2	estimate	units
+Winn two_hour_total_biopterin_ratio	22.8	9.9	2.303030303030303	treated_over_vehicle
+Winn break_even_treated_reduced_fraction	0.2	2.303030303030303	0.08684210526315789	fraction_of_total
+Winn break_even_treated_reduced_fraction	0.5	2.303030303030303	0.21710526315789472	fraction_of_total
+Winn break_even_treated_reduced_fraction	0.8	2.303030303030303	0.34736842105263155	fraction_of_total
+Winn hypothetical_lower_BH4	0.2	0.8	0.5757575757575758	treated_over_vehicle
+Winn total_biopterin_treatment	14.4	3,79	1.4305493787094259e-07	F_right_tail
+Winn HVA_treatment	4.077	3,79	0.009558496141986953	F_right_tail
+Winn 5HIAA_treatment	15.97	3,79	3.3119274602159635e-08	F_right_tail
+Winn reported_5HIAA_genotype_F	2.37	1,79	0.12768312942460291	F_right_tail
+Heine preloaded_Sf9_nNOS_0h	208	215	0.9674418604651163	BH2_over_no_BH2
+Heine preloaded_Sf9_nNOS_24h	156	160	0.975	BH2_over_no_BH2
+Heine preloaded_Sf9_nNOS_48h	131	128	1.0234375	BH2_over_no_BH2
+Coughlin CSF_BH4_to_BH2_baseline	12	28	0.42857142857142855	molar_ratio
+Coughlin CSF_BH4_to_BH2_first_followup	12	31	0.3870967741935484	molar_ratio
+Coughlin CSF_BH4_to_BH2_second_followup	16	27	0.5925925925925926	molar_ratio
+Ohashi Fig4C left_rat_total_before_to_30min	366	441	1.3191489361702127	pixel_derived_treated_over_before
+Ohashi Fig4C left_rat_blood_subtracted_before_to_30min	366,641	441,672	1.1904761904761905	pixel_derived_treated_over_before
+SPARK implied_elimination_half_life	2780	3870	0.9649207153838087	hours
+SPARK implied_absorption_half_life	0.234	ln(2)	2.9621674382903644	hours

@@ -1,0 +1,11 @@
+source	contrast	value	unit
+NCT01053156	Clinical Global Impression Scale (CGI)	-0.4800	rating units
+NCT01053156	Visual Analogue Scale- Behavior 1	0.1600	cm
+A-MANECE Table 2	minocycline minus placebo change at 8 weeks	-0.1000	age-equivalent months
+Casha 2012 abstract	acute spinal-injury CSF CI low	4.5902	µM
+Casha 2012 abstract	acute spinal-injury CSF mean	5.0273	µM
+Casha 2012 abstract	acute spinal-injury CSF CI high	5.4645	µM
+Casha and Romero-Perez	direct active MMP9 IC50 / mean CSF	35.8043	fold
+Dziembowska 2013	change in normalized plasma signal, CI low	-42.0000	%
+Dziembowska 2013	change in normalized plasma signal, geometric	-25.0000	%
+Dziembowska 2013	change in normalized plasma signal, CI high	-3.0000	%

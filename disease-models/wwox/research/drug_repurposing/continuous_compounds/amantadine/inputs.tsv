@@ -1,0 +1,21 @@
+id	value	unit	source	locator
+parent_mw	151.25	g/mol	https://pubchem.ncbi.nlm.nih.gov/compound/Amantadine	Calculated properties, free base
+hcl_mw	187.71	g/mol	https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a016ab57-d18f-4a3b-b2ab-f91fecc1eef7	Description, amantadine hydrochloride
+pediatric_avg_reference	1.5	mg/L	https://pubmed.ncbi.nlm.nih.gov/20129511/	Abstract, Results, exploratory threshold above this time-averaged total plasma reference
+plasma_binding	67	percent	https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a016ab57-d18f-4a3b-b2ab-f91fecc1eef7	Clinical Pharmacology, in vitro 0.1–2.0 mg/L
+amantadine_ic50_0mg	49	umol/L	https://pubmed.ncbi.nlm.nih.gov/20955720/	Abstract, human GluN1/GluN2A at −80 mV, nominal Mg-free medium
+amantadine_ic50_1mg	165	umol/L	https://pubmed.ncbi.nlm.nih.gov/20955720/	Abstract, human GluN1/GluN2A at −80 mV, 1 mM Mg
+memantine_ic50_0mg	1	umol/L	https://pubmed.ncbi.nlm.nih.gov/20955720/	Abstract, human GluN1/GluN2A at −80 mV, nominal Mg-free medium
+memantine_ic50_1mg	6.6	umol/L	https://pubmed.ncbi.nlm.nih.gov/20955720/	Abstract, human GluN1/GluN2A at −80 mV, 1 mM Mg
+rat_nicotinic_ic50	6.5	umol/L	https://pubmed.ncbi.nlm.nih.gov/9152392/	Abstract, hippocampal type IA α7-sensitive current
+rat_striatal_ecf_low	6	umol/L	https://pubmed.ncbi.nlm.nih.gov/8532138/	Abstract, minimum striatal microdialysate at behaviorally active exposures
+rat_striatal_ecf_high	21	umol/L	https://pubmed.ncbi.nlm.nih.gov/8532138/	Abstract, maximum striatal microdialysate at behaviorally active exposures
+swas_n	5	count	https://www.elsevier.es/es-revista-neurologia-295-pdf-download-S0213485325001021	Results and Tables 2–3, D/EE-SWAS group
+swas_pattern_improved	4	count	https://www.elsevier.es/es-revista-neurologia-295-pdf-download-S0213485325001021	Results and Table 3 p. 7, normal or nearly normal by authors' pattern-level interpretation
+swas_none_explicit	1	count	https://www.elsevier.es/es-revista-neurologia-295-pdf-download-S0213485325001021	Table 3 p. 7, explicit absence of epileptiform activity in follow-up description
+swas_residual_among_improved	3	count	https://www.elsevier.es/es-revista-neurologia-295-pdf-download-S0213485325001021	Table 3 p. 7, residual sleep discharges among the four with improved pattern
+swas_unchanged	1	count	https://www.elsevier.es/es-revista-neurologia-295-pdf-download-S0213485325001021	Table 3 p. 7, no EEG change
+nrem_baseline_lower_bound	80	percent	https://www.elsevier.es/es-revista-neurologia-295-pdf-download-S0213485325001021	Tables 2 and 3, selected illustrative paired observation with baseline >80% of recorded NREM
+nrem_followup	12	percent	https://www.elsevier.es/es-revista-neurologia-295-pdf-download-S0213485325001021	Table 2 p. 5, reported follow-up NREM percentage for the paired observation
+wilson_baseline_median	76	percent	https://pubmed.ncbi.nlm.nih.gov/29754107/	Abstract, cohort median before exposure
+wilson_followup_median	53	percent	https://pubmed.ncbi.nlm.nih.gov/29754107/	Abstract, cohort median after exposure

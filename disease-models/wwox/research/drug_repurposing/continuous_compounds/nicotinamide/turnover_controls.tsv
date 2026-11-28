@@ -1,0 +1,15 @@
+study_panel	endpoint	n_values	value	unit
+Wu Fig. 4 supp. 1A	row 12 NAM concentration		39.06250	µM
+Wu Fig. 4 supp. 1A	PC6 signal inhibition	3	20.72099	%
+Sasaki Fig. 4b	WT uncut light NAD loss	9	8.46777	%/h
+Sasaki Fig. 4b	WT cut light NAD loss	9	21.73137	%/h
+Sasaki Fig. 4b	WT cut/uncut light NAD loss		2.56636	fold
+Sasaki Fig. 4b	Sarm1 KO uncut light NAD loss	9	6.28993	%/h
+Sasaki Fig. 4b	Sarm1 KO cut light NAD loss	9	7.87787	%/h
+Sasaki Fig. 4b	Sarm1 KO cut/uncut light NAD loss		1.25246	fold
+Sasaki Fig. 4 supp. 1	0 h control degeneration index	4	0.18144	index
+Sasaki Fig. 4 supp. 1	0 h NAM 1 mM degeneration index	4	0.16877	index
+Sasaki Fig. 4 supp. 1	9 h control degeneration index	4	0.81215	index
+Sasaki Fig. 4 supp. 1	9 h NAM 1 mM degeneration index	4	0.57751	index
+Sasaki Fig. 4 supp. 1	24 h control degeneration index	4	0.84395	index
+Sasaki Fig. 4 supp. 1	24 h NAM 1 mM degeneration index	4	0.68737	index

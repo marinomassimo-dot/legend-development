@@ -1,4 +1,6 @@
 # Perampanel nella perdita di funzione di WWOX
+
+**Aggiornamento del 26 novembre.** Il [dossier clinico e meccanicistico aggiornato](clinical_mechanistic_update_20261126.md) separa la risposta per sindrome IESS dagli esiti sugli spasmi, qualifica vigilanza e tollerabilità e ritira le stime aggregate non comparabili. La domanda strutturale proposta distingue i contatti con il farmaco dagli effetti dello stato del recettore, con controlli pubblici e un successivo confronto tra occupazione e corrente.
 ## Decisione di ricerca del 22 novembre 2026
 
 Il perampanel merita una verifica mirata sulla relazione tra eccitazione di rete e sopravvivenza degli oligodendrociti in maturazione. Per ora il dossier non sostiene una priorità per il recupero della mielina. Nel tessuto Wwox esaminato la premessa «troppi trascritti dei recettori AMPA» perde forza. Rimane possibile un eccesso di corrente in specifici neuroni, anche con una quantità di RNA complessivamente stabile. La questione aperta è se la stessa perturbazione che attenua le scariche preservi il segnale di cui le cellule gliali hanno bisogno durante lo sviluppo. Ambito preclinico, classe di genotipo, nessuna indicazione di trattamento individuale.

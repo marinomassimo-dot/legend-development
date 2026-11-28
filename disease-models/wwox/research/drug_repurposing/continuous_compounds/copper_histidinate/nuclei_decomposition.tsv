@@ -1,0 +1,11 @@
+subset	assigned_class_contrast	Slc31a1_CPM
+all_assigned	control_observed	22.617423
+all_assigned	knockout_observed	22.252407
+all_assigned	knockout_minus_control	-0.365016
+all_assigned	within_assigned_class	0.384528
+all_assigned	assigned_class_composition	-0.749543
+min_100_nuclei	control_observed	19.237064
+min_100_nuclei	knockout_observed	17.611804
+min_100_nuclei	knockout_minus_control	-1.625260
+min_100_nuclei	within_assigned_class	-2.491674
+min_100_nuclei	assigned_class_composition	0.866415

@@ -1,0 +1,45 @@
+{
+  "investigation": "INV-06",
+  "title": "Calcitriol and myelin in WOREE",
+  "date": "27 November 2026",
+  "summary": "A conditional comparator for testing glial vitamin D receptor (VDR) function.",
+  "graph": {
+    "evidence": "Culture-dependent maturation.",
+    "inference": "Markers and sheaths can diverge.",
+    "hypothesis": "Glial VDR could help deficient axons.",
+    "experiment": "Measure persistent first sheaths."
+  },
+  "evidence": [
+    "A rat OPC marker increased at 50–100 nM after stripped-serum conditioning. Conventional-serum cultures showed no detectable increase."
+  ],
+  "inference": [
+    "At 50 nM, the nominal culture concentration was about 430 times the total serum peak measured in children on dialysis. Juvenile neural free exposure is unknown."
+  ],
+  "hypothesis": [
+    "A glial VDR response could support first sheaths even on Wwox-deficient axons. Increased MBP alone can coexist with a lasting axonal deficit."
+  ],
+  "experiment": [
+    "Qualify local calcitriol measurement. Compare first stable sheaths per eligible axon and conduction across axon and glial genotypes, with glial VDR, precursor reserves and minerals controlled."
+  ],
+  "limits": [
+    "Adult brain assay sensitivity depends on input mass. Clinical experience concerns renal and endocrine disease. Pediatric WWOX study priority is deferred."
+  ],
+  "sources": [
+    {
+      "label": "de la Fuente et al. OPCs, Fig. 3 and Supplementary Fig. S2.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4674280/"
+    },
+    {
+      "label": "Repudi et al. WWOX neuron–glia comparison, Fig. 6.",
+      "url": "https://doi.org/10.1093/brain/awab174"
+    },
+    {
+      "label": "Xuan et al. Active vitamin D in adult human brain, Fig. 2 and Table 1.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11367554/"
+    },
+    {
+      "label": "Jones et al. Total serum pharmacokinetics in pediatric dialysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7923966/"
+    }
+  ]
+}

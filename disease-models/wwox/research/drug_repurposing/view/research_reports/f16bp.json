@@ -1,0 +1,35 @@
+{
+  "investigation": "INV-07",
+  "title": "F1,6BP in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "Fructose-1,6-bisphosphate tests a rapid calcium effect and a delayed change in glucose use.",
+  "graph": {
+    "evidence": "Juvenile rat slices show smaller calcium and GABA currents.",
+    "inference": "Free ions and circuit inhibition constrain interpretation.",
+    "hypothesis": "A separate glucose-flux effect may follow in defined WWOX cells.",
+    "experiment": "Match free ions and activity, then trace glucose and read function."
+  },
+  "evidence": [
+    "In juvenile CA3, nominal bath exposure suppressed bursts in 13 of 19 slices. Peak calcium current fell 39.8% and evoked GABA current fell 48.2% in separate recordings.",
+    "In a juvenile rat status model, 6 of 10 animals in the higher exposure arm stopped electrographic and behavioral status. Acute provoked status is the setting of the observation."
+  ],
+  "inference": [
+    "The Wwox-null fibroblast F1,6BP pool was higher in the published panel. The held neural RNA datasets showed preparation-dependent changes in carbon-handling transcripts. Neither measures pathway flux."
+  ],
+  "hypothesis": [
+    "A rapid extracellular effect and a slower metabolic contribution can coexist. Reduced activity can itself change isotope labeling and energetic demand."
+  ],
+  "experiment": [
+    "Restore measured free calcium and magnesium and match recruitment. Read recurrence and inhibitory function before testing a delayed genotype-dependent tracer and redox effect at matched activity."
+  ],
+  "limits": [
+    "Total adult rat blood and brain homogenate cannot establish free juvenile brain exposure. Keep as a conditional local research comparator and defer systemic pediatric WWOX priority."
+  ],
+  "sources": [
+    {"label": "Shao et al. Juvenile CA3 synaptic and voltage-activated currents.", "url": "https://doi.org/10.3389/fncel.2018.00168"},
+    {"label": "Janicot et al. Juvenile rat status and video EEG.", "url": "https://doi.org/10.1016/j.eplepsyres.2020.106500"},
+    {"label": "Abu-Remaileh and Aqeilan. Wwox-null fibroblast metabolite panel.", "url": "https://doi.org/10.1038/cdd.2014.95"},
+    {"label": "Xu and Stringer. Adult rat whole-blood and brain exposure.", "url": "https://doi.org/10.1016/j.phrs.2008.01.008"},
+    {"label": "McDonald et al. Glucose labeling after chronic pilocarpine.", "url": "https://doi.org/10.1016/j.yebeh.2021.108223"}
+  ]
+}

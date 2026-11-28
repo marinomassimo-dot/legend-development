@@ -1,0 +1,3 @@
+publication	registered_total	randomized_substudy	active_randomized	placebo_randomized	active_analyzed	placebo_analyzed	month	endpoint	adjusted_delta	CI95_lo	CI95_hi	p_text	p_figure_table
+Halliday_Fig1B_D	53	34	16	18	14	18	3	myocardial_PCr/ATP	-0.09	-0.24	0.07	0.27	0.25
+Halliday_Fig1C_D	53	34	16	18	14	17	3	muscle_PCr_recovery_s	-1.3	-7.6	4.9	0.67	0.67

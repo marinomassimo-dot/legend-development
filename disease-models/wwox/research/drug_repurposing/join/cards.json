@@ -19123,7 +19123,7 @@
       "epistemic_status": "DATO",
       "id": "DR-A01-006",
       "locator": "disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/README.md section 4; munc18_cytosolic_precedent_panel_readings_20261029.tsv",
-      "measured_result_note": "Total mutant protein about 1.8 fold of its own untreated control (three experiments, significance mark printed); wild type rose about 1.8 fold as well, so the gain is not mutant-specific; transgene mRNA under treatment was not measured.",
+      "measured_result_note": "Total G544D mutant protein about 1.8 fold of its own untreated control in Supplementary Figure 12a, about 1.55 fold in 12b (HEK293T, three experiments each) and about 1.64 fold in neurons (Figure 6a, five experiments), significance mark printed in each; wild type rose about 1.8 to 2.05 fold in HEK293T and about 1.3 fold in neurons as well, so the gain is not mutant-specific; transgene mRNA under treatment was not measured.",
       "reading_depth": "partial_fulltext_read",
       "receipt": "FTR-20261021-30266908-01",
       "source": "Guiberson 2018 (PMID 30266908), Supplementary Figure 12a, mutant panel read in IT5 P8; NOT WWOX EVIDENCE",
@@ -19161,7 +19161,7 @@
       "epistemic_status": "DATO",
       "id": "DR-A01-008",
       "locator": "disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/munc18_cytosolic_precedent_panel_readings_20261029.tsv",
-      "measured_result_note": "Mutant total protein in Supplementary Figure 12a (HEK293T, three independent experiments): about 2.35 fold of control with trehalose and about 1.8 fold with sorbitol, both marked; Figure 12b (same cell line, same concentration) repeats the trehalose rise but shows about 1.0 fold, unmarked, for sorbitol, and the higher concentration of either gave no rise in panel a, so no sorbitol effect is established and the osmolyte arm rests on trehalose (corrected 2026-11-25, ADV-279; figure readings). Both were also raised in yeast by a second assay (panel c, fluorescence). The osmolytes act at high levels, so an osmotic effect is not separated from chaperoning; the effect is on wild type as well.",
+      "measured_result_note": "Mutant total protein in Supplementary Figure 12a (HEK293T, three independent experiments): about 2.35 fold of control with trehalose and about 1.8 fold with sorbitol, both marked; Figure 12b (same cell line, same concentration) repeats the trehalose rise but shows about 1.0 fold, unmarked, for sorbitol, and the higher concentration of either gave no rise in panel a, so no sorbitol effect is established and the osmolyte arm for G544D rests on trehalose (sorbitol is marked for G544D in 12a and in yeast and for R406H and G544V in 12b, but not for G544D in 12b or in neurons) (corrected 2026-11-25, ADV-279; figure readings). Both were also raised in yeast by a second assay (panel c, fluorescence). The osmolytes act at high levels, so an osmotic effect is not separated from chaperoning; the effect is on wild type as well.",
       "reading_depth": "partial_fulltext_read",
       "receipt": "FTR-20261021-30266908-01",
       "source": "Guiberson 2018 (PMID 30266908), Supplementary Figure 12a, mutant panel read in IT5 P8; NOT WWOX EVIDENCE",
@@ -19180,7 +19180,7 @@
       "epistemic_status": "DATO",
       "id": "DR-A01-009",
       "locator": "disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/munc18_quantity_function_arithmetic_20261029.tsv",
-      "measured_result_note": "Mutant total protein sits at about 4 to 8 percent of wild type in four of five variants and rises only about 1.05 to 1.65 fold with the class; the soluble fraction roughly doubles (soluble pool about 2 to 4 fold, reader arithmetic); function reaches or exceeds the untreated wild-type range for three of the four low-protein variants (R406H about 44 against about 55 does not; the fifth variant, P335L, has about 65 percent protein and little baseline deficit). The soluble-pool figures combine panels with different loading normalisers and carry a reader error of about plus or minus 10 percent of axis, and fold values near 1.05 are not separable from 1.0. Quantity and function are not proportional (read-out saturation not excluded; the authors report near-wild-type expression in neurons, not overexpression, and a pixel-threshold read-out); a steady-state deficit of about 12 to 25 fold is only about 1.5 to 3 fold explained by the measured turnover.",
+      "measured_result_note": "Mutant total protein sits at about 4 to 8 percent of wild type in four of five variants and rises only about 1.05 to 1.65 fold with the class; the soluble fraction roughly doubles (soluble pool about 2 to 4 fold, reader arithmetic); function reaches or exceeds the untreated wild-type range for three of the four low-protein variants (R406H about 44 against about 55 does not with the class, and reaches about 58 with sorbitol; the fifth variant, P335L, has about 65 percent protein, an intermediate and not absent deficit, and its soluble fraction shows no marked change). The soluble-pool figures combine panels with different loading normalisers and carry a reader error of about plus or minus 10 percent of axis, and fold values near 1.05 are not separable from 1.0. Quantity and function are not proportional (read-out saturation not excluded; the authors report near-wild-type expression in neurons, not overexpression, and a pixel-threshold read-out); a steady-state deficit of about 12 to 25 fold is only about 1.5 to 3 fold explained by the measured turnover.",
       "reading_depth": "partial_fulltext_read",
       "receipt": "FTR-20261021-30266908-01",
       "source": "Guiberson 2018 (PMID 30266908), Figures 3, 4 and 6 read in IT5 P8; NOT WWOX EVIDENCE",
@@ -19199,7 +19199,7 @@
       "epistemic_status": "DATO",
       "id": "DR-A01-010",
       "locator": "disease-models/wwox/research/repurposing_10h_scientist-a_r1d_20261022.md section 3, item 5; deepdive_manifests/PMID41274966.json entries 5 to 7",
-      "measured_result_note": "Enzyme protein rose toward wild type with acetylated HSP90 up; plasma phenylalanine fell about 44 percent from sham yet stayed about three times wild type; two sham animals against three treated; a higher exposure level caused kidney enlargement, ascites and deaths; no turnover measurement supports the authors' degradation reading. Shows that a cytosolic mutant enzyme can respond to an HDAC6 lever, which butyrate does not engage.",
+      "measured_result_note": "Enzyme protein rose toward wild type with acetylated HSP90 up; plasma phenylalanine fell about 43 to 44 percent from sham at week 12 (44.1 from the printed group means, 749.41 against 1341.01; 42.9 from the mean of the three tabulated treated values, 765.9, against the two tabulated sham values) yet stayed about three times wild type; two sham animals against three treated; a higher dose caused abdominal oedema and deaths (that group was excluded from the analysis; kidney enlargement and ascites at necropsy); the tables list two sham animals although the Methods state three per group; no turnover measurement supports the authors' degradation reading. Suggests, in one small study (Pah enu2 F263S mice, two tabulated sham against three treated animals), that a mutant liver enzyme can respond to an HDAC6 inhibitor; this paper does not test whether butyrate engages HDAC6.",
       "reading_depth": "complete_fulltext_read",
       "receipt": "FTR-20261022-41274966-01",
       "source": "PMID 41274966 (R1 reading, manifest of 2026-10-22); NOT WWOX EVIDENCE",
@@ -20579,7 +20579,7 @@
       "for": [
        "Allele-specific rescue of a fully ER-retained variant with protein and function read together (GAT-1 G443V, fly seizure-like episodes down).",
        "Total and surface protein rise in other missense lesions with the class.",
-       "In the soluble cytosolic client, the class and two HDAC-free osmolytes raised the mutant while a class-I HDAC inhibitor did not, and the soluble fraction roughly doubled with a vesicle-recycling read-out at or above the untreated wild-type range for three of the four low-protein variants (partial dissociation of quantity from function in the favourable direction; NOT WWOX EVIDENCE)."
+       "In the soluble cytosolic client (Guiberson 2018), phenylbutyrate raised the G544D mutant total protein about 1.8 fold (Supplementary Figure 12a) and about 1.5 fold (12b) and trehalose about 2.35 fold in both; sorbitol raised it in 12a (about 1.8 fold, marked) but carries no significance mark in 12b (about 1.0) or in neurons (Figure 6a, about 1.6); sodium butyrate, tested only on G544D and wild type in HEK293T (three experiments), did not raise G544D (about 1.0; wild type about 1.9, unmarked); with phenylbutyrate the soluble fraction rose about 1.7 to 2.4 fold in the four low-protein variants and the vesicle-recycling read-out was at or above the untreated wild-type range for three of the four (partial dissociation of quantity from function in the favourable direction; NOT WWOX EVIDENCE)."
       ],
       "transfer_limits": "Soluble monomeric client with a dominant-negative mechanism, or ER-retained membrane client, versus a recessive cytosolic SDR enzyme; CMV-promoter plasmid overexpression in cell lines, or lentiviral expression near wild-type level in neurons (authors' statement; saturation or excess not excluded), versus own promoter; wild type raised alike; the in vitro and in vivo gains are protein quantity, not WWOX function."
      },
@@ -20652,7 +20652,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "576104d9b34a2a60816ecf3dd1ac91e1f79824cffa0fe49df07d1e9149cef576",
+   "input_sha256": "2db133f95c11f4a4d0722eaa5cb8a7c12bf8f5cf820cbd71daa5078d8d89dfe7",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -33941,7 +33941,7 @@
       "epistemic_status": "DATO",
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-W2-003",
-      "locator": "same reading as DR-W2-002; Fisher test reported 14 of 19 versus 3 of 15",
+      "locator": "same reading as DR-W2-002; Fisher test reported 14 of 19 versus 3 of 15; scoring #28 and #29 as improved gives 14 of 19 against 5 of 15, p 0.036 (a sensitivity re-scoring, not the authors' analysis: their conclusion for both is no effect; #28 is a synonymous variant and #29 a missense variant of uncertain significance, neither tested functionally)",
       "measured_result_note": "Benefit in 3 of 15 (the group of 15, which keeps #19 although the Results say it was excluded from further analyses, includes five individuals with variants the authors call non-pathogenic: Table 1 lists four of unknown significance (#8, #19, #29, #31) and one likely benign (#28), the supplementary table of ACMG classes lists all five as unknown significance, and the text counts them as five in one place and as six in another), mild and parent-reported (one also reported by the kindergarten); seizure reduction 2 of 10, not different from the gain-of-function group (P = 0.417), and both reductions come from two carriers (#28 and #29) of variants not tested for function and rated no effect by the authors, so counting them would make 5 of 15; neither reduction is isolated from other changes (antiseizure drug changes in #28 and a regimen of three drugs in #29), and none comes from a carrier with a tested loss-of-function or indeterminate variant. The direction of the receptor lesion, not the presence of an NMDAR gene, separated responders.",
       "reading_depth": "partial_fulltext_read",
       "source": "Karnstedt 2026, Epilepsia (PMID 41489401; NOT WWOX EVIDENCE; other disease)",
@@ -34476,7 +34476,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "6ad6c760d092db6bdd2f3bcb56385ba5ad4b355fc73ae7f9ae8b35a18775b378",
+   "input_sha256": "0c96fda3a38e55d42f38d823ebd970b0da9d62dc4ad63adac30e68bcc3fd4912",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -37837,7 +37837,7 @@
     "not_known": [
      "Whether a WWOX-deficient human neural cell has a measurable bioenergetic defect that a ketone substrate would bypass.",
      "Whether lactate is raised, normal or low in WWOX-deficient human brain across ages and contexts.",
-     "A ketogenic-diet response is reported in 3 of 5 WOREE individuals (lactate 2.4 to 3.3 mmol/L in one individual; registry statement, no held source passage, ADV-259); the Pdk1 transcript and serum-lactate datum in the Wwox-null MEF and mouse paper is non-neural and measures no PDH.",
+     "In a held report of five paediatric WOREE patients (Chong 2023, PMID 36537114) epilepsy responded to a ketogenic diet in three (patients 1, 2 and 4); the lactate range of 2.4 to 3.3 mmol/L in one individual is a registry statement (ADV-259) not found in the held text (8 delivered chunks only; the case narratives of patients 1 to 4 are not held; searched 2026-11-26 for lactate, lactic and mmol); other held WOREE reports are less favourable; the Pdk1 transcript and serum-lactate datum in the Wwox-null MEF and mouse paper is non-neural and measures no PDH.",
      "SCI 2026-11-19 (ADV-074, advisor_pilot_20261113/brainstorm_20261116/h_glucose_axis_adv074_sci_20261119/GLUCOSE_METABOLIC_AXIS_FIRST_PASS_ADV074_SCI_20261119.md; mapped by IT): the card's evidence is clinical and tiny with no metabolic readout in any WWOX-deficient neural system; on the held originals its rationale neither gains nor loses decisively: it would gain plausibility (an alternative brain fuel) only if hypoglycaemia or glucose use contributes to excitability, which nothing shows, and it would reduce to a generic anticonvulsant action if seizures occur with normal glucose (the P47T adults and the neuron-targeted line suggest they may). A diet that lowers blood glucose would act on pups that are already hypoglycaemic from about P10 and die: whether it helps or harms is unknown (a hypothesis-level caution, not advice). No change of tier."
     ],
     "p4_card": {
@@ -38025,7 +38025,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "2f898fafd58f7b942cee554f165669bd8fdeed97450a51f43ba62af083b70a3e",
+   "input_sha256": "367f15ec47e62c43044665eeb798780dbc965b2dd17e173f6342d5e1df7ef80d",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",

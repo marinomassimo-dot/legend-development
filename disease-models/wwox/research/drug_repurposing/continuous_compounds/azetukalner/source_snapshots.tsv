@@ -1,0 +1,9 @@
+pmid	doi	retrieval_url	local_snapshot	sha256	coverage_locator	evidence_depth
+31568714	10.1002/acn3.50896	https://kclpure.kcl.ac.uk/ws/portalfiles/portal/117816133/Premoli_2019.pdf	Premoli_2019.pdf	53b7fdbc26e03370b4b21a5dd93a0c79964aa126a4d03130b1b7fe3ade648e24	Results subjects, PK, TMS-EMG and EEG; Fig. 2 and Fig. 3 captions; Data analysis; Discussion of cortical pharmacodynamics	partial_fulltext_read
+37812429	10.1001/jamaneurol.2023.3542	https://pmc.ncbi.nlm.nih.gov/articles/PMC10562989/	remote		Methods design and statistical analysis; Results disposition and efficacy, Figs. 1–2 captions and Tables 2–3	partial_fulltext_read
+43002431	10.1001/jamaneurol.2026.4141	https://jamanetwork.com/journals/jamaneurology/fullarticle/2856389	remote		Methods study design, endpoints and statistical analysis; Results disposition, Tables 1–3 and Fig. 2 legend; Limitations	partial_fulltext_read
+	10.15302/vita.2026.05.0035	https://jf2.hep.com.cn/c783fdb54d484e0fbbe4d8f3bf2862aa.pdf	Lu_2026.pdf	5acee1d73cd372368d481b61fdd0e3a766b200bd4ecad212c6895c08f042d18d	pp. 180–182, Fig. 4a visual, Fig. 5 legend; Whole-cell electrophysiology and Data Availability pp. 184–185; discussion assembly boundaries	partial_fulltext_read
+		https://clinicaltrials.gov/api/v2/studies/NCT03796962	NCT03796962.json	1ce5969a4221f1482a07fedf1a352eb9dd2a144a878abc5325c3fa48288d0cf6	Posted phase 2b efficacy	public_deposit
+		https://clinicaltrials.gov/api/v2/studies/NCT05614063	NCT05614063.json	09ee382987b6514b963d98589094611e709832ea482d88610a5570c208233b33	Phase 3 registry status	public_deposit
+		https://clinicaltrials.gov/api/v2/studies/NCT05667142	NCT05667142.json	cb06848bd3d661e858e6f65557a2935810bb414824bf725e874343fca10f0d0e	Pediatric age boundary and results status	public_deposit
+		https://files.rcsb.org/download/22BI.cif	22BI.cif	fd5e2af79b005b55d80e97baa652e952842bb75f8218cca56190f4e4ea1bb3c7	2:2 deposited nonpolymer scheme	public_deposit

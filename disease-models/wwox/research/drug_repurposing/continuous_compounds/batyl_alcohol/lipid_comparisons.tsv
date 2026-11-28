@@ -1,0 +1,68 @@
+tissue_or_feature	comparison	n_reference	n_compared	reference_mean	compared_mean	effect	omit_min	omit_max	scale	source
+RBC	2 months: treated Pex7-null vs control diet WT	4	6	4.2	5.4	128.571			% of comparator DMA ratio	Brites Table 1
+RBC	2 months: treated Pex7-null vs same diet WT	6	6	7.6	5.4	71.0526			% of comparator DMA ratio	Brites Table 1
+Liver	2 months: treated Pex7-null vs control diet WT	4	6	0.5	1.4	280			% of comparator DMA ratio	Brites Table 1
+Liver	2 months: treated Pex7-null vs same diet WT	6	6	1.1	1.4	127.273			% of comparator DMA ratio	Brites Table 1
+Kidney	2 months: treated Pex7-null vs control diet WT	4	6	3.5	3.9	111.429			% of comparator DMA ratio	Brites Table 1
+Kidney	2 months: treated Pex7-null vs same diet WT	6	6	7.1	3.9	54.9296			% of comparator DMA ratio	Brites Table 1
+Heart	2 months: treated Pex7-null vs control diet WT	4	6	2.3	9.6	417.391			% of comparator DMA ratio	Brites Table 1
+Heart	2 months: treated Pex7-null vs same diet WT	6	6	9.8	9.6	97.9592			% of comparator DMA ratio	Brites Table 1
+Lung	2 months: treated Pex7-null vs control diet WT	4	6	8.1	17.7	218.519			% of comparator DMA ratio	Brites Table 1
+Lung	2 months: treated Pex7-null vs same diet WT	6	6	15.7	17.7	112.739			% of comparator DMA ratio	Brites Table 1
+Testis	2 months: treated Pex7-null vs control diet WT	4	6	2.4	2.1	87.5			% of comparator DMA ratio	Brites Table 1
+Testis	2 months: treated Pex7-null vs same diet WT	6	6	3.4	2.1	61.7647			% of comparator DMA ratio	Brites Table 1
+Eye	2 months: treated Pex7-null vs control diet WT	4	6	4.0	2.7	67.5			% of comparator DMA ratio	Brites Table 1
+Eye	2 months: treated Pex7-null vs same diet WT	6	6	3.1	2.7	87.0968			% of comparator DMA ratio	Brites Table 1
+Sciatic nerve	2 months: treated Pex7-null vs control diet WT	4	6	26.7	0.6	2.24719			% of comparator DMA ratio	Brites Table 1
+Sciatic nerve	2 months: treated Pex7-null vs same diet WT	6	6	39.0	0.6	1.53846			% of comparator DMA ratio	Brites Table 1
+Cerebrum	2 months: treated Pex7-null vs control diet WT	4	6	13.7	0.1	0.729927			% of comparator DMA ratio	Brites Table 1
+Cerebrum	2 months: treated Pex7-null vs same diet WT	6	6	13.9	0.1	0.719424			% of comparator DMA ratio	Brites Table 1
+Cerebellum	2 months: treated Pex7-null vs control diet WT	4	6	14.5	0.2	1.37931			% of comparator DMA ratio	Brites Table 1
+Cerebellum	2 months: treated Pex7-null vs same diet WT	6	6	14.5	0.2	1.37931			% of comparator DMA ratio	Brites Table 1
+Spinal cord	2 months: treated Pex7-null		6						below detection	Brites Table 1
+Cerebellum	4 months: treated Pex7-null vs same diet WT	3	3	13.7	0.4	2.91971			% of comparator DMA ratio	Brites Table 1
+Spinal cord	4 months: treated Pex7-null vs same diet WT	3	3	17.2	0.5	2.90698			% of comparator DMA ratio	Brites Table 1
+sum of PE P-16:0 features	untreated TBI-D1 vs Sham	5	5	3082.85	1828.29	0.593052	0.560122	0.629068	ratio of mean deposited signals	Mendeley untreated CSV
+sum of PE P-16:0 features	untreated TBI-D3 vs Sham	5	5	3082.85	1768.3	0.573593	0.515018	0.618301	ratio of mean deposited signals	Mendeley untreated CSV
+sum of PE P-16:0 features	untreated TBI-D28 vs Sham	5	5	3082.85	1806	0.585822	0.553293	0.621398	ratio of mean deposited signals	Mendeley untreated CSV
+sum of PE P-18:0 features	untreated TBI-D1 vs Sham	5	5	7409.13	4508.65	0.608526	0.570848	0.657309	ratio of mean deposited signals	Mendeley untreated CSV
+sum of PE P-18:0 features	untreated TBI-D3 vs Sham	5	5	7409.13	3851.83	0.519876	0.480898	0.561553	ratio of mean deposited signals	Mendeley untreated CSV
+sum of PE P-18:0 features	untreated TBI-D28 vs Sham	5	5	7409.13	4156	0.56093	0.526199	0.605897	ratio of mean deposited signals	Mendeley untreated CSV
+ePC	Sham d28: OAG minus control	6	6	-0.00188708	0.00511837	0.00700545	-0.00994898	0.0251359	difference in deposited transformed units	Mendeley XLSX
+ePC	TBI-d1: OAG minus control	6	5	-0.00305314	-0.0275689	-0.0245158	-0.0388741	-0.0104605	difference in deposited transformed units	Mendeley XLSX
+ePC	TBI-d3: OAG minus control	6	6	0.00690563	0.00865478	0.00174915	-0.0145321	0.0129216	difference in deposited transformed units	Mendeley XLSX
+ePC	TBI-d28: OAG minus control	6	6	-0.0180922	0.0466484	0.0647406	0.0287394	0.0905887	difference in deposited transformed units	Mendeley XLSX
+ePE	Sham d28: OAG minus control	6	6	0.000586361	-0.000548659	-0.00113502	-0.00359533	0.00112423	difference in deposited transformed units	Mendeley XLSX
+ePE	TBI-d1: OAG minus control	6	5	0.000633905	0.00448195	0.00384805	0.00173938	0.00582167	difference in deposited transformed units	Mendeley XLSX
+ePE	TBI-d3: OAG minus control	6	6	-0.000669081	-0.000775559	-0.000106478	-0.00168222	0.00211957	difference in deposited transformed units	Mendeley XLSX
+ePE	TBI-d28: OAG minus control	6	6	0.0014407	-0.00781104	-0.00925174	-0.013131	-0.00490573	difference in deposited transformed units	Mendeley XLSX
+ePL	Sham d28: OAG minus control	6	6	-1.1005e-11	1.22512e-11	2.32562e-11	1.50008e-11	3.30201e-11	difference in deposited transformed units	Mendeley XLSX
+ePL	TBI-d1: OAG minus control	6	5	-6.50761e-12	-2.79528e-11	-2.14451e-11	-3.96809e-11	-6.92602e-12	difference in deposited transformed units	Mendeley XLSX
+ePL	TBI-d3: OAG minus control	6	6	1.73802e-11	-9.01997e-12	-2.64002e-11	-4.33146e-11	-1.03807e-11	difference in deposited transformed units	Mendeley XLSX
+ePL	TBI-d28: OAG minus control	6	6	1.18943e-11	1.09665e-11	-9.27776e-13	-1.1861e-11	8.57329e-12	difference in deposited transformed units	Mendeley XLSX
+PE P-36:4	Sham d28: OAG minus control	6	6	-0.0450563	-0.0758047	-0.0307484	-0.0403422	-0.0241847	difference in deposited transformed units	Mendeley XLSX
+PE P-36:4	TBI-d1: OAG minus control	6	5	0.0566263	0.0435841	-0.0130422	-0.0227009	-0.00610411	difference in deposited transformed units	Mendeley XLSX
+PE P-36:4	TBI-d3: OAG minus control	6	6	0.0626346	-0.00840591	-0.0710405	-0.0859253	-0.0579722	difference in deposited transformed units	Mendeley XLSX
+PE P-36:4	TBI-d28: OAG minus control	6	6	-0.0202121	-0.0162807	0.0039314	-0.0171644	0.0248082	difference in deposited transformed units	Mendeley XLSX
+PE P-36:4.1	Sham d28: OAG minus control	6	6	-0.0397576	-0.0136696	0.026088	0.00345971	0.0526898	difference in deposited transformed units	Mendeley XLSX
+PE P-36:4.1	TBI-d1: OAG minus control	6	5	0.012559	-0.0203294	-0.0328884	-0.0534791	-0.0169841	difference in deposited transformed units	Mendeley XLSX
+PE P-36:4.1	TBI-d3: OAG minus control	6	6	-0.00458484	-0.024348	-0.0197632	-0.0342508	-0.00575987	difference in deposited transformed units	Mendeley XLSX
+PE P-36:4.1	TBI-d28: OAG minus control	6	6	0.0915276	0.0262258	-0.0653018	-0.0863781	-0.0386471	difference in deposited transformed units	Mendeley XLSX
+PE P-38:6	Sham d28: OAG minus control	6	6	0.00525655	-0.0185513	-0.0238079	-0.033601	-0.0143478	difference in deposited transformed units	Mendeley XLSX
+PE P-38:6	TBI-d1: OAG minus control	6	5	0.0172342	0.00291966	-0.0143146	-0.026695	-0.00455662	difference in deposited transformed units	Mendeley XLSX
+PE P-38:6	TBI-d3: OAG minus control	6	6	0.00432683	-0.0307428	-0.0350697	-0.0451149	-0.0238997	difference in deposited transformed units	Mendeley XLSX
+PE P-38:6	TBI-d28: OAG minus control	6	6	0.0291431	-0.0408381	-0.0699812	-0.0906971	-0.0424219	difference in deposited transformed units	Mendeley XLSX
+PE P-38:4	Sham d28: OAG minus control	6	6	-0.0313155	-0.0140501	0.0172655	0.00476106	0.0386229	difference in deposited transformed units	Mendeley XLSX
+PE P-38:4	TBI-d1: OAG minus control	6	5	0.031168	0.0311928	2.48282e-05	-0.00999605	0.0140529	difference in deposited transformed units	Mendeley XLSX
+PE P-38:4	TBI-d3: OAG minus control	6	6	0.0381304	0.0185658	-0.0195647	-0.0329399	-0.00914777	difference in deposited transformed units	Mendeley XLSX
+PE P-38:4	TBI-d28: OAG minus control	6	6	-0.0736534	-0.00512312	0.0685302	0.033061	0.0881991	difference in deposited transformed units	Mendeley XLSX
+PE P-38:4.1	Sham d28: OAG minus control	6	6	0.00971292	0.00319343	-0.00651949	-0.0354294	0.0188677	difference in deposited transformed units	Mendeley XLSX
+PE P-38:4.1	TBI-d1: OAG minus control	6	5	-0.0209698	-0.0347567	-0.0137869	-0.0236313	-0.00391463	difference in deposited transformed units	Mendeley XLSX
+PE P-38:4.1	TBI-d3: OAG minus control	6	6	-0.0246003	-0.0328103	-0.00821007	-0.0224288	0.00236759	difference in deposited transformed units	Mendeley XLSX
+PE P-38:4.1	TBI-d28: OAG minus control	6	6	0.104258	0.0333182	-0.0709393	-0.101464	-0.0252571	difference in deposited transformed units	Mendeley XLSX
+PE P-38:4.2	Sham d28: OAG minus control	6	6	-0.0256737	0.0207314	0.0464051	0.0311336	0.0662914	difference in deposited transformed units	Mendeley XLSX
+PE P-38:4.2	TBI-d1: OAG minus control	6	5	-0.020783	0.00823852	0.0290215	0.0227789	0.0341529	difference in deposited transformed units	Mendeley XLSX
+PE P-38:4.2	TBI-d3: OAG minus control	6	6	-0.0278831	0.0316721	0.0595552	0.0516677	0.0677376	difference in deposited transformed units	Mendeley XLSX
+PE P-38:4.2	TBI-d28: OAG minus control	6	6	0.0215278	0.0257813	0.00425344	-0.00826625	0.0201054	difference in deposited transformed units	Mendeley XLSX
+ePL	entire treatment matrix	53				9.7478e-11			maximum absolute transformed value	Mendeley XLSX
+ePC and ePE	entire treatment matrix	53				-0.989352			Pearson r	Mendeley XLSX

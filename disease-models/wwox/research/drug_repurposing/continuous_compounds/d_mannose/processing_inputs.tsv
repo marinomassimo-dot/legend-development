@@ -1,0 +1,25 @@
+key	source_unit	locator	value
+ipsc_high	percent of normalized N-glycan signal, undifferentiated human iPSCs	39463965 Table 1	73.5
+ipsc_sialic	percent of normalized N-glycan signal, undifferentiated human iPSCs	39463965 Table 1	12.8
+ipsc_man5	percent of normalized N-glycan signal, undifferentiated human iPSCs	39463965 Table 1	4.2
+ipsc_man9	percent of normalized N-glycan signal, undifferentiated human iPSCs	39463965 Table 1	21.0
+inn_high	percent of normalized N-glycan signal, day-14 human glutamatergic culture	39463965 Table 1	62.5
+inn_sialic	percent of normalized N-glycan signal, day-14 human glutamatergic culture	39463965 Table 1	6.5
+inn_man5	percent of normalized N-glycan signal, day-14 human glutamatergic culture	39463965 Table 1	24.5
+inn_man9	percent of normalized N-glycan signal, day-14 human glutamatergic culture	39463965 Table 1	7.0
+iad_high	percent of normalized N-glycan signal, day-14 human GABAergic culture	39463965 Table 1	58.5
+iad_sialic	percent of normalized N-glycan signal, day-14 human GABAergic culture	39463965 Table 1	7.3
+iad_man5	percent of normalized N-glycan signal, day-14 human GABAergic culture	39463965 Table 1	14.1
+iad_man9	percent of normalized N-glycan signal, day-14 human GABAergic culture	39463965 Table 1	10.3
+cog_control_oligomannose	percent of normalized N-glycan signal, control human fibroblast lysate	41362306 Results 3.6	44
+cog_case_oligomannose	percent of normalized N-glycan signal, COG6-CDG human fibroblast lysate	41362306 Results 3.6	55
+cog_control_sialic	percent of normalized N-glycan signal, control human fibroblast lysate	41362306 Results 3.6	29
+cog_case_sialic	percent of normalized N-glycan signal, COG6-CDG human fibroblast lysate	41362306 Results 3.6	14
+cog_control_disialylated	percent relative intensity, control human serum Hex5HexNAc4NeuAc2	41362306 Results 3.6	55.2
+cog_case_disialylated	percent relative intensity, COG6-CDG human serum Hex5HexNAc4NeuAc2	41362306 Results 3.6	30.1
+mpi_1_100	pmol mature LLO per 10 million Mpi-null mouse fibroblasts at 100 µM mannose	19157945 Table 1 experiment 1	7.7
+mpi_1_500	pmol mature LLO per 10 million Mpi-null mouse fibroblasts at 500 µM mannose	19157945 Table 1 experiment 1	2.4
+mpi_3_100	pmol mature LLO per 10 million Mpi-null mouse fibroblasts at 100 µM mannose	19157945 Table 1 experiment 3	4.9
+mpi_3_500	pmol mature LLO per 10 million Mpi-null mouse fibroblasts at 500 µM mannose	19157945 Table 1 experiment 3	1.8
+mpi_4_100	pmol mature LLO per 10 million Mpi-null mouse fibroblasts at 100 µM mannose	19157945 Table 1 experiment 4	5.2
+mpi_4_500	pmol mature LLO per 10 million Mpi-null mouse fibroblasts at 500 µM mannose	19157945 Table 1 experiment 4	1.9

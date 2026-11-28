@@ -1,0 +1,30 @@
+comparison	endpoint	value	unit
+lowest reported group	total parent plasma peak	0.110507	umol/L
+lowest reported group	IMPase IC50 divided by total peak	13.5738	fold
+lowest reported group	GLS1 inactivation Ki divided by total peak	0.126688	fold
+lowest reported group	TrxR apparent Km divided by total peak	22.6229	fold
+highest reported group	total parent plasma peak	0.304169	umol/L
+highest reported group	IMPase IC50 divided by total peak	4.93147	fold
+highest reported group	GLS1 inactivation Ki divided by total peak	0.0460271	fold
+highest reported group	TrxR apparent Km divided by total peak	8.21912	fold
+purified GLS1	saturating inactivation half-time at reported kinact	0.525112	h
+baseline	glutamine pool	1	normalized
+baseline	glutamate pool	1	normalized
+baseline	glutamine supply	1	normalized
+baseline	glutaminase flux	0.7	normalized
+baseline	glutamate removal constant	0.7	normalized
+GLS inhibition alone	glutamine pool	1.53846	normalized
+GLS inhibition alone	glutamate pool	0.769231	normalized
+GLS inhibition alone	glutamine supply	1	normalized
+GLS inhibition alone	glutaminase flux	0.538462	normalized
+GLS inhibition alone	glutamate removal constant	0.7	normalized
+same observed pools with unchanged GLS	glutamine pool	0.936111	normalized
+same observed pools with unchanged GLS	glutamate pool	0.972556	normalized
+same observed pools with unchanged GLS	glutamine supply	0.936111	normalized
+same observed pools with unchanged GLS	glutaminase flux	0.655278	normalized
+same observed pools with unchanged GLS	glutamate removal constant	0.673769	normalized
+same observed pools with half GLS	glutamine pool	0.936111	normalized
+same observed pools with half GLS	glutamate pool	0.972556	normalized
+same observed pools with half GLS	glutamine supply	0.608472	normalized
+same observed pools with half GLS	glutaminase flux	0.327639	normalized
+same observed pools with half GLS	glutamate removal constant	0.336884	normalized

@@ -141,7 +141,7 @@
    "endpoint": "clinical improvement",
    "direction": "NO_CHANGE",
    "source": "Karnstedt 2026, Epilepsia (PMID 41489401; NOT WWOX EVIDENCE; other disease)",
-   "locator": "same reading as DR-W2-002; Fisher test reported 14 of 19 versus 3 of 15",
+   "locator": "same reading as DR-W2-002; Fisher test reported 14 of 19 versus 3 of 15; scoring #28 and #29 as improved gives 14 of 19 against 5 of 15, p 0.036 (a sensitivity re-scoring, not the authors' analysis: their conclusion for both is no effect; #28 is a synonymous variant and #29 a missense variant of uncertain significance, neither tested functionally)",
    "epistemic_status": "DATO",
    "reading_depth": "partial_fulltext_read",
    "context": {

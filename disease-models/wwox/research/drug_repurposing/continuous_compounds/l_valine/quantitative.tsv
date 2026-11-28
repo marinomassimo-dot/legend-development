@@ -1,0 +1,121 @@
+source	measure	contrast	value	unit	basis
+Table S1	Leu	standard	19.0	g/kg_diet	aligned ordered amino acid row
+Table S1	Leu	supplemented	17.0	g/kg_diet	aligned ordered amino acid row
+Table S1	Leu	AA_control	25.4	g/kg_diet	aligned ordered amino acid row
+Table S1	Leu	restricted	25.4	g/kg_diet	aligned ordered amino acid row
+Table S1	Ile	standard	7.0	g/kg_diet	aligned ordered amino acid row
+Table S1	Ile	supplemented	6.2	g/kg_diet	aligned ordered amino acid row
+Table S1	Ile	AA_control	7.8	g/kg_diet	aligned ordered amino acid row
+Table S1	Ile	restricted	7.8	g/kg_diet	aligned ordered amino acid row
+Table S1	Val	standard	8.0	g/kg_diet	aligned ordered amino acid row
+Table S1	Val	supplemented	38.0	g/kg_diet	aligned ordered amino acid row
+Table S1	Val	AA_control	8.4	g/kg_diet	aligned ordered amino acid row
+Table S1	Val	restricted	2.74	g/kg_diet	aligned ordered amino acid row
+Table S1	Lys	standard	8.0	g/kg_diet	aligned ordered amino acid row
+Table S1	Lys	supplemented	6.7	g/kg_diet	aligned ordered amino acid row
+Table S1	Lys	AA_control	20.38	g/kg_diet	aligned ordered amino acid row
+Table S1	Lys	restricted	20.38	g/kg_diet	aligned ordered amino acid row
+Table S2	Ala	WT_control	302.9	nmol/g	SEM=4.4
+Table S2	Ala	ECHS1D_control	329.4	nmol/g	SEM=14.7
+Table S2	Ala	WT_intervention	295.1	nmol/g	SEM=26.5
+Table S2	Ala	ECHS1D_intervention	541.2	nmol/g	SEM=52.2
+Table S2	Ala	WT_change	-7.8	nmol/g	-2.6% of control
+Table S2	Ala	ECHS1D_change	211.8	nmol/g	+64.3% of control
+Table S2	Ala	interaction	219.6	nmol/g	illustrative independent-arm SEM=60.5
+Table S2	Ile	WT_control	14.1	nmol/g	SEM=1.0
+Table S2	Ile	ECHS1D_control	11.7	nmol/g	SEM=1.4
+Table S2	Ile	WT_intervention	17.4	nmol/g	SEM=1.9
+Table S2	Ile	ECHS1D_intervention	16.1	nmol/g	SEM=1.3
+Table S2	Ile	WT_change	3.3	nmol/g	+23.4% of control
+Table S2	Ile	ECHS1D_change	4.4	nmol/g	+37.6% of control
+Table S2	Ile	interaction	1.1	nmol/g	illustrative independent-arm SEM=2.9
+Table S2	Leu	WT_control	42.9	nmol/g	SEM=1.5
+Table S2	Leu	ECHS1D_control	32.2	nmol/g	SEM=3.1
+Table S2	Leu	WT_intervention	41.1	nmol/g	SEM=4.0
+Table S2	Leu	ECHS1D_intervention	39.6	nmol/g	SEM=3.7
+Table S2	Leu	WT_change	-1.8	nmol/g	-4.2% of control
+Table S2	Leu	ECHS1D_change	7.4	nmol/g	+23.0% of control
+Table S2	Leu	interaction	9.2	nmol/g	illustrative independent-arm SEM=6.4
+Table S2	Lys	WT_control	230.2	nmol/g	SEM=11.6
+Table S2	Lys	ECHS1D_control	176.5	nmol/g	SEM=18.9
+Table S2	Lys	WT_intervention	190.5	nmol/g	SEM=18.3
+Table S2	Lys	ECHS1D_intervention	171.1	nmol/g	SEM=10.6
+Table S2	Lys	WT_change	-39.7	nmol/g	-17.2% of control
+Table S2	Lys	ECHS1D_change	-5.4	nmol/g	-3.1% of control
+Table S2	Lys	interaction	34.3	nmol/g	illustrative independent-arm SEM=30.6
+Table S2	Pro	WT_control	67.6	nmol/g	SEM=2.2
+Table S2	Pro	ECHS1D_control	57.0	nmol/g	SEM=1.4
+Table S2	Pro	WT_intervention	60.5	nmol/g	SEM=5.6
+Table S2	Pro	ECHS1D_intervention	69.1	nmol/g	SEM=1.4
+Table S2	Pro	WT_change	-7.1	nmol/g	-10.5% of control
+Table S2	Pro	ECHS1D_change	12.1	nmol/g	+21.2% of control
+Table S2	Pro	interaction	19.2	nmol/g	illustrative independent-arm SEM=6.3
+Table S2	Val	WT_control	54.1	nmol/g	SEM=2.5
+Table S2	Val	ECHS1D_control	42.9	nmol/g	SEM=6.0
+Table S2	Val	WT_intervention	160.8	nmol/g	SEM=31.2
+Table S2	Val	ECHS1D_intervention	110.1	nmol/g	SEM=11.3
+Table S2	Val	WT_change	106.7	nmol/g	+197.2% of control
+Table S2	Val	ECHS1D_change	67.2	nmol/g	+156.6% of control
+Table S2	Val	interaction	-39.5	nmol/g	illustrative independent-arm SEM=33.8
+Table S2	Ala/Lys	WT_diet_ratio_of_arm_means	1.177	fold	Ala multiplier=0.974; Lys multiplier=0.828
+Table S2	Ala/Lys	WT_Ala_log_component	-0.0261	natural_log_units	signed log-ratio decomposition from arm means
+Table S2	Ala/Lys	WT_Lys_log_component	+0.1893	natural_log_units	signed log-ratio decomposition from arm means
+Table S2	Ala/Lys	ECHS1D_diet_ratio_of_arm_means	1.695	fold	Ala multiplier=1.643; Lys multiplier=0.969
+Table S2	Ala/Lys	ECHS1D_Ala_log_component	+0.4965	natural_log_units	signed log-ratio decomposition from arm means
+Table S2	Ala/Lys	ECHS1D_Lys_log_component	+0.0311	natural_log_units	signed log-ratio decomposition from arm means
+Table S3	Ala	WT_control	307.4	nmol/g	SEM=32.5
+Table S3	Ala	ECHS1D_control	317.5	nmol/g	SEM=33.3
+Table S3	Ala	WT_intervention	244.2	nmol/g	SEM=14.6
+Table S3	Ala	ECHS1D_intervention	344.9	nmol/g	SEM=32.4
+Table S3	Ala	WT_change	-63.2	nmol/g	-20.6% of control
+Table S3	Ala	ECHS1D_change	27.4	nmol/g	+8.6% of control
+Table S3	Ala	interaction	90.6	nmol/g	illustrative independent-arm SEM=58.5
+Table S3	Ile	WT_control	17.0	nmol/g	SEM=2.4
+Table S3	Ile	ECHS1D_control	12.4	nmol/g	SEM=1.7
+Table S3	Ile	WT_intervention	12.8	nmol/g	SEM=1.3
+Table S3	Ile	ECHS1D_intervention	13.0	nmol/g	SEM=1.4
+Table S3	Ile	WT_change	-4.2	nmol/g	-24.7% of control
+Table S3	Ile	ECHS1D_change	0.6	nmol/g	+4.8% of control
+Table S3	Ile	interaction	4.8	nmol/g	illustrative independent-arm SEM=3.5
+Table S3	Leu	WT_control	46.8	nmol/g	SEM=8.6
+Table S3	Leu	ECHS1D_control	37.4	nmol/g	SEM=5.1
+Table S3	Leu	WT_intervention	35.2	nmol/g	SEM=1.9
+Table S3	Leu	ECHS1D_intervention	35.0	nmol/g	SEM=3.9
+Table S3	Leu	WT_change	-11.6	nmol/g	-24.8% of control
+Table S3	Leu	ECHS1D_change	-2.4	nmol/g	-6.4% of control
+Table S3	Leu	interaction	9.2	nmol/g	illustrative independent-arm SEM=10.9
+Table S3	Lys	WT_control	244.6	nmol/g	SEM=13.9
+Table S3	Lys	ECHS1D_control	237.6	nmol/g	SEM=13.2
+Table S3	Lys	WT_intervention	207.9	nmol/g	SEM=10.6
+Table S3	Lys	ECHS1D_intervention	237.4	nmol/g	SEM=16.8
+Table S3	Lys	WT_change	-36.7	nmol/g	-15.0% of control
+Table S3	Lys	ECHS1D_change	-0.2	nmol/g	-0.1% of control
+Table S3	Lys	interaction	36.5	nmol/g	illustrative independent-arm SEM=27.6
+Table S3	Pro	WT_control	68.2	nmol/g	SEM=4.8
+Table S3	Pro	ECHS1D_control	60.9	nmol/g	SEM=5.6
+Table S3	Pro	WT_intervention	50.1	nmol/g	SEM=1.6
+Table S3	Pro	ECHS1D_intervention	59.0	nmol/g	SEM=3.8
+Table S3	Pro	WT_change	-18.1	nmol/g	-26.5% of control
+Table S3	Pro	ECHS1D_change	-1.9	nmol/g	-3.1% of control
+Table S3	Pro	interaction	16.2	nmol/g	illustrative independent-arm SEM=8.4
+Table S3	Val	WT_control	61.2	nmol/g	SEM=5.5
+Table S3	Val	ECHS1D_control	42.7	nmol/g	SEM=4.0
+Table S3	Val	WT_intervention	35.8	nmol/g	SEM=4.9
+Table S3	Val	ECHS1D_intervention	42.1	nmol/g	SEM=4.8
+Table S3	Val	WT_change	-25.4	nmol/g	-41.5% of control
+Table S3	Val	ECHS1D_change	-0.6	nmol/g	-1.4% of control
+Table S3	Val	interaction	24.8	nmol/g	illustrative independent-arm SEM=9.7
+Table S3	Ala/Lys	WT_diet_ratio_of_arm_means	0.935	fold	Ala multiplier=0.794; Lys multiplier=0.850
+Table S3	Ala/Lys	WT_Ala_log_component	-0.2302	natural_log_units	signed log-ratio decomposition from arm means
+Table S3	Ala/Lys	WT_Lys_log_component	+0.1626	natural_log_units	signed log-ratio decomposition from arm means
+Table S3	Ala/Lys	ECHS1D_diet_ratio_of_arm_means	1.087	fold	Ala multiplier=1.086; Lys multiplier=0.999
+Table S3	Ala/Lys	ECHS1D_Ala_log_component	+0.0828	natural_log_units	signed log-ratio decomposition from arm means
+Table S3	Ala/Lys	ECHS1D_Lys_log_component	+0.0008	natural_log_units	signed log-ratio decomposition from arm means
+Table S5	SCPC	model_genotype_by_diet	0.2843	p_reported	published omnibus interaction term
+Table S5	SCEC	model_genotype_by_diet	0.1219	p_reported	published omnibus interaction term
+Table S7	Alanine:Lysine	model_genotype_by_diet	0.0018	p_reported	published omnibus interaction term
+Table S7	NAD:NADH	model_genotype_by_diet	0.1835	p_reported	published omnibus interaction term
+Table S7	Energy charge	model_genotype_by_diet	0.5475	p_reported	published omnibus interaction term
+Table S9	SCPC	model_genotype_by_diet	0.6946	p_reported	published omnibus interaction term
+Table S9	SCEC	model_genotype_by_diet	0.0706	p_reported	published omnibus interaction term
+Table S11	Energy charge	model_genotype_by_diet	0.3043	p_reported	published omnibus interaction term

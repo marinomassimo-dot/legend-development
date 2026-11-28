@@ -1,0 +1,14 @@
+comparison	condition	statistic	value	sensitivity_low	sensitivity_high	range_interpretation
+firsov_9hpo	mixed_light	ratio_per_known_substrate	0.6856	0.6673	0.7045	pixel-height sensitivity only
+firsov_9hpo	mixed_total_detected	ratio_per_known_substrate	0.5485	0.5368	0.5605	pixel-height sensitivity only
+firsov_13hpo	mixed_light	ratio_per_known_substrate	0.6512	0.6356	0.6671	pixel-height sensitivity only
+firsov_13hpo	mixed_total_detected	ratio_per_known_substrate	0.4862	0.4767	0.4959	pixel-height sensitivity only
+raefsky_cortex_f4_ad	mixed_light	raw_reporter_ratio	0.2222	0.2065	0.2384	pixel-height sensitivity only
+raefsky_cortex_f4_wt	mixed_light	raw_reporter_ratio	0.3607	0.3387	0.3833	pixel-height sensitivity only
+raefsky_cortex_f2_ad	mixed_light	raw_reporter_ratio	0.3276	0.3051	0.3509	pixel-height sensitivity only
+human_15_lox_2	20% heavy at 5 uM total	light_flux_per_light_substrate_ratio	1.0061	0.9891	1.0225	reported Km spreads used as a sensitivity box
+human_15_lox_2	20% heavy at 20 uM total	light_flux_per_light_substrate_ratio	1.0148	0.9726	1.0522	reported Km spreads used as a sensitivity box
+human_15_lox_2	20% heavy at 100 uM total	light_flux_per_light_substrate_ratio	1.0241	0.9540	1.0805	reported Km spreads used as a sensitivity box
+human_cox_2	20% heavy at 5 uM total	light_flux_per_light_substrate_ratio	0.9994	0.9490	1.0473	reported Km spreads used as a sensitivity box
+human_cox_2	20% heavy at 20 uM total	light_flux_per_light_substrate_ratio	0.9988	0.8908	1.0859	reported Km spreads used as a sensitivity box
+human_cox_2	20% heavy at 100 uM total	light_flux_per_light_substrate_ratio	0.9983	0.8431	1.1099	reported Km spreads used as a sensitivity box

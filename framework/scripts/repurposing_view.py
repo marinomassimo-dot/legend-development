@@ -5103,6 +5103,13 @@ def render_investigations(P: dict) -> str:
 
     ph = rk.get("investigation_physiological") or {}
 
+    def compound_analysis_links(iid):
+        links = P.get("compound_analysis_links", {}).get(iid, ())
+        if not links:
+            return ""
+        anchors = "".join(f'<a href="#analysis-{E(slug)}">{E(name)}</a>' for slug, name in links)
+        return f'<p class="ca-investigation-links"><strong>Compound analyses</strong> {anchors}</p>'
+
     def phys_dt(iid):
         """IT40 P9: the conditional physiological hypotheses of one investigation as a progressive detail. Each is a condition-stated question with its observation, the hypothesis, the rivals that stay,
         and what would strengthen or weaken it; it is not an acquired datum, names no compound and draws no gene-to-gene link."""
@@ -5158,7 +5165,8 @@ def render_investigations(P: dict) -> str:
         items.append(f'<li class="inv-row' + (' inv-compact' if n_row > FIRST_OPEN else '') + f'" id="inv-{n_row}" data-rank="{E(str(r["position"]))}" data-origin="{E(r["origin_class"])}" data-cmp="{cmp_state(r.get("inv_id"))}"' + (f' data-status="{E(st)}"' if st else "") +
                      f'><div class="inv-h">' + (f'<a id="{E(r["inv_id"])}" class="inv-anchor" aria-hidden="true"></a>' if r.get("inv_id") else "") + f'<span class="inv-pos" aria-label="{E(U["iv_pos"])} {E(str(r["position"]))}">{E(str(r["position"]))}</span>{tie} '
                      f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{badge}<a class="plink" href="#inv-{n_row}" aria-label="{E(U["iv_link"])}" title="{E(U["iv_link"])}">#</a></div>'
-                     f'{report_links(P, r.get("inv_id"))}<dl class="qk-dl inv-glance">{gl}</dl><details class="inv-more"><summary>{E(U["iv_more"])}</summary><dl class="qk-dl">{dl}</dl></details></li>')
+                     f'{report_links(P, r.get("inv_id"))}{compound_analysis_links(r.get("inv_id"))}'
+                     f'<dl class="qk-dl inv-glance">{gl}</dl><details class="inv-more"><summary>{E(U["iv_more"])}</summary><dl class="qk-dl">{dl}</dl></details></li>')
     out = head + f'<p class="lead inv-purpose">{E(U["iv_purpose"])} <span class="mini mut">{E(U["iv_lead"])}</span></p>'
     every = list(rows) + list(rk.get("further_investigations") or []) + list(rk.get("conditional_hypotheses") or [])      # IT35: the filters cover the whole queue
     present = [o for o in ("known_in_wwox", "generated_by_legend", "external_transferred") if any(r["origin_class"] == o for r in every)]
@@ -5190,7 +5198,7 @@ def render_investigations(P: dict) -> str:
             tail_c = cdl + cmp_dt(r["inv_id"]) + phys_dt(r["inv_id"])
             ci.append(f'<li class="inv-row inv-cond" id="{E(r["inv_id"])}" data-inv="{E(r["inv_id"])}" data-origin="{E(r["origin_class"])}" data-cmp="{cmp_state(r["inv_id"])}" data-status="conditional_hypothesis"><div class="inv-h">'
                       f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span> '
-                      f'<span class="stt stt-conditional_hypothesis">{E(U["iv_st_conditional_hypothesis"])}</span></div>{report_links(P, r["inv_id"])}{card_dl(r, cspec, tail_c)}</li>')
+                      f'<span class="stt stt-conditional_hypothesis">{E(U["iv_st_conditional_hypothesis"])}</span></div>{report_links(P, r["inv_id"])}{compound_analysis_links(r["inv_id"])}{card_dl(r, cspec, tail_c)}</li>')
         out += (f'<section id="inv-conditional" class="inl" aria-labelledby="h-inv-cond"><h3 id="h-inv-cond">{E(U["iv_cond_h"])} ({len(conds)})</h3>'
                 f'<p class="note">{E(U["iv_cond_lead"])}</p><ul class="inv-list inv-cond-list">{"".join(ci)}</ul></section>')
     furs = rk.get("further_investigations") or []
@@ -5208,7 +5216,7 @@ def render_investigations(P: dict) -> str:
             fb = f' <span class="stt stt-{E(st)}">{E(U["iv_st_" + st])}</span>' if st in ("carded_thread", "premise_measurement") else ""
             fi.append(f'<li class="inv-row inv-further" id="{E(r["inv_id"])}" data-inv="{E(r["inv_id"])}" data-origin="{E(r["origin_class"])}" data-cmp="{cmp_state(r["inv_id"])}" data-status="{E(str(st))}"><div class="inv-h">'
                       f'<span class="inv-pos" aria-label="{E(U["iv_pos"])} {E(str(r["position"]))}">{E(str(r["position"]))}</span> <span class="mini">({E(U["iv_fur_pos"])})</span> '
-                      f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{fb}</div>{report_links(P, r["inv_id"])}{card_dl(r, fspec, tail_f)}</li>')
+                      f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{fb}</div>{report_links(P, r["inv_id"])}{compound_analysis_links(r["inv_id"])}{card_dl(r, fspec, tail_f)}</li>')
         out += (f'<section id="inv-further" class="inl" aria-labelledby="h-inv-fur"><h3 id="h-inv-fur">{E(U["iv_fur_h"])} ({len(furs)})</h3>'
                 f'<p class="note">{E(U["iv_fur_lead"])}</p><ul class="inv-list inv-fur-list">{"".join(fi)}</ul></section>')
     if rows is not None:
@@ -5830,7 +5838,7 @@ def localise_it_fields(obj):
     return obj
 
 
-def render(P: dict, dr: Path = DEFAULT_DR) -> str:
+def render(P: dict, dr: Path = DEFAULT_DR, *, compound_analyses: bool = False) -> str:
     st = render_static(P)
     P = dict(P, ui=ui_payload())
     if P["source"] == "shareable":
@@ -5838,18 +5846,42 @@ def render(P: dict, dr: Path = DEFAULT_DR) -> str:
         P["ui"] = _map_strings(P["ui"], lambda x: scrub_file_tokens(x, _allow))
     data = json.dumps(P if CUR["lang"] == "it" else localise_it_fields(P), ensure_ascii=False, sort_keys=True, separators=(",", ":")).replace("</", "<\\/").replace("<!--", "<\\!--")
     public = P["source"] == "shareable"
+    analyses = ""
     if public:
         from repurposing_research_reports import entries
         report_index = {}
+        report_slugs = set()
         for slug, report in entries(dr):
             report_index.setdefault(report["investigation"], []).append((slug, report["title"]))
+            report_slugs.add(slug)
         P["pdf_reports"] = report_index
+        if compound_analyses:
+            from repurposing_compound_analyses import load_cards, public_slug, render as render_compound_analyses
+            public_compounds = (P["cur"].get("ranking") or {}).get("compound_view") or []
+            cards = load_cards(dr, public_compounds)
+            by_investigation = {}
+            for slug, card in cards.items():
+                if iid := card.get("investigation"):
+                    by_investigation.setdefault(iid, {})[slug] = card["name"]
+            for item in public_compounds:
+                if iid := item.get("inv_id"):
+                    for entry in item.get("names_public") or ():
+                        slug = public_slug(entry["label"])
+                        if slug in cards:
+                            by_investigation.setdefault(iid, {})[slug] = cards[slug]["name"]
+            P["compound_analysis_links"] = {iid: tuple(links.items()) for iid, links in by_investigation.items()}
+            analyses = render_compound_analyses(dr, report_slugs, cards)
     U = UI_IT
     page = TEMPLATE
     cur_html = fill_tokens(read_asset(dr, "curated.html"))
     cur_html = cur_html.replace("__OVERVIEW__", render_overview(P)).replace("__GRAPH__", render_evidence_graph(P)).replace("__WORKORDER__", render_work_order(P)).replace("__SELECTION__", render_selection(P)).replace("__HYPOTHESES__", render_hypotheses(P)).replace("__PREDICTIVE__", render_predictive(P)).replace("__CHARTS__", render_charts(P)).replace("__RANKING__", render_ranking(P)).replace("__EXPLORE__", render_explore(P)).replace("__FUNNEL20__", render_funnel18(P)).replace("__RANKPRINT__", render_ranking_onepage(P))
-    page = page.replace("__CSS__", CSS + read_asset(dr, "curated.css") + read_asset(dr, "editorial.css")).replace("__JS__", JS).replace("__CJS__", read_asset(dr, "curated.js"))
+    analysis_css = read_asset(dr, "compound_analyses.css") if analyses else ""
+    analysis_js = read_asset(dr, "compound_analyses.js") if analyses else ""
+    page = page.replace("__CSS__", CSS + read_asset(dr, "curated.css") + read_asset(dr, "editorial.css") + analysis_css).replace("__JS__", JS).replace("__CJS__", read_asset(dr, "curated.js") + analysis_js)
     page = page.replace("__CURATED__", (render_gene_therapy() if public else "") + cur_html).replace("__FOOTER__", render_footer(P))
+    if analyses:
+        page = page.replace('<a href="#navigate">__NP_CMP__</a>', '<a href="#compound-analyses">Compound Analyses</a><a href="#navigate">__NP_CMP__</a>', 1)
+        page = page.replace('<section id="ranking"', analyses + '<section id="ranking"', 1)
     for k, key in (("TITLE", "page_title"), ("SKIP", "skip"), ("H1", "h1"), ("SUB", "sub"), ("BRAND", "brand"), ("BRAND_CTX", "brand_ctx"), ("BRAND_STATE", "brand_state"), ("BRAND_STATE_T", "brand_state_title"), ("NP_PRI", "np_pri"), ("NP_BIO", "np_bio"), ("NP_CMP", "np_cmp"), ("NP_EVI", "np_evi"), ("NP_ALL", "np_all"), ("NAVLABEL", "nav_label"), ("N_OV", "nav_overview"), ("N_QK", "nav_start"), ("N_XP", "nav_explore"), ("N_FU", "nav_funnel"), ("N_RK", "nav_ranking"), ("N_TH", "nav_threads"), ("N_EG", "nav_chains"), ("N_CH", "nav_charts"), ("N_SE", "nav_selection"), ("N_HY", "nav_hyp"), ("N_PR2", "nav_pred"), ("N_NAV", "nav_navigate"),
                    ("N_CA", "nav_cards"), ("N_PR", "nav_priority"), ("N_CP", "nav_compare"), ("N_TD", "nav_tech"), ("TD_SUM", "td_sum"), ("TD_NOTE", "td_note"), ("SEC_FUNNEL", "sec_funnel"), ("SEC_ACCESS", "sec_access"), ("SEC_FILTERS", "sec_filters"), ("SEC_FILTERS_NOTE", "sec_filters_note"), ("SEC_NEEDS", "sec_needs"), ("SEC_MATRIX", "sec_matrix"), ("SEC_PRIO", "sec_prio"), ("SEC_LEADS", "sec_leads"), ("SEC_LIMITS", "sec_limits"), ("SEC_TECH", "sec_tech"), ("SEC_FOOTER", "sec_footer")):
         page = page.replace(f"__{k}__", E(U[key]))
@@ -5884,14 +5916,14 @@ def render(P: dict, dr: Path = DEFAULT_DR) -> str:
     return page
 
 
-def build(dr: Path = DEFAULT_DR, source: str = "full", lang: str | None = None) -> str:
+def build(dr: Path = DEFAULT_DR, source: str = "full", lang: str | None = None, *, compound_analyses: bool = False) -> str:
     lang = lang or ("en" if source == "shareable" else "it")          # the shareable edition opens in English; the local full view stays Italian unless asked
     if lang not in LANGS:
         raise SystemExit(f"unknown language {lang!r}: one of {', '.join(LANGS)}")
     load_translations(dr)
     CUR["lang"] = lang
     try:
-        out = render(build_payload(dr, source), dr)
+        out = render(build_payload(dr, source), dr, compound_analyses=compound_analyses)
     finally:
         CUR["lang"] = "it"
     n = len(out.encode("utf-8"))

@@ -1,0 +1,7 @@
+comparison	numerator	denominator	unit	descriptive_ratio	experimental_units
+mouse_ABAT_6d	62.6000	100	pct_vehicle	0.6260	6_mice_each
+mouse_bulk_GABA_6d	134	100	pct_vehicle	1.3400	6_mice_each
+mouse_tonic_current_6d_vs_vehicle	60.8000	9.7000	pA	6.2680	15_cells_4_mice_vs_16_cells_5_mice
+mouse_tonic_current_6d_vs_1d	60.8000	13.2000	pA	4.6061	15_cells_4_mice_vs_8_cells_5_mice
+adult_LICI150_APB_day7_over_baseline	0.4700	1.2490	ratio	0.3763	10_vs_4
+adult_LICI150_FDI_day7_over_baseline	0.5570	1.5950	ratio	0.3492	15_vs_5

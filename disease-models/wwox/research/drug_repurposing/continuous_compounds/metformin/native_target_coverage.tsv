@@ -1,0 +1,26 @@
+source	target	accession	row	measure	value	unit
+Düking P14 O4+	PRKAA1	Q5EG47	129	quantified injections	0	of 8
+Düking P14 O4+	PRKAA2	NA	NA	quantified injections	0	of 8
+Düking P14 O4+	PRKAB1	Q9R078	130	quantified injections	0	of 8
+Düking P14 O4+	PRKAB2	NA	NA	quantified injections	0	of 8
+Düking P14 O4+	PSENEN	NA	NA	quantified injections	0	of 8
+Düking P14 O4+	ATP6AP1	Q9R1Q9	3741	quantified injections	0	of 8
+Düking P14 O4+	ACACA	Q5SWU9	190	quantified injections	6	of 8
+Düking P14 O4+	ACACB	E9Q4Z2	191	quantified injections	0	of 8
+Oligosphere phosphoproteome	ACACA S79	Q5SWU9	2950	localization probability	0.99993600000000005	fraction
+Oligosphere phosphoproteome	ACACA S79	Q5SWU9	2950	day 7 / 0 raw Rep01	-3.54757159948349E-2	log2 ratio
+Oligosphere phosphoproteome	ACACA S79	Q5SWU9	2950	day 7 / 0 raw Rep02	2.94174924492836E-2	log2 ratio
+Oligosphere phosphoproteome	ACACA S79	Q5SWU9	2950	day 14 / 0 raw Rep01	-0.41023650765419001	log2 ratio
+Oligosphere phosphoproteome	ACACA S79	Q5SWU9	2950	day 14 / 0 raw Rep02	-0.307715684175491	log2 ratio
+Oligosphere phosphoproteome	ACACA S79	Q5SWU9	2950	day 7 / 0 protein corrected Rep01	-0.37084466218948398	log2 ratio
+Oligosphere phosphoproteome	ACACA S79	Q5SWU9	2950	day 7 / 0 protein corrected Rep02	-0.116976998746395	log2 ratio
+Oligosphere phosphoproteome	ACACA S79	Q5SWU9	2950	day 14 / 0 protein corrected Rep01	-0.70125061273574796	log2 ratio
+Oligosphere phosphoproteome	ACACA S79	Q5SWU9	2950	day 14 / 0 protein corrected Rep02	-0.48786357045173601	log2 ratio
+Oligosphere phosphoproteome	ACACB S222	E9Q4Z2	NA	exact mapped row	0	rows
+Oligosphere phosphoproteome	PRKAA1 T183	Q5EG47	NA	exact mapped row	0	rows
+Oligosphere phosphoproteome	PRKAA2 T172	Q8BRK8	NA	exact mapped row	0	rows
+Dimas optic nerve	FASN conditional loss	NA	P14	unwrapped mutant minus control	8.40	percentage points
+Dimas optic nerve	FASN conditional loss	NA	P180	unwrapped mutant minus control	16.87	percentage points
+Hale infant plasma	metformin	NA	pp. 1511–1512	detection limit	0.0774	µM parent equivalent
+Hale infant plasma	metformin	NA	pp. 1511–1512	low detected	0.3871	µM parent equivalent
+Hale infant plasma	metformin	NA	pp. 1511–1512	high detected	0.6194	µM parent equivalent

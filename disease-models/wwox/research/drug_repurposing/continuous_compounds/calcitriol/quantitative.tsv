@@ -1,0 +1,28 @@
+source	comparison	value	unit	basis
+de la Fuente Fig. 3B	vehicle	25.7	%_MBP_positive_Olig2	plot y=143; percent axis 0@215, 60@47; approximate pixel reading
+de la Fuente Fig. 3B	10nM	30.7	%_MBP_positive_Olig2	plot y=129; percent axis 0@215, 60@47; approximate pixel reading
+de la Fuente Fig. 3B	50nM	40.4	%_MBP_positive_Olig2	plot y=102; percent axis 0@215, 60@47; approximate pixel reading
+de la Fuente Fig. 3B	100nM	46.1	%_MBP_positive_Olig2	plot y=86; percent axis 0@215, 60@47; approximate pixel reading
+Repudi Fig. 6D	WT_DRG_WT_OPC	44.9	%_myelinating_OL_morphology	box median y=665; percent axis 0@790, 70@595; PDF p.12 scaled to 1500px
+Repudi Fig. 6D	KO_DRG_WT_OPC	28.0	%_myelinating_OL_morphology	box median y=712; percent axis 0@790, 70@595; PDF p.12 scaled to 1500px
+de la Fuente Fig. 3B / Jones oral Cmax	10	86.2	nominal_to_total_ratio	nominal cell medium nM / 0.116 nM total pediatric serum
+de la Fuente Fig. 3B / Jones oral Cmax	50	431.0	nominal_to_total_ratio	nominal cell medium nM / 0.116 nM total pediatric serum
+de la Fuente Fig. 3B / Jones oral Cmax	100	862.1	nominal_to_total_ratio	nominal cell medium nM / 0.116 nM total pediatric serum
+FDA Table 9 Klaus	historical serum peak	0.300	nM_total	125 pg/mL / molecular weight; separate pediatric CKD study
+Xuan Fig. 2	anterior_watershed	73.7	pM_total_equivalent	30.7 pg/g wet tissue; assumes 1 kg/L solely for unit comparison
+Xuan Fig. 2	middle_temporal	46.1	pM_total_equivalent	19.2 pg/g wet tissue; assumes 1 kg/L solely for unit comparison
+Xuan Fig. 2	cerebellum	44.4	pM_total_equivalent	18.5 pg/g wet tissue; assumes 1 kg/L solely for unit comparison
+Xuan input scenarios	5mg detection equivalent	50.0	pg_per_g	same absolute input mass at detection as original; constant assay recovery
+Xuan input scenarios	5mg lowest QC equivalent	200.0	pg_per_g	same absolute mass as lowest reported QC; not a validated LLOQ
+Xuan input scenarios	10mg detection equivalent	25.0	pg_per_g	same absolute input mass at detection as original; constant assay recovery
+Xuan input scenarios	10mg lowest QC equivalent	100.0	pg_per_g	same absolute mass as lowest reported QC; not a validated LLOQ
+Xuan input scenarios	20mg detection equivalent	12.5	pg_per_g	same absolute input mass at detection as original; constant assay recovery
+Xuan input scenarios	20mg lowest QC equivalent	50.0	pg_per_g	same absolute mass as lowest reported QC; not a validated LLOQ
+Xuan input scenarios	50mg detection equivalent	5.0	pg_per_g	same absolute input mass at detection as original; constant assay recovery
+Xuan input scenarios	50mg lowest QC equivalent	20.0	pg_per_g	same absolute mass as lowest reported QC; not a validated LLOQ
+Xuan input scenarios	100mg detection equivalent	2.5	pg_per_g	same absolute input mass at detection as original; constant assay recovery
+Xuan input scenarios	100mg lowest QC equivalent	10.0	pg_per_g	same absolute mass as lowest reported QC; not a validated LLOQ
+Stephenson Table 3	10mg fixed 400uL stack	500.0	pg_per_g	ideal 100% recovery, original extraction ratio, no extra diluent beyond filling stack
+Stephenson Table 3	20mg fixed 400uL stack	250.0	pg_per_g	ideal 100% recovery, original extraction ratio, no extra diluent beyond filling stack
+Stephenson Table 3	50mg fixed 400uL stack	100.0	pg_per_g	ideal 100% recovery, original extraction ratio, no extra diluent beyond filling stack
+Stephenson Table 3	60mg fixed 400uL stack	83.3	pg_per_g	ideal 100% recovery, original extraction ratio, no extra diluent beyond filling stack

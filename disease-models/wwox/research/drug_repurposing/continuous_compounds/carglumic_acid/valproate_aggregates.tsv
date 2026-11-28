@@ -1,0 +1,11 @@
+group	n	hour	baseline_mean_uM	baseline_SD_uM	follow_up_mean_uM	follow_up_SD_uM	paired_drop_mean_uM	paired_drop_SD_uM	paired_drop_median_uM	drop_ratio_of_means	n_lower_ammonia	n_at_or_below_50_uM	n_recurrence
+all	25	2	151.28	63.8648	98.32	35.2074	52.96	62.0252	42	0.350079	24	2	5
+all	25	24	151.28	63.8648	62.64	16.3958	88.64	66.3456	81	0.585933	25	5	5
+no_listed_additional_nitrogen_therapy	16	2	142.625	73.1354	100.188	30.6055	42.4375	73.1382	22.5	0.297546	15	0	5
+no_listed_additional_nitrogen_therapy	16	24	142.625	73.1354	62.6875	15.3263	79.9375	78.5599	54	0.560473	16	3	5
+listed_additional_nitrogen_therapy	9	2	166.667	42.3202	95	44.0795	71.6667	29.9416	62	0.43	9	2	0
+listed_additional_nitrogen_therapy	9	24	166.667	42.3202	62.5556	19.1319	104.111	34.8226	109	0.624667	9	2	0
+valproate_eventually_withdrawn	17	2	137.412	45.6523	87.8235	33.7125	49.5882	34.2017	46	0.360873	17	2	0
+valproate_eventually_withdrawn	17	24	137.412	45.6523	62.5294	16.7672	74.8824	43.4783	64	0.544949	17	3	0
+valproate_maintained	8	2	180.75	88.0953	120.625	28.5654	60.125	102.128	22.5	0.332642	7	0	5
+valproate_maintained	8	24	180.75	88.0953	62.875	16.7028	117.875	96.6148	96	0.652144	8	2	5

@@ -1,0 +1,10 @@
+route	single_dose_mg_salt_kg	printed_Cmax_ug_salt_mL	maximum_plasma_mL_kg	scenario_plasma_mL_kg	implied_fraction_of_administered_dose
+SC	0.04	35.26	1.1344	20	17.63
+SC	0.04	35.26	1.1344	30	26.445
+SC	0.04	35.26	1.1344	40	35.26
+SC	0.2	71.33	2.8039	20	7.133
+SC	0.2	71.33	2.8039	30	10.7
+SC	0.2	71.33	2.8039	40	14.266
+IP	1	65.91	15.172	20	1.3182
+IP	1	65.91	15.172	30	1.9773
+IP	1	65.91	15.172	40	2.6364

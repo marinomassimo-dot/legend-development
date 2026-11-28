@@ -1,0 +1,32 @@
+{
+  "title": "Sobetirome in WWOX research",
+  "date": "27 November 2026",
+  "summary": "Retain as a glial maturation probe. Defer pediatric WWOX trial priority pending local exposure and functional first-sheath evidence.",
+  "graph": {
+    "evidence": "Neonatal lineage maturation and adult remyelination increase.",
+    "inference": "Free drug at a developing axon remains unmeasured.",
+    "hypothesis": "Glial thyroid-receptor engagement could bypass a neuronal constraint.",
+    "experiment": "Measure first stable sheaths and conduction with exposure and hormone matched."
+  },
+  "evidence": [
+    "In neonatal mice, the mature share of labeled callosal cells increased from about 39% to 54%. In adult Myrf repair, the fraction of myelinated axons rose from 45.5% to 60.9%.",
+    "After oral parent in a separate mouse model, total brain drug was about 0.265 ng/g. Residual blood can influence this value. A separate parenteral experiment detected parent in perfused brain."
+  ],
+  "inference": [
+    "Glial marker induction, sheath initiation and conduction are separate outcomes. Systemic thyroid feedback can change the baseline during chronic exposure."
+  ],
+  "hypothesis": [
+    "If engaged glia can bypass the WWOX neuronal constraint, first stable sheaths and function should recover on WWOX axons."
+  ],
+  "experiment": [
+    "At measured free parent and matched T3/T4, compare reciprocal neuron and glial genotypes. Read receptor response, stable new sheaths per eligible axon and patterned conduction."
+  ],
+  "limits": [
+    "The registered X-ALD studies enrolled no participants. Pediatric endocrine tolerability, WWOX exposure and functional rescue remain open."
+  ],
+  "sources": [
+    {"label": "Baxi et al., developmental lineage tracing", "url": "https://doi.org/10.1002/glia.22697"},
+    {"label": "Hartley et al., adult structural repair", "url": "https://doi.org/10.1172/jci.insight.126329"},
+    {"label": "Hartley et al., oral exposure and T4 add-back", "url": "https://doi.org/10.1016/j.chembiol.2020.02.008"}
+  ]
+}

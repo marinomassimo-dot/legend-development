@@ -1,0 +1,13 @@
+model	matrix_negative_mV	media_free_nM	cyto_free_nM	matrix_free_uM	cyto_fraction_free	matrix_fraction_free	predicted_cell_to_medium_total_ACR
+printed_coefficients	157	57.2	255.742	91.3373	0.002	0.097	648.303
+cytosol_fit_to_921	157	57.2	255.742	91.3373	0.0012629	0.097	921
+estimated_free_over_dissipation_sensitive_pools	157	57.2	255.742	91.3373	0.00303694	0.0311731	871.154
+printed_coefficients	147	57.2	255.742	62.8126	0.002	0.097	591.751
+cytosol_fit_to_921	147	57.2	255.742	62.8126	0.0012629	0.097	864.448
+estimated_free_over_dissipation_sensitive_pools	147	57.2	255.742	62.8126	0.00303694	0.0311731	695.184
+printed_coefficients	137	57.2	255.742	43.1961	0.002	0.097	552.86
+cytosol_fit_to_921	137	57.2	255.742	43.1961	0.0012629	0.097	825.558
+estimated_free_over_dissipation_sensitive_pools	137	57.2	255.742	43.1961	0.00303694	0.0311731	574.17
+printed_coefficients	127	57.2	255.742	29.7059	0.002	0.097	526.115
+cytosol_fit_to_921	127	57.2	255.742	29.7059	0.0012629	0.097	798.813
+estimated_free_over_dissipation_sensitive_pools	127	57.2	255.742	29.7059	0.00303694	0.0311731	490.949

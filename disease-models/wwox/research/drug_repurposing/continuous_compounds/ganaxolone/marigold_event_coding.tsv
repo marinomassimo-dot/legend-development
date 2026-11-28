@@ -1,0 +1,4 @@
+event	ganaxolone_n	ganaxolone_denominator	placebo_n	placebo_denominator	ganaxolone_placebo_RR	risk_difference_pp	two_sided_Fisher_descriptive
+motor_seizure_response_at_least_50pct	12	49	5	51	2.49796	+14.686	0.06428
+motor_seizure_response_under_50pct	37	49	46	51	0.83718	-14.686	0.06428
+somnolence_registry_preferred_term	18	50	8	51	2.29500	+20.314	0.02378

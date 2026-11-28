@@ -1,0 +1,6 @@
+contrast	active_zero_count	active_n	control_zero_count	control_n	risk_difference	fisher_two_sided_unadjusted
+vehicle_analyzed	4	12	0	10	0.33333	0.096377
+vehicle_two_missing_both_seizures	4	12	0	12	0.33333	0.093168
+vehicle_two_missing_one_seizure_free	4	12	1	12	0.25	0.31677
+vehicle_two_missing_both_seizure_free	4	12	2	12	0.16667	0.64041
+levetiracetam_analyzed	4	12	0	12	0.33333	0.093168

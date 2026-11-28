@@ -1,0 +1,47 @@
+endpoint	condition	value	unit
+exposure	pediatric SMA mean total plasma peak	1.53288	umol/L
+exposure	pediatric SMA total plasma peak SD	0.99915	umol/L
+exposure	pediatric SMA mean peak arithmetic free plasma at 96% binding	0.06132	umol/L
+exposure	pediatric SMA mean peak arithmetic free plasma at 98% binding	0.03066	umol/L
+exposure	pediatric OCD week-24 total serum median	0.32451	umol/L
+exposure	pediatric OCD week-24 total serum IQR lower	0.22630	umol/L
+exposure	pediatric OCD week-24 total serum IQR upper	0.73442	umol/L
+exposure	historical adult ALS total serum median peak	0.78138	umol/L
+exposure	adult spinal-injury CSF single total concentration	0.01665	umol/L
+nominal_bath_over_arithmetic_free_plasma	0.1 umol/L bath	1.63	ratio
+nominal_bath_over_arithmetic_free_plasma	1 umol/L bath	16.31	ratio
+nominal_bath_over_arithmetic_free_plasma	3 umol/L bath	48.93	ratio
+nominal_bath_over_arithmetic_free_plasma	100 umol/L bath	1630.92	ratio
+local_application_amount	Human slice Fig. 3	1.40	nmol
+initial_Glu	evoked baseline	1.00000	normalized concentration
+early_Glu_50ms	evoked baseline	0.77880	normalized concentration
+total_Glu_area	evoked baseline	0.20000	normalized concentration*s
+late_Glu_area_after_200ms	evoked baseline	0.07358	normalized concentration*s
+initial_Glu	evoked uptake	1.00000	normalized concentration
+early_Glu_50ms	evoked uptake	0.68729	normalized concentration
+total_Glu_area	evoked uptake	0.13333	normalized concentration*s
+late_Glu_area_after_200ms	evoked uptake	0.02975	normalized concentration*s
+initial_Glu	evoked neuronal_release_reduction	0.70000	normalized concentration
+early_Glu_50ms	evoked neuronal_release_reduction	0.54516	normalized concentration
+total_Glu_area	evoked neuronal_release_reduction	0.14000	normalized concentration*s
+late_Glu_area_after_200ms	evoked neuronal_release_reduction	0.05150	normalized concentration*s
+initial_Glu	evoked uptake_and_delayed_glial_release	1.00000	normalized concentration
+early_Glu_50ms	evoked uptake_and_delayed_glial_release	0.68729	normalized concentration
+total_Glu_area	evoked uptake_and_delayed_glial_release	0.21333	normalized concentration*s
+late_Glu_area_after_200ms	evoked uptake_and_delayed_glial_release	0.10536	normalized concentration*s
+initial_Glu	fixed baseline	1.00000	normalized concentration
+early_Glu_50ms	fixed baseline	0.77880	normalized concentration
+total_Glu_area	fixed baseline	0.20000	normalized concentration*s
+late_Glu_area_after_200ms	fixed baseline	0.07358	normalized concentration*s
+initial_Glu	fixed uptake	1.00000	normalized concentration
+early_Glu_50ms	fixed uptake	0.68729	normalized concentration
+total_Glu_area	fixed uptake	0.13333	normalized concentration*s
+late_Glu_area_after_200ms	fixed uptake	0.02975	normalized concentration*s
+initial_Glu	fixed neuronal_release_reduction	1.00000	normalized concentration
+early_Glu_50ms	fixed neuronal_release_reduction	0.77880	normalized concentration
+total_Glu_area	fixed neuronal_release_reduction	0.20000	normalized concentration*s
+late_Glu_area_after_200ms	fixed neuronal_release_reduction	0.07358	normalized concentration*s
+initial_Glu	fixed uptake_and_delayed_glial_release	1.00000	normalized concentration
+early_Glu_50ms	fixed uptake_and_delayed_glial_release	0.68729	normalized concentration
+total_Glu_area	fixed uptake_and_delayed_glial_release	0.21333	normalized concentration*s
+late_Glu_area_after_200ms	fixed uptake_and_delayed_glial_release	0.10536	normalized concentration*s

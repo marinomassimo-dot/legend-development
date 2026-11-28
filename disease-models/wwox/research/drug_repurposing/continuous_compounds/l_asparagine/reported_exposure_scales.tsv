@@ -1,0 +1,9 @@
+source	matrix	measure	asparagine_uM	interpretation
+Sprute_2019	serum	month_0	3.000	reported in one of two cases
+Sprute_2019	serum	month_6	5.300	reported in one of two cases
+Sprute_2019	serum	month_12	4.400	reported in one of two cases
+Sprute_2019	serum	month_18	3.500	reported in one of two cases
+Sprute_2019	CSF	baseline	2.910	post-exposure CSF unavailable
+Cui_2026	RPE_and_cancer_cell_medium	added	100.000	nominal bath increment
+NARS1_2026	HEK293T_medium	added_if_anhydrous	1513.775	200 mg/L converted with stated hydration assumption
+NARS1_2026	HEK293T_medium	added_if_monohydrate	1332.179	200 mg/L converted with stated hydration assumption

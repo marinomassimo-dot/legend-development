@@ -1,0 +1,30 @@
+# Extracellular spermidine and disposition in WWOX loss of function
+
+**Data scope.** Held untreated juvenile mouse cortex and hippocampus bulk TPM, human organoid CPM and juvenile mouse hippocampal nuclei UMI CPM. External data comprise primary cortical culture, adult mouse V1 immunofluorescence and miniature currents, and compartment-specific polyamine measurements. [Pretest and boundaries](circuit_pretest_20261126.md)
+
+## Reproducible comparison
+
+| External contrast | Unit and biological denominator | Control → test | Sensitivity |
+|---|---|---:|---|
+| Direct 10 nM spermidine vs vehicle, Fig. 4f | Bassoon/Homer1 puncta per image, equal weighting of 3 independent preparations (64/66 images) | 50.01 → 87.37 (+74.7%) | +27.12 to +45.79 puncta after leaving out each preparation pair |
+| Direct 10 nM spermine vs vehicle, Fig. 4f | Same measure and 3 preparations (64/65 images) | 50.01 → 67.80 (+35.6%) | +16.16 to +19.21 puncta |
+| Atp13a4 knockdown vs control astrocyte-conditioned medium, Fig. 4c | Same measure and 3 preparations (58/64 images) | 92.49 → 128.06 | +25.82 to +45.59 puncta |
+| Parent in the collected media, Fig. 4d | LC-MS/MS µM, 3 preparations | 0.730 → 1.380 | +0.550 to +0.815 µM |
+| Global Atp13a4 KO vs WT V1, Fig. 5p | Puncta per image, 14 WT and 12 KO animals | 138.06 → 187.79 | +38.69 to +58.55 puncta after any single animal omission |
+| Same model, Fig. 5r–s | mEPSC Hz, equal weighting of 3 animals per genotype (26/23 neurons) | 11.19 → 14.99 | +1.75 to +5.93 Hz after any single animal omission |
+
+Ten nM was the nominal direct supplement in cultured cortical neurons, given on DIV8 and DIV11 in the Methods. It was selected by an astrocyte morphology screen, so the study establishes a tested point and leaves the synaptogenesis threshold unresolved. The readout counts marker colocalization, with no functional paired inhibition measurement in that direct-addition contrast. The collected conditioned medium value is from a separate assay. The culture received a protein-normalized amount of conditioned medium, and intact exposure in the final wells was unmeasured.
+
+The adult V1 result is from global Atp13a4 deletion without experimental spermidine addition. Single-animal omissions reverse the directions of mEPSC amplitude and mIPSC frequency and amplitude in the source replay (3 animals per group). The investigators reported changes in several metabolites across cortex and CSF, including increases in CSF putrescine and N1/8-acetylspermidine, and no statistically detected parent spermidine change in those compartments. The descriptive CSF parent estimate includes pooled samples and source zeros for values below detection. Tissue homogenate, bulk CSF and plasma give no free concentration at the synapse. These observations do not assign the adult knockout current phenotype to parent spermidine. [van Veen et al., Figs. 4–5, Supplementary Figs. 11–12 and synapse quantification Methods](https://doi.org/10.1038/s41467-026-76132-z)
+
+**WWOX transfer check.** Atp13a4 changes from 3.836 to 3.661 TPM in juvenile mouse cortex (omission range crosses zero) and 11.368 to 6.221 TPM in juvenile hippocampus (all omissions negative). Human week-15 organoids show the opposite direction from a sparse baseline (0.141→0.397 CPM, all omissions positive). In the single P17 hippocampal pool per genotype, astrocytes show 218.30→197.01 CPM (319/339 gene UMIs in 417/479 assigned nuclei), excitatory nuclei 4.36→4.16 CPM, and inhibitory nuclei only 3 and 1 gene UMIs. The strongest bulk decrease therefore leaves per-astrocyte ATP13A4 abundance and clearance unresolved. Treat both compartments as measured variables. [Bulk](atp13a4_bulk.tsv) · [Nuclei](atp13a4_nuclei.tsv)
+
+## Decision and reopening observation
+
+**Park for an unselected pediatric WWOX trial and retain as a mechanistic comparator.** The untreated WWOX expression record gives no demonstrated substrate deficit. The primary comparators establish separate routes for hypusination, excitatory contact formation and activity-dependent glutamatergic plasticity. Pediatric central exposure and co-medication effects are unresolved, and the untreated WWOX data do not select a favorable circuit sign.
+
+**Predictions.** At matched measured free extracellular and intracellular exposure, an intracellular rescue should first increase absolute and fractional hypusinated eIF5A. Improved inhibitory recruitment should follow, persist after washout and attenuate if residual DHPS limits flux. A dominant extracellular route predicts more excitatory contacts and more recurrent excitatory input as extracellular parent rises, potentially alongside increased intracellular hypusination. A faster current change without contact remodeling falls into the acute receptor branch, which can be distinguished by timing and controlled Mg, pH and receptor conditions. Pair absolute inhibitory charge with recurrent excitatory drive and viable neuron and interneuron counts in age-matched WWOX and isogenic/control preparations. Include vehicle and separately measured spermine. A durable preferential WWOX benefit with preserved evoked circuit reserve and no excess recurrent excitatory drive would reopen preclinical priority. The public comparators leave these paired WWOX measurements open. [Developmental comparisons](grin2b_and_dhps_20261126.md) · [Opening WWOX and exposure comparisons](README.md)
+
+## Replay
+
+Download the official [source workbook](https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-026-76132-z/MediaObjects/41467_2026_76132_MOESM10_ESM.xlsx), SHA-256 `078a7d40c842fbf6ee9f66fafeca67f7b3153162a6d8fe7819a81b828631894b`. Run `python3 -B replay_atp13a4.py WORKBOOK > OUTPUT_TSV` from this directory. The [aggregate output](atp13a4_source_summary.tsv) gives source denominators and omission estimates. For the WWOX check, run `python3 -B polyamine_routes.py FILES OUTPUT_DIRECTORY --atp13a4`; source checksums are in the [held input manifest](../creatine/inputs.tsv). The paper is CC BY 4.0. The saved workbook-derived results are aggregates with no images or raw source rows reproduced.

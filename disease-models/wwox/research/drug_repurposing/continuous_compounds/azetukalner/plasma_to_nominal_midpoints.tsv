@@ -1,0 +1,15 @@
+time	plasma_mean_ng_mL	plasma_sd_ng_mL	total_nM	assay	nominal_midpoint_nM	unbound_brain_to_total_plasma_ratio_to_midpoint
+2h	15.7	21.5	42.6052	AES_HEK	42	0.985796
+2h	15.7	21.5	42.6052	Lu_HEK	660	15.4911
+4h_results	30.2	21.9	81.9539	AES_HEK	42	0.512483
+4h_results	30.2	21.9	81.9539	Lu_HEK	660	8.05331
+4h_caption	30.2	21.1	81.9539	AES_HEK	42	0.512483
+4h_caption	30.2	21.1	81.9539	Lu_HEK	660	8.05331
+6h_results	42.1	19.1	114.247	AES_HEK	42	0.367625
+6h_results	42.1	19.1	114.247	Lu_HEK	660	5.77696
+6h_caption	44.4	20.2	120.488	AES_HEK	42	0.348581
+6h_caption	44.4	20.2	120.488	Lu_HEK	660	5.4777
+mean_individual_peak	59.2	13.8	160.651	AES_HEK	42	0.261436
+mean_individual_peak	59.2	13.8	160.651	Lu_HEK	660	4.10828
+max_placebo_carryover	8.2	NA	22.2524	AES_HEK	42	1.88744
+max_placebo_carryover	8.2	NA	22.2524	Lu_HEK	660	29.6598

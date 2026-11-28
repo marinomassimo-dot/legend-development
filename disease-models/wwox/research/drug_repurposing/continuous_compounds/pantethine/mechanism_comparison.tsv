@@ -1,0 +1,11 @@
+source	metric	nominal	min_edge	max_edge	units
+Brunetti_Fig7_OCR_ADP	WT_control	241.63	NA	NA	OCR_axis
+Brunetti_Fig7_OCR_ADP	KO_control	192.76	NA	NA	OCR_axis
+Brunetti_Fig7_OCR_ADP	WT_pantethine	393.67	NA	NA	OCR_axis
+Brunetti_Fig7_OCR_ADP	KO_pantethine	426.24	NA	NA	OCR_axis
+Brunetti_Fig7_OCR_ADP	WT_difference	152.04	141.18	162.90	OCR_axis
+Brunetti_Fig7_OCR_ADP	KO_difference	233.48	222.62	244.34	OCR_axis
+Brunetti_Fig7_OCR_ADP	KO_minus_WT_difference	81.45	59.73	103.17	OCR_axis
+Brunetti_Fig7_OCR_ADP	WT_ratio	1.63	1.57	1.69	ratio
+Brunetti_Fig7_OCR_ADP	KO_ratio	2.21	2.12	2.30	ratio
+Rana_Fig3D_JC1	fraction_of_WT_gap_closed	0.6190	NA	NA	ratio

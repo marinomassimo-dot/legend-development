@@ -1,0 +1,11 @@
+# Ademetionine (SAMe) | Methyl-donor availability versus creatine synthesis capacity
+
+context_policy: QUESTION_DRIVEN
+
+**Opening checkpoint.** Ademetionine is the sole active compound after the L-ornithine disposition. Reduced GAMT RNA and discordant MAT2A RNA make a common WWOX methyl-donor deficit uncertain. Direct exposure to native S-adenosyl-L-methionine tests a different question from betaine-mediated remethylation and L-arginine supply. Oral cerebrospinal fluid evidence in adults and a small pediatric SLC6A8 adjunct report make this a bounded formulation question. Establish the active stereoisomer and exact salt wherever supplied. [L-arginine disposition](../l_arginine/precursor_fate_and_disposition_20261127.md) · [L-ornithine disposition](../l_ornithine/guanidinoacetate_and_disposition_20261127.md) · [Adult CSF primary study](https://pubmed.ncbi.nlm.nih.gov/2292704/) · [Pediatric adjunct primary study](https://pubmed.ncbi.nlm.nih.gov/26205312/)
+
+**Discriminating prediction.** At matched local GAA and first recruitment, methyl-donor limitation predicts that increasing intracellular active SAM relative to SAH restores methyl transfer to creatine, followed by absolute creatine and phosphocreatine recovery. Improved SAM availability without new labeled creatine favors downstream GAMT capacity, access or transport limits. A change in a different methylated product alone has no specificity for the creatine branch. Source data must distinguish administered parent from newly synthesized SAM and separate time on a common regimen from ademetionine exposure.
+
+**Next comparison.** Extract routes, formulation, paired CSF values and visit timing from the adult record. Reconstruct which pediatric SLC6A8 outcomes changed when ademetionine was added, preserving ongoing cointerventions and exposure uncertainty. Test the label pattern needed to distinguish intact SAM entry from systemic conversion and neuronal resynthesis, and look for SAM, SAH or GAMT measurements in the matched WWOX models before assigning priority.
+
+**Disposition.** Controlled local exposure and WWOX-specific methyl-transfer limitation remain prerequisites. Keep as a conditional mechanistic probe and defer trial priority. [Results, reproducibility and reopen condition](parent_and_methyl_transfer_20261127.md)

@@ -1,0 +1,12 @@
+id	kind	reference	value	unit	context	locator	source
+molecular_weight	mass		371.4	g/mol	PubChem CID 44205240	Molecular Weight	https://pubchem.ncbi.nlm.nih.gov/compound/44205240
+ags_min	csf		1.24	ng/mL	AGS 5 participants, 11 CSF samples	Pharmacokinetics, lower observed bound	https://doi.org/10.1007/s10875-023-01500-z
+ags_median	csf		7.26	ng/mL	AGS 5 participants, 11 CSF samples	Pharmacokinetics, median	https://doi.org/10.1007/s10875-023-01500-z
+ags_max	csf		15.25	ng/mL	AGS 5 participants, 11 CSF samples	Pharmacokinetics, upper observed bound	https://doi.org/10.1007/s10875-023-01500-z
+mono_IFNa_STAT1	assay		192	nM	Healthy human whole blood, monocytes	Table 1, BARI, IFNa/pSTAT1	https://doi.org/10.1136/annrheumdis-2020-219012
+mono_IFNa_STAT3	assay		40	nM	Healthy human whole blood, monocytes	Table 1, BARI, IFNa/pSTAT3	https://doi.org/10.1136/annrheumdis-2020-219012
+mono_IL6_STAT1	assay		39	nM	Healthy human whole blood, monocytes	Table 1, BARI, IL6/pSTAT1	https://doi.org/10.1136/annrheumdis-2020-219012
+mono_IL6_STAT3	assay	mono_IL6_STAT1	161	nM	Healthy human whole blood, monocytes	Table 1, BARI, IL6/pSTAT3	https://doi.org/10.1136/annrheumdis-2020-219012
+CD4_IL6_STAT1	assay		29	nM	Healthy human whole blood, CD4 T cells	Table 1, BARI, IL6/pSTAT1	https://doi.org/10.1136/annrheumdis-2020-219012
+CD4_IL6_STAT3	assay	CD4_IL6_STAT1	274	nM	Healthy human whole blood, CD4 T cells	Table 1, BARI, IL6/pSTAT3	https://doi.org/10.1136/annrheumdis-2020-219012
+sensory_LIF_IL6_bath	bath		1000	nM	Human iPSC-derived peripheral sensory neurons	Supplementary Fig. 6, one tested bath level	https://doi.org/10.1172/jci.insight.186646DS1

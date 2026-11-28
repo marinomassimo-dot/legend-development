@@ -1,0 +1,10 @@
+# Sodium selenate opening comparison
+
+| Evidence | Opening observation | Transfer limit |
+|---|---|---|
+| Adult acquired epilepsy | SeLECT is registered as a randomized phase 2 sodium-selenate study in chronic drug-resistant temporal lobe epilepsy. An acquired rat model reports a persistent seizure outcome after treatment and separate regional tau/PP2A endpoints. | The registered design and adult-model readouts motivate a comparative analysis. WWOX developmental effects and a pediatric exposure bridge remain unverified. [SeLECT registry](https://anzctr.org.au/Trial/Registration/TrialReview.aspx?id=385697) · [Primary acquired-model report](https://doi.org/10.7554/eLife.78877) |
+| WWOX-linked tau phosphorylation | The primary SH-SY5Y differentiation and biochemical study links WWOX to reduced GSK3β-mediated tau phosphorylation. | Establish the same phosphosite and developmental stage in held WWOX disease-model evidence before treating the observation as a rescue test. [Primary WWOX/GSK3β article](https://doi.org/10.1038/cdd.2011.188) |
+| Opposing cell result | In SH-SY5Y-derived cells the separate sodium-selenate report describes increased phosphorylation at certain tau epitopes alongside lower excitability. | A lower firing readout alone cannot establish phosphatase-mediated recovery. Retrieve exact epitopes and exposure, and distinguish PP2A protein state from phosphatase activity. [PMID 30781361, abstract](https://pubmed.ncbi.nlm.nih.gov/30781361/) |
+| Human CNS exposure | An exploratory substudy of a randomized adult Alzheimer trial measured serum and CSF selenium after selenate. | Total selenium, a chromatography fraction and verified free parent each answer different questions. The next analysis will determine which analyte and interval are supported. [PMID 30215171, abstract](https://pubmed.ncbi.nlm.nih.gov/30215171/) |
+
+**Checkpoint completed.** The [reproduced comparison](speciation_and_disposition_20261127.md) audits the human exposure ceiling, the rodent PK inconsistency and the divergent tau and EEG signals. [Registered prediction](pretest_20261127.md)

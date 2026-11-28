@@ -1,0 +1,16 @@
+comparison	value	unit
+rat_csf_naive_0_min	0.00	umol/L
+rat_csf_naive_22.5_min	20.57	umol/L
+rat_csf_naive_37.5_min	4.76	umol/L
+rat_csf_naive_60_min	4.07	umol/L
+rat_csf_naive_area_of_group_means_0_to_60_min	520.7	umol*min/L
+rat_csf_pretreated_0_min	0.00	umol/L
+rat_csf_pretreated_22.5_min	23.32	umol/L
+rat_csf_pretreated_37.5_min	13.47	umol/L
+rat_csf_pretreated_60_min	3.61	umol/L
+rat_csf_pretreated_area_of_group_means_0_to_60_min	730.4	umol*min/L
+pediatric_plasma_average_total_peak	16.33	umol/L
+pediatric_plasma_arithmetic_free_peak	7.84	umol/L
+10_uM_nominal_bath_over_pediatric_total_peak	0.61	ratio_of_different_compartments
+100_uM_nominal_bath_over_pediatric_total_peak	6.12	ratio_of_different_compartments
+1000_uM_nominal_bath_over_pediatric_total_peak	61.23	ratio_of_different_compartments

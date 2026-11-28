@@ -28,7 +28,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 543,
+    "values": 547,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 807,
+    "values": 813,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -88,7 +88,7 @@
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(pmids\\[\\]|views\\.(broad|partial)\\.evidence\\.pmids\\[\\])$": {
     "class": "BIBLIO",
-    "values": 257,
+    "values": 258,
     "why": "PMID of a cited work (ranking)"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 239,
+   "distinct_hrefs": 252,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3650,
+    "forbidden-name": 3658,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -247,7 +247,7 @@
     ]
    ],
    "forbidden_identifiers": 100768,
-   "forbidden_names": 126040,
+   "forbidden_names": 126039,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
     "count": 159,
@@ -465,12 +465,12 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-31T07:28:37Z",
-  "data_date": "2026-11-26",
+  "data_date": "2026-11-28",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2525,
+  "BIBLIO": 2536,
   "COUNT": 12405,
   "ID": 4861,
   "OWN": 88916,
@@ -543,11 +543,11 @@
   },
   "README.md": {
    "bytes": 4730,
-   "sha256": "cbdd0a8648271721cb474136a4b877db6e0c0e6772513a92d35ab78f0afcdd58"
+   "sha256": "81031adf3db07cfb19fc7f4d876ee8f0a7d147a6c3318103c026c4e781df7467"
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2286,
-   "sha256": "b5ea9a016208a3b698f2f75526bd6870429d87fc2b5b59d9eb6b92e992d0c983"
+   "sha256": "930d813afa9fa01a3981d3e139c797b0947946f243adaba292361b8dff740236"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -562,16 +562,68 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5108369,
-   "sha256": "1faefd6615288e0ffcf9e40ed7a44e54bacfc53aa699bfef7648778a7bafc314"
+   "bytes": 5113874,
+   "sha256": "a440b40d3746a84be600d3591c32d102b22d24d1d11d13c5dd68d97d8345f7b2"
+  },
+  "reports/amiloride.pdf": {
+   "bytes": 126398,
+   "sha256": "bc4fcfe23c834c9651b12a5451f0e7e3ca3b354e6bbe6278970df0a89d27d3f2"
+  },
+  "reports/baricitinib.pdf": {
+   "bytes": 129454,
+   "sha256": "ee758c926be1e5c6bb20a45304d728c62111d098c7475e61f0a641a6aedc6ce0"
+  },
+  "reports/bexarotene.pdf": {
+   "bytes": 120555,
+   "sha256": "dcbea99260b613ec33e182e3bae8e37b46495f435f8839d4010a15cbdc1bb400"
+  },
+  "reports/chlorzoxazone.pdf": {
+   "bytes": 128607,
+   "sha256": "97a6a869efe50ee1f781f45057693a97f6495887d809d73058b3a89fa8df68da"
   },
   "reports/ethosuximide.pdf": {
-   "bytes": 168171,
-   "sha256": "e28654ba85541bbed26560cb2fa667d622d55f928e76cf6bfd13de8abf4762d1"
+   "bytes": 186816,
+   "sha256": "0abbf2afae4d7572e65036afe4ea773919d27ac90aaf33e5531ac2575bccd19a"
+  },
+  "reports/f16bp.pdf": {
+   "bytes": 123360,
+   "sha256": "c45577e8809b51e81d6a034dc95fb0cb223447fb0ffc88eeb38578bd8bc4bdb4"
+  },
+  "reports/felodipine.pdf": {
+   "bytes": 127966,
+   "sha256": "75f61ad3c05d0012240b791c7aa33fb44a8260f7c67036c89f75d2e4376a830e"
+  },
+  "reports/fenofibrate.pdf": {
+   "bytes": 129223,
+   "sha256": "faf79fbe2e748dd377e36cf5d0c2f05b680706c8fc8c5ab7fea02fd72207e83f"
+  },
+  "reports/huperzine-a.pdf": {
+   "bytes": 118260,
+   "sha256": "215d592e9a19d252a210a51038d6f58dfafe9a5b049e962e4df3593e5624e03e"
+  },
+  "reports/istradefylline.pdf": {
+   "bytes": 122531,
+   "sha256": "d635442f8830f9ede78dd6cdb32be6743dade114f04be3e6fd7e0a7f7d48bef3"
   },
   "reports/ketamine.pdf": {
-   "bytes": 466235,
-   "sha256": "a459e13fb8b8cfc90173f091e61c0280b7a5628fe88595bf707d89f1be510846"
+   "bytes": 528795,
+   "sha256": "322240f85da414f2dfb463340cc7ea9d751fa1cde1d6be068c70f872c4123d87"
+  },
+  "reports/nervonic-acid.pdf": {
+   "bytes": 125360,
+   "sha256": "4fa495a360d1e783b77e596854d97f6060dbbad54f7d56c3e553d7be96f2ebcb"
+  },
+  "reports/octadecylglycerol.pdf": {
+   "bytes": 122936,
+   "sha256": "924ee74b8d3a556db63d00d1d64d1f86393438064c94173215ea49b845cd5250"
+  },
+  "reports/piracetam.pdf": {
+   "bytes": 123732,
+   "sha256": "740d52ac15e74cac221e60e3c4a76729607489d236260d846468f9ffc6c0e070"
+  },
+  "reports/verapamil.pdf": {
+   "bytes": 120465,
+   "sha256": "a373fb7c1f15e1da81932a5ca3322a6e23c2aaffc408d127c27d9fd05466e285"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

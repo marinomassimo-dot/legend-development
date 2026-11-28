@@ -1,0 +1,14 @@
+comparison	value	unit
+adult_granule_peak	133.754	umol/L
+adult_granule_peak_sd	47.646	umol/L
+adult_granule_120_after_glucose	86.108	umol/L
+rat_synaptosome_IC50_over_capsule_peak	19.745	ratio
+rat_synaptosome_IC50_over_tea_peak	18.106	ratio
+rat_synaptosome_IC50_over_granule_peak	3.587	ratio
+P19_four_day_nominal_over_capsule_peak	4.115	ratio
+P19_four_day_nominal_over_tea_peak	3.774	ratio
+P19_four_day_nominal_over_granule_peak	0.748	ratio
+pilocarpine_twitch_relative_difference	23.529	%
+ptz_tonus_relative_difference	-34.066	%
+cortical_gaba_relative_difference	-76.562	%
+hippocampal_gaba_relative_difference	26.087	%

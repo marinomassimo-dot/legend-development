@@ -1,0 +1,10 @@
+pmid	locator	oral_input	reported_dose_g	plasma_analyte	summary	n_sampled_later	time_h	later_uM	delta_uM	ratio_later_pre	bath100_over_later	bath2000_over_later
+41243468	Fig2A pC2	C2	0.5	C2	median	6	4	5.5	0.80	1.17	18.18	363.64
+41243468	Fig2A pC2	C2	1.5	C2	median	11	4	12.5	3.10	1.33	8.00	160.00
+41243468	Fig2A pC2	C0	0.5	C2	median	11	4	8.6	3.00	1.54	11.63	232.56
+41243468	Fig2A pC2	C0	1.5	C2	median	12	4	20.9	8.80	1.73	4.78	95.69
+41243468	Fig2E pTMAO	C2	1.5	TMAO	median	11	16	47	44.80	21.36	.	.
+18923701	Table 2	C2	1.5 twice daily	C2	mean	15	2	7.7	0.10	1.01	12.99	259.74
+18923701	Table 2	C2	1 once daily	C2	mean	4	2	6.8	-0.30	0.96	14.71	294.12
+18923701	Table 2	C2	2 once daily	C2	mean	7	2	6.8	-0.90	0.88	14.71	294.12
+18923701	Table 2	C2	3 once daily	C2	mean	12	2	7.5	0.40	1.06	13.33	266.67

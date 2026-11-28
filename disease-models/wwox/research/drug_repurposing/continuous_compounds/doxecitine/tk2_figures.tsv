@@ -1,0 +1,15 @@
+source	quantity	value	unit	basis
+Fig8A	dC_only_KO_day_14	1	events_approx	x=222
+Fig8A	dC_only_KO_day_15	3	events_approx	x=230
+Fig8A	dC_only_KO_day_17	1	events_approx	x=247
+Fig8A	dC_only_KO_day_18	1	events_approx	x=256
+Fig8A	dC_only_KO_raster_mean	15.667	day	curve_steps
+Fig8A	dC_only_KO_raster_sample_SD	1.506	day	curve_steps
+Fig8A	minimum_SD_if_literal_reported_mean_and_median	2.958	day	half_at_or_below_15_n6
+Fig9B	P12_brain_WT_vehicle_median	112.28	mtDNA_over_nDNA	y=596;axis_y0=612;axis_y800=498
+Fig9B	P12_brain_WT_dT_median	280.70	mtDNA_over_nDNA	y=572;axis_y0=612;axis_y800=498
+Fig9B	P12_brain_KO_vehicle_median	38.60	mtDNA_over_nDNA	y=606.5;axis_y0=612;axis_y800=498
+Fig9B	P12_brain_KO_dC_plus_dT_median	38.60	mtDNA_over_nDNA	y=606.5;axis_y0=612;axis_y800=498
+Fig9B	P12_brain_KO_dT_median	73.68	mtDNA_over_nDNA	y=601.5;axis_y0=612;axis_y800=498
+Fig9B	P12_brain_KO_dT_relative_to_WT_vehicle	0.656	relative_fraction	range_at_2px=0.472-0.893
+Fig9B	P12_brain_KO_dT_relative_to_WT_dT	0.263	relative_fraction	range_at_2px=0.202-0.329
