@@ -1254,6 +1254,13 @@
      "accepted_at": "2026-11-26T02:13:33Z",
      "evidence": "ADV-295 block 1 closed, main abf15a728: RESULT_ADV295_BLOCK1_SCI_20261126.md, SENTENCES_FOR_IT_ADV295_BLOCK1_SCI_20261126.md; strict 3 of 5 records, 1 decision-bearing; block 2 not started (ADV decides)",
      "updated_at": "2026-11-26T04:13:58Z"
+    },
+    {
+     "step": "ADV-297: catalogued-only abstract triage test on ten seeded-drawn records (PREREG before any abstract; step A triage reader, step B full-text readers, blind check of every miss); deliver to ADV",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-297 (ADV message 2026-11-28; assignments/ADV-297.md on main b0d899f91)",
+     "accepted_at": "2026-11-28T05:31:58Z"
     }
    ]
   }
@@ -2222,6 +2229,13 @@
    "at": "2026-11-26T02:13:33Z",
    "source": "ADV-295 (ADV message 2026-11-26; assignments/ADV-295.md lands with ADV's next push)",
    "step_sha256": "4056442e5dc1",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T05:31:58Z",
+   "source": "ADV-297 (ADV message 2026-11-28; assignments/ADV-297.md on main b0d899f91)",
+   "step_sha256": "04f2fad2f695",
    "reopened_block": false,
    "authorised_by": null
   }
