@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-30290271-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "doi": "10.1016/j.nbd.2018.09.026",
+  "pmid": "30290271"
+ },
+ "event_at": "2026-11-28T19:46:00Z",
+ "analysis_at": "2026-11-28T19:46:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "ADV-339 continuation (IT43), sentence-level reading by delegates of IT43, context policy QUESTION_DRIVEN: H4 (first reader): PMC XML in full searched for blood chemistry (glucose, BUN, serum, bicarbonate, acidosis); supplementary tables not held",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID30290271_Hussain2019_PMC_r2.xml",
+ "source_fingerprint": "3672e628fd6f8d71bbc5512c214a9aedf81fe73a297bed2e1c0a7ee7f73aa1a7",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT43-ADV339-01.md"
+ ],
+ "evidence_basis": [
+  "Opened by the delegate (transcript): H4 (first reader): PMC XML in full searched for blood chemistry (glucose, BUN, serum, bicarbonate, acidosis); supplementary tables not held. Methods or other sections marked not_read were consulted only for single values or not at all."
+ ],
+ "prior_receipt": "FTR-20261123-30290271-97",
+ "reread_reason": "adversarial_reanalysis"
+}
