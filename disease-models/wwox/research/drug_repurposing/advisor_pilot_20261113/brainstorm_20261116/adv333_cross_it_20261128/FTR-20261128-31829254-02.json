@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-28T15:47Z",
+ "analysis_time_precision": "minute",
+ "event_at": "2026-11-28T15:47:41Z",
+ "event_id": "FTR-20261128-31829254-02",
+ "evidence_depth": "complete_fulltext_read",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "prior_receipt": "FTR-20261128-31829254-01",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "supplementary": "not_present"
+ },
+ "evidence_basis": [
+  "verbatim_locator | proposition: A single anti-WWOX reagent is named | Methods, Immunohistochemistry | \"rabbit anti-WWOX (1:500, sc-366,157; Santa Cruz Biotechnology)\"",
+  "verbatim_locator | proposition: The anti-rabbit secondary used | Methods, Immunohistochemistry | \"donkey anti-rabbit Alexa 647-conjugated IgG (1:500; Abcam) were used as secondary antibodies\"",
+  "verbatim_locator | proposition: The WWOX triple label used 6 mice, 22 slices, 22 medial and 14 lateral images | Methods, Experimental design | \"and for TH-VGLUT2-WWOX triple labeling, N = 6, 22 brain slices, M location: 22 images, L location: 14 images\"",
+  "verbatim_locator | proposition: A correlation screen preceded the choice of Wwox | Results, marker genes | \"we identified 191 genes with expression intensities that correlated significantly (P < 0.05) with the minimum intensities of Th and Slc17a6\"",
+  "verbatim_locator | proposition: Wwox was chosen by in situ pattern, overlap with Th and the minimum profile | Results, marker genes | \"We selected the gene encoding WW domain-containing oxidoreductase (Wwox), whose expression pattern was most similar to that of Slc17a6\"",
+  "verbatim_locator | proposition: The proportion is of WWOX-expressing neurons | Results, Fig. 6c | \"> 70% of the neurons that expressed WWOX also expressed both TH and VGLUT2\"",
+  "ADV-assigned completion of ADV-333: text whole and Figs 1-6 as images by a delegate producer (sonnet 5.5, effort high); IT38 re-checked quoted passages and viewed Fig 6; supplement searched on five routes and not found; reference titles listed, cited works not read."
+ ],
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID31829254.json",
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv333_cross_it_20261128/RESULT_ADV333B_COMPLETE_READ_IT38_20261128.md"
+ ],
+ "source_fingerprint": "785a10ea6b5998f1777e8fdf14c3b68301e8ae541f3e4b11cd8e49c176a29543",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID31829254_PMC6907252_epmc_20261128.xml",
+ "study_id": {
+  "doi": "10.1186/s13041-019-0530-8",
+  "pmid": "31829254"
+ },
+ "workflow": "IT38 ADV-333 completion: antibody-specificity and per-animal question on the whole paper (RP-017 premise)"
+}

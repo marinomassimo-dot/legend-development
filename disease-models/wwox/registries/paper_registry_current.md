@@ -18392,16 +18392,24 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 
 ---
 
-## CORPUS-STUB-197
+## PAPER 571
+**Short title:** Wwox co-expression with TH and VGLUT2 in mouse VTA — immunohistochemistry without a stated antibody-specificity control (Mol Brain 2019)
 **Corpus paper no:** 197
+**Source type:** primary research — mouse brain immunohistochemistry and computational analysis of Allen Brain Atlas in situ data
 **Full title:** Systematic analysis of expression signatures of neuronal subpopulations in the VTA
 **Journal/source:** *Molecular Brain* 2019
-**Identifier:** PMID 31829254 / DOI 10.1186/s13041-019-0530-8
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Identifier:** PMID 31829254 / PMC6907252 / DOI 10.1186/s13041-019-0530-8
+**Status:** processed
+**Evidence depth:** `complete_fulltext_read` (**full text**) — receipt `FTR-20261128-31829254-02`; created by `CC-20261128-ORCHESTRATOR-IT38-PMID31829254-01` (`BATCH_20261128_009`); manifest `deepdive_manifests/PMID31829254.json`; text, all six figures as images, no supplement found (2026-11-28).
+**Model/species:** male C57BL/6J mice, age not stated; WWOX triple label with TH and VGLUT2: 6 mice, 22 slices, 22 medial and 14 lateral images
+**Genotype/model:** wild type only; no WWOX-deficient system
+**Transferability:** T3 — wild-type mouse expression observation; anti-WWOX immunoreactivity reported, antibody specificity not shown
+**clinical relevance:** BACKGROUND. Not medical advice.
+**Registry role:** reports WWOX immunoreactivity in cells the authors call neurons in medial and lateral VTA (Fig 6c: 73.88 and 70.24 percent of WWOX-positive cells also TH- and VGLUT2-positive); no neuronal marker in that label; no deficient-tissue, blocking-peptide, second-antibody or omission control found; no per-animal values. Not a demonstrated neuronal WWOX premise.
 **Claim links:** none
-**Next action:** screening only; wild-type mouse expression map (WWOX co-expressed with TH and VGLUT2 in medial VTA); T3
-**Note:** Added by `CC-20261124-ORCHESTRATOR-ADV215-CORPUS-STUBS-01` (`BATCH_20261124_001`, ADV-215 intake, Orchestrator). Triaged at abstract level; where a free PMC text exists it was retrieved and the WWOX contexts read. Preserve until processed, filtered out, or upgraded to a full PAPER record. Class-level record; not medical advice.
+**LIT link:** none
+**Next action:** none owed by this record; it feeds the premise line of RP-017 (owner ADV)
+**Note:** converted from `CORPUS-STUB-197` (added at ADV-215 intake); class-level record; no individual-level detail. Not medical advice.
 
 ---
 
