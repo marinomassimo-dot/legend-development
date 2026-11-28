@@ -9,7 +9,11 @@ DATA_PATH = "disease-models/wwox/research/drug_repurposing/"
 LINK = re.compile(r"\[([^\]\n]+)\]\(([^)\s]+)\)")
 DOSSIER = re.compile(r"(?:continuous_compounds/)?[a-z0-9_-]+/[a-zA-Z0-9_.-]+\.md")
 RUNTIME_LABEL = re.compile(r"\b(?:(?:SCI(?:ENCE)?[ _-]+)?CODEX(?:[ _-]+STRATEGY)?|CLAUDE(?:[ _-]+CODE)?)\b", re.I)
-RETAINED_COMPARISON = re.compile(r"\bretain(?:ed)?\s+(?:as|for)\s+[^.!?]{0,65}\b(?:probe|comparator|comparison)\b", re.I)
+# A kept research role: "retain as a ... probe", or a clause that begins with Retain or Keep, or "stays a ... comparator". A clause start excludes a result sentence such as "8/10 slices retained a response".
+RETAINED_COMPARISON = re.compile(r"\bretain(?:ed)?\s+(?:as|for)\s+[^.!?]{0,65}\b(?:probe|comparator|comparison)\b"
+                                 r"|(?:^|[.!?]\s+|\band\s+|;\s+)(?:retain|keep)\b|\bstays\s+an?\s+[^.!?]{0,40}\b(?:probe|comparator|comparison)\b", re.I)
+# The checkpoint writes the base form too ("Park for pediatric WWOX trial priority").
+PARKED_OR_DEFERRED = re.compile(r"\b(?:park(?:ed|ing)?|defer(?:red|ring)?)\b", re.I)
 GROUPS = (
     ("Priority follow-up", "priority"),
     ("Targeted comparison", "comparison"),
@@ -88,7 +92,7 @@ def programme_cards(dr: Path):
         elif RETAINED_COMPARISON.search(disposition):
             # The source may defer a trial and explicitly retain an experiment.
             group = "comparison"
-        elif re.search(r"\b(?:parked|deferred)\b", disposition, re.I):
+        elif PARKED_OR_DEFERRED.search(disposition):
             group = "deferred"
         elif re.search(r"\b(?:high(?:est)? priority|priority follow-up)\b", disposition, re.I):
             group = "priority"
