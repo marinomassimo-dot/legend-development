@@ -227,7 +227,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Next: proglumide.** Compare direct CCK receptor modulation of inhibitory recruitment with peripheral or peptide-handling effects. Open after losigamone closes.
+**Active: proglumide.** Compare CCK receptor engagement, extracellular peptide lifetime and peripheral effects at measured free exposure. First reconcile native inhibitory recruitment and adult exposure. [Prespecified comparison](proglumide/pretest.md)
 
 **Losigamone.** Retain as a conditional ex vivo comparator of persistent sodium current and evoked release. Defer pediatric WWOX priority. Rat first-action-current amplitude was largely preserved while rheobase rose 49%. Mouse cortical release differed by isomer. Reopen with measured juvenile free exposure, matched initial recruitment and independent persistent-current normalization. [Dossier and replay](losigamone/README.md)
 
