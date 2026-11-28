@@ -1,0 +1,22 @@
+trial	endpoint	arm_group	events	n	placebo_events	placebo_n	difference_pp	unadjusted_95_low_pp	unadjusted_95_high_pp	arm_count_basis	source
+EP0069	75% primary	400	8	26	3	27	19.66	-2.50	40.20	printed	Muglia Results paragraph
+EP0091	75% primary	50	11	80	5	81	7.58	-1.94	17.44	unique from rounded percentage	Rademacher Figure 1B
+EP0091	75% primary	100	10	82	5	81	6.02	-3.22	15.51	unique from rounded percentage	Rademacher Figure 1B
+EP0091	75% primary	200	9	81	5	81	4.94	-4.14	14.30	unique from rounded percentage	Rademacher Figure 1B
+EP0091	75% primary	400	13	81	5	81	9.88	0.02	20.00	unique from rounded percentage	Rademacher Figure 1B
+EP0091	50% secondary	50	27	80	17	81	12.76	-1.02	25.96	unique from rounded percentage	Rademacher Figure 1C
+EP0091	50% secondary	100	26	82	17	81	10.72	-2.83	23.76	unique from rounded percentage	Rademacher Figure 1C
+EP0091	50% secondary	200	21	81	17	81	4.94	-8.12	17.80	unique from rounded percentage	Rademacher Figure 1C
+EP0091	50% secondary	400	26	81	17	81	11.11	-2.51	24.21	unique from rounded percentage	Rademacher Figure 1C
+EP0092	somnolence	100	10	60	2	55	13.03	1.65	24.70	printed	Rademacher Table 4
+EP0092	somnolence	200	19	57	2	55	29.70	15.81	42.91	printed	Rademacher Table 4
+EP0092	somnolence	400	20	59	2	55	30.26	16.43	43.26	printed	Rademacher Table 4
+EP0092	adverse-event discontinuation	100	6	60	2	55	6.36	-3.83	16.85	printed	Rademacher Table 4
+EP0092	adverse-event discontinuation	200	6	57	2	55	6.89	-3.45	17.81	printed	Rademacher Table 4
+EP0092	adverse-event discontinuation	400	12	59	2	55	16.70	4.69	28.92	printed	Rademacher Table 4
+EP0092	75% primary	100	9	59	7	54	2.29	-11.14	15.32	unique from rounded percentage	NCT03739840 outcome-specific analysis set
+EP0092	75% primary	200	7	56	7	54	-0.46	-13.54	12.44	unique from rounded percentage	NCT03739840 outcome-specific analysis set
+EP0092	75% primary	400	8	56	7	54	1.32	-12.04	14.51	unique from rounded percentage	NCT03739840 outcome-specific analysis set
+EP0092	50% secondary	100	21	59	15	54	7.82	-9.29	24.12	unique from rounded percentage	NCT03739840 outcome-specific analysis set
+EP0092	50% secondary	200	19	56	15	54	6.15	-10.97	22.71	unique from rounded percentage	NCT03739840 outcome-specific analysis set
+EP0092	50% secondary	400	24	56	15	54	15.08	-2.76	31.58	unique from rounded percentage	NCT03739840 outcome-specific analysis set

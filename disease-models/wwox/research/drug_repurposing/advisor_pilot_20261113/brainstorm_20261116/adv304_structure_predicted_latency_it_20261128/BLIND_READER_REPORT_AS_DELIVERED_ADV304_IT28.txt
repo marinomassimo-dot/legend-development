@@ -1,0 +1,70 @@
+BLIND FIGURE RE-READ (p304b). I did not open any worktree file or the p304a folder. I read the page images and the PDF figure myself and calibrated each axis on its tick pixels. Python had no PIL, so I used ImageMagick to dump pixels. Scratch folder: /home/desktop/.claude/jobs/54ca757b/tmp/p304b/ (helper rd.py, native Fig 5 raster s/fig-000.png). No repository file was edited, nothing was fetched, and I deleted the large rasters.
+
+Page mapping, SOURCE 1: Figure 2 is p06_embedded_1749x504.png. Figure 4 is p08_embedded_1958x994.png. p07 and p09 are other figures. The Figure 4 legend (XML) puts the myelinated-axon count in A and the g-ratio bars and scatter in B.
+
+LAYOUT NOTE for Figure 4. On the page image the two g-ratio bar charts (0-0.5 um and 0.5-1 um) sit in the lower row beside the count chart, under the "A" micrographs column. The scatter sits under the "B" micrographs. The legend assigns the bars and the scatter both to B. I read them as the legend says.
+
+SOURCE 1, Palma 2022, wild-type mouse corpus callosum, P21 (vehicle printed as "Control")
+
+(a) Fig 2B, N1 conduction velocity. The panel plots bars with SEM error bars and no dots.
+- Y-axis label is "Velocity (mm/s)", axis 0.2 to 0.6. The printed unit is mm/s, so 0.5 means 0.5 mm/s as printed.
+- Calibration: ticks 0.6 at y=99, 0.5 at y=178, 0.4 at y=256.5, 0.3 at y=335.5, i.e. 78.9 px per 0.1.
+- Control: bar top y~175, value 0.505 mm/s. The SEM caps (y=150 and 197) give 0.535 and 0.475, whose midpoint of 0.505 agrees with the bar top.
+- Clemastine: bar top y~236.5, value 0.426 mm/s. Its SEM caps were not fully resolved. The upper cap is at about 0.442.
+- Confidence: high for 0.505 (+/-0.005) and 0.426 (+/-0.004). A star marks significance on N1. N2 bars (~0.275 and ~0.278) were not asked.
+
+(b) Fig 4 g-ratio bars (mean, bar top, SEM caps and 3 dots per bar; axes are truncated and differ between the two charts).
+- 0-0.5 um bin, axis 0.70 to 0.84 (0.84 at y=556.5, 0.70 at y=888.5, 2371 px/unit). Control 0.769 (top line centre y~727, outer edge gives 0.769). Clemastine 0.787 (line centre y~683, 0.787 to 0.788). A *** sits over this pair.
+- 0.5-1 um bin, axis 0.60 to 0.74 (0.74 at y=555.5, 0.60 at y=888.5, 2379 px/unit). Control 0.663. Clemastine 0.673.
+- Only these two bins are shown as bars.
+- Scatter with fitted lines: y-axis g-ratio 0.5 to 1.0, x-axis "Axon diameter" (no unit printed on the axis; the bin labels carry um). Calibration: y ticks 1.0 at 566.5 and 0.5 at 890.5 (64.8 px per 0.1); x ticks 0.2 at 1243.5, 0.4 at 1373.5, 0.6 at 1504.5, 0.8 at 1634.5, 1.0 at 1765.5.
+- I fitted the line centres by robust line-fit through the line pixels and checked the result by eye on an enlarged crop. These are straight lines of slight positive slope.
+
+| Axon diameter | Control line | Clemastine line |
+|---|---|---|
+| 0.3 | 0.757 | 0.781 |
+| 0.5 | 0.777 | 0.788 |
+| 0.7 | 0.796 | 0.795 |
+| 0.8 | 0.805 | 0.799 |
+
+- Line extents: control about 0.27 to 0.85, clemastine about 0.25 to 0.86, so all four requested diameters lie inside both lines.
+- Confidence: bars high (+/-0.002 to 0.003). Line values medium-high (+/-0.005). The lines overlap and cross near 0.7, and the dots hide parts of both.
+
+(c) Fig 4A, number of myelinated axons. Bars with SEM and 3 dots each. The y-axis is truncated, 150 to 350, and labelled "nº Myelinated axons/10³ µm²". The calibration is 350 at y=558 and 150 at y=889 (82.75 px per 50).
+- Control: ~287 per 10³ um². The bar top line centre is at y~663 and the upper SEM cap is at ~301.
+- Clemastine: ~250 per 10³ um². The bar top is at y~725 and the upper SEM cap is at ~272.
+- Confidence: high, +/-2. A * marks significance.
+
+SOURCE 2, Repudi 2021 Brain, Figure 5, PDF page 11. The figure is a single 1000x887 raster embedded at 150 ppi (pdfimages), not vector, so resolution is limited.
+
+(d) Fig 5C top (Corpus callosum). Plotted: individual dots (S-Control navy, S-KO red, hundreds of overlapping points) plus one thin straight fitted line per group (navy and red, about 1 px wide). There are no bars. Axes: g-ratio 0 to 1.2, axis ticks 0 at y=178.5 and 1.2 at y=52.5 (105 px per unit); x "Axon diameter (um)", ticks 0 at x=710.5, 0.5 at 765.5, 1.0 at 819.5, 1.5 at 874.5, 2.0 at 928.5, 2.5 at 983.5 (109.2 px per unit). I read the navy line from its 1-px runs through the dots (adjacent points 755,112 to 925,93). I read the red line from the exposed right-hand part (x=1.6 to 2.0, slope about 0.2 px per px), extrapolated left, and checked against its visible left end (~0.3, ~0.65) and right end (~2.0, ~1.0).
+
+| Axon diameter (um) | S-Control line | S-KO line |
+|---|---|---|
+| 0.5 | 0.64 | 0.69 |
+| 1.0 | 0.70 | 0.79 |
+| 1.5 | 0.76 | 0.89 |
+
+- Line extents: S-Control about 0.40 to 1.98 um; S-KO about 0.3 to 2.0 um.
+- Confidence: S-Control +/-0.01. S-KO +/-0.015 at 0.5 and 1.0, and also about +/-0.015 at 1.5. The KO line is heavily hidden by dots across 0.4 to 1.5. At 1.0 and 1.5 (both within the KO line's drawn extent) the position rests on a slope fixed from only the visible right end.
+
+(e) Fig 5D(ii), N1 latency. Plotted: individual dots plus a horizontal mean line and error bars, with unit "Latency (ms)", axis 0 to 20. Calibration: 20 at y=530.5, 15 at 601, 10 at 672, 5 at 742, 0 at 812.5 (14.1 px per ms).
+- N1 S-Control: 2.45 ms (mean line at y~778).
+- N1 S-KO: 3.19 ms (mean line at y~767.5).
+- Not asked but read from the same lines: N2 S-Ctrl 6.67 ms and N2 S-KO 8.30 ms. A * marks N1.
+- Confidence: high, +/-0.1 ms. The caption does not say whether the horizontal line is a mean or a median, or what the error bars are.
+
+(f) Fig 5B top, myelinated axons per FOV. Plotted: individual dots (about 13 per group), a wide horizontal line and error bars. Y-axis label "number of myelinated axons per FOV", axis 0 to 250. Calibration: 250 at y=46, 200 at 77, 150 at 109, 100 at 140.5, 50 at 172, 0 at 204 (0.632 px per unit).
+- S-Control: 184 (wide line at y=88, 183.5).
+- S-KO: 55 (wide line at y=169, 55.4).
+- The error-bar caps are at about 212 and 155 for S-Control and about 81 for the upper S-KO cap.
+- Confidence: high for the line positions (+/-2). The wide line is assumed to be the mean. The legend says the error bars are SEM, but their span looks like SD-sized relative to the dot spread, so I do not rely on them.
+
+THINGS THAT MAKE A NUMBER LESS CERTAIN
+1. Source 2 Fig 5 is a 150 ppi raster. The C-panel lines are 1 px wide, so (d) has sub-pixel error. The S-KO line is mostly hidden under the dots, so its 0.5 and 1.0 values rest on a slope fixed from the exposed right-hand end only. The S-Control line is read directly through the dots.
+2. In Source 1 Fig 4B the two fitted lines overlap and cross near 0.7, and dots hide parts of both. The values at 0.3 and 0.8 sit near the ends of the drawn lines, and the line end points are only approximately located.
+3. Axis labels: Source 1 Fig 2B reads "mm/s" as printed. At 0.5 this is an implausibly slow conduction velocity for a myelinated tract, so treat the printed unit as a possible labelling error, but it is the unit as printed. The Fig 4 scatter x-axis has no unit printed. The Source 2 count panels have no area unit, only "per FOV".
+4. Source 1 Fig 4 truncated y-axes (g-ratio bars 0.70-0.84 and 0.60-0.74; counts 150-350) mean bar tops are measured against tick pixels, not bar baselines.
+5. Source 1 Fig 4 layout note above: the legend assigns the g-ratio bars to B, but on the page they sit in the A column.
+6. The Source 2 caption names no summary statistic for the D(ii) and B middle lines, and the legend SEM statement does not match the visible error-bar span in B.
+7. All values are one reader's pixel reads, with no second independent read.

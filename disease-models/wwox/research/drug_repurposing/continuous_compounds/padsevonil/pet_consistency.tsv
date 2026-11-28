@@ -1,0 +1,6 @@
+readout	n	mean_pct_or_pp	sd	min	max
+table_post1	10	82.23	14.81	56.4	99.3
+table_post2	7	39.21	26.28	2.2	66.2
+within_person_post2_minus_post1	7	-42.94	22.34	-85.2	-19.9
+methods_post1_printed	10	82.10	14.50	57.0	98.0
+methods_post2_printed	7	41.20	21.20	16.0	63.0

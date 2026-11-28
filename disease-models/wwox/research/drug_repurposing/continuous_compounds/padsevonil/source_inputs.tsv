@@ -1,0 +1,8 @@
+local_filename	sha256	access_and_scope	url
+koole.xml	7f8b54a9f40f53732798c8d197bb06a2c61d84c04175495b3ca750c0ffe2dc32	CC BY 4.0 Table 1 and aggregate PK model	https://pmc-oa-opendata.s3.amazonaws.com/PMC12244171.1/PMC12244171.1.xml
+NCT03739840.json	4c97d624b17897392437d8d7e8e4a039064b7ffa2cc3a0a95551176910dd41e8	public registry outcome denominators and percentages	https://clinicaltrials.gov/api/v2/studies/NCT03739840
+rademacher-supp.pdf	59d08a53f3ae8406334bf2aac7e6d23fdbad1d1284224ab72d82b0eaf9dd5491	article CC BY 4.0 Figure S4A parent trough geometric means	https://pmc-oa-opendata.s3.amazonaws.com/PMC9712475.1/EPI4-7-758-s001.pdf
+muglia.xml	a2ecf55a3f6978bb3146fa1e515b224791310f4b711eea15197198ea3b97e965	CC BY NC 4.0 numeric facts only	https://pmc-oa-opendata.s3.amazonaws.com/PMC7677606.1/PMC7677606.1.xml
+rademacher.xml	2a16e8d0e5c5f1bd2e74d742db5ff8acb446c5c39e575a8aec5386ea8cff87e9	CC BY 4.0 numerical arm facts	https://pmc-oa-opendata.s3.amazonaws.com/PMC9712475.1/PMC9712475.1.xml
+niespodziany.xml	4c012d268979f8140a0f386782860a4fc6048494676d72337162300eebc5f1e7	CC BY NC ND 4.0 assay values only	https://pmc-oa-opendata.s3.amazonaws.com/PMC7383892.1/PMC7383892.1.xml
+kramer.pdf	17b2294c02bf225b799365dff0a0cfce167948e0d48976b17ed68a779501810e	free publisher full text blood/plasma timing	https://link.springer.com/content/pdf/10.1208/s12248-023-00866-7.pdf
