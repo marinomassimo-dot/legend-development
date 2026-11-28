@@ -1,0 +1,23 @@
+comparison	cohort	n	assay	reference_uM	comparator_uM	labeled_ratio
+adult_serum_vs_assay	control	4	human CCK1 competition IC50	23.465	660	28.13
+adult_serum_vs_assay	control	4	human CCK2 competition IC50	23.465	4130	176.01
+adult_serum_vs_assay	control	4	rat unsulfated CCK8 cleavage apparent Ki	23.465	1300	55.40
+adult_serum_vs_assay	control	4	rat sulfated CCK8 cleavage Fig4 condition	23.465	2000	85.23
+adult_serum_vs_assay	Child-Pugh A	4	human CCK1 competition IC50	29.069	660	22.70
+adult_serum_vs_assay	Child-Pugh A	4	human CCK2 competition IC50	29.069	4130	142.08
+adult_serum_vs_assay	Child-Pugh A	4	rat unsulfated CCK8 cleavage apparent Ki	29.069	1300	44.72
+adult_serum_vs_assay	Child-Pugh A	4	rat sulfated CCK8 cleavage Fig4 condition	29.069	2000	68.80
+adult_serum_vs_assay	Child-Pugh B	3	human CCK1 competition IC50	31.802	660	20.75
+adult_serum_vs_assay	Child-Pugh B	3	human CCK2 competition IC50	31.802	4130	129.86
+adult_serum_vs_assay	Child-Pugh B	3	rat unsulfated CCK8 cleavage apparent Ki	31.802	1300	40.88
+adult_serum_vs_assay	Child-Pugh B	3	rat sulfated CCK8 cleavage Fig4 condition	31.802	2000	62.89
+dog_CSF_vs_serum	third ventricle	6	180 min	303.707	2558.143	0.119
+dog_CSF_vs_assay	third ventricle	6	human CCK1 competition IC50	303.707	660	2.17
+dog_CSF_vs_assay	third ventricle	6	human CCK2 competition IC50	303.707	4130	13.60
+dog_CSF_vs_assay	third ventricle	6	rat unsulfated CCK8 cleavage apparent Ki	303.707	1300	4.28
+dog_CSF_vs_assay	third ventricle	6	rat sulfated CCK8 cleavage Fig4 condition	303.707	2000	6.59
+dog_CSF_vs_serum	lateral ventricle	4	180 min	282.681	2850.169	0.099
+dog_CSF_vs_assay	lateral ventricle	4	human CCK1 competition IC50	282.681	660	2.33
+dog_CSF_vs_assay	lateral ventricle	4	human CCK2 competition IC50	282.681	4130	14.61
+dog_CSF_vs_assay	lateral ventricle	4	rat unsulfated CCK8 cleavage apparent Ki	282.681	1300	4.60
+dog_CSF_vs_assay	lateral ventricle	4	rat sulfated CCK8 cleavage Fig4 condition	282.681	2000	7.08

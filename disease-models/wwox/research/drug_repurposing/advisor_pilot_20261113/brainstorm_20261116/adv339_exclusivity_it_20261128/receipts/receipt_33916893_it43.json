@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-33916893-03",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "doi": "10.3390/cells10040824",
+  "pmid": "33916893"
+ },
+ "event_at": "2026-11-28T19:46:00Z",
+ "analysis_at": "2026-11-28T19:46:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "ADV-339 continuation (IT43), sentence-level reading by delegates of IT43, context policy QUESTION_DRIVEN: Atoms C4-C5 (blind final-text check) and S5 (first reader): Table 1 JATS with rowspans, reference list, Table S1 and S3 extracts",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+ "source_fingerprint": "88682e21d23680979070c94e9cdcf5b0456af1965967344977559ce6b8602aa7",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT43-ADV339-01.md"
+ ],
+ "evidence_basis": [
+  "Opened by the delegate (transcript): Atoms C4-C5 (blind final-text check) and S5 (first reader): Table 1 JATS with rowspans, reference list, Table S1 and S3 extracts. Methods or other sections marked not_read were consulted only for single values or not at all."
+ ],
+ "prior_receipt": "FTR-20261128-33916893-02",
+ "reread_reason": "adversarial_reanalysis"
+}
