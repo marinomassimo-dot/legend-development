@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-33914858-43",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "33914858",
+  "doi": "10.1093/brain/awab174"
+ },
+ "event_at": "2026-11-28T18:25:00Z",
+ "analysis_at": "2026-11-28T18:25:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "ADV-339 final-text second reader: delegate of IT-42, sonnet at effort high, blind (numbered atoms only, no earlier sentence or grade), context policy QUESTION_DRIVEN: the O-KO line atoms A1-A10 (weight, survival, clasping, MBP, exclusions); main PDF and text, Fig 1 page, supplement File009 pages for Supp Figs 1, 2, 8; spreadsheets listed only",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+ "source_fingerprint": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT42-ADV339-01.md"
+ ],
+ "evidence_basis": [
+  "Opened by the delegate (transcript): the O-KO line atoms A1-A10 (weight, survival, clasping, MBP, exclusions); main PDF and text, Fig 1 page, supplement File009 pages for Supp Figs 1, 2, 8; spreadsheets listed only. Methods consulted only for single values, marked not_read. No video or spreadsheet was viewed."
+ ],
+ "prior_receipt": "FTR-20261128-33914858-42",
+ "reread_reason": "adversarial_reanalysis"
+}

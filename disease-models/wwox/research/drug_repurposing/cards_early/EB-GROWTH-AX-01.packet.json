@@ -30,7 +30,7 @@
   "p4_fields": {
     "endpoint_pursued": "head circumference, height and weight against age-expected SD scores at a stated age, repeated",
     "functional_evidence_available": "none for any intervention; the only human values sit on a surface that strips signs and ranges",
-    "temporal_or_model_limit": "one timepoint per patient in the only series; in the Wwox-null mouse the current CLAIM 011 reads dose-grading as shown on expression, P20 glycaemia and motor score and NOT on survival or body weight (the two treated arms are superimposed at P30, and the low-dose series stops at day 60, so equality on that side is conditioned on survivors); a systemic null is metabolically decompensated at P18, so a growth endpoint there measures the whole animal",
+    "temporal_or_model_limit": "one timepoint per patient in the only series; in the Wwox-null mouse CLAIM 011 (retitled 2026-11-28 after two readers; the earlier title read dose-grading as shown on expression and NOT on survival) reads dose-grading as shown on survival (Fig 3B), P20 glycaemia and motor score, mostly not significant on expression (Fig 5) and untested for body weight (the two treated arms are superimposed at P30, and the low-dose series stops at day 60, so equality on that side is conditioned on survivors); a systemic null is metabolically decompensated at P18, so a growth endpoint there measures the whole animal",
     "cellular_context": {
       "target_expression": "UNKNOWN",
       "cells_tissue_stage": "UNKNOWN",
