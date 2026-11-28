@@ -1,0 +1,33 @@
+{
+  "investigation": "INV-10",
+  "title": "Etifoxine in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "A comparison of endogenous neurosteroid production and direct GABA-A modulation.",
+  "graph": {
+    "evidence": "Human free plasma parent is estimated at 0.31 nM. The rat fast-current assay showed a signal from nominal 0.1 µM.",
+    "inference": "Juvenile neural exposure and steroid flux remain unknown.",
+    "hypothesis": "A delayed response could require new neurosteroid production.",
+    "experiment": "Pair local exposure, isotope flux and fast versus delayed inhibitory function."
+  },
+  "evidence": [
+    "Tspo declined in three untreated bulk WWOX models. Hippocampal pooled nuclei gave the opposite sign. In the small adult focal epilepsy trial the reproduced crude IRR is 0.863 and the published interval includes no effect."
+  ],
+  "inference": [
+    "The RNA results leave local synthesis unresolved. The parent exposure estimate constrains transfer of both published mechanisms."
+  ],
+  "hypothesis": [
+    "Restored steroid production could improve inhibition only where basal capacity and native chloride support that response."
+  ],
+  "experiment": [
+    "Compare labeled cholesterol and pregnenolone with a conversion block and downstream product rescue. Read native GABA reversal, early recruitment and late recurrence with measured free parent."
+  ],
+  "limits": [
+    "Retain as a secondary laboratory probe. Pediatric WWOX exposure and functional benefit remain unverified. Official product review documents rare serious skin and hepatic reactions."
+  ],
+  "sources": [
+    {"label": "Owen et al. Human PK and brain affinity, Table 1.", "url": "https://doi.org/10.1111/bcp.15392"},
+    {"label": "Do Rego et al. Supplied precursor conversion, Figs. 4–9.", "url": "https://doi.org/10.1371/journal.pone.0120473"},
+    {"label": "Schlichter et al. GABA-A current, Fig. 1.", "url": "https://doi.org/10.1016/S0028-3908(99)00253-1"},
+    {"label": "Sirimontakan et al. Adult focal epilepsy, Tables 5.1–6.", "url": "https://thaijoneuro.com/journal/99b9770bf12a447da20c0e74c06aada4"}
+  ]
+}

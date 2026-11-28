@@ -1,0 +1,19 @@
+key	value	unit	source_locator
+parent_molecular_mass	300.8	g/mol	PubChem CID 135413553, neutral parent
+peak_total_plasma_median	32	ng/mL	Owen et al. 2022 Table 1
+peak_total_plasma_low	24	ng/mL	Owen et al. 2022 Table 1
+peak_total_plasma_high	39	ng/mL	Owen et al. 2022 Table 1
+plasma_free_fraction	0.0029	fraction	Owen et al. 2022 section 3.3 equilibrium dialysis mean
+human_tspo_ki	7.8	µM	Owen et al. 2022 section 3.4 pooled adult brain competition (n=8 donors)
+human_tspo_ki_low	4.5	µM	Owen et al. 2022 section 3.4 lower 95% confidence limit
+human_tspo_ki_high	14.6	µM	Owen et al. 2022 section 3.4 upper 95% confidence limit
+fast_gaba_low_nominal	0.1	µM	Schlichter et al. 2000 section 3.3.1 and Fig. 1, approximate
+fast_gaba_peak_nominal	2	µM	Schlichter et al. 2000 section 3.3.1 and Fig. 1, approximate
+frog_homogenate_nominal	1	µM	do Rego et al. 2015 Figs. 7–9, nominal parent
+frog_explant_timecourse_nominal	3	µM	do Rego et al. 2015 Fig. 4, nominal parent
+human_plasma_allo_etifoxine_mean	0.183	ng/mL	Riebel et al. 2025 Table 1, day 5
+human_plasma_allo_placebo_mean	0.190	ng/mL	Riebel et al. 2025 Table 1, day 5
+seizures_etifoxine	290	events	Sirimontakan et al. 2023 Table 5.2
+seizures_placebo	348	events	Sirimontakan et al. 2023 Table 5.2
+followup_etifoxine	43.54	person-months	Sirimontakan et al. 2023 Table 5.2
+followup_placebo	45.11	person-months	Sirimontakan et al. 2023 Table 5.2
