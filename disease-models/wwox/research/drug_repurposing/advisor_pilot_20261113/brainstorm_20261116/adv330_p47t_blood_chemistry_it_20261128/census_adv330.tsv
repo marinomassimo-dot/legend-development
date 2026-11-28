@@ -1,0 +1,5 @@
+analyte | WT mean | hom mean | diff | rel % | 95% CI of diff (approx) | null-sized change at this WT mean
+Glucose mg/dL | 296 | 254.33 | -41.67 | -14.1 | [-112.0, +28.7] | -43% = -126.5
+Urea nitrogen (BUN) mg/dL | 19.11 | 20.86 | +1.75 | +9.2 | [-1.7, +5.2] | +111% = +21.2
+Calcium mg/dL | 11.57 | 11.26 | -0.31 | -2.7 | [-0.9, +0.3] | 
+White blood cells 10^3/uL | 5.71 | 4.08 | -1.63 | -28.5 | [-3.4, +0.2] | 

@@ -1435,6 +1435,16 @@
      "accepted_at": "2026-11-28T13:39:33Z",
      "updated_at": "2026-11-28T14:23:55Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv327_lithium_wt_developing_brain_sci_20261128/RESULT_ADV327_LITHIUM_WT_DEVELOPING_BRAIN_SCI.md; second reader two passes; receipts FTR-20261128-{18190791,21364661,22625652,23167932,24787352,27057548,32394966}-01; verdict not decidable at the pre-registered acute range"
+    },
+    {
+     "step": "ADV-332: held-source regimen audit of every in vivo drug-treated Wwox-deficient arm the repository cites, recorded dose against the primary methods sentence, with drug-treated WT arm present or not",
+     "status": "BLOCKED",
+     "owner": "orchestrator",
+     "source": "ADV-332 (ADV message 2026-11-28, SCI proposal accepted)",
+     "accepted_at": "2026-11-28T14:31:59Z",
+     "blocker": "extractor delegate stopped by a safety classifier; not retried or rerouted; waits for an operator decision on whether and how to run the audit",
+     "no_condition": "an operator decision has no file or commit that can be typed in advance",
+     "updated_at": "2026-11-28T14:33:11Z"
     }
    ]
   }
@@ -2543,6 +2553,13 @@
    "at": "2026-11-28T13:39:33Z",
    "source": "ADV - CURRENT direction round 2026-11-28T13:17Z, message to SCI bf",
    "step_sha256": "f6d4b71b385f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T14:31:59Z",
+   "source": "ADV-332 (ADV message 2026-11-28, SCI proposal accepted)",
+   "step_sha256": "0435ce05674d",
    "reopened_block": false,
    "authorised_by": null
   }
