@@ -1769,6 +1769,13 @@
      "accepted_at": "2026-11-28T14:01:40Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv329_blind_repudi_he_20261128/TABLE_ADV329_HE.md",
      "updated_at": "2026-11-28T14:04:29Z"
+    },
+    {
+     "step": "ADV-331: independent blind read of P47T knock-in PMID 36828035 and held Supplementary Tables 2 and 3 (serum chemistry, glucose/CO2/BUN/Ca stage, sample/fasting/n, body weight and survival); labelled table, hand to ADV and IT; do not open ADV-330 folder/PREREG or dossier item 9",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV-331 (cross-session message from ADV - CURRENT a5e6f2ad, 2026-11-28)",
+     "accepted_at": "2026-11-28T14:27:58Z"
     }
    ]
   }
@@ -3136,6 +3143,13 @@
    "at": "2026-11-28T14:01:40Z",
    "source": "ADV-329 assignment text adv329.txt, ADV - CURRENT a5e6f2ad 2026-11-28",
    "step_sha256": "a5160973edc0",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T14:27:58Z",
+   "source": "ADV-331 (cross-session message from ADV - CURRENT a5e6f2ad, 2026-11-28)",
+   "step_sha256": "412353346153",
    "reopened_block": false,
    "authorised_by": null
   }
