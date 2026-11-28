@@ -20,7 +20,7 @@ asserted by no receipt. `prior_receipt` means the reading this one builds on, an
 sharing a parent are the normal case under parallel branches.
 
 
-**2854 paper(s)** with at least one receipt · **3857 receipt(s)** · **41 paper(s) read in parallel** by two receipts sharing a parent.
+**2854 paper(s)** with at least one receipt · **3860 receipt(s)** · **41 paper(s) read in parallel** by two receipts sharing a parent.
 
 ## Papers read in parallel
 
@@ -514,7 +514,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 20825410 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | — | 1 |
 | PMID 20846324 | `partial_fulltext_read` | read | read | read | read | not_read | not_present | not_read | not_present | not_read | not_read | 1 |
 | PMID 20855618 | `partial_fulltext_read` | not_read | not_read | not_read | read | captions_only | not_read | not_read | not_read | not_read | — | 1 |
-| PMID 20858739 | `queried_not_full_read` | read | not_read | not_read | not_read | captions_only | not_read | not_read | not_read | not_read | not_read | 1 |
+| PMID 20858739 | `partial_fulltext_read` | read | read | read | read | read | read | read | read | read | not_read | 2 |
 | PMID 20881052 | `partial_fulltext_read` | read | not_read | read | read | captions_only | not_read | read | not_read | not_read | not_read | 1 |
 | PMID 20888844 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_present | not_read | — | 3 |
 | PMID 2093170 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
@@ -1457,7 +1457,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 31118567 | `queried_not_full_read` | read | not_read | not_read | read | read | read | not_read | not_read | not_read | not_read | 1 |
 | PMID 31123592 | `partial_fulltext_read` | read | not_read | not_read | read | not_read | not_read | read | not_read | not_read | not_read | 1 |
 | PMID 31123603 | `partial_fulltext_read` | read | read | read | read | read | not_present | read | not_present | not_read | — | 1 |
-| PMID 31140740 | `partial_fulltext_read` | not_read | not_read | read | read | read | not_present | not_read | not_read | read | not_read | 1 |
+| PMID 31140740 | `partial_fulltext_read` | read | read | read | read | read | not_present | read | read | read | read | 2 |
 | PMID 31143434 | `partial_fulltext_read` | read | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 31145772 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | not_present | — | 1 |
 | PMID 31164655 | `queried_not_full_read` | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
@@ -1872,7 +1872,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 35355991 | `partial_fulltext_read` | read | read | read | read | captions_only | not_present | read | not_read | not_present | not_read | 3 |
 | PMID 35364618 | `queried_not_full_read` | not_read | not_read | read | read | not_read | read | not_read | not_read | not_read | not_read | 1 |
 | PMID 35370549 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
-| PMID 35372341 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | unavailable | not_read | 4 |
+| PMID 35372341 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | read | not_read | 5 |
 | PMID 35378685 | `partial_fulltext_read` | not_read | not_read | read | read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 35383287 | `queried_not_full_read` | not_read | not_read | read | read | read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 35398096 | `queried_not_full_read` | not_read | not_read | read | read | captions_only | not_read | not_read | not_read | not_read | not_read | 1 |
