@@ -693,6 +693,13 @@
      "accepted_at": "2026-11-28T15:52:00Z",
      "evidence": "FTR-20261128-31829254-02; BATCH_20261128_009; RESULT_ADV333B_COMPLETE_READ_IT38_20261128.md",
      "updated_at": "2026-11-28T15:52:00Z"
+    },
+    {
+     "step": "ADV-335: antibody and specificity control behind each repository statement placing WWOX protein in a neural cell type or region",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message ADV-335, 2026-11-28",
+     "accepted_at": "2026-11-28T16:00:25Z"
     }
    ]
   }
@@ -1234,6 +1241,13 @@
    "at": "2026-11-28T15:52:00Z",
    "source": "ADV launch brief to IT38, 2026-11-28; checkpoint 37 section 2 item 3",
    "step_sha256": "e25225324703",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T16:00:25Z",
+   "source": "ADV message ADV-335, 2026-11-28",
+   "step_sha256": "f3c428f98b6b",
    "reopened_block": false,
    "authorised_by": null
   }
