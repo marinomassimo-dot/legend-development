@@ -1338,10 +1338,12 @@
     },
     {
      "step": "ADV-313 (myelin-calibration-table-to-four-counted-sources): bring the ADV-312 calibration table to at least 4 counted pairs or close STILL TOO FEW with dated queries and routes",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-313; ADV delivery message 2026-11-28; text /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv313.txt",
-     "accepted_at": "2026-11-28T09:32:47Z"
+     "accepted_at": "2026-11-28T09:32:47Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv313_myelin_calibration_sci_20261128/RESULT_ADV313_SCI_20261128.md; published 336110982 on development/main (gate PASS); receipts FTR-20261128-34576288-01, -31140740-01, -30373833-01, -27008179-01, -23603111-01, -35441271-01, -29755326-01, -32676012-01, -30225359-01, -39576623-01",
+     "updated_at": "2026-11-28T09:59:14Z"
     }
    ]
   }
