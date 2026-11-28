@@ -6,7 +6,7 @@ document prints a date after the freeze; otherwise the entry is UNRESOLVED. One 
 ## Arms
 | Arm | Input | Rule |
 |---|---|---|
-| ENGINE | `QUESTIONS_C1.md`, `INPUT_PACKET_C1.md`, the repository | free to reason; one reason per answer |
+| ENGINE | `QUESTIONS_C1.md`, `INPUT_PACKET_C1.txt`, the repository | free to reason; one reason per answer |
 | B0 textbook pairing | `QUESTIONS_C1.md` only | general knowledge; no repository read, no search, no tool call |
 | B1 abstain | none | ABSTAIN on all |
 | B2 first option | none | option (a) on all |

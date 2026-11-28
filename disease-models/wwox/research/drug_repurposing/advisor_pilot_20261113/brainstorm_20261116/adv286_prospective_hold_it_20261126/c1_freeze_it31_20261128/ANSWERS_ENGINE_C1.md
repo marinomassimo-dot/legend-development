@@ -1,6 +1,6 @@
 # ADV-286 C1: ENGINE answers (delegate sonnet, effort high stated; as delivered, 2026-11-28)
 
-Hypothesis level; nothing here is medical advice. Inputs: QUESTIONS_C1.md and INPUT_PACKET_C1.md plus the repository.
+Hypothesis level; nothing here is medical advice. Inputs: QUESTIONS_C1.md and INPUT_PACKET_C1.txt (named .md when the ENGINE read it; bytes unchanged) plus the repository.
 The delegate wrote no file; this is its reply, reasons shortened only by the removal of row-name decoration.
 
 | Q | Pick | One reason |

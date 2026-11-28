@@ -121,7 +121,7 @@ answers are not written.
 
 ADV decided that the retrospective hold is not built (the weaker design; ADV-175 is the standing masked retrospective
 instrument) and that RP-005 stays parked, with this note as its record. The C1 freeze is built: folder
-`c1_freeze_it31_20261128/` holds `QUESTIONS_C1.md` (six questions, failing conditions), `INPUT_PACKET_C1.md` (held
+`c1_freeze_it31_20261128/` holds `QUESTIONS_C1.md` (six questions, failing conditions), `INPUT_PACKET_C1.txt` (held
 extracts, with `build_packet_c1.py`), `SCORING_C1.md`, `ANSWERS_ENGINE_C1.md` and `ANSWERS_B0_B1_B2_C1.md`, and
 `FREEZE_C1.sha256` (one sha256 per file, with the freeze time). The questions had one blind reader first (sonnet,
 effort high stated); it overturned five of six questions (options not exhaustive, a mediation question that admitted
