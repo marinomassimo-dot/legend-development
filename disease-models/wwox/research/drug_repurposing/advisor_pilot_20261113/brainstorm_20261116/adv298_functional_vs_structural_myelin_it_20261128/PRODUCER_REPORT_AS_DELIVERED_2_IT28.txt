@@ -1,0 +1,139 @@
+ADV-298 PRODUCER, batch 2 (patient case series, MRI and clinical reports). Hypothesis level, reference genotype class, not medical advice. No files written, no network, no images rendered. I did not open the Obeid 2026 article or any adv174/adv175 folder (not opened).
+
+## 0. Scope and reading limits
+- All 12 files were read as text in full. They are FULL TEXT, and none is ABSTRACT-ONLY.
+- XML reference lists were stripped before reading (AbdelSalam, Piard, Iacomino, Ehaideb, Feng, Teplyshova, Sapuppo). Bibliographies carry no readouts, but I could not check the citation numbers inside Sapuppo's Table 1.
+- No figure was viewed. For MRI figures I used only the legends and text. The MRI images in AlBaradie Fig 1 (illustration only), Shaukat Fig 3, Piard Fig 3, Johannsen Fig 1 and Iacomino Fig 1 were not looked at.
+- Piard Supplementary Tables 1-4 are not in the file. Their per-patient MRI ages and findings are therefore not available to me.
+- No duplicate papers are in my list, so there is one set of rows per file.
+- Probable patient overlap, which I infer and no source states:
+  - Ehaideb P2 and P3 (Arg54* sibling pair, male 3 mo and female 18 mo) look like the same family as AlBaradie 2.1 and 2.2. AlBaradie says 2.2 was "first seen... at the age of 18 months, with her younger brother", and the MRI wording is nearly identical. Do not count them twice.
+  - Tarta-Arsene (Romania) is a Piard co-author. Piard's cohort includes Romanian patients, so a shared patient is possible but not verifiable here.
+- Column definitions:
+  - TYPE is PRIMARY (the source's own patient) or 2ND (a finding re-reported from another paper inside the source).
+  - CLASS is the frozen rule class.
+  - SUB is the dispatcher's split: MYELIN-STATED or ANATOMY-ONLY for STRUCTURAL MRI rows, and CONDUCTION or OTHER-EVOKED for FUNCTIONAL rows.
+  - A "(b)" marks a borderline call, with the reason in the row.
+  - Model is human for every row. All patients are WWOX/WOREE or SCAR12 class biallelic, and no row is a control.
+- Source keys (file names are under /home/desktop/legend-development/files/fulltext/):
+  - AS = Abdel-Salam 2014, PMID 24456803, PMID24456803_AbdelSalam2014_PMC.xml
+  - TB = Tabarki 2015 (review), PMID 25416187, PMID25416187_Tabarki2015_PMC4935222_wayback20250307.html
+  - PI = Piard 2019, PMID 30356099, PMID30356099_Piard2019_EPMC.xml
+  - JO = Johannsen 2018, PMID 29808465, PMID29808465_Johannsen2018.txt
+  - SH = Shaukat 2018, PMID 30361190, PMID30361190_Shaukat2018_JLE.txt
+  - TA = Tarta-Arsene 2017, PMID 28721938, PMID28721938_TartaArsene2017_JLE.txt
+  - AB = Al-Baradie 2022, PMID 35792847, PMID35792847_AlBaradie2022_JLE_fulltext.html
+  - IA = Iacomino 2020, PMID 32581702, PMID32581702_Iacomino2020_PMC_r2.xml
+  - EH = Ehaideb 2018, PMID 30746283, PMID30746283_Ehaideb2018_PMC.xml
+  - FE = Feng 2024, PMID 39416860, PMID39416860_Feng2024_PMC_r2.xml
+  - TE = Teplyshova 2024, PMID 39507621, PMID39507621_Teplyshova2024_PMC_r2.xml
+  - SA = Sapuppo 2026, PMID 42193054, PMID42193054_Sapuppo2026_PMC.xml
+
+## 1. Table
+Access is FULL TEXT in every row. No number was read from a graph. "n" is always patients unless stated.
+
+| ID | Src | TYPE | Age | Genotype / group | Readout (as stated) | CLASS | SUB | n | Direction / size as stated | Locator |
+|---|---|---|---|---|---|---|---|---|---|---|
+| AS1 | AS | PRIMARY | not stated (died at 16 mo) | II:4, girl, homozygous c.160G>T p.Arg54* | Cranial MRI: supratentorial atrophy, simplified gyral pattern, hypoplasia of hippocampus and temporal lobe, thin hypoplastic corpus callosum | STRUCTURAL | ANATOMY-ONLY | 1 patient | No myelin or white-matter-signal statement | Results para 1; Fig 2A-C; Table 1 |
+| AS2 | AS | PRIMARY | not stated | same | Visual evoked potential (VEP) | FUNCTIONAL | CONDUCTION | 1 patient | "reduced wave amplitudes and great implicit time delays". Authors: "major impairment of retinocortical transmission", with optic atrophy and "bilateral severe macular and optic nerve dysfunction" | Results para 1 |
+| AS3 | AS | PRIMARY | not stated | same | Scotopic and photopic flash ERG; photopic flicker ERG | FUNCTIONAL | OTHER-EVOKED (retinal evoked response) | 1 patient | Flash ERG "moderately reduced"; photopic flicker "markedly reduced" | Results para 1 |
+| AS4 | AS | PRIMARY | not stated | same | "Audiological evaluation... normal" (method not named) | FUNCTIONAL (b) | OTHER-EVOKED | 1 patient | Normal | Results para 1 |
+| TB1 | TB | PRIMARY (review, "unpublished data") | MRI age not stated; onset in first month | Three Saudi siblings, homozygous WWOX Chr16_78458766G>A | "MRI brain showed hypomyelination and global brain atrophy" | STRUCTURAL | MYELIN-STATED | "three siblings" described; the text does not say how many were imaged | Hypomyelination plus global atrophy; no quantification | Section "Mutation in WWOX gene cause microcephaly...", para 2 |
+| TB2 | TB | 2ND (Mallaret 2014) | not stated | Homozygous P47T (SCAR12 family) | "MRI brain of one patient revealed posterior white matter hyperintensities" | STRUCTURAL | MYELIN-STATED (white-matter signal) | 1 patient | Present | Section "Germline loss-of-function...", para 1 |
+| PI1 | PI | PRIMARY | median age at last follow-up 52 mo (3 mo to 17 y); MRI ages not given in main text | 20 WOREE patients from 18 families, biallelic WWOX CNV/SNV | MRI "White matter hypersignal" | STRUCTURAL | MYELIN-STATED | 2 of 20 patients | "occasionally reported". Fig 3 r-t legend: "Symmetric white matter hypersignal on axial T2". Three panels, but the text count is 2/20 | Results "Neurodevelopmental data" para 3; Fig 3 r-t |
+| PI2 | PI | PRIMARY | as above | same | MRI "delayed myelination" | STRUCTURAL | MYELIN-STATED | 1 of 20 patients | Present | Results "Neurodevelopmental data" para 3 |
+| PI3 | PI | PRIMARY | as above | P19 | Fig 3w: sagittal T1 "circular lesions (hyposignal) of the medial part of the corpus callosum" | STRUCTURAL | MYELIN-STATED (b). It is a signal finding in a white-matter structure, and the authors give no myelin interpretation | 1 patient (P19) | Present; not counted in the text | Fig 3w legend |
+| PI4 | PI | PRIMARY | as above | 20 patients | MRI corpus callosum hypoplasia (overall MRI abnormal 16/20, 80%) | STRUCTURAL | ANATOMY-ONLY | 15 of 20 patients (75%) | Present | Results para 1; Discussion; Fig 3a-j |
+| PI5 | PI | PRIMARY | as above | 20 patients | MRI progressive cerebral atrophy (also enlarged subarachnoid spaces, plagiocephaly, asymmetric lateral ventricle) | STRUCTURAL | ANATOMY-ONLY | 11 of 20 patients (55%) | Present | Results; Fig 3k-q, u-v |
+| PI6 | PI | 2ND (SCAR12) | not stated | SCAR12 patients | MRI mild cerebellar hypoplasia | STRUCTURAL | ANATOMY-ONLY | 2 of 2 patients | "100%"; "a feature not observed in our cohort" | Discussion, SCAR12 phenotype |
+| PI7 | PI | PRIMARY | as above | 11 patients tested | "electrodiagnostic tests" (type not named; "suggestive of optic atrophy and/or retinal dystrophy") | FUNCTIONAL (b). The test type is unnamed, so it is not clearly an evoked potential | OTHER-EVOKED | 11 patients tested | Abnormal in 5/11 (45%) | Results "Ophthalmological features"; Discussion |
+| JO1 | JO | PRIMARY | MRI at 3, 5 and 21 mo; 12 y at report | Patient 1, homozygous c.689A>C p.Gln230Pro (Introduction also writes "glycine 230") | Brain MRI "myelination delay" with global atrophy and CC hypoplasia (normal MR spectroscopy) | STRUCTURAL | MYELIN-STATED | 1 patient (3 time points) | Present. Fig 1a (21 mo, T2 sagittal): "showing myelination delay" | Results "Patient data"; Fig 1a |
+| JO2 | JO | PRIMARY | as JO1 | same | Global atrophy, thinning of the corpus callosum | STRUCTURAL | ANATOMY-ONLY | 1 patient | Present | Fig 1b; Results |
+| JO3 | JO | PRIMARY | MRI at 3 and 6 mo; 10 y at report | Patient 2, same variant, no WWOX protein in fibroblasts | Global atrophy and CC hypoplasia. No myelination statement | STRUCTURAL | ANATOMY-ONLY | 1 patient | Present | Results; Fig 1c |
+| SH1 | SH | PRIMARY | MRI at 2 mo; 2 y at report | Case 1, boy, homozygous deletion of exons 3-4 | Thin/hypoplastic CC (esp. anterior), wide Sylvian fissure, connatal cysts left frontal | STRUCTURAL | ANATOMY-ONLY | 1 patient | Present | Results; Fig 3A |
+| SH2 | SH | PRIMARY | MRI at 2 mo; 12 mo at report | Case 2, boy, homozygous c.606-1G>A | Bilateral parietal/posterior polymicrogyria, dysplastic thin CC, wide CSF spaces, "reduced white matter volume, particularly in the temporal lobe" | STRUCTURAL | ANATOMY-ONLY (b). White-matter volume, not myelination or signal | 1 patient | Present | Results; Fig 3B |
+| SH3 | SH | 2ND (Gribaa/Mallaret cases 3 and 4) | 12 y and 4 y at MRI | Homozygous P47T | Table 1 "Posterior white matter hyperintensities" (MRI) | STRUCTURAL | MYELIN-STATED | 2 patients | Present | Table 1, MRI rows |
+| SH4 | SH | 2ND (Mignot case 2) | 6 mo | Compound heterozygous deletion/nonsense | Table 1 "Mild myelination delay", thin CC | STRUCTURAL | MYELIN-STATED | 1 patient | Present | Table 1 |
+| SH5 | SH | 2ND (Elsaadany 2016 cases 1, 2) | 7 y; 20 mo | Homozygous W44* | Table 1 "Hypomyelination", progressive frontotemporal atrophy, thin CC | STRUCTURAL | MYELIN-STATED | 2 patients | Present | Table 1, continued |
+| SH6 | SH | 2ND (Mignot case 1) | 4 y | Mignot case 1 | Table 1 "Reduced WM volume", thin CC | STRUCTURAL | ANATOMY-ONLY (b) | 1 patient | Present | Table 1 |
+| SH7 | SH | 2ND (Tabarki 2015a cases 1, 2) | 0 and 11 mo; age not stated | Homozygous c.606-1G>A | Table 1: "Progressive atrophy of periventricular WM, CC and upper brainstem"; "Periventricular WM loss posteriorly" | STRUCTURAL | ANATOMY-ONLY (b) | 2 patients | Present | Table 1, continued |
+| SH8 | SH | 2ND (Abdel-Salam 1, Mignot 2 and 5, Tabarki 1-5) | not stated | Biallelic WWOX | Table 1 "Abnormal ERG" | FUNCTIONAL | OTHER-EVOKED | 8 patients by my column mapping (1, 2 and 5 per paper) | Abnormal | Table 1, "Ophthalmic involvement" |
+| TA1 | TA | PRIMARY | 5 wk | Boy, compound heterozygous c.173-1G>T and c.918del | MRI: "normal myelination for age", completely formed but thin CC | STRUCTURAL | MYELIN-STATED (normal) | 1 patient | Normal myelination | Fig 1C-E legend (the text says only "thin corpus callosum") |
+| TA2 | TA | PRIMARY | 2.6 y | same | MRI: "significant supratentorial atrophy, delayed myelination, an extremely thin corpus callosum, and flattening of the brainstem" | STRUCTURAL | MYELIN-STATED | 1 patient | Delayed myelination. Only the Fig 2 legend says this. The text says "cortico-subcortical atrophy... affecting mainly the grey matter" | Fig 2C-E legend; Results |
+| AB1 | AB | PRIMARY | 10 y at report (MRI age not stated) | P1.1, homozygous P47T | Brain MRI: "mild generalized brain atrophy and no grey-white matter abnormality" | STRUCTURAL | MYELIN-STATED (normal) | 1 patient | No abnormality | Patient 1.1 text; Table 1 |
+| AB2 | AB | PRIMARY | 15 y 5 mo | P1.2, homozygous P47T | T2/FLAIR hyperintensity, left subcortical parahippocampal gyrus | STRUCTURAL | MYELIN-STATED (b). Focal subcortical signal; the authors do not say white matter | 1 patient | Present | Patient 1.2; Table 1 |
+| AB3 | AB | PRIMARY | 3 y 9 mo | P2.1, homozygous Arg54* | Moderate thinning of CC (MRS normal) | STRUCTURAL | ANATOMY-ONLY | 1 patient | Present | Patient 2.1; Table 1 |
+| AB4 | AB | PRIMARY | 5 y | P2.2, homozygous Arg54* | Generalized asymmetrical volume loss, asymmetrical ventricular dilatation, thinning of CC | STRUCTURAL | ANATOMY-ONLY | 1 patient | Present | Patient 2.2; Table 1 |
+| AB5 | AB | PRIMARY | 4 y 5 mo (deceased) | P3.1, homozygous c.606-1G>A | Thinning of CC, "periventricular leukomalacia" | STRUCTURAL | MYELIN-STATED (b). It is a named white-matter injury, with no signal or myelin wording | 1 patient | Present | Patient 3.1; Table 1 |
+| AB6 | AB | PRIMARY | 2 y 5 mo | P4, homozygous P47T, with leukaemia | Generalized volume loss; "high T2/FLAIR/DWI signal intensity in the bilateral central tegmental tract" (MRS normal; dural thickening noted) | STRUCTURAL | MYELIN-STATED (b). Tract signal with no myelin interpretation, and leukaemia is a confound | 1 patient | Present | Patient 4; Results para 2 |
+| AB7 | AB | PRIMARY | 4 y 6 mo | P5, homozygous Arg54* | Brain CT: absent corpus callosum. MRI "not performed" | STRUCTURAL (imaging; CT, not MRI) | ANATOMY-ONLY | 1 patient | Present | Patient 5 |
+| AB8 | AB | PRIMARY | 5 y 2 mo | P6, homozygous Gln230Pro | Supratentorial tissue volume loss, subcortical band heterotopia (MRS unremarkable) | STRUCTURAL | ANATOMY-ONLY | 1 patient | Present | Patient 6; Table 1 |
+| AB9 | AB | PRIMARY | 10 y | P1.1 | "hearing... assessment were normal" (method not named) | FUNCTIONAL (b) | OTHER-EVOKED | 1 patient | Normal | Patient 1.1 |
+| IA1 | IA | PRIMARY | MRI at 9 mo and 2.4 y; 4 y at report | II.1, male, homozygous c.790C>T p.Arg264Ter | "T2 signal alterations of the parietal periventricular and frontal white matter" | STRUCTURAL | MYELIN-STATED | 1 patient | Present. Fig 1E'' (axial T2, 2.4 y): "bilateral white matter hyperintensity". Discussion: "white matter signal alterations" | Results "Antenatal and Postnatal Features"; Fig 1E'' |
+| IA2 | IA | PRIMARY | as IA1 | same | Reduced brain volume, hypoplasia of cerebellar vermis and CC, mild frontal atrophy | STRUCTURAL | ANATOMY-ONLY | 1 patient | Present | Same; Fig 1E' |
+| IA3 | IA | PRIMARY | 21 gestational weeks | II.3, fetus, homozygous p.Arg264Ter | Fetal MRI and post-mortem MRI: mild cerebellar vermis hypoplasia. "The laminar organization of the cerebral hemispheres and cortical gyration are appropriate for the gestational age (not shown)" | STRUCTURAL | ANATOMY-ONLY | 1 fetus | Mild vermis hypoplasia | Fig 1F legend; Results |
+| EH1 | EH | PRIMARY | 1 y 9 mo at exam (MRI age not stated) | P1, male, homozygous c.409+1G>T | "Brain atrophy and increased white matter signal in cerebellar area" | STRUCTURAL | MYELIN-STATED | 1 patient | Present | Clinical Report Patient 1 |
+| EH2 | EH | PRIMARY | 3 mo | P2, male, homozygous Arg54* | Brain atrophy, moderate CC thinning, "unremarkable spectroscopy" | STRUCTURAL | ANATOMY-ONLY | 1 patient | Present | Patient 2 |
+| EH3 | EH | PRIMARY | 18 mo | P3, female, homozygous Arg54* | Generalized asymmetrical volume loss, asymmetrical ventricular dilatation, thinning of CC and periventricular white matter (left more). Fig 1 legend: "paucity white matter" | STRUCTURAL | ANATOMY-ONLY (b). White-matter volume | 1 patient | Present | Patient 3; Fig 1 legend |
+| EH4 | EH | 2ND (Table 1) | n/a | Patients from other papers | Table 1 "Brain MRI" row. "Myelination delay" is listed in the Johannsen and Tarta-Arsene columns. "Posterior white matter hyperintensities" is listed in the Mallaret and Abdel-Salam columns | STRUCTURAL | MYELIN-STATED | not stated per column (the table lists patient counts per paper) | Present as printed. The Abdel-Salam source file (AS) holds no white-matter-signal statement, so that cell looks misattributed. Treat the row as a secondhand pointer | Table 1; Discussion para 1 ("hypomyelination" in a generic feature list) |
+| FE1 | FE | PRIMARY | 5 mo (died at 6 mo) | Boy, homozygous c.991C>A p.Ser304Tyr (Table 1 prints c.911C>A; the text says "glycine to serine"); plus a CACNA1A heterozygous VUS | Axial T1: "deepened bilateral frontal sulci and cerebral fissures along with small gyri"; sagittal T1 "slender corpus callosum". The text says only "delayed neurological development". No myelin statement for this patient | STRUCTURAL | ANATOMY-ONLY | 1 patient | Present | Fig 1A-D legend; Clinical manifestation |
+| FE2 | FE | PRIMARY | 5 mo | same | "Audiological testing indicated bilateral hearing loss and an absence of response to sound stimulation" (method not named) | FUNCTIONAL (b) | OTHER-EVOKED | 1 patient | Hearing loss | Clinical manifestation |
+| SA1 | SA | PRIMARY | 10 days | Female, compound deletion exons 6-7 plus c.1043del p.Phe348Serfs*57. Phase unproven because parents were untested | Brain MRI at 10 days "unremarkable". Fig 1 legend: "incomplete myelination, normal for age (10 days)" | STRUCTURAL | MYELIN-STATED (normal) | 1 patient | Normal for age | Case Presentation; Fig 1A-B legend |
+| SA2 | SA | 2ND (Table 1, ref [7] sub-Saharan male) | not stated | Compound deletion 6-8 | Table 1 MRI: cerebral atrophy, subarachnoid enlargement, CC hypoplasia, "white matter hypersignal" | STRUCTURAL | MYELIN-STATED | 1 patient | Present | Table 1 |
+| SA3 | SA | 2ND (Table 1, ref [11], Chinese female) | not stated | Compound c.517_605del and c.517_1056del | "white matter hyperintensity and delayed myelination in the brain" | STRUCTURAL | MYELIN-STATED | 1 patient | Present. The Conclusions repeat it for "the previously reported case [15]". Reference numbers unverified | Table 1; Conclusions |
+
+NO ROW lines:
+- TE: NO ROW: own patient has no MRI, and the CT showed no lesion (see section 3).
+
+## 2. Counts per source
+These cover PRIMARY rows only. 2nd rows are in the last column. OTHER rows are listed, not counted.
+
+| Src | STRUCTURAL | of which MYELIN-STATED | ANATOMY-ONLY | FUNCTIONAL strict | FUNCTIONAL (b) | 2nd rows | OTHER (listed) |
+|---|---|---|---|---|---|---|---|
+| AS | 1 | 0 | 1 | 2 (AS2 CONDUCTION, AS3 OTHER-EVOKED) | 1 (AS4) | 0 | EEG generalized epileptic abnormalities; seizures; growth; microcephaly |
+| TB | 1 | 1 | 0 | 0 | 0 | 1 STRUCT (TB2, MYELIN-STATED) | rat audiogenic seizures (cited) |
+| PI | 5 | 3 (PI1, PI2 and PI3 (b)) | 2 | 0 | 1 (PI7) | 1 STRUCT (PI6) | seizures; EEG; premature death |
+| JO | 3 | 1 | 2 | 0 | 0 | 0 | EEG hypsarrhythmia; WWOX qPCR and Western blot (not myelin) |
+| SH | 2 | 0 | 2 | 0 | 0 | 5 STRUCT (3 MYELIN-STATED, 2 ANATOMY-ONLY) + 1 FUNC (SH8) | EEG; seizures |
+| TA | 2 | 2 | 0 | 0 | 0 | 0 | EEG; seizures |
+| AB | 8 | 4 (AB1 strict; AB2, AB5, AB6 (b)) | 4 | 0 | 1 (AB9) | 0 | EEG; seizure types |
+| IA | 3 | 1 | 2 | 0 | 0 | 0 | fetal H&E, GFAP, CD31, PAS; rat Nissl, Satb2, Tbr1, BrdU; hNPC transcriptome. None is a myelin readout. EEG burst suppression |
+| EH | 3 | 1 | 2 | 0 | 0 | 1 STRUCT (EH4) | EEG; seizures |
+| FE | 1 | 0 | 1 | 0 | 1 (FE2) | 0 | EEG |
+| TE | 0 | 0 | 0 | 0 | 0 | 0 | video-EEG at 36 y; seizures |
+| SA | 1 | 1 | 0 | 0 | 0 | 2 STRUCT (SA2, SA3, both MYELIN-STATED) | EEG; seizures; death |
+
+Totals over the 12 sources:
+- PRIMARY STRUCTURAL = 30. That is 14 MYELIN-STATED and 16 ANATOMY-ONLY.
+  - Of the 14, 10 are stated without reservation (TB1, PI1, PI2, JO1, TA1, TA2, AB1, IA1, EH1, SA1).
+    - 7 report an abnormal myelination or white-matter-signal finding: TB1, PI1, PI2, JO1, TA2, IA1, EH1.
+    - 3 are normal-for-age or no-abnormality statements: TA1, AB1, SA1.
+  - 4 are borderline (PI3, AB2, AB5, AB6).
+  - The 16 ANATOMY-ONLY include 4 flagged "(b)" because they are white-matter volume findings (SH2, EH3, AB5 is counted under MYELIN above) or CT-only (AB7). The (b) ANATOMY-ONLY rows are SH2 and EH3, plus SH6 and SH7 among the 2nd rows.
+- 2nd (secondhand) STRUCTURAL = 10 rows:
+  - TB2, PI6, SH3 to SH7, EH4, SA2, SA3.
+  - 6 of these are MYELIN-STATED: TB2, SH3, SH4, SH5, SA2, SA3, with EH4 counted as the seventh pointer row.
+  - TB also repeats Abdel-Salam's MRI (same patient as AS1). I made no extra row for it.
+- PRIMARY FUNCTIONAL strict = 2, both in AS. FUNCTIONAL (b) = 4: AS4, PI7, AB9, FE2. 2nd FUNCTIONAL = 1 (SH8).
+- NO ROW sources = 1 (TE).
+
+## 3. Sources with at least one FUNCTIONAL row in a WWOX-deficient preparation
+- AS (Abdel-Salam 2014), one girl with homozygous Arg54*:
+  - VEP (CONDUCTION): "reduced wave amplitudes and great implicit time delays". The authors read this as impaired retinocortical transmission and attribute it to macular and optic nerve dysfunction.
+  - Flash ERG (OTHER-EVOKED): moderately reduced.
+  - Flicker ERG (OTHER-EVOKED): markedly reduced.
+  - The patient also had optic atrophy and retinal dystrophy, so the VEP latency delay cannot be assigned to myelin.
+- Borderline only, test type unnamed and not clearly an evoked potential, none counted as strict:
+  - PI, 5 of 11 patients had abnormal "electrodiagnostic tests".
+  - AB, hearing assessment normal in P1.1.
+  - FE, hearing loss on "audiological testing".
+  - AS, audiological evaluation normal.
+- Secondhand only: SH Table 1 lists abnormal ERG for 8 patients described in other papers.
+- Across the main text and tables of the 12 files I found no nerve conduction study, ABR, SSEP, compound action potential or conduction velocity in any WWOX patient. The Piard supplements were not available to me.
+
+## 4. Notes for the integrator
+- TE Teplyshova 2024 has no myelin readout. The own patient (40 y, homozygous p.Thr12Met) had no MRI, and CT at 35 y "did not show any significant pathological lesions". The Discussion cites, without measurement, "disrupted myelination" in imaging of WWOX-DEE patients (Battaglia 2023, Oliver 2023). It also says AAV-SynI-WWOX in Wwox-null mice rescued "myelination deficits" (Repudi 2021). These are leads to other papers, not rows.
+- IA Iacomino 2020 cites Tochigi 2019 as describing "severe hypomyelination (with a reduced number of mature oligodendrocytes)" in lde/lde rats. IA's own rat work is P1 cortical-layer migration only. That too is a lead only.
+- Text and legend disagreements: TA says "mainly affecting the grey matter" while the Fig 2 legend says "delayed myelination" (TA2). PI Fig 3 shows three white-matter-hypersignal panels but the text gives 2/20 (PI1). EH Table 1 puts "Posterior white matter hyperintensities" under Abdel-Salam, where AS has no such statement (EH4).
+- n is unstated in two rows: TB1 (how many of the three siblings were imaged) and EH4 (per column).
+- In AS, the rat lde/lde and mouse knockout columns of Table 1 list extracellular vacuoles and no myelin readout. Teplyshova and Sapuppo mention WWOX knockout mouse or lde rat only as background.
