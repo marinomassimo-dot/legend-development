@@ -1587,6 +1587,15 @@
      "accepted_at": "2026-11-28T06:53:54Z",
      "updated_at": "2026-11-28T07:01:47Z",
      "evidence": "disk: disease-models/wwox/research/drug_repurposing/callosal_recordings_adv306_he_20261128/RESULT_ADV306_HE_20261128.md: two LATENCY-ONLY callosal deposits (dryad.gk117 Rictor; figshare.4040070 shiverer), no Wwox deposit; delivered ADV and IT"
+    },
+    {
+     "step": "ADV-307: Rictor callosal deposit, fitted slope against early recruitment (PREREG first; descriptive; deliver ADV and IT)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-307 message from ADV a5e6f2ad 2026-11-28",
+     "accepted_at": "2026-11-28T07:06:40Z",
+     "evidence": "disk: disease-models/wwox/research/drug_repurposing/rictor_slope_adv307_he_20261128/RESULT_ADV307_HE_20261128.md: INDETERMINATE, pooled rho -0.37; delivered ADV, IT",
+     "updated_at": "2026-11-28T07:06:40Z"
     }
    ]
   }
@@ -2814,6 +2823,13 @@
    "at": "2026-11-28T06:53:54Z",
    "source": "ADV-306 message from ADV a5e6f2ad 2026-11-28",
    "step_sha256": "6165344c9d54",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T07:06:40Z",
+   "source": "ADV-307 message from ADV a5e6f2ad 2026-11-28",
+   "step_sha256": "33b142be11f5",
    "reopened_block": false,
    "authorised_by": null
   }
