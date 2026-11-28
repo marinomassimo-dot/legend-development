@@ -1,0 +1,43 @@
+FREQUENCIES (knockouts / genotyped pups)
+  Cheng WD1 (P5-P12): 9/177 = 0.051  Wilson 95% [0.027, 0.094]
+  Cheng WD234 (P5-P12): 51/785 = 0.065  Wilson 95% [0.050, 0.084]
+  Ludes-Meyers EIIA-Cre null (P3): 30/154 = 0.195  Wilson 95% [0.140, 0.264]
+  Cheng 0.051*177 = 9.03 ; 0.065*785 = 51.02
+FISHER two-sided, Ludes-Meyers 30/154 vs Cheng:
+  vs Cheng WD1 (P5-P12) p=5.79e-05
+  vs Cheng WD234 (P5-P12) p=2.12e-06
+  Cheng WD1 vs WD234 p=0.61
+
+KNOCKOUTS PER LITTER = L x f
+  L=5: Cheng WD1 f=0.051: 0.255; Cheng WD234 f=0.065: 0.325; Ludes-Meyers P3 f=30/154: 0.974; Mendelian 0.25: 1.250
+  L=7: Cheng WD1 f=0.051: 0.357; Cheng WD234 f=0.065: 0.455; Ludes-Meyers P3 f=30/154: 1.364; Mendelian 0.25: 1.750
+  L=7.75: Cheng WD1 f=0.051: 0.395; Cheng WD234 f=0.065: 0.504; Ludes-Meyers P3 f=30/154: 1.510; Mendelian 0.25: 1.938
+  L=9: Cheng WD1 f=0.051: 0.459; Cheng WD234 f=0.065: 0.585; Ludes-Meyers P3 f=30/154: 1.753; Mendelian 0.25: 2.250
+
+LITTERS NEEDED = n_KO / (L x f), L = 7 (brief)
+scenario                                                    n_KO       WD1     WD234    LudesM    Mendel
+stage 1 pilot, 6 per KO cell                                   6        17        14         5         4
+stage 1 pilot, 8 per KO cell                                   8        23        18         6         5
+11 per arm x 1 KO arm                                         11        31        25         9         7
+2 KO arms x 11 (stage 2)                                      22        62        49        17        13
+3 KO arms x 11 (brief minimum)                                33        93        73        25        19
+2 KO arms x 31                                                62       174       137        46        36
+3 KO arms x 31                                                93       261       205        69        54
+plan upper bound (brief)                                     150       421       330       110        86
+interaction, 22 per cell, 2 KO cells (ADV-061, SD 0.3)        44       124        97        33        26
+interaction low (ADV-061)                                    350       981       770       257       200
+interaction high (ADV-061)                                   630      1765      1385       462       360
+36 per arm x 2 (ADV-061 simple, low)                          72       202       159        53        42
+109 per arm x 2 (ADV-061 simple, high)                       218       611       480       160       125
+
+KNOCKOUTS OBTAINED IN 20 LITTERS (L=7): Cheng WD1 f=0.051: 7.1; Cheng WD234 f=0.065: 9.1; Ludes-Meyers P3 f=30/154: 27.3; Mendelian 0.25: 35.0
+
+CRITICAL f = K / (cap x L), L=7
+  K=22: cap 20: f*=0.157; cap 25: f*=0.126; cap 50: f*=0.063; cap 86: f*=0.037
+  K=33: cap 20: f*=0.236; cap 25: f*=0.189; cap 50: f*=0.094; cap 86: f*=0.055
+  K=150: cap 20: f*=1.071; cap 25: f*=0.857; cap 50: f*=0.429; cap 86: f*=0.249
+
+SENSITIVITY with L=5 and 9 for K=33: L=5: WD1 130, WD234 102, LudesM 34; L=9: WD1 72, WD234 57, LudesM 19
+
+Ratio of Mendelian to observed: WD1 4.90, WD234 3.85, LudesM 1.28
+Pre-genotyping loss u (unknown): if the P3 frequency 30/154 were the birth frequency of the Cheng line, the Cheng P5-P12 survivors imply a relative KO retention of 0.22 (WD1) and 0.29 (WD234) between P3 and P5-12 - a comparison across two lines and laboratories, not a measurement.
