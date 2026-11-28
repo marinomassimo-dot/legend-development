@@ -1,0 +1,33 @@
+{
+  "investigation": "INV-05",
+  "title": "Huperzine A in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "A test of acetylcholine availability and physiological inhibitory recruitment.",
+  "graph": {
+    "evidence": "Spontaneous hippocampal EEG counts fell during exposure in acquired epilepsy.",
+    "inference": "The fixed phase order leaves shared time and vigilance effects open.",
+    "hypothesis": "Residual septal input and receptor reserve determine the response.",
+    "experiment": "Match local enzyme engagement and measure acetylcholine, inhibition and recurrence."
+  },
+  "evidence": [
+    "Across ten mice, observed events fell from 119.0 to 53.5 per recorded eight hours and reached 98.8 after withdrawal. The count fell during exposure in every mouse. A separate kindling experiment supports local cholinergic dependence."
+  ],
+  "inference": [
+    "Lower CHRM1 RNA survived single-library omissions in three untreated WWOX models. Hippocampal acetylcholinesterase RNA was directionally sensitive to omissions. These data do not measure cholinergic input or native inhibition."
+  ],
+  "hypothesis": [
+    "Slower acetylcholine clearance could restrain recurrence only when a sufficient local input survives and its receptors recruit effective inhibition."
+  ],
+  "experiment": [
+    "Compare a second reversible inhibitor at matched local acetylcholinesterase engagement. Read acetylcholine decay, inhibitory charge and spontaneous recurrence while holding temperature, vigilance and first recruitment comparable."
+  ],
+  "limits": [
+    "Retain as a research probe. The published spontaneous EEG comparison has no parallel control. The investigational formulation has adult trials. Pediatric WWOX exposure, tolerability and benefit remain unresolved."
+  ],
+  "sources": [
+    {"label": "Yu et al. Spontaneous EEG and cholinergic experiments, Figs. 3–6.", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12274539/#Fig3"},
+    {"label": "Wong et al. Provoked seizure and temperature controls.", "url": "https://doi.org/10.3389/fphar.2016.00357"},
+    {"label": "Dinday and Baraban. Larval behavior counterexample, Fig. 4.", "url": "https://doi.org/10.1523/ENEURO.0068-15.2015"},
+    {"label": "SPN-817 adult randomized trial record.", "url": "https://clinicaltrials.gov/study/NCT06798896"}
+  ]
+}

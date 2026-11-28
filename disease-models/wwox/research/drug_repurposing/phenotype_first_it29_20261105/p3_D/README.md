@@ -53,7 +53,7 @@ CDKL5 organoids: hyperexcitability by patch-clamp, no drug (D26, abstract only).
 * Frequency versus duration: scn1lab compounds moved event frequency, not burst duration (D01). Kv7 and KCC2 results are evoked-spike count or latency (D21, D22), not spontaneous bursting.
 * Behaviour versus discharge: locomotion hits were false positives in 3 of 4 (Dinday); only discharge-confirmed compounds are counted favourable in the zebrafish rows, except D10 and D11 which are behaviour-led with partial EEG.
 * Sedation and toxicity: only the 2025 platform and the Tsc1 study state absence of sedation; lamotrigine produced deaths (D18); fenfluramine lethal at the highest zebrafish concentration (D09). No row is shown to be sedation-free except where noted.
-* Provoked versus spontaneous: huperzine A worked in provoked WT PTZ and failed in spontaneous LoF discharge (D07).
+* Provoked versus spontaneous: huperzine A improved WT PTZ locomotor behavior but did not improve spontaneous seizure-associated locomotion in scn1lab larvae (D07). Figure 4e contains fenfluramine recordings. [Drug and endpoint audit](../../continuous_compounds/huperzine_a/README.md)
 * LoF versus GoF: sodium-channel blockers flip sign (D04, D18 versus D24); Kv7 opening is useful in GoF and Kcnq2-LoF models but null in Scn1a-LoF.
 * Species and assay: fenfluramine and lorcaserin helped in fish, not in the mouse hyperthermia threshold. A fish bath concentration is not a mammalian exposure.
 
