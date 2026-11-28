@@ -1,0 +1,14 @@
+[
+ {
+  "op": "replace-within",
+  "id": "CLAIM 031",
+  "old": "sopravvivenza, mentre nessun antiepilettico lo fa.",
+  "new": "sopravvivenza (topo; Fig 4B-K, 6F, 3B); Obeid 2026 non include alcun braccio con antiepilettici, quindi il contrasto con il controllo delle crisi non viene da quel lavoro ma dalla serie clinica di questo claim. *(Corretto 2026-11-28, `BATCH_20261128_013`, ADV-339, tre lettori indipendenti: la formulazione precedente, «mentre nessun antiepilettico lo fa», attribuiva a Obeid 2026 un braccio con antiepilettici che il lavoro non ha; le affermazioni su comportamento, mielina e sopravvivenza reggono.)*"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 030",
+  "old": "**Corroboration (BATCH_20260909_001 — independent secondary source, R4 satisfied).** Corroborated independently by Abu-Remaileh et al. 2015,",
+  "new": "**Corroboration (BATCH_20260909_001 — a second document, NOT an independent source; R4 satisfied).** *(Corrected 2026-11-28, `BATCH_20261128_013`, ADV-339, three independent readers: the earlier header «independent secondary source» and the words «Corroborated independently by» contradicted this paragraph's own statement below; both documents restate Mignot 2015.)* Concordant with Abu-Remaileh et al. 2015,"
+ }
+]

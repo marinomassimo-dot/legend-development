@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-42422765-03",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "doi": "10.1016/j.omta.2026.201791",
+  "pmid": "42422765"
+ },
+ "event_at": "2026-11-28T19:46:00Z",
+ "analysis_at": "2026-11-28T19:46:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "ADV-339 continuation (IT43), sentence-level reading by delegates of IT43, context policy QUESTION_DRIVEN: Atoms B1-B5 (blind final-text check, sonnet effort high) and H2 (first reader, sonnet effort medium): PMC XML in full, gr3, gr4, gr6, mmc1 and mmc2 as text; negative search for antiseizure terms across XML, mmc1 and mmc2",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml",
+ "source_fingerprint": "7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT43-ADV339-01.md"
+ ],
+ "evidence_basis": [
+  "Opened by the delegate (transcript): Atoms B1-B5 (blind final-text check, sonnet effort high) and H2 (first reader, sonnet effort medium): PMC XML in full, gr3, gr4, gr6, mmc1 and mmc2 as text; negative search for antiseizure terms across XML, mmc1 and mmc2. Methods or other sections marked not_read were consulted only for single values or not at all."
+ ],
+ "prior_receipt": "FTR-20261128-42422765-02",
+ "reread_reason": "adversarial_reanalysis"
+}

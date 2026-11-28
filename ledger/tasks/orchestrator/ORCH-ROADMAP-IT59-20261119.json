@@ -748,6 +748,13 @@
      "owner": "orchestrator",
      "source": "ADV message 2026-11-28 'ADV-339 = your proposal, yes'",
      "accepted_at": "2026-11-28T17:56:28Z"
+    },
+    {
+     "step": "ADV-339 continuation (IT43): two packets of about 6 counted CLAIM sentences to HE and SCI as independent readers, own first-reader table withheld, compare cell by cell, one batch for both-agree repairs, then the DREAM line",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV launch prompt of IT43 2026-11-28 and CHECKPOINT_IT_20261128_17 section 2 item 2",
+     "accepted_at": "2026-11-28T19:25:07Z"
     }
    ]
   }
@@ -1331,6 +1338,13 @@
    "at": "2026-11-28T17:56:28Z",
    "source": "ADV message 2026-11-28 'ADV-339 = your proposal, yes'",
    "step_sha256": "176732fb7a47",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T19:25:07Z",
+   "source": "ADV launch prompt of IT43 2026-11-28 and CHECKPOINT_IT_20261128_17 section 2 item 2",
+   "step_sha256": "76ccd49aa8d3",
    "reopened_block": false,
    "authorised_by": null
   }

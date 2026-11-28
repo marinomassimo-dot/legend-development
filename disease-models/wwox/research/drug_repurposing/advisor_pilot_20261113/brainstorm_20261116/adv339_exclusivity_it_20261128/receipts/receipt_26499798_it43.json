@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-26499798-03",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "doi": "10.1074/jbc.R115.676346",
+  "pmid": "26499798"
+ },
+ "event_at": "2026-11-28T19:46:00Z",
+ "analysis_at": "2026-11-28T19:46:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "ADV-339 continuation (IT43), sentence-level reading by delegates of IT43, context policy QUESTION_DRIVEN: Atoms C1-C3, C5 (blind final-text check) and S6 (first reader): PDF text, Fig 2 jpeg, reference list (ref 63 = Mignot 2015)",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+ "source_fingerprint": "95b0f37fa9c939cd5836a061f59fac3392e9a1ede84685a814ec1c44aab18d4f",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT43-ADV339-01.md"
+ ],
+ "evidence_basis": [
+  "Opened by the delegate (transcript): Atoms C1-C3, C5 (blind final-text check) and S6 (first reader): PDF text, Fig 2 jpeg, reference list (ref 63 = Mignot 2015). Methods or other sections marked not_read were consulted only for single values or not at all."
+ ],
+ "prior_receipt": "FTR-20261128-26499798-02",
+ "reread_reason": "adversarial_reanalysis"
+}

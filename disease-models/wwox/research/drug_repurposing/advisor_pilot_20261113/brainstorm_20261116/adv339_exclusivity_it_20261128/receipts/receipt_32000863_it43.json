@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-32000863-02",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "doi": "10.1186/s40478-020-0883-3",
+  "pmid": "32000863"
+ },
+ "event_at": "2026-11-28T19:46:00Z",
+ "analysis_at": "2026-11-28T19:46:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "ADV-339 continuation (IT43), sentence-level reading by delegates of IT43, context policy QUESTION_DRIVEN: H1 (first reader, sonnet effort medium): PMC XML in full, MOESM1 and PMC pdf text, Fig 7 image and panel d crop; Fig 7b/7d values",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+ "source_fingerprint": "792b5b296863674d0295a7dba918ee7c59ade8cdff64ee8ec9d8f01bd12f00f5",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT43-ADV339-01.md"
+ ],
+ "evidence_basis": [
+  "Opened by the delegate (transcript): H1 (first reader, sonnet effort medium): PMC XML in full, MOESM1 and PMC pdf text, Fig 7 image and panel d crop; Fig 7b/7d values. Methods or other sections marked not_read were consulted only for single values or not at all."
+ ],
+ "prior_receipt": "FTR-20261128-32000863-01",
+ "reread_reason": "adversarial_reanalysis"
+}
