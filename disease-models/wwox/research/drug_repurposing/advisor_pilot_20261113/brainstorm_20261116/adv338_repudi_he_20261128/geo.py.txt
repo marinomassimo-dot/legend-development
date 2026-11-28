@@ -1,0 +1,29 @@
+import sys,re,collections
+import xml.etree.ElementTree as ET
+NS='{http://www.w3.org/2000/svg}'
+def mat(t):
+    m=re.search(r'matrix\(([^)]*)\)',t or '')
+    return tuple(float(v) for v in re.split(r'[ ,]+',m.group(1).strip())) if m else (1,0,0,1,0,0)
+def mul(a,b):
+    return (a[0]*b[0]+a[2]*b[1],a[1]*b[0]+a[3]*b[1],a[0]*b[2]+a[2]*b[3],a[1]*b[2]+a[3]*b[3],a[0]*b[4]+a[2]*b[5]+a[4],a[1]*b[4]+a[3]*b[5]+a[5])
+def paths(f):
+    root=ET.parse(f).getroot()
+    out=[]
+    def walk(e,m,indefs):
+        tag=e.tag.replace(NS,'')
+        if tag in('defs','clipPath','symbol'): return
+        m2=mul(m,mat(e.get('transform'))) if e.get('transform') else m
+        if tag=='path':
+            n=[float(v) for v in re.findall(r'-?\d+\.?\d*(?:e-?\d+)?',e.get('d',''))]
+            pts=[(m2[0]*x+m2[2]*y+m2[4],m2[1]*x+m2[3]*y+m2[5]) for x,y in zip(n[0::2],n[1::2])]
+            if pts:
+                xs,ys=zip(*pts)
+                st=e.get('style','')
+                fill=e.get('fill') or (re.search(r'fill:([^;]+)',st) or [0,''])[1]
+                stroke=e.get('stroke') or (re.search(r'stroke:([^;]+)',st) or [0,''])[1]
+                cmds=''.join(re.findall(r'[A-Za-z]',e.get('d','')))
+                out.append((min(xs),min(ys),max(xs),max(ys),fill,stroke,cmds))
+        for c in e: walk(c,m2,indefs)
+    walk(root,(1,0,0,1,0,0),False)
+    return out
+BLUE='rgb(0%, 0%, 75.294495%)'; RED='rgb(100%, 0%, 0%)'
