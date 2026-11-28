@@ -52,6 +52,11 @@ RULES = [
       for suite in ("framework/scripts/test_trace_claim_foundation.py", "framework/scripts/test_growth_anchors.py", "framework/scripts/test_generate_semantic_graph.py",
                     "framework/scripts/test_build_evidence_index.py", "framework/scripts/test_dependency_integrity.py", "framework/scripts/test_locator_count_crosscheck.py",
                     "scripts/test_canonical_structure.py", "disease-models/wwox/analysis/scripts/test_dismech_independent_protocol.py")],
+    # #2811-#2826 (2026-11-28): BATCH_20261128_004 changed CLAIM 016 and the sealed DisMech sidecar stopped reproducing; the suite selected above passes on that tip (e8f112188),
+    # this one test does not. It alone, named in full so that a rename fails loudly (about 6 s). Its inputs are the two registries, the receipt ledger and the authored data files
+    ("disease-models/wwox/analysis/scripts/test_derive_dismech_sidecar.py SerialisationTests.test_committed_sidecar_reproduces_byte_for_byte",
+     lambda c: _any(c, "disease-models/*/registries/claim_registry_current.md", "disease-models/*/registries/paper_registry_current.md", "*fulltext_read_receipts.jsonl",
+                    "disease-models/*/analysis/data/dismech_*")),
     # #1994, #2109: a receipt recorded and the two derived pages not regenerated
     ("framework/scripts/test_coverage_report.py", lambda c: _any(c, "*fulltext_read_receipts.jsonl", "*coverage_report*")),
     ("framework/scripts/test_reading_state.py", lambda c: _any(c, "*fulltext_read_receipts.jsonl", "*reading_state*")),
