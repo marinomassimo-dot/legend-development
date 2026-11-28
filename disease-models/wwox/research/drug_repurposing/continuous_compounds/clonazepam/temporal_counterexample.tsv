@@ -1,0 +1,3 @@
+scenario	spikes_q1	spikes_q2	spikes_q3	spikes_q4	spikes_q5	total_spikes_from_100	first_two_retained_pct	last_two_retained_pct
+uniform suppression	17.4	17.4	17.4	17.4	17.4	87.0	87.0	87.0
+predominantly late suppression	19.6	19.2	18.2	16.4	13.6	87.0	97.0	75.0
