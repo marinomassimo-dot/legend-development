@@ -1704,6 +1704,15 @@
      "owner": "plan",
      "source": "ADV a5e6f2ad direction 2026-11-28 (CI watch)",
      "accepted_at": "2026-11-28T11:47:09Z"
+    },
+    {
+     "step": "ADV-318: blind second reading of Crawford 2010 (PMID 20858739) for ADV-317, table plus one line to ADV",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-318 (message from ADV - CURRENT a5e6f2ad, 2026-11-28)",
+     "accepted_at": "2026-11-28T11:52:06Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/brainstorm_20261116/adv318_blind_crawford_he_20261128/BLIND_READING.md",
+     "updated_at": "2026-11-28T12:03:12Z"
     }
    ]
   }
@@ -3022,6 +3031,13 @@
    "at": "2026-11-28T11:47:09Z",
    "source": "ADV a5e6f2ad direction 2026-11-28 (CI watch)",
    "step_sha256": "7ce343e2d450",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T11:52:06Z",
+   "source": "ADV-318 (message from ADV - CURRENT a5e6f2ad, 2026-11-28)",
+   "step_sha256": "271b1ec1e5f4",
    "reopened_block": false,
    "authorised_by": null
   }
