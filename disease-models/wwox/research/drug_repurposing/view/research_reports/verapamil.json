@@ -1,0 +1,34 @@
+{
+  "investigation": "INV-05",
+  "title": "Verapamil in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "A test of barrier transport versus systemic exposure and calcium currents.",
+  "graph": {
+    "evidence": "Cortical co-drug exposure rose after local verapamil in kindled rats.",
+    "inference": "The published curves lack free blood data by treatment arm.",
+    "hypothesis": "Activity may induce a drug-delivery deficit in some WWOX barriers.",
+    "experiment": "Match free systemic co-drug and measure native neural exposure and function."
+  },
+  "evidence": [
+    "Reconstructed cortical extracellular exposure increased about 25% for phenytoin and 15% for carbamazepine in a local rat comparison. The pediatric placebo-controlled study detected no significant between-arm difference."
+  ],
+  "inference": [
+    "Verapamil PET tracer experiments measure transport of the tracer and inhibition by a different compound. Circulating co-drug, norverapamil, and direct calcium-current effects remain relevant alternatives."
+  ],
+  "hypothesis": [
+    "A functional ABCB1 bottleneck could restrict an independently verified co-drug after sustained activity. Baseline WWOX bulk RNA and marker-scaled contrasts do not measure luminal transport."
+  ],
+  "experiment": [
+    "Measure unbound co-drug on both sides of the barrier and verify ABCB1 engagement. At fixed neural co-drug, read residual current and recurrence."
+  ],
+  "limits": [
+    "Retain as a laboratory comparator. Juvenile exposure, WWOX transport and cardiovascular tolerability limit pediatric priority."
+  ],
+  "sources": [
+    {"label": "Ma et al. Rat extracellular exposure, Figs. 2 and 3.", "url": "https://doi.org/10.2147/DDDT.S52533"},
+    {"label": "Römermann et al. Tracer transport and knockout controls.", "url": "https://doi.org/10.1016/j.nucmedbio.2013.05.012"},
+    {"label": "Elkhayat et al. Randomized childhood epilepsy comparison.", "url": "https://doi.org/10.1111/ane.12778"},
+    {"label": "Dravet trial registry results and flow.", "url": "https://clinicaltrials.gov/study/NCT01607073?tab=results"},
+    {"label": "Kuryshev et al. State-dependent calcium-current effects.", "url": "https://doi.org/10.1089/adt.2013.552"}
+  ]
+}

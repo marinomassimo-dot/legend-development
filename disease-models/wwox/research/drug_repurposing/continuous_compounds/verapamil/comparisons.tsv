@@ -1,0 +1,29 @@
+comparison	value	unit
+phenytoin_control_ecf_auc_15_to_180	151.2907	µg·min/mL
+phenytoin_kindled_ecf_auc_15_to_180	121.0814	µg·min/mL
+phenytoin_verapamil_ecf_auc_15_to_180	151.9186	µg·min/mL
+phenytoin_ecf_auc_treated_vs_kindled	1.254682	ratio
+phenytoin_ecf_ratio_lower_digitization	1.226458	ratio
+phenytoin_ecf_ratio_upper_digitization	1.28363	ratio
+phenytoin_serum_exposure_change_explaining_ecf_at_fixed_ratio	25.46816	percent hypothetical
+carbamazepine_control_ecf_auc_15_to_180	199.6639	µg·min/mL
+carbamazepine_kindled_ecf_auc_15_to_180	165.2521	µg·min/mL
+carbamazepine_verapamil_ecf_auc_15_to_180	190.084	µg·min/mL
+carbamazepine_ecf_auc_treated_vs_kindled	1.150267	ratio
+carbamazepine_ecf_ratio_lower_digitization	1.126477	ratio
+carbamazepine_ecf_ratio_upper_digitization	1.174595	ratio
+carbamazepine_serum_exposure_change_explaining_ecf_at_fixed_ratio	15.0267	percent hypothetical
+tracer_baseline_abcb1_loss_vs_wt	5.307692	ratio
+tracer_baseline_additional_abcg2_loss_vs_abcb1_only	1.144928	ratio
+human_k1_resistant_minus_healthy_lower	-34.9	percentage points
+human_k1_resistant_minus_healthy_higher	-15.3	percentage points
+sum_of_mean_parent_peak_concentrations	0.208095	µM
+parent_free_peak_scenario	0.01681408	µM
+parent_digoxin_ic50_over_free_plasma_scenario	65.42137	ratio
+parent_digoxin_ic50_over_total_plasma_upper_scenario	5.286047	ratio
+parent_to_norverapamil_digoxin_assay_ic50	3.666667	ratio
+cav_pulse1_ic50_over_pulse2	3.879121	ratio
+conditioned_cav_ic50_over_free_plasma_scenario	112.4058	ratio
+adult_randomized_fraction_completing	0.5454545	fraction
+dravet_raw_count_ratio	0.3589744	ratio
+dravet_rate_ratio_if_baseline_is_eight_weeks_and_active_is_four	0.7179487	ratio scenario
