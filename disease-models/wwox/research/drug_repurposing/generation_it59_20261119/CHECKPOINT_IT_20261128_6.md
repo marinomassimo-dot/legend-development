@@ -8,7 +8,7 @@ LAB-RESUME-COMPOUND-FOLLOWTHROUGH-20261128 governs; Codex is never contacted.
 * `bf55f66e75`: K1' to K3' (with the ADV-315 adjustments) and SCI ADV-314 K1, K2 and measurement applied to INV-06,
   the inv06 retest note, the clemastine and sobetirome notes; ranking, views, i18n inventory. One blind read: MUST
   CHANGE 1 of 5, ADD 1 of 5. Record `adv313_consumers_it31_20261128/BLIND_ADV313_APPLY_IT32.md`. ADV accepted.
-* CI repair: BATCH_20261128_006 (CLAIM 005 model field, whitespace only). CI had been red from run 2835 (`1c309be84`,
+* CI repair: BATCH_20261128_006 (CLAIM 005 model field, whitespace only), on main with `c977798da` (gate PASS). CI had been red from run 2835 (`1c309be84`,
   BATCH_005) on `test_trace_claim_foundation.py`.
 * Self-evaluation and scout for IT30 and IT31, and for IT32 (`research/session_evaluations/`).
 * SCI told the overturned ADV-313 cells; SCI's addendum is on main (`8857a232d`).
@@ -16,14 +16,19 @@ LAB-RESUME-COMPOUND-FOLLOWTHROUGH-20261128 governs; Codex is never contacted.
 ## Open, in order
 | # | Item | State |
 |---|---|---|
-| 1 | CI of the repair | one look at the run of the repair landing; tell ADV green or the remaining red |
+| 1 | CI of the repair | one look at the run of `c977798da` (or the first later run); tell ADV green or the remaining red. Runs before it, #2855 included, are expected red on the same test. Look not yet made at writing |
 | 2 | SCI ADV-316 step 2 sentences | `adv316_partial_read_depth_sci_20261128/SENTENCES_TO_IT32_ADV316_STEP2_SCI_20261128.md` (PMIDs 41744777, 42395553, 27339895); SCI sends the SHA; blind read, then card/claim wording; claim edits need BATCH_COMMIT |
 | 3 | ADV-286 dates | C1 re-check 2026-12-05; C2 not before 2026-12-06; UNRESOLVED 2026-12-12 if no printed poster date |
 | 4 | Later increments | `meta_gaba_paradox_current.md` line 23; DL-MECH-027; DL-MECH-049; ledger line 566; generated join files |
 
 J4 stays unrouted; ADV-308 has no sentence file. RP-049 is ADV's row and ADV has taken the measurement additions.
 
+ADV direction round (2026-11-28), answered and accepted: no further INV-06 or RP-049 edit for SCI's ADV-313 addendum
+and ADV-314 dated line; ADV-316 sentences are a first composition (second reader before a card); the missed suite is on
+ADV's list for the operator. ADV launches IT33 on receipt of this file.
+
 ## Rules and traps
+* Write nothing in the worktree while a `safe_push` runs: an untracked or modified file makes it refuse.
 * **Landing-suite gap:** after any claim-registry edit run `framework/scripts/test_trace_claim_foundation.py`,
   `test_pathograph.py` and the DisMech suites yourself; the gate does not run the first.
 * A claim field's first line is the structured value; put a counter-observation on a continuation line.
