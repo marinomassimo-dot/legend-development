@@ -857,3 +857,7 @@
 {"evidence": "SendMessage 2026-11-28 with task text", "id": "ADV-337", "receipt": ["5650b67d-6523-4b02-98e0-37bcbcb3c02e"], "state": "SENT", "to": ["IT Orchestrator - CURRENT c817e528"], "utc": "2026-11-28T16:33:41Z"}
 {"assessment": "HOST", "id": "ADV-338", "key": "repudi2021-supp-fig-5g-and-7f-blind-image-read-he", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-28T17:18:31Z"}
 {"evidence": "SendMessage 2026-11-28 with task text", "id": "ADV-338", "receipt": ["ce607512-c208-4392-a2f3-533a0068feb4"], "state": "SENT", "to": ["HE - CURRENT 7ec59b7e"], "utc": "2026-11-28T17:18:58Z"}
+{"basis": "result landed on main (fe1c40bd2, f0d03ecce)", "id": "ADV-337", "state": "STRAND", "strand": "claim-wording-audits", "utc": "2026-11-28T17:56:31Z"}
+{"basis": "result landed on main (86eb87f8e)", "counts_with": "ADV-337", "id": "ADV-338", "state": "STRAND", "strand": "claim-wording-audits", "utc": "2026-11-28T17:56:31Z"}
+{"assessment": "HOST", "id": "ADV-339", "key": "claim-registry-line-arm-exclusivity-sentences-enumerate-first-it", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-28T17:56:00Z"}
+{"evidence": "SendMessage 2026-11-28 with task text; line reconstructed by ADV after the same overwrite of the unpublished log as for ADV-335 (receipt from the send result; utc approximate)", "id": "ADV-339", "receipt": ["e64db66c-4325-4800-80ac-d058c966795b"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 98a18a59"], "utc": "2026-11-28T17:56:30Z"}

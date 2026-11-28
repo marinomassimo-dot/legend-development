@@ -1,0 +1,11 @@
+# L-threonine, glycine production and spinal motor recruitment
+
+28 November 2026 UTC. Continuous compound #208, INV-05. context_policy: QUESTION_DRIVEN. Start after [trimetazidine #207](../trimetazidine/README.md).
+
+**Question.** At matched local exposure, can L-threonine improve a native WWOX motor-circuit phenotype through newly formed extracellular glycine? Competing explanations include broader neutral amino-acid transport, effects of parent or another metabolite, and shifts in motor expression. A spinal inhibitory glycine-receptor effect, glycine as an NMDA coagonist and brain seizure burden are distinct.
+
+**Reason for selection.** In rats, threonine loading increased tissue glycine, but a separate exposure study found no detected increase in extracellular glycine. In an adult controlled spasticity study, oral threonine raised plasma and lumbar CSF parent. The paper found no detected glycine increment even though a semiquantitative motor scale changed. Human TDH is annotated as a pseudogene, while tracer estimates attributed a small whole-body flux to a TDH-related route. The two measurements leave the local human route unresolved. [Rat compartment primary](https://pubmed.ncbi.nlm.nih.gov/7902952/) · [Adult crossover](https://pubmed.ncbi.nlm.nih.gov/1742749/) · [Human TDH study](https://pmc.ncbi.nlm.nih.gov/articles/PMC131051/) · [Human tracer primary](https://doi.org/10.1152/ajpendo.2000.278.5.E877)
+
+**Contrast.** Chemical appearance of labeled glycine from labeled threonine locally in the same predefined spinal compartment should accompany a functional GlyR-sensitive effect. Preserve the first excitatory and inhibitory responses, native chloride and NMDA coagonist conditions. Measure systemic labeled glycine and competing amino acids to distinguish imported product and transport competition. A larger tissue pool without an extracellular or synaptic product increment, or a motor effect without labeled local product and receptor engagement, lowers the conversion hypothesis.
+
+**First step.** Reconcile denominators and periods in the adult crossover CSF and motor outcomes. Then compare same-study rat tissue and extracellular amino acids, conversion pathway evidence and developmental native chloride. Track age, route and exposure rather than combining plasma, lumbar CSF and spinal interstitial measurements.
