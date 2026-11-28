@@ -1,0 +1,11 @@
+# Dalfampridine research increment, SCI_CODEX, 28 November 2026 UTC
+
+**Decision and source route.** The [pretest](../drug_repurposing/continuous_compounds/dalfampridine/pretest.md) fixed direct propagation and recruitment as rivals. Main evidence included a neuron-specific developmental comparator, an adult injury washout experiment, a measured-plasma motor-circuit comparator and a randomized adult ocular-motor study with a small unresolved estimate. The question-focused reading claims partial depth. Literature scope and source locators are in the [dossier](../drug_repurposing/continuous_compounds/dalfampridine/README.md).
+
+**Changed assumption.** A distance regression improves on one fixed latency but a peak-speed slope can still shift when component weights move. The [synthetic control](../drug_repurposing/continuous_compounds/dalfampridine/recruitment_control.tsv) specifically tests that assumption. The updated primary outcome is conditional distal failure in a tracked response at matched proximal recruitment, with timing as a separate outcome.
+
+**Epistemic checks.** The adult traumatic injury study's electrophysiology cohort was separate from measured serum and the morphology measurements. Figure 6B bar positions and reported inference stay separate. The small signed effects from pixels are within display uncertainty. Clinical observations in gain-of-function potassium channel disorders supply exposure context with a distinct causal premise. WWOX efficacy and pediatric formulation transfer are unresolved. The official product's seizure-history contraindication determines the systemic disposition.
+
+**Next action and review.** Reopen the propagation hypothesis when genotype-matched preparation data resolve conditional failures at a measured local exposure. An independent review would have leverage on such data or on recovered distance-indexed waveforms. A literature-only review would not fix those gaps. The next independent increment can return to a non-myelin pathway with a measured exposure and interpretable functional readout.
+
+**Capability scout.** Primary publisher and NCBI open data routes were used to recover the existing study and displayed figure coordinates. The replay uses the Python standard library. CHANGE = NONE.

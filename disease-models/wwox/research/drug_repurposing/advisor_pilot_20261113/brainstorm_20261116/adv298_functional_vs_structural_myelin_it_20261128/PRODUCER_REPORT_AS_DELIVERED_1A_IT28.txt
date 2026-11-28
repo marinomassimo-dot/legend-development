@@ -1,0 +1,208 @@
+ADV-298 PRODUCER, BATCH 1A. Hypothesis level; extraction only; nothing here is medical advice. Written by the IT28 delegate (sonnet, effort high). No files written, no network, and no figure image viewed. Every direction and size below comes from text, tables or legends, and "read from graph" means I did not read the graph. Obeid 2026 (PMID 42422765, PMC13343157, scientist-b_scratch_gold/obeid.txt) and the adv174/adv175 folders: not opened and not met in any listed file.
+
+## 0. Files, duplicates and how much I read
+
+Paths are relative to /home/desktop/legend-development/files/fulltext/.
+
+| Key | Paper | Files | Reading |
+|---|---|---|---|
+| A | Repudi 2021 Brain, PMID 33914858, doi 10.1093/brain/awab174 | PMID33914858_Repudi2021_Brain_operator_supplied.txt; the OUP browserprint file is the same paper | Operator-supplied file: Abstract, Methods, Results, all figure legends and Discussion read. Browserprint: only the Fig 5 legend/results region and a grep for "latenc|N1" read; the two texts agree there. Supplementary figures and tables are in neither file. |
+| B | Repudi 2021 EMBO Mol Med, PMID 34747138, PMC8649866, doi 10.15252/emmm.202114599 | PMID34747138_Repudi2021_PMC.xml; origin_it_20261117/PMC8649866_text.txt | These are the same paper, so one set of rows. XML read in full except the reference list. The .txt: identity checked, and the Fig 5 n statements (n=350, n=200, P=0.011334) match; not re-read in full. Appendix figures (S1 to S6) are in neither file. |
+| C | Abudiab 2025 bioRxiv (not peer reviewed), PPR1124524, doi 10.1101/2025.11.22.689900 | PPR1124524_Abudiab2025_bioRxiv.txt | Summary, Results, Discussion, the legends of Figs 2, 3, 6 and Supp Figs 2 to 4, and the relevant Methods read. The file is mostly extracted figure text; I read the figure-embedded N/n labels for Figs 2, 3 and Supp 3 and 4 only. |
+| D | Tochigi 2019 Int J Mol Sci, PMID 31340538 = PMC6678113, doi 10.3390/ijms20143596 | pv_rp019_it_20261118/PMID31340538_Tochigi2019_europepmc_fullTextXML.xml; origin_it_20261117/PMC6678113_text.txt | Same paper. XML read in full except references; .txt identity checked. |
+| E | Cheng 2020 Acta Neuropathol Commun, PMID 32000863, doi 10.1186/s40478-020-0883-3 | PMID32000863_Cheng2020_PMC_r2.xml | Abstract, Methods and Results through Fig 5 read in full. The seizure, GSK3B and Discussion sections were read only through a keyword filter (myelin, optic, evoked, latency, conduction, MEP). Supplementary figures are not in the file. |
+| F | Hussain 2023 Prog Neurobiol, PMID 36828035 = PMC10835625, doi 10.1016/j.pneurobio.2023.102425 | PMID36828035_Hussain2023_PMC.xml; origin_it_20261117/PMC10835625_text.txt | Same paper. XML read in full for every myelin, oligodendrocyte, white matter, MRI, conduction, latency and evoked hit, plus the Fig 4 and Fig 6 legends and RNA-seq Methods. The rest (behaviour, cerebellum, inflammation) was not read paragraph by paragraph. The .txt: identity and two key sentences checked. Supplementary figures are not in the file. |
+| G | Steinberg 2021 Cells, PMID 34831305 (review) | ketamine_kds_it_20261117/p6_metabolic_ocular/PMID34831305_Steinberg2021_epmcfulltextxml.xml | Every paragraph containing myelin, oligodendrocyte, conduction, evoked, MRI, white matter or corpus callosum read. The rest was not read. |
+| H | Four repository notes | citicoline/myelin.md, bexarotene/README.md, bexarotene/pretest.md, and BATCH7_...bexarotene_HE_20261120.md | Read in full. The BATCH7 file is read in full although the dispatch asked for the bexarotene part only. |
+
+**Access.** Every row is FULL TEXT for the main text; no file is abstract-only. Where a row rests on a sentence that cites a supplementary figure, the row says "supplement not in file". The numbers in those rows are the main-text sentence only.
+
+**Class convention.** Rows are numbered per source. F-prefix is not used; "Fn" below means FUNCTIONAL and "St" means STRUCTURAL. n is stated with its unit exactly as the source gives it.
+
+## 1. Source A: Repudi 2021, Brain (PMID 33914858)
+
+Common to the A rows unless stated:
+- Preparation: mouse, conditional Wwox deletion. S-KO is Wwox flox/flox; Synapsin-I-Cre. S-Control is Wwox+/+; Syn-Cre+. S-HT is Wwox+/flox; Syn-Cre+. Also N-KO (Nestin-Cre), O-KO (Olig2-Cre), G-KO (GFAP-Cre) and the germline Wwox-null.
+- Ages: tissue P17 or P18 as stated per row; electrophysiology mice P13 to P17 (Methods).
+
+| # | Model / age / group | Readout (exact name) | CLASS | n (unit) | Direction and size as stated | Locator |
+|---|---|---|---|---|---|---|
+| A1 | S-KO vs S-Control, acute coronal neocortical slices 400 to 500 µm, mice P13 to P17. Corpus callosum stimulated, recording in neocortical layer V, 250 µm from the stimulator | Evoked response to corpus callosum stimulation: latency to N1 and N2 from stimulus onset | Fn | Legend as printed: "n = 8 slices, five subjects; S-Control; n = 8 slices, six subjects S-KO". The attribution of 5 and 6 subjects to groups is garbled in the legend. | Text: "a significant latency of neural conductivity in S-KO compared with that of control ... consistent with impaired myelination"; "a longer response latency of axonal propagation [Fig. 5D(ii and iii)]". No latency values (ms) and no P value for latency in the text or legend. Size: read from graph. Graph not viewed. | Results "Neuronal WWOX ablation results in hypomyelination ... impaired axonal conductivity", Fig 5D(ii) |
+| A2 | Same preparation | Peak amplitudes of the evoked potentials N1 and N2 | Fn | Same as A1 | Text: "significantly lower peak amplitudes of the evoked potentials". Legend: N1 *P = 0.0104, N2 P = 0.5737 (Wilcoxon rank sum). So the legend reports N2 as not significant, while the text says "peak amplitudes" lower without separating N1 from N2. Values: read from graph. | Fig 5D(i), legend |
+| A3 | Same preparation | Ratio of the amplitude of N1 and the amplitude of N2 (N1/N2) | Fn | Same as A1 | **P = 0.0030 (Wilcoxon). Direction not stated in text or legend; read from graph. | Fig 5D(iii) |
+| A4 | S-KO vs S-Control, P17, bulk RNA-seq | Differentially expressed myelination genes; GO "myelination", "ensheathment of neurons"; GSEA myelination; heat map of oligodendrocyte maturation and myelination genes | St | Fig 3A legend: cortex total n = 7 (S-Control 4, S-KO 3); hippocampus total n = 5 (S-Control 2, S-KO 3); animals | Text: 730 upregulated and 579 downregulated genes (P<0.01, fold change >1.5), whole list. "significant downregulation of genes associated with myelination and ensheathment of neurons". Downregulated: Gjb1, Gjc2, Olig1, Ermn, Ugt8a, Plp1, Otud7b, Mal, Eml1, Mobp, Hist1h2be, Cldn11, Mbp, Gal3st1, Fa2h, Gsn, Adamts4, Cnp, Mog, Opalin, Enpp2, Mag, Myrf. Fold sizes: read from graph. | Fig 3A, C, D, E; Supp Tables 1 and 2 not in file |
+| A5 | Wwox-null and N-KO vs S-KO, hippocampus bulk RNA-seq (age not stated in main text) | Myelin-associated transcripts, GO and GSEA | St | not stated in main text | "significant downregulation of myelin-associated genes ... grouping the samples according to their WWOX status"; top 25 DEGs include Cnp, Ugt8a, Plp1, Ermn, Otud7b, Mettl7a1, Prr18, Adamts4, Klhdc7a, Mobp, Cldn11, Mbp. | Results text; Supp Fig 4A to D (supplement not in file) |
+| A6 | S-KO vs S-Control, hippocampus, P17, snRNA-seq | Cluster composition: matured myelinating oligodendrocytes, COPs, OPCs | St | S-Control n = 1 and S-KO n = 1 (pooled libraries, one per genotype) | Quote: "a reduced number of matured myelinating oligodendrocyte cells (15%), COPs ... (68%) and a greater number of OPCs (150%) in S-KO compared with S-Control". The text does not say what the percentages refer to. | Fig 3F |
+| A7 | S-KO vs S-Control, cortex, P18, qRT-PCR | Oligodendrocyte maturation and myelination gene expression | St | not stated | "decreased in S-KO"; Pdgfra and Cspg4 "slightly higher". | Supp Fig 5C (supplement not in file) |
+| A8 | S-KO vs S-Control, P18, immunofluorescence | MBP and CNP fluorescence sum intensity, cortex and cerebellum (three sections each) | St | n = 3 mice per genotype | "significant reduction in cortex and cerebellum of S-KO". Sizes: read from graph. Whole-brain sagittal MBP (Fig 4A) shown as qualitative image. | Fig 4A to E; extra regions Supp Fig 5A (supplement not in file) |
+| A9 | S-KO vs S-Control, P18, Luxol fast blue | White-matter LFB myelin staining | St | not stated | "hypomyelination in the white matter tracks". | Supp Fig 5B (supplement not in file) |
+| A10 | S-KO vs S-Control, corpus callosum, P17 | CC1+ (mature oligodendrocytes) and PDGFRa+ (OPC) cell counts, 0.5 mm² area, three sections each | St | n = 3 mice per genotype | "a 2-fold reduction in CC1-positive cells and significantly more OPCs". Legend marks: *P<0.01, **P<0.001 (which panel is which is not stated). | Fig 4F, G |
+| A11 | S-KO vs S-Control, corpus callosum and cerebellum | NG2+/CC1+ double-positive cell number | St | not stated | "decreased number of double-positive cells". | Supp Fig 6A to D (supplement not in file) |
+| A12 | S-KO | CC1 plus cleaved caspase 3 staining (oligodendrocyte death) | St | not stated | "no significant oligodendrocyte cell death". | Supp Fig 6E (supplement not in file) |
+| A13 | N-KO and germline Wwox-null brains | Hypomyelination and oligodendrocyte maturation defects | St | not stated | "Similar results of hypomyelination and defects in oligodendrocyte maturation". No sizes. | Supp Fig 5D to H and Supp Fig 7 (supplement not in file) |
+| A14 | S-KO vs S-Control, P17, electron microscopy, corpus callosum | Number of myelinated axons per field of view | St | n = 3 mice per genotype. Legend: axons counted S-Control n = 2500, S-KO n = 1200. | Text: average 180 ± 40 (S-Control) vs 55 ± 35 (S-KO) per FOV; "substantial reduction (3.5 to 4-fold)". Legend ***P ≤ 0.001, error bars SEM. Flag: the means given give 3.3-fold and the legend axon counts give 2.1-fold; both differ from the stated 3.5 to 4-fold. | Fig 5A, B |
+| A15 | Same, optic nerve | Number of unmyelinated axons per field of view | St | n = 3 mice per genotype. Legend: axons counted S-Control n = 500, S-KO n = 3000. | Text: 55 ± 20 vs 270 ± 60 per FOV; "a greater number (6-fold)". The means give 4.9-fold. Legend ***P ≤ 0.001. | Fig 5A, B |
+| A16 | Same, corpus callosum and optic nerve | g-ratio of myelinated axons | St | n = 3 mice per genotype; axons n = 300 per genotype per tissue (Methods: "600, 100 axons per mouse") | "significantly higher ratio in S-KO ... reduced myelin thickness". ***P ≤ 0.001. Numeric g-ratios: read from graph. | Fig 5C |
+| A17 | In vitro: Wwox-null DRG neurons (E13.5 embryos) co-cultured with wild-type OPCs vs WT DRG with WT OPCs | Number of pre-myelinating, myelinating (MBP+) and degraded oligodendrocytes, area covered 14 mm diameter | St | n = 4 vs n = 4 (fields or wells; unit not stated), from two independent experiments | "significantly reduced differentiation into myelinating oligodendrocytes"; "increased number of pre-myelinating oligodendrocytes". **P<0.01. Values: read from graph. The Wwox-deficient element is the neuron only. | Fig 6A to D |
+| A18 | O-KO (Olig2-Cre) vs control, P17 | MBP staining | St | not stated | "no major changes". | Supp Fig 8 (supplement not in file) |
+| A19 | Human WWOX-KO oligocortical spheroids (CRISPR in WiBR hESC) vs OS-WT, week 14 | CC1+ cells and PDGFRa+ cells (OPC proportion) | St | OS-WT n = 3, OS-WWOX-KO n = 3 (unit not stated in legend) | "number of CC1+ cells was decreased"; OPC proportions "similar". | Fig 7E |
+| A20 | Same, week 20 | CNP+ cells and NG2+ cells | St | OS-WT n = 3, KO n = 4 (unit not stated) | "prominent decrease in CNP+ cells, which was not apparent in NG2+ cells". | Fig 7F |
+| A21 | Same, week 30 | MBP and CNP staining; MBP and CNP transcripts | St | n = 5 vs 5 (unit not stated) | "significantly reduced staining of both MBP and CNP ... supported by transcript levels"; SOX10 and PDGFRA RNA "slightly increased" in KO. Transcript sizes: read from graph. | Fig 7G; Supp Fig 9D (supplement not in file) |
+| A22 | Same, week 37, EM | Myelinated vs unmyelinated axons (percentage) | St | Fig 7H legend: OS-WT n = 3, KO n = 3. Fig 7I legend: OS-WT n = 2, KO n = 3. The two legends disagree; unit not stated. | "more myelinated axons in OS-WT compared with the OS-WWOX-KO". Percentages: read from graph. | Fig 7H, I |
+
+OTHER rows in A (listed, not counted, and I did not enumerate every behaviour, weight or survival panel):
+- Spontaneous tonic-clonic seizures, duration 68.5 ± 13.4 s (n = 6, P14 to 18).
+- Slices with bursting (Fig 2B): S-Control 0 of 11 slices; S-HT 4 of 23 (17% in text); S-KO 36 of 42 (86% in text, 84% in the legend), across 24 animals in text and 20 in the legend.
+- LFP spectral power, in vivo and in vitro (Fig 2C, D).
+- Weight and survival (Fig 1).
+- Organoid resting membrane potential and low-frequency power (Fig 7B to D): OS-WT -52.1 ± 0.90 mV vs OS-WWOX-KO -21.28 ± 6.91 mV.
+
+**Flag, not a myelin readout.** Fig 2E, F: electrically evoked field response (layer V stimulation, layer II/III recording, 100 µA). The first peak and the second peak are larger in S-KO (P = 0.0127; 0.008 and 0.0202). n = 6 slices/3 subjects (S-Control), 8 slices/5 (S-HT), 8 slices/6 (S-KO). The authors use it as an excitability readout. Read literally, the frozen rule puts any evoked potential in FUNCTIONAL, but I excluded it from the counts because it is not a myelin readout. The decision is yours.
+
+**Background only.** "Delayed myelination" on MRI in WOREE children is cited from the literature (refs 10, 13 to 18) in the Introduction and Discussion. It is not a measurement in this paper.
+
+## 2. Source B: Repudi 2021, EMBO Mol Med (PMID 34747138 = PMC8649866)
+
+Preparation: AAV9-hSynI-mWwox or hWWOX injected ICV at P0 into germline Wwox-null mice (FVB). Comparison groups: WT, KO or KO+AAV-GFP, and KO+AAV-mWwox. Wwox deficiency is the baseline in these rows; the rescue is the intervention.
+
+| # | Age | Readout | CLASS | n (unit) | Direction and size | Locator |
+|---|---|---|---|---|---|---|
+| B1 | P17 | MBP immunofluorescence, sagittal sections: cortex, hippocampus, cerebellum | St | n = 3 mice per group | "improved myelination in all parts ... of the rescued mice brain compared to Wwox-null mice injected with control virus". Qualitative; no quantification stated. The hWWOX vector gave "same results" (Appendix Fig S6, not in file). | Fig 4A |
+| B2 | P17 | CC1+ (mature oligodendrocytes) and PDGFRa+ (OPC) cells, corpus callosum, 0.5 mm², three sections per mouse | St | WT n = 3, KO n = 3, KO+A-mWwox n = 3 (mice) | "significantly increased number of matured oligodendrocytes in rescued mice compared to the KO". PDGFRa direction not stated in text. Values: read from graph. | Fig 4B, C |
+| B3 | P17 | EM: myelinated axons per field of view, corpus callosum | St | n = 3 mice per group | "increased the number of myelinated axons compared to KO". Values: read from graph. Legend **P<0.01, ***P<0.001. | Fig 5A, B |
+| B4 | P17 | g-ratio, corpus callosum | St | n = 3 mice per group; axons n = 350 per group | KO has higher g-ratio ("reduced myelin thickness") than KO+AAV-mWwox; "some minor differences" remain vs WT. Values: read from graph. | Fig 5C |
+| B5 | 6 months | EM: myelinated axons, unmyelinated axons per FOV, g-ratio, corpus callosum, rescued vs WT | St | n = 3 mice per group; g-ratio axons n = 300 per group; P = 0.011334 as printed | "similar number of myelinated axons in rescued mice compared to wild type"; "minor differences in the g-ratio and the number of unmyelinated axons" (5E, F). Values: read from graph. | Fig 5D to F |
+| B6 | P17 | EM: myelinated axons per FOV; g-ratio, optic nerve | St | n = 3 mice per genotype; axons n = 200 per group | "increased number of myelinated axons as well as myelin thickness" in KO+AAV-mWwox vs KO. Values: read from graph. | Fig 5G to I |
+
+OTHER rows in B (listed, not counted): cell-attached firing rate (WT 30, KO+AAV-mWwox 30, KO+AAV-hWWOX 30 and KO 45 neurons; n = 3 mice each; about 6-fold higher in KO than WT); adult 6-month firing (60 and 60 neurons, 3 mice each); body weight; Kaplan-Meier survival; blood glucose; hindlimb clasping; open field, elevated plus maze, rotarod; GFAP and Iba1 counts.
+
+FUNCTIONAL rows in B: none. There is no conduction, latency or evoked-potential measurement; the electrophysiology is cell-attached firing.
+
+## 3. Source C: Abudiab 2025 bioRxiv (PPR1124524)
+
+Preparations:
+- Primary OPC cultures from Wwox-null pups ("KO") vs WT.
+- O-KO: Wwox flox/flox; Olig2-Cre, mixed C57BL6/J;129sv, with a Rosa26-tdTomato reporter, vs O-CTR.
+- Oli-neu CRISPR WWOX-KO cell line (SOX10 stability and Western blots only; no myelin readout, so no row).
+- HA-tagged WWOX knock-in mouse (co-immunoprecipitation only; no row).
+- Cuprizone: 0.2% for 5 weeks starting at 6 to 8 weeks of age, then 2 weeks on normal diet. Fig 3a timeline: demyelination tissue at 11 to 13 weeks, remyelination tissue at 13 to 15 weeks.
+
+| # | Model / age | Readout | CLASS | n (unit) | Direction and size | Locator |
+|---|---|---|---|---|---|---|
+| C1 | Wwox-null vs WT primary OPC cultures, RNA-seq at 2 days of differentiation | Oligodendroglial and radial-glia marker expression; myelin genes (Mag, Cnp) and other programs | St | not stated in text (replicates were removed as low quality: CTR4 and KO4) | "lower levels of oligodendroglial markers"; "reduced expression of myelin-associated genes (e.g., Mag, Cnp)"; Oli and OPC signatures enriched in WT; cell-cycle and WNT genes up in KO. Values: read from graph. | Fig 2b to d; Supp Fig 2a to f |
+| C2 | Same cultures, immunofluorescence at day 5 and day 8 | Fraction of MBP+ cells; fraction of PDGFRa+ cells; MBP+ cell number (7 DIV, Supp 2g) | St | n = 3 (unit not stated) | "significantly lower fraction of cells was immunoreactive for MBP in KO"; PDGFRa fraction larger; "significantly fewer MBP-positive cells". Legend marks * p<0.05 (panel assignment not clear from extraction). | Fig 2e; Supp Fig 2g |
+| C3 | Same cultures | MBP+ cell surface area; Sholl branching | St | n = 29 (WT) and n = 35 (KO), cells, as read from the figure text | "reduced surface area and branching complexity". Legend marks * and **. | Fig 2f |
+| C4 | O-KO vs O-CTR, 2 to 3 months, corpus callosum | PDGFRa+ and CC1+ cells per mm² | St | N = 3 mice (figure label) | "no differences in the proportions"; figure labels ns. | Supp Fig 3c |
+| C5 | O-KO vs O-CTR, 2 months | MBP immunofluorescence mean intensity: cortex, corpus callosum, cerebellum | St | N = 2 mice, n = 3 sections per animal | "comparable between genotypes, with only minor differences detected in the cerebellum". | Supp Fig 3d |
+| C6 | O-KO vs O-CTR, 2 to 3 months, TEM corpus callosum | Myelinated axons per FOV; g-ratio vs axon diameter | St | N = 3 mice; g-ratio axons n = 330 (O-CTR), n = 340 (O-KO) | Myelinated axons O-CTR 117.6 ± 12.5 vs O-KO 125.1 ± 9 per FOV, P = 0.22 (± not defined). Text: "subtle reduction in myelin thickness". | Supp Fig 3e |
+| C7 | O-KO vs O-CTR, 18 months, TEM corpus callosum | Myelinated axons per FOV; g-ratio | St | N = 3 mice; axon labels as extracted are n = 330 and n = 340, identical to panel C6 and possibly duplicated | O-CTR 130.1 ± 28.6 vs O-KO 102.3 ± 31.8 per FOV, P = 0.0044; text says "similar myelin thickness". The panel shows asterisk labels for the g-ratio fit that I could not assign unambiguously. | Supp Fig 3f |
+| C8 | O-KO vs O-CTR, cuprizone, MBP immunofluorescence (cortex, cerebellum, corpus callosum) | Mean MBP intensity at demyelination and after remyelination | St | Figure labels as extracted: normal diet O-CTR N = 3; demyelination O-CTR N = 2, O-KO N = 2; remyelination O-CTR N = 3, O-KO N = 3 (mice; three sections each) | Demyelination "comparable" (Supp Fig 4a, b). Remyelination: "significantly reduced MBP signal in O-KO mice (O-CTR = 60; O-KO = 40)" (units not stated), *** p<0.001. | Fig 3b, c; Supp Fig 4a |
+| C9 | Same | Luxol fast blue staining | St | Labels as extracted give N = 3 and N = 5; group assignment unclear | Reduced blue staining remained in O-KO after 2 weeks of remyelination, in all three regions. | Supp Fig 4b |
+| C10 | O-KO vs O-CTR after remyelination, TEM corpus callosum | g-ratio vs axon diameter; myelinated axons per FOV | St | N = 3 mice per genotype; axons n = 303 (O-CTR), n = 299 (O-KO) | "thinner myelin sheaths and fewer myelinated axons" (O-CTR: 59.1/FOV; O-KO: 36.1/FOV). Panel marks *** for g-ratio and some ns marks; assignment not clear from the extracted text. | Fig 3d |
+| C11 | Same | PDGFRa+ and CC1+ cells per FOV, corpus callosum | St | N = 3 mice per genotype | CC1+ O-CTR 220/FOV vs O-KO 140/FOV; PDGFRa+ O-CTR 78.25/FOV vs O-KO 111/FOV; *** marks. | Fig 3e, f |
+| C12 | O-KO vs O-CTR cortex, snRNA-seq: normal diet, demyelination, remyelination | Oligodendroglial transcriptional state, differentiation trajectories, differential abundance, cell cycle, pathway enrichment (borderline: differentiation state, not myelin-gene level) | St | 40,906 nuclei overall; 4,799 oligodendroglial nuclei; replicates per genotype: normal diet 2, demyelination 2, remyelination 3, pooled | Genotypes diverged only in remyelination. O-KO OPCs: up TGFb and WNT/Ca2+ genes, more cells in S-phase. O-KO oligodendrocytes: down fatty-acid biosynthesis, monocarboxylic acid metabolism, axon-glia interaction pathways. Discussion: "reduction in mature oligodendrocytes during demyelination in O-KO mice". Values: read from graph. | Figs 4 and 5; Discussion |
+| C13 | Remyelination | Sox10 transcript (culture and snRNA-seq); SOX10+ nuclei in corpus callosum; SOX10 regulon enrichment | St | n not stated in text | O-CTR 1550 ± 200 vs O-KO 937.8 ± 168 SOX10+ nuclei (unit "nuclei", area not stated); "Sox10 emerged as the only factor significantly reduced in KO cells" (Fig 6a) and in vivo OPCs (Fig 6b); positive SOX10 regulon under-represented in O-KO OPCs during remyelination (Fig 6d). | Fig 6a to d |
+
+FUNCTIONAL rows in C: none. A keyword search of the whole file for conduct*, latency, evoked, compound action and MRI returned only the Introduction lines 53 to 55, which are general statements about myelin. The Wwox-deficient human MS snRNA-seq reanalysis (Fig 1) is WWOX expression in MS tissue, not a Wwox-deficient preparation, so no row.
+
+## 4. Source D: Tochigi 2019, lde/lde rat (PMID 31340538 = PMC6678113)
+
+Preparation: lde/lde rats (13-bp deletion in Wwox exon 9) vs +/+ (and +/lde), male. PND 5, 10, 15, 21. n: "at least three rats"; graphs are "mean ± S.D. from three independent experiments" (unit ambiguous). No numeric values are given in the text.
+
+| # | Readout | CLASS | Direction and size | Locator |
+|---|---|---|---|---|
+| D1 | MBP-positive area, cerebral cortex (immunohistochemistry, pixels per mm²) | St | "significantly lower myelination on PNDs 5 to 21". Sizes: read from graph. | Fig 4A, B |
+| D2 | CNP-positive area, cerebral cortex | St | Same wording. | Fig 4C, D |
+| D3 | MBP and CNP Western blot, cerebral cortex | St | Age-related increase in +/+; "significantly lower levels of expression in lde/lde". The ages at which each difference is significant are not stated in text. | Fig 4E to G |
+| D4 | APC (clone CC-1)+ mature oligodendrocyte number, subarea of cortex including white matter | St | "significantly lower ... on PNDs 15 to 21"; "also observed in the region of corpus callosum" (quantification not stated). | Fig 4H, I |
+
+FUNCTIONAL rows in D: none. The word "conduction" appears only in the Discussion as general background. MRI findings in WOREE patients are cited from the literature, not measured.
+
+## 5. Source E: Cheng 2020, Wwox-/- mice (PMID 32000863)
+
+Preparation: two knockout lines, WD1 (exon 1 deletion) and WD234 (exons 2/3/4). The text does not say which line was used for Tc-MEP and sciatic EM. Age: 3 weeks for Tc-MEP and LFB; P20 for sciatic nerve. Values are mean ± SEM (Statistical analysis section).
+
+| # | Readout | CLASS | n (unit) | Direction and size | Locator |
+|---|---|---|---|---|---|
+| E1 | Transcranial motor evoked potential (Tc-MEP) amplitude. Scalp stimulation, recording from forelimb plantar muscles. Whole corticospinal plus peripheral plus muscle pathway, not a callosal measure. | Fn | Wwox+/+ n = 10; Wwox-/- n = 4; Wwox+/- n = 5 (mice) | Wwox+/+ 59.2 ± 9.0 µV vs Wwox-/- 11.8 ± 5.4 µV, p < 0.05. Wwox+/- 59.6 ± 17.2 µV, comparable to Wwox+/+. | Fig 2a, b |
+| E2 | Tc-MEP onset latency | Fn | Not separately stated for latency (amplitude n values above). | Wwox+/+ 1.39 ± 0.13 ms vs Wwox-/- 2.44 ± 0.37 ms, p < 0.01 (longer in null). Wwox+/- 2.13 ± 0.22 ms, p < 0.05 vs wild type: a prolonged latency with normal amplitude. | Fig 2c |
+| E3 | Sciatic nerve (PNS) toluidine blue semi-thin sections, EM, immuno-EM for cleaved caspase-3 in Schwann cells | St | N = 3 mice per genotype (Fig 3 legend) | "similar axonal organization and approximately equal numbers of nerve fibers"; smaller endoneurium spaces; "a large number of abnormal-shaped and demyelinated axons", detachment of myelin lamellae, onion bulb degeneration, in all Wwox-/- nerves examined. Cleaved caspase-3 in Schwann cells. Wwox+/-: "Myelin thickness, axonal organization and the density of myelinated fibers were similar" (data not shown). No myelin thickness or fibre-count values are given. | Fig 3a to c |
+| E4 | CNS Luxol fast blue myelin staining intensity: corpus callosum, anterior and dorsal hippocampal commissures, cingulum, projection fibres, internal capsule, optic tract, cerebellar foliar white matter | St | "all Wwox-/- mice examined"; "representative results of three independent experiments" (unit not stated) | "significantly reduced myelin staining intensity"; "severe hypomyelination" with atrophy of the optic tract and cerebellar white matter. No quantification or statistical test is described in Methods or legend. The Abstract says "optic nerve atrophy", while the Results and legend say optic tract. | Fig 4a to f |
+
+OTHER rows in E (listed, not counted; the seizure and cerebellar sections were read by keyword filter only): rotarod latency to fall, footprint gait, hindlimb clasping (Fig 1); pilocarpine and PTZ seizure severity (Fig 7).
+
+## 6. Source F: Hussain 2023, WwoxP47T/P47T knock-in mice (PMID 36828035 = PMC10835625)
+
+Preparation: knock-in of the SCAR12 partial loss-of-function allele (protein expressed, WW1 binding impaired).
+
+| # | Readout | CLASS | n (unit) | Direction and size | Locator |
+|---|---|---|---|---|---|
+| F1 | Olig2-positive oligodendrocyte count, corpus callosum, 1.5 x 1 mm² image, three 500 µm² regions per mouse. Age not stated in the Fig 4d, e legend (Fig 4a to c used 80 and 250 day groups). | St | n = 3 mice per group; each data point is one region | "significantly reduced oligodendrocytes numbers compared to WwoxWT/WT (p-value < 0.01)". Values: read from graph. | Fig 4d, e |
+| F2 | Mbp immunostaining, parietal cortex above corpus callosum | St | not stated in main text | "no significant differences in Mbp staining were detected". Sizes: not in text. | Supp Fig 6a to d (supplement not in file) |
+| F3 | BRETIGEA transcript-derived cell-type scores from bulk RNA-seq (mature oligodendrocytes "OLIGs" and OPCs), hippocampus and prefrontal cortex. Mice 150 to 280 days. | St (transcript-derived marker score) | n = 5 mice per group (2 male, 3 female) | Text: "reduced scores for mature oligodendrocytes (OLIGs) and oligodendrocytes progenitor cells (OPCs) in the HPC". The PFC sentence names only astrocyte and microglia scores as higher. P values are on the plot, not in the text. | Fig 6c |
+
+OTHER rows in F (listed, not counted): video-EEG seizure activity (WT n = 3, P47T n = 3 mice); behaviour.
+
+FUNCTIONAL rows in F: none. MRI findings in SCAR12 and WOREE patients in the Introduction ("mild cerebellar atrophy", "reduced myelination") are literature background; no patient or MRI measurement in this paper.
+
+## 7. Source G: Steinberg 2021 review (PMID 34831305)
+
+NO ROW (original): review with no new measurements; it restates readouts from D, E, A and B.
+
+Secondary restatements (not counted):
+- It restates Tochigi (D) and Cheng's Tc-MEP (E1, E2). It states "delayed signal conductance when stimulating in the CC" for Repudi (A1).
+- It states the Wwox-/- sciatic nerve had "thinner myelin sheath". Cheng's text I read reports "thinner" axons and says myelin thickness was "similar" only for the Wwox+/- mice (data not shown); no myelin-thickness value is given for Wwox-/-. The review's wording is not supported by what I read in E.
+- It cites patient MRI (Abdel-Salam: supratentorial and cortical atrophy, hippocampus and corpus callosum hypoplasia) with no myelin wording.
+- It cites a GWAS signal (rs10514437) for infant white matter volume, which is an association, not a Wwox-deficient preparation.
+- It cites a single fetal WOREE neuropathology report (Iacomino 2020) with no myelin readout stated.
+
+## 8. Source H: Starting-set notes. Every myelin readout they cite
+
+| Note | Readout cited | Source paper | In a Wwox-deficient preparation? |
+|---|---|---|---|
+| citicoline/myelin.md | Myelin staining (4 mice), CC1+ cell count in corpus callosum (3 mice), percentage of myelinated axons by EM in optic nerve and corpus callosum (3 mice), under citicoline vs vehicle | Chen et al., Fig 7A to D (conditional Slc44a1 knockout mouse) | No. Other system (Slc44a1 deficiency). |
+| citicoline/myelin.md | Zebrafish per-area myelin counts | Chen et al., Fig 6H | No. Other system. |
+| citicoline/myelin.md | Hippocampal nuclei oligodendrocyte-lineage class contribution (CPM): precursor 162 to 233, committed 718 to 576, newly formed 747 to 698, myelin-forming 440 to 461, mature 414 to 251 (mature raw counts 164 vs 79, nuclei 119 vs 94) | GSE158684, the repository's own re-analysis. The repository census (wwox_data_census_it6_20261029.md line 39) lists GSE158684 as P17 hippocampal nuclei snRNA, S-KO vs Cre-only control. I did not verify this from the papers; the Brain paper's own snRNA-seq is S-Control n = 1 vs S-KO n = 1 at P17 (A6). | Yes (neuron-targeted Wwox deletion), one pooled library per condition. STRUCTURAL, with no animal-level confidence limits per the note. |
+| citicoline/myelin.md | Slc44a1, Pcyt1b and Flvcr1 CPM by class (e.g. Slc44a1 log2 +0.53 in OPC, -0.73 in mature oligodendrocytes, dated line 2026-11-24) | Same dataset | Yes, but these are choline-pathway genes by cell class, not myelin readouts. Not counted. |
+| citicoline/myelin.md | "improved evoked propagation" | None | A prediction only; no measurement. |
+| bexarotene/README.md | "In the P17 callosal comparison, neuron-targeted Wwox loss reduced counted myelinated profiles" | Repudi 2021 Brain (A14); this is the file's own reconstruction | Yes. STRUCTURAL; matches A14. |
+| bexarotene/README.md | "Neuronal WWOX restoration in the germline null improved the myelin phenotype in an independent study" | Repudi 2021 EMBO Mol Med (B1 to B6) | Yes. STRUCTURAL. Flag: the wording "independent study" is the note's; this is the same laboratory and first author as Repudi Brain. |
+| bexarotene/README.md | Pointer: "WWOX functional myelin comparator (../clemastine/callosal_propagation.md)" | Not opened | I did not open this file (not in my list). The only functional myelin readouts in my files are A1 to A3 and E1, E2. |
+| bexarotene/README.md | Qki oligodendrocyte-specific deficiency: survival, 1.737x myelinated profiles (4 mutant mice per arm), 1.895x FluoroMyelin (4 per arm) | Zhou et al., JCI, Fig 6 | No (Qki). |
+| bexarotene/README.md | Aged stroke: callosal/external capsule CAP N1 and N2 amplitudes (6 vehicle and 6 drug animals); SMI32/MBP in myeloid Rxra cKO | Lyu et al., Stroke, Figs 3 and 6 | No. The CAP readout is FUNCTIONAL but from a stroke model. |
+| bexarotene/README.md | MS patients: lesion MTR +0.16 percentage units (-0.39 to +0.71), visual evoked P100 latency -4.06 ms (29 vs 22 eyes) and -2.85 ms (42 vs 44 eyes); follow-up -7.79 ms (24 vs 14 eyes), -5.39 ms (20 vs 7 eyes) | CCMR One trial; McMurran et al., Fig 1 | No (MS patients). VEP latency is FUNCTIONAL but not Wwox. |
+| bexarotene/README.md | Monocyte phagocytosis index; cuprizone remyelination (about 25% vs about 65% of control) | Natrajan et al., Fig 7; Berghoff et al., Fig 2a | No. |
+| bexarotene/README.md | APP/PS1 transcripts (Apoe, Abca1, Abcg1, ...) in oligodendrocyte classes; bulk RXR/LXR transcripts in P17 mouse null cortex (4 control, 3 null), hippocampus (2, 3) and week-15 human organoids (2, 4) | GSE283905; native replay | Native part: Wwox-deficient, but lipid/LXR transcripts, not myelin genes. APP/PS1: not Wwox. |
+| bexarotene/pretest.md | No readout; prediction only ("first functional WWOX sheaths", conduction recovery) | None | No measurement. |
+| BATCH7 (bexarotene part) | ChEMBL potency rows only; the title-level mention of PMID 26463675 (RXR activation reverses age-related deficits in myelin debris phagocytosis and remyelination); the sheet states no ChEMBL row measures oligodendrocyte differentiation or myelination | None read beyond titles | No Wwox readout. |
+
+## 9. Closing counts
+
+Per source: STRUCTURAL / FUNCTIONAL / OTHER rows. The OTHER figures are the lines I listed, not an exhaustive count of behaviour, weight or survival panels. The Fig 2E, F flag in A is excluded from every count.
+
+| Source | STRUCTURAL | FUNCTIONAL | OTHER (listed) |
+|---|---|---|---|
+| A Repudi 2021 Brain | 19 (A4 to A22) | 3 (A1 to A3) | 5 lines |
+| B Repudi 2021 EMBO Mol Med | 6 | 0 | 2 lines |
+| C Abudiab 2025 bioRxiv | 13 | 0 | 0 |
+| D Tochigi 2019 | 4 | 0 | 0 |
+| E Cheng 2020 | 2 (E3, E4) | 2 (E1, E2) | 2 lines |
+| F Hussain 2023 | 3 | 0 | 2 lines |
+| G Steinberg 2021 review | 0 | 0 | 0 |
+| H notes | 3 Wwox-deficient myelin-cell-class or myelin-profile items, all already counted in A or B or from the pooled GSE158684 re-analysis | 0 Wwox-deficient | 0 |
+
+**Sources with at least one FUNCTIONAL row in a Wwox-deficient preparation (2):**
+1. **Repudi 2021 Brain (A1 to A3), S-KO mouse slices P13 to P17.** After corpus callosum stimulation the response latency is longer in S-KO ("a significant latency of neural conductivity", "a longer response latency of axonal propagation"). Peak amplitudes are lower in S-KO: N1 P = 0.0104, N2 P = 0.5737 (not significant) per the legend, while the text says "significantly lower peak amplitudes". The N1/N2 ratio differs, **P = 0.0030, direction not stated. No latency values are in the text. Graph not viewed. n = 8 slices from five subjects and 8 slices from six subjects, group attribution garbled.
+2. **Cheng 2020 (E1, E2), Wwox-/- mice at 3 weeks, Tc-MEP.** Onset latency is 2.44 ± 0.37 ms vs 1.39 ± 0.13 ms (p < 0.01); amplitude 11.8 ± 5.4 µV (n = 4) vs 59.2 ± 9.0 µV (n = 10) (p < 0.05). The Wwox+/- group has a latency of 2.13 ± 0.22 ms (p < 0.05) with normal amplitude. This reads the whole corticospinal, peripheral and muscle pathway, not a callosal or intracortical measure.
+
+No FUNCTIONAL row in any other file. The null here means no such readout in the text I read, not that none exists; the supplements and the Appendix of B were not in the files.
+
+## 10. What I did not do, and limits
+
+- No figure image was viewed. Every "read from graph" size is unread and unquoted.
+- Supplementary and Appendix material is not in any file. Rows resting on a supplementary-figure sentence say so (A5, A7, A9, A11 to A13, A18, A21 transcripts, F2).
+- The OUP browserprint, the B and D and F text duplicates, and the Cheng seizure and discussion sections were read only in part, as stated in section 0.
+- Several of my own arithmetic notes (A14 3.3-fold, A15 4.9-fold, A14 2.1-fold from the legend counts) are computed from the quoted means or counts; the source's own folds are quoted beside them.
+- The class assignment of A6, C12 and F3 (transcript composition or derived scores) as STRUCTURAL follows the frozen rule's "myelin-gene transcript levels". C12 is borderline because it measures differentiation state.
+- I did not open ../clemastine/callosal_propagation.md, which the bexarotene README names as the WWOX functional myelin comparator.
+

@@ -1,0 +1,3 @@
+panel	sham_vehicle_m_s	sham_dalfampridine_m_s	tbi_vehicle_m_s	tbi_dalfampridine_m_s	sham_shift_m_s	tbi_shift_m_s	interaction_m_s	pixel_only_low_m_s	pixel_only_high_m_s
+N1	1.000	1.087	0.696	0.754	0.087	0.058	-0.029	-0.145	0.087
+N2	0.386	0.393	0.321	0.350	0.007	0.029	0.021	-0.036	0.079

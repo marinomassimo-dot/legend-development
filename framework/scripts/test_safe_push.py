@@ -6,6 +6,12 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 TOOL = Path(__file__).resolve().parent / "safe_push.py"
+# The publishers under test must not count the real machine's live gates (safe_push step 17): their /proc is an empty folder.
+_NO_PROCESSES = TemporaryDirectory(prefix="safe-push-test-proc-")
+os.environ["LEGEND_SAFE_PUSH_PROC_ROOT"] = _NO_PROCESSES.name
+# Nor may a short disk on this machine turn them red (2026-11-28: two real-clone publications failed at 1.1 and 2.0 GB free, and a landing runs this suite).
+# The tests of the disk rule set their own floor.
+os.environ["LEGEND_SAFE_PUSH_MIN_FREE_GB"] = "0"
 
 GATE_PASS = "import sys\nprint('VERDICT: PASS')\nprint('BLOCKS: 0')\nsys.exit(0)\n"
 GATE_BLOCK = ("import sys\nprint('VERDICT: BLOCK_PUBLICATION')\n"
@@ -216,6 +222,110 @@ class SafePushRefusals(unittest.TestCase):
             self.assertIn("git push exited", r.stderr)
             self.assertNotIn("working tree", r.stderr)
             self.assertNotIn("not PASS", r.stderr)
+
+
+def _load_tool():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("safe_push_under_test", TOOL)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def _fake_proc(root: Path, table) -> Path:
+    """A /proc-shaped folder from (pid, ppid, argv, environ) rows."""
+    for pid, ppid, argv, env in table:
+        d = root / str(pid)
+        d.mkdir()
+        (d / "stat").write_text(f"{pid} (x y) S {ppid} 0 0\n")
+        (d / "cmdline").write_bytes("\0".join(argv).encode() + b"\0")
+        (d / "environ").write_bytes("\0".join(env).encode())
+    return root
+
+
+class SafePushDiskCountsLiveRuns(unittest.TestCase):
+    """Step 17 (2026-11-28): the free-space floor adds the declared peak of every OTHER live run that writes clones, and a publisher waits for that space instead of refusing at once."""
+
+    def test_only_working_runs_of_other_families_are_counted(self) -> None:
+        sp = _load_tool()
+        gate = ["python3", "scripts/public_release_gate.py"]
+        push = ["python3", "framework/scripts/safe_push.py", "development", "main", "--serialize"]
+        table = [
+            (10, 1, ["bash", "-c", "python3 framework/scripts/safe_push.py development main"], []),      # names it, is not it
+            (11, 10, ["timeout", "560", *push], []),
+            (12, 11, push, []),                                                                             # working: has a child
+            (13, 12, gate, []),                                                                             # staging gate: no clone
+            (14, 12, ["python3", "-B", "framework/scripts/candidate_tree_freshness.py", "--regenerate"], []),  # same family as 12
+            (20, 1, push, []),                                                                              # queued: no child
+            (30, 1, ["python3", "-B", "-u", "framework/scripts/candidate_tree_freshness.py", "--regenerate"], []),
+            (31, 1, [*gate, "--mode", "release"], []),
+            (40, 1, push, ["LEGEND_SAFE_PUSH_ROOT=/tmp/fixture"]),                                         # a test fixture
+            (41, 40, ["git", "status"], []),
+            (50, 1, push, []),                                                                              # my own family
+            (51, 50, ["python3", "framework/scripts/test_x.py"], []),                                      # me
+            (52, 50, ["python3", "scripts/run_release_regressions.py"], []),
+            (53, 51, ["python3", "scripts/run_release_regressions.py"], []),
+        ]
+        with TemporaryDirectory() as td:
+            got = sp.live_heavy_runs(_fake_proc(Path(td), table), me=51)
+        self.assertEqual([(pid, name) for pid, name, _ in got],
+                         [(12, "safe_push.py"), (30, "candidate_tree_freshness.py"), (31, "public_release_gate.py")])
+
+    def _space(self, sp, free_gb, runs):
+        from unittest import mock
+        usage = mock.Mock(side_effect=lambda p: mock.Mock(free=free_gb.pop(0) * 1e9 if len(free_gb) > 1 else free_gb[0] * 1e9))
+        return (mock.patch.object(sp.shutil, "disk_usage", usage), mock.patch.object(sp, "live_heavy_runs", side_effect=runs),
+                mock.patch.object(sp, "MIN_FREE_GB", 2.0), mock.patch.object(sp, "DISK_POLL_S", 0.01))
+
+    def test_space_that_covers_one_clone_but_not_a_second_run_is_waited_for_then_refused(self) -> None:
+        sp = _load_tool()
+        one = [(777, "safe_push.py", 1.4)]
+        patches = self._space(sp, [2.5], lambda *a: one)
+        with patches[0], patches[1], patches[2], patches[3], mock_wait(sp, 0.05):
+            msg = sp.wait_for_space()
+        self.assertIn("below 3.4 GB", msg)
+        self.assertIn("pid 777 safe_push.py", msg)
+        self.assertIn("Waited", msg)
+        self.assertIn("Nothing was gated or pushed", msg)
+
+    def test_the_wait_ends_when_the_other_run_ends(self) -> None:
+        sp = _load_tool()
+        seen = iter([[(777, "safe_push.py", 1.4)], []])
+        patches = self._space(sp, [2.5], lambda *a: next(seen))
+        with patches[0], patches[1], patches[2], patches[3], mock_wait(sp, 30):
+            self.assertEqual(sp.wait_for_space(), "")
+
+    def test_a_shortage_with_no_live_run_refuses_at_once(self) -> None:
+        sp = _load_tool()
+        patches = self._space(sp, [1.5], lambda *a: [])
+        with patches[0], patches[1], patches[2], patches[3], mock_wait(sp, 3600):
+            started = time.time()
+            msg = sp.wait_for_space()
+        self.assertIn("below 2 GB", msg)
+        self.assertNotIn("Waited", msg)
+        self.assertLess(time.time() - started, 5)
+
+    def test_a_serialized_push_queues_when_a_live_run_accounts_for_the_shortage_and_the_lock_check_still_refuses(self) -> None:
+        import shutil
+        with TemporaryDirectory() as td, TemporaryDirectory() as proc_dir:
+            marker = Path(td) / "gate-ran"
+            root = SafePushRefusals._repo(self, td, f"open({str(marker)!r}, 'w').close()\n" + GATE_PASS)
+            _fake_proc(Path(proc_dir), [(900001, 1, ["python3", "scripts/run_release_regressions.py"], [])])
+            floor = min(shutil.disk_usage(p).free for p in (root, Path(td))) / 1e9 + 0.7      # short now; the 1.4 GB the live run holds would cover it
+            env = dict(os.environ, LEGEND_SAFE_PUSH_ROOT=str(root), LEGEND_SAFE_PUSH_GATE=str(root / "scripts" / "gate.py"), TMPDIR=td,
+                       LEGEND_SAFE_PUSH_MIN_FREE_GB=f"{floor:.2f}", LEGEND_SAFE_PUSH_PROC_ROOT=proc_dir, LEGEND_SAFE_PUSH_DISK_WAIT_S="1")
+            r = subprocess.run([sys.executable, str(TOOL), "origin", "main", "--serialize"], capture_output=True, text=True, env=env, timeout=60)
+            self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+            self.assertIn("queueing", r.stdout)
+            self.assertIn("landing lock acquired", r.stdout)
+            self.assertIn("waiting for disk space", r.stdout)
+            self.assertIn("for the live run(s) pid 900001", r.stderr)
+            self.assertFalse(marker.exists(), "the gate must not run on a short disk")
+
+
+def mock_wait(sp, seconds):
+    from unittest import mock
+    return mock.patch.object(sp, "DISK_WAIT_S", seconds)
 
 
 GATE_SLOW = ("import os, sys, time\nlog = os.environ['LEGEND_TEST_LOG']\nopen(log, 'a').write('start %s %.2f\\n' % (os.environ.get('LEGEND_TEST_NAME', '?'), time.time()))\n"

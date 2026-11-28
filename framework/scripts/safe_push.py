@@ -86,6 +86,14 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      went out without check 15 that way, from a worktree one landing behind). When the file differs after the merge the push is refused before any check; the merge commit stays, and running again with
      the merged SHA runs the new sequence.
 
+  17. Free space counts the other live runs that write clones (2026-11-28, ADV-299: free space fell from 3.1 to 1.7 GB under ONE publisher, a regeneration of about 0.46 GB then a suite clone of
+     about 0.93 GB, and the 2 GB floor of step 12 did not see a second one). A LIVE heavy run is a `safe_push.py` that has a child process (a publisher waiting in the queue has none and writes
+     nothing), a `run_release_regressions.py`, a release-mode `public_release_gate.py` or a `candidate_tree_freshness.py`, seen in /proc, so older copies and other repositories count too; this
+     process, its parents and its children are not counted, nor is a test fixture (LEGEND_SAFE_PUSH_ROOT set). Declared peaks: PEAK_GB. Under the lock, before the merge and the regeneration, and
+     again before the parallel checks, the floor is 2 GB PLUS the declared peaks of those runs: when it is not met the tool WAITS (`LEGEND_SAFE_PUSH_DISK_WAIT_S`, default 600 s) and refuses only
+     if the space does not come back; with no live run it refuses at once, as before. At the start, a `--serialize` push whose shortage the live runs account for (they will give it back) joins the
+     queue instead of being refused. A waiting publisher has no child, so two of them never wait for each other. Not covered: two publishers that pass the check in the same instant.
+
 Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived] [--no-landing-suites] [--serial-checks] [--no-copied-sentence-check]] [--landing-suites]      (default branch: main)
 """
 from __future__ import annotations
@@ -182,22 +190,114 @@ MIN_FREE_GB = float(os.environ.get("LEGEND_SAFE_PUSH_MIN_FREE_GB", "2"))
 CLONE_REPORT = ROOT / "framework" / "scripts" / "tmp_clone_report.py"
 
 
-def free_space_refusal() -> str:
+# Declared peak, in GB, of the scratch copies one live run of each tool holds (step 17; ADV-299 trace of 2026-11-28 for safe_push, the step 12 measurements for the other two; a battery is
+# taken as large as a publisher).
+PEAK_GB = {"safe_push.py": 1.4, "run_release_regressions.py": 1.4, "public_release_gate.py": 0.86, "candidate_tree_freshness.py": 0.45}
+DISK_WAIT_S = float(os.environ.get("LEGEND_SAFE_PUSH_DISK_WAIT_S", "600"))
+DISK_POLL_S = 10.0
+PROC = Path(os.environ.get("LEGEND_SAFE_PUSH_PROC_ROOT", "/proc"))
+
+
+def _heavy_script(argv: list[str]) -> str:
+    """The name in PEAK_GB of the script a python process runs, or ''. A shell or `timeout` that merely names the script is not it."""
+    if not argv or not os.path.basename(argv[0]).startswith("python"):
+        return ""
+    for i, word in enumerate(argv[1:], 1):
+        if word in ("-c", "-m"):
+            return ""
+        if not word.startswith("-"):
+            name = os.path.basename(word)
+            rest = argv[i + 1:]
+            if name == "public_release_gate.py" and not ("--mode=release" in rest or ("--mode", "release") in zip(rest, rest[1:])):
+                return ""      # the staging-mode gate builds no clone
+            return name if name in PEAK_GB else ""
+    return ""
+
+
+def live_heavy_runs(proc: Path | None = None, me: int | None = None) -> list[tuple[int, str, float]]:
+    """[(pid, script, declared peak GB)] of the runs of step 17 that are writing now. Read-only; a process that vanishes or cannot be read is not counted."""
+    proc, me = proc or PROC, me or os.getpid()
+    parent, heavy = {}, {}
+    try:
+        entries = [e for e in proc.iterdir() if e.name.isdigit()]
+    except OSError:
+        return []
+    for entry in entries:
+        try:
+            parent[int(entry.name)] = int((entry / "stat").read_text().rsplit(")", 1)[1].split()[1])
+            name = _heavy_script((entry / "cmdline").read_bytes().decode("utf-8", "replace").split("\0"))
+            if name:
+                heavy[int(entry.name)] = name
+        except (OSError, IndexError, ValueError):
+            continue
+
+    def chain(pid):
+        seen = []
+        while pid in parent and pid not in seen:
+            seen.append(pid)
+            pid = parent[pid]
+        return seen
+
+    mine = chain(me) or [me]
+    top = next((pid for pid in reversed(mine) if pid == me or pid in heavy), me)      # my own family starts at my outermost heavy ancestor
+    working = set(parent.values())
+    counted = {pid for pid, name in heavy.items() if pid not in mine and top not in chain(pid) and (name != "safe_push.py" or pid in working)}
+    runs = []
+    for pid in sorted(counted):
+        if any(above in counted for above in chain(pid)[1:]):      # one family is one run
+            continue
+        try:
+            if b"LEGEND_SAFE_PUSH_ROOT=" in (proc / str(pid) / "environ").read_bytes():
+                continue
+        except OSError:
+            pass
+        runs.append((pid, heavy[pid], PEAK_GB[heavy[pid]]))
+    return runs
+
+
+def free_space_refusal(floor: float | None = None, why: str = "") -> str:
     """'' when both the directory the gate builds a clone in (tempfile's: TMPDIR, else /tmp) and the repository's own filesystem (the merge, the regeneration and the object store write there)
-    have MIN_FREE_GB free; otherwise the refusal text naming the scarcer one. Read-only."""
+    have `floor` (default MIN_FREE_GB) free; otherwise the refusal text naming the scarcer one. Read-only."""
+    floor = MIN_FREE_GB if floor is None else floor
     worst = None
     for where in (Path(tempfile.gettempdir()), ROOT):
         try:
             free = shutil.disk_usage(where).free / 1e9
         except OSError:
             continue          # an unreadable filesystem is not a reason to refuse; the gate will say what it finds
-        if free < MIN_FREE_GB and (worst is None or free < worst[0]):
+        if free < floor and (worst is None or free < worst[0]):
             worst = (free, where)
     if worst is None:
         return ""
     hint = " List your dead clones with `python3 framework/scripts/tmp_clone_report.py`." if CLONE_REPORT.is_file() else ""
-    return (f"free space {worst[0]:.1f} GB at {worst[1]} is below {MIN_FREE_GB:g} GB (twice the measured peak, 0.86 GB, of one release-mode gate clone): remove a clone or a scratch folder of yours first.{hint} "
+    return (f"free space {worst[0]:.1f} GB at {worst[1]} is below {floor:g} GB ({why or 'twice the measured peak, 0.86 GB, of one release-mode gate clone'}): remove a clone or a scratch folder of yours first.{hint} "
             "Nothing was gated or pushed.")
+
+
+def _named(runs) -> str:
+    return ", ".join(f"pid {pid} {name} {peak:g} GB" for pid, name, peak in runs)
+
+
+def wait_for_space() -> str:
+    """'' once the free space covers MIN_FREE_GB plus the declared peaks of the other live runs, waiting for them up to DISK_WAIT_S; otherwise the refusal. With no live run nothing will
+    give space back, so a shortage refuses at once."""
+    started, said = time.time(), False
+    while True:
+        runs = live_heavy_runs()
+        reserved = sum(peak for _, _, peak in runs)
+        short = free_space_refusal(MIN_FREE_GB + reserved, f"{MIN_FREE_GB:g} GB plus {reserved:g} GB for the live run(s) {_named(runs)}" if runs else "")
+        if not short:
+            if said:
+                print(f"disk space available after {time.time() - started:.0f}s", flush=True)
+            return ""
+        if not runs:
+            return short
+        if time.time() - started >= DISK_WAIT_S:
+            return f"{short} Waited {time.time() - started:.0f}s."
+        if not said:
+            print(f"waiting for disk space (up to {DISK_WAIT_S:.0f}s): {short.split(':')[0]}", flush=True)
+            said = True
+        time.sleep(min(DISK_POLL_S, max(0.1, DISK_WAIT_S - (time.time() - started))))
 
 
 SUITE_TIMEOUT_S = 1500
@@ -393,7 +493,7 @@ def checks(remote: str, base: str, sha: str, landing: bool, parallel: bool) -> s
     views_job = gate_job = None
     started, suites_s, clone_s = time.time(), 0.0, 0.0
     if parallel:
-        short = free_space_refusal()      # a waiter can sit in the queue for many minutes while other clones fill the disk
+        short = wait_for_space()      # a waiter can sit in the queue for many minutes while other clones fill the disk
         if short:
             return short
         _STOPPING.clear()
@@ -515,6 +615,12 @@ def main(argv: list[str]) -> int:
             return fail(f"{name} {value!r} is option-shaped; usage: safe_push.py <remote> [<branch>]")
 
     short = free_space_refusal()
+    if short and serialize:
+        runs = live_heavy_runs()
+        coming = sum(peak for _, _, peak in runs)
+        if runs and not free_space_refusal(MIN_FREE_GB - coming):      # what they hold will come back: queue instead of refusing (step 17)
+            print(f"free space is short while {_named(runs)} write(s): queueing, and the disk is checked again under the lock", flush=True)
+            short = ""
     if short:
         return fail(short)
 
@@ -564,6 +670,9 @@ def main(argv: list[str]) -> int:
         print(f"landing lock acquired after {time.time() - t0:.0f}s", flush=True)
         held_from = time.time()
         atexit.register(lambda: print(f"landing lock held {time.time() - held_from:.0f}s", flush=True))
+        short = wait_for_space()      # before the merge and the regeneration write anything (step 17)
+        if short:
+            return fail(short)
         current = run("git", "rev-parse", "HEAD").stdout.strip()
         if current != before:
             return fail(f"HEAD moved while waiting for the landing lock ({before} -> {current}). "
