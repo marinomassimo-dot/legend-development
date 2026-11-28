@@ -1,0 +1,11 @@
+# β-alanine, endogenous carnosine formation and direct circuit effects
+
+28 November 2026 UTC. Continuous compound #206, INV-06. context_policy: QUESTION_DRIVEN. Sole active compound after L-histidine #205. The earlier carnosine and anserine comparisons studied intact dipeptides and surface products. Here the manipulated species is the β-alanine precursor, with local CARNS1-dependent carnosine synthesis as the proposed mediator. [Held carnosine comparison](../l_carnosine/kinetics.md) · [Held anserine comparison](../anserine/README.md)
+
+**Question.** At measured free β-alanine exposure in juvenile WWOX neural material, does labelled conversion to carnosine lower newly formed lipid-aldehyde adducts and preserve recovery after matched evoked work? Alternatives include direct chloride-dependent GlyR or GABA receptor effects, reduced recruitment, and competition with taurine transport. β-Alanine entry and carnosine accumulation are separate from new adduct formation and circuit response.
+
+**Comparison.** Align brain β-alanine and carnosine by region, age, route and time, with adult human central measures kept separate from peripheral exposure. Seek precursor-product tracing and a chemically resolved adduct readout rather than bulk antioxidant capacity. Require a slower benefit that covaries with labelled carnosine, survives parent clearance and loses the benefit when local carnosine synthesis is independently perturbed. Compare acute current/recruitment changes, chloride driving force and taurine handling in the same preparation. Bound any contribution of survival changes.
+
+**Decision rule.** A carnosine-dependent fall in adduct formation and functional recovery at matched work increases mechanistic priority. Effects confined to acute parent, loss of early recruitment, or a taurine shift without a carnosine-linked effect favor alternatives. Brain content alone supplies no functional claim or pediatric exposure.
+
+**First step.** Verify the GADL1 genetic metabolomics papers and primary oral hippocampal carnosine data. Compare the acute nominal receptor window with measured parent, noting age and compartment. Preserve separate readouts for benefit and loss of inhibition or taurine reserve.
