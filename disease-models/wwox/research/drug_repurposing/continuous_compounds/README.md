@@ -228,7 +228,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active: acipimox.** Compare intracellular NAD pool renewal with reduced fatty-acid availability and compensatory rebound. [Prespecified comparison](acipimox/pretest.md)
+**Active: acipimox.** Compare intracellular NAD pool renewal with reduced fatty-acid availability and compensatory rebound. [Prespecified comparison](acipimox/pretest.md) · [Opening clinical and metabolic contrasts](acipimox/first_comparison.md)
 
 **Proglumide.** Retain as a conditional ex vivo comparator of CCK receptor antagonism and peptide persistence. Defer pediatric WWOX priority. Total ventricular parent is measurable after high intravenous exposure in dogs. Human cloned receptor potency, adult serum and rat peptide cleavage span distinct assay scales. Reopen for a native CCK response with measured local parent and peptides. [Dossier and replay](proglumide/README.md)
 
