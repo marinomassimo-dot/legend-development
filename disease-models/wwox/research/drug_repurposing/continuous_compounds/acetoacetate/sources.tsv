@@ -1,0 +1,9 @@
+source	id	url	scope	cache_sha256
+Juge 2010	20920794	https://graylab.ucdavis.edu/wp-content/uploads/sites/202/2015/02/2010-Juge-et-al-Neuron.pdf	Targeted Results, Figs. 3–4, 6 and Electrophysiology. Public author-hosted copy; derived readings only.	62e19d2806c9cb6d11422e3069ef57ccc3087f618b0778d60c479151de5b84af
+Martineau 2017	29273736	https://www.nature.com/articles/s41467-017-02367-6	Open-access original Results excerpts, Figs. 2 and 4f.	NA
+Courchesne-Loyer 2017	27629100	https://doi.org/10.1177/0271678X16669366	Original PDF from IHMC mirror; targeted Results, Table 1 and Fig. 1; derived values only.	886b81816fae3c0faf5bf8b36a1a73588d2d0ab54d24128269cd6b868c640ac5
+Klepper 2004	14769490	https://www.sciencedirect.com/science/article/abs/pii/S0952327803002229	Original abstract and indexed discussion extract referring to Table 2.	NA
+Mouse cortex	GSE158682	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158682	Public processed GEO values and one-library omissions.	See cached provenance checked by replay_native.py
+Mouse hippocampus	GSE158681	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158681	Public processed GEO values and one-library omissions.	See cached provenance checked by replay_native.py
+Human organoid	GSE156243	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE156243	Public processed GEO values and one-library omissions.	See cached provenance checked by replay_native.py
+Mouse nuclear data	GSE158684	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158684	Public processed GEO pools and within-class/weights decomposition.	See cached provenance checked by replay_native.py

@@ -1,0 +1,53 @@
+{
+  "investigation": "INV-05",
+  "title": "Acetoacetate and vesicular glutamate filling in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "A chloride-dependent vesicle transport comparison separates direct glutamate loading from ketolysis and changes in synaptic release.",
+  "graph": {
+    "evidence": "Fixed acetoacetate has different effects as assay chloride changes.",
+    "inference": "Terminal exposure and chloride set the direct transport prediction.",
+    "hypothesis": "Lower glutamate per fusion could reduce recurrence.",
+    "experiment": "Pair single-fusion glutamate with chloride and ATP."
+  },
+  "evidence": [
+    "Purified VGLUT2 showed a reported functional IC50 of 0.2 mM acetoacetate at 10 mM external assay chloride. The digitized fits predict about 42% versus 88% of normalized baseline uptake at 10 versus 20 mM chloride with acetoacetate held fixed.",
+    "CA1 mini currents fell from 9.03 to 6.88 pA in the high nominal lithium acetoacetate comparison. The matched lithium control adds 10 mM extracellular chloride; intracellular chloride was not measured.",
+    "Adult dietary ketosis increased plasma acetoacetate from 0.2 to 1.7 mM and PET brain metabolic rate from 0.7 to 4.8 micromoles per 100 grams per minute. Plasma and PET do not measure unbound presynaptic exposure."
+  ],
+  "inference": [
+    "Mouse Wwox hippocampus and human cortical organoids show less SLC17A7 RNA. The juvenile mouse cortical RNA result is unstable under single omissions. RNA and larger cortical mini currents cannot establish excess vesicle content.",
+    "Native vesicle chloride and bouton cytosolic chloride are distinct. Metabolized acetoacetate can affect energy supply independently of an acute vesicle transport effect."
+  ],
+  "hypothesis": [
+    "Loading inhibition predicts a fall in content and glutamate per fusion at matched local parent, ATP, pH and voltage. A change in cytosolic chloride should attenuate that effect. Delayed ketolysis-dependent ATP recovery with intact content favors fuel delivery."
+  ],
+  "experiment": [
+    "At measured juvenile bouton acetoacetate, compare Wwox and corrected preparations with matched pH, anion, counterion and first drive. Record fusion counts, cleft glutamate, content and ATP. Verify the separate chloride and ketolysis controls, then measure inhibitory recruitment and spontaneous recurrence."
+  ],
+  "limits": [
+    "Retain as an ex vivo probe. Defer pediatric WWOX priority pending free terminal exposure, a native single-event effect and preserved inhibitory recruitment.",
+    "An adult mixed diet, CSF in GLUT1 deficiency and a lithium salt in a slice do not supply the formulation, tolerability or interaction evidence for isolated pediatric use."
+  ],
+  "sources": [
+    {
+      "label": "Juge et al. Vesicle reconstitution, CA1 recordings and incubation recipe.",
+      "url": "https://doi.org/10.1016/j.neuron.2010.09.002"
+    },
+    {
+      "label": "Martineau et al. Native vesicular chloride and VGLUT1.",
+      "url": "https://doi.org/10.1038/s41467-017-02367-6"
+    },
+    {
+      "label": "Courchesne-Loyer et al. Plasma and adult metabolic PET.",
+      "url": "https://doi.org/10.1177/0271678X16669366"
+    },
+    {
+      "label": "Klepper et al. GLUT1 deficiency, blood and CSF.",
+      "url": "https://doi.org/10.1016/j.plefa.2003.07.004"
+    },
+    {
+      "label": "Repudi et al. Juvenile Wwox cortical electrophysiology.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34634460/"
+    }
+  ]
+}
