@@ -1445,6 +1445,16 @@
      "blocker": "extractor delegate stopped by a safety classifier; not retried or rerouted; waits for an operator decision on whether and how to run the audit",
      "no_condition": "an operator decision has no file or commit that can be typed in advance",
      "updated_at": "2026-11-28T14:33:11Z"
+    },
+    {
+     "step": "ADV-334: one design page for the first Wwox-null GSK3 same-animal panel (design only), hand to IT37 for the RP-026 consumer line",
+     "status": "BLOCKED",
+     "owner": "orchestrator",
+     "source": "ADV-334 (ADV message 2026-11-28)",
+     "accepted_at": "2026-11-28T15:18:33Z",
+     "blocker": "my own response was stopped by a safety classifier while preparing the page; no page written; not retried or reworded; waits for an operator decision",
+     "no_condition": "an operator decision has no file or commit that can be typed in advance",
+     "updated_at": "2026-11-28T15:19:48Z"
     }
    ]
   }
@@ -2560,6 +2570,13 @@
    "at": "2026-11-28T14:31:59Z",
    "source": "ADV-332 (ADV message 2026-11-28, SCI proposal accepted)",
    "step_sha256": "0435ce05674d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T15:18:33Z",
+   "source": "ADV-334 (ADV message 2026-11-28)",
+   "step_sha256": "c4e0c5213416",
    "reopened_block": false,
    "authorised_by": null
   }
