@@ -1,0 +1,5 @@
+oxygen_group	time_h	brain_zero_y	brain_25_y	brain_bar_y	plasma_point_y	brain_homogenate_ug_mL	plasma_ug_mL	matrix_quotient
+normoxia	1	937	206	926	747	0.376	8.222	0.0458
+normoxia	2	937	206	930	903	0.239	5.287	0.0453
+hypoxia	1	936	197	928	286	0.271	16.896	0.0160
+hypoxia	2	936	197	930	531	0.203	12.286	0.0165

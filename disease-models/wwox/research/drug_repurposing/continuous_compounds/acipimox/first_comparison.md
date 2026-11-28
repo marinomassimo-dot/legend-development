@@ -1,0 +1,16 @@
+# Acipimox opening comparison
+
+28 November 2026 UTC · Primary abstracts only · No full-text progress counted. [Prespecified comparison](pretest.md)
+
+| Preparation | Observation | Limit |
+|---|---|---|
+| Two-week randomized crossover, 21 adults with type 2 diabetes | Ex vivo muscle respiration increased. Plasma nonesterified fatty acids (NEFAs) measured in the study were 759 µmol/L on placebo and 1,135 µmol/L on acipimox. The paper's abstract assigns a direct increase in NAD concentration to separate C2C12 myotubes. | Respiration and a higher contemporaneous circulating NEFA concentration can coexist. The clinical comparison did not establish intracellular incorporation of acipimox into newly synthesized NAD. [Van de Weijer et al.](https://pubmed.ncbi.nlm.nih.gov/25352640/) |
+| Older adults with probable sarcopenia, 11 recruited and all completed visits, before–after with aspirin | Muscle biopsy at three weeks gave a median NAD change of −0.003 µmol/g, with IQR −0.058 to +0.210 and p = 0.26. No secondary functional endpoint improvement was detected. | Small uncontrolled cohort, concurrent aspirin, variable individual change. The IQR is spread of observations. The null pool result cannot resolve turnover or equivalence. [McDonald et al.](https://pubmed.ncbi.nlm.nih.gov/40100528/) |
+| Six-month randomized trial, 39 adults with obesity at allocation | Fasting fatty acids fell. The authors detected no improvement in the studied mitochondrial function and density measures, including postexercise phosphocreatine recovery. | Endpoint-specific denominators, assay timing and exposure required from the primary text. A fasting change does not specify the whole daily fatty-acid trajectory. [Makimura et al.](https://pubmed.ncbi.nlm.nih.gov/26691888/) |
+| Separate short and longer type 2 diabetes comparison | Abstract reports approximately 10% lower 24-hour NEFAs at three days, with attenuation at four weeks and about twice the morning NEFA concentration. | Sampling time and duration are different contrasts. The abstract does not identify a neural exposure or NAD response. [Primary](https://pubmed.ncbi.nlm.nih.gov/8306591/) |
+
+**Replay.** The crossover's reported mean NEFA difference is 376 µmol/L, or +49.54% relative to placebo. `python3 -c 'print(1135-759, round(100*(1135/759-1), 2))'`. This is arithmetic on reported means, with no paired error estimate or adjustment.
+
+**Checkpoint.** Quantify parent-derived labeling and NAD redox state separately from absolute pool size. At fixed extracellular fatty-acid delivery, a prompt rise in parent-derived NAD followed by respiratory and evoked recovery would strengthen a precursor mechanism. Improvement that depends on the NEFA trajectory or persists without labeled NAD after demonstrated local parent exposure would favor altered substrate supply or another mechanism. Recover clinical and cell assay timing, exact assay denominators, the presence or absence of labelled NAD, and direct free neural exposure in the next primary-source pass.
+
+**Full-text correction.** The McDonald primary endpoint uses eight paired usable muscle NAD measurements. Table 2 and the Results give the IQR as −0.06 to +0.02 µmol/g. The larger upper value above was printed in the abstract. [Audited findings](README.md)

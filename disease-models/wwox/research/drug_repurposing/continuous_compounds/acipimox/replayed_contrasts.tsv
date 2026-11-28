@@ -1,0 +1,6 @@
+preparation	readout	control	acipimox	unit	change_percent_vs_control
+adult T2D crossover	plasma NEFA	759	1135	umol/L	49.54
+adult T2D crossover	muscle ATP luminescence	35.2	70.0	RLU/mg protein	98.86
+C2C12 Figure 5 approximate	NAD plus at 3 h	1.422	2.393	umol/L assay	68.29
+C2C12 Figure 5 approximate	basal respiration at 24 h	22.018	27.523	pmol O2/s/mL	25.00
+C2C12 Figure 5 approximate	FCCP respiration at 24 h	62.844	86.697	pmol O2/s/mL	37.96
