@@ -1,8 +1,8 @@
 {
   "investigation": "INV-05",
-  "title": "Agmatine sulfate in WWOX-LoF",
+  "title": "Agmatine and spontaneous recurrence in WWOX-LoF",
   "date": "28 November 2026",
-  "summary": "NMDA channel block, coupled nitric oxide signaling and spontaneous EEG can give different answers.",
+  "summary": "The oral sulfate formulation and measured agmatine are compared with NMDA current, coupled nitric oxide signaling and spontaneous EEG.",
   "graph": {
     "evidence": "Adult WAG/Rij rats had more spike-and-wave discharges.",
     "inference": "Magnesium interaction changes which voltage loses more current.",
