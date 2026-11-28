@@ -1419,11 +1419,20 @@
     },
     {
      "step": "ADV-325: GSK3-substrate phosphosite census over held WWOX full texts (frozen rule first; passes and fails with locators; consequence for the same-animal panel, the lithium-in-WT confound and RP-026)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-325",
      "accepted_at": "2026-11-28T12:48:00Z",
-     "authorised_by": "ADV-325 message 2026-11-28 to SCI bd"
+     "authorised_by": "ADV-325 message 2026-11-28 to SCI bd",
+     "evidence": "main b5993e42a: adv325_gsk3_phosphosite_census_sci_20261128/RESULT_ADV325_FINAL (second reader done), COMPARISON_ADV326_ADV325, SECOND_READER_ADV325; 7 receipts",
+     "updated_at": "2026-11-28T13:39:25Z"
+    },
+    {
+     "step": "ADV-327: does lithium change GSK3-pathway phosphorylation in wild-type developing rodent brain (prereg frozen 2026-11-28T13:34:30Z, sha256 417fd957; run the fixed search, second reader, deliver to ADV and IT)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV - CURRENT direction round 2026-11-28T13:17Z, message to SCI bf",
+     "accepted_at": "2026-11-28T13:39:33Z"
     }
    ]
   }
@@ -2527,6 +2536,13 @@
    "step_sha256": "73b50c8218c9",
    "reopened_block": false,
    "authorised_by": "ADV-325 message 2026-11-28 to SCI bd"
+  },
+  {
+   "at": "2026-11-28T13:39:33Z",
+   "source": "ADV - CURRENT direction round 2026-11-28T13:17Z, message to SCI bf",
+   "step_sha256": "f6d4b71b385f",
+   "reopened_block": false,
+   "authorised_by": null
   }
  ],
  "DELEGATIONS": [
