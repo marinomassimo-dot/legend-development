@@ -1,0 +1,29 @@
+# Checkpoint IT42 (window 59ab4c81), 2026-11-28, written at about 240k context (census, effort high)
+
+Hypothesis level; nothing here is medical advice. Mandate ORCH-ROADMAP-IT59-20261119. Read this file and the ADV-339 folder `advisor_pilot_20261113/brainstorm_20261116/adv339_exclusivity_it_20261128/` (PREREG, `RESULT_ADV339_part1/2`, `consumers_it42_20261128.tsv`); `_16` only for the first half. Codex is never contacted. Worktree `it_42_20261128`, branch `task/it42b` (landed, tip `2488f1f4b`).
+
+## Done
+* Bound (marker verified), effort high, main merged; IT41 (98a18a59) released on request.
+* **BATCH_20261128_012 landed on main** (MINOR, `2488f1f4b`, gate PASS verified by ls-remote): ADV-339 repairs after two readers per sentence and a blind second reader on the FINAL text. Edits: CLAIM 003 O-KO age atom; CLAIM 011 title (survival graded by Fig 3B, expression mostly ns, body weight untested) and the P90 / S7I / gliosis sentence (S7I and Fig 6F are held; KO+RI dead by about P18 from the axis). Dated pointers, text unchanged: CLAIM 003 S2, CLAIM 004 S4, CLAIM 005 S5. Blind reader: **2 of 32 atoms not supported on first composition (6 percent); 2 of 3 repaired units had a failing atom**; both reworded and re-graded by the same reader (delta, not independent). Receipts `FTR-20261128-33914858-43`, `-42422765-02`, `-42397075-02`, `-34747138-39` (`queried_not_full_read`). CC `CC-20261128-ORCHESTRATOR-IT42-ADV339-01`, ops `ops_adv339_it42.json`.
+* Card `EB-GROWTH-AX-01` (packet, card, `regenerated/` copy) no longer restates the old CLAIM 011 title.
+* CI red from ADV: `PMID33914858.json` manifest receipt repointed with `manifest_receipt_repoint.py --pmid 33914858 --apply` (declared `-41`, producer `FTR-20261003-33914858-02`); `test_manifest_receipt_provenance.py` OK, ceiling 8 not raised; PMID31829254 has one naming event and conforms. This landed in the same push.
+* Runs #2960 success; #2962, #2963, #2965 to #2968 completed `failure` (all before the fix; reproduced locally as that one test; annotations not read: `gh` is not on this host). **#2974 (`2488f1f4b`, the first tip with the fix) was in progress at the push**; read it with `ci_runs.py status 2488f1f4b5e885343db7a63bbf8ddd5d7017edc0` and tell ADV when it is green.
+* `consumers_it42.py` and `consumers_it42_20261128.tsv`: for the claims 013 and above, the number of candidate sentences the net lists and how many repurposing folders cite the claim. By consumer: CLAIM 031, 016, 036, 042, 030, 035, 019, 025, 033, 032.
+
+## Open, in order
+| # | Item | State |
+|---|---|---|
+| 1 | CI of #2974 and later: green is read only from a completed run of a tip at or after `2488f1f4b`; tell ADV | open |
+| 2 | **ADV-339 continuation (ADV 2026-11-28 19:2xZ):** cut ONE packet of about 6 counted sentences for HE (`HE - CURRENT 7ec59b7e`) and one for SCI (`SCI - CURRENT f59eabd0`), each an independent reader: source papers whole in the packet (search `files/figures`, `files/supplement`, `files/fulltext`, `figure_renders` by PMID first), labels by figure, panel, group, n; no brief names the expected answer; your own first-reader table is withheld until theirs is back; then compare cell by cell, MUST CHANGE rate with its denominator, ONE batch for the both-agree repairs (`test_batch_queue` first). Order by `consumers_it42_20261128.tsv`; a "counted" sentence is a judgement on the net's candidates (marker plus arm), so list and label them before cutting. Stop rule unchanged (six holding sentences close the pattern; the first 11 had 6 not holding on strict readings) | open |
+| 3 | DREAM line owed for ADV-339 first half once the second half is in (consumers: CLAIM 003/004/005/011 text and the RP-016/017/019 premises that cite them; one finding for the card chain: a card copying a CLAIM title goes stale with it, `copied_card_sentences.py --base development/main` said 0 held after the repair) | owed |
+| 4 | ADV-286 dates: C1 re-check 2026-12-05, C2 not before 2026-12-06, UNRESOLVED 2026-12-12 | dated |
+| 5 | Two mp4 supplements of 33914858 unviewed (decoder; refused fetch, not retried) | operator list |
+| 6 | One safeguard stop (a withheld response while I read the CLAIM 011 P90 / S7I sentence in the registry); recorded to ADV, not retried; goes on the operator list. If a sentence is withheld again, record it BLOCKED and move to the next | recorded |
+| 7 | Worktrees `it_39` to `it_41` hold ignored files: never remove yourself; `it_42` is mine, branches `task/it42-old`, `task/it42b`, `task/it42c` are mine (the first is the superseded one) | ADV |
+
+## Traps met
+* A ledger move on main between my receipt and my push (Codex SCI receipts landed twice) makes the merge conflict in `fulltext_read_receipts.jsonl`, coverage and reading state. Restart: new branch from `development/main`, check out only my input files from the old branch, `record` again, `propagate --apply`, redo state history and manifest, then regenerate. Script `relanding.sh` (job tmp) did it in about 3 minutes; push at once.
+* **Regeneration order**: `repurposing_join.py run`, then `repurposing_coverage.py run`, then `ranking_it8.py run`, then the view trio (`run`, `--source shareable run`, `package`). Skipping coverage made `safe_push` write its own "regenerate derived surfaces" commit that left the committed view stale: two refused pushes.
+* `gh` is not installed; the check-run annotation route needs the API through `curl` or a tool in `framework/scripts`.
+* A blind packet must be atoms only: the first composition of two atoms (my "no functional reading beyond P17-P18"; "dead by about P25" copied from my own part 2 adjudication) failed on the reader's check; an adjudicator's arithmetic is not a source.
+* Context: 232k at turn 130; the whole-claim records were never read whole (snippet script, `registry_records.py get` to a file, `snip.py` windows).
