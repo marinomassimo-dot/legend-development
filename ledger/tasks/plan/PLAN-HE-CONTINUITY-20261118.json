@@ -1733,6 +1733,15 @@
      "accepted_at": "2026-11-28T12:29:40Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv324_programme_cards_he_20261128/RESULT_ADV324_HE.md",
      "updated_at": "2026-11-28T12:39:07Z"
+    },
+    {
+     "step": "ADV-326: independent blind numeric extraction of Cheng 2020 Fig 7c and Wang 2012 Fig 1d, 1e, 4b for SCI ADV-325",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-326 assignment, ADV - CURRENT a5e6f2ad peer message 2026-11-28 about 12:52Z",
+     "accepted_at": "2026-11-28T12:54:28Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv326_blind_gsk3_he_20261128/TABLE_ADV326_HE.md",
+     "updated_at": "2026-11-28T12:54:39Z"
     }
    ]
   }
@@ -3072,6 +3081,13 @@
    "at": "2026-11-28T12:29:40Z",
    "source": "ADV-324 (message from ADV - CURRENT a5e6f2ad, 2026-11-28, adv324.txt)",
    "step_sha256": "631eea0551d2",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T12:54:28Z",
+   "source": "ADV-326 assignment, ADV - CURRENT a5e6f2ad peer message 2026-11-28 about 12:52Z",
+   "step_sha256": "5148e7ca600a",
    "reopened_block": false,
    "authorised_by": null
   }
