@@ -1,0 +1,134 @@
+BLIND VERIFICATION REPORT (IT28, ADV-295 block 1 consumers; hypothesis level; nothing here is medical advice)
+
+SCOPE AND FILES OPENED
+I opened only the packet and the held sources, all read in full as text, with tags stripped and reference lists dropped:
+- Packet: /home/desktop/.claude/jobs/54ca757b/tmp/blind295/BLIND_PACKET_S_295B1_IT28.txt
+- Helton 2026: /home/desktop/legend-development/files/fulltext/PMID42401046_Helton2026_PMC_r2.xml (all text, methods, legends Fig 1-6)
+- Qin 2025: .../PMID41254692_Qin2025_PMC.xml
+- Tiwari 2024: .../PMID39546604_ADV272_PMC_r2.xml
+- Khadija 2026: .../PMID42807679_Khadija2026_PMC.xml, plus the supplement Supplementaryfile1.docx. The supplement is only a STROBE checklist and holds no data.
+- Vono 2025: .../PMID41210171_Vono2025_PMC.xml
+
+Limits:
+- No figure images were read. Every figure-dependent number below is UNSETTLED unless the text or legend gives it.
+- Supplementary tables and figures are not in the held texts: Helton Supplemental Fig 1-4, Qin Tables S1-S6 and the sheet, Tiwari Table S3, Vono Document S1.
+- I wrote no files. The harness itself spilled two long tool outputs into its own tool-results folder under /home/desktop/.claude/projects/..., not in the repository.
+
+SUMMARY TABLE
+| Block | Verdict | One-line reason |
+|---|---|---|
+| A1 | STANDS (optional ADD) | Direction claims match the text. A reader could miss that the contralateral IHK dentate gyrus showed remodelling with no Axin2 fall. |
+| A1-add1 | MUST CHANGE (the "about 10-fold by eye" clause is UNSETTLED) | The text gives no magnitude. n = 6 per group is stated, but the unit is not explicit. The count is a density. |
+| A1-add2 | MUST CHANGE | "Daily body weight to day 14" is not in the text. The Axin2 time-course part is correct. |
+| A2a | MUST CHANGE (small) | The quoted phrase is verbatim but ungrammatical in context. The paper cites Table S6, not S7, for the compound lists. |
+| A2b | UNSETTLED (sheet clauses) + ADD | The held text cannot support or refute "not given in the sheet" or "every row". |
+| A2c | UNSETTLED for "LOWERS ... Homo sapiens (cell or tissue type not given)"; STANDS for "paper states the opposite" | The sheet is not held. The paper's text clearly says valproate increases WWOX. |
+| A3 | STANDS | Species and system claims are all supported. |
+| B1 | STANDS | Every clause matches Table 3, Table 1 and the WES text. |
+| B2 | MUST CHANGE | Table S3 is not in the held text, and the Fig 2 legends give no culture counts. |
+| B3 | STANDS (wording note) | Incidence and severity are summarised for brain only (Fig 6C legend). |
+
+BLOCK A1 (Helton 2026)
+Fragment: "so, in this study, the direction of the Wnt-activation effect is the same in both models ... only the number of remodelling markers that respond differs; a model-dependent Wnt direction is not shown by this paper (immature dentate granule cells, mouse, day 14, one dose)".
+- "Axin2 fell in the epileptogenic zone ... in both" is supported.
+  - Results para 6, Fig 5 and Fig 6 legends: in IHK, Axin2 in POMC-GFP+ immature cells was below baseline ipsilaterally. In IPK it was below baseline in both hemispheres, which were averaged.
+  - Fig 5C-D: contralateral IHK Axin2 was unchanged after kainate.
+- "Restored to baseline by the GSK3 inhibitor in both" is supported. Legends 5B and 6B say SB415286 raised Axin2 to saline-control (baseline) levels. No p-values are given in the text for Fig 5/6, so I cannot confirm the significance of the Axin2 comparisons.
+- "Remodelling was reduced in both" is supported.
+  - IHK: ipsilateral dispersion (Fig 3C) and migration (3D) fell. Contralateral neurogenesis (3E) fell. Proximal dendrite angle fell in both hemispheres (3F,G).
+  - IPK: only dendrite angle fell (Fig 4E). Dispersion, migration and neurogenesis were unaffected (Fig 4B-D).
+- "Only the number of markers that respond differs" is supported as a statement about drug response. IPK is a subset of the IHK responders.
+- The baseline pathology also differs between the models: no dispersion in IPK. The authors stress model differences, so this clause is not an overstatement.
+- "Mouse, day 14, one dose" is supported.
+  - 8-10-week-old C57BL/6J and POMC-eGFP mice, both sexes 1:1.
+  - 10 mg/kg/day i.p., dosed daily for 14 days from 24 h after kainate (Fig 2 legend).
+  - Histology "2 weeks after seizure induction". The exact euthanasia day (14 or 15) is not stated, so "day 14" means about 2 weeks.
+- ADD (optional) so a reader of this text alone is not misled: "in the contralateral IHK dentate gyrus Axin2 did not fall although remodelling occurred and was reduced by the drug, so Axin2 restoration does not account for every effect."
+
+BLOCK A1-add1
+Fragment: "(the ipsilateral immature-cell count, which kainate had reduced about 10-fold by eye, not significantly changed by the drug, n = 6 mice per group)".
+- "Not significantly changed by the drug" is supported by the Fig 3E legend: "IHK caused significant granule cell loss in the ipsilateral dentate gyrus compared to saline controls; this was unaffected by SB415286 treatment". No p-value or effect size appears in the text.
+- "About 10-fold by eye" is UNSETTLED. The text says only "loss", and the magnitude would have to come from Fig 3E, which I could not read. If kept, name Fig 3E and say it is the checker's visual estimate, not a reported value.
+- "n = 6 mice per group" is mostly supported. Methods 2.8 says "For each experiment, n per group was 6, male and female mice were used equally". Other text says "mice"; the legends give no separate n. Fig 3E is a per-group count, but the unit is not stated per panel, so say "n = 6 per group (Methods 2.8)".
+- The quantity is a POMC-GFP+ cell count normalised to granule-cell-layer volume (Methods 2.7), that is, a density, not a raw count.
+- Minimal replacement: "(the ipsilateral immature (POMC-GFP+) cell density, which kainate reduced markedly relative to saline controls (Fig 3E), was not significantly changed by the drug; n = 6 per group per Methods 2.8)".
+
+BLOCK A1-add2
+Fragment: "histology and immunohistochemistry at day 14 only for the epilepsy-model outcomes (plus a single-dose Axin2 time course at 3 h and 24 h and daily body weight to day 14)".
+- The Axin2 time course is supported. Results para 1 and Fig 1 describe a single i.p. dose with Axin2 at 3 h (5 ± 0.94 fold) and 24 h (7 ± 1.25 fold). The legend places this in the innermost third of the granule cell layer.
+- "Daily body weight to day 14" is NOT supported. The text says only "SB415286 administration had no effect on animal weight during the treatment period (Supplemental Figure 1)" and "no adverse effects on mouse weight". "Daily", the schedule, and whether kainate animals were weighed are not in the held text.
+- Also, the dose of the single-dose time course is not stated in the main text.
+- Replacement for the parenthesis: "(plus a single-dose Axin2 time course at 3 h and 24 h, and body weight over the treatment period reported only as 'no effect' with Supplemental Figure 1)".
+
+BLOCK A2a (Qin 2025)
+Fragment: "compounds that «potentially increasing» WWOX expression".
+- The quote is verbatim. Results, final section: "The compounds potentially increasing WWOX expression include Vorinostat, Valproic Acid, Sunitinib, Jinfukang, and Arsenic Trioxide." The list of five matches exactly.
+- The grammar breaks as inserted ("compounds that «potentially increasing»"). MUST CHANGE, minor: "...as compounds «potentially increasing» WWOX expression."
+- The paper cites "Additional file 1: Table S6" for these compound lists. Tables S1-S6 are the only supplementary tables named anywhere in the main text. Table S7 is never cited. The sentence "Its own deposited CTD export, Table S7" is unsupported by the held text. Check the table number against the deposit, or write "its deposited supplementary table (the main text cites Table S6)".
+- The Methods say CTD interactions were "restricted to interactions documented in human tissues". The string "Homo sapiens" never occurs in the text, so the species label is a sheet-level fact I cannot check.
+- The claims "every one of those five WWOX rows is `Decreases expression`", "every THBS2 row `Increases expression`" and "no Increases row for WWOX anywhere" cannot be checked from the held text. The paper never states a direction per row.
+- The paper does state the opposite direction in its Discussion: "HDACi (Vorinostat and Valproic Acid) can simultaneously upregulate WWOX expression and downregulate THBS2 expression".
+
+BLOCK A2b
+Fragment: "cell type, dose and readout (transcript or protein) are not given in the deposited sheet; the species is Homo sapiens in every row".
+- The sheet is not held, so both sheet clauses are UNSETTLED.
+- What the held text supports:
+  - The main text gives no cell type, dose or readout for any CTD interaction.
+  - It says only that interactions were restricted to human tissues.
+  - The compounds were then filtered for antitumour activity.
+- "Every row" is an absolute word that needs the sheet. "Not given" can only be verified from the sheet.
+- Safe wording: "the paper's main text gives no cell type, dose or readout (transcript or protein) for these interactions and restricts them to human tissue; the deposited sheet was audited separately".
+- "CTD rows are extracted from cancer and toxicology experiments" is not in the held paper. The paper says only that CTD compiles chemical-gene-disease interactions. This sits in the surrounding sentence, not in the fragment.
+- Consistent with the source: the paper's protein-level WWOX association is OR 0.117, P = 7.2E-03, FDR-corrected P = 0.160.
+
+BLOCK A2c
+Fragment: "valproate LOWERS WWOX expression in Homo sapiens (cell or tissue type not given)", with the heading's clause "the paper that carries the row states the opposite".
+- "The paper states the opposite" is SUPPORTED, as above.
+- "LOWERS", "Homo sapiens" and "cell or tissue type not given" all rest on the unseen sheet and are UNSETTLED here.
+- The fragment is better than the replaced "in human cells", because the paper says "human tissues". Keep it only with an attribution such as "per the deposited sheet as audited".
+- Replacement if the sheet cannot be reconfirmed: "A curated database annotation, as audited in the deposited sheet, lowers WWOX expression for valproate in human data (cell or tissue type not given); the paper's text states the opposite".
+
+BLOCK A3 (Tiwari 2024)
+Fragment: "matrix pyruvate sensor (mtPyronicSF; CaMKII-mtPyronicSF in axons) in cultured Sprague-Dawley rat neurons and human HEK293 cells; mouse tissue is used in the paper only for the 13C3-pyruvate infusion, the Sirt3-/- brain immunoprecipitation and the MPC1 cDNA". STANDS.
+- Axonal sensor (Fig 2E-G): CaMKII-mtPyronicSF in hippocampal neurons. Methods: hippocampi from 1-3-day-old Sprague-Dawley rat pups, so rat neurons.
+- HEK293 (Fig 4, 5): mtPyronicSF, with the ATCC human HEK293 line listed in Table 1.
+- Mouse uses, checked across the whole methods:
+  - Male C57BL/6 mice, 6 weeks at purchase, with jugular-vein 13C3-pyruvate infusion (Fig 1A-C; n = 4 mice).
+  - Sirt3+/+ and Sirt3-/- mouse cortex for the MPC1 immunoprecipitation (Fig 4D,E; five animals per genotype, 6-10 weeks, mixed sex; the Fig 4E legend says n = 4 IP blots).
+  - A mouse MPC1 sequence, codon-optimised for rat cells, for the constructs.
+  - I found no other mouse tissue or cell use.
+- The cultured cortical neurons used for survival and metabolomics are also rat ("primary cultures of rat cortical neurons"). This does not conflict with the fragment.
+- Outside the fragment but in its sentence: the legend gives n = 12-18 neurons for Fig 2F, and "3 cultures" is not in the text. The "21 against 12" in "SCI's reading" is therefore not reproducible from the held text. It may come from the figure or from Table S3.
+
+BLOCK B1 (Khadija 2026, Table 3)
+Fragment: "Not examined (as far as the paper reports): the remaining WWOX allele; no WWOX sequence result is given. Exome sequencing was done in six selected patients, of whom four are named (P7, P16, P17, P18) and two are not; whether this patient was one of them is not stated. No RNA, protein or follow-up is reported." STANDS.
+- Table 3 row P8 reads: sex M, age "1 M" (1 month), "Dysgenesis of CC", hydrocephaly, microcephaly, karyotype 46,XY, arr16q(74,718,513-87,891,103)x1, CNV "L", Size "L", genes WWOX/ANKRD11/ZNF778/CDH15/CDH13, inheritance "De novo", ACMG "P".
+- P8 has no WES marker. The Table 3 legend defines "+: explored by WES, -: not explored by WES", but no "+" appears for P8 or elsewhere in the table.
+- WES (Methods 2.4.5, Results 3.4, Limitations): "six selected patients". Results 3.4 says rare variants were found in four patients and "no clinically relevant sequence variants were detected in the remaining two patients". Table 1 shows only P7, P16, P17 and P18. The selection rule ("unresolved patients carrying CNVs and/or presenting parental consanguinity") could include P8, but the paper does not say it did.
+- No WWOX sequence result appears anywhere. The string WWOX occurs only in the Table 3 P8 row and in the glossary.
+- I found no RNA, expression or protein analysis, and no follow-up or outcome data.
+- Interval check: 87,891,103 - 74,718,513 = 13.17 Mb, derived from the printed hg18 interval. The "Size" cell reads "L", so the later "Integrator amendment" is correct.
+- Minor caveat: the heading "Not examined" can read as a fact. The sentence already says "as far as the paper reports", which is adequate.
+
+BLOCK B2 (Tiwari 2024)
+Fragment: "and the paper does not state whether the sensor datasets (Fig 2F,G) and the ATP datasets (Fig 2I,J) came from the same cultures; both list 3 cultures (Table S3) and no paired measurement is shown".
+- "Does not state whether ... the same cultures" is supported for the main text and legends.
+  - Fig 2F: n = 12 to 18 (neurons). Fig 2I: n = 9 (neurons).
+  - Neither legend gives a culture count.
+  - The panel assignments are right: sensor F,G and ATP I,J.
+- "Both list 3 cultures (Table S3)" is NOT checkable. Table S3 is not in the held text and is never cited in the main text. The "Tables S1 to S3" list appears only at the end, and only S1 and S2 are cited, for Fig 1.
+- Fig 3 legends do give culture counts (3 cultures) for the SV experiments, which may be the source of the "3 cultures" idea.
+- "No paired measurement is shown" is supported. The Fig 2H schematic shows the sensor and Syn-ATP together, but the legends never say they were co-expressed or recorded in the same neurons. Fig 2I,J report Syn-ATP only.
+- MUST CHANGE minimal wording: "and the paper's main text and Fig 2 legends do not state whether the sensor datasets (Fig 2F,G; n = 12 to 18 neurons) and the ATP datasets (Fig 2I,J; n = 9 neurons) came from the same cultures; no culture count is given in the Fig 2 legends and no paired measurement is shown (Table S3 not in the held text)".
+
+BLOCK B3 (Vono 2025)
+Fragment: "incidence and severity are tabulated for brain only; the absence of tabulated incidence applies to every non-brain site the text lists as affected, DRG among them". STANDS.
+- Results: microscopic findings "were mostly minimal to slight in severity with high individual variabilities and included mononuclear cell infiltrate, neuronal degeneration, axonal degeneration, and gliosis in the brain, intrathecal injection site, spinal cord, cauda equina/spinal nerve roots, and/or DRG (Figure 6A)". The Discussion adds heart.
+- Fig 6A legend: representative photomicrographs from "animals across scAAV9-CBA-mCherry-administered groups". The DRG panel is sacral. No incidence is given.
+- Fig 6C legend: "Summary of the incidence and severity of ... microscopic findings in the brain". Only the brain is summarised.
+- The listed Document S1 contents are Figures S1 and S2 and Tables S1-S3. The text assigns the tables to antibody titers and S2 to clinical chemistry, so I expect no non-brain histopathology incidence table. I could not read the supplement.
+- Methods support the later sentence: DRG at cervical, thoracic, lumbar and sacral levels were sectioned and H&E stained.
+- Wording note: Fig 6C is a summary figure panel, not strictly a table. Safer wording: "incidence and severity are summarised (Fig 6C) for brain only".
+- The tissue list is "intrathecal injection site, spinal cord, cauda equina/nerve roots, DRG" plus heart in the Discussion. All are non-brain sites without an incidence summary, so "every non-brain site the text lists" is accurate.
+
+Repository clauses (what the repository holds or has searched, the auditors' verification, "read" status of primaries, "two independent auditors") were outside my check and I did not grade them.

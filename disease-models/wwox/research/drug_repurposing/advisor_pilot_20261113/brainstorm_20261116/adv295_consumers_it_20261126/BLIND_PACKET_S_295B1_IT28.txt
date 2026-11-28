@@ -1,0 +1,79 @@
+BLIND VERIFICATION PACKET (IT28, ADV-295 block 1 consumers; hypothesis level; nothing here is medical advice)
+
+Each block holds a NEW text fragment (marked >>> ... <<<) inside the record line it will sit in. Check the fragment, and the sentence it sits in where it depends on it, against the held source named, in full. Do not open any other repository file or search the repository; no network; nothing is written into the repository.
+Verdicts per block: MUST CHANGE (a word, number, unit, species, age, group size, comparator, direction, test or generalisation is wrong, unsupported or says more than the source), ADD (supported, but an omission would mislead a reader who sees only this text), STANDS.
+Grade every clause. Absolute words (only, no, none, every, not stated, not given) need the whole source read; say UNSETTLED where you cannot settle. Numbers read from a figure: name figure and panel. Say for each number which group, unit (animal, culture, patient, cell), species and age it belongs to.
+Clauses about what this repository holds or has searched are OUTSIDE your check. For MUST CHANGE and ADD give minimal replacement wording; no dose and no compound recommendation.
+Report: a summary table, then per block the findings with locators and which files you opened. Return the whole report as your final handback.
+
+=== BLOCK A1
+SOURCE: /home/desktop/legend-development/files/fulltext/PMID42401046_Helton2026_PMC_r2.xml (Helton 2026; read in full, also its figure legends)
+CONTEXT WITH NEW FRAGMENT:
+ do not occur anywhere in that article. (ii) PMID **42401046** (`NOT WWOX EVIDENCE`): a GSK3 inhibitor used as a Wnt **activator** in **adult** temporal-lobe epilepsy reduced granule-cell dispersion, immature-cell migration and the contralateral cell-count increase in the unilateral model (the ipsilateral count unchanged), while in the bilateral model **only the primary dendrite angle** changed — >>>so, in this study, the direction of the Wnt-activation effect is the same in both models (Axin2 fell in the epileptogenic zone and was restored to baseline by the GSK3 inhibitor in both; remodelling was reduced in both) and only the number of remodelling markers that respond differs; a model-dependent Wnt direction is not shown by this paper (immature dentate granule cells, mouse, day 14, one dose)<<<. ⚠️ That study is **histology and immunohistochemistry at day 14 only, at one dose level, in adult mice**: there is **no EEG and no spontaneous-seizure or seizure-burden endpoint**; seizures were scored behaviourally for two hours at induction, only to define status epilepticus. 🔵 One divergence from the candidate's wording, declared: the candidate counted *"two of four"* remodelling markers in t
+REPLACES: so **Wnt direction in neural tissue is model-dependent**
+
+=== BLOCK A1-add1
+SOURCE: same as A1
+CONTEXT WITH NEW FRAGMENT:
+nd behaviour were measured; there is no EEG** — the strings EEG, electroencephalograph and electrocorticograph do not occur anywhere in that article. (ii) PMID **42401046** (`NOT WWOX EVIDENCE`): a GSK3 inhibitor used as a Wnt **activator** in **adult** temporal-lobe epilepsy reduced granule-cell dispersion, immature-cell migration and the contralateral cell-count increase in the unilateral model >>>(the ipsilateral immature-cell count, which kainate had reduced about 10-fold by eye, not significantly changed by the drug, n = 6 mice per group)<<<, while in the bilateral model **only the primary dendrite angle** changed — so **Wnt direction in neural tissue is model-dependent**. ⚠️ That study is **histology and immunohistochemistry at day 14 only, at one dose level, in adult mice**: there is **no EEG and no spontaneous-seizure or seizure-burden endpoint**; seizures were scored behaviourally for two hours at induction, only to define status
+REPLACES: (the ipsilateral count unchanged)
+
+=== BLOCK A1-add2
+SOURCE: same as A1
+CONTEXT WITH NEW FRAGMENT:
+DENCE`): a GSK3 inhibitor used as a Wnt **activator** in **adult** temporal-lobe epilepsy reduced granule-cell dispersion, immature-cell migration and the contralateral cell-count increase in the unilateral model (the ipsilateral count unchanged), while in the bilateral model **only the primary dendrite angle** changed — so **Wnt direction in neural tissue is model-dependent**. ⚠️ That study is **>>>histology and immunohistochemistry at day 14 only for the epilepsy-model outcomes (plus a single-dose Axin2 time course at 3 h and 24 h and daily body weight to day 14)<<<, at one dose level, in adult mice**: there is **no EEG and no spontaneous-seizure or seizure-burden endpoint**; seizures were scored behaviourally for two hours at induction, only to define status epilepticus. 🔵 One divergence from the candidate's wording, declared: the candidate counted *"two of four"* remodelling markers in the unilateral model and *"one of five"* concentrations in (a); the aud
+REPLACES: histology and immunohistochemistry at day 14 only
+
+=== BLOCK A2a
+SOURCE: /home/desktop/legend-development/files/fulltext/PMID41254692_Qin2025_PMC.xml (Qin 2025)
+CONTEXT WITH NEW FRAGMENT:
+DIRECTION-01`, propagated by `BATCH_20261004_002`. The id is the ledger's own next in this family (`DL-REPO-001`, `DL-REPO-002` landed; measured with `registry_records.py catalog`).
+- **The finding.** [[paper_registry_current#PAPER 222]] (PMID 41254692) proposes raising WWOX as a therapeutic direction and names vorinostat, valproic acid, sunitinib, Jinfukang and arsenic trioxide as compounds that >>>*«potentially increasing»* WWOX expression<<<. Its own deposited CTD export, Table S7, records **every one of those five WWOX rows as `Decreases expression`** in *Homo sapiens* — and every THBS2 row as `Increases expression`, again the opposite of the text's intent. 🔴 **Two independent auditors verified this cell-wise on the deposited table and found exactly five WWOX rows, with no `Increases expression` row for WWOX anywhere in the sheet.**
+REPLACES: *«potentially increase»* WWOX expression
+
+=== BLOCK A2b
+SOURCE: same as A2a (the deposited sheet of that paper, if described in the text; the sheet itself is not held, so species/cell-type clauses rest on the text)
+CONTEXT WITH NEW FRAGMENT:
+hild whose spasms stopped on valproate plus clobazam. **If** the curated direction were right **and** transferred, a drug that lowers WWOX expression would matter in a disease of WWOX loss. **None of that is established here.** The direction is a **database annotation**, not a measurement in this paper; four of the five primaries are now read (see the wave-9 entry below); the fifth is **unread**; >>>cell type, dose and readout (transcript or protein) are not given in the deposited sheet; the species is Homo sapiens in every row<<<; CTD rows are extracted from cancer and toxicology experiments; and nothing connects an expression change in a cultured cell to a patient carrying two loss-of-function alleles, where the question is **residual function of a specific allele**, not transcription of a wild-type gene. The paper's own protein-level WWOX association does **not** survive multiple-testing correction (FDR-corrected P = 0.
+REPLACES: cell type, dose, species and readout (transcript or protein) are unknown
+
+=== BLOCK A2c
+SOURCE: same as A2a
+CONTEXT WITH NEW FRAGMENT:
+ts «20 mg/kg» with «40 mg/mL, 1 mL/body», which is 40 mg per body only for a 2 kg animal; the animals weigh 2 to 3 kg per Table 1, so the two statements differ by up to 1.5-fold).
+- **Links:** [[paper_registry_current#PAPER 185]] · [[paper_registry_current#PAPER 184]] · [[paper_registry_current#PAPER 188]] · `DIS-031` · `DL-THER-116` · `RL-C-20261003w6`
+
+
+### DL-REPO-003 — A curated database says >>>valproate LOWERS WWOX expression in Homo sapiens (cell or tissue type not given)<<<, and the paper that carries the row states the opposite: the direction is a reading debt, not a lead
+
+- **Tag:** DATO (what the deposited table says) + INFERENZA (what it would mean)
+- **Status:** open
+- **Created:** 2026-10-04 · intake wave 8, from `CC-20261004W8-A-VPA-DIRECTION-01`, propagated by `BATCH_20261004_002`. The id is the ledger's own next in this family (`DL-REPO-001`, `DL-REPO-002` 
+REPLACES: valproate LOWERS WWOX expression in human cells
+
+=== BLOCK A3
+SOURCE: /home/desktop/legend-development/files/fulltext/PMID39546604_ADV272_PMC_r2.xml (Tiwari 2024)
+CONTEXT WITH NEW FRAGMENT:
+periment commission. | ADV 2026-11-23T04:19:29Z: ADV-189 CONSUMED, NARROW to a methods note plus ONE optional conditional WO-07 clause (SCI; on main cfcd90ce6; pre-registration 2795177d2 before the body; receipt FTR-20261123-39546604-01; brainstorm_20261116/adv189_tiwari_pyruvate_sensor_sci_20261123/RESULT_ADV189_TIWARI_PYRUVATE_SENSOR_SCI_20261123.md). Source: Tiwari et al. 2024 (PMID 39546604), >>>matrix pyruvate sensor (mtPyronicSF; CaMKII-mtPyronicSF in axons) in cultured Sprague-Dawley rat neurons and human HEK293 cells; mouse tissue is used in the paper only for the 13C3-pyruvate infusion, the Sirt3-/- brain immunoprecipitation and the MPC1 cDNA<<<. ADV spot-checked the PMC text: the sensor response is a PEAK at a 10 mM external pyruvate step (a stock, not a rate); pH correction is described only for the cyto-pHluorin-corrected ATP measurements; PDH appears only as background. ANSWER: the paper validates the sensor for ENTRY only (MPC1 knockdown abolishes the axonal response, 21 against 12 neurons, 3 cultures per SCI's reading); it never te
+REPLACES: matrix pyruvate sensor in mouse neurons and HEK cells
+
+=== BLOCK B1
+SOURCE: /home/desktop/legend-development/files/fulltext/PMID42807679_Khadija2026_PMC.xml ; /home/desktop/legend-development/files/fulltext/PMID42807679_Khadija2026_supplement/ (Khadija 2026; Table 3)
+CONTEXT WITH NEW FRAGMENT:
+ 2026-10-04 (`CC-20261004W7-B-CNV-CARRIER-01`); again not a haploinsufficiency datum.** [[paper_registry_current#PAPER 208]] (PMID 42807679): a de novo heterozygous ~13 Mb 16q23q24 deletion including WWOX, ANKRD11 and CDH13 in a male infant with callosal dysgenesis, hydrocephaly and microcephaly (no epilepsy recorded). What was examined in the carrier: karyotype and array-CGH (hg18); inheritance. >>>**Not examined (as far as the paper reports):** the remaining WWOX allele; no WWOX sequence result is given. Exome sequencing was done in six selected patients, of whom four are named (P7, P16, P17, P18) and two are not; whether this patient was one of them is not stated. No RNA, protein or follow-up is reported.<<< Dozens of genes are deleted, ANKRD11 among them, so the phenotype neither fires nor refutes the trigger above for WWOX. ⚠️ **Integrator amendment (blind audit):** the source's Table 3 states **no size** for this patient's deletion — its `CNV (G/L)` and `Size` cells both read `L` — so the ~13 Mb figure is derived from the printed hg18 interval, not quoted from the paper. 🔴 **Not a dosage datum eit
+REPLACES: **Not examined:** the remaining WWOX allele (exome was done in six other patients), RNA, protein, follow-up.
+
+=== BLOCK B2
+SOURCE: same as A3 (Fig 2 legends, Table S3 if in the text)
+CONTEXT WITH NEW FRAGMENT:
+at a 10 mM external pyruvate step (a stock, not a rate); pH correction is described only for the cyto-pHluorin-corrected ATP measurements; PDH appears only as background. ANSWER: the paper validates the sensor for ENTRY only (MPC1 knockdown abolishes the axonal response, 21 against 12 neurons, 3 cultures per SCI's reading); it never tests the sensor against a PDH, PDK or consumption perturbation, >>>and the paper does not state whether the sensor datasets (Fig 2F,G) and the ATP datasets (Fig 2I,J) came from the same cultures; both list 3 cultures (Table S3) and no paired measurement is shown<<<; so whether it separates entry from PDH regulation is SCI's logic, consistent with the paper and untested in it (a response to a RISE in pool was never shown: possible ceiling). Not CLOSE: no existing INV-07 step measures entry (explanations row 6 names transporter expression and a bypass substrate); not KEEP for the reasons above. OPTIONAL CLAUSE for IT at its next touch of WO-07 or INV-07 row 6
+REPLACES: and the sensor and ATP readouts were never in the same cultures
+
+=== BLOCK B3
+SOURCE: /home/desktop/legend-development/files/fulltext/PMID41210171_Vono2025_PMC.xml (Vono 2025)
+CONTEXT WITH NEW FRAGMENT:
+elated findings.
+  3. That same study reports DRG lesions in prose keyed to a representative photomicrograph, with no incidence and no control comparison **for that tissue** — ⚠️ integrator amendment (blind audit): the article does give a qualitative severity range (*«mostly minimal to slight … with high individual variabilities»*) and does tabulate incidence and severity, but **for brain only**; >>>incidence and severity are tabulated for brain only; the absence of tabulated incidence applies to every non-brain site the text lists as affected, DRG among them<<<. Its methods confirm DRG at four spinal levels were sectioned and stained, so the unreported data were generated.
+  4. The lesion is explicitly stated by one of these studies to occur independently of pre-existing anti-capsid antibody titre, so it is not the pre-existing-immunity component.
+  5. The human record does not scale monotonically with dose: signals at 1.2 × 10^14 vg intrathecally, and 
+REPLACES: the absence is DRG-specific, not article-wide
