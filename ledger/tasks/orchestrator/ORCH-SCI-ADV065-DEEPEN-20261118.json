@@ -1464,6 +1464,15 @@
      "accepted_at": "2026-11-28T19:26:17Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv339_sci_second_reader_20261128/sci_table.tsv handed to IT43 2026-11-28 (36 graded atoms: HOLDS 30, TOO_NARROW 2, NOT_SUPPORTED 2, UNSETTLED 1, plus 3 NOT_GRADED rows); IT43 acknowledged",
      "updated_at": "2026-11-28T19:35:17Z"
+    },
+    {
+     "step": "Independence of corroboration behind claim-registry sentences asserting independent/two-source/confirmed-by support: enumerate, freeze rule, check held sources, second blind reading of failing sentences, deliver to ADV (repairs to IT43)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV launch prompt of SCI successor BI, 2026-11-28 (checkpoint BI section 2 item 1)",
+     "accepted_at": "2026-11-28T19:47:59Z",
+     "evidence": "brainstorm_20261116/corroboration_independence_sci_20261128/RESULT_CORROBORATION_INDEPENDENCE_SCI_20261128.md (prereg 846ea80a, second reading delegate); repairs offered to IT43 via ADV",
+     "updated_at": "2026-11-28T20:00:07Z"
     }
    ]
   }
@@ -2593,6 +2602,13 @@
    "at": "2026-11-28T19:26:17Z",
    "source": "ADV launch brief of window SCI successor BH (2026-11-28); checkpoint BH section 3 item 1; ADV-339",
    "step_sha256": "4a76efc12f3a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T19:47:59Z",
+   "source": "ADV launch prompt of SCI successor BI, 2026-11-28 (checkpoint BI section 2 item 1)",
+   "step_sha256": "1e3abaa1d0d5",
    "reopened_block": false,
    "authorised_by": null
   }
