@@ -1,0 +1,50 @@
+FIGURE READBACK, p304a (producer; hypothesis level; no biology interpreted). Scratch: /home/desktop/.claude/jobs/54ca757b/tmp/p304a/ (zoom crops, pixel scripts in w/, Source-2 embedded figure img/fig-000.png). No repository file edited, nothing downloaded, large raster deleted. Method for all: PNG to numpy via ImageMagick (no PIL), axis ticks located by pixel rows/columns, linear calibration, bar tops read at the centre of the dark outline stroke, error-bar caps read as horizontal segments, dots located by ring centres.
+
+=== SOURCE 1: Palma 2022, PMID 35372341 (WT mice, corpus callosum, P21; clemastine 50 ug/kg vs control) ===
+Pages: Figure 2 = p06_embedded_1749x504.png; Figure 4 = p08_embedded_1958x994.png (Figure 3 is p07). Legends from the XML.
+
+(a) Figure 2B, bar chart, y axis printed "Velocity (mm/s)", range 0.2 to 0.6 (axis does not start at 0). Mark = bar top (mean) with a whisker; the legend does not state the error type. Legend n: vehicle n = 12, clemastine n = 10-12 (no n printed on the panel). Calibration: y ticks at pixel rows 99 (0.6), 178 (0.5), 256.5 (0.4), 336 (0.3), 414.5 (0.2); 78.9 px per 0.1.
+- N1 vehicle (Control): 0.504 mm/s (bar top row 175). Whisker both ways: top cap 0.536, bottom cap 0.475 (half-width about 0.030).
+- N1 clemastine: 0.425 mm/s (bar top row 237), asterisk shown. Only an upper whisker is drawn: cap 0.441 (about +0.016); no lower whisker is visible.
+- N2 vehicle: 0.274 mm/s (bar top row 356); upper cap about 0.281.
+- N2 clemastine: 0.278 mm/s (bar top row 353); whisker too small to see.
+- Uncertainty: N1 values about +/-0.004, N2 about +/-0.003 (1 px = 0.0013). Sure of the group values; sure of the clemastine-lower direction at N1 (asterisked). The unit "mm/s" is exactly as printed; I cannot check whether it is a typo.
+
+(b) Figure 4B (panels right of 4A). The legend text says "mean g-ratios for small and bigger axons" and "distribution of g-ratios". The figure shows two bar panels binned by axon diameter, labelled "0-0.5 um" and "0.5-1 um", plus a scatter of g-ratio against axon diameter. It does NOT show a histogram or modal g-ratio, so no modal value exists to read. No pooled bar is plotted. Each bar panel has 3 dots per group (n = 3 mice per the legend) plus a mean bar and a whisker; the legend does not state the whisker type.
+- Bin 0-0.5 um (y axis 0.70 to 0.84, truncated; calibration ticks at rows 556.5 = 0.84 and 888.5 = 0.70, 2371 px per unit): Control 0.768 (bar top row 727; dots 0.779, 0.771, 0.757; whisker caps 0.775 and 0.762). Clemastine 0.787 (bar top row 683; dots 0.791, 0.792, 0.779; caps 0.792 and 0.783). Marked *** (clemastine higher). Reading uncertainty about +/-0.002.
+- Bin 0.5-1 um (y axis 0.60 to 0.74, truncated; ticks at rows 555.5 = 0.74 and 887.5 = 0.60): Control 0.663 (bar top row 739.3; dots 0.684, 0.659, 0.648; caps 0.674 and 0.653). Clemastine 0.672 (bar top row 716.8; dots 0.694, 0.666, 0.659; caps 0.684 and 0.662). No significance mark. Uncertainty about +/-0.002.
+- Scatter panel: one dot per axon with a linear fitted line per group. Axes: x "Axon diameter" 0.2 to 1.0 with no unit printed on the axis; y "g-ratio" 0.5 to 1.0. Calibration: y ticks at rows 566.5 (1.0), 631.5, 696.5, 761.5, 826, 890.5 (0.5); x ticks at columns 1243.5 (0.2), 1373.5, 1504.5, 1634.5, 1765.5 (1.0). Fitted lines from pixels (RANSAC on thick-line column centres): Control line runs from about 0.27 to 0.84 of axon diameter, with g-ratio 0.754 at the left end and 0.809 at the right end; read at 0.3 / 0.5 / 0.7 / 0.8 it gives 0.757 / 0.776 / 0.796 / 0.805. Clemastine line runs from about 0.245 to 0.854, with 0.778 at the left end and 0.800 at the right end; at 0.3 / 0.5 / 0.7 / 0.8 it gives 0.781 / 0.788 / 0.795 / 0.799. The two lines cross at about 0.7 to 0.8 of axon diameter. Line uncertainty about +/-0.004 in g-ratio. Dot clouds cover about 0.25 to 0.86 in diameter and about 0.58 to 0.91 in g-ratio (control extremes about 0.585 and 0.905; clemastine about 0.657 and 0.889). I did not count dots.
+
+(c) Figure 4A: y axis printed "nº Myelinated axons/10^3 um^2", range 150 to 350 (truncated). It is NOT "per field" as printed. The legend says the graph is the average of myelinated axons with at least 60 images per animal, n = 3 mice per group. Mark = bar (mean) with whisker, plus 3 dots per group. Calibration: ticks at rows 558 (350), 641, 724, 806.5, 889 (150), 1.66 px per unit.
+- Control: bar 287 (bar top row 663). Dots about 305, 298, 261. Whisker caps 301.5 and 274.4 (half-width about 13.5).
+- Clemastine: bar 249 (bar top row 725). Dots about 280, 263, 207. Whisker caps 272.6 and 228.3 (half-width about 22).
+- Marked *. Uncertainty about +/-2 units (1 px = 0.6 units). Sure of the values.
+
+=== SOURCE 2: Repudi 2021, PMID 33914858, Figure 5 (S-Control vs S-KO, P17) ===
+The PDF page 11 carries Figure 5 as one embedded raster of 1000x887 px at 150 ppi (extracted with pdfimages, no resampling). That is low resolution, so 1 px is about 0.6 to 1.6 data units, depending on the panel.
+
+(d) Figure 5C top panel, "Corpus callosum": scatter of per-axon g-ratio (y, axis 0 to 1.2) against axon diameter (x, "Axon diameter (um)", 0 to 2.5), with one fitted straight line per genotype (S-Control navy, S-KO red). NO bars, means or medians are plotted. The legend says n = 300 axons per genotype, n = 3 per group, ***P < 0.001. Calibration: x ticks at columns 710.5 (0), 765.5, 819.5, 874.5, 928.5, 983.5 (2.5), 109.2 px per um; y ticks at rows 178.5 (0) up to 52.5 (1.2), 105 px per unit.
+- S-Control line (drawn from about 0.4 to 2.0 um): g about 0.637 at 0.4 um; 0.648 at 0.5; 0.706 at 1.0; 0.764 at 1.5; 0.822 at 2.0. Slope about 0.116 per um.
+- S-KO line (drawn from about 0.3 to 2.0 um): g about 0.643 at 0.3 um; 0.685 at 0.5; 0.789 at 1.0; 0.894 at 1.5; 0.999 at 2.0. Slope about 0.21 per um.
+- Dots: S-Control from about 0.4 to 2.0 um, g about 0.42 to 0.9; S-KO from about 0.3 to 2.0 um, g about 0.4 to 0.97. The S-KO dots sit on top of the S-Control dots between 0.4 and 1.0 um.
+- Line uncertainty about +/-0.015 in g (1 px = 0.0095), slope about +/-0.01 per um. Medium certainty. The S-KO line is partly hidden where it crosses the red dot cloud, so only the 0.3-0.45 and 1.6-2.0 segments are cleanly visible, and its fit used about 46 pixel points. The control line is visible on the red cloud, with about 120 points.
+- The optic-nerve panel below was not read (not asked).
+
+(e) Figure 5D(ii): the y axis carries a unit label, "Latency (ms)", range 0 to 20, ticks every 5. Marks = individual slice dots (blue circles for S-Ctrl, red squares for S-KO), a black horizontal mean line, and coloured error whiskers. The legend states n = 8 slices per genotype (five subjects in S-Control and six in S-KO) but does not state the error-bar type for D(ii). The legend says "Error bar represents +/-SEM" only for panel B. Calibration: y ticks at rows 530.6 (20), 601, 672, 742, 812.5 (0), 14.1 px per ms.
+- N1 S-Ctrl: mean line 2.48 ms. N1 S-KO: mean line 3.19 ms (marked * = P 0.0104, Wilcoxon, per the legend).
+- The N1 whiskers are NOT separately readable, because they are hidden inside the dot cluster and the mean line. Dots: S-Ctrl cluster about 2.2 to 2.9 ms with one at about 1.3; S-KO about 2.9 to 3.9 ms with one at about 1.5.
+- N2 for context: S-Ctrl mean 6.66 ms (whisker caps 7.74 and 5.64); S-KO mean 8.30 ms (caps 9.93 and about 6.73), n.s.
+- Uncertainty about +/-0.07 ms for the N1 means (1 px = 0.07 ms). Sure of the N1 means; N1 error not readable.
+
+(f) Figure 5B top panel: y axis "number of myelinated axons per FOV", range 0 to 250 (a unit-free count; "FOV" is the field of view). Marks = one dot per field of view (blue circles S-Control, red squares S-KO), a black horizontal mean line, and coloured whiskers (legend: +/-SEM, ***). Calibration: y ticks at rows 45.8 (250), 77.3, 109, 140.3, 172, 203.4 (0), 0.6305 px per unit (fit v = 322.67 - 1.586*row).
+- S-Control: mean 183.8. Whisker caps 211.6 and 154.6 (half-width about 28.5). Dots about 141 to 230 (about 14 dots).
+- S-KO: mean 54.6. Upper cap 80.0; lower cap hidden behind the squares, about 30 to 31. Dots about 25 to 103 (about 13 dots).
+- Uncertainty about +/-2 units on means, +/-3 on dot extremes. Sure of the means. The caps enclose roughly the spread of the dots, which looks wide for SEM but the legend says SEM; I report the legend wording and have not resolved it.
+
+=== What makes numbers less certain ===
+1. Palma 2B: error type not stated in the legend; the clemastine lower whisker is not drawn or is hidden; N2 whiskers are too small to read. The n is in the legend only (vehicle 12, clemastine 10-12), not on the panel.
+2. Palma 4A, 4B: the legend states no whisker type; y axes are truncated (150 to 350; 0.70 to 0.84; 0.60 to 0.74), so bars start above zero. The 4B dots per bin are 3 per group, assumed to be per-mouse means.
+3. Palma 4B: the legend's "distribution of g-ratios" is a scatter with linear fits, not a histogram, so there is no modal g-ratio. Also, the 0.5-1 um bar values (0.66 to 0.67) look lower than the scatter, where nearly all axons above 0.5 um sit at g of about 0.7 to 0.85 and the lowest g is about 0.58. I cannot tell from the figure whether the bin "diameter" is the same quantity as the scatter x axis (no unit is printed on the scatter x axis). I did not resolve this.
+4. Palma 4A axis unit is per 10^3 um^2 as printed, not per field.
+5. Repudi: low-resolution embedded raster (150 ppi, 1000 px wide). The red and blue 5C dots overlap heavily, and the S-KO line is hidden where it crosses the red cloud. The 5D(ii) N1 whiskers are occluded by dots and the mean line. The 5B lower KO cap is occluded. The legend does not name the error type for 5D(ii).
+6. All dot values are read from ring centres at about 1 px accuracy; dots were not counted exhaustively.

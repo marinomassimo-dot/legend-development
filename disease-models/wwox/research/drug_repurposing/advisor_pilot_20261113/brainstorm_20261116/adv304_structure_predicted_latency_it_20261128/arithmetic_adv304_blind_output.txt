@@ -1,0 +1,8 @@
+CALIBRATION on Palma 2022 (WT callosum, P21; clemastine against vehicle)
+  measured N1 velocity ratio 0.844  ln -0.170
+  bin0_0.5: g 0.769->0.787  R-predicted ratio 0.9773 ln -0.0230  |ln measured|/|ln predicted| = 7.4  usable by the frozen rule: False
+  bin0.5_1: g 0.663->0.673  R-predicted ratio 0.9964 ln -0.0036  |ln measured|/|ln predicted| = 47.5  usable by the frozen rule: False
+APPLICATION to Wwox (NOT validated if calibration fails; descriptive only). Control latency 2.45 ms; readback difference 0.74 ms
+  diameter 0.5um: g 0.64->0.69  velocity ratio 0.983  predicted shift +0.04 ms  (g +-0.015 each: +0.07 to +0.02)
+  diameter 1.0um: g 0.7->0.79  velocity ratio 0.917  predicted shift +0.22 ms  (g +-0.015 each: +0.30 to +0.14)
+  diameter 1.5um: g 0.76->0.89  velocity ratio 0.763  predicted shift +0.76 ms  (g +-0.015 each: +1.01 to +0.55)

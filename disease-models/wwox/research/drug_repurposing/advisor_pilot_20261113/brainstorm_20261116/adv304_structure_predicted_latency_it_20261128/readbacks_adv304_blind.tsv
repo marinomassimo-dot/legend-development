@@ -1,0 +1,17 @@
+quantity	value	unit	source_panel	reader	note
+palma_N1_velocity_vehicle	0.505	mm/s	Palma 2022 Fig 2B	blind	
+palma_N1_velocity_clemastine	0.426	mm/s	Palma 2022 Fig 2B	blind	
+palma_g_bin0_0.5_vehicle	0.769	g-ratio	Palma 2022 Fig 4B	blind	
+palma_g_bin0_0.5_clemastine	0.787	g-ratio	Palma 2022 Fig 4B	blind	
+palma_g_bin0.5_1_vehicle	0.663	g-ratio	Palma 2022 Fig 4B	blind	
+palma_g_bin0.5_1_clemastine	0.673	g-ratio	Palma 2022 Fig 4B	blind	
+palma_myelinated_vehicle	287	per 1e3 um2	Palma 2022 Fig 4A	blind	
+palma_myelinated_clemastine	250	per 1e3 um2	Palma 2022 Fig 4A	blind	
+repudi_g_control_0.5um	0.64	g-ratio	Repudi 2021 Fig 5C line	blind	
+repudi_g_control_1.0um	0.70	g-ratio	Repudi 2021 Fig 5C line	blind	
+repudi_g_control_1.5um	0.76	g-ratio	Repudi 2021 Fig 5C line	blind	
+repudi_g_ko_0.5um	0.69	g-ratio	Repudi 2021 Fig 5C line	blind	
+repudi_g_ko_1.0um	0.79	g-ratio	Repudi 2021 Fig 5C line	blind	
+repudi_g_ko_1.5um	0.89	g-ratio	Repudi 2021 Fig 5C line	blind	
+repudi_N1_latency_control	2.45	ms	Repudi 2021 Fig 5D(ii)	blind	
+repudi_N1_latency_ko	3.19	ms	Repudi 2021 Fig 5D(ii)	blind	
