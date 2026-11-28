@@ -1781,10 +1781,12 @@
     },
     {
      "step": "ADV-336: blind image read, PMID 33914858 Supp Fig 1A-C and PMID 42397075 uncropped Supp Fig 1K (lanes, band sizes against ladder, antibody, loading control, n); table to ADV and IT39; do not open adv335_antibody_it_20261128",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-336 (cross-session message from ADV - CURRENT a5e6f2ad, 2026-11-28)",
-     "accepted_at": "2026-11-28T16:18:11Z"
+     "accepted_at": "2026-11-28T16:18:11Z",
+     "evidence": "commit d9a51f3da on development/main; advisor_pilot_20261113/brainstorm_20261116/adv336_blind_antibody_he_20261128/TABLE_ADV336_HE.md; receipts FTR-20261128-33914858-03, FTR-20261128-42397075-01",
+     "updated_at": "2026-11-28T16:28:26Z"
     }
    ]
   }
