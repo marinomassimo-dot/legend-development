@@ -1299,6 +1299,15 @@
      "accepted_at": "2026-11-28T07:45:48Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv308_burst_split_sci_20261128/RESULT_ADV308_SCI_20261128.md",
      "updated_at": "2026-11-28T07:45:48Z"
+    },
+    {
+     "step": "ADV-309: age-window decision table for held Wwox histology and the pup brief (E-A vs E-B frozen first)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-309",
+     "accepted_at": "2026-11-28T07:52:37Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv309_age_window_table_sci_20261128/RESULT_ADV309_SCI_20261128.md",
+     "updated_at": "2026-11-28T07:52:37Z"
     }
    ]
   }
@@ -2302,6 +2311,13 @@
    "at": "2026-11-28T07:45:48Z",
    "source": "ADV-308",
    "step_sha256": "9672baec0a2e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T07:52:37Z",
+   "source": "ADV-309",
+   "step_sha256": "999d76dba8ea",
    "reopened_block": false,
    "authorised_by": null
   }
