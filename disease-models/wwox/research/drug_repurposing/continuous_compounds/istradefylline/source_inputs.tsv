@@ -1,0 +1,20 @@
+key	value	unit	locator
+hyperoxia_control_events	6	mice	Du et al. 42996364 Fig. 1E and §3.1, mechanistic comparison
+hyperoxia_drug_events	1	mice	Du et al. 42996364 Fig. 1E and §3.1, mechanistic comparison
+hyperoxia_n	6	mice per arm	Du et al. 42996364 Fig. 1E caption and 1/6 curve step
+gaba_normal	285654	table scale	Du et al. 42996364 Table 1 normal mean
+gaba_control	178056	table scale	Du et al. 42996364 Table 1 oxygen-vehicle mean
+gaba_drug	219721	table scale	Du et al. 42996364 Table 1 oxygen-istradefylline mean
+glu_normal	315699	table scale	Du et al. 42996364 Table 1 normal mean
+glu_control	408595	table scale	Du et al. 42996364 Table 1 oxygen-vehicle mean
+glu_drug	408941	table scale	Du et al. 42996364 Table 1 oxygen-istradefylline mean
+ratio_normal	1.113	unitless	Du et al. 42996364 Table 1 reported mean of ratios and Fig. 2C
+ratio_control	2.345	unitless	Du et al. 42996364 Table 1 reported mean of ratios and Fig. 2C
+ratio_drug	1.890	unitless	Du et al. 42996364 Table 1 reported mean of ratios and Fig. 2C
+a2a_ki	12	nM	FDA NDA 022075 Other Review, p. 4, human recombinant affinity
+a2b_ki	150	nM	FDA NDA 022075 Other Review, p. 4, human recombinant affinity
+a1_ki_floor	1000	nM	FDA NDA 022075 Other Review, p. 4, lowest possible human Ki
+acute_pet_lower	39.5	percent	Ishibashi et al. 30253174 striatal mean, lower adult exposure arm
+acute_pet_higher	52.1	percent	Ishibashi et al. 30253174 striatal mean, higher adult exposure arm
+long_pet_lower	72.1	percent	Ishibashi et al. 33200448 Fig. 1 summary, lower adult exposure arm
+long_pet_higher	86.5	percent	Ishibashi et al. 33200448 Fig. 1 summary, higher adult exposure arm
