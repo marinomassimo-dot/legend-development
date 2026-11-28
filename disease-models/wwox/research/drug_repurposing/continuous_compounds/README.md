@@ -208,6 +208,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 202 | Carabersat, stereoselective membrane binding and recurrent activity | At matched free exposure and native ionic conditions, does the binding-active enantiomer selectively reduce late burden while first recruitment is preserved? |
 | 203 | Pyrroloquinoline quinone, redox chemistry and mitochondrial adaptation | At verified parent exposure and matched demand, does ATP-linked flux improve together with evoked recovery after washout? |
 | 204 | Tezampanel, AMPA-matched kainate and release comparison | At matched fast postsynaptic AMPA inhibition and first recruitment, does tezampanel change native release through an independently verified GluK1-sensitive component? |
+| 205 | L-histidine, central histamine synthesis and vigilance | At measured free neural parent, does histidine-derived histamine shift native recruitment at equivalent vigilance and first response? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -218,9 +219,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Tezampanel.** Retain as a mixed AMPA/GluK1 comparator in calibrated tissue assays and defer pediatric WWOX priority. The GluA2-flip versus GluK1 margin changes from 30-fold to 3-fold after the published agonist correction. Juvenile neural free parent is unresolved. Reopen with a native GluK1-dependent release contrast at measured exposure and matched AMPA, NMDA and first recruitment. [Dossier and replay](tezampanel/README.md)
+**Active: L-histidine.** Compare parent entry and central histamine turnover before testing whether matched vigilance and recruitment preserve a pathway-dependent effect. [Prespecified contrast](l_histidine/pretest.md)
 
-**Next planned: L-histidine.** Test whether raising the native histamine precursor changes brain histamine turnover and circuit recruitment beyond a vigilance shift, building on the H3 comparator.
+**Tezampanel.** Retain as a mixed AMPA/GluK1 comparator in calibrated tissue assays and defer pediatric WWOX priority. The GluA2-flip versus GluK1 margin changes from 30-fold to 3-fold after the published agonist correction. Juvenile neural free parent is unresolved. Reopen with a native GluK1-dependent release contrast at measured exposure and matched AMPA, NMDA and first recruitment. [Dossier and replay](tezampanel/README.md)
 
 **Pyrroloquinoline quinone (PQQ).** Retain as a conditional reserve and NMDA-redox comparator and defer pediatric WWOX priority. Adult APP rat synaptosomal reserve rose by 28 percentage points of WT. A separate NMDA effect persisted after a short rinse. Reopen with measured juvenile parent and coupled ATP recovery after verified washout at matched NMDA load and recruitment. [Dossier and replay](pyrroloquinoline_quinone/README.md)
 
