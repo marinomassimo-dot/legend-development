@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 261,
+   "distinct_hrefs": 262,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3659,
+    "forbidden-name": 3660,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5116582,
-   "sha256": "4d10665864f0a1cf6e31caf3953992c368be742931ab00d6bbd7e9d03fafc4de"
+   "bytes": 5116711,
+   "sha256": "024afa9cb5beae96ae5cb75e45143a54813bd2b08189f57ca883baae3b263828"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
@@ -616,6 +616,10 @@
   "reports/gaba-subtype-response.pdf": {
    "bytes": 116678,
    "sha256": "02291aa3049e6c57e1a8dffa64acd35b59bd0f4a18cf501333007b187be745d2"
+  },
+  "reports/glutamate-clearance-and-localization.pdf": {
+   "bytes": 117718,
+   "sha256": "4db1940856f4e667d6d2c798c3bd6445d6ef85ba8870858a953bc5e2018fce43"
   },
   "reports/huperzine-a.pdf": {
    "bytes": 118260,
