@@ -1,0 +1,29 @@
+key	value	unit	locator
+phenytoin_axis_top	30	px	Ma et al. 24348021 Fig. 3A y=1.6 tick, original 750 × 872 JPEG
+phenytoin_axis_bottom	374	px	Ma et al. 24348021 Fig. 3A y=0 tick
+phenytoin_axis_height	1.6	µg/mL	Ma et al. 24348021 Fig. 3A
+carbamazepine_axis_top	487	px	Ma et al. 24348021 Fig. 3B y=2.0 tick, original 750 × 872 JPEG
+carbamazepine_axis_bottom	844	px	Ma et al. 24348021 Fig. 3B y=0 tick
+carbamazepine_axis_height	2	µg/mL	Ma et al. 24348021 Fig. 3B
+tracer_wt	1.3	brain-to-blood activity ratio	Römermann et al. 23845421 Fig. 2C WT baseline
+tracer_abcb1_ko	6.9	brain-to-blood activity ratio	Römermann et al. 23845421 Fig. 2C Mdr1a/b KO baseline
+tracer_abcb1_abcg2_ko	7.9	brain-to-blood activity ratio	Römermann et al. 23845421 Fig. 2C combined KO baseline
+adult_resistant_k1_low	21.9	percent change	Feldmann et al. 23786896 abstract resistant, lower tariquidar arm
+adult_healthy_k1_low	56.8	percent change	Feldmann et al. 23786896 abstract healthy, lower tariquidar arm
+adult_resistant_k1_high	42.6	percent change	Feldmann et al. 23786896 abstract resistant, higher tariquidar arm
+adult_healthy_k1_high	57.9	percent change	Feldmann et al. 23786896 abstract healthy, higher tariquidar arm
+adult_r_peak	77.8	ng/mL	DailyMed ER PM §12.3 mean steady-state R-verapamil Cmax
+adult_s_peak	16.8	ng/mL	DailyMed ER PM §12.3 mean steady-state S-verapamil Cmax
+parent_mass	454.6	g/mol	PubChem CID 2520 free parent
+parent_unbound_fraction	0.0808	fraction	Rumiantsev et al. 2789930 abstract, distinct adult monotherapy cohort serum unbound fraction
+parent_digoxin_ic50	1.1	µM	Pauli-Magnus et al. 10773005, ABCB1-mediated digoxin assay
+nor_digoxin_ic50	0.3	µM	Pauli-Magnus et al. 10773005, separate norverapamil digoxin transport assay
+cav_pulse1_ic50	35.3	µM	Kuryshev et al. Fig. 3C and Results, first pulse
+cav_pulse2_ic50	9.1	µM	Kuryshev et al. Fig. 3C and Results, second pulse
+cav_conditioned_ic50	1.89	µM	Kuryshev et al. Fig. 3C and Results, preconditioning experiment
+dravet_baseline_count	39	events	NCT01607073 aggregated baseline generalized tonic-clonic seizures, 2 analyzed
+dravet_active_count	14	events	NCT01607073 aggregated week-12 generalized tonic-clonic seizures, 2 analyzed
+dravet_baseline_weeks	8	weeks	NCT01607073 measurement description, baseline data collection
+dravet_active_weeks	4	weeks	NCT01607073 measurement description, treatment time at week 12
+adult_randomized	22	people	Borlot et al. 25223728 abstract
+adult_completed	12	people	Borlot et al. 25223728 abstract

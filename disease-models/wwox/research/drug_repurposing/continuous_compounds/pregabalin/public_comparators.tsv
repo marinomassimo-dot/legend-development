@@ -1,0 +1,42 @@
+source_group	measure	value	unit
+Pregabalin 7 mg/kg/Day or 6 mg/kg/Day	randomized	71	people
+Pregabalin 7 mg/kg/Day or 6 mg/kg/Day	completed blinded period	69	people
+Pregabalin 7 mg/kg/Day or 6 mg/kg/Day	primary modified ITT	59	people
+Pregabalin 7 mg/kg/Day or 6 mg/kg/Day	outside primary modified ITT	12	people
+Pregabalin 7 mg/kg/Day or 6 mg/kg/Day	adjusted log(24-hour seizure count + 1)	1.69	log scale
+Pregabalin 7 mg/kg/Day or 6 mg/kg/Day	≥50% EEG responders	18/59	people / mITT
+Pregabalin 7 mg/kg/Day or 6 mg/kg/Day	reported somnolence	8/71	people / safety denominator
+Pregabalin 14 mg/kg/Day or 12 mg/kg/Day	randomized	34	people
+Pregabalin 14 mg/kg/Day or 12 mg/kg/Day	completed blinded period	33	people
+Pregabalin 14 mg/kg/Day or 12 mg/kg/Day	primary modified ITT	28	people
+Pregabalin 14 mg/kg/Day or 12 mg/kg/Day	outside primary modified ITT	6	people
+Pregabalin 14 mg/kg/Day or 12 mg/kg/Day	adjusted log(24-hour seizure count + 1)	1.15	log scale
+Pregabalin 14 mg/kg/Day or 12 mg/kg/Day	≥50% EEG responders	15/28	people / mITT
+Pregabalin 14 mg/kg/Day or 12 mg/kg/Day	reported somnolence	6/34	people / safety denominator
+Placebo	randomized	70	people
+Placebo	completed blinded period	67	people
+Placebo	primary modified ITT	53	people
+Placebo	outside primary modified ITT	17	people
+Placebo	adjusted log(24-hour seizure count + 1)	1.58	log scale
+Placebo	≥50% EEG responders	22/53	people / mITT
+Placebo	reported somnolence	4/70	people / safety denominator
+Pregabalin 7 mg/kg/Day or 6 mg/kg/Day versus placebo	adjusted log difference (95% CI)	0.11 (-0.19, 0.42)	log scale
+Pregabalin 7 mg/kg/Day or 6 mg/kg/Day versus placebo	primary p-value	0.4606	probability
+Pregabalin 14 mg/kg/Day or 12 mg/kg/Day versus placebo	adjusted log difference (95% CI)	-0.43 (-0.80, -0.06)	log scale
+Pregabalin 14 mg/kg/Day or 12 mg/kg/Day versus placebo	primary p-value	0.0223	probability
+Adult lumbar CSF at 2h, PMID 20975469	reported concentration	0.115	µg/mL
+Adult lumbar CSF at 2h, PMID 20975469	molar conversion	0.7222	µM
+Adult lumbar CSF at 2h, PMID 20975469	nominal 20 µM bath / reported CSF	27.69	ratio
+Adult lumbar CSF at 2h, PMID 20975469	nominal 100 µM bath / reported CSF	138.46	ratio
+Adult lumbar CSF at 2h, PMID 20975469	nominal 500 µM bath / reported CSF	692.30	ratio
+Adult lumbar CSF at 6h, PMID 20975469	reported concentration	0.359	µg/mL
+Adult lumbar CSF at 6h, PMID 20975469	molar conversion	2.2546	µM
+Adult lumbar CSF at 6h, PMID 20975469	nominal 20 µM bath / reported CSF	8.87	ratio
+Adult lumbar CSF at 6h, PMID 20975469	nominal 100 µM bath / reported CSF	44.35	ratio
+Adult lumbar CSF at 6h, PMID 20975469	nominal 500 µM bath / reported CSF	221.77	ratio
+FDA rat brain extracellular fluid, scan page 78	estimated time at plotted mean	103.5	min
+FDA rat brain extracellular fluid, scan page 78	digitized plotted mean	372.8	ng/mL
+FDA rat brain extracellular fluid, scan page 78	molar conversion	2.3410	µM
+FDA rat plasma, scan page 78	estimated time at plotted mean	103.5	min
+FDA rat plasma, scan page 78	digitized plotted mean	3921.1	ng/mL
+FDA rat plasma, scan page 78	molar conversion	24.6253	µM

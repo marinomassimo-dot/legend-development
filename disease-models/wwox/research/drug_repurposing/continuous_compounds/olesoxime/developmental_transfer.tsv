@@ -1,0 +1,34 @@
+study	condition	measure	value	unit
+Su 2026 Fig. 4C	12h serum withdrawal	WT signal	0.612	fold of baseline
+Su 2026 Fig. 4C	12h serum withdrawal	KO signal	0.807	fold of baseline
+Su 2026 Fig. 4C	12h serum withdrawal	KO/WT baseline for equal raw signal	0.758	ratio
+Su 2026 Fig. 4C	24h serum withdrawal	WT signal	0.484	fold of baseline
+Su 2026 Fig. 4C	24h serum withdrawal	KO signal	0.795	fold of baseline
+Su 2026 Fig. 4C	24h serum withdrawal	KO/WT baseline for equal raw signal	0.609	ratio
+Su 2026 Fig. 4C	48h serum withdrawal	WT signal	0.353	fold of baseline
+Su 2026 Fig. 4C	48h serum withdrawal	KO signal	0.787	fold of baseline
+Su 2026 Fig. 4C	48h serum withdrawal	KO/WT baseline for equal raw signal	0.448	ratio
+Wang 2009 Fig. 1	P9	WT n	16	animals
+Wang 2009 Fig. 1	P9	KO n	19	animals
+Wang 2009 Fig. 1	P9	WT tissue loss	10.5	mm3
+Wang 2009 Fig. 1	P9	KO tissue loss	20.6	mm3
+Wang 2009 Fig. 1	P9	KO minus WT tissue loss	10.1	mm3
+Wang 2009 Fig. 1	P9	KO/WT tissue loss	1.962	ratio
+Wang 2009 Fig. 1	P60	WT n	18	animals
+Wang 2009 Fig. 1	P60	KO n	13	animals
+Wang 2009 Fig. 1	P60	WT tissue loss	14.3	mm3
+Wang 2009 Fig. 1	P60	KO tissue loss	2.3	mm3
+Wang 2009 Fig. 1	P60	KO minus WT tissue loss	-12.0	mm3
+Wang 2009 Fig. 1	P60	KO/WT tissue loss	0.161	ratio
+Bordet 2010 Table 4	Day 7, middle row	Total brain	0.475	umol/kg
+Bordet 2010 Table 4	Day 7, middle row	Total brain/plasma	0.345	mL/g
+Bordet 2010 Table 4	Day 7, middle row	Required brain/medium free fractions	63.10	ratio
+Bordet 2010 Table 4	Day 42, middle row	Total brain	0.601	umol/kg
+Bordet 2010 Table 4	Day 42, middle row	Total brain/plasma	0.511	mL/g
+Bordet 2010 Table 4	Day 42, middle row	Required brain/medium free fractions	49.96	ratio
+Bordet 2010 Table 4	Day 7, highest row	Total brain	3.078	umol/kg
+Bordet 2010 Table 4	Day 7, highest row	Total brain/plasma	0.230	mL/g
+Bordet 2010 Table 4	Day 7, highest row	Required brain/medium free fractions	9.75	ratio
+Bordet 2010 Table 4	Day 42, highest row	Total brain	6.656	umol/kg
+Bordet 2010 Table 4	Day 42, highest row	Total brain/plasma	0.455	mL/g
+Bordet 2010 Table 4	Day 42, highest row	Required brain/medium free fractions	4.51	ratio

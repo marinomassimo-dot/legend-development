@@ -1,0 +1,3 @@
+# Phenytoin | Sodium channel RNA coverage plan
+
+Use held juvenile neuronal-deletion cortex and hippocampus and human organoid libraries separately. Ask whether the total abundance of SCN1A, SCN2A or SCN8A provides a stable direction for prioritizing channel context, before seeking exon 5A/5N evidence. Require both means ≥1 TPM or CPM and consistent direction after leaving out each library, and use assigned excitatory and inhibitory nuclei as pooled presence checks at a ≥10 UMI per arm floor. Keep species, ages, cell types and genotype definitions visible. Gene totals and the pooled nuclear matrices cannot test the exon switch, channel availability or a phenytoin response.

@@ -1,0 +1,5 @@
+region_age	cell_class	metric	comparator	comparator_cells_animals	KO_cells_animals	comparator_mean_mV	KO_mean_mV	KO_minus_comparator_mV
+L2-3_neocortex_mouse_P13-P17	putative_pyramidal	Resting membrane potential	S-WT	13/5	40/15	-79.25	-73.62	5.63
+L2-3_neocortex_mouse_P13-P17	putative_pyramidal	Resting membrane potential	S-HT	15/6	40/15	-75.51	-73.62	1.89
+L2-3_neocortex_mouse_P13-P17	untyped_interneuron	Resting membrane potential	pooled_S-WT_and_S-HT	5/4	6/5	-67.11	-71.52	-4.41
+L2-3_neocortex_mouse_P13-P17	untyped_interneuron	AP amplitude	pooled_S-WT_and_S-HT	5/4	6/5	60.78	45.03	-15.75

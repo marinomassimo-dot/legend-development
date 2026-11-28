@@ -1,0 +1,26 @@
+contrast	n_reference	n_felodipine	reference	felodipine_or_summary	change_pct	lower_check	upper_check	unit	locator
+Fig4b_50nM	3	3	13.0000	14.6679	12.8303			normalized autolysosomes	Fig4b
+Fig4b_100nM	3	3	13.0000	16.5548	27.3449			normalized autolysosomes	Fig4b
+Fig4c_50nM	3	3	90.0000	81.2044	-9.7729			normalized aggregate-positive neurons	Fig4c
+Fig4c_100nM	3	3	90.0000	79.2988	-11.8903			normalized aggregate-positive neurons	Fig4c
+Fig4d_I	7	6	30.0000	42.5607	41.8691	24.5683	61.7963	normalized cortical autolysosomes	Fig4d column I
+Fig4f_M	9	7	75.0000	53.8343	-28.2209	-31.5839	-22.3086	normalized aggregate-positive cells per animal	Fig4f column M
+Fig4f_N	9	7	78.0000	57.7956	-25.9031	-31.7462	-15.9019	normalized aggregate-positive cells per animal	Fig4f column N
+Fig5c_cortex_reported	11	11	335.2791	125.4375	-62.5871			normalized insoluble alpha-synuclein / GAPDH	Fig5c J,K
+Fig5c_cortex_without_third_blot	7	8	322.7824	135.3370	-58.0717			normalized insoluble alpha-synuclein / GAPDH	Fig5c J,K
+Fig5c_brainstem_reported	11	11	105.7301	56.4827	-46.5784			normalized insoluble alpha-synuclein / GAPDH	Fig5c AC,AD
+ip_mouse_plasma_peak				2995.3677				nM total plasma	source_inputs.tsv
+pk_mouse_d10_plasma				74.4938				nM total plasma	source_inputs.tsv
+pk_mouse_d28_plasma				33.4279				nM total plasma	source_inputs.tsv
+phenotype_mouse_d28_plasma				46.8433				nM total plasma	source_inputs.tsv
+phenotype_mouse_d28_plasma_min				14.7556				nM total plasma	source_inputs.tsv
+phenotype_mouse_d28_plasma_max				77.0312				nM total plasma	source_inputs.tsv
+phenotype_mouse_over_elder_adult_peak				1.5358				ratio of total plasma means across studies	source_inputs.tsv
+phenotype_mouse_over_young_adult_er_peak				6.6919				ratio of total plasma means across studies	source_inputs.tsv
+young_adult_free_peak_ceiling				0.0700				nM plasma, upper bound under label binding	source_inputs.tsv
+pk_mouse_d28_brain_censor_bounds		8				27.1375	42.1375	ng/g total homogenate mean	Siddiqi Table 5
+aed_peak				17.9775				%	source_inputs.tsv
+aed_auc				6.6667				%	source_inputs.tsv
+fell_attributable_ae				18.7500				%	source_inputs.tsv
+fell_attributable_sae				0.0000				%	source_inputs.tsv
+pediatric_blinded_completion				96.2406				%	source_inputs.tsv

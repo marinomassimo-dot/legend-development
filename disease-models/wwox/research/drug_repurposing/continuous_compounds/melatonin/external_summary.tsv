@@ -1,0 +1,19 @@
+locator	contrast	unit	exposed_input	control_input	estimate	lower	upper	two_sided_fisher
+Sun Table 3	at least half reduction of spasms	risk difference	27/35	24/35	0.08571429	-0.1209224	0.283298	0.5916438
+Sun Table 3	no spasms for 3 days	risk difference	18/35	13/35	0.1428571	-0.08615146	0.3521432	0.3359122
+Sun Table 3	no spasms for 28 days	risk difference	15/35	10/35	0.1428571	-0.07915625	0.3466102	0.3184755
+Sun Table 3	post-treatment EEG hypsarrhythmia	risk difference	6/35	3/35	0.08571429	-0.07932575	0.2509359	0.4772625
+Jain Table 3	N1 stage-share ratio	ratio	4	4.8	0.8333333	NA	NA	NA
+Jain Table 3	N2 stage-share ratio	ratio	44	42.6	1.032864	NA	NA	NA
+Jain Table 3	N3 stage-share ratio	ratio	32.6	27.4	1.189781	NA	NA	NA
+Jain Table 3	REM stage-share ratio	ratio	19.4	25.2	0.7698413	NA	NA	NA
+Jain Table 3	observed marginal spikes per hour ratio	ratio	31.7	71.9	0.4408901	NA	NA	NA
+Jain Table 3	common-rate stage mixture ratio bounds	ratio	NA	NA	NA	0.7698413	1.189781	NA
+Jain Table 3	lowest predicted marginal spikes at fixed stage rates	spikes/hour of sleep	NA	71.9	55.35159	NA	NA	NA
+Jain Table 3	three-group bounds with common early non-REM rate	ratio	NA	NA	NA	0.7698413	1.189781	NA
+Sun Table 3	treated infant 06:00 serum median	nM	84.8	NA	0.3650766	NA	NA	NA
+Sun Table 3	placebo infant 06:00 serum median	nM	17.5	NA	0.07534011	NA	NA	NA
+EMA 5.2	child prolonged-release saliva Cmax	nM	410	NA	1.765111	NA	NA	NA
+EMA 5.2	fed adult prolonged-release plasma Cmax	nM	3570	NA	15.36938	NA	NA	NA
+Somalo-Barranco Figure 8	mitochondrial or culture nominal bath / adult label plasma peak	ratio	1000	15.36938	65.06443	NA	NA	NA
+Suofu Figure 5A	mitochondrial or culture nominal bath / adult label plasma peak	ratio	10000	15.36938	650.6443	NA	NA	NA

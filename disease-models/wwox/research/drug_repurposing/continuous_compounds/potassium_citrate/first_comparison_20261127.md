@@ -1,0 +1,15 @@
+# Opening clinical comparison for tripotassium citrate in ketogenic-context WWOX
+
+27 November 2026 · SCI_CODEX
+
+Bjurulf et al. compared nonconcurrent practice periods at one pediatric epilepsy unit. The comparison was between 22 children receiving oral **Polycitra-K crystals** starting with the ketogenic diet after April 2007 and 29 starting diet before May 2007. Median ages at diet initiation were 1 year 7 months and 6 years 1 month, respectively. Seizure burden, background antiseizure agents and the rate of diet escalation differed. The paper identifies the brand and alkali equivalents but does not independently assay the historical crystal composition. A current label for a different potassium-citrate crystal brand explicitly includes citric acid monohydrate. That is a formulation comparison, not confirmation of the cohort product. [Bjurulf et al., Methods, Tables 1 and 3](https://onlinelibrary.wiley.com/doi/10.1111/dmcn.14393) · [Example official crystal formulation label](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=490c77d7-47f8-439f-aa37-953692f4c23a)
+
+| Endpoint | Citrate and historical comparison | Descriptive contrast and scope |
+| --- | --- | --- |
+| Uncompensated acidosis at diet start, symptomatic definition with pH <7.30 where assessed | 0/22 vs 10/29 | **−34.5 percentage points** (sampling-only 95% interval **−52.7 to −13.7**). Age, era, symptom recording and diet titration are outside the interval. The Methods required symptomatic and laboratory criteria, but only six of the ten historical cases have reported pH/bicarbonate data. |
+| Serum pH and bicarbonate in measured subsets | 7.32 and 19.7 mmol/L in 12/22 versus 7.24 and 14.0 mmol/L in 6/10 symptomatic historical cases | Prospective repeated measurements in the exposed group versus symptom-triggered measurements in historical cases. The 0.08 pH and 5.7 mmol/L differences do not estimate the cohort-wide change or a pH exposure for a neural preparation. |
+| Greater than 50% seizure reduction after seven months of diet | 9/22 vs 8/29 | **+13.3 percentage points** (sampling-only 95% interval **−12.0 to +37.4**). The study was neither randomized nor designed for an equivalence or noninferiority inference. |
+
+Calculations use difference of arm proportions. For each arm compute the Wilson interval, then calculate the Newcombe interval for the difference: subtract the hypotenuse of treated lower and control upper deviations from the point estimate for the lower limit, and add the hypotenuse of treated upper and control lower deviations for the upper limit. The intervals reflect independent binomial sampling, without correction for the observational design or noncomparable surveillance. [Original Table 3 and Statistical analysis](https://onlinelibrary.wiley.com/doi/10.1111/dmcn.14393)
+
+**Next.** Audit independently studied urinary and central endpoints and determine whether any measured citrate exposure can distinguish a citrate-carbon or direct ion effect from systemic alkali. Keep cerebral pH, bicarbonate and potassium separate from blood and urine. [Prespecified comparison](pretest_20261127.md)

@@ -1,0 +1,16 @@
+comparison	value	units_and_scope
+adult_fasted_plasma	1.74305	uM total plasma
+adult_fed_plasma	1.673	uM total plasma
+rat_oral_alone_plasma	0.586352	uM total plasma
+rat_oral_combined_plasma	0.308185	uM total plasma
+rat_oral_alone_over_combo_cmax	1.9026	ratio of reported means
+rat_oral_alone_over_combo_auc	2.11765	ratio of reported means
+echs1_bath_over_adult_total_plasma	57.3708	descriptive ratio across compartments
+lebeau_bath_over_adult_total_plasma	286.854	descriptive ratio across compartments
+mouse_genetic_plasma_table_ratio	4.50919	ratio of reported means
+mouse_genetic_plasma_figure_ratio	3.71	reported relative value
+mouse_genetic_brain_table_ratio	23.2343	ratio of reported means
+mouse_genetic_brain_figure_ratio	3.37	reported relative value
+rat_iv_poststroke_reconstructed_taurine_conjugate	90	pmol/g tissue, approximate derived conjugate
+tudca_associated_ldh_change	-27.1	percentage points relative to vehicle
+cdca_associated_ldh_change	-67.1	percentage points relative to vehicle

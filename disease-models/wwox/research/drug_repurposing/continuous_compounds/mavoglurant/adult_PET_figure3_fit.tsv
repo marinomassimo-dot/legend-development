@@ -1,0 +1,6 @@
+fit_subset	plot_point_n	apparent_EC50_ng_mL	apparent_Emax_displacement_pct	fit_RMSE_pct_points
+all_points	12	40.6	64.663	9.9955
+omit_dose_25_mg	9	30.6	63.058	8.7823
+omit_dose_100_mg	9	41.1	67.62	10.554
+omit_dose_200_mg	9	65.8	69.251	8.8614
+omit_dose_400_mg	9	23.2	55.238	10.176

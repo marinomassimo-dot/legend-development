@@ -1,0 +1,41 @@
+endpoint	stratum	value	unit
+analytical_concentration	Sato single-dose serum detection limit	0.036	nmol/L
+analytical_concentration	Glakay adult fed mean peak	569.437	nmol/L
+analytical_concentration	Glakay paired adult fasted mean peak	72.641	nmol/L
+analytical_concentration	Glakay paired adult fed mean peak	796.132	nmol/L
+analytical_concentration	Kaytwo adult syrup mean peak	730.912	nmol/L
+fed_to_fasted_mean_Cmax	Glakay n=3	10.960	ratio
+fed_to_fasted_mean_AUC	Glakay n=3	6.755	ratio
+pooled_ctrl	AIFM2	1.9526	UMI CPM
+pooled_ko	AIFM2	2.3519	UMI CPM
+pooled_delta	AIFM2	0.3993	UMI CPM
+within_class_part	AIFM2	0.1912	UMI CPM
+class_weight_part	AIFM2	0.2081	UMI CPM
+pooled_ctrl	UBIAD1	3.3628	UMI CPM
+pooled_ko	UBIAD1	4.2816	UMI CPM
+pooled_delta	UBIAD1	0.9188	UMI CPM
+within_class_part	UBIAD1	0.8675	UMI CPM
+class_weight_part	UBIAD1	0.0513	UMI CPM
+pooled_ctrl	GGCX	10.6850	UMI CPM
+pooled_ko	GGCX	9.8900	UMI CPM
+pooled_delta	GGCX	-0.7950	UMI CPM
+within_class_part	GGCX	-0.8683	UMI CPM
+class_weight_part	GGCX	0.0733	UMI CPM
+pooled_ctrl	GAS6	39.3229	UMI CPM
+pooled_ko	GAS6	48.6658	UMI CPM
+pooled_delta	GAS6	9.3430	UMI CPM
+within_class_part	GAS6	8.1921	UMI CPM
+class_weight_part	GAS6	1.1509	UMI CPM
+pooled_ctrl	TYRO3	22.6717	UMI CPM
+pooled_ko	TYRO3	17.0059	UMI CPM
+pooled_delta	TYRO3	-5.6658	UMI CPM
+within_class_part	TYRO3	-2.8457	UMI CPM
+class_weight_part	TYRO3	-2.8201	UMI CPM
+pooled_ctrl	AXL	4.5560	UMI CPM
+pooled_ko	AXL	4.4625	UMI CPM
+pooled_delta	AXL	-0.0935	UMI CPM
+within_class_part	AXL	-0.7396	UMI CPM
+class_weight_part	AXL	0.6462	UMI CPM
+gas6_change	WT OPCs	30.23	MBP+ segments per field
+gas6_change	Tyro3-null OPCs	4.37	MBP+ segments per field
+gas6_difference_of_changes	WT minus Tyro3 null	25.86	MBP+ segments per field

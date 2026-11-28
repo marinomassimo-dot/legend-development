@@ -1,0 +1,13 @@
+analyte	group	cortex_side	printed_plasma_AUC	printed_brain_AUC	printed_ratio	recomputed_ratio
+selenate	SC_0.04_mg_kg	left	153.5	482.8	1.262	3.1453
+selenate	SC_0.04_mg_kg	right	153.5	417	1.089	2.7166
+selenate	SC_0.2_mg_kg	left	225.5	590.1	0.9502	2.6169
+selenate	SC_0.2_mg_kg	right	225.5	712.5	1.147	3.1596
+selenate	IP_1_mg_kg	left	175.9	180.4	1.026	1.0256
+selenate	IP_1_mg_kg	right	175.9	118.1	0.6715	0.6714
+total_selenium	SC_0.04_mg_kg	left	1231	702.8	0.1543	0.57092
+total_selenium	SC_0.04_mg_kg	right	1231	696.9	0.153	0.56613
+total_selenium	SC_0.2_mg_kg	left	1697	1160	0.239	0.68356
+total_selenium	SC_0.2_mg_kg	right	1697	1232	0.2539	0.72599
+total_selenium	IP_1_mg_kg	left	2408	370.4	0.1538	0.15382
+total_selenium	IP_1_mg_kg	right	2408	299.8	0.1245	0.1245

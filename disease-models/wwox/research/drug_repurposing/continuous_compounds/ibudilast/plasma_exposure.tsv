@@ -1,0 +1,6 @@
+time	n	total_ng_ml	total_nM	assumed_max_free_fraction	estimated_unbound_upper_nM
+day_1_peak	14	32.0	138.943	0.05	6.947
+day_6_peak	10	59.9	260.084	0.05	13.004
+day_6_trough	10	27.5	119.404	0.05	5.970
+day_16_peak	10	59.9	260.084	0.05	13.004
+day_16_trough	10	22.1	95.958	0.05	4.798

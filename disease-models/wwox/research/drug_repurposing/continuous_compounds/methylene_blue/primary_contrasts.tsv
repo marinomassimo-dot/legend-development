@@ -1,0 +1,11 @@
+PMID	locator	comparison	mean_units	ordered_means	contrast	contrast_units
+30734287	Fig 2A	rotenone O2 loss recovered	nmol/min/mg	121.4,1.95,21.0	15.948	% lost
+30734287	Fig 2B	antimycin O2 after dye	nmol/min/mg	15.6,20.2	29.487	% change
+30734287	Fig 1	peroxide with pyruvate and malate	pmol/min/mg	76.3,1460	1813.499	% change
+33669457	Fig 1D	antimycin O2 after dye, before ADP	nmol/min/mg	36.7,58.7	59.946	% change
+33669457	Fig 1D	antimycin O2 after ADP versus after dye	nmol/min/mg	58.7,36.4	-37.990	% change
+33669457	Fig 1D	antimycin O2 after ADP versus pre-dye	nmol/min/mg	36.7,36.4	-0.817	% change
+33669457	Fig 1C	myxothiazol O2 after dye, before ADP	nmol/min/mg	4.5,22.7	404.444	% change
+28495375	Fig 2B	ATP with oligomycin/AP5, alpha-ketoglutarate	nmol/min/mg	47,81	72.340	% change
+28495375	Fig 2D	ATP with oligomycin/AP5, glutamate	nmol/min/mg	31,54	74.194	% change
+28495375	Fig 2C	ATP with oligomycin/AP5, succinate	nmol/min/mg	19,19	0.000	% change

@@ -1,0 +1,15 @@
+source	readout	estimand	n_recordings	baseline	exposed	change_percent_or_pp
+Olah_S1	CA1 WT miniature IPSC frequency	mean frequency ratio per cell	10	1.0	0.6	-40.000
+Olah_S1	CA1 PV-GluN2D-KO miniature IPSC frequency	mean frequency ratio per cell	9	1.0	0.94	-6.000
+Olah_S1	CA1 vehicle miniature IPSC frequency	mean frequency ratio per cell	10	1.0	1.02	2.000
+Olah_S1	CA1 WT miniature IPSC frequency	ratio of group means, Hz	10	1.4	0.89	-36.429
+Olah_S1	CA1 PV-GluN2D-KO miniature IPSC frequency	ratio of group means, Hz	9	1.24	1.11	-10.484
+Olah_S2	CA1 WT miniature IPSC amplitude	mean amplitude ratio per cell	10	1.0	0.99	-1.000
+Olah_S2	CA1 PV-GluN2D-KO miniature IPSC amplitude	mean amplitude ratio per cell	9	1.0	1.03	3.000
+Bieber_Fig6	intracortical NMDA EPSP area	ratio of medians	6	1115	521	-53.274
+Bieber_Fig7A	spontaneous IPSC frequency without AP5	ratio of medians, Hz	8	1.2	1.5	25.000
+Bieber_Fig7B	spontaneous IPSC frequency with AP5	ratio of medians, Hz	10	1.37	2.442	78.248
+Bieber_Fig8A	intracortical AMPA EPSP area	ratio of medians	6	294	472	60.544
+Bieber_Fig9A	thalamocortical AMPA EPSP area	ratio of medians	10	337	399	18.398
+Olah_S1	WT minus PV-GluN2D-KO	difference in mean cell-ratio changes, percentage points	10/9	NA	NA	-34.000
+Olah_S1	WT minus PV-GluN2D-KO	difference in ratios of means, percentage points	10/9	NA	NA	-25.945

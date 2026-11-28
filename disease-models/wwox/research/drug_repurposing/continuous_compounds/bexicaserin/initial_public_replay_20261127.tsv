@@ -1,0 +1,15 @@
+comparison	quantity	value
+PACIFIC_FAS	two_sided_Fisher_p	0.2607
+PACIFIC_FAS	responder_difference_pp	26.667
+PACIFIC_missing_active_all_fail	responder_difference_pp	15.504
+PACIFIC_missing_active_all_respond	responder_difference_pp	34.109
+paper_csf_peak	concentration_nM	59.59
+paper_csf_peak	concentration_over_nominal_IP_EC50	1.419
+poster_low_csf_peak	concentration_nM	41.60
+poster_low_csf_peak	concentration_over_nominal_IP_EC50	0.991
+poster_high_csf_peak	concentration_nM	102.79
+poster_high_csf_peak	concentration_over_nominal_IP_EC50	2.447
+poster_low_csf_average	concentration_nM	31.34
+poster_low_csf_average	concentration_over_nominal_IP_EC50	0.746
+poster_high_csf_average	concentration_nM	82.48
+poster_high_csf_average	concentration_over_nominal_IP_EC50	1.964

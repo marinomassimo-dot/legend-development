@@ -1,0 +1,13 @@
+comparison	unit	value
+adult_observed_pk_csf_peak_mean	nmol/L	6.293068
+adult_observed_pk_csf_peak_sd	nmol/L	5.768646
+adult_observed_pk_free_plasma_peak_mean	nmol/L	3.670956
+adult_observed_pk_csf_quantification_limit	nmol/L	1.311056
+pediatric_model_wild_type_csf_steady_state_mean	nmol/L	4.457590
+pediatric_model_cyp2c9star3_csf_steady_state_mean	nmol/L	6.555279
+analgesia_fit_csf_ce50	nmol/L	3.828283
+expressed_cox2_ic50_over_adult_mean_peak	ratio	6.250000
+fibroblast_pge2_ic50_over_adult_mean_peak	ratio	14.460355
+rat_slice_nominal_10uM_over_adult_mean_peak	ratio	1589.050000
+rat_nonresponders_during_celecoxib_over_vehicle	ratio	0.841146
+rat_nonresponders_after_phenobarbital_over_celecoxib_period	ratio	0.340557

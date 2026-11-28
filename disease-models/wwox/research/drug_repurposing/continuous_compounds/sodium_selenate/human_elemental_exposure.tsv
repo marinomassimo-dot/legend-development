@@ -1,0 +1,7 @@
+arm	matrix	baseline_ug_Se_L	n_baseline	week24_ug_Se_L	n_week24	n_paired	baseline_uM_Se	week24_uM_Se	paired_delta_95CI_lo_uM_Se	paired_delta_95CI_hi_uM_Se
+placebo	serum	135.8	9	143.8	8	8	1.7196	1.8209	-0.6534	0.64961
+nutritional	serum	122.2	8	176.7	8	8	1.5474	2.2375	0.25706	1.1232
+supranutritional	serum	145.4	19	858.3	19	19	1.8412	10.869	6.2985	11.755
+placebo	CSF	1.3	9	1.4	7	7	0.016462	0.017728	-0.0050652	0.008864
+nutritional	CSF	1.6	6	2.5	7	6	0.020261	0.031657	0.0025326	0.020261
+supranutritional	CSF	1.4	17	20.2	14	13	0.017728	0.25579	0.16968	0.31404

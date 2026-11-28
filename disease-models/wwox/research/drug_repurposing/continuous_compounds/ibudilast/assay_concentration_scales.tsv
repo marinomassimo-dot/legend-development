@@ -1,0 +1,5 @@
+endpoint	parameter	assay_nM	estimated_adult_unbound_plasma_peak_upper_nM	assay_to_plasma_upper_ratio
+MIF-stimulated PBMC migration	significant at nominal 10 nM	10	13.004	0.769
+MIF tautomerase	K_i	30900	13.004	2376.153
+MIF fluorescence binding	K_d	55100	13.004	4237.089
+H2O2-challenged rat astrocyte viability	lowest reported effective nominal level	10000	13.004	768.982

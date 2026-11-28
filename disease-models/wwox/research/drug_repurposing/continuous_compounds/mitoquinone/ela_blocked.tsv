@@ -1,0 +1,13 @@
+endpoint	sex	arm_a	arm_b	cohort_n	unit	mean_a	mean_b	delta	median_pair_delta	omit_min	omit_max	unpaired_Hedges_g	positive_pairs
+complex_I	female	ELA_MitoQ	ELA_dTPP	12	printed_fig4_mOD/min/ug	8.28667	5.495	2.79167	2.705	2.61636	2.95	1.51511	12
+complex_I	female	ELA_MitoQ	ELA_vehicle	12	printed_fig4_mOD/min/ug	8.28667	4.54833	3.73833	3.49	3.55273	3.87909	2.25639	12
+complex_I	female	ELA_dTPP	ELA_vehicle	12	printed_fig4_mOD/min/ug	5.495	4.54833	0.946667	0.67	0.696364	1.09636	0.53049	8
+complex_I	male	ELA_MitoQ	ELA_dTPP	12	printed_fig4_mOD/min/ug	8.19417	6.685	1.50917	1.725	1.32909	1.71727	0.643387	11
+complex_I	male	ELA_MitoQ	ELA_vehicle	12	printed_fig4_mOD/min/ug	8.19417	6.565	1.62917	1.235	1.36909	1.96909	0.742484	11
+complex_I	male	ELA_dTPP	ELA_vehicle	12	printed_fig4_mOD/min/ug	6.685	6.565	0.12	0.025	-0.19	0.439091	0.0570759	7
+sucrose	female	ELA_MitoQ	ELA_dTPP	15	percentage_points	85.885	78.7133	7.17169	2.5	5.26967	8.20538	0.746227	10
+sucrose	female	ELA_MitoQ	ELA_vehicle	15	percentage_points	85.885	65.2617	20.6233	22.9	19.7035	21.6393	3.09733	15
+sucrose	female	ELA_dTPP	ELA_vehicle	15	percentage_points	78.7133	65.2617	13.4516	13.7	11.5624	15.1124	1.31318	13
+sucrose	male	ELA_MitoQ	ELA_dTPP	15	percentage_points	84.56	78.6933	5.86667	4.2	3.67143	7.02857	0.658054	10
+sucrose	male	ELA_MitoQ	ELA_vehicle	15	percentage_points	84.56	83.4804	1.07961	0.4	-0.75042	2.12101	0.122738	8
+sucrose	male	ELA_dTPP	ELA_vehicle	15	percentage_points	78.6933	83.4804	-4.78706	-3.3	-6.73613	-3.57185	-0.436084	5

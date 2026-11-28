@@ -1,0 +1,13 @@
+panel	readout	analyte	control_mean	SLC35A2OE_mean	OE_to_control	paired_omission_min	paired_omission_max
+4G	raw_ion_signal	UDP_Gal	2543.00000	2705.33333	1.06384	0.93689	1.25988
+4G	TIC_normalized	UDP_Gal	1.00000	2.32868	2.32868	1.95644	2.62661
+4G	raw_ion_signal	UDP_Glc	10187.00000	7937.66667	0.77920	0.68264	0.96606
+4G	TIC_normalized	UDP_Glc	1.00000	1.71930	1.71930	1.58632	1.90200
+4G	raw_ion_signal	UDP_HexNAc	421216.00000	178674.66667	0.42419	0.36449	0.49953
+4G	TIC_normalized	UDP_HexNAc	1.00000	0.94737	0.94737	0.93042	0.96312
+4G	raw_ion_signal	CMP_Sia	31231.00000	12766.00000	0.40876	0.37146	0.46437
+4G	TIC_normalized	CMP_Sia	1.00000	0.90845	0.90845	0.87771	0.94743
+4G	normalization_denominator	TIC	112972.00000	50546.33333	0.44742	0.39106	0.52350
+5B	normalized_filter_retention	UDP_Gal	1.00000	5.23878	5.23878	4.89812	6.03347
+5B	normalized_filter_retention	UDP_Glc	1.00000	1.63626	1.63625	1.55689	1.72962
+5B	normalized_filter_retention	UDP_GlcNAc	1.00000	1.07026	1.07026	1.02926	1.12641

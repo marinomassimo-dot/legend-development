@@ -1,0 +1,13 @@
+condition	value	unit	n	locator	source
+parent_molar_mass	440.66	g/mol		Table 1, physiochemical properties	https://doi.org/10.1002/jcph.6133
+parent_plasma_unbound_fraction	0.022	fraction		Methods, Model Development and Table 1, fu	https://doi.org/10.1002/jcph.6133
+adult_fasted_peak	7.65	ng/mL	15	Table 3, fasted mean Cmax	https://doi.org/10.1002/bdd.70015
+adult_liquid_peak	31.2	ng/mL	18	Table 3, PediaSure liquid mean Cmax	https://doi.org/10.1002/bdd.70015
+adult_solid_meal_peak	274	ng/mL	17	Table 3, fatty meal mean Cmax	https://doi.org/10.1002/bdd.70015
+adult_liquid_auc	167	ng*h/mL	18	Table 3, liquid food mean AUC0–t	https://doi.org/10.1002/bdd.70015
+adult_solid_meal_auc	1200	ng*h/mL	17	Table 3, fatty meal mean AUC0–t	https://doi.org/10.1002/bdd.70015
+under7_fa_week4_pre	173.33	ng/mL	5	Primary plasma PK, week 4 predose geometric mean	https://www.clinicaltrialsregister.eu/ctr-search/trial/2022-003265-38/results
+under7_fa_week12_3to6h	1070.60	ng/mL	5	Primary plasma PK, week 12 3–6 h geometric mean	https://www.clinicaltrialsregister.eu/ctr-search/trial/2022-003265-38/results
+rat_tissue_radioactivity_bql	0.179	ug eq/g	1	Tissue distribution Results, general tissue BQL with one animal per time in Methods	https://doi.org/10.1080/00498254.2023.2245459
+healthy_human_parent_auc	2.77	ug eq*h/mL	8	Table 3, parent plasma AUC0–t following labeled exposure, pooled profiling	https://doi.org/10.1080/00498254.2023.2245459
+healthy_human_radioactivity_auc	74.1	ug eq*h/mL	8	Table 3, total plasma radioactivity AUC0–t, pooled profiling	https://doi.org/10.1080/00498254.2023.2245459

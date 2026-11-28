@@ -1,0 +1,4 @@
+day1_outcome	day1_n	day21_outcome	day21_n	ratio_of_means	ratio_per_nominal_dose_step
+JBPOS0101 Plasma Concentration 0.5 - 1.5 Hours Post Morning Dose, Day 1	12	JBPOS0101 Plasma Concentration 0.5 -1.5 Hours Post Morning Dose, Day 21	11	3.7310	1.4924
+JBPOS0101 Plasma Concentration 4-6 Hours Post Morning Dose, Day 1	12	JBPOS0101 Plasma Concentration 4 - 6 Hours Post Morning Dose, Day 21	10	3.0867	1.2347
+JBPOS0101 Plasma Concentration 8 Hours Post Morning Dose and Pre-PM Dose, Day 1	11	JBPOS0101 Plasma Concentration 8 Hours Post Morning Dose and Pre-PM Dose, Day 21	9	3.0966	1.2386

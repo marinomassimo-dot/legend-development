@@ -1,0 +1,30 @@
+category	endpoint	participants_affected	participants_at_risk	events
+aggregate	All-cause mortality	0	12	NA
+aggregate	Any serious adverse event	3	12	NA
+aggregate	Any other adverse event	12	12	NA
+seriousEvents	Liver function test increased	1	12	1
+seriousEvents	Seizure	1	12	1
+seriousEvents	Aspiration Pneumonia	1	12	1
+otherEvents	Somnolence	3	12	3
+otherEvents	Sedation	2	12	4
+otherEvents	Liver function test increased	2	12	2
+otherEvents	Electrocardiogram QT prolonged	1	12	1
+otherEvents	Gamma-glutamyltransferase increased	1	12	2
+otherEvents	Abnormal behaviour	1	12	1
+otherEvents	Irritability	2	12	2
+otherEvents	Constipation	1	12	1
+otherEvents	Fatigue	1	12	1
+otherEvents	Sedation complication	1	12	1
+otherEvents	Urine odour abnormal	1	12	1
+otherEvents	Drooling	1	12	1
+otherEvents	Seizure	1	12	2
+otherEvents	Rash	2	12	2
+otherEvents	Pyrexia	1	12	2
+otherEvents	Cough	2	12	2
+otherEvents	Nasal congestion	1	12	1
+otherEvents	Aspiration pneumonia	1	12	1
+otherEvents	Wheezing	1	12	1
+otherEvents	Gastroenteritis	1	12	1
+otherEvents	Nasopharyngitis	1	12	2
+otherEvents	Otitis media acute	1	12	1
+otherEvents	Upper respiratory tract infection	1	12	1

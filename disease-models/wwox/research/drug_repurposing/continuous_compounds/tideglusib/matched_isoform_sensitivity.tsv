@@ -1,0 +1,46 @@
+compound_target	off_on_IC50_ratio	basis	assumed_same_slope	target_block	off_target_block
+tideglusib_beta	1.8088	matched recombinant pair	0.7	0.2	0.1417
+tideglusib_beta	1.8088	matched recombinant pair	0.7	0.5	0.3977
+tideglusib_beta	1.8088	matched recombinant pair	0.7	0.8	0.7254
+tideglusib_beta	1.8088	matched recombinant pair	1.0	0.2	0.1214
+tideglusib_beta	1.8088	matched recombinant pair	1.0	0.5	0.3560
+tideglusib_beta	1.8088	matched recombinant pair	1.0	0.8	0.6886
+tideglusib_beta	1.8088	matched recombinant pair	1.5	0.2	0.0932
+tideglusib_beta	1.8088	matched recombinant pair	1.5	0.5	0.2913
+tideglusib_beta	1.8088	matched recombinant pair	1.5	0.8	0.6218
+BRD3731_beta	14.3333	matched recombinant pair	0.7	0.2	0.0373
+BRD3731_beta	14.3333	matched recombinant pair	0.7	0.5	0.1343
+BRD3731_beta	14.3333	matched recombinant pair	0.7	0.8	0.3828
+BRD3731_beta	14.3333	matched recombinant pair	1.0	0.2	0.0171
+BRD3731_beta	14.3333	matched recombinant pair	1.0	0.5	0.0652
+BRD3731_beta	14.3333	matched recombinant pair	1.0	0.8	0.2182
+BRD3731_beta	14.3333	matched recombinant pair	1.5	0.2	0.0046
+BRD3731_beta	14.3333	matched recombinant pair	1.5	0.5	0.0181
+BRD3731_beta	14.3333	matched recombinant pair	1.5	0.8	0.0687
+BRD0705_alpha	7.8030	matched recombinant pair	0.7	0.2	0.0560
+BRD0705_alpha	7.8030	matched recombinant pair	0.7	0.5	0.1918
+BRD0705_alpha	7.8030	matched recombinant pair	0.7	0.8	0.4870
+BRD0705_alpha	7.8030	matched recombinant pair	1.0	0.2	0.0310
+BRD0705_alpha	7.8030	matched recombinant pair	1.0	0.5	0.1136
+BRD0705_alpha	7.8030	matched recombinant pair	1.0	0.8	0.3389
+BRD0705_alpha	7.8030	matched recombinant pair	1.5	0.2	0.0113
+BRD0705_alpha	7.8030	matched recombinant pair	1.5	0.5	0.0439
+BRD0705_alpha	7.8030	matched recombinant pair	1.5	0.8	0.1551
+cellular_sensitivity_4fold	4.0000	sensitivity	0.7	0.2	0.0865
+cellular_sensitivity_4fold	4.0000	sensitivity	0.7	0.5	0.2748
+cellular_sensitivity_4fold	4.0000	sensitivity	0.7	0.8	0.6025
+cellular_sensitivity_4fold	4.0000	sensitivity	1.0	0.2	0.0588
+cellular_sensitivity_4fold	4.0000	sensitivity	1.0	0.5	0.2000
+cellular_sensitivity_4fold	4.0000	sensitivity	1.0	0.8	0.5000
+cellular_sensitivity_4fold	4.0000	sensitivity	1.5	0.2	0.0303
+cellular_sensitivity_4fold	4.0000	sensitivity	1.5	0.5	0.1111
+cellular_sensitivity_4fold	4.0000	sensitivity	1.5	0.8	0.3333
+cellular_sensitivity_6fold	6.0000	sensitivity	0.7	0.2	0.0666
+cellular_sensitivity_6fold	6.0000	sensitivity	0.7	0.5	0.2220
+cellular_sensitivity_6fold	6.0000	sensitivity	0.7	0.8	0.5330
+cellular_sensitivity_6fold	6.0000	sensitivity	1.0	0.2	0.0400
+cellular_sensitivity_6fold	6.0000	sensitivity	1.0	0.5	0.1429
+cellular_sensitivity_6fold	6.0000	sensitivity	1.0	0.8	0.4000
+cellular_sensitivity_6fold	6.0000	sensitivity	1.5	0.2	0.0167
+cellular_sensitivity_6fold	6.0000	sensitivity	1.5	0.5	0.0637
+cellular_sensitivity_6fold	6.0000	sensitivity	1.5	0.8	0.2139

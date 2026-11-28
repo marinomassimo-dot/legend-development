@@ -1,0 +1,9 @@
+check	value	unit	input
+video_observed_difference	-5.45	pp	6/11 vs 9/15
+video_allocation_lower	-30.92	pp	6/16 vs 13/19
+video_allocation_upper	21.38	pp	11/16 vs 9/19
+anti_nmdar_screen_excluded	35.48	percent	(6 + 5)/31
+semple_fig6b_compatible	0.57136	Fisher p	18/19 vs 13/15
+semple_fig7b_caption_range	0.04481	Fisher p	11/19 vs 4/19
+semple_fig7b_extend_to_14	0.07330	Fisher p	11/19 vs 3/14
+semple_fig7b_extend_to_14	0.04481	Fisher p	11/19 vs 4/19

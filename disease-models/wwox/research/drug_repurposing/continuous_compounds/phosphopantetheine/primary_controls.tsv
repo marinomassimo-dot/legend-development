@@ -1,0 +1,33 @@
+PMID	locator	model	condition	unit	observations	mean	SD
+40745475	Fig S5	control	untreated	pct untreated control fibroblasts	16	100.00125	16.29975
+40745475	Fig S5	control	50 µM P	pct untreated control fibroblasts	4	123.23250	6.39410
+40745475	Fig S5	control	150 µM P	pct untreated control fibroblasts	4	127.96000	18.64750
+40745475	Fig S5	control	500 µM P	pct untreated control fibroblasts	4	198.22250	53.53541
+40745475	Fig S5	control	50 µM 4PP	pct untreated control fibroblasts	4	81.81250	4.77951
+40745475	Fig S5	control	150 µM 4PP	pct untreated control fibroblasts	4	91.32000	14.10317
+40745475	Fig S5	control	500 µM 4PP	pct untreated control fibroblasts	4	106.79750	18.53857
+40745475	Fig S5	PPCS line A	untreated	pct untreated control fibroblasts	8	74.44250	8.76094
+40745475	Fig S5	PPCS line A	50 µM P	pct untreated control fibroblasts	3	105.83333	5.33233
+40745475	Fig S5	PPCS line A	150 µM P	pct untreated control fibroblasts	3	95.70667	2.78319
+40745475	Fig S5	PPCS line A	500 µM P	pct untreated control fibroblasts	3	117.57333	2.52655
+40745475	Fig S5	PPCS line A	50 µM 4PP	pct untreated control fibroblasts	3	60.97333	1.90243
+40745475	Fig S5	PPCS line A	150 µM 4PP	pct untreated control fibroblasts	3	72.79667	0.65056
+40745475	Fig S5	PPCS line A	500 µM 4PP	pct untreated control fibroblasts	3	88.92000	2.55278
+40745475	Fig S5	PPCS line B	untreated	pct untreated control fibroblasts	4	70.78000	5.51244
+40745475	Fig S5	PPCS line B	50 µM P	pct untreated control fibroblasts	3	104.71333	4.74318
+40745475	Fig S5	PPCS line B	150 µM P	pct untreated control fibroblasts	3	128.87667	6.44036
+40745475	Fig S5	PPCS line B	500 µM P	pct untreated control fibroblasts	3	156.71333	28.66326
+40745475	Fig S5	PPCS line B	50 µM 4PP	pct untreated control fibroblasts	3	73.73333	2.85715
+40745475	Fig S5	PPCS line B	150 µM 4PP	pct untreated control fibroblasts	3	71.87667	2.23755
+40745475	Fig S5	PPCS line B	500 µM 4PP	pct untreated control fibroblasts	3	88.33333	0.91784
+35896750	Fig 4c	immunopurified full-length PANK4	Water blank	relative phosphate release	3	0.05000	0.00000
+35896750	Fig 4c	immunopurified full-length PANK4	4'-phosphopantothenate	relative phosphate release	3	0.10000	0.01000
+35896750	Fig 4c	immunopurified full-length PANK4	4'-phosphopantetheine	relative phosphate release	3	1.00000	0.07937
+35896750	Fig 4d source workbook	vector	total CoA	pct change vs vector mean, protein-normalized	3	-0.00333	12.65965
+35896750	Fig 4d source workbook	vector	M+4 CoA from vitamin B5	pct change vs vector mean, protein-normalized	3	0.00000	15.89347
+35896750	Fig 4d source workbook	WT PANK4	total CoA	pct change vs vector mean, protein-normalized	3	-40.29000	6.88599
+35896750	Fig 4d source workbook	WT PANK4	M+4 CoA from vitamin B5	pct change vs vector mean, protein-normalized	3	-39.66667	12.74481
+35896750	Fig 4d source workbook	D623A	total CoA	pct change vs vector mean, protein-normalized	3	6.04333	3.36354
+35896750	Fig 4d source workbook	D623A	M+4 CoA from vitamin B5	pct change vs vector mean, protein-normalized	3	2.85667	27.63133
+35896750	Fig 4d source workbook	D659A	total CoA	pct change vs vector mean, protein-normalized	3	4.73667	9.13220
+35896750	Fig 4d source workbook	D659A	M+4 CoA from vitamin B5	pct change vs vector mean, protein-normalized	3	8.57333	4.93807

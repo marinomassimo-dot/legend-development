@@ -1,0 +1,37 @@
+locator	contrast	unit	n	estimate	median_if_applicable
+Greenberg 3D	normalized MAP2-positive neuron count, healthy	ratio	196	1	0.995126
+Greenberg 3D	normalized MAP2-positive neuron count, MPS IIIA vehicle	ratio	152	0.874902	0.883619
+Greenberg 3D	normalized MAP2-positive neuron count, allopurinol	ratio	12	0.964145	0.957558
+Greenberg 3F	normalized GFAP-positive astrocyte count, healthy	ratio	198	0.996725	0.865866
+Greenberg 3F	normalized GFAP-positive astrocyte count, MPS IIIA vehicle	ratio	152	9.41644	9.01165
+Greenberg 3F	normalized GFAP-positive astrocyte count, allopurinol	ratio	12	0.266618	0.168122
+Greenberg 8B	normalized excitatory/inhibitory synapse marker ratio, healthy	ratio	12	1	1.00218
+Greenberg 8B	normalized excitatory/inhibitory synapse marker ratio, MPS IIIA vehicle	ratio	20	1.48515	1.40533
+Greenberg 8B	normalized excitatory/inhibitory synapse marker ratio, allopurinol plus probenecid	ratio	12	1.07603	1.05634
+Tran 3B	kidney AMP M+5, separate tracer-only cohort	fractional abundance %	8	1.59091	NA
+Tran 4C	blood hypoxanthine M+5, vehicle, 30 min	fractional abundance %	5	3.12676	NA
+Tran 4C	blood hypoxanthine M+5, allopurinol, 30 min	fractional abundance %	5	22.9859	NA
+Tran 4C	blood hypoxanthine M+5, vehicle, 60 min	fractional abundance %	5	1.94366	NA
+Tran 4C	blood hypoxanthine M+5, allopurinol, 60 min	fractional abundance %	5	13.4366	NA
+Tran 4C	blood hypoxanthine M+5, vehicle, 300 min	fractional abundance %	5	1.1831	NA
+Tran 4C	blood hypoxanthine M+5, allopurinol, 300 min	fractional abundance %	5	16.5634	NA
+Tran 4D	brain hypoxanthine M+5, allopurinol then tracer	fractional abundance %	5	1.67135	NA
+Tran 4D	kidney hypoxanthine M+5, allopurinol then tracer	fractional abundance %	5	14.4522	NA
+Tran 4D	brain IMP M+5, allopurinol then tracer	fractional abundance %	5	0.47191	NA
+Tran 4D	kidney IMP M+5, allopurinol then tracer	fractional abundance %	5	6.4382	NA
+Tran 4D	brain AMP M+5, allopurinol then tracer	fractional abundance %	5	0.370787	NA
+Tran 4D	kidney AMP M+5, allopurinol then tracer	fractional abundance %	5	7.41573	NA
+Chu Eq. 3	published EFF multiplier, C=0 mg/L	instantaneous salvage fraction	NA	1	NA
+Chu Eq. 3	residual activity 1-EFF, C=0 mg/L	instantaneous salvage fraction	NA	0.714286	NA
+Chu Eq. 3	published EFF multiplier, C=0.68 mg/L	instantaneous salvage fraction	NA	0.833333	NA
+Chu Eq. 3	residual activity 1-EFF, C=0.68 mg/L	instantaneous salvage fraction	NA	0.833333	NA
+Chu Eq. 3	published EFF multiplier, C=6.12 mg/L	instantaneous salvage fraction	NA	0.735294	NA
+Chu Eq. 3	residual activity 1-EFF, C=6.12 mg/L	instantaneous salvage fraction	NA	0.961538	NA
+Benders Table 1	mortality	risk difference allopurinol minus vehicle	17/15	0.0980392	NA
+Benders Table 1	mortality	two-sided Fisher p	17/15	0.69886	NA
+Benders Table 1	aEEG recovery within 24 h	risk difference allopurinol minus vehicle	17/15	-0.054902	NA
+Benders Table 1	aEEG recovery within 24 h	two-sided Fisher p	17/15	1	NA
+Benders Table 1	status epilepticus	risk difference allopurinol minus vehicle	17/15	0.137255	NA
+Benders Table 1	status epilepticus	two-sided Fisher p	17/15	0.490529	NA
+US label section 12.3	adult oral total parent Cmax	micromolar	NA	22.041	NA
+Greenberg Fig. 3 vs label	nominal 2200 uM / adult total parent Cmax	ratio	NA	99.814	NA

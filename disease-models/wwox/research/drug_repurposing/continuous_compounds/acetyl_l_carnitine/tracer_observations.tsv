@@ -1,0 +1,16 @@
+source	locator	analyte	unit	minutes	mean	SEM	n_forebrains
+20477950	Table 1	Glutamate C4	nmol 13C/mg forebrain protein	15	0.378	0.033	5
+20477950	Table 1	Glutamate C4	nmol 13C/mg forebrain protein	60	0.605	0.056	6
+20477950	Table 1	Glutamate C4	nmol 13C/mg forebrain protein	120	1.045	0.158	8
+20477950	Table 1	Glutamate C3	nmol 13C/mg forebrain protein	15	0.544	0.042	5
+20477950	Table 1	Glutamate C3	nmol 13C/mg forebrain protein	60	0.665	0.105	6
+20477950	Table 1	Glutamate C3	nmol 13C/mg forebrain protein	120	1.010	0.141	8
+20477950	Table 1	Glutamine C4	nmol 13C/mg forebrain protein	15	0.180	0.021	5
+20477950	Table 1	Glutamine C4	nmol 13C/mg forebrain protein	60	0.212	0.053	6
+20477950	Table 1	Glutamine C4	nmol 13C/mg forebrain protein	120	0.477	0.080	8
+20477950	Table 1	GABA C2	nmol 13C/mg forebrain protein	15	0.110	0.021	5
+20477950	Table 1	GABA C2	nmol 13C/mg forebrain protein	60	0.177	0.085	6
+20477950	Table 1	GABA C2	nmol 13C/mg forebrain protein	120	0.141	0.034	8
+20477950	Table 2	Lactate C3	nmol 13C/mg forebrain protein	15	0.218	0.053	5
+20477950	Table 2	Lactate C3	nmol 13C/mg forebrain protein	60	0.403	0.101	6
+20477950	Table 2	Lactate C3	nmol 13C/mg forebrain protein	120	0.997	0.179	8

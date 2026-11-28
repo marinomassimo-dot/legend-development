@@ -1,0 +1,7 @@
+n	hour	boundary	shift_px	y_px	nominal_plasma_uM
+4	1	lower_group_envelope	-3	869	331.793
+4	1	lower_group_envelope	0	872	319.122
+4	1	lower_group_envelope	3	875	306.935
+4	1	upper_group_envelope	-3	759	1383.32
+4	1	upper_group_envelope	0	762	1330.49
+4	1	upper_group_envelope	3	765	1279.68

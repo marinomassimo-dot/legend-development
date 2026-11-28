@@ -1,0 +1,3 @@
+source	compartment	genotype	start_hr	end_hr	radiolabel_AUC_parent_eq_nmol_h_g	time_avg_parent_eq_nmol_g	ratio_to_WT
+Porteous_2013_III_Fig2B	whole_brain_wet	WT	1	20	0.6	0.0315789	1
+Porteous_2013_III_Fig2B	whole_brain_wet	Mdr1a_Mdr1b_Bcrp_KO	1	20	2.3	0.121053	3.83333

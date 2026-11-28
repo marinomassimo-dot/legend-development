@@ -1,0 +1,23 @@
+id	kind	reference	value	unit	n	region_or_matrix	locator	source
+free_base_mw	MW		229.63	g/mol	NA	PubChem CID 16231	Molecular Weight	https://pubchem.ncbi.nlm.nih.gov/compound/16231
+adult_CF_Cmax	plasma		20.6	ng/mL	10 adults	total plasma	Abstract, oral Cmax mean SD 10.0	https://pubmed.ncbi.nlm.nih.gov/9085317/
+adolescent_CF_Cmax	plasma		21.7	ng/mL	9 adolescents	total plasma	Abstract, oral Cmax mean SD 4.88	https://pubmed.ncbi.nlm.nih.gov/9085317/
+CHO_D212_IC50	bath	IC50	1.91	uM	4–5 cells per curve	human recombinant ASIC1a-D212 in CHO	Fig. 5A and Results, pH 7.4 to 6.0	https://doi.org/10.3389/fnmol.2019.00133
+CHO_G212_IC50	bath	IC50	1.54	uM	4–5 cells per curve	human recombinant ASIC1a-G212 in CHO	Fig. 5A and Results, pH 7.4 to 6.0	https://doi.org/10.3389/fnmol.2019.00133
+mouse_cortex_IC50	bath	IC50	13.82	uM	5 cells	cultured mouse cortex	Table 1 and Fig. 2, pH 7.4 to 6.0 at -60 mV	https://doi.org/10.1111/cns.12524
+rat_hippocampal_PSC	bath	tested bath	25	uM	5 cells	cultured rat hippocampus	Fig. 5, evoked PSC recording	https://doi.org/10.1186/s13041-016-0269-4
+human_cortex_test	bath	tested bath	100	uM	9 recorded cells	dissociated human cortex	Fig. 2A–B, pH 7.4 to 6.0	https://doi.org/10.1038/jcbfm.2010.30
+hatch_WT_reference	reference		211.6	firing counts	12 cells	WT P16–21 mouse CA1 pyramidal neurons	Fig. 2C, pH 7.4	https://doi.org/10.1523/JNEUROSCI.1387-22.2022
+hatch_WT_acid	response	hatch_WT_reference	102.9	firing counts	12 cells	WT P16–21 mouse CA1 pyramidal neurons	Fig. 2C, pH 6.9	https://doi.org/10.1523/JNEUROSCI.1387-22.2022
+hatch_KO_reference	reference		221.9	firing counts	7 cells	Asic1a-null P16–21 mouse CA1 pyramidal neurons	Fig. 2F, pH 7.4	https://doi.org/10.1523/JNEUROSCI.1387-22.2022
+hatch_KO_acid	response	hatch_KO_reference	74	firing counts	7 cells	Asic1a-null P16–21 mouse CA1 pyramidal neurons	Fig. 2F, pH 6.9	https://doi.org/10.1523/JNEUROSCI.1387-22.2022
+hatch_WT_mild_reference	reference		287.8	firing counts	5 cells	WT P16–21 mouse CA1 pyramidal neurons	Fig. 4E, pH 7.4	https://doi.org/10.1523/JNEUROSCI.1387-22.2022
+hatch_WT_mild_acid	response	hatch_WT_mild_reference	228.2	firing counts	5 cells	WT P16–21 mouse CA1 pyramidal neurons	Fig. 4E, pH 7.2	https://doi.org/10.1523/JNEUROSCI.1387-22.2022
+storozhuk_inward_reference	reference		100	percent control	5 cells	cultured rat hippocampus	Fig. 5A, below reversal	https://doi.org/10.1186/s13041-016-0269-4
+storozhuk_inward	response	storozhuk_inward_reference	69.5	percent control	5 cells	cultured rat hippocampus	Fig. 5A, 25 uM amiloride	https://doi.org/10.1186/s13041-016-0269-4
+storozhuk_outward_reference	reference		100	percent control	5 cells	cultured rat hippocampus	Fig. 5B, above reversal	https://doi.org/10.1186/s13041-016-0269-4
+storozhuk_outward	response	storozhuk_outward_reference	88.3	percent control	5 cells	cultured rat hippocampus	Fig. 5B, 25 uM amiloride	https://doi.org/10.1186/s13041-016-0269-4
+human_cortex_reference	reference		1209.46	pA magnitude	9 cells	dissociated human cortex	Fig. 2B, pH 6.0 drug-free	https://doi.org/10.1038/jcbfm.2010.30
+human_cortex_amiloride	response	human_cortex_reference	59.23	pA magnitude	9 cells	dissociated human cortex	Fig. 2B, pH 6.0 with 100 uM amiloride	https://doi.org/10.1038/jcbfm.2010.30
+global_WT_serum_total_CO2	reference		21.67	mEq/L	3 mice	P18-era global Wwox mouse serum	Table 3, WT	https://doi.org/10.1371/journal.pone.0007775
+global_KO_serum_total_CO2	response	global_WT_serum_total_CO2	14.50	mEq/L	4 mice	P18-era global Wwox mouse serum	Table 3, KO	https://doi.org/10.1371/journal.pone.0007775

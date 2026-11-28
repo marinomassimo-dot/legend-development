@@ -1,0 +1,13 @@
+source	total_plasma_uM	assumed_fu_plasma	assumed_Kpuu	scenario_free_brain_uM
+pediatric_day21_first_window_mean	99.9107	NA	NA	NA
+adult_mean_Cmax_alone	97.0457	NA	NA	NA
+adult_mean_Cmax_with_CBZ	64.2858	NA	NA	NA
+pediatric_day21_first_window_sensitivity	99.9107	0.1	0.1	0.9991
+pediatric_day21_first_window_sensitivity	99.9107	0.1	0.3	2.9973
+pediatric_day21_first_window_sensitivity	99.9107	0.1	1.0	9.9911
+pediatric_day21_first_window_sensitivity	99.9107	0.5	0.1	4.9955
+pediatric_day21_first_window_sensitivity	99.9107	0.5	0.3	14.9866
+pediatric_day21_first_window_sensitivity	99.9107	0.5	1.0	49.9554
+pediatric_day21_first_window_sensitivity	99.9107	0.9	0.1	8.9920
+pediatric_day21_first_window_sensitivity	99.9107	0.9	0.3	26.9759
+pediatric_day21_first_window_sensitivity	99.9107	0.9	1.0	89.9197

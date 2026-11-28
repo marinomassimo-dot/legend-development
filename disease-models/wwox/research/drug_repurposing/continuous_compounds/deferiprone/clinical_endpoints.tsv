@@ -1,0 +1,8 @@
+trial	endpoint	time	n_deferiprone	n_placebo	deferiprone	placebo	difference_DFP_minus_placebo	units
+NCT01741532	Change in Score on Barry-Albright Dystonia Scale	Baseline to 18 Months	58	28	2.48	3.99	-1.51	score on a scale
+NCT01741532	Score on Patient Global Impression of Improvement at End of Study	Month 18	58	28	4.55	4.66	-0.11	score on a scale
+NCT01741532	Change in Level of Brain Iron	Baseline to 18 Months	24	16	-36.1	-0.5	-35.60	Hz
+NCT02655315	Total MDS-UPDRS change (ITT)	Baseline to week 36	186	186	15.6	6.3	9.30	scale points
+NCT02655315	Withdrawal for symptoms requiring dopaminergic therapy	Week 36	186	186	22.04	2.69	19.35	percent (difference in percentage points)
+NCT03234686	NTB cognitive composite change (ITT)	Baseline to month 12	53	28	-0.8	-0.3	-0.50	standardized scale points
+NCT03234686	Hippocampal QSM change (completed MRI)	Baseline to month 12	18	15	-0.36	0.32	-0.68	ppb

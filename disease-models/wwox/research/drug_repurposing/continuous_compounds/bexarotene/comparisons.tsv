@@ -1,0 +1,14 @@
+comparison	value	unit
+trial_hypothyroid_exposed_risk_difference	100	percentage points
+trial_hypertriglyceridemia_exposed_risk_difference	92.30769	percentage points
+trial_discontinued_for_ae_exposed_risk_difference	10.89744	percentage points
+primary_mtr_design_target_minus_ci_upper	0.47	percentage units
+followup_observed_eye_risk_difference	20.2381	percentage points, post hoc
+followup_delayed_observed_eye_risk_difference	7.142857	percentage points, post hoc
+followup_no_assumption_eye_risk_difference_lower	-59.61538	percentage points, hypothetical
+followup_no_assumption_eye_risk_difference_upper	67.30769	percentage points, hypothetical
+followup_missing_placebo_responses_to_tie_if_no_missing_active	7	eyes, hypothetical
+healthy_csf_limit_over_average_plasma_peak	1.438356	percent, scale comparison
+healthy_quantifiable_subset_csf_fraction_of_plasma	1.176471	percent, author-estimated ratio inverted
+qki_myelinated_fraction_treatment_ratio	1.737	ratio to untreated Qki iCKO
+qki_myelin_lipid_stain_treatment_ratio	1.895	ratio to untreated Qki iCKO

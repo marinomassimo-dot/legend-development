@@ -1,0 +1,35 @@
+{
+  "investigation":"INV-07",
+  "title":"Fenofibrate in WWOX-LoF",
+  "date":"28 November 2026",
+  "summary":"An experimental comparison of systemic fuel handling and direct neural action.",
+  "graph":{
+    "evidence":"Global Wwox loss can lower circulating glucose.",
+    "inference":"Neuronal rescue can also normalize systemic glucose.",
+    "hypothesis":"Systemic fuel support or direct neural signaling could change activity.",
+    "experiment":"Match fuels and verify local acid, recruitment and spontaneous EEG."
+  },
+  "evidence":[
+    "In a nicotine challenge, EEG discharges occurred in 6/7 control and 2/8 fenofibrate-fed mice. In an adult sleep-related epilepsy series, all 11 completers had a motor event in the follow-up overnight recording."
+  ],
+  "inference":[
+    "Evoked protection, sleep movements and spontaneous seizures have different evidential value. Adult mouse total brain acid was 3.83 and 2.76 nmol/g at two sampling points."
+  ],
+  "hypothesis":[
+    "A systemic response could improve fuel use. A local response could change nicotinic recruitment, while direct parent exposure can also depress mitochondrial respiration in a separate assay."
+  ],
+  "experiment":[
+    "Measure native juvenile substrate use, then match glucose and ketones and verify local parent and acid, pathway engagement, initial recruitment and spontaneous activity."
+  ],
+  "limits":[
+    "Adult whole-brain totals leave juvenile unbound exposure open. The pediatric lipid study does not establish WWOX efficacy or CNS exposure. Retain as a preclinical probe and defer pediatric priority."
+  ],
+  "sources":[
+    {"label":"Ludes-Meyers et al. Global Wwox loss and blood chemistry.","url":"https://doi.org/10.1371/journal.pone.0007775"},
+    {"label":"Puligheddu et al. Nicotine EEG and slice responses, Figs. 3–4.","url":"https://doi.org/10.1371/journal.pone.0064541"},
+    {"label":"Puligheddu et al. Sleep-related hypermotor epilepsy, Tables 1–2.","url":"https://doi.org/10.1111/epi.13863"},
+    {"label":"Blednov et al. Total acid in mouse brain, plasma and liver, Table 1.","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4308472/"},
+    {"label":"Zubareva et al. Neuroprotection and spontaneous seizures, primary abstract.","url":"https://pubmed.ncbi.nlm.nih.gov/42309244/"},
+    {"label":"Dalili et al. Pediatric lipid trial, primary abstract.","url":"https://pubmed.ncbi.nlm.nih.gov/41636674/"}
+  ]
+}

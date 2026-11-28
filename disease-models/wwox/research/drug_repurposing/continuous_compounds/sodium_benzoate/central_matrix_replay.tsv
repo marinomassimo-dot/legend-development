@@ -1,0 +1,10 @@
+source	arm	time_h	numerator_matrix_and_unit	numerator	denominator_matrix_and_unit	denominator	ratio_unit	ratio_of_group_means
+Batshaw_1988_T5	mouse_OTC_low	1	cortical_parent_nmol_g	29	plasma_total_parent_uM	85	mL_g	0.341176
+Batshaw_1988_T5	mouse_OTC_high	1	cortical_parent_nmol_g	2239	plasma_total_parent_uM	6362	mL_g	0.351933
+Batshaw_1988_T5	mouse_control_high	1	cortical_parent_nmol_g	2581	plasma_total_parent_uM	5627	mL_g	0.458681
+Kurebayashi_1999_T3	rat_oral_sodium_low	6	brain_tracer_ug_eq_g	0.12	blood_tracer_ug_eq_g	0.39	dimensionless	0.307692
+Kurebayashi_1999_T4	rat_oral_sodium_low	48	brain_tracer_ug_eq_g	0.03	blood_tracer_ug_eq_g	0.06	dimensionless	0.500000
+Kurebayashi_1999_T5	rat_oral_sodium_mid	6	brain_tracer_ug_eq_g	2.34	blood_tracer_ug_eq_g	4.4	dimensionless	0.531818
+Kurebayashi_1999_T6	rat_oral_sodium_mid	48	brain_tracer_ug_eq_g	0.33	blood_tracer_ug_eq_g	0.62	dimensionless	0.532258
+Kurebayashi_1999_T7	rat_oral_sodium_high	6	brain_tracer_ug_eq_g	791.65	blood_tracer_ug_eq_g	1477.46	dimensionless	0.535818
+Kurebayashi_1999_T8	rat_oral_sodium_high	48	brain_tracer_ug_eq_g	1.84	blood_tracer_ug_eq_g	3.63	dimensionless	0.506887

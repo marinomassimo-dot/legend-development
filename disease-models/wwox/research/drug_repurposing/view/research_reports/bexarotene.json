@@ -1,0 +1,45 @@
+{
+  "investigation": "INV-06",
+  "title": "Bexarotene in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "A test of sterol delivery during first myelination.",
+  "graph": {
+    "evidence": "Apoe increased while Abcg1 decreased in two treated mouse cell classes.",
+    "inference": "A higher lipid-carrier signal leaves sterol transfer unresolved.",
+    "hypothesis": "Lipid supply and recipient metabolism can limit distinct steps in WWOX.",
+    "experiment": "Trace sterol to new sheaths under donor and recipient controls."
+  },
+  "evidence": [
+    "Apoe rose and Abcg1 fell in microglia and mature oligodendrocyte gates in four treated versus four control APP/PS1 mice. Both directions survive two gate thresholds and every single-animal omission."
+  ],
+  "inference": [
+    "LXR transcripts fell in three held WWOX models. Exporter RNA changes differed by tissue. Neither RNA observation measures sterol transfer."
+  ],
+  "hypothesis": [
+    "Bexarotene could change sterol synthesis or retention in oligodendrocytes even if donor export stays limited."
+  ],
+  "experiment": [
+    "At matched exposure, interrupt donor export or recipient RXR and include a lipidated-carrier bypass. Measure label in first compact sheaths and conduction at matched recruitment."
+  ],
+  "limits": [
+    "Retain as a laboratory probe. The adult MS primary efficacy endpoint missed its target. All 26 bexarotene recipients developed hypothyroidism. Pediatric CNS exposure remains unresolved."
+  ],
+  "sources": [
+    {
+      "label": "GSE283905. Mouse brain counts for the animal-level replay.",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE283905"
+    },
+    {
+      "label": "Zhou et al. Oligodendrocyte-dependent myelin maintenance, Fig. 6.",
+      "url": "https://doi.org/10.1172/JCI131800"
+    },
+    {
+      "label": "Lyu et al. Aged stroke and separate myeloid cohort, Figs. 3 and 6.",
+      "url": "https://doi.org/10.1161/STROKEAHA.126.055940"
+    },
+    {
+      "label": "Brown et al. Randomized adult MS trial.",
+      "url": "https://doi.org/10.1016/S1474-4422(21)00179-4"
+    }
+  ]
+}

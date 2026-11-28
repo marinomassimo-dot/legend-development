@@ -1,0 +1,13 @@
+panel	contrast	unit	analysis_unit	ctrl_n	test_n	ctrl_observations	test_observations	ctrl_mean	test_mean	difference	ratio	omit_min_difference	omit_max_difference
+Fig. 4c	knockdown medium vs control medium	colocalized puncta/image	neuronal preparation	3	3	58	64	92.494	128.06	35.566	1.3845	25.819	45.591
+Fig. 4f	10 nM spermidine vs vehicle	colocalized puncta/image	neuronal preparation	3	3	64	66	50.011	87.373	37.363	1.7471	27.124	45.794
+Fig. 4f	10 nM spermine vs vehicle	colocalized puncta/image	neuronal preparation	3	3	64	65	50.011	67.799	17.789	1.3557	16.16	19.211
+Fig. 4d	knockdown medium vs control medium spermidine	uM	biological replicate	3	3	3	3	0.72967	1.3797	0.65	1.8908	0.54983	0.81483
+Fig. 5a-d	cortical spermidine KO vs WT	nmol/g	mouse	12	12	12	12	1193.3	1023.5	-169.79	0.85772	-234.74	-53.215
+Fig. 5e-g	CSF spermidine KO vs WT	uM	sample incl. pools	6	6	6	6	0.53	0.945	0.415	1.783	0.008	0.665
+Suppl. Fig. 12a-g	plasma spermidine KO vs WT	uM	mouse	12	12	12	12	13.198	13.934	0.73633	1.0558	-1.259	1.6638
+Fig. 5p	excitatory contacts KO vs WT	colocalized puncta/image	mouse	14	12	14	12	138.06	187.79	49.73	1.3602	38.688	58.552
+Fig. 5r-s	mEPSC frequency KO vs WT	Hz	mouse	3	3	26	23	11.188	14.988	3.7998	1.3396	1.7524	5.9305
+Fig. 5r-s	mEPSC amplitude KO vs WT	pA	mouse	3	3	26	23	25.559	24.121	-1.4378	0.94374	-4.1425	1.3263
+Suppl. Fig. 11p-q	mIPSC frequency KO vs WT	Hz	mouse	3	3	23	23	8.6883	9.5693	0.88103	1.1014	-1.4711	2.9037
+Suppl. Fig. 11p-q	mIPSC amplitude KO vs WT	pA	mouse	3	3	23	23	31.556	31.2	-0.3562	0.98871	-4.1173	1.6789

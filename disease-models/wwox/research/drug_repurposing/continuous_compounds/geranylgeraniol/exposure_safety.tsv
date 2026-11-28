@@ -1,0 +1,13 @@
+comparison	value	unit	basis
+Adult randomized	83	participants	Gheith et al. 2023, §§2.2 and 3.4; denominators are study completers
+Adult analyzed	66	participants	Gheith et al. 2023, §§2.2 and 3.4; denominators are study completers
+Adult not in analysis	17	participants	Gheith et al. 2023, §§2.2 and 3.4; denominators are study completers
+Adult at least one reported AE, active	17.647	%	Gheith et al. 2023, §§2.2 and 3.4; denominators are study completers
+Adult at least one reported AE, placebo	15.625	%	Gheith et al. 2023, §§2.2 and 3.4; denominators are study completers
+Adult difference active minus placebo	2.022	percentage points	Gheith et al. 2023, §§2.2 and 3.4; denominators are study completers
+Adult difference Newcombe 95% lower	-16.595	percentage points	Gheith et al. 2023, §§2.2 and 3.4; denominators are study completers
+Adult difference Newcombe 95% upper	20.147	percentage points	Gheith et al. 2023, §§2.2 and 3.4; denominators are study completers
+Adult zero-serious-event upper limit under active completer denominator	8.434	%, one-sided 95% exact binomial	Gheith et al. 2023, §§2.2 and 3.4; denominators are study completers
+Minimum exact two-sided signed-rank p for three nonzero pairs	0.250	probability	Sediva et al. 2024, Fig. S1, 3 paired adults
+Slice concentration	200	µM, nominal in perfusate	Kotti et al. 2008, nominal bath concentration in Fig. 2D and Results
+Slice concentration	58.097	µg/mL, nominal in perfusate	Kotti et al. 2008, nominal bath concentration in Fig. 2D and Results

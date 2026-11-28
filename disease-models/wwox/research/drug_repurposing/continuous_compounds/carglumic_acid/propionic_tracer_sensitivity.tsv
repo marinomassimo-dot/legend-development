@@ -1,0 +1,4 @@
+start_minute	end_minute	precursor_pre_atom_pct_min	precursor_post_atom_pct_min	urea_pre_uM_min	urea_post_uM_min	precursor_post_pre	urea_post_pre	quotient_of_post_pre_ratios
+0	240	66.5903	64.2251	366.293	636.906	0.964481	1.73879	1.80282
+15	240	64.3827	62.1995	364.017	631.662	0.966089	1.73525	1.79616
+30	240	61.2412	59.2156	358.773	621.174	0.966924	1.73138	1.79061

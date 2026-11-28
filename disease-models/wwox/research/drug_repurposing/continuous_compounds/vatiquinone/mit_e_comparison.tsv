@@ -1,0 +1,6 @@
+endpoint	unit	n_vatiquinone	n_placebo	vatiquinone	placebo	unadjusted_difference_pp	reported_hodges_lehmann_difference_pp	ci95_low_pp	ci95_high_pp	p_value	contrast
+primary_week24_change	percent	34	34	-12.74	-0.33	-12.41	-8.31	-31.3	16.4	= 0.173	reported Hodges–Lehmann estimate and rank ANCOVA p-value
+serious_adverse_event	participants	34	34	18	9	26.47				0.046472	both registries agree, exploratory Fisher exact and risk difference
+death_as_noncompletion_reason	participants	34	34	3	0						both registry disposition tables
+all_cause_death_us_ae_summary	participants	34	34	3	0						ClinicalTrials.gov adverse event table, timing unresolved across registries
+all_cause_death_eu_ae_summary	participants	34	34	1	0						EudraCT adverse event table, timing unresolved across registries

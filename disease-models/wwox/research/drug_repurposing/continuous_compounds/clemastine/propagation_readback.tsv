@@ -1,0 +1,4 @@
+panel	metric	unit	axis_zero_y	axis_top_y	axis_top_value	control_y	knockout_y
+5Dii	N1_latency	ms	523	62	20	467	450
+5Dii	N2_latency	ms	523	62	20	370	332
+5Diii	N1_over_N2_amplitude	ratio	519	62	6	309	454

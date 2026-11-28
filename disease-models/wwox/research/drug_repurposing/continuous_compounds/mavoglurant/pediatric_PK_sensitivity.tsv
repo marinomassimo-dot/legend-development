@@ -1,0 +1,11 @@
+age_years	PK_day	study_regimen_mg_per_administration	PK_n_Cmax	mean_Cmax_ng_mL	PK_n_AUC0to12	mean_AUC0to12_ng_h_mL	arithmetic_mean_Cavg_ng_mL	adult_model_at_pediatric_mean_Cmax_pct	adult_model_at_Cavg_K58_pct	adult_model_at_Cavg_K43_pct	adult_model_at_Cavg_K35_pct
+3–4	8	15	1	177	0	NA	NA	80.455	NA	NA	NA
+3–4	8	20	1	75.4	0	NA	NA	63.682	NA	NA	NA
+3–4	8	25	2	149	2	689	57.417	77.604	49.747	57.178	62.128
+3–4	8	50	4	179	2	768	64	80.631	52.459	59.813	64.646
+3–4	8	100	1	96	0	NA	NA	69.065	NA	NA	NA
+5–11	7	20	1	196	0	NA	NA	82.008	NA	NA	NA
+5–11	7	25	1	113	1	461	38.417	72.436	39.844	47.185	52.327
+5–11	7	50	3	229	1	585	48.75	84.191	45.667	53.134	58.209
+5–11	7	60	1	234	0	NA	NA	84.477	NA	NA	NA
+5–11	7	100	6	286	3	1210	100.83	86.93	63.484	70.104	74.233

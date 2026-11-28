@@ -1,0 +1,29 @@
+stage	category	gene	mapped_symbol	ctrl_n	ko_n	ctrl_TPM	depletion_TPM	log2_delta	mapping
+progenitor	upstream_context	STAR		1	1				unmapped
+progenitor	upstream_context	CYP11A1		1	1				unmapped
+progenitor	upstream_context	HSD3B1		1	1				unmapped
+progenitor	upstream_context	HSD3B2		1	1				unmapped
+progenitor	five_alpha_reduction	SRD5A1	SRD5A1	1	1	35.1123	43.2595	0.293499	mapped
+progenitor	five_alpha_reduction	SRD5A2		1	1				unmapped
+progenitor	mouse_product_routing	AKR1C14		1	1				unmapped
+progenitor	human_product_routing	AKR1C1		1	1				unmapped
+progenitor	human_product_routing	AKR1C2		1	1				unmapped
+progenitor	human_product_routing	AKR1C3		1	1				unmapped
+progenitor	sulfate_handling	SULT2B1		1	1				unmapped
+progenitor	sulfate_handling	STS		1	1				unmapped
+progenitor	sulfate_handling	PAPSS1	PAPSS1	1	1	18.2913	27.4209	0.559004	mapped
+progenitor	sulfate_handling	PAPSS2		1	1				unmapped
+differentiated	upstream_context	STAR		1	1				unmapped
+differentiated	upstream_context	CYP11A1		1	1				unmapped
+differentiated	upstream_context	HSD3B1		1	1				unmapped
+differentiated	upstream_context	HSD3B2		1	1				unmapped
+differentiated	five_alpha_reduction	SRD5A1	SRD5A1	1	1	16.0921	5.84336	-1.32055	mapped
+differentiated	five_alpha_reduction	SRD5A2		1	1				unmapped
+differentiated	mouse_product_routing	AKR1C14		1	1				unmapped
+differentiated	human_product_routing	AKR1C1		1	1				unmapped
+differentiated	human_product_routing	AKR1C2		1	1				unmapped
+differentiated	human_product_routing	AKR1C3		1	1				unmapped
+differentiated	sulfate_handling	SULT2B1		1	1				unmapped
+differentiated	sulfate_handling	STS		1	1				unmapped
+differentiated	sulfate_handling	PAPSS1	PAPSS1	1	1	13.0022	2.16057	-2.14739	mapped
+differentiated	sulfate_handling	PAPSS2		1	1				unmapped

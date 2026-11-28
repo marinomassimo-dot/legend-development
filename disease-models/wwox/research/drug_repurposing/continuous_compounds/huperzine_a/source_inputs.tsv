@@ -1,0 +1,17 @@
+key	value	unit	source	locator
+wt_20ma_vehicle_events	11	mice	https://doi.org/10.3389/fphar.2016.00357	Fig. 2D and Results, Scn1a+/− mutants, WT
+wt_20ma_treated_events	1	mice	https://doi.org/10.3389/fphar.2016.00357	Fig. 2D and Results, Scn1a+/− mutants, WT
+scn1a_20ma_vehicle_events	11	mice	https://doi.org/10.3389/fphar.2016.00357	Fig. 2D and Results, Scn1a+/− mutants, mutant
+scn1a_20ma_treated_events	3	mice	https://doi.org/10.3389/fphar.2016.00357	Fig. 2D and Results, Scn1a+/− mutants, mutant
+n_20ma	11	mice per genotype/treatment	https://doi.org/10.3389/fphar.2016.00357	Fig. 2D Results, same mice in randomized trials
+acetylcholinesterase_inhibition_day12	70	approximate percent	https://doi.org/10.3389/fphar.2016.00357	Fig. 4C and Results, CF1 separate enzyme assay
+flurothyl_treated_deaths	11	mice	https://doi.org/10.3389/fphar.2016.00357	Fig. 1F–G Results, exploratory adverse direction
+flurothyl_treated_n	13	mice	https://doi.org/10.3389/fphar.2016.00357	Fig. 1F–G Results
+pk_total_peak	2.59	ng/mL	https://pubmed.ncbi.nlm.nih.gov/18348466/	Abstract, twelve healthy volunteers after one tablet exposure
+parent_mass	242.32	g/mol	https://pubchem.ncbi.nlm.nih.gov/compound/854026	Defined (−)-huperzine A molecular weight
+nmda_current_half	126	µM	https://pubmed.ncbi.nlm.nih.gov/11516831/	Abstract, dissociated rat CA1 nominal bath current IC50
+local_dca1	100	nM	https://doi.org/10.1038/s41401-025-01522-w	Fig. 5b,c Results, nominal solution used for local kindling arm
+interim_enrolled	41	adults	https://ir.supernus.com/node/14401/pdf	23 May 2024 announcement, enrolled by interim cutoff
+interim_maintenance_complete	19	adults	https://ir.supernus.com/node/14401/pdf	23 May 2024 announcement, completed maintenance at cutoff
+interim_focal_n	16	adults	https://ir.supernus.com/node/14401/pdf	23 May 2024 announcement, focal-seizure subset of completers
+interim_focal_half_percent	63	rounded percent	https://ir.supernus.com/node/14401/pdf	23 May 2024 announcement, focal subset at least 50% reduction

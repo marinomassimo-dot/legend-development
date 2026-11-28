@@ -1,0 +1,25 @@
+id	value	unit	source	locator
+molecular_weight	384.26	g/mol	DailyMed setid 2e4298cf-02e9-49c7-9803-887161e1989a	Description
+elder_adult_peak	30.5	nM	Siddiqi 2019	Results preceding Table 2, reported average of age 60–80 years
+young_adult_er_peak	7	nM	DailyMed setid 2e4298cf-02e9-49c7-9803-887161e1989a	Clinical Pharmacology, Pharmacokinetics and Metabolism
+young_adult_er_trough	2	nM	DailyMed setid 2e4298cf-02e9-49c7-9803-887161e1989a	Clinical Pharmacology, Pharmacokinetics and Metabolism
+young_adult_unbound_ceiling	0.01	fraction	DailyMed setid 2e4298cf-02e9-49c7-9803-887161e1989a	Reported greater than 99 percent plasma protein binding
+ip_mouse_plasma_peak	1151	ng/mL	Siddiqi 2019	Table 3, 60 min plasma mean, n=3
+pk_mouse_d10_plasma	28.625	ng/mL	Siddiqi 2019	Table 5, day 10 mean, n=8
+pk_mouse_d28_plasma	12.845	ng/mL	Siddiqi 2019	Table 5, terminal mean, n=8
+pk_mouse_d28_brain_detected_sum	217.1	ng/g sum	Siddiqi 2019	Table 5, sum of 37.1, 30.6, 49.6, 40.9 and 58.9
+pk_mouse_d28_brain_total_n	8	count	Siddiqi 2019	Table 5, all mice
+pk_mouse_d28_brain_censored_n	3	count	Siddiqi 2019	Table 5, three entries below detection
+pk_mouse_d28_brain_censor_limit	40	ng/g	Siddiqi 2019	Table 5, censor marker <40
+phenotype_mouse_d28_plasma	18.0	ng/mL	Siddiqi 2019	Supplementary Table 9, retained cases n=7
+phenotype_mouse_d28_plasma_min	5.67	ng/mL	Siddiqi 2019	Supplementary Table 9, retained-case minimum
+phenotype_mouse_d28_plasma_max	29.60	ng/mL	Siddiqi 2019	Supplementary Table 9, retained-case maximum
+aed_control_peak	8.9	nM	Capewell et al., PMID 2900404	Primary abstract, healthy controls
+aed_exposed_peak	1.6	nM	Capewell et al., PMID 2900404	Primary abstract, long-term antiseizure therapy group
+aed_control_auc	30.0	nM h	Capewell et al., PMID 2900404	Primary abstract, healthy controls
+aed_exposed_auc	2.0	nM h	Capewell et al., PMID 2900404	Primary abstract, long-term antiseizure therapy group
+fell_related_ae	3	count	ISRCTN56240656 Basic results	Table 2, mITT, participant with attributable AE
+fell_related_sae	0	count	ISRCTN56240656 Basic results	Table 2, mITT, participant with attributable SAE
+fell_mitt	16	count	ISRCTN56240656 Basic results	Table 2, mITT analysed
+pediatric_randomized	133	count	Trachtman et al., PMID 12700955	Primary abstract, randomized
+pediatric_blinded_completed	128	count	Trachtman et al., PMID 12700955	Primary abstract, completed double-blind period
