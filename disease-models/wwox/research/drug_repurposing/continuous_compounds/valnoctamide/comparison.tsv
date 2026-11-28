@@ -1,0 +1,52 @@
+preparation	condition	statistic	value	unit	locator
+rat P14–22 dorsal CA1 whole-cell	1 mM VCD vs baseline	weighted decay time constant ratio	1.8358209	ratio of means	Spampanato and Dudek 2014 Results and Fig. 1
+rat P14–22 dorsal CA1 whole-cell	1 mM VCD washout vs baseline	weighted decay time constant ratio	1.0447761	ratio of means	Spampanato and Dudek 2014 Results and Fig. 1
+rat P14–22 dorsal CA1 whole-cell	500 µM VCD vs baseline	weighted decay time constant ratio	1.62	ratio of means	Spampanato and Dudek 2014 Results and Fig. 1
+rat P14–22 dorsal CA1 whole-cell	flumazenil plus VCD vs VCD	weighted decay time constant ratio	1	ratio of means	Spampanato and Dudek 2014 Results and Fig. 1
+rat P14–22 dorsal CA1 whole-cell	diazepam plus VCD vs diazepam	weighted decay time constant ratio	1.6806723	ratio of means	Spampanato and Dudek 2014 Results and Fig. 1
+rat P14–22 dorsal CA1 whole-cell	1 mM VCD vs baseline	decay-area proxy from means	1.7455346	ratio of products	Spampanato and Dudek 2014 Methods, Fig. 1A2 and Fig. 2B
+recombinant rat ACSL4 lysate	two reported candidate models	relative AICc weight for uncompetitive model	0.78541394	fraction	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	0.455 mM nominal VCD, 5 µM AA	model activity reduction	3.5706214	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	0.455 mM nominal VCD, 20 µM AA	model activity reduction	5.4740332	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	0.455 mM nominal VCD, 35 µM AA	model activity reduction	5.9252639	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	0.5 mM nominal VCD, 5 µM AA	model activity reduction	3.9099522	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	0.5 mM nominal VCD, 20 µM AA	model activity reduction	5.9830297	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	0.5 mM nominal VCD, 35 µM AA	model activity reduction	6.4733442	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	0.6 mM nominal VCD, 5 µM AA	model activity reduction	4.6555368	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	0.6 mM nominal VCD, 20 µM AA	model activity reduction	7.0947396	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	0.6 mM nominal VCD, 35 µM AA	model activity reduction	7.6687285	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	1 mM nominal VCD, 5 µM AA	model activity reduction	7.525655	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	1 mM nominal VCD, 20 µM AA	model activity reduction	11.290543	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	1 mM nominal VCD, 35 µM AA	model activity reduction	12.159558	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	1.26 mM nominal VCD, 5 µM AA	model activity reduction	9.3003481	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	1.26 mM nominal VCD, 20 µM AA	model activity reduction	13.820381	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	1.26 mM nominal VCD, 35 µM AA	model activity reduction	14.851515	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	1.25 mM nominal VCD, 5 µM AA	model activity reduction	9.2333512	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	1.25 mM nominal VCD, 20 µM AA	model activity reduction	13.725751	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	1.25 mM nominal VCD, 35 µM AA	model activity reduction	14.751033	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	2.5 mM nominal VCD, 5 µM AA	model activity reduction	16.905736	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	2.5 mM nominal VCD, 20 µM AA	model activity reduction	24.138334	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	2.5 mM nominal VCD, 35 µM AA	model activity reduction	25.70963	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	5 mM nominal VCD, 5 µM AA	model activity reduction	28.921996	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	5 mM nominal VCD, 20 µM AA	model activity reduction	38.889412	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+recombinant rat ACSL4 lysate	5 mM nominal VCD, 35 µM AA	model activity reduction	40.903199	%	Modi et al. 2014 Results and Fig. 2; low-substrate idealization
+rat single-isomer total plasma	approximate 65 mg/L early scale	converted nominal concentration	0.45381554	mM	Shekh-Ahmad et al. 2014 Fig. 4 approximate plotted range; PubChem CID 20140
+rat single-isomer total plasma	approximate 85 mg/L early scale	converted nominal concentration	0.59345109	mM	Shekh-Ahmad et al. 2014 Fig. 4 approximate plotted range; PubChem CID 20140
+30-day adult rat brain tracer	total phospholipid	JFA reduction vs control denominator	47.868852	%	Modi et al. 2017 Table 5, control n=12 and valnoctamide n=15
+30-day adult rat brain tracer	total phospholipid	FFA reduction vs control denominator	45.535714	%	Modi et al. 2017 Table 5, control n=12 and valnoctamide n=15
+30-day adult rat brain tracer	choline glycerophospholipid	JFA reduction vs control denominator	48.549618	%	Modi et al. 2017 Table 5, control n=12 and valnoctamide n=15
+30-day adult rat brain tracer	choline glycerophospholipid	FFA reduction vs control denominator	44.776119	%	Modi et al. 2017 Table 5, control n=12 and valnoctamide n=15
+30-day adult rat brain tracer	phosphatidylserine	JFA reduction vs control denominator	51.865672	%	Modi et al. 2017 Table 5, control n=12 and valnoctamide n=15
+30-day adult rat brain tracer	phosphatidylserine	FFA reduction vs control denominator	51.188119	%	Modi et al. 2017 Table 5, control n=12 and valnoctamide n=15
+30-day adult rat brain tracer	phosphatidylinositol	JFA reduction vs control denominator	7.5471698	%	Modi et al. 2017 Table 5, control n=12 and valnoctamide n=15
+30-day adult rat brain tracer	phosphatidylinositol	FFA reduction vs control denominator	20.069204	%	Modi et al. 2017 Table 5, control n=12 and valnoctamide n=15
+30-day adult rat brain tracer	ethanolamine glycerophospholipid	JFA reduction vs control denominator	49.753695	%	Modi et al. 2017 Table 5, control n=12 and valnoctamide n=15
+30-day adult rat brain tracer	ethanolamine glycerophospholipid	FFA reduction vs control denominator	48.638132	%	Modi et al. 2017 Table 5, control n=12 and valnoctamide n=15
+30-day adult rat brain tracer	total phospholipid	plasma incorporation Jin ratio	0.89367816	ratio of means	Modi et al. 2017 Table 3
+30-day adult rat brain tracer	total phospholipid	dilution factor lambda ratio	1.3703704	ratio of means	Modi et al. 2017 Table 4
+30-day adult rat brain tracer	fixed Jin sensitivity	JFA ratio from lambda alone	0.72972973	ratio of means	Modi et al. 2017 Eq. 4; sensitivity at equal Jin
+30-day adult rat brain tracer	substitution of printed group means	JFA ratio from Jin and lambda	0.65214352	ratio of quotients	Modi et al. 2017 Eq. 4 and Tables 3–4; does not reproduce per-rat aggregation
+adult epilepsy carbamazepine subgroup	concomitant valnoctamide	day 4 CBZ epoxide ratio	4.9333333	ratio of means	Pisani et al. 1993 primary abstract, n=6
+adult epilepsy carbamazepine subgroup	concomitant valnoctamide	day 7 CBZ epoxide ratio	5.1333333	ratio of means	Pisani et al. 1993 primary abstract, n=6
+adult healthy epoxide challenge	with vs without valnoctamide	epoxide half-life ratio	2.8550725	ratio of means	Pisani et al. 1992 primary abstract
+adult healthy epoxide challenge	without vs with valnoctamide	apparent epoxide clearance ratio	3.8055556	ratio of means	Pisani et al. 1992 primary abstract
