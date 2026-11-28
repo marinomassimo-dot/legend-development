@@ -1,0 +1,18 @@
+# Baricitinib bounded dataset check: result (SCI bb, 2026-11-28)
+
+Hypothesis level; not medical advice. Frozen note: `PREREG_BARICITINIB_CHECK_ADV316B_SCI_20261128.md` (sha256 505b17ea9242e797975f105e920c4494f46ae1ffb6d34f162a6379008aea43cc, written 2026-11-28T11:26:18Z before any search). One pass, as frozen; no aggregate was re-scored.
+
+## Outcome: NONE qualifies (the prior expectation holds; the rejecting observation, one qualifying dataset, was not found)
+| Route (date 2026-11-28) | Query | Result |
+|---|---|---|
+| Ledger and registries | paper registry and receipt ledger: STAT3/pSTAT3 records; ledger lookup by PMID for Nobuta 22941903 and Laitman 27529406 (0 receipts each; both are in the dossier through abstract or workbook replay) | Only non-neural WWOX papers (cancer JAK2/STAT3) and PAPER for PMID 39006838 (COL4A2 variant, rat astrocytes under LPS, p-STAT3 up, reversed by WP1066): cell culture, no WWOX, no stage series, no animals. Not qualifying (fails rules 1, 2, 4). |
+| GEO (esearch, db gds) | `Wwox AND (Stat3 OR pSTAT3)`: 1 hit (GSE310210, 4T1 breast tumour gold-nanoparticle study); `Wwox AND (microglia OR astrocyte OR Gfap)`: 0; `Stat3 [Title] AND (oligodendrocyte OR myelin OR myelination) AND mouse`: GSE99709, GSE99708, GSE99797 (Stat3-silenced and ChIP in cultured OPCs, 2017) | None qualifies: cancer, or in-vitro OPC culture with no age series and no animal-linked function (fails 2 and 4). |
+| Europe PMC full text | `(WWOX OR Wwox) AND (pSTAT3 OR phospho-STAT3 OR p-STAT3 OR STAT3 phosphorylation) AND (microglia OR astrocyte OR oligodendrocyte OR myelin OR brain OR cortex OR hippocampus OR neuron)`: 44 hits | The first 25 titles are reviews and cancer papers, none a neural WWOX or developing-model primary with a stage series. Hits 26 to 44 were not listed (one result page): treat as unchecked. |
+| Zenodo / figshare | WWOX with STAT3, microglia, astrocyte or myelin: Zenodo 0 hits; figshare search endpoint returned HTTP 404 (a result, not retried) | none |
+Near-misses already in the dossier (not new): Laitman 2016 (Olig1Cre and Pdgfra-CreER Stat3 loss, birth and E18.5, workbook rows without animal mapping), Steelman 2016 (3 to 5 mice per group, no pSTAT3 stage series), Kedia 2025 (adult 5xFAD).
+
+## Exact missing observation (for the portfolio row)
+In ONE developing model with a WWOX-related or comparable glial/myelin lesion: pSTAT3 (Y705) and pSTAT1, or a named JAK-STAT-dependent glial marker, measured per animal at two or more ages including one BEFORE the first functional or structural deficit, with the same animals' functional or structural readout (first sheaths per eligible axon, conduction, seizure or behaviour), with raw values or per-animal points available. Without it the choice between E-INFL (engagement before the deficit) and E-TROPH (STAT3 signal follows loss) cannot be tested from held or public data, and baricitinib stays a conditional laboratory comparator.
+
+## What changes
+Nothing about the compound role (conditional laboratory comparator, INV-14 fork) or priority; the open observation is now registered with its search record, so a later retrieval does not repeat these four routes.
