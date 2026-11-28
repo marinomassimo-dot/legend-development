@@ -1,0 +1,10 @@
+model	accession	gene	ctrl_n	ko_n	ctrl_positive	ko_positive	ctrl_mean	ko_mean	log2_delta	omit_min	omit_max	mapping
+mouse_cortex	GSE158682	CCK	4	3	4	3	1100	922.08	-0.275857	-0.472938	-0.105937	mapped
+mouse_cortex	GSE158682	CCKAR	4	3	4	3	0.241062	0.167829	-0.0898307	-0.188868	-0.0136455	mapped
+mouse_cortex	GSE158682	CCKBR	4	3	4	3	56.4839	49.2892	-0.209522	-0.353521	-0.0858046	mapped
+human_organoid	GSE156243	CCK	2	4	1	2	0.0500347	0.0129991	-0.0502832	-0.11908	0.0185141	mapped
+human_organoid	GSE156243	CCKAR	2	4	2	4	0.0935541	0.162557	0.0854783	0.0328533	0.138103	mapped
+human_organoid	GSE156243	CCKBR	2	4	2	4	10.1189	6.15746	-0.632329	-0.817904	-0.446755	mapped
+mouse_hippocampus	GSE158681	CCK	2	3	2	3	580.58	240.67	-1.28638	-1.43815	-1.08311	mapped
+mouse_hippocampus	GSE158681	CCKAR	2	3	1	3	0.0063405	0.07167	0.0902477	0.0636281	0.109214	mapped
+mouse_hippocampus	GSE158681	CCKBR	2	3	2	3	4.31308	4.64289	-0.052118	-0.480691	0.244462	mapped
