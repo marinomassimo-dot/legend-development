@@ -1353,6 +1353,21 @@
      "accepted_at": "2026-11-28T10:07:23Z",
      "evidence": "brainstorm_20261116/adv314_repudi_cap_components_sci_20261128/RESULT_ADV314_SCI_20261128.md; PREREG sha256 4dd86f6f; receipt FTR-20261128-33914858-02",
      "updated_at": "2026-11-28T10:17:04Z"
+    },
+    {
+     "step": "ADV-316 (key partial-reads-with-consumers-read-depth-debt-second-tier): step 1 rank partial full-text records by consumer units, freeze E-A vs E-B first; step 2 depth read of top three only if at least 3 have a lawful route, else ACCESS-LIMITED",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "source": "ADV-316 (ADV message after ADV-314 consumed; jobs/a5e6f2ad/tmp/adv316.txt)",
+     "accepted_at": "2026-11-28T10:23:55Z",
+     "updated_at": "2026-11-28T10:27:03Z"
+    },
+    {
+     "step": "ADV-313 table dated addendum: IT31 7 MUST-CHANGE cells and HE ADV-315 6 provenance cells, original rows unedited; path to IT (waits for HE's report)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message after ADV-314 consumed (2026-11-28)",
+     "accepted_at": "2026-11-28T10:23:55Z"
     }
    ]
   }
@@ -2398,6 +2413,20 @@
    "at": "2026-11-28T10:07:23Z",
    "source": "ADV-314 (ADV assignment text jobs/a5e6f2ad/tmp/adv314.txt; successor mandate prompt 2026-11-28)",
    "step_sha256": "596752212470",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T10:23:55Z",
+   "source": "ADV-316 (ADV message after ADV-314 consumed; jobs/a5e6f2ad/tmp/adv316.txt)",
+   "step_sha256": "54b3a38b327d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T10:23:55Z",
+   "source": "ADV message after ADV-314 consumed (2026-11-28)",
+   "step_sha256": "e6d287df7f3c",
    "reopened_block": false,
    "authorised_by": null
   }

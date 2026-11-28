@@ -1,0 +1,40 @@
+import sys, collections, json
+from pathlib import Path
+root = Path.cwd()
+sys.path.insert(0, str(root / 'framework/scripts'))
+import coverage_report as cr, consumer_count as cc, fulltext_receipts as fr
+reg = root / 'disease-models/wwox/registries'
+entries = cr.parse_entries((reg / 'paper_registry_current.md').read_text(encoding='utf-8'))
+ledger = fr.default_ledger_path(root, 'wwox')
+events = fr.load_ledger(ledger)
+owners = cr.receipt_owners(entries, fr.receipt_depth_index(ledger))
+partial = [e for e in entries if cr.effective_depth(e, owners.get(e['_id'])) == 'partial_full_text']
+print('partial records', len(partial))
+union = collections.defaultdict(dict)
+rank = {"unknown_legacy":0,"not_read":1,"unavailable":2,"not_present":3,"captions_only":4,"read":5}
+for ev in fr.active_receipts(events):
+    st = ev.get('study_id') or {}
+    keys = [str(st.get('pmid') or ''), fr.normalise_doi(st['doi']) if st.get('doi') else '']
+    for k in filter(None, keys):
+        for s, v in (ev.get('coverage') or {}).items():
+            if rank.get(v,0) > rank.get(union[k].get(s,'unknown_legacy'),-1) or s not in union[k]:
+                union[k][s] = v
+ids = cc.registry_ids(root); pm = cc.pmcids(root); units = cc.units(root)
+rows = []
+for e in partial:
+    ident = e.get('identifier','')
+    pmids = cr.PMID.findall(ident); dois = [fr.normalise_doi(d) for d in cr.DOI.findall(ident)]
+    key = pmids[0] if pmids else (dois[0] if dois else '')
+    if not key: rows.append((0,0,'',e['_id'],[],[])); continue
+    got = cc.consumers([key], ids, units)[key]
+    state = union.get(key) or (union.get(dois[0]) if dois else {}) or {}
+    unread = [s for s in ('abstract','introduction','methods','results','figures','tables','discussion','limitations','supplementary') if state.get(s) not in ('read','not_present')]
+    cm = sum(1 for u in got if u.startswith(('claim','model')))
+    rows.append((len(got), cm, key, e['_id'], unread, got))
+rows.sort(key=lambda r: (-r[0], -r[1], int(r[2]) if r[2].isdigit() else 10**12))
+withc = [r for r in rows if r[0]]
+print('with >=1 consumer', len(withc), '| of these, nothing unread in union', sum(1 for r in withc if not r[4]))
+json.dump([{'units':r[0],'claim_model':r[1],'key':r[2],'id':r[3],'unread':{s:(union.get(r[2]) or {}).get(s,'none') for s in r[4]},'consumers':r[5]} for r in rows], open(sys.argv[1],'w'))
+for r in [r for r in withc if r[4]][:18]:
+    st = union.get(r[2]) or {}
+    print(r[0], r[1], r[2], r[3][:16], '|', ','.join(f"{s[:5]}:{(st.get(s) or 'none')[:5]}" for s in r[4]))
