@@ -1275,10 +1275,21 @@
     },
     {
      "step": "ADV-302: consumer-first depth reading of the catalogued-only tail (step 1 list records without receipt that already have a consumer; step 2 read three at depth if at least 3)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-302",
-     "accepted_at": "2026-11-28T07:04:20Z"
+     "accepted_at": "2026-11-28T07:04:20Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv302_consumer_first_sci_20261128/RESULT_ADV302_SCI_20261128.md; receipts FTR-20261128-26041563-01, FTR-20261128-25703206-01 on development/main",
+     "updated_at": "2026-11-28T07:40:16Z"
+    },
+    {
+     "step": "ADV-305: divergent branch etifoxine versus ganaxolone or baricitinib versus microglial comparator (step 0 chooses; step 1 on the primary)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-305",
+     "accepted_at": "2026-11-28T07:40:16Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv305_divergent_etifoxine_sci_20261128/RESULT_ADV305_SCI_20261128.md",
+     "updated_at": "2026-11-28T07:40:16Z"
     }
    ]
   }
@@ -2268,6 +2279,13 @@
    "at": "2026-11-28T07:04:20Z",
    "source": "ADV-302",
    "step_sha256": "740bae28c45d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T07:40:16Z",
+   "source": "ADV-305",
+   "step_sha256": "e679c6ed6341",
    "reopened_block": false,
    "authorised_by": null
   }
