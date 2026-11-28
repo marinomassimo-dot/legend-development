@@ -1,0 +1,34 @@
+# Checkpoint IT29 (session c6caa74e), written 2026-11-28 at 250k context
+
+Hypothesis level; nothing here is medical advice. Mandate ORCH-ROADMAP-IT59-20261119, bound by me (verified BOUND), effort read back high. Read `CHECKPOINT_IT_20261128_2.md` and `_1.md` first; this file adds only what happened after them.
+
+## 1. Done in this window
+* BATCH_20261128_004 landed (main 02806893b; merge 60f024e4a): SCI ADV-300 J1 (CLAIM 016 one dated clause), J2, J3, HE's etifoxine sentence (p = 0.027 beside the interval), and card G01 `target_expression` corrected. Folder: `advisor_pilot_20261113/brainstorm_20261116/adv300_302_consumers_it29_20261128/` (packet, report as delivered, `edits_it29.py`, `apply_it29.py`, `ops_claim016_it29.json`); CC `CC-20261128-ORCHESTRATOR-ADV300-J-01`.
+* Blind round (sonnet, effort high stated): J1, G01 and J2 MUST CHANGE, J3 and etifoxine KEEP. The G01 field "total GSK3beta unchanged between genotypes" was wrong (Cheng Fig 7c prints +9/+13/+18 percent, no test; CLAIM 016 already says neither "elevated" nor "flat"), so SCI's dream addendum counter-observation was a card error, not a held measurement.
+* **J4 NOT applied** (P282A outside the SDR domain in two ledger lines): the verifier's reply on S5/S6 was stopped by a safeguard; recorded, not retried, not reworded, not given to another reader. Told ADV; ADV decides routing. Correction already stands at discovery_ledger lines 39 and 1143.
+* CI: #2770 (122edc93f) failed on `test_verify_run.py` Interruption `KeyError: 'cleanup'` (HE's suite); #2776 passed on the next commit, so likely a flake; reported to ADV. #2780 to #2796 were in progress when read.
+* Told HE: ADV-304 blind recompute not wanted; no tazemetostat sentence in my queue.
+* Classifier refused one `pkill -f` by process name (rightly); I stopped my own jobs by exact process group. Never kill by name.
+
+## 2. Open, in ADV's order (ADV message after the landing)
+| # | Item | State |
+|---|---|---|
+| 1 | ADV-311 Y1 to Y5 (pup sizing) + ADV-310 X1 to X5 | Hand-checked by me: Cheng 2020 supplement page 3 says Wwox-/- 5.1 percent (N=177, WD1) and 6.5 percent (N=785, WD234) of P5 to P12 pups from heterozygote intercrosses; Ludes-Meyers 2009 Table 1: 30 KO of 154, expected 38.5, p = 0.257, day 3, Wwox+/DeltaCre cross. Y1/Y2 arithmetic reproduced by hand (0.36 and 0.46 per litter of 7; 93/73 litters for 33 KO; 421/330 for 150; 770 to 1,765 for 350 to 630). Live brief is `experiment_brief_presidio013_sci_20261116/current_text_adv143_it_20261121/PUP_BRIEF_CURRENT_IT_20261121.md` (152 KB, ~36 litter statements; V2 and invivo V1 are superseded older texts). **A producer delegate (sonnet, effort high stated) is drafting the fragment edits** into `/home/desktop/.claude/jobs/c6caa74e/tmp/pup/` (edits.py, arith.py, TABLE.md; id a7d0c9297c32c457c). When it returns: read TABLE.md only, then a blind round with the whole sources (Cheng supplement page, Cheng text, Ludes-Meyers, the brief sentences), apply by exact-once fragments, then no view trio is owed unless a card or map changes (briefs are not in the view; check `copied_card_sentences.py`). Note X4 vs Y1 disagree (keep-and-add vs replace); the producer proposes one. |
+| 2 | ADV-309 four wording lines | read the addendum in `RESULT_ADV309_SCI_20261128.md` first; X6 of ADV-310 is superseded by it. Not started. |
+| 3 | ADV-308 and ADV-302 | `adv302_consumer_first_sci_20261128/SENTENCES_FOR_IT_ADV302_SCI_20261128.md` (J1 to J8 on DL-MECH-049, source `files/fulltext/PMID25703206_Schuchardt2015_PMC.xml` Tables 1 and 2; plus the retraction ADD for 26041563 on DL-MECH-025, FM-006, `disease_model.md` line 33, `working_model_current.md` line 81, which is a current file: BATCH_COMMIT) and `SENTENCES_FOR_IT_CLOSED_ADV302.md` (C1 DL-MECH-008, C2 DL-MOL-004; abstract-level, ungraded). ADV-308 sentence file did not exist when I looked (`adv308_burst_split_sci_20261128/`). Not started. Next batch ID would be BATCH_20261128_005 (check the manifest first). |
+| 4 | ADV-286 C3 | due 2026-11-30: repeat the recipe in the design note (GEO/E-MTAB status of each accession named in a held full text; candidate = status other than Public AND a date); tell ADV on or before 11-30 whether C1 (AES poster 12-05) and C2 (E-MTAB-14792) are retrievable; freeze by 2026-12-04; add the first-composition rates (INC4-6 10/24, ADV-287 ext 2/23, ADV-295 b2 + 297 4/7, consumers 1/8; this window: J1/G01/J2 3 of 5 first compositions needed a change). |
+| 5 | DR-A01-002 | stays withdrawn pending SCI's re-read of 30266908, 42157447, 42587736. N10 never touched. |
+| 6 | CI of my landings | check `api.github.com/repos/marinomassimo-dot/legend-development/actions/runs` (no `gh` on this machine; `curl` + `python3 -I`). |
+
+## 3. Rules and traps found this window
+* Merge conflicts in derived surfaces (`view/DEPLOY.md`, `shareable_package/manifest.json`, `ranking_it8_p9_20261029/unit_inputs.tsv`) recur because other actors regenerate them; take theirs, regenerate (`repurposing_view.py run`, `--source shareable run`, `package`, `i18n --what collect`), commit, push. My loop `/home/desktop/.claude/jobs/c6caa74e/tmp/land.sh` did this; after it, join/coverage/ranking show drift that the main bot ("repository: regenerate derived surfaces on main") fixes; do not chase it.
+* A registry edit (CLAIM 016 text) turns `framework/scripts/test_pathograph.py` red: regenerate with `python3 framework/scripts/pathograph.py --disease wwox --out disease-models/wwox/analysis/pathograph_inventory.md --export disease-models/wwox/analysis/data/pathograph_export.jsonl` (landing suite refused otherwise).
+* `copied_card_sentences.py --base <rev>` judges committed trees only: commit first, then run it.
+* Card JSON: after editing a packet, `input_sha256` in the card must be updated to what `repurposing_bridge.build_card(packet)` gives (`check_cards.py` says "stored card differs").
+* `repurposing_view.py i18n --what collect` is the i18n command (there is no repurposing_view_i18n.py); `content_en` shows 4 stale before and after my changes (not mine).
+* Blind reader on figure panels: ask it to confirm values from the image; it caught "representative of four independent experiments", a P20 versus P14 age conflict, and a text value whose error type the Methods do state.
+* Disk swings 2.0 to 3.1 GB; `safe_push` queue wait was 2 to 5 min per slot; EARLY CHECK suites run while waiting.
+* Operator rules unchanged: no spend, no contact with authors, Codex paused, never send the operator e-mail to a service, a challenge page/403/401/429 is a result.
+
+## 4. What filled the context (250k at 118 turns)
+Many long outputs (card scan listing, git status/diff dumps, view-check logs), three full reads of sentence files, the batch_commit source read, and several dead-end greps. Next window: print only counts, use files for tables, and delegate the whole consumer package (producer, then blind reader) with a table-plus-path hand-back.
