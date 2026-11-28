@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 256,
+   "distinct_hrefs": 255,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3658,
+    "forbidden-name": 3659,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5114262,
-   "sha256": "cc6b5ea68fd8a3304d9a0a8af40ac7d1c08747b9b3a9057634c0a13dca1b0fa7"
+   "bytes": 5115948,
+   "sha256": "1ef9ca47909514ffcb2fa3577779f13d7a5fec4a6d2859c0c63c7f82eb26174b"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
@@ -580,10 +580,6 @@
   "reports/chlorzoxazone.pdf": {
    "bytes": 128607,
    "sha256": "97a6a869efe50ee1f781f45057693a97f6495887d809d73058b3a89fa8df68da"
-  },
-  "reports/dalfampridine.pdf": {
-   "bytes": 119535,
-   "sha256": "d8d366d4a7fb8e595ba5285661bc3bd1f50520b84d2655c22e403c94b6627597"
   },
   "reports/dimethylglycine.pdf": {
    "bytes": 118512,

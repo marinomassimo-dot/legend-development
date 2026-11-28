@@ -6525,7 +6525,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Claim links:** → CLAIM 027
 **Identifier:** PENDING
 **Status:** deep-dived — registry placeholder (lint restored)
-**Note:** Source description from tracking log 2026-04-17.
+**Note:** Source description from tracking log 2026-04-17. [IT 2026-11-28, ADV-297 defect] The tracking-log line of 2026-04-17 names only the topic and the level (no title, author, year or identifier), so the source of this placeholder cannot be recovered from the entry or from that line. Two logged items match the topic (the review «HYAL-2-WWOX-SMAD4 Signaling in Cell Death and Anticancer Response», landing PAPER 365, and «Transforming growth factor beta1 signaling via interaction with cell surface Hyal-2 and recruitment of WWOX/WOX1», landing PAPER 358), but the coincidence with this placeholder is not confirmed, so no identifier is entered and the placeholder is not merged; it counts as unrecoverable until a source-level check or an operator decision.
 
 ## CORPUS P207
 **Topic:** Context-dependence support (WWOX output partner/context-dependent)

@@ -1,0 +1,83 @@
+BLIND VERIFICATION PACKET (IT28, ADV-298 consumers; hypothesis level; nothing here is medical advice)
+
+Each block holds a NEW text fragment (marked >>> ... <<<) inside the line it will sit in. Check the fragment against the held sources named, in full. Do not open any other repository file or search the repository; no network; nothing is written into the repository. Do not open Obeid 2026 (PMID 42422765) or any folder named adv174 or adv175.
+Verdicts per block: MUST CHANGE (a word, number, unit, species, age, group size, comparator, direction, test or generalisation is wrong, unsupported or says more than the source), ADD (supported, but an omission would mislead a reader who sees only this text), STANDS.
+Grade every clause. Absolute words (only, no, none, every, not stated, not given) need the whole source read; say UNSETTLED where you cannot settle. Numbers read from a figure: name figure and panel; say for each number the group, unit (animal, culture, patient, cell), species and age. Clauses about what this repository holds or has searched (the dated search, 'in the held full texts') are OUTSIDE your check, except that you may name any counter-example you meet in the files below. For MUST CHANGE and ADD give minimal replacement wording; no dose and no compound recommendation.
+Report: a summary table, then per block the findings with locators and which files you opened. Return the whole report as your final handback.
+
+
+=== BLOCK INV06-investigations.tsv
+SOURCE(S):
+ /home/desktop/legend-development/files/fulltext/PMID32000863_Cheng2020_PMC_r2.xml (the heterozygote clause; the counts of sources are OUTSIDE)
+CONTEXT WITH NEW FRAGMENT:
+pound; Palma 2022, daily from P5, slices at P21, one mouse as the unit, n = 10 to 12) slowed callosal N1 conduction velocity (ratio about 0.84 read from Fig 2B; P < 0.05 by the figure legend, P < 0.01 in the text), so a pro-myelinating comparison in a Wwox-deficient model is more informative with a wild-type drug-only arm and a conduction readout; >>>no Wwox-deficient study held has both.] [IT 2026-11-28, ADV-298: a table of the held Wwox-deficient myelin readouts (dated search of the held full texts, 2026-11-28; about 60 papers read) finds a conduction or latency readout with a stated abnormal direction in 5 sources (two mouse preparations and three single patients) and none with a rescue or drug arm, so the myelin evidence behind this row is structural apart from baseline conduction; in Cheng 2020 the heterozygous Wwox+/- mice have a longer transcranial motor-evoked-potential onset latency (2.13 against 1.39 ms, P < 0.05) with normal amplitude, and the paper reports their sciatic-nerve myelin thickness and fibre density as similar (data not shown), so a latency change alone is not a central-myelin readout.]<<<	E2 - card reviewed, abstention (premise named, no test designed)	Whether the neuron still emits the activity-dependent signal that a pro-myelinating agent would amplify. If it does not, the whole cla
+REPLACES: no Wwox-deficient study held has both.]
+
+=== BLOCK C-A
+SOURCE(S):
+ /home/desktop/legend-development/files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.txt (Fig 5D legend and Results; the claim to check is only that the paper prints no millisecond value for the N1 or N2 latency in text or legend)
+CONTEXT WITH NEW FRAGMENT:
+tibility. Scarce reads or discordant directions leave that question open. A single cell pool per genotype is descriptive. These observations cannot establish the concentration of extracellular ATP. The separate [reanalysis of the drug–ATP interaction](purinergic.md) preserves exposure and replicate units.
+
+**Follow-up on native Wwox propagation.** >>>At the published Fig. 5D geometry the knockout N1 peak is about 0.74 ms later (a difference between two values this note read off the plotted bars; the paper prints no millisecond value in its text or legend).<<< A fixed latency offset and slower travel both fit that geometry. The next test compares distance dependence with absolute recruitment held comparable and structural denominators measured in the same 
+REPLACES: At the published Fig. 5D geometry the knockout N1 peak is about 0.74 ms later.
+
+=== BLOCK C-B
+SOURCE(S):
+ /home/desktop/legend-development/files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.txt (same check)
+CONTEXT WITH NEW FRAGMENT:
+predictions and receptor geometry account for the reciprocal functional controls and can select the next occupancy-plus-current comparison. Juvenile cortical AMPA/NMDA and hippocampal release remain separate experiments. [Updated dossier](../perampanel_20261122/clinical_mechanistic_update_20261126.md)
+
+**Completed targeted follow-up: clemastine.** >>>The Wwox neuronal knockout N1 peak is about 0.74 ms later at the published electrode geometry (a difference between two values read off the plotted bars by this repository; the paper prints no millisecond value in its text or legend).<<< A fixed offset and a propagation delay reproduce that value. The held material lacks mouse-linked callosal fields and multi-distance traces. Reopen for absolute recruitment and tracked latency at mea
+REPLACES: The Wwox neuronal knockout N1 peak is about 0.74 ms later at the published electrode geometry.
+
+=== BLOCK C-C1
+SOURCE(S):
+ /home/desktop/legend-development/files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.txt (Fig 5D legend and Results around it)
+CONTEXT WITH NEW FRAGMENT:
+3/brain/awab174) | Callosal stimulation and layer V field recording. General mouse electrophysiology methods give P13–17. Figure 5D gives eight slices per group from five control and six S-KO mice and a 250 µm **vertical electrode separation**. | Representative traces, separate N1 and N2 latency summaries and a per-recording N1/N2 amplitude ratio. >>>The legend prints Wilcoxon P values of 0.0104 (N1) and 0.5737 (N2) inside panel (i) without saying whether they test latency or amplitude (the Results text reports a significant latency citing panel 5D(i), and lower peak amplitudes), and P = 0.0030 for the N1/N2 amplitude ratio; no P value is printed for the panel (ii) latency summary.<<< | Animal linkage, raw waveforms, absolute component amplitudes, and traveled distance for the recorded response. The reported tests are carried through as printed. Mouse-level uncertainty cannot be r
+REPLACES: Published Wilcoxon values are 0.0104 for N1 latency, 0.5737 for N2 latency and 0.0030 for the amplitude ratio.
+
+=== BLOCK C-C2
+SOURCE(S):
+ /home/desktop/legend-development/files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.txt (same)
+CONTEXT WITH NEW FRAGMENT:
+e supports a mouse readback and a bound on interpretation. There is no fitted conduction velocity, individual-axon trajectory or clemastine-by-WWOX result here. The source articles and images stay at the publishers or in the held workspace. This folder carries derived factual values and original code.
+
+## Reproducible matched comparison
+
+**Data.** >>>The horizontal bars in the published Brain Fig. 5D read approximately 2.43 to 3.17 ms for N1 and 6.64 to 8.29 ms for N2, S-Control to S-KO (this note's own readback of the plotted bars, not numbers the paper states).<<< The plotted summary of the N1/N2 amplitude ratio falls from about 2.76 to 0.85. Absolute N1 and N2 values are unavailable at the group level. The 0.31 ratio-of-ratios is compatible with an illustrati
+REPLACES: The horizontal bars in the published Brain Fig. 5D read approximately 2.43 to 3.17 ms for N1 and 6.64 to 8.29 ms for N2, S-Control to S-KO.
+
+=== BLOCK C-D1
+SOURCE(S):
+ /home/desktop/legend-development/files/fulltext/PMID34747138_Repudi2021_PMC.xml (Repudi 2021 EMBO Mol Med: authors, staining, CC1 counts, EM profiles, g-ratio, any conduction or latency readout) and the first page of PMID33914858_Repudi2021_Brain_operator_supplied.txt (authors)
+CONTEXT WITH NEW FRAGMENT:
+emyelination, versus about 65% after disrupting Abca1/Abcg1 export. | Synthesis and export are functionally separable in an injury. No bexarotene or developmental first-sheath comparison. |
+| Juvenile WWOX, existing LEGEND primary-source reconstruction | In the P17 callosal comparison, neuron-targeted Wwox loss reduced counted myelinated profiles. >>>Neuronal WWOX restoration in the germline null improved the myelin phenotype in a second paper from the same laboratory and first author (structural readouts: staining, CC1 counts, EM profiles and g-ratio; in the held full texts, searched 2026-11-28, no conduction readout follows a rescue or drug arm in any Wwox-deficient preparation).<<< | Axonal competence remains a competing limiter even if lipid supply rises or oligodendrocytes respond. Compare sheath initiation per initially eligible axon while preserving matching of activity and
+REPLACES: Neuronal WWOX restoration in the germline null improved the myelin phenotype in an independent study.
+
+=== BLOCK C-D2
+SOURCE(S):
+ /home/desktop/legend-development/files/fulltext/PMID32000863_Cheng2020_PMC_r2.xml
+CONTEXT WITH NEW FRAGMENT:
+ially eligible axon while preserving matching of activity and survival. |
+
+[Zhou, JCI Fig. 6](https://doi.org/10.1172/JCI131800) · [Lyu, Stroke Figs. 3 and 6](https://doi.org/10.1161/STROKEAHA.126.055940) · [Natrajan, Brain Fig. 7](https://doi.org/10.1093/brain/awv289) · [Berghoff, Nat Neurosci Fig. 2](https://doi.org/10.1038/s41593-020-00757-6) · >>>[WWOX conduction readouts: baseline only, no drug arm, and a latency change alone is not a central-myelin readout](../clemastine/callosal_propagation.md)<<<
+
+## Adult efficacy, exposure and pediatric feasibility
+
+- **CCMR One randomized adults.** Six months, 26 assigned per arm, 26 versus 24 exposed, 25 versus 24 with the primary efficacy outcome. Safety
+REPLACES: [WWOX functional myelin comparator](../clemastine/callosal_propagation.md)
+
+=== BLOCK C-E
+SOURCE(S):
+ /home/desktop/legend-development/files/fulltext/PMID32000863_Cheng2020_PMC_r2.xml (Cheng 2020: Tc-MEP amplitude and latency in +/+, +/- and -/-, the sciatic nerve findings, the Wwox+/- statement) and /home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/continuous_compounds/citicoline/myelin.md only for the sentence about improved evoked propagation
+CONTEXT WITH NEW FRAGMENT:
+OX and corrected cells, then check whether a lipid response co-occurs with myelin initiation per longitudinally followed viable axon and improved evoked propagation. Normalize to cell number and record axon caliber and firing. A change in CC1-positive cell count or in whole-tissue phosphatidylcholine can occur without more sheaths per viable axon. >>>Equalizing extracellular substrate alone cannot distinguish this from differences in uptake and intracellular availability.
+
+**Dated line, 2026-11-28 (ADV-298; added by the Orchestrator, the dossier owner reconciles).** Every observation in this note that supports a myelin effect (the CC1 counts, the percentage of myelinated axons, the myelin staining and the juvenile WWOX cell classes) is structural, and the sentence above about improved evoked propagation is a prediction, not a held observation: in the held full texts, searched 2026-11-28, no Wwox-deficient preparation has a conduction or latency readout together with a rescue or drug arm. The held baseline conduction readouts are not clean central-myelin readouts: Cheng 2020 transcranial motor-evoked-potential latency includes peripheral nerve and the same paper reports sciatic demyelination in the null mice, and the heterozygous Wwox+/- mice have a longer latency (2.13 against 1.39 ms, P < 0.05) with normal amplitude, with their sciatic-nerve myelin reported as similar (data not shown). A latency change alone would therefore not show a myelin effect of a lever. [ADV-298 result](../../advisor_pilot_20261113/brainstorm_20261116/adv298_functional_vs_structural_myelin_it_20261128/RESULT_ADV298_IT_20261128.md)
+<<<
+**Dated line, 2026-11-24 (added by the Orchestrator while the Codex lane was out; Codex reconciles on return).** The wording "relative sparing of early precursors" in the paragraph above is not carri
+REPLACES: Equalizing extracellular substrate alone cannot distinguish this from differences in uptake and intracellular availability.
+

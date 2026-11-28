@@ -1,0 +1,67 @@
+BLIND VERIFICATION REPORT, IT28 ADV-298 consumers (hypothesis level; not medical advice)
+
+Files opened: the packet; Cheng 2020 (PMID32000863 PMC_r2.xml, tag-stripped and read in the relevant parts: Tc-MEP, sciatic, latency, amplitude, drug-arm and "data not shown" passages); Repudi 2021 Brain (PMID33914858 .txt, Fig 5D legend, Results text, and a full search for "ms", "msec", "milli", "latenc", "N1", "conduct"); Repudi 2021 EMBO Mol Med (PMID34747138 PMC.xml, authors, Figs 3-5, methods, search for latency/conduction/electrophysiology); citicoline/myelin.md (whole file, 12 lines). I did not open Obeid 2026, adv174, adv175, any image or any other repository file.
+
+Housekeeping: to read the XMLs I wrote two tag-stripped copies in /tmp (cheng_plain.txt, emm_plain.txt). I deleted both afterwards. Nothing was written in the repository.
+
+SUMMARY TABLE
+
+| Block | Verdict | Why in one line |
+|---|---|---|
+| INV06 | ADD | Het values, P, amplitude and sciatic clause are correct. "No study held has both" read literally has a near-miss in Cheng (see below). n and age missing. |
+| C-A | ADD (light) | The checked claim (no ms printed in text or legend) is confirmed. The 0.74 ms figure cannot be verified from text (UNSETTLED). "Knockout" should say neuronal. |
+| C-B | STANDS | Claim confirmed. "Neuronal knockout" is correct. The 0.74 ms figure is UNSETTLED. |
+| C-C1 | STANDS | Every printed P value, the n and the P13-17 age match. |
+| C-C2 | ADD | The 2.43/3.17 and 6.64/8.29 ms values are UNSETTLED (figure only). Units, n and what the bar summarises are missing. |
+| C-D1 | ADD (light) | Same lab, same first author and the readouts are correct. Neonatal AAV9 delivery and incomplete rescue are not stated. |
+| C-D2 | STANDS | The link text is supported. One optional clarification. |
+| C-E | MUST CHANGE | "The held baseline conduction readouts" over-generalises beyond Cheng. "Juvenile WWOX cell classes ... structural" is wrong in kind. Also ADD forelimb/hindlimb. |
+
+BLOCK INV06 (Cheng 2020)
+- Het latency: the text gives "an increase in Tc-MEP latency was determined in Wwox +/- mice (2.13 ± 0.22 msec; p < 0.05)" against Wwox+/+ 1.39 ± 0.13 msec. Correct. Fig 2 legend: "* P < 0.05".
+- Amplitude: +/- 59.6 ± 17.2 µV (n = 5) against +/+ 59.2 ± 9.0 µV (n = 10), "comparable". The legend says "no changes in amplitude". "Normal amplitude" stands.
+- Sciatic: "Myelin thickness, axonal organization and the density of myelinated fibers were similar in Wwox +/- and Wwox +/+ mice (data not shown)". The fragment's "thickness and fibre density ... similar (data not shown)" is correct. "Sciatic" is right, because the sentence sits in the sciatic-nerve paragraph.
+- ADD (units and groups): the 2.13 against 1.39 ms values are group means of mice at 3 weeks of age, 5 heterozygous against 10 wild-type. The legend gives n = 5 and n = 10 for amplitude. I found no separate n for latency. Minimal wording: "(3-week-old mice, n = 5 against 10)".
+- Counter-example to "no Wwox-deficient study held has both" (a wild-type drug-only arm and a conduction readout). Cheng 2020 has both elements, but in separate experiments. Ethosuximide was given to Wwox+/+ and +/- mice in the PTZ seizure assay (Fig 7b). Tc-MEP latency was a baseline in separate mice. Nothing pairs them. Suggested replacement: "no Wwox-deficient experiment held pairs a wild-type drug-only arm with a conduction readout." The counts of sources are outside my check.
+- "A latency change alone is not a central-myelin readout": supported. The Tc-MEP is recorded from "intrinsic plantar muscles of bilateral forelimbs", so it includes peripheral nerve and muscle.
+
+BLOCK C-A (Repudi Brain)
+- Confirmed: the only "ms" values in the whole text are 0.1 ms pulse duration and the 350 ms (206-472) burst duration. The Fig 5D legend gives "(ii) Latency to N1 and N2 from the onset of the stimulus" with no value and no unit. Results: "a significant latency ... [Fig 5D(i)]" and "longer response latency ... [Fig 5D(ii and iii)]" with no number. So "prints no millisecond value in its text or legend" is correct.
+- The direction (knockout later) is supported by that Results text.
+- The 0.74 ms difference is UNSETTLED. It rests on bar positions in the figure, which this text file does not contain, and I did not render images. It equals 3.17 minus 2.43, which matches the C-C2 readback. The ms unit is not stated in text or legend and would come from the figure axis. I cannot confirm what the bar is (mean or median) or the n behind it.
+- ADD (light): "knockout" should read "neuronal (Synapsin-Cre, S-KO) knockout, slices from mice aged P13-17, 250 µm vertical electrode separation". The paper's S-KO is Wwoxflox/flox; Synapsin-Cre, not the germline null. In a note on "native Wwox propagation" a reader could take it as the null.
+
+BLOCK C-B
+- Same checks as C-A. "Wwox neuronal knockout" is correct. "250 µm" appears as "250 mm" in the OCR of the legend, which is a font artefact. STANDS. The number is UNSETTLED as above.
+
+BLOCK C-C1
+- Legend, item (i): "recording at a vertical distance of 250 [µ]m from the stimulator ... (N1 *P = 0.0104; N2 = 0.5737 Wilcoxon rank sum test)". The legend does not say which measure these P values test. Correct.
+- Item (iii): "**P = 0.0030; Wilcoxon rank sum". Correct.
+- Item (ii): no P value in the legend or text. Correct.
+- Results: "significant latency of neural conductivity in S-KO ... [Fig. 5D(i)]" and "significantly lower peak amplitudes of the evoked potentials". Correct.
+- Context n: "n = 8 slices, five subjects; S-Control; n = 8 slices, six subjects S-KO". Correct. P13-17 is correct (methods).
+- Caveat: "no P value is printed" is verified for the legend and text only. I did not view the figure image, so any in-panel asterisks are UNSETTLED. Optional wording: "in the legend or text".
+
+BLOCK C-C2
+- The numbers 2.43-3.17 ms (N1) and 6.64-8.29 ms (N2) are UNSETTLED. They are figure readbacks I cannot check from text. The fragment marks them as this note's own readback, which is the correct frame. Differences: N1 0.74, N2 1.65.
+- ADD, because a reader seeing only this text would lack the unit and the summary type. Minimal wording: add "(slice-level recordings, 8 slices per group from five control and six S-KO mice aged P13-17; the legend does not say whether the bars are means or medians, and states no ms unit)".
+- Note: if the legend's N2 P = 0.5737 refers to latency, then a 1.65 ms difference carries a non-significant P. The packet already treats the attribution as unclear, so no change is forced.
+
+BLOCK C-D1
+- Same laboratory and same first author: the Brain paper starts "Srinivasarao Repudi, ... Rami I. Aqeilan". The EMBO Mol Med paper (Repudi S, Kustanovich I, Abu-Swai S, Stern S, Aqeilan RI) is "Neonatal neuronal WWOX gene therapy rescues Wwox null phenotypes". Correct.
+- Readouts: MBP immunofluorescence (Fig 4A), CC1 and PDGFRα counts in corpus callosum (Fig 4B-C), EM myelinated-axon counts and g-ratio in corpus callosum (P17 and 6 months) and optic nerve (Fig 5). All are structural. Correct.
+- No conduction or latency readout was found in this paper. Its only electrophysiology after rescue is cell-attached firing-rate recordings (P18-21 and 6-month mice, Fig 3), which test excitability, not conduction. Not a counter-example. "Latency" appears only for rotarod.
+- ADD (light): "restoration" was neonatal AAV9-SynI delivery. Myelin was improved but not fully normalised, since the text reports "some minor differences in the g-ratio and the number of unmyelinated axons" against wild-type at P17 and 6 months. Minimal wording: "Neonatal AAV9-mediated neuronal WWOX restoration in the germline null improved (not fully normalised) ...".
+
+BLOCK C-D2
+- Link text "WWOX conduction readouts: baseline only, no drug arm, and a latency change alone is not a central-myelin readout". Cheng's conduction readout is baseline only. Its drug arms (ethosuximide, LiCl) test seizure susceptibility, not conduction. Brain 2021 has no drug arm. STANDS. Optional: "no drug or rescue arm on a conduction readout".
+
+BLOCK C-E
+- Dated-line sentence about improved evoked propagation: correct. In citicoline/myelin.md it sits in the "Prediction for WWOX" paragraph. Chen Fig 7: panel B myelin staining, C CC1, D percentage of myelinated axons, and "Neither panel tests conduction".
+- Cheng claims: latency 2.13 against 1.39 ms with P < 0.05, normal amplitude, and sciatic myelin similar (data not shown), all correct. "Sciatic demyelination in the null mice": correct (Fig 3b).
+- MUST CHANGE 1 (generalisation): "The held baseline conduction readouts are not clean central-myelin readouts" is supported only for Cheng. Repudi 2021 Brain has a callosal-slice latency in the neuronal knockout, which is a central readout (bar-level, P-value attribution unclear, N2 non-significant). Minimal replacement: "The held Cheng 2020 baseline conduction readout is not a clean central-myelin readout:". If the others are meant, add that the Repudi callosal-slice latency is central but baseline only.
+- MUST CHANGE 2 (kind): "the juvenile WWOX cell classes ... is structural". These are marker-assigned snRNA-seq nuclear classes in one pool per condition (myelin.md), a transcriptomic readout, not structural. Minimal replacement: "is structural or transcriptomic (none is a conduction readout)". Counts of those classes are also not an observation of a myelin effect.
+- ADD: "Tc-MEP latency includes peripheral nerve and the same paper reports sciatic demyelination". Tc-MEP was recorded from forelimb muscles, and the sciatic nerve is a hindlimb nerve. Add "(recorded from forelimb muscles; the sciatic finding shows peripheral involvement, not that the recorded path was demyelinated; the paper itself links the two)".
+- The first sentence of the fragment ("Equalizing extracellular substrate alone cannot distinguish ...") is unsourced reasoning, outside my check.
+
+Not done: no figure was viewed or measured, so every figure-derived number (0.74 ms, 2.43/3.17, 6.64/8.29) is UNSETTLED. I did not check the repository clauses (dated searches, "about 60 papers", "5 sources") except for the counter-example near-misses above.

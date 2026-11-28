@@ -1,0 +1,140 @@
+# Blind verification report: IT28, ADV-295 block 2 and ADV-297 consumers
+
+Sources are cited as PMID. I read each named source in full, from the XML or text provided, apart from the El Ghaleb 2021 and 2025 reference lists. I opened no repository file other than the packet, wrote no files, and used no network and no images. Supplementary materials (El Ghaleb 2021 Table S1, Liu 2020 Supplementary Figs 7–10, the Jang and Cabungcal supplements) were not available. Clauses that rest on them are marked OUTSIDE or UNSETTLED.
+
+## Summary table
+
+| Block | Verdict | One-line reason |
+|---|---|---|
+| S1 | MUST CHANGE + ADD | "about 29 and 31" conflicts with the main text (28 and 31). "No seizures" for the two El Ghaleb 2021 carriers rests on Table S1 (OUTSIDE). The "without seizures" 2025 carrier had staring spells and was only "not yet" seizure-free, and the A398V carriers were aged 13 and 4. El Ghaleb 2021 also reports ethosuximide given to a variant carrier, which bears on "no cited paper tests a blocker on a variant channel". |
+| S2 | ADD | Cntnap2 current is a net inward current, not an isolated T-type current. The Cntnap2 mice were males aged 8–14 weeks. For Gclm KO plus challenge and for MAM at day 20–30, the difference holds across prepulse voltages but not at resting potential. |
+| S3 | MUST CHANGE (one clause) + ADD | "no such effect is reported in wild-type mice" misstates the source, which reports a null effect. Several qualifiers are also missing. |
+| I1 | MUST CHANGE | "S281 ... reported" is a number the source does not give. The review's S260 and Saluda-Gorgul's serine are different residues. |
+| I2 | MUST CHANGE (first line) + ADD | "con guadagno entropico" is only a hypothesis in the review and was not measured. The folds are computed from the Kd table, not stated by the review. |
+| I4 | ADD | The numbers are correct. The qualifiers (12-mer peptide, mean ± 1 SD, weak affinity in the hundreds of µM) are missing. |
+| I5 | ADD | The statement is accurate but omits the review's own "preliminary" and "appears" hedges. Saluda-Gorgul report loss of activity on purification. |
+
+## Block S1
+
+**Opened:** PMID33704440 (El Ghaleb 2021) and PMID40825030 (El Ghaleb 2025), both full text.
+
+**Clause by clause**
+
+1. **"Four variants classed gain-of-function in transfected HEK293T cells" (PMID 33704440).** STANDS. The Results state "Taken together, the current properties of the four Cav3.3 mutants reveal a gain-of-function effect". The variants are I860N, I860M, I1306T and M1425I, in HEK293T cells. I860M is the weakest effect.
+2. **"Found in six individuals with neurodevelopmental phenotypes".** STANDS. Family 2 has three I860M carriers (Patients 2–4), and Patients 1, 5 and 6 are unrelated.
+3. **"Two of whom had no seizures at about 29 and 31 years".** MUST CHANGE for the ages. The "no seizures" part is OUTSIDE.
+   - The main text says "28-year-old son (Patient 3) and 31-year-old daughter (Patient 4)".
+   - The main text does not state seizure status for Patients 3 and 4. It says Patient 3 has mild ID and Patient 4 moderate ID with speech retardation. Their seizure status rests on Table S1, which is not held.
+   - Their mother (Patient 2, 58 years) "developed seizures at the age of 58 years" (Results and Discussion: "Patient 2 developed late-onset seizures").
+   - Minimal wording: "two of whom (aged 28 and 31 years in the main text) had no seizures recorded in Supplementary Table S1". If Table S1 gives 29 for Patient 3, say so and flag the discrepancy with the main text.
+4. **"A second series reports a partial loss-of-function variant in two individuals without seizures" (PMID 40825030).** STANDS with an ADD.
+   - Source: A398V in Patients 2 and 3, who are unrelated. The Results say "no seizures", and the Abstract says "lack of seizures in the two independent p.(Ala398Val) patients". The authors call it "partial loss-of-function": about 3-fold lower Ipeak (−18.2 vs −51.1 pA/pF) and a 4.0 mV right shift of V½ activation. This is HEK293T, with n = 11 vs 22 cells (Table 2).
+   - ADD: they were aged 13 and 4 years at last examination (Table 1), so seizure-free so far.
+5. **"And a gain-of-function carrier without seizures".** ADD. This is M1425V (Patient 4).
+   - Source: GoF by V½ activation −12.3 mV, Fig 2.
+   - Table 1 reads "None documented but has had staring spells for most of his life". The Discussion says he "had not yet developed seizures, but experienced staring spells for most of his life", at age 25.
+   - Minimal wording: "a gain-of-function carrier (M1425V, 25 years) without documented seizures but with lifelong staring spells".
+6. **"Its authors write that both directions can cause neurodevelopmental disease".** STANDS. Abstract: "both gain- and loss-of-function variants of CACNA1I can cause neurodevelopmental disease".
+7. **"(our inference; no cited paper tests a blocker on a variant channel)".** ADD. PMID 33704440 tests no blocker on a channel. The Discussion does report: "targeted treatment of Patient 1 [I860N] with the non-selective T-type channel blocker ethosuximide resulted in improved control of seizures, in particular in a reduction of myoclonic seizures". This is a single clinical report, not a channel test, and the earlier Results say her seizures did not respond to treatment. A reader of the block could be misled. Suggested wording: "no cited paper tests a blocker on a variant channel; PMID 33704440 reports one clinical case (I860N) of improved seizure control on ethosuximide".
+8. **"Neither supports a rule for T-type channels as a class".** This is the block's own inference. The sources are consistent with it. The 2025 authors themselves say "substantial gain-of-function ... leads to the development of seizures" and also that both directions can cause neurodevelopmental disease.
+
+## Block S2
+
+**Opened:** PMID40834072 (Jang 2025) and PMID35079122 (Cabungcal 2022), both full text. "Targeted search only" is OUTSIDE.
+
+**Jang (Cntnap2): "higher in Cntnap2 knockout"**
+- Direction STANDS. Fig 3H: Cntnap2−/− RT neurons have "significantly increased inward current density" (n = 15 +/+ and 14 −/− cells; two-way ANOVA with Tukey).
+- ADD, three points:
+  1. The authors say they cannot isolate T-type current. Discussion: "it is impractical to completely isolate T currents with somatic recordings of RT cells in brain slices", with partial masking by SK channels, and "we can conclude that the net inward current ... is larger in Cntnap2−/−". The protocol is a steady-state inactivation protocol, holding −60 mV, prepulses −105 to −65 mV, test pulse −55 mV.
+  2. The mice were males aged 8–14 weeks. The fragment gives ages for Gclm but not for Cntnap2.
+  3. The unit is the cell, in acute slices.
+- Minimal wording: "higher low-threshold inward (T-type-attributed, not isolated) current density in Cntnap2 knockout RT neurons of adult males (8–14 weeks; PMID 40834072)".
+
+**Cabungcal (lower): "germline Gclm knockout at postnatal day 60 to 75 but not day 20 to 30; at day 20 to 30 only after an added early-life challenge or prenatal MAM; ex vivo, neuron-level statistics"**
+- STANDS in substance.
+  - P60–75: overall T-Ca2+ current density decreased (F = 31.92, p < 0.0001, n = 9 vs 10 neurons). At RMP the difference is p = 0.034, one-tailed t-test.
+  - P20–30 Gclm KO alone: no difference.
+  - P20–30 KO + GBR and WT + BSO + GBR: overall decrease (F = 36.98, p < 0.0001).
+  - MAM (PND21–30): overall decrease (F = 73.63, p < 0.0001).
+  - Neuron-level n: yes. Acute slices: yes.
+- ADD: for the P20–30 challenged groups and MAM, the decrease is a voltage-dependent, overall two-way ANOVA result, largest at ≤ −70 mV prepulses. At resting potential it is not significant. For KO-GBR and WT-BSO-GBR the Kruskal–Wallis p is 0.062 (Fig 2C). For MAM, Fig 4G says "not significantly different".
+- Minimal wording: add "(decrease across prepulse potentials; at resting potential not significant at day 20 to 30 after challenge or in MAM)".
+- The comparison across studies uses different protocols and test pulses, and the fragment already says "not a matched comparison".
+
+## Block S3
+
+**Opened:** PMID32719346 (Liu 2020), full text.
+
+1. **"Ethosuximide (200 mg/kg intraperitoneal, before/after, no vehicle arm) improved behaviour" in Nlgn2 KO.** STANDS for the main text.
+   - Source: Fig 5a–d, with tests "30 min prior to and after the systemic or local injection" in the same animals. The effects are on open field, elevated plus maze and three-chamber social recognition. KO n = 12 for open field and plus maze and n = 8 for the social test; thalamic local injection n = 10.
+   - A vehicle arm exists only for the EEG/SWD experiment (0.3% Tween 80). None is described for behaviour in the main text. Supplementary Figs 7–9 were not available, so I could not check them.
+   - ADD: the authors say the rescue was partial ("only partially rescue motor deficits").
+2. **"No such effect is reported in wild-type mice".** MUST CHANGE. This reads as absence of data. The source reports a null: "ETX had no effects on locomotion, anxiety and social recognition memory" in WT (Fig 5c,d, Suppl Fig 7), and the Discussion says "ETX has no effects in WT and two other ASD mouse models".
+   - Minimal wording: "in wild-type mice ethosuximide had no effect on locomotion, anxiety-like behaviour or social recognition memory (Fig 5c,d; Suppl Fig 7, not held)".
+3. **"Social-memory deficit was not rescued in PAK3-transgenic or FMR1-knockout mice ... lacking absence-type discharges by citation (not recorded in them)".** Mostly STANDS, with one UNSETTLED part and one ADD.
+   - "Not rescued": the text says ETX "did not rescue the social memory deficits in PAK3 transgenic mice" and "also did not improve" it in FMR1 KO (Suppl Figs 8 and 9, not held).
+   - By citation: PAK3 "have no seizures (ref 46)". FMR1 KO "have increased susceptibility to seizures, which differ from absence seizures (ref 48)".
+   - "Not recorded in them" is UNSETTLED. The main text gives no EEG in those lines, but the supplement was not held.
+   - ADD: FMR1 KO has seizure susceptibility, only of a non-absence type. Minimal wording: "FMR1 knockout (increased susceptibility to non-absence seizures by citation)". Also, the FMR1 controls were on an FVB background, PAK3 on C57BL/6J, and Nlgn2 on a mixed 129 × B6 background.
+4. **"Consistent with, and does not prove, an action that depends on the discharges (the authors' own caution)".** STANDS. The authors write "likely mediated through blocking the SWDs" and "we cannot rule out the possibility that ETX may also act through other mechanisms independent of the SWDs".
+5. **"In wild-type thalamic slices ethosuximide 500 uM still reduced rebound burst firing".** STANDS on the main-text sentence. ETX (500 µM) "did not affect sIPSCs or action potentials induced by depolarizing currents in either WT or KO mice, but it reduced the number of action potentials in the rebound burst firing in both genotypes". The numbers are in Suppl Fig 10, which was not held. Precise wording is "number of action potentials in the rebound burst".
+
+## Block I1
+
+**Opened:** PMID25662954 (Farooq 2015 review) and PMID21476439 (Saluda-Gorgul 2011), both full text. The statement about the earlier repository text is OUTSIDE.
+
+1. **"The SDR active-site map of WWOX is a sequence-and-model assignment, not an experimental structure".** STANDS. The review's Figure 7 is a MODELLER homology model built on mpRDH (PDB 3RD5), with NADPH mapped from 3AI2 and retinal docked analogously to 1FDT. Figure 6 is a sequence alignment. Saluda-Gorgul describe "amino acid sequence analysis".
+2. **"S260 (substrate), the Y293/K297 dyad of the YxxxK motif, and GxxxGxG for the NADP(H) cofactor (review)".** STANDS.
+   - The review says an "absolutely conserved serine (S260 in WWOX) is required for the stabilization of retinoid substrate". Y293 and K297 are the YXXXK active-site dyad. GXXXGXG accommodates the NADP+/NADPH cofactor.
+   - It gives no residue positions for GXXXGXG.
+   - The review contains no "S281" and no "NAD(H)" site.
+3. **"S281 and a «NAD(H) or NADP(H)» site are reported from sequence analysis in PMID 21476439".** MUST CHANGE for S281. The NAD(H)/NADP(H) site STANDS.
+   - Source: "WWOX amino acid sequence analysis identified both the coenzyme [NAD(H) or NADP(H)] binding site GANSGIG at position 131–137 and the potential substrate binding site YNRSK at position 293–297". It adds "WWOX has a serine residue 12 amino acids upstream of the YNRSK substrate binding motif ... nearly identical location to that observed in steroid dehydrogenases (usually position −13 from Tyr)".
+   - "281" does not appear in the source. It is derived arithmetic (293 − 12), and the "−13 from Tyr" remark makes it ambiguous by ±1.
+   - Also, the review's S260 and Saluda-Gorgul's serine are different residues (33 versus 12 positions upstream of Y293). The fragment could read as one serine.
+   - Minimal wording: "a serine 12 residues upstream of the YNRSK motif (about position 281 by count; no residue number given) and a «NAD(H) or NADP(H)» site GANSGIG 131–137 are reported from sequence analysis in PMID 21476439; the review's conserved substrate serine S260 is a different residue".
+
+## Block I2
+
+**Opened:** PMID25662954, full text.
+
+1. **First line: "WW1 nel modulo tandem lega 2-3× più forte che da solo, con guadagno entropico."** MUST CHANGE for "con guadagno entropico". The "2–3×" STANDS, and the review's text says "between two- to three-folds".
+   - The only mention is conditional: "ligand binding to WW1 domain could trigger a conformational change ... and the resulting entropic gain could in turn lower its free energy to ligand binding".
+   - Table 1 reports Kd only, with no ΔH or TΔS. No entropy was measured.
+   - Minimal wording: "... 2–3× più forte che da solo (a gain in entropy is proposed by the review as a possible explanation, not measured)".
+2. **Second bullet.** The folds STAND as arithmetic on Table 1 (Kd WW1 / Kd WW1-WW2).
+   - ErbB4 179/75 = 2.39. p73 107/60 = 1.78. PTCH1 278/79 = 3.52. PTPN14 763/214 = 3.56. SMAD7 272/53 = 5.13. TMG2 202/84 = 2.41. WBP1 368/141 = 2.61. WBP2 133/42 = 3.17. Range 1.8–5.1, so the range and the per-ligand values are correct.
+   - Eight peptides, all 12 residues and all containing PPPY. ITC at 25 °C and pH 7, "at least three independent measurements", errors to one SD.
+   - "Unpublished" STANDS for p73, PTCH1, PTPN14, SMAD7 and TMG2 ("unpublished observations"). ErbB4 and WBP1/2 cite refs 32 and 14.
+   - The review's text "two- to three-folds" is quoted correctly, including for the unpublished five.
+   - ADD: the folds are computed ratios of Kd values and are not stated in the review. The review's text claim of "two- to threefold" for the unpublished five is not consistent with its own Table 1 (1.8 to 5.1). "Same laboratory" is OUTSIDE.
+
+## Block I4
+
+**Opened:** PMID25662954, full text. The first line ("IPOTESI ... questo paper") and "competition with Smurf ... remain unmeasured" are OUTSIDE.
+
+- Numbers STAND. SMAD7 peptide LESPPPPYSRYP: Kd 272 ± 29 µM for WW1 and 53 ± 8 µM for WW1-WW2 (Table 1). The row is "unpublished" in the review text. The review contains no Smad4 or Smurf measurement.
+- ADD: the peptide is a 12-mer, not full-length SMAD7. The values are ITC, 25 °C, pH 7, mean ± 1 SD, n ≥ 3. They are weak affinities, in the tens to hundreds of µM.
+
+## Block I5
+
+**Opened:** PMID25662954 and PMID21476439, full text. "The corpus's SDR reading has rested on..." is OUTSIDE.
+
+- The review statement is reported accurately. It says, in a "preliminary" stage, that "biochemical studies conducted on a high-quality bacterially-purified recombinant protein in my laboratory indeed confirm that the SDR domain ... is a bona fide retinal oxidoreductase — not only does it catalyze the oxidation of retinol to retinal aldehyde but it also appears to efficiently catalyze the reversible reaction". There is no data, rate, constant or construct boundary. It also mentions possible retinal → retinoic acid oxidation, "may also be involved".
+- "Crude-extract enzymology": STANDS. Saluda-Gorgul used soluble crude bacterial extracts (NUS-WWOX and GST-WWOX) with steroid substrates, not retinoids. They state that "oxidoreductase activity was lost during purification" (twice: for NUS-WWOX and GST-WWOX).
+- ADD (two points):
+  1. Add the review's own hedges "while still in preliminary stage" and "appears to", so the sentence does not read as a firm statement. Minimal wording: "states, as preliminary and without data, rate, constant or construct, that a bacterially purified recombinant protein appears to interconvert retinol and retinal".
+  2. Note that the crude-extract work used steroid substrates, and that Saluda-Gorgul report activity lost on purification, which sits against the review's claim.
+
+## Files opened (all read-only)
+
+- /home/desktop/.claude/jobs/54ca757b/tmp/blind_b2_297.txt
+- /home/desktop/legend-development/files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml
+- /home/desktop/legend-development/files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml
+- /home/desktop/legend-development/files/fulltext/PMID40834072_Jang2025_PMC_r2.xml
+- /home/desktop/legend-development/files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml
+- /home/desktop/legend-development/files/fulltext/PMID32719346_Liu2020_PMC_r2.xml
+- /home/desktop/legend-development/files/fulltext/PMID25662954_Farooq2015_PMCbucket.txt
+- /home/desktop/legend-development/files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.txt
+
+No other repository file was opened.
