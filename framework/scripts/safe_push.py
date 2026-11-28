@@ -59,11 +59,11 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      applies to every publisher, `--serialize` or not; a repository without `framework/scripts/repurposing_view.py` skips it; nothing is loosened and nothing is written.
 
   12. Free space is checked at the START and again just before the gate (2026-11-24, ADV-207): `/` was 100% full (219 MB free) and a landing died midway with 'No space left on device'. The tool refuses,
-     before any lock, gate or merge, when the directory the gate builds a clone in (tempfile's: TMPDIR, else /tmp) or the repository's own filesystem has less than 2 GB free, names the number and
+     before any lock, gate or merge, when the directory the gate builds a clone in (tempfile's: TMPDIR, else /tmp) or the repository's own filesystem has less than MIN_FREE_GB free (1.5 GB, step 18; 2 GB until 2026-11-28), names the number and
      the path, and points at `tmp_clone_report.py` once that tool exists. 2 GB = twice the MEASURED peak of one release-mode gate clone: `public_release_gate.py --mode release` run with TMPDIR set to
      an empty folder and `du -sk` of it sampled every 2 s: peak 856,524 KB (tar of `git archive HEAD` 425 MB plus its extraction), clean tree, PASS. The staging-mode gate that this tool runs builds NO clone
      (same sampling: peak 4 KB). `--regenerate-derived` builds a candidate tree under `<tmp>/legend-candidate-tree-*` (the path of the 04:50Z incident): sampled the same way its peak is 444,432 KB with the
-     default checks and with `--all`, so the release-mode clone is the larger of the two. The merge writes only the changed files; the 2 GB is headroom for the larger run and the object store.
+     default checks and with `--all`, so the release-mode clone is the larger of the two. The merge writes only the changed files; the 2 GB set then was headroom for the larger run and the object store.
      `LEGEND_SAFE_PUSH_MIN_FREE_GB` overrides the threshold (tests, or an operator who knows better). Read-only; an unreadable filesystem does not refuse.
 
   13. Landing suites (THE DEFAULT under `--serialize` since 2026-11-25, ADV; `--landing-suites` asks by name, also without `--serialize`): after the merge and any regeneration, before the gate, the suites that
@@ -92,9 +92,13 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      about 0.93 GB, and the 2 GB floor of step 12 did not see a second one). A LIVE heavy run is a `safe_push.py` that has a child process (a publisher waiting in the queue has none and writes
      nothing), a `run_release_regressions.py`, a release-mode `public_release_gate.py` or a `candidate_tree_freshness.py`, seen in /proc, so older copies and other repositories count too; this
      process, its parents and its children are not counted, nor is a test fixture (LEGEND_SAFE_PUSH_ROOT set). Declared peaks: PEAK_GB. Under the lock, before the merge and the regeneration, and
-     again before the parallel checks, the floor is 2 GB PLUS the declared peaks of those runs: when it is not met the tool WAITS (`LEGEND_SAFE_PUSH_DISK_WAIT_S`, default 600 s) and refuses only
+     again before the parallel checks, the floor is MIN_FREE_GB PLUS the declared peaks of those runs: when it is not met the tool WAITS (`LEGEND_SAFE_PUSH_DISK_WAIT_S`, default 600 s) and refuses only
      if the space does not come back; with no live run it refuses at once, as before. At the start, a `--serialize` push whose shortage the live runs account for (they will give it back) joins the
      queue instead of being refused. A waiting publisher has no child, so two of them never wait for each other. Not covered: two publishers that pass the check in the same instant.
+
+  18. Floor and declared peak after the shared suite clone (2026-11-28, ADV decision; HE_DISK_PEAK_20261128.md). Two real pushes sampled: a candidate tree of 0.48 GB, then a suite clone of
+     0.48 GB, never both at once. Computed, not sampled: a red suite adds a base clone beside the suite clone, about 0.97 GB. MIN_FREE_GB = 1.5, the laboratory's 1.0 GB stop line plus one green
+     push; PEAK_GB of a publisher = 1.0, the red case. The release battery was not measured again and keeps 1.4.
 
 Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--no-regenerate-derived] [--no-landing-suites] [--serial-checks] [--no-copied-sentence-check]] [--landing-suites]      (default branch: main)
 """
@@ -187,14 +191,14 @@ def stale_derived_views(runner=None) -> str:
     return ""
 
 
-# Free space the gate needs where it builds its clean clone (tempfile's directory: TMPDIR, else /tmp). MEASURED 2026-11-24 (ADV-207): see the module docstring, item 12.
-MIN_FREE_GB = float(os.environ.get("LEGEND_SAFE_PUSH_MIN_FREE_GB", "2"))
+# Free space a push needs where it builds its temporary copies (tempfile's directory: TMPDIR, else /tmp) and in the repository. See the module docstring, items 12 and 18.
+MIN_FREE_GB = float(os.environ.get("LEGEND_SAFE_PUSH_MIN_FREE_GB", "1.5"))
 CLONE_REPORT = ROOT / "framework" / "scripts" / "tmp_clone_report.py"
 
 
-# Declared peak, in GB, of the scratch copies one live run of each tool holds (step 17; ADV-299 trace of 2026-11-28 for safe_push, the step 12 measurements for the other two; a battery is
-# taken as large as a publisher).
-PEAK_GB = {"safe_push.py": 1.4, "run_release_regressions.py": 1.4, "public_release_gate.py": 0.86, "candidate_tree_freshness.py": 0.45}
+# Declared peak, in GB, of the scratch copies one live run of each tool holds (steps 17 and 18: the sampled pushes of 2026-11-28 for safe_push, the step 12 measurements for the gate and the
+# regeneration; the battery keeps the 1.4 it was given as large as the publisher of that day, not measured since).
+PEAK_GB = {"safe_push.py": 1.0, "run_release_regressions.py": 1.4, "public_release_gate.py": 0.86, "candidate_tree_freshness.py": 0.45}
 DISK_WAIT_S = float(os.environ.get("LEGEND_SAFE_PUSH_DISK_WAIT_S", "600"))
 DISK_POLL_S = 10.0
 PROC = Path(os.environ.get("LEGEND_SAFE_PUSH_PROC_ROOT", "/proc"))
@@ -272,7 +276,7 @@ def free_space_refusal(floor: float | None = None, why: str = "") -> str:
     if worst is None:
         return ""
     hint = " List your dead clones with `python3 framework/scripts/tmp_clone_report.py`." if CLONE_REPORT.is_file() else ""
-    return (f"free space {worst[0]:.1f} GB at {worst[1]} is below {floor:g} GB ({why or 'twice the measured peak, 0.86 GB, of one release-mode gate clone'}): remove a clone or a scratch folder of yours first.{hint} "
+    return (f"free space {worst[0]:.1f} GB at {worst[1]} is below {floor:g} GB ({why or 'the 1.0 GB stop line plus the 0.5 GB one push writes'}): remove a clone or a scratch folder of yours first.{hint} "
             "Nothing was gated or pushed.")
 
 
