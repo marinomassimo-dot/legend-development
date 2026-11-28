@@ -18,3 +18,9 @@ operator; the classifier refused ADV a deletion on 2026-11-28.
 
 ## Kept line
 The PREREG of ADV-299 ranked the Codex writer first and the `/tmp` clones third; the trace showed the order was wrong (the landing gate itself is the writer).
+
+## Second item, queued (SCI message of 2026-11-28, defects in my own `consumer_count.py`)
+`DEFECTS_FOR_IT_AND_HE_ADV297_SCI_20261128.md` (on main since 79a736edd, `brainstorm_20261116/adv297_catalogued_triage_sci_20261128/`):
+(1) `registry_ids()` takes every line containing "Identifier", so a prose Note in PAPER 055 makes a false consumer for PMID 25662954;
+(2) citations by PMCID are not joined (discovery ledger line 29 cites PMC4374002). Candidate repairs are named there, neither applied nor tested.
+Repair with a test in `test_consumer_count.py` (the file is tracked; run the 4 existing tests first), after the safe_push disk item above; HE owns the script (ADV-279 defect 2).
