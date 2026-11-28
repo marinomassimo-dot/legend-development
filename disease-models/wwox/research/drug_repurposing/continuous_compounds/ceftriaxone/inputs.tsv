@@ -1,0 +1,21 @@
+context	measure	value	unit	locator
+Lee_HFA	ceftriaxone_exposure	10	uM	Fig. 5A nominal exposure applied for two days
+Nau_adults_noninflamed	peak_low	0.18	mg/L	pm8363385 Results peak range
+Nau_adults_noninflamed	peak_median	0.43	mg/L	pm8363385 Results peak median
+Nau_adults_noninflamed	peak_high	1.04	mg/L	pm8363385 Results peak range
+Nau_adults_noninflamed	quantifiable_peak_n	5	persons	pm8363385 Results
+Peds_bacterial_meningitis	first_arm_mean	5.4	mg/L	pm6301362 and FDA label Table 3
+Peds_bacterial_meningitis	second_arm_mean	6.4	mg/L	pm6301362 and FDA label Table 3
+Peds_sparse_pk	simulated_median_72_96h	5.6	mg/L	10.1128/aac.00747-24 Results Figure 1 paragraph
+Peds_sparse_pk	simulated_median_168_192h	6.6	mg/L	10.1128/aac.00747-24 Results Figure 1 paragraph
+ALS_stage1	protocol_reference	1	uM	Zhao PK Introduction and Results Figure 4
+R6_2_slope	WT_saline	0.544	extraction_fraction	Miller Fig. 4C and caption
+R6_2_slope	KO_treated	0.558	extraction_fraction	Miller Fig. 4C and caption
+R6_2_uptake	WT_change	24	percent	Miller Fig. 4C Results
+R6_2_uptake	KO_change	22	percent	Miller Fig. 4C Results
+ALS_phase3	n_active	340	participants	Cudkowicz Results combined final population
+ALS_phase3	n_placebo	173	participants	Cudkowicz Results combined final population
+ALS_phase3	cholelithiasis_active	181	participants	Cudkowicz Results safety
+ALS_phase3	cholelithiasis_placebo	5	participants	Cudkowicz Results safety
+ALS_phase3	serious_hepatobiliary_active	41	participants	Cudkowicz summary and Results safety
+ALS_phase3	serious_hepatobiliary_placebo	0	participants	Cudkowicz summary and Results safety

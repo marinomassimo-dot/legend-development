@@ -1,0 +1,10 @@
+region	endpoint	unit	control_n	treated_n	reported_p	locator
+hippocampus	total_GLT1	animals	7	7	0.008	Fig. 1A
+hippocampus	peak_iGluSnFR	slices	14	16	0.084	Fig. 1F
+hippocampus	decay_tau	slices	14	16	0.154	Fig. 1G
+cortex	total_GLT1	animals	7	7	0.045	Fig. 2A
+cortex	peak_iGluSnFR	slices	15	16	0.011	Fig. 2F
+cortex	decay_tau	slices	15	16	0.083	Fig. 2G
+striatum	total_GLT1	animals	7	7	0.049	Fig. 3A
+striatum	peak_iGluSnFR	slices	17	20	0.982	Fig. 3F
+striatum	decay_tau	slices	17	20	0.145	Fig. 3G

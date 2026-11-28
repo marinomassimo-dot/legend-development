@@ -1012,6 +1012,18 @@ class SafePushParallelChecks(unittest.TestCase):
             self.assertEqual((root / "files" / "held.bin").read_text(), "held\n")
             self.assertEqual((root / "files" / "held.bin").stat().st_nlink, 1)
 
+    def test_the_suite_clone_borrows_the_objects_instead_of_copying_them(self) -> None:
+        # 2026-11-28, disk: the copied object database was 816 of the clone's 1283 MB on every push.
+        with TemporaryDirectory() as td:
+            suite = ("import pathlib, sys\n"
+                     "objects = pathlib.Path('.git/objects')\n"
+                     "copied = [p for p in objects.rglob('*') if p.is_file() and p.parent.name != 'info']\n"
+                     "sys.exit(0 if (objects / 'info' / 'alternates').is_file() and not copied else 1)\n")
+            root, bare = self.with_suites(td, {"borrows.py": suite})
+            r = self.publish(root, "--serialize")
+            self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+            self.assertIn("LANDING-SUITE PASS suites/borrows.py", r.stdout)
+
     def test_serial_checks_run_in_the_worktree_and_are_recorded_in_the_history(self) -> None:
         with TemporaryDirectory() as td:
             root, bare = self.with_suites(td, {"where.py": self.WHERE})
