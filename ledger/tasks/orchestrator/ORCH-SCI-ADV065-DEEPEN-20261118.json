@@ -1416,6 +1416,14 @@
      "accepted_at": "2026-11-28T12:27:10Z",
      "evidence": "COMPARISON_ADV320_ADV323_SCI_20261128.md on main 3b492f686; reported to ADV and IT 2026-11-28",
      "updated_at": "2026-11-28T12:36:26Z"
+    },
+    {
+     "step": "ADV-325: GSK3-substrate phosphosite census over held WWOX full texts (frozen rule first; passes and fails with locators; consequence for the same-animal panel, the lithium-in-WT confound and RP-026)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-325",
+     "accepted_at": "2026-11-28T12:48:00Z",
+     "authorised_by": "ADV-325 message 2026-11-28 to SCI bd"
     }
    ]
   }
@@ -2512,6 +2520,13 @@
    "step_sha256": "65dc2f841da7",
    "reopened_block": false,
    "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T12:48:00Z",
+   "source": "ADV-325",
+   "step_sha256": "73b50c8218c9",
+   "reopened_block": false,
+   "authorised_by": "ADV-325 message 2026-11-28 to SCI bd"
   }
  ],
  "DELEGATIONS": [
