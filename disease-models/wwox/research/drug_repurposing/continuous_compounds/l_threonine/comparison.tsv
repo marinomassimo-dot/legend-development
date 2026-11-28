@@ -1,0 +1,37 @@
+comparison	statistic	value	unit	locator
+clinician spasticity	favors threonine	12	participants	Hauser 1992 p. 925 paired figure
+clinician spasticity	favors placebo	4	participants	Hauser 1992 p. 925 paired figure
+clinician spasticity	ties	5	participants	Hauser 1992 p. 925 paired figure
+clinician spasticity	exact two-sided sign p	0.076812744	probability	Hauser 1992 p. 925 paired figure
+patient spasticity	favors threonine	8	participants	Hauser 1992 p. 925 paired figure
+patient spasticity	favors placebo	7	participants	Hauser 1992 p. 925 paired figure
+patient spasticity	ties	6	participants	Hauser 1992 p. 925 paired figure
+patient spasticity	exact two-sided sign p	1	probability	Hauser 1992 p. 925 paired figure
+clinician global	favors threonine	7	participants	Hauser 1992 p. 925 paired figure
+clinician global	favors placebo	8	participants	Hauser 1992 p. 925 paired figure
+clinician global	ties	6	participants	Hauser 1992 p. 925 paired figure
+clinician global	exact two-sided sign p	1	probability	Hauser 1992 p. 925 paired figure
+patient global	favors threonine	6	participants	Hauser 1992 p. 925 paired figure
+patient global	favors placebo	6	participants	Hauser 1992 p. 925 paired figure
+patient global	ties	9	participants	Hauser 1992 p. 925 paired figure
+patient global	exact two-sided sign p	1	probability	Hauser 1992 p. 925 paired figure
+clinician spasticity	improved on threonine only	10	participants	Hauser 1992 p. 925 paired figure
+clinician spasticity	improved on placebo only	4	participants	Hauser 1992 p. 925 paired figure
+clinician spasticity	binary improvement exact McNemar p	0.17956543	probability	Hauser 1992 p. 925 paired figure
+Growdon lumbar threonine	difference of reported means	50	µM	Growdon 1991 Table 3
+Growdon lumbar threonine	relative difference of means	98.039216	%	Growdon 1991 Table 3
+Growdon lumbar glycine	difference of reported means	-0.8	µM	Growdon 1991 Table 3
+Growdon lumbar glycine	relative difference of means	-9.5238095	%	Growdon 1991 Table 3
+Hauser lumbar threonine	difference of reported means	85.5	table units unstated	Hauser 1992 labeled Table 3
+Hauser lumbar threonine	relative difference of means	256.75676	%	Hauser 1992 labeled Table 3
+Hauser lumbar glycine	difference of reported means	-0.8	table units unstated	Hauser 1992 labeled Table 3
+Hauser lumbar glycine	relative difference of means	-11.764706	%	Hauser 1992 labeled Table 3
+juvenile rat C vs B brain tissue glycine	difference of reported means	1.6	nmol/mg protein	Castagné 1994 Table II
+juvenile rat C vs B brain tissue glycine	relative difference of means	36.363636	%	Castagné 1994 Table II
+juvenile rat C vs B brain tissue threonine	difference of reported means	33.1	nmol/mg protein	Castagné 1994 Table II
+juvenile rat C vs B brain tissue threonine	relative difference of means	321.35922	%	Castagné 1994 Table II
+juvenile rat C vs B plasma glycine	difference of reported means	580	nmol/mL	Castagné 1994 Table II
+juvenile rat C vs B plasma glycine	relative difference of means	169.59064	%	Castagné 1994 Table II
+adult systemic tracer control	glycine share of two modeled disposal routes	9.6385542	%	Darling 2000 abstract, ratio of rate means
+adult systemic tracer free Thr	glycine share of two modeled disposal routes	6.6666667	%	Darling 2000 abstract, ratio of rate means
+adult systemic tracer protein Thr	glycine share of two modeled disposal routes	7.0247934	%	Darling 2000 abstract, ratio of rate means
