@@ -1,0 +1,332 @@
+{
+ "schema_version": 2,
+ "pmid": "31829254",
+ "doi": "10.1186/s13041-019-0530-8",
+ "receipt": "FTR-20261128-31829254-02",
+ "landing": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv333_cross_it_20261128/RESULT_ADV333B_COMPLETE_READ_IT38_20261128.md"
+ ],
+ "coverage_status": "complete_fulltext_read",
+ "declared_reading_gap": "The cited works were not read; the original Allen Brain Atlas image series were not opened; the vendor datasheet of the anti-WWOX antibody answered 403 (2026-11-28), so its host species and validation are not verified.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "ADV-assigned question-driven completion of one paper: no commit candidate for any claim."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC XML and the PMC open-data bucket; the publisher image host answered 403 and was not retried."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 66,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Counts are PubMed esearch results for the last author name Kim Joung-Hun[au] (2026-11-28; name-based, not disambiguated). A computational neuroanatomy study with mouse immunohistochemistry at a Korean university; no WWOX-directed programme visible in it."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "(WWOX[tiab] OR \"WW domain-containing oxidoreductase\"[tiab]) AND \"ventral tegmental area\"[tiab]",
+    "route": "PubMed esearch rettype=count, 2026-11-28",
+    "count": 1
+   }
+  ],
+  "note": "Wwox is the output of an expression screen, not the stated subject of the study."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 33,
+  "gene_direct_refs_in_source": [
+   "29",
+   "30",
+   "31",
+   "32",
+   "33"
+  ],
+  "enumeration_method": "XML reference list (33 entries); five entries concern WWOX/WOX1.",
+  "resolved": [
+   {
+    "pmid": "30158849",
+    "state": "receipt already in the ledger"
+   },
+   {
+    "pmid": "27551439",
+    "state": "receipt already in the ledger"
+   },
+   {
+    "pmid": "19918364",
+    "state": "receipt already in the ledger"
+   },
+   {
+    "pmid": "15126504",
+    "state": "abstract-level receipt only; not complete"
+   }
+  ],
+  "note": "Ref 29 (PMID 18437686, a 2008 review) is not read and not queued. No cited work was opened for this read."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "git grep for the antibody catalogue number in disease-models and the held full texts; fulltext_receipts.py status for the PMID",
+  "hits": 1,
+  "finding": "The only prior reading is the ADV-333 partial receipt; no other held source names this catalogue number for WWOX."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-11-28",
+  "route": "retraction_check.py (skill script); dependency_integrity.py screen",
+  "result": "Checked 2026-11-28: flagged 0; references screened clean (30 of 33 with DOI).",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 33,
+   "references_screened": 30,
+   "references_with_doi": 30,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 38,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID31829254_PMC6907252_epmc_20261128.xml",
+   "sha256": "785a10ea6b5998f1777e8fdf14c3b68301e8ae541f3e4b11cd8e49c176a29543",
+   "kind": "article_text",
+   "note": "Europe PMC full-text XML (JATS), CC BY; body, legends and references.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6907252/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-28",
+    "result_sha256": "785a10ea6b5998f1777e8fdf14c3b68301e8ae541f3e4b11cd8e49c176a29543"
+   }
+  },
+  {
+   "path": "files/figures/PMID31829254/13041_2019_530_Fig1_HTML.jpg",
+   "sha256": "62d7e94288cd36dafc86b3b96ae90fbe3ea625d86826a13caf7a6af80d47d31d",
+   "kind": "figure",
+   "note": "Figure 1 from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6907252.1/13041_2019_530_Fig1_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-28",
+    "result_sha256": "62d7e94288cd36dafc86b3b96ae90fbe3ea625d86826a13caf7a6af80d47d31d"
+   }
+  },
+  {
+   "path": "files/figures/PMID31829254/13041_2019_530_Fig2_HTML.jpg",
+   "sha256": "508933e5cbbca4a59f8f1f56c6cc1655a15b6f9398fb2a8e12d53b2ec946baa6",
+   "kind": "figure",
+   "note": "Figure 2 from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6907252.1/13041_2019_530_Fig2_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-28",
+    "result_sha256": "508933e5cbbca4a59f8f1f56c6cc1655a15b6f9398fb2a8e12d53b2ec946baa6"
+   }
+  },
+  {
+   "path": "files/figures/PMID31829254/13041_2019_530_Fig3_HTML.jpg",
+   "sha256": "db2e00a2ab965b1047e5f1d869ae28e2c0fd7c9849d3e7d8aed8ae9c284c6e3b",
+   "kind": "figure",
+   "note": "Figure 3 from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6907252.1/13041_2019_530_Fig3_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-28",
+    "result_sha256": "db2e00a2ab965b1047e5f1d869ae28e2c0fd7c9849d3e7d8aed8ae9c284c6e3b"
+   }
+  },
+  {
+   "path": "files/figures/PMID31829254/13041_2019_530_Fig4_HTML.jpg",
+   "sha256": "f1c923e3b976ad1436ba68a478e4c8d862448158ecab04b41632aa83aa35d647",
+   "kind": "figure",
+   "note": "Figure 4 from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6907252.1/13041_2019_530_Fig4_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-28",
+    "result_sha256": "f1c923e3b976ad1436ba68a478e4c8d862448158ecab04b41632aa83aa35d647"
+   }
+  },
+  {
+   "path": "files/figures/PMID31829254/13041_2019_530_Fig5_HTML.jpg",
+   "sha256": "b986db063259db8bc45931d98e430c142ea199b594579f6671bdd5091d49f081",
+   "kind": "figure",
+   "note": "Figure 5 from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6907252.1/13041_2019_530_Fig5_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-28",
+    "result_sha256": "b986db063259db8bc45931d98e430c142ea199b594579f6671bdd5091d49f081"
+   }
+  },
+  {
+   "path": "files/figures/PMID31829254/13041_2019_530_Fig6_HTML.jpg",
+   "sha256": "d329e311ceca64542642bc88aead45cef1c4843b9185778b7515f9402a6fe097",
+   "kind": "figure",
+   "note": "Figure 6 from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6907252.1/13041_2019_530_Fig6_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-28",
+    "result_sha256": "d329e311ceca64542642bc88aead45cef1c4843b9185778b7515f9402a6fe097"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC fullTextXML of PMC6907252 was retrieved and string-checked.",
+  "abstract_anchoring_waived": "The entries quote Methods, Results, legends and Discussion, not the abstract.",
+  "note": "Complete read of text and six figures; no supplement found.",
+  "entries": [
+   {
+    "proposition": "A single anti-WWOX reagent is named",
+    "snippet": "rabbit anti-WWOX (1:500, sc-366,157; Santa Cruz Biotechnology)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31829254_PMC6907252_epmc_20261128.xml",
+    "anchor": "Methods, Immunohistochemistry",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The anti-rabbit secondary used",
+    "snippet": "donkey anti-rabbit Alexa 647-conjugated IgG (1:500; Abcam) were used as secondary antibodies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31829254_PMC6907252_epmc_20261128.xml",
+    "anchor": "Methods, Immunohistochemistry",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX triple label used 6 mice, 22 slices, 22 medial and 14 lateral images",
+    "snippet": "and for TH-VGLUT2-WWOX triple labeling, N = 6, 22 brain slices, M location: 22 images, L location: 14 images",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31829254_PMC6907252_epmc_20261128.xml",
+    "anchor": "Methods, Experimental design",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A correlation screen preceded the choice of Wwox",
+    "snippet": "we identified 191 genes with expression intensities that correlated significantly (P < 0.05) with the minimum intensities of Th and Slc17a6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31829254_PMC6907252_epmc_20261128.xml",
+    "anchor": "Results, marker genes",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Wwox was chosen by in situ pattern, overlap with Th and the minimum profile",
+    "snippet": "We selected the gene encoding WW domain-containing oxidoreductase (Wwox), whose expression pattern was most similar to that of Slc17a6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31829254_PMC6907252_epmc_20261128.xml",
+    "anchor": "Results, marker genes",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The proportion is of WWOX-expressing neurons",
+    "snippet": "> 70% of the neurons that expressed WWOX also expressed both TH and VGLUT2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31829254_PMC6907252_epmc_20261128.xml",
+    "anchor": "Results, Fig. 6c",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The overlap coefficients come from 10 cells",
+    "snippet": "red and blue (R:B) channels, n = 10 cells",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID31829254_PMC6907252_epmc_20261128.xml",
+    "anchor": "Fig. 6 legend, b",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pie charts partition WWOX-expressing neurons",
+    "snippet": "Pie charts showing the proportions of WWOX expressing neurons expressing or not expressing TH and/or VGLUT2",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID31829254_PMC6907252_epmc_20261128.xml",
+    "anchor": "Fig. 6 legend, c",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The densities in Fig. 6e use the images of Fig. 6c",
+    "snippet": "lateral (L) regions of the VTA (image data same as c",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID31829254_PMC6907252_epmc_20261128.xml",
+    "anchor": "Fig. 6 legend, e",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Data are available only from the author",
+    "snippet": "Please contact the author for data and materials requests.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31829254_PMC6907252_epmc_20261128.xml",
+    "anchor": "Availability of data and materials",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The induction wording is a Discussion suggestion",
+    "snippet": "Wwox can be induced highly in dopamine- and glutamate-co-releasing neurons",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31829254_PMC6907252_epmc_20261128.xml",
+    "anchor": "Discussion",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261128-31829254-01",
+   "reader": "orchestrator (IT37), ADV-333",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "Partial read: text whole, Figs 5 and 6 viewed.",
+   "outputs": [
+    "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv333_cross_it_20261128/RESULT_ADV333_IT_20261128.md"
+   ]
+  },
+  {
+   "receipt": "FTR-20261128-31829254-02",
+   "reader": "orchestrator (IT38, session 1eb17530) with a delegate producer",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "All six figures opened and supplement routes searched; the ADV-333 verdict holds on the whole paper.",
+   "outputs": [
+    "disease-models/wwox/research/deepdive_manifests/PMID31829254.json",
+    "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv333_cross_it_20261128/RESULT_ADV333B_COMPLETE_READ_IT38_20261128.md"
+   ]
+  }
+ ]
+}
