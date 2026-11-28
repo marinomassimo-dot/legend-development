@@ -1,0 +1,4 @@
+comparison	exposed_over_reference	percent_fall_over_reference	difference_pct_points
+zhang_oaa	0.45557	54.443	-63.1
+zhang_dialysis	0.63754	36.246	-36.5
+zhang_oaa_30	0.66790	33.210	-35.8

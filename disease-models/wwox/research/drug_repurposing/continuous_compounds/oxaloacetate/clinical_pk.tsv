@@ -1,0 +1,7 @@
+arm_mg	time_min	group_mean_ng_mL	group_sd_ng_mL	mean_within_person_ratio	sd_within_person_ratio	n
+500	0	94	102	1	0	15
+500	60	63	55	1.01	0.51	15
+500	90	87	80	1.15	0.41	15
+1000	0	1400	962	1	0	15
+1000	60	1355	690	1.07	0.20	15
+1000	90	1363	759	0.99	0.19	15

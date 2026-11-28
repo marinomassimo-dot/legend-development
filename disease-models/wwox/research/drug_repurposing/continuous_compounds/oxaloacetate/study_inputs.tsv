@@ -1,0 +1,4 @@
+comparison	matrix	time	reference	reference_sem	exposed	exposed_sem	n_reference	n_exposed	units	source
+zhang_oaa	serum	60_min	115.9	10.7	52.8	8.8	4	4	percent_of_each_preinjection_baseline	Zhang 2017 Fig 1D
+zhang_dialysis	serum	before_vs_end	100.7	6.5	64.2	6.8	4	4	percent_of_pre_experimental_baseline	Zhang 2017 Fig 3D
+zhang_oaa_30	serum	30_min	107.8	5.4	72.0	9.7	4	4	percent_of_each_preinjection_baseline	Zhang 2017 Fig 4E
