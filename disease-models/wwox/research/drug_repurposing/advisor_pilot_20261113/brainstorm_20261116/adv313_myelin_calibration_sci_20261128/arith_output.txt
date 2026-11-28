@@ -1,0 +1,41 @@
+contrast | ln structure | ln speed | |s|/|c|
+Palma axon-count | -0.142 | -0.170 | 0.83
+Palma g small | +0.024 | -0.170 | 0.14
+Crawford10 thick EAE/normal | -0.799 | -0.074 | 10.77
+Crawford10 g EAE/normal | +0.077 | -0.074 | 1.04
+Crawford10 thick ligand/EAE | +0.879 | +0.128 | 6.89
+Crawford10 g ligand/EAE | -0.101 | +0.128 | 0.79
+Nr2f1 g | -0.161 | -0.243 | 0.66
+STZ thick lumbar | -0.241 | -0.258 | 0.93
+STZ g lumbar | +0.150 | -0.258 | 0.58
+STZ thick cervical | -0.351 | -0.028 | 12.74
+STZ g cervical | +0.015 | -0.028 | 0.55
+CPZ pct-myelinated +0.16 | -1.277 | +0.036 | 35.33
+CPZ pct-myelinated -1.59 | -2.167 | +0.012 | 185.67
+CPZ g -1.59 | +0.152 | +0.012 | 13.04
+L-NIO myelinated-number | -0.410 | -0.131 | 3.14
+Dutta g | +0.063 | -0.228 | 0.28
+Fig4 pct-myelinated Olig2Cre | -1.885 | -1.153 | 1.63
+Fig4 pct-myelinated SynCre | -2.172 | -0.999 | 2.18
+Fig4 g Olig2Cre | +0.063 | -1.153 | 0.05
+Fig4 g SynCre | +0.048 | -0.999 | 0.05
+headline-variable set (7 sources): combinations 36, rho min -0.32, max +0.07, rho>=0.7 in 0, |rho|<0.5 in 36
+g-ratio class (7 sources): combinations 8, rho min -0.14, max +0.07, rho>=0.7 in 0, |rho|<0.5 in 8
+
+first-listed choices:
+headline +0.07
+  leave out Palma axon-count +0.09
+  leave out Crawford10 thick EAE/normal +0.37
+  leave out Nr2f1 g +0.03
+  leave out STZ thick lumbar +0.03
+  leave out CPZ pct-myelinated +0.16 +0.37
+  leave out Dutta g +0.09
+  leave out Fig4 pct-myelinated Olig2Cre -0.49
+g-ratio -0.14
+  leave out Palma g small -0.37
+  leave out Crawford10 g EAE/normal -0.09
+  leave out Nr2f1 g -0.43
+  leave out STZ g lumbar -0.20
+  leave out CPZ g -1.59 +0.14
+  leave out Dutta g -0.20
+  leave out Fig4 g Olig2Cre +0.14
