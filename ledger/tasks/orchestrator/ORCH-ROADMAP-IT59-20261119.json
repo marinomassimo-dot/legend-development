@@ -727,6 +727,13 @@
      "accepted_at": "2026-11-28T16:30:25Z",
      "evidence": "2e3ca7321 and this commit; ADV accepted, no registry edit",
      "updated_at": "2026-11-28T16:30:25Z"
+    },
+    {
+     "step": "ADV-337: complete read of PMID 33914858 as countable PAPER record with receipt, then blind comparison of the consuming sentences; PREREG first; composition check; report at 250k",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-28 (ADV-337)",
+     "accepted_at": "2026-11-28T16:35:30Z"
     }
    ]
   }
@@ -1289,6 +1296,13 @@
    "at": "2026-11-28T16:30:25Z",
    "source": "IT39 launch message 2026-11-28; ADV message 2026-11-28",
    "step_sha256": "770d9cc067b3",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T16:35:30Z",
+   "source": "ADV message 2026-11-28 (ADV-337)",
+   "step_sha256": "ef605f99fe1b",
    "reopened_block": false,
    "authorised_by": null
   }
