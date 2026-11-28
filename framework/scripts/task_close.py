@@ -28,6 +28,12 @@ in-flight inputs or conflict at the next landing (N3, metabolic batch 2026-10-19
 regeneration fails the landing stands, the reason is printed and the exit status is 3. An
 unverifiable surface (CHECK_ERROR) still refuses; its override is a stated reason,
 `--stale-surfaces-because "<why>"`, which is printed.
+
+When NO worktree holds main (2026-11-28: the root checkout is detached and actors publish with
+`safe_push.py`), nothing can be merged here. The tool then only CLOSES: if the task tip is already
+in a remote-tracking `refs/remotes/<remote>/main` it detaches the worktree, deletes the branch
+(and, with `--remove-worktree`, the worktree) and prints `PUBLISHED_IN <ref> <full ID>`; otherwise
+it refuses and names the `safe_push.py` command to run first. It fetches and pushes nothing.
 """
 from __future__ import annotations
 
@@ -139,15 +145,48 @@ def check_freshness(source: Path, tip: str, main_sha: str,
                    f"--stale-surfaces-because \"<reason>\".\n{report_text}")
 
 
+def published_in(source: Path, tip: str) -> list[str]:
+    """The remote-tracking `main` branches that already contain `tip`, as of the last fetch or push."""
+    out = git(["for-each-ref", "--format=%(refname)", f"--contains={tip}", "refs/remotes"], source)
+    return [ref for ref in out.split() if ref.count("/") == 3 and ref.endswith("/main")]
+
+
+def close_published(source: Path, primary: Path, branch: str, current: str, tip: str,
+                    remove_worktree: bool, dry_run: bool) -> list[list[str]]:
+    """No worktree holds main: detach and delete a branch whose tip a remote main already has."""
+    if not published_in(source, tip):
+        raise GitError("no worktree holds main, so nothing can be merged here, and no remote-tracking "
+                       f"main contains {tip}. Publish from this branch first:\n"
+                       f"  python3 framework/scripts/safe_push.py <remote> main --expect-sha {tip} --serialize\n"
+                       "then run task_close again to detach and delete the branch. Nothing was changed.")
+    clean(source, remove_worktree)
+    commands = [["git", "-C", str(source), "switch", "--detach", "HEAD"],
+                ["git", "-C", str(source), "branch", "-d", "--", branch]]
+    if remove_worktree:
+        commands.append(["git", "-C", str(primary), "worktree", "remove", str(source)])
+    if dry_run:
+        return commands
+    if git(["rev-parse", "HEAD"], source).strip() != tip or git(["branch", "--show-current"], source).strip() != current:
+        raise GitError("task checkout changed; retry after inspection")
+    git(commands[0][3:], source)
+    # `branch -d` measures "merged" against the upstream when there is one; HEAD (= the tip) is what was verified.
+    if git(["for-each-ref", "--format=%(upstream)", f"refs/heads/{branch}"], source).strip():
+        git(["branch", "--unset-upstream", branch], source)
+    git(commands[1][3:], source)
+    if remove_worktree:
+        git(commands[2][3:], primary)
+    return commands
+
+
 def close_task(start: Path, remove_worktree: bool = False,
                dry_run: bool = False, resume_branch: str | None = None,
                stale_because: str | None = None) -> list[list[str]]:
     source = repo_root(start).resolve()
     trees = worktrees(source)
     mains = [Path(str(t["path"])).resolve() for t in trees if t["branch"] == "main"]
-    if len(mains) != 1:
+    if len(mains) > 1:
         raise GitError("main must be checked out in exactly one worktree")
-    destination = mains[0]
+    destination = mains[0] if mains else None
     current = git(["branch", "--show-current"], source).strip()
     branch = resume_branch or current
     if not branch or branch == "main" or source == destination:
@@ -165,6 +204,9 @@ def close_task(start: Path, remove_worktree: bool = False,
     if remove_worktree and any(Path(str(t["path"])).resolve() == source and t.get("locked")
                                for t in trees):
         raise GitError("the task worktree is locked; keeping its branch and checkout")
+    if destination is None:
+        return close_published(source, Path(str(trees[0]["path"])).resolve(), branch, current, tip,
+                               remove_worktree, dry_run)
 
     commands = [["git", "-C", str(destination), "merge", "--no-ff", "-m", "repository: integrate task",
                  "--no-overwrite-ignore", f"refs/heads/{branch}"],
@@ -288,6 +330,10 @@ def main(argv: list[str] | None = None) -> int:
                              "stale or unverifiable, for this stated reason (printed)")
     args = parser.parse_args(argv)
     try:
+        # decided before closing: --remove-worktree leaves no directory to ask afterwards
+        main_held = any(t["branch"] == "main" for t in worktrees(repo_root(Path.cwd()).resolve()))
+        tip_before = git(["rev-parse", "HEAD"], Path.cwd()).strip()
+        landed_refs = [] if main_held else published_in(Path.cwd(), tip_before)
         commands = close_task(Path.cwd(), args.remove_worktree, args.dry_run, args.branch,
                               args.stale_because)
     except LandedButNotRegenerated as exc:
@@ -297,6 +343,11 @@ def main(argv: list[str] | None = None) -> int:
         print(f"task_close: {exc}", file=sys.stderr)
         return 2
     print("\n".join(shlex.join(command) for command in commands))
+    if not main_held:
+        # no landing happened here, so no MERGED_MAIN and no PUSH_NOTE: the local `main` ref says nothing
+        print(f"PUBLISHED_IN {', '.join(landed_refs)} {tip_before}")
+        print("DRY_RUN" if args.dry_run else "TASK_CLOSED")
+        return 0
     if not args.dry_run:
         # The FULL object ID, for machine comparison: `git log` and this tool's own PUSH_NOTE
         # abbreviate, and a hash typed from an abbreviation has its tail guessed (2026-09-28,
