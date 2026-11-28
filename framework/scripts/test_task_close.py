@@ -235,6 +235,69 @@ class TaskClosure(unittest.TestCase):
         self.assert_kept()
         self.assertEqual("task/test", run(["branch", "--show-current"], self.wt).strip())
 
+class NoWorktreeHoldsMain(unittest.TestCase):
+    """2026-11-28: the root checkout is detached and actors publish with safe_push, so every closure was refused and landed branches stayed."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(prefix="legend-close-")
+        self.addCleanup(self.tmp.cleanup)
+        self.repo = Path(self.tmp.name) / "root"
+        self.repo.mkdir()
+        run(["init", "-q", "-b", "main"], self.repo)
+        run(["config", "user.name", "close-test"], self.repo)
+        run(["config", "user.email", "close@example.invalid"], self.repo)
+        commit(self.repo, "base", "base")
+        run(["switch", "-q", "--detach", "HEAD"], self.repo)
+        self.wt = Path(self.tmp.name) / "task space"
+        run(["worktree", "add", "-q", "-b", "task/test", str(self.wt), "main"], self.repo)
+        commit(self.wt, "task", "completed task")
+        self.tip = run(["rev-parse", "HEAD"], self.wt).strip()
+
+    def publish(self):
+        run(["update-ref", "refs/remotes/development/main", self.tip], self.repo)
+
+    def branches(self):
+        return run(["branch", "--list", "task/test"], self.repo).strip()
+
+    def test_an_unpublished_tip_is_refused_with_the_command_and_nothing_changes(self):
+        done = run_cli(self.wt)
+        self.assertEqual(done.returncode, 2, done.stdout + done.stderr)
+        self.assertIn(f"safe_push.py <remote> main --expect-sha {self.tip}", done.stderr)
+        self.assertTrue(self.branches())
+        self.assertEqual("task/test", run(["branch", "--show-current"], self.wt).strip())
+
+    def test_a_published_tip_is_closed_without_touching_local_main(self):
+        self.publish()
+        before = run(["rev-parse", "main"], self.repo)
+        run(["config", "branch.task/test.remote", "development"], self.repo)
+        done = run_cli(self.wt)
+        self.assertEqual(done.returncode, 0, done.stderr)
+        self.assertIn(f"PUBLISHED_IN refs/remotes/development/main {self.tip}", done.stdout)
+        self.assertIn("TASK_CLOSED", done.stdout)
+        self.assertNotIn("MERGED_MAIN", done.stdout)
+        self.assertEqual("", self.branches())
+        self.assertEqual("", run(["branch", "--show-current"], self.wt).strip())
+        self.assertEqual(before, run(["rev-parse", "main"], self.repo))
+
+    def test_removal_and_dry_run(self):
+        self.publish()
+        dry = run_cli(self.wt, "--dry-run", "--remove-worktree")
+        self.assertEqual(dry.returncode, 0, dry.stderr)
+        self.assertTrue(self.branches() and self.wt.exists())
+        done = run_cli(self.wt, "--remove-worktree")
+        self.assertEqual(done.returncode, 0, done.stderr)
+        self.assertFalse(self.wt.exists())
+        self.assertEqual("", self.branches())
+
+    def test_a_dirty_task_checkout_is_still_refused(self):
+        self.publish()
+        (self.wt / "stray").write_text("x\n")
+        done = run_cli(self.wt)
+        self.assertEqual(done.returncode, 2)
+        self.assertIn("not clean", done.stderr)
+        self.assertTrue(self.branches())
+
+
 class TheCliIsDriven(unittest.TestCase):
     """``main`` as a subprocess from the task worktree — what §21e tells an actor to run.
 
