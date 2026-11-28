@@ -1,0 +1,12 @@
+panel	measure	n_treated	n_comparator	mean_treated	mean_comparator	difference	conditional_bootstrap_low95	conditional_bootstrap_high95	unit
+2B	10uMTZ baseline	17	12	2.5098	1.6285	0.8813	0.2122	1.5547	sensor ratio
+2C	10uMTZ Post-stim	17	12	85.6721	70.6770	14.9952	3.2877	26.5563	% baseline sensor ratio
+2D	10uMTZ Recovery	17	12	97.5043	77.0808	20.4234	6.0858	34.2497	% baseline sensor ratio
+2D minus 2C	10uMTZ paired recovery	17	12	11.8321	6.4039	5.4282	-3.1968	13.6362	percentage points of baseline
+2B	PGK1-HALO baseline	10	12	1.6246	1.6285	-0.0038	-0.4932	0.4750	sensor ratio
+2C	PGK1-HALO Post-stim	10	12	88.0861	70.6770	17.4091	9.5664	25.3841	% baseline sensor ratio
+2D	PGK1-HALO Recovery	10	12	107.5470	77.0808	30.4661	18.0434	44.3441	% baseline sensor ratio
+2D minus 2C	PGK1-HALO paired recovery	10	12	19.4609	6.4039	13.0570	2.9468	23.3261	percentage points of baseline
+Fig.1E.csv	10uMTerazosin minus 0.1mMGlucose, train 10	10	23	0.1356	0.2599	-0.1243	-0.2078	-0.0370	fraction of NH4Cl-revealed fluorescence
+Fig.S2F.csv	10uMTZ+PGK1_KD minus 10uMTZ, train 10	13	10	0.4036	0.1356	0.2680	0.1320	0.3977	fraction of NH4Cl-revealed fluorescence
+Fig.S2H.csv	10uMTZ-md minus 10uMTZ, train 10	10	10	0.0703	0.1356	-0.0653	-0.1367	0.0042	fraction of NH4Cl-revealed fluorescence
