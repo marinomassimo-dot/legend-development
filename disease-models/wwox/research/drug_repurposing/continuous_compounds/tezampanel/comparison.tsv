@@ -1,0 +1,38 @@
+contrast	value	unit	source_or_assumption
+minimum Hill-1 potency ratio	16.0	ratio	Illustrative criterion 80% kainate and at most 20% AMPA inhibition
+GluA2-flip vs GluK1 (fixed glutamate IC50) potency ratio	29.86	ratio	Alt 2006 Table 1
+GluA2-flip vs GluK1 (fixed glutamate IC50) AMPA inhibition	11.81	%	Hill-1 scenario at 80% kainate inhibition
+GluA2-flip vs GluK1 (equal fractional challenge using apparent Kb) potency ratio	3.00	ratio	Alt 2006 Table 1
+GluA2-flip vs GluK1 (equal fractional challenge using apparent Kb) AMPA inhibition	57.14	%	Hill-1 scenario at 80% kainate inhibition
+GluA2-flip vs GluK1/GluK2 (fixed glutamate IC50) potency ratio	20.90	ratio	Alt 2006 Table 1
+GluA2-flip vs GluK1/GluK2 (fixed glutamate IC50) AMPA inhibition	16.06	%	Hill-1 scenario at 80% kainate inhibition
+GluA2-flip vs GluK1/GluK2 (equal fractional challenge using apparent Kb) potency ratio	1.20	ratio	Alt 2006 Table 1
+GluA2-flip vs GluK1/GluK2 (equal fractional challenge using apparent Kb) AMPA inhibition	76.92	%	Hill-1 scenario at 80% kainate inhibition
+GluA2-flip vs GluK1/GluK5 (fixed glutamate IC50) potency ratio	6.53	ratio	Alt 2006 Table 1
+GluA2-flip vs GluK1/GluK5 (fixed glutamate IC50) AMPA inhibition	37.98	%	Hill-1 scenario at 80% kainate inhibition
+GluA2-flip vs GluK1/GluK5 (equal fractional challenge using apparent Kb) potency ratio	0.86	ratio	Alt 2006 Table 1
+GluA2-flip vs GluK1/GluK5 (equal fractional challenge using apparent Kb) AMPA inhibition	82.35	%	Hill-1 scenario at 80% kainate inhibition
+GluA2-flop vs GluK1 (fixed glutamate IC50) potency ratio	21.43	ratio	Alt 2006 Table 1
+GluA2-flop vs GluK1 (fixed glutamate IC50) AMPA inhibition	15.73	%	Hill-1 scenario at 80% kainate inhibition
+GluA2-flop vs GluK1 (equal fractional challenge using apparent Kb) potency ratio	4.00	ratio	Alt 2006 Table 1
+GluA2-flop vs GluK1 (equal fractional challenge using apparent Kb) AMPA inhibition	50.00	%	Hill-1 scenario at 80% kainate inhibition
+GluA2-flop vs GluK1/GluK2 (fixed glutamate IC50) potency ratio	15.00	ratio	Alt 2006 Table 1
+GluA2-flop vs GluK1/GluK2 (fixed glutamate IC50) AMPA inhibition	21.05	%	Hill-1 scenario at 80% kainate inhibition
+GluA2-flop vs GluK1/GluK2 (equal fractional challenge using apparent Kb) potency ratio	1.60	ratio	Alt 2006 Table 1
+GluA2-flop vs GluK1/GluK2 (equal fractional challenge using apparent Kb) AMPA inhibition	71.43	%	Hill-1 scenario at 80% kainate inhibition
+GluA2-flop vs GluK1/GluK5 (fixed glutamate IC50) potency ratio	4.69	ratio	Alt 2006 Table 1
+GluA2-flop vs GluK1/GluK5 (fixed glutamate IC50) AMPA inhibition	46.04	%	Hill-1 scenario at 80% kainate inhibition
+GluA2-flop vs GluK1/GluK5 (equal fractional challenge using apparent Kb) potency ratio	1.14	ratio	Alt 2006 Table 1
+GluA2-flop vs GluK1/GluK5 (equal fractional challenge using apparent Kb) AMPA inhibition	77.78	%	Hill-1 scenario at 80% kainate inhibition
+0.25 h whole-brain parent	1.141	µmol/kg	Raw homogenate mean; Apland Table 2
+0.25 h illustrative vascular-subtracted parent	0.461	µmol/kg	Apland Table 2 and assumed 10.3 µL residual plasma/g tissue
+0.25 h fraction of subtracted total needed to reach 0.2 µM	43.4	%	1 kg/L tissue scenario; not a measured free fraction or native potency
+0.5 h whole-brain parent	0.449	µmol/kg	Raw homogenate mean; Apland Table 2
+0.5 h illustrative vascular-subtracted parent	0.137	µmol/kg	Apland Table 2 and assumed 10.3 µL residual plasma/g tissue
+0.5 h fraction of subtracted total needed to reach 0.2 µM	146.1	%	1 kg/L tissue scenario; not a measured free fraction or native potency
+1 h whole-brain parent	0.429	µmol/kg	Raw homogenate mean; Apland Table 2
+1 h illustrative vascular-subtracted parent	0.364	µmol/kg	Apland Table 2 and assumed 10.3 µL residual plasma/g tissue
+1 h fraction of subtracted total needed to reach 0.2 µM	54.9	%	1 kg/L tissue scenario; not a measured free fraction or native potency
+1.5 h whole-brain parent	0.131	µmol/kg	Raw homogenate mean; Apland Table 2
+1.5 h illustrative vascular-subtracted parent	0.108	µmol/kg	Apland Table 2 and assumed 10.3 µL residual plasma/g tissue
+1.5 h fraction of subtracted total needed to reach 0.2 µM	184.9	%	1 kg/L tissue scenario; not a measured free fraction or native potency
