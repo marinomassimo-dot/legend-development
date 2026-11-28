@@ -1606,6 +1606,15 @@
      "accepted_at": "2026-11-28T07:38:10Z",
      "evidence": "286a400367e3 and 80a7f1b24de0 on main, gate PASS; 5 suite-red refusals 2026-11-25..28 counted; test_safe_push + test_landing_suites 84 OK",
      "updated_at": "2026-11-28T07:38:10Z"
+    },
+    {
+     "step": "CI #2770 red (test_verify_run Interruption KeyError cleanup): cause, reproduction, fix",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad message to HE 6fe75e26, 2026-11-28",
+     "accepted_at": "2026-11-28T08:56:58Z",
+     "evidence": "655ba20d8 / af3e65848 on main; real race (RUNNING saved before the SIGTERM handler); new test red before, 21/21 after; 1 red seen",
+     "updated_at": "2026-11-28T08:56:58Z"
     }
    ]
   }
@@ -2847,6 +2856,13 @@
    "at": "2026-11-28T07:38:10Z",
    "source": "ADV a5e6f2ad message to HE 6fe75e26, 2026-11-28: fine micro-upgrade, build only if it recurs",
    "step_sha256": "1c21b3fc6853",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T08:56:58Z",
+   "source": "ADV a5e6f2ad message to HE 6fe75e26, 2026-11-28",
+   "step_sha256": "3466e826547a",
    "reopened_block": false,
    "authorised_by": null
   }

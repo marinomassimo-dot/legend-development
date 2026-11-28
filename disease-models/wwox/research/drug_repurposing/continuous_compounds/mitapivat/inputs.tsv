@@ -1,0 +1,34 @@
+group	key	value	unit	locator
+plasma_arm_A	cmax	101.2	ng/mL	FDA 2022 review Table 6 model geometric mean
+plasma_arm_A	ctrough	10.1	ng/mL	FDA 2022 review Table 6
+plasma_arm_A	auc	450.4	ng*h/mL	FDA 2022 review Table 6
+plasma_arm_B	cmax	389.9	ng/mL	FDA 2022 review Table 6 model geometric mean
+plasma_arm_B	ctrough	32.3	ng/mL	FDA 2022 review Table 6
+plasma_arm_B	auc	1623.8	ng*h/mL	FDA 2022 review Table 6
+plasma_arm_C	cmax	935.2	ng/mL	FDA 2022 review Table 6 highest displayed historical arm geometric mean
+plasma_arm_C	ctrough	62.1	ng/mL	FDA 2022 review Table 6
+plasma_arm_C	auc	3591.4	ng*h/mL	FDA 2022 review Table 6
+adult_pk	interval	12	h	FDA 2022 review Table 6
+adult_pk	free_fraction	0.0233	fraction	FDA 2022 review Table 65 three tested concentrations
+adult_pk	free_base_mass	450.56	g/mol	DailyMed section 11 active moiety formula C24H26N4SO3
+rat_single	plasma_auc	253619	ng*h/mL	EMA original EPAR Distribution
+rat_single	brain_auc	14394	ng*h/g	EMA original EPAR Distribution total tissue
+rat_repeat	plasma_auc	192010	ng*h/mL	EMA original EPAR Distribution day 5
+rat_repeat	brain_auc	17506	ng*h/g	EMA original EPAR Distribution day 5 total tissue
+benchmarks	pkm2_ac50	38	nM	FDA 2022 review Table 59 recombinant coupled assay
+benchmarks	pkl_ac50	37	nM	FDA 2022 review Table 59 recombinant coupled assay
+benchmarks	pkr_wt_ac50	13	nM	FDA 2022 review Table 59 recombinant coupled assay
+benchmarks	h3_ec50	12	nM	FDA 2022 review inverse agonism paragraph at printed p65
+benchmarks	h3_ic50	102	nM	FDA 2022 review antagonism paragraph at printed p65
+pkr_assay	vehicle_vmax	0.69	umol/(s*mg)	Kung 2017 Table 1 WT row
+pkr_assay	vehicle_km	1.13	mM PEP	Kung 2017 Table 1 WT row
+pkr_assay	bound_vmax	0.74	umol/(s*mg)	Kung 2017 Table 1 WT row tested 5 uM compound
+pkr_assay	bound_km	0.32	mM PEP	Kung 2017 Table 1 WT row tested 5 uM compound
+peds_NT	active_n	19	participants	Grace ASH 2025 4654 Figures 3 and 4 and NCT05175105
+peds_NT	active_success	6	participants	Grace ASH 2025 4654 Hb response
+peds_NT	control_n	11	participants	Grace ASH 2025 4654 and NCT05175105
+peds_NT	control_success	0	participants	Grace ASH 2025 4654 Hb response
+peds_T	active_n	32	participants	ACTIVATE-KidsT sponsor report 1 Aug 2024 and NCT05144256
+peds_T	active_success	9	participants	ACTIVATE-KidsT sponsor report 1 Aug 2024 transfusion reduction
+peds_T	control_n	17	participants	ACTIVATE-KidsT sponsor report 1 Aug 2024 and NCT05144256
+peds_T	control_success	2	participants	ACTIVATE-KidsT sponsor report 1 Aug 2024 transfusion reduction

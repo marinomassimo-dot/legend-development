@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 260,
+   "distinct_hrefs": 261,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -547,7 +547,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2286,
-   "sha256": "2483bf3a0dcbf1ea720e87afaf4e72e53dacc56413020d9c143e23966570a39c"
+   "sha256": "6bc9c1ea40ba23a5796a7f311a026b9bc6176e478c3f29d9245f77595e79dfce"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5116464,
-   "sha256": "a4e400f758f0793101debea6b88ac0c41442e53ab84762dfdaa17694df243175"
+   "bytes": 5116582,
+   "sha256": "4d10665864f0a1cf6e31caf3953992c368be742931ab00d6bbd7e9d03fafc4de"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
@@ -644,6 +644,10 @@
   "reports/piracetam.pdf": {
    "bytes": 123732,
    "sha256": "740d52ac15e74cac221e60e3c4a76729607489d236260d846468f9ffc6c0e070"
+  },
+  "reports/pyruvate-kinase-response.pdf": {
+   "bytes": 119383,
+   "sha256": "c3401a4910c857c154551645377362cdd83f7cb5e3eb81cbfa3dccf94c3bdadf"
   },
   "reports/suvorexant.pdf": {
    "bytes": 118890,
