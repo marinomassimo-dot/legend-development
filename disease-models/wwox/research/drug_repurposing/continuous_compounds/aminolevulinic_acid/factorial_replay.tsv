@@ -1,0 +1,4 @@
+ALA_uM	SFC_uM	ALA_fold_MRR	SFC_fold_MRR	combined_fold_MRR	additive_residual	additive_low_2px	additive_high_2px	multiplicative_ratio	multiplicative_low_2px	multiplicative_high_2px
+50	25	1.1982	1.5899	1.4977	-0.2903	-0.4286	-0.1521	0.7862	0.7131	0.8680
+100	50	1.9585	2.2120	2.3733	-0.7972	-0.9355	-0.6590	0.5478	0.5141	0.5841
+200	100	2.5115	1.6129	3.4562	0.3318	0.1935	0.4700	0.8532	0.8037	0.9067
