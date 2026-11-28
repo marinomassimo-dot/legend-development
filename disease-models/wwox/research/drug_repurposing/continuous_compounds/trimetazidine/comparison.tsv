@@ -1,0 +1,37 @@
+comparison	statistic	value	unit	locator
+rat cardiac flux	palmitate	-16.393443	% change	PMID 10720420 abstract
+rat cardiac flux	glucose	25.886713	% change	PMID 10720420 abstract
+competitive at 2.5 µM immediate substrate	untreated rate	0.4	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+competitive at 2.5 µM immediate substrate	treated rate	0.2	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+competitive at 2.5 µM immediate substrate	remaining inhibition	50	% of same-substrate control	illustrative model prompted by PMID 12869392 Figure 1
+noncompetitive at 2.5 µM immediate substrate	untreated rate	0.4	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+noncompetitive at 2.5 µM immediate substrate	treated rate	0.2	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+noncompetitive at 2.5 µM immediate substrate	remaining inhibition	50	% of same-substrate control	illustrative model prompted by PMID 12869392 Figure 1
+competitive at 5 µM immediate substrate	untreated rate	0.48	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+competitive at 5 µM immediate substrate	treated rate	0.3	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+competitive at 5 µM immediate substrate	remaining inhibition	37.5	% of same-substrate control	illustrative model prompted by PMID 12869392 Figure 1
+noncompetitive at 5 µM immediate substrate	untreated rate	0.6	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+noncompetitive at 5 µM immediate substrate	treated rate	0.3	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+noncompetitive at 5 µM immediate substrate	remaining inhibition	50	% of same-substrate control	illustrative model prompted by PMID 12869392 Figure 1
+competitive at 10 µM immediate substrate	untreated rate	0.53333333	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+competitive at 10 µM immediate substrate	treated rate	0.4	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+competitive at 10 µM immediate substrate	remaining inhibition	25	% of same-substrate control	illustrative model prompted by PMID 12869392 Figure 1
+noncompetitive at 10 µM immediate substrate	untreated rate	0.8	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+noncompetitive at 10 µM immediate substrate	treated rate	0.4	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+noncompetitive at 10 µM immediate substrate	remaining inhibition	50	% of same-substrate control	illustrative model prompted by PMID 12869392 Figure 1
+competitive at 15 µM immediate substrate	untreated rate	0.55384615	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+competitive at 15 µM immediate substrate	treated rate	0.45	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+competitive at 15 µM immediate substrate	remaining inhibition	18.75	% of same-substrate control	illustrative model prompted by PMID 12869392 Figure 1
+noncompetitive at 15 µM immediate substrate	untreated rate	0.9	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+noncompetitive at 15 µM immediate substrate	treated rate	0.45	arbitrary rate	illustrative model prompted by PMID 12869392 Figure 1
+noncompetitive at 15 µM immediate substrate	remaining inhibition	50	% of same-substrate control	illustrative model prompted by PMID 12869392 Figure 1
+competitive model with exactly 50% at 2.5 µM	infimum at 15 µM	14.285714	% inhibition	illustrative model prompted by PMID 12869392 Figure 1
+rabbit myocyte trimetazidine	state 3 palmitoylcarnitine respiration	-22.279693	% change of group means	PMID 23388837 Table 1
+rabbit myocyte trimetazidine	palmitate-induced pore readout	-75.245098	% change of group means	PMID 23388837 Figure 4C
+rabbit myocyte 4-bromotiglic acid	state 3 palmitoylcarnitine respiration	-25	% change of group means	PMID 23388837 Table 1
+rabbit myocyte 4-bromotiglic acid	palmitate-induced pore readout	-5.1470588	% change of group means	PMID 23388837 Figure 4C
+rat patent distribution	whole-brain mean	37.233333	ng/g wet tissue	WO2018236745A1 Table 68
+rat patent distribution	mean paired total brain/plasma	2.33	ratio	WO2018236745A1 Table 68
+rat patent distribution	SD of paired total brain/plasma	0.67223508	ratio	WO2018236745A1 Table 68
+rat patent distribution	whole-brain mean as molar amount/mass	0.13979625	µmol/kg wet tissue	WO2018236745A1 Table 68 and PubChem 21109
+mouse PTZ kindling	low-arm hippocampal IL-6	-69.424996	% change of group means	PMID 40894200 Table 1
