@@ -30969,7 +30969,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9d5b3fe39393c3d9",
+  "digest": "6f4442f038f003c1",
   "kind": "lead",
   "leads_named": [
    "DL-REPO-001",
@@ -30992,7 +30992,7 @@
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-REPO-003",
   "origin_line": 3781,
-  "origin_title": "DL-REPO-003 — A curated database says valproate LOWERS WWOX expression in human cells, and the paper that carries the row states the opposite: the direction is a reading debt, not a lead",
+  "origin_title": "DL-REPO-003 — A curated database says valproate LOWERS WWOX expression in Homo sapiens (cell or tissue type not given; per the deposited sheet), and the paper that carries the row states the opposite: the direction is a reading debt, not a lead",
   "papers_named": [
    "PAPER 222"
   ],

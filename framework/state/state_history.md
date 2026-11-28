@@ -24,6 +24,8 @@ the repeated `prev_batch_commit_id` and the `target_wm_version` / `last_wm_updat
 `BATCH_20260909_001` — and none of them is a current value.
 
 ```yaml
+batch_20261128_001_scope: "No version bump, WM_v7.29 preserved, MANUAL trigger, ACTOR_ID orchestrator, mandate IT59 (IT successor 28; SCI ADV-295 block 1). Record-scoped: claim_registry_current CLAIM 032 (the exome clause; one replacement) and discovery_ledger_current DL-THER-089 (clause ii: Wnt direction is not shown to be model-dependent by Helton 2026; two ADDs), DL-REPO-003 (quote, species and sheet wording) and DL-METH-118 (brain-only summary). MINOR, no status or grade changed; the research_portfolio RP-033 next_action wording was fixed in the same landing (not a current file)."
+batch_20261128_001_candidates: "CC-20261128-ORCHESTRATOR-ADV295-B1-01 (propagated)"
 batch_20261126_002_scope: "No version bump, WM_v7.29 preserved, MANUAL trigger, ACTOR_ID orchestrator, mandate IT59 (IT successor 27; ADV-292 consumers). Record-scoped: discovery_ledger_current DL-MECH-170 (the Kam 2019 and Chen 2015 sentences, corrected after two blind rounds) and paper_registry_current PAPER 219 (evidence codes per allele; the RNA column). MINOR, no status or grade changed. The card edits of the same window (A01, A03, A04) went by the ordinary card route."
 batch_20261126_002_candidates: "CC-20261126-ORCHESTRATOR-ADV292-LEDGER-PAPER-01 (propagated)"
 batch_20261126_001_scope: "No version bump, WM_v7.29 preserved, MANUAL trigger, ACTOR_ID orchestrator, mandate IT59 (IT successor 27; checkpoint 26 section 3). Record-scoped: claim_registry_current CLAIM 021, three replacements (supplementary Fig. S3, Fig. S4 and Table S1 of Breton 2021 are held and read). MINOR, no status or grade changed."
