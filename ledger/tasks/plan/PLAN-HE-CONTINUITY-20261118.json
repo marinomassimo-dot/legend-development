@@ -1745,10 +1745,12 @@
     },
     {
      "step": "ADV tick cost: measure where strategic_advisor.py tick spends its time, one smallest verdict-preserving change only if under 30 s is reachable, report benefit and cost, after the view suites",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV direction round 2026-11-28T13:17Z tick-cost peer message",
-     "accepted_at": "2026-11-28T13:17:45Z"
+     "accepted_at": "2026-11-28T13:17:45Z",
+     "evidence": "framework/scripts/strategic_advisor.py: bare tick 49-53 s to 9.1 s, assignment_states output identical on 327 assignments, 240 tests OK",
+     "updated_at": "2026-11-28T13:58:29Z"
     },
     {
      "step": "Fix the i18n notice test that read a nested section's note as overview's own (IT35 report)",

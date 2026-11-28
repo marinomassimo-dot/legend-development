@@ -2098,8 +2098,7 @@ def assignment_states(campaign: Path) -> dict[str, dict[str, Any]]:
     def walk(node: Any, ident: str) -> tuple[bool, bool]:
         hit, ok = False, False
         if isinstance(node, dict):
-            blob = json.dumps(node)
-            if ident in blob and str(node.get("status", "")).upper() == "DONE":
+            if str(node.get("status", "")).upper() == "DONE" and ident in json.dumps(node):   # serialise only DONE nodes: dumping every dict was most of a tick (2026-11-28)
                 ok = True
             for v in node.values():
                 h, o = walk(v, ident); hit, ok = hit or h, ok or o
@@ -2115,7 +2114,10 @@ def assignment_states(campaign: Path) -> dict[str, dict[str, Any]]:
                 d = json.loads(path.read_text(encoding="utf-8"))
             except (OSError, json.JSONDecodeError):
                 continue
+            whole = json.dumps(d)
             for ident in out:
+                if ident not in whole and json.dumps(ident)[1:-1] not in whole:
+                    continue                                          # a record that never names the assignment can be neither TAKEN nor EXECUTED: no walk
                 h, o = walk(d, ident)
                 if any(tag in path.name for tag in SENDER_RECORDS):
                     continue                                      # the sender's own records name the drafts and their delivery (a DONE delivery step included): that is not a recipient taking one in charge

@@ -791,3 +791,7 @@
 {"evidence": "SendMessage 2026-11-28 after SCI's proposal", "id": "ADV-325", "receipt": ["2c50f36f-3149-48e7-8bbd-abdd9e9be2b4"], "state": "SENT", "to": ["SCI - CURRENT ba384503"], "utc": "2026-11-28T12:47:59Z"}
 {"assessment": "HOST", "id": "ADV-326", "key": "gsk3-phosphosite-blind-numeric-extraction-he", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-28T12:53:08Z"}
 {"evidence": "SendMessage 2026-11-28 with task text; HE bound and idle", "id": "ADV-326", "receipt": ["a4e44d41-ffd8-4585-a5a4-ebe3f753581a"], "state": "SENT", "to": ["HE - CURRENT 4441b7bf"], "utc": "2026-11-28T12:53:24Z"}
+{"assessment": "HOST", "id": "ADV-327", "key": "lithium-wt-developing-brain-gsk3-substrate-phosphorylation-sci", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-28T13:43:08Z"}
+{"evidence": "SendMessage 2026-11-28 after SCI's frozen prereg and option A", "id": "ADV-327", "receipt": ["557c08c8-df02-4b6e-a37a-21c10f87415d"], "state": "SENT", "to": ["SCI - CURRENT 7e0f7b15"], "utc": "2026-11-28T13:43:21Z"}
+{"assessment": "HOST", "id": "ADV-328", "key": "wwox-metabolic-confound-conditional-alleles-it", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-28T13:46:06Z"}
+{"evidence": "SendMessage 2026-11-28 after IT35's frozen PREREG", "id": "ADV-328", "receipt": ["572143a6-273e-4c0a-a6f0-170e5c9673a7"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 1c914d1b"], "utc": "2026-11-28T13:46:19Z"}
