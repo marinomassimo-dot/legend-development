@@ -219,7 +219,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active: L-histidine.** Compare parent entry and central histamine turnover before testing whether matched vigilance and recruitment preserve a pathway-dependent effect. [Prespecified contrast](l_histidine/pretest.md)
+**Active: L-histidine.** Two primary rat abstracts separate tissue histamine from its methylated products after injected or oral exposure. Next verify direct extracellular or labelled turnover after precursor and align exposure and age. [Prespecified contrast](l_histidine/pretest.md) · [Opening comparison](l_histidine/first_comparison.md)
 
 **Tezampanel.** Retain as a mixed AMPA/GluK1 comparator in calibrated tissue assays and defer pediatric WWOX priority. The GluA2-flip versus GluK1 margin changes from 30-fold to 3-fold after the published agonist correction. Juvenile neural free parent is unresolved. Reopen with a native GluK1-dependent release contrast at measured exposure and matched AMPA, NMDA and first recruitment. [Dossier and replay](tezampanel/README.md)
 
