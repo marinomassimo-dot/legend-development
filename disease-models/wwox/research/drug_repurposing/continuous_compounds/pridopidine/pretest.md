@@ -1,0 +1,7 @@
+# Pridopidine comparison pretest
+
+Frozen 28 November 2026 UTC after bibliographic triage and before targeted extraction. The central question is whether restoring productive ER-to-mitochondrial calcium coupling in WWOX-LoF can improve ATP recovery at the same neuronal work. Consider a real reduction in workload, an already overloaded mitochondrial calcium compartment and calcium-independent trophic effects as rivals.
+
+In genotype-matched preparations, compare responses at measured local parent and matched first recruitment and integrated demand. Measure the ER source transient, cytosolic calcium, matrix calcium, membrane potential and ATP recovery as separate quantities. An early matrix transfer change conditional on SIGMAR1 and followed by ATP benefit at equal work supports the coupling hypothesis. Preserved benefit when matrix entry is interrupted supports a rival. Increased and prolonged matrix calcium with worse recovery or delayed depolarization lowers priority even if appositions increase. The same oxygen-consumption change after an unmatched reduction in demand is uninformative.
+
+Keep tracer displacement, local target activity, organelle apposition, ionic transfer and organism-level outcomes as separate evidence. A credible WWOX-specific control point and a fit-for-purpose juvenile exposure bridge are required to reconsider priority. The current scope is ex vivo hypothesis testing and an exposure audit.
