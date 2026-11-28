@@ -1,0 +1,7 @@
+pmid	doi	consumer_file_and_line	consumer_unit	units	route_result_2026-11-28
+19465938	10.1038/onc.2009.120	disease-models/wwox/research/discovery_ledger_current.md:97;:102;:208	DL-MOL-003; DL-MECH-008	2	Europe PMC no PMC copy; nature.com 200, subscription preview only; OpenAlex closed; HAL 0 records; CORE record without file; Semantic Scholar 429; queued FT-180
+14695174		disease-models/wwox/research/drug_repurposing/cards/A02_proteasome_inhibitor_class.card.json:426	card A02	1	Europe PMC no PMC copy; aacrjournals.org 403 challenge page; OpenAlex closed; CORE no match; Semantic Scholar 429; queued FT-206
+16818616	10.1158/0008-5472.CAN-06-0956	disease-models/wwox/research/discovery_ledger_current.md:3794	DL-REPO-003	1	Europe PMC no PMC copy (supplementary figure only, figshare); OpenAlex closed; hdl.handle.net/11392/499115 500; publisher not retried after the 403 of the same site
+25720522	10.1007/s12032-015-0525-y	disease-models/wwox/research/discovery_ledger_current.md:3794	DL-REPO-003	1	Europe PMC subscription link only; no other route tried
+34015398	10.1016/j.canlet.2021.05.010	disease-models/wwox/research/discovery_ledger_current.md:110	DL-MOL-004	1	Europe PMC subscription link only; no other route tried
+25411445		disease-models/wwox/registries/claim_registry_current.md:631	CLAIM 030	1	not tried today; already waiting for the operator supply (mandate step L)
