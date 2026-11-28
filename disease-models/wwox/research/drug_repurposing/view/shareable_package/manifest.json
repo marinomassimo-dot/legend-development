@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 252,
+   "distinct_hrefs": 253,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -247,7 +247,7 @@
     ]
    ],
    "forbidden_identifiers": 100768,
-   "forbidden_names": 126039,
+   "forbidden_names": 126038,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
     "count": 159,
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5113874,
-   "sha256": "a440b40d3746a84be600d3591c32d102b22d24d1d11d13c5dd68d97d8345f7b2"
+   "bytes": 5113965,
+   "sha256": "1c4d5885045f9c73e3874318d70aa846c905ceb5aaa0b0e86cbd8d6eb5238afe"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
@@ -584,6 +584,10 @@
   "reports/ethosuximide.pdf": {
    "bytes": 186816,
    "sha256": "0abbf2afae4d7572e65036afe4ea773919d27ac90aaf33e5531ac2575bccd19a"
+  },
+  "reports/etifoxine.pdf": {
+   "bytes": 120242,
+   "sha256": "a2900f088c34f68b60c40ba86594e9db0bdc3428a958cd06168514c2c8d50f70"
   },
   "reports/f16bp.pdf": {
    "bytes": 123360,

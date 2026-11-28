@@ -11,8 +11,8 @@ fast_gaba_low_nominal	0.1	µM	Schlichter et al. 2000 section 3.3.1 and Fig. 1, a
 fast_gaba_peak_nominal	2	µM	Schlichter et al. 2000 section 3.3.1 and Fig. 1, approximate
 frog_homogenate_nominal	1	µM	do Rego et al. 2015 Figs. 7–9, nominal parent
 frog_explant_timecourse_nominal	3	µM	do Rego et al. 2015 Fig. 4, nominal parent
-human_plasma_allo_etifoxine_mean	0.183	ng/mL	Riebel et al. 2025 Table 1, day 5
-human_plasma_allo_placebo_mean	0.190	ng/mL	Riebel et al. 2025 Table 1, day 5
+human_plasma_allo_etifoxine_mean	0.183	ng/mL	Riebel et al. (10.1007/s00406-024-01843-7) Table 1, day 5
+human_plasma_allo_placebo_mean	0.190	ng/mL	Riebel et al. (10.1007/s00406-024-01843-7) Table 1, day 5
 seizures_etifoxine	290	events	Sirimontakan et al. 2023 Table 5.2
 seizures_placebo	348	events	Sirimontakan et al. 2023 Table 5.2
 followup_etifoxine	43.54	person-months	Sirimontakan et al. 2023 Table 5.2
