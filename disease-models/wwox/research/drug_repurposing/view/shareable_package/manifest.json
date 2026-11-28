@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 244,
+   "distinct_hrefs": 245,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -562,12 +562,16 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5113106,
-   "sha256": "912ce1255e3d1cf1a59953df83f0b95a7f60e880638a3548879bb976dc280cf4"
+   "bytes": 5113201,
+   "sha256": "3db2fa79786b531fbe777cc9cbf5f10ea32b58fef4e38bc8ca5b2f6a30a64be9"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
    "sha256": "bc4fcfe23c834c9651b12a5451f0e7e3ca3b354e6bbe6278970df0a89d27d3f2"
+  },
+  "reports/baricitinib.pdf": {
+   "bytes": 129454,
+   "sha256": "ee758c926be1e5c6bb20a45304d728c62111d098c7475e61f0a641a6aedc6ce0"
   },
   "reports/chlorzoxazone.pdf": {
    "bytes": 128607,
