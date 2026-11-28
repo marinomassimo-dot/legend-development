@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 247,
+   "distinct_hrefs": 248,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5113410,
-   "sha256": "49a648c4849744152e4391523282edcb318f4b26eb29199964e3065ec93b4f0b"
+   "bytes": 5113494,
+   "sha256": "576bf5de721a8a9a015d5ab6e6be2dec8c5cc3fcf180e9a09091f28016703c06"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
@@ -580,6 +580,10 @@
   "reports/ethosuximide.pdf": {
    "bytes": 186816,
    "sha256": "0abbf2afae4d7572e65036afe4ea773919d27ac90aaf33e5531ac2575bccd19a"
+  },
+  "reports/f16bp.pdf": {
+   "bytes": 123360,
+   "sha256": "c45577e8809b51e81d6a034dc95fb0cb223447fb0ffc88eeb38578bd8bc4bdb4"
   },
   "reports/felodipine.pdf": {
    "bytes": 127966,
