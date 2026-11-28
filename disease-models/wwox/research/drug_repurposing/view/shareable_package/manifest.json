@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 243,
+   "distinct_hrefs": 244,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -562,8 +562,12 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5113015,
-   "sha256": "77cd2b4d0f78ef6d358754be349fc456c3180bc26a9f2a417fe43fa2e5ae517a"
+   "bytes": 5113106,
+   "sha256": "912ce1255e3d1cf1a59953df83f0b95a7f60e880638a3548879bb976dc280cf4"
+  },
+  "reports/amiloride.pdf": {
+   "bytes": 126398,
+   "sha256": "bc4fcfe23c834c9651b12a5451f0e7e3ca3b354e6bbe6278970df0a89d27d3f2"
   },
   "reports/chlorzoxazone.pdf": {
    "bytes": 128607,
