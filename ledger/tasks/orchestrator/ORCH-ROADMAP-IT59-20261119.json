@@ -657,10 +657,12 @@
     },
     {
      "step": "IT28: checkpoint 27 queue in ADV order: N02 wording on card F04 with the next card batch after a blind check; ADV-282 INC4-6 sentence set (section 3.1 five MUST CHANGE, section 4 ADD) plus DR-L01-003 addendum, each by blind packet with the whole source; ADV-285 S1-S8 with ADV-288 corrections; ADV-286 design note in parallel (start by 2026-12-01, freeze by 2026-12-04); DR-A01-002 stays withdrawn pending re-read; CI #2586 report to ADV; later SCI sentence sets (ADV-287 extension, ADV-295)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator launch message 2026-11-26 (IT successor window 54ca757b); generation_it59_20261119/CHECKPOINT_IT_20261126_2.md section 2",
-     "accepted_at": "2026-11-26T02:24:14Z"
+     "accepted_at": "2026-11-26T02:24:14Z",
+     "evidence": "IT39 check 2026-11-28 against commit subjects on development/main: N02 and ADV-282 INC4-6 4e6ff476c; ADV-285/288 167edd98f; ADV-287 extension b190be1ba; ADV-295 bfd65f651 and 004230e5b; ADV-286 note frozen and C1 frozen 2c6ce8f8c (later dates held as their own step); CI #2586 not re-read, superseded by later green runs; DR-A01-002 remains withdrawn",
+     "updated_at": "2026-11-28T16:30:25Z"
     },
     {
      "step": "IT32: apply ADV-accepted K1'-K3' (after HE ADV-315 re-read) to INV-06 next_test, clemastine callosal_propagation and sobetirome note, regenerate ranking and views, land; consume SCI ADV-314; write IT30+IT31 self-evaluation, capability scout, takeaways; one CI look per SHA",
@@ -673,17 +675,21 @@
     },
     {
      "step": "ADV-321 (DisMech three prompts in the ROOT checkout file DISMECH-COMPOUND-QUESTIONS-20261128.md; trace of the priority display for non-top dossiers) and the ADV-317 Crawford 2010 consumers for INV-06/RP-049 where a decision changes",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV cross-session messages 2026-11-28 (ADV-321 text /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv321.txt, ASSIGNMENT 1; ADV-317 note)",
-     "accepted_at": "2026-11-28T12:12:27Z"
+     "accepted_at": "2026-11-28T12:12:27Z",
+     "evidence": "part A b3ec0779e, part B 4fcfb2134; Crawford INV-06 sentence ab6b34093, RP-049 interval 34bab0cf1; the prompts are the operator's to paste (ADV 2026-11-28)",
+     "updated_at": "2026-11-28T16:30:25Z"
     },
     {
      "step": "ADV-333: cross the 183 catalogued-only records without receipt with the decision cells of RP-016, RP-018, RP-042, RP-043; PREREG, whole read as PAPER record with receipt, second reader, deliver to ADV and row owner",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message 2026-11-28 (ADV-333, assignment accepted from IT37 proposal)",
-     "accepted_at": "2026-11-28T15:08:44Z"
+     "accepted_at": "2026-11-28T15:08:44Z",
+     "evidence": "05010b723, 3ba6334d6, fd60afcc2; complete read BATCH_20261128_009; ADV 2026-11-28: ADV-333 remainder none",
+     "updated_at": "2026-11-28T16:30:25Z"
     },
     {
      "step": "IT38: complete read of PMID 31829254 (ADV-333 completion): PAPER record, receipt, second reader, BATCH_COMMIT",
@@ -702,6 +708,25 @@
      "accepted_at": "2026-11-28T16:00:25Z",
      "evidence": "RESULT_ADV335_IT_20261128.md",
      "updated_at": "2026-11-28T16:13:42Z"
+    },
+    {
+     "step": "ADV-286 dates: C1 re-check 2026-12-05; C2 not before 2026-12-06; UNRESOLVED 2026-12-12 if no printed poster date",
+     "status": "BLOCKED",
+     "owner": "orchestrator",
+     "source": "checkpoint 38 section 2 item 4; IT39 launch message 2026-11-28",
+     "accepted_at": "2026-11-28T16:30:25Z",
+     "blocker": "calendar: nothing to do before 2026-12-05",
+     "no_condition": "a date, not a repository event",
+     "updated_at": "2026-11-28T16:30:25Z"
+    },
+    {
+     "step": "IT39: second reading of the ADV-335 composition, compare with HE ADV-336, dated note on ADV-246/251, IT38 self-evaluation addendum",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "IT39 launch message 2026-11-28; ADV message 2026-11-28",
+     "accepted_at": "2026-11-28T16:30:25Z",
+     "evidence": "2e3ca7321 and this commit; ADV accepted, no registry edit",
+     "updated_at": "2026-11-28T16:30:25Z"
     }
    ]
   }
@@ -1250,6 +1275,20 @@
    "at": "2026-11-28T16:00:25Z",
    "source": "ADV message ADV-335, 2026-11-28",
    "step_sha256": "f3c428f98b6b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T16:30:25Z",
+   "source": "checkpoint 38 section 2 item 4; IT39 launch message 2026-11-28",
+   "step_sha256": "b4bdd9667b77",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T16:30:25Z",
+   "source": "IT39 launch message 2026-11-28; ADV message 2026-11-28",
+   "step_sha256": "770d9cc067b3",
    "reopened_block": false,
    "authorised_by": null
   }
