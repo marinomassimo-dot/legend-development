@@ -206,7 +206,7 @@
    "PMID": 159
   },
   "links": {
-   "distinct_hrefs": 251,
+   "distinct_hrefs": 252,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5113781,
-   "sha256": "a3712f659545a01f33455b1c8e0ef6a69a632f569382ff65e002921219f3e802"
+   "bytes": 5113874,
+   "sha256": "a440b40d3746a84be600d3591c32d102b22d24d1d11d13c5dd68d97d8345f7b2"
   },
   "reports/amiloride.pdf": {
    "bytes": 126398,
@@ -572,6 +572,10 @@
   "reports/baricitinib.pdf": {
    "bytes": 129454,
    "sha256": "ee758c926be1e5c6bb20a45304d728c62111d098c7475e61f0a641a6aedc6ce0"
+  },
+  "reports/bexarotene.pdf": {
+   "bytes": 120555,
+   "sha256": "dcbea99260b613ec33e182e3bae8e37b46495f435f8839d4010a15cbdc1bb400"
   },
   "reports/chlorzoxazone.pdf": {
    "bytes": 128607,
