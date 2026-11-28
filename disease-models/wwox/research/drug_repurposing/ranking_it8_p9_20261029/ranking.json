@@ -6101,7 +6101,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 3818
+   "receipt_ledger_lines": 3819
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -9969,7 +9969,7 @@
    "inputs": {
     "T1_cards": "1b03c19213149d81",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "121e5a8cd7ed72ab",
+    "T3_receipts": "0959c15536a963db",
     "T4_needs": "55ff62f47762bab4",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "a51c161c63ba11d3"
@@ -10031,7 +10031,7 @@
     "34268881",
     "42397075"
    ],
-   "receipts_on_cited_pmids": 47,
+   "receipts_on_cited_pmids": 48,
    "research_objective": "",
    "tracks": [
     "A"
@@ -11988,7 +11988,7 @@
    "inputs": {
     "T1_cards": "0ee15ad17336b705",
     "T2_pertinence": "8b0a047e9ce40434",
-    "T3_receipts": "dcab56eca1c75397",
+    "T3_receipts": "ea371ebf3c11a6f9",
     "T4_needs": "503be10cec75e346",
     "T5_pharmacology": "5da5f03bb1490bdc",
     "T6_identity": "589dd4de63446384"
@@ -12140,7 +12140,7 @@
     "36537114",
     "37275776"
    ],
-   "receipts_on_cited_pmids": 35,
+   "receipts_on_cited_pmids": 36,
    "research_objective": "",
    "tracks": [
     "A"
@@ -14521,7 +14521,7 @@
    "inputs": {
     "T1_cards": "4ab5a7b8cd78a98a",
     "T2_pertinence": "db0343ccb25dda32",
-    "T3_receipts": "bf1a16e303205a2c",
+    "T3_receipts": "e28813d8cb25b484",
     "T4_needs": "f8af163a656e7af1",
     "T5_pharmacology": "8e5ccb8ab12853d1",
     "T6_identity": "c599af8bf00c008f"
@@ -14641,7 +14641,7 @@
     "32000863",
     "36537114"
    ],
-   "receipts_on_cited_pmids": 31,
+   "receipts_on_cited_pmids": 32,
    "research_objective": "",
    "tracks": [
     "A"
@@ -14876,7 +14876,7 @@
    "inputs": {
     "T1_cards": "725b0aec1d59462f",
     "T2_pertinence": "904f40dca9a2c7f5",
-    "T3_receipts": "16fff434102ccf5f",
+    "T3_receipts": "84272afcf45fcca3",
     "T4_needs": "503be10cec75e346",
     "T5_pharmacology": "5da5f03bb1490bdc",
     "T6_identity": "61b1f388d5aca48f"
@@ -15019,7 +15019,7 @@
     "36537114",
     "40165594"
    ],
-   "receipts_on_cited_pmids": 25,
+   "receipts_on_cited_pmids": 26,
    "research_objective": "",
    "tracks": [
     "A"
