@@ -1,0 +1,8 @@
+[
+ {
+  "op": "replace-within",
+  "heading": "BLOCK 2 — claim registry mirror (baseline)",
+  "old": "a liver-de-targeted capsid costs ~8-fold packaging and brain exposure",
+  "new": "the liver-de-targeted capsid AAV9-DM costs ~8-fold packaging and about 60-fold fewer brain vector genomes per µg DNA than wild-type AAV9 (mouse; brain RNA not different)"
+ }
+]
