@@ -1,6 +1,6 @@
 {
-  "frozen_at": "2026-10-04T22:41:23Z",
-  "git_head_at_freeze": "64b33e71fd46b49bd37c5d69a550fa7f95293ce2",
+  "frozen_at": "2026-11-28T09:05:59Z",
+  "git_head_at_freeze": "9f1e2d7b528259e2070bbd7b0f3e55f6e0e35a8c",
   "git_verification_policy": "baseline bytes must match HEAD; every declared input and output must match git_head_at_freeze:path via git cat-file; freeze commit must be an ancestor of HEAD",
   "inputs": {
     "authored_assertions": {
@@ -22,16 +22,16 @@
     "claim_registry": {
       "path": "disease-models/wwox/registries/claim_registry_current.md",
       "scope_block_sha256": {
-        "CLAIM 016": "f93fa9f6ce09861438b2c3fed581a9279ec5f288aca936ce5d4d0078795b9a2e",
+        "CLAIM 016": "45b5f428f7e4179b230f130581fae791fa2896d84f967cd86aed39319fd6d79b",
         "CLAIM 024": "b720170fc2e4f0c150c5b72d75ac271aad8ebb7120d8d30054b125ba4e17afc7",
-        "CLAIM 035": "6504c5cf76c09461f21dea80b8602d8cc02c94dee987016a07c30c070c23dc35"
+        "CLAIM 035": "1c2309fa686adfa01d1082410d82600f27f5007f32d7f71c52d7b25866d5b0ce"
       },
       "scope_blocks": [
         "CLAIM 016",
         "CLAIM 024",
         "CLAIM 035"
       ],
-      "scope_sha256": "46c486836fb42cf9589e7917cd99561ee78a071abd6cb4aa3c01c24408c167f8",
+      "scope_sha256": "795a765ca130011b1db004ed89e3e928efa561f95ce0faf20a45ddabeeed87ff",
       "verification_policy": "sealed_scope"
     },
     "derivation_script": {
@@ -53,7 +53,7 @@
     "paper_registry": {
       "path": "disease-models/wwox/registries/paper_registry_current.md",
       "scope_block_sha256": {
-        "PAPER 019": "14fcd6c20d7f5864457f9543d2a1eb079cdc58ddc948b2a866a0d3d33ef66a6c",
+        "PAPER 019": "4297dbe02aaf590f5fc111592a279a29a175356707ee7f571d06d583e74b904d",
         "PAPER 055": "99d27a6d8a6baca392aa17fca7827bf7c843146a5824951fbd9f1054a73145c4",
         "PAPER 056": "d84d2f78863fe569d145839004871a9edb248436d06641ed601c7f82200f3662"
       },
@@ -62,7 +62,7 @@
         "PAPER 055",
         "PAPER 056"
       ],
-      "scope_sha256": "a8042da5c0cfcb11e880ca0aceeee4ad976cd8b28241d7db5cbb863226f62051",
+      "scope_sha256": "72a26148d18797a88f8337d03d150bc8b336911f8ba7e56c7bcb4bb1b734eeff",
       "verification_policy": "sealed_scope"
     },
     "receipt_ledger": {
@@ -113,9 +113,9 @@
   "output": {
     "path": "disease-models/wwox/analysis/data/dismech_sidecar_016_024_035.jsonl",
     "records": 49,
-    "sha256": "5395422fc64d76ac41f5cc0bd694ce1f8da385b8d60cf9391a3bfc5904da1c9f"
+    "sha256": "5fcc8e1a9292e39a0468f060d0708454177d9eefe4cc4b2014c5c3db3924bfe1"
   },
-  "revision": "rev.20 (BATCH_20261004_007, 2026-10-04): absorbing the CLAIM 016 and CLAIM 035 sealed-scope drift left standing by BATCH_20261004_004's D6 reciprocal Ser9 boundary appends, after measuring that the drift is exactly those two declared appends (one added line each, 1633 and 1593 bytes) and that CLAIM 024 is byte-identical",
+  "revision": "rev.21 (BATCH_20261128_004, 2026-11-28): CLAIM 016 additive dated clause of that batch; also absorbs two earlier committed batch drifts found at re-seal and traced before absorbing: CLAIM 035 (BATCH_20261120_001, additive evidence-boundary field) and PAPER 019 (BATCH_20261019_012 stale locator total; BATCH_20261019_027 reading update)",
   "revision_history": [
     {
       "frozen_at": "2026-09-28T03:13:48Z",
@@ -128,9 +128,15 @@
       "git_head_at_freeze": "e59067f3ca0aedde5b172fb91e1e803071e76e2b",
       "revision": "rev.19 (BATCH_20260928_007, 2026-09-28): the backlog batch edited CLAIM 016's Meccanismo aggiunto so that total GSK3B invariance in the Wang system is NOT_ASSERTED rather than stated (CC-20260826-GSK3B-S9-AXIS-01 D13, first site). The drifted block is THIS batch's own edit, declared in the WM_v7.6 changelog row, and is the only block named with --absorb; rev.19 is the first label strictly above rev.18.",
       "revision_ordinal": 19
+    },
+    {
+      "frozen_at": "2026-10-04T22:41:23Z",
+      "git_head_at_freeze": "64b33e71fd46b49bd37c5d69a550fa7f95293ce2",
+      "revision": "rev.20 (BATCH_20261004_007, 2026-10-04): absorbing the CLAIM 016 and CLAIM 035 sealed-scope drift left standing by BATCH_20261004_004's D6 reciprocal Ser9 boundary appends, after measuring that the drift is exactly those two declared appends (one added line each, 1633 and 1593 bytes) and that CLAIM 024 is byte-identical",
+      "revision_ordinal": 20
     }
   ],
-  "revision_ordinal": 20,
+  "revision_ordinal": 21,
   "window": {
     "before_phase5_pr": "Run assert_exportable(). It supersedes the manual re-verification this field used to describe: it reports per-block drift and refuses to export over anything unacknowledged. The risk it protects against is unchanged \u2014 shipping a contribution derived from superseded claims.",
     "closed_on": "2026-08-06",
