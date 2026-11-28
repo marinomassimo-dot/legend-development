@@ -661,6 +661,13 @@
      "owner": "orchestrator",
      "source": "operator launch message 2026-11-26 (IT successor window 54ca757b); generation_it59_20261119/CHECKPOINT_IT_20261126_2.md section 2",
      "accepted_at": "2026-11-26T02:24:14Z"
+    },
+    {
+     "step": "IT32: apply ADV-accepted K1'-K3' (after HE ADV-315 re-read) to INV-06 next_test, clemastine callosal_propagation and sobetirome note, regenerate ranking and views, land; consume SCI ADV-314; write IT30+IT31 self-evaluation, capability scout, takeaways; one CI look per SHA",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV decision 2026-11-28 in the IT32 dispatch; CHECKPOINT_IT_20261128_5.md section 2",
+     "accepted_at": "2026-11-28T10:19:18Z"
     }
    ]
   }
@@ -1174,6 +1181,13 @@
    "at": "2026-11-26T02:24:14Z",
    "source": "operator launch message 2026-11-26 (IT successor window 54ca757b); generation_it59_20261119/CHECKPOINT_IT_20261126_2.md section 2",
    "step_sha256": "32bbfa29b818",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T10:19:18Z",
+   "source": "ADV decision 2026-11-28 in the IT32 dispatch; CHECKPOINT_IT_20261128_5.md section 2",
+   "step_sha256": "57198b7b4c2a",
    "reopened_block": false,
    "authorised_by": null
   }

@@ -3462,3 +3462,10 @@ Gap: an assignment premise ("no functional readout is held") was wrong because t
 
 ### 2026-11-26, SCI, ADV-291 and ADV-292
 Gap: no single command lists the readable reading queue with the standing exclusions; the exclusions live in PREREG prose and three scripts of different dates, and SCI's first ADV-292 list was wrong by four records because of it. CHANGE = NONE in the harness for now: a bullet in the ADV-276 pre-read checklist. Candidate for HE if another reading batch follows ADV-292: one script that reads an exclusion table (record, reason, date) on top of `consumer_count.py`.
+
+## 2026-11-28 - IT Orchestrator windows IT30 and IT31 (written by IT32 from the record)
+Gap, repeated: a blind-verification packet can carry less than the source its sentence rests on (page 3 of a 24-page
+supplement; a text conversion without front matter or image-only tables), and the reader then cannot judge a
+whole-document negative. No tool checks it. CHANGE = NONE in the harness: the dispatch names the complete source files
+and states what the conversion drops. Candidate for the harness scout, not implemented here. Evidence:
+`session_evaluations/self_eval_orchestrator_it30_it31_20261128.md`. No external search, no spend.
