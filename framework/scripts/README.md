@@ -301,6 +301,7 @@ not by running it.
 
 | Module | What it defines |
 |---|---|
+| `framework/scripts/browser_scratch.py` | how a test runs a headless browser and leaves no profile folder or child process behind (`run_browser`, `remove_tree`; the 247 stale `~/legend_browser_tmp/tmp*` profiles of 2026-11-28) |
 | `framework/scripts/repo_root.py` | where the repository authority root is — one answer or a refusal, never a guess |
 | `framework/scripts/screen_verdict.py` | the verdict contract every screen in `framework/scripts/` returns |
 | `framework/scripts/corpus_firewall.py` | what a bibliographic corpus is, and how every guard recognises one |
