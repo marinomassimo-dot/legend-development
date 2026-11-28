@@ -1,6 +1,8 @@
 # ADV-295 block 2, record 2 (PMID 33704440): first reader report, verbatim
 
-Subagent hand-back saved verbatim by SCI on 2026-11-28 (legend-delegate, claude-sonnet-5-5, effort high read back from the transcript). Model output, hypothesis level, not medical advice; not edited.
+Subagent hand-back saved verbatim by SCI on 2026-11-28 (legend-delegate, claude-sonnet-5-5, effort high read back from the transcript). Model output, hypothesis level, not medical advice.
+
+**One redaction:** the inheritance entries of three rows of the individuals table (a published cohort, not the reference genotype) are replaced by "[inheritance redacted]" because the publication gate blocks that pairing in a record; nothing else is edited. No finding of this unit uses them.
 
 ---
 
@@ -51,10 +53,10 @@ Even then it could not rescue "gain-of-function variants cause seizures" as a un
 |---|---|---|---|---|
 | 1 | I860N, de novo | F, 8 y 1 m | severe global delay, no motor milestones, nonverbal | yes, onset 4 m, difficult to treat |
 | 2 | I860M, origin not determined | F, 58 y | IQ 70-85 | yes, onset 58 y, controlled on "Diphantoine" |
-| 3 | I860M, maternal | M, 28 y 11 m | IQ 50-70 | no (EEG: no data) |
-| 4 | I860M, maternal | F, 31 y | IQ 36-51 | no (EEG: no data) |
+| 3 | I860M, [inheritance redacted] | M, 28 y 11 m | IQ 50-70 | no (EEG: no data) |
+| 4 | I860M, [inheritance redacted] | F, 31 y | IQ 36-51 | no (EEG: no data) |
 | 5 | I1306T, de novo | F, 21 m | severe delay, hypotonia | yes, onset 2 wk, controlled (Keppra; earlier response to phenobarbital) |
-| 6 | M1425I, absent in mother, father untested | M, 8 y 3 m | developmental impairment, nonverbal | yes, onset 2 y, controlled |
+| 6 | M1425I, [inheritance redacted] | M, 8 y 3 m | developmental impairment, nonverbal | yes, onset 2 y, controlled |
 
 By variant, seizures were present in I860N 1/1, I860M 1/3, I1306T 1/1 and M1425I 1/1.
 
