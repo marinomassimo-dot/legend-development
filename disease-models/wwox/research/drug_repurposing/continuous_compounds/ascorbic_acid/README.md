@@ -13,3 +13,7 @@ Discriminating prediction: at measured extracellular reduced ascorbate over time
 Cross-model countercheck: SLC23A2 KO-minus-control bulk differences (mean log2[1+expression]) were −0.679 in mouse cortex, −0.327 in mouse hippocampus and +0.727 in human organoids. Omitting any single library preserved the opposing cortex and organoid signs; the hippocampal range included zero. This defeats a conserved whole-tissue transporter decrease. The organoid increase could reflect composition, stage or regulation. Prioritize a human cell-stage measurement of transporter protein and ascorbate uptake before testing a developmental intervention. [Bulk inputs and omission bounds](bulk.tsv). Reproduce with bulk.py REPO FILES OUTPUT.
 
 - 2026-11-24 (SCI, window AB): while the Codex lane was out, SCI took resume steps 1 and 2 over as ADV-210; result, disposition (c, parked) and the reopening measurement are in `../../advisor_pilot_20261113/brainstorm_20261116/adv210_ascorbate_resume_sci_20261124/RESULT_ADV210_ASCORBATE_RESUME_SCI_20261124.md`. Codex reconciles on return.
+
+[Resumption checkpoint on age, compartment and formulation](exposure_bridge_20261126.md) · [Human oligodendroglial transporter coverage](human_stage_checkpoint_20261126.md).
+
+[Final disposition and functional countercheck](peripheral_translation_20261126.md).

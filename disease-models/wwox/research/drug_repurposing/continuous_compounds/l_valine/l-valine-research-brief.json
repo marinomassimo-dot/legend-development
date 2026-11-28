@@ -1,0 +1,41 @@
+{
+  "investigation": "INV-07",
+  "title": "L-valine and mitochondrial flux in WOREE",
+  "date": "27 November 2026",
+  "summary": "A conditional preclinical comparator for substrate supply and oxidative recovery.",
+  "graph": {
+    "evidence": "Brain valine changes by genotype.",
+    "inference": "Intake poorly predicts local exposure.",
+    "hypothesis": "Valine flux can favor supply or overflow.",
+    "experiment": "Trace carbon and measure recovery."
+  },
+  "evidence": [
+    "With valine restriction, brain valine fell about 42% in WT and 1% in primary ECHS1-deficient mice. The mutant intervention did not measurably improve the provoked seizure outcomes."
+  ],
+  "inference": [
+    "The comparison does not establish what a confirmed reduction of valine in mutant brain would do. Lower ECHS1 RNA in WWOX cannot establish a matching enzyme defect."
+  ],
+  "hypothesis": [
+    "At matched cellular exposure, WWOX may route labeled valine into productive metabolites or disproportionately into the SCPC conjugate."
+  ],
+  "experiment": [
+    "Follow labeled valine into protein and mitochondrial products, then test direct pyruvate oxidation and functional recovery with a known ECHS1-deficient control."
+  ],
+  "limits": [
+    "Human nutrition data concern ECHS1 and HIBCH deficiencies. Local WWOX exposure and effects on growth, metabolism and spontaneous seizures are unresolved."
+  ],
+  "sources": [
+    {
+      "label": "Eller et al. Mouse diet comparisons and Supplementary Tables S1–S3.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13710032/"
+    },
+    {
+      "label": "Ferdinandusse et al. Direct hydratase and pyruvate dehydrogenase assays.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4474341/"
+    },
+    {
+      "label": "Abdenur et al. Nutritional observations in primary enzyme deficiencies.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7334802/"
+    }
+  ]
+}

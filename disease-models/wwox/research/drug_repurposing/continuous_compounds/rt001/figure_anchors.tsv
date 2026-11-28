@@ -1,0 +1,13 @@
+comparison	source_locator	bar	axis_zero_y	axis_reference_y	axis_reference_ng_ml_or_ng_g	bar_y	substrate_fraction
+firsov_9hpo	Firsov Fig. 11B/C, p. 9 at 150 dpi, 5 min without alpha-tocopherol	control_light	785	496	30	623	1
+firsov_9hpo	Firsov Fig. 11B/C, p. 9 at 150 dpi, 5 min without alpha-tocopherol	mixed_light	786	505	12	651	0.5
+firsov_9hpo	Firsov Fig. 11B/C, p. 9 at 150 dpi, 5 min without alpha-tocopherol	mixed_total_detected	786	505	12	570	1
+firsov_13hpo	Firsov Fig. 11B/C, p. 9 at 150 dpi, 5 min without alpha-tocopherol	control_light	785	496	30	598	1
+firsov_13hpo	Firsov Fig. 11B/C, p. 9 at 150 dpi, 5 min without alpha-tocopherol	mixed_light	786	505	12	638	0.5
+firsov_13hpo	Firsov Fig. 11B/C, p. 9 at 150 dpi, 5 min without alpha-tocopherol	mixed_total_detected	786	505	12	565	1
+raefsky_cortex_f4_ad	Raefsky Fig. 8A original 800x270 jpeg; APP/PS1 transgenic groups	control_light	245	48	250	92	1
+raefsky_cortex_f4_ad	Raefsky Fig. 8A original 800x270 jpeg; APP/PS1 transgenic groups	mixed_light	245	48	250	211	unknown
+raefsky_cortex_f4_wt	Raefsky Fig. 8A original 800x270 jpeg; WT groups	control_light	245	48	250	123	1
+raefsky_cortex_f4_wt	Raefsky Fig. 8A original 800x270 jpeg; WT groups	mixed_light	245	48	250	201	unknown
+raefsky_cortex_f2_ad	Raefsky Fig. 8C original 800x270 jpeg; APP/PS1 transgenic groups	control_light	245	54	5	129	1
+raefsky_cortex_f2_ad	Raefsky Fig. 8C original 800x270 jpeg; APP/PS1 transgenic groups	mixed_light	245	54	5	207	unknown

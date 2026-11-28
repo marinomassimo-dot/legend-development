@@ -1,0 +1,10 @@
+model	transcript_biotype	transcript_count	ctrl_n	ko_n	ctrl_TPM	ko_TPM	log2_delta
+hippocampus_neuronal_deletion	TEC	1	2	3	0.186198	0.17196833333333333	-0.02283579409954911
+hippocampus_neuronal_deletion	processed_transcript	3	2	3	6.9679400000000005	17.060067	1.1798941490874277
+hippocampus_neuronal_deletion	protein_coding	4	2	3	9.2194945	6.3204389999999995	-0.6004682814376325
+hippocampus_progenitor_deletion	TEC	1	2	2	0.243118	0.3604395	0.12825674807383636
+hippocampus_progenitor_deletion	processed_transcript	3	2	2	6.948653500000001	12.807126499999999	0.7802483840453878
+hippocampus_progenitor_deletion	protein_coding	4	2	2	7.514994	6.2577645	-0.2444223737369331
+hippocampus_constitutive_null	TEC	1	3	2	0.15565933333333332	0.1244535	-0.039609158618116064
+hippocampus_constitutive_null	processed_transcript	3	3	2	7.061245666666667	3.05239	-1.0127612869247484
+hippocampus_constitutive_null	protein_coding	4	3	2	2.6715683333333335	3.479535	0.2972745644154229

@@ -1,0 +1,5 @@
+measure	group	x	y_top	y_zero	y_tick	tick_count
+total_axons	control	1990	1956	2062	1891	150
+total_axons	GlcNAc	2080	1933	2062	1891	150
+myelinated_axons	control	1652	2271	2390	2219	100
+myelinated_axons	GlcNAc	1740	2242	2390	2219	100

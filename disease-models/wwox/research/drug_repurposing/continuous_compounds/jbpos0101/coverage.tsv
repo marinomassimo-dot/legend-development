@@ -1,0 +1,12 @@
+endpoint	value	locator
+registry_actual_enrollment	16	Design module
+STARTED	12	Participant flow
+COMPLETED	10	Participant flow
+NOT COMPLETED	2	Participant flow
+day28_eeg_response	not_posted	Prespecified analysis plan §6.2 and table shells 14.2.1–14.2.4
+spasm_or_hypsarrhythmia_response	not_posted	Prespecified analysis plan §6.2 and table shells 14.2.1–14.2.4
+taper_relapse	not_posted	Prespecified analysis plan §6.2 and table shells 14.2.1–14.2.4
+seizure_diary_response	not_posted	Prespecified analysis plan §6.2 and table shells 14.2.1–14.2.4
+CGI-C	not_posted	Prespecified analysis plan §6.2 and table shells 14.2.1–14.2.4
+EAS_or_mEAS_denominator	not_posted	Completion and PK denominators do not establish EEG evaluability
+raw_posted_outcome_count	9	Outcome measures module

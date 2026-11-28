@@ -1,0 +1,5 @@
+pmid	doi	retrieval_url	local_snapshot	sha256	coverage_locator	evidence_depth
+28073790	10.1093/brain/aww342	https://neuroscience.uga.edu/wp-content/uploads/sites/21/2017/07/Clemizole-and-modulators-of-serotonin-signalling-suppress-seizures-in-Dravet-syndrome.pdf	Griffin_2017.pdf	c9a2b6d2c43bd839d7ddfe44f9e8ca8ab69bf6e6180a36fa80f64baa0f775f98	pp. 670–674, methods and results, Figs. 1–2; Fig. 2 axis from rendered p. 674	partial_fulltext_read
+23143674	10.1124/jpet.112.198697	https://pmc.ncbi.nlm.nih.gov/articles/PMC3558826/	remote	NA	Methods LC-MS; Results human exposure and DDI; Table 2, Figs. 1/3 captions; separately checked erratum p. 327	partial_fulltext_read
+33683200	10.7554/eLife.63429	https://cdn.elifesciences.org/articles/63429/elife-63429-v2.pdf	Song_2021.pdf	462e1f5ed917ec7b089b6a172c622a519a9b18b166516f99d648f9f6b201a61c	pp. 2–6, Figs. 1–2, Table 2, FLIPR Methods pp. 14–15; Fig. 1 source spreadsheet rows 3–12	partial_fulltext_read
+42470359	10.1002/epi.70346	https://onlinelibrary.wiley.com/doi/full/10.1002/epi.70346	remote	NA	§§5.2.2, 5.4–5.8, Fig. 3 caption and study references; clemizole sponsor conference report section	partial_fulltext_read

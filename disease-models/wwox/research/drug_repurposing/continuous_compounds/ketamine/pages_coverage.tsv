@@ -1,0 +1,18 @@
+investigation	compound	anchor	group	research_role	dossier_links
+INV-04	Ethosuximide	#analysis-ethosuximide	priority	Direct Wwox seizure-model result	7
+INV-05	ifenprodil	#analysis-ifenprodil	pending	Named in an investigation	0
+INV-05	Ketamine	#analysis-ketamine	comparison	Probe of NMDA channel block and inhibitory output	1
+INV-05	Memantine	#analysis-memantine	lower	Comparator for NMDA block in native cells	5
+INV-05	NBQX	#analysis-nbqx	pending	Named in an investigation	0
+INV-05	Perampanel	#analysis-perampanel	priority	Comparator for AMPA and kainate effects	4
+INV-05	Piracetam	#analysis-piracetam	comparison	Conditional comparator for AMPA signaling and calcium-dependent release	1
+INV-05	radiprodil	#analysis-radiprodil	pending	Named in an investigation	0
+INV-05	traxoprodil	#analysis-traxoprodil	pending	Named in an investigation	0
+INV-06	Calcitriol	#analysis-calcitriol	comparison	Conditional comparator for glial VDR response	1
+INV-06	Clemastine	#analysis-clemastine	deferred	Comparator for myelin formation and function	3
+INV-07	Sodium dichloroacetate	#analysis-sodium_dichloroacetate	comparison	PDK comparator for metabolic bottlenecks	3
+INV-09	Lithium	#analysis-lithium	comparison	Compound with an acute Wwox model comparison	1
+INV-09	Tideglusib	#analysis-tideglusib	unranked	Conditional tool for GSK3 activity	2
+INV-10	Ganaxolone	#analysis-ganaxolone	comparison	Comparator for tonic inhibition	7
+INV-18	carbenoxolone	#analysis-carbenoxolone	pending	Named in an investigation	0
+INV-18	Ivabradine	#analysis-ivabradine	deferred	Existing dossier	2

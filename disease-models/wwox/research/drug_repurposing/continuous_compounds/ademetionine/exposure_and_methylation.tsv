@@ -1,0 +1,45 @@
+source	compartment_or_target	measure	value	unit
+Bottiglieri Table 3	CSF	mean_change	30.5	ng/mL
+Bottiglieri Table 3	CSF	change_over_pre_mean	85.915	%
+Bottiglieri Table 3	CSF	paired_sd_required_by_reported_t	8.4254	ng/mL
+Bottiglieri Table 3	CSF	minimum_paired_sd_at_any_correlation	2.9	ng/mL
+Bottiglieri Table 3	CSF	maximum_paired_t_at_any_correlation	21.034	t
+Bottiglieri Table 3	plasma	mean_change	101.8	ng/mL
+Bottiglieri Table 3	plasma	change_over_pre_mean	302.98	%
+Bottiglieri Table 3	plasma	paired_sd_required_by_reported_t	32.164	ng/mL
+Bottiglieri Table 3	plasma	minimum_paired_sd_at_any_correlation	63.8	ng/mL
+Bottiglieri Table 3	plasma	maximum_paired_t_at_any_correlation	3.1912	t
+Cameron Table 6	plasma	fasted_MSI195_vs_commercial_dose_corrected_AUCt	2.8401	ratio
+Cameron Table 6	plasma	MSI195_fed_vs_fasted_AUCt	0.55379	ratio
+Fustin Figure 6c	SAM	control	1.5	relative peak area
+Fustin Figure 6c	SAM	low_SAM_food_arm	0.6	relative peak area
+Fustin Figure 6c	SAM	high_SAM_food_arm	0.4	relative peak area
+Fustin Figure 6c	SAH	control	1	relative peak area
+Fustin Figure 6c	SAH	low_SAM_food_arm	0.9	relative peak area
+Fustin Figure 6c	SAH	high_SAM_food_arm	0.5	relative peak area
+Fustin Figure 6c	SAM_to_SAH	control	1.4	reported ratio
+Fustin Figure 6c	SAM_to_SAH	low_SAM_food_arm	0.6	reported ratio
+Fustin Figure 6c	SAM_to_SAH	high_SAM_food_arm	0.7	reported ratio
+GSE158684 replay	Gamt	ctrl_exc	2.4241	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Gamt	ctrl_astro	10.949	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Gamt	ctrl_NFOL	9.3397	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Gamt	ctrl_MFOL	39.094	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Gamt	ctrl_MOL	27.795	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Gamt	ko_exc	1.7396	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Gamt	ko_astro	6.3926	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Gamt	ko_NFOL	11.49	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Gamt	ko_MFOL	58.131	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Gamt	ko_MOL	15.865	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Mat2a	ctrl_exc	141.73	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Mat2a	ctrl_astro	324.37	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Mat2a	ctrl_NFOL	240.5	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Mat2a	ctrl_MFOL	428.64	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Mat2a	ctrl_MOL	346.17	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Mat2a	ko_exc	131.43	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Mat2a	ko_astro	241.76	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Mat2a	ko_NFOL	195.33	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Mat2a	ko_MFOL	411.39	CPM in class of one P17 hippocampal nuclei pool per genotype
+GSE158684 replay	Mat2a	ko_MOL	177.69	CPM in class of one P17 hippocampal nuclei pool per genotype
+normalized sensitivity	GAMT	SAM/Km=0.4;SAH/Ki=0.1	0.26667	fraction of Vmax
+normalized sensitivity	GAMT	SAM/Km=4;SAH/Ki=1	0.66667	fraction of Vmax
+normalized sensitivity	GAMT	SAM/Km=40;SAH/Ki=10	0.78431	fraction of Vmax

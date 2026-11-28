@@ -1,0 +1,9 @@
+source	study_exposure_mg_kg_ip	endpoint	point	lower_95CL	upper_95CL	SEM	n	ratio_to_vehicle
+Socala_MEST	0	CC50_mA	9.92	9.19	10.71			1
+Socala_MEST	100	CC50_mA	11.05	10.33	11.82			1.11391
+Socala_MEST	200	CC50_mA	11.02	10.39	11.68			1.11089
+Socala_MEST	400	CC50_mA	11.93	11.5	12.38			1.20262
+Socala_MEST	800	CC50_mA	11.93	11.15	12.77			1.20262
+Fone_PFC	0	glycine_AUC_pct_min_per_1000	17.29			0.17	15	1
+Fone_PFC	200	glycine_AUC_pct_min_per_1000	23.07			0.42	5	1.3343
+Fone_PFC	800	glycine_AUC_pct_min_per_1000	28.9			2.3	5	1.67149

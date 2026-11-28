@@ -1,0 +1,20 @@
+id	reference	statistic	value	unit
+adult_CF_Cmax	free_base_mw	total plasma Cmax	0.08971	uM
+adolescent_CF_Cmax	free_base_mw	total plasma Cmax	0.09450	uM
+CHO_D212_IC50	adult_CF_Cmax	nominal bath / total plasma	21.29	fold
+CHO_D212_IC50	adolescent_CF_Cmax	nominal bath / total plasma	20.21	fold
+CHO_G212_IC50	adult_CF_Cmax	nominal bath / total plasma	17.17	fold
+CHO_G212_IC50	adolescent_CF_Cmax	nominal bath / total plasma	16.30	fold
+mouse_cortex_IC50	adult_CF_Cmax	nominal bath / total plasma	154.05	fold
+mouse_cortex_IC50	adolescent_CF_Cmax	nominal bath / total plasma	146.24	fold
+rat_hippocampal_PSC	adult_CF_Cmax	nominal bath / total plasma	278.68	fold
+rat_hippocampal_PSC	adolescent_CF_Cmax	nominal bath / total plasma	264.55	fold
+human_cortex_test	adult_CF_Cmax	nominal bath / total plasma	1114.71	fold
+human_cortex_test	adolescent_CF_Cmax	nominal bath / total plasma	1058.20	fold
+hatch_WT_acid	hatch_WT_reference	relative change from source means	-51.37	percent
+hatch_KO_acid	hatch_KO_reference	relative change from source means	-66.65	percent
+hatch_WT_mild_acid	hatch_WT_mild_reference	relative change from source means	-20.71	percent
+storozhuk_inward	storozhuk_inward_reference	relative change from source means	-30.50	percent
+storozhuk_outward	storozhuk_outward_reference	relative change from source means	-11.70	percent
+human_cortex_amiloride	human_cortex_reference	relative change from source means	-95.10	percent
+global_KO_serum_total_CO2	global_WT_serum_total_CO2	relative change from source means	-33.09	percent

@@ -1,0 +1,10 @@
+trial	outcome	arm	n_baseline	n_followup	baseline_mean	followup_mean	unadjusted_marginal_change	drug_minus_placebo_marginal_change	reported_p_label_for_analysis
+NCT00593957	spikes_per_min	lower_active	13	13	44.220000	38.290000	-5.930000	NA	<0.40
+NCT00593957	spikes_per_min	middle_active	12	12	25.440000	27.580000	2.140000	NA	<0.62
+NCT00593957	spikes_per_min	higher_active	8	8	40.670000	36.010000	-4.660000	NA	<0.38
+NCT01520363	mullen_receptive_language	drug	24	22	6.450000	6.680000	0.230000	0.630000	NA
+NCT01520363	mullen_receptive_language	placebo	26	25	6.950000	6.550000	-0.400000	NA	NA
+NCT01520363	age_0_to_4	drug	11	11	3.000000	3.700000	0.700000	0.800000	0.21
+NCT01520363	age_0_to_4	placebo	10	10	3.200000	3.100000	-0.100000	NA	NA
+NCT01520363	age_5_to_10	drug	13	11	3.600000	3.360000	-0.240000	-0.810000	0.28
+NCT01520363	age_5_to_10	placebo	16	16	2.800000	3.370000	0.570000	NA	NA

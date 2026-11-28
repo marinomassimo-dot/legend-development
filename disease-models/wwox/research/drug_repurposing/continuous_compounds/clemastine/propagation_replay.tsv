@@ -1,0 +1,17 @@
+comparison	point_or_model	unit	estimate	readback_low	readback_high
+N1_latency	S-Control	ms	2.430	2.343	2.516
+N1_latency	S-KO	ms	3.167	3.080	3.254
+N2_latency	S-Control	ms	6.638	6.551	6.725
+N2_latency	S-KO	ms	8.286	8.200	8.373
+N1_over_N2_amplitude	S-Control	ratio	2.757	2.731	2.783
+N1_over_N2_amplitude	S-KO	ratio	0.853	0.827	0.880
+N1_gap_at_0.5_times_reference_path	fixed_offset	ms	0.738	0.564	0.911
+N1_gap_at_0.5_times_reference_path	propagation_only	ms	0.369	0.282	0.456
+N1_gap_at_1_times_reference_path	fixed_offset	ms	0.738	0.564	0.911
+N1_gap_at_1_times_reference_path	propagation_only	ms	0.738	0.564	0.911
+N1_gap_at_1.5_times_reference_path	fixed_offset	ms	0.738	0.564	0.911
+N1_gap_at_1.5_times_reference_path	propagation_only	ms	1.106	0.846	1.367
+N1_gap_at_2_times_reference_path	fixed_offset	ms	0.738	0.564	0.911
+N1_gap_at_2_times_reference_path	propagation_only	ms	1.475	1.128	1.822
+conditional_amplitude_example	N1_change_if_N2_fixed	KO_over_control	0.310	0.297	0.322
+conditional_amplitude_example	N2_change_if_N1_fixed	KO_over_control	3.231	3.104	3.365

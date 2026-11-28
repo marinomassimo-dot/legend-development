@@ -1,0 +1,15 @@
+{
+  "mass": 258.11,
+  "annotated_rt_s": 711.67,
+  "apex_s": 711.67,
+  "gate_pass": true,
+  "pooled_n": 12,
+  "blank_n": 6,
+  "pool_median_area": 39790710.07932322,
+  "blank_median_area": 15848.554419982891,
+  "pooled_spearman": 0.8881118881118882,
+  "pool1_spearman": 0.3142857142857143,
+  "pool2_spearman": 0.7714285714285715,
+  "secondary_peak_fraction": 0,
+  "filled_experimental_cells_in_maf": 0
+}

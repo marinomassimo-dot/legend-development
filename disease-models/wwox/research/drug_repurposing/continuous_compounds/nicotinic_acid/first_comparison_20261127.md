@@ -1,0 +1,18 @@
+# Nicotinic acid first comparison
+
+27 November 2026 · SCI_CODEX · context_policy: QUESTION_DRIVEN
+
+**Checkpoint.** Untreated WWOX bulk RNA points to measuring acid-derived NAD flux. The HCAR2–CD36 premise has direct pharmacology in other models, with sparse receptor coverage in the WWOX nuclei and divergent CD36 direction across models. [Registered prediction](pretest_20261127.md) · [Bulk values](contrasts.tsv) · [Nuclear counts](nuclei.tsv)
+
+- **NAD entry.** NAPRT differences in mean log₂(1 + expression) are **−0.596** in P17 mouse cortex, **−0.643** in P17 mouse hippocampus and **−0.347** in week-15 human cerebral organoids. All single-library omissions preserve the direction. NMNAT2 is also lower in all three with stable sign, while NADSYN1 lacks a common direction. Sparse NAPRT nuclear signal includes **one** molecule in each microglial pool and **one vs two** in newly formed oligodendrocytes. This does not assign the bulk effect to either lineage or establish a rate-limiting enzyme. The prior NR dossier describes why whole-cell NAD can be uninformative about the axon. [Source inputs and fingerprints](../creatine/inputs.tsv) · [Axonal NAD comparator](../nicotinamide_riboside/endogenous.md)
+- **Myeloid and lipid handling.** HCAR2 changes are positive in all three bulk models but have means below **0.14 TPM** in the mouse groups and **0.08 CPM** in the organoid groups. The feature is present in both deposited hippocampal nuclear matrices. There are zero Hcar2 molecules in the assigned classes in either arm. CD36 falls in mouse cortex and rises in hippocampus and organoids. In the microglial pools APOE increases **144 → 318** and ABCA1 **59 → 129** UMIs in **167** control versus **171** KO nuclei. These are single pooled observations. Nuclear assignment, capture, age and model composition limit interpretation. Increased APOE or ABCA1 may accompany lipid handling without proving a receptor-dependent response. [Hippocampal nuclear source](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158684)
+- **External countercheck.** Rawji et al. observed more myelin debris uptake after nominal **100 µmol/L** nicotinic acid in mouse and adult human microglial cultures. The drug-associated difference was absent in separate **Hcar2-null mouse marrow-derived macrophages**. A CD36 perturbation attenuated the culture effect. In middle-aged mice after focal adult demyelination, their day-21 electron microscopy endpoint showed a reported **62% relative increase** in the proportion of remyelinated axons (Fig. 5g, one point per mouse, one-tailed test). It did not test whether HCAR2 was necessary for the *treatment effect* in that adult lesion arm. The separate young knockout lesion comparison addressed spontaneous repair. The adult result establishes neither normal first-sheath development nor improved axonal conduction in WWOX. [Primary Methods and Figs. 3d–h, 4a and 5f–g](https://link.springer.com/content/pdf/10.1007/s00401-020-02129-7.pdf)
+
+**Next step.** Bound available parent by formulation and compare the blood and neural exposure evidence with the concentration used for debris handling. Test the receptor and NAD-synthesis hypotheses separately before inferring that the common bulk NAPRT decrease implies substrate responsiveness.
+
+```sh
+p=disease-models/wwox/research/drug_repurposing/continuous_compounds/nicotinic_acid
+python3 -B "$p/branch_screen.py" /home/desktop/legend-development/files /tmp/wwox-nicotinic-acid-replay
+diff "$p/contrasts.tsv" /tmp/wwox-nicotinic-acid-replay/contrasts.tsv
+diff "$p/nuclei.tsv" /tmp/wwox-nicotinic-acid-replay/nuclei.tsv
+```

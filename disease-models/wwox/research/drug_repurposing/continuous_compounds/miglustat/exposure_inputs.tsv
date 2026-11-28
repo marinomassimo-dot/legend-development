@@ -1,0 +1,13 @@
+key	value	units	source	locator
+parent_mass	219.28	g/mol	PubChem 51634	Molecular weight
+csf_trough_min	201	ng/mL	19067373	Results, extent of exposure; four GD3 samples
+csf_trough_max	629	ng/mL	19067373	Results, extent of exposure; four GD3 samples
+human_gba2_ki	0.326	uM	28937220	Table 1 compound 1; 4MU substrate and human overexpression cell homogenate
+gcs_ic50	50	uM	28937220	Table 1 compound 1; GCS IC50 in situ
+neurite_bath	5	uM	30662006	Fig. 4G-H; 48 h juvenile mouse cerebellar neuron nominal culture input
+npc_older_plasma_peak	2698	ng/mL	TGA AusPAR 2010	p. 52, older NPC study group geometric mean Cmax; n=6
+npc_younger_plasma_peak	3289	ng/mL	TGA AusPAR 2010	p. 52, younger NPC subgroup geometric mean Cmax; n=2
+monkey_csf_6th	752	ng/mL	TGA AusPAR 2010	p. 9, 8 h after sixth oral radiotracer exposure
+monkey_csf_7th	732	ng/mL	TGA AusPAR 2010	p. 9, 8 h after seventh oral radiotracer exposure
+liver_without_detergent	0.012	uM	23250757	Fig. 4H, pH 6 mouse liver lysate IC50
+liver_with_detergent	11	uM	23250757	Fig. 4H, pH 6 mouse liver lysate apparent IC50, composite activity

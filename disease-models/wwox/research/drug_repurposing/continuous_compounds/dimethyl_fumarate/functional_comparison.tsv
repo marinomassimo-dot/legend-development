@@ -1,0 +1,17 @@
+source	condition	value	unit	locator
+Parodi Fig. 7g, digitized	2.5 min	101.0	% pre-drug frequency	marker y=599.5
+Parodi Fig. 7g, digitized	5 min	100.8	% pre-drug frequency	marker y=600
+Parodi Fig. 7g, digitized	7.5 min	94.6	% pre-drug frequency	marker y=614
+Parodi Fig. 7g, digitized	10 min	87.0	% pre-drug frequency	marker y=631.5
+Parodi Fig. 7g, digitized	12.5 min	80.2	% pre-drug frequency	marker y=647
+Parodi Fig. 7g, digitized	15 min	80.2	% pre-drug frequency	marker y=647
+Parodi Fig. 7g, digitized	17.5 min	83.7	% pre-drug frequency	marker y=639
+Parodi Fig. 7g, digitized	20 min	87.7	% pre-drug frequency	marker y=630
+Parodi Fig. 7g, digitized	22.5 min	92.5	% pre-drug frequency	marker y=619
+Parodi Fig. 7g, digitized	25 min	95.5	% pre-drug frequency	marker y=612
+Parodi Fig. 7g, digitized	27.5 min	99.9	% pre-drug frequency	marker y=602
+Parodi Fig. 7g, digitized	30 min	100.8	% pre-drug frequency	marker y=600
+Parodi Fig. 7g direct exposure	nominal bath relative to adult CSF	1.65–3.34	fold	1 µM nominal MMF
+Parodi Fig. 8 N9 kinetics positive arm	nominal bath relative to adult CSF	164.68–333.59	fold	100 µM nominal MMF
+Althaus Fig. 2B cerebellum fitted EC50	nominal bath relative to adult CSF	7.81–15.81	fold	4.74 µM nominal MMF
+Althaus Fig. 3B hippocampus fitted EC50	nominal bath relative to adult CSF	13.04–26.42	fold	7.92 µM nominal MMF

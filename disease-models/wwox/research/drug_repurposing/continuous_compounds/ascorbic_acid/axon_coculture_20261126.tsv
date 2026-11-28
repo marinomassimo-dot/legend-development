@@ -1,0 +1,4 @@
+category	WT_median_y_px	KO_median_y_px	WT_pct	KO_pct	KO_minus_WT_pp	KO_over_WT_fraction
+premyelinating	878.5	817.0	30.29	48.12	17.83	1.589
+myelinating	827.5	886.0	45.07	28.12	-16.96	0.624
+degraded	917.0	910.5	19.13	21.01	1.88	1.098

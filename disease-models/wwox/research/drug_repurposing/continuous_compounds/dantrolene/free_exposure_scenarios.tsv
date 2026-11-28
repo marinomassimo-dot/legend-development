@@ -1,0 +1,7 @@
+human_total_plasma_example	total_ug_mL	assumed_fu_plasma	parent_mw_g_mol	conditional_free_plasma_uM	partition_scenario	assumed_Kp_uu	conditional_product_uM	Kp_uu_for_10uM
+adult_oral_total_plasma_peak	1.24	0.051	314.25	0.201241	rat_brain_slice_reference	0.0297	0.005977	49.692
+adult_oral_total_plasma_peak	1.24	0.051	314.25	0.201241	rat_brain_homogenate_reference	0.061	0.012276	49.692
+adult_oral_total_plasma_peak	1.24	0.051	314.25	0.201241	hypothetical_unity_partition	1.0	0.201241	49.692
+adult_acute_iv_total_plasma_peak	9.0	0.051	314.25	1.460621	rat_brain_slice_reference	0.0297	0.043380	6.846
+adult_acute_iv_total_plasma_peak	9.0	0.051	314.25	1.460621	rat_brain_homogenate_reference	0.061	0.089098	6.846
+adult_acute_iv_total_plasma_peak	9.0	0.051	314.25	1.460621	hypothetical_unity_partition	1.0	1.460621	6.846

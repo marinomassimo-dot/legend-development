@@ -303,6 +303,7 @@ not by running it.
 | `framework/scripts/repo_root.py` | where the repository authority root is — one answer or a refusal, never a guess |
 | `framework/scripts/screen_verdict.py` | the verdict contract every screen in `framework/scripts/` returns |
 | `framework/scripts/corpus_firewall.py` | what a bibliographic corpus is, and how every guard recognises one |
+| `framework/scripts/repurposing_compound_analyses.py` | the public compound cards, research priority tiers and dossier links built from the published decision registers by `repurposing_view.py package --pages-out` |
 | `framework/scripts/claim_links.py` | the declared `Claim links` of a record, never identifiers inside a refusal or an annotation |
 | `framework/scripts/eutils.py` | the one polite door to NCBI E-utilities: a throttle shared by every process on the host, back-off on 429/5xx with `Retry-After`, a one-day response cache (`LEGEND_EUTILS_CACHE_TTL=0` disables) — used by `pubmed_identity_check`, `staged_receipt_check`, `pmc_bucket_fetch`, `lot_internal_edges`; a new tool that calls NCBI imports it |
 

@@ -1,0 +1,45 @@
+{
+  "title": "Soticlestat in WWOX research",
+  "date": "27 November 2026",
+  "summary": "Retain as a CYP46A1 research comparator once local 24S-hydroxycholesterol (24S-HC) depletion is verified. Defer pediatric WWOX trial priority.",
+  "graph": {
+    "evidence": "Mouse enzyme occupancy precedes the drop in bulk brain oxysterol.",
+    "inference": "An acute circuit test can occur before the proposed mediator changes.",
+    "hypothesis": "A local 24S-HC excess sustains late NMDA-dependent recruitment.",
+    "experiment": "Verify local depletion and test whether metabolite add-back reverses the late effect."
+  },
+  "evidence": [
+    "At 1 h after one exposure, apparent mouse CYP46A1 occupancy was 99.1% and brain 24S-HC was 107.4% of vehicle. At 24 h these were 35.2% and 67.4% (three animals per time).",
+    "After the fifth exposure, 63.0–74.3% of control 24S-HC remained. Figure 4 and Table S2 give a 25.7–37.0% reduction. Results prose reports about 60% reduction."
+  ],
+  "inference": [
+    "An acute assay can precede the change in metabolite. WWOX models differ in CYP46A1 RNA direction. Local 24S-HC is unmeasured."
+  ],
+  "hypothesis": [
+    "A local cortical 24S-HC excess could sustain late NMDA-dependent recruitment in WWOX."
+  ],
+  "experiment": [
+    "In age-matched cortex, verify local depletion and test reversal by 24S-HC add-back at fixed soticlestat exposure. Measure early recruitment and inhibition separately. Verified depletion without a selective late effect lowers priority."
+  ],
+  "limits": [
+    "Dravet and Lennox–Gastaut phase 3 studies missed their primary endpoints despite large plasma 24S-HC falls. WOREE efficacy, local exposure and infant tolerability remain unresolved."
+  ],
+  "sources": [
+    {
+      "label": "Miyamoto et al., Figure 4 and Supplemental Table 2C–D",
+      "url": "https://doi.org/10.1016/j.jpet.2026.103816"
+    },
+    {
+      "label": "Breton et al., juvenile Wwox-deficient cortical physiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34634460/"
+    },
+    {
+      "label": "SKYLINE, Dravet syndrome",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41784472/"
+    },
+    {
+      "label": "SKYWAY, Lennox–Gastaut syndrome",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41891667/"
+    }
+  ]
+}

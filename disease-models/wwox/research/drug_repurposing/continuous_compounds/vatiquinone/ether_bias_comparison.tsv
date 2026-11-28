@@ -1,0 +1,5 @@
+panel	condition	n_per_condition	diacyl_mean_pmol_per_nmol_precursor	alkenyl_mean_pmol_per_nmol_precursor	alkenyl_to_diacyl_ratio
+2f	15-LOX-2, HT22 lipid liposomes, 2.5 min	3	35.480	49.543	1.396
+2f	15-LOX-2, HT22 lipid liposomes, 5 min	3	62.267	106.287	1.707
+2g	AMVN, DOPC liposomes	3	26.543	27.620	1.041
+2g	AMVN, subtract corresponding control mean	3	25.820	26.197	1.015

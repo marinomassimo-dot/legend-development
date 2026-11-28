@@ -1,0 +1,16 @@
+comparison	observation	value	unit
+fraction_over_plasma_mean	tryptophan	2.43309	percent
+fraction_over_plasma_mean	kynurenine	1.45631	percent
+fraction_over_plasma_mean	kynurenate	3.52941	percent
+fraction_over_plasma_mean	quinolinate	2.96382	percent
+receptor_scale	NMDA IC50 shift with 10 µM added glycine	15.513	fold
+receptor_scale	no-added-glycine IC50 over CSF KYNA mean	10922	fold
+receptor_scale	10 µM glycine IC50 over CSF KYNA mean	169433	fold
+import-dominant	central KYN amount	1	normalized
+import-dominant	shared precursor label	50	percent
+import-dominant	incoming KYN-specific label	40	percent
+import-dominant	local TRP-specific label	10	percent
+local-dominant	central KYN amount	1	normalized
+local-dominant	shared precursor label	50	percent
+local-dominant	incoming KYN-specific label	10	percent
+local-dominant	local TRP-specific label	40	percent

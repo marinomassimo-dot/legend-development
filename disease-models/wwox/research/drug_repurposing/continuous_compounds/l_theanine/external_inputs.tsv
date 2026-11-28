@@ -1,0 +1,15 @@
+id	value	dispersion	dispersion_type	unit	population_and_matrix	source	locator
+adult_capsule_peak	24.3	5.7	SEM	umol/L	12 healthy adults, plasma parent, 100 mg capsule	https://pubmed.ncbi.nlm.nih.gov/23096008/	Table 2, L-theanine plasma capsule Cmax,70
+adult_tea_peak	26.5	5.2	SEM	umol/L	12 healthy adults, plasma parent, tea containing 100 mg L-theanine	https://pubmed.ncbi.nlm.nih.gov/23096008/	Table 2, L-theanine plasma green tea Cmax,70
+adult_granule_peak	23.3	8.3	SD	ug/mL	39 adults, serum parent, 300 mg granule and glucose challenge	https://pmc.ncbi.nlm.nih.gov/articles/PMC13113039/	Fig. 4 and Results, 30 minutes after glucose / 45 minutes after L-theanine
+adult_granule_120	15.0	6.9	SD	ug/mL	39 adults, serum parent, 300 mg granule and glucose challenge	https://pmc.ncbi.nlm.nih.gov/articles/PMC13113039/	Fig. 4 and Results, 120 minutes after glucose / 135 minutes after L-theanine
+rat_glutamine_ic50	479.8	132.2	SEM	umol/L	Rat brain crude synaptosomal fractions with 1 umol/L radiolabeled glutamine	https://doi.org/10.1002/jnr.21637	Results, structural analogues, and Fig. 3B left
+p19_prolonged	100			umol/L	Mouse embryonal carcinoma P19 cell differentiation culture	https://doi.org/10.1371/journal.pone.0048270	Results, Figs. 5C and 6A–D, nominal 4-day exposure
+pilocarpine_twitch_water	255	26	SEM	mg/kg	Male NMRI mice, vehicle group, behavioral body twitch	https://doi.org/10.1179/1476830512y.0000000033	p. 79 Results; Fig. 1 axis labeled Pilocarpine (drawn B), P=0.047
+pilocarpine_twitch_theanine	315	36	SEM	mg/kg	Male NMRI mice, chronic theanine group, behavioral body twitch	https://doi.org/10.1179/1476830512y.0000000033	p. 79 Results; Fig. 1 axis labeled Pilocarpine (drawn B), P=0.047
+ptz_tonus_water	91	10	SEM	mg/kg	Male NMRI mice, vehicle group, behavioral tonus	https://doi.org/10.1179/1476830512y.0000000033	p. 80 Results; Fig. 1 axis labeled PTZ (drawn A), P=0.014
+ptz_tonus_theanine	60	14	SEM	mg/kg	Male NMRI mice, chronic theanine group, behavioral tonus	https://doi.org/10.1179/1476830512y.0000000033	p. 80 Results; Fig. 1 axis labeled PTZ (drawn A), P=0.014
+cortical_gaba_water	0.0064	0.0020	SEM	umol/L	Male NMRI mice, vehicle group, frontal dialysate GABA	https://doi.org/10.1179/1476830512y.0000000033	p. 80 Results; Fig. 2C on p. 81, P=0.016
+cortical_gaba_theanine	0.0015	0.0004	SEM	umol/L	Male NMRI mice, chronic theanine group, frontal dialysate GABA	https://doi.org/10.1179/1476830512y.0000000033	p. 80 Results; Fig. 2C on p. 81, P=0.016
+hippocampal_gaba_water	0.0046	0.0009	SEM	umol/L	Male NMRI mice, vehicle group, hippocampal dialysate GABA	https://doi.org/10.1179/1476830512y.0000000033	p. 80 Results; Fig. 2D on p. 81, P=0.42
+hippocampal_gaba_theanine	0.0058	0.0012	SEM	umol/L	Male NMRI mice, chronic theanine group, hippocampal dialysate GABA	https://doi.org/10.1179/1476830512y.0000000033	p. 80 Results; Fig. 2D on p. 81, P=0.42

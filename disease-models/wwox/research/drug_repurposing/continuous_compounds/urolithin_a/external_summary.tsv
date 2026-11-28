@@ -1,0 +1,21 @@
+panel	contrast	unit	ctrl_n	test_n	ctrl	test	test_minus_ctrl	two_sided_fisher
+4b	neuroretina, young UA	fold of own vehicle reference	NA	5	NA	5.094613	NA	NA
+4b	neuroretina, old UA	fold of own vehicle reference	NA	7	NA	1.386265	NA	NA
+4c	RPE, young UA	fold of own vehicle reference	NA	5	NA	2.81	NA	NA
+4c	RPE, old UA	fold of own vehicle reference	NA	7	NA	1.372857	NA	NA
+4d	young UA vs vehicle	hindlimb clasping score	5	5	0.2	0.2	0	NA
+4d	old UA vs vehicle	hindlimb clasping score	6	7	1.666667	0.4285714	-1.238095	NA
+7b	UA addition at ABT	mitolysosomes/cell	4	4	18.80838	48.9812	30.17282	NA
+7b	UA addition at ABT plus dual PINK1/PRKN knockdown	mitolysosomes/cell	4	4	15.84009	42.6498	26.80971	NA
+7b	change in UA effect under dual knockdown	mitolysosomes/cell	NA	NA	NA	NA	-3.363109	NA
+7e	UA addition at ABT	cytosolic DNA foci/cell	4	4	40.55	18.7631	-21.7869	NA
+7e	UA addition at ABT plus dual PINK1/PRKN knockdown	cytosolic DNA foci/cell	4	4	57.68274	64.16842	6.485683	NA
+7e	change in UA effect under dual knockdown	cytosolic DNA foci/cell	NA	NA	NA	NA	28.27259	NA
+Mishra 3e	any visible seizure	animal event fraction	7	7	1	0.5714286	-0.4285714	0.1923077
+Mishra 3e	tonic-clonic	animal event fraction	7	7	1	0.4285714	-0.5714286	0.06993007
+Jiménez-Loygorri 4a	mass in 350 mg if printed axis literal	micrograms	NA	NA	NA	108.5	NA	NA
+Jiménez-Loygorri 4a	mouse mass to supply calculated aliquot at 5 mg/kg	grams	NA	NA	NA	21.7	NA	NA
+Monsalve Acevedo Results	tail probability implied by printed F(1,15.27)=0.661	p	NA	NA	NA	0.428702	NA	NA
+Liu month 4	adult plasma aglycone	micromolar	NA	NA	NA	0.004548642	NA	NA
+Liu month 4	adult plasma glucuronide	micromolar	NA	NA	NA	2.508039	NA	NA
+Mishra vs Liu	50 uM bath/adult total unconjugated plasma	concentration ratio	NA	NA	NA	10992.29	NA	NA

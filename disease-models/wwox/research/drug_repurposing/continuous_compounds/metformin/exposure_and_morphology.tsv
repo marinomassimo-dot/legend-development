@@ -1,0 +1,35 @@
+source	condition	measure	value	unit
+Koenig	week 8 fasting	plasma	7.3699	µM parent equivalent
+Koenig	week 8 fasting	CSF	0.7402	µM parent equivalent
+Koenig	week 8 fasting	CSF/plasma ratio of means	10.0431	%
+Koenig	week 8 fasting	CSF if mass expressed as HCl	0.5772	µM salt-equivalent sensitivity
+Ma primary mouse hepatocytes	Koenig mean CSF reference	nominal bath / adult CSF	6.7552	fold
+Mohammadnia human oligodendroglia	Koenig mean CSF reference	nominal bath / adult CSF	13.5105	fold
+Narine rodent OL lower bath	Koenig mean CSF reference	nominal bath / adult CSF	270.2092	fold
+Narine rodent OL highest bath	Koenig mean CSF reference	nominal bath / adult CSF	1351.0460	fold
+Chaudhari	male day 7	total perfused whole-brain parent	3.3935	µmol/kg wet tissue
+Chaudhari	male day 7	total brain / plasma ratio of means	0.1838	mL/g
+Chaudhari	male day 30	total perfused whole-brain parent	3.9478	µmol/kg wet tissue
+Chaudhari	male day 30	total brain / plasma ratio of means	0.1743	mL/g
+Chaudhari	female day 7	total perfused whole-brain parent	3.3385	µmol/kg wet tissue
+Chaudhari	female day 7	total brain / plasma ratio of means	0.2568	mL/g
+Chaudhari	female day 30	total perfused whole-brain parent	5.2269	µmol/kg wet tissue
+Chaudhari	female day 30	total brain / plasma ratio of means	0.2366	mL/g
+Sharma	90 mg/kg at 30 min	brain in reported volume units	8.0520	µM reported-volume equivalent
+Sharma	90 mg/kg at 30 min	CSF	0.6968	µM parent equivalent
+Sharma	90 mg/kg at 30 min	brain / CSF ratio of means	11.5556	reported-volume quotient
+Sharma	150 mg/kg at 30 min	brain in reported volume units	14.1685	µM reported-volume equivalent
+Sharma	150 mg/kg at 30 min	CSF	0.8517	µM parent equivalent
+Sharma	150 mg/kg at 30 min	brain / CSF ratio of means	16.6364	reported-volume quotient
+Sharma	30 mg/kg at 120 min	brain in reported volume units	1.3162	µM reported-volume equivalent
+Sharma	30 mg/kg at 120 min	CSF	0.0279	µM parent equivalent
+Sharma	30 mg/kg at 120 min	brain / CSF ratio of means	47.2222	reported-volume quotient
+Sharma	90 mg/kg at 120 min	brain in reported volume units	4.7228	µM reported-volume equivalent
+Sharma	90 mg/kg at 120 min	CSF	0.2942	µM parent equivalent
+Sharma	90 mg/kg at 120 min	brain / CSF ratio of means	16.0526	reported-volume quotient
+Sharma	150 mg/kg at 120 min	brain in reported volume units	9.3682	µM reported-volume equivalent
+Sharma	150 mg/kg at 120 min	CSF	0.1858	µM parent equivalent
+Sharma	150 mg/kg at 120 min	brain / CSF ratio of means	50.4167	reported-volume quotient
+Azmi	P14 metformin	sampled-field density	0.0987	axon profiles/µm²
+Azmi	P14 control if 480 total profiles	sampled-field density	0.0896	axon profiles/µm²
+Azmi	P14 control if 960 total profiles	sampled-field density	0.1792	axon profiles/µm²

@@ -1,0 +1,9 @@
+ion	readout	scenario	true_d1	true_d2	uncorrected_m1	uncorrected_m2	corrected_d1	corrected_d2	d1_min	d1_max	d2_min	d2_max
+intact_pe_18_0_20_4_plus_o2	nominal_parent	blank	0.000000	0.000000	0.298023	0.082894	0.000000	0.000000	-0.009604	0.009675	-0.004656	0.004610
+intact_pe_18_0_20_4_plus_o2	nominal_parent	low	0.002000	0.008000	0.297236	0.087897	0.002000	0.008000	-0.007534	0.011609	0.003331	0.012622
+intact_pe_18_0_20_4_plus_o2	nominal_parent	moderate	0.010000	0.040000	0.294036	0.108236	0.010000	0.040000	0.000751	0.019345	0.035285	0.044667
+intact_pe_18_0_20_4_plus_o2	nominal_parent	equal_d1_d2	0.075000	0.075000	0.310555	0.144267	0.075000	0.075000	0.065740	0.084353	0.069938	0.080011
+oxidized_arachidonate_fragment_plus_o2	matched_nominal_parent_to_fragment	blank	0.000000	0.000000	0.176704	0.025188	0.000000	0.000000	-0.004402	0.004457	-0.000986	0.000973
+oxidized_arachidonate_fragment_plus_o2	matched_nominal_parent_to_fragment	low	0.002000	0.008000	0.176828	0.031728	0.002000	0.008000	-0.002390	0.006446	0.006987	0.009000
+oxidized_arachidonate_fragment_plus_o2	matched_nominal_parent_to_fragment	moderate	0.010000	0.040000	0.177326	0.058110	0.010000	0.040000	0.005657	0.014401	0.038626	0.041398
+oxidized_arachidonate_fragment_plus_o2	matched_nominal_parent_to_fragment	equal_d1_d2	0.075000	0.075000	0.213700	0.096165	0.075000	0.075000	0.070073	0.079985	0.072826	0.077208

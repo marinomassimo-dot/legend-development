@@ -1,0 +1,17 @@
+held_path_under_files	sha256	source_or_use
+deepening_downloads/epalrestat_20261127/NCT04925960.json	136f0c8c8c5120f6efd4ea22ea1c27ac4c0c9c5d98652bc1f4d0d42f936c6717	ClinicalTrials.gov API v2 full snapshot
+deepening_downloads/epalrestat_20261127/NCT04925960_explicit_format.json	136f0c8c8c5120f6efd4ea22ea1c27ac4c0c9c5d98652bc1f4d0d42f936c6717	ClinicalTrials.gov API v2 JSON representation
+deepening_downloads/epalrestat_20261127/NCT04925960_results_fields.json	f65e5725f6dc56d565af4ed3e0e5ceca76ca1141897471d7726814a81db91335	ClinicalTrials.gov API v2 results status fields
+deepening_downloads/epalrestat_20261127/pmda_sawai.pdf	eecff9d46658b6598edebfbeb59cbc174a5b8bbf745bf00ec1e34d1f5cd2e378	Japanese PMDA prescribing information, §§9.7, 11, 16.1.1, 16.3, 19
+deepening_downloads/epalrestat_20261127/PMC10313913.xml	d1f61a2a8f82cf9030b2c6b5df3f6324e0cb8934df4f5cdcc9acf2ed80244c0b	Radenkovic et al. 2023 PMC JATS
+deepening_downloads/epalrestat_20261127/gr2.jpg	d441be8533421492ef5314d50838285a64f5c9ba3b9eca7c16dc1296698a86a4	Radenkovic et al. 2023 PMC original Figure 2
+deepening_downloads/epalrestat_20261127/gr4.jpg	beaa5eb5f09eb1f2b76e3482c39627f3548867e95a73e6f5ff81d8b11e3f4ce9	Radenkovic et al. 2023 PMC original Figure 4
+deepening_downloads/epalrestat_20261127/mmc1.pdf	5bf202f41c7696e7d9382ffbf84000c9b358322421209f81f5ef592c255fa07a	Radenkovic et al. 2023 PMC supplement, original Fig. S4 p. 9, caption pp. 9–10
+deepening_downloads/epalrestat_20261127/PMC6899038.xml	af2e6e518d2a967d22b0a54fb5f7f41adf21be647dfed85eceda424138caa838	Iyer et al. 2019 PMC JATS
+deepening_downloads/epalrestat_20261127/PMC8353599.html	05d008963656e171436c8f901fd6f4fb6a9c1280caa6bc2a9bc2a4d640ecd975	Cortese et al. 2020 PMC public author manuscript
+deepening_downloads/epalrestat_20261127/Ligezka_2021.pdf	fb5e45bb04c80d6826dd8c1c5a1adf49b638235bef70c0172cea442344317144	Ligezka et al. 2021 author manuscript, Amour Fund public copy
+deepening_downloads/n_acetylneuraminic_acid_20261126/m_MTBLS12344_LC-MS_alternating_hilic_metabolite_profiling_v2_maf.tsv	8bd1add7e482d049443130062c41e5386e4c474c80d45b0417165a4a8c6200b0	MTBLS12344 assigned metabolite list
+geo/ and reference_ensembl_r92/	see ../../memantine_magnesium_20261123/inputs.tsv	GSE158681/82/84 and GSE156243; archived mouse symbol and transcript mapping
+deepening_downloads/l_leucine_loop_20261126/positive/	see ../l_leucine/fly_leucine_qc.tsv and fly_leucine_sample_inputs.tsv	38 centroided MTBLS12344 positive-mode spectra, held public inputs
+deepening_downloads/epalrestat_20261127/PMC13723946.html	3935cf94d21a8824c019f73c4c2af30c809902a3cde62ca08d75910e2375fac5	Radenkovic et al. 2024 PMC author manuscript
+deepening_downloads/epalrestat_20261127/PMC13723946_fig7.webp	6b1c62df1858b0a8ae95d4cfb68365acfaf175991ab7c98258518c3c9b70ee0c	Radenkovic et al. 2024 PMC original Figure 7 panel A

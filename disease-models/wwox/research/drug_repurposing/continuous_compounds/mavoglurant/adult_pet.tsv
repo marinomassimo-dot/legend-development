@@ -1,0 +1,5 @@
+single_dose_mg	PK_n	mean_Cmax_ng_mL	mean_AUC3to4_ng_h_mL	reported_RO_pct	dose_model_RO_pct	implied_dose_model_displacement_pct	mean_scan_C_inserted_into_C_model_pct
+25	5	54.23	31.42	27	26.596	17.287	42.22
+100	3	191.6	156.3	59	59.172	38.462	78.424
+200	4	337.6	202.8	74	74.349	48.327	82.506
+400	3	1004	715	85	85.288	55.437	94.327

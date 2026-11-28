@@ -1,0 +1,30 @@
+group	endpoint	n_available	value	unit
+nicotinamide	12 month plasma NAM mean as tabulated	23	52.478	µM
+nicotinamide	12 month plasma NAM maximum as tabulated	23	243.400	µM
+nicotinamide	12 month CSF NAM mean as tabulated	19	18.426	µM
+nicotinamide	12 month CSF NAM maximum as tabulated	19	129.500	µM
+nicotinamide	12 month plasma MNA mean as tabulated	23	90.787	µM
+nicotinamide	12 month plasma MNA maximum as tabulated	23	293.900	µM
+nicotinamide	12 month CSF MNA mean as tabulated	19	3.053	µM
+nicotinamide	12 month CSF MNA maximum as tabulated	19	9.200	µM
+nicotinamide	12 month CSF NAM above 2.1 µM	19	6	count
+nicotinamide	12 month CSF NAM elevated-only mean	6	57.233	µM
+nicotinamide	CSF NAM with baseline and 12 month values	24	18	count
+nicotinamide	12 month CSF NAM mean with floor 0 µM	19	18.174	µM
+nicotinamide	12 month CSF NAM mean with floor 0.2 µM	19	18.300	µM
+nicotinamide	12 month CSF NAM mean with floor 0.4 µM	19	18.426	µM
+nicotinamide	first tested neuronal bath / all available CSF mean	19	135.68	fold
+nicotinamide	first tested neuronal bath / elevated subgroup CSF mean	6	43.68	fold
+placebo	12 month plasma NAM mean as tabulated	20	0.400	µM
+placebo	12 month plasma NAM maximum as tabulated	20	0.400	µM
+placebo	12 month CSF NAM mean as tabulated	20	0.400	µM
+placebo	12 month CSF NAM maximum as tabulated	20	0.400	µM
+placebo	12 month plasma MNA mean as tabulated	20	0.150	µM
+placebo	12 month plasma MNA maximum as tabulated	20	0.800	µM
+placebo	12 month CSF MNA mean as tabulated	20	0.100	µM
+placebo	12 month CSF MNA maximum as tabulated	20	0.100	µM
+placebo	12 month CSF NAM above 2.1 µM	20	0	count
+placebo	CSF NAM with baseline and 12 month values	23	20	count
+placebo	12 month CSF NAM mean with floor 0 µM	20	0.000	µM
+placebo	12 month CSF NAM mean with floor 0.2 µM	20	0.200	µM
+placebo	12 month CSF NAM mean with floor 0.4 µM	20	0.400	µM

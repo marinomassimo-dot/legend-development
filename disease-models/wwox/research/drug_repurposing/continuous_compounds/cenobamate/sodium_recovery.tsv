@@ -1,0 +1,7 @@
+interval_ms	vehicle_recovered_pct	cenobamate_100_uM_recovered_pct	difference_percentage_points
+5	48.61	22.06	-26.56
+10	68.37	36.91	-31.47
+20	82.87	54.08	-28.80
+50	94.95	70.99	-23.96
+100	99.28	80.55	-18.73
+200	99.99	90.75	-9.23

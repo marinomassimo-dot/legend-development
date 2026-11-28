@@ -1,0 +1,10 @@
+study	panel	endpoint	unit	upper_y	upper_value	lower_y	lower_value	ctl_vehicle	pa_or_challenge_vehicle	ctl_pea	pa_or_challenge_pea	mk886	gw9662
+Herrera2022	2A	air_righting_onset	postnatal_days	30	6	207	0	119	70	116	119	NA	NA
+Herrera2022	2B	gait_onset	postnatal_days	32	15	206	0	112	94	106	112	NA	NA
+Herrera2022	2C	forelimb_placing_onset	postnatal_days	295	15	472	0	387	356	386	393	NA	NA
+Herrera2022	2D	forelimb_grasp_onset	postnatal_days	295	15	472	0	436	374	436	430	NA	NA
+Herrera2022	6	negative_geotaxis_P11	seconds	20	65	316	0	NA	131	NA	222	NA	NA
+Herrera2022	6	negative_geotaxis_P12	seconds	20	65	316	0	NA	89	NA	239	NA	NA
+Scuderi2012	1B	GFAP_positive_count	figure_count_units	59	80	190	0	154	87	NA	132	97	122
+Scuderi2012	1C	MAP2_apoptosis_count	figure_count_units	274	20	400	0	380	312	NA	368	324	362
+Balaji2024	2	adult_open_field_distance	meters	110	30	248	0	154	NA	224	NA	NA	NA

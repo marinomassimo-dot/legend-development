@@ -1,0 +1,52 @@
+source	contrast	n_values_when_given	value	unit
+Fons Table 1	mean urinary GAA before	4	55.7500	mmol/mol creatinine
+Fons Table 1	mean urinary GAA after	4	107.0000	mmol/mol creatinine
+Fons Table 1	mean urinary GAA paired change	4	51.2500	mmol/mol creatinine
+Fons Table 1	participants with urinary GAA increase	4	4.0000	count
+Chilosi Table 1	PCr/PDE mean paired change	3	0.1733	ratio
+Chilosi Table 1	PCr/PDE median paired change	3	0.1700	ratio
+Chilosi Table 1	PCr/PDE participants increasing	3	3.0000	count
+Chilosi Table 1	PCr/PDE min leave-one-out mean	3	0.1550	ratio
+Chilosi Table 1	PCr/PDE max leave-one-out mean	3	0.1900	ratio
+Chilosi Table 1	tCr mean paired change	3	0.7967	mmol/L voxel
+Chilosi Table 1	tCr median paired change	3	0.6200	mmol/L voxel
+Chilosi Table 1	tCr participants increasing	3	2.0000	count
+Chilosi Table 1	tCr min leave-one-out mean	3	0.2950	mmol/L voxel
+Chilosi Table 1	tCr max leave-one-out mean	3	1.2100	mmol/L voxel
+Onalo Table 2	arginine post/pre plasma arginine medians	22	2.0741	fold
+Cross-system sensitivity	arginine, arginine only, total at lower composition		4.8262	nmol/min/g
+Cross-system sensitivity	arginine, arginine only, total at higher composition		7.1664	nmol/min/g
+Cross-system sensitivity	arginine, arginine only, saturable		1.2649	fold
+Cross-system sensitivity	arginine, arginine only, saturable plus linear		1.4849	fold
+Cross-system sensitivity	arginine, with ornithine, total at lower composition		2.5584	nmol/min/g
+Cross-system sensitivity	arginine, with ornithine, total at higher composition		4.4402	nmol/min/g
+Cross-system sensitivity	arginine, with ornithine, saturable		1.3791	fold
+Cross-system sensitivity	arginine, with ornithine, saturable plus linear		1.7356	fold
+Cross-system sensitivity	arginine, ornithine and fixed lysine 150 µM, total at lower composition		2.1002	nmol/min/g
+Cross-system sensitivity	arginine, ornithine and fixed lysine 150 µM, total at higher composition		3.9610	nmol/min/g
+Cross-system sensitivity	arginine, ornithine and fixed lysine 150 µM, saturable		1.5729	fold
+Cross-system sensitivity	arginine, ornithine and fixed lysine 150 µM, saturable plus linear		1.8860	fold
+Cross-system sensitivity	arginine, ornithine and fixed lysine 250 µM, total at lower composition		1.9451	nmol/min/g
+Cross-system sensitivity	arginine, ornithine and fixed lysine 250 µM, total at higher composition		3.7668	nmol/min/g
+Cross-system sensitivity	arginine, ornithine and fixed lysine 250 µM, saturable		1.6514	fold
+Cross-system sensitivity	arginine, ornithine and fixed lysine 250 µM, saturable plus linear		1.9366	fold
+Onalo Table 2	placebo post/pre plasma arginine medians	25	1.3441	fold
+Cross-system sensitivity	placebo, arginine only, total at lower composition		5.2140	nmol/min/g
+Cross-system sensitivity	placebo, arginine only, total at higher composition		6.1222	nmol/min/g
+Cross-system sensitivity	placebo, arginine only, saturable		1.1051	fold
+Cross-system sensitivity	placebo, arginine only, saturable plus linear		1.1742	fold
+Cross-system sensitivity	placebo, with ornithine, total at lower composition		2.8515	nmol/min/g
+Cross-system sensitivity	placebo, with ornithine, total at higher composition		3.5615	nmol/min/g
+Cross-system sensitivity	placebo, with ornithine, saturable		1.1425	fold
+Cross-system sensitivity	placebo, with ornithine, saturable plus linear		1.2490	fold
+Cross-system sensitivity	placebo, ornithine and fixed lysine 150 µM, total at lower composition		2.3762	nmol/min/g
+Cross-system sensitivity	placebo, ornithine and fixed lysine 150 µM, total at higher composition		3.0741	nmol/min/g
+Cross-system sensitivity	placebo, ornithine and fixed lysine 150 µM, saturable		1.2064	fold
+Cross-system sensitivity	placebo, ornithine and fixed lysine 150 µM, saturable plus linear		1.2937	fold
+Cross-system sensitivity	placebo, ornithine and fixed lysine 250 µM, total at lower composition		2.2104	nmol/min/g
+Cross-system sensitivity	placebo, ornithine and fixed lysine 250 µM, total at higher composition		2.8910	nmol/min/g
+Cross-system sensitivity	placebo, ornithine and fixed lysine 250 µM, saturable		1.2305	fold
+Cross-system sensitivity	placebo, ornithine and fixed lysine 250 µM, saturable plus linear		1.3079	fold
+Jomura Fig. 4	raw 37 C proportional transport share	3	52.9412	%
+Jomura Fig. 4	37 C minus 4 C proportional transport share	3	92.0415	%
+Jomura Fig. 5	apparent brain clearance creatine/mannitol		0.8977	fold

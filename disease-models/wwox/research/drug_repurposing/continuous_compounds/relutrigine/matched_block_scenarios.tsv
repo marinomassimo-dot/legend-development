@@ -1,0 +1,43 @@
+drug	matched_assay	match_fraction	concentration_nM	block_persistent	block_peak_tonic	block_peak_10Hz	block_peak_voltage_dependent
+relutrigine	peak_voltage_dependent	0.05	16.68421	0.07168	0.00197	0.01949	0.05000
+relutrigine	peak_voltage_dependent	0.1	35.22222	0.15916	0.00414	0.04937	0.10000
+relutrigine	peak_voltage_dependent	0.2	79.25000	0.33373	0.00927	0.12616	0.20000
+relutrigine	peak_voltage_dependent	0.3	135.85714	0.48886	0.01578	0.21715	0.30000
+relutrigine	peak_voltage_dependent	0.5	317.00000	0.72555	0.03607	0.41308	0.50000
+relutrigine	persistent	0.25	56.44404	0.25000	0.00662	0.08634	0.15114
+relutrigine	persistent	0.5	141.00000	0.50000	0.01637	0.22467	0.30786
+carbamazepine	peak_voltage_dependent	0.05	1683.65108	0.01460	0.00073	0.00232	0.05000
+carbamazepine	peak_voltage_dependent	0.1	3862.06851	0.03561	0.00167	0.00489	0.10000
+carbamazepine	peak_voltage_dependent	0.2	9508.97888	0.09049	0.00410	0.01094	0.20000
+carbamazepine	peak_voltage_dependent	0.3	17307.18093	0.16125	0.00745	0.01861	0.30000
+carbamazepine	peak_voltage_dependent	0.5	44370.00000	0.35130	0.01887	0.04237	0.50000
+carbamazepine	persistent	0.25	28542.96373	0.25000	0.01222	0.02889	0.40202
+carbamazepine	persistent	0.5	77490.00000	0.50000	0.03250	0.06811	0.62289
+lamotrigine	peak_voltage_dependent	0.05	1483.29774	0.01855	0.00455	0.00287	0.05000
+lamotrigine	peak_voltage_dependent	0.1	3402.48497	0.04155	0.00880	0.00655	0.10000
+lamotrigine	peak_voltage_dependent	0.2	8377.41682	0.09645	0.01792	0.01598	0.20000
+lamotrigine	peak_voltage_dependent	0.3	15247.63811	0.16268	0.02862	0.02871	0.30000
+lamotrigine	peak_voltage_dependent	0.5	39090.00000	0.33248	0.05889	0.07045	0.50000
+lamotrigine	persistent	0.25	26160.00000	0.25000	0.04341	0.04827	0.41060
+lamotrigine	persistent	0.5	78480.00000	0.50000	0.09852	0.13206	0.65187
+cenobamate	peak_voltage_dependent	0.05	2531.35821	0.02465	0.00077	0.01828	0.05000
+cenobamate	peak_voltage_dependent	0.1	5806.59433	0.05926	0.00191	0.03223	0.10000
+cenobamate	peak_voltage_dependent	0.2	14296.68652	0.14510	0.00513	0.05889	0.20000
+cenobamate	peak_voltage_dependent	0.3	26021.23147	0.24698	0.00986	0.08689	0.30000
+cenobamate	peak_voltage_dependent	0.5	66710.00000	0.48021	0.02728	0.15536	0.50000
+cenobamate	persistent	0.25	26406.56949	0.25000	0.01002	0.08771	0.30279
+cenobamate	persistent	0.5	71690.00000	0.50000	0.02946	0.16209	0.51619
+phenytoin	peak_voltage_dependent	0.05	2514.73684	0.07342		0.02896	0.05000
+phenytoin	peak_voltage_dependent	0.1	5308.88889	0.12592		0.04462	0.10000
+phenytoin	peak_voltage_dependent	0.2	11945.00000	0.21605		0.07060	0.20000
+phenytoin	peak_voltage_dependent	0.3	20477.14286	0.29784		0.09500	0.30000
+phenytoin	peak_voltage_dependent	0.5	47780.00000	0.45517		0.14859	0.50000
+phenytoin	persistent	0.25	15151.12357	0.25000		0.08056	0.24076
+phenytoin	persistent	0.5	59820.00000	0.50000		0.16647	0.55595
+lacosamide	peak_voltage_dependent	0.05	23153.05762	0.03826		0.01215	0.05000
+lacosamide	peak_voltage_dependent	0.1	43155.31214	0.06514		0.02689	0.10000
+lacosamide	peak_voltage_dependent	0.2	84824.18468	0.11348		0.06238	0.20000
+lacosamide	peak_voltage_dependent	0.3	132919.60204	0.16091		0.10657	0.30000
+lacosamide	peak_voltage_dependent	0.5	269300.00000	0.26581		0.22999	0.50000
+lacosamide	persistent	0.25	245670.96808	0.25000		0.20954	0.47248
+lacosamide	persistent	0.5	832700.00000	0.50000		0.56443	0.79488

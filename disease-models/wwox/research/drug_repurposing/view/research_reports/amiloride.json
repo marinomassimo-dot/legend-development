@@ -1,0 +1,53 @@
+{
+  "investigation": "INV-05",
+  "title": "Amiloride in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "A preclinical comparison of proton-sensitive burst initiation and termination.",
+  "graph": {
+    "evidence": "Acidification can change excitatory firing and inhibit discharges.",
+    "inference": "The contribution of ASIC1a varies by phase and preparation.",
+    "hypothesis": "Blocking ASIC can remove a late inhibitory response.",
+    "experiment": "Match the pH waveform and first recruitment, then measure the late burst."
+  },
+  "evidence": [
+    "ASIC1a loss weakened the effect of acidification on discharge termination in one model. In juvenile mouse CA1, acidification lowered pyramidal-cell firing by 67% even after ASIC1a loss."
+  ],
+  "inference": [
+    "An onset effect and a termination effect can differ. In nine adolescents with cystic fibrosis, the mean total plasma peak was 0.0945 µM, about 146-fold below the nominal IC50 in cultured mouse cortical neurons."
+  ],
+  "hypothesis": [
+    "A fast acid transient may recruit an inhibitory brake during a WWOX burst. A slower pH change could independently reduce excitatory firing."
+  ],
+  "experiment": [
+    "Match local pH history and first recruitment in juvenile Wwox-deficient cortex. Verify ASIC engagement with an independent reference and compare inhibitory output and late burst duration."
+  ],
+  "limits": [
+    "Free juvenile cortex exposure and native WWOX ASIC activity remain open. Renal and potassium effects complicate systemic transfer. Keep amiloride as a secondary laboratory control and defer pediatric study priority."
+  ],
+  "sources": [
+    {
+      "label": "Ziemann et al. ASIC1a and termination, Figs. 1–5.",
+      "url": "https://doi.org/10.1038/nn.2132"
+    },
+    {
+      "label": "Hatch et al. Juvenile acid response and NaV1.2, Figs. 1–4.",
+      "url": "https://doi.org/10.1523/JNEUROSCI.1387-22.2022"
+    },
+    {
+      "label": "Storozhuk et al. Evoked inhibitory currents, Fig. 5.",
+      "url": "https://doi.org/10.1186/s13041-016-0269-4"
+    },
+    {
+      "label": "Bretón et al. Juvenile Wwox cortical bursts, Fig. 3.",
+      "url": "https://doi.org/10.1016/j.nbd.2021.105529"
+    },
+    {
+      "label": "Leng et al. Mouse cortical peak-current IC50, Table 1.",
+      "url": "https://doi.org/10.1111/cns.12524"
+    },
+    {
+      "label": "Jones et al. Adolescent plasma data, primary abstract.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9085317/"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+panel	group	x_pixel	bar_top_y_pixel	approximate_mean	difference_from_same_panel_vehicle
+4a_EEG	vehicle	315	299	5.71	+0.00
+4a_EEG	NP103_low	354	274	9.29	+3.57
+4a_EEG	NP103_high	395	265	10.57	+4.86
+4a_EEG	NP12_low	434	284	7.86	+2.14
+4a_EEG	NP12_high	474	290	7.00	+1.29
+4b_injury	vehicle	316	532	5.11	+0.00
+4b_injury	NP103_low	355	452	50.50	+45.39
+4b_injury	NP103_high	395	448	52.77	+47.66
+4b_injury	NP12_low	433	430	62.98	+57.87
+4b_injury	NP12_high	472	468	41.42	+36.31
+4c_injury_WT	vehicle	573	494	50.00	+0.00
+4c_injury_WT	NP12	611	424	124.47	+74.47
+4c_injury_Lpr	vehicle	724	466	104.90	+0.00
+4c_injury_Lpr	NP12	762	434	149.65	+44.76

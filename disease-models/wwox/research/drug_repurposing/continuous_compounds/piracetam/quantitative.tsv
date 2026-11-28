@@ -1,0 +1,37 @@
+source	contrast	value	unit	basis
+Yan Table 2	fed_test	143.80	µM_total_plasma	input=20.4429 µg/mL; MW=142.16 g/mol
+Yan Table 2	fed_test_SCG_IC50_scale	2.36	%	3.4 µM / measured total plasma peak; no CNS exposure inference
+Yan Table 2	fed_reference	146.14	µM_total_plasma	input=20.775 µg/mL; MW=142.16 g/mol
+Yan Table 2	fed_reference_SCG_IC50_scale	2.33	%	3.4 µM / measured total plasma peak; no CNS exposure inference
+Yan Table 2	fasting_test	222.84	µM_total_plasma	input=31.6786 µg/mL; MW=142.16 g/mol
+Yan Table 2	fasting_test_SCG_IC50_scale	1.53	%	3.4 µM / measured total plasma peak; no CNS exposure inference
+Yan Table 2	fasting_reference	225.93	µM_total_plasma	input=32.1179 µg/mL; MW=142.16 g/mol
+Yan Table 2	fasting_reference_SCG_IC50_scale	1.50	%	3.4 µM / measured total plasma peak; no CNS exposure inference
+AEMPS §5.2	historical_single	590.88	µM_total_plasma	input=84.0 µg/mL; MW=142.16 g/mol
+AEMPS §5.2	historical_single_SCG_IC50_scale	0.58	%	3.4 µM / measured total plasma peak; no CNS exposure inference
+AEMPS §5.2	historical_repeated	808.95	µM_total_plasma	input=115.0 µg/mL; MW=142.16 g/mol
+AEMPS §5.2	historical_repeated_SCG_IC50_scale	0.42	%	3.4 µM / measured total plasma peak; no CNS exposure inference
+Bravo Fig. 2Ac	mean_current_density_reduction	75.61	%	1 − 1.90 / 7.79; ratio of reported means, pA/pF
+Bravo Fig. 5Cb	CA1_AP	-27.07	%	97 / 133 − 1; per 20 s
+Bravo Fig. 5Cb	CA1_AP_illustrative_paired_SE	21.00	events_per_20_s	within-pair correlation=-1; assumes paired cell means
+Bravo Fig. 5Cb	CA1_AP_illustrative_paired_SE	14.87	events_per_20_s	within-pair correlation=0; assumes paired cell means
+Bravo Fig. 5Cb	CA1_AP_illustrative_paired_SE	1.00	events_per_20_s	within-pair correlation=1; assumes paired cell means
+Bravo Fig. 5Cc	CA1_EPSP	-77.50	%	18 / 80 − 1; per 20 s
+Bravo Fig. 5Cc	CA1_EPSP_illustrative_paired_SE	10.00	events_per_20_s	within-pair correlation=-1; assumes paired cell means
+Bravo Fig. 5Cc	CA1_EPSP_illustrative_paired_SE	7.62	events_per_20_s	within-pair correlation=0; assumes paired cell means
+Bravo Fig. 5Cc	CA1_EPSP_illustrative_paired_SE	4.00	events_per_20_s	within-pair correlation=1; assumes paired cell means
+Bravo Fig. 6B	low_Mg_high_K_AP	-51.87	%	37.3 / 77.5 − 1; per 20 s
+Bravo Fig. 6B	low_Mg_high_K_AP_illustrative_paired_SE	2.70	events_per_20_s	within-pair correlation=-1; assumes paired cell means
+Bravo Fig. 6B	low_Mg_high_K_AP_illustrative_paired_SE	2.01	events_per_20_s	within-pair correlation=0; assumes paired cell means
+Bravo Fig. 6B	low_Mg_high_K_AP_illustrative_paired_SE	0.90	events_per_20_s	within-pair correlation=1; assumes paired cell means
+Bravo Fig. 5Cc	gain_per_event_to_hold_total_charge	4.444	fold	count ratio alone; each event must carry equal mean charge after scaling
+Breton §2.3	threshold_KO_to_WT_peak_for_equal_charge	1.070	fold	single exponential, multiply peak by effective decay; group means only
+Illustrative terminal model	minimum_gI_over_gE_for_relative_improvement	1.000	fold	b=0.7561; fE=0.2; fI=0.2; no native release estimate
+Illustrative terminal model	minimum_gI_over_gE_for_relative_improvement	1.365	fold	b=0.7561; fE=0.2; fI=0.5; no native release estimate
+Illustrative terminal model	minimum_gI_over_gE_for_relative_improvement	2.148	fold	b=0.7561; fE=0.2; fI=0.8; no native release estimate
+Illustrative terminal model	minimum_gI_over_gE_for_relative_improvement	0.733	fold	b=0.7561; fE=0.5; fI=0.2; no native release estimate
+Illustrative terminal model	minimum_gI_over_gE_for_relative_improvement	1.000	fold	b=0.7561; fE=0.5; fI=0.5; no native release estimate
+Illustrative terminal model	minimum_gI_over_gE_for_relative_improvement	1.574	fold	b=0.7561; fE=0.5; fI=0.8; no native release estimate
+Illustrative terminal model	minimum_gI_over_gE_for_relative_improvement	0.466	fold	b=0.7561; fE=0.8; fI=0.2; no native release estimate
+Illustrative terminal model	minimum_gI_over_gE_for_relative_improvement	0.635	fold	b=0.7561; fE=0.8; fI=0.5; no native release estimate
+Illustrative terminal model	minimum_gI_over_gE_for_relative_improvement	1.000	fold	b=0.7561; fE=0.8; fI=0.8; no native release estimate

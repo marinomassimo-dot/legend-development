@@ -1,0 +1,6 @@
+figure	panel	group	quantity	y_low	y_high	data_y	estimate	unit
+Herpfer	1B	P15_control	MRI_volume	779	504	688	9.324	uL
+Hung	4E	NCAR	brain_BH4	1618	1418	1476	426.000	pmol/g
+Hung	4E	R6/2	brain_BH4	1618	1418	1479	417.000	pmol/g
+Hung	4E	NCAR	brain_BH2	1611	1411	1453	197.500	pmol/g
+Hung	4E	R6/2	brain_BH2	1611	1411	1444	208.750	pmol/g

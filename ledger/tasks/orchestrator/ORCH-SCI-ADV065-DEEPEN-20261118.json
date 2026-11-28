@@ -1248,10 +1248,12 @@
     },
     {
      "step": "ADV-295: one-consumer reading batch, block 1 (42807679 figures 3-7, 41254692, 42401046, 39546604, 41210171) with own PREREG and the ADV-292 recipe; block 2 only if block 1 has a strict record (1 strict: three records; 2 or more: five); report the remaining debt counts after block 1; after the ADV-287 extension",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-295 (ADV message 2026-11-26; assignments/ADV-295.md lands with ADV's next push)",
-     "accepted_at": "2026-11-26T02:13:33Z"
+     "accepted_at": "2026-11-26T02:13:33Z",
+     "evidence": "ADV-295 block 1 closed, main abf15a728: RESULT_ADV295_BLOCK1_SCI_20261126.md, SENTENCES_FOR_IT_ADV295_BLOCK1_SCI_20261126.md; strict 3 of 5 records, 1 decision-bearing; block 2 not started (ADV decides)",
+     "updated_at": "2026-11-26T04:13:58Z"
     }
    ]
   }

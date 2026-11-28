@@ -1,0 +1,35 @@
+table	compartment	unit	analyte	comparison	n	estimate	SD_or_SE	omit_min	omit_max
+S4	Oli-neu	nmol/mg protein	C0	Con mean	6	4.983	0.264	.	.
+S4	Oli-neu	nmol/mg protein	C0	ALC mean	6	11.388	0.692	.	.
+S4	Oli-neu	nmol/mg protein	C0	LC mean	6	19.847	1.239	.	.
+S4	Oli-neu	nmol/mg protein	C2	Con mean	6	1.377	0.486	.	.
+S4	Oli-neu	nmol/mg protein	C2	ALC mean	6	3.441	1.796	.	.
+S4	Oli-neu	nmol/mg protein	C2	LC mean	6	9.910	2.180	.	.
+S6	serum	uM	C0	RE-DW mean	5	13.805	3.636	.	.
+S6	serum	uM	C0	RE-ALC mean	4	30.098	5.132	.	.
+S6	serum	uM	C0	SI-DW mean	5	14.231	4.361	.	.
+S6	serum	uM	C0	SI-ALC mean	4	27.572	4.518	.	.
+S6	serum	uM	C0	RE ALC - DW	.	16.293	.	.	.
+S6	serum	uM	C0	SI ALC - DW	.	13.341	.	.	.
+S6	serum	uM	C0	SI increment - RE increment	.	-2.952	4.258	-4.692	-0.711
+S6	serum	uM	C2	RE-DW mean	5	19.513	5.762	.	.
+S6	serum	uM	C2	RE-ALC mean	4	54.675	5.298	.	.
+S6	serum	uM	C2	SI-DW mean	5	20.151	7.208	.	.
+S6	serum	uM	C2	SI-ALC mean	4	49.056	8.646	.	.
+S6	serum	uM	C2	RE ALC - DW	.	35.162	.	.	.
+S6	serum	uM	C2	SI ALC - DW	.	28.905	.	.	.
+S6	serum	uM	C2	SI increment - RE increment	.	-6.257	6.537	-10.440	-3.685
+S8	mPFC	nmol/mg protein	C0	RE-DW mean	5	184.410	61.901	.	.
+S8	mPFC	nmol/mg protein	C0	RE-ALC mean	4	190.891	75.195	.	.
+S8	mPFC	nmol/mg protein	C0	SI-DW mean	5	157.893	49.175	.	.
+S8	mPFC	nmol/mg protein	C0	SI-ALC mean	4	171.679	35.578	.	.
+S8	mPFC	nmol/mg protein	C0	RE ALC - DW	.	6.480	.	.	.
+S8	mPFC	nmol/mg protein	C0	SI ALC - DW	.	13.786	.	.	.
+S8	mPFC	nmol/mg protein	C0	SI increment - RE increment	.	7.306	54.589	-20.765	38.209
+S8	mPFC	nmol/mg protein	C2	RE-DW mean	5	254.962	50.225	.	.
+S8	mPFC	nmol/mg protein	C2	RE-ALC mean	4	272.324	124.194	.	.
+S8	mPFC	nmol/mg protein	C2	SI-DW mean	5	241.923	35.881	.	.
+S8	mPFC	nmol/mg protein	C2	SI-ALC mean	4	304.898	13.886	.	.
+S8	mPFC	nmol/mg protein	C2	RE ALC - DW	.	17.362	.	.	.
+S8	mPFC	nmol/mg protein	C2	SI ALC - DW	.	62.975	.	.	.
+S8	mPFC	nmol/mg protein	C2	SI increment - RE increment	.	45.613	68.310	7.118	99.855

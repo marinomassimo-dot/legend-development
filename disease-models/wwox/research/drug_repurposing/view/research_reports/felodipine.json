@@ -1,0 +1,35 @@
+{
+  "investigation": "INV-09",
+  "title": "Felodipine in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "A comparison of native Tau clearance and altered phosphorylation.",
+  "graph": {
+    "evidence": "Mouse aggregate burden fell and a separate Tau model changed soluble phospho-Tau.",
+    "inference": "A lower phospho-Tau signal leaves cargo turnover unresolved.",
+    "hypothesis": "WWOX loss may impair disposal or increase the production of phosphorylated Tau.",
+    "experiment": "Track old Tau at matched calcium current and test axonal function."
+  },
+  "evidence": [
+    "The published Huntington mouse workbook shows 28.2% and 25.9% lower normalized aggregate-positive cells in piriform and motor cortex. Both directions survive paired batch omissions."
+  ],
+  "inference": [
+    "The cortical α-synuclein worksheet repeats density values. PS19 soluble phospho-Tau fell, but WWOX Tau turnover remains unmeasured."
+  ],
+  "hypothesis": [
+    "Felodipine may accelerate lysosomal turnover or alter calcium-dependent phosphorylation. The two routes can change the same terminal marker."
+  ],
+  "experiment": [
+    "Compare with an independent intervention matched on early L-type current. Measure decay of old Tau across cells and medium, phosphosite occupancy, lysosomal dependence and axonal transport."
+  ],
+  "limits": [
+    "The retained mouse phenotype cohort averaged 46.84 nM total plasma. Pediatric free brain exposure remains unknown. Keep felodipine as a conditional laboratory comparator."
+  ],
+  "sources": [
+    {"label": "Siddiqi et al. Figs. 4 and 5 and source data.", "url": "https://doi.org/10.1038/s41467-019-09494-2"},
+    {"label": "Hwang et al. PS19 Tau fractions, Fig. 1.", "url": "https://doi.org/10.1186/s13041-024-01137-y"},
+    {"label": "Wang et al. WWOX and Tau phosphorylation. Figs. 4 and 5.", "url": "https://doi.org/10.1038/cdd.2011.188"},
+    {"label": "Mirfakhar et al. Human MAPT-mutant neuronal lysosomal comparison.", "url": "https://doi.org/10.1038/s41467-026-70473-5"},
+    {"label": "FELL-HD clinical trial registry report. Flowchart and Table 2.", "url": "https://www.isrctn.com/editorial/retrieveFile/2d7e2556-32c7-4e3d-bdf9-cbf30a5e0f25/41702"},
+    {"label": "Trachtman et al. Pediatric hypertension trial, primary abstract.", "url": "https://pubmed.ncbi.nlm.nih.gov/12700955/"}
+  ]
+}

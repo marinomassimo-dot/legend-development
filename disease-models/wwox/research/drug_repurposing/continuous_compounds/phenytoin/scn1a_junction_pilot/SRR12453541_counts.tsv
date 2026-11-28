@@ -1,0 +1,5 @@
+rule	Q	reads	flip	flop	conflict
+centered	20	34397207	0	0	0
+any	20	34397207	0	0	0
+centered	30	34397207	0	0	0
+any	30	34397207	0	0	0

@@ -1,0 +1,11 @@
+source	group_or_time	measurement	value	unit
+3975061	normal CSF laboratory values	reported_CSF_mean	170.9	µM
+3975061	premature infants subgroup	reported_CSF_mean	671.1	µM
+3975061	school-age subgroup	reported_CSF_mean	160.7	µM
+1794949	term day one	reported_CSF_mean	215.8	µM
+1794949	preterm day one	reported_CSF_mean	295.2	µM
+1794949	later neonatal estimates	reported_CSF_mean	164.7	µM
+29423921	nominal 150 µM L-ascorbic acid	initial_nominal	26.42	mg/L
+36418489	6 h from 200 µM nominal bolus in N2B27	scaled_initial_by_measured_retention	26.0	µM
+36418489	8 h from 200 µM nominal bolus in N2B27	scaled_initial_by_measured_retention	12.6	µM
+36418489	24 h from 200 µM nominal bolus in N2B27	scaled_initial_by_measured_retention	2.8	µM

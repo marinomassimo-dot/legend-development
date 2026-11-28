@@ -1,0 +1,13 @@
+study	panel	construct	endpoint	n	control	drug	drug_over_control	published_p
+Zhang	S6A	GluA1i_gamma8	peak_fraction	7	1	0.7391976	0.7391976	0.0091
+Zhang	S6B	GluA1i_gamma8	equilibrium_percent	7	8.538409	2.480589	0.2905212	0.0144
+Zhang	S6A	GluA1i_gamma8	resensitization_percent	7	2.309473	0.03279729	0.0142012	0.0403
+Zhang	4B	GluA1i_gamma8	desensitization_ms	7	9.601469	5.574119	0.5805485	0.0102
+Zhang	S9B	GluA2iQ_gamma8	peak_fraction	9	1	0.9185536	0.9185536	0.0578
+Zhang	S9B	GluA2iQ_gamma8	equilibrium_percent	9	33.07909	15.98108	0.4831172	0.0037
+Zhang	S9B	GluA2iQ_gamma8	resensitization_percent	9	5.585879	-0.2654029	-0.04751318	0.0002
+Zhang	6B	GluA2iQ_gamma8	desensitization_ms	9	37.59289	46.43041	1.235085	0.0089
+Dohrke	7B2	GluA2_gamma8	peak_fraction	9	1	0.936	0.936	0.0004
+Dohrke	7C3	GluA2_gamma8	equilibrium_percent	20	16.96	8.35	0.4923349	<0.0001
+Dohrke	7C2	GluA2_gamma8	resensitization_percent	20	8.31	0.38	0.04572804	<0.0001
+Dohrke	7D	GluA2_gamma8	desensitization_ms	20	26.5	30.88	1.165283	0.0002

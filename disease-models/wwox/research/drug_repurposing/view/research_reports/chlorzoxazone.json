@@ -1,0 +1,53 @@
+{
+  "investigation": "INV-18",
+  "title": "Chlorzoxazone in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "A preclinical comparison of early and late potassium feedback in WWOX-deficient cortex.",
+  "graph": {
+    "evidence": "First-spike AHP changes little in published Wwox means.",
+    "inference": "Train-evoked SK and BK effects remain unresolved.",
+    "hypothesis": "Slow SK feedback could restrain late spikes.",
+    "experiment": "Match calcium, then test first and late recruitment."
+  },
+  "evidence": [
+    "Mean first-spike afterhyperpolarization was 14.42 mV in juvenile Wwox knockout cortex versus 15.14 mV in controls. Train currents were not isolated. In a separate juvenile cortical model, increased BK current accompanied 46% more evoked spikes."
+  ],
+  "inference": [
+    "Chlorzoxazone reduced Purkinje spike-interval variability at 30 µM and rat accumbens firing at 100 µM in an apamin-sensitive comparison. Transfer depends on cell type and exposure."
+  ],
+  "hypothesis": [
+    "Reduced slow SK feedback could increase late spikes. Faster BK repolarization could instead increase early firing."
+  ],
+  "experiment": [
+    "At matched calcium and voltage history, separate SK-sensitive and BK-sensitive train currents. Track early excitation, inhibitory recruitment and late recurrence at measured free exposure."
+  ],
+  "limits": [
+    "Adolescent mean total plasma peaks were 53.1 and 29.5 µM. Unbound brain exposure is unresolved. Retain as a preclinical comparator and defer WWOX trial priority."
+  ],
+  "sources": [
+    {
+      "label": "Bretón et al. Wwox juvenile cortical physiology, Table 1.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8609180/"
+    },
+    {
+      "label": "Alviña and Khodakhah. Ataxic Purkinje firing, Figs. 1–2.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2909841/"
+    },
+    {
+      "label": "Shruti et al. Post-seizure BK current and cortical firing, Figs. 2–3.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2665726/"
+    },
+    {
+      "label": "Hopf et al. Apamin-sensitive effect in rat accumbens, Fig. 7.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3062269/"
+    },
+    {
+      "label": "Gade et al. Clinical probe pharmacokinetics, Table 2.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6046481/"
+    },
+    {
+      "label": "Wang et al. Adult unbound fraction, Table 3.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1884181/"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+panel	WT control	KO control	WT TUDCA	KO TUDCA	WT effect	KO effect	KO minus WT effect	SE independent arms
+8b ATF4, fold	0.978	1.335	0.37567	0.76833	-0.60233	-0.56667	0.035667	0.1303
+8c FASN, fold	0.96933	1.428	0.69133	0.79033	-0.278	-0.63767	-0.35967	0.2183
+8e droplets/NSPC	25.814	38.467	21.758	30.246	-4.0555	-8.2208	-4.1653	not estimated
+8f droplet diameter, um	0.58028	0.82085	0.58701	0.75301	0.0067287	-0.06784	-0.074569	not estimated
+8i SVZ labelled cells/mm^3	1.2167e+05	59023	1.2442e+05	1.0198e+05	2756	42953	40197	8459
+8j DG labelled cells/mm^3	8573.1	4298.5	8919.9	7700.9	346.79	3402.4	3055.6	548.2
+8m DG NeuN among BrdU, percent	67.035	45.357	83.854	77.932	16.82	32.575	15.755	2.538
+8n DG DCX among BrdU, percent	70.491	42.161	72.481	69.05	1.9896	26.889	24.9	2.239

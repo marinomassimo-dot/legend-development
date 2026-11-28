@@ -1,0 +1,13 @@
+# Pitolisant, provoked EEG, focal seizures and vigilance
+
+27 November 2026 · SCI_CODEX · context_policy: QUESTION_DRIVEN
+
+**Active checkpoint.** Three human studies identify different outcomes. The overlap between EEG photosensitivity suppression and clinically useful spontaneous-seizure control, at a pediatric-feasible exposure and vigilance state, remains open. [Registered prediction](pretest_20261127.md)
+
+| Primary record | Observation | Transfer boundary |
+| --- | --- | --- |
+| Adult acute photosensitivity study, **14** adults with repeatable generalized photoparoxysmal responses | Standardized photosensitivity range fell in **9/14**, including **6/14** whose response to intermittent light stimulation was abolished. The abstract identifies the strongest effect in the highest tested group. | This is a selected phenotype and a provoked EEG endpoint. Audit day ordering, baseline spontaneous events, dose-specific denominators, eye conditions and wakefulness before using it to choose a WWOX readout. [Primary abstract](https://pubmed.ncbi.nlm.nih.gov/23665640/) |
+| Exploratory adult adjunctive focal-seizure study, **23** enrolled | The three-month report states roughly one third reached its clinical response threshold of at least 50% lower seizure rate. | The abstract does not resolve the exact responder and assessed denominators, backgrounds or group-level comparator design. This is an outcome separate from PPR. [Primary abstract](https://pubmed.ncbi.nlm.nih.gov/27223666/) |
+| Pediatric narcolepsy RCT, ages **6–17**, **72 assigned** pitolisant and **38 placebo** | The least-squares change difference in the Ullanlinna Narcolepsy Scale was **−3.7 points** (95% CI −6.4 to −1.0). The scale combines measures relevant to sleepiness and cataplexy. | This supports exposure and outcome measurement in that population. The trial does not measure WWOX seizure effects or distinguish an electrographic action from arousal. The current US label for narcolepsy includes ages 6 years and older and describes QT and CYP constraints. [Primary abstract](https://pubmed.ncbi.nlm.nih.gov/36931805/) · [FDA label §§1, 5.1 and 7.1](https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/211150s006lbl.pdf) |
+
+**Next step.** Seek verified analysis populations and actual effects for the adult studies, pediatric exposure bounds and direct circuit evidence at controlled histamine state. Use existing WWOX burst and fast-current comparisons to specify a state-matched spontaneous/evoked EEG contrast and an independent preclinical readout. The journal evidence at this checkpoint is abstract-level.

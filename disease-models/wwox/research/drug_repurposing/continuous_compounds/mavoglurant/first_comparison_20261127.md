@@ -1,0 +1,9 @@
+# Mavoglurant opening comparison
+
+| Evidence | Observation | Transfer limit |
+|---|---|---|
+| Adult PET displacement | The pilot estimated mGlu5 engagement in six healthy adult men with [11C]ABP688, 3–4 hours after single oral exposure. The primary abstract reports 27%, 59%, 74% and 85% across the four exposure groups. | Age, test conditions, tracer model, time and per-level denominators need verification. Displacement neither measures downstream function nor estimates pediatric steady-state occupancy. [PMID 33545349](https://pubmed.ncbi.nlm.nih.gov/33545349/) |
+| Pediatric FXLEARN | Randomized AFQ056 plus language-learning intervention versus placebo plus the same intervention in fragile X syndrome. The published trial found no significant improvement in its primary language outcome. | This is informative pediatric functional and tolerability experience in an adjacent diagnosis. Verify effect estimates and denominators. The language endpoint does not establish electroclinical efficacy or functional response in WWOX. [Primary article](https://doi.org/10.1172/JCI171723) · [ClinicalTrials.gov, NCT02920892](https://clinicaltrials.gov/study/NCT02920892?tab=results) |
+| Held WWOX compartments | GRM5 mean normalized expression increased from 1.06 to 3.38 CPM in organoids and fell from 24.05 to 13.70 TPM in mouse hippocampus. Mouse cortical mean was 9.63 versus 9.32 TPM. | Compare within each model. These bulk contrasts motivate testing mGlu5-dependent activity at defined cell-state and stage, with no abundance-to-function assumption. [Held source table](../jbpos0101/bulk_receptors.tsv) |
+
+**Checkpoint completed.** The [reproduced comparison](occupancy_and_disposition_20261127.md) quantifies PET model sensitivity, pediatric plasma context, randomized outcomes and the WWOX-specific decision. [Registered prediction](pretest_20261127.md)

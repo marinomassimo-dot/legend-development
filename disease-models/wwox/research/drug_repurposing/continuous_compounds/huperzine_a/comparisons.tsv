@@ -1,0 +1,23 @@
+comparison	value	unit
+eeg_pre_mean	119.0333	events per recorded 8 h
+eeg_during_mean	53.5	events per recorded 8 h
+eeg_post_mean	98.8	events per recorded 8 h
+eeg_during_vs_pre_group_reduction	55.05461	percent
+eeg_during_vs_pre_median_within_mouse_reduction	51.10853	percent
+eeg_during_below_pre_mice	10	mice
+eeg_omit_one_mouse_group_reduction_min	49.61538	percent
+eeg_omit_one_mouse_group_reduction_max	60.11	percent
+eeg_pre_post_midpoint_median_within_mouse_reduction	45.81778	percent
+eeg_during_below_pre_post_midpoint_mice	10	mice
+eeg_post_above_during_mice	10	mice
+eeg_day4_below_own_pre_mean_mice	9	mice
+eeg_day5_below_own_pre_mean_mice	9	mice
+eeg_day6_below_own_pre_mean_mice	10	mice
+wt_6hz_20ma_behavioral_event_reduction	90.90909	percentage points
+scn1a_6hz_20ma_behavioral_event_reduction	72.72727	percentage points
+flurothyl_treated_death_fraction	0.8461538	fraction
+adult_tablet_total_plasma_peak	10.68835	nM
+rat_nmda_nominal_ic50_over_adult_total_plasma_peak	11788.54	cross-study ratio
+rat_nmda_nominal_ic50_over_mouse_local_kindling_solution	1260	cross-assay ratio
+sponsor_interim_maintenance_completion	0.4634146	fraction at cutoff
+sponsor_interim_focal_responders_reconstructed	10	adults, from rounded percent

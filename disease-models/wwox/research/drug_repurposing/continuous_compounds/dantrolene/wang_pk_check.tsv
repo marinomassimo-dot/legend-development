@@ -1,0 +1,65 @@
+measure	compartment	route_or_column	locator	n	value	unit
+group_mean	plasma	intranasal	10 min	5	732.20000	ng/ml
+group_mean	plasma	intranasal	20 min	8	1755.87500	ng/ml
+group_mean	plasma	intranasal	30 min	5	1183.80000	ng/ml
+group_mean	plasma	intranasal	50 min	4	718.25000	ng/ml
+group_mean	plasma	intranasal	70 min	4	764.62500	ng/ml
+group_mean	plasma	intranasal	120 min	4	745.75000	ng/ml
+group_mean	plasma	intranasal	150 min	5	490.00000	ng/ml
+group_mean	plasma	intranasal	180 min	5	58.00000	ng/ml
+group_mean_auc	plasma	intranasal	10–120 min		98747.37500	ng/ml*min
+group_mean_auc	plasma	intranasal	10–180 min		125503.62500	ng/ml*min
+group_mean	plasma	oral	10 min	5	301.00000	ng/ml
+group_mean	plasma	oral	20 min	5	315.00000	ng/ml
+group_mean	plasma	oral	30 min	5	731.00000	ng/ml
+group_mean	plasma	oral	50 min	5	905.60000	ng/ml
+group_mean	plasma	oral	70 min	5	538.80000	ng/ml
+group_mean	plasma	oral	120 min	5	30.40000	ng/ml
+group_mean_auc	plasma	oral	10–120 min		53350.00000	ng/ml*min
+group_mean	brain	intranasal	10 min	5	104.80000	ng/g
+group_mean	brain	intranasal	20 min	8	369.37500	ng/g
+group_mean	brain	intranasal	30 min	5	360.60000	ng/g
+group_mean	brain	intranasal	50 min	4	112.12500	ng/g
+group_mean	brain	intranasal	70 min	4	129.37500	ng/g
+group_mean	brain	intranasal	120 min	4	172.00000	ng/g
+group_mean	brain	intranasal	150 min	5	149.20000	ng/g
+group_mean	brain	intranasal	180 min	5	7.00000	ng/g
+group_mean_auc	brain	intranasal	10–120 min		20697.37500	ng/g*min
+group_mean_auc	brain	intranasal	10–180 min		27858.37500	ng/g*min
+group_mean	brain	oral	10 min	5	51.20000	ng/g
+group_mean	brain	oral	20 min	5	82.60000	ng/g
+group_mean	brain	oral	30 min	5	203.20000	ng/g
+group_mean	brain	oral	50 min	5	278.20000	ng/g
+group_mean	brain	oral	70 min	5	96.60000	ng/g
+group_mean	brain	oral	120 min	5	0.00000	ng/g
+group_mean_auc	brain	oral	10–120 min		13075.00000	ng/g*min
+oral_series_column_integral	plasma	K	10–120 min		67720.00000	ng/ml*min
+reported_brain_auc	brain	intranasal	1D:A3		67720.00000	ng/g*min
+reported_minus_column_integral	plasma	K	1D:A3		0.00000	numeric_difference
+oral_series_column_integral	brain	K	10–120 min		12330.00000	ng/g*min
+reported_brain_auc	brain	oral	1D:B3		12330.00000	ng/g*min
+reported_minus_column_integral	brain	K	1D:B3		0.00000	numeric_difference
+oral_series_column_integral	plasma	L	10–120 min		57565.00000	ng/ml*min
+reported_brain_auc	brain	intranasal	1D:A4		57565.00000	ng/g*min
+reported_minus_column_integral	plasma	L	1D:A4		0.00000	numeric_difference
+oral_series_column_integral	brain	L	10–120 min		12680.00000	ng/g*min
+reported_brain_auc	brain	oral	1D:B4		12680.00000	ng/g*min
+reported_minus_column_integral	brain	L	1D:B4		0.00000	numeric_difference
+oral_series_column_integral	plasma	M	10–120 min		45955.00000	ng/ml*min
+reported_brain_auc	brain	intranasal	1D:A5		45955.00000	ng/g*min
+reported_minus_column_integral	plasma	M	1D:A5		0.00000	numeric_difference
+oral_series_column_integral	brain	M	10–120 min		14055.00000	ng/g*min
+reported_brain_auc	brain	oral	1D:B5		14055.00000	ng/g*min
+reported_minus_column_integral	brain	M	1D:B5		0.00000	numeric_difference
+oral_series_column_integral	plasma	N	10–120 min		40905.00000	ng/ml*min
+reported_brain_auc	brain	intranasal	1D:A6		40905.00000	ng/g*min
+reported_minus_column_integral	plasma	N	1D:A6		0.00000	numeric_difference
+oral_series_column_integral	brain	N	10–120 min		13315.00000	ng/g*min
+reported_brain_auc	brain	oral	1D:B6		13315.00000	ng/g*min
+reported_minus_column_integral	brain	N	1D:B6		0.00000	numeric_difference
+oral_series_column_integral	plasma	O	10–120 min		54605.00000	ng/ml*min
+reported_brain_auc	brain	intranasal	1D:A7		54605.00000	ng/g*min
+reported_minus_column_integral	plasma	O	1D:A7		0.00000	numeric_difference
+oral_series_column_integral	brain	O	10–120 min		12995.00000	ng/g*min
+reported_brain_auc	brain	oral	1D:B7		12995.00000	ng/g*min
+reported_minus_column_integral	brain	O	1D:B7		0.00000	numeric_difference

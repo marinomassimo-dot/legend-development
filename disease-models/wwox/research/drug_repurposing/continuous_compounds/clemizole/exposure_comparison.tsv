@@ -1,0 +1,15 @@
+assay	endpoint	compartment	assumed_local_unbound_uM	multiple_of_adult_unbound_peak	assay_midpoint_uM	midpoint_over_local
+hERG_WT_Jie_2017	functional_IC50	cardiac	0.01	1	0.07	7
+TRPC5_Richter_low	functional_IC50	neural	0.001	0.1	1	1000
+TRPC5_Richter_low	functional_IC50	neural	0.01	1	1	100
+TRPC5_Richter_low	functional_IC50	neural	0.1	10	1	10
+TRPC5_Richter_high	functional_IC50	neural	0.001	0.1	1.3	1300
+TRPC5_Richter_high	functional_IC50	neural	0.01	1	1.3	130
+TRPC5_Richter_high	functional_IC50	neural	0.1	10	1.3	13
+hTRPC5_Song_WT	functional_IC50	neural	0.001	0.1	3.07	3070
+hTRPC5_Song_WT	functional_IC50	neural	0.01	1	3.07	307
+hTRPC5_Song_WT	functional_IC50	neural	0.1	10	3.07	30.7
+hTRPC5_Song_N443L	functional_IC50	construct_control	0.01	1	10.43	1043
+HTR2A_B_C_Griffin_parent	functional_EC50_unavailable	neural	0.001	0.1	NA	NA
+HTR2A_B_C_Griffin_parent	functional_EC50_unavailable	neural	0.01	1	NA	NA
+HTR2A_B_C_Griffin_parent	functional_EC50_unavailable	neural	0.1	10	NA	NA

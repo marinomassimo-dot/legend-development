@@ -1,0 +1,6 @@
+source	public_locator	local_filename	sha256	scope
+Oláh primary article	https://pmc-oa-opendata.s3.amazonaws.com/PMC13581442.1/PMC13581442.1.xml	Olah2026.xml	b8f8f933eb814c1df2ff365759cca50340c042fdee7fe63fa028b1f85652eff8	Selected Results and STAR Methods
+Oláh Fig. 6	https://pmc-oa-opendata.s3.amazonaws.com/PMC13581442.1/nihms-2206882-f0007.webp	Olah_Fig6.webp	9ddd815a4a3f8c6d29b917b749964b6456c8cd08bb9b1cdfbf17d37ca9cce8cc	Original A and B–E panels visually inspected
+Oláh supplement	https://pmc-oa-opendata.s3.amazonaws.com/PMC13581442.1/NIHMS2206882-supplement-1.pdf	Olah2026_supplement.pdf	9f16fda86a4db9cdc8c001f33f27f8329a3c97b549094dda345ba1cf5fb7ae7e	Tables S1 and S2
+Bieber PDF	https://mediatum.ub.tum.de/doc/1696490/document.pdf	Bieber2022.pdf	235e17bb2437b75fcbb320415b99b1ec8125e8b3ebc76424c401e3cbc222e96a	Methods and results with original Figs. 6–8
+Banke abstract	https://pubmed.ncbi.nlm.nih.gov/43044834/	NA	external	Published abstract only

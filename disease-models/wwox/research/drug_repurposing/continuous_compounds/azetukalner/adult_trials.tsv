@@ -1,0 +1,8 @@
+trial	research_arm_mg	efficacy_n	median_individual_change_pct	difference_of_arm_medians_pp	responders_50pct	response_rate	response_risk_diff	safety_n	TEAE_permanent_stop	stop_rate	stop_risk_diff	dizziness_n	dizziness_risk_diff	somnolence_n	somnolence_risk_diff
+X_TOLE_8_week	25	112	-52.8	-34.6	61	0.544643	0.39552	114	18	0.157895	0.122807	36	0.245614	17	0.0789474
+X_TOLE_8_week	20	51	-46.4	-28.2	22	0.431373	0.28225	51	7	0.137255	0.102167	13	0.184727	11	0.145511
+X_TOLE_8_week	10	46	-33.2	-15	13	0.282609	0.133486	46	1	0.0217391	-0.0133486	3	-0.00495805	5	0.0385202
+X_TOLE_8_week	0	114	-18.2	0	17	0.149123	0	114	4	0.0350877	0	8	0	8	0
+X_TOLE2_12_week	0	125	-10.43	0	26	0.208	0	125	4	0.032	0	4	0	9	0
+X_TOLE2_12_week	15	125	-34.45	-24.02	47	0.376	0.168	125	6	0.048	0.016	12	0.064	10	0.008
+X_TOLE2_12_week	25	124	-53.15	-42.72	68	0.548387	0.340387	124	18	0.145161	0.113161	39	0.282516	12	0.0247742

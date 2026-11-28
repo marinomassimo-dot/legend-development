@@ -1,0 +1,53 @@
+{
+  "investigation": "INV-14",
+  "title": "Baricitinib in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "A comparison of inflammatory signaling and trophic support for first myelin sheaths.",
+  "graph": {
+    "evidence": "Measured CSF exposure and different responses to the same cytokine.",
+    "inference": "A lower inflammatory marker leaves local function unresolved.",
+    "hypothesis": "Broad JAK inhibition may also remove protective glial signaling.",
+    "experiment": "Match inflammatory engagement and test new sheaths and conduction."
+  },
+  "evidence": [
+    "In Aicardi–Goutières syndrome, the median total CSF concentration was 19.55 nM across 11 samples from five people. In healthy whole-blood monocytes, IL-6/pSTAT1 and IL-6/pSTAT3 IC50 values were 39 and 161 nM."
+  ],
+  "inference": [
+    "In cultured human sensory neurons, one nominal baricitinib concentration inhibited responses to both IL-6 and LIF. Separate mouse models give different developmental results after Stat3 loss."
+  ],
+  "hypothesis": [
+    "A local inflammatory signal may amplify WWOX dysfunction. JAK inhibition could also attenuate CNTF/LIF support in the cells making first sheaths."
+  ],
+  "experiment": [
+    "Compare baricitinib with one ligand-specific reference at matched inflammatory engagement. Measure local free drug, trophic responses, first sheaths per eligible axon and conduction."
+  ],
+  "limits": [
+    "The pediatric clinical settings differ from WOREE. A local functional effect and preserved trophic response are required to raise research priority. Retain as a conditional laboratory probe."
+  ],
+  "sources": [
+    {
+      "label": "Frémond et al. CSF pharmacokinetics and AGS outcomes.",
+      "url": "https://doi.org/10.1007/s10875-023-01500-z"
+    },
+    {
+      "label": "Traves et al. Ligand and STAT-substrate potencies, Table 1.",
+      "url": "https://doi.org/10.1136/annrheumdis-2020-219012"
+    },
+    {
+      "label": "Laitman et al. Embryonic oligodendrocytes, Fig. 5 and S1 Data.",
+      "url": "https://doi.org/10.1371/journal.pbio.1002467"
+    },
+    {
+      "label": "Steelman et al. Development and adult repair, Figs. 4–6.",
+      "url": "https://doi.org/10.1016/j.nbd.2016.03.023"
+    },
+    {
+      "label": "Li et al. Responses to IL-6 and LIF in human sensory neurons, Suppl. Fig. 6.",
+      "url": "https://doi.org/10.1172/jci.insight.186646DS1"
+    },
+    {
+      "label": "Ramanan et al. Juvenile idiopathic arthritis, primary abstract.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37423231/"
+    }
+  ]
+}

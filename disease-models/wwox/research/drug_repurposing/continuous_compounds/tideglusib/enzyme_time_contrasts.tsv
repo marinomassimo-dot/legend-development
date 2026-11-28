@@ -1,0 +1,4 @@
+comparison	preincubation_h	IC50_before_nM	IC50_after_nM	ratio_before_after	C199A_off_rate_half_life_h
+Dominguez_WT_beta	1	105	5	21.0	NA
+Dominguez_C199A_beta	1	7000	60	116.67	2.19
+Gordon_WT_beta	3	1780	139	12.81	NA

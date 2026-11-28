@@ -1,0 +1,34 @@
+{
+  "investigation": "INV-05",
+  "title": "Istradefylline in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "An adenosine comparison for post-burst propagation and preserved inhibition.",
+  "graph": {
+    "evidence": "A mouse hyperoxia challenge showed fewer motor seizures.",
+    "inference": "Receptor binding, seizure timing and tissue protection are separate endpoints.",
+    "hypothesis": "A2A can facilitate late propagation while A1 supplies a parallel brake.",
+    "experiment": "Match the first burst, verify target engagement and measure A1 function."
+  },
+  "evidence": [
+    "In a 30-minute hyperoxia challenge, motor seizures occurred in 1 of 6 treated and 6 of 6 control mice. In the separate kainate study, the drug-specific EEG comparison tested a P2X7 antagonist."
+  ],
+  "inference": [
+    "Adult PET establishes striatal engagement. Reported recombinant affinities differ 12.5-fold between A2A and A2B. An illustrative equilibrium model predicts appreciable A2B occupancy when A2A occupancy is high."
+  ],
+  "hypothesis": [
+    "Selectively reducing episode-dependent A2A gain could limit late WWOX propagation while preserving native A1 inhibition. ADORA2A RNA changes in opposite directions in mouse cortex and human organoids."
+  ],
+  "experiment": [
+    "At measured local parent and adenosine, match first recruitment and compare recurrence with A2A occlusion and an A2B control. Read evoked A1 and inhibitory reserve."
+  ],
+  "limits": [
+    "Juvenile exposure, native cortical target engagement and spontaneous WWOX electrographic effects are unresolved. Retain as a conditional research probe and defer systemic pediatric prioritization."
+  ],
+  "sources": [
+    {"label": "Du et al. Fixed-window behavioral seizures and cortical chemistry.", "url": "https://doi.org/10.3389/fnmol.2026.1922859"},
+    {"label": "Sun et al. Kainate and allocation of compound readouts.", "url": "https://doi.org/10.7150/thno.100365"},
+    {"label": "Nasrallah et al. Dentate A2A-dependent plasticity and seizure timing.", "url": "https://doi.org/10.1016/j.celrep.2024.114382"},
+    {"label": "Ishibashi et al. Adult striatal PET occupancy.", "url": "https://doi.org/10.1002/mds.28378"},
+    {"label": "FDA. Binding affinities and functional antagonist data.", "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2019/022075Orig1s000OtherR.pdf"}
+  ]
+}

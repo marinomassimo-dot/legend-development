@@ -1,0 +1,9 @@
+study	comparison	endpoint	locator	control	comparison_value	effect	effect_unit	two_sided_fisher_p	replication
+Morabito	L2/3 pyramidal to pyramidal, chelation	first median NMDA charge, pC	Fig. 1G	0.37	0.45	21.622	% change of published marginal summaries		8 pairs
+Morabito	L2/3 pyramidal to pyramidal, chelation	total median NMDA charge, pC	Fig. 1G	2.17	2.96	36.406	% change of published marginal summaries		8 pairs
+Morabito	L2/3 pyramidal to SST, added zinc	first median NMDA charge, pC	Fig. 2I	0.11	0.08	-27.273	% change of published marginal summaries		12 pairs
+Morabito	L2/3 pyramidal to SST, added zinc	total median NMDA charge, pC	Fig. 2I	2.89	1.94	-32.872	% change of published marginal summaries		12 pairs
+Saad	Published	≥50% seizure reduction	Table III	1/22	7/23	25.889	percentage points	0.046977	45 children
+Saad	Sensitivity, one fewer zinc responder	≥50% seizure reduction	Table III	1/22	6/23	21.542	percentage points	0.095916	45 children
+Saad	Sensitivity, one more placebo responder	≥50% seizure reduction	Table III	2/22	7/23	21.344	percentage points	0.134552	45 children
+Saad	Published	Seizure freedom	Table III	0/22	2/23	8.696	percentage points	0.488889	45 children

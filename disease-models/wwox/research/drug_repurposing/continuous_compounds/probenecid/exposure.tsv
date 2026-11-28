@@ -1,0 +1,9 @@
+source	time_h	matrix	statistic	n	parent_ug_ml	parent_uM	ratio_of_group_means_pct	study_reported_concurrent_CSF_serum_pct
+Clark_TBI_Pro_NAC	24	CSF	measured_total	7	5.4	18.923	7.162	7.33
+Clark_TBI_Pro_NAC	24	serum	measured_total	7	75.4	264.228	NA	NA
+Clark_TBI_Pro_NAC	48	CSF	measured_total	7	6.2	21.727	8.256	7.64
+Clark_TBI_Pro_NAC	48	serum	measured_total	7	75.1	263.176	NA	NA
+Clark_TBI_Pro_NAC	72	CSF	measured_total	7	4.6	16.120	8.696	10.16
+Clark_TBI_Pro_NAC	72	serum	measured_total	7	52.9	185.380	NA	NA
+Nagata_rat_infusion	3	CSF	measured_total	NA	NA	57.300	NA	NA
+Nagata_rat_infusion	3	plasma	measured_unbound	NA	NA	154.000	NA	NA

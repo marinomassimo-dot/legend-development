@@ -1,0 +1,5 @@
+peak	provisional_identity	baseline_area	week24_area	n	delta_area	fold_area
+1	likely_albumin_associated	4.4	137.4	11	133	31.227
+2	likely_SELENO_P_associated	<LOD	123.3	11	NA	NA
+3	tentative_selenate	1347	1748	11	401	1.2977
+4	suspected_selenite	351.7	1551	11	1199.3	4.41

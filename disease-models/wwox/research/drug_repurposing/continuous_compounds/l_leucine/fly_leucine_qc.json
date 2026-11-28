@@ -1,0 +1,14 @@
+{
+  "apex_s": 607.7,
+  "pools": 12,
+  "blanks": 6,
+  "median_pool_area": 71256117.56328124,
+  "median_blank_area": 743132.8761723624,
+  "spearman_vs_deposit": 0.8391608391608393,
+  "spearman_within_pool_label_sets": {
+    "Pool1_": 0.3142857142857143,
+    "Pool2_": 0.3714285714285715
+  },
+  "strongest_secondary_fraction": 0,
+  "gate_pass": true
+}

@@ -1,0 +1,601 @@
+assigned_class	pool	detection_set	depth_comparison	nuclei	positive_nuclei	positive_pct
+exc	ctrl	Cacna2d1	all	1596	1474	92.35589
+exc	ctrl	Cacna2d1	shared-depth standardized	1596	1474	92.18120
+exc	ctrl	Cacna2d1	500–<2000	76	23	30.26316
+exc	ctrl	Cacna2d1	2000–<5000	360	311	86.38889
+exc	ctrl	Cacna2d1	5000–<10000	759	743	97.89196
+exc	ctrl	Cacna2d1	10000+	401	397	99.00249
+exc	ctrl	Cacna2d2	all	1596	70	4.38596
+exc	ctrl	Cacna2d2	shared-depth standardized	1596	70	4.45452
+exc	ctrl	Cacna2d2	500–<2000	76	5	6.57895
+exc	ctrl	Cacna2d2	2000–<5000	360	14	3.88889
+exc	ctrl	Cacna2d2	5000–<10000	759	20	2.63505
+exc	ctrl	Cacna2d2	10000+	401	31	7.73067
+exc	ctrl	Cacna1a	all	1596	1433	89.78697
+exc	ctrl	Cacna1a	shared-depth standardized	1596	1433	89.65583
+exc	ctrl	Cacna1a	500–<2000	76	18	23.68421
+exc	ctrl	Cacna1a	2000–<5000	360	297	82.50000
+exc	ctrl	Cacna1a	5000–<10000	759	718	94.59816
+exc	ctrl	Cacna1a	10000+	401	400	99.75062
+exc	ctrl	Cacna1b	all	1596	1080	67.66917
+exc	ctrl	Cacna1b	shared-depth standardized	1596	1080	68.06057
+exc	ctrl	Cacna1b	500–<2000	76	12	15.78947
+exc	ctrl	Cacna1b	2000–<5000	360	148	41.11111
+exc	ctrl	Cacna1b	5000–<10000	759	554	72.99078
+exc	ctrl	Cacna1b	10000+	401	366	91.27182
+exc	ctrl	Grik1	all	1596	167	10.46366
+exc	ctrl	Grik1	shared-depth standardized	1596	167	10.63252
+exc	ctrl	Grik1	500–<2000	76	3	3.94737
+exc	ctrl	Grik1	2000–<5000	360	16	4.44444
+exc	ctrl	Grik1	5000–<10000	759	71	9.35441
+exc	ctrl	Grik1	10000+	401	77	19.20200
+exc	ctrl	Grik2	all	1596	1532	95.98997
+exc	ctrl	Grik2	shared-depth standardized	1596	1532	95.78942
+exc	ctrl	Grik2	500–<2000	76	36	47.36842
+exc	ctrl	Grik2	2000–<5000	360	341	94.72222
+exc	ctrl	Grik2	5000–<10000	759	755	99.47299
+exc	ctrl	Grik2	10000+	401	400	99.75062
+exc	ctrl	Grik4	all	1596	942	59.02256
+exc	ctrl	Grik4	shared-depth standardized	1596	942	58.79413
+exc	ctrl	Grik4	500–<2000	76	10	13.15789
+exc	ctrl	Grik4	2000–<5000	360	211	58.61111
+exc	ctrl	Grik4	5000–<10000	759	478	62.97760
+exc	ctrl	Grik4	10000+	401	243	60.59850
+exc	ctrl	Neto1	all	1596	1018	63.78446
+exc	ctrl	Neto1	shared-depth standardized	1596	1018	63.85212
+exc	ctrl	Neto1	500–<2000	76	7	9.21053
+exc	ctrl	Neto1	2000–<5000	360	169	46.94444
+exc	ctrl	Neto1	5000–<10000	759	542	71.40975
+exc	ctrl	Neto1	10000+	401	300	74.81297
+exc	ctrl	Neto2	all	1596	420	26.31579
+exc	ctrl	Neto2	shared-depth standardized	1596	420	26.93493
+exc	ctrl	Neto2	500–<2000	76	4	5.26316
+exc	ctrl	Neto2	2000–<5000	360	21	5.83333
+exc	ctrl	Neto2	5000–<10000	759	160	21.08037
+exc	ctrl	Neto2	10000+	401	235	58.60349
+exc	ctrl	Slc12a5	all	1596	782	48.99749
+exc	ctrl	Slc12a5	shared-depth standardized	1596	782	49.25868
+exc	ctrl	Slc12a5	500–<2000	76	5	6.57895
+exc	ctrl	Slc12a5	2000–<5000	360	122	33.88889
+exc	ctrl	Slc12a5	5000–<10000	759	375	49.40711
+exc	ctrl	Slc12a5	10000+	401	280	69.82544
+exc	ctrl	Cacna2d1+Cacna1a	all	1596	1373	86.02757
+exc	ctrl	Cacna2d1+Cacna1a	shared-depth standardized	1596	1373	85.95597
+exc	ctrl	Cacna2d1+Cacna1a	500–<2000	76	9	11.84211
+exc	ctrl	Cacna2d1+Cacna1a	2000–<5000	360	265	73.61111
+exc	ctrl	Cacna2d1+Cacna1a	5000–<10000	759	703	92.62187
+exc	ctrl	Cacna2d1+Cacna1a	10000+	401	396	98.75312
+exc	ctrl	Cacna2d1+Cacna1b	all	1596	1045	65.47619
+exc	ctrl	Cacna2d1+Cacna1b	shared-depth standardized	1596	1045	65.89271
+exc	ctrl	Cacna2d1+Cacna1b	500–<2000	76	8	10.52632
+exc	ctrl	Cacna2d1+Cacna1b	2000–<5000	360	133	36.94444
+exc	ctrl	Cacna2d1+Cacna1b	5000–<10000	759	542	71.40975
+exc	ctrl	Cacna2d1+Cacna1b	10000+	401	362	90.27431
+exc	ctrl	Cacna2d2+Cacna1a	all	1596	67	4.19799
+exc	ctrl	Cacna2d2+Cacna1a	shared-depth standardized	1596	67	4.25678
+exc	ctrl	Cacna2d2+Cacna1a	500–<2000	76	3	3.94737
+exc	ctrl	Cacna2d2+Cacna1a	2000–<5000	360	13	3.61111
+exc	ctrl	Cacna2d2+Cacna1a	5000–<10000	759	20	2.63505
+exc	ctrl	Cacna2d2+Cacna1a	10000+	401	31	7.73067
+exc	ctrl	Cacna2d2+Cacna1b	all	1596	52	3.25815
+exc	ctrl	Cacna2d2+Cacna1b	shared-depth standardized	1596	52	3.33730
+exc	ctrl	Cacna2d2+Cacna1b	500–<2000	76	2	2.63158
+exc	ctrl	Cacna2d2+Cacna1b	2000–<5000	360	5	1.38889
+exc	ctrl	Cacna2d2+Cacna1b	5000–<10000	759	16	2.10804
+exc	ctrl	Cacna2d2+Cacna1b	10000+	401	29	7.23192
+exc	ctrl	Cacna2d2+Grik1	all	1596	23	1.44110
+exc	ctrl	Cacna2d2+Grik1	shared-depth standardized	1596	23	1.47499
+exc	ctrl	Cacna2d2+Grik1	500–<2000	76	0	0.00000
+exc	ctrl	Cacna2d2+Grik1	2000–<5000	360	3	0.83333
+exc	ctrl	Cacna2d2+Grik1	5000–<10000	759	5	0.65876
+exc	ctrl	Cacna2d2+Grik1	10000+	401	15	3.74065
+exc	ctrl	Cacna2d1+Grik1	all	1596	154	9.64912
+exc	ctrl	Cacna2d1+Grik1	shared-depth standardized	1596	154	9.82358
+exc	ctrl	Cacna2d1+Grik1	500–<2000	76	2	2.63158
+exc	ctrl	Cacna2d1+Grik1	2000–<5000	360	12	3.33333
+exc	ctrl	Cacna2d1+Grik1	5000–<10000	759	65	8.56390
+exc	ctrl	Cacna2d1+Grik1	10000+	401	75	18.70324
+exc	ctrl	Cacna2d2+Grik2	all	1596	66	4.13534
+exc	ctrl	Cacna2d2+Grik2	shared-depth standardized	1596	66	4.19807
+exc	ctrl	Cacna2d2+Grik2	500–<2000	76	3	3.94737
+exc	ctrl	Cacna2d2+Grik2	2000–<5000	360	12	3.33333
+exc	ctrl	Cacna2d2+Grik2	5000–<10000	759	20	2.63505
+exc	ctrl	Cacna2d2+Grik2	10000+	401	31	7.73067
+exc	ctrl	Cacna2d2+Grik1+Cacna1a	all	1596	23	1.44110
+exc	ctrl	Cacna2d2+Grik1+Cacna1a	shared-depth standardized	1596	23	1.47499
+exc	ctrl	Cacna2d2+Grik1+Cacna1a	500–<2000	76	0	0.00000
+exc	ctrl	Cacna2d2+Grik1+Cacna1a	2000–<5000	360	3	0.83333
+exc	ctrl	Cacna2d2+Grik1+Cacna1a	5000–<10000	759	5	0.65876
+exc	ctrl	Cacna2d2+Grik1+Cacna1a	10000+	401	15	3.74065
+exc	ctrl	Cacna2d2+Grik1+Cacna1b	all	1596	18	1.12782
+exc	ctrl	Cacna2d2+Grik1+Cacna1b	shared-depth standardized	1596	18	1.16742
+exc	ctrl	Cacna2d2+Grik1+Cacna1b	500–<2000	76	0	0.00000
+exc	ctrl	Cacna2d2+Grik1+Cacna1b	2000–<5000	360	1	0.27778
+exc	ctrl	Cacna2d2+Grik1+Cacna1b	5000–<10000	759	3	0.39526
+exc	ctrl	Cacna2d2+Grik1+Cacna1b	10000+	401	14	3.49127
+exc	ctrl	Grik1+Neto1	all	1596	126	7.89474
+exc	ctrl	Grik1+Neto1	shared-depth standardized	1596	126	8.03533
+exc	ctrl	Grik1+Neto1	500–<2000	76	2	2.63158
+exc	ctrl	Grik1+Neto1	2000–<5000	360	13	3.61111
+exc	ctrl	Grik1+Neto1	5000–<10000	759	48	6.32411
+exc	ctrl	Grik1+Neto1	10000+	401	63	15.71072
+exc	ctrl	Grik1+Neto2	all	1596	72	4.51128
+exc	ctrl	Grik1+Neto2	shared-depth standardized	1596	72	4.65779
+exc	ctrl	Grik1+Neto2	500–<2000	76	1	1.31579
+exc	ctrl	Grik1+Neto2	2000–<5000	360	2	0.55556
+exc	ctrl	Grik1+Neto2	5000–<10000	759	20	2.63505
+exc	ctrl	Grik1+Neto2	10000+	401	49	12.21945
+exc	ctrl	Grik1+Grik4	all	1596	83	5.20050
+exc	ctrl	Grik1+Grik4	shared-depth standardized	1596	83	5.30863
+exc	ctrl	Grik1+Grik4	500–<2000	76	1	1.31579
+exc	ctrl	Grik1+Grik4	2000–<5000	360	5	1.38889
+exc	ctrl	Grik1+Grik4	5000–<10000	759	34	4.47958
+exc	ctrl	Grik1+Grik4	10000+	401	43	10.72319
+exc	ctrl	Cacna2d2+Grik1+Neto1	all	1596	17	1.06516
+exc	ctrl	Cacna2d2+Grik1+Neto1	shared-depth standardized	1596	17	1.08720
+exc	ctrl	Cacna2d2+Grik1+Neto1	500–<2000	76	0	0.00000
+exc	ctrl	Cacna2d2+Grik1+Neto1	2000–<5000	360	3	0.83333
+exc	ctrl	Cacna2d2+Grik1+Neto1	5000–<10000	759	3	0.39526
+exc	ctrl	Cacna2d2+Grik1+Neto1	10000+	401	11	2.74314
+exc	ctrl	Cacna2d2+Grik1+Grik4+Neto1	all	1596	5	0.31328
+exc	ctrl	Cacna2d2+Grik1+Grik4+Neto1	shared-depth standardized	1596	5	0.32565
+exc	ctrl	Cacna2d2+Grik1+Grik4+Neto1	500–<2000	76	0	0.00000
+exc	ctrl	Cacna2d2+Grik1+Grik4+Neto1	2000–<5000	360	0	0.00000
+exc	ctrl	Cacna2d2+Grik1+Grik4+Neto1	5000–<10000	759	1	0.13175
+exc	ctrl	Cacna2d2+Grik1+Grik4+Neto1	10000+	401	4	0.99751
+exc	ctrl	Grik1+Slc12a5	all	1596	91	5.70175
+exc	ctrl	Grik1+Slc12a5	shared-depth standardized	1596	91	5.82848
+exc	ctrl	Grik1+Slc12a5	500–<2000	76	1	1.31579
+exc	ctrl	Grik1+Slc12a5	2000–<5000	360	6	1.66667
+exc	ctrl	Grik1+Slc12a5	5000–<10000	759	34	4.47958
+exc	ctrl	Grik1+Slc12a5	10000+	401	50	12.46883
+exc	ko	Cacna2d1	all	1262	1149	91.04596
+exc	ko	Cacna2d1	shared-depth standardized	1262	1149	91.13582
+exc	ko	Cacna2d1	500–<2000	75	27	36.00000
+exc	ko	Cacna2d1	2000–<5000	244	199	81.55738
+exc	ko	Cacna2d1	5000–<10000	589	572	97.11375
+exc	ko	Cacna2d1	10000+	354	351	99.15254
+exc	ko	Cacna2d2	all	1262	221	17.51189
+exc	ko	Cacna2d2	shared-depth standardized	1262	221	17.43557
+exc	ko	Cacna2d2	500–<2000	75	2	2.66667
+exc	ko	Cacna2d2	2000–<5000	244	28	11.47541
+exc	ko	Cacna2d2	5000–<10000	589	113	19.18506
+exc	ko	Cacna2d2	10000+	354	78	22.03390
+exc	ko	Cacna1a	all	1262	1123	88.98574
+exc	ko	Cacna1a	shared-depth standardized	1262	1123	89.14083
+exc	ko	Cacna1a	500–<2000	75	20	26.66667
+exc	ko	Cacna1a	2000–<5000	244	202	82.78689
+exc	ko	Cacna1a	5000–<10000	589	550	93.37861
+exc	ko	Cacna1a	10000+	354	351	99.15254
+exc	ko	Cacna1b	all	1262	868	68.77971
+exc	ko	Cacna1b	shared-depth standardized	1262	868	68.27738
+exc	ko	Cacna1b	500–<2000	75	11	14.66667
+exc	ko	Cacna1b	2000–<5000	244	100	40.98361
+exc	ko	Cacna1b	5000–<10000	589	431	73.17487
+exc	ko	Cacna1b	10000+	354	326	92.09040
+exc	ko	Grik1	all	1262	129	10.22187
+exc	ko	Grik1	shared-depth standardized	1262	129	10.07777
+exc	ko	Grik1	500–<2000	75	5	6.66667
+exc	ko	Grik1	2000–<5000	244	18	7.37705
+exc	ko	Grik1	5000–<10000	589	47	7.97963
+exc	ko	Grik1	10000+	354	59	16.66667
+exc	ko	Grik2	all	1262	1204	95.40412
+exc	ko	Grik2	shared-depth standardized	1262	1204	95.63439
+exc	ko	Grik2	500–<2000	75	37	49.33333
+exc	ko	Grik2	2000–<5000	244	229	93.85246
+exc	ko	Grik2	5000–<10000	589	586	99.49066
+exc	ko	Grik2	10000+	354	352	99.43503
+exc	ko	Grik4	all	1262	879	69.65135
+exc	ko	Grik4	shared-depth standardized	1262	879	70.01577
+exc	ko	Grik4	500–<2000	75	16	21.33333
+exc	ko	Grik4	2000–<5000	244	176	72.13115
+exc	ko	Grik4	5000–<10000	589	436	74.02377
+exc	ko	Grik4	10000+	354	251	70.90395
+exc	ko	Neto1	all	1262	729	57.76545
+exc	ko	Neto1	shared-depth standardized	1262	729	57.31789
+exc	ko	Neto1	500–<2000	75	17	22.66667
+exc	ko	Neto1	2000–<5000	244	90	36.88525
+exc	ko	Neto1	5000–<10000	589	350	59.42275
+exc	ko	Neto1	10000+	354	272	76.83616
+exc	ko	Neto2	all	1262	237	18.77971
+exc	ko	Neto2	shared-depth standardized	1262	237	18.45294
+exc	ko	Neto2	500–<2000	75	2	2.66667
+exc	ko	Neto2	2000–<5000	244	21	8.60656
+exc	ko	Neto2	5000–<10000	589	96	16.29881
+exc	ko	Neto2	10000+	354	118	33.33333
+exc	ko	Slc12a5	all	1262	606	48.01902
+exc	ko	Slc12a5	shared-depth standardized	1262	606	47.56504
+exc	ko	Slc12a5	500–<2000	75	8	10.66667
+exc	ko	Slc12a5	2000–<5000	244	64	26.22951
+exc	ko	Slc12a5	5000–<10000	589	295	50.08489
+exc	ko	Slc12a5	10000+	354	239	67.51412
+exc	ko	Cacna2d1+Cacna1a	all	1262	1054	83.51823
+exc	ko	Cacna2d1+Cacna1a	shared-depth standardized	1262	1054	83.49905
+exc	ko	Cacna2d1+Cacna1a	500–<2000	75	8	10.66667
+exc	ko	Cacna2d1+Cacna1a	2000–<5000	244	164	67.21311
+exc	ko	Cacna2d1+Cacna1a	5000–<10000	589	534	90.66214
+exc	ko	Cacna2d1+Cacna1a	10000+	354	348	98.30508
+exc	ko	Cacna2d1+Cacna1b	all	1262	827	65.53090
+exc	ko	Cacna2d1+Cacna1b	shared-depth standardized	1262	827	64.90220
+exc	ko	Cacna2d1+Cacna1b	500–<2000	75	8	10.66667
+exc	ko	Cacna2d1+Cacna1b	2000–<5000	244	79	32.37705
+exc	ko	Cacna2d1+Cacna1b	5000–<10000	589	417	70.79796
+exc	ko	Cacna2d1+Cacna1b	10000+	354	323	91.24294
+exc	ko	Cacna2d2+Cacna1a	all	1262	208	16.48177
+exc	ko	Cacna2d2+Cacna1a	shared-depth standardized	1262	208	16.40856
+exc	ko	Cacna2d2+Cacna1a	500–<2000	75	1	1.33333
+exc	ko	Cacna2d2+Cacna1a	2000–<5000	244	27	11.06557
+exc	ko	Cacna2d2+Cacna1a	5000–<10000	589	104	17.65705
+exc	ko	Cacna2d2+Cacna1a	10000+	354	76	21.46893
+exc	ko	Cacna2d2+Cacna1b	all	1262	160	12.67829
+exc	ko	Cacna2d2+Cacna1b	shared-depth standardized	1262	160	12.44301
+exc	ko	Cacna2d2+Cacna1b	500–<2000	75	2	2.66667
+exc	ko	Cacna2d2+Cacna1b	2000–<5000	244	9	3.68852
+exc	ko	Cacna2d2+Cacna1b	5000–<10000	589	74	12.56367
+exc	ko	Cacna2d2+Cacna1b	10000+	354	75	21.18644
+exc	ko	Cacna2d2+Grik1	all	1262	27	2.13946
+exc	ko	Cacna2d2+Grik1	shared-depth standardized	1262	27	2.07485
+exc	ko	Cacna2d2+Grik1	500–<2000	75	0	0.00000
+exc	ko	Cacna2d2+Grik1	2000–<5000	244	0	0.00000
+exc	ko	Cacna2d2+Grik1	5000–<10000	589	11	1.86757
+exc	ko	Cacna2d2+Grik1	10000+	354	16	4.51977
+exc	ko	Cacna2d1+Grik1	all	1262	115	9.11252
+exc	ko	Cacna2d1+Grik1	shared-depth standardized	1262	115	8.93020
+exc	ko	Cacna2d1+Grik1	500–<2000	75	3	4.00000
+exc	ko	Cacna2d1+Grik1	2000–<5000	244	11	4.50820
+exc	ko	Cacna2d1+Grik1	5000–<10000	589	42	7.13073
+exc	ko	Cacna2d1+Grik1	10000+	354	59	16.66667
+exc	ko	Cacna2d2+Grik2	all	1262	214	16.95721
+exc	ko	Cacna2d2+Grik2	shared-depth standardized	1262	214	16.84235
+exc	ko	Cacna2d2+Grik2	500–<2000	75	2	2.66667
+exc	ko	Cacna2d2+Grik2	2000–<5000	244	23	9.42623
+exc	ko	Cacna2d2+Grik2	5000–<10000	589	111	18.84550
+exc	ko	Cacna2d2+Grik2	10000+	354	78	22.03390
+exc	ko	Cacna2d2+Grik1+Cacna1a	all	1262	26	2.06022
+exc	ko	Cacna2d2+Grik1+Cacna1a	shared-depth standardized	1262	26	1.99477
+exc	ko	Cacna2d2+Grik1+Cacna1a	500–<2000	75	0	0.00000
+exc	ko	Cacna2d2+Grik1+Cacna1a	2000–<5000	244	0	0.00000
+exc	ko	Cacna2d2+Grik1+Cacna1a	5000–<10000	589	10	1.69779
+exc	ko	Cacna2d2+Grik1+Cacna1a	10000+	354	16	4.51977
+exc	ko	Cacna2d2+Grik1+Cacna1b	all	1262	24	1.90174
+exc	ko	Cacna2d2+Grik1+Cacna1b	shared-depth standardized	1262	24	1.83461
+exc	ko	Cacna2d2+Grik1+Cacna1b	500–<2000	75	0	0.00000
+exc	ko	Cacna2d2+Grik1+Cacna1b	2000–<5000	244	0	0.00000
+exc	ko	Cacna2d2+Grik1+Cacna1b	5000–<10000	589	8	1.35823
+exc	ko	Cacna2d2+Grik1+Cacna1b	10000+	354	16	4.51977
+exc	ko	Grik1+Neto1	all	1262	87	6.89382
+exc	ko	Grik1+Neto1	shared-depth standardized	1262	87	6.73985
+exc	ko	Grik1+Neto1	500–<2000	75	0	0.00000
+exc	ko	Grik1+Neto1	2000–<5000	244	7	2.86885
+exc	ko	Grik1+Neto1	5000–<10000	589	30	5.09338
+exc	ko	Grik1+Neto1	10000+	354	50	14.12429
+exc	ko	Grik1+Neto2	all	1262	47	3.72425
+exc	ko	Grik1+Neto2	shared-depth standardized	1262	47	3.62512
+exc	ko	Grik1+Neto2	500–<2000	75	0	0.00000
+exc	ko	Grik1+Neto2	2000–<5000	244	3	1.22951
+exc	ko	Grik1+Neto2	5000–<10000	589	15	2.54669
+exc	ko	Grik1+Neto2	10000+	354	29	8.19209
+exc	ko	Grik1+Grik4	all	1262	69	5.46751
+exc	ko	Grik1+Grik4	shared-depth standardized	1262	69	5.39695
+exc	ko	Grik1+Grik4	500–<2000	75	2	2.66667
+exc	ko	Grik1+Grik4	2000–<5000	244	10	4.09836
+exc	ko	Grik1+Grik4	5000–<10000	589	25	4.24448
+exc	ko	Grik1+Grik4	10000+	354	32	9.03955
+exc	ko	Cacna2d2+Grik1+Neto1	all	1262	23	1.82250
+exc	ko	Cacna2d2+Grik1+Neto1	shared-depth standardized	1262	23	1.75999
+exc	ko	Cacna2d2+Grik1+Neto1	500–<2000	75	0	0.00000
+exc	ko	Cacna2d2+Grik1+Neto1	2000–<5000	244	0	0.00000
+exc	ko	Cacna2d2+Grik1+Neto1	5000–<10000	589	8	1.35823
+exc	ko	Cacna2d2+Grik1+Neto1	10000+	354	15	4.23729
+exc	ko	Cacna2d2+Grik1+Grik4+Neto1	all	1262	19	1.50555
+exc	ko	Cacna2d2+Grik1+Grik4+Neto1	shared-depth standardized	1262	19	1.46149
+exc	ko	Cacna2d2+Grik1+Grik4+Neto1	500–<2000	75	0	0.00000
+exc	ko	Cacna2d2+Grik1+Grik4+Neto1	2000–<5000	244	0	0.00000
+exc	ko	Cacna2d2+Grik1+Grik4+Neto1	5000–<10000	589	8	1.35823
+exc	ko	Cacna2d2+Grik1+Grik4+Neto1	10000+	354	11	3.10734
+exc	ko	Grik1+Slc12a5	all	1262	72	5.70523
+exc	ko	Grik1+Slc12a5	shared-depth standardized	1262	72	5.60757
+exc	ko	Grik1+Slc12a5	500–<2000	75	1	1.33333
+exc	ko	Grik1+Slc12a5	2000–<5000	244	9	3.68852
+exc	ko	Grik1+Slc12a5	5000–<10000	589	24	4.07470
+exc	ko	Grik1+Slc12a5	10000+	354	38	10.73446
+inh	ctrl	Cacna2d1	all	246	135	54.87805
+inh	ctrl	Cacna2d1	shared-depth standardized	246	135	54.60941
+inh	ctrl	Cacna2d1	500–<2000	27	10	37.03704
+inh	ctrl	Cacna2d1	2000–<5000	66	43	65.15152
+inh	ctrl	Cacna2d1	5000–<10000	111	62	55.85586
+inh	ctrl	Cacna2d1	10000+	42	20	47.61905
+inh	ctrl	Cacna2d2	all	246	84	34.14634
+inh	ctrl	Cacna2d2	shared-depth standardized	246	84	33.50488
+inh	ctrl	Cacna2d2	500–<2000	27	0	0.00000
+inh	ctrl	Cacna2d2	2000–<5000	66	9	13.63636
+inh	ctrl	Cacna2d2	5000–<10000	111	49	44.14414
+inh	ctrl	Cacna2d2	10000+	42	26	61.90476
+inh	ctrl	Cacna1a	all	246	205	83.33333
+inh	ctrl	Cacna1a	shared-depth standardized	246	205	82.63229
+inh	ctrl	Cacna1a	500–<2000	27	11	40.74074
+inh	ctrl	Cacna1a	2000–<5000	66	56	84.84848
+inh	ctrl	Cacna1a	5000–<10000	111	98	88.28829
+inh	ctrl	Cacna1a	10000+	42	40	95.23810
+inh	ctrl	Cacna1b	all	246	176	71.54472
+inh	ctrl	Cacna1b	shared-depth standardized	246	176	70.68831
+inh	ctrl	Cacna1b	500–<2000	27	7	25.92593
+inh	ctrl	Cacna1b	2000–<5000	66	33	50.00000
+inh	ctrl	Cacna1b	5000–<10000	111	96	86.48649
+inh	ctrl	Cacna1b	10000+	42	40	95.23810
+inh	ctrl	Grik1	all	246	174	70.73171
+inh	ctrl	Grik1	shared-depth standardized	246	174	69.69440
+inh	ctrl	Grik1	500–<2000	27	4	14.81481
+inh	ctrl	Grik1	2000–<5000	66	34	51.51515
+inh	ctrl	Grik1	5000–<10000	111	99	89.18919
+inh	ctrl	Grik1	10000+	42	37	88.09524
+inh	ctrl	Grik2	all	246	228	92.68293
+inh	ctrl	Grik2	shared-depth standardized	246	228	92.06395
+inh	ctrl	Grik2	500–<2000	27	15	55.55556
+inh	ctrl	Grik2	2000–<5000	66	62	93.93939
+inh	ctrl	Grik2	5000–<10000	111	109	98.19820
+inh	ctrl	Grik2	10000+	42	42	100.00000
+inh	ctrl	Grik4	all	246	64	26.01626
+inh	ctrl	Grik4	shared-depth standardized	246	64	25.96997
+inh	ctrl	Grik4	500–<2000	27	6	22.22222
+inh	ctrl	Grik4	2000–<5000	66	16	24.24242
+inh	ctrl	Grik4	5000–<10000	111	26	23.42342
+inh	ctrl	Grik4	10000+	42	16	38.09524
+inh	ctrl	Neto1	all	246	161	65.44715
+inh	ctrl	Neto1	shared-depth standardized	246	161	64.56309
+inh	ctrl	Neto1	500–<2000	27	5	18.51852
+inh	ctrl	Neto1	2000–<5000	66	26	39.39394
+inh	ctrl	Neto1	5000–<10000	111	89	80.18018
+inh	ctrl	Neto1	10000+	42	41	97.61905
+inh	ctrl	Neto2	all	246	102	41.46341
+inh	ctrl	Neto2	shared-depth standardized	246	102	40.89468
+inh	ctrl	Neto2	500–<2000	27	3	11.11111
+inh	ctrl	Neto2	2000–<5000	66	14	21.21212
+inh	ctrl	Neto2	5000–<10000	111	55	49.54955
+inh	ctrl	Neto2	10000+	42	30	71.42857
+inh	ctrl	Slc12a5	all	246	84	34.14634
+inh	ctrl	Slc12a5	shared-depth standardized	246	84	33.61526
+inh	ctrl	Slc12a5	500–<2000	27	1	3.70370
+inh	ctrl	Slc12a5	2000–<5000	66	15	22.72727
+inh	ctrl	Slc12a5	5000–<10000	111	43	38.73874
+inh	ctrl	Slc12a5	10000+	42	25	59.52381
+inh	ctrl	Cacna2d1+Cacna1a	all	246	112	45.52846
+inh	ctrl	Cacna2d1+Cacna1a	shared-depth standardized	246	112	45.11349
+inh	ctrl	Cacna2d1+Cacna1a	500–<2000	27	5	18.51852
+inh	ctrl	Cacna2d1+Cacna1a	2000–<5000	66	37	56.06061
+inh	ctrl	Cacna2d1+Cacna1a	5000–<10000	111	52	46.84685
+inh	ctrl	Cacna2d1+Cacna1a	10000+	42	18	42.85714
+inh	ctrl	Cacna2d1+Cacna1b	all	246	99	40.24390
+inh	ctrl	Cacna2d1+Cacna1b	shared-depth standardized	246	99	39.73440
+inh	ctrl	Cacna2d1+Cacna1b	500–<2000	27	3	11.11111
+inh	ctrl	Cacna2d1+Cacna1b	2000–<5000	66	24	36.36364
+inh	ctrl	Cacna2d1+Cacna1b	5000–<10000	111	52	46.84685
+inh	ctrl	Cacna2d1+Cacna1b	10000+	42	20	47.61905
+inh	ctrl	Cacna2d2+Cacna1a	all	246	79	32.11382
+inh	ctrl	Cacna2d2+Cacna1a	shared-depth standardized	246	79	31.52424
+inh	ctrl	Cacna2d2+Cacna1a	500–<2000	27	0	0.00000
+inh	ctrl	Cacna2d2+Cacna1a	2000–<5000	66	9	13.63636
+inh	ctrl	Cacna2d2+Cacna1a	5000–<10000	111	44	39.63964
+inh	ctrl	Cacna2d2+Cacna1a	10000+	42	26	61.90476
+inh	ctrl	Cacna2d2+Cacna1b	all	246	72	29.26829
+inh	ctrl	Cacna2d2+Cacna1b	shared-depth standardized	246	72	28.71950
+inh	ctrl	Cacna2d2+Cacna1b	500–<2000	27	0	0.00000
+inh	ctrl	Cacna2d2+Cacna1b	2000–<5000	66	6	9.09091
+inh	ctrl	Cacna2d2+Cacna1b	5000–<10000	111	41	36.93694
+inh	ctrl	Cacna2d2+Cacna1b	10000+	42	25	59.52381
+inh	ctrl	Cacna2d2+Grik1	all	246	74	30.08130
+inh	ctrl	Cacna2d2+Grik1	shared-depth standardized	246	74	29.51738
+inh	ctrl	Cacna2d2+Grik1	500–<2000	27	0	0.00000
+inh	ctrl	Cacna2d2+Grik1	2000–<5000	66	8	12.12121
+inh	ctrl	Cacna2d2+Grik1	5000–<10000	111	43	38.73874
+inh	ctrl	Cacna2d2+Grik1	10000+	42	23	54.76190
+inh	ctrl	Cacna2d1+Grik1	all	246	92	37.39837
+inh	ctrl	Cacna2d1+Grik1	shared-depth standardized	246	92	36.85090
+inh	ctrl	Cacna2d1+Grik1	500–<2000	27	2	7.40741
+inh	ctrl	Cacna2d1+Grik1	2000–<5000	66	20	30.30303
+inh	ctrl	Cacna2d1+Grik1	5000–<10000	111	52	46.84685
+inh	ctrl	Cacna2d1+Grik1	10000+	42	18	42.85714
+inh	ctrl	Cacna2d2+Grik2	all	246	83	33.73984
+inh	ctrl	Cacna2d2+Grik2	shared-depth standardized	246	83	33.10875
+inh	ctrl	Cacna2d2+Grik2	500–<2000	27	0	0.00000
+inh	ctrl	Cacna2d2+Grik2	2000–<5000	66	9	13.63636
+inh	ctrl	Cacna2d2+Grik2	5000–<10000	111	48	43.24324
+inh	ctrl	Cacna2d2+Grik2	10000+	42	26	61.90476
+inh	ctrl	Cacna2d2+Grik1+Cacna1a	all	246	70	28.45528
+inh	ctrl	Cacna2d2+Grik1+Cacna1a	shared-depth standardized	246	70	27.93287
+inh	ctrl	Cacna2d2+Grik1+Cacna1a	500–<2000	27	0	0.00000
+inh	ctrl	Cacna2d2+Grik1+Cacna1a	2000–<5000	66	8	12.12121
+inh	ctrl	Cacna2d2+Grik1+Cacna1a	5000–<10000	111	39	35.13514
+inh	ctrl	Cacna2d2+Grik1+Cacna1a	10000+	42	23	54.76190
+inh	ctrl	Cacna2d2+Grik1+Cacna1b	all	246	64	26.01626
+inh	ctrl	Cacna2d2+Grik1+Cacna1b	shared-depth standardized	246	64	25.52426
+inh	ctrl	Cacna2d2+Grik1+Cacna1b	500–<2000	27	0	0.00000
+inh	ctrl	Cacna2d2+Grik1+Cacna1b	2000–<5000	66	5	7.57576
+inh	ctrl	Cacna2d2+Grik1+Cacna1b	5000–<10000	111	37	33.33333
+inh	ctrl	Cacna2d2+Grik1+Cacna1b	10000+	42	22	52.38095
+inh	ctrl	Grik1+Neto1	all	246	140	56.91057
+inh	ctrl	Grik1+Neto1	shared-depth standardized	246	140	55.97624
+inh	ctrl	Grik1+Neto1	500–<2000	27	2	7.40741
+inh	ctrl	Grik1+Neto1	2000–<5000	66	20	30.30303
+inh	ctrl	Grik1+Neto1	5000–<10000	111	81	72.97297
+inh	ctrl	Grik1+Neto1	10000+	42	37	88.09524
+inh	ctrl	Grik1+Neto2	all	246	89	36.17886
+inh	ctrl	Grik1+Neto2	shared-depth standardized	246	89	35.57577
+inh	ctrl	Grik1+Neto2	500–<2000	27	1	3.70370
+inh	ctrl	Grik1+Neto2	2000–<5000	66	12	18.18182
+inh	ctrl	Grik1+Neto2	5000–<10000	111	50	45.04505
+inh	ctrl	Grik1+Neto2	10000+	42	26	61.90476
+inh	ctrl	Grik1+Grik4	all	246	40	16.26016
+inh	ctrl	Grik1+Grik4	shared-depth standardized	246	40	15.97903
+inh	ctrl	Grik1+Grik4	500–<2000	27	0	0.00000
+inh	ctrl	Grik1+Grik4	2000–<5000	66	6	9.09091
+inh	ctrl	Grik1+Grik4	5000–<10000	111	20	18.01802
+inh	ctrl	Grik1+Grik4	10000+	42	14	33.33333
+inh	ctrl	Cacna2d2+Grik1+Neto1	all	246	61	24.79675
+inh	ctrl	Cacna2d2+Grik1+Neto1	shared-depth standardized	246	61	24.33306
+inh	ctrl	Cacna2d2+Grik1+Neto1	500–<2000	27	0	0.00000
+inh	ctrl	Cacna2d2+Grik1+Neto1	2000–<5000	66	4	6.06061
+inh	ctrl	Cacna2d2+Grik1+Neto1	5000–<10000	111	34	30.63063
+inh	ctrl	Cacna2d2+Grik1+Neto1	10000+	42	23	54.76190
+inh	ctrl	Cacna2d2+Grik1+Grik4+Neto1	all	246	18	7.31707
+inh	ctrl	Cacna2d2+Grik1+Grik4+Neto1	shared-depth standardized	246	18	7.19163
+inh	ctrl	Cacna2d2+Grik1+Grik4+Neto1	500–<2000	27	0	0.00000
+inh	ctrl	Cacna2d2+Grik1+Grik4+Neto1	2000–<5000	66	1	1.51515
+inh	ctrl	Cacna2d2+Grik1+Grik4+Neto1	5000–<10000	111	8	7.20721
+inh	ctrl	Cacna2d2+Grik1+Grik4+Neto1	10000+	42	9	21.42857
+inh	ctrl	Grik1+Slc12a5	all	246	71	28.86179
+inh	ctrl	Grik1+Slc12a5	shared-depth standardized	246	71	28.35217
+inh	ctrl	Grik1+Slc12a5	500–<2000	27	0	0.00000
+inh	ctrl	Grik1+Slc12a5	2000–<5000	66	10	15.15152
+inh	ctrl	Grik1+Slc12a5	5000–<10000	111	37	33.33333
+inh	ctrl	Grik1+Slc12a5	10000+	42	24	57.14286
+inh	ko	Cacna2d1	all	293	156	53.24232
+inh	ko	Cacna2d1	shared-depth standardized	293	156	53.68319
+inh	ko	Cacna2d1	500–<2000	40	8	20.00000
+inh	ko	Cacna2d1	2000–<5000	78	52	66.66667
+inh	ko	Cacna2d1	5000–<10000	126	70	55.55556
+inh	ko	Cacna2d1	10000+	49	26	53.06122
+inh	ko	Cacna2d2	all	293	97	33.10580
+inh	ko	Cacna2d2	shared-depth standardized	293	97	33.60128
+inh	ko	Cacna2d2	500–<2000	40	1	2.50000
+inh	ko	Cacna2d2	2000–<5000	78	8	10.25641
+inh	ko	Cacna2d2	5000–<10000	126	52	41.26984
+inh	ko	Cacna2d2	10000+	49	36	73.46939
+inh	ko	Cacna1a	all	293	244	83.27645
+inh	ko	Cacna1a	shared-depth standardized	293	244	84.00807
+inh	ko	Cacna1a	500–<2000	40	14	35.00000
+inh	ko	Cacna1a	2000–<5000	78	61	78.20513
+inh	ko	Cacna1a	5000–<10000	126	121	96.03175
+inh	ko	Cacna1a	10000+	49	48	97.95918
+inh	ko	Cacna1b	all	293	193	65.87031
+inh	ko	Cacna1b	shared-depth standardized	293	193	66.82403
+inh	ko	Cacna1b	500–<2000	40	2	5.00000
+inh	ko	Cacna1b	2000–<5000	78	37	47.43590
+inh	ko	Cacna1b	5000–<10000	126	106	84.12698
+inh	ko	Cacna1b	10000+	49	48	97.95918
+inh	ko	Grik1	all	293	175	59.72696
+inh	ko	Grik1	shared-depth standardized	293	175	60.49539
+inh	ko	Grik1	500–<2000	40	6	15.00000
+inh	ko	Grik1	2000–<5000	78	22	28.20513
+inh	ko	Grik1	5000–<10000	126	101	80.15873
+inh	ko	Grik1	10000+	49	46	93.87755
+inh	ko	Grik2	all	293	266	90.78498
+inh	ko	Grik2	shared-depth standardized	293	266	91.41248
+inh	ko	Grik2	500–<2000	40	19	47.50000
+inh	ko	Grik2	2000–<5000	78	73	93.58974
+inh	ko	Grik2	5000–<10000	126	125	99.20635
+inh	ko	Grik2	10000+	49	49	100.00000
+inh	ko	Grik4	all	293	136	46.41638
+inh	ko	Grik4	shared-depth standardized	293	136	46.60851
+inh	ko	Grik4	500–<2000	40	11	27.50000
+inh	ko	Grik4	2000–<5000	78	49	62.82051
+inh	ko	Grik4	5000–<10000	126	50	39.68254
+inh	ko	Grik4	10000+	49	26	53.06122
+inh	ko	Neto1	all	293	162	55.29010
+inh	ko	Neto1	shared-depth standardized	293	162	56.01431
+inh	ko	Neto1	500–<2000	40	5	12.50000
+inh	ko	Neto1	2000–<5000	78	20	25.64103
+inh	ko	Neto1	5000–<10000	126	92	73.01587
+inh	ko	Neto1	10000+	49	45	91.83673
+inh	ko	Neto2	all	293	75	25.59727
+inh	ko	Neto2	shared-depth standardized	293	75	25.96776
+inh	ko	Neto2	500–<2000	40	1	2.50000
+inh	ko	Neto2	2000–<5000	78	6	7.69231
+inh	ko	Neto2	5000–<10000	126	39	30.95238
+inh	ko	Neto2	10000+	49	29	59.18367
+inh	ko	Slc12a5	all	293	107	36.51877
+inh	ko	Slc12a5	shared-depth standardized	293	107	36.99773
+inh	ko	Slc12a5	500–<2000	40	2	5.00000
+inh	ko	Slc12a5	2000–<5000	78	22	28.20513
+inh	ko	Slc12a5	5000–<10000	126	55	43.65079
+inh	ko	Slc12a5	10000+	49	28	57.14286
+inh	ko	Cacna2d1+Cacna1a	all	293	136	46.41638
+inh	ko	Cacna2d1+Cacna1a	shared-depth standardized	293	136	46.97671
+inh	ko	Cacna2d1+Cacna1a	500–<2000	40	3	7.50000
+inh	ko	Cacna2d1+Cacna1a	2000–<5000	78	40	51.28205
+inh	ko	Cacna2d1+Cacna1a	5000–<10000	126	68	53.96825
+inh	ko	Cacna2d1+Cacna1a	10000+	49	25	51.02041
+inh	ko	Cacna2d1+Cacna1b	all	293	105	35.83618
+inh	ko	Cacna2d1+Cacna1b	shared-depth standardized	293	105	36.33392
+inh	ko	Cacna2d1+Cacna1b	500–<2000	40	1	2.50000
+inh	ko	Cacna2d1+Cacna1b	2000–<5000	78	24	30.76923
+inh	ko	Cacna2d1+Cacna1b	5000–<10000	126	54	42.85714
+inh	ko	Cacna2d1+Cacna1b	10000+	49	26	53.06122
+inh	ko	Cacna2d2+Cacna1a	all	293	92	31.39932
+inh	ko	Cacna2d2+Cacna1a	shared-depth standardized	293	92	31.86730
+inh	ko	Cacna2d2+Cacna1a	500–<2000	40	1	2.50000
+inh	ko	Cacna2d2+Cacna1a	2000–<5000	78	7	8.97436
+inh	ko	Cacna2d2+Cacna1a	5000–<10000	126	49	38.88889
+inh	ko	Cacna2d2+Cacna1a	10000+	49	35	71.42857
+inh	ko	Cacna2d2+Cacna1b	all	293	88	30.03413
+inh	ko	Cacna2d2+Cacna1b	shared-depth standardized	293	88	30.51608
+inh	ko	Cacna2d2+Cacna1b	500–<2000	40	0	0.00000
+inh	ko	Cacna2d2+Cacna1b	2000–<5000	78	6	7.69231
+inh	ko	Cacna2d2+Cacna1b	5000–<10000	126	47	37.30159
+inh	ko	Cacna2d2+Cacna1b	10000+	49	35	71.42857
+inh	ko	Cacna2d2+Grik1	all	293	77	26.27986
+inh	ko	Cacna2d2+Grik1	shared-depth standardized	293	77	26.70561
+inh	ko	Cacna2d2+Grik1	500–<2000	40	0	0.00000
+inh	ko	Cacna2d2+Grik1	2000–<5000	78	3	3.84615
+inh	ko	Cacna2d2+Grik1	5000–<10000	126	41	32.53968
+inh	ko	Cacna2d2+Grik1	10000+	49	33	67.34694
+inh	ko	Cacna2d1+Grik1	all	293	92	31.39932
+inh	ko	Cacna2d1+Grik1	shared-depth standardized	293	92	31.85779
+inh	ko	Cacna2d1+Grik1	500–<2000	40	1	2.50000
+inh	ko	Cacna2d1+Grik1	2000–<5000	78	16	20.51282
+inh	ko	Cacna2d1+Grik1	5000–<10000	126	51	40.47619
+inh	ko	Cacna2d1+Grik1	10000+	49	24	48.97959
+inh	ko	Cacna2d2+Grik2	all	293	92	31.39932
+inh	ko	Cacna2d2+Grik2	shared-depth standardized	293	92	31.91400
+inh	ko	Cacna2d2+Grik2	500–<2000	40	0	0.00000
+inh	ko	Cacna2d2+Grik2	2000–<5000	78	5	6.41026
+inh	ko	Cacna2d2+Grik2	5000–<10000	126	51	40.47619
+inh	ko	Cacna2d2+Grik2	10000+	49	36	73.46939
+inh	ko	Cacna2d2+Grik1+Cacna1a	all	293	74	25.25597
+inh	ko	Cacna2d2+Grik1+Cacna1a	shared-depth standardized	293	74	25.66311
+inh	ko	Cacna2d2+Grik1+Cacna1a	500–<2000	40	0	0.00000
+inh	ko	Cacna2d2+Grik1+Cacna1a	2000–<5000	78	3	3.84615
+inh	ko	Cacna2d2+Grik1+Cacna1a	5000–<10000	126	39	30.95238
+inh	ko	Cacna2d2+Grik1+Cacna1a	10000+	49	32	65.30612
+inh	ko	Cacna2d2+Grik1+Cacna1b	all	293	71	24.23208
+inh	ko	Cacna2d2+Grik1+Cacna1b	shared-depth standardized	293	71	24.62266
+inh	ko	Cacna2d2+Grik1+Cacna1b	500–<2000	40	0	0.00000
+inh	ko	Cacna2d2+Grik1+Cacna1b	2000–<5000	78	2	2.56410
+inh	ko	Cacna2d2+Grik1+Cacna1b	5000–<10000	126	37	29.36508
+inh	ko	Cacna2d2+Grik1+Cacna1b	10000+	49	32	65.30612
+inh	ko	Grik1+Neto1	all	293	135	46.07509
+inh	ko	Grik1+Neto1	shared-depth standardized	293	135	46.81188
+inh	ko	Grik1+Neto1	500–<2000	40	1	2.50000
+inh	ko	Grik1+Neto1	2000–<5000	78	11	14.10256
+inh	ko	Grik1+Neto1	5000–<10000	126	80	63.49206
+inh	ko	Grik1+Neto1	10000+	49	43	87.75510
+inh	ko	Grik1+Neto2	all	293	69	23.54949
+inh	ko	Grik1+Neto2	shared-depth standardized	293	69	23.93151
+inh	ko	Grik1+Neto2	500–<2000	40	0	0.00000
+inh	ko	Grik1+Neto2	2000–<5000	78	3	3.84615
+inh	ko	Grik1+Neto2	5000–<10000	126	37	29.36508
+inh	ko	Grik1+Neto2	10000+	49	29	59.18367
+inh	ko	Grik1+Grik4	all	293	66	22.52560
+inh	ko	Grik1+Grik4	shared-depth standardized	293	66	22.84469
+inh	ko	Grik1+Grik4	500–<2000	40	1	2.50000
+inh	ko	Grik1+Grik4	2000–<5000	78	6	7.69231
+inh	ko	Grik1+Grik4	5000–<10000	126	34	26.98413
+inh	ko	Grik1+Grik4	10000+	49	25	51.02041
+inh	ko	Cacna2d2+Grik1+Neto1	all	293	68	23.20819
+inh	ko	Cacna2d2+Grik1+Neto1	shared-depth standardized	293	68	23.58662
+inh	ko	Cacna2d2+Grik1+Neto1	500–<2000	40	0	0.00000
+inh	ko	Cacna2d2+Grik1+Neto1	2000–<5000	78	1	1.28205
+inh	ko	Cacna2d2+Grik1+Neto1	5000–<10000	126	36	28.57143
+inh	ko	Cacna2d2+Grik1+Neto1	10000+	49	31	63.26531
+inh	ko	Cacna2d2+Grik1+Grik4+Neto1	all	293	26	8.87372
+inh	ko	Cacna2d2+Grik1+Grik4+Neto1	shared-depth standardized	293	26	8.99814
+inh	ko	Cacna2d2+Grik1+Grik4+Neto1	500–<2000	40	0	0.00000
+inh	ko	Cacna2d2+Grik1+Grik4+Neto1	2000–<5000	78	0	0.00000
+inh	ko	Cacna2d2+Grik1+Grik4+Neto1	5000–<10000	126	9	7.14286
+inh	ko	Cacna2d2+Grik1+Grik4+Neto1	10000+	49	17	34.69388
+inh	ko	Grik1+Slc12a5	all	293	84	28.66894
+inh	ko	Grik1+Slc12a5	shared-depth standardized	293	84	29.10389
+inh	ko	Grik1+Slc12a5	500–<2000	40	0	0.00000
+inh	ko	Grik1+Slc12a5	2000–<5000	78	14	17.94872
+inh	ko	Grik1+Slc12a5	5000–<10000	126	43	34.12698
+inh	ko	Grik1+Slc12a5	10000+	49	27	55.10204

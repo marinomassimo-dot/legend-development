@@ -1,0 +1,41 @@
+{
+  "title": "Zinc acetate in WWOX research",
+  "date": "27 November 2026",
+  "summary": "Retain as a circuit probe. Defer pediatric WWOX trial priority pending native circuit and brain exposure data.",
+  "graph": {
+    "evidence": "Added zinc suppresses first NMDA input into SST cells.",
+    "inference": "Reduced late charge can accompany weaker recruitment of inhibitory neurons.",
+    "hypothesis": "A measured free-zinc window can reduce recurrence while preserving native inhibition.",
+    "experiment": "Measure recurrence, SST recruitment and direct SST output."
+  },
+  "evidence": [
+    "In mouse cortex, chelation increased median train NMDA charge from 2.17 to 2.96 pC (eight pairs). Added zinc reduced the median first NMDA charge into somatostatin (SST) neurons from 0.11 to 0.08 pC (12 pairs).",
+    "In a small pediatric zinc sulfate trial, 7/23 versus 1/22 had at least 50% fewer reported seizures. Exact p=0.047 becomes p=0.096 with one fewer zinc responder."
+  ],
+  "inference": [
+    "Separate excitatory drive to SST cells from their inhibitory output and tonic GABA-A conductance."
+  ],
+  "hypothesis": [
+    "A local free-zinc increment can lower WWOX recurrence while preserving early and inhibitory recruitment."
+  ],
+  "experiment": [
+    "Compare zinc acetate with acetate-matched vehicle in age-matched WWOX and control cortex. Measure free zinc, first drive, recurrence and native inhibition."
+  ],
+  "limits": [
+    "A sulfate trial and an open-label acetate pilot in GNAO1 do not establish WWOX brain exposure or efficacy."
+  ],
+  "sources": [
+    {
+      "label": "Morabito et al., cortical NMDA timing and cell classes",
+      "url": "https://doi.org/10.1016/j.celrep.2022.110415"
+    },
+    {
+      "label": "Saad et al., sulfate trial and Table III",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4610753/#tIII-181-185"
+    },
+    {
+      "label": "Thiel et al., oral acetate feasibility in GNAO1",
+      "url": "https://doi.org/10.1016/j.eclinm.2026.104092"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+comparison	value	units_and_scope
+neurite_bath_over_high_GD3_CSF_trough	1.74308	descriptive ratio
+neurite_bath_over_low_GD3_CSF_trough	5.45473	descriptive ratio
+older_NPC_group_plasma_Cmax	12.3039	uM total plasma
+younger_NPC_group_plasma_Cmax	14.9991	uM total plasma
+monkey_radioassay_CSF_6th	3.42941	uM equivalent, radiotracer design
+monkey_radioassay_CSF_7th	3.3382	uM equivalent, radiotracer design
+liver_lysate_with_over_without_detergent	916.667	apparent IC50 ratio, mixed activities

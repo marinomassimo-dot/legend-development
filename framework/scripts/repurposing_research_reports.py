@@ -18,6 +18,7 @@ STAGES = (
     ("Experiment", "experiment", "#82562a", "#faf0df"),
 )
 
+# Collapsed table backgrounds can be painted on following pages by MuPDF Story.
 CSS = """
 body{font-family:sans-serif;color:#20313d;font-size:10.3pt;line-height:1.36}
 h1{font-family:serif;font-size:27pt;line-height:1.08;color:#153e54;margin:6pt 0 7pt}
@@ -27,7 +28,7 @@ a{color:#17587a}
 .meta{color:#345d6d;font-size:9pt}
 .notice{background:#eaf2f3;padding:5pt 8pt;margin:7pt 0}
 .summary{font-size:11.4pt;color:#163e4b;margin:8pt 0}
-.graph{border-collapse:collapse;width:100%;margin:2pt 0 4pt;page-break-inside:avoid}
+.graph{border-collapse:separate;border-spacing:0;width:100%;margin:2pt 0 4pt;page-break-inside:avoid}
 .node{font-size:9.5pt;vertical-align:top;padding:6pt;width:22%}
 .node b{font-size:8.4pt}
 .arrow{text-align:center;vertical-align:middle;width:4%;font-size:15pt;color:#496572}
@@ -37,7 +38,7 @@ a{color:#17587a}
 .chapter{page-break-before:always}
 .chapter h2.title{font-family:serif;font-size:25pt;line-height:1.1;margin:5pt 0 8pt}
 .chapter p{margin-bottom:7pt}
-.comparison{border-collapse:collapse;width:100%;margin:7pt 0 11pt}
+.comparison{border-collapse:separate;border-spacing:0;width:100%;margin:7pt 0 11pt}
 .comparison th{font-size:9.5pt;vertical-align:top;text-align:left;color:#fff;background:#245467;padding:7pt}
 .comparison td{font-size:9.5pt;vertical-align:top;background:#f0f5f5;padding:7pt;border-bottom:1pt solid #fff}
 .contents{padding:6pt 9pt;background:#f1f4f7;color:#294b5d;font-size:9.2pt}

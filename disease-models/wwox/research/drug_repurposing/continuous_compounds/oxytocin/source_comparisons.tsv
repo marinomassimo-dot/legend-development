@@ -1,0 +1,26 @@
+comparison	value	unit	basis
+OXTR Ki	0.83	nM	Busnelli 2013 Table 1, native ligand and recombinant mouse receptors
+OXTR at 1 nM	54.645	%, one-site scenario with Ki used as Kd	Busnelli 2013 Table 1, native ligand and recombinant mouse receptors
+OXTR at 10 nM	92.336	%, one-site scenario with Ki used as Kd	Busnelli 2013 Table 1, native ligand and recombinant mouse receptors
+OXTR at 100 nM	99.177	%, one-site scenario with Ki used as Kd	Busnelli 2013 Table 1, native ligand and recombinant mouse receptors
+AVPR1A Ki	20.38	nM	Busnelli 2013 Table 1, native ligand and recombinant mouse receptors
+AVPR1A at 1 nM	4.677	%, one-site scenario with Ki used as Kd	Busnelli 2013 Table 1, native ligand and recombinant mouse receptors
+AVPR1A at 10 nM	32.916	%, one-site scenario with Ki used as Kd	Busnelli 2013 Table 1, native ligand and recombinant mouse receptors
+AVPR1A at 100 nM	83.070	%, one-site scenario with Ki used as Kd	Busnelli 2013 Table 1, native ligand and recombinant mouse receptors
+AVPR1B Ki	36.32	nM	Busnelli 2013 Table 1, native ligand and recombinant mouse receptors
+AVPR1B at 1 nM	2.680	%, one-site scenario with Ki used as Kd	Busnelli 2013 Table 1, native ligand and recombinant mouse receptors
+AVPR1B at 10 nM	21.589	%, one-site scenario with Ki used as Kd	Busnelli 2013 Table 1, native ligand and recombinant mouse receptors
+AVPR1B at 100 nM	73.357	%, one-site scenario with Ki used as Kd	Busnelli 2013 Table 1, native ligand and recombinant mouse receptors
+Orbitofrontal cortex whole-tissue equivalent	2.117	nM	Lee 2020 Table 1, reported tissue mass and Methods extracellular-volume scenario
+Orbitofrontal cortex if all analyte assigned to 15% extracellular volume	14.111	nM, scenario	Lee 2020 Table 1, reported tissue mass and Methods extracellular-volume scenario
+Orbitofrontal cortex if all analyte assigned to 20% extracellular volume	10.583	nM, scenario	Lee 2020 Table 1, reported tissue mass and Methods extracellular-volume scenario
+Orbitofrontal cortex if all analyte assigned to 25% extracellular volume	8.466	nM, scenario	Lee 2020 Table 1, reported tissue mass and Methods extracellular-volume scenario
+Striatum whole-tissue equivalent	2.500	nM	Lee 2020 Table 1, reported tissue mass and Methods extracellular-volume scenario
+Striatum if all analyte assigned to 15% extracellular volume	16.670	nM, scenario	Lee 2020 Table 1, reported tissue mass and Methods extracellular-volume scenario
+Striatum if all analyte assigned to 20% extracellular volume	12.502	nM, scenario	Lee 2020 Table 1, reported tissue mass and Methods extracellular-volume scenario
+Striatum if all analyte assigned to 25% extracellular volume	10.002	nM, scenario	Lee 2020 Table 1, reported tissue mass and Methods extracellular-volume scenario
+Infant NOMAS responder difference	0.00	percentage points	Tauber 2026 OTBB3 week-4 Results; active minus placebo, descriptive
+Infant VFSS selected-subscore responder difference	36.67	percentage points	Tauber 2026 OTBB3 week-4 Results; active minus placebo, descriptive
+Infant paired-VFSS any improvement difference	36.11	percentage points	Tauber 2026 OTBB3 week-4 Results; active minus placebo, descriptive
+Male Fmr1-KO severity score change	-1.83	ordinal score points, descriptive	Chavez 2026 preprint Results and Fig. 2B,E, early treatment
+Female Fmr1-KO severity score change	-0.04	ordinal score points, descriptive	Chavez 2026 preprint Results and Fig. 2B,E, early treatment

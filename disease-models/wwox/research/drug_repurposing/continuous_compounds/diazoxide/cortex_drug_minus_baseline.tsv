@@ -1,0 +1,5 @@
+subset	class	n_cells	n_reported_responsive	n_dG_positive	median_dVm_mV	median_dG_nS	median_dG_pct	omit_one_dG_min_nS	omit_one_dG_max_nS
+all_reported	regular_spiking_Glu	9	8	8	-3.9531	0.5881	11.4506	0.5398	0.6525
+all_reported	fast_spiking_Pvalb	3	1	1	-4.9279	-0.1086	-2.0795	-4.0648	0.5270
+reported_responsive	regular_spiking_Glu	8	8	8	-3.7686	0.6525	23.7134	0.5881	0.7170
+reported_responsive	fast_spiking_Pvalb	1	1	1	-6.1853	1.1625	15.8521	NA	NA

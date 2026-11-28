@@ -1,0 +1,21 @@
+key	value	units	n	source	locator
+slice_burst_responders	13	slices	19	29962940	Fig. 2 and results: partial or complete suppression
+slice_bath_low	2.5	mM	19	29962940	Fig. 2 and results: lower end of nominal bath range
+slice_bath_high	5	mM	19	29962940	Fig. 2 and results: upper end of nominal bath range
+slice_time	4.2	min	NA	29962940	Fig. 2 results: time to blockade, SEM 0.7, timing denominator unstated
+older_2dg_time	14.2	min	NA	29962940	Fig. 2 results: independent precedent cited by authors, SEM 1.6
+gaba_baseline	311	pA	6	29962940	Fig. 5: baseline mean, SEM 27
+gaba_fbp	161	pA	6	29962940	Fig. 5: mean during bath, SEM 15
+hva_baseline	996	pA	9	29962940	Fig. 6A–D: baseline mean, SEM 97
+hva_fbp	600	pA	9	29962940	Fig. 6A–D: mean at 5 mM nominal bath, SEM 62
+hva_calcium	1.3	mM nominal CaCl2	NA	29962940	Electrophysiology: standard aCSF; the 2 mM exception is specified for bursts and NMDA
+juvenile_stop	6	rats	10	33161312	Abstract: vEEG status ends in about 15 min in the higher exposure group
+adult_oral_blood	22.2	µg/mL	5	18325780	Results oral arm: treated whole blood, SEM 3.3
+adult_naive_blood	15.0	µg/mL	11	18325780	Results oral arm: naïve whole blood, SEM 1.0
+adult_oral_brain	0.50	mg/g	5	18325780	Results oral arm: treated perfused-brain homogenate, SEM 0.02
+adult_naive_brain	0.42	mg/g	11	18325780	Results oral arm: naïve perfused-brain homogenate, SEM 0.01
+free_acid_mass	340.12	g/mol	NA	PubChem CID 445557	D-fructose-1,6-diphosphate free acid
+mef_axis_top	385	pixels from top	NA	25012504	Fig. 2F, right, 838 × 519 publisher image, tick at 3.5
+mef_axis_bottom	501	pixels from top	NA	25012504	Fig. 2F, right, tick at 0
+mef_wt_median	478	pixels from top	5	25012504	Fig. 2F right, WT median line
+mef_ko_median	426	pixels from top	5	25012504	Fig. 2F right, KO median line

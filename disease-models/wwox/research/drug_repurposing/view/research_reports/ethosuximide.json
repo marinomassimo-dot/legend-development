@@ -1,14 +1,16 @@
 {
   "investigation": "INV-04",
   "title": "Ethosuximide in WOREE",
-  "date": "22 November 2026",
+  "date": "27 November 2026",
   "summary": "In one mouse study, ethosuximide pretreatment lowered PTZ-provoked seizure scores. The result leaves WWOX specificity, spontaneous seizure control and benefit in children with WWOX-DEE unestablished.",
   "evidence": [
     "Cheng et al. reported lower PTZ-provoked seizure scores in Wwox-null mice (Figure 7B). LEGEND’s re-reading of the group means found that most separation occurred late. Individual trajectories were unavailable.",
-    "Clinical evidence in childhood absence epilepsy concerns a different seizure syndrome."
+    "Clinical evidence in childhood absence epilepsy concerns a different seizure syndrome.",
+    "Oliver et al. list ethosuximide exposure in one published WWOX-DEE series participant with multiple ASMs tried. An independently attributable outcome was unavailable."
   ],
   "limits": [
-    "The mouse result leaves effects on spontaneous seizures, development and benefit in WWOX-DEE unresolved."
+    "The mouse result leaves effects on spontaneous seizures, development and benefit in WWOX-DEE unresolved.",
+    "Angelman and DEE-SWAS results use distinct outcomes and do not establish a WOREE response rate or a scalp phase–amplitude coupling threshold."
   ],
   "sources": [
     {
@@ -16,8 +18,8 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/32000863/"
     },
     {
-      "label": "Glauser et al. Randomised trial in childhood absence epilepsy. PMID 20164429.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/20164429/"
+      "label": "Glauser et al. Randomized trial in childhood absence epilepsy. PMID 20200383.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20200383/"
     },
     {
       "label": "LEGEND re-reading of Cheng Figure 7, methods and limitations.",
@@ -37,7 +39,8 @@
     "Ethosuximide could have a different effect in Wwox-deficient animals. The data leave open both a general antiseizure effect and the identity of any channel mediating the response."
   ],
   "experiment": [
-    "Compare treated and untreated groups across genotypes at the same age. Measure the treatment-by-genotype interaction and whether any effect extends to spontaneous seizures."
+    "Compare treated and untreated groups across genotypes at the same age. Measure the treatment-by-genotype interaction and whether any effect extends to spontaneous seizures.",
+    "In juvenile Wwox cortical slices, compare time-matched vehicle, ethosuximide and a native-engaged CaV3 reference. Measure voltage-matched rebound, first recruitment, sustained firing and spontaneous initiation and spread separately."
   ],
   "chapters": [
     {
@@ -214,6 +217,72 @@
         {
           "label": "LEGEND exposure bounds and what different results would change",
           "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv122_ethosuximide_ontogeny_prior_sci_20261120/RESULT_ADV122_SCI_20261120.md"
+        }
+      ]
+    },
+    {
+      "title": "Clinical transfer and the waveform alternative",
+      "takeaway": "An acute Wwox result supports a targeted physiology experiment. Seizure and EEG responses in other pediatric syndromes address distinct outcomes.",
+      "table": {
+        "columns": [
+          "Population",
+          "Observed endpoint",
+          "Transfer limit"
+        ],
+        "rows": [
+          [
+            "Childhood absence epilepsy, randomized",
+            "81/154 free of treatment failure at week 16 or 20",
+            "Composite endpoint in newly diagnosed childhood absence epilepsy."
+          ],
+          [
+            "Angelman syndrome, retrospective",
+            "78% response, Figure 3 reports n > 10",
+            "Exact denominator unreported in the inspected surfaces. Multiple seizure types and concomitant therapy."
+          ],
+          [
+            "D/EE-SWAS, prospective observed add-on",
+            "28/39 seizure-free, 8/39 normalized EEG",
+            "At least 20 seizure-free without EEG normalization. No controlled comparison."
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "label": "Evidence",
+          "paragraphs": [
+            "The Cheng stage ≥3 effect is bounded at +11.1 to +51.7 percentage points at primary graphical tolerance and −2.2 to +55.6 at twice that tolerance. These are compatible mouse-minute bounds, not intervals for individual responders."
+          ]
+        },
+        {
+          "label": "Inference",
+          "paragraphs": [
+            "Baseline scalp N2 coupling in a 20-child DEE-SWAS series is a different measurement from PAC within a burst in juvenile Wwox cortex. Synthetic sharp transients can leave residual coupling after subtraction of a phase-aligned mean waveform. Neither comparison supplies a validated WOREE marker."
+          ]
+        },
+        {
+          "label": "Discriminating experiment",
+          "paragraphs": [
+            "Measure native CaV3 engagement and determine whether initiation falls while recruitment and sustained firing are preserved. A drug-specific shortening of ongoing bursts redirects the inquiry to maintenance and competing currents. Keep developmental and functional myelin outcomes separate."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Oliver et al. · Table 2 and electroclinical Results",
+          "url": "https://doi.org/10.1111/epi.17542"
+        },
+        {
+          "label": "Manssen et al. · Figure 3 and Table 3",
+          "url": "https://doi.org/10.1016/j.ejpn.2026.09.001"
+        },
+        {
+          "label": "Sahu et al. · prospective D/EE-SWAS observation",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42485909/"
+        },
+        {
+          "label": "LEGEND comparative audit, sources and replay",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/ethosuximide_20261123/dismech_comparison_20261127.md"
         }
       ]
     }

@@ -1,0 +1,11 @@
+comparison	value	unit
+slice_estimated_IC50_over_recombinant_IC50	48.3871	ratio
+25nM_recombinant_Hill1_fraction_of_maximum	0.0746	fraction
+granules_age_2.3_to_6.0_total_at_54h	6.7405	uM
+granules_age_2.3_to_6.0_free_at_54h_scenario	0.1348	uM
+granules_age_2.3_to_6.0_10uM_nominal_slice_over_free_scenario	74.1784	ratio
+granules_age_2.3_to_6.0_25uM_nominal_slice_over_free_scenario	185.4461	ratio
+tablets_age_6.3_to_12.0_total_at_54h	4.7977	uM
+tablets_age_6.3_to_12.0_free_at_54h_scenario	0.0960	uM
+tablets_age_6.3_to_12.0_10uM_nominal_slice_over_free_scenario	104.2176	ratio
+tablets_age_6.3_to_12.0_25uM_nominal_slice_over_free_scenario	260.5441	ratio
