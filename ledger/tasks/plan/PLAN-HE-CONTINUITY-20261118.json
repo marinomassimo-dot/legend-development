@@ -1661,6 +1661,15 @@
      "blocker": "dated item: not before 2026-11-29",
      "no_condition": "the condition is a calendar date",
      "updated_at": "2026-11-28T09:53:03Z"
+    },
+    {
+     "step": "ADV-315: blind extraction of Mu 2019, Crawford 2010, Palma 2022 calibration rows, then cell-by-cell comparison with the ADV-313 table",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-315, ADV message to HE a2763bd3 2026-11-28",
+     "accepted_at": "2026-11-28T10:10:47Z",
+     "evidence": "blind_calibration_he package: RESULT_ADV315_HE_20261128.md; table sha256 2e23f790 hashed before the comparison",
+     "updated_at": "2026-11-28T10:23:52Z"
     }
    ]
   }
@@ -2944,6 +2953,13 @@
    "at": "2026-11-28T09:52:52Z",
    "source": "checkpoint HE-AD section 3 item 2",
    "step_sha256": "075d0ee45cc6",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T10:10:47Z",
+   "source": "ADV-315, ADV message to HE a2763bd3 2026-11-28",
+   "step_sha256": "1f527f56d0df",
    "reopened_block": false,
    "authorised_by": null
   }
