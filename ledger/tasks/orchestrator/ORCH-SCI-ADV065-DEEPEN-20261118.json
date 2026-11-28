@@ -1266,10 +1266,12 @@
     },
     {
      "step": "ADV-300: second frozen increment of the abstract-triage test on catalogued-only records, draw restricted before drawing to open full-text routes checked by script",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-300",
-     "accepted_at": "2026-11-28T05:54:55Z"
+     "accepted_at": "2026-11-28T05:54:55Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv300_catalogued_triage_open_sci_20261128/RESULT_ADV300_SCI_20261128.md (not decidable under both readings; six receipts FTR-20261128-*; ADV accepted)",
+     "updated_at": "2026-11-28T06:44:13Z"
     }
    ]
   }
