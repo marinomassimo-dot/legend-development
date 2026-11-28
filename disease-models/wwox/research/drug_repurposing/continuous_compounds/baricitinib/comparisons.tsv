@@ -1,0 +1,32 @@
+comparison	reference	statistic	value	unit
+ags_min	molecular_weight	CSF total	3.3387	nM
+ags_median	molecular_weight	CSF total	19.5477	nM
+ags_max	molecular_weight	CSF total	41.0609	nM
+mono_IFNa_STAT1	ags_median	nominal blood IC50 / total CSF	9.8221	fold
+mono_IFNa_STAT1	ags_max	nominal blood IC50 / total CSF	4.6760	fold
+mono_IFNa_STAT3	ags_median	nominal blood IC50 / total CSF	2.0463	fold
+mono_IFNa_STAT3	ags_max	nominal blood IC50 / total CSF	0.9742	fold
+mono_IL6_STAT1	ags_median	nominal blood IC50 / total CSF	1.9951	fold
+mono_IL6_STAT1	ags_max	nominal blood IC50 / total CSF	0.9498	fold
+mono_IL6_STAT3	ags_median	nominal blood IC50 / total CSF	8.2363	fold
+mono_IL6_STAT3	ags_max	nominal blood IC50 / total CSF	3.9210	fold
+mono_IL6_STAT3	mono_IL6_STAT1	nominal IC50 ratio within stimulus	4.1282	fold
+CD4_IL6_STAT1	ags_median	nominal blood IC50 / total CSF	1.4836	fold
+CD4_IL6_STAT1	ags_max	nominal blood IC50 / total CSF	0.7063	fold
+CD4_IL6_STAT3	ags_median	nominal blood IC50 / total CSF	14.0170	fold
+CD4_IL6_STAT3	ags_max	nominal blood IC50 / total CSF	6.6730	fold
+CD4_IL6_STAT3	CD4_IL6_STAT1	nominal IC50 ratio within stimulus	9.4483	fold
+sensory_LIF_IL6_bath	ags_median	tested nominal bath / total CSF	51.1570	fold
+sensory_LIF_IL6_bath	ags_max	tested nominal bath / total CSF	24.3541	fold
+olig1_p0_APC	Figure 5I	control mean from 3 entries	28.0000	cells per lumbar section
+olig1_p0_APC	Figure 5I	Stat3-loss mean from 3 entries	10.6667	cells per lumbar section
+olig1_p0_APC	Figure 5I	relative change of means	-61.90	percent
+olig1_p0_MBP	Figure 5J	control mean from 3 entries	33300.6533	um2 per lumbar section
+olig1_p0_MBP	Figure 5J	Stat3-loss mean from 3 entries	9753.0400	um2 per lumbar section
+olig1_p0_MBP	Figure 5J	relative change of means	-70.71	percent
+pdgfra_E18_OLP	Figure 5M	control mean from 5 entries	596.9600	source cell count
+pdgfra_E18_OLP	Figure 5M	Stat3-loss mean from 5 entries	636.7200	source cell count
+pdgfra_E18_OLP	Figure 5M	relative change of means	6.66	percent
+pdgfra_E18_APC	Figure 5M	control mean from 3 entries	30.0000	source cell count
+pdgfra_E18_APC	Figure 5M	Stat3-loss mean from 5 entries	16.8000	source cell count
+pdgfra_E18_APC	Figure 5M	relative change of means	-44.00	percent
