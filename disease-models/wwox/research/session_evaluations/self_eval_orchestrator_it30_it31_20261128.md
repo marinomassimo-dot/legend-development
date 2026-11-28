@@ -76,13 +76,15 @@ ATTRIBUTION_CENSUS
 incidents: 10
 machine: 4   blind_auditor: 5   peer: 0   self: 1
 severity_high: 5   of which self: 0
-undetected_known: 0
+undetected_known: 1
 ```
 
 Machine: stale sealed DisMech sidecar on main (CI 2826); delegate Write refusal; `safe_push` refusal after merging a
 new `safe_push.py`; reader-journey failure on an inline relative path. Blind auditor: pup-repair wording; ADV-309/302
 wording; packet smaller than the source; C1 question list; ADV-313 table cells and K1. Self: join-run drift, reverted.
-`undetected_known` is 0 at writing time; HE ADV-315 may change it.
+`undetected_known` was 0 at first writing. Found afterwards by IT32: IT30's BATCH_20261128_005 (`1c309be84`) put a
+second species inside CLAIM 005's one-line model field and CI was red from run 2835 on
+(`test_trace_claim_foundation.py`); repaired by BATCH_20261128_006.
 
 ## Section 21c output
 
