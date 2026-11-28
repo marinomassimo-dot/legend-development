@@ -1,0 +1,7 @@
+source	compartment	statistic	low_ng_ml	high_ng_ml	free_low	free_high	locator
+ampyra_er	adult total plasma	printed fasting single-administration Cmax range	17.3	21.6	0.97	0.99	DailyMed section 12.3
+oral_solution	adult total plasma	printed comparator Cmax	42.7	42.7	0.97	0.99	DailyMed section 12.3
+kcna1_gof	infant total serum	measured trough range across sampled visits in one report	10	27			PMID 36793218 Table 1
+kcna1_gof	infant total serum	measured post-administration range excluding uncertain-time sample	33	65			PMID 36793218 Table 1
+sindhurakar	adult rat total plasma	five-hour group means in intact and injured treatment cohorts	59.7	63.3			PMID 28107804 Figure 3B and Results
+van_diemen	adult MS total serum	oral-phase observed range (69 entrants)	7	107			1993 paper page 200

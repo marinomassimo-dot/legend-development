@@ -1,0 +1,7 @@
+source	compartment	statistic	total_low_uM	total_high_uM	free_plasma_low_uM	free_plasma_high_uM	nominal_bath_to_free_plasma_low	nominal_bath_to_free_plasma_high
+ampyra_er	adult total plasma	printed fasting single-administration Cmax range	0.1838	0.2295	0.1783	0.2272	2.20	5.61
+oral_solution	adult total plasma	printed comparator Cmax	0.4537	0.4537	0.4401	0.4492	1.11	2.27
+kcna1_gof	infant total serum	measured trough range across sampled visits in one report	0.1063	0.2869	NA	NA	NA	NA
+kcna1_gof	infant total serum	measured post-administration range excluding uncertain-time sample	0.3507	0.6907	NA	NA	NA	NA
+sindhurakar	adult rat total plasma	five-hour group means in intact and injured treatment cohorts	0.6344	0.6726	NA	NA	NA	NA
+van_diemen	adult MS total serum	oral-phase observed range (69 entrants)	0.0744	1.1370	NA	NA	NA	NA

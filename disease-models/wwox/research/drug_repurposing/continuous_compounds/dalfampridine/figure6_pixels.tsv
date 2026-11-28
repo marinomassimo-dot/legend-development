@@ -1,0 +1,9 @@
+panel	group	y_zero	y_top_tick	top_tick_m_s	y_bar
+N1	sham_vehicle	190	52	2.0	121
+N1	sham_dalfampridine	190	52	2.0	115
+N1	tbi_vehicle	190	52	2.0	142
+N1	tbi_dalfampridine	190	52	2.0	138
+N2	sham_vehicle	190	50	1.0	136
+N2	sham_dalfampridine	190	50	1.0	135
+N2	tbi_vehicle	190	50	1.0	145
+N2	tbi_dalfampridine	190	50	1.0	141

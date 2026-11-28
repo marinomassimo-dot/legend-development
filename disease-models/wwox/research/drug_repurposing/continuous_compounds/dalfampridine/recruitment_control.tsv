@@ -1,0 +1,4 @@
+synthetic_case	fast_trace_weight	true_fast_m_s	true_slow_m_s	sum_component_weights	peak_ms_at_0.4_mm	peak_ms_at_0.8_mm	peak_ms_at_1.2_mm	peak_ms_at_1.6_mm	fitted_intercept_ms	apparent_peak_speed_m_s
+baseline	0.2	0.8	0.5	1.0	0.964	1.793	2.600	3.400	0.160	0.493
+recruitment_only	0.8	0.8	0.5	1.0	0.736	1.207	1.700	2.200	0.240	0.819
+same_weights_faster_axons	0.2	1.28	0.8	1.0	0.668	1.169	1.690	2.199	0.153	0.782
