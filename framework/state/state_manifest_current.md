@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261128_002
+last_batch_commit_id: BATCH_20261128_003
 last_batch_commit_date: 2026-11-28
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 1
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate ORCH-ROADMAP-IT59-20261119, IT successor 28; SCI's ADV-295 block 2 and ADV-297 sentences, one blind round by legend-delegate, sonnet, effort high stated in the dispatch). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: one candidate, record-scoped in the paper registry (CORPUS P214 note) and by fragment replacement in the discovery ledger (DL-MECH-170 and three other entries); scope in state_history section 4
+trigger: MANUAL (ACTOR_ID orchestrator, mandate ORCH-ROADMAP-IT59-20261119, IT successor 28; one dated wording refinement of DL-MECH-170 after SCI found the held supplement). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: discovery ledger by fragment replacement; scope in state_history section 4
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261128_BATCH_20261128_002
+last_lint_id: LINT_20261128_BATCH_20261128_003
 last_lint_date: 2026-11-28
 last_lint_result: WARN
 ```
@@ -164,8 +164,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 3789
-fulltext_ledger_head: acd19c449007692d77c2c40a28031a7132d172227eddf306a53c70042466ac0a
+fulltext_ledger_events: 3796
+fulltext_ledger_head: 254a72c0745b34236cc1bf9adf781fbf3caae1cd57f296451fd5dcc539f75555
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
