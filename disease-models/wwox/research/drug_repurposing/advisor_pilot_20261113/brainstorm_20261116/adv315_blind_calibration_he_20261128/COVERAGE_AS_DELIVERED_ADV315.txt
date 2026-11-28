@@ -1,0 +1,74 @@
+ADV-315 blind extraction - coverage record (2026-11-28). Effort: high.
+Table: out/EXTRACTION_ADV315_BLIND.tsv - 129 data rows, 21 columns (Mu 64, Crawford 54, Palma 11).
+Rebuild (from scripts/): python3 -I build.py ../out/EXTRACTION_ADV315_BLIND.tsv ../downloads/txt/<Mu>.txt ../downloads/txt/<Crawford>.txt ../downloads/txt/<Palma>.txt
+Quoted phrases in the locator column were checked by script against the converted source text (hyphen variants and spacing normalised). The Fig 9 table of Crawford and all "raster estimate" notes were read by eye from images and are not script-checked.
+
+CONVERSION CHECK
+xml2txt.py converted all three XMLs; cov.py found 0 XML text nodes missing from the output (captions, footnotes, the one table included).
+
+BLINDNESS
+Read nothing from the repository, worktrees, other job folders or memory notes; no search for other extractions. The generic delegate instruction to read framework/protocols/delegation_budget.md was NOT followed, because the dispatch forbids reading the repository.
+Disclosure: the session start injected the project CLAUDE.md, a memory index (one-line titles) and recent commit subjects into context without any action by me. I saw in them no mention of these three papers and none of their numbers.
+
+VALUES
+No figure in any of the three PDFs is vector: every data figure is an embedded raster image (the PDF drawings are page furniture). No value in the table is "vector". A value column holds only printed numbers; everything else is UNREAD with a by-eye "raster estimate" in the note. Raster estimates are approximate and must not be promoted to values.
+
+MU 2019 (PMID 31140740, PMC6698976)
+Read: abstract; 1; 2.1-2.9; 3.1-3.4; 4; 5; conflict of interest; acknowledgements; references; captions of Figs 1-6. No tables.
+Figures opened (all raster, 2079 px wide from the PDF, plus bucket JPEGs): Fig 1, 2 (schematic with summary table), 3, 4, 5, 6.
+Supplement CNS-25-1018-s001.docx: read whole (legends of Fig S1 and S2, Appendix S1-S4, its 2 references); Fig S1 and S2 images opened.
+Could not read: numeric values of all CAP amplitudes/areas (except Fig 1B/1C text), velocities, half-widths, g-ratios, all cuprizone EM values, L-NIO EM counts, LFB: figure-only. Not stated anywhere: stimulus pulse duration and rate; number of slices per mouse.
+
+CRAWFORD 2010 (PMID 20858739, PMC2947430)
+Read: abstract; introduction; all methods subsections; all results; discussion; funding; abbreviations; captions of Figs 1-10. Reference list: only its opening entries (bibliography not read through). No XML tables.
+Figures opened (all raster): Figs 1-10. The refractoriness table exists only inside the Fig 9 image.
+Supplement supp_awq237_AWQ237-Supplementary_Figures.pdf: 3 pages, all text and both figures read. supp_133_10_2999__index.html downloaded, not opened.
+Could not read: every CAP amplitude (Fig 8), MBP, beta-APP, Caspr, tracer and supplement bar heights (figure-only). Not stated: n, P and timepoint for conduction velocity; latency values.
+
+PALMA 2022 (PMID 35372341, PMC8970281)
+Identity confirmed from the file: pmid 35372341, PMC8970281, DOI 10.3389/fcell.2022.841548, "Clemastine Induces an Impairment in Developmental Myelination", Front Cell Dev Biol.
+Read: abstract; introduction; all methods; all results; discussion; data/ethics/contributions/funding/conflict/publisher note; Table 1; captions of Figs 1-6 and of Supplementary Figs S1, S2. Reference list not read.
+Figures opened (all raster): Figs 1-6. Supplements Image1.tif (S1) and Image2.tif (S2) opened.
+Could not read: NO structural or conduction value is printed as a number anywhere in this paper - velocities, input-output, nodes, MBP, NF-L, axon counts and g-ratios are all figure-only (UNREAD).
+
+ROUTES
+PMC open-data bucket (pmc-oa-opendata, https): listings, PDFs, figures, supplements all HTTP 200. No failed route; Europe PMC and publisher pages not tried (not needed). No e-mail, login or spend.
+Not checked: correction / retraction / expression-of-concern notices (no search outside the three articles was allowed or made).
+
+OUT OF SCOPE, DELIBERATELY NOT TABULATED
+Oligodendrocyte-lineage, immune, microglial and astrocyte cell counts or intensities; microglial morphology; gene expression; myelin phagocytosis in vitro; clinical scores.
+(Crawford Figs 1-3 and Supp Fig 1; Palma Figs 1, 5, 6, S1, S2.) Qualitative-only structural statements are limited to the rows marked "qualitative".
+Rows labelled OTHER TRACT (Crawford spinal cord / corticospinal) and "CEREBRAL CORTEX" (Palma internode length) are not from the recorded tract.
+
+INTERNAL INCONSISTENCIES FOUND
+Mu 2019
+ 1. Unmyelinated axons, bregma +0.16 vs -1.59: text 62.8 vs 70.3 per 100 um2; Fig 1I plots about 140 vs 205. The figure agrees with the printed myelinated percentages; the text does not.
+ 2. g-ratio, cuprizone at +0.16: text and Fig 3D/E say increased; Supp Fig S2A shows a LOWER mean with cuprizone and points up to about 2.8.
+ 3. N2 amplitude, cuprizone at -1.59: one sentence says increased (Fig 4H, *), a later one says N1 and N2 amplitude were not markedly altered.
+ 4. N2 amplitude at +0.16: text P<0.01, figure bracket ***.
+ 5. Anterior-posterior amplitudes: text/Fig 1B-C (0.25 vs 0.13; 0.22 vs 0.53 mV at 2 mA) do not match the Fig 1J curves (about 0.46 vs 0.17; 0.33 vs 0.72).
+ 6. Shared control data (raster observation, by eye; for N1 amplitude, Fig 1J vs 6A, marker positions agree within about 0.002 mV): sham half-width and velocity points of Fig 4E/G (cuprizone sham), Fig 6B/D (L-NIO saline sham) and Fig S1 (+0.16 naive) look identical; Fig 6A sham curves look identical to Fig 1J naive curves; N1 area is shared by Fig 1K, 4F, 6C. The paper describes these as separate groups and does not state any reuse. Not verified at pixel or raw-data level.
+ 7. Fig 3E/F: 12 and 9 sham points although caption gives n=6-8. Fig 1H shows 5 points at +0.16 against 6 in Fig 1I.
+ 8. Recording distance: 0.75 mm (main text, velocity formula) vs "0.75 mm or 1 mm" (Appendix S2).
+ 9. Fig 2 table header says bregma "+1.6mm" (text: +0.16).
+ 10. Interpretive tension: SMI-32 up 4-8 fold with cuprizone while the paper concludes no axonal injury.
+ 11. Printed MBP error at +0.16 (0.09) looks larger than the plotted bar.
+Crawford 2010
+ 1. N2 refractory interval errors: text 0.10/0.05/0.16 vs Fig 9 table 0.12/0.20/0.22.
+ 2. Fig 9 caption says mean +/- SD; methods say mean +/- SEM.
+ 3. Fig 9 caption wording on direction of "refractoriness" is inverted relative to the text's definition.
+ 4. Caspr: text "<60% of normal"; plotted ratio about 66%.
+ 5. Tracer (Fig 10D): text/caption say ERbeta not different from normal; the ERbeta bar carries "*". Fig 10B marks normal vs ERbeta "*" for dorsal-column dextran while text says similar.
+ 6. Printed vehicle g-ratio error 0.026 vs a very small plotted bar.
+ 7. Mean myelin thickness and g-ratio include unmyelinated axons (visible in scatter plots); "nearly 2-fold" for 0.065 vs 0.027 (2.4).
+ 8. Velocity "significant" differences carry no P, no n, and SEMs of similar size to the differences.
+Palma 2022
+ 1. Treatment window: P5-P21 (methods) vs P5-P20 (results, Fig 1A). Dose 50 mg/kg (methods, results) vs 50 ug/kg (Fig 1 caption).
+ 2. Velocity axis in mm/s; magnitude implies m/s.
+ 3. N1 velocity: text p<0.01, figure single asterisk.
+ 4. Stimulus range 30-3000 uA (methods) vs Fig 2C axis to 4.5 mA.
+ 5. n: caption n=6 but 5 points for MBP and NF-L; internode length plots about 16 and 20 points.
+ 6. g-ratio 0.5-1 um bars about 0.66 vs scatter centred near 0.79 for the same diameters (raster).
+ 7. "Paired" t-test stated for independent groups; *** with n=3 per group (g-ratio) suggests an unstated unit.
+ 8. Internode length is from cerebral cortex (caption, methods) though placed in a corpus callosum results paragraph.
+ 9. N2 called "partially myelinated" (methods) and "unmyelinated" (results).
