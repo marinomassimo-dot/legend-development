@@ -116,3 +116,16 @@ engine arm still needs the matched control of section 5 item 3.
 **State of the hold on 2026-11-28.** C3 repeated: no candidate. C1 is looked at again on 2026-12-05 and C2 not before
 2026-12-06. The retrospective-hold design of section 1 is the fallback; its question list, input packet and arm
 answers are not written.
+
+## 8. C1 freeze (IT31, 2026-11-28, on ADV's decision of the same day)
+
+ADV decided that the retrospective hold is not built (the weaker design; ADV-175 is the standing masked retrospective
+instrument) and that RP-005 stays parked, with this note as its record. The C1 freeze is built: folder
+`c1_freeze_it31_20261128/` holds `QUESTIONS_C1.md` (six questions, failing conditions), `INPUT_PACKET_C1.txt` (held
+extracts, with `build_packet_c1.py`), `SCORING_C1.md`, `ANSWERS_ENGINE_C1.md` and `ANSWERS_B0_B1_B2_C1.md`, and
+`FREEZE_C1.sha256` (one sha256 per file, with the freeze time). The questions had one blind reader first (sonnet,
+effort high stated); it overturned five of six questions (options not exhaustive, a mediation question that admitted
+an association, an unresolvable-chain gap in the scoring file) and the repairs were applied as it worded them; the
+repairs were not re-read. The poster is read only after 2026-12-05 and only if it is retrievable with a printed date;
+if it is not retrievable by 2026-12-12 the entry closes UNRESOLVED and the sealed answers stay unopened. Status line:
+**prospective if the poster date is printed, otherwise unresolved.** Scoring is descriptive.

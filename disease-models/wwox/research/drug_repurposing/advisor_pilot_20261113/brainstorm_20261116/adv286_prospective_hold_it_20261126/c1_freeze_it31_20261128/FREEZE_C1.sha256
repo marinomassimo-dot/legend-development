@@ -1,0 +1,6 @@
+# first hashed 2026-11-28T10:01:32Z; re-hashed 2026-11-28T10:06:00Z (UTC) after renaming the packet to .txt (its bytes and hash are unchanged; the SCORING_C1.md and ENGINE answers header lines changed names only); IT31; on or before 2026-12-04T23:59Z
+61caf6be6d4036f49e67c5b25b68dffd6106c1437239697733618860ee1aa999  c1_freeze_it31_20261128/QUESTIONS_C1.md
+c14c1f9c18d8f084e85b1780ef670a65c728aa79397a3736d1ffc81f5de2fff9  c1_freeze_it31_20261128/INPUT_PACKET_C1.txt
+4c6a003faf176b06e63369b1ea719f998f0964417bd045656d624fda4e9a7315  c1_freeze_it31_20261128/SCORING_C1.md
+d545dd1b8493da2f5e772fc2bb87c8a2e74135b0bae3e40e5dd2fc12b98df30a  c1_freeze_it31_20261128/ANSWERS_ENGINE_C1.md
+c5dafe2e48470a578158c5c9ea3a1356bab9c5a7572408497494f15c8e55ff00  c1_freeze_it31_20261128/ANSWERS_B0_B1_B2_C1.md
