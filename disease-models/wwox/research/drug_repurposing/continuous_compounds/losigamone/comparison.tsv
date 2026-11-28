@@ -1,0 +1,99 @@
+preparation	condition	statistic	value	unit	locator
+mouse cortical slice effluent	potassium, S(+), 0 µM, glutamate	graphical S2/S1	90.23438	% of first pulse	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=57
+mouse cortical slice effluent	potassium, S(+), 0 µM, glutamate	graphical relative change vs own plotted control	0	% of control S2/S1	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=57
+mouse cortical slice effluent	potassium, S(+), 50 µM, glutamate	graphical S2/S1	92.57812	% of first pulse	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=51
+mouse cortical slice effluent	potassium, S(+), 50 µM, glutamate	graphical relative change vs own plotted control	2.597403	% of control S2/S1	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=51
+mouse cortical slice effluent	potassium, S(+), 100 µM, glutamate	graphical S2/S1	43.35938	% of first pulse	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=177
+mouse cortical slice effluent	potassium, S(+), 100 µM, glutamate	graphical relative change vs own plotted control	-51.94805	% of control S2/S1	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=177
+mouse cortical slice effluent	potassium, S(+), 200 µM, glutamate	graphical S2/S1	28.125	% of first pulse	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=216
+mouse cortical slice effluent	potassium, S(+), 200 µM, glutamate	graphical relative change vs own plotted control	-68.83117	% of control S2/S1	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=216
+mouse cortical slice effluent	potassium, S(+), 0 µM, aspartate	graphical S2/S1	95.3125	% of first pulse	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=44
+mouse cortical slice effluent	potassium, S(+), 0 µM, aspartate	graphical relative change vs own plotted control	0	% of control S2/S1	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=44
+mouse cortical slice effluent	potassium, S(+), 50 µM, aspartate	graphical S2/S1	86.32812	% of first pulse	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=67
+mouse cortical slice effluent	potassium, S(+), 50 µM, aspartate	graphical relative change vs own plotted control	-9.42623	% of control S2/S1	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=67
+mouse cortical slice effluent	potassium, S(+), 100 µM, aspartate	graphical S2/S1	60.54688	% of first pulse	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=133
+mouse cortical slice effluent	potassium, S(+), 100 µM, aspartate	graphical relative change vs own plotted control	-36.47541	% of control S2/S1	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=133
+mouse cortical slice effluent	potassium, S(+), 200 µM, aspartate	graphical S2/S1	35.15625	% of first pulse	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=198
+mouse cortical slice effluent	potassium, S(+), 200 µM, aspartate	graphical relative change vs own plotted control	-63.11475	% of control S2/S1	Srinivasan 1999 Fig. 1a; y0=288, y100=32, bar top=198
+mouse cortical slice effluent	veratridine, S(+), 0 µM, glutamate	graphical S2/S1	88.06584	% of first pulse	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=406
+mouse cortical slice effluent	veratridine, S(+), 0 µM, glutamate	graphical relative change vs own plotted control	0	% of control S2/S1	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=406
+mouse cortical slice effluent	veratridine, S(+), 50 µM, glutamate	graphical S2/S1	86.83128	% of first pulse	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=409
+mouse cortical slice effluent	veratridine, S(+), 50 µM, glutamate	graphical relative change vs own plotted control	-1.401869	% of control S2/S1	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=409
+mouse cortical slice effluent	veratridine, S(+), 100 µM, glutamate	graphical S2/S1	46.09053	% of first pulse	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=508
+mouse cortical slice effluent	veratridine, S(+), 100 µM, glutamate	graphical relative change vs own plotted control	-47.66355	% of control S2/S1	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=508
+mouse cortical slice effluent	veratridine, S(+), 200 µM, glutamate	graphical S2/S1	30.8642	% of first pulse	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=545
+mouse cortical slice effluent	veratridine, S(+), 200 µM, glutamate	graphical relative change vs own plotted control	-64.95327	% of control S2/S1	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=545
+mouse cortical slice effluent	veratridine, S(+), 0 µM, aspartate	graphical S2/S1	82.71605	% of first pulse	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=419
+mouse cortical slice effluent	veratridine, S(+), 0 µM, aspartate	graphical relative change vs own plotted control	0	% of control S2/S1	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=419
+mouse cortical slice effluent	veratridine, S(+), 50 µM, aspartate	graphical S2/S1	79.01235	% of first pulse	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=428
+mouse cortical slice effluent	veratridine, S(+), 50 µM, aspartate	graphical relative change vs own plotted control	-4.477612	% of control S2/S1	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=428
+mouse cortical slice effluent	veratridine, S(+), 100 µM, aspartate	graphical S2/S1	52.26337	% of first pulse	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=493
+mouse cortical slice effluent	veratridine, S(+), 100 µM, aspartate	graphical relative change vs own plotted control	-36.81592	% of control S2/S1	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=493
+mouse cortical slice effluent	veratridine, S(+), 200 µM, aspartate	graphical S2/S1	32.51029	% of first pulse	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=541
+mouse cortical slice effluent	veratridine, S(+), 200 µM, aspartate	graphical relative change vs own plotted control	-60.69652	% of control S2/S1	Srinivasan 1999 Fig. 1b; y0=620, y100=377, bar top=541
+mouse cortical slice effluent	potassium, R(−), 0 µM, glutamate	graphical S2/S1	90.26217	% of first pulse	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=45
+mouse cortical slice effluent	potassium, R(−), 0 µM, glutamate	graphical relative change vs own plotted control	0	% of control S2/S1	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=45
+mouse cortical slice effluent	potassium, R(−), 100 µM, glutamate	graphical S2/S1	79.77528	% of first pulse	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=73
+mouse cortical slice effluent	potassium, R(−), 100 µM, glutamate	graphical relative change vs own plotted control	-11.61826	% of control S2/S1	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=73
+mouse cortical slice effluent	potassium, R(−), 200 µM, glutamate	graphical S2/S1	79.40075	% of first pulse	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=74
+mouse cortical slice effluent	potassium, R(−), 200 µM, glutamate	graphical relative change vs own plotted control	-12.0332	% of control S2/S1	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=74
+mouse cortical slice effluent	potassium, R(−), 400 µM, glutamate	graphical S2/S1	76.40449	% of first pulse	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=82
+mouse cortical slice effluent	potassium, R(−), 400 µM, glutamate	graphical relative change vs own plotted control	-15.3527	% of control S2/S1	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=82
+mouse cortical slice effluent	potassium, R(−), 0 µM, aspartate	graphical S2/S1	94.75655	% of first pulse	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=33
+mouse cortical slice effluent	potassium, R(−), 0 µM, aspartate	graphical relative change vs own plotted control	0	% of control S2/S1	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=33
+mouse cortical slice effluent	potassium, R(−), 100 µM, aspartate	graphical S2/S1	91.38577	% of first pulse	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=42
+mouse cortical slice effluent	potassium, R(−), 100 µM, aspartate	graphical relative change vs own plotted control	-3.557312	% of control S2/S1	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=42
+mouse cortical slice effluent	potassium, R(−), 200 µM, aspartate	graphical S2/S1	92.13483	% of first pulse	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=40
+mouse cortical slice effluent	potassium, R(−), 200 µM, aspartate	graphical relative change vs own plotted control	-2.766798	% of control S2/S1	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=40
+mouse cortical slice effluent	potassium, R(−), 400 µM, aspartate	graphical S2/S1	85.39326	% of first pulse	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=58
+mouse cortical slice effluent	potassium, R(−), 400 µM, aspartate	graphical relative change vs own plotted control	-9.881423	% of control S2/S1	Srinivasan 1999 Fig. 2a; y0=286, y100=19, bar top=58
+mouse cortical slice effluent	veratridine, R(−), 0 µM, glutamate	graphical S2/S1	89.7541	% of first pulse	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=399
+mouse cortical slice effluent	veratridine, R(−), 0 µM, glutamate	graphical relative change vs own plotted control	0	% of control S2/S1	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=399
+mouse cortical slice effluent	veratridine, R(−), 100 µM, glutamate	graphical S2/S1	85.65574	% of first pulse	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=409
+mouse cortical slice effluent	veratridine, R(−), 100 µM, glutamate	graphical relative change vs own plotted control	-4.56621	% of control S2/S1	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=409
+mouse cortical slice effluent	veratridine, R(−), 200 µM, glutamate	graphical S2/S1	84.83607	% of first pulse	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=411
+mouse cortical slice effluent	veratridine, R(−), 200 µM, glutamate	graphical relative change vs own plotted control	-5.479452	% of control S2/S1	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=411
+mouse cortical slice effluent	veratridine, R(−), 400 µM, glutamate	graphical S2/S1	81.14754	% of first pulse	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=420
+mouse cortical slice effluent	veratridine, R(−), 400 µM, glutamate	graphical relative change vs own plotted control	-9.589041	% of control S2/S1	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=420
+mouse cortical slice effluent	veratridine, R(−), 0 µM, aspartate	graphical S2/S1	94.67213	% of first pulse	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=387
+mouse cortical slice effluent	veratridine, R(−), 0 µM, aspartate	graphical relative change vs own plotted control	0	% of control S2/S1	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=387
+mouse cortical slice effluent	veratridine, R(−), 100 µM, aspartate	graphical S2/S1	92.62295	% of first pulse	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=392
+mouse cortical slice effluent	veratridine, R(−), 100 µM, aspartate	graphical relative change vs own plotted control	-2.164502	% of control S2/S1	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=392
+mouse cortical slice effluent	veratridine, R(−), 200 µM, aspartate	graphical S2/S1	92.62295	% of first pulse	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=392
+mouse cortical slice effluent	veratridine, R(−), 200 µM, aspartate	graphical relative change vs own plotted control	-2.164502	% of control S2/S1	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=392
+mouse cortical slice effluent	veratridine, R(−), 400 µM, aspartate	graphical S2/S1	84.83607	% of first pulse	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=411
+mouse cortical slice effluent	veratridine, R(−), 400 µM, aspartate	graphical relative change vs own plotted control	-10.38961	% of control S2/S1	Srinivasan 1999 Fig. 2b; y0=618, y100=374, bar top=411
+rat entorhinal layer II	exposure versus vehicle	rheobase mean change	81.8	pA	Boehlen et al. 2013 Results, Fig. 7 and Table 2
+rat entorhinal layer II	exposure versus vehicle	excitability threshold demand	1.491587	ratio of means	Boehlen et al. 2013 Results, Fig. 7 and Table 2
+mouse cortical wedge, zero added Mg	exposure versus vehicle	normalized afterpotentials, 25 µM	0.3527169	ratio of means	Srinivasan et al. 1997 Table 1
+mouse cortical wedge, zero added Mg	exposure versus vehicle	normalized spontaneous depolarizations, 25 µM	0.9490695	ratio of means	Srinivasan et al. 1997 Table 1
+mouse cortical wedge, zero added Mg	exposure versus vehicle	normalized spontaneous depolarizations, 100 µM	0.6630754	ratio of means	Srinivasan et al. 1997 Table 1
+mouse cortical wedge, zero added Mg	exposure versus vehicle	normalized spontaneous depolarizations, 200 µM	0.4818805	ratio of means	Srinivasan et al. 1997 Table 1
+healthy adult plasma	Biber 0.7 µg/mL	converted Cmax	2.748763	µM total	Biber and Dienel 1996 primary abstract
+healthy adult plasma	Biber 0.7 µg/mL	conditional Cmax at fu=0.50	1.374382	µM unbound scenario	Biber and Dienel 1996 primary abstract
+healthy adult plasma	Biber 1.7 µg/mL	converted Cmax	6.675567	µM total	Biber and Dienel 1996 primary abstract
+healthy adult plasma	Biber 1.7 µg/mL	conditional Cmax at fu=0.50	3.337784	µM unbound scenario	Biber and Dienel 1996 primary abstract
+healthy adult plasma	Biber 4.4 µg/mL	converted Cmax	17.27794	µM total	Biber and Dienel 1996 primary abstract
+healthy adult plasma	Biber 4.4 µg/mL	conditional Cmax at fu=0.50	8.63897	µM unbound scenario	Biber and Dienel 1996 primary abstract
+healthy adult plasma	Peeters racemate parent	converted Cmax	7.814341	µM total	Peeters et al. 1998 Table I
+healthy adult plasma	Peeters racemate parent	conditional Cmax at fu=0.50	3.90717	µM unbound scenario	Peeters et al. 1998 Table I
+healthy adult plasma	Peeters pure S(+)	converted Cmax	6.636299	µM total	Peeters et al. 1998 Table I
+healthy adult plasma	Peeters pure S(+)	conditional Cmax at fu=0.50	3.31815	µM unbound scenario	Peeters et al. 1998 Table I
+healthy adult plasma	Peeters pure R(−)	converted Cmax	1.727794	µM total	Peeters et al. 1998 Table I
+healthy adult plasma	Peeters pure R(−)	conditional Cmax at fu=0.50	0.863897	µM unbound scenario	Peeters et al. 1998 Table I
+cross-preparation scale	25 µM nominal bath	bath / illustrative adult unbound Cmax	2.893864	ratio	Biber and Dienel 1996 primary abstract; Peeters et al. 1998 plasma binding
+cross-preparation scale	100 µM nominal bath	bath / illustrative adult unbound Cmax	11.57545	ratio	Biber and Dienel 1996 primary abstract; Peeters et al. 1998 plasma binding
+cross-preparation scale	200 µM nominal bath	bath / illustrative adult unbound Cmax	23.15091	ratio	Biber and Dienel 1996 primary abstract; Peeters et al. 1998 plasma binding
+healthy adult chiral plasma	pure S(+) / R(−) Cmax	reported-value ratio	3.840909	ratio of means	Peeters et al. 1998 Table I
+healthy adult chiral plasma	pure S(+) / R(−) AUC	reported-value ratio	8.301587	ratio of means	Peeters et al. 1998 Table I
+healthy adult chiral plasma	racemate S(+) / R(−) AUC	reported-value ratio	8.207207	ratio of means	Peeters et al. 1998 Table II
+healthy adult chiral plasma	pure R(−) / S(+) apparent oral clearance	reported-value ratio	10.89474	ratio of means	Peeters et al. 1998 Table I
+Bauer 2001	active	median frequency reduction difference versus placebo	8.2	percentage points	Bauer et al. 2001 primary abstract
+Bauer 2001	active	reported responder rate difference versus placebo	7.7	percentage points	Bauer et al. 2001 primary abstract
+Bauer 2001	active	any adverse event difference versus placebo	22.1	percentage points	Bauer et al. 2001 primary abstract
+Baulac 2003	lower	median frequency reduction difference versus placebo	16.4	percentage points	Baulac and Klement 2003 primary abstract
+Baulac 2003	lower	reported responder rate difference versus placebo	5.4	percentage points	Baulac and Klement 2003 primary abstract
+Baulac 2003	lower	any adverse event difference versus placebo	3.3	percentage points	Baulac and Klement 2003 primary abstract
+Baulac 2003	higher	median frequency reduction difference versus placebo	22	percentage points	Baulac and Klement 2003 primary abstract
+Baulac 2003	higher	reported responder rate difference versus placebo	17.5	percentage points	Baulac and Klement 2003 primary abstract
+Baulac 2003	higher	any adverse event difference versus placebo	17.3	percentage points	Baulac and Klement 2003 primary abstract
