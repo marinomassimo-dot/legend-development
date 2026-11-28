@@ -696,10 +696,12 @@
     },
     {
      "step": "ADV-335: antibody and specificity control behind each repository statement placing WWOX protein in a neural cell type or region",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message ADV-335, 2026-11-28",
-     "accepted_at": "2026-11-28T16:00:25Z"
+     "accepted_at": "2026-11-28T16:00:25Z",
+     "evidence": "RESULT_ADV335_IT_20261128.md",
+     "updated_at": "2026-11-28T16:13:42Z"
     }
    ]
   }
