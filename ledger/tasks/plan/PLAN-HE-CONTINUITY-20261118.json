@@ -1670,6 +1670,40 @@
      "accepted_at": "2026-11-28T10:10:47Z",
      "evidence": "blind_calibration_he package: RESULT_ADV315_HE_20261128.md; table sha256 2e23f790 hashed before the comparison",
      "updated_at": "2026-11-28T10:23:52Z"
+    },
+    {
+     "step": "Measure (no build): tracked-tree weight, what gates/suites/views read, what a worktree sparse checkout could omit, saving per worktree; and the hosted CI queue share from campaign-record-only pushes; one report to ADV",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad message 2026-11-28 to HE 4dc0566e (micro-upgrade accepted as measurement only)",
+     "accepted_at": "2026-11-28T10:39:54Z",
+     "evidence": "report sent to ADV a5e6f2ad 2026-11-28 (msg c044d46e): worktree 486 MB vs 175 MB sparse, gate/LINT block in sparse, 49 suites inside omitted folders, 49 of 235 fail; CI 18 open, 9 records-only; recommendation do not build",
+     "updated_at": "2026-11-28T11:27:20Z"
+    },
+    {
+     "step": "ADV-299 disk writer trace and browser profile leak fix (executed by HE window 888b4b03, recorded late by 4dc0566e)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-299",
+     "accepted_at": "2026-11-28T11:24:30Z",
+     "evidence": "eb890eef9 and 3f576e5b3 on main (05:20Z, 05:51Z 2026-11-28): trace, RESULT_ADV299_HE_20261128.md, test; done by HE 888b4b03, checked by 4dc0566e from git, not re-run",
+     "updated_at": "2026-11-28T11:24:30Z"
+    },
+    {
+     "step": "Put test_trace_claim_foundation.py and other registry-shaped suites into the safe_push landing set with measured run time and a test; add the worktree-removal rule line to the README row; confirm CI run for 66e92e2f (#2855)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad messages 2026-11-28 (landing-set; direction round items 2 and 4)",
+     "accepted_at": "2026-11-28T11:24:31Z",
+     "evidence": "615d0775 on main: 8 suites in landing_suites.py on claim/paper registry change, test, README removal rule; CI watch is its own step",
+     "updated_at": "2026-11-28T11:47:09Z"
+    },
+    {
+     "step": "Confirm CI gate runs #2855 (66e92e2f) and #2856 (c977798d) concluded and tell ADV in one line",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV a5e6f2ad direction 2026-11-28 (CI watch)",
+     "accepted_at": "2026-11-28T11:47:09Z"
     }
    ]
   }
@@ -2960,6 +2994,34 @@
    "at": "2026-11-28T10:10:47Z",
    "source": "ADV-315, ADV message to HE a2763bd3 2026-11-28",
    "step_sha256": "1f527f56d0df",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T10:39:54Z",
+   "source": "ADV a5e6f2ad message 2026-11-28 to HE 4dc0566e (micro-upgrade accepted as measurement only)",
+   "step_sha256": "f7be81d7de4b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T11:24:30Z",
+   "source": "ADV-299",
+   "step_sha256": "0bd9900f5ad7",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T11:24:31Z",
+   "source": "ADV a5e6f2ad messages 2026-11-28 (landing-set; direction round items 2 and 4)",
+   "step_sha256": "31d53dd4ab7e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T11:47:09Z",
+   "source": "ADV a5e6f2ad direction 2026-11-28 (CI watch)",
+   "step_sha256": "7ce343e2d450",
    "reopened_block": false,
    "authorised_by": null
   }
