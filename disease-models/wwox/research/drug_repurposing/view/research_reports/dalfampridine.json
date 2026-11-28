@@ -1,0 +1,33 @@
+{
+  "investigation": "INV-06",
+  "title": "Dalfampridine in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "An acute probe of callosal propagation and recruitment.",
+  "graph": {
+    "evidence": "A genetic mouse model had shorter callosal peak latency during acute exposure.",
+    "inference": "A compound peak can change when the mixture of conducting fibers changes.",
+    "hypothesis": "Surviving WWOX axons may have acutely recoverable propagation reserve.",
+    "experiment": "Measure distal failures of the same component at matched proximal recruitment."
+  },
+  "evidence": [
+    "In Gtf2i-deficient mice, 4-aminopyridine shortened callosal peak latency in mutants and controls. In adult brain injury, some structural markers improved while conduction velocity did not show recovery after washout."
+  ],
+  "inference": [
+    "The synthetic replay increased apparent compound-peak speed from 0.49 to 0.82 m/s by changing fiber weights while leaving both fiber speeds fixed."
+  ],
+  "hypothesis": [
+    "An acute action could recover transmission in surviving WWOX axons. Recruitment of a different fiber mixture or a larger synaptic response can produce an apparent gain."
+  ],
+  "experiment": [
+    "At verified local exposure, track direct components across distance and compare distal train failures at matched proximal recruitment. Record later synaptic responses and spontaneous activity separately."
+  ],
+  "limits": [
+    "Retain as a conditional ex vivo probe. Free juvenile neural exposure is unmeasured. The US label contraindicates dalfampridine in people with a seizure history."
+  ],
+  "sources": [
+    {"label": "Barak et al. Neuronal Gtf2i deletion, Fig. 4C–E.", "url": "https://doi.org/10.1038/s41593-019-0380-9"},
+    {"label": "Radomski et al. Callosal injury, Figs. 4–6 and Table 4.", "url": "https://doi.org/10.1186/s40478-022-01366-z"},
+    {"label": "Sindhurakar et al. Plasma and spared motor circuits, Fig. 3.", "url": "https://doi.org/10.1177/1545968316688800"},
+    {"label": "DailyMed. AMPYRA contraindications and pharmacokinetics.", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=550eb76a-e4a6-4fa1-ad65-c0fd8b0ce783"}
+  ]
+}
