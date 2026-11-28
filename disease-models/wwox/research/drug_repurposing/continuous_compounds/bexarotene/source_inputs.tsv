@@ -1,0 +1,25 @@
+key	value	unit	source	locator
+trial_randomized_per_arm	26	adults	https://doi.org/10.1016/S1474-4422(21)00179-4	Fig. 1, assigned participants
+trial_drug_exposed	26	adults	https://www.clinicaltrialsregister.eu/ctr-search/trial/2014-003145-99/results	Adverse Events, exposed denominator
+trial_placebo_exposed	24	adults	https://www.clinicaltrialsregister.eu/ctr-search/trial/2014-003145-99/results	Adverse Events, exposed denominator
+trial_drug_hypothyroid	26	adults	https://doi.org/10.1016/S1474-4422(21)00179-4	Table 2, Results
+trial_placebo_hypothyroid	0	adults	https://doi.org/10.1016/S1474-4422(21)00179-4	Table 2, Results
+trial_drug_hypertriglyceridemia	24	adults	https://doi.org/10.1016/S1474-4422(21)00179-4	Table 2, Results
+trial_placebo_hypertriglyceridemia	0	adults	https://doi.org/10.1016/S1474-4422(21)00179-4	Table 2, Results
+trial_drug_discontinued_for_ae	5	adults	https://doi.org/10.1016/S1474-4422(21)00179-4	Table 2, Results
+trial_placebo_discontinued_for_ae	2	adults	https://doi.org/10.1016/S1474-4422(21)00179-4	Table 2, Results
+trial_mtr_target	1.18	percentage units	https://doi.org/10.1016/S1474-4422(21)00179-4	Results, effect size for trial design
+trial_mtr_upper_ci	0.71	percentage units	https://www.clinicaltrialsregister.eu/ctr-search/trial/2014-003145-99/results	Primary efficacy analysis subject-level adjusted effect
+followup_drug_recordable	24	eyes	https://doi.org/10.1177/13524585241233177	Fig. 1b,d and Results, same site returning participants
+followup_placebo_recordable	14	eyes	https://doi.org/10.1177/13524585241233177	Fig. 1b,d and Results, same site returning participants
+followup_drug_improved	10	eyes reconstructed	https://doi.org/10.1177/13524585241233177	Fig. 1d all eyes follow-up minus baseline, bar ~42%, n=24
+followup_placebo_improved	3	eyes reconstructed	https://doi.org/10.1177/13524585241233177	Fig. 1d all eyes follow-up minus baseline, bar ~21%, n=14
+followup_delayed_drug_recordable	20	eyes	https://doi.org/10.1177/13524585241233177	Fig. 1c,d and Results, baseline P100 >118 ms
+followup_delayed_placebo_recordable	7	eyes	https://doi.org/10.1177/13524585241233177	Fig. 1c,d and Results, baseline P100 >118 ms
+followup_delayed_drug_improved	10	eyes reconstructed	https://doi.org/10.1177/13524585241233177	Fig. 1d prolonged eyes follow-up minus baseline, bar 50%, n=20
+followup_delayed_placebo_improved	3	eyes reconstructed	https://doi.org/10.1177/13524585241233177	Fig. 1d prolonged eyes follow-up minus baseline, bar ~43%, n=7
+healthy_csf_limit	0.021	µM	https://doi.org/10.1016/j.trci.2016.06.001	Fig. 1 and Results section 3.1, quantification limit
+healthy_plasma_peak	1.46	µM	https://doi.org/10.1016/j.trci.2016.06.001	Results section 3.1, average peak plasma
+healthy_csf_plasma_ratio_inverse	85	ratio	https://doi.org/10.1016/j.trci.2016.06.001	Results section 3.1, author estimate for quantifiable subset
+qki_myelinated_gain	73.7	relative percent	https://doi.org/10.1172/JCI131800	Fig. 6F and Results, bexarotene-treated versus untreated Qki iCKO
+qki_myelin_fluorescence_gain	89.5	relative percent	https://doi.org/10.1172/JCI131800	Fig. 6H and Results, bexarotene-treated versus untreated Qki iCKO
