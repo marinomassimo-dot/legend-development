@@ -1,0 +1,33 @@
+{
+  "investigation": "INV-15",
+  "title": "Glutamate clearance at two sites",
+  "date": "28 November 2026",
+  "summary": "Ceftriaxone as a conditional astrocyte comparator in WWOX loss of function.",
+  "graph": {
+    "evidence": "Total GLT-1 rose without faster decay in healthy slices.",
+    "inference": "A local signal can shrink through uptake, dispersion or release.",
+    "hypothesis": "Surface transport may be constrained by sodium recovery.",
+    "experiment": "Measure both sites after the same calibrated glutamate input."
+  },
+  "evidence": [
+    "In Tsc1 mice, starting before seizure onset reduced recorded frequency. Starting after onset raised GLT-1 with no detected EEG benefit. Human ALS efficacy was unconfirmed."
+  ],
+  "inference": [
+    "WWOX bulk SLC1A2 fell. Pooled astrocyte Slc1a2 rose after removing it from cell assignment. Atp1a2 fell in that pool. Measure native transport and ionic reserve."
+  ],
+  "hypothesis": [
+    "Improved uptake should reduce near and distal glutamate after a fixed pulse. Faster dispersion can shorten near decay while increasing distal spillover."
+  ],
+  "experiment": [
+    "Pair local free exposure, surface EAAT2, sodium recovery and near/distal glutamate with a transporter dependency control. Test first recruitment separately."
+  ],
+  "limits": [
+    "Conditional ex vivo comparison. Pediatric CSF data come mainly from infection-related care. Prolonged adult exposure increased hepatobiliary events."
+  ],
+  "sources": [
+    {"label": "Wilkie et al. Total protein and glutamate decay.", "url": "https://doi.org/10.3389/fncel.2021.661412"},
+    {"label": "Zeng et al. Tsc1 early and late video-EEG.", "url": "https://doi.org/10.1016/j.nbd.2009.12.020"},
+    {"label": "Pediatric unbound CSF model and study matrix.", "url": "https://doi.org/10.1128/aac.00747-24"},
+    {"label": "Cudkowicz et al. ALS outcomes and adverse events.", "url": "https://doi.org/10.1016/S1474-4422(14)70222-4"}
+  ]
+}

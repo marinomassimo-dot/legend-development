@@ -1627,11 +1627,12 @@
     },
     {
      "step": "Measure the disk transient of one push by component and shrink it if a third or more can go without changing what the gate verifies",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV a5e6f2ad direction round to HE 6fe75e26, 2026-11-28 about 09:20Z (disk)",
      "accepted_at": "2026-11-28T09:27:06Z",
-     "updated_at": "2026-11-28T09:27:06Z"
+     "updated_at": "2026-11-28T09:33:43Z",
+     "evidence": "1792bd8f3760; sampled suite clone 1294 MB -> 471 MB; CHECKPOINT_HE_20261128_AD_ADDENDUM.md"
     }
    ]
   }
