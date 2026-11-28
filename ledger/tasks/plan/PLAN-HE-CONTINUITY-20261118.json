@@ -1713,6 +1713,15 @@
      "accepted_at": "2026-11-28T11:52:06Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/brainstorm_20261116/adv318_blind_crawford_he_20261128/BLIND_READING.md",
      "updated_at": "2026-11-28T12:03:12Z"
+    },
+    {
+     "step": "ADV-323: blind second reading of Chornyy 2025 (PMID 41036104) for ADV-320, table plus one line to ADV",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-323 (message from ADV - CURRENT a5e6f2ad, 2026-11-28, adv323.txt)",
+     "accepted_at": "2026-11-28T12:25:40Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv323_blind_chornyy_he_20261128/BLIND_READING.md",
+     "updated_at": "2026-11-28T12:25:40Z"
     }
    ]
   }
@@ -3038,6 +3047,13 @@
    "at": "2026-11-28T11:52:06Z",
    "source": "ADV-318 (message from ADV - CURRENT a5e6f2ad, 2026-11-28)",
    "step_sha256": "271b1ec1e5f4",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T12:25:40Z",
+   "source": "ADV-323 (message from ADV - CURRENT a5e6f2ad, 2026-11-28, adv323.txt)",
+   "step_sha256": "4b91cc9d733f",
    "reopened_block": false,
    "authorised_by": null
   }
