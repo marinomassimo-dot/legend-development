@@ -1326,6 +1326,15 @@
      "accepted_at": "2026-11-28T08:14:48Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv311_pup_feasibility_sci_20261128/RESULT_ADV311_SCI_20261128.md; receipts FTR-20261128-19936220-01, FTR-20261128-33914858-01",
      "updated_at": "2026-11-28T08:14:48Z"
+    },
+    {
+     "step": "ADV-312: myelin structure-to-conduction calibration sources outside Wwox (E-A vs E-B frozen first)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-312",
+     "accepted_at": "2026-11-28T08:55:54Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv312_myelin_calibration_sci_20261128/RESULT_ADV312_SCI_20261128.md; receipts FTR-20261128-20858739-01, FTR-20261128-31318166-01, FTR-20261128-30703503-01",
+     "updated_at": "2026-11-28T08:59:18Z"
     }
    ]
   }
@@ -2350,6 +2359,13 @@
    "at": "2026-11-28T08:14:48Z",
    "source": "ADV-311",
    "step_sha256": "78c91ee0cd54",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T08:55:54Z",
+   "source": "ADV-312",
+   "step_sha256": "898291abbd82",
    "reopened_block": false,
    "authorised_by": null
   }
