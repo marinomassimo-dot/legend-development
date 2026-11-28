@@ -21,3 +21,7 @@ Proposed: "Across separate studies (not a matched comparison), the thalamic reti
 Present: "a Neuroligin 2 line (PMID 32719346) shows a restriction that follows the SWD phenotype (no effect in wild type or in two non-SWD mutants);"
 
 Proposed: "in a Neuroligin 2 knockout with spike-wave discharges, ethosuximide (200 mg/kg intraperitoneal, before/after, no vehicle arm) improved behaviour; no such effect is reported in wild-type mice, and the social-memory deficit was not rescued in PAK3-transgenic or FMR1-knockout mice, taken as lacking absence-type discharges by citation (not recorded in them); the pattern is consistent with, and does not prove, an action that depends on the discharges (the authors' own caution); in wild-type thalamic slices ethosuximide 500 uM still reduced rebound burst firing (PMID 32719346);"
+
+## Optional design note for the same entry (DREAM, IPOTESI; not a sentence correction)
+
+DL-MECH-170's falsifying experiment (line 4478) asks for whole-cell T-type current density in Wwox-null thalamic reticular and relay neurons at one fixed postnatal age. Record 3 and its comparator suggest the direction should not be presumed (lower in redox or developmental-insult mouse models, higher in Cntnap2 knockout) and that one age can miss a late-appearing change (the Gclm knockout shows none at postnatal day 20 to 30). Rival readings: no change, a rise, or a fall secondary to redox stress or cell loss. Two ages would separate more than one. New combination within the repository; no novelty claimed; nothing here moves a card, need or ranking.
