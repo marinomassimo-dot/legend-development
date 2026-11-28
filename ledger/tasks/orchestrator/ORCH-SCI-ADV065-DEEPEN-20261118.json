@@ -1398,6 +1398,24 @@
      "accepted_at": "2026-11-28T12:18:43Z",
      "evidence": "adv320_chornyy2025_figures_sci_20261128/RESULT_ADV320_CHORNYY2025_SCI_20261128.md; receipt FTR-20261128-41036104-02",
      "updated_at": "2026-11-28T12:18:43Z"
+    },
+    {
+     "step": "ADV-322: decision note on 3 to 4 follow-ups outside the two top research-priority compounds (one different pathway, one mechanism-strong dossier with sparse clinical evidence), plus one line on IT's three DisMech prompt blocks",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-322",
+     "accepted_at": "2026-11-28T12:27:10Z",
+     "evidence": "RESULT_ADV322_COMPOUND_PRIORITY_NOTE_SCI_20261128.md in adv322_compound_priority_sci_20261128 (push follows this commit); one-line DisMech review inside the note",
+     "updated_at": "2026-11-28T12:36:26Z"
+    },
+    {
+     "step": "Compare HE ADV-323 blind table of Chornyy 2025 (Fig 4C, S1B, Table S1) with SCI ADV-320 table cell by cell; report differing cells to ADV before IT narrows CLAIM 047 bound (2)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-28 to SCI successor bd (ADV-323 comparison)",
+     "accepted_at": "2026-11-28T12:27:10Z",
+     "evidence": "COMPARISON_ADV320_ADV323_SCI_20261128.md on main 3b492f686; reported to ADV and IT 2026-11-28",
+     "updated_at": "2026-11-28T12:36:26Z"
     }
    ]
   }
@@ -2478,6 +2496,20 @@
    "at": "2026-11-28T12:18:43Z",
    "source": "ADV-320 (registered by ADV 2026-11-28)",
    "step_sha256": "b3002b3dac6b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T12:27:10Z",
+   "source": "ADV-322",
+   "step_sha256": "44c0ffc678bd",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T12:27:10Z",
+   "source": "ADV message 2026-11-28 to SCI successor bd (ADV-323 comparison)",
+   "step_sha256": "65dc2f841da7",
    "reopened_block": false,
    "authorised_by": null
   }

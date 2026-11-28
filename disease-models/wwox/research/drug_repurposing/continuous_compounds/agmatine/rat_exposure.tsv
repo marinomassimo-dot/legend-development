@@ -1,0 +1,6 @@
+condition	peak	mass_units	converted	molar_units	tmax_min
+rat IV terminal plasma	59278	ng/mL	455.3191	µmol/L	15
+rat IV terminal brain	3138	ng/g	24.1032	µmol/kg	15
+rat IV terminal spinal cord	814	ng/g	6.2524	µmol/kg	120
+rat oral serial plasma, lower source arm	4730	ng/mL	36.3315	µmol/L	23.6
+rat oral serial plasma, higher source arm	14494	ng/mL	111.3296	µmol/L	45

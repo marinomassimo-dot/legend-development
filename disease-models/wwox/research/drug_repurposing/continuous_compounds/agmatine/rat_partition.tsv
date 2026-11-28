@@ -1,0 +1,4 @@
+comparison	tissue	plasma	ratio_mL_g
+brain/plasma at common sampled Tmax	3138	59278	0.052937
+brain/plasma using reported AUCs	25246	63658	0.396588
+spinal/plasma using reported AUCs	18718	63658	0.294040
