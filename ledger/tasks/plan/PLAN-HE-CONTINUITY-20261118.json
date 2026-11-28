@@ -1645,10 +1645,12 @@
     },
     {
      "step": "Sample one SCI push after the floor change and report its peak to ADV (every-publisher condition)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "operator HE brief 2026-11-28 (two measured pushes on every publisher)",
-     "accepted_at": "2026-11-28T09:52:52Z"
+     "accepted_at": "2026-11-28T09:52:52Z",
+     "evidence": "SCI push 336110982: candidate tree 462 MiB then suite clone 462 MiB; HE_DISK_PEAK_20261128.md; reported to ADV",
+     "updated_at": "2026-11-28T09:59:09Z"
     },
     {
      "step": "2026-11-29: recheck and delete files/adv174_negraes_custodian_he/ in the root checkout (sealed, outside git)",
