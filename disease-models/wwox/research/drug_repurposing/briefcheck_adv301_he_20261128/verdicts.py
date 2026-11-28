@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """ADV-301: write verdicts.tsv = flags.tsv plus HE's hand verdict and the passage that decides it."""
 import csv
 from pathlib import Path

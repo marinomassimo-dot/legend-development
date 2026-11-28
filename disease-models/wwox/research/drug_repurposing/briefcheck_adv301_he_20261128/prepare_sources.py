@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """ADV-301: turn the held (untrusted) source files into plain text before the check.
 
 Usage: python3 -I prepare_sources.py SRC_DIR OUT_DIR

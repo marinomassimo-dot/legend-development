@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """ADV-301: run framework/scripts/fragment_source_check.py over every sentence of five briefs.
 
 Usage: python3 run_adv301.py PREP_DIR [--side]
