@@ -684,6 +684,15 @@
      "owner": "orchestrator",
      "source": "ADV message 2026-11-28 (ADV-333, assignment accepted from IT37 proposal)",
      "accepted_at": "2026-11-28T15:08:44Z"
+    },
+    {
+     "step": "IT38: complete read of PMID 31829254 (ADV-333 completion): PAPER record, receipt, second reader, BATCH_COMMIT",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV launch brief to IT38, 2026-11-28; checkpoint 37 section 2 item 3",
+     "accepted_at": "2026-11-28T15:52:00Z",
+     "evidence": "FTR-20261128-31829254-02; BATCH_20261128_009; RESULT_ADV333B_COMPLETE_READ_IT38_20261128.md",
+     "updated_at": "2026-11-28T15:52:00Z"
     }
    ]
   }
@@ -1218,6 +1227,13 @@
    "at": "2026-11-28T15:08:44Z",
    "source": "ADV message 2026-11-28 (ADV-333, assignment accepted from IT37 proposal)",
    "step_sha256": "d6153c403a49",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T15:52:00Z",
+   "source": "ADV launch brief to IT38, 2026-11-28; checkpoint 37 section 2 item 3",
+   "step_sha256": "e25225324703",
    "reopened_block": false,
    "authorised_by": null
   }
