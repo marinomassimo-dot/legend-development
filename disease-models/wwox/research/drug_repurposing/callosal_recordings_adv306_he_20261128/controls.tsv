@@ -1,0 +1,35 @@
+06:52:22Z	datacite	myelin	total	862	got	25
+06:52:24Z	zenodo	myelin	total	530	got	25
+06:52:25Z	figshare	myelin	total	25	got	25
+06:52:28Z	dryad	myelin	total	27	got	25
+06:52:31Z	dandi	myelin	total	8	got	8
+06:52:32Z	gin	myelin	total	2	got	2
+06:52:37Z	osf	myelin	total	42	got	25
+06:52:38Z	datacite	"corpus callosum"	total	493	got	25
+06:52:40Z	zenodo	"corpus callosum"	total	282	got	25
+06:52:41Z	figshare	"corpus callosum"	total	25	got	25
+06:52:45Z	dryad	"corpus callosum"	total	21	got	21
+06:52:47Z	dandi	"corpus callosum"	total	3	got	3
+06:52:48Z	gin	"corpus callosum"	total	0	got	0
+06:52:52Z	osf	"corpus callosum"	total	12	got	12
+06:52:53Z	datacite	"optic nerve"	total	825	got	25
+06:52:54Z	zenodo	"optic nerve"	total	718	got	25
+06:52:56Z	figshare	"optic nerve"	total	25	got	25
+06:52:58Z	dryad	"optic nerve"	total	20	got	20
+06:53:01Z	dandi	"optic nerve"	total	4	got	4
+06:53:02Z	gin	"optic nerve"	total	0	got	0
+06:53:06Z	osf	"optic nerve"	total	7	got	7
+06:53:07Z	datacite	Wwox	total	34	got	25
+06:53:08Z	zenodo	Wwox	total	11	got	11
+06:53:09Z	figshare	Wwox	total	25	got	25
+06:53:10Z	dryad	Wwox	total	0	got	0
+06:53:12Z	dandi	Wwox	total	0	got	0
+06:53:12Z	gin	Wwox	total	0	got	0
+06:53:14Z	osf	Wwox	total	0	got	0
+06:53:15Z	datacite	"compound action potential"	total	92	got	25
+06:53:16Z	zenodo	"compound action potential"	total	24	got	24
+06:53:18Z	figshare	"compound action potential"	total	25	got	25
+06:53:22Z	dryad	"compound action potential"	total	27	got	25
+06:53:23Z	dandi	"compound action potential"	total	0	got	0
+06:53:24Z	gin	"compound action potential"	total	0	got	0
+06:53:26Z	osf	"compound action potential"	total	0	got	0

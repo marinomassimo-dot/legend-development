@@ -1572,10 +1572,21 @@
     },
     {
      "step": "ADV-301: mechanical source check of the latest compound briefs (read-only; PREREG first; five briefs; hand-check two)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-301 message from ADV a5e6f2ad 2026-11-28",
-     "accepted_at": "2026-11-28T06:32:49Z"
+     "accepted_at": "2026-11-28T06:32:49Z",
+     "updated_at": "2026-11-28T06:48:57Z",
+     "evidence": "disk: disease-models/wwox/research/drug_repurposing/briefcheck_adv301_he_20261128/RESULT_ADV301_HE_20261128.md (1a1ddb235): 0 true of 15 flags in five briefs; ADV told"
+    },
+    {
+     "step": "ADV-306: search public repositories for callosal or optic-nerve conduction recordings that give a slope (read-only; PREREG a6f05b8c; deliver ADV and IT)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-306 message from ADV a5e6f2ad 2026-11-28",
+     "accepted_at": "2026-11-28T06:53:54Z",
+     "updated_at": "2026-11-28T07:01:47Z",
+     "evidence": "disk: disease-models/wwox/research/drug_repurposing/callosal_recordings_adv306_he_20261128/RESULT_ADV306_HE_20261128.md: two LATENCY-ONLY callosal deposits (dryad.gk117 Rictor; figshare.4040070 shiverer), no Wwox deposit; delivered ADV and IT"
     }
    ]
   }
@@ -2796,6 +2807,13 @@
    "at": "2026-11-28T06:32:49Z",
    "source": "ADV-301 message from ADV a5e6f2ad 2026-11-28",
    "step_sha256": "8db464fa5a4a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T06:53:54Z",
+   "source": "ADV-306 message from ADV a5e6f2ad 2026-11-28",
+   "step_sha256": "6165344c9d54",
    "reopened_block": false,
    "authorised_by": null
   }

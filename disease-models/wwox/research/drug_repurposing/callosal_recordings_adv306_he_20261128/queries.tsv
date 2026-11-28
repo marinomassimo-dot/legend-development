@@ -1,0 +1,56 @@
+2026-11-28T06:50:44Z	datacite	Q1	"compound action potential" "corpus callosum"	ok	0	0
+2026-11-28T06:50:46Z	datacite	Q2	callosal conduction velocity myelin mouse	ok	0	0
+2026-11-28T06:50:47Z	datacite	Q3	"optic nerve" "compound action potential" mouse	ok	0	0
+2026-11-28T06:50:49Z	datacite	Q4	hypomyelination electrophysiology conduction	ok	0	0
+2026-11-28T06:50:50Z	datacite	Q5	shiverer conduction	ok	0	0
+2026-11-28T06:50:51Z	datacite	Q6	Wwox electrophysiology	ok	0	0
+2026-11-28T06:50:52Z	datacite	Q7	4-aminopyridine "compound action potential"	ok	0	0
+2026-11-28T06:50:54Z	datacite	Q8	clemastine conduction	ok	0	0
+2026-11-28T06:50:55Z	zenodo	Q1	"compound action potential" "corpus callosum"	ok	306	25
+2026-11-28T06:50:57Z	zenodo	Q2	callosal conduction velocity myelin mouse	ok	0	0
+2026-11-28T06:50:58Z	zenodo	Q3	"optic nerve" "compound action potential" mouse	ok	17276	25
+2026-11-28T06:51:00Z	zenodo	Q4	hypomyelination electrophysiology conduction	ok	0	0
+2026-11-28T06:51:01Z	zenodo	Q5	shiverer conduction	ok	0	0
+2026-11-28T06:51:02Z	zenodo	Q6	Wwox electrophysiology	ok	0	0
+2026-11-28T06:51:04Z	zenodo	Q7	4-aminopyridine "compound action potential"	ok	637586	25
+2026-11-28T06:51:06Z	zenodo	Q8	clemastine conduction	ok	0	0
+2026-11-28T06:51:08Z	figshare	Q1	"compound action potential" "corpus callosum"	ok	0	0
+2026-11-28T06:51:10Z	figshare	Q2	callosal conduction velocity myelin mouse	ok	0	0
+2026-11-28T06:51:11Z	figshare	Q3	"optic nerve" "compound action potential" mouse	ok	25	25
+2026-11-28T06:51:12Z	figshare	Q4	hypomyelination electrophysiology conduction	ok	0	0
+2026-11-28T06:51:13Z	figshare	Q5	shiverer conduction	ok	25	25
+2026-11-28T06:51:15Z	figshare	Q6	Wwox electrophysiology	ok	0	0
+2026-11-28T06:51:16Z	figshare	Q7	4-aminopyridine "compound action potential"	ok	25	25
+2026-11-28T06:51:18Z	figshare	Q8	clemastine conduction	ok	5	5
+2026-11-28T06:51:19Z	dryad	Q1	"compound action potential" "corpus callosum"	ok	0	0
+2026-11-28T06:51:20Z	dryad	Q2	callosal conduction velocity myelin mouse	ok	0	0
+2026-11-28T06:51:22Z	dryad	Q3	"optic nerve" "compound action potential" mouse	ok	0	0
+2026-11-28T06:51:24Z	dryad	Q4	hypomyelination electrophysiology conduction	ok	0	0
+2026-11-28T06:51:25Z	dryad	Q5	shiverer conduction	ok	2	2
+2026-11-28T06:51:27Z	dryad	Q6	Wwox electrophysiology	ok	0	0
+2026-11-28T06:51:28Z	dryad	Q7	4-aminopyridine "compound action potential"	ok	0	0
+2026-11-28T06:51:30Z	dryad	Q8	clemastine conduction	ok	0	0
+2026-11-28T06:51:32Z	dandi	Q1	"compound action potential" "corpus callosum"	ok	0	0
+2026-11-28T06:51:34Z	dandi	Q2	callosal conduction velocity myelin mouse	ok	0	0
+2026-11-28T06:51:35Z	dandi	Q3	"optic nerve" "compound action potential" mouse	ok	0	0
+2026-11-28T06:51:37Z	dandi	Q4	hypomyelination electrophysiology conduction	ok	0	0
+2026-11-28T06:51:38Z	dandi	Q5	shiverer conduction	ok	0	0
+2026-11-28T06:51:40Z	dandi	Q6	Wwox electrophysiology	ok	0	0
+2026-11-28T06:51:41Z	dandi	Q7	4-aminopyridine "compound action potential"	ok	0	0
+2026-11-28T06:51:43Z	dandi	Q8	clemastine conduction	ok	0	0
+2026-11-28T06:51:44Z	gin	Q1	"compound action potential" "corpus callosum"	ok	0	0
+2026-11-28T06:51:46Z	gin	Q2	callosal conduction velocity myelin mouse	ok	0	0
+2026-11-28T06:51:47Z	gin	Q3	"optic nerve" "compound action potential" mouse	ok	0	0
+2026-11-28T06:51:48Z	gin	Q4	hypomyelination electrophysiology conduction	ok	0	0
+2026-11-28T06:51:49Z	gin	Q5	shiverer conduction	ok	0	0
+2026-11-28T06:51:50Z	gin	Q6	Wwox electrophysiology	ok	0	0
+2026-11-28T06:51:51Z	gin	Q7	4-aminopyridine "compound action potential"	ok	0	0
+2026-11-28T06:51:52Z	gin	Q8	clemastine conduction	ok	0	0
+2026-11-28T06:51:53Z	osf	Q1	"compound action potential" "corpus callosum"	ok	0	0
+2026-11-28T06:51:55Z	osf	Q2	callosal conduction velocity myelin mouse	ok	0	0
+2026-11-28T06:51:57Z	osf	Q3	"optic nerve" "compound action potential" mouse	ok	0	0
+2026-11-28T06:51:59Z	osf	Q4	hypomyelination electrophysiology conduction	ok	0	0
+2026-11-28T06:52:01Z	osf	Q5	shiverer conduction	ok	0	0
+2026-11-28T06:52:02Z	osf	Q6	Wwox electrophysiology	ok	0	0
+2026-11-28T06:52:04Z	osf	Q7	4-aminopyridine "compound action potential"	ok	0	0
+2026-11-28T06:52:06Z	osf	Q8	clemastine conduction	ok	0	0
