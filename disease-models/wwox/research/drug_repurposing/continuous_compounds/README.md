@@ -220,7 +220,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active: β-alanine.** Test local carnosine formation against acute receptor and taurine transport effects, with matched recruitment and measured parent. [Prespecified contrast](beta_alanine/pretest.md)
+**Active: β-alanine.** Oral rodent hippocampal carnosine and adult combined brain MRS signals measure different quantities. Next recover the exact effects and assay sensitivity before aligning developmental and acute receptor windows. [Prespecified contrast](beta_alanine/pretest.md) · [Opening comparison](beta_alanine/first_comparison.md)
 
 **L-histidine.** Retain as a conditional precursor comparator and defer pediatric WWOX priority. One rat study measured higher striatal extracellular histamine after injection. The neuronal source remains unresolved. The feeding data show reduced trial engagement without concurrent photometry, and repeated dosing accelerated rat kindling. Reopen for isotope-verified neuronal product and a matched-vigilance WWOX EEG effect with repeat-exposure countercheck. [Dossier and replay](l_histidine/README.md)
 
