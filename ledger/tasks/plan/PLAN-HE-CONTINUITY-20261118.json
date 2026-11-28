@@ -1527,12 +1527,13 @@
     },
     {
      "step": "At the first normal resumption after the weekly quota reset, read the HE token-yield brief at /home/desktop/legend-development/files/coordination/adv-codex-loop/HE_TOKEN_YIELD_PILOT_20261128.md and apply it to the first suitable routine CI or landing verification in the existing queue. Measure through accepted delivery at identical verification coverage. Preserve SCI throughput and keep demonstrated savings in the existing guidance.",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
      "source": "files/coordination/adv-codex-loop/HE_TOKEN_YIELD_PILOT_20261128.md",
      "accepted_at": "2026-11-26T18:39:33Z",
      "authorised_by": "Operator instruction 2026-11-26: take the HE pilot at the Claude Code quota reset using the existing recovery path",
-     "updated_at": "2026-11-28T06:36:35Z"
+     "updated_at": "2026-11-28T08:47:00Z",
+     "evidence": "files/coordination/adv-codex-loop/HE_TOKEN_YIELD_RESULT.md arms A and B (#2800, #2802 success; 3 calls against 10); one line in framework/scripts/README.md"
     },
     {
      "step": "safe_push disk rule counts overlapping gate clones (live gates' declared peaks), with a test, no gate bypass, no workflow edit",
