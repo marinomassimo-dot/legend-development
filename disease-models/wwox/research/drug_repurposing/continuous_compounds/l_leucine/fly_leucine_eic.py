@@ -48,7 +48,7 @@ def assay_map(sample_path, positive_path, negative_path):
     return samples, mappings[0], audit
 
 
-def spectra(path, stem):
+def spectra(path, stem, *, target_mass=MASS):
     captured = []
     for _, scan in ET.iterparse(path):
         if not scan.tag.endswith("}scan") and scan.tag != "scan":
@@ -72,7 +72,7 @@ def spectra(path, stem):
                 endian = "<" if byte_order == "little" else ">"
                 arr = np.frombuffer(blob, dtype=f"{endian}f{precision // 8}").reshape(-1, 2)
                 masses, signal = arr.T
-                in_window = np.abs(masses / MASS - 1) <= PPM
+                in_window = np.abs(masses / target_mass - 1) <= PPM
                 signal_sum = float(signal.astype(float).sum())
                 total = float(scan.attrib.get("totIonCurrent", signal_sum))
                 captured.append((float(retention.group(1)), float(signal[in_window].astype(float).sum()), total))
