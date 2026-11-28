@@ -1,0 +1,13 @@
+zebrafish residual = treated/vehicle
+  spikes etifoxine 0.113  XBD173 0.016  PK11195 0.186  STP 0.032  Ro5 0.820
+  rate_Hz etifoxine 0.097  XBD173 0.014  PK11195 0.187  STP 0.030  Ro5 0.753
+zebrafish share blocked
+  spikes etifoxine 0.887  XBD173 0.984  PK11195 0.814  STP 0.968  Ro5 0.180
+  rate_Hz etifoxine 0.903  XBD173 0.986  PK11195 0.813  STP 0.970  Ro5 0.247
+culture share of 4-AP increase blocked
+  spikes etifoxine 1.032  XBD173 0.606  PK11195 1.034  STP 1.229  Ro5 0.288
+  rate etifoxine 1.144  XBD173 0.551  PK11195 1.022  STP 1.218  Ro5 0.400
+culture residual = 1 - blocked
+  spikes etifoxine -0.032  XBD173 0.394  PK11195 -0.034  STP -0.229  Ro5 0.712
+  rate etifoxine -0.144  XBD173 0.449  PK11195 -0.022  STP -0.218  Ro5 0.600
+sensitivity: zebrafish vehicle baseline +-25 percent moves residuals by x0.8 to x1.33 and no residual ratio between ligands.
