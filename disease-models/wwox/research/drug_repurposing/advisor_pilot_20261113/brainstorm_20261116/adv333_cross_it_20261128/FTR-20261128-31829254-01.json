@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-28T15:25Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-28T15:25:52Z",
+ "event_id": "FTR-20261128-31829254-01",
+ "evidence_basis": [
+  "verbatim_locator | proposition: Wwox was chosen by similarity of its ISH pattern to Slc17a6, not by prior WWOX biology | Results, marker genes for co-releasing neurons | \"We selected the gene encoding WW domain-containing oxidoreductase (Wwox), whose expression pattern was most similar to that of Slc17a6\"",
+  "verbatim_locator | proposition: the WWOX antibody is a single catalogue reagent | Methods, Immunohistochemistry | \"rabbit anti-WWOX (1:500, sc-366,157; Santa Cruz Biotechnology)\"",
+  "verbatim_locator | proposition: the denominator of the proportion is the WWOX-expressing neurons | Results, Fig. 6c | \"> 70% of the neurons that expressed WWOX also expressed both TH and VGLUT2\"",
+  "verbatim_locator | proposition: regional WWOX-positive density, mean and SEM, mouse | Fig. 6e legend | \"WWOX+, 197.31 ± 16.10 cells/mm2\"",
+  "verbatim_locator | proposition: the paper calls Wwox a potential marker only | Discussion | \"We identified Wwox as a potential marker gene for these co-releasing neurons\"",
+  "Question-driven read for ADV-333 (RP-017 premise): text (abstract, Methods, Results, Discussion, figure legends) read whole by a delegate (legend-delegate, sonnet 5.5, effort high) and string-checked by IT37; Figs 5 and 6 viewed as images from the publisher open site by IT37 (Fig 6c pies: medial 73.88 triple, 10.08 TH-/VGLUT2-, 14.65 TH+/VGLUT2-, 1.38 TH-/VGLUT2+; lateral 70.24, 10.71, 16.07, 2.98, percent of WWOX+ neurons; Fig 6b MOC G:R 0.76, G:B 0.89, R:B 0.72); Figs 1-4 captions only; reference list not read beyond the WWOX statements; no antibody-specificity control is stated in the text or the legends and none is visible in Figs 5 or 6."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv333_cross_it_20261128/RESULT_ADV333_IT_20261128.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "785a10ea6b5998f1777e8fdf14c3b68301e8ae541f3e4b11cd8e49c176a29543",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID31829254_PMC6907252_epmc_20261128.xml",
+ "study_id": {
+  "doi": "10.1186/s13041-019-0530-8",
+  "pmid": "31829254"
+ },
+ "workflow": "IT ADV-333 cross of catalogued-only records with RP decision cells; RP-017 premise question"
+}

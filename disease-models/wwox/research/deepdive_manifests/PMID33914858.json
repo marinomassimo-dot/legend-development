@@ -4,7 +4,7 @@
  "doi": "10.1093/brain/awab174",
  "pmcid": null,
  "receipt": "FTR-20261003-33914858-02",
- "receipt_note": "Prepared as a JSON file for the integrator and not appended at preparation time. It is a re-read: the standing receipt FTR-20260923-33914858-01 covers this paper with figures `captions_only`, and its declared authoritative artefact — the saved publisher HTML — is NOT present in this checkout (see source_artifacts).",
+ "receipt_note": "2026-11-28 (IT40): this manifest now describes the complete read FTR-20261128-33914858-41 (ADV-337; operator-supplied typeset PDF, supplement text, figures rendered, xlsx tables parsed; the two mp4 files not viewed). Earlier receipt named here: FTR-20261003-33914858-02 (partial passes of 2026-10-03). Entries 40 to 50 were added by that read; entries 0 to 39 are earlier passes and are kept. Earlier note follows. Prepared as a JSON file for the integrator and not appended at preparation time. It is a re-read: the standing receipt FTR-20260923-33914858-01 covers this paper with figures `captions_only`, and its declared authoritative artefact — the saved publisher HTML — is NOT present in this checkout (see source_artifacts).",
  "landing": [
   "FTR-20261003-33914858-02",
   "disease-models/wwox/research/intake_wave_20261003w4_B.md",
@@ -1153,6 +1153,259 @@
     },
     "panel_text_relation": "text_only",
     "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE NESTIN-CONDITIONAL ELECTRON-MICROSCOPY POINTS ARE FIELDS OF VIEW, NOT MICE: the Supplementary Fig 5G legend states that each data point is the average number of axons counted per field of view, while the n it prints (3 per genotype) is the number of mice.",
+    "snippet": "average=440±210) in optic nerve (N-Control n = 3, N-KO n = 3). Data points represents the",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.txt",
+    "anchor": "Supplementary Figure Legends, Supplementary Fig 5(G), File009 text layer (line carrying the unmyelinated-axon n and the start of the data-point sentence)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "mouse brain, in vivo (corpus callosum and optic nerve)",
+     "genotype": "Nestin-Cre conditional Wwox deletion (N-KO) versus N-Control",
+     "treatment": "none",
+     "timepoint": "P18",
+     "comparator": "N-Control, n = 3 mice per genotype; plotted unit is the field of view",
+     "endpoint": "transmission electron microscopy counts of myelinated (corpus callosum) and unmyelinated (optic nerve) axons per field of view"
+    },
+    "added_by": "adv337-it40"
+   },
+   {
+    "proposition": "SUPPLEMENTARY FIG 5G, READ AS A RENDERED PANEL: the N-KO has more than three plotted points per group (field-of-view averages) in both plots; read from plot, myelinated axons per field in corpus callosum are about 145 (N-Control, 7 or more points) and about 38 (N-KO, about 15 points), unmyelinated axons per field in optic nerve about 192 (N-Control, about 12 points) and about 408 (N-KO, about 12 points, one point near 720). The printed legend means (148, 45, 195, 440) are close but the N-KO plotted means sit somewhat lower (45 printed v about 38; 440 v about 408). The point counts are the reader's and approximate. The N-KO line therefore carries its own quantified electron-microscopy counts, and the *** is computed over fields.",
+    "snippet": "number of unmyelinated axons per FOV",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.pdf",
+    "anchor": "Supplementary Fig 5G (right of the TEM images in 5F), File009 PDF page 11",
+    "page_anchor": {
+     "page": 11,
+     "dpi": 260,
+     "render_call": "pdftoppm -r 260 -f 11 -l 11 -x 0 -y 1900 -W 1600 -H 1100 -png",
+     "source_pdf_sha256": "686ebcd80ef3108290877c4b5f39a006100c7528a4408c6e74317124a35c8cab",
+     "crop_published": false,
+     "crop_note": "Crop of the lower-right part of the page showing the 5F images, the 5G plots and the left edge of 5H; No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[25]",
+    "qualifies_needle": "myelinated axons (N-Control, average=148±45, N-KO, average=45±26)",
+    "experimental_context": {
+     "system": "mouse brain, in vivo (corpus callosum and optic nerve)",
+     "genotype": "Nestin-Cre conditional Wwox deletion (N-KO) versus N-Control",
+     "treatment": "none",
+     "timepoint": "P18",
+     "comparator": "N-Control, n = 3 mice per genotype; plotted unit is the field of view",
+     "endpoint": "transmission electron microscopy axon counts per field of view"
+    },
+    "added_by": "adv337-it40",
+    "snippet_note": "Panel transcription: the labels as drawn, in the order they are drawn, read off the rendered panel. It is a reading of pixels, not a string extracted from a text layer. Values read from a plot are labelled 'read from plot' in the proposition."
+   },
+   {
+    "proposition": "THE WWOX-NULL CELL COUNTS ARE THREE SECTIONS PER MOUSE, THREE MICE PER GENOTYPE, ON A CONSTITUTIVE NULL: the Supplementary Fig 7F legend counts CC1-positive and PDGFR-alpha-positive cells in 0.5 mm2 of corpus callosum from three identical sections with wild type n = 3 and Wwox null n = 3, at P17.",
+    "snippet": "(area 0.5mm2) from three identical sections (Wild type n = 3, Wwox null n = 3). Error bar represents",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.txt",
+    "anchor": "Supplementary Figure Legends, Supplementary Fig 7(F), File009 text layer",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse brain, in vivo (corpus callosum)",
+     "genotype": "constitutive Wwox null versus wild type (FVB background per Methods)",
+     "treatment": "none",
+     "timepoint": "P17",
+     "comparator": "wild type, n = 3 mice, three sections each",
+     "endpoint": "CC1-positive and PDGFR-alpha-positive cell counts per 0.5 mm2"
+    },
+    "added_by": "adv337-it40"
+   },
+   {
+    "proposition": "SUPPLEMENTARY FIG 7F, READ AS A RENDERED PANEL: the constitutive Wwox null, not the neuronal S-KO, also carries a quantified CC1 and PDGFR-alpha count. Read from plot (bars with SEM, no individual points drawn): CC1-positive cells about 189 (wild type) v about 93 (null), PDGFR-alpha-positive cells about 57 v about 87, with one bracket on each pair (** and * in the legend). The panel shows bars only, so the replicate unit (sections) cannot be seen on it.",
+    "snippet": "Number of CC1 and PDGFRα cells in CC",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.pdf",
+    "anchor": "Supplementary Fig 7F, File009 PDF page 13",
+    "page_anchor": {
+     "page": 13,
+     "dpi": 200,
+     "render_call": "pdftoppm -r 200 -f 13 -l 13 -x 1150 -y 1480 -W 560 -H 560 -png",
+     "source_pdf_sha256": "686ebcd80ef3108290877c4b5f39a006100c7528a4408c6e74317124a35c8cab",
+     "crop_published": false,
+     "crop_note": "Crop of panel 7F only; No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[42]",
+    "qualifies_needle": "from three identical sections (Wild type n = 3, Wwox null n = 3)",
+    "experimental_context": {
+     "system": "mouse brain, in vivo (corpus callosum)",
+     "genotype": "constitutive Wwox null versus wild type",
+     "treatment": "none",
+     "timepoint": "P17",
+     "comparator": "wild type, n = 3 mice (bars only on the panel)",
+     "endpoint": "CC1-positive and PDGFR-alpha-positive cells per 0.5 mm2"
+    },
+    "added_by": "adv337-it40",
+    "snippet_note": "Panel transcription: the labels as drawn, in the order they are drawn, read off the rendered panel. It is a reading of pixels, not a string extracted from a text layer. Values read from a plot are labelled 'read from plot' in the proposition."
+   },
+   {
+    "proposition": "FIGURE 3F, READ AS A RENDERED PANEL: the hippocampal UMAP labels a 'GABAergic' cluster and a 'Microglia' cluster in both S-Ctrl and S-KO (single-nucleus RNA-seq, one sample per genotype, P17). Neither cluster is mentioned in the running text or the legend, and no nuclei count or share is printed for either; the text quantifies only mature oligodendrocytes (15%), COPs (68%) and OPCs (150%). I did not count nuclei. A reader should not read this panel as an interneuron or microglia measurement, but it is not true that microglia appear nowhere in the paper.",
+    "snippet": "GABAergic  Microglia  S-Ctrl  S-KO",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 3F, journal page 3068 (PDF page 8), lower part of the page",
+    "page_anchor": {
+     "page": 8,
+     "dpi": 200,
+     "render_call": "pdftoppm -r 200 -f 8 -l 8 -x 600 -y 1180 -W 1100 -H 520 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "Crop of the two UMAP panels; No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[38]",
+    "qualifies_needle": "analysed from snRNA-seq of S-Control (n = 1) and S-KO (n = 1) at P17",
+    "experimental_context": {
+     "system": "mouse hippocampus, single-nucleus RNA-seq",
+     "genotype": "S-KO versus S-Control",
+     "treatment": "none",
+     "timepoint": "P17",
+     "comparator": "S-Control, n = 1 versus S-KO n = 1",
+     "endpoint": "cluster assignment on an integrated UMAP (labels as drawn: Granule DG, NPC, GABAergic, Pyramidal CA1, Endothelial, Glia-like Astrocytes NCS, Microglia, Mature and MFOL, COPs, OPCs, Ependymal)"
+    },
+    "added_by": "adv337-it40",
+    "snippet_note": "Panel transcription: the labels as drawn, in the order they are drawn, read off the rendered panel. It is a reading of pixels, not a string extracted from a text layer. Values read from a plot are labelled 'read from plot' in the proposition."
+   },
+   {
+    "proposition": "THE G-KO DELETION CHECK IS ONE IMAGE: the Supplementary Fig 1F legend offers immunofluorescence images showing loss of WWOX expression in astrocytes (stained with anti-GFAP) of the G-KO brain, representative, with one magnified cell, at P18, with no count of astrocytes or percentage of loss.",
+    "snippet": "images showing loss of WWOX expression in astrocytes (stained with anti-GFAP) of G-KO brain",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.txt",
+    "anchor": "Supplementary Figure Legends, Supplementary Fig 1(F), File009 text layer",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse brain, in vivo",
+     "genotype": "GFAP-Cre conditional Wwox deletion (G-KO) versus G-Control",
+     "treatment": "none",
+     "timepoint": "P18",
+     "comparator": "G-Control, one representative field per genotype, n not stated",
+     "endpoint": "WWOX immunofluorescence in GFAP-positive astrocytes (deletion validation)"
+    },
+    "added_by": "adv337-it40"
+   },
+   {
+    "proposition": "SUPPLEMENTARY FIG 1F, READ AS A RENDERED PANEL: in the single G-Control field the WWOX (magenta) channel is itself faint and sparse (a few puncta, one brighter spot), and in the single G-KO field it is essentially black, so the panel shows absent signal in one field against a weak control signal; efficiency of astrocytic deletion is not quantified. The G-KO weight, survival and delay negatives (Fig 1M-O) therefore rest on a deletion shown in one image.",
+    "snippet": "Merge  WWOX  Merge  G-Control  G-KO",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.pdf",
+    "anchor": "Supplementary Fig 1F (lower right of the page), File009 PDF page 7",
+    "page_anchor": {
+     "page": 7,
+     "dpi": 200,
+     "render_call": "pdftoppm -r 200 -f 7 -l 7 -x 1050 -y 1100 -W 700 -H 700 -png",
+     "source_pdf_sha256": "686ebcd80ef3108290877c4b5f39a006100c7528a4408c6e74317124a35c8cab",
+     "crop_published": false,
+     "crop_note": "Crop of panel 1F (and the lower edge of 1E); No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[45]",
+    "qualifies_needle": "loss of WWOX expression in astrocytes (stained with anti-GFAP) of G-KO brain",
+    "experimental_context": {
+     "system": "mouse brain, in vivo",
+     "genotype": "GFAP-Cre conditional Wwox deletion (G-KO) versus G-Control",
+     "treatment": "none",
+     "timepoint": "P18",
+     "comparator": "G-Control, one field each",
+     "endpoint": "WWOX immunofluorescence with GFAP counterstain"
+    },
+    "added_by": "adv337-it40",
+    "snippet_note": "Panel transcription: the labels as drawn, in the order they are drawn, read off the rendered panel. It is a reading of pixels, not a string extracted from a text layer. Values read from a plot are labelled 'read from plot' in the proposition."
+   },
+   {
+    "proposition": "THE S-KO NEURONAL DELETION IS SHOWN BY ARROWS ON A SINGLE CORTICAL FIELD: the Supplementary Fig 1C legend says loss of WWOX expression (shown with white arrows) in neurons of S-KO brain compared with S-Control at P17, representative images from the cortex, with no percentage of neurons losing WWOX.",
+    "snippet": "WWOX showing loss of WWOX expression (shown with white arrows) in neurons of S-KO brain",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.txt",
+    "anchor": "Supplementary Figure Legends, Supplementary Fig 1(C), File009 text layer",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse cortex, in vivo",
+     "genotype": "Synapsin-Cre conditional Wwox deletion (S-KO) versus S-Control",
+     "treatment": "none",
+     "timepoint": "P17",
+     "comparator": "S-Control, one representative field each, n not stated",
+     "endpoint": "WWOX immunofluorescence in NeuN-positive neurons (deletion validation)"
+    },
+    "added_by": "adv337-it40"
+   },
+   {
+    "proposition": "SUPPLEMENTARY FIG 1C, READ AS A RENDERED PANEL: in the S-KO cortical field the WWOX (red) channel is near-dark with faint residual speckle, four NeuN-positive cells are arrowed, and at least one further NeuN-positive cell in the field is not arrowed; in the S-Control field WWOX is clearly cytoplasmic in the NeuN-positive cells. The panel supports loss in the arrowed cells of one field and does not count how many neurons lose WWOX; it is consistent with the incomplete bulk transcript fall in the S-KO RNA-seq (log2FC -1.86 in the authors' File012 sheet, not a locator).",
+    "snippet": "S-Control  S-KO  Hoechst  NeuN  WWOX  Merge",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.pdf",
+    "anchor": "Supplementary Fig 1C (left middle of the page), File009 PDF page 7",
+    "page_anchor": {
+     "page": 7,
+     "dpi": 200,
+     "render_call": "pdftoppm -r 200 -f 7 -l 7 -x 0 -y 700 -W 1100 -H 400 -png",
+     "source_pdf_sha256": "686ebcd80ef3108290877c4b5f39a006100c7528a4408c6e74317124a35c8cab",
+     "crop_published": false,
+     "crop_note": "Crop of panel 1C (and the left edge of 1E); No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[47]",
+    "qualifies_needle": "loss of WWOX expression (shown with white arrows) in neurons of S-KO brain",
+    "experimental_context": {
+     "system": "mouse cortex, in vivo",
+     "genotype": "Synapsin-Cre conditional Wwox deletion (S-KO) versus S-Control",
+     "treatment": "none",
+     "timepoint": "P17",
+     "comparator": "S-Control, one field each",
+     "endpoint": "WWOX and NeuN immunofluorescence"
+    },
+    "added_by": "adv337-it40",
+    "snippet_note": "Panel transcription: the labels as drawn, in the order they are drawn, read off the rendered panel. It is a reading of pixels, not a string extracted from a text layer. Values read from a plot are labelled 'read from plot' in the proposition."
+   },
+   {
+    "proposition": "THE S-KO CARRIES A QUANTIFIED RNA-LEVEL MYELIN READOUT OF ITS OWN: Supplementary Fig 5C is quantitative RT-PCR from the cortex showing down regulation of myelin-specific genes in S-KO (n = 3) against S-Control (n = 3) at P18. This is not exclusive to the null or the N-KO.",
+    "snippet": "Quantitative RT-PCR analysis from the cortex representing down regulation of myelin specific",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.txt",
+    "anchor": "Supplementary Figure Legends, Supplementary Fig 5(C), File009 text layer (line 1 of the panel C sentence; the genotype n follows on the next lines)",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse cortex, in vivo, qRT-PCR",
+     "genotype": "Synapsin-Cre conditional Wwox deletion (S-KO) versus S-Control",
+     "treatment": "none",
+     "timepoint": "P18",
+     "comparator": "S-Control, n = 3 per genotype",
+     "endpoint": "relative fold change of myelin-specific transcripts"
+    },
+    "added_by": "adv337-it40"
+   },
+   {
+    "proposition": "FIGURE 1K AND 1L, READ AS RENDERED PANELS: for the oligodendrocyte-specific deletion the weight curves overlap through P16 with no significance marks (read from plot, about 10.3 g O-Control v about 10.0 g O-KO at P16), and the survival curves are flat at 100 percent with censor ticks only, out to about 120 days. With no deaths in either group the log-rank P of 1.0 carries no information about power; the negative covers weight and survival, not myelin.",
+    "snippet": "O-Control  O-KO  Mice weight (g)  Per cent survival",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 1K (weight) and 1L (survival), journal page 3066 (PDF page 6)",
+    "page_anchor": {
+     "page": 6,
+     "dpi": 220,
+     "render_call": "pdftoppm -r 220 -f 6 -l 6 -x 650 -y 1000 -W 700 -H 480 -png (panel K) and -x 850 -y 1300 -W 900 -H 800 -png (panel L)",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "Two crops, one per panel; No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[30]",
+    "qualifies_needle": "O-Control, n = 11 and O-KO, n = 10, P-value 1.0, no significance, log-rank Mantel-Cox test",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Olig2-Cre conditional Wwox deletion (O-KO) versus O-Control",
+     "treatment": "none",
+     "timepoint": "weight P4-P16, survival to about 120 days",
+     "comparator": "O-Control, n = 11 versus O-KO n = 10 (survival)",
+     "endpoint": "body weight and Kaplan-Meier survival"
+    },
+    "added_by": "adv337-it40",
+    "snippet_note": "Panel transcription: the labels as drawn, in the order they are drawn, read off the rendered panel. It is a reading of pixels, not a string extracted from a text layer. Values read from a plot are labelled 'read from plot' in the proposition."
    }
   ]
  },

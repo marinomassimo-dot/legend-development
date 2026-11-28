@@ -1,0 +1,9 @@
+contrast	value	unit	source_or_assumption
+Hepa1-6 nominal bath / adult circulating peak	3333	ratio	Chowanadisai Fig. 1J; Harris Fig. 2A
+rat cortical NMDA nominal bath / adult circulating peak	5556	ratio	Aizenman Fig. 1; Harris Fig. 2A
+6 h whole-brain label, product of group means	0.0066	% administered activity	Smidt Tables I and II; descriptive only
+PQQ minus control spare respiratory capacity	28	percentage points of WT	Martino Adami Fig. 5a
+PQQ minus control hippocampal TBARS	-1.4	nmol/mg protein	Martino Adami Fig. 5d
+reference	0	arbitrary OCR units relative to reference	illustration only; basal=100, after oligomycin=40, maximum=140
+scenario A	10	arbitrary OCR units relative to reference	illustration only; basal=110, after oligomycin=40, maximum=170
+scenario B	-10	arbitrary OCR units relative to reference	illustration only; basal=110, after oligomycin=60, maximum=170

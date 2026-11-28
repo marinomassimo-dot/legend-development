@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261128_008
+last_batch_commit_id: BATCH_20261128_012
 last_batch_commit_date: 2026-11-28
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 1
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate ORCH-ROADMAP-IT59-20261119, IT successor 34; SCI ADV-320 with HE ADV-323: CLAIM 047 bound (2), PAPER 225 and the working-model row narrowed to the plotted medians and maxima after three blind rounds; ADV-322 compound dispositions in the compound register). MINOR, WM_v7.29
+trigger: MANUAL (ACTOR_ID orchestrator, mandate ORCH-ROADMAP-IT59-20261119, IT successor 42; ADV-339 repairs ordered by ADV: scope words in CLAIM 003, 004, 005 and 011 after two readers per sentence and a blind second reader on the final text). MINOR, no version bump.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261128_BATCH_20261128_008
+last_lint_id: LINT_20261128_BATCH_20261128_010
 last_lint_date: 2026-11-28
 last_lint_result: WARN
 ```
@@ -164,8 +164,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 3931
-fulltext_ledger_head: 2129292e0af1d977e52bb7cbec6c7045c775928af3c3bda028083a4a71bdd635
+fulltext_ledger_events: 3994
+fulltext_ledger_head: a1e2c31436bc9905052034ce6788036c799edc4674cd1ac3b7e5a52cc4a6418d
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -213,8 +213,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 68
-growth_anchor_head: 04a0e9ad3d7a35849cd17f51b926ab3acbf269b828130695767fec3e35e8b5a6
+growth_anchor_events: 70
+growth_anchor_head: e7225f155ac7c0ea74a2e91988d7eda6dd202927734b2c2ae3182bd9d878208a
 ```
 
 ```bash
@@ -262,7 +262,7 @@ baseline below must equal the live count, never preserve historical padding.
 
 ```yaml
 unread_premise_baseline: 0
-unread_premise_measured_on: 2026-11-25
+unread_premise_measured_on: 2026-11-28
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions

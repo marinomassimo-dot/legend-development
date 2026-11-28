@@ -1,0 +1,26 @@
+comparison	statistic	value	unit	locator
+adult lumbar CSF analytical scale	reported 7-chlorokynurenate threshold	6.2609007	nM	Park 2020 Discussion; PubChem 1884
+embryonic mouse hippocampal current	late current IC50 / CSF threshold	359.37321	ratio of concentrations	Vyklický 1990 abstract at 3 µM added glycine; Park 2020 Discussion
+embryonic mouse hippocampal current	peak current IC50 / CSF threshold	1431.104	ratio of concentrations	Vyklický 1990 abstract at 3 µM added glycine; Park 2020 Discussion
+embryonic mouse hippocampal current	peak / late functional IC50	3.9822222	ratio	Vyklický 1990 abstract at 3 µM added glycine
+one-site model at coagonist/Ka=0.1	inhibition at 1 × threshold	1.9922621	% of matched baseline	conditional model; Vyklický 1990 280 nM antagonist estimate
+one-site model at coagonist/Ka=0.1	inhibition at 10 × threshold	16.893547	% of matched baseline	conditional model; Vyklický 1990 280 nM antagonist estimate
+one-site model at coagonist/Ka=0.1	antagonist producing 20% effect	77	nM	conditional model; Vyklický 1990 280 nM antagonist estimate
+one-site model at coagonist/Ka=0.1	20% effect concentration / CSF threshold	12.29855	ratio	conditional model; Vyklický 1990 280 nM antagonist estimate
+one-site model at coagonist/Ka=1	inhibition at 1 × threshold	1.1056565	% of matched baseline	conditional model; Vyklický 1990 280 nM antagonist estimate
+one-site model at coagonist/Ka=1	inhibition at 10 × threshold	10.055911	% of matched baseline	conditional model; Vyklický 1990 280 nM antagonist estimate
+one-site model at coagonist/Ka=1	antagonist producing 20% effect	140	nM	conditional model; Vyklický 1990 280 nM antagonist estimate
+one-site model at coagonist/Ka=1	20% effect concentration / CSF threshold	22.361	ratio	conditional model; Vyklický 1990 280 nM antagonist estimate
+one-site model at coagonist/Ka=5	inhibition at 1 × threshold	0.37128897	% of matched baseline	conditional model; Vyklický 1990 280 nM antagonist estimate
+one-site model at coagonist/Ka=5	inhibition at 10 × threshold	3.5928316	% of matched baseline	conditional model; Vyklický 1990 280 nM antagonist estimate
+one-site model at coagonist/Ka=5	antagonist producing 20% effect	420	nM	conditional model; Vyklický 1990 280 nM antagonist estimate
+one-site model at coagonist/Ka=5	20% effect concentration / CSF threshold	67.083	ratio	conditional model; Vyklický 1990 280 nM antagonist estimate
+one-site model at coagonist/Ka=10	inhibition at 1 × threshold	0.20286362	% of matched baseline	conditional model; Vyklický 1990 280 nM antagonist estimate
+one-site model at coagonist/Ka=10	inhibition at 10 × threshold	1.9922621	% of matched baseline	conditional model; Vyklický 1990 280 nM antagonist estimate
+one-site model at coagonist/Ka=10	antagonist producing 20% effect	770	nM	conditional model; Vyklický 1990 280 nM antagonist estimate
+one-site model at coagonist/Ka=10	20% effect concentration / CSF threshold	122.9855	ratio	conditional model; Vyklický 1990 280 nM antagonist estimate
+rat PFC dialysate highest inhibitor arm	Cmax ratio of means	95.727273	ratio	Patel et al. 2021 Table 1 author manuscript
+rat PFC dialysate highest inhibitor arm	AUC0–240 ratio of means	94.47895	ratio	Patel et al. 2021 Table 1 author manuscript
+rat PFC dialysate distinct comparison	Cmax ratio of means	34.155844	ratio	Patel et al. Figure 4 and Supplementary Table 3 as reported in text
+LAT1 fit at 250 µM parent	with/without amino acid mix at equal Vmax	0.40370913	estimated fraction	Patel et al. Figure 2F–G, fits in transfected HEK293 cells
+LAT1 fit at 250 µM parent	with/without amino acid mix using both fitted Vmax means	0.30184733	estimated fraction	Patel et al. Figure 2F–G, fits in transfected HEK293 cells

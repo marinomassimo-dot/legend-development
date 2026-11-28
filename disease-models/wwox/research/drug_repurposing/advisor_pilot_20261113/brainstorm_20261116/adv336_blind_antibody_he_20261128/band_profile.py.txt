@@ -1,0 +1,18 @@
+import sys, math, numpy as np
+def ppm(p):
+    b=open(p,'rb').read()
+    parts=b.split(b'\n',3); assert parts[0]==b'P6'
+    w,h=map(int,parts[1].split()); return np.frombuffer(parts[3],np.uint8).reshape(h,w,3).astype(float)
+im=ppm(sys.argv[1]); h,w,_=im.shape; g=im.mean(axis=2)
+print('size',w,h)
+for name,x,hw in [a.split(':') and (a.split(':')[0],int(a.split(':')[1]),int(a.split(':')[2])) for a in sys.argv[2:]]:
+    prof=255-np.median(g[:,max(0,x-hw):x+hw],axis=1)
+    k=np.ones(3)/3; s=np.convolve(prof,k,mode='same')
+    peaks=[]
+    for y in range(2,h-2):
+        if s[y]>=s[y-1] and s[y]>s[y+1]:
+            # prominence against the lower of the two flanking minima within 15 px
+            l=s[max(0,y-15):y+1].min(); r=s[y:min(h,y+16)].min()
+            pr=s[y]-max(l,r)
+            if pr>=2: peaks.append((y,round(float(s[y])),round(float(pr))))
+    print(name,x,'peaks(y,darkness,prominence):',peaks)

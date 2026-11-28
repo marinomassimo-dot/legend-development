@@ -1,0 +1,44 @@
+[
+ {
+  "op": "replace-within",
+  "id": "CLAIM 003",
+  "old": "consiste in peso e sopravvivenza fino a circa 120 giorni, in un'immagine di hind-limb clasping e in **un solo confronto anti-MBP a P17**: nessuna microscopia elettronica, nessun g-ratio, nessun conteggio di assoni, nessun conteggio CC1/OPC, nessuna elettrofisiologia e nessuna età successiva a P17.",
+  "new": "consiste in peso (mostrato fino a P16) e sopravvivenza (fino a circa 120 giorni), in un'immagine di hind-limb clasping (P18) e in **un solo confronto anti-MBP a P17**: nessuna microscopia elettronica, nessun g-ratio, nessun conteggio di assoni, nessun conteggio CC1/OPC, nessuna elettrofisiologia e nessuna lettura istologica, molecolare o elettrofisiologica oltre P17-P18. *(Corretto 2026-11-28, `BATCH_20261128_012`, ADV-339, due lettori su PMID 33914858: la formulazione precedente, «peso e sopravvivenza fino a circa 120 giorni … e nessuna età successiva a P17», era falsa per l'età: la sopravvivenza arriva a circa 120 giorni, il peso è mostrato fino a P16, il clasping e la validazione CC1/WWOX sono a P18. Le esclusioni di saggio — niente EM, g-ratio, conteggi, elettrofisiologia — hanno retto a entrambi i lettori.)*"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 003",
+  "old": "(≈ 0,08 ciascuno alla ri-misura cieca).",
+  "new": "(≈ 0,08 ciascuno alla ri-misura cieca). *(Puntatore 2026-11-28, `BATCH_20261128_012`, ADV-339, testo non modificato: la frase vale come dato di espressione di WWOX per lignaggio, come dice la sua stessa specificazione; presa alla lettera come «unico dato oligodendrocitario» un secondo lettore la trova troppo stretta, perché i cluster 9 e 10 degli organoidi (Suppl Fig 3C) sono arricchiti per marcatori OPC e microglia e la Fig 6D,E riporta percorsi.)*"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 004",
+  "old": "adult recordings exist only for treated animals because the untreated nulls died within four weeks.",
+  "new": "adult recordings exist only for treated animals because the untreated nulls died within four weeks. *(Pointer 2026-11-28, `BATCH_20261128_012`, ADV-339, text not changed: the sentence holds for the quantified behavioural endpoints; a second reader found one qualitative untreated-KO clasping image beside wild type in Appendix Fig S3A of PMID 34747138, so «every behavioural endpoint» means every quantified one.)*"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 005",
+  "old": "in un solo studio (PMID 30290271);",
+  "new": "in un solo studio (PMID 30290271) *(puntatore 2026-11-28, `BATCH_20261128_012`, ADV-339, testo non modificato: «in un solo studio» vale per il segnale GABAergico; per il segnale gliale un secondo studio riporta aumenti di GFAP e Iba1 in CA3 del nullo sistemico a P19, un'altra età e un altro allele — Repudi 2021, PMID 34747138, Fig 3E-G)*;"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 011",
+  "old": "**Title:** AAV9-hSynI-hWWOX in Wwox-null murine model: durable survival rescue at the high dose only, with dose-grading demonstrated on expression, P20 glycaemia and motor score and NOT on survival, body weight, ECoG/SWD, myelination or gliosis",
+  "new": "**Title:** AAV9-hSynI-hWWOX in Wwox-null murine model: durable survival rescue at the high dose only; dose-grading is shown on survival (Fig 3B), P20 glycaemia and motor score, is mostly not significant on expression (Fig 5), is untested for body weight, and is NOT shown on ECoG/SWD, myelination or gliosis"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 011",
+  "old": "⚠️ **E non esiste alcun braccio di malattia non trattato a P90, per costruzione:**",
+  "new": "⚠️ **E non esiste alcun braccio di malattia non trattato nello studio comportamentale a P90, per costruzione:**"
+ },
+ {
+  "op": "replace-within",
+  "id": "CLAIM 011",
+  "old": "**mielinizzazione** (`UNRESOLVED` nello studio di dose: nessun braccio trattato è quantificato — attestazione di pannello dichiarata su S7I, byte assenti), **gliosi** (`RESCUE` a dose alta, `NO_RESCUE` a dose bassa)",
+  "new": "**mielinizzazione** (`UNRESOLVED` nello studio di dose: nessun braccio trattato è quantificato; S7I è tenuta, `files/supplement/PMID42422765_r2/mmc1.pdf` pagina 9 e `mmc2.pdf`, e la Fig 6F è `files/figures/PMID42422765_r2/gr6.jpg`: «byte assenti» era superato), **gliosi** (GFAP: `RESCUE` a dose alta, `NO_RESCUE` a dose bassa, S7H LD `**`, HD ns; Iba1: S7F non mostra alcuna differenza LD contro WT, quindi nessun test sostiene un «NO_RESCUE» per Iba1) *(corretto 2026-11-28, `BATCH_20261128_012`, ADV-339, due lettori: la frase precedente, «nessun braccio di malattia non trattato a P90 … attestazione di pannello dichiarata su S7I, byte assenti … gliosi `RESCUE` a dose alta, `NO_RESCUE` a dose bassa», valeva per il comportamento ma non come blanket. La legenda di Suppl S5A-D riporta «P90 in wild-type, untreated Wwox-null (KO)» con una corsia KO per blot, così S5E-G a P180, S6A e S6H, in conflitto con la Fig 3B dove i KO+RI sono morti entro circa P18, lettura dall'asse della curva: incoerenza della fonte, non risolta qui. Il titolo è stato corretto lo stesso giorno: il titolo precedente diceva «with dose-grading demonstrated on expression, P20 glycaemia and motor score and NOT on survival, body weight, ECoG/SWD, myelination or gliosis»; la Fig 3B (legenda: HD contro LD p < 0,0001, «a clear dose-response relationship») gradua la sopravvivenza, la Fig 5 ha un solo `*` (DNA vettoriale, ippocampo) e per il resto ns, il peso corporeo non ha un test LD contro HD. Anche `gr4.jpg` è presente nella cartella delle figure: la presenza è verificata con `ls`, i pannelli 4D–4G non sono riletti né riaggiudicati.)*"
+ }
+]

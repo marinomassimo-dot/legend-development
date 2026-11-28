@@ -1,0 +1,4 @@
+metric	vehicle_mean	histidine_mean	paired_delta	animals_decreased	leave_one_out_delta_min	leave_one_out_delta_max
+licks per session	572.375	244.875	-327.500	8	-365.143	-288.429
+trials with a lick per 100	60.750	32.875	-27.875	8	-30.143	-24.143
+licks per active trial	9.276	6.743	-2.534	6	-3.105	-1.848

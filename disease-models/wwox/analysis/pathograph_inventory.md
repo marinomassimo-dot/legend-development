@@ -32,12 +32,12 @@ annotations is reported below whatever it happens to be.
 | …undirected edges they collapse into | 46 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
-| Deep-dive manifests read | 598 |
+| Deep-dive manifests read | 599 |
 | …of which bound to at least one claim | 96 |
-| Propositions scanned | 9615 |
-| …carrying a relational connective | 2028 |
-| …locator-backed candidates | 1988 |
-| …locator-backed and bound to a claim | 435 |
+| Propositions scanned | 9637 |
+| …carrying a relational connective | 2029 |
+| …locator-backed candidates | 1989 |
+| …locator-backed and bound to a claim | 436 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -60,7 +60,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 008 | WOREE and SCAR12 form a genotype-phenotype spectrum | consolidated baseline | DATO | Clinical spectrum / genotype-phenotype | NOT_ANNOTATED | 0 | 3 |
 | CLAIM 009 | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficiency | in observation | INFERENZA | P5 — metabolism / mitochondria / redox / | NOT_ANNOTATED | 7 | 12 |
 | CLAIM 010 | Mitophagy may be more relevant than senolytics for WWOX-related mitochondrial dysfunction | background only | IPOTESI | P5 — metabolism / mitochondria / mitopha | NOT_ANNOTATED | 0 | 0 |
-| CLAIM 011 | AAV9-hSynI-hWWOX in Wwox-null murine model: durable survival rescue at the high dose only, with  | flagged for review | DATO preclinico (full text reviewed) | P7 — gene therapy readiness; P4 — myelin | NOT_ANNOTATED | 11 | 1 |
+| CLAIM 011 | AAV9-hSynI-hWWOX in Wwox-null murine model: durable survival rescue at the high dose only; dose- | flagged for review | DATO preclinico (full text reviewed) | P7 — gene therapy readiness; P4 — myelin | NOT_ANNOTATED | 11 | 1 |
 | CLAIM 012 | Fenotipo WWOX severo neonatale-fatale con MRI inizialmente normale: genotipo-severità heterogene | consolidated baseline | DATO descrittivo (full text reviewed) | clinical spectrum / genotype-phenotype | NOT_ANNOTATED | 0 | 1 |
 | CLAIM 013 | In WWOX-DEE, genotipi biallelici null/null associati a maggiore rischio di crisi, ipertonia e co | in observation | DATO con limiti metodologici dichiarati | Clinical spectrum / genotype-phenotype / | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 014 | WWOX loss perturbs prenatal cortical development, neuronal migration and cortical maturation acr | consolidated baseline | DATO | P3 — neurodevelopment / migration / cort | NOT_ANNOTATED | 0 | 3 |
@@ -188,7 +188,7 @@ assembler lists the titles and stops there.
 | CLAIM 005 | `reduced` | AMBIGUOUS_LEXICAL_FORM | ambiguous bare form | Reduced GABAergic interneurons and glial activation in WWOX-KO |
 | CLAIM 007 | `abolishes` | CAUSAL | finite or multiword | P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro |
 | CLAIM 009 | `control` | AMBIGUOUS_LEXICAL_FORM | ambiguous bare form | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficienc |
-| CLAIM 011 | `rescue` | AMBIGUOUS_LEXICAL_FORM | ambiguous bare form | AAV9-hSynI-hWWOX in Wwox-null murine model: durable survival rescue at the high dose only, |
+| CLAIM 011 | `rescue` | AMBIGUOUS_LEXICAL_FORM | ambiguous bare form | AAV9-hSynI-hWWOX in Wwox-null murine model: durable survival rescue at the high dose only; |
 | CLAIM 013 | `associati a` | ASSOCIATIVE | finite or multiword | In WWOX-DEE, genotipi biallelici null/null associati a maggiore rischio di crisi, ipertoni |
 | CLAIM 014 | `perturbs` | CAUSAL | finite or multiword | WWOX loss perturbs prenatal cortical development, neuronal migration and cortical maturati |
 | CLAIM 016 | `contribute to` | CAUSAL | finite or multiword | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
@@ -322,12 +322,12 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 1988 |
+| locator_proposition | 1989 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 1457 |
+| AMBIGUOUS_LEXICAL_FORM | 1458 |
 | ARROW | 18 |
 | ASSOCIATIVE | 90 |
 | CAUSAL | 359 |
@@ -355,13 +355,13 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 005 | claim_title | `reduced` | Reduced GABAergic interneurons and glial activation in WWOX-KO |
 | CLAIM 007 | claim_title | `abolishes` | P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro |
 | CLAIM 009 | claim_title | `control` | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficiency |
-| CLAIM 011 | claim_title | `rescue` | AAV9-hSynI-hWWOX in Wwox-null murine model: durable survival rescue at the high dose only, with dose-grading demonstrate |
+| CLAIM 011 | claim_title | `rescue` | AAV9-hSynI-hWWOX in Wwox-null murine model: durable survival rescue at the high dose only; dose-grading is shown on surv |
 | CLAIM 013 | claim_title | `associati a` | In WWOX-DEE, genotipi biallelici null/null associati a maggiore rischio di crisi, ipertonia e complicanze respiratorie r |
 | CLAIM 014 | claim_title | `perturbs` | WWOX loss perturbs prenatal cortical development, neuronal migration and cortical maturation across species |
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 475 bound candidates; the
+Showing 12 of 476 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -377,7 +377,7 @@ carried no connective from the lexicon.
 
 ## Provenance
 
-Derived from 601 input files; digest
-`ec4f46e13f8f5234`. Sources: the claim, paper and
+Derived from 602 input files; digest
+`e98d2432124b809d`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-33914858-42",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "33914858",
+  "doi": "10.1093/brain/awab174"
+ },
+ "event_at": "2026-11-28T17:43:00Z",
+ "analysis_at": "2026-11-28T17:43:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "ADV-337 follow-up, second reader of the CLAIM 003 myelin-endpoint sentences: delegate of IT-41, sonnet at effort high, context policy QUESTION_DRIVEN (which myelin readouts are quantified in which line); own table first, sentences second, then a delta check of the replacement text.",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+ "source_fingerprint": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/commit_candidates/CC-20261128-ORCHESTRATOR-IT41-CLAIM003-01.md"
+ ],
+ "evidence_basis": [
+  "Opened, from the delegate transcript: the article text file (in parts) and PDF pages 6 and 8-14; the supplementary figures document File009 (text and rendered pages 1-20); one spreadsheet read filtered by gene names; the sentence packet and the replacement text. The two video supplements were not opened. Methods were consulted only for single values; they are marked not_read."
+ ],
+ "prior_receipt": "FTR-20261128-33914858-41",
+ "reread_reason": "adversarial_reanalysis"
+}

@@ -1,0 +1,20 @@
+exec(open('geo.py').read())
+P=paths('p11.svg')
+W=[p for p in P if 240<p[0]<345 and 465<p[1]<720]
+def col(p): return 'B' if BLUE in (p[4],p[5]) else 'R' if RED in (p[4],p[5]) else 'k'
+for name,sel,y0,y1,unit in (('top',lambda y:y<600,585.36,502.50,250),('bottom',lambda y:y>600,706.14,623.01,800)):
+    val=lambda y:(y0-y)/(y0-y1)*unit
+    for c,g in (('B','N-Control'),('R','N-KO')):
+        d=[p for p in W if col(p)==c and 'Z' in p[6] and sel((p[1]+p[3])/2)]
+        v=sorted(round(val((p[1]+p[3])/2),1) for p in d)
+        xy=[(round((p[0]+p[2])/2,2),round((p[1]+p[3])/2,2)) for p in d]
+        same=len(xy)-len(set(xy))
+        n=len(v); m=sum(v)/n; sd=(sum((x-m)**2 for x in v)/(n-1))**.5
+        print(f"{name} {g}: n={n} (exact duplicates {same}) mean={m:.1f} sd={sd:.1f} sem={sd/n**.5:.1f} min={v[0]} max={v[-1]}")
+        print('   ', v)
+    for p in W:
+        if col(p)!='k' and not 'Z' in p[6] and sel(p[1]):
+            print(f"    err {col(p)} {p[6]} x {p[0]:.1f}-{p[2]:.1f} value {val(p[1]):.1f}..{val(p[3]):.1f}")
+    for p in W:
+        if col(p)=='k' and p[6]=='ML' and 20<p[2]-p[0]<30 and p[3]-p[1]<0.01 and sel(p[1]) and p[1]<y0-5 and p[0]>262:
+            print(f"    black wide line x {p[0]:.1f}-{p[2]:.1f} value {val(p[1]):.1f}")

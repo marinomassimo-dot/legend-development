@@ -1,0 +1,20 @@
+comparison	statistic	value	unit
+Solis paired adult MRS	participants	14	count
+Solis paired adult MRS	mean pre	0.103379	band/creatine
+Solis paired adult MRS	mean post	0.11458169	band/creatine
+Solis paired adult MRS	mean paired change	0.011202695	band/creatine
+Solis paired adult MRS	paired SE	0.0073747027	band/creatine
+Solis paired adult MRS	paired t	1.5190707	ratio
+Solis paired adult MRS	95% lower	-0.0047293819	band/creatine
+Solis paired adult MRS	95% upper	0.027134771	band/creatine
+Solis scaled to observed mean pre	mean	10.836529	%
+Solis scaled to observed mean pre	95% lower	-4.5747996	%
+Solis scaled to observed mean pre	95% upper	26.247857	%
+Hoffman Fig. 1 vector estimate	control mean	14.695035	nmol/g
+Hoffman Fig. 1 vector estimate	exposed mean	27.903546	nmol/g
+Hoffman Fig. 1 vector estimate	relative increase	89.88417	%
+Carnosine-only increase of 89.5%	MRS change at f=0.05	4.475	%
+Carnosine-only increase of 89.5%	MRS change at f=0.10	8.95	%
+Carnosine-only increase of 89.5%	MRS change at f=0.20	17.9	%
+Carnosine-only increase of 89.5%	MRS change at f=0.30	26.85	%
+Carnosine-only increase of 89.5%	f at observed scaled upper interval	0.29327215	fraction
