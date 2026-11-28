@@ -1,8 +1,8 @@
 {
   "investigation": "INV-15",
-  "title": "Padsevonil in WWOX-LoF",
+  "title": "SV2A and inhibition",
   "date": "28 November 2026",
-  "summary": "Separate synaptic target binding from recruitment of inhibition.",
+  "summary": "What padsevonil can reveal about inhibitory recruitment in WWOX-LoF.",
   "graph": {
     "evidence": "Adult PET showed high SV2A occupancy. Phase 3 did not confirm the efficacy endpoints.",
     "inference": "Occupancy alone cannot establish balanced inhibitory and excitatory release.",

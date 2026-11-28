@@ -1,5 +1,7 @@
 # Padsevonil in WWOX loss of function
 
+[Printable research brief](../../view/research_reports/sv2a-inhibitory-recruitment.pdf)
+
 **Disposition.** Retain padsevonil as a conditional ex vivo comparator for the contribution of benzodiazepine-sensitive GABA-A modulation at matched SV2A engagement. Defer systemic pediatric WWOX repurposing. The clinically unsuccessful program supplies a direct lesson for LEGEND: adult target occupancy can be measured or plausibly inferred while the relevant inhibitory-circuit function remains unresolved. The [pretest](pretest.md) fixed the causal alternatives before the numeric replay. Context policy was SYNTHESIS.
 
 ## Adult trials and denominator audit
