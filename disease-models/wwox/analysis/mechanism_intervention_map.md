@@ -399,7 +399,7 @@ an answer ([`proteostasis_rationale.md`](proteostasis_rationale.md) §2).
 clamping that region risks **rescuing abundance while abolishing function** — the "stable but inert"
 trap, with an experimentally identified victim function (working model, *SDR-domain function is
 measurable*). In WWOX, **stability and function are in structural tension: stability is bought with
-occlusion** ([[discovery_ledger_current#DL-MECH-049 — In WWOX **stabilità e funzione sono in TENSIONE STRUTTURALE**: la stabilità si compra con l'occlusione. Vincolo di progetto per qualunque stabilizzatore di Q230P.|DL-MECH-049]]).
+occlusion** ([[discovery_ledger_current#DL-MECH-049 — In WWOX **stabilità e funzione sono forse in TENSIONE STRUTTURALE**: WW2 stabilizza WW1 (lavori precedenti) e nella MD senza ligando ne copre in parte il solco (Fig 9, simulazione non verificata sperimentalmente); l'affinità misurata per otto peptidi PPXY è maggiore con WW2 presente. Vincolo di progetto ipotetico per uno stabilizzatore di Q230P.|DL-MECH-049]]).
 
 **Chain G (canonical splice-acceptor worked example, c.1057-2A>G):**
 ```
