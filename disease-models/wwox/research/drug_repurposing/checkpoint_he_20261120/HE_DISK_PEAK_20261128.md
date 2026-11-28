@@ -15,6 +15,15 @@ skipped) with the free space of `/`. It ran from about 09:41Z to 09:47Z. It did 
 | `f51067bf0` (ADV; sampled from 09:41Z, it had started at 09:35Z) | 462 MiB | 462 MiB, `.git` 3 MiB | no |
 | `d0bc8e409` (IT Orchestrator; whole push) | 462 MiB | 462 MiB, `.git` 3 MiB | no |
 
+Added after the constants landed (same sampler, same day), so that every publisher is measured:
+
+| Push (publisher) | Candidate tree | Suite clone | Both at once |
+|---|---:|---:|---|
+| `388324288` (HE; the change itself) | 462 MiB | 462 MiB, `.git` 3 MiB | no |
+| `336110982` (SCI) | 462 MiB | 462 MiB, `.git` 3 MiB | no |
+
+The constants landed before SCI's push had been sampled; the code was the same, and the sample then agreed.
+
 Free space fell by about 0.49 GB during a push and came back at its end. 462 MiB is 0.48 GB (`safe_push` counts
 GB of 1e9 bytes). Every worktree with a commit in the previous 12 hours, and the root checkout, carried the `--shared` code.
 
@@ -23,7 +32,6 @@ GB of 1e9 bytes). Every worktree with a commit in the previous 12 hours, and the
 - A push with a red suite builds a base clone beside the suite clone (`_red_at_base`): about 0.97 GB, computed.
 - The release battery (`run_release_regressions.py`).
 - The first six minutes of the first push, which it spent before the sampler started.
-- A push published by SCI or by HE (the two measured are ADV's and the Orchestrator's; the code is the same).
 
 ## Proposal (accepted by ADV)
 
