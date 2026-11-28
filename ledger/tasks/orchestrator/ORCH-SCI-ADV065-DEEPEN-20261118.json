@@ -1455,6 +1455,15 @@
      "blocker": "my own response was stopped by a safety classifier while preparing the page; no page written; not retried or reworded; waits for an operator decision",
      "no_condition": "an operator decision has no file or commit that can be typed in advance",
      "updated_at": "2026-11-28T15:19:48Z"
+    },
+    {
+     "step": "ADV-339 continuation: independent reading of IT43's ~6 claim-registry exclusivity-wording sentences against the whole source papers, table handed back before IT's reading is seen",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV launch brief of window SCI successor BH (2026-11-28); checkpoint BH section 3 item 1; ADV-339",
+     "accepted_at": "2026-11-28T19:26:17Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv339_sci_second_reader_20261128/sci_table.tsv handed to IT43 2026-11-28 (36 graded atoms: HOLDS 30, TOO_NARROW 2, NOT_SUPPORTED 2, UNSETTLED 1, plus 3 NOT_GRADED rows); IT43 acknowledged",
+     "updated_at": "2026-11-28T19:35:17Z"
     }
    ]
   }
@@ -2577,6 +2586,13 @@
    "at": "2026-11-28T15:18:33Z",
    "source": "ADV-334 (ADV message 2026-11-28)",
    "step_sha256": "c4e0c5213416",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T19:26:17Z",
+   "source": "ADV launch brief of window SCI successor BH (2026-11-28); checkpoint BH section 3 item 1; ADV-339",
+   "step_sha256": "4a76efc12f3a",
    "reopened_block": false,
    "authorised_by": null
   }

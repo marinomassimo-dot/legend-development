@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-33916893-02",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "doi": "10.3390/cells10040824",
+  "pmid": "33916893"
+ },
+ "event_at": "2026-11-28T19:32:00Z",
+ "analysis_at": "2026-11-28T19:32:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "ADV-339 continuation: SCI as independent second reader of six claim-registry sentences (packet adv339_it43), blind to the first reading",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+ "source_fingerprint": "88682e21d23680979070c94e9cdcf5b0456af1965967344977559ce6b8602aa7",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv339_sci_second_reader_20261128/sci_table.tsv"
+ ],
+ "evidence_basis": [
+  "Whole body text, Table 1 and Table 2 read, Table 1 rowspan checked in the XML; figures not viewed (legends read); supplement tables only searched for codon-47 and exon-1 rows. CLAIM 030 sentence S5."
+ ],
+ "prior_receipt": "FTR-20260726-33916893-01",
+ "reread_reason": "adversarial_reanalysis"
+}

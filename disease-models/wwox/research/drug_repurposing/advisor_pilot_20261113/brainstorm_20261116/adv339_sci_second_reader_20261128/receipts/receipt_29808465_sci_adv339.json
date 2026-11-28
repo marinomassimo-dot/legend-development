@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-29808465-22",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "doi": "10.1007/s10048-018-0549-5",
+  "pmid": "29808465"
+ },
+ "event_at": "2026-11-28T19:32:00Z",
+ "analysis_at": "2026-11-28T19:32:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "ADV-339 continuation: SCI as independent second reader of six claim-registry sentences (packet adv339_it43), blind to the first reading",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID29808465_Johannsen2018.pdf",
+ "source_fingerprint": "0b2bce6f124ef868b0c12bb3b7eb439399ffb627f28babd424621988a52f8e49",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv339_sci_second_reader_20261128/sci_table.tsv"
+ ],
+ "evidence_basis": [
+  "Whole extracted text read; Fig 3 viewed and bar tops measured; Figs 1 and 2 not viewed (legends read). CLAIM 019 sentences S3 and S4."
+ ],
+ "prior_receipt": "FTR-20260810-29808465-01",
+ "reread_reason": "adversarial_reanalysis"
+}

@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261128-26499798-02",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "doi": "10.1074/jbc.R115.676346",
+  "pmid": "26499798"
+ },
+ "event_at": "2026-11-28T19:32:00Z",
+ "analysis_at": "2026-11-28T19:32:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "ADV-339 continuation: SCI as independent second reader of six claim-registry sentences (packet adv339_it43), blind to the first reading",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+ "source_fingerprint": "95b0f37fa9c939cd5836a061f59fac3392e9a1ede84685a814ec1c44aab18d4f",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv339_sci_second_reader_20261128/sci_table.tsv"
+ ],
+ "evidence_basis": [
+  "Whole review body read, Fig 2 viewed; Figs 1 and 3 not viewed (legends read); reference list consulted only for entry 63. CLAIM 030 sentence S6."
+ ],
+ "prior_receipt": "FTR-20260909-26499798-01",
+ "reread_reason": "adversarial_reanalysis"
+}
