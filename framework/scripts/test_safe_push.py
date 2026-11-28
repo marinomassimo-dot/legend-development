@@ -9,6 +9,9 @@ TOOL = Path(__file__).resolve().parent / "safe_push.py"
 # The publishers under test must not count the real machine's live gates (safe_push step 17): their /proc is an empty folder.
 _NO_PROCESSES = TemporaryDirectory(prefix="safe-push-test-proc-")
 os.environ["LEGEND_SAFE_PUSH_PROC_ROOT"] = _NO_PROCESSES.name
+# Nor may a short disk on this machine turn them red (2026-11-28: two real-clone publications failed at 1.1 and 2.0 GB free, and a landing runs this suite).
+# The tests of the disk rule set their own floor.
+os.environ["LEGEND_SAFE_PUSH_MIN_FREE_GB"] = "0"
 
 GATE_PASS = "import sys\nprint('VERDICT: PASS')\nprint('BLOCKS: 0')\nsys.exit(0)\n"
 GATE_BLOCK = ("import sys\nprint('VERDICT: BLOCK_PUBLICATION')\n"

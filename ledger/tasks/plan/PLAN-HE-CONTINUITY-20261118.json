@@ -1541,6 +1541,33 @@
      "accepted_at": "2026-11-28T05:57:39Z",
      "evidence": "506b740dd, published as c27737046407 (gate PASS, 8 landing suites, ls-remote); test_safe_push.py class SafePushDiskCountsLiveRuns",
      "updated_at": "2026-11-28T06:13:35Z"
+    },
+    {
+     "step": "consumer_count.py: SCI ADV-297 defects (identifier prose lines, PMCID citations)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "CHECKPOINT_HE_20261128_AA_ADDENDUM second item",
+     "accepted_at": "2026-11-28T06:17:05Z",
+     "evidence": "17cc693bd published (gate PASS, ls-remote); test_consumer_count.py 6 tests",
+     "updated_at": "2026-11-28T06:17:05Z"
+    },
+    {
+     "step": "task_close.py: close a branch already published when no worktree holds main",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "checkpoint HE-AA section 2 item 2",
+     "accepted_at": "2026-11-28T06:17:05Z",
+     "evidence": "framework/scripts/task_close.py published-close mode; test_task_close.py 38 tests OK",
+     "updated_at": "2026-11-28T06:17:48Z"
+    },
+    {
+     "step": "test_safe_push: no environmental red from a short disk (measured today: 2 failures at 1.1/2.0 GB)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "operator standing rule: need-driven micro-upgrade",
+     "accepted_at": "2026-11-28T06:28:43Z",
+     "evidence": "test_safe_push.py 63 tests OK with 1.5 GB free at start",
+     "updated_at": "2026-11-28T06:28:43Z"
     }
    ]
   }
@@ -2733,6 +2760,27 @@
    "at": "2026-11-28T05:57:39Z",
    "source": "checkpoint_he_20261120/CHECKPOINT_HE_20261128_AA_ADDENDUM.md (sha256 6a8450c1)",
    "step_sha256": "f72f9a0ac0a2",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T06:17:05Z",
+   "source": "CHECKPOINT_HE_20261128_AA_ADDENDUM second item",
+   "step_sha256": "70fc67eab862",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T06:17:05Z",
+   "source": "checkpoint HE-AA section 2 item 2",
+   "step_sha256": "9d08a7a4e671",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T06:28:43Z",
+   "source": "operator standing rule: need-driven micro-upgrade",
+   "step_sha256": "e9a20aa12cf4",
    "reopened_block": false,
    "authorised_by": null
   }
