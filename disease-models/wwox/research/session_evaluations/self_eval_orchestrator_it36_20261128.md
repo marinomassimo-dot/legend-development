@@ -34,7 +34,7 @@ IT37 before repair: the stage sentence said "P14 to P18" for a blood chemistry h
 "denominator undefined" was false for Fig 2G of PMID 34747138 (legend: percentage of neurons showing the transgene);
 the same wording stood in line 23 of `meta_gaba_paradox_current.md` and was repaired there. A re-read of the repairs:
 11 items, 8 OK, 3 ADD, 0 MUST CHANGE. The two ADV-328 clauses recorded as "quoted from line 23, fine" were therefore
-not fine: a copied sentence is as wrong as its original, and a "not re-read" repair is a debt, not a result.
+not fine: a copied sentence is as wrong as its original. IT37 then found two more live copies of the P14 to P18 chemistry stage that IT36's six pointers had not covered (`metabolic_differential_vulnerability_reposed_20260922.md`, `earliest_lesion_developmental_timeline_20260921.md`) and added dated pointers; a third read of those pointers returned 4 OK, 3 ADD per paragraph (row named, white-cell count has no age, glucose day by panel), 0 MUST CHANGE, applied to the pointers, line 23 and the copies, and not re-read. Line 422 of `peripheral_phenotype_denominator_audit_20260922.md` proposes a blood gas at P14 to P18 on new animals: a design, not a statement of what is held, left unchanged. A "not re-read" repair is a debt, not a result.
 
 ## Dream pass
 Material change: a "not significant" panel with no draw age and no fasting state supports neither the presence nor the
