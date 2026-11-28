@@ -1,0 +1,15 @@
+study	measure	control	case	locator
+Blednov	brain_acid_ug_g_day1	NA	1.22	Table 1
+Blednov	plasma_acid_ug_mL_day1	NA	37.2	Table 1
+Blednov	liver_acid_ug_g_day1	NA	103	Table 1
+Blednov	brain_acid_ug_g_day8	NA	0.881	Table 1
+Blednov	plasma_acid_ug_mL_day8	NA	58.2	Table 1
+Blednov	liver_acid_ug_g_day8	NA	131	Table 1
+Honda	acid_PPAR_alpha_EC50_uM	NA	9.47	Fig. 1F
+Honda	acid_PPAR_gamma_EC50_uM	NA	61.0	Fig. 1F
+FDA	acid_molecular_mass_g_mol	NA	318.75	NDA 022418 Chemistry Review, §16
+Puligheddu_2013	nicotine_spike_wave_events	6	2	Results and Fig. 3E
+Puligheddu_2013	nicotine_spike_wave_animals	7	8	Results and Fig. 3E
+Puligheddu_2013	nicotine_severe_behavior_events	11	0	Results and Fig. 3B
+Puligheddu_2013	nicotine_severe_behavior_animals	14	8	Results and Fig. 3B
+Puligheddu_2013	frontal_OEA_pmol_g	484.3	729.5	Results and Fig. 3C
