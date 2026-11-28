@@ -18,6 +18,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import browser_scratch  # noqa: E402
 import repurposing_view as rv  # noqa: E402
 
 DR = rv.DEFAULT_DR
@@ -283,7 +284,8 @@ class Browser(unittest.TestCase):
         cls.bin = rv.find_chromium()
         if not cls.bin:
             raise unittest.SkipTest("no Chromium")
-        cls.tmp = tempfile.TemporaryDirectory()
+        cls.tmp = tempfile.TemporaryDirectory(ignore_cleanup_errors=True)
+        cls.addClassCleanup(browser_scratch.remove_tree, cls.tmp.name)   # also when setUpClass or a test fails; ADV-299
         cls.html = Path(cls.tmp.name) / "v.html"
         cls.html.write_text(rv.build(DR), encoding="utf-8")
         cls.P = embedded(cls.html.read_text())
@@ -296,7 +298,7 @@ class Browser(unittest.TestCase):
         cmd = [self.bin, "--headless=new", "--disable-gpu", f"--user-data-dir={self.tmp.name}/p", "--virtual-time-budget=5000"]
         if width:
             cmd.append(f"--window-size={width},900")
-        r = subprocess.run(cmd + ["--dump-dom", f"file://{html or self.html}{frag}"], capture_output=True, text=True, timeout=120)
+        r = browser_scratch.run_browser(cmd + ["--dump-dom", f"file://{html or self.html}{frag}"], timeout=120)   # kills the browser's whole group, ADV-299
         if "data-ready" not in r.stdout:
             self.skipTest("browser could not run the page: " + r.stderr[-200:])
         return r.stdout
