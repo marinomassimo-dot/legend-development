@@ -1308,6 +1308,15 @@
      "accepted_at": "2026-11-28T07:52:37Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv309_age_window_table_sci_20261128/RESULT_ADV309_SCI_20261128.md",
      "updated_at": "2026-11-28T07:52:37Z"
+    },
+    {
+     "step": "ADV-310: Cheng 2020 first-hand rows for the age table, brief statements checked (E-A vs E-B frozen first)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-310",
+     "accepted_at": "2026-11-28T07:58:11Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv310_cheng_first_hand_sci_20261128/RESULT_ADV310_SCI_20261128.md; receipt FTR-20261128-32000863-01",
+     "updated_at": "2026-11-28T07:58:11Z"
     }
    ]
   }
@@ -2318,6 +2327,13 @@
    "at": "2026-11-28T07:52:37Z",
    "source": "ADV-309",
    "step_sha256": "999d76dba8ea",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T07:58:11Z",
+   "source": "ADV-310",
+   "step_sha256": "39d72a6ea4aa",
    "reopened_block": false,
    "authorised_by": null
   }
