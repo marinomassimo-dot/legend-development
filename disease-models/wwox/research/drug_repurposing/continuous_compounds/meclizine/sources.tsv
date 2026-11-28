@@ -1,0 +1,14 @@
+file	sha256	source_url	degree_and_locator
+PMC3853286.xml	ea89b9a502fc3d146d9e8003bad3df322d2fd99b666758cf5a60d5fba5784523	https://pmc-oa-opendata.s3.amazonaws.com/PMC3853286.1/PMC3853286.1.xml	Figs. 1–7 and selected experimental procedures. Metabolic labeling, PCYT2 and measured PE fractions.
+PMC3135002.xml	bcb6df00ba2895259d0dd52d1097345a589ff3f0bc44b2598105bb6a80925906	https://pmc-oa-opendata.s3.amazonaws.com/PMC3135002.1/PMC3135002.1.xml	Results on intact/isolated assays and MCAO. Original Supplementary Fig. 9 visually checked separately.
+PMC11039361.xml	d770f2d60ad13da3c914598cd2d3f189f55b00de6caa41d2a26b4353aead58b7	https://pmc-oa-opendata.s3.amazonaws.com/PMC11039361.1/PMC11039361.1.xml	MCAO, PET, separate enantiomer assays. Original Figs. 4 and 5 inspected.
+PMC8233209.xml	105014cebc712ac2a0fe145819e958a59baf58723e1c518f922552cea89c4215	https://pmc-oa-opendata.s3.amazonaws.com/PMC8233209.1/PMC8233209.1.xml	Primary cortical astrocyte tracer results and original in vivo lipidomics Fig. 6.
+PMC6821184.xml	215cdda2537ff16c06d8de68503c393c493a1dbb1a634e35ef1d9789038fc6be	https://pmc-oa-opendata.s3.amazonaws.com/PMC6821184.1/PMC6821184.1.xml	Targeted Fig. 1C–E and Fig. 3 Results. Genetic enzyme activity and species outcomes.
+PMC12589596.xml	57e37a8920460158c83af85f8d9417b74f42f38a70da3bd6c063de8d17bf0283	https://pmc-oa-opendata.s3.amazonaws.com/PMC12589596.1/PMC12589596.1.xml	Results and captions on PCYT2 reduction and nutrient stress, Figs. 2, 6 and 9.
+Phase1b_meclizine.xml	58ed9312978f781a8d9a9028c591341ff91530eaf7f0b2368893bacc16f30d68	https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0283425&type=manuscript	Pediatric cohort summary Table 4–5 and weight-normalized analysis from Results.
+PMC3135002-supplement.pdf	4aab334dd871ef899610e1d87b445c7ed18db9363b3c27fc90e4dfab1ec501e7	https://pmc-oa-opendata.s3.amazonaws.com/PMC3135002.1/NIHMS170209-supplement-1.pdf	Targeted original Supplementary Fig. 9, page 9, embryonic mouse cortical neuron OCR.
+		https://doi.org/10.1371/journal.pone.0229639	Phase Ia context from primary abstract.
+		https://doi.org/10.1007/s00223-025-01449-8	Phase 2 context from primary abstract. University manuscript access attempt returned HTTP 403.
+		https://doi.org/10.1007/s00223-026-01528-4	Publisher lists a correction to Fig. 1.
+		https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff719d9c-8d80-42db-97a5-022a75773623	US oral label, sections 1, 5, 7, 8.4 and 12.
+		https://webbook.nist.gov/cgi/cbook.cgi?ID=C569653&Mask=2280&Units=SI	Parent mass 390.948 g/mol rounded to 390.95.
