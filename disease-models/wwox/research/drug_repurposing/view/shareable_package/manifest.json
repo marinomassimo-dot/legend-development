@@ -206,7 +206,7 @@
    "PMID": 161
   },
   "links": {
-   "distinct_hrefs": 265,
+   "distinct_hrefs": 266,
    "external_public": 99,
    "hosts": [
     "civicdb.org",
@@ -562,8 +562,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5125999,
-   "sha256": "6cdb5042a3cfe94bf27f548c00c79fb4c3a5a66c721ebd0961edb31b20eab112"
+   "bytes": 5126127,
+   "sha256": "039563fa46c1cb071121d712e802d17e4df6664d84b070a64028bfb3bb38683f"
   },
   "reports/acetoacetate.pdf": {
    "bytes": 123029,
@@ -656,6 +656,10 @@
   "reports/octadecylglycerol.pdf": {
    "bytes": 122936,
    "sha256": "924ee74b8d3a556db63d00d1d64d1f86393438064c94173215ea49b845cd5250"
+  },
+  "reports/oxaloacetate.pdf": {
+   "bytes": 122993,
+   "sha256": "78c5011d8c34932915f811facc3443268bef30a696a063f94b903f4b5ae9dbc7"
   },
   "reports/piracetam.pdf": {
    "bytes": 123732,
