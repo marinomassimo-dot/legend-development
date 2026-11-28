@@ -787,3 +787,5 @@
 {"evidence": "SendMessage 2026-11-28 with text path", "id": "ADV-323", "receipt": ["c851b824-fb59-486a-a961-39e640feb0b6"], "state": "SENT", "to": ["HE - CURRENT 0a29d266"], "utc": "2026-11-28T12:17:15Z"}
 {"assessment": "HOST", "id": "ADV-324", "key": "programme-cards-display-misrouting-fix-he", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-28T12:28:28Z"}
 {"evidence": "SendMessage 2026-11-28 with text path and IT trace", "id": "ADV-324", "receipt": ["d7a390aa-6cfd-454c-831c-3df20887d5c7"], "state": "SENT", "to": ["HE - CURRENT 0a29d266"], "utc": "2026-11-28T12:28:43Z"}
+{"assessment": "HOST", "id": "ADV-325", "key": "gsk3-substrate-phosphosite-held-text-census-sci", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-28T12:47:43Z"}
+{"evidence": "SendMessage 2026-11-28 after SCI's proposal", "id": "ADV-325", "receipt": ["2c50f36f-3149-48e7-8bbd-abdd9e9be2b4"], "state": "SENT", "to": ["SCI - CURRENT ba384503"], "utc": "2026-11-28T12:47:59Z"}
