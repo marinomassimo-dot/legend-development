@@ -1,0 +1,3 @@
+condition	original	true_transitions	live_other	live_mature_expected	live_BrdU_expected	mature_percent
+vehicle	100	60	40	10.00	50.00	20.00
+cilostazol	100	60	40	45.29	85.29	53.10

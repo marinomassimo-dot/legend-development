@@ -1378,6 +1378,15 @@
      "owner": "orchestrator",
      "source": "ADV-317 (SENT 2026-11-28T11:42:37Z); checkpoint BC section 2",
      "accepted_at": "2026-11-28T11:53:35Z"
+    },
+    {
+     "step": "ADV-319 RP-018 eIF2B S540E full-text read-depth question (bioRxiv 10.1101/2025.11.03.686297)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-319 (ADV message 2026-11-28, registered)",
+     "accepted_at": "2026-11-28T12:06:42Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv319_eif2b_s540e_sci_20261128/RESULT_ADV319_EIF2B_S540E_SCI_20261128.md (route result; exact missing observation registered)",
+     "updated_at": "2026-11-28T12:06:48Z"
     }
    ]
   }
@@ -2444,6 +2453,13 @@
    "at": "2026-11-28T11:53:35Z",
    "source": "ADV-317 (SENT 2026-11-28T11:42:37Z); checkpoint BC section 2",
    "step_sha256": "5603358c611a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-28T12:06:42Z",
+   "source": "ADV-319 (ADV message 2026-11-28, registered)",
+   "step_sha256": "8767fdb75a32",
    "reopened_block": false,
    "authorised_by": null
   }

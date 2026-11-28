@@ -1,0 +1,38 @@
+{
+  "investigation": "INV-06",
+  "title": "Cilostazol and first functional myelin in WWOX-LoF",
+  "date": "28 November 2026",
+  "summary": "A developmental myelin comparison that separates precursor maturation, survival and neurovascular support.",
+  "graph": {
+    "evidence": "The mature-marker share rises from about 20% to 53% after experimental ischemia.",
+    "inference": "A change in survival can produce the same marker shift with identical transition counts.",
+    "hypothesis": "Local OPC PDE3 engagement may shorten a verified developmental delay.",
+    "experiment": "Track timed fate and first compact sheaths, then test matched-axon conduction."
+  },
+  "evidence": [
+    "In rat precursor cultures, the response appeared under chemical stress. The representative condition used 3 micromolar nominal parent. The unstressed 10 micromolar blot did not show an evident marker gain.",
+    "In adult rat hypoperfusion, tissue cAMP and labeled-cell survival improved. The sampled cortical blood-flow series showed no treatment difference. Separate endothelial experiments support a vascular-compartment response.",
+    "In pooled WWOX hippocampal precursor nuclei, Pde3a was about 38 to 64 UMI CPM. There was one pool per genotype. Bulk RNA signals and myelin-marker directions depend on the model."
+  ],
+  "inference": [
+    "The injured-mouse GST-pi-positive proportion among BrdU-labeled cells can increase at fixed transition number if more mature cells survive. Timed transitions and starting denominators are required.",
+    "An adult plasma-binding calculation gives 0.034 to 0.086 micromolar illustrative free parent. This is distinct from measured brain exposure."
+  ],
+  "hypothesis": [
+    "Where a genuine WWOX first-sheath delay exists, a local cAMP response should precede faster precursor maturation and durable new sheaths while survival and neuronal recruitment are comparable."
+  ],
+  "experiment": [
+    "Compare developmentally matched neuronal WWOX loss and corrected controls at verified local parent. Track loss, division and individual transition. Verify precursor PDE3 dependence and measure first compact sheaths and post-washout conduction on the same recruited axons."
+  ],
+  "limits": [
+    "Retain a conditional ex vivo comparator and defer systemic pediatric WWOX priority. Juvenile free brain exposure and functional rescue remain unresolved. The limited pediatric vascular series includes aspirin and surgery. The US label includes a heart-failure warning."
+  ],
+  "sources": [
+    {"label": "Miyamoto et al. Precursor culture and injured mice, Figs. 5 and 6 and Supplementary Fig. 5.", "url": "https://doi.org/10.1161/STROKEAHA.113.001530"},
+    {"label": "Miyamoto et al. Rat flow and survival, Figs. 3 to 5 and 7.", "url": "https://doi.org/10.1038/jcbfm.2009.210"},
+    {"label": "Repudi et al. Native WWOX myelination and conditional neuronal loss.", "url": "https://doi.org/10.1093/brain/awab174"},
+    {"label": "Adult formulation crossover, Table 3.", "url": "https://doi.org/10.1016/j.jpha.2014.08.001"},
+    {"label": "Pediatric and young adult vascular experience, aggregate abstract.", "url": "https://pubmed.ncbi.nlm.nih.gov/40974885/"},
+    {"label": "US label, contraindication, safety and PK.", "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=77e77eaf-5556-43ac-844e-c0e29f02fe07&type=display"}
+  ]
+}
