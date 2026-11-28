@@ -1,0 +1,51 @@
+# ADV-302 step 2: consumer text of the reserve record 25703206, copied by script (verbatim; hypothesis level; not medical advice)
+
+## R4 25703206 — disease-models/wwox/research/discovery_ledger_current.md, DL-MECH-049
+
+```text
+### DL-MECH-049 — In WWOX **stabilità e funzione sono in TENSIONE STRUTTURALE**: la stabilità si compra con l'occlusione. Vincolo di progetto per qualunque stabilizzatore di Q230P.
+
+- **Fonte:** Schuchardt, Mikles, Bhat, McDonald, **Sudol**, **Farooq** — *J Mol Recognit* 2015 — PMID 25703206 / PMC4376589 / DOI 10.1002/jmr.2419. **Full text letto integralmente** (Intro, Metodi, Risultati/Discussione, Conclusioni).
+- **Tag:** `DATO` (ITC/CD) + `INFERENZA` (meccanismo del coperchio, da omologia+MD)
+- **Provenienza:** `corpus placeholder` mai letto, recuperato dall'audit `--mechanism` del 2026-07-12.
+
+**⚠️ Prima il limite di scopo, perché ribalta l'aspettativa.** Il paper studia **esclusivamente i residui 1-91** (moduli WW1-WW2). **Q230 è nel dominio SDR (~137-350), che non è nemmeno nei costrutti.** Era stato indicato come possibile *"razionale per lo stabilizzatore conformazionale del SDR"*: **quella lettura non regge** ([[dismissal_ledger_current#DIS-005 — «PMID 25703206 (allostery) gives the rationale for the SDR stabilizer» → ❌ **DOES NOT HOLD (but yields something else)**|DIS-005]]).
+
+**Ma il reperto è più utile del razionale cercato.**
+
+**`DATO` (ITC/CD, n≥3):**
+- **WW1 lega tutti i ligandi PPXY; WW2 nessuno.** WW2 è un **dominio orfano**.
+- WW1 **nel modulo tandem** lega **2-3× più forte** che da solo, con **guadagno entropico**.
+- Review PMID 25662954 (same laboratory; Table 1; ITC, 25 °C, pH 7, at least three measurements) gives, for eight 12-residue PPPY peptides, a WW1-WW2 gain over WW1 alone of 1.8- to 5.1-fold (p73 1.8; ErbB4 2.4; TMG2 2.4; WBP1 2.6; WBP2 3.2; PTCH1 3.5; PTPN14 3.6; SMAD7 5.1); the folds are ratios of the Table 1 values (the review prints no per-ligand fold); the review's text says «two- to threefold», which four ligands exceed (WBP2 3.2, PTCH1 3.5, PTPN14 3.6, SMAD7 5.1) and p73 (1.8) falls below. The rows for p73, PTCH1, PTPN14, SMAD7 and TMG2 are stated there as unpublished.
+- **WW1 da solo è parzialmente destrutturato e si ripiega legando il ligando**; nel modulo tandem il legame avviene su un **WW1 già completamente ripiegato**.
+
+→ **Esistenza-prova:** un dominio instabile di WWOX viene **riscattato in stato ripiegato e funzionale** da un partner che vi si aggancia. **Stabilizzare un fold floscio di WWOX non è ipotetico: è il design nativo della proteina.** Cade l'obiezione *"non puoi stabilizzare WWOX legandoci qualcosa"*. (Conferma e meccanizza [[discovery_ledger_current#DL-MECH-017 — WW2 come chaperone intramolecolare che stabilizza WW1 (rinforza il razionale stabilizzatori/proteostasi)|DL-MECH-017]].)
+
+**🔴 `INFERENZA` (omologia FBP21/2JXW + MD 4 μs, 4 force field) — il vincolo che conta:**
+Il WW2 si aggancia con la faccia **convessa** sulla faccia **concava** di WW1 (contatti: W44 di WW1 stretto tra Q65/V73 di WW2; T67 di WW2 tra W31/Y33 di WW1; H-bond W44 Nε1–Q65 Oε1). E — **il punto**:
+
+> *"la giustapposizione di WW2 sulla faccia concava di WW1 **blocca parzialmente il solco di legame**… WW2 agisce come un **coperchio** che deve essere spostato"*
+> *"in assenza di ligando, l'equilibrio aperto↔chiuso è **nettamente a favore del chiuso**"*
+
+**L'interazione che STABILIZZA WW1 è la stessa che ne BLOCCA la funzione.** WWOX risolve il conflitto con uno **switch allosterico**: il ligando paga il costo entropico e solleva il coperchio (*binding-coupled dissociation*).
+
+**→ VINCOLO DI PROGETTO (`IPOTESI` operativa, alta priorità):**
+> **Una molecola che irrigidisce un fold di WWOX per impedirne la degradazione rischia, con lo stesso gesto, di CHIUDERLO in uno stato non funzionale.**
+
+Questo dà una **ragione strutturale, specifica di WWOX**, allo scenario *"stabile ma inerte"* che P282A ha dimostrato empiricamente ([[discovery_ledger_current#DL-MECH-047 — P252A mostra degradazione lisosomiale HSC70-associata; **CMA e trasferimento a Q230P non dimostrati**|DL-MECH-047]]). Non era solo una possibilità: **in WWOX la stabilità si compra con l'occlusione, e l'occlusione è anti-funzione.** → default `D-04` in [[dismissal_ledger_current]].
+
+**Conseguenze operative:**
+1. Lo stabilizzatore per Q230P deve essere **allosterico e reversibile**, **non una morsa**: deve alzare l'energia libera di folding **senza occludere la superficie funzionale**.
+2. **Il readout di abbondanza è insufficiente per costruzione.** Serve il readout **funzionale** (attività SDR, binding ai partner, soppressione di HIF1α, localizzazione) — e ora sappiamo *perché*, non solo *che*.
+3. **Failure mode pre-registrato**: se un candidato fa riemergere proteina Q230P **inerte**, non è un fallimento inatteso — è **la predizione**.
+
+**Reperto minore (basso valore per il genotipo di riferimento, annotato per completezza).** L'interfaccia W44↔Q65/V73 è una PPI piccola e definita, in principio druggabile. **Ma la funzione WW1/PPxY non determina la gravità** (P47T abolisce il binding PPxY e dà fenotipo **lieve**; il SDR sì) → **non è il nostro bersaglio.**
+
+**Limiti (dichiarati dagli autori e da me).** Il modello è **omologia + MD**, non struttura sperimentale; gli autori ammettono che il modello *"non supporta né contraddice"* l'associazione dei domini. La conformazione **non-legata di partenza è stata assunta identica alla legata**, il che orienta la "burst phase". Riprodotto su AMBER/GROMOS/CHARMM/OPLS. **Nessun dato sul SDR. Nessun dato su Q230P.**
+
+**🎯 Il buco che questo paper rende visibile:** non esiste, nel nostro corpus, **biofisica strutturale del dominio SDR di WWOX**. L'in-silico interno gira su **AlphaFold** ([[claim_registry_current#CLAIM 019]]). **Per progettare uno stabilizzatore allosterico del SDR serve una struttura del SDR** — sperimentale o almeno una caratterizzazione dinamica. **È il prossimo bersaglio di ricerca.**
+- 🔵 **Append-only, 2026-09-26 (`BATCH_20260926_MALLARET`) — le parole su P47T in questa voce sono più forti della fonte.** In Mallaret 2014 (PMID 24369382) la proteina P47T è *presente, di abbondanza simile ai controlli all'ispezione visiva (non quantificata)*, in un solo paziente e senza densitometria — non "a livelli normali" o "a livello wild type" come misura; il binding è perduto *in vitro* verso un solo peptide PPPY (WBP1), e la generalizzazione ai motivi PPxY è della didascalia degli autori. Vedi [[claim_registry_current#CLAIM 030]]. **Nessun altro contenuto di questa voce è modificato.**
+
+---
+
+```
