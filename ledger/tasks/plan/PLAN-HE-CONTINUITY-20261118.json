@@ -1535,10 +1535,12 @@
     },
     {
      "step": "safe_push disk rule counts overlapping gate clones (live gates' declared peaks), with a test, no gate bypass, no workflow edit",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "checkpoint_he_20261120/CHECKPOINT_HE_20261128_AA_ADDENDUM.md (sha256 6a8450c1)",
-     "accepted_at": "2026-11-28T05:57:39Z"
+     "accepted_at": "2026-11-28T05:57:39Z",
+     "evidence": "506b740dd, published as c27737046407 (gate PASS, 8 landing suites, ls-remote); test_safe_push.py class SafePushDiskCountsLiveRuns",
+     "updated_at": "2026-11-28T06:13:35Z"
     }
    ]
   }
