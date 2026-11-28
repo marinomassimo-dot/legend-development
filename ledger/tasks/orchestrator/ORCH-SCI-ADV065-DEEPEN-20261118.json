@@ -1257,10 +1257,12 @@
     },
     {
      "step": "ADV-297: catalogued-only abstract triage test on ten seeded-drawn records (PREREG before any abstract; step A triage reader, step B full-text readers, blind check of every miss); deliver to ADV",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-297 (ADV message 2026-11-28; assignments/ADV-297.md on main b0d899f91)",
-     "accepted_at": "2026-11-28T05:31:58Z"
+     "accepted_at": "2026-11-28T05:31:58Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv297_catalogued_triage_sci_20261128/RESULT_ADV297_SCI_20261128.md (not decidable from this draw; 1 miss of 3 checked)",
+     "updated_at": "2026-11-28T05:47:19Z"
     }
    ]
   }
