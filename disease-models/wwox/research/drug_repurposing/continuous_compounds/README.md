@@ -225,7 +225,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active: valnoctamide.** Compare acute phasic GABA-A inhibition and slower arachidonate handling at measured stereoisomer exposure. First reconcile the published inhibitory-current measurements, stereoisomer pharmacokinetics and ACSL4 assay conditions. [Prespecified comparison](valnoctamide/pretest.md)
+**Active: valnoctamide.** Compare acute phasic GABA-A inhibition and slower arachidonate handling at measured stereoisomer exposure. First reconcile the published inhibitory-current measurements, stereoisomer pharmacokinetics and ACSL4 assay conditions. [Prespecified comparison](valnoctamide/pretest.md) · [Opening comparison](valnoctamide/first_comparison.md)
 
 **Procysteine.** Retain as a conditional preclinical tracer and defer pediatric WWOX priority. At 20 h the rat GSH pool carries retained carbon without a confirmed increase in pool size. OPLAH RNA falls across three WWOX bulk datasets. Reopen with measured local parent, labeled cysteine bypass and a genotype-matched functional contrast. [Dossier and replay](procysteine/README.md)
 
