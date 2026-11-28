@@ -226,7 +226,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Next: losigamone.** Compare suppression of persistent sodium current with an enantiomer-related release or GABA effect at matched free exposure. Open after valnoctamide closes.
+**Active: losigamone.** Compare persistent sodium-current suppression with an enantiomer-related release or native inhibition effect at matched free exposure. First recover the voltage-clamp, release and clinical denominators. [Prespecified comparison](losigamone/pretest.md)
 
 **Valnoctamide.** Retain as a conditional ex vivo phasic-current comparator and defer pediatric WWOX priority. Rat CA1 decay prolonged reversibly. The 30-day total phospholipid turnover estimate falls 45.5% on the control denominator, with direct ACSL4 engagement unresolved. Adult carbamazepine-epoxide exposure rose about fivefold in a separate interaction study. Reopen with free juvenile exposure, native chloride and matched first recruitment. [Dossier and replay](valnoctamide/README.md)
 
