@@ -378,6 +378,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 601 input files; digest
-`8889e879baa4a356`. Sources: the claim, paper and
+`1f248427f1a9f651`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
